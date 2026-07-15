@@ -1,0 +1,19 @@
+# Notes (never sync)
+notes/
+
+# OS
+.DS_Store
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+.ipynb_checkpoints/
+
+# Data / model artifacts
+data/
+*.ckpt
+*.pt
+*.pth
+wandb/
