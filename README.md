@@ -15,6 +15,17 @@ not classic BERT — see [docs/boardy-embedding-model.md](docs/boardy-embedding-
 This repo still includes a frozen `bert-base-uncased` offline control; we will
 benchmark against Voyage and against two-tower / MoE / student–teacher variants.
 
+### Baseline snapshot (offline, 2026-07-17)
+
+| Baseline | ROC-AUC | MRR | Top-1 | R@10 |
+|----------|---------|-----|-------|------|
+| Frozen BERT | 0.47 | 0.09 | 0.02 | 0.18 |
+| Voyage-4-nano (local) | 0.56 | 0.30 | 0.16 | 0.60 |
+| Voyage-4-large (API) | 0.57 | 0.31 | 0.13 | 0.70 |
+
+**Large ≈ nano** on this dataset (shared Voyage-4 space); both far above BERT.
+Details in the docs page above.
+
 ## Data prep
 
 Dedupe pair datasets into a unique-user catalog (canonical `userContactFile`
@@ -93,3 +104,26 @@ retrieval protocol as frozen BERT). First run downloads HF weights.
 Note: `voyage-4-nano` remote code needs `transformers>=4.51,<5` (transformers 5.x
 currently fails with `config_class` None on load). Cold MPS encode ~40+ min;
 re-runs hit `artifacts/voyage_nano/` cache.
+
+## Baseline eval (Voyage-4-large API)
+
+Boardy production model via Voyage API (`voyage-4-large`, `output_dimension=1024`,
+`input_type=query` for seekers / `document` for candidates). Requires
+`VOYAGE_API_KEY`. Per-text disk cache under `artifacts/voyage_large/` so re-runs
+cost ~0 tokens. Free tier: first **200M tokens**/account for voyage-4-large;
+throttle defaults leave headroom under 3M TPM / 2k RPM.
+
+```bash
+source .venv/bin/activate
+pip install -r requirements.txt
+export VOYAGE_API_KEY=pa-...   # https://docs.voyageai.com/docs/api-key-and-installation
+
+python -m baselines.voyage_large.eval \
+  --data-dir data \
+  --model voyage-4-large \
+  --output-dimension 1024
+```
+
+Optional: `--batch-size 16`, `--tpm-limit 2500000`, `--rpm-limit 1500` (or env
+`VOYAGE_TPM_LIMIT` / `VOYAGE_RPM_LIMIT`). Writes `artifacts/voyage_large/metrics.json`
++ per-embedding cache; prints Top-1 (= Recall@1) with MRR / Recall@K.

@@ -56,7 +56,49 @@ Defaults: `max_length=8192` (of 32k) for MPS memory; `truncate_dim=1024` to
 align with Boardy large’s reported default. Cache + metrics:
 `artifacts/voyage_nano/`.
 
-API `voyage-4-large` eval (if course gets a key) remains a separate follow-up.
+## API baseline: Voyage-4-large (done)
+
+Production model via Voyage API under `baselines/voyage_large/`. Same pair AUC /
+retrieval protocol and field-tagged text as frozen BERT / nano. Uses
+`input_type=query` (seekers) and `input_type=document` (candidates/corpus),
+`output_dimension=1024`, truncation on. Aggressive per-text disk cache + dedupe
+under `artifacts/voyage_large/`; rate-limit knobs default to ~2.5M TPM / 1500 RPM
+(headroom under 3M TPM / 2k RPM). Free allowance: first **200M tokens**/account
+for `voyage-4-large`.
+
+```bash
+source .venv/bin/activate
+pip install -r requirements.txt
+export VOYAGE_API_KEY=pa-...
+
+python -m baselines.voyage_large.eval \
+  --data-dir data \
+  --model voyage-4-large \
+  --output-dimension 1024
+```
+
+Writes `artifacts/voyage_large/metrics.json` (+ `usage.json`, embedding cache).
+
+## Offline results (2026-07-17)
+
+Same protocol on `data/dataset_{positive,negative}.json` (100/100 pairs;
+retrieval vs ~178 unique matches). Sources: `artifacts/*/metrics.json`.
+
+| Baseline | ROC-AUC | AP | MRR | Top-1 | R@5 | R@10 |
+|----------|---------|-----|-----|-------|-----|------|
+| Frozen BERT (`bert-base-uncased`, 512) | 0.47 | 0.51 | 0.09 | 0.02 | 0.14 | 0.18 |
+| Voyage-4-nano (local, dim 1024) | 0.56 | 0.56 | 0.30 | **0.16** | 0.47 | 0.60 |
+| Voyage-4-large (API, dim 1024) | **0.57** | **0.57** | **0.31** | 0.13 | **0.56** | **0.70** |
+
+**Takeaway:** On this labeled set, **`voyage-4-large` performs very close to
+`voyage-4-nano`** (shared Voyage-4 embedding space). Large edges nano slightly
+on AUC / MRR / R@10; nano is slightly higher on Top-1. Both crush frozen BERT.
+For iteration, nano is enough locally; large remains the Boardy-faithful
+production reference (~691k API tokens for the first full run; cache thereafter).
+
+Pair discrimination is still weak for all three (cosine gaps tiny) — hard
+negatives look similar in embedding space. Headroom for two-tower / fine-tune /
+rerank remains large even vs Boardy’s model family.
 
 ## Open questions for Boardy / course staff
 
@@ -71,8 +113,10 @@ API `voyage-4-large` eval (if course gets a key) remains a separate follow-up.
 
 - [x] Add local Voyage-4-nano baseline eval parallel to `baselines/bert_frozen`
       (sentence-transformers, cache embeddings, same pair AUC / Recall@K).
-- [ ] Optional: API `voyage-4-large` client baseline if course gets a key.
-- [x] Update README with Voyage-nano run command (BERT kept as weaker control).
+- [x] API `voyage-4-large` client baseline (`baselines/voyage_large/`, needs
+      `VOYAGE_API_KEY`; free 200M tokens + TPM/RPM throttles).
+- [x] Update README with Voyage-nano + Voyage-large API run commands (BERT kept
+      as weaker control).
 - [ ] Decide whether two-tower / MoE work should beat Voyage offline, or only
       beat frozen BERT.
 
