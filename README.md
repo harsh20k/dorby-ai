@@ -7,14 +7,7 @@ performance, starting with:
 - **Two-tower model** trained on their dataset
 - Try **Mixture of Experts** architecture
 - Possibly try - **Student - Teacher** architecture
-
-Frozen Voyage is the baseline; official Voyage fine-tune is enterprise/sales-only
-(not self-serve). `voyage-4-large` is closed (no DIY FT); `voyage-4-nano` has open
-weights (SentenceTransformers / LoRA OK) but ~200 hard pairs overfit easily.
-Grow hard labels + two-tower first; revisit Voyage FT / student–teacher
-(large → small) when data scales (~1k+) and frozen baselines plateau.
-Student–teacher = optional distillation for cost/latency, not a substitute for
-hard intro labels.
+- Later: fine-tune embeddings for intro-matching (Voyage FT enterprise-only; large closed; nano open-weight DIY but overfits at ~200 pairs). Prefer hard labels + two-tower first; student–teacher (Voyage-large → smaller tower) optional after frozen baselines plateau.
 
 ## Overview
 
