@@ -6,7 +6,15 @@ performance, starting with:
 
 - **Two-tower model** trained on their dataset
 - Try **Mixture of Experts** architecture
-- Possibly try - **Student - Teacher** architecture 
+- Possibly try - **Student - Teacher** architecture
+
+Frozen Voyage is the baseline; official Voyage fine-tune is enterprise/sales-only
+(not self-serve). `voyage-4-large` is closed (no DIY FT); `voyage-4-nano` has open
+weights (SentenceTransformers / LoRA OK) but ~200 hard pairs overfit easily.
+Grow hard labels + two-tower first; revisit Voyage FT / student–teacher
+(large → small) when data scales (~1k+) and frozen baselines plateau.
+Student–teacher = optional distillation for cost/latency, not a substitute for
+hard intro labels.
 
 ## Overview
 
@@ -77,7 +85,8 @@ python -m baselines.bert_frozen.eval \
 
 Writes embeddings cache + `artifacts/bert_frozen/metrics.json` (pair ROC-AUC /
 AP / best-F1, retrieval MRR + NDCG/Precision/Recall@K, intent + neg-hardness
-slices). See [docs/baseline-metrics.md](docs/baseline-metrics.md).
+slices). See [docs/baseline-metrics.md](docs/baseline-metrics.md). Full metrics:
+[docs/baseline-results-all.md](docs/baseline-results-all.md).
 
 ## Baseline eval (Voyage-4-nano)
 
@@ -101,6 +110,7 @@ python -m baselines.voyage_nano.eval \
 
 Writes embeddings cache + `artifacts/voyage_nano/metrics.json` (same expanded
 metrics as frozen BERT; see [docs/baseline-metrics.md](docs/baseline-metrics.md)).
+Full metrics: [docs/baseline-results-all.md](docs/baseline-results-all.md).
 First run downloads HF weights.
 
 Note: `voyage-4-nano` remote code needs `transformers>=4.51,<5` (transformers 5.x
@@ -129,4 +139,5 @@ python -m baselines.voyage_large.eval \
 Optional: `--batch-size 16`, `--tpm-limit 2500000`, `--rpm-limit 1500` (or env
 `VOYAGE_TPM_LIMIT` / `VOYAGE_RPM_LIMIT`). Writes `artifacts/voyage_large/metrics.json`
 + per-embedding cache (same expanded metrics as BERT/nano; see
-[docs/baseline-metrics.md](docs/baseline-metrics.md)).
+[docs/baseline-metrics.md](docs/baseline-metrics.md)). Full metrics:
+[docs/baseline-results-all.md](docs/baseline-results-all.md).
