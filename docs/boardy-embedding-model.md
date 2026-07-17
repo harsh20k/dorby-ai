@@ -95,6 +95,8 @@ retrieval vs ~178 unique matches). Sources: `artifacts/*/metrics.json`.
 on AUC / MRR / R@10; nano is slightly higher on Top-1. Both crush frozen BERT.
 For iteration, nano is enough locally; large remains the Boardy-faithful
 production reference (~691k API tokens for the first full run; cache thereafter).
+See [nano-vs-large-similarity.md](nano-vs-large-similarity.md) for why they
+match (shared space, hard-neg ceiling, length, n=100).
 
 Pair discrimination is still weak for all three (cosine gaps tiny) — hard
 negatives look similar in embedding space. Headroom for two-tower / fine-tune /
