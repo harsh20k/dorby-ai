@@ -8,10 +8,8 @@ import sys
 from pathlib import Path
 from typing import Any
 
-import numpy as np
-from sklearn.metrics import average_precision_score, roc_auc_score
-
 from baselines.bert_frozen.text import candidate_to_text, seeker_to_text
+from baselines.metrics import pair_metrics, print_metrics, retrieval_metrics, slice_metrics
 from baselines.voyage_nano.encode import VoyageNanoEncoder, cosine_scores, pick_device
 
 
@@ -43,58 +41,6 @@ def build_candidate_corpus(
         ids.append(mid)
         texts.append(candidate_to_text(record["matchContactFile"]))
     return ids, texts
-
-
-def pair_metrics(
-    pos_scores: np.ndarray,
-    neg_scores: np.ndarray,
-) -> dict[str, float]:
-    y_true = np.concatenate(
-        [np.ones(len(pos_scores), dtype=np.int32), np.zeros(len(neg_scores), dtype=np.int32)]
-    )
-    y_score = np.concatenate([pos_scores, neg_scores])
-    return {
-        "roc_auc": float(roc_auc_score(y_true, y_score)),
-        "average_precision": float(average_precision_score(y_true, y_score)),
-        "mean_cosine_positive": float(np.mean(pos_scores)),
-        "mean_cosine_negative": float(np.mean(neg_scores)),
-        "mean_cosine_gap": float(np.mean(pos_scores) - np.mean(neg_scores)),
-        "num_positive": int(len(pos_scores)),
-        "num_negative": int(len(neg_scores)),
-    }
-
-
-def retrieval_metrics(
-    query_embs: np.ndarray,
-    target_ids: list[str],
-    candidate_ids: list[str],
-    candidate_embs: np.ndarray,
-    ks: tuple[int, ...] = (1, 5, 10),
-) -> dict[str, float]:
-    id_to_idx = {cid: i for i, cid in enumerate(candidate_ids)}
-    ranks: list[int] = []
-    recalls = {k: 0 for k in ks}
-
-    for q_emb, target_id in zip(query_embs, target_ids):
-        target_idx = id_to_idx[target_id]
-        scores = candidate_embs @ q_emb  # both L2-normalized
-        order = np.argsort(-scores, kind="stable")
-        rank = int(np.where(order == target_idx)[0][0]) + 1  # 1-based
-        ranks.append(rank)
-        for k in ks:
-            if rank <= k:
-                recalls[k] += 1
-
-    n = len(ranks)
-    out: dict[str, float] = {
-        "mrr": float(np.mean([1.0 / r for r in ranks])),
-        "num_queries": float(n),
-        "mean_rank": float(np.mean(ranks)),
-        "median_rank": float(np.median(ranks)),
-    }
-    for k in ks:
-        out[f"recall@{k}"] = float(recalls[k] / n) if n else 0.0
-    return out
 
 
 def run_eval(
@@ -159,6 +105,18 @@ def run_eval(
         candidate_ids=corpus_ids,
         candidate_embs=corpus_emb,
     )
+    slices = slice_metrics(
+        positives=positives,
+        negatives=negatives,
+        pos_scores=pos_scores,
+        neg_scores=neg_scores,
+        neg_seeker_texts=neg_seeker_texts,
+        neg_cand_texts=neg_cand_texts,
+        query_embs=pos_seeker_emb,
+        target_ids=pos_target_ids,
+        candidate_ids=corpus_ids,
+        candidate_embs=corpus_emb,
+    )
 
     return {
         "model_name": model_name,
@@ -168,26 +126,8 @@ def run_eval(
         "batch_size": batch_size,
         "pair": pair,
         "retrieval": retrieval,
+        "slices": slices,
     }
-
-
-def print_metrics(metrics: dict[str, Any]) -> None:
-    pair = metrics["pair"]
-    ret = metrics["retrieval"]
-    print("\n=== Pair metrics (200 labeled pairs) ===")
-    print(f"ROC-AUC:            {pair['roc_auc']:.4f}")
-    print(f"Average Precision:  {pair['average_precision']:.4f}")
-    print(f"Mean cosine (pos):  {pair['mean_cosine_positive']:.4f}")
-    print(f"Mean cosine (neg):  {pair['mean_cosine_negative']:.4f}")
-    print(f"Mean cosine gap:    {pair['mean_cosine_gap']:.4f}")
-
-    print("\n=== Retrieval metrics (100 positives vs corpus) ===")
-    print(f"MRR:                {ret['mrr']:.4f}")
-    print(f"Recall@1:           {ret['recall@1']:.4f}")
-    print(f"Recall@5:           {ret['recall@5']:.4f}")
-    print(f"Recall@10:          {ret['recall@10']:.4f}")
-    print(f"Mean rank:          {ret['mean_rank']:.2f}")
-    print(f"Median rank:        {ret['median_rank']:.1f}")
 
 
 def parse_args(argv: list[str] | None = None) -> argparse.Namespace:

@@ -76,7 +76,8 @@ python -m baselines.bert_frozen.eval \
 ```
 
 Writes embeddings cache + `artifacts/bert_frozen/metrics.json` (pair ROC-AUC /
-AP, retrieval MRR + Recall@1/5/10).
+AP / best-F1, retrieval MRR + NDCG/Precision/Recall@K, intent + neg-hardness
+slices). See [docs/baseline-metrics.md](docs/baseline-metrics.md).
 
 ## Baseline eval (Voyage-4-nano)
 
@@ -98,8 +99,9 @@ python -m baselines.voyage_nano.eval \
   --truncate-dim 1024
 ```
 
-Writes embeddings cache + `artifacts/voyage_nano/metrics.json` (same pair /
-retrieval protocol as frozen BERT). First run downloads HF weights.
+Writes embeddings cache + `artifacts/voyage_nano/metrics.json` (same expanded
+metrics as frozen BERT; see [docs/baseline-metrics.md](docs/baseline-metrics.md)).
+First run downloads HF weights.
 
 Note: `voyage-4-nano` remote code needs `transformers>=4.51,<5` (transformers 5.x
 currently fails with `config_class` None on load). Cold MPS encode ~40+ min;
@@ -126,4 +128,5 @@ python -m baselines.voyage_large.eval \
 
 Optional: `--batch-size 16`, `--tpm-limit 2500000`, `--rpm-limit 1500` (or env
 `VOYAGE_TPM_LIMIT` / `VOYAGE_RPM_LIMIT`). Writes `artifacts/voyage_large/metrics.json`
-+ per-embedding cache; prints Top-1 (= Recall@1) with MRR / Recall@K.
++ per-embedding cache (same expanded metrics as BERT/nano; see
+[docs/baseline-metrics.md](docs/baseline-metrics.md)).

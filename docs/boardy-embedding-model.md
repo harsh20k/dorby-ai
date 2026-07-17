@@ -83,6 +83,9 @@ Writes `artifacts/voyage_large/metrics.json` (+ `usage.json`, embedding cache).
 
 Same protocol on `data/dataset_{positive,negative}.json` (100/100 pairs;
 retrieval vs ~178 unique matches). Sources: `artifacts/*/metrics.json`.
+Extended metrics (NDCG, MAP, Precision@K, best-F1, intent / hard-neg slices)
+are documented in [baseline-metrics.md](baseline-metrics.md) and live in each
+`metrics.json`.
 
 | Baseline | ROC-AUC | AP | MRR | Top-1 | R@5 | R@10 |
 |----------|---------|-----|-----|-------|-----|------|
