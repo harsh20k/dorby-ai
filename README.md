@@ -10,10 +10,10 @@ performance, starting with:
 
 ## Overview
 
-Boardy AI currently relies on generic (non-fine-tuned) BERT embeddings for
-recommendations. This project benchmarks that baseline against a two-tower
-retrieval architecture and task-specific trained embeddings, evaluating
-whichever combination yields the best offline/online recommendation metrics.
+Boardy’s production embeddings are **Voyage `voyage-4-large`** (32k context),
+not classic BERT — see [docs/boardy-embedding-model.md](docs/boardy-embedding-model.md).
+This repo still includes a frozen `bert-base-uncased` offline control; we will
+benchmark against Voyage and against two-tower / MoE / student–teacher variants.
 
 ## Data prep
 
@@ -66,3 +66,30 @@ python -m baselines.bert_frozen.eval \
 
 Writes embeddings cache + `artifacts/bert_frozen/metrics.json` (pair ROC-AUC /
 AP, retrieval MRR + Recall@1/5/10).
+
+## Baseline eval (Voyage-4-nano)
+
+Local open-weight cousin of Boardy’s API `voyage-4-large`, same Voyage-4 embedding
+space. Uses `sentence-transformers` with `encode_query` / `encode_document`,
+shared field-tagged text from `baselines.bert_frozen.text`. Default
+`max_length=8192` (model supports 32k; capped for MPS memory) and
+`truncate_dim=1024` (Boardy large default).
+
+```bash
+source .venv/bin/activate
+pip install -r requirements.txt
+
+python -m baselines.voyage_nano.eval \
+  --data-dir data \
+  --model voyageai/voyage-4-nano \
+  --batch-size 4 \
+  --max-length 8192 \
+  --truncate-dim 1024
+```
+
+Writes embeddings cache + `artifacts/voyage_nano/metrics.json` (same pair /
+retrieval protocol as frozen BERT). First run downloads HF weights.
+
+Note: `voyage-4-nano` remote code needs `transformers>=4.51,<5` (transformers 5.x
+currently fails with `config_class` None on load). Cold MPS encode ~40+ min;
+re-runs hit `artifacts/voyage_nano/` cache.

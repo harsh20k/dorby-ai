@@ -4,12 +4,22 @@ notes/
 # OS
 .DS_Store
 
+# Editor / Cursor
+.cursor/
+
 # Python
 __pycache__/
-*.pyc
+*.py[cod]
+*$py.class
 .venv/
 venv/
 .ipynb_checkpoints/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+*.egg-info/
+dist/
+build/
 
 # Data / model artifacts
 data/
@@ -17,4 +27,6 @@ artifacts/
 *.ckpt
 *.pt
 *.pth
+*.npy
 wandb/
+.cache/
