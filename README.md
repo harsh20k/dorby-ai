@@ -58,6 +58,34 @@ HF_HUB_OFFLINE=1 TRANSFORMERS_OFFLINE=1 \
 .venv/bin/python scripts/build_unique_users_token_counts.py --html-only
 ```
 
+Seed pair summary: [data/dataset_summary.md](data/dataset_summary.md). Plan for growing beyond 200 pairs: [data/synthetic_data_generation.md](data/synthetic_data_generation.md).
+
+### Synthetic pairs (LangGraph + LangSmith)
+
+Pilot pipeline: train-only seed → generate one label → heuristic filter → independent-model judge → staging + batch manifest. See [data/synthetic/pipeline.md](data/synthetic/pipeline.md).
+
+```bash
+source .venv/bin/activate
+pip install -r requirements.txt
+
+# user-disjoint seed split (writes data/synthetic/seed_split.json)
+python -m synth_pipeline --init-split
+
+# plumbing test (no LLM calls)
+python -m synth_pipeline --dry-run --n-pos 2 --n-neg 2 --batch-id dry_demo
+
+# real batch (requires OPENAI_API_KEY; optional LangSmith tracing)
+export OPENAI_API_KEY=...
+# export LANGCHAIN_TRACING_V2=true LANGCHAIN_API_KEY=... LANGCHAIN_PROJECT=dorby-synth
+python -m synth_pipeline --n-pos 10 --n-neg 10 --batch-id batch_001 \
+  --generate-model gpt-4.1-mini --judge-model gpt-4.1
+
+# after offline human_review.verdict=yes on staged files:
+python -m synth_pipeline.promote --batch-id batch_001
+```
+
+Outputs land in `artifacts/synth/<batch_id>/` (`staged/`, `dropped/`, `manifest.json`).
+
 ## Baseline eval (frozen BERT)
 
 Offline bi-encoder baseline: `bert-base-uncased`, mean-pool + L2, cosine

@@ -5,3 +5,7 @@ scikit-learn>=1.4.0
 numpy>=1.26.0
 tqdm>=4.66.0
 voyageai>=0.3.0
+langgraph>=0.2.0
+langchain-core>=0.3.0
+langchain-openai>=0.2.0
+langsmith>=0.1.0
