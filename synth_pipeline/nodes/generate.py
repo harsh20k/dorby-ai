@@ -7,7 +7,8 @@ import json
 from typing import Any
 
 from synth_pipeline.config import PROFILE_KEYS, PipelineConfig
-from synth_pipeline.llm import complete_json, load_prompt, truncate_pair_for_prompt
+from synth_pipeline.llm import complete_json, truncate_pair_for_prompt
+from synth_pipeline.prompts import hub_run_metadata, load_prompt, prompt_version_label
 from synth_pipeline.state import PairState
 
 
@@ -64,11 +65,14 @@ def _force_ids(pair: dict[str, Any], state: PairState) -> dict[str, Any]:
 def generate_node(state: PairState, cfg: PipelineConfig) -> dict[str, Any]:
     label = state["label"]
     if label == "pos":
-        system = load_prompt("generate_pos.md")
+        loaded = load_prompt("generate_pos")
     else:
-        system = load_prompt("generate_neg.md").format(
-            failure_mode=state.get("failure_mode") or "wrong_role"
+        loaded = load_prompt(
+            "generate_neg",
+            format_vars={"failure_mode": state.get("failure_mode") or "wrong_role"},
         )
+    system = loaded.text
+    gen_ref = loaded.ref
 
     payload = {
         "label": label,
@@ -95,9 +99,16 @@ def generate_node(state: PairState, cfg: PipelineConfig) -> dict[str, Any]:
         temperature=cfg.temperature,
         dry_run=cfg.dry_run,
         dry_run_payload=_dry_run_pair(state),
+        cfg=cfg,
+        run_metadata=hub_run_metadata(gen_ref),
+        run_tags=[f"prompt:{gen_ref.version_label}"],
     )
     pair = _force_ids(raw, state)
     meta = dict(state.get("metadata") or {})
     meta["attempt_index"] = state.get("retry_count", 0)
     meta["generate_model"] = cfg.generate_model
+    prompt_refs = dict(meta.get("prompt_refs") or {})
+    prompt_refs["generate"] = gen_ref.to_dict()
+    meta["prompt_refs"] = prompt_refs
+    meta["prompt_version"] = prompt_version_label(prompt_refs)
     return {"pair": pair, "metadata": meta, "status": "pending", "drop_reason": None}

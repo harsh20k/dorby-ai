@@ -69,6 +69,8 @@ def staging_node(state: PairState, cfg: PipelineConfig) -> dict[str, Any]:
         "qc": {
             "filter_passed": state.get("qc", {}).get("filter_passed"),
             "filter_reject_reason": state.get("qc", {}).get("filter_reject_reason"),
+            "would_be_good_intro": state.get("qc", {}).get("would_be_good_intro"),
+            "is_easy_negative": state.get("qc", {}).get("is_easy_negative"),
             "judge_verdict": state.get("qc", {}).get("judge_verdict"),
             "query_match_jaccard": state.get("qc", {}).get("query_match_jaccard"),
         },
@@ -76,6 +78,7 @@ def staging_node(state: PairState, cfg: PipelineConfig) -> dict[str, Any]:
             "generate_model": state.get("metadata", {}).get("generate_model"),
             "judge_model": state.get("metadata", {}).get("judge_model"),
             "prompt_version": state.get("metadata", {}).get("prompt_version"),
+            "prompt_refs": state.get("metadata", {}).get("prompt_refs"),
             "attempt_index": state.get("metadata", {}).get("attempt_index"),
         },
     }

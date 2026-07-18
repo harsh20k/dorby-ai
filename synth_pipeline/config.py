@@ -11,6 +11,36 @@ DEFAULT_DATA_DIR = REPO_ROOT / "data"
 DEFAULT_SPLIT_PATH = DEFAULT_DATA_DIR / "synthetic" / "seed_split.json"
 DEFAULT_ARTIFACTS_DIR = REPO_ROOT / "artifacts" / "synth"
 
+# OpenRouter (OpenAI-compatible). DeepSeek is cheap and good enough for synth.
+DEFAULT_OPENROUTER_BASE_URL = "https://openrouter.ai/api/v1"
+DEFAULT_GENERATE_MODEL = "deepseek/deepseek-v4-pro"
+DEFAULT_JUDGE_MODEL = "google/gemini-3.1-flash-lite"
+
+
+def load_dotenv() -> None:
+    """Load repo-root `.env` if python-dotenv is installed (no-op otherwise)."""
+    env_path = REPO_ROOT / ".env"
+    if not env_path.exists():
+        return
+    try:
+        from dotenv import load_dotenv as _load
+
+        _load(env_path, override=False)
+    except ImportError:
+        # Minimal fallback: KEY=VALUE lines only
+        for line in env_path.read_text(encoding="utf-8").splitlines():
+            line = line.strip()
+            if not line or line.startswith("#") or "=" not in line:
+                continue
+            key, _, value = line.partition("=")
+            key = key.strip()
+            value = value.strip().strip("'").strip('"')
+            if key and key not in os.environ:
+                os.environ[key] = value
+
+
+load_dotenv()
+
 PROFILE_KEYS = (
     "positioning",
     "lookingFor",
@@ -52,11 +82,24 @@ class PipelineConfig:
     data_dir: Path = DEFAULT_DATA_DIR
     split_path: Path = DEFAULT_SPLIT_PATH
     artifacts_dir: Path = DEFAULT_ARTIFACTS_DIR
+    # OpenRouter API key preferred; falls back to OPENAI_API_KEY for local proxies.
+    api_key: str = field(
+        default_factory=lambda: os.getenv("OPENROUTER_API_KEY")
+        or os.getenv("OPENAI_API_KEY")
+        or ""
+    )
+    base_url: str = field(
+        default_factory=lambda: os.getenv(
+            "OPENROUTER_BASE_URL", DEFAULT_OPENROUTER_BASE_URL
+        )
+    )
     generate_model: str = field(
-        default_factory=lambda: os.getenv("SYNTH_GENERATE_MODEL", "gpt-4.1-mini")
+        default_factory=lambda: os.getenv(
+            "SYNTH_GENERATE_MODEL", DEFAULT_GENERATE_MODEL
+        )
     )
     judge_model: str = field(
-        default_factory=lambda: os.getenv("SYNTH_JUDGE_MODEL", "gpt-4.1")
+        default_factory=lambda: os.getenv("SYNTH_JUDGE_MODEL", DEFAULT_JUDGE_MODEL)
     )
     temperature: float = 0.7
     judge_temperature: float = 0.0
@@ -64,7 +107,11 @@ class PipelineConfig:
     max_retries: int = MAX_RETRIES
     holdout_fraction: float = HOLDOUT_FRACTION
     dry_run: bool = False
-    prompt_version: str = "v1"
+    # Fallback label when hub refs are unavailable; overridden at runtime by
+    # hub commit/tag when prompts are pulled (see synth_pipeline.prompts).
+    prompt_version: str = field(
+        default_factory=lambda: os.getenv("SYNTH_PROMPT_VERSION", "v1")
+    )
 
     @property
     def positive_path(self) -> Path:

@@ -68,23 +68,68 @@ Pilot pipeline: train-only seed → generate one label → heuristic filter → 
 source .venv/bin/activate
 pip install -r requirements.txt
 
+# API key (DeepSeek via OpenRouter — cheap). Copy .env.example → .env
+cp .env.example .env
+# edit .env and set OPENROUTER_API_KEY=sk-or-v1-...
+
 # user-disjoint seed split (writes data/synthetic/seed_split.json)
 python -m synth_pipeline --init-split
 
 # plumbing test (no LLM calls)
 python -m synth_pipeline --dry-run --n-pos 2 --n-neg 2 --batch-id dry_demo
 
-# real batch (requires OPENAI_API_KEY; optional LangSmith tracing)
-export OPENAI_API_KEY=...
-# export LANGCHAIN_TRACING_V2=true LANGCHAIN_API_KEY=... LANGCHAIN_PROJECT=dorby-synth
-python -m synth_pipeline --n-pos 10 --n-neg 10 --batch-id batch_001 \
-  --generate-model gpt-4.1-mini --judge-model gpt-4.1
+# real batch — defaults: deepseek/deepseek-v4-pro (generate),
+# google/gemini-3.1-flash-lite (judge) via OpenRouter
+# optional LangSmith: LANGCHAIN_TRACING_V2=true LANGCHAIN_API_KEY=...
+python -m synth_pipeline --n-pos 10 --n-neg 10 --batch-id batch_001
 
 # after offline human_review.verdict=yes on staged files:
 python -m synth_pipeline.promote --batch-id batch_001
 ```
 
 Outputs land in `artifacts/synth/<batch_id>/` (`staged/`, `dropped/`, `manifest.json`).
+Staged envelopes include `metadata.prompt_refs` (hub name + commit when pulled).
+
+#### LangSmith Prompt Hub
+
+Generate/judge system prompts are pulled from LangSmith Hub when configured,
+with local `synth_pipeline/prompts/*.md` as fallback (logged on pull failure).
+
+| Env var | Purpose |
+|---------|---------|
+| `LANGCHAIN_API_KEY` | Hub + tracing (alias: `LANGSMITH_API_KEY`) |
+| `LANGSMITH_PROMPT_OWNER` | Handle/org; builds `owner/synth-generate-pos:latest` etc. |
+| `LANGSMITH_PROMPT_TAG` | Tag/commit suffix when using owner defaults (`latest`) |
+| `SYNTH_PROMPT_GENERATE_POS` | Full id, e.g. `dorby-ai/synth-generate-pos:abc123` |
+| `SYNTH_PROMPT_GENERATE_NEG` | Full id for hard-neg generator |
+| `SYNTH_PROMPT_JUDGE` | Full id for judge (prefer `:v2` — quality-only schema) |
+| `SYNTH_PROMPT_VERSION` | Local fallback label when hub unused (`v1`) |
+
+Judge Hub **v2** returns `would_be_good_intro` only; code computes `judge_verdict`
+(pos→pass iff good; neg→pass iff not-good and not easy-neg). Pin with
+`SYNTH_PROMPT_JUDGE=<owner>/synth-judge:v2` so generators can stay on
+`LANGSMITH_PROMPT_TAG=v1`.
+
+```bash
+# 1) Push local markdown into Hub (creates private prompts)
+python -m synth_pipeline.push_prompts --owner your-handle --tag v1
+# judge polarity fix only:
+python -m synth_pipeline.push_prompts --owner your-handle --role judge --tag v2
+# dry-run (no API): python -m synth_pipeline.push_prompts --dry-run
+
+# 2) Point the pipeline at Hub (owner shorthand or explicit ids)
+# in .env:
+#   LANGSMITH_PROMPT_OWNER=your-handle
+#   LANGSMITH_PROMPT_TAG=v1
+#   SYNTH_PROMPT_JUDGE=your-handle/synth-judge:v2
+
+# 3) Runs without hub still work — local *.md fallback
+python -m synth_pipeline --dry-run --n-pos 1 --n-neg 1 --batch-id dry_prompts
+```
+
+Hub commit hashes are written into `metadata.prompt_refs` / `prompt_version` and
+attached to LangSmith run metadata (`lc_hub_commit_hash`, `prompt_identifier`)
+so traces show which prompt version produced each pair.
 
 ## Baseline eval (frozen BERT)
 

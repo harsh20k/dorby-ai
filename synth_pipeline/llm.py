@@ -1,4 +1,7 @@
-"""Thin chat wrappers; LangSmith picks up traces when env is configured."""
+"""Thin chat wrappers via OpenRouter (DeepSeek by default).
+
+LangSmith picks up traces when LANGCHAIN_TRACING_V2 + LANGCHAIN_API_KEY are set.
+"""
 
 from __future__ import annotations
 
@@ -6,17 +9,40 @@ import json
 import re
 from typing import Any
 
-from synth_pipeline.config import PipelineConfig
+from synth_pipeline.config import PipelineConfig, load_dotenv
+
+load_dotenv()
 
 
-def _chat_model(model: str, temperature: float):
+def _chat_model(
+    model: str,
+    temperature: float,
+    *,
+    api_key: str,
+    base_url: str,
+):
     try:
         from langchain_openai import ChatOpenAI
     except ImportError as exc:  # pragma: no cover
         raise ImportError(
             "langchain-openai is required. pip install -r requirements.txt"
         ) from exc
-    return ChatOpenAI(model=model, temperature=temperature)
+    if not api_key:
+        raise RuntimeError(
+            "Missing API key. Set OPENROUTER_API_KEY in .env "
+            "(or OPENAI_API_KEY for an OpenAI-compatible proxy)."
+        )
+    return ChatOpenAI(
+        model=model,
+        temperature=temperature,
+        api_key=api_key,
+        base_url=base_url,
+        default_headers={
+            # Optional OpenRouter attribution headers
+            "HTTP-Referer": "https://github.com/harsh20k/dorby-ai",
+            "X-Title": "dorby-ai-synth",
+        },
+    )
 
 
 def complete_json(
@@ -27,18 +53,35 @@ def complete_json(
     temperature: float,
     dry_run: bool = False,
     dry_run_payload: dict[str, Any] | None = None,
+    api_key: str | None = None,
+    base_url: str | None = None,
+    cfg: PipelineConfig | None = None,
+    run_metadata: dict[str, Any] | None = None,
+    run_tags: list[str] | None = None,
 ) -> dict[str, Any]:
     if dry_run:
         if dry_run_payload is None:
             raise ValueError("dry_run_payload required when dry_run=True")
         return dry_run_payload
 
-    llm = _chat_model(model, temperature)
+    if cfg is not None:
+        api_key = api_key or cfg.api_key
+        base_url = base_url or cfg.base_url
+    api_key = api_key or ""
+    base_url = base_url or "https://openrouter.ai/api/v1"
+
+    llm = _chat_model(model, temperature, api_key=api_key, base_url=base_url)
+    config: dict[str, Any] = {}
+    if run_metadata:
+        config["metadata"] = run_metadata
+    if run_tags:
+        config["tags"] = run_tags
     msg = llm.invoke(
         [
             {"role": "system", "content": system},
             {"role": "user", "content": user},
-        ]
+        ],
+        config=config or None,
     )
     content = msg.content if isinstance(msg.content, str) else str(msg.content)
     return parse_json_object(content)
@@ -82,10 +125,10 @@ def truncate_pair_for_prompt(pair: dict[str, Any], *, max_field: int = 400) -> d
 
 
 def load_prompt(name: str) -> str:
-    from pathlib import Path
+    """Load prompt text by local filename or role (hub preferred when configured)."""
+    from synth_pipeline.prompts import load_prompt_text
 
-    path = Path(__file__).resolve().parent / "prompts" / name
-    return path.read_text(encoding="utf-8")
+    return load_prompt_text(name)
 
 
 def model_ids(cfg: PipelineConfig) -> dict[str, str]:
@@ -93,4 +136,5 @@ def model_ids(cfg: PipelineConfig) -> dict[str, str]:
         "generate_model": cfg.generate_model,
         "judge_model": cfg.judge_model,
         "prompt_version": cfg.prompt_version,
+        "base_url": cfg.base_url,
     }
