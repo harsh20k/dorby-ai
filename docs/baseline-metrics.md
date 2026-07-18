@@ -4,6 +4,11 @@ Shared helpers live in [`baselines/metrics.py`](../baselines/metrics.py). All th
 baselines (`bert_frozen`, `voyage_nano`, `voyage_large`) write the same JSON
 shape to `artifacts/*/metrics.json`.
 
+No-query ablations (`bert_frozen_no_query`, `voyage_nano_no_query`,
+`voyage_large_no_query`) use the same metric keys; seeker packing omits
+`searchQuery` (`baselines/text_no_query.py`). Metrics land under
+`artifacts/*_no_query/metrics.json` and include `"seeker_text": "profile_only_no_query"`.
+
 Production metrics (accept rate, intro success, etc.) are **out of scope** for
 these offline baselines.
 

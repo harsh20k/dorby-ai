@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-07-17T21:45:47Z",
-  "protocol_note": "same pair/retrieval/slices for all",
+  "generated_at": "2026-07-18T21:08:33Z",
+  "protocol_note": "same pair/retrieval/slices for all; (no query) = profile-only seeker text (no searchQuery)",
   "baselines": {
     "bert_frozen": {
       "model_name": "bert-base-uncased",
@@ -122,6 +122,132 @@
             "low_n": false,
             "mean_cosine_negative": 0.9453231692314148,
             "mean_cosine_gap": -0.004083156585693359,
+            "pair_auc": 0.41080000000000005
+          }
+        }
+      }
+    },
+    "bert_frozen_no_query": {
+      "model_name": "bert-base-uncased",
+      "device": "mps",
+      "max_length": 512,
+      "batch_size": 16,
+      "seeker_text": "profile_only_no_query",
+      "pair": {
+        "roc_auc": 0.4699,
+        "average_precision": 0.5110596002621824,
+        "best_f1": 0.6757679180887373,
+        "best_f1_threshold": 0.9094806909561157,
+        "best_f1_accuracy": 0.525,
+        "accuracy_at_0.5": 0.5,
+        "mean_cosine_positive": 0.9412400126457214,
+        "mean_cosine_negative": 0.9419086575508118,
+        "mean_cosine_gap": -0.000668644905090332,
+        "std_cosine_positive": 0.0148229468613863,
+        "std_cosine_negative": 0.016087105497717857,
+        "score_percentiles": {
+          "positive": {
+            "p10": 0.9199292063713074,
+            "p50": 0.9407021105289459,
+            "p90": 0.9607047080993653
+          },
+          "negative": {
+            "p10": 0.9179164648056031,
+            "p50": 0.9460823833942413,
+            "p90": 0.9588825941085816
+          }
+        },
+        "num_positive": 100,
+        "num_negative": 100
+      },
+      "retrieval": {
+        "mrr": 0.0941420312732453,
+        "map": 0.0941420312732453,
+        "num_queries": 100.0,
+        "mean_rank": 55.23,
+        "median_rank": 40.0,
+        "recall@1": 0.02,
+        "ndcg@1": 0.02,
+        "precision@1": 0.02,
+        "recall@5": 0.14,
+        "ndcg@5": 0.0864693163757553,
+        "precision@5": 0.028000000000000004,
+        "recall@10": 0.18,
+        "ndcg@10": 0.09885824669676463,
+        "precision@10": 0.018000000000000002,
+        "top1": 0.02
+      },
+      "slices": {
+        "intent": {
+          "customers": {
+            "n_pairs": 5,
+            "n_queries": 3,
+            "low_n": true,
+            "pair_auc": 0.6666666666666666,
+            "mrr": null,
+            "recall@10": null
+          },
+          "fundraise": {
+            "n_pairs": 157,
+            "n_queries": 79,
+            "low_n": false,
+            "pair_auc": 0.4248620577734502,
+            "mrr": 0.072732470804525,
+            "recall@10": 0.11392405063291139
+          },
+          "hiring": {
+            "n_pairs": 19,
+            "n_queries": 8,
+            "low_n": false,
+            "pair_auc": 0.5454545454545454,
+            "mrr": 0.14085130465470905,
+            "recall@10": 0.375
+          },
+          "other": {
+            "n_pairs": 3,
+            "n_queries": 1,
+            "low_n": true,
+            "pair_auc": null,
+            "mrr": null,
+            "recall@10": null
+          },
+          "partnerships": {
+            "n_pairs": 16,
+            "n_queries": 9,
+            "low_n": false,
+            "pair_auc": 0.5873015873015873,
+            "mrr": 0.1861260059896036,
+            "recall@10": 0.3333333333333333
+          }
+        },
+        "neg_hardness": {
+          "rule": {
+            "overlap": "token Jaccard(seeker_text, match_text) on negative pairs",
+            "easy": "jaccard <= p25 (cutoff=0.1561)",
+            "hard": "jaccard >= p50 (cutoff=0.1705)"
+          },
+          "overlap_stats": {
+            "mean": 0.1736310262964514,
+            "p25": 0.15611301234070848,
+            "p50": 0.17050345048481497,
+            "p75": 0.1945265809318189
+          },
+          "easy": {
+            "n_negatives": 25,
+            "mean_overlap": 0.1381301636414252,
+            "overlap_cutoff": 0.15611301234070848,
+            "low_n": false,
+            "mean_cosine_negative": 0.9310728311538696,
+            "mean_cosine_gap": 0.010167181491851807,
+            "pair_auc": 0.6516000000000001
+          },
+          "hard": {
+            "n_negatives": 50,
+            "mean_overlap": 0.19601288054158958,
+            "overlap_cutoff": 0.17050345048481497,
+            "low_n": false,
+            "mean_cosine_negative": 0.945326566696167,
+            "mean_cosine_gap": -0.004086554050445557,
             "pair_auc": 0.41080000000000005
           }
         }
@@ -249,6 +375,133 @@
             "mean_cosine_negative": 0.6745653748512268,
             "mean_cosine_gap": -0.000814974308013916,
             "pair_auc": 0.5064
+          }
+        }
+      }
+    },
+    "voyage_nano_no_query": {
+      "model_name": "voyageai/voyage-4-nano",
+      "device": "mps",
+      "max_length": 8192,
+      "truncate_dim": 1024,
+      "batch_size": 4,
+      "seeker_text": "profile_only_no_query",
+      "pair": {
+        "roc_auc": 0.5416,
+        "average_precision": 0.5331831080990133,
+        "best_f1": 0.6688963210702341,
+        "best_f1_threshold": 0.5179004669189453,
+        "best_f1_accuracy": 0.505,
+        "accuracy_at_0.5": 0.505,
+        "mean_cosine_positive": 0.6639543771743774,
+        "mean_cosine_negative": 0.6573150753974915,
+        "mean_cosine_gap": 0.006639301776885986,
+        "std_cosine_positive": 0.05280408263206482,
+        "std_cosine_negative": 0.053154416382312775,
+        "score_percentiles": {
+          "positive": {
+            "p10": 0.59209064245224,
+            "p50": 0.6692867577075958,
+            "p90": 0.7257189095020294
+          },
+          "negative": {
+            "p10": 0.5986864924430847,
+            "p50": 0.6526503562927246,
+            "p90": 0.721103060245514
+          }
+        },
+        "num_positive": 100,
+        "num_negative": 100
+      },
+      "retrieval": {
+        "mrr": 0.2236394907790712,
+        "map": 0.2236394907790712,
+        "num_queries": 100.0,
+        "mean_rank": 24.28,
+        "median_rank": 12.0,
+        "recall@1": 0.08,
+        "ndcg@1": 0.08,
+        "precision@1": 0.08,
+        "recall@5": 0.39,
+        "ndcg@5": 0.2413276267936431,
+        "precision@5": 0.07800000000000001,
+        "recall@10": 0.48,
+        "ndcg@10": 0.27009967952772146,
+        "precision@10": 0.04799999999999999,
+        "top1": 0.08
+      },
+      "slices": {
+        "intent": {
+          "customers": {
+            "n_pairs": 5,
+            "n_queries": 3,
+            "low_n": true,
+            "pair_auc": 0.16666666666666666,
+            "mrr": null,
+            "recall@10": null
+          },
+          "fundraise": {
+            "n_pairs": 157,
+            "n_queries": 79,
+            "low_n": false,
+            "pair_auc": 0.4787406686140863,
+            "mrr": 0.1748369515023532,
+            "recall@10": 0.4430379746835443
+          },
+          "hiring": {
+            "n_pairs": 19,
+            "n_queries": 8,
+            "low_n": false,
+            "pair_auc": 0.6704545454545454,
+            "mrr": 0.45125,
+            "recall@10": 0.625
+          },
+          "other": {
+            "n_pairs": 3,
+            "n_queries": 1,
+            "low_n": true,
+            "pair_auc": null,
+            "mrr": null,
+            "recall@10": null
+          },
+          "partnerships": {
+            "n_pairs": 16,
+            "n_queries": 9,
+            "low_n": false,
+            "pair_auc": 0.9682539682539684,
+            "mrr": 0.47784391534391535,
+            "recall@10": 0.7777777777777778
+          }
+        },
+        "neg_hardness": {
+          "rule": {
+            "overlap": "token Jaccard(seeker_text, match_text) on negative pairs",
+            "easy": "jaccard <= p25 (cutoff=0.1561)",
+            "hard": "jaccard >= p50 (cutoff=0.1705)"
+          },
+          "overlap_stats": {
+            "mean": 0.1736310262964514,
+            "p25": 0.15611301234070848,
+            "p50": 0.17050345048481497,
+            "p75": 0.1945265809318189
+          },
+          "easy": {
+            "n_negatives": 25,
+            "mean_overlap": 0.1381301636414252,
+            "overlap_cutoff": 0.15611301234070848,
+            "low_n": false,
+            "mean_cosine_negative": 0.6311587691307068,
+            "mean_cosine_gap": 0.032795608043670654,
+            "pair_auc": 0.6712
+          },
+          "hard": {
+            "n_negatives": 50,
+            "mean_overlap": 0.19601288054158958,
+            "overlap_cutoff": 0.17050345048481497,
+            "low_n": false,
+            "mean_cosine_negative": 0.6694890856742859,
+            "mean_cosine_gap": -0.005534708499908447,
+            "pair_auc": 0.4770000000000001
           }
         }
       }
@@ -383,6 +636,139 @@
         "total_api_calls": 0,
         "cache_hits": 578,
         "cache_misses": 0
+      }
+    },
+    "voyage_large_no_query": {
+      "model_name": "voyage-4-large",
+      "output_dimension": 1024,
+      "batch_size": 16,
+      "tpm_limit": 2500000,
+      "rpm_limit": 1500,
+      "seeker_text": "profile_only_no_query",
+      "pair": {
+        "roc_auc": 0.5252,
+        "average_precision": 0.5209148224507731,
+        "best_f1": 0.6689895470383276,
+        "best_f1_threshold": 0.5260404348373413,
+        "best_f1_accuracy": 0.525,
+        "accuracy_at_0.5": 0.495,
+        "mean_cosine_positive": 0.6072231531143188,
+        "mean_cosine_negative": 0.603490948677063,
+        "mean_cosine_gap": 0.0037322044372558594,
+        "std_cosine_positive": 0.05056006833910942,
+        "std_cosine_negative": 0.0496281161904335,
+        "score_percentiles": {
+          "positive": {
+            "p10": 0.5476465165615082,
+            "p50": 0.611756443977356,
+            "p90": 0.6690305888652801
+          },
+          "negative": {
+            "p10": 0.5306838274002075,
+            "p50": 0.6012729108333588,
+            "p90": 0.6702520906925201
+          }
+        },
+        "num_positive": 100,
+        "num_negative": 100
+      },
+      "retrieval": {
+        "mrr": 0.2502801407503594,
+        "map": 0.2502801407503594,
+        "num_queries": 100.0,
+        "mean_rank": 21.22,
+        "median_rank": 9.0,
+        "recall@1": 0.12,
+        "ndcg@1": 0.12,
+        "precision@1": 0.12,
+        "recall@5": 0.38,
+        "ndcg@5": 0.25265473109737696,
+        "precision@5": 0.07600000000000001,
+        "recall@10": 0.55,
+        "ndcg@10": 0.3075728485437909,
+        "precision@10": 0.05499999999999998,
+        "top1": 0.12
+      },
+      "slices": {
+        "intent": {
+          "customers": {
+            "n_pairs": 5,
+            "n_queries": 3,
+            "low_n": true,
+            "pair_auc": 0.16666666666666666,
+            "mrr": null,
+            "recall@10": null
+          },
+          "fundraise": {
+            "n_pairs": 157,
+            "n_queries": 79,
+            "low_n": false,
+            "pair_auc": 0.480688088283025,
+            "mrr": 0.20916402827190006,
+            "recall@10": 0.4936708860759494
+          },
+          "hiring": {
+            "n_pairs": 19,
+            "n_queries": 8,
+            "low_n": false,
+            "pair_auc": 0.5909090909090908,
+            "mrr": 0.41991835585585585,
+            "recall@10": 0.75
+          },
+          "other": {
+            "n_pairs": 3,
+            "n_queries": 1,
+            "low_n": true,
+            "pair_auc": null,
+            "mrr": null,
+            "recall@10": null
+          },
+          "partnerships": {
+            "n_pairs": 16,
+            "n_queries": 9,
+            "low_n": false,
+            "pair_auc": 0.8888888888888888,
+            "mrr": 0.49583333333333335,
+            "recall@10": 0.8888888888888888
+          }
+        },
+        "neg_hardness": {
+          "rule": {
+            "overlap": "token Jaccard(seeker_text, match_text) on negative pairs",
+            "easy": "jaccard <= p25 (cutoff=0.1561)",
+            "hard": "jaccard >= p50 (cutoff=0.1705)"
+          },
+          "overlap_stats": {
+            "mean": 0.1736310262964514,
+            "p25": 0.15611301234070848,
+            "p50": 0.17050345048481497,
+            "p75": 0.1945265809318189
+          },
+          "easy": {
+            "n_negatives": 25,
+            "mean_overlap": 0.1381301636414252,
+            "overlap_cutoff": 0.15611301234070848,
+            "low_n": false,
+            "mean_cosine_negative": 0.584393322467804,
+            "mean_cosine_gap": 0.022829830646514893,
+            "pair_auc": 0.6184000000000001
+          },
+          "hard": {
+            "n_negatives": 50,
+            "mean_overlap": 0.19601288054158958,
+            "overlap_cutoff": 0.17050345048481497,
+            "low_n": false,
+            "mean_cosine_negative": 0.6134030818939209,
+            "mean_cosine_gap": -0.006179928779602051,
+            "pair_auc": 0.47259999999999996
+          }
+        }
+      },
+      "usage": {
+        "total_tokens_used": 648326,
+        "total_api_calls": 23,
+        "cache_hits": 187,
+        "cache_misses": 391
       }
     }
   }

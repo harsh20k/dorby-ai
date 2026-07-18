@@ -12,13 +12,27 @@ ARTIFACTS = ROOT / "artifacts"
 OUT_JSON = ROOT / "docs" / "baseline-results-all.json"
 OUT_MD = ROOT / "docs" / "baseline-results-all.md"
 
-BASELINES = ("bert_frozen", "voyage_nano", "voyage_large")
+# with-query (searchQuery on seeker) then profile-only / no-query siblings
+BASELINES = (
+    "bert_frozen",
+    "bert_frozen_no_query",
+    "voyage_nano",
+    "voyage_nano_no_query",
+    "voyage_large",
+    "voyage_large_no_query",
+)
 LABELS = {
     "bert_frozen": "Frozen BERT",
+    "bert_frozen_no_query": "Frozen BERT (no query)",
     "voyage_nano": "Voyage-4-nano",
+    "voyage_nano_no_query": "Voyage-4-nano (no query)",
     "voyage_large": "Voyage-4-large",
+    "voyage_large_no_query": "Voyage-4-large (no query)",
 }
-PROTOCOL_NOTE = "same pair/retrieval/slices for all"
+PROTOCOL_NOTE = (
+    "same pair/retrieval/slices for all; "
+    "(no query) = profile-only seeker text (no searchQuery)"
+)
 
 
 def _fmt(v: object, digits: int = 4) -> str:
@@ -73,7 +87,8 @@ def build_md(payload: dict) -> str:
         f"Generated: `{payload['generated_at']}`",
         "",
         f"Protocol: {payload['protocol_note']}. Sources: "
-        "`artifacts/{bert_frozen,voyage_nano,voyage_large}/metrics.json`.",
+        "`artifacts/{bert_frozen,bert_frozen_no_query,voyage_nano,"
+        "voyage_nano_no_query,voyage_large,voyage_large_no_query}/metrics.json`.",
         "",
         "Metric definitions: [baseline-metrics.md](baseline-metrics.md).",
         "",

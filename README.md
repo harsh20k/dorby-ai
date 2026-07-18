@@ -207,3 +207,43 @@ Optional: `--batch-size 16`, `--tpm-limit 2500000`, `--rpm-limit 1500` (or env
 + per-embedding cache (same expanded metrics as BERT/nano; see
 [docs/baseline-metrics.md](docs/baseline-metrics.md)). Full metrics:
 [docs/baseline-results-all.md](docs/baseline-results-all.md).
+
+## Baseline eval (no-query ablation)
+
+Same three encoders and metrics protocol, but **seeker text drops
+`searchQuery`** — only the tagged user profile (`profile_to_text`). Candidate
+side is unchanged (match profile only). Purpose: measure how much the query
+string contributes vs profile–profile similarity alone.
+
+Shared packing: `baselines/text_no_query.py`. Artifacts go to separate dirs so
+caches do not collide with the with-query runs.
+
+```bash
+# Frozen BERT (no query)
+python -m baselines.bert_frozen_no_query.eval \
+  --data-dir data \
+  --model bert-base-uncased \
+  --batch-size 16 \
+  --max-length 512
+# → artifacts/bert_frozen_no_query/metrics.json
+
+# Voyage-4-nano (no query)
+python -m baselines.voyage_nano_no_query.eval \
+  --data-dir data \
+  --model voyageai/voyage-4-nano \
+  --batch-size 4 \
+  --max-length 8192 \
+  --truncate-dim 1024
+# → artifacts/voyage_nano_no_query/metrics.json
+
+# Voyage-4-large API (no query; needs VOYAGE_API_KEY)
+python -m baselines.voyage_large_no_query.eval \
+  --data-dir data \
+  --model voyage-4-large \
+  --output-dimension 1024
+# → artifacts/voyage_large_no_query/metrics.json
+```
+
+Compare against the matching with-query `artifacts/{bert_frozen,voyage_nano,voyage_large}/metrics.json`.
+`scripts/export_baseline_results.py` still aggregates the original three only;
+export no-query metrics separately after you run them.
