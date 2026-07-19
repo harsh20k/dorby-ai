@@ -4,6 +4,9 @@ Full 5-epoch LoRA fine-tune of `voyage-4-nano` on `twotower/`, run on Modal
 (L4 GPU). See `docs/two-tower-fine-tune-plan.md` for the architecture/loss
 decision and `docs/modal-training-guide.md` for the Modal setup.
 
+Plain-language findings and recommended next steps:
+[`twotower-run-001-findings.md`](twotower-run-001-findings.md).
+
 ## Run config
 
 | | |
