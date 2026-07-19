@@ -1,6 +1,9 @@
 torch>=2.2.0
 transformers>=4.51.0,<5
-sentence-transformers>=3.0.0
+sentence-transformers>=3.4.1,<6
+peft>=0.14,<1
+accelerate>=0.30
+datasets>=2.19
 scikit-learn>=1.4.0
 numpy>=1.26.0
 tqdm>=4.66.0
@@ -10,3 +13,4 @@ langchain-core>=0.3.0
 langchain-openai>=0.2.0
 langsmith>=0.1.0
 python-dotenv>=1.0.0
+modal>=0.73

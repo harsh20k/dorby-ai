@@ -9,9 +9,28 @@ networking/CRM product that recommends contact introductions. Given a user's
 profile + `searchQuery`, decide if a candidate match is a good intro. Boardy's
 production embeddings are Voyage `voyage-4-large` (32k context), not BERT —
 see `docs/boardy-embedding-model.md`. This repo benchmarks frozen baselines
-(BERT, Voyage nano/large) against planned two-tower / MoE / student-teacher
-approaches, and includes a LangGraph pipeline for synthesizing more training
-pairs beyond the 200-pair seed set.
+(BERT, Voyage nano/large) against a LoRA-fine-tuned two-tower model, and
+includes a LangGraph pipeline for synthesizing more training pairs beyond
+the 200-pair seed set.
+
+**Status:** first full LoRA fine-tune (`twotower/`, `run_001`) has
+completed and been evaluated on the real 69-pair frozen holdout — **it
+does not beat the frozen baselines.** Holdout pair AUC 0.578, essentially
+tied with Voyage-4-nano (0.561) and below Voyage-4-large (0.573), despite
+train-dev pair AUC of 0.986 looking dramatically better. Root cause
+(`docs/possible-bugs.md` #4, confirmed): the LoRA adapter appears to have
+overfit to structural/stylistic artifacts of the synthetic-generation
+prompts rather than learning real matching semantics — real-holdout
+hard-negative-slice AUC is 0.4845, *below chance*. Per the decision gate in
+`docs/two-tower-fine-tune-plan.md` ("if lift shows on train but not
+holdout, stop and diagnose — don't scale data yet"), **do not generate a
+larger synthetic batch or launch `run_002` until this is diagnosed** — see
+`docs/twotower-run-001-results.md` for the full writeup and next-step
+options. Other known open items: checkpoint selection silently picks the
+final epoch instead of the best one (`possible-bugs.md` #2), and only a 2%
+sample of the 460 synthetic pairs from `batch_500_001` got real human
+review before promotion — the rest were promoted on judge-verdict alone
+(see "Synthetic pair review & promotion" below).
 
 ## Setup
 
@@ -122,6 +141,102 @@ independently. Push local prompt changes with
 `python -m synth_pipeline.push_prompts --owner <handle> --tag <tag>` (add
 `--role judge --tag v2` for judge-only updates; `--dry-run` for no-API check).
 
+Negatives are labeled with one of five `failure_mode`s (`wrong_side`,
+`wrong_stage`, `wrong_role`, `geo_mismatch`, `prefs_conflict`), defined in
+`synth_pipeline/prompts/generate_neg.md` — each is meant to share surface
+jargon/topic with the query while violating exactly one axis of Boardy's
+actual matching semantics (see `data/synthetic/strategy.md` for why: easy
+negatives don't move hard-neg AUC, only topically-similar-but-wrong ones
+do).
+
+### Synthetic pair review & promotion
+
+`batch_500_001` (497 attempts, 460 staged, 37 judge-rejected, ~93% yield)
+is the first batch run at scale. Reviewing 460 pairs by hand doesn't scale,
+so there's a browser-based spot-check workflow instead of editing staged
+JSON files directly:
+
+```bash
+# rebuild the browser; flags a stratified 2% sample of each batch's staged
+# pairs (across pos/neg and all 5 failure modes) as in_sample for review
+python3 scripts/build_synth_browser.py
+
+# serve it locally with a write-back endpoint (stdlib only, no new deps) —
+# approve/reject buttons in the browser POST to /api/review, which writes
+# human_review straight into the staged pair's JSON file
+python3 scripts/serve_synth_review.py   # open http://localhost:8765
+```
+
+Toggle "Review sample only" in the browser to see just the flagged subset.
+After reviewing, promote:
+
+```bash
+# strict gate: only pairs with human_review.verdict == "yes"
+python -m synth_pipeline.promote --batch-id batch_500_001
+
+# judge-verdict-only gate: promotes every staged pair regardless of human
+# review — used for batch_500_001 after the 9-pair spot check passed
+# clean (documented in docs/possible-bugs.md #1 as the one confirmed
+# quality issue found), to hit the ~660-pair training target without a
+# full manual pass
+python -m synth_pipeline.promote --batch-id batch_500_001 --allow-unreviewed
+```
+
+`--allow-unreviewed` is a deliberate scope deviation from the documented
+default ("only for staged files with human sign-off") — use it
+consciously, not as the default path for future batches, and re-check
+`docs/possible-bugs.md` for confirmed data-quality issues before trusting
+a judge-only-promoted batch at face value.
+
+### Two-tower LoRA fine-tune (`twotower/` + Modal)
+
+LoRA fine-tune of `voyage-4-nano` on the promoted dataset. Architecture and
+loss-choice rationale (pairwise `ContrastiveLoss`, not `MultipleNegatives-
+RankingLoss` triplets, because current pos/neg pairs mostly don't share a
+seeker — only 5 of 91 synth seekers had both) are in
+`docs/two-tower-fine-tune-plan.md`. Results and open caveats for the first
+full run are in `docs/twotower-run-001-results.md`.
+
+```bash
+# local (CPU/MPS smoke-test only — MPS LoRA backward is weak, prefer Modal for real runs)
+python -m twotower.train --dry-run --epochs 1
+
+# Modal GPU (L4 default), full run
+modal run twotower/modal_train.py --run-id run_001 --epochs 5
+modal volume get dorby-twotower-checkpoints run_001 ./artifacts/twotower/run_001
+# NOTE: `modal volume get` errors "Is a directory" when downloading a
+# whole run directory in one call on this CLI version — pull run_meta.json/
+# run_result.json/metrics_train_dev.json and the adapter/ subfiles
+# individually instead (see docs/twotower-run-001-results.md).
+
+# holdout eval — one-time final check only, per the decision-gate rule in
+# docs/two-tower-fine-tune-plan.md; do not run repeatedly while iterating
+python -m twotower.eval --split holdout --adapter-dir artifacts/twotower/run_001/adapter
+```
+
+`twotower/data.py::build_split_bundle()` is leakage-safe by construction:
+holdout = frozen `eval_pair_ids` only, train pool = frozen train pairs +
+promoted synth pairs that touch no eval user, train-dev = a further
+user-disjoint carve from train. `assert_no_holdout_leak()` is called in
+both `train.py` and `eval.py`; `tests/test_twotower_data.py` covers this
+plus deterministic carving and split-hash tamper rejection.
+
+`run_001` (5 epochs, full 530/61/69 split, `max_seq_length=4096`):
+train-dev pair AUC looked great (0.986) but the **real 69-pair holdout
+tells a different story: pair AUC 0.578**, essentially tied with the
+frozen baselines and *below chance (0.4845)* on hard real negatives — see
+`docs/twotower-run-001-results.md` for the full table and
+`docs/possible-bugs.md` #4 for the root-cause writeup (likely overfitting
+to synthetic-generation-prompt artifacts, not real matching semantics).
+**Do not launch `run_002` or generate more synthetic data at current
+settings until this is diagnosed** — that's the decision gate from
+`docs/two-tower-fine-tune-plan.md` doing its job. Checkpoint selection also
+has a known bug (`docs/possible-bugs.md` #2): it silently picked the final
+epoch instead of the actual best-scoring one this run (epoch 3 outscored
+epoch 5 on train-dev `pair_auc`, 0.989 vs 0.986) — low-impact here but
+unverified at scale, fix before trusting a future run's checkpoint
+selection.
+
 ### Data prep utilities
 
 ```bash
@@ -182,15 +297,58 @@ than inventing its own.
 into the canonical `data/dataset_positive.json` / `dataset_negative.json`,
 gated on `human_review.verdict == "yes"` and schema validation
 (`schema.py::validate_pair_schema`) and deduped against existing
-`(userContactId, matchContactId)` keys.
+`(userContactId, matchContactId)` keys — `--allow-unreviewed` bypasses the
+human-review gate (judge verdict only); see "Synthetic pair review &
+promotion" under Commands.
+
+`scripts/build_synth_browser.py` + `scripts/serve_synth_review.py`: a
+review UI for staged/dropped synth pairs. The build script embeds every
+batch's manifest + pair JSON into one self-contained HTML file and flags a
+stratified sample (`--sample-pct`, default 2%, across pos/neg and all 5
+failure modes) as `in_sample`; the serve script is a stdlib-only local HTTP
+server that write-backs `human_review` verdicts from browser button clicks
+straight into the staged pair's JSON file (no framework dependency added).
+
+### `twotower/` — LoRA fine-tune of voyage-4-nano
+
+`config.py` (`TrainConfig`, single source of truth for hyperparams/paths) →
+`data.py` (leakage-safe `SplitBundle`: frozen holdout + train pool +
+user-disjoint train-dev carve, `assert_no_holdout_leak`) → `train.py`
+(LoRA adapter on `q/k/v/o_proj`, `SentenceTransformerTrainer` +
+`ContrastiveLoss`, gradient/target-count validation before training,
+`select_best_checkpoint` — currently buggy, see
+`docs/possible-bugs.md` #2) → `eval.py` (reuses `baselines/metrics.py`
+directly, so metric shape matches the frozen baselines exactly — same
+`pair`/`retrieval`/`slices` keys). `modal_train.py` is the Modal GPU
+entrypoint (L4 default, separate checkpoint + HF-cache volumes). Not a
+true untied two-tower — one shared-weight model called via
+`encode_query`/`encode_document` with different prompt prefixes (Voyage's
+native asymmetric convention), matching how the frozen baseline already
+worked; an untied/projection-head variant is documented as a fallback in
+`docs/two-tower-fine-tune-plan.md` only if plain LoRA underperforms.
+`tests/test_twotower_data.py` covers leakage/split-hash-tamper safety.
 
 ## Data
 
-`data/dataset_positive.json` / `dataset_negative.json`: 100/100 labeled
-pairs, no `label` field — membership in the file *is* the label. Schema:
+`data/dataset_positive.json` / `dataset_negative.json`: labeled pairs, no
+`label` field — membership in the file *is* the label. Schema:
 `userContactId`, `matchContactId`, `*ContactFileVersion`, `searchQuery`,
 `userContactFile`/`matchContactFile` (nested profiles with `positioning`,
 `background`, `lookingFor`, `notes`, `locationAvailability`,
 `introPreferences`, `personalPreferences`,
 `meetingAndSchedulingPreferences`). Full field-level notes in
 `data/dataset_summary.md`.
+
+Started at 100/100 real seed pairs. As of `batch_500_001` promotion
+(2026-07-19), **320 positive / 340 negative (660 total)**: 100/100 real
+seed + 220/240 promoted synthetic (`cmsynth*` contact IDs). Only 9 of the
+460 staged synthetic pairs got real human sign-off
+(`human_review.verdict == "yes"`, via the review browser below); the
+remaining 451 were promoted on judge-verdict alone via `promote.py
+--allow-unreviewed` — a deliberate scope call, not the documented
+default gate (see "Synthetic pair review & promotion" and
+`docs/possible-bugs.md`). `data/synthetic/seed_split.json` still defines
+the frozen leakage-safe split: 131 real train pairs / 69 real holdout
+pairs (`eval_pair_ids`) — `twotower/data.py::build_split_bundle()` is the
+canonical way to load train/train-dev/holdout without leaking synthetic or
+holdout-user pairs into training.
