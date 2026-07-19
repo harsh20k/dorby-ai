@@ -34,3 +34,6 @@ artifacts/
 *.npy
 wandb/
 .cache/
+
+# Lean Context
+.lean-ctx/

@@ -6,6 +6,7 @@ import argparse
 import json
 import random
 import sys
+from concurrent.futures import ThreadPoolExecutor, as_completed
 from datetime import datetime, timezone
 from pathlib import Path
 
@@ -14,7 +15,7 @@ from synth_pipeline.graph import run_one
 from synth_pipeline.nodes.seed import sample_initial_state
 from synth_pipeline.nodes.writer import init_manifest
 from synth_pipeline.split import ensure_split
-from synth_pipeline.state import Label
+from synth_pipeline.state import Label, PairState
 
 
 def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
@@ -46,6 +47,12 @@ def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
         help="No LLM calls; stub pairs for plumbing tests",
     )
     p.add_argument("--rng-seed", type=int, default=0)
+    p.add_argument(
+        "--concurrency",
+        type=int,
+        default=8,
+        help="Parallel in-flight graph runs (LLM calls are I/O-bound). 1 = sequential.",
+    )
     return p.parse_args(argv)
 
 
@@ -97,33 +104,51 @@ def main(argv: list[str] | None = None) -> int:
 
     print(
         f"batch_id={batch_id} split_hash={split['split_hash']} "
-        f"jobs={len(jobs)} dry_run={cfg.dry_run} "
+        f"jobs={len(jobs)} dry_run={cfg.dry_run} concurrency={args.concurrency} "
         f"generate={cfg.generate_model} judge={cfg.judge_model}"
     )
 
+    # Build all initial states up front, sequentially: sample_initial_state
+    # draws from the shared `rng` (random.Random, not thread-safe) and mints
+    # ids, so this must not run concurrently. The graph run itself (LLM
+    # calls) is I/O-bound and safe to parallelize below.
+    initials: list[tuple[Label, str | None, PairState]] = []
+    for label, mode in jobs:
+        initial = sample_initial_state(
+            cfg=cfg,
+            batch_id=batch_id,
+            label=label,
+            failure_mode=mode,
+            rng=rng,
+        )
+        initials.append((label, mode, initial))
+
     summary = {"staged": 0, "dropped": 0, "errors": 0}
-    for i, (label, mode) in enumerate(jobs, start=1):
-        try:
-            initial = sample_initial_state(
-                cfg=cfg,
-                batch_id=batch_id,
-                label=label,
-                failure_mode=mode,
-                rng=rng,
-            )
-            final = run_one(cfg, initial)
-            status = final.get("status")
-            if status == "staged":
-                summary["staged"] += 1
-            else:
-                summary["dropped"] += 1
-            print(
-                f"[{i}/{len(jobs)}] {label} mode={mode} → {status}"
-                + (f" ({final.get('drop_reason')})" if status != "staged" else "")
-            )
-        except Exception as exc:  # noqa: BLE001 — batch continues
-            summary["errors"] += 1
-            print(f"[{i}/{len(jobs)}] ERROR {label} mode={mode}: {exc}", file=sys.stderr)
+    done = 0
+
+    def _run(job: tuple[Label, str | None, PairState]) -> tuple[Label, str | None, dict]:
+        label, mode, initial = job
+        return label, mode, run_one(cfg, initial)
+
+    with ThreadPoolExecutor(max_workers=max(1, args.concurrency)) as pool:
+        futures = {pool.submit(_run, job): job for job in initials}
+        for future in as_completed(futures):
+            done += 1
+            label, mode, _ = futures[future]
+            try:
+                _, _, final = future.result()
+                status = final.get("status")
+                if status == "staged":
+                    summary["staged"] += 1
+                else:
+                    summary["dropped"] += 1
+                print(
+                    f"[{done}/{len(jobs)}] {label} mode={mode} → {status}"
+                    + (f" ({final.get('drop_reason')})" if status != "staged" else "")
+                )
+            except Exception as exc:  # noqa: BLE001 — batch continues
+                summary["errors"] += 1
+                print(f"[{done}/{len(jobs)}] ERROR {label} mode={mode}: {exc}", file=sys.stderr)
 
     print(json.dumps({"batch_id": batch_id, **summary}, indent=2))
     print(f"artifacts: {cfg.artifacts_dir / batch_id}")

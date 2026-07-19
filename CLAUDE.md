@@ -50,6 +50,28 @@ python scripts/export_baseline_results.py
 # writes docs/baseline-results-all.json and .md
 ```
 
+### Query ablation (searchQuery removed from seeker text)
+
+Each baseline has a `*_no_query` sibling that packs the seeker side as
+`profile_to_text(userContactFile)` only (candidate side unchanged), via
+`baselines/text_no_query.py::seeker_to_text`. Used to isolate how much
+signal `searchQuery` actually contributes.
+
+```bash
+python -m baselines.bert_frozen_no_query.eval --data-dir data --model bert-base-uncased --batch-size 16 --max-length 512
+python -m baselines.voyage_nano_no_query.eval --data-dir data --model voyageai/voyage-4-nano --batch-size 4 --max-length 8192 --truncate-dim 1024
+python -m baselines.voyage_large_no_query.eval --data-dir data --model voyage-4-large --output-dimension 1024
+```
+
+Writes to `artifacts/<baseline>_no_query/metrics.json`;
+`scripts/export_baseline_results.py` picks these up automatically and adds
+"(no query)" columns to `docs/baseline-results-all.md`/`.json` alongside
+each baseline. Finding so far: BERT is unaffected (already near-chance, AUC
+~0.47, isn't using the query either way); both Voyage models degrade
+noticeably without the query, mostly on retrieval metrics (MRR/NDCG/Recall@10
+down ~20–26%) — `searchQuery` is load-bearing, not redundant with the
+profile.
+
 Note: `voyage-4-nano` needs `transformers>=4.51,<5` (5.x fails to load the
 remote code); requirements.txt already pins this. Cold MPS encode for nano
 takes ~40+ min — subsequent runs hit the artifact cache.
@@ -79,6 +101,15 @@ Outputs land in `artifacts/synth/<batch_id>/{staged,dropped}/` +
 `data/dataset_positive.json` / `dataset_negative.json`, and only for staged
 files with human sign-off — never merge synth output into those files
 directly.
+
+Cost/scale reference (from `batch_pilot_010`, deepseek-v4-pro generate +
+gemini-3.1-flash-lite judge via OpenRouter): 10 attempts → 9 staged, $0.1461
+total, i.e. ~$0.015/attempt, ~90% judge-pass yield (small sample — expect
+this to vary, especially on harder intent slices like `fundraise`). Scaling
+to thousands of pairs for a two-tower fine-tune costs low tens to ~$150 in
+API spend, but the real bottleneck is the human `human_review.verdict`
+pass before `promote.py` — that scales linearly with staged volume and
+isn't parallelizable the way generation is.
 
 Prompts are pulled from LangSmith Hub when `LANGSMITH_PROMPT_OWNER` /
 `SYNTH_PROMPT_*` env vars are set, else fall back to local
@@ -115,6 +146,11 @@ of truth for how "good" is measured) and `baselines/bert_frozen/text.py`
 even by the Voyage baselines). If you touch the text serialization or metric
 definitions, all three baselines are affected — keep them in sync rather
 than forking.
+
+Each has a `*_no_query` sibling package (`bert_frozen_no_query`,
+`voyage_nano_no_query`, `voyage_large_no_query`) for the query-ablation eval
+— same `encode.py`, same metrics, only the seeker-text packing changes via
+`baselines/text_no_query.py`. See "Query ablation" under Commands.
 
 ### `synth_pipeline/` — LangGraph synthetic pair generator
 

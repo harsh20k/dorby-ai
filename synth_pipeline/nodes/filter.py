@@ -99,6 +99,7 @@ def heuristic_filter_node(state: PairState, cfg: PipelineConfig) -> dict[str, An
         return _reject(state, qc, "near_dup_seed_match", max_retries=cfg.max_retries)
 
     qc["filter_passed"] = True
+    qc["filter_reject_reason"] = None
     return {
         "qc": {**state.get("qc", {}), **qc},
         "status": "filtered",

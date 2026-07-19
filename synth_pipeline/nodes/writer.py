@@ -3,12 +3,17 @@
 from __future__ import annotations
 
 import json
+import threading
 from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
 
 from synth_pipeline.config import PipelineConfig
 from synth_pipeline.state import PairState
+
+# Guards the manifest.json read-modify-write cycle in staging_node, which is
+# invoked from worker threads when batches run concurrently (run_batch.py).
+_MANIFEST_LOCK = threading.Lock()
 
 
 def batch_dir(cfg: PipelineConfig, batch_id: str) -> Path:
@@ -54,6 +59,11 @@ def _save_manifest(cfg: PipelineConfig, batch_id: str, manifest: dict[str, Any])
 
 
 def staging_node(state: PairState, cfg: PipelineConfig) -> dict[str, Any]:
+    with _MANIFEST_LOCK:
+        return _staging_node_locked(state, cfg)
+
+
+def _staging_node_locked(state: PairState, cfg: PipelineConfig) -> dict[str, Any]:
     batch_id = state["batch_id"]
     manifest = init_manifest(cfg, batch_id, split_hash=state["split_hash"])
     manifest["counts"]["attempts"] = manifest["counts"].get("attempts", 0) + 1
