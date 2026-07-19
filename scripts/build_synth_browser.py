@@ -10,6 +10,8 @@ from __future__ import annotations
 
 import argparse
 import json
+import random
+from collections import defaultdict
 from pathlib import Path
 from typing import Any
 
@@ -133,6 +135,16 @@ HTML_TEMPLATE = r"""<!DOCTYPE html>
   .chip.staged { color: var(--accent); background: var(--accent-soft); }
   .chip.dropped { color: var(--bad); background: var(--bad-soft); }
   .chip.mode { color: var(--muted); background: #eef1ef; }
+  .chip.sample { color: #8a6d1f; background: #f4ecd2; }
+  .chip.verdict-yes { color: var(--accent); background: var(--accent-soft); }
+  .chip.verdict-no { color: var(--bad); background: var(--bad-soft); }
+
+  .review-bar { display: flex; gap: 0.6rem; align-items: center; padding: 0.9rem 1.35rem; border-top: 1px solid var(--line); position: sticky; bottom: 0; background: var(--panel); }
+  .review-btn { border: 1px solid var(--line); border-radius: 999px; padding: 0.55rem 1.1rem; font: inherit; font-weight: 700; cursor: pointer; }
+  .review-btn.approve { background: var(--accent); border-color: var(--accent); color: white; }
+  .review-btn.reject { background: var(--bad); border-color: var(--bad); color: white; }
+  .review-btn:disabled { opacity: 0.5; cursor: default; }
+  .review-status { color: var(--muted); font-size: 0.85rem; margin-left: auto; }
 
   .id { font-size: 0.72rem; color: var(--muted); font-family: var(--mono); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 
@@ -205,6 +217,9 @@ HTML_TEMPLATE = r"""<!DOCTYPE html>
           <button class="toggle" data-label="pos" type="button">Pos only</button>
           <button class="toggle" data-label="neg" type="button">Neg only</button>
         </div>
+        <div class="chips">
+          <button class="toggle active" id="sample-toggle" type="button">Review sample only</button>
+        </div>
         <label class="search" for="q">
           <span aria-hidden="true">⌕</span>
           <input id="q" type="search" placeholder="Filter by query, seed id, failure mode, drop reason…" autocomplete="off" />
@@ -226,6 +241,11 @@ HTML_TEMPLATE = r"""<!DOCTYPE html>
       <button class="close" type="button" id="close" aria-label="Close">×</button>
     </div>
     <div class="modal-body" id="detail-body"></div>
+    <div class="review-bar" id="review-bar" hidden>
+      <button class="review-btn approve" id="approve-btn" type="button">Approve</button>
+      <button class="review-btn reject" id="reject-btn" type="button">Reject</button>
+      <span class="review-status" id="review-status"></span>
+    </div>
   </dialog>
 
   <script id="batches-data" type="application/json">__EMBEDDED_JSON__</script>
@@ -247,6 +267,45 @@ HTML_TEMPLATE = r"""<!DOCTYPE html>
 
     let statusFilter = "all";
     let labelFilter = "all";
+    let sampleOnly = true;
+    let currentRecord = null;
+
+    const sampleToggle = document.getElementById("sample-toggle");
+    sampleToggle.addEventListener("click", () => {
+      sampleOnly = !sampleOnly;
+      sampleToggle.classList.toggle("active", sampleOnly);
+      render();
+    });
+
+    const reviewBar = document.getElementById("review-bar");
+    const approveBtn = document.getElementById("approve-btn");
+    const rejectBtn = document.getElementById("reject-btn");
+    const reviewStatus = document.getElementById("review-status");
+
+    async function submitVerdict(verdict) {
+      if (!currentRecord) return;
+      reviewStatus.textContent = "Saving…";
+      approveBtn.disabled = true;
+      rejectBtn.disabled = true;
+      try {
+        const res = await fetch("/api/review", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ rel_path: currentRecord.rel_path, verdict }),
+        });
+        if (!res.ok) throw new Error(await res.text());
+        currentRecord.human_review = { verdict };
+        reviewStatus.textContent = verdict === "yes" ? "Approved ✓" : "Rejected ✗";
+        render();
+      } catch (err) {
+        reviewStatus.textContent = "Save failed — is scripts/serve_synth_review.py running?";
+      } finally {
+        approveBtn.disabled = false;
+        rejectBtn.disabled = false;
+      }
+    }
+    approveBtn.addEventListener("click", () => submitVerdict("yes"));
+    rejectBtn.addEventListener("click", () => submitVerdict("no"));
 
     for (const name of batchNames) {
       const opt = document.createElement("option");
@@ -301,10 +360,20 @@ HTML_TEMPLATE = r"""<!DOCTYPE html>
     }
 
     function openDetail(r) {
+      currentRecord = r;
       const pair = r.pair || {};
       detailTitle.textContent = snippet(pair.searchQuery, 90).replace(/…$/, "") || "Pair";
       detailSub.textContent = `${r.label}${r.failure_mode ? " · " + r.failure_mode : ""} · ${r.status}` +
         (r.drop_reason ? ` · ${r.drop_reason}` : "");
+
+      if (r.in_sample) {
+        reviewBar.hidden = false;
+        const verdict = r.human_review?.verdict;
+        reviewStatus.textContent = verdict === "yes" ? "Approved ✓" : verdict === "no" ? "Rejected ✗" : "";
+      } else {
+        reviewBar.hidden = true;
+        reviewStatus.textContent = "";
+      }
 
       const qc = r.qc || {};
       const qcHtml = [
@@ -346,10 +415,12 @@ HTML_TEMPLATE = r"""<!DOCTYPE html>
       let list = currentRecords();
       if (statusFilter !== "all") list = list.filter((r) => r.status === statusFilter);
       if (labelFilter !== "all") list = list.filter((r) => r.label === labelFilter);
+      if (sampleOnly) list = list.filter((r) => r.in_sample);
       const term = q.value.trim().toLowerCase();
       if (term) list = list.filter((r) => haystack(r).includes(term));
 
-      countEl.textContent = `${list.length} of ${currentRecords().length}`;
+      const sampleCount = currentRecords().filter((r) => r.in_sample).length;
+      countEl.textContent = `${list.length} of ${currentRecords().length} (${sampleCount} in review sample)`;
 
       const b = BATCHES[batchSel.value];
       const c = b?.manifest?.counts;
@@ -373,11 +444,14 @@ HTML_TEMPLATE = r"""<!DOCTYPE html>
         const btn = document.createElement("button");
         btn.type = "button";
         btn.className = "card";
+        const verdict = r.human_review?.verdict;
         btn.innerHTML = `
           <div class="card-top">
             <span class="chip ${r.label}">${escapeHtml(r.label)}</span>
             <span class="chip ${r.status}">${escapeHtml(r.status)}</span>
             ${r.failure_mode ? `<span class="chip mode">${escapeHtml(r.failure_mode)}</span>` : ""}
+            ${r.in_sample ? `<span class="chip sample">sample</span>` : ""}
+            ${verdict ? `<span class="chip verdict-${verdict}">${verdict === "yes" ? "approved" : "rejected"}</span>` : ""}
             <span class="id">${escapeHtml((r.seed_user_id || "").slice(0, 18))}</span>
           </div>
           <p class="query">${escapeHtml(snippet(pair.searchQuery, 110))}</p>
@@ -425,7 +499,37 @@ def _load_pair_json(path: Path) -> dict[str, Any]:
         return {}
 
 
-def _load_batch(batch_dir: Path) -> dict[str, Any] | None:
+def _mark_review_sample(records: list[dict[str, Any]], pct: float, seed: int) -> None:
+    """Flag a stratified sample of staged records with in_sample=True for human review."""
+    staged = [r for r in records if r.get("status") == "staged"]
+    for r in records:
+        r["in_sample"] = False
+    if not staged or pct <= 0:
+        return
+
+    target = max(1, round(len(staged) * pct / 100))
+    buckets: dict[tuple, list[dict[str, Any]]] = defaultdict(list)
+    for r in staged:
+        buckets[(r.get("label"), r.get("failure_mode"))].append(r)
+
+    rng = random.Random(seed)
+    for bucket in buckets.values():
+        rng.shuffle(bucket)
+
+    picked: list[dict[str, Any]] = []
+    bucket_keys = sorted(buckets.keys(), key=lambda k: -len(buckets[k]))
+    i = 0
+    while len(picked) < target and any(buckets.values()):
+        key = bucket_keys[i % len(bucket_keys)]
+        if buckets[key]:
+            picked.append(buckets[key].pop())
+        i += 1
+
+    for r in picked:
+        r["in_sample"] = True
+
+
+def _load_batch(batch_dir: Path, sample_pct: float, sample_seed: int) -> dict[str, Any] | None:
     manifest_path = batch_dir / "manifest.json"
     if not manifest_path.exists():
         return None
@@ -435,21 +539,37 @@ def _load_batch(batch_dir: Path) -> dict[str, Any] | None:
     for record in manifest.get("records", []):
         rel = record.get("staged_path") or record.get("dropped_path")
         pair = None
+        human_review = None
+        env_status = record.get("status")
         if rel:
             full = batch_dir.parent / rel
             payload = _load_pair_json(full)
             pair = payload.get("pair")
-        records.append({**record, "pair": pair})
+            human_review = payload.get("human_review")
+            env_status = payload.get("status", env_status)
+        records.append(
+            {
+                **record,
+                "pair": pair,
+                "rel_path": rel,
+                "human_review": human_review,
+                "env_status": env_status,
+            }
+        )
+
+    _mark_review_sample(records, sample_pct, sample_seed)
 
     return {"manifest": manifest, "records": records}
 
 
-def build(synth_dir: Path, out_path: Path) -> dict[str, int]:
+def build(
+    synth_dir: Path, out_path: Path, sample_pct: float = 2.0, sample_seed: int = 0
+) -> dict[str, int]:
     batches: dict[str, Any] = {}
     for batch_dir in sorted(synth_dir.iterdir()):
         if not batch_dir.is_dir():
             continue
-        loaded = _load_batch(batch_dir)
+        loaded = _load_batch(batch_dir, sample_pct, sample_seed)
         if loaded is not None:
             batches[batch_dir.name] = loaded
 
@@ -466,8 +586,15 @@ def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--synth-dir", type=Path, default=DEFAULT_SYNTH_DIR)
     parser.add_argument("--out", type=Path, default=DEFAULT_OUT)
+    parser.add_argument(
+        "--sample-pct",
+        type=float,
+        default=2.0,
+        help="Percent of staged records per batch to flag for human review (default: 2.0)",
+    )
+    parser.add_argument("--sample-seed", type=int, default=0)
     args = parser.parse_args()
-    counts = build(args.synth_dir, args.out)
+    counts = build(args.synth_dir, args.out, args.sample_pct, args.sample_seed)
     for name, n in counts.items():
         print(f"  {name}: {n} pairs")
     print(f"Wrote {args.out} with {len(counts)} batches embedded.")

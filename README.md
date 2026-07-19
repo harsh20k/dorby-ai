@@ -8,6 +8,7 @@ performance, starting with:
 - Try **Mixture of Experts** architecture
 - Possibly try - **Student - Teacher** architecture
 - Later: fine-tune embeddings for intro-matching (Voyage FT enterprise-only; large closed; nano open-weight DIY but overfits at ~200 pairs). Prefer hard labels + two-tower first; student–teacher (Voyage-large → smaller tower) optional after frozen baselines plateau.
+- Possible extension: **self-supervised two-tower** (Yao et al.) — add a contrastive auxiliary loss between two randomly field-masked views of the same candidate profile, on top of the supervised pos/neg loss. Targets the long-tail problem (most Boardy users appear in only 1-2 labeled pairs) by learning from the much larger pool of *unlabeled* profiles instead of only the ~660 labeled training pairs. Try only if plain LoRA fine-tuning underperforms the decision gate in [docs/two-tower-fine-tune-plan.md](docs/two-tower-fine-tune-plan.md).
 
 ## Overview
 
