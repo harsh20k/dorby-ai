@@ -14,6 +14,7 @@ OUT_MD = ROOT / "docs" / "baseline-results-all.md"
 
 # with-query (searchQuery on seeker) then profile-only / no-query siblings
 BASELINES = (
+    "tfidf",
     "bert_frozen",
     "bert_frozen_no_query",
     "voyage_nano",
@@ -22,6 +23,7 @@ BASELINES = (
     "voyage_large_no_query",
 )
 LABELS = {
+    "tfidf": "TF-IDF (lexical)",
     "bert_frozen": "Frozen BERT",
     "bert_frozen_no_query": "Frozen BERT (no query)",
     "voyage_nano": "Voyage-4-nano",
@@ -65,30 +67,50 @@ def load_baselines() -> dict[str, dict]:
     return out
 
 
-def build_json(baselines: dict[str, dict]) -> dict:
+def load_from_paths(paths: dict[str, Path]) -> dict[str, dict]:
+    """Like load_baselines() but for an explicit {name: path} mapping —
+    used for the holdout comparison, where twotower's metrics_holdout.json
+    lives at a different path convention than artifacts/<name>/metrics.json."""
+    out: dict[str, dict] = {}
+    for name, path in paths.items():
+        if not path.is_file():
+            raise FileNotFoundError(f"missing {path}")
+        out[name] = json.loads(path.read_text())
+    return out
+
+
+def build_json(baselines: dict[str, dict], protocol_note: str = PROTOCOL_NOTE) -> dict:
     return {
         "generated_at": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
-        "protocol_note": PROTOCOL_NOTE,
+        "protocol_note": protocol_note,
         "baselines": baselines,
     }
 
 
-def build_md(payload: dict) -> str:
+def build_md(
+    payload: dict,
+    names: list[str] | None = None,
+    labels: dict[str, str] | None = None,
+    title: str = "# Baseline results (all metrics)",
+    sources_note: str = (
+        "Sources: `artifacts/{bert_frozen,bert_frozen_no_query,voyage_nano,"
+        "voyage_nano_no_query,voyage_large,voyage_large_no_query}/metrics.json`."
+    ),
+) -> str:
     baselines: dict[str, dict] = payload["baselines"]
-    names = list(BASELINES)
-    cols = [LABELS[n] for n in names]
+    names = names if names is not None else list(BASELINES)
+    labels = labels if labels is not None else LABELS
+    cols = [labels[n] for n in names]
 
     def col_vals(getter) -> list[str]:
         return [_fmt(getter(baselines[n])) for n in names]
 
     lines: list[str] = [
-        "# Baseline results (all metrics)",
+        title,
         "",
         f"Generated: `{payload['generated_at']}`",
         "",
-        f"Protocol: {payload['protocol_note']}. Sources: "
-        "`artifacts/{bert_frozen,bert_frozen_no_query,voyage_nano,"
-        "voyage_nano_no_query,voyage_large,voyage_large_no_query}/metrics.json`.",
+        f"Protocol: {payload['protocol_note']}. {sources_note}",
         "",
         "Metric definitions: [baseline-metrics.md](baseline-metrics.md).",
         "",
@@ -248,6 +270,66 @@ def build_md(payload: dict) -> str:
     return "\n".join(lines)
 
 
+# Matched-population comparison on the frozen 69-pair real holdout only —
+# see docs/possible-bugs.md #3. Baseline entries come from the *_holdout
+# artifact dirs (produced by `eval.py --holdout-only`); twotower entries are
+# named per run_id and point at that run's metrics_holdout.json directly,
+# since twotower doesn't share the artifacts/<name>/metrics.json convention.
+HOLDOUT_OUT_JSON = ROOT / "docs" / "baseline-results-holdout.json"
+HOLDOUT_OUT_MD = ROOT / "docs" / "baseline-results-holdout.md"
+HOLDOUT_PATHS = {
+    "tfidf": ARTIFACTS / "tfidf_holdout" / "metrics.json",
+    "bert_frozen": ARTIFACTS / "bert_frozen_holdout" / "metrics.json",
+    "voyage_nano": ARTIFACTS / "voyage_nano_holdout" / "metrics.json",
+    "voyage_large": ARTIFACTS / "voyage_large_holdout" / "metrics.json",
+}
+HOLDOUT_LABELS = {
+    "tfidf": "TF-IDF (lexical)",
+    "bert_frozen": "Frozen BERT",
+    "voyage_nano": "Voyage-4-nano",
+    "voyage_large": "Voyage-4-large (prod)",
+}
+HOLDOUT_PROTOCOL_NOTE = (
+    "frozen 69-pair real holdout (data/synthetic/seed_split.json eval_pair_ids) only — "
+    "same population for every row, unlike baseline-results-all.md's full-dataset numbers. "
+    "See docs/possible-bugs.md #3 and docs/twotower-run-001-results.md."
+)
+
+
+def add_twotower_holdout_run(run_id: str, metrics_path: Path | None = None) -> None:
+    """Register a twotower run's metrics_holdout.json for the holdout comparison."""
+    path = metrics_path or (ARTIFACTS / "twotower" / f"{run_id}_holdout_eval" / "metrics_holdout.json")
+    HOLDOUT_PATHS[f"twotower_{run_id}"] = path
+    HOLDOUT_LABELS[f"twotower_{run_id}"] = f"twotower {run_id}"
+
+
+def build_holdout_comparison() -> None:
+    if not all(p.is_file() for p in HOLDOUT_PATHS.values() if "twotower" not in str(p)):
+        missing = [str(p) for p in HOLDOUT_PATHS.values() if not p.is_file()]
+        print(f"skipping holdout comparison — missing: {missing}")
+        return
+    baselines = load_from_paths(HOLDOUT_PATHS)
+    payload = build_json(baselines, protocol_note=HOLDOUT_PROTOCOL_NOTE)
+    names = list(HOLDOUT_PATHS)
+    HOLDOUT_OUT_JSON.write_text(json.dumps(payload, indent=2) + "\n")
+    HOLDOUT_OUT_MD.write_text(
+        build_md(
+            payload,
+            names=names,
+            labels=HOLDOUT_LABELS,
+            title="# Baseline vs. twotower — matched real-holdout comparison",
+            sources_note=(
+                "Sources: `artifacts/{tfidf,bert_frozen,voyage_nano,voyage_large}_holdout/"
+                "metrics.json` + `artifacts/twotower/<run_id>_holdout_eval/"
+                "metrics_holdout.json`."
+            ),
+        )
+    )
+    print(f"wrote {HOLDOUT_OUT_JSON.relative_to(ROOT)}")
+    print(f"wrote {HOLDOUT_OUT_MD.relative_to(ROOT)}")
+    print(f"holdout comparison: {', '.join(names)}")
+
+
 def main() -> None:
     baselines = load_baselines()
     payload = build_json(baselines)
@@ -257,6 +339,10 @@ def main() -> None:
     print(f"wrote {OUT_JSON.relative_to(ROOT)}")
     print(f"wrote {OUT_MD.relative_to(ROOT)}")
     print(f"baselines: {', '.join(baselines)}")
+
+    add_twotower_holdout_run("run_001")
+    add_twotower_holdout_run("arm_a_real_only")
+    build_holdout_comparison()
 
 
 if __name__ == "__main__":

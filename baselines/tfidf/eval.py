@@ -1,4 +1,12 @@
-"""Offline eval for local Voyage-4-nano bi-encoder baseline."""
+"""Offline eval for a TF-IDF lexical-similarity baseline.
+
+Same seeker/candidate text serialization and metrics as the neural
+baselines (bert_frozen, voyage_nano, voyage_large) — the only difference is
+the encoder: plain TF-IDF cosine similarity, no neural model, no GPU. Exists
+to establish a lexical floor: if this scores anywhere close to the neural
+baselines, the embedding models aren't adding much beyond keyword overlap
+for this task.
+"""
 
 from __future__ import annotations
 
@@ -11,7 +19,7 @@ from typing import Any
 from baselines.bert_frozen.text import candidate_to_text, seeker_to_text
 from baselines.holdout import filter_to_holdout
 from baselines.metrics import pair_metrics, print_metrics, retrieval_metrics, slice_metrics
-from baselines.voyage_nano.encode import VoyageNanoEncoder, cosine_scores, pick_device
+from baselines.tfidf.encode import TfidfEncoder, cosine_scores, pick_device
 
 
 def load_pairs(data_dir: Path) -> tuple[list[dict[str, Any]], list[dict[str, Any]]]:
@@ -46,10 +54,8 @@ def build_candidate_corpus(
 
 def run_eval(
     data_dir: Path,
-    model_name: str,
-    batch_size: int,
-    max_length: int,
-    truncate_dim: int | None,
+    max_features: int,
+    ngram_range: tuple[int, int],
     artifacts_dir: Path,
     *,
     holdout_only: bool = False,
@@ -57,7 +63,7 @@ def run_eval(
 ) -> dict[str, Any]:
     device = pick_device()
     print(f"device: {device}")
-    print(f"model:  {model_name}")
+    print(f"model:  tfidf(max_features={max_features}, ngram_range={ngram_range})")
 
     positives, negatives = load_pairs(data_dir)
     if holdout_only:
@@ -79,29 +85,22 @@ def run_eval(
     corpus_ids, corpus_texts = build_candidate_corpus(positives, negatives)
     print(f"candidate corpus size: {len(corpus_ids)}")
 
-    encoder = VoyageNanoEncoder(
-        model_name=model_name,
-        device=device,
-        max_length=max_length,
-        truncate_dim=truncate_dim,
+    encoder = TfidfEncoder(
+        max_features=max_features,
+        ngram_range=ngram_range,
         cache_dir=artifacts_dir,
     )
+    # Fit on every text that will be encoded, seeker + candidate pooled, so
+    # cosine similarity between the two sides lives in a shared vocab/IDF
+    # space. Candidate corpus already covers pos_cand/neg_cand (same texts
+    # by matchContactId), only the seeker texts are additional.
+    encoder.fit(pos_seeker_texts + neg_seeker_texts + corpus_texts)
 
-    pos_seeker_emb = encoder.encode(
-        pos_seeker_texts, role="query", batch_size=batch_size, cache_name="pos_seeker"
-    )
-    neg_seeker_emb = encoder.encode(
-        neg_seeker_texts, role="query", batch_size=batch_size, cache_name="neg_seeker"
-    )
-    pos_cand_emb = encoder.encode(
-        pos_cand_texts, role="document", batch_size=batch_size, cache_name="pos_cand"
-    )
-    neg_cand_emb = encoder.encode(
-        neg_cand_texts, role="document", batch_size=batch_size, cache_name="neg_cand"
-    )
-    corpus_emb = encoder.encode(
-        corpus_texts, role="document", batch_size=batch_size, cache_name="corpus"
-    )
+    pos_seeker_emb = encoder.encode(pos_seeker_texts, cache_name="pos_seeker")
+    neg_seeker_emb = encoder.encode(neg_seeker_texts, cache_name="neg_seeker")
+    pos_cand_emb = encoder.encode(pos_cand_texts, cache_name="pos_cand")
+    neg_cand_emb = encoder.encode(neg_cand_texts, cache_name="neg_cand")
+    corpus_emb = encoder.encode(corpus_texts, cache_name="corpus")
 
     pos_scores = cosine_scores(pos_seeker_emb, pos_cand_emb)
     neg_scores = cosine_scores(neg_seeker_emb, neg_cand_emb)
@@ -128,11 +127,10 @@ def run_eval(
     )
 
     return {
-        "model_name": model_name,
-        "device": str(device),
-        "max_length": max_length,
-        "truncate_dim": truncate_dim,
-        "batch_size": batch_size,
+        "model_name": f"tfidf(max_features={max_features},ngram_range={ngram_range})",
+        "device": device,
+        "max_features": max_features,
+        "ngram_range": list(ngram_range),
         "pair": pair,
         "retrieval": retrieval,
         "slices": slices,
@@ -140,26 +138,15 @@ def run_eval(
 
 
 def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
-    p = argparse.ArgumentParser(description="Voyage-4-nano local bi-encoder baseline eval")
+    p = argparse.ArgumentParser(description="TF-IDF lexical-similarity baseline eval")
     p.add_argument("--data-dir", type=Path, default=Path("data"))
-    p.add_argument("--model", type=str, default="voyageai/voyage-4-nano")
-    p.add_argument("--batch-size", type=int, default=4)
-    p.add_argument(
-        "--max-length",
-        type=int,
-        default=8192,
-        help="Token cap (model supports 32k; 8192 default for MPS memory).",
-    )
-    p.add_argument(
-        "--truncate-dim",
-        type=int,
-        default=1024,
-        help="Matryoshka output dim (256/512/1024/2048). Default 1024 matches Boardy large.",
-    )
+    p.add_argument("--max-features", type=int, default=20000)
+    p.add_argument("--ngram-min", type=int, default=1)
+    p.add_argument("--ngram-max", type=int, default=2)
     p.add_argument(
         "--artifacts-dir",
         type=Path,
-        default=Path("artifacts/voyage_nano"),
+        default=Path("artifacts/tfidf"),
     )
     p.add_argument(
         "--holdout-only",
@@ -178,10 +165,8 @@ def main(argv: list[str] | None = None) -> int:
 
     metrics = run_eval(
         data_dir=args.data_dir,
-        model_name=args.model,
-        batch_size=args.batch_size,
-        max_length=args.max_length,
-        truncate_dim=args.truncate_dim,
+        max_features=args.max_features,
+        ngram_range=(args.ngram_min, args.ngram_max),
         artifacts_dir=args.artifacts_dir,
         holdout_only=args.holdout_only,
         split_path=args.split_path,

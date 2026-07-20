@@ -46,6 +46,7 @@ class TrainConfig:
     train_dev_user_fraction: float = 0.1
     train_dev_min_pairs: int = 20
     contrastive_margin: float = 0.5
+    include_synth: bool = True  # False = real-only control arm
 
     # Prompts (Voyage asymmetric convention)
     query_prompt: str = DEFAULT_QUERY_PROMPT

@@ -105,11 +105,24 @@ def parse_json_object(text: str) -> dict[str, Any]:
     return data
 
 
-def truncate_pair_for_prompt(pair: dict[str, Any], *, max_field: int = 400) -> dict[str, Any]:
+def truncate_pair_for_prompt(
+    pair: dict[str, Any], *, max_field: int | None = 400
+) -> dict[str, Any]:
+    """Truncate profile string fields for prompt-length control.
+
+    ``max_field=None`` disables truncation entirely — use this for the seed
+    pair, which the generator is instructed to keep "essentially the same":
+    real seed fields (e.g. `lookingFor`) can run past 20k characters across
+    many accumulated sections, and truncating at 400 chars silently hides
+    most of the field from the model, producing seeker/query inconsistency
+    (see docs/possible-bugs.md #1). Few-shot examples, shown repeatedly per
+    prompt, should stay truncated for prompt-length/cost control.
+    """
+
     def trunc_profile(profile: dict[str, Any]) -> dict[str, Any]:
         out: dict[str, Any] = {}
         for k, v in profile.items():
-            if isinstance(v, str) and len(v) > max_field:
+            if max_field is not None and isinstance(v, str) and len(v) > max_field:
                 out[k] = v[:max_field] + "…"
             else:
                 out[k] = v

@@ -10,6 +10,7 @@ from typing import Any
 
 from baselines.bert_frozen.encode import FrozenBertEncoder, cosine_scores, pick_device
 from baselines.bert_frozen.text import candidate_to_text, seeker_to_text
+from baselines.holdout import filter_to_holdout
 from baselines.metrics import pair_metrics, print_metrics, retrieval_metrics, slice_metrics
 
 
@@ -49,12 +50,20 @@ def run_eval(
     batch_size: int,
     max_length: int,
     artifacts_dir: Path,
+    *,
+    holdout_only: bool = False,
+    split_path: Path | None = None,
 ) -> dict[str, Any]:
     device = pick_device()
     print(f"device: {device}")
     print(f"model:  {model_name}")
 
     positives, negatives = load_pairs(data_dir)
+    if holdout_only:
+        positives, negatives = filter_to_holdout(
+            positives, negatives, split_path or data_dir / "synthetic" / "seed_split.json"
+        )
+        print(f"holdout-only: filtered to {len(positives)} positives, {len(negatives)} negatives")
     print(f"loaded {len(positives)} positives, {len(negatives)} negatives")
 
     pos_seeker_texts = [
@@ -128,6 +137,14 @@ def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
         type=Path,
         default=Path("artifacts/bert_frozen"),
     )
+    p.add_argument(
+        "--holdout-only",
+        action="store_true",
+        help="Restrict eval to the frozen real holdout (data/synthetic/seed_split.json's "
+        "eval_pair_ids) instead of the full canonical dataset. Pass a distinct "
+        "--artifacts-dir so this doesn't overwrite the full-dataset metrics.json.",
+    )
+    p.add_argument("--split-path", type=Path, default=None)
     return p.parse_args(argv)
 
 
@@ -141,6 +158,8 @@ def main(argv: list[str] | None = None) -> int:
         batch_size=args.batch_size,
         max_length=args.max_length,
         artifacts_dir=args.artifacts_dir,
+        holdout_only=args.holdout_only,
+        split_path=args.split_path,
     )
     print_metrics(metrics)
 

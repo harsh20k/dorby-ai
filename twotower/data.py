@@ -92,12 +92,15 @@ def build_split_bundle(
     train_dev_user_fraction: float = 0.1,
     train_dev_min_pairs: int = 20,
     seed: int = 42,
+    include_synth: bool = True,
 ) -> SplitBundle:
     """Build leakage-safe train / train-dev / holdout from frozen seed_split + synth.
 
     Holdout = frozen eval_pair_ids only (never used for model selection).
     Train pool = frozen train_pair_ids + promoted synth pairs that touch no eval user.
     Train-dev = user-disjoint carve from the train pool.
+    ``include_synth=False`` drops promoted synth pairs from the train pool
+    entirely (real-only control arm — see docs/twotower-run-001-findings.md).
     """
     positives, negatives = load_canonical_pairs(data_dir)
     split = load_split(split_path)
@@ -143,6 +146,8 @@ def build_split_bundle(
             if pid in train_pair_ids:
                 source: Literal["real_train", "synth"] = "real_train"
             elif _is_synth_pair(pair):
+                if not include_synth:
+                    continue
                 source = "synth"
             else:
                 # Real pair not in frozen train/eval — treat as train only if

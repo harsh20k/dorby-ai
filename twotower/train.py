@@ -5,6 +5,7 @@ from __future__ import annotations
 import argparse
 import json
 import platform
+import re
 import sys
 from datetime import datetime, timezone
 from pathlib import Path
@@ -147,6 +148,14 @@ def smoke_backward(model: SentenceTransformer, cfg: TrainConfig) -> None:
     raise RuntimeError("smoke_backward: no non-zero LoRA gradients")
 
 
+_STEPS_RE = re.compile(r"_steps(\d+)")
+
+
+def _loud_warning(msg: str) -> None:
+    banner = "!" * 78
+    print(f"\n{banner}\nWARNING: {msg}\n{banner}\n")
+
+
 def select_best_checkpoint(
     model: SentenceTransformer,
     *,
@@ -154,77 +163,104 @@ def select_best_checkpoint(
     cfg: TrainConfig,
     device: str,
 ) -> tuple[SentenceTransformer, dict[str, Any]]:
-    """Pick best epoch checkpoint by train-dev primary metric; reload if needed."""
-    metric_files = sorted(checkpoints_dir.glob("train_dev_metrics_epoch*.json"))
+    """Pick best epoch checkpoint by train-dev primary metric; reload if needed.
+
+    ST's Trainer writes evaluator output under ``checkpoints_dir/eval/``, not
+    ``checkpoints_dir`` itself (see sentence_transformers/base/trainer.py's
+    ``evaluate()`` — output_path = os.path.join(args.output_dir, "eval")).
+    Selection is keyed on ``steps`` (parsed from the filename), which maps
+    exactly to HF's ``checkpoint-{global_step}`` directory names — the only
+    stable join key. ``epoch`` is a float from the Trainer (e.g. ``1.0``) and
+    is not used for matching, only for logging.
+    """
+    eval_dir = checkpoints_dir / "eval"
+    metric_files = sorted(eval_dir.glob("train_dev_metrics_*.json"))
     if not metric_files:
-        return model, {"source": "final_in_memory", "reason": "no_metric_files"}
+        _loud_warning(
+            f"select_best_checkpoint found no metric files under {eval_dir} — "
+            "falling back to the FINAL epoch, not the best one. The "
+            "checkpoint-selection safety net did not run for this training "
+            "run; do not assume the shipped adapter is the best epoch."
+        )
+        return model, {"source": "final_in_memory", "reason": "no_metric_files", "eval_dir": str(eval_dir)}
+
+    ckpts_by_step = {
+        int(p.name.split("-")[-1]): p
+        for p in checkpoints_dir.iterdir()
+        if p.is_dir() and p.name.startswith("checkpoint-")
+    }
 
     best_path: Path | None = None
     best_score = float("-inf")
-    best_epoch: int | None = None
+    best_steps: int | None = None
+    key = f"train_dev_{cfg.primary_metric}"
+    skipped_unparseable = 0
     for path in metric_files:
         payload = json.loads(path.read_text(encoding="utf-8"))
         flat = payload.get("flat") or {}
-        key = f"train_dev_{cfg.primary_metric}"
         if key not in flat:
             continue
         score = float(flat[key])
-        # filename: train_dev_metrics_epochN.json
-        stem = path.stem  # train_dev_metrics_epoch3
-        try:
-            epoch = int(stem.rsplit("epoch", 1)[-1].split("_", 1)[0])
-        except ValueError:
-            epoch = None
+        m = _STEPS_RE.search(path.stem)
+        if m is None:
+            skipped_unparseable += 1
+            continue
+        steps = int(m.group(1))
         if score > best_score:
             best_score = score
-            best_epoch = epoch
-            if epoch is not None:
-                # HF/ST saves as checkpoint-{global_step}; prefer matching by
-                # sorted checkpoint dirs + epoch order when available.
-                best_path = path
+            best_steps = steps
+            best_path = path
 
-    ckpts = sorted(
-        [p for p in checkpoints_dir.iterdir() if p.is_dir() and p.name.startswith("checkpoint-")],
-        key=lambda p: int(p.name.split("-")[-1]),
-    )
-    chosen: Path | None = None
-    if best_epoch is not None and 1 <= best_epoch <= len(ckpts):
-        chosen = ckpts[best_epoch - 1]
-    elif ckpts:
-        chosen = ckpts[-1]
+    if skipped_unparseable:
+        _loud_warning(
+            f"select_best_checkpoint could not parse `steps` from "
+            f"{skipped_unparseable} metric file(s) under {eval_dir} — those "
+            "were skipped as candidates for best-checkpoint selection."
+        )
 
+    chosen = ckpts_by_step.get(best_steps) if best_steps is not None else None
     if chosen is None:
+        _loud_warning(
+            f"select_best_checkpoint found a best score ({best_score}) at "
+            f"steps={best_steps} but no matching checkpoint-{best_steps} "
+            f"directory under {checkpoints_dir} (available: "
+            f"{sorted(ckpts_by_step)}) — falling back to the FINAL epoch."
+        )
         return model, {
             "source": "final_in_memory",
+            "reason": "checkpoint_dir_not_found",
             "best_score": best_score,
-            "best_epoch": best_epoch,
+            "best_steps": best_steps,
             "metric_file": str(best_path) if best_path else None,
+            "available_checkpoint_steps": sorted(ckpts_by_step),
         }
 
     try:
-        reloaded = SentenceTransformer(
-            str(chosen),
-            trust_remote_code=cfg.trust_remote_code,
-            truncate_dim=cfg.truncate_dim,
-            device=device,
-            revision=cfg.model_revision,
-        )
-        reloaded.max_seq_length = cfg.max_seq_length
+        # Intermediate Trainer checkpoints are LoRA-only saves (adapter_model
+        # .safetensors + adapter_config.json, no base-model config.json /
+        # preprocessor_config.json) — same shape as the final adapter/ dir.
+        # Rebuild the base model fresh and load the adapter onto it, mirroring
+        # eval.py::load_model_for_eval, rather than reconstructing a full
+        # SentenceTransformer directly from the checkpoint path (which fails:
+        # "Can't load feature extractor" / missing preprocessor_config.json).
+        reloaded = build_model(cfg, device)
+        reloaded.load_adapter(str(chosen))
         return reloaded, {
             "source": "checkpoint",
             "path": str(chosen),
             "best_score": best_score,
-            "best_epoch": best_epoch,
+            "best_steps": best_steps,
             "metric_file": str(best_path) if best_path else None,
         }
     except Exception as exc:  # noqa: BLE001
-        print(f"warning: failed to reload best checkpoint {chosen}: {exc}")
+        _loud_warning(f"failed to reload best checkpoint {chosen}: {exc}")
         return model, {
             "source": "final_in_memory",
+            "reason": "reload_failed",
             "error": str(exc),
             "attempted_path": str(chosen),
             "best_score": best_score,
-            "best_epoch": best_epoch,
+            "best_steps": best_steps,
         }
 
 
@@ -306,6 +342,7 @@ def run_training(
         train_dev_user_fraction=cfg.train_dev_user_fraction,
         train_dev_min_pairs=cfg.train_dev_min_pairs,
         seed=cfg.seed,
+        include_synth=cfg.include_synth,
     )
     assert_no_holdout_leak(bundle, split_path=cfg.split_path)
     print(f"data counts: {bundle.counts}")
@@ -481,6 +518,12 @@ def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
     p.add_argument("--seed", type=int, default=cfg.seed)
     p.add_argument("--truncate-dim", type=int, default=cfg.truncate_dim)
     p.add_argument("--run-holdout", action="store_true")
+    p.add_argument(
+        "--real-only",
+        action="store_true",
+        help="Exclude promoted synthetic pairs from the train pool (control arm — "
+        "see docs/twotower-run-001-findings.md).",
+    )
     p.add_argument("--dry-run", action="store_true")
     p.add_argument("--resume-from-checkpoint", type=str, default=None)
     return p.parse_args(argv)
@@ -504,6 +547,7 @@ def config_from_args(args: argparse.Namespace) -> TrainConfig:
         split_path=args.split_path,
         output_dir=args.output_dir,
         run_holdout=args.run_holdout,
+        include_synth=not args.real_only,
     )
 
 

@@ -13,24 +13,32 @@ see `docs/boardy-embedding-model.md`. This repo benchmarks frozen baselines
 includes a LangGraph pipeline for synthesizing more training pairs beyond
 the 200-pair seed set.
 
-**Status:** first full LoRA fine-tune (`twotower/`, `run_001`) has
-completed and been evaluated on the real 69-pair frozen holdout — **it
-does not beat the frozen baselines.** Holdout pair AUC 0.578, essentially
-tied with Voyage-4-nano (0.561) and below Voyage-4-large (0.573), despite
-train-dev pair AUC of 0.986 looking dramatically better. Root cause
-(`docs/possible-bugs.md` #4, confirmed): the LoRA adapter appears to have
-overfit to structural/stylistic artifacts of the synthetic-generation
-prompts rather than learning real matching semantics — real-holdout
-hard-negative-slice AUC is 0.4845, *below chance*. Per the decision gate in
-`docs/two-tower-fine-tune-plan.md` ("if lift shows on train but not
-holdout, stop and diagnose — don't scale data yet"), **do not generate a
-larger synthetic batch or launch `run_002` until this is diagnosed** — see
-`docs/twotower-run-001-results.md` for the full writeup and next-step
-options. Other known open items: checkpoint selection silently picks the
-final epoch instead of the best one (`possible-bugs.md` #2), and only a 2%
-sample of the 460 synthetic pairs from `batch_500_001` got real human
-review before promotion — the rest were promoted on judge-verdict alone
-(see "Synthetic pair review & promotion" below).
+**Status:** first full LoRA fine-tune (`twotower/`, `run_001`) did not beat
+the frozen baselines on the real 69-pair holdout (pair AUC 0.578, hard-
+negative-slice AUC 0.4845 — *below chance* — vs. Voyage-4-large's matched-
+holdout 0.609/0.602), despite train-dev AUC of 0.986 looking dramatically
+better. **Root cause found, fixed, and confirmed** (`docs/possible-bugs.md`
+#4): the LoRA adapter had overfit to structural/stylistic artifacts of the
+synthetic-generation prompts, not real matching semantics — a trivial
+classifier shown *only* the candidate's own profile text guessed the
+label with 99.2% accuracy on the old synthetic data vs. 48.7% (chance) on
+real data. Fixed the generator (seed-truncation bug in `synth_pipeline/
+llm.py`, banned meta-commentary give-aways, closed a style gap between
+`generate_pos.md`/`generate_neg.md`) and **proved the direction is right**:
+a real-only control arm (`arm_a_real_only`, 111 real pairs, zero
+synthetic) beat `run_001` (530 pairs, 410 synthetic) on every metric
+except pair AUC, using 1/5th the data — the unfixed synthetic data was
+actively harmful, not just unhelpful. Also fixed checkpoint selection
+(`possible-bugs.md` #2, was silently shipping the final epoch instead of
+the best one) and rebuilt the baseline comparison on a matched population
+(`docs/baseline-results-holdout.md`). **Remaining:** a full-scale
+regeneration with the fixed prompts (Arm C) to see if it beats Arm A and
+closes the gap to Voyage-large — scale/timing deliberately not yet
+scheduled. See `docs/twotower-run-001-findings.md` (plain-language) and
+`docs/twotower-run-001-results.md` (full tables) for the complete writeup.
+Only a 2% sample of the 460 synthetic pairs from `batch_500_001` got real
+human review before promotion — the rest were promoted on judge-verdict
+alone (see "Synthetic pair review & promotion" below).
 
 ## Setup
 
@@ -50,6 +58,10 @@ synth generation, `VOYAGE_API_KEY` for the Voyage-large baseline, optional
 MRR/NDCG/P/R@K, intent + neg-hardness slices — see `docs/baseline-metrics.md`)
 
 ```bash
+# TF-IDF lexical baseline (no neural model — cosine similarity on TF-IDF
+# vectors; establishes a lexical floor to compare the neural baselines against)
+python -m baselines.tfidf.eval --data-dir data
+
 # Frozen BERT (bert-base-uncased, mean-pool + L2 cosine; MPS if available)
 python -m baselines.bert_frozen.eval --data-dir data --model bert-base-uncased --batch-size 16 --max-length 512
 
@@ -62,12 +74,22 @@ python -m baselines.voyage_large.eval --data-dir data --model voyage-4-large --o
 
 Each writes an embeddings/response cache under `artifacts/<baseline>/` (so
 re-runs are cheap/free) plus `artifacts/<baseline>/metrics.json`. Aggregate
-all three into one exportable results file:
+all four into one exportable results file:
 
 ```bash
 python scripts/export_baseline_results.py
-# writes docs/baseline-results-all.json and .md
+# writes docs/baseline-results-all.json/.md and (if *_holdout artifact dirs
+# exist) docs/baseline-results-holdout.json/.md — the matched-population
+# comparison, see "Two-tower LoRA fine-tune" below
 ```
+
+Finding so far (matched 69-pair holdout, see
+`docs/baseline-results-holdout.md`): TF-IDF's pair AUC (0.592) actually
+beats both twotower training runs (`run_001` 0.578, `arm_a_real_only`
+0.579) — plain keyword-overlap cosine similarity, no training, edges out
+the fine-tuned LoRA adapter on binary pair classification, though TF-IDF
+is the weakest of all baselines on retrieval/ranking (MRR 0.248). See
+`docs/possible-bugs.md` #3.
 
 ### Query ablation (searchQuery removed from seeker text)
 
@@ -194,8 +216,10 @@ LoRA fine-tune of `voyage-4-nano` on the promoted dataset. Architecture and
 loss-choice rationale (pairwise `ContrastiveLoss`, not `MultipleNegatives-
 RankingLoss` triplets, because current pos/neg pairs mostly don't share a
 seeker — only 5 of 91 synth seekers had both) are in
-`docs/two-tower-fine-tune-plan.md`. Results and open caveats for the first
-full run are in `docs/twotower-run-001-results.md`.
+`docs/two-tower-fine-tune-plan.md`. Results, root-cause diagnosis, fixes
+applied, and the Arm A/B/C experiment plan are in
+`docs/twotower-run-001-findings.md` (plain-language) and
+`docs/twotower-run-001-results.md` (full tables).
 
 ```bash
 # local (CPU/MPS smoke-test only — MPS LoRA backward is weak, prefer Modal for real runs)
@@ -203,6 +227,9 @@ python -m twotower.train --dry-run --epochs 1
 
 # Modal GPU (L4 default), full run
 modal run twotower/modal_train.py --run-id run_001 --epochs 5
+# real-only control arm (excludes all promoted synth pairs from train pool)
+modal run twotower/modal_train.py --run-id arm_a_real_only --epochs 5 --real-only
+
 modal volume get dorby-twotower-checkpoints run_001 ./artifacts/twotower/run_001
 # NOTE: `modal volume get` errors "Is a directory" when downloading a
 # whole run directory in one call on this CLI version — pull run_meta.json/
@@ -212,30 +239,35 @@ modal volume get dorby-twotower-checkpoints run_001 ./artifacts/twotower/run_001
 # holdout eval — one-time final check only, per the decision-gate rule in
 # docs/two-tower-fine-tune-plan.md; do not run repeatedly while iterating
 python -m twotower.eval --split holdout --adapter-dir artifacts/twotower/run_001/adapter
+
+# matched-population comparison across BERT/nano/large/twotower runs
+python -m baselines.bert_frozen.eval --holdout-only --artifacts-dir artifacts/bert_frozen_holdout ...
+python scripts/export_baseline_results.py   # also builds docs/baseline-results-holdout.md
 ```
 
 `twotower/data.py::build_split_bundle()` is leakage-safe by construction:
 holdout = frozen `eval_pair_ids` only, train pool = frozen train pairs +
-promoted synth pairs that touch no eval user, train-dev = a further
-user-disjoint carve from train. `assert_no_holdout_leak()` is called in
-both `train.py` and `eval.py`; `tests/test_twotower_data.py` covers this
-plus deterministic carving and split-hash tamper rejection.
+promoted synth pairs that touch no eval user (or zero synth pairs with
+`include_synth=False` / `--real-only`), train-dev = a further user-disjoint
+carve from train. `assert_no_holdout_leak()` is called in both `train.py`
+and `eval.py`; `tests/test_twotower_data.py` covers this plus deterministic
+carving, the real-only mode, and split-hash tamper rejection.
 
-`run_001` (5 epochs, full 530/61/69 split, `max_seq_length=4096`):
-train-dev pair AUC looked great (0.986) but the **real 69-pair holdout
-tells a different story: pair AUC 0.578**, essentially tied with the
-frozen baselines and *below chance (0.4845)* on hard real negatives — see
-`docs/twotower-run-001-results.md` for the full table and
-`docs/possible-bugs.md` #4 for the root-cause writeup (likely overfitting
-to synthetic-generation-prompt artifacts, not real matching semantics).
-**Do not launch `run_002` or generate more synthetic data at current
-settings until this is diagnosed** — that's the decision gate from
-`docs/two-tower-fine-tune-plan.md` doing its job. Checkpoint selection also
-has a known bug (`docs/possible-bugs.md` #2): it silently picked the final
-epoch instead of the actual best-scoring one this run (epoch 3 outscored
-epoch 5 on train-dev `pair_auc`, 0.989 vs 0.986) — low-impact here but
-unverified at scale, fix before trusting a future run's checkpoint
-selection.
+**`run_001`** (5 epochs, full 530/61/69 split): train-dev pair AUC looked
+great (0.986) but real 69-pair holdout pair AUC was 0.578, hard-negative
+AUC 0.4845 (*below chance*) — did not beat the frozen baselines. Root cause
+confirmed (`docs/possible-bugs.md` #4): the LoRA adapter overfit to
+synthetic-generation-prompt artifacts. **`arm_a_real_only`** (same recipe,
+111 real pairs, zero synthetic) then beat `run_001` on every metric except
+pair AUC using 1/5th the data — proof the synthetic data was actively
+harmful, not just unhelpful, and that the architecture/recipe are fine on
+their own. Both the data-generation root cause (`synth_pipeline/llm.py`
+seed-truncation bug, `generate_neg.md` meta-commentary/tone gaps) and
+checkpoint selection (`docs/possible-bugs.md` #2, was silently shipping
+the final epoch) are fixed and confirmed. **Remaining: Arm C** — full-scale
+regeneration with the fixed prompts, trained and compared against Arm A's
+bar — scale/timing deliberately not yet scheduled, do not generate a large
+batch or launch further runs until that's decided.
 
 ### Data prep utilities
 
@@ -252,20 +284,32 @@ python scripts/build_unique_users_token_counts.py --html-only  # rebuild HTML on
 
 ### `baselines/` — offline embedding baselines
 
-Three sibling packages (`bert_frozen`, `voyage_nano`, `voyage_large`), each
-with `encode.py` (model-specific embedding logic) + `eval.py` (CLI entry:
-load pairs, embed, score, write `metrics.json`). All three share
-`baselines/metrics.py` (pair + retrieval + slice metrics — the single source
-of truth for how "good" is measured) and `baselines/bert_frozen/text.py`
-(field-tagged text serialization of a contact profile into a string, shared
-even by the Voyage baselines). If you touch the text serialization or metric
-definitions, all three baselines are affected — keep them in sync rather
-than forking.
+Four sibling packages (`tfidf`, `bert_frozen`, `voyage_nano`,
+`voyage_large`), each with `encode.py` (model-specific embedding logic) +
+`eval.py` (CLI entry: load pairs, embed, score, write `metrics.json`). All
+four share `baselines/metrics.py` (pair + retrieval + slice metrics — the
+single source of truth for how "good" is measured) and
+`baselines/bert_frozen/text.py` (field-tagged text serialization of a
+contact profile into a string, shared even by the Voyage and TF-IDF
+baselines). If you touch the text serialization or metric definitions, all
+four baselines are affected — keep them in sync rather than forking.
+`tfidf` differs structurally from the other three: it has no pretrained
+model, so `TfidfEncoder.fit()` must be called on the full corpus before any
+`encode()` calls (vocabulary/IDF are corpus-dependent, unlike a frozen
+neural encoder) — see `run_eval()` in `baselines/tfidf/eval.py` for the
+fit-then-encode ordering.
 
-Each has a `*_no_query` sibling package (`bert_frozen_no_query`,
-`voyage_nano_no_query`, `voyage_large_no_query`) for the query-ablation eval
-— same `encode.py`, same metrics, only the seeker-text packing changes via
-`baselines/text_no_query.py`. See "Query ablation" under Commands.
+Each of the three neural baselines has a `*_no_query` sibling package
+(`bert_frozen_no_query`, `voyage_nano_no_query`, `voyage_large_no_query`)
+for the query-ablation eval — same `encode.py`, same metrics, only the
+seeker-text packing changes via `baselines/text_no_query.py`. See "Query
+ablation" under Commands. `tfidf` doesn't have a `_no_query` sibling yet.
+
+`baselines/holdout.py::filter_to_holdout()` is shared by all `--holdout-only`
+flags (added to every baseline `eval.py`) — filters to the frozen 69-pair
+`eval_pair_ids` from `data/synthetic/seed_split.json`, so baseline and
+twotower holdout numbers are computed on an identical population. See
+"Two-tower LoRA fine-tune" below and `docs/baseline-results-holdout.md`.
 
 ### `synth_pipeline/` — LangGraph synthetic pair generator
 

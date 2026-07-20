@@ -13,6 +13,22 @@ Rules:
   - geo_mismatch: geo/availability conflict when query is geo-specific
   - prefs_conflict: violates clear introPreferences / hard requirements
 - Do NOT make an easy unrelated negative (random other industry).
+- Do NOT narrate or explain the mismatch anywhere in the candidate's profile.
+  Never write meta-commentary that states or hints at the failure_mode itself
+  — banned patterns include (but are not limited to) "this would be a
+  mismatch," "critical distinction," "mistaken for," "has never," "despite
+  the surface similarity," "not a genuine," "not an actual," "important
+  distinction for matching," or any sentence whose purpose is to tell the
+  reader why this is a bad intro. The candidate must read like a normal,
+  self-contained profile — someone who exists and has their own life, not a
+  profile written to fail a test. The failure must be inferable only by
+  comparing the candidate's facts against the seeker's stated requirements,
+  never spelled out in prose.
+- Match Boardy CRM tone: markdown-ish lookingFor sections ok; preference
+  fields may be empty/null often. Use the same tone, section conventions,
+  and level of polish as a genuine positive match profile would have —
+  negatives should not be systematically distinguishable from positives by
+  writing style, structure, or length alone.
 - Use the provided synthetic IDs exactly. Do not copy names/companies/long substrings from few-shots.
 - Output a single JSON object with exactly these top-level keys:
   userContactId, matchContactId, userContactFileVersion, matchContactFileVersion,

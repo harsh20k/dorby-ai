@@ -84,6 +84,13 @@ def test_triplet_path_does_not_crash(bundle):
     assert isinstance(rows, list)
 
 
+def test_real_only_excludes_synth():
+    b = build_split_bundle(DATA_DIR, SPLIT_PATH, include_synth=False)
+    assert b.counts["train_synth"] == 0
+    assert b.counts["train_dev_synth"] == 0
+    assert b.counts["holdout"] == 69  # holdout is always 100% real, unaffected
+
+
 def test_split_hash_tamper_rejected(tmp_path: Path):
     raw = json.loads(SPLIT_PATH.read_text())
     raw["split_hash"] = "deadbeefdeadbeef"

@@ -83,7 +83,13 @@ def generate_node(state: PairState, cfg: PipelineConfig) -> dict[str, Any]:
             "userContactFileVersion": 1,
             "matchContactFileVersion": 1,
         },
-        "seed": truncate_pair_for_prompt(state["seed_pair"]),
+        # Seed stays untruncated — the generator is instructed to keep the
+        # seeker's userContactFile/searchQuery "essentially the same," and
+        # real fields (e.g. lookingFor) can run past 20k chars across many
+        # accumulated sections. Truncating here silently hides most of the
+        # field (docs/possible-bugs.md #1). Few-shot examples stay truncated
+        # (default max_field=400) for prompt-length/cost control.
+        "seed": truncate_pair_for_prompt(state["seed_pair"], max_field=None),
         "few_shot": [truncate_pair_for_prompt(p) for p in state["few_shot_pairs"]],
         "instructions": (
             "Return only the pair JSON. Use assigned_ids exactly. "

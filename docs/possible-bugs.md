@@ -141,16 +141,53 @@ read twotower's `metrics_holdout.json` (different path convention:
 `artifacts/twotower/<run_id>/metrics_holdout.json` vs. the other
 baselines' flat `artifacts/<name>/metrics.json`).
 
-**Status:** partially resolved 2026-07-19 — ran `twotower/eval.py --split
-holdout` directly against the real 69-pair frozen holdout (matched
-population on the twotower side; baseline rows still pending a matched
-rerun). Result: twotower holdout pair AUC 0.578 vs. Voyage-4-large 0.573 —
-essentially tied, not the ~2x gap the train-dev table implied. See
-`docs/twotower-run-001-results.md` for the full table. This confirms the
-comparison-invalidity concern was real: the raw table was misleading.
-Baseline rows in the corrected table are still the old 200-pair/8192
-cached numbers, not yet rerun on the matched 69-pair/4096 population —
-close this out once that rerun happens.
+**Status:** resolved 2026-07-19. Added `--holdout-only` to all three
+baseline `eval.py` scripts (filters via new `baselines/holdout.py::
+filter_to_holdout`, reusing `synth_pipeline.split.load_split`) and reran
+all three restricted to the same 69-pair holdout at `max_length=4096`
+(BERT stays at its native 512-token architectural cap). Extended
+`scripts/export_baseline_results.py` with a second output
+(`docs/baseline-results-holdout.md`/`.json`) that reads the `*_holdout`
+artifact dirs plus twotower's `metrics_holdout.json` directly (different
+path convention, handled via `add_twotower_holdout_run()`).
+
+**Corrected finding — the gap was previously understated, not overstated:**
+matching the population changed the baseline numbers more than the
+twotower number. Voyage-4-large's *true* holdout retrieval quality is much
+better than the stale full-200-pair cached number suggested (MRR 0.529 vs.
+the old 0.310 — a *smaller*, holdout-only candidate corpus of 65 unique
+candidates makes retrieval easier than the full ~168-candidate pool the
+original number was computed against). On the properly matched table:
+
+| | pair AUC | MRR | NDCG@10 | Recall@10 | Top-1 |
+|---|---|---|---|---|---|
+| Frozen BERT | 0.460 | 0.137 | 0.156 | 0.310 | 0.069 |
+| Voyage-4-nano | 0.579 | 0.461 | 0.523 | 0.759 | 0.276 |
+| Voyage-4-large (prod) | 0.609 | 0.529 | 0.604 | 0.862 | 0.345 |
+| **twotower run_001** | 0.578 | **0.283** | **0.359** | 0.655 | **0.069** |
+
+twotower is roughly tied with Voyage-nano on pair AUC (binary classify-this-
+one-pair) but clearly **worse than both Voyage baselines on every retrieval
+metric** — Top-1 accuracy ties the near-random BERT baseline (0.069). Full
+table: `docs/baseline-results-holdout.md`. This sharpens (not softens) the
+`run_001` verdict in `docs/twotower-run-001-results.md`: it isn't just
+failing to beat Voyage-large, it's underperforming Voyage-nano on ranking
+quality specifically — consistent with #4's diagnosis (the model learned a
+binary classify-this-one-candidate shortcut, not something that transfers
+to ranking many candidates against each other).
+
+**Added 2026-07-20: `baselines/tfidf/`, a plain TF-IDF-cosine lexical
+baseline** (no neural model), as a lexical floor. Result: TF-IDF pair AUC
+is **0.592 — higher than both `run_001` (0.578) and `arm_a_real_only`
+(0.579)**. Simple keyword-overlap cosine similarity beats the fine-tuned
+LoRA adapter on the exact metric it was trained to optimize. TF-IDF is
+weakest of all baselines on retrieval (MRR 0.248, only ahead of BERT),
+consistent with keyword overlap being useful for coarse binary separation
+but not for ranking the single best candidate among several
+keyword-similar ones. Its neg-hardness split (easy AUC 0.755, hard AUC
+0.502 — exactly chance) is a clean sanity check that the hardness slice
+metric works as intended by construction. See
+`docs/twotower-run-001-results.md` for the full six-way table.
 
 ## 4. `run_001` LoRA adapter likely overfit to synthetic-generation artifacts, not real matching semantics
 
@@ -197,21 +234,122 @@ data is unlikely to fix it and could make the shortcut-learning worse, per
 spots" / mode collapse), which predicted a version of this failure mode
 before it was observed.
 
-**Suggested next step:** (a) strip/rewrite overt meta-commentary from
-synthetic profiles — the 9 confirmed cases are an easy first pass; (b)
-audit for subtler structural tells (section-header conventions, phrasing
-templates, sentence-length distributions) that differ systematically
-between `generate_pos.md` and `generate_neg.md` outputs, e.g. by training a
-trivial classifier on synthetic-only text to predict pos/neg label without
-seeing the seeker/candidate relationship at all — if that classifier scores
-well above chance, it quantifies exactly how "gameable" the current
-synthetic data is; (c) consider generating positives and negatives from a
-single shared prompt/pass (one call decides both, or a diff-based negative
-mutation of a real positive) rather than two structurally different
-prompts, to remove the shortcut signal at the source.
+**Quantified via `scripts/check_synth_cheatability.py`** (2026-07-19): a
+trivial TF-IDF + logistic regression classifier, given **only the
+candidate's own profile text** — no seeker, no query, no relationship
+between the two — predicts pos/neg label with:
 
-**Status:** confirmed 2026-07-19, root cause not yet fixed. Per the
-decision gate in `docs/two-tower-fine-tune-plan.md` ("if lift shows on
-train but not holdout, stop and diagnose — don't scale data yet"), do not
-generate a larger synthetic batch or launch `run_002` until this is
-addressed.
+| Population | n pos / n neg | 5-fold CV ROC-AUC |
+|---|---|---|
+| Real seed pairs only | 100 / 100 | **0.487** (pure chance) |
+| Synthetic (`batch_500_001`) only | 220 / 240 | **0.992** (near-perfect) |
+| Combined | 320 / 340 | 0.911 |
+
+Gap: **+0.505**. Real candidate profiles carry essentially zero label
+signal in isolation — correct, since whether a real person is a good
+match depends entirely on who's asking. Synthetic candidate profiles are
+almost perfectly separable by surface text alone, confirming the shortcut
+is pervasive across the whole synthetic set, not confined to the 9
+profiles with blatant meta-commentary — this is a stronger and more
+complete piece of evidence than the phrase-grep, and fully explains
+`run_001`'s inflated train-dev AUC (0.986) without needing any other
+mechanism.
+
+**Base experiment — real-data control, in detail (2026-07-19):** ran the
+same classifier on real-only data with per-fold breakdown and a feature
+inspection, as a formal control to contrast against the synthetic result
+above (not just a summary number).
+
+Per-fold AUC (5-fold CV, seed=42): `[0.497, 0.335, 0.542, 0.516, 0.518]`,
+mean 0.482, **std 0.075**. Compare to the synthetic-only run: std 0.0054 —
+14x tighter. This is the more important signal than the mean AUC alone: a
+classifier that's found a real, generalizable pattern scores consistently
+across folds; one that's fitting to sampling noise in a small (200-row)
+dataset bounces around near 0.5 fold-to-fold, which is exactly what the
+real-data run does. The synthetic run's tight, stable ~0.99 across every
+fold is strong independent evidence that it reflects a real systematic
+artifact, not an overfit statistical fluke — the real-data control is a
+methodological sanity check that the diagnostic isn't just prone to
+finding spurious signal in any small dataset.
+
+Top TF-IDF coefficients on the real-data control (full fit): negative-
+leaning — `and`, `munich`, `engineer`, `startup`, `trade`, `technical`,
+`the`, `europe`, `singapore`, `tax`, `nyc`; positive-leaning — `health`,
+`sports`, `robotics`, `women`, `chris`, `ventures`, `robert`, `05 27`
+(a date fragment), `longevity`, `lp`, `ecommerce`. These are stopwords and
+person/company/location proper nouns scattered across unrelated topics —
+the model is keying on incidental identity details that happen to
+correlate with label by chance in a small sample, not on anything about
+*how the profile was written*. Contrast with the synthetic-batch feature
+list (`generate_neg.md` fix validation, above): narrative/explanatory
+language ("critical distinction," "has never," "mistaken for") before the
+fix, then post-fix topic-clustering words ("campus," "festival," "health,"
+"climate") — a qualitatively different, structural failure mode, not
+noise. The real-data control confirms the diagnostic distinguishes real
+structural artifacts from small-sample noise correctly.
+
+**Suggested next step:** (a) strip/rewrite overt meta-commentary from
+synthetic profiles — the 9 confirmed cases are an easy first pass; (b) fix
+`synth_pipeline/llm.py::truncate_pair_for_prompt`'s 400-character seed
+truncation, which likely also contributes structural distortion (see #1);
+(c) close the stylistic gap between `generate_pos.md` (has a "Match
+Boardy CRM tone" instruction) and `generate_neg.md` (lacks it); (d)
+consider generating positives and negatives from a single shared
+prompt/pass (one call decides both, or a diff-based negative mutation of a
+real positive) rather than two structurally different prompts, to remove
+the shortcut signal at the source; (e) re-run
+`scripts/check_synth_cheatability.py` after each fix to confirm the
+synthetic-only AUC drops toward the real-only ~0.487 floor.
+
+**Fixes applied (2026-07-19):** (a) `synth_pipeline/llm.py::
+truncate_pair_for_prompt` no longer truncates the seed pair (was 400 chars;
+real `lookingFor` fields run up to 23,672 chars, p95 4,874 — the truncation
+was hiding most of the field from the generator, root cause of #1); (b)
+`generate_neg.md` now explicitly bans meta-commentary give-away phrases;
+(c) `generate_neg.md` now has the same "Match Boardy CRM tone" instruction
+`generate_pos.md` already had, closing a structural gap. Pushed as
+`synth-generate-neg:v2` on LangSmith Hub.
+
+**Validation (pilot batch, 2026-07-19):** generated `batch_pilot_fix_001`
+(20/20 attempts, 36 staged, 90% yield — consistent with `batch_500_001`'s
+93%, no regression in generation quality) with the fixed prompt, then
+re-ran `scripts/check_synth_cheatability.py --batch-dir
+artifacts/synth/batch_pilot_fix_001`:
+
+| Population | n pos / n neg | CV ROC-AUC |
+|---|---|---|
+| Real seed pairs (unchanged control) | 100 / 100 | 0.487–0.532 (CV-fold dependent) |
+| `batch_500_001` (unfixed, old) | 220 / 240 | 0.992 |
+| **`batch_pilot_fix_001` (fixed prompt)** | 19 / 17 | **0.863** |
+
+Material drop (0.992 → 0.863), clearing the plan's decision-gate bar. Not
+fully closed to the real-data floor — inspected the classifier's top
+TF-IDF coefficients on the pilot batch and found **no meta-commentary
+words** (previously would expect "mistaken," "distinction," etc.); the
+top features are now pure topic/domain vocabulary ("campus," "festival,"
+"health," "climate"), consistent with small-sample topic clustering (only
+36 examples across ~15 distinct seed queries) rather than a persistent
+structural pos/neg tell. Caveat: this is a noisy read at n=36 — a larger
+validation batch would give a cleaner signal, and the real arbiter is the
+Arm C real-holdout eval in Phase 4, not this proxy metric in isolation.
+
+**Confirmed with a training experiment, not just the cheatability proxy
+(2026-07-19):** trained `arm_a_real_only` — identical recipe to `run_001`
+but 111 real pairs only, zero synthetic. On the same real holdout, Arm A
+beat `run_001` (real + 410 unfixed synth) on every metric except pair AUC
+(a tie): MRR 0.388 vs 0.283, NDCG@10 0.471 vs 0.359, Recall@10 0.793 vs
+0.655, hard-negative AUC 0.500 (chance) vs 0.4845 (below chance). Using
+~1/5th the training data and none of it synthetic produced a *better*
+model. This is decisive: the unfixed synthetic data wasn't just failing to
+help, it was **actively degrading** the model relative to not using it at
+all. Full table: `docs/twotower-run-001-results.md`.
+
+**Status:** root cause fixed and validated at small scale 2026-07-19, and
+independently confirmed harmful-not-neutral via the Arm A real-only
+control. Decision: Arm C (full-scale regeneration with fixed prompts +
+train real+fixed-synth, bar to clear = Arm A's numbers, not just
+Voyage-large's) is the remaining step, scale/timing not yet scheduled —
+deliberate pause per user decision, not a technical blocker. Re-run
+`scripts/check_synth_cheatability.py` against the full-scale regenerated
+batch once available to confirm the drop holds at scale before promoting
+it.

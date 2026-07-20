@@ -1,0 +1,761 @@
+{
+  "generated_at": "2026-07-20T00:27:08Z",
+  "protocol_note": "frozen 69-pair real holdout (data/synthetic/seed_split.json eval_pair_ids) only \u2014 same population for every row, unlike baseline-results-all.md's full-dataset numbers. See docs/possible-bugs.md #3 and docs/twotower-run-001-results.md.",
+  "baselines": {
+    "tfidf": {
+      "model_name": "tfidf(max_features=20000,ngram_range=(1, 2))",
+      "device": "cpu",
+      "max_features": 20000,
+      "ngram_range": [
+        1,
+        2
+      ],
+      "pair": {
+        "roc_auc": 0.5922413793103449,
+        "average_precision": 0.5041317288466158,
+        "best_f1": 0.6363636363636365,
+        "best_f1_threshold": 0.14328964054584503,
+        "best_f1_accuracy": 0.5362318840579711,
+        "accuracy_at_0.5": 0.5797101449275363,
+        "mean_cosine_positive": 0.18809178471565247,
+        "mean_cosine_negative": 0.17616339027881622,
+        "mean_cosine_gap": 0.011928394436836243,
+        "std_cosine_positive": 0.03665057197213173,
+        "std_cosine_negative": 0.041236985474824905,
+        "score_percentiles": {
+          "positive": {
+            "p10": 0.15279653966426848,
+            "p50": 0.18204344809055328,
+            "p90": 0.2249162256717682
+          },
+          "negative": {
+            "p10": 0.13418908566236495,
+            "p50": 0.17028089612722397,
+            "p90": 0.23562592267990112
+          }
+        },
+        "num_positive": 29,
+        "num_negative": 40
+      },
+      "retrieval": {
+        "mrr": 0.2474815913137905,
+        "map": 0.2474815913137905,
+        "num_queries": 29.0,
+        "mean_rank": 14.310344827586206,
+        "median_rank": 11.0,
+        "recall@1": 0.13793103448275862,
+        "ndcg@1": 0.13793103448275862,
+        "precision@1": 0.13793103448275862,
+        "recall@5": 0.3448275862068966,
+        "ndcg@5": 0.23570041124530808,
+        "precision@5": 0.06896551724137931,
+        "recall@10": 0.4827586206896552,
+        "ndcg@10": 0.28185002264394315,
+        "precision@10": 0.04827586206896553,
+        "top1": 0.13793103448275862
+      },
+      "slices": {
+        "intent": {
+          "customers": {
+            "n_pairs": 3,
+            "n_queries": 1,
+            "low_n": true,
+            "pair_auc": null,
+            "mrr": null,
+            "recall@10": null
+          },
+          "fundraise": {
+            "n_pairs": 60,
+            "n_queries": 24,
+            "low_n": false,
+            "pair_auc": 0.5358796296296297,
+            "mrr": 0.21372279585336984,
+            "recall@10": 0.4166666666666667
+          },
+          "hiring": {
+            "n_pairs": 4,
+            "n_queries": 3,
+            "low_n": true,
+            "pair_auc": null,
+            "mrr": null,
+            "recall@10": null
+          },
+          "partnerships": {
+            "n_pairs": 2,
+            "n_queries": 1,
+            "low_n": true,
+            "pair_auc": null,
+            "mrr": null,
+            "recall@10": null
+          }
+        },
+        "neg_hardness": {
+          "rule": {
+            "overlap": "token Jaccard(seeker_text, match_text) on negative pairs",
+            "easy": "jaccard <= p25 (cutoff=0.1541)",
+            "hard": "jaccard >= p50 (cutoff=0.1717)"
+          },
+          "overlap_stats": {
+            "mean": 0.17360300707756346,
+            "p25": 0.15406203417039332,
+            "p50": 0.17167133380004668,
+            "p75": 0.19362673283644954
+          },
+          "easy": {
+            "n_negatives": 10,
+            "mean_overlap": 0.13839812277487357,
+            "overlap_cutoff": 0.15406203417039332,
+            "low_n": false,
+            "mean_cosine_negative": 0.1559143364429474,
+            "mean_cosine_gap": 0.03217744827270508,
+            "pair_auc": 0.7551724137931035
+          },
+          "hard": {
+            "n_negatives": 20,
+            "mean_overlap": 0.1975300989629716,
+            "overlap_cutoff": 0.17167133380004668,
+            "low_n": false,
+            "mean_cosine_negative": 0.18654394149780273,
+            "mean_cosine_gap": 0.0015478432178497314,
+            "pair_auc": 0.5017241379310344
+          }
+        }
+      }
+    },
+    "bert_frozen": {
+      "model_name": "bert-base-uncased",
+      "device": "mps",
+      "max_length": 512,
+      "batch_size": 16,
+      "pair": {
+        "roc_auc": 0.45948275862068966,
+        "average_precision": 0.4053725414125448,
+        "best_f1": 0.6153846153846154,
+        "best_f1_threshold": 0.9179375767707825,
+        "best_f1_accuracy": 0.4927536231884058,
+        "accuracy_at_0.5": 0.42028985507246375,
+        "mean_cosine_positive": 0.940717339515686,
+        "mean_cosine_negative": 0.9410148859024048,
+        "mean_cosine_gap": -0.00029754638671875,
+        "std_cosine_positive": 0.013200896792113781,
+        "std_cosine_negative": 0.018751293420791626,
+        "score_percentiles": {
+          "positive": {
+            "p10": 0.9231568336486816,
+            "p50": 0.9422924518585205,
+            "p90": 0.9578514099121094
+          },
+          "negative": {
+            "p10": 0.9169512450695038,
+            "p50": 0.9474376738071442,
+            "p90": 0.9611267745494843
+          }
+        },
+        "num_positive": 29,
+        "num_negative": 40
+      },
+      "retrieval": {
+        "mrr": 0.1370748200674727,
+        "map": 0.1370748200674727,
+        "num_queries": 29.0,
+        "mean_rank": 24.344827586206897,
+        "median_rank": 21.0,
+        "recall@1": 0.06896551724137931,
+        "ndcg@1": 0.06896551724137931,
+        "precision@1": 0.06896551724137931,
+        "recall@5": 0.13793103448275862,
+        "ndcg@5": 0.10105781234735838,
+        "precision@5": 0.027586206896551727,
+        "recall@10": 0.3103448275862069,
+        "ndcg@10": 0.15577026912515188,
+        "precision@10": 0.03103448275862069,
+        "top1": 0.06896551724137931
+      },
+      "slices": {
+        "intent": {
+          "customers": {
+            "n_pairs": 3,
+            "n_queries": 1,
+            "low_n": true,
+            "pair_auc": null,
+            "mrr": null,
+            "recall@10": null
+          },
+          "fundraise": {
+            "n_pairs": 60,
+            "n_queries": 24,
+            "low_n": false,
+            "pair_auc": 0.45717592592592593,
+            "mrr": 0.13329080440692634,
+            "recall@10": 0.20833333333333334
+          },
+          "hiring": {
+            "n_pairs": 4,
+            "n_queries": 3,
+            "low_n": true,
+            "pair_auc": null,
+            "mrr": null,
+            "recall@10": null
+          },
+          "partnerships": {
+            "n_pairs": 2,
+            "n_queries": 1,
+            "low_n": true,
+            "pair_auc": null,
+            "mrr": null,
+            "recall@10": null
+          }
+        },
+        "neg_hardness": {
+          "rule": {
+            "overlap": "token Jaccard(seeker_text, match_text) on negative pairs",
+            "easy": "jaccard <= p25 (cutoff=0.1541)",
+            "hard": "jaccard >= p50 (cutoff=0.1717)"
+          },
+          "overlap_stats": {
+            "mean": 0.17360300707756346,
+            "p25": 0.15406203417039332,
+            "p50": 0.17167133380004668,
+            "p75": 0.19362673283644954
+          },
+          "easy": {
+            "n_negatives": 10,
+            "mean_overlap": 0.13839812277487357,
+            "overlap_cutoff": 0.15406203417039332,
+            "low_n": false,
+            "mean_cosine_negative": 0.9296533465385437,
+            "mean_cosine_gap": 0.011063992977142334,
+            "pair_auc": 0.6379310344827586
+          },
+          "hard": {
+            "n_negatives": 20,
+            "mean_overlap": 0.1975300989629716,
+            "overlap_cutoff": 0.17167133380004668,
+            "low_n": false,
+            "mean_cosine_negative": 0.9433472752571106,
+            "mean_cosine_gap": -0.0026299357414245605,
+            "pair_auc": 0.4224137931034483
+          }
+        }
+      }
+    },
+    "voyage_nano": {
+      "model_name": "voyageai/voyage-4-nano",
+      "device": "mps",
+      "max_length": 4096,
+      "truncate_dim": 1024,
+      "batch_size": 4,
+      "pair": {
+        "roc_auc": 0.5793103448275863,
+        "average_precision": 0.512300855925692,
+        "best_f1": 0.5979381443298969,
+        "best_f1_threshold": 0.5779787302017212,
+        "best_f1_accuracy": 0.43478260869565216,
+        "accuracy_at_0.5": 0.43478260869565216,
+        "mean_cosine_positive": 0.6774557828903198,
+        "mean_cosine_negative": 0.6630135774612427,
+        "mean_cosine_gap": 0.014442205429077148,
+        "std_cosine_positive": 0.05541292205452919,
+        "std_cosine_negative": 0.05490288883447647,
+        "score_percentiles": {
+          "positive": {
+            "p10": 0.5909398317337036,
+            "p50": 0.6882003545761108,
+            "p90": 0.7394842386245728
+          },
+          "negative": {
+            "p10": 0.6036375999450684,
+            "p50": 0.6570144295692444,
+            "p90": 0.7262338817119598
+          }
+        },
+        "num_positive": 29,
+        "num_negative": 40
+      },
+      "retrieval": {
+        "mrr": 0.46104957904626953,
+        "map": 0.46104957904626953,
+        "num_queries": 29.0,
+        "mean_rank": 6.793103448275862,
+        "median_rank": 2.0,
+        "recall@1": 0.27586206896551724,
+        "ndcg@1": 0.27586206896551724,
+        "precision@1": 0.27586206896551724,
+        "recall@5": 0.6551724137931034,
+        "ndcg@5": 0.49082888414855647,
+        "precision@5": 0.1310344827586207,
+        "recall@10": 0.7586206896551724,
+        "ndcg@10": 0.5230473958638598,
+        "precision@10": 0.07586206896551727,
+        "top1": 0.27586206896551724
+      },
+      "slices": {
+        "intent": {
+          "customers": {
+            "n_pairs": 3,
+            "n_queries": 1,
+            "low_n": true,
+            "pair_auc": null,
+            "mrr": null,
+            "recall@10": null
+          },
+          "fundraise": {
+            "n_pairs": 60,
+            "n_queries": 24,
+            "low_n": false,
+            "pair_auc": 0.568287037037037,
+            "mrr": 0.4140460191253535,
+            "recall@10": 0.7083333333333334
+          },
+          "hiring": {
+            "n_pairs": 4,
+            "n_queries": 3,
+            "low_n": true,
+            "pair_auc": null,
+            "mrr": null,
+            "recall@10": null
+          },
+          "partnerships": {
+            "n_pairs": 2,
+            "n_queries": 1,
+            "low_n": true,
+            "pair_auc": null,
+            "mrr": null,
+            "recall@10": null
+          }
+        },
+        "neg_hardness": {
+          "rule": {
+            "overlap": "token Jaccard(seeker_text, match_text) on negative pairs",
+            "easy": "jaccard <= p25 (cutoff=0.1541)",
+            "hard": "jaccard >= p50 (cutoff=0.1717)"
+          },
+          "overlap_stats": {
+            "mean": 0.17360300707756346,
+            "p25": 0.15406203417039332,
+            "p50": 0.17167133380004668,
+            "p75": 0.19362673283644954
+          },
+          "easy": {
+            "n_negatives": 10,
+            "mean_overlap": 0.13839812277487357,
+            "overlap_cutoff": 0.15406203417039332,
+            "low_n": false,
+            "mean_cosine_negative": 0.645472526550293,
+            "mean_cosine_gap": 0.031983256340026855,
+            "pair_auc": 0.6206896551724138
+          },
+          "hard": {
+            "n_negatives": 20,
+            "mean_overlap": 0.1975300989629716,
+            "overlap_cutoff": 0.17167133380004668,
+            "low_n": false,
+            "mean_cosine_negative": 0.6680766940116882,
+            "mean_cosine_gap": 0.009379088878631592,
+            "pair_auc": 0.5706896551724138
+          }
+        }
+      }
+    },
+    "voyage_large": {
+      "model_name": "voyage-4-large",
+      "output_dimension": 1024,
+      "batch_size": 16,
+      "tpm_limit": 2500000,
+      "rpm_limit": 1500,
+      "pair": {
+        "roc_auc": 0.6086206896551725,
+        "average_precision": 0.5185454428484251,
+        "best_f1": 0.6153846153846154,
+        "best_f1_threshold": 0.6310446262359619,
+        "best_f1_accuracy": 0.6376811594202898,
+        "accuracy_at_0.5": 0.43478260869565216,
+        "mean_cosine_positive": 0.6371753811836243,
+        "mean_cosine_negative": 0.6178308725357056,
+        "mean_cosine_gap": 0.0193445086479187,
+        "std_cosine_positive": 0.04380651190876961,
+        "std_cosine_negative": 0.051590971648693085,
+        "score_percentiles": {
+          "positive": {
+            "p10": 0.5696845412254333,
+            "p50": 0.646202027797699,
+            "p90": 0.6819127082824707
+          },
+          "negative": {
+            "p10": 0.5663123726844788,
+            "p50": 0.6116210222244263,
+            "p90": 0.6901842653751373
+          }
+        },
+        "num_positive": 29,
+        "num_negative": 40
+      },
+      "retrieval": {
+        "mrr": 0.528667801726667,
+        "map": 0.528667801726667,
+        "num_queries": 29.0,
+        "mean_rank": 4.448275862068965,
+        "median_rank": 2.0,
+        "recall@1": 0.3448275862068966,
+        "ndcg@1": 0.3448275862068966,
+        "precision@1": 0.3448275862068966,
+        "recall@5": 0.8275862068965517,
+        "ndcg@5": 0.592927047084786,
+        "precision@5": 0.16551724137931037,
+        "recall@10": 0.8620689655172413,
+        "ndcg@10": 0.603805146284294,
+        "precision@10": 0.08620689655172416,
+        "top1": 0.3448275862068966
+      },
+      "slices": {
+        "intent": {
+          "customers": {
+            "n_pairs": 3,
+            "n_queries": 1,
+            "low_n": true,
+            "pair_auc": null,
+            "mrr": null,
+            "recall@10": null
+          },
+          "fundraise": {
+            "n_pairs": 60,
+            "n_queries": 24,
+            "low_n": false,
+            "pair_auc": 0.6041666666666667,
+            "mrr": 0.5381124826419449,
+            "recall@10": 0.875
+          },
+          "hiring": {
+            "n_pairs": 4,
+            "n_queries": 3,
+            "low_n": true,
+            "pair_auc": null,
+            "mrr": null,
+            "recall@10": null
+          },
+          "partnerships": {
+            "n_pairs": 2,
+            "n_queries": 1,
+            "low_n": true,
+            "pair_auc": null,
+            "mrr": null,
+            "recall@10": null
+          }
+        },
+        "neg_hardness": {
+          "rule": {
+            "overlap": "token Jaccard(seeker_text, match_text) on negative pairs",
+            "easy": "jaccard <= p25 (cutoff=0.1541)",
+            "hard": "jaccard >= p50 (cutoff=0.1717)"
+          },
+          "overlap_stats": {
+            "mean": 0.17360300707756346,
+            "p25": 0.15406203417039332,
+            "p50": 0.17167133380004668,
+            "p75": 0.19362673283644954
+          },
+          "easy": {
+            "n_negatives": 10,
+            "mean_overlap": 0.13839812277487357,
+            "overlap_cutoff": 0.15406203417039332,
+            "low_n": false,
+            "mean_cosine_negative": 0.6062362790107727,
+            "mean_cosine_gap": 0.030939102172851562,
+            "pair_auc": 0.6
+          },
+          "hard": {
+            "n_negatives": 20,
+            "mean_overlap": 0.1975300989629716,
+            "overlap_cutoff": 0.17167133380004668,
+            "low_n": false,
+            "mean_cosine_negative": 0.6244649291038513,
+            "mean_cosine_gap": 0.01271045207977295,
+            "pair_auc": 0.6017241379310345
+          }
+        }
+      },
+      "usage": {
+        "total_tokens_used": 242037,
+        "total_api_calls": 10,
+        "cache_hits": 66,
+        "cache_misses": 137
+      }
+    },
+    "twotower_run_001": {
+      "model_name": "voyageai/voyage-4-nano",
+      "device": "mps",
+      "max_length": 4096,
+      "truncate_dim": 1024,
+      "batch_size": 4,
+      "n_pos": 29,
+      "n_neg": 40,
+      "pair": {
+        "roc_auc": 0.578448275862069,
+        "average_precision": 0.4874045043149243,
+        "best_f1": 0.6190476190476191,
+        "best_f1_threshold": 0.7478505373001099,
+        "best_f1_accuracy": 0.5362318840579711,
+        "accuracy_at_0.5": 0.42028985507246375,
+        "mean_cosine_positive": 0.8055604696273804,
+        "mean_cosine_negative": 0.7825482487678528,
+        "mean_cosine_gap": 0.023012220859527588,
+        "std_cosine_positive": 0.06481117010116577,
+        "std_cosine_negative": 0.07907997816801071,
+        "score_percentiles": {
+          "positive": {
+            "p10": 0.7409579873085022,
+            "p50": 0.8079205751419067,
+            "p90": 0.8755768775939942
+          },
+          "negative": {
+            "p10": 0.6672456324100494,
+            "p50": 0.7961430847644806,
+            "p90": 0.8621855318546295
+          }
+        },
+        "num_positive": 29,
+        "num_negative": 40
+      },
+      "retrieval": {
+        "mrr": 0.282930784473066,
+        "map": 0.282930784473066,
+        "num_queries": 29.0,
+        "mean_rank": 9.655172413793103,
+        "median_rank": 5.0,
+        "recall@1": 0.06896551724137931,
+        "ndcg@1": 0.06896551724137931,
+        "precision@1": 0.06896551724137931,
+        "recall@5": 0.5517241379310345,
+        "ndcg@5": 0.3248495604153316,
+        "precision@5": 0.11034482758620694,
+        "recall@10": 0.6551724137931034,
+        "ndcg@10": 0.3585945723725469,
+        "precision@10": 0.06551724137931035,
+        "top1": 0.06896551724137931
+      },
+      "slices": {
+        "intent": {
+          "customers": {
+            "n_pairs": 3,
+            "n_queries": 1,
+            "low_n": true,
+            "pair_auc": null,
+            "mrr": null,
+            "recall@10": null
+          },
+          "fundraise": {
+            "n_pairs": 60,
+            "n_queries": 24,
+            "low_n": false,
+            "pair_auc": 0.5821759259259259,
+            "mrr": 0.2904969498360303,
+            "recall@10": 0.6666666666666666
+          },
+          "hiring": {
+            "n_pairs": 4,
+            "n_queries": 3,
+            "low_n": true,
+            "pair_auc": null,
+            "mrr": null,
+            "recall@10": null
+          },
+          "partnerships": {
+            "n_pairs": 2,
+            "n_queries": 1,
+            "low_n": true,
+            "pair_auc": null,
+            "mrr": null,
+            "recall@10": null
+          }
+        },
+        "neg_hardness": {
+          "rule": {
+            "overlap": "token Jaccard(seeker_text, match_text) on negative pairs",
+            "easy": "jaccard <= p25 (cutoff=0.1541)",
+            "hard": "jaccard >= p50 (cutoff=0.1717)"
+          },
+          "overlap_stats": {
+            "mean": 0.17360300707756346,
+            "p25": 0.15406203417039332,
+            "p50": 0.17167133380004668,
+            "p75": 0.19362673283644954
+          },
+          "easy": {
+            "n_negatives": 10,
+            "mean_overlap": 0.13839812277487357,
+            "overlap_cutoff": 0.15406203417039332,
+            "low_n": false,
+            "mean_cosine_negative": 0.7456237077713013,
+            "mean_cosine_gap": 0.0599367618560791,
+            "pair_auc": 0.6931034482758621
+          },
+          "hard": {
+            "n_negatives": 20,
+            "mean_overlap": 0.1975300989629716,
+            "overlap_cutoff": 0.17167133380004668,
+            "low_n": false,
+            "mean_cosine_negative": 0.8082133531570435,
+            "mean_cosine_gap": -0.002652883529663086,
+            "pair_auc": 0.4844827586206897
+          }
+        }
+      },
+      "split": "holdout",
+      "split_hash": "20bbe8f293127372",
+      "data_hash": "0cdfeb652624869a",
+      "counts": {
+        "canonical_pos": 320,
+        "canonical_neg": 340,
+        "train": 530,
+        "train_dev": 61,
+        "holdout": 69,
+        "train_real": 120,
+        "train_synth": 410,
+        "train_dev_real": 11,
+        "train_dev_synth": 50,
+        "train_pos": 261,
+        "train_neg": 269,
+        "excluded_eval_leak": 0
+      },
+      "adapter_dir": "artifacts/twotower/run_001/adapter"
+    },
+    "twotower_arm_a_real_only": {
+      "model_name": "voyageai/voyage-4-nano",
+      "device": "mps",
+      "max_length": 4096,
+      "truncate_dim": 1024,
+      "batch_size": 4,
+      "n_pos": 29,
+      "n_neg": 40,
+      "pair": {
+        "roc_auc": 0.5793103448275863,
+        "average_precision": 0.48457585027070205,
+        "best_f1": 0.6097560975609757,
+        "best_f1_threshold": 0.7441480159759521,
+        "best_f1_accuracy": 0.5362318840579711,
+        "accuracy_at_0.5": 0.42028985507246375,
+        "mean_cosine_positive": 0.7765017747879028,
+        "mean_cosine_negative": 0.764853835105896,
+        "mean_cosine_gap": 0.011647939682006836,
+        "std_cosine_positive": 0.04072090983390808,
+        "std_cosine_negative": 0.04982487112283707,
+        "score_percentiles": {
+          "positive": {
+            "p10": 0.7340161561965942,
+            "p50": 0.7778065800666809,
+            "p90": 0.8264938831329346
+          },
+          "negative": {
+            "p10": 0.7286801695823669,
+            "p50": 0.7697124481201172,
+            "p90": 0.8282788574695588
+          }
+        },
+        "num_positive": 29,
+        "num_negative": 40
+      },
+      "retrieval": {
+        "mrr": 0.3882152169591429,
+        "map": 0.3882152169591429,
+        "num_queries": 29.0,
+        "mean_rank": 6.9655172413793105,
+        "median_rank": 5.0,
+        "recall@1": 0.2413793103448276,
+        "ndcg@1": 0.2413793103448276,
+        "precision@1": 0.2413793103448276,
+        "recall@5": 0.5862068965517241,
+        "ndcg@5": 0.4093405878526184,
+        "precision@5": 0.11724137931034485,
+        "recall@10": 0.7931034482758621,
+        "ndcg@10": 0.47129522634963383,
+        "precision@10": 0.07931034482758623,
+        "top1": 0.2413793103448276
+      },
+      "slices": {
+        "intent": {
+          "customers": {
+            "n_pairs": 3,
+            "n_queries": 1,
+            "low_n": true,
+            "pair_auc": null,
+            "mrr": null,
+            "recall@10": null
+          },
+          "fundraise": {
+            "n_pairs": 60,
+            "n_queries": 24,
+            "low_n": false,
+            "pair_auc": 0.5659722222222222,
+            "mrr": 0.32699937006494734,
+            "recall@10": 0.7916666666666666
+          },
+          "hiring": {
+            "n_pairs": 4,
+            "n_queries": 3,
+            "low_n": true,
+            "pair_auc": null,
+            "mrr": null,
+            "recall@10": null
+          },
+          "partnerships": {
+            "n_pairs": 2,
+            "n_queries": 1,
+            "low_n": true,
+            "pair_auc": null,
+            "mrr": null,
+            "recall@10": null
+          }
+        },
+        "neg_hardness": {
+          "rule": {
+            "overlap": "token Jaccard(seeker_text, match_text) on negative pairs",
+            "easy": "jaccard <= p25 (cutoff=0.1541)",
+            "hard": "jaccard >= p50 (cutoff=0.1717)"
+          },
+          "overlap_stats": {
+            "mean": 0.17360300707756346,
+            "p25": 0.15406203417039332,
+            "p50": 0.17167133380004668,
+            "p75": 0.19362673283644954
+          },
+          "easy": {
+            "n_negatives": 10,
+            "mean_overlap": 0.13839812277487357,
+            "overlap_cutoff": 0.15406203417039332,
+            "low_n": false,
+            "mean_cosine_negative": 0.7419065833091736,
+            "mean_cosine_gap": 0.03459519147872925,
+            "pair_auc": 0.6551724137931034
+          },
+          "hard": {
+            "n_negatives": 20,
+            "mean_overlap": 0.1975300989629716,
+            "overlap_cutoff": 0.17167133380004668,
+            "low_n": false,
+            "mean_cosine_negative": 0.7794700860977173,
+            "mean_cosine_gap": -0.002968311309814453,
+            "pair_auc": 0.5
+          }
+        }
+      },
+      "split": "holdout",
+      "split_hash": "20bbe8f293127372",
+      "data_hash": "0cdfeb652624869a",
+      "counts": {
+        "canonical_pos": 320,
+        "canonical_neg": 340,
+        "train": 530,
+        "train_dev": 61,
+        "holdout": 69,
+        "train_real": 120,
+        "train_synth": 410,
+        "train_dev_real": 11,
+        "train_dev_synth": 50,
+        "train_pos": 261,
+        "train_neg": 269,
+        "excluded_eval_leak": 0
+      },
+      "adapter_dir": "artifacts/twotower/arm_a_real_only/adapter"
+    }
+  }
+}
