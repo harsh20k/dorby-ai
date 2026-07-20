@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-20T00:27:08Z",
+  "generated_at": "2026-07-20T02:37:33Z",
   "protocol_note": "frozen 69-pair real holdout (data/synthetic/seed_split.json eval_pair_ids) only \u2014 same population for every row, unlike baseline-results-all.md's full-dataset numbers. See docs/possible-bugs.md #3 and docs/twotower-run-001-results.md.",
   "baselines": {
     "tfidf": {
@@ -479,6 +479,205 @@
         "total_api_calls": 10,
         "cache_hits": 66,
         "cache_misses": 137
+      }
+    },
+    "hybrid_tfidf_voyage": {
+      "model_name": "hybrid_tfidf_voyage(alpha,rrf)",
+      "device": "cpu+cached",
+      "max_length": 4096,
+      "truncate_dim": 1024,
+      "fusion": {
+        "mode": "alpha",
+        "alpha": 0.75,
+        "tfidf_z": {
+          "mean": 0.17599572212868975,
+          "std": 0.0377568685092145
+        },
+        "voyage_z": {
+          "mean": 0.666735430255191,
+          "std": 0.04863677853822402
+        },
+        "fit_auc": 0.5676056338028169,
+        "alpha_grid": [
+          0.0,
+          0.05,
+          0.1,
+          0.15000000000000002,
+          0.2,
+          0.25,
+          0.30000000000000004,
+          0.35000000000000003,
+          0.4,
+          0.45,
+          0.5,
+          0.55,
+          0.6000000000000001,
+          0.65,
+          0.7000000000000001,
+          0.75,
+          0.8,
+          0.8500000000000001,
+          0.9,
+          0.9500000000000001,
+          1.0
+        ],
+        "alpha_aucs": [
+          0.5507042253521126,
+          0.5532863849765258,
+          0.5525821596244131,
+          0.5499999999999999,
+          0.5530516431924882,
+          0.5544600938967137,
+          0.5565727699530516,
+          0.5612676056338028,
+          0.5610328638497653,
+          0.5622065727699531,
+          0.5673708920187793,
+          0.5659624413145541,
+          0.5647887323943661,
+          0.5640845070422535,
+          0.5661971830985915,
+          0.5676056338028169,
+          0.5664319248826292,
+          0.5647887323943661,
+          0.5631455399061033,
+          0.5645539906103287,
+          0.565962441314554
+        ]
+      },
+      "retrieval_mode": "rrf",
+      "rrf_k": 60,
+      "fit": {
+        "n_pairs": 131,
+        "n_pos": 71,
+        "n_neg": 60,
+        "include_synth": false,
+        "split_hash": "20bbe8f293127372"
+      },
+      "solo_holdout": {
+        "tfidf_pair_auc": 0.6474137931034483,
+        "voyage_pair_auc": 0.5793103448275863,
+        "tfidf_mrr": 0.29386712464274545,
+        "voyage_mrr": 0.46104957904626953
+      },
+      "pair": {
+        "roc_auc": 0.639655172413793,
+        "average_precision": 0.5200427657295158,
+        "best_f1": 0.631578947368421,
+        "best_f1_threshold": 1.061794400215149,
+        "best_f1_accuracy": 0.5942028985507246,
+        "accuracy_at_0.5": 0.5072463768115942,
+        "mean_cosine_positive": 1.7007230520248413,
+        "mean_cosine_negative": 1.2955973148345947,
+        "mean_cosine_gap": 0.4051257371902466,
+        "std_cosine_positive": 0.9060996174812317,
+        "std_cosine_negative": 1.2274410724639893,
+        "score_percentiles": {
+          "positive": {
+            "p10": 0.5694296836853028,
+            "p50": 1.699149489402771,
+            "p90": 2.773615550994873
+          },
+          "negative": {
+            "p10": 0.06494429558515549,
+            "p50": 1.1099170446395874,
+            "p90": 2.929819464683533
+          }
+        },
+        "num_positive": 29,
+        "num_negative": 40
+      },
+      "retrieval": {
+        "mrr": 0.4043028322440087,
+        "map": 0.4043028322440087,
+        "num_queries": 29.0,
+        "mean_rank": 7.448275862068965,
+        "median_rank": 4.0,
+        "recall@1": 0.27586206896551724,
+        "ndcg@1": 0.27586206896551724,
+        "precision@1": 0.27586206896551724,
+        "recall@5": 0.5862068965517241,
+        "ndcg@5": 0.4214726286997783,
+        "precision@5": 0.11724137931034485,
+        "recall@10": 0.7931034482758621,
+        "ndcg@10": 0.48665286758499987,
+        "precision@10": 0.07931034482758621,
+        "top1": 0.27586206896551724
+      },
+      "slices": {
+        "intent": {
+          "customers": {
+            "n_pairs": 3,
+            "n_queries": 1,
+            "low_n": true,
+            "pair_auc": null,
+            "mrr": null,
+            "recall@10": null
+          },
+          "fundraise": {
+            "n_pairs": 60,
+            "n_queries": 24,
+            "low_n": false,
+            "pair_auc": 0.5995370370370371,
+            "mrr": 0.370477033405955,
+            "recall@10": 0.75
+          },
+          "hiring": {
+            "n_pairs": 4,
+            "n_queries": 3,
+            "low_n": true,
+            "pair_auc": null,
+            "mrr": null,
+            "recall@10": null
+          },
+          "partnerships": {
+            "n_pairs": 2,
+            "n_queries": 1,
+            "low_n": true,
+            "pair_auc": null,
+            "mrr": null,
+            "recall@10": null
+          }
+        },
+        "neg_hardness": {
+          "rule": {
+            "overlap": "token Jaccard(seeker_text, match_text) on negative pairs",
+            "easy": "jaccard <= p25 (cutoff=0.1541)",
+            "hard": "jaccard >= p50 (cutoff=0.1717)"
+          },
+          "overlap_stats": {
+            "mean": 0.17360300707756346,
+            "p25": 0.15406203417039332,
+            "p50": 0.17167133380004668,
+            "p75": 0.19362673283644954
+          },
+          "easy": {
+            "n_negatives": 10,
+            "mean_overlap": 0.13839812277487357,
+            "overlap_cutoff": 0.15406203417039332,
+            "low_n": false,
+            "mean_cosine_negative": 0.8955707550048828,
+            "mean_cosine_gap": 0.8051522970199585,
+            "pair_auc": 0.7172413793103448
+          },
+          "hard": {
+            "n_negatives": 20,
+            "mean_overlap": 0.1975300989629716,
+            "overlap_cutoff": 0.17167133380004668,
+            "low_n": false,
+            "mean_cosine_negative": 1.4485912322998047,
+            "mean_cosine_gap": 0.2521318197250366,
+            "pair_auc": 0.6034482758620691
+          }
+        }
+      },
+      "n_corpus": 65,
+      "n_holdout_texts_checked": {
+        "pos_seeker": 29,
+        "neg_seeker": 40,
+        "pos_cand": 29,
+        "neg_cand": 40,
+        "corpus": 65
       }
     },
     "twotower_run_001": {

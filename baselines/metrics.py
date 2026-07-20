@@ -176,6 +176,85 @@ def ranks_for_queries(
     return ranks
 
 
+def ranks_from_score_matrix(
+    score_matrix: np.ndarray,
+    target_ids: list[str],
+    candidate_ids: list[str],
+) -> list[int]:
+    """1-based ranks from a precomputed (n_queries × n_candidates) score matrix.
+
+    Used by late-fusion hybrids that rank by fused scalar scores rather than
+    embedding dot-products.
+    """
+    if score_matrix.ndim != 2:
+        raise ValueError(f"expected 2d score matrix, got shape {score_matrix.shape}")
+    if score_matrix.shape[0] != len(target_ids):
+        raise ValueError(
+            f"score_matrix rows ({score_matrix.shape[0]}) != len(target_ids) "
+            f"({len(target_ids)})"
+        )
+    if score_matrix.shape[1] != len(candidate_ids):
+        raise ValueError(
+            f"score_matrix cols ({score_matrix.shape[1]}) != len(candidate_ids) "
+            f"({len(candidate_ids)})"
+        )
+    id_to_idx = {cid: i for i, cid in enumerate(candidate_ids)}
+    ranks: list[int] = []
+    for row, target_id in zip(score_matrix, target_ids):
+        target_idx = id_to_idx[target_id]
+        order = np.argsort(-row, kind="stable")
+        ranks.append(int(np.where(order == target_idx)[0][0]) + 1)
+    return ranks
+
+
+def retrieval_metrics_from_ranks(
+    ranks: list[int],
+    ks: tuple[int, ...] = (1, 5, 10),
+) -> dict[str, float]:
+    """Same retrieval metric dict as ``retrieval_metrics``, from 1-based ranks."""
+    recalls = {k: 0 for k in ks}
+    ndcgs = {k: [] for k in ks}
+    precisions = {k: [] for k in ks}
+    aps: list[float] = []
+    idcg = 1.0 / np.log2(2)
+
+    for rank in ranks:
+        aps.append(1.0 / rank)
+        for k in ks:
+            if rank <= k:
+                recalls[k] += 1
+                precisions[k].append(1.0 / k)
+            else:
+                precisions[k].append(0.0)
+            ndcgs[k].append(_dcg_at_k(rank, k) / idcg)
+
+    n = len(ranks)
+    out: dict[str, float] = {
+        "mrr": float(np.mean([1.0 / r for r in ranks])) if n else 0.0,
+        "map": float(np.mean(aps)) if n else 0.0,
+        "num_queries": float(n),
+        "mean_rank": float(np.mean(ranks)) if n else 0.0,
+        "median_rank": float(np.median(ranks)) if n else 0.0,
+    }
+    for k in ks:
+        out[f"recall@{k}"] = float(recalls[k] / n) if n else 0.0
+        out[f"ndcg@{k}"] = float(np.mean(ndcgs[k])) if n else 0.0
+        out[f"precision@{k}"] = float(np.mean(precisions[k])) if n else 0.0
+    out["top1"] = out.get("recall@1", 0.0)
+    return out
+
+
+def retrieval_metrics_from_score_matrix(
+    score_matrix: np.ndarray,
+    target_ids: list[str],
+    candidate_ids: list[str],
+    ks: tuple[int, ...] = (1, 5, 10),
+) -> dict[str, float]:
+    """Ranking metrics from a fused (n_queries × n_candidates) score matrix."""
+    ranks = ranks_from_score_matrix(score_matrix, target_ids, candidate_ids)
+    return retrieval_metrics_from_ranks(ranks, ks=ks)
+
+
 # ---------------------------------------------------------------------------
 # Intent slices
 # ---------------------------------------------------------------------------
@@ -282,16 +361,24 @@ def intent_slice_metrics(
     negatives: list[dict[str, Any]],
     pos_scores: np.ndarray,
     neg_scores: np.ndarray,
-    query_embs: np.ndarray,
+    query_embs: np.ndarray | None,
     target_ids: list[str],
     candidate_ids: list[str],
-    candidate_embs: np.ndarray,
+    candidate_embs: np.ndarray | None,
     min_n: int = 5,
+    ranks: list[int] | None = None,
 ) -> dict[str, Any]:
-    """Per-intent pair AUC + retrieval MRR / Recall@10. Skip/mark slices with n < min_n."""
+    """Per-intent pair AUC + retrieval MRR / Recall@10. Skip/mark slices with n < min_n.
+
+    Pass either ``ranks`` (1-based, for late-fusion score matrices) or
+    ``query_embs`` + ``candidate_embs`` (embedding dot-product ranking).
+    """
     pos_intents = [_record_intent(r) for r in positives]
     neg_intents = [_record_intent(r) for r in negatives]
-    ranks = ranks_for_queries(query_embs, target_ids, candidate_ids, candidate_embs)
+    if ranks is None:
+        if query_embs is None or candidate_embs is None:
+            raise ValueError("intent_slice_metrics requires ranks= or query/candidate embs")
+        ranks = ranks_for_queries(query_embs, target_ids, candidate_ids, candidate_embs)
 
     buckets = sorted(set(pos_intents) | set(neg_intents))
     out: dict[str, Any] = {}
@@ -450,10 +537,11 @@ def slice_metrics(
     neg_scores: np.ndarray,
     neg_seeker_texts: list[str],
     neg_cand_texts: list[str],
-    query_embs: np.ndarray,
+    query_embs: np.ndarray | None,
     target_ids: list[str],
     candidate_ids: list[str],
-    candidate_embs: np.ndarray,
+    candidate_embs: np.ndarray | None,
+    ranks: list[int] | None = None,
 ) -> dict[str, Any]:
     return {
         "intent": intent_slice_metrics(
@@ -465,6 +553,7 @@ def slice_metrics(
             target_ids,
             candidate_ids,
             candidate_embs,
+            ranks=ranks,
         ),
         "neg_hardness": neg_hardness_slice_metrics(
             neg_scores,

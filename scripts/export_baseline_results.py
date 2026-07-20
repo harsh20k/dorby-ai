@@ -282,12 +282,14 @@ HOLDOUT_PATHS = {
     "bert_frozen": ARTIFACTS / "bert_frozen_holdout" / "metrics.json",
     "voyage_nano": ARTIFACTS / "voyage_nano_holdout" / "metrics.json",
     "voyage_large": ARTIFACTS / "voyage_large_holdout" / "metrics.json",
+    "hybrid_tfidf_voyage": ARTIFACTS / "hybrid_tfidf_voyage_holdout" / "metrics.json",
 }
 HOLDOUT_LABELS = {
     "tfidf": "TF-IDF (lexical)",
     "bert_frozen": "Frozen BERT",
     "voyage_nano": "Voyage-4-nano",
     "voyage_large": "Voyage-4-large (prod)",
+    "hybrid_tfidf_voyage": "Hybrid TF-IDF+nano",
 }
 HOLDOUT_PROTOCOL_NOTE = (
     "frozen 69-pair real holdout (data/synthetic/seed_split.json eval_pair_ids) only — "
@@ -304,13 +306,22 @@ def add_twotower_holdout_run(run_id: str, metrics_path: Path | None = None) -> N
 
 
 def build_holdout_comparison() -> None:
-    if not all(p.is_file() for p in HOLDOUT_PATHS.values() if "twotower" not in str(p)):
-        missing = [str(p) for p in HOLDOUT_PATHS.values() if not p.is_file()]
-        print(f"skipping holdout comparison — missing: {missing}")
+    # Required core baselines; hybrid + twotower are optional extras.
+    required = ("tfidf", "bert_frozen", "voyage_nano", "voyage_large")
+    missing_required = [n for n in required if not HOLDOUT_PATHS[n].is_file()]
+    if missing_required:
+        print(
+            "skipping holdout comparison — missing required: "
+            + ", ".join(str(HOLDOUT_PATHS[n]) for n in missing_required)
+        )
         return
-    baselines = load_from_paths(HOLDOUT_PATHS)
+    paths = {n: p for n, p in HOLDOUT_PATHS.items() if p.is_file()}
+    skipped = [n for n in HOLDOUT_PATHS if n not in paths]
+    if skipped:
+        print(f"holdout comparison: skipping missing optional: {', '.join(skipped)}")
+    baselines = load_from_paths(paths)
     payload = build_json(baselines, protocol_note=HOLDOUT_PROTOCOL_NOTE)
-    names = list(HOLDOUT_PATHS)
+    names = list(paths)
     HOLDOUT_OUT_JSON.write_text(json.dumps(payload, indent=2) + "\n")
     HOLDOUT_OUT_MD.write_text(
         build_md(
@@ -319,9 +330,9 @@ def build_holdout_comparison() -> None:
             labels=HOLDOUT_LABELS,
             title="# Baseline vs. twotower — matched real-holdout comparison",
             sources_note=(
-                "Sources: `artifacts/{tfidf,bert_frozen,voyage_nano,voyage_large}_holdout/"
-                "metrics.json` + `artifacts/twotower/<run_id>_holdout_eval/"
-                "metrics_holdout.json`."
+                "Sources: `artifacts/{tfidf,bert_frozen,voyage_nano,voyage_large,"
+                "hybrid_tfidf_voyage}_holdout/metrics.json` + "
+                "`artifacts/twotower/<run_id>_holdout_eval/metrics_holdout.json`."
             ),
         )
     )
