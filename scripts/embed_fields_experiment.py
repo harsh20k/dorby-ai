@@ -52,7 +52,11 @@ def build_contact_profiles(
 def pick_sample_contacts(
     train_user_ids: list[str], profiles: dict[str, dict[str, Any]], n: int
 ) -> list[str]:
-    sample = [uid for uid in train_user_ids if uid in profiles][:n]
+    """n = -1 means all non-holdout train users with a profile."""
+    all_sample = [uid for uid in train_user_ids if uid in profiles]
+    if n == -1:
+        return all_sample
+    sample = all_sample[:n]
     if len(sample) < n:
         raise ValueError(f"only found {len(sample)} train contacts with a profile, need {n}")
     return sample
@@ -70,9 +74,10 @@ def run(data_dir: Path, n_contacts: int, cache_dir: Path) -> dict[str, Any]:
     encoder = VoyageNanoEncoder(cache_dir=cache_dir)
 
     index: dict[str, dict[str, Any]] = {}
-    for contact_id in contact_ids:
+    for i, contact_id in enumerate(contact_ids, 1):
         profile = profiles[contact_id]
         index[contact_id] = {}
+        n_present = 0
         for field in FIELDS:
             text = profile.get(field)
             if not text or not str(text).strip():
@@ -93,7 +98,9 @@ def run(data_dir: Path, n_contacts: int, cache_dir: Path) -> dict[str, Any]:
                 "shape": list(emb.shape),
                 "chars": len(str(text)),
             }
-            print(f"  {contact_id} / {field:32s} -> {emb.shape} ({len(str(text))} chars)")
+            n_present += 1
+        if i % 10 == 0 or i == len(contact_ids):
+            print(f"  [{i}/{len(contact_ids)}] {contact_id}: {n_present}/{len(FIELDS)} fields embedded")
 
     index_path = cache_dir / "field_index.json"
     index_path.write_text(json.dumps(index, indent=2))
