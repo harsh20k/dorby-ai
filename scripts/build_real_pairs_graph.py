@@ -502,10 +502,10 @@ applyViewBox();
 
 svg.innerHTML = `
   <defs>
-    <marker id="arrow-pos" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+    <marker id="arrow-pos" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse">
       <path d="M0,0 L10,5 L0,10 z" style="fill:var(--pos)"></path>
     </marker>
-    <marker id="arrow-neg" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+    <marker id="arrow-neg" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse">
       <path d="M0,0 L10,5 L0,10 z" style="fill:var(--neg)"></path>
     </marker>
   </defs>
@@ -516,16 +516,26 @@ const edgeLayer = document.getElementById("edgeLayer");
 const nodeLayer = document.getElementById("nodeLayer");
 
 const edgeEls = edges.map(e => {
+  // visible edge: thicker stroke + a large arrowhead marks the search direction (seeker -> candidate)
   const line = document.createElementNS(svgNS, "line");
   line.style.stroke = e.label === "pos" ? "var(--pos)" : "var(--neg)";
-  line.setAttribute("stroke-width", "1.1");
-  line.setAttribute("stroke-opacity", "0.45");
+  line.setAttribute("stroke-width", "2.4");
+  line.setAttribute("stroke-opacity", "0.55");
   line.setAttribute("marker-end", e.label === "pos" ? "url(#arrow-pos)" : "url(#arrow-neg)");
-  line.addEventListener("mouseenter", (ev) => showTooltip(ev, e));
-  line.addEventListener("mousemove", (ev) => moveTooltip(ev));
-  line.addEventListener("mouseleave", hideTooltip);
+  line.style.pointerEvents = "none";
   edgeLayer.appendChild(line);
-  return { e, line };
+
+  // invisible wide hit-line layered on top so hovering is easy without a visually fat edge
+  const hit = document.createElementNS(svgNS, "line");
+  hit.setAttribute("stroke", "transparent");
+  hit.setAttribute("stroke-width", "14");
+  hit.style.cursor = "pointer";
+  hit.addEventListener("mouseenter", (ev) => showTooltip(ev, e));
+  hit.addEventListener("mousemove", (ev) => moveTooltip(ev));
+  hit.addEventListener("mouseleave", hideTooltip);
+  edgeLayer.appendChild(hit);
+
+  return { e, line, hit };
 });
 
 const nodeEls = nodes.map(n => {
@@ -556,12 +566,15 @@ document.getElementById("statsLine").textContent =
   `${nodes.length} contacts · ${edges.length} pairs · ${nodes.filter(n => n.role === "both").length} both-role`;
 
 function render() {
-  for (const { e, line } of edgeEls) {
+  for (const { e, line, hit } of edgeEls) {
     const a = nodeById.get(e.source), b = nodeById.get(e.target);
     line.setAttribute("x1", a.x); line.setAttribute("y1", a.y);
     line.setAttribute("x2", b.x); line.setAttribute("y2", b.y);
+    hit.setAttribute("x1", a.x); hit.setAttribute("y1", a.y);
+    hit.setAttribute("x2", b.x); hit.setAttribute("y2", b.y);
     const visible = (e.label === "pos" ? showPos.checked : showNeg.checked) && passesFilter(a) && passesFilter(b);
     line.style.display = visible ? "" : "none";
+    hit.style.display = visible ? "" : "none";
   }
   for (const { n, g } of nodeEls) {
     g.setAttribute("transform", `translate(${n.x},${n.y})`);
@@ -590,7 +603,8 @@ search.addEventListener("input", render);
 const tooltip = document.getElementById("tooltip");
 function showTooltip(ev, edge, node) {
   if (edge) {
-    tooltip.innerHTML = `<strong>${edge.label === "pos" ? "Positive" : "Negative"}</strong><br>${escapeHtml(edge.searchQuery || "")}`;
+    const dir = `${escapeHtml(edge.source)} &rarr; ${escapeHtml(edge.target)}`;
+    tooltip.innerHTML = `<strong>${edge.label === "pos" ? "Positive" : "Negative"}</strong> · ${dir}<br>${escapeHtml(edge.searchQuery || "")}`;
   } else if (node) {
     tooltip.innerHTML = `<strong>${escapeHtml(node.id)}</strong><br>role: ${node.role} · ${node.pairCount} pair edge(s)`;
   }
