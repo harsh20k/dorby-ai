@@ -397,48 +397,99 @@ const edges = GRAPH.edges.filter(e => nodeById.has(e.source) && nodeById.has(e.t
 
 const ROLE_COLOR = { seeker: "var(--seeker)", candidate: "var(--candidate)", both: "var(--both)" };
 
-// --- simple force-directed layout, run synchronously on load (small graph) ---
-function layout() {
-  const REPULSION = 4200;
-  const SPRING = 0.012;
-  const SPRING_LEN = 90;
-  const CENTER = 0.0006;
-  const DAMP = 0.85;
-  const iterations = 350;
-  for (let it = 0; it < iterations; it++) {
-    for (const n of nodes) { n.fx = 0; n.fy = 0; }
-    for (let i = 0; i < nodes.length; i++) {
-      for (let j = i + 1; j < nodes.length; j++) {
-        const a = nodes[i], b = nodes[j];
-        let dx = a.x - b.x, dy = a.y - b.y;
-        let d2 = dx*dx + dy*dy + 0.01;
-        let d = Math.sqrt(d2);
-        const f = REPULSION / d2;
-        dx /= d; dy /= d;
-        a.fx += dx * f; a.fy += dy * f;
-        b.fx -= dx * f; b.fy -= dy * f;
+// --- connected components (undirected) so separate clusters can repel each other, Obsidian-style ---
+const compOf = new Map();
+{
+  const adj = new Map(nodes.map(n => [n.id, []]));
+  for (const e of edges) { adj.get(e.source).push(e.target); adj.get(e.target).push(e.source); }
+  let compId = 0;
+  for (const n of nodes) {
+    if (compOf.has(n.id)) continue;
+    const stack = [n.id];
+    compOf.set(n.id, compId);
+    while (stack.length) {
+      const cur = stack.pop();
+      for (const nb of adj.get(cur)) {
+        if (!compOf.has(nb)) { compOf.set(nb, compId); stack.push(nb); }
       }
     }
-    for (const e of edges) {
-      const a = nodeById.get(e.source), b = nodeById.get(e.target);
-      let dx = b.x - a.x, dy = b.y - a.y;
-      let d = Math.sqrt(dx*dx + dy*dy) || 0.01;
-      const f = (d - SPRING_LEN) * SPRING;
+    compId++;
+  }
+}
+
+// --- live force simulation: attraction along edges, repulsion between all nodes
+// (boosted between different connected components so isolated clusters drift apart),
+// mild global centering so the whole graph doesn't fly off-screen. Alpha decays to
+// rest, and reheats when a node is dragged, so it behaves like a real force field
+// rather than a one-shot static layout. ---
+const REPULSION = 4200;
+const CROSS_COMPONENT_BOOST = 3.2;
+const SPRING = 0.012;
+const SPRING_LEN = 90;
+const CENTER = 0.0006;
+const DAMP = 0.85;
+const ALPHA_DECAY = 0.996;
+const ALPHA_MIN = 0.02;
+const REDUCED_MOTION = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+let alpha = 1;
+let simRunning = false;
+
+function tickPhysics(strength) {
+  for (const n of nodes) { n.fx = 0; n.fy = 0; }
+  for (let i = 0; i < nodes.length; i++) {
+    for (let j = i + 1; j < nodes.length; j++) {
+      const a = nodes[i], b = nodes[j];
+      let dx = a.x - b.x, dy = a.y - b.y;
+      let d2 = dx*dx + dy*dy + 0.01;
+      let d = Math.sqrt(d2);
+      const boost = compOf.get(a.id) === compOf.get(b.id) ? 1 : CROSS_COMPONENT_BOOST;
+      const f = (REPULSION * boost) / d2;
       dx /= d; dy /= d;
       a.fx += dx * f; a.fy += dy * f;
       b.fx -= dx * f; b.fy -= dy * f;
     }
-    for (const n of nodes) {
-      n.fx -= n.x * CENTER;
-      n.fy -= n.y * CENTER;
-      n.vx = (n.vx + n.fx) * DAMP;
-      n.vy = (n.vy + n.fy) * DAMP;
-      n.x += n.vx;
-      n.y += n.vy;
-    }
+  }
+  for (const e of edges) {
+    const a = nodeById.get(e.source), b = nodeById.get(e.target);
+    let dx = b.x - a.x, dy = b.y - a.y;
+    let d = Math.sqrt(dx*dx + dy*dy) || 0.01;
+    const f = (d - SPRING_LEN) * SPRING;
+    dx /= d; dy /= d;
+    a.fx += dx * f; a.fy += dy * f;
+    b.fx -= dx * f; b.fy -= dy * f;
+  }
+  for (const n of nodes) {
+    n.fx -= n.x * CENTER;
+    n.fy -= n.y * CENTER;
+    if (n.pinned) { n.vx = 0; n.vy = 0; continue; }
+    n.vx = (n.vx + n.fx * strength) * DAMP;
+    n.vy = (n.vy + n.fy * strength) * DAMP;
+    n.x += n.vx;
+    n.y += n.vy;
   }
 }
-layout();
+
+function runSimulationLoop() {
+  if (!simRunning) return;
+  tickPhysics(alpha);
+  render();
+  alpha *= ALPHA_DECAY;
+  if (alpha < ALPHA_MIN) { simRunning = false; return; }
+  requestAnimationFrame(runSimulationLoop);
+}
+
+function reheat(amount = 0.7) {
+  alpha = Math.max(alpha, amount);
+  if (!simRunning) { simRunning = true; requestAnimationFrame(runSimulationLoop); }
+}
+
+if (REDUCED_MOTION) {
+  // settle instantly, no animation loop
+  for (let it = 0; it < 400; it++) tickPhysics(1);
+} else {
+  reheat(1);
+}
 
 // --- svg setup ---
 const svg = document.getElementById("svg");
@@ -633,6 +684,9 @@ function makeDraggable(g, n) {
   let dragging = false;
   g.addEventListener("mousedown", (ev) => {
     dragging = true;
+    n.pinned = true;
+    n.vx = 0; n.vy = 0;
+    reheat();
     ev.stopPropagation();
   });
   window.addEventListener("mousemove", (ev) => {
@@ -641,9 +695,14 @@ function makeDraggable(g, n) {
     const scale = viewBox.w / rect.width;
     n.x += ev.movementX * scale;
     n.y += ev.movementY * scale;
-    render();
+    if (!simRunning) render();
   });
-  window.addEventListener("mouseup", () => { dragging = false; });
+  window.addEventListener("mouseup", () => {
+    if (!dragging) return;
+    dragging = false;
+    n.pinned = false;
+    reheat();
+  });
 }
 
 render();
