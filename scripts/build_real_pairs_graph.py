@@ -353,6 +353,25 @@ HTML_TEMPLATE = r"""<!DOCTYPE html>
     line-height: 1.35;
   }
 
+  .credit {
+    position: absolute;
+    left: 1.25rem;
+    bottom: 1rem;
+    z-index: 5;
+    font-family: var(--mono);
+    font-size: 0.72rem;
+    color: var(--muted);
+    background: var(--panel-glass);
+    backdrop-filter: blur(6px);
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    padding: 0.35rem 0.8rem;
+    pointer-events: auto;
+  }
+  .credit a { color: var(--accent); text-decoration: none; }
+  .credit a:hover,
+  .credit a:focus-visible { text-decoration: underline; }
+
   @media (prefers-reduced-motion: reduce) {
     * { transition: none !important; }
   }
@@ -378,6 +397,7 @@ HTML_TEMPLATE = r"""<!DOCTYPE html>
     </div>
     <svg id="svg"></svg>
     <div id="tooltip"></div>
+    <footer class="credit">Harsh Pandey · <a href="mailto:harsh.pandey77@gmail.com">harsh.pandey77@gmail.com</a></footer>
   </div>
   <aside id="panel">
     <button class="close-btn" id="panelClose">&times;</button>
