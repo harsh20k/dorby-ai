@@ -85,7 +85,7 @@ HTML_TEMPLATE = r"""<!DOCTYPE html>
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Real pairs graph — Dorby AI</title>
+<title>Real pairs graph — Boardy AI</title>
 <style>
   :root {
     --paper: #f4f6f3;
