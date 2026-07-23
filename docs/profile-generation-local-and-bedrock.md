@@ -253,6 +253,43 @@ Smoke-tested 2026-07-23 (`run_20260723_093500`, `--max-profiles 3
 archetype refresh, ~22-29s per profile. Content sanity-checked — coherent,
 on-archetype, no truncation. Ready for a real batch run.
 
+## Cost tracking
+
+Bedrock's Converse API returns real `inputTokens`/`outputTokens` usage with
+every response. `bedrock_profile_gen.py` records this per call in
+`manifest.jsonl` — both profile-generation calls (`"kind": "profile"`) *and*
+style/archetype refresh calls (`"kind": "style_refresh"` /
+`"archetypes_refresh"`, added 2026-07-23; refresh calls dump several full
+reference profiles into the prompt and were previously untracked, silently
+undercounting true cost).
+
+```bash
+python scripts/estimate_bedrock_cost.py artifacts/bedrock_synth/run_<timestamp> --model-id google.gemma-3-27b-it
+# or override pricing directly:
+python scripts/estimate_bedrock_cost.py artifacts/bedrock_synth/run_<timestamp> --price-in 0.62 --price-out 1.85
+```
+
+For live/ongoing tracking rather than a post-hoc manifest read, two AWS
+resources were also set up directly against the `tf_provisioner` account
+(`us-east-1`, account `411960113601`) — not via Terraform, since this repo
+has no existing IaC for AWS infra:
+
+- **CloudWatch dashboard** `dorby-bedrock-profile-gen` — token usage,
+  invocation count/errors/throttles, an estimated-$/hour metric-math
+  widget (Gemma 3 27B pricing), and invocation latency, all filtered to
+  `ModelId=google.gemma-3-27b-it`. Built from Bedrock's built-in `AWS/
+  Bedrock` CloudWatch metrics namespace — no invocation logging or extra
+  setup needed, these are emitted automatically by every Bedrock call.
+- **AWS Budget** `dorby-bedrock-profile-gen` — $10/month, filtered to
+  `Service: Amazon Bedrock`, email alerts at 50% and 100% of threshold to
+  the account owner. Budget $ figures come from Cost Explorer (~24h billing
+  lag, but the authoritative actual-spend number) rather than the
+  CloudWatch token-count estimate.
+
+If the target model changes from Gemma 3 27B, both the dashboard's
+`ModelId` dimension and its cost-estimate metric-math pricing constants
+need updating to match.
+
 ## Next: pairing (not yet built)
 
 Once profile generation is solid, turning a pool of independent profiles

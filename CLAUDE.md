@@ -270,6 +270,16 @@ a name-blocklist fix), and one malformed archetype-list label
 downstream profile using it, since step 2's output isn't content-validated
 the way step 3's is.
 
+**Cost tracking:** `manifest.jsonl` records real per-call token usage
+(profile generation *and* refresh calls) —
+`python scripts/estimate_bedrock_cost.py <run_dir> --model-id google.gemma-3-27b-it`
+computes actual $ from it. For live tracking, a CloudWatch dashboard
+(`dorby-bedrock-profile-gen`, `us-east-1`) and a $10/month AWS Budget with
+email alerts (filtered to `Service: Amazon Bedrock`) are set up directly
+against the `tf_provisioner` account — see "Cost tracking" in
+`docs/profile-generation-local-and-bedrock.md` for details and what to
+update if the target model changes.
+
 ### Two-tower LoRA fine-tune (`twotower/` + Modal)
 
 LoRA fine-tune of `voyage-4-nano` on the promoted dataset. Architecture and
