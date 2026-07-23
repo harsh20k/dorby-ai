@@ -187,24 +187,31 @@ At this scale every option is cheap in absolute terms (a few dollars at
 most) — the real differentiator turned out to be structured-output support,
 not price.
 
-### Structured-output support: only Claude Haiku 4.5 actually works
+### Structured-output support: Llama and Nova are the outliers, not open-weight models in general
 
 AWS's own docs (`docs.aws.amazon.com/bedrock/.../structured-output.html`)
 say structured outputs are supported for "Claude 4.5+ models... and select
 open-weight models such as Meta Llama and Amazon Nova." **Live testing
 against a real Bedrock account (`us-east-1`, `AWS_PROFILE=tf_provisioner`)
-contradicts this for every open-weight model tried:**
+contradicts this specifically for Llama and Nova**, but confirms it works
+cleanly on most *other* open-weight model families:
 
-| Model | `outputConfig.textFormat` (Converse) | `toolConfig` `strict: true` | Forced `toolChoice` |
-|---|---|---|---|
-| `us.meta.llama3-3-70b-instruct-v1:0` | ❌ `ValidationException: doesn't support the outputConfig field` | ❌ `doesn't support the strict field` | ❌ `doesn't support toolConfig.toolChoice.tool` |
-| `us.amazon.nova-micro-v1:0` | ❌ same error | ❌ same error | not tested |
-| `us.amazon.nova-lite-v1:0` | ❌ same error | ❌ same error | not tested |
-| `us.amazon.nova-pro-v1:0` | ❌ same error | ❌ same error | not tested |
-| `us.amazon.nova-premier-v1:0` | ❌ same error | ❌ same error | not tested |
-| `us.anthropic.claude-haiku-4-5-20251001-v1:0` | ✅ clean `{"foo":"hello"}` on first try | not needed | not needed |
+| Model | `outputConfig.textFormat` (Converse) |
+|---|---|
+| `us.meta.llama3-3-70b-instruct-v1:0` | ❌ `ValidationException: doesn't support the outputConfig field` |
+| `us.amazon.nova-micro-v1:0` / `-lite` / `-pro` / `-premier` (all) | ❌ same error, every variant |
+| `mistral.voxtral-mini-3b-2507` | ✅ clean JSON, first try |
+| `mistral.ministral-3-3b-instruct` | ✅ clean JSON, first try |
+| `nvidia.nemotron-nano-9b-v2` | ✅ clean JSON, first try |
+| `zai.glm-4.7-flash` | ✅ clean JSON, first try |
+| `deepseek.v3.2` | ✅ clean JSON, first try |
+| `google.gemma-3-27b-it` | ✅ clean JSON, first try |
+| `openai.gpt-oss-120b-1:0` | ✅ works — reasoning model, emits a `reasoningContent` block before the schema-compliant `text` block; read the last content block, not the first |
+| `minimax.minimax-m2.5` | ⚠️ works in principle (schema-compliant plan visible in reasoning), but is a heavy reasoning model that can exhaust a small `maxTokens` budget before emitting the final JSON — needs a larger token budget than the others |
+| `us.anthropic.claude-haiku-4-5-20251001-v1:0` | ✅ clean JSON, first try |
 
-Additional findings for Llama specifically:
+Additional findings for Llama specifically (root cause, not just the
+observed error):
 - Llama's native `InvokeModel` request schema
   (`docs.aws.amazon.com/.../model-parameters-meta.html`) only accepts
   `prompt`/`temperature`/`top_p`/`max_gen_len` — there is no
@@ -213,20 +220,19 @@ Additional findings for Llama specifically:
   output doc page implies.
 - Non-strict, non-forced `toolConfig` (auto tool choice) doesn't error, but
   the model doesn't emit a real `toolUse` content block either — it just
-  prints a JSON-*looking* string inside a plain text block
-  (`{"type": "function", "name": "emit", "parameters": {"foo": "hello"}}`),
-  unparsed and unguaranteed. This is the "standard tool-calling workaround"
-  referenced in community discussion of Llama-on-Bedrock — it is **not**
-  actually reliable; it degrades to the same class of fragility as
-  prompt-based JSON on gemma3:4b.
+  prints a JSON-*looking* string inside a plain text block, unparsed and
+  unguaranteed. The commonly-cited "tool-calling workaround" for Llama on
+  Bedrock is **not actually reliable** — it degrades to the same class of
+  fragility as prompt-based JSON on gemma3:4b.
 
-**Conclusion: there is currently no reliable structured-output path for
-Llama 3.3 70B or any Nova variant on Bedrock.** Any Llama/Nova route would
-mean reintroducing prompt-based JSON + retry-on-parse-failure — functionally
-the same approach already fought through for `gemma3:4b`, just on a model
-that costs more per retried call. Claude Haiku 4.5 is the only model in
-this comparison confirmed to work cleanly, at trivial absolute cost (~$7
-for 500 profiles).
+**Conclusion:** avoid Llama and Nova model families for anything needing
+guaranteed JSON on Bedrock. Every other open-weight family tested (Mistral,
+NVIDIA, Zhipu, DeepSeek, Google, OpenAI) and Claude 4.5+ genuinely support
+it. **Chosen: `google.gemma-3-27b-it`** — same model family as the local
+`gemma3:4b` runs (just bigger, 27B vs 4B), confirmed structured-output
+support, ~$1.30 for 500 profiles, and smoke-tested clean (3/3 profiles,
+~25s each, no retries, 8-128K context / 8K max output — double Llama's 4K
+cap).
 
 ## `scripts/bedrock_profile_gen.py` — current state
 
@@ -241,16 +247,11 @@ export AWS_PROFILE=tf_provisioner AWS_DEFAULT_REGION=us-east-1
 python scripts/bedrock_profile_gen.py --max-profiles 20   # bounded test
 ```
 
-**Status: currently defaults to `meta.llama3-3-70b-instruct-v1:0`
-(`--model-id`), which per the findings above cannot produce structured
-output on Bedrock and will fail immediately (confirmed live — the initial
-style-spec refresh exhausts all retries and raises).** Decision on which
-model to actually target (Claude Haiku 4.5 vs. reworking to prompt-based
-JSON for Llama) was paused mid-conversation, not yet made — **do not run
-this script for a real batch until `--model-id` is updated to a
-confirmed-working model** (`us.anthropic.claude-haiku-4-5-20251001-v1:0`
-per the table above) or the retry/parsing logic is reworked for a
-non-structured-output model.
+**Status: defaults to `google.gemma-3-27b-it`, confirmed working.**
+Smoke-tested 2026-07-23 (`run_20260723_093500`, `--max-profiles 3
+--concurrency 2`): 3/3 succeeded, no retries, ~13s style refresh, ~10s
+archetype refresh, ~22-29s per profile. Content sanity-checked — coherent,
+on-archetype, no truncation. Ready for a real batch run.
 
 ## Next: pairing (not yet built)
 

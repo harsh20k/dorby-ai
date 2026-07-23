@@ -44,7 +44,9 @@ PROFILE_FIELDS = [
     "meetingAndSchedulingPreferences",
 ]
 
-DEFAULT_MODEL_ID = "us.meta.llama3-3-70b-instruct-v1:0"  # geo cross-region inference ID (required in us-east-1)
+DEFAULT_MODEL_ID = "google.gemma-3-27b-it"  # confirmed to support Bedrock structured outputs; see
+                                             # docs/profile-generation-local-and-bedrock.md for what was ruled out
+                                             # (Llama 3.3 70B and all Nova variants don't support it at all)
 DEFAULT_REGION = "us-east-1"
 
 STEP1_SCHEMA = {
@@ -444,7 +446,7 @@ def main():
     ap.add_argument("--model-id", default=DEFAULT_MODEL_ID, help="Bedrock model/inference-profile ID")
     ap.add_argument("--region", default=DEFAULT_REGION)
     ap.add_argument("--concurrency", type=int, default=4, help="Parallel worker threads hitting Bedrock")
-    ap.add_argument("--max-tokens", type=int, default=4000, help="Llama 3.3 70B's max output is 4K")
+    ap.add_argument("--max-tokens", type=int, default=4000, help="Gemma 3 27B's max output is 8K; 4K is plenty for one profile")
     ap.add_argument("--temperature", type=float, default=0.6)
     ap.add_argument("--sample-size", type=int, default=8, help="Real profiles sampled per style/archetype refresh")
     ap.add_argument("--archetype-refresh-every", type=int, default=5)

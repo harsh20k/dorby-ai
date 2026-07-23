@@ -250,18 +250,16 @@ local run lost its fast local endpoint to an uncaught `RuntimeError` ~10
 minutes in and spent the rest of the run single-threaded on the slow
 remote box, producing only 51 profiles instead of an estimated ~740.
 
-**Bedrock model caveat — do not skip:** live testing found that despite
-AWS's docs claiming broad support, **neither Llama 3.3 70B nor any Nova
-variant (Micro/Lite/Pro/Premier) actually supports Bedrock's native
-structured-output JSON-schema enforcement** — all fail with
-`ValidationException` on both the Converse `outputConfig` mechanism and
-strict tool-calling. **Claude Haiku 4.5 is the only model confirmed
-working** in this comparison (clean schema-compliant JSON, first try).
-`bedrock_profile_gen.py` currently defaults `--model-id` to
-`meta.llama3-3-70b-instruct-v1:0` and **will fail immediately if run as-is**
-— update `--model-id` to `us.anthropic.claude-haiku-4-5-20251001-v1:0`
-(~$7 for 500 profiles, still trivial) before running a real batch. Full
-cost table and live-test evidence in
+**Bedrock model note:** live testing found that despite AWS's docs claiming
+broad support, **Llama 3.3 70B and every Nova variant (Micro/Lite/Pro/
+Premier) fail outright** on Bedrock's native structured-output JSON-schema
+enforcement (`ValidationException` on both Converse `outputConfig` and
+strict tool-calling) — but most *other* open-weight families (Mistral,
+NVIDIA, Zhipu, DeepSeek, Google, OpenAI) and Claude 4.5+ genuinely work.
+`bedrock_profile_gen.py` defaults `--model-id` to `google.gemma-3-27b-it`
+(same family as the local `gemma3:4b` runs, just bigger; ~$1.30 for 500
+profiles) — **smoke-tested 2026-07-23, 3/3 clean, ready for a real batch.**
+Full cost table and live-test evidence in
 `docs/profile-generation-local-and-bedrock.md`.
 
 Known unfixed issues (both scripts, documented in detail in the doc above):
