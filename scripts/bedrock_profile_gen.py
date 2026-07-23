@@ -223,12 +223,16 @@ Do not repeat or summarize any specific person's actual details — only describ
             self.client, self.model_id, prompt, STEP1_SCHEMA, "style_spec",
             "Per-field style guide learned from real profiles", temperature=0.5,
             max_tokens=self.max_tokens, max_retries=self.max_retries, log_fn=self._log)
+        usage = r.get("_usage", {})
         with self.lock:
             self.style_version += 1
             self.style_spec = spec
             self.last_style_refresh_count = self.completed_count
             v = self.style_version
+            self.total_usage["input_tokens"] += usage.get("inputTokens") or 0
+            self.total_usage["output_tokens"] += usage.get("outputTokens") or 0
         atomic_write_json(self.out_dir / "specs" / f"style_v{v}.json", spec)
+        self._log_refresh_manifest("style", v, usage)
         self._log(f"[style refresh v{v}] elapsed={r['_elapsed_s']:.1f}s sample_size={len(sample)}")
 
     def refresh_archetypes(self):
@@ -243,12 +247,16 @@ Looking at these profiles as whole people (not field by field), identify 6-8 rec
             "Recurring persona archetypes found across the sampled profiles", temperature=0.5,
             max_tokens=self.max_tokens, max_retries=self.max_retries, log_fn=self._log)
         archetypes = parsed["archetypes"]
+        usage = r.get("_usage", {})
         with self.lock:
             self.archetypes_version += 1
             self.archetypes = archetypes
             self.last_archetype_refresh_count = self.completed_count
             v = self.archetypes_version
+            self.total_usage["input_tokens"] += usage.get("inputTokens") or 0
+            self.total_usage["output_tokens"] += usage.get("outputTokens") or 0
         atomic_write_json(self.out_dir / "specs" / f"archetypes_v{v}.json", archetypes)
+        self._log_refresh_manifest("archetypes", v, usage)
         self._log(f"[archetype refresh v{v}] elapsed={r['_elapsed_s']:.1f}s sample_size={len(sample)} n_archetypes={len(archetypes)}")
 
     def initial_setup(self):
@@ -329,6 +337,18 @@ Then, using that reasoning, fill in the 8 profile fields consistently with it an
     def _log(self, msg: str):
         print(f"[{time.strftime('%H:%M:%S')}] {msg}", flush=True)
 
+    def _log_refresh_manifest(self, kind: str, version: int, usage: dict):
+        """Record refresh-call token usage in the manifest too, so cost calculations
+        from manifest.jsonl alone aren't missing the style/archetype refresh calls."""
+        with self.manifest_lock:
+            with open(self.manifest_path, "a") as f:
+                f.write(json.dumps({
+                    "kind": f"{kind}_refresh", "version": version,
+                    "input_tokens": usage.get("inputTokens") or 0,
+                    "output_tokens": usage.get("outputTokens") or 0,
+                    "ts": time.time(),
+                }) + "\n")
+
     def _save_result(self, result: dict):
         pid = result["id"]
         status = "ok" if result["success"] else "FAILED"
@@ -337,7 +357,7 @@ Then, using that reasoning, fill in the 8 profile fields consistently with it an
         with self.manifest_lock:
             with open(self.manifest_path, "a") as f:
                 f.write(json.dumps({
-                    "id": pid, "archetype": result["archetype"],
+                    "kind": "profile", "id": pid, "archetype": result["archetype"],
                     "success": result["success"], "n_attempts": len(result["attempts"]),
                     "elapsed_s": sum(a.get("elapsed_s", 0) for a in result["attempts"]),
                     "input_tokens": sum(a.get("input_tokens") or 0 for a in result["attempts"]),
