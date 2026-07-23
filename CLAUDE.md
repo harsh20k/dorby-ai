@@ -38,7 +38,13 @@ scheduled. See `docs/twotower-run-001-findings.md` (plain-language) and
 `docs/twotower-run-001-results.md` (full tables) for the complete writeup.
 Only a 2% sample of the 460 synthetic pairs from `batch_500_001` got real
 human review before promotion — the rest were promoted on judge-verdict
-alone (see "Synthetic pair review & promotion" below).
+alone (see "Synthetic pair review & promotion" below). **In-progress
+(separate track):** a profile-first generation redesign (no label attached
+at generation time, avoiding the leakage mechanism above by construction)
+now has two working generators — local Ollama and AWS Bedrock — see
+"Standalone profile generation" below and
+`docs/profile-generation-local-and-bedrock.md`. Pairing/labeling those
+profiles into a new pos/neg dataset is designed but not yet built.
 
 ## Setup
 
@@ -209,6 +215,62 @@ default ("only for staged files with human sign-off") — use it
 consciously, not as the default path for future batches, and re-check
 `docs/possible-bugs.md` for confirmed data-quality issues before trusting
 a judge-only-promoted batch at face value.
+
+### Standalone profile generation (local Ollama + AWS Bedrock)
+
+A separate, newer generation path from the pairs pipeline above — generates
+fictional user profiles with **no pos/neg label attached at all**, so
+nothing about "why this is a good/bad match" can leak into the profile text
+(the root cause diagnosed in `possible-bugs.md` #4). Full design, findings,
+and current status in `docs/profile-generation-local-and-bedrock.md`; pairing
+these profiles into labeled pos/neg pairs (query generation → candidate
+picking → existing judge) is sketched there but not yet built.
+
+```bash
+# local Ollama (127.0.0.1 + a remote Tailscale box), gemma3:4b
+python scripts/local_gemma_profile_gen.py                     # run until Ctrl+C
+python scripts/local_gemma_profile_gen.py --max-profiles 20   # bounded test
+
+# AWS Bedrock — see model caveat below before running a real batch
+export AWS_PROFILE=tf_provisioner AWS_DEFAULT_REGION=us-east-1
+python scripts/bedrock_profile_gen.py --max-profiles 20
+
+# browse either script's output (existing build_synth_browser.py only
+# understands labeled pairs, not standalone profiles)
+python3 scripts/build_profile_browser.py --runs-dir artifacts/local_gemma_synth --out artifacts/local_gemma_synth/_browser.html
+open artifacts/local_gemma_synth/_browser.html
+```
+
+Both scripts implement the same 3-step design (periodically-refreshed style
+spec + archetype list feeding continuous per-profile generation with a
+discarded chain-of-thought `reasoning` field) and the same crash-resilience
+fix: a failed style/archetype refresh now logs and keeps the stale spec
+instead of crashing its worker thread — found because a ~6h51m unattended
+local run lost its fast local endpoint to an uncaught `RuntimeError` ~10
+minutes in and spent the rest of the run single-threaded on the slow
+remote box, producing only 51 profiles instead of an estimated ~740.
+
+**Bedrock model caveat — do not skip:** live testing found that despite
+AWS's docs claiming broad support, **neither Llama 3.3 70B nor any Nova
+variant (Micro/Lite/Pro/Premier) actually supports Bedrock's native
+structured-output JSON-schema enforcement** — all fail with
+`ValidationException` on both the Converse `outputConfig` mechanism and
+strict tool-calling. **Claude Haiku 4.5 is the only model confirmed
+working** in this comparison (clean schema-compliant JSON, first try).
+`bedrock_profile_gen.py` currently defaults `--model-id` to
+`meta.llama3-3-70b-instruct-v1:0` and **will fail immediately if run as-is**
+— update `--model-id` to `us.anthropic.claude-haiku-4-5-20251001-v1:0`
+(~$7 for 500 profiles, still trivial) before running a real batch. Full
+cost table and live-test evidence in
+`docs/profile-generation-local-and-bedrock.md`.
+
+Known unfixed issues (both scripts, documented in detail in the doc above):
+name/company collapse across unrelated archetypes (e.g. "Elias Vance" /
+"SynapseFlow" reused for two unrelated personas — user explicitly declined
+a name-blocklist fix), and one malformed archetype-list label
+(`"X", "Y", "Z", (choose one appropriate)`) that propagated into every
+downstream profile using it, since step 2's output isn't content-validated
+the way step 3's is.
 
 ### Two-tower LoRA fine-tune (`twotower/` + Modal)
 
