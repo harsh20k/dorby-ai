@@ -107,6 +107,65 @@ goal, the next lever is 3 components (mild further gain) or a nonlinear
 reduction (UMAP/t-SNE) rather than more physics tuning — those are built to
 preserve local neighborhood structure that linear PCA/SVD compresses away.
 
+### Direct 3D PCA scatter (`scripts/build_real_pairs_3d_scatter.py`)
+
+A separate, standalone script (not a `build_real_pairs_graph.py` mode — that
+file's renderer is 2D SVG, a genuine 3D scatter needed its own hand-rolled
+canvas perspective projector). `real-pairs-voyage-lookingfor-3d-pca.html`:
+297 real contacts placed at the first 3 PCA components of their cached
+voyage-4-large `lookingFor` embeddings (`artifacts/voyage_large_lookingfor/`,
+same cache as the 2D version — this run was 297/297 cache hits, 0 new API
+calls). Positions are entirely fixed, no simulation of any kind; mouse drag
+only rotates the camera (yaw/pitch), scroll only zooms — neither moves a
+node. The 200 seeker→candidate pairs are drawn as thin dotted directed
+arrows (green = positive, red = negative) between their fixed points, nodes
+colored by pairing polarity as in the 2D version. PC1/PC2/PC3 explain
+7.9%/5.0%/4.4% of variance (17.3% cumulative, matching the 2D version's
+PC1+PC2 of 12.9% plus PC3's further 4.4%); expect the same "no dramatic
+clusters" honest read, now with one more (weak) axis to look along.
+
+Full per-component breakdown (PCA fit to 10 components on the same 297
+embeddings, for reference — decay is gradual with no elbow, meaning the
+real structure is spread thin across many directions rather than
+concentrated in the first few, which is exactly the bad case for any
+linear projection):
+
+| component | variance explained | cumulative |
+|---|---|---|
+| PC1 | 7.90% | 7.90% |
+| PC2 | 4.96% | 12.86% |
+| PC3 | 4.41% | 17.27% |
+| PC4 | 3.12% | 20.39% |
+| PC5 | 2.78% | 23.17% |
+| PC6 | 2.75% | 25.92% |
+| PC7 | 2.48% | 28.40% |
+| PC8 | 2.33% | 30.73% |
+| PC9 | 2.18% | 32.91% |
+| PC10 | 2.04% | 34.95% |
+
+### PCA / t-SNE / UMAP 3D comparison with a layout selector (`scripts/build_real_pairs_3d_manifold.py`)
+
+The gradual-decay table above means more PCA components won't fix the
+"no obvious clusters" problem — it's the wrong tool, since it can only ever
+show whichever axes happen to carry the most raw variance, not axes chosen
+to make a good picture. `real-pairs-voyage-lookingfor-3d-manifold.html`
+reuses the 3D canvas scatter from the PCA-only build above (same fixed
+positions, no simulation, same dotted directed pos/neg arrows) but computes
+**three** layouts up front from the same cached embeddings — PCA (linear,
+baseline for comparison), t-SNE (`sklearn.manifold.TSNE`, perplexity 30),
+and UMAP (`umap-learn`, `n_neighbors=15`, `min_dist=0.1`) — and embeds all
+three in one file with a button selector top-left, so switching is instant
+(positions swap, camera angle stays put). New dependency: `umap-learn`,
+added to `requirements.txt`. Still 297/297 cache hits, 0 new API calls.
+
+**Caveat carried in the UI itself** (shown per-layout under the selector):
+t-SNE/UMAP positions are nonlinear — they optimize for "things that were
+near in the real 1024-dim space stay near here," which is exactly what you
+want for an honest "is there visual clustering" read, but unlike PCA there
+is no axis meaning and no variance-explained number to quote; only relative
+neighborhoods in the picture are trustworthy, not absolute distances or
+directions.
+
 ## Published Artifacts (claude.ai, this account)
 
 `Artifact` publishing (`action: "list"`, `scope: "mine"`) shows 3
