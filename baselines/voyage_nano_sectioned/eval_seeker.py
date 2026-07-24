@@ -27,6 +27,7 @@ from baselines.metrics import (
     slice_metrics,
 )
 from baselines.voyage_nano.encode import VoyageNanoEncoder, pick_device
+from baselines.voyage_nano_sectioned.aggregate import aggregate_sections
 from baselines.voyage_nano_sectioned.text import seeker_to_sectioned_texts
 
 
@@ -73,7 +74,7 @@ def build_sectioned_seekers(
     return offsets, section_texts
 
 
-def run_eval(
+def _load_and_encode(
     data_dir: Path,
     model_name: str,
     batch_size: int,
@@ -85,6 +86,12 @@ def run_eval(
     split_path: Path | None = None,
     user_id: str | None = None,
 ) -> dict[str, Any]:
+    """Load pairs, build the sectioned-seeker + candidate-corpus embeddings once.
+
+    Shared by ``run_eval`` (single agg mode) and ``run_eval_multi_agg`` (several
+    agg modes scored from one embedding pass) so re-running for a second or
+    third aggregation mode never re-encodes anything.
+    """
     device = pick_device()
     print(f"device: {device}")
     print(f"model:  {model_name}")
@@ -137,13 +144,48 @@ def run_eval(
         corpus_texts, role="document", batch_size=batch_size, cache_name=None
     )
 
-    # (n_sections x n_candidates) -> max-pool per contiguous record block (axis=0) -> (n_records x n_candidates)
-    pos_row_offsets = np.array(pos_offsets[:-1])
-    neg_row_offsets = np.array(neg_offsets[:-1])
-    pos_section_scores = pos_section_emb @ corpus_emb.T
-    neg_section_scores = neg_section_emb @ corpus_emb.T
-    pos_record_scores = np.maximum.reduceat(pos_section_scores, pos_row_offsets, axis=0)
-    neg_record_scores = np.maximum.reduceat(neg_section_scores, neg_row_offsets, axis=0)
+    return {
+        "device": device,
+        "positives": positives,
+        "negatives": negatives,
+        "neg_cand_texts": neg_cand_texts,
+        "neg_seeker_texts_plain": neg_seeker_texts_plain,
+        "corpus_ids": corpus_ids,
+        "id_to_idx": id_to_idx,
+        "pos_offsets": pos_offsets,
+        "neg_offsets": neg_offsets,
+        "pos_section_scores": pos_section_emb @ corpus_emb.T,
+        "neg_section_scores": neg_section_emb @ corpus_emb.T,
+    }
+
+
+def _score_with_agg(
+    encoded: dict[str, Any],
+    *,
+    agg: str,
+    topk: int,
+    temperature: float,
+) -> dict[str, Any]:
+    """Aggregate the already-computed section-score matrices and build metrics."""
+    positives = encoded["positives"]
+    negatives = encoded["negatives"]
+    id_to_idx = encoded["id_to_idx"]
+    corpus_ids = encoded["corpus_ids"]
+
+    pos_record_scores = aggregate_sections(
+        encoded["pos_section_scores"],
+        encoded["pos_offsets"],
+        mode=agg,
+        topk=topk,
+        temperature=temperature,
+    )
+    neg_record_scores = aggregate_sections(
+        encoded["neg_section_scores"],
+        encoded["neg_offsets"],
+        mode=agg,
+        topk=topk,
+        temperature=temperature,
+    )
 
     pos_target_ids = [r["matchContactId"] for r in positives]
     neg_target_ids = [r["matchContactId"] for r in negatives]
@@ -168,8 +210,8 @@ def run_eval(
         negatives=negatives,
         pos_scores=pos_scores,
         neg_scores=neg_scores,
-        neg_seeker_texts=neg_seeker_texts_plain,
-        neg_cand_texts=neg_cand_texts,
+        neg_seeker_texts=encoded["neg_seeker_texts_plain"],
+        neg_cand_texts=encoded["neg_cand_texts"],
         query_embs=None,
         target_ids=pos_target_ids,
         candidate_ids=corpus_ids,
@@ -178,12 +220,9 @@ def run_eval(
     )
 
     return {
-        "model_name": model_name,
-        "device": str(device),
-        "max_length": max_length,
-        "truncate_dim": truncate_dim,
-        "batch_size": batch_size,
-        "user_id_filter": user_id,
+        "agg": agg,
+        "topk": topk,
+        "temperature": temperature,
         "pair": pair,
         "retrieval": retrieval,
         "slices": slices,
@@ -198,6 +237,96 @@ def run_eval(
             ],
         },
     }
+
+
+def run_eval(
+    data_dir: Path,
+    model_name: str,
+    batch_size: int,
+    max_length: int,
+    truncate_dim: int | None,
+    artifacts_dir: Path,
+    *,
+    holdout_only: bool = False,
+    split_path: Path | None = None,
+    user_id: str | None = None,
+    agg: str = "max",
+    topk: int = 2,
+    temperature: float = 0.05,
+) -> dict[str, Any]:
+    encoded = _load_and_encode(
+        data_dir,
+        model_name,
+        batch_size,
+        max_length,
+        truncate_dim,
+        artifacts_dir,
+        holdout_only=holdout_only,
+        split_path=split_path,
+        user_id=user_id,
+    )
+    scored = _score_with_agg(encoded, agg=agg, topk=topk, temperature=temperature)
+    return {
+        "model_name": model_name,
+        "device": str(encoded["device"]),
+        "max_length": max_length,
+        "truncate_dim": truncate_dim,
+        "batch_size": batch_size,
+        "user_id_filter": user_id,
+        **scored,
+    }
+
+
+def run_eval_multi_agg(
+    data_dir: Path,
+    model_name: str,
+    batch_size: int,
+    max_length: int,
+    truncate_dim: int | None,
+    artifacts_dir: Path,
+    agg_configs: list[dict[str, Any]],
+    *,
+    holdout_only: bool = False,
+    split_path: Path | None = None,
+    user_id: str | None = None,
+) -> dict[str, dict[str, Any]]:
+    """Encode sections/candidates once, score several agg modes from that one pass.
+
+    ``agg_configs`` is a list of dicts like
+    ``{"label": "topk_mean", "agg": "topk_mean", "topk": 2, "temperature": 0.05}``.
+    Returns ``{label: metrics_dict}``, each metrics_dict shaped like ``run_eval``'s
+    return value (same "pair"/"retrieval"/"slices" keys).
+    """
+    encoded = _load_and_encode(
+        data_dir,
+        model_name,
+        batch_size,
+        max_length,
+        truncate_dim,
+        artifacts_dir,
+        holdout_only=holdout_only,
+        split_path=split_path,
+        user_id=user_id,
+    )
+    results: dict[str, dict[str, Any]] = {}
+    for cfg in agg_configs:
+        label = cfg.get("label", cfg["agg"])
+        scored = _score_with_agg(
+            encoded,
+            agg=cfg["agg"],
+            topk=cfg.get("topk", 2),
+            temperature=cfg.get("temperature", 0.05),
+        )
+        results[label] = {
+            "model_name": model_name,
+            "device": str(encoded["device"]),
+            "max_length": max_length,
+            "truncate_dim": truncate_dim,
+            "batch_size": batch_size,
+            "user_id_filter": user_id,
+            **scored,
+        }
+    return results
 
 
 def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
@@ -215,6 +344,22 @@ def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
     p.add_argument("--holdout-only", action="store_true")
     p.add_argument("--split-path", type=Path, default=None)
     p.add_argument("--user-id", type=str, default=None, help="Restrict to one userContactId")
+    p.add_argument(
+        "--agg",
+        type=str,
+        choices=["max", "topk_mean", "softmax"],
+        default="max",
+        help="Section-score aggregation mode (default 'max', backward compatible)",
+    )
+    p.add_argument(
+        "--topk", type=int, default=2, help="k for --agg topk_mean (default 2)"
+    )
+    p.add_argument(
+        "--temperature",
+        type=float,
+        default=0.05,
+        help="Temperature for --agg softmax (default 0.05)",
+    )
     return p.parse_args(argv)
 
 
@@ -232,6 +377,9 @@ def main(argv: list[str] | None = None) -> int:
         holdout_only=args.holdout_only,
         split_path=args.split_path,
         user_id=args.user_id,
+        agg=args.agg,
+        topk=args.topk,
+        temperature=args.temperature,
     )
     print_metrics(metrics)
 
