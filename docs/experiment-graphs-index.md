@@ -1,4 +1,35 @@
-# Experiment graph HTMLs — index
+# Experiment HTMLs — index
+
+One flat table first: every self-contained HTML this project has produced,
+local or published, in one place. Detailed per-file notes (what each one
+demonstrates, why it looks the way it does) follow below for anyone who
+wants the full story.
+
+## All local + published HTML outputs
+
+| Name | Where | Built | What it is |
+|---|---|---|---|
+| `pairs-comparison-graph-hub-test.html` | local (`docs/`) | 2026-07-24 | Dual-pane real-vs-synth pairing graph, 3-profile smoke test after routing generation prompts through LangSmith Hub |
+| `pairs-comparison-graph-no-refex.html` | local (`docs/`) | 2026-07-24 | Dual-pane graph, 5-profile batch after dropping redundant reference examples from `generate_profile` |
+| `pairs-comparison-graph-disjoint.html` | local (`docs/`) | 2026-07-24 | Dual-pane graph, same 5 profiles re-paired with disjoint seeker/candidate split + per-seeker cap |
+| `pairs-comparison-graph-named.html` | local (`docs/`) | 2026-07-24 | Dual-pane graph, 10-profile batch after the name-collision fix (10/10 unique names) |
+| `real-pairs-tfidf-cluster.html` | local (`docs/`) | 2026-07-24 | Force-directed real-pairs graph, TF-IDF similarity force added |
+| `real-pairs-voyage-lookingfor-cluster.html` | local (`docs/`) | 2026-07-24 | Force-directed real-pairs graph, voyage-4-large `lookingFor` similarity force |
+| `real-pairs-tfidf-pca.html` | local (`docs/`) | 2026-07-24 | Static PCA/SVD scatter (no physics), TF-IDF — 1.67% variance explained |
+| `real-pairs-voyage-lookingfor-pca.html` | local (`docs/`) | 2026-07-24 | Static PCA scatter, voyage-4-large `lookingFor` — 12.9% variance explained |
+| `real-pairs-voyage-lookingfor-3d-pca.html` | local (`docs/`) | 2026-07-24 | 3D PCA scatter, hand-rolled canvas projector — 17.3% cumulative (PC1–3) |
+| `real-pairs-voyage-lookingfor-3d-manifold.html` | local (`docs/`) | 2026-07-24 | 3D PCA / t-SNE / UMAP scatter with a layout selector |
+| `baseline-results-holdout-browser.html` | local (`docs/`) | 2026-07-20 | Browser for the matched-holdout baseline comparison table |
+| Pairs graph — Boardy AI | [published](https://claude.ai/code/artifact/642d0a82-7784-4843-b0ad-5686cf7db24c) | 2026-07-24 | Likely one of the `pairs-comparison-graph*.html` variants above, published via `--fragment` — exact source not traceable from this session |
+| Real pairs graph — Boardy AI | [published](https://claude.ai/code/artifact/ac74ea3a-912d-407a-a040-74d8c62d1edd) | 2026-07-22 (page updated 2026-07-24) | Predates the batches above; likely an early real-only single-pane build |
+| Holdout comparison browser — Dorby AI | [published](https://claude.ai/code/artifact/95beeed4-9a3d-4a79-906d-cf2d24d0457f) | 2026-07-20 | Likely `baseline-results-holdout-browser.html` above, by date match |
+| Does splitting lookingFor into sections help matching? | [published](https://claude.ai/code/artifact/3ec8c0da-9ba1-4de9-b52d-b057507b6163) | 2026-07-24 | lookingFor field-sectioning experiment findings — see `docs/lookingfor-sectioning-findings.md` |
+
+Local files open directly in a browser, no server needed
+(`open docs/<file>.html`). Published links work from any device but are
+private unless shared from the page's share menu.
+
+---
 
 Every `docs/pairs-comparison-graph*.html` file is a self-contained,
 two-pane dual graph built by `scripts/build_real_pairs_graph.py`: left
@@ -168,22 +199,12 @@ directions.
 
 ## Published Artifacts (claude.ai, this account)
 
-`Artifact` publishing (`action: "list"`, `scope: "mine"`) shows 3
-currently-published pages relevant to this project:
-
-| title | url | last updated | likely source |
-|---|---|---|---|
-| Pairs graph — Boardy AI | https://claude.ai/code/artifact/642d0a82-7784-4843-b0ad-5686cf7db24c | 2026-07-24 | uncertain — not published by this session; possibly one of the `pairs-comparison-graph*.html` variants above via `--fragment` mode (added in commit `0ade0ca`), but this session made no `Artifact` publish calls, so the exact source file is not traceable from here |
-| Real pairs graph — Boardy AI | https://claude.ai/code/artifact/ac74ea3a-912d-407a-a040-74d8c62d1edd | 2026-07-22 | uncertain — predates every batch documented above; likely an early real-only single-pane build (no local file with that exact shape exists in this worktree currently) |
-| Holdout comparison browser — Dorby AI | https://claude.ai/code/artifact/95beeed4-9a3d-4a79-906d-cf2d24d0457f | 2026-07-20 | likely `docs/baseline-results-holdout-browser.html` (`scripts/build_holdout_browser.py`, generated 2026-07-20 per file mtime, committed to `main` at `ef9fd8d`/`bdd1631`) — plausible by date match but not confirmed |
-
-**Caveat on the "likely source" column:** this session never called
-`Artifact` to publish anything — all 9 graphs above (5 comparison, 2
-force-similarity, 2 PCA scatter) were only opened locally
-(`open docs/<file>.html`). The 3 published pages listed
-were published in earlier sessions this account doesn't have visibility
-into from here, so the source-file mapping is a best guess from filename/
-date proximity, not a verified fact. If you want a definitive link between
-a specific experiment and a shareable URL, the reliable path is to
-explicitly publish the file you want (`Artifact` with `--fragment` output,
-per commit `0ade0ca`) rather than trust this table's guesses.
+See the unified table at the top of this doc for all 4 currently-published
+pages. The first 3 predate this worktree's sessions, so their exact source
+file among the local HTMLs above is a best guess from filename/date
+proximity, not a verified fact — the 4th (lookingFor sectioning findings)
+was published directly from this session and is definitively traceable to
+`docs/lookingfor-sectioning-findings.md`. If you want a guaranteed link
+between a specific experiment and a shareable URL going forward, publish
+the file explicitly (`Artifact` with `--fragment` output for local HTMLs,
+per commit `0ade0ca`) rather than relying on this guesswork.
