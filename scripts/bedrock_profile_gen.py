@@ -50,6 +50,7 @@ load_dotenv(REPO_ROOT / ".env")
 import sys as _sys
 _sys.path.insert(0, str(REPO_ROOT))
 from scripts.profile_gen_prompt_hub import load_prompt as load_hub_prompt
+from scripts.random_name import random_full_name
 
 PROFILE_FIELDS = [
     "positioning", "background", "lookingFor", "notes",
@@ -295,12 +296,14 @@ class Runner:
         style_spec, archetypes = self._current_snapshot()
         archetype = archetypes[profile_id % len(archetypes)]
         style_guide_text = "\n".join(f"- {f}: {style_spec[f]}" for f in PROFILE_FIELDS)
+        given_name = random_full_name()
 
         loaded = load_hub_prompt(
             "generate_profile",
             style_guide_text=style_guide_text,
             archetype_label=archetype["label"],
             archetype_description=archetype["description"],
+            given_name=given_name,
         )
         prompt = loaded.text
         prompt_ref = loaded.ref.to_dict()
@@ -329,11 +332,11 @@ class Runner:
                               "output_tokens": usage.get("outputTokens"),
                               "problems": problems})
             if not problems:
-                return {"id": profile_id, "archetype": archetype["label"],
+                return {"id": profile_id, "archetype": archetype["label"], "given_name": given_name,
                         "style_version": self.style_version, "archetypes_version": self.archetypes_version,
                         "prompt_refs": {**self.last_prompt_refs, "generate_profile": prompt_ref},
                         "profile": parsed, "attempts": attempts, "success": True}
-        return {"id": profile_id, "archetype": archetype["label"],
+        return {"id": profile_id, "archetype": archetype["label"], "given_name": given_name,
                 "style_version": self.style_version, "archetypes_version": self.archetypes_version,
                 "prompt_refs": {**self.last_prompt_refs, "generate_profile": prompt_ref},
                 "profile": parsed, "attempts": attempts, "success": False}
@@ -364,6 +367,7 @@ class Runner:
             with open(self.manifest_path, "a") as f:
                 f.write(json.dumps({
                     "kind": "profile", "id": pid, "archetype": result["archetype"],
+                    "given_name": result.get("given_name"),
                     "success": result["success"], "n_attempts": len(result["attempts"]),
                     "elapsed_s": sum(a.get("elapsed_s", 0) for a in result["attempts"]),
                     "input_tokens": sum(a.get("input_tokens") or 0 for a in result["attempts"]),

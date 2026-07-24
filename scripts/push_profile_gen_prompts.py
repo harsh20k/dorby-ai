@@ -44,6 +44,7 @@ _FORMAT_VARS: dict[PromptRole, tuple[str, ...]] = {
     "style_refresh": ("sample_count", "sample_json", "fields_list"),
     "archetype_refresh": ("sample_count", "sample_json"),
     "generate_profile": (
+        "given_name",
         "style_guide_text",
         "archetype_label",
         "archetype_description",
