@@ -498,7 +498,7 @@ function createGraph(root, spec) {
         if (e.label === "pos") pos++; else neg++;
       }
       const total = pos + neg;
-      n.polarity = total ? (pos - neg) / total : 0; // -1..1, pos-heavy -> negative (left)
+      n.polarity = total ? (neg - pos) / total : 0; // -1..1, pos-heavy -> negative (left), neg-heavy -> positive (right)
     }
   }
 
