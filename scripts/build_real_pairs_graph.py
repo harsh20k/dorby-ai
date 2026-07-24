@@ -635,13 +635,28 @@ function createGraph(root, spec) {
   const DAMP = 0.85;
   const ALPHA_DECAY = 0.996;
   const ALPHA_MIN = 0.02;
-  // Optional per-pane polarization: pulls every node touched by a positive
-  // edge toward -x and every node touched by a negative edge toward +x, so
-  // the two labels separate into left/right clusters instead of interleaving.
-  // A node with edges of both labels settles at the force-weighted balance
-  // point between them, rather than being hard-classified into one side.
+  // Optional per-pane polarization: every node gets a target x based on the
+  // net label of edges touching it (-1 = all positive -> left target, +1 =
+  // all negative -> right target, 0 = mixed/no edges -> center). Each tick
+  // pulls a node toward its target PROPORTIONALLY to how far it has strayed
+  // (a spring anchor, not a constant nudge) — with hundreds of small,
+  // mutually-repelling components a constant force is too weak to overcome
+  // repulsion and produces no visible separation; a proportional pull grows
+  // with distance from target and reliably wins.
   const POLARIZE = spec.polarizeByLabel === true;
-  const POLARIZE_STRENGTH = 0.15;
+  const POLARIZE_TARGET_X = 420;
+  const POLARIZE_K = 0.03;
+  if (POLARIZE) {
+    for (const n of nodes) {
+      let pos = 0, neg = 0;
+      for (const e of edges) {
+        if (e.source !== n.id && e.target !== n.id) continue;
+        if (e.label === "pos") pos++; else neg++;
+      }
+      const total = pos + neg;
+      n.polarity = total ? (pos - neg) / total : 0; // -1..1, pos-heavy -> negative (left)
+    }
+  }
 
   let alpha = 1;
   let simRunning = false;
@@ -669,14 +684,16 @@ function createGraph(root, spec) {
       dx /= d; dy /= d;
       a.fx += dx * f; a.fy += dy * f;
       b.fx -= dx * f; b.fy -= dy * f;
-      if (POLARIZE) {
-        const pull = e.label === "pos" ? -POLARIZE_STRENGTH : POLARIZE_STRENGTH;
-        a.fx += pull; b.fx += pull;
-      }
     }
     for (const n of nodes) {
-      n.fx -= n.x * CENTER;
-      n.fy -= n.y * CENTER;
+      if (POLARIZE) {
+        const targetX = n.polarity * POLARIZE_TARGET_X;
+        n.fx += (targetX - n.x) * POLARIZE_K;
+        n.fy -= n.y * CENTER;
+      } else {
+        n.fx -= n.x * CENTER;
+        n.fy -= n.y * CENTER;
+      }
       if (n.pinned) { n.vx = 0; n.vy = 0; continue; }
       n.vx = (n.vx + n.fx * strength) * DAMP;
       n.vy = (n.vy + n.fy * strength) * DAMP;
