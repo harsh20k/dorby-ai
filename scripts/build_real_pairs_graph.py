@@ -17,10 +17,16 @@ from __future__ import annotations
 
 import argparse
 import json
+import sys
 from pathlib import Path
 from typing import Any, Callable
 
 ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(ROOT))
+
+from dotenv import load_dotenv  # noqa: E402 — needs ROOT/sys.path set first
+
+load_dotenv(ROOT / ".env")
 DEFAULT_POS = ROOT / "data" / "dataset_positive.json"
 DEFAULT_NEG = ROOT / "data" / "dataset_negative.json"
 DEFAULT_OUT = ROOT / "docs" / "real-pairs-graph.html"
@@ -100,6 +106,87 @@ def build_graph(
         out_nodes.append(node)
 
     return {"nodes": out_nodes, "edges": edges}
+
+
+def compute_tfidf_similarity(nodes: list[dict]) -> list[list[float]]:
+    """Pairwise cosine similarity over each node's profile text (TF-IDF).
+
+    Reuses baselines.bert_frozen.text.candidate_to_text, the same field-tagged
+    serialization synth_pipeline/pairing/select.py fits its vocabulary on, so
+    "similar" means the same thing here as it does in the pairing scorer.
+    """
+    from sklearn.feature_extraction.text import TfidfVectorizer
+
+    from baselines.bert_frozen.text import candidate_to_text
+
+    texts = [candidate_to_text(n["profile"]) for n in nodes]
+    vec = TfidfVectorizer(max_features=20000, ngram_range=(1, 2), min_df=1)
+    mat = vec.fit_transform(texts).toarray()  # already L2-normalized by TfidfVectorizer
+    sim = mat @ mat.T
+    return sim.tolist()
+
+
+def compute_voyage_lookingfor_similarity(
+    nodes: list[dict], *, cache_dir: Path
+) -> list[list[float]]:
+    """Pairwise cosine similarity over each node's `lookingFor` text, embedded
+    with voyage-4-large. Per-text disk cache under cache_dir/emb/ (content-hash
+    keyed, from VoyageLargeEncoder itself) makes every re-run after the first
+    free — that's the "save it for reuse later" cache, not a separate one.
+    """
+    import numpy as np
+
+    from baselines.voyage_large.encode import VoyageLargeEncoder
+
+    texts = [(n["profile"].get("lookingFor") or "").strip() or " " for n in nodes]
+    encoder = VoyageLargeEncoder(cache_dir=cache_dir)
+    emb = encoder.encode(texts, input_type="document", label="real_lookingfor")
+    encoder.write_usage_meta()
+    sim = emb @ emb.T
+    return np.asarray(sim, dtype=np.float64).tolist()
+
+
+def compute_tfidf_pca2d(nodes: list[dict]) -> tuple[list[list[float]], list[float]]:
+    """First 2 SVD components of the TF-IDF matrix (TruncatedSVD — PCA doesn't
+    accept sparse input), scaled to fit a ~1000-unit canvas. Returns
+    (positions, explained_variance_ratio) — the ratio matters: if it's low,
+    "no obvious clustering" in the plot means the structure is genuinely
+    higher-dimensional, not that the plot is wrong.
+    """
+    import numpy as np
+    from sklearn.decomposition import TruncatedSVD
+    from sklearn.feature_extraction.text import TfidfVectorizer
+
+    from baselines.bert_frozen.text import candidate_to_text
+
+    texts = [candidate_to_text(n["profile"]) for n in nodes]
+    vec = TfidfVectorizer(max_features=20000, ngram_range=(1, 2), min_df=1)
+    mat = vec.fit_transform(texts)
+    svd = TruncatedSVD(n_components=2, random_state=42)
+    coords = svd.fit_transform(mat)
+    coords = coords / (np.abs(coords).max() or 1.0) * 480
+    return coords.tolist(), svd.explained_variance_ratio_.tolist()
+
+
+def compute_voyage_lookingfor_pca2d(
+    nodes: list[dict], *, cache_dir: Path
+) -> tuple[list[list[float]], list[float]]:
+    """First 2 PCA components of voyage-4-large embeddings of `lookingFor`.
+    Reuses the same per-text disk cache as compute_voyage_lookingfor_similarity —
+    a run right after that one costs zero new API calls."""
+    import numpy as np
+    from sklearn.decomposition import PCA
+
+    from baselines.voyage_large.encode import VoyageLargeEncoder
+
+    texts = [(n["profile"].get("lookingFor") or "").strip() or " " for n in nodes]
+    encoder = VoyageLargeEncoder(cache_dir=cache_dir)
+    emb = encoder.encode(texts, input_type="document", label="real_lookingfor_pca")
+    encoder.write_usage_meta()
+    pca = PCA(n_components=2, random_state=42)
+    coords = pca.fit_transform(emb)
+    coords = coords / (np.abs(coords).max() or 1.0) * 480
+    return coords.tolist(), pca.explained_variance_ratio_.tolist()
 
 
 def load_pairing_batch(batch_dir: Path) -> tuple[list[dict], list[dict], dict[str, dict]]:
@@ -600,7 +687,17 @@ function openPanel(n, spec, edges) {
 
 // --- one independent graph instance per pane ---
 function createGraph(root, spec) {
-  const nodes = spec.nodes.map(n => ({...n, x: (Math.random()-0.5)*900, y: (Math.random()-0.5)*900, vx: 0, vy: 0}));
+  const STATIC_LAYOUT = spec.staticLayout === true;
+  const nodes = spec.nodes.map((n, i) => {
+    const [fx, fy] = STATIC_LAYOUT ? spec.fixedPositions[i] : [null, null];
+    return {
+      ...n,
+      x: STATIC_LAYOUT ? fx : (Math.random()-0.5)*900,
+      y: STATIC_LAYOUT ? fy : (Math.random()-0.5)*900,
+      vx: 0, vy: 0,
+      pinned: STATIC_LAYOUT || undefined,
+    };
+  });
   const nodeById = new Map(nodes.map(n => [n.id, n]));
   const edges = spec.edges.filter(e => nodeById.has(e.source) && nodeById.has(e.target));
 
@@ -635,6 +732,45 @@ function createGraph(root, spec) {
   const DAMP = 0.85;
   const ALPHA_DECAY = 0.996;
   const ALPHA_MIN = 0.02;
+  // Optional per-pane polarization: every node gets a target x based on the
+  // net label of edges touching it (-1 = all positive -> left target, +1 =
+  // all negative -> right target, 0 = mixed/no edges -> center). Each tick
+  // pulls a node toward its target PROPORTIONALLY to how far it has strayed
+  // (a spring anchor, not a constant nudge) — with hundreds of small,
+  // mutually-repelling components a constant force is too weak to overcome
+  // repulsion and produces no visible separation; a proportional pull grows
+  // with distance from target and reliably wins.
+  const POLARIZE = spec.polarizeByLabel === true;
+  const POLARIZE_TARGET_X = 420;
+  const POLARIZE_K = 0.03;
+  // Computed unconditionally — used by the polarize FORCE (if enabled) and by
+  // colorBy="polarity" (static-layout panes), which are independent concerns.
+  for (const n of nodes) {
+    let pos = 0, neg = 0;
+    for (const e of edges) {
+      if (e.source !== n.id && e.target !== n.id) continue;
+      if (e.label === "pos") pos++; else neg++;
+    }
+    const total = pos + neg;
+    n.polarity = total ? (neg - pos) / total : 0; // -1..1, pos-heavy -> negative, neg-heavy -> positive
+  }
+
+  // Optional pairwise-similarity clustering force: pulls nodes whose content
+  // similarity is high closer together (targetGap shrinks toward 0 as
+  // similarity -> 1) and, symmetrically, pushes low-similarity pairs further
+  // apart (targetGap grows toward SIM_MAX_DIST as similarity -> 0) — a signed
+  // spring over EVERY pair, not just edges, reusing the dx/dy/d already
+  // computed for repulsion in the same O(n^2) loop below.
+  const SIM_MATRIX = spec.similarityMatrix || null;
+  const SIMILARITY = SIM_MATRIX !== null;
+  // Tuned against the real 297-node graph via a headless port of this exact
+  // physics loop (job tmp dir): correlation(similarity, final distance) =
+  // -0.39, top-50-most-similar pairs ~2.8x closer than bottom-50-least-similar,
+  // while polarizeByLabel's left/right split still holds 99%+ correct — these
+  // two constants keep both forces visually co-present rather than one
+  // dominating (SIM_MAX_DIST close to POLARIZE_TARGET_X's scale).
+  const SIM_MAX_DIST = 500;
+  const SIM_K = 0.01;
 
   let alpha = 1;
   let simRunning = false;
@@ -652,6 +788,13 @@ function createGraph(root, spec) {
         dx /= d; dy /= d;
         a.fx += dx * f; a.fy += dy * f;
         b.fx -= dx * f; b.fy -= dy * f;
+        if (SIMILARITY) {
+          const sim = Math.max(0, SIM_MATRIX[i][j]);
+          const targetGap = SIM_MAX_DIST * (1 - sim);
+          const sf = (d - targetGap) * SIM_K;
+          a.fx -= dx * sf; a.fy -= dy * sf;
+          b.fx += dx * sf; b.fy += dy * sf;
+        }
       }
     }
     for (const e of edges) {
@@ -664,8 +807,14 @@ function createGraph(root, spec) {
       b.fx -= dx * f; b.fy -= dy * f;
     }
     for (const n of nodes) {
-      n.fx -= n.x * CENTER;
-      n.fy -= n.y * CENTER;
+      if (POLARIZE) {
+        const targetX = n.polarity * POLARIZE_TARGET_X;
+        n.fx += (targetX - n.x) * POLARIZE_K;
+        n.fy -= n.y * CENTER;
+      } else {
+        n.fx -= n.x * CENTER;
+        n.fy -= n.y * CENTER;
+      }
       if (n.pinned) { n.vx = 0; n.vy = 0; continue; }
       n.vx = (n.vx + n.fx * strength) * DAMP;
       n.vy = (n.vy + n.fy * strength) * DAMP;
@@ -768,9 +917,14 @@ function createGraph(root, spec) {
   // --- node coloring ---
   const archetypes = [...new Set(nodes.map(n => n.archetype).filter(Boolean))].sort();
   const archetypeColor = new Map(archetypes.map((a, i) => [a, ARCHETYPE_COLORS[i % ARCHETYPE_COLORS.length]]));
-  const colorBy = spec.colorBy === "archetype" && archetypes.length ? "archetype" : "role";
+  const colorBy = spec.colorBy === "archetype" && archetypes.length ? "archetype"
+    : spec.colorBy === "polarity" ? "polarity" : "role";
   function nodeColor(n) {
     if (colorBy === "archetype") return archetypeColor.get(n.archetype) || "var(--muted)";
+    if (colorBy === "polarity") {
+      const negPct = Math.round(((n.polarity + 1) / 2) * 100); // -1 (all pos) -> 0%, +1 (all neg) -> 100%
+      return `color-mix(in srgb, var(--neg) ${negPct}%, var(--pos) ${100 - negPct}%)`;
+    }
     return ROLE_COLOR[n.role];
   }
 
@@ -798,7 +952,7 @@ function createGraph(root, spec) {
       draggingNode = n;
       n.pinned = true;
       n.vx = 0; n.vy = 0;
-      reheat();
+      if (!STATIC_LAYOUT) reheat();
       ev.stopPropagation();
     });
     nodeLayer.appendChild(g);
@@ -814,6 +968,16 @@ function createGraph(root, spec) {
   if (colorBy === "role") {
     roleLegend.innerHTML = ["seeker", "candidate", "both"].map(rk =>
       `<label><span class="legend-dot" style="background:${ROLE_COLOR[rk]}"></span> ${rk}</label>`
+    ).join("");
+    roleLegend.style.display = "inline-flex";
+    roleLegend.style.gap = "0.75rem";
+  } else if (colorBy === "polarity") {
+    roleLegend.innerHTML = [
+      ["all positive pairs", "var(--pos)"],
+      ["mixed / no pairs", "color-mix(in srgb, var(--neg) 50%, var(--pos) 50%)"],
+      ["all negative pairs", "var(--neg)"],
+    ].map(([label, color]) =>
+      `<label><span class="legend-dot" style="background:${color}"></span> ${label}</label>`
     ).join("");
     roleLegend.style.display = "inline-flex";
     roleLegend.style.gap = "0.75rem";
@@ -929,7 +1093,10 @@ function createGraph(root, spec) {
     applyViewBox();
   });
   window.addEventListener("mouseup", () => {
-    if (draggingNode) { draggingNode.pinned = false; draggingNode = null; reheat(); }
+    if (draggingNode) {
+      if (STATIC_LAYOUT) { draggingNode = null; }
+      else { draggingNode.pinned = false; draggingNode = null; reheat(); }
+    }
     panning = false;
     svg.classList.remove("panning");
   });
@@ -947,7 +1114,11 @@ function createGraph(root, spec) {
   }, { passive: false });
 
   // Small graphs settle instantly; only the big pane is worth animating.
-  if (REDUCED_MOTION || nodes.length < 60) {
+  if (STATIC_LAYOUT) {
+    // No physics at all — positions are the embedding's own coordinates.
+    render();
+    requestAnimationFrame(() => fitView());
+  } else if (REDUCED_MOTION || nodes.length < 60) {
     for (let it = 0; it < 400; it++) tickPhysics(1);
     render();
     requestAnimationFrame(() => fitView());
@@ -981,13 +1152,17 @@ def _pane_spec(
     graph: dict,
     *,
     color_by: str = "role",
+    polarize_by_label: bool = False,
+    similarity_matrix: list[list[float]] | None = None,
+    fixed_positions: list[list[float]] | None = None,
 ) -> dict:
     stats = graph_stats(graph)
-    return {
+    spec = {
         "key": key,
         "title": title,
         "subtitle": subtitle,
         "colorBy": color_by,
+        "polarizeByLabel": polarize_by_label,
         "physics": suggest_physics(graph),
         "stats": (
             f"{stats['nodes']} contacts · {stats['edges']} pairs "
@@ -997,6 +1172,15 @@ def _pane_spec(
         "nodes": graph["nodes"],
         "edges": graph["edges"],
     }
+    if similarity_matrix is not None:
+        # rounding cuts embedded JSON size substantially with no visible layout impact
+        spec["similarityMatrix"] = [[round(v, 4) for v in row] for row in similarity_matrix]
+    if fixed_positions is not None:
+        # Static scatter: node order matches graph["nodes"] order, same convention
+        # as similarityMatrix. No physics runs at all when this is set.
+        spec["staticLayout"] = True
+        spec["fixedPositions"] = [[round(x, 2), round(y, 2)] for x, y in fixed_positions]
+    return spec
 
 
 def _to_fragment(html: str) -> str:
@@ -1035,17 +1219,74 @@ def build(
     *,
     compare: Path | None = None,
     fragment: bool = False,
+    similarity_mode: str | None = None,
+    voyage_cache_dir: Path | None = None,
+    layout: str = "force",
 ) -> dict:
     pos_pairs = json.loads(pos_path.read_text(encoding="utf-8"))
     neg_pairs = json.loads(neg_path.read_text(encoding="utf-8"))
     real = build_graph(pos_pairs, neg_pairs)
 
+    similarity_matrix = None
+    fixed_positions = None
+    similarity_note = ""
+    cache_dir = voyage_cache_dir or (ROOT / "artifacts" / "voyage_large_lookingfor")
+
+    if layout == "pca":
+        # Direct 2D scatter at the embedding's own first 2 components — no
+        # force simulation, no label-driven positioning. The honest diagnostic
+        # for "is there real clustering structure at all" that a force layout
+        # (3 competing forces diluting any one signal) can't answer reliably.
+        if similarity_mode == "tfidf":
+            fixed_positions, explained = compute_tfidf_pca2d(real["nodes"])
+            src = "TF-IDF (TruncatedSVD)"
+        elif similarity_mode == "voyage_large_lookingfor":
+            fixed_positions, explained = compute_voyage_lookingfor_pca2d(
+                real["nodes"], cache_dir=cache_dir
+            )
+            src = "voyage-4-large lookingFor (PCA)"
+        else:
+            raise ValueError("--layout pca requires --similarity-mode")
+        pct = [f"{v*100:.1f}%" for v in explained]
+        similarity_note = (
+            f" Position = first 2 components of {src}, no physics. "
+            f"PC1 explains {pct[0]} of variance, PC2 {pct[1]} "
+            f"(cumulative {sum(explained)*100:.1f}%) — low cumulative variance "
+            "means real clustering structure lives beyond 2D, not that this plot "
+            "is wrong. Colored by pos/neg pair polarity."
+        )
+    elif similarity_mode == "tfidf":
+        similarity_matrix = compute_tfidf_similarity(real["nodes"])
+        similarity_note = (
+            " Contacts with similar profile text (TF-IDF cosine over the same "
+            "field-tagged serialization the pairing scorer uses) are pulled "
+            "closer together; dissimilar contacts are pushed further apart."
+        )
+    elif similarity_mode == "voyage_large_lookingfor":
+        similarity_matrix = compute_voyage_lookingfor_similarity(
+            real["nodes"], cache_dir=cache_dir
+        )
+        similarity_note = (
+            " Contacts whose `lookingFor` text is semantically similar (voyage-4-large "
+            "cosine) are pulled closer together; dissimilar ones are pushed further apart."
+        )
+
     specs = [
         _pane_spec(
             "real",
             "Real pairs",
-            "Original Boardy seeker→candidate pairs, synthetic contacts excluded.",
+            "Original Boardy seeker→candidate pairs, synthetic contacts excluded."
+            + (
+                " Positive-labeled contacts drift left, negative-labeled drift right."
+                if layout != "pca"
+                else ""
+            )
+            + similarity_note,
             real,
+            polarize_by_label=(layout != "pca"),
+            similarity_matrix=similarity_matrix,
+            fixed_positions=fixed_positions,
+            color_by="polarity" if layout == "pca" else "role",
         )
     ]
 
@@ -1086,9 +1327,37 @@ def main() -> None:
         help="emit body-only HTML for the Artifact publisher (which supplies "
         "its own document skeleton)",
     )
+    parser.add_argument(
+        "--similarity-mode",
+        choices=("tfidf", "voyage_large_lookingfor"),
+        default=None,
+        help="add a real-pane clustering force pulling profile-similar contacts "
+        "together (and pushing dissimilar ones apart): tfidf = whole-profile TF-IDF "
+        "cosine; voyage_large_lookingfor = voyage-4-large cosine over the "
+        "lookingFor field only, cached to disk for reuse",
+    )
+    parser.add_argument(
+        "--voyage-cache-dir",
+        type=Path,
+        default=None,
+        help="cache dir for voyage_large_lookingfor mode (default: "
+        "artifacts/voyage_large_lookingfor)",
+    )
+    parser.add_argument(
+        "--layout",
+        choices=("force", "pca"),
+        default="force",
+        help="force (default): physics simulation, --similarity-mode adds a "
+        "clustering force alongside label-polarization. pca: static scatter at "
+        "the embedding's first 2 components, no physics, no label-polarization "
+        "— requires --similarity-mode, the direct diagnostic for whether "
+        "clustering structure exists at all",
+    )
     args = parser.parse_args()
     stats = build(
-        args.pos, args.neg, args.out, compare=args.compare, fragment=args.fragment
+        args.pos, args.neg, args.out, compare=args.compare, fragment=args.fragment,
+        similarity_mode=args.similarity_mode, voyage_cache_dir=args.voyage_cache_dir,
+        layout=args.layout,
     )
     summary = ", ".join(
         f"{p['key']}: {p['nodes']} nodes/{p['edges']} edges" for p in stats["panes"]
