@@ -31,14 +31,16 @@ Band = Literal["top", "near", "mid"]
 def split_seekers_candidates(
     profiles: list[SynthProfile],
     *,
-    seeker_frac: float = 0.48,
+    seeker_frac: float = 0.43,
     seed: int = 42,
 ) -> tuple[list[SynthProfile], list[SynthProfile]]:
     """Partition the profile pool into disjoint seeker / candidate subsets.
 
-    Real data: seeker and candidate are near-disjoint roles (only 0.8% of real
-    contacts are ever both), and ~48% of contacts ever act as a seeker at all
-    (see docs — computed from data/dataset_positive.json + dataset_negative.json).
+    Real data: seeker and candidate are near-disjoint roles (only 3.4% of real
+    contacts are ever both), and ~43% of contacts ever act as a seeker at all
+    (see docs — computed from the 200 REAL-ONLY pairs in data/dataset_positive/
+    negative.json, i.e. excluding cmsynth* promoted-synthetic contact ids; an
+    earlier pass mistakenly included those, reporting 48% / 0.8% instead).
     The synthetic pipeline previously had every profile act as both, which is
     part of why synthetic batches come out far denser than real data. Splitting
     the pool up front (not per-query) makes the two roles disjoint the same way.

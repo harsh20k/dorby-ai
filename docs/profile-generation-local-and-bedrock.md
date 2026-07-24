@@ -125,10 +125,13 @@ fundamental speed limit of the two-box setup.
   archetypes (B2B data-workflow automation vs. medtech neuroimaging). This
   is a more serious duplicate-content risk than the milder "Vance"-surname
   reuse noted earlier in ad hoc testing. **User explicitly declined a
-  name-blocklist mitigation** ("no name-blocklist required") — this remains
-  accepted-as-is pending a different fix (e.g. a larger/refreshed reference
-  sample, or explicit anti-repetition instructions naming recently-used
-  names/companies in the prompt).
+  name-blocklist mitigation** ("no name-blocklist required").
+  **Fixed for `bedrock_profile_gen.py` (2026-07-24)** — not by a blocklist
+  but by removing the name from the model's own output entirely: see
+  "Fix: programmatic random name injection (v3)" further down. **Not yet
+  applied to `local_gemma_profile_gen.py`** (this script) — the Ollama
+  generator still asks the model to invent its own name and would need the
+  same `given_name`-injection treatment ported over.
 - **Malformed archetype label propagates downstream, undetected**: one
   archetype-list refresh returned a label as a literal multi-option string
   — `"The Strategic Investor - Tech & Fintech", "Family Office Investor",
@@ -503,3 +506,111 @@ data.
 - 18 distinct archetypes across 20 profiles (archetypes refresh every 5
   profiles, so labels accumulate). Archetype coloring in the graph is therefore
   nearly one color per node, and same-archetype pairs are rare (4 of 104).
+
+### Fix: disjoint seeker/candidate split + per-seeker pair cap (2026-07-24)
+
+Directly addresses the "topology is nothing like real data" finding above.
+Computed from `data/dataset_positive.json` + `dataset_negative.json`,
+**filtered to the 200 genuinely-real pairs** (`build_real_pairs_graph.py`'s
+`real_only()` — excludes `cmsynth*` promoted-synthetic contact ids, which
+the dataset also contains 460 of). An earlier pass in this session
+accidentally computed these stats over all 660 pairs including the
+promoted-synthetic ones and got noticeably different numbers (0.542
+edges/node, 48.4% seekers, 93% single-match, 0.8% both-role) — directionally
+the same story, but wrong in the specifics; corrected below:
+
+| real-data property (real-only, N=200 pairs / 297 nodes) | value |
+|---|---|
+| edges per node | 0.673 |
+| contacts that are ever both seeker and candidate | 10/297 (3.4%) |
+| contacts that ever act as a seeker | 129/297 (43.4%) |
+| avg labeled pairs per seeker | 1.55 |
+| seekers with exactly 1 pair | 88/129 (68.2%) |
+
+The old pairing pipeline made every profile both a seeker (it always got
+`queries_per_profile` queries) and a candidate (eligible for every other
+seeker's query), with no cap on how many of the resulting candidates convert
+to a label — mechanically guaranteed high density and near-total pos/neg
+overlap regardless of batch size (`pair_test_001` at N=20 was in fact the
+*densest* of any batch run so far, 5.2 edges/node, so this was never a
+small-N artifact).
+
+Implemented in `synth_pipeline/pairing/select.py`, wired through
+`run.py`/the CLI, **off by default** so old batches are reproducible:
+
+- `split_seekers_candidates(profiles, seeker_frac=0.43, seed)` — seeded,
+  deterministic disjoint partition. Only the seeker subset gets queries
+  generated; `select_candidates()` now takes a separate `candidate_pool` to
+  rank against instead of the full profile list.
+- `cap_labeled_per_seeker(candidates, labels, scores, max_pairs=1,
+  bump_frac=0.15, seed)` — keeps at most `max_pairs` labeled pairs per
+  seeker (a seeded `bump_frac` gets `max_pairs + 1`, mirroring the real
+  tail rather than a hard uniform cap), most-confident-first by `|score|`.
+  Everything cut gets `drop_reason="seeker_cap"` in its envelope instead of
+  silently disappearing.
+- CLI: `--seeker-frac 0.43 --max-pairs-per-seeker 1
+  --seeker-cap-bump-frac 0.15` (the two experiments below were run with
+  `--seeker-frac 0.48`, the not-yet-corrected figure at the time — kept as
+  run, not re-run, since the difference is small and both are documented
+  as experiments, not shipped defaults).
+
+**Verified on `run_20260724_111235`** (the same 5-profile pool used for the
+no-reference-examples experiment below, reused rather than regenerated —
+batch `pair_disjoint_001`, reusing cached `queries.json` and fit-pairs
+embeddings, zero new LLM/embedding calls): 2 seekers / 3 candidates picked,
+6 candidates surfaced, capped to **2 pos / 1 neg / 3 excluded** — density
+**2.4 → 0.6 edges/node** on the identical profile pool, in line with real
+data's 0.673. `docs/pairs-comparison-graph-disjoint.html`.
+n=5 is a mechanism check, not a statistically meaningful validation — worth
+rerunning at real batch scale (20+ profiles) before trusting the density
+number itself.
+
+### Fix: real-only generate_profile prompt, no reference examples (v2)
+
+`generate_profile`'s prompt originally included 2 real profiles shown
+"only as tone/format reference" — redundant with `style_refresh`/
+`archetype_refresh`, which already extract tone/format separately, and
+those two prompts are refreshed periodically while the reference examples
+were resampled fresh every single call for no clear benefit. Removed;
+pushed to hub as `-/profile-gen-generate:v2`. Confirmed this was a
+content-neutral simplification, not a name-collapse fix on its own: a
+5-profile rerun (`run_20260724_111235`) on the trimmed prompt still
+produced 4/5 "Anya Sharma" — see the name-injection fix below for what
+actually addresses that.
+
+### Fix: programmatic random name injection (v3) — the actual name-collapse fix
+
+Every batch run so far (`run_20260723_093500` through
+`run_20260724_111235`, 26 profiles total) showed the same pattern: **14/26
+"Anya [Sharma]", 6/26 "Aris [Thorne]"** — 77% of all profiles generated
+from two first names, regardless of archetype, temperature, or prompt
+version. Root cause: the model writes the name as the first thing in the
+`reasoning` field, before archetype-specific detail can steer the persona
+— Gemma 3 27B's fictional-person prior is sharply peaked on "Anya Sharma,"
+and nothing in the pipeline gave it a reason to deviate (every
+`generate_one()` call is independent, with no memory of names used in
+other profiles in the same batch).
+
+Fix: stop asking the model to invent a name at all. `scripts/random_name.py`
+draws a full name (first + last, independently) from a fixed pool (62 first
+names x 52 last names = 3224 combinations, not sourced from real user
+records) via `random.SystemRandom()`, one per profile, generated in Python
+*before* the Bedrock call. `generate_profile`'s prompt (pushed as
+`-/profile-gen-generate:v3`, pinned in `.env`) now states the name as a
+given fact ("The person's name is: {given_name}. Use this exact name
+throughout... Do not invent, substitute, or modify it.") instead of asking
+the model to invent one. Recorded per-profile in both the result JSON
+(`given_name` key) and `manifest.jsonl`, so name-compliance is auditable
+after the fact, not just assumed.
+
+**Result (`run_20260724_123452`, 10 profiles): 10/10 unique names, 10/10
+compliance** — every profile used its assigned name verbatim in `reasoning`
+and the generated fields, zero collisions, zero substitutions. This is a
+complete fix, not an improvement — the previous best batch-level rate was
+~50% Anya-free.
+
+Paired (`pair_named_001`, same disjoint-split + per-seeker-cap settings as
+above): 5 seekers / 5 candidates, 25 candidates surfaced, capped to **4 pos
+/ 2 neg / 19 excluded** (0.75 edges/node on 8 nodes — small-n noisy but
+still far below the pre-fix density).
+`docs/pairs-comparison-graph-named.html`.

@@ -43,7 +43,7 @@ def main(argv: list[str] | None = None) -> None:
     ap.add_argument("--seed", type=int, default=42)
     ap.add_argument("--seeker-frac", type=float, default=None,
                     help="split the profile pool into disjoint seeker/candidate "
-                         "subsets before pairing (real data: ~0.48). Default: off "
+                         "subsets before pairing (real data: ~0.43). Default: off "
                          "(old behavior, every profile is both)")
     ap.add_argument("--max-pairs-per-seeker", type=int, default=None,
                     help="cap labeled pairs kept per seeker after scoring (real "
