@@ -15,6 +15,7 @@ Two decisions worth stating, because both are easy to get subtly wrong:
 
 from __future__ import annotations
 
+import random
 from dataclasses import dataclass
 from typing import Literal
 
@@ -25,6 +26,62 @@ from baselines.bert_frozen.text import candidate_to_text
 from synth_pipeline.pairing.profiles import SynthProfile
 
 Band = Literal["top", "near", "mid"]
+
+
+def split_seekers_candidates(
+    profiles: list[SynthProfile],
+    *,
+    seeker_frac: float = 0.48,
+    seed: int = 42,
+) -> tuple[list[SynthProfile], list[SynthProfile]]:
+    """Partition the profile pool into disjoint seeker / candidate subsets.
+
+    Real data: seeker and candidate are near-disjoint roles (only 0.8% of real
+    contacts are ever both), and ~48% of contacts ever act as a seeker at all
+    (see docs — computed from data/dataset_positive.json + dataset_negative.json).
+    The synthetic pipeline previously had every profile act as both, which is
+    part of why synthetic batches come out far denser than real data. Splitting
+    the pool up front (not per-query) makes the two roles disjoint the same way.
+    """
+    shuffled = list(profiles)
+    random.Random(seed).shuffle(shuffled)
+    n_seekers = max(1, round(len(shuffled) * seeker_frac))
+    n_seekers = min(n_seekers, len(shuffled) - 1) if len(shuffled) > 1 else len(shuffled)
+    return shuffled[:n_seekers], shuffled[n_seekers:]
+
+
+def cap_labeled_per_seeker(
+    candidates: list[Candidate],
+    labels: list[str | None],
+    scores: np.ndarray,
+    *,
+    max_pairs: int = 1,
+    bump_frac: float = 0.15,
+    seed: int = 42,
+) -> list[bool]:
+    """Keep at most `max_pairs` labeled pairs per seeker (real data: 93% of
+    seekers who get any match get exactly 1; a small tail gets 2+, never
+    everyone). A seeded `bump_frac` of seekers gets `max_pairs + 1` instead of
+    a uniform cap, to avoid flattening that tail entirely. Within a seeker,
+    keeps the most confident labels first (largest |score|, i.e. furthest
+    from the quantile deadband) — unrelated to k_per_query, which controls
+    how many candidates are *offered* for scoring, not how many survive.
+    Only affects already-labeled entries; deadband exclusions are untouched.
+    """
+    rng = random.Random(seed)
+    by_seeker: dict[str, list[int]] = {}
+    for i, lab in enumerate(labels):
+        if lab is None:
+            continue
+        by_seeker.setdefault(candidates[i].seeker.contact_id, []).append(i)
+
+    keep = [False] * len(candidates)
+    for seeker_id, idxs in sorted(by_seeker.items()):
+        cap = max_pairs + (1 if rng.random() < bump_frac else 0)
+        idxs_sorted = sorted(idxs, key=lambda i: -abs(float(scores[i])))
+        for i in idxs_sorted[:cap]:
+            keep[i] = True
+    return keep
 
 
 @dataclass(frozen=True)
@@ -66,18 +123,26 @@ def _band_for_rank(rank: int) -> Band:
 
 
 def select_candidates(
-    profiles: list[SynthProfile],
+    seekers: list[SynthProfile],
     queries: dict[str, list[str]],
     *,
+    candidate_pool: list[SynthProfile] | None = None,
     k_per_query: int = 5,
     max_cosine: float = 0.90,
 ) -> list[Candidate]:
-    """Rank all other profiles against each query, take a log-spaced top band."""
-    if len(profiles) < 2:
+    """Rank candidate_pool against each seeker's query, take a log-spaced top band.
+
+    candidate_pool defaults to `seekers` itself (old behavior: every profile is
+    both seeker and candidate). Pass a disjoint pool to keep the two roles
+    separate, matching real data where seeker/candidate are ~99% disjoint —
+    see split_seekers_candidates().
+    """
+    candidates = candidate_pool if candidate_pool is not None else seekers
+    if len(seekers) < 1 or len(candidates) < 1:
         return []
 
-    by_id = {p.contact_id: p for p in profiles}
-    cand_texts = [candidate_to_text(p.profile) for p in profiles]
+    by_id = {p.contact_id: p for p in candidates}
+    cand_texts = [candidate_to_text(p.profile) for p in candidates]
     all_queries = [q for qs in queries.values() for q in qs]
 
     # Fit one shared vocabulary over candidates and queries so the two sides live
@@ -89,7 +154,7 @@ def select_candidates(
     out: list[Candidate] = []
     seen: set[tuple[str, str]] = set()
 
-    for seeker in profiles:
+    for seeker in seekers:
         for q_idx, query in enumerate(queries.get(seeker.contact_id, [])):
             q_vec = vec.transform([query]).toarray().astype(np.float32)[0]
             sims = cand_mat @ q_vec  # both L2-normalized by TfidfVectorizer
@@ -97,14 +162,14 @@ def select_candidates(
             order = [
                 i
                 for i in np.argsort(-sims)
-                if profiles[i].contact_id != seeker.contact_id
+                if candidates[i].contact_id != seeker.contact_id
                 and float(sims[i]) <= max_cosine
             ]
             if not order:
                 continue
 
             for rank in _log_spaced_ranks(len(order), k_per_query):
-                cand = profiles[order[rank]]
+                cand = candidates[order[rank]]
                 key = (seeker.contact_id, cand.contact_id)
                 # The pair schema has no query identity, and promote.py dedups on
                 # (userContactId, matchContactId) — so the same two people cannot

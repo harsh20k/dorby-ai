@@ -41,6 +41,17 @@ def main(argv: list[str] | None = None) -> None:
     ap.add_argument("--refresh-queries", action="store_true",
                     help="ignore queries.json and regenerate (re-bills the calls)")
     ap.add_argument("--seed", type=int, default=42)
+    ap.add_argument("--seeker-frac", type=float, default=None,
+                    help="split the profile pool into disjoint seeker/candidate "
+                         "subsets before pairing (real data: ~0.48). Default: off "
+                         "(old behavior, every profile is both)")
+    ap.add_argument("--max-pairs-per-seeker", type=int, default=None,
+                    help="cap labeled pairs kept per seeker after scoring (real "
+                         "data: 93 pct of seekers have exactly 1). Default: off "
+                         "(no cap)")
+    ap.add_argument("--seeker-cap-bump-frac", type=float, default=0.15,
+                    help="fraction of seekers (seeded) allowed max+1 pairs "
+                         "instead of max, only used with --max-pairs-per-seeker")
     args = ap.parse_args(argv)
 
     run_pairing(
@@ -62,6 +73,9 @@ def main(argv: list[str] | None = None) -> None:
         limit=args.limit,
         refresh_queries=args.refresh_queries,
         seed=args.seed,
+        seeker_frac=args.seeker_frac,
+        max_pairs_per_seeker=args.max_pairs_per_seeker,
+        seeker_cap_bump_frac=args.seeker_cap_bump_frac,
     )
 
 
