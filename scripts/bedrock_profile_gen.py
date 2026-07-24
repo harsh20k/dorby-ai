@@ -91,7 +91,7 @@ STEP3_SCHEMA = {
             "type": "string",
             "description": "3-4 sentences: who this person is, their specific role, one distinctive "
                            "career detail, what they're trying to achieve now, and why the story is "
-                           "coherent. Do not reuse facts from the reference examples.",
+                           "coherent.",
         },
         **{f: {"type": "string"} for f in PROFILE_FIELDS},
     },
@@ -292,19 +292,15 @@ class Runner:
             return self.style_spec, self.archetypes
 
     def generate_one(self, profile_id: int):
-        import random
         style_spec, archetypes = self._current_snapshot()
         archetype = archetypes[profile_id % len(archetypes)]
         style_guide_text = "\n".join(f"- {f}: {style_spec[f]}" for f in PROFILE_FIELDS)
-        ref_examples = random.sample(self.full_pool, 2)
 
         loaded = load_hub_prompt(
             "generate_profile",
             style_guide_text=style_guide_text,
             archetype_label=archetype["label"],
             archetype_description=archetype["description"],
-            ref_example_1=json.dumps(ref_examples[0], indent=2),
-            ref_example_2=json.dumps(ref_examples[1], indent=2),
         )
         prompt = loaded.text
         prompt_ref = loaded.ref.to_dict()

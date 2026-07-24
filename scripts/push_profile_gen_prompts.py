@@ -47,8 +47,6 @@ _FORMAT_VARS: dict[PromptRole, tuple[str, ...]] = {
         "style_guide_text",
         "archetype_label",
         "archetype_description",
-        "ref_example_1",
-        "ref_example_2",
     ),
 }
 
