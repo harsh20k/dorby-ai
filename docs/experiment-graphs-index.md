@@ -107,6 +107,24 @@ goal, the next lever is 3 components (mild further gain) or a nonlinear
 reduction (UMAP/t-SNE) rather than more physics tuning — those are built to
 preserve local neighborhood structure that linear PCA/SVD compresses away.
 
+### Direct 3D PCA scatter (`scripts/build_real_pairs_3d_scatter.py`)
+
+A separate, standalone script (not a `build_real_pairs_graph.py` mode — that
+file's renderer is 2D SVG, a genuine 3D scatter needed its own hand-rolled
+canvas perspective projector). `real-pairs-voyage-lookingfor-3d-pca.html`:
+297 real contacts placed at the first 3 PCA components of their cached
+voyage-4-large `lookingFor` embeddings (`artifacts/voyage_large_lookingfor/`,
+same cache as the 2D version — this run was 297/297 cache hits, 0 new API
+calls). Positions are entirely fixed, no simulation of any kind; mouse drag
+only rotates the camera (yaw/pitch), scroll only zooms — neither moves a
+node. The 200 seeker→candidate pairs are drawn as thin dotted directed
+arrows (green = positive, red = negative) between their fixed points, nodes
+colored by pairing polarity as in the 2D version. PC1/PC2/PC3 explain
+7.9%/5.0%/4.4% of variance (17.6% cumulative) — even lower than the 2D
+version's 2-component number since PC3 adds only ~4.4 more points; expect
+the same "no dramatic clusters" honest read, now with one more (weak) axis
+to look along.
+
 ## Published Artifacts (claude.ai, this account)
 
 `Artifact` publishing (`action: "list"`, `scope: "mine"`) shows 3
