@@ -6,6 +6,7 @@ accelerate>=0.30
 datasets>=2.19
 scikit-learn>=1.4.0
 numpy>=1.26.0
+umap-learn>=0.5.5
 tqdm>=4.66.0
 voyageai>=0.3.0
 langgraph>=0.2.0
