@@ -17,6 +17,15 @@ Requires AWS credentials (env vars, ~/.aws/config profile, or SSO login) with
 bedrock:InvokeModel / Converse access, and model access enabled for the
 target model in the Bedrock console.
 
+Prompts (style refresh, archetype refresh, per-profile generation) are pulled
+hub-only from LangSmith Prompt Hub via scripts/profile_gen_prompt_hub.py —
+there is no local-file fallback at runtime, so a run only ever executes an
+exact, versioned, auditable prompt commit. Source text lives in
+scripts/prompts/profile_gen/*.md; push with
+scripts/push_profile_gen_prompts.py before running this script. Every
+profile's manifest.jsonl line and result JSON records the resolved
+prompt_refs (hub commit hash) it was generated with.
+
 Usage:
     python scripts/bedrock_profile_gen.py --max-profiles 20   # bounded test run
     python scripts/bedrock_profile_gen.py                     # run until Ctrl+C
@@ -37,6 +46,10 @@ from langsmith import traceable
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
 load_dotenv(REPO_ROOT / ".env")
+
+import sys as _sys
+_sys.path.insert(0, str(REPO_ROOT))
+from scripts.profile_gen_prompt_hub import load_prompt as load_hub_prompt
 
 PROFILE_FIELDS = [
     "positioning", "background", "lookingFor", "notes",
@@ -185,6 +198,7 @@ class Runner:
         self.style_version = 0
         self.archetypes = None
         self.archetypes_version = 0
+        self.last_prompt_refs: dict = {}  # role -> PromptRef.to_dict(), for audit trail
         self.last_archetype_refresh_count = 0
         self.last_style_refresh_count = 0
         self.refresh_in_progress = False
@@ -208,17 +222,14 @@ class Runner:
 
     def refresh_style(self):
         sample = self._fresh_sample()
-        prompt = f"""Here are {len(sample)} real user profiles from a professional networking product, as JSON objects.
-
-{json.dumps(sample, indent=2)}
-
-For each of these fields — {', '.join(PROFILE_FIELDS)} — describe, in one paragraph:
-1. typical length
-2. whether it's written as sentences, dashes/bullets, or short tags
-3. common tone/vocabulary
-4. what kind of content usually appears
-
-Do not repeat or summarize any specific person's actual details — only describe the pattern across all profiles."""
+        loaded = load_hub_prompt(
+            "style_refresh",
+            sample_count=len(sample),
+            sample_json=json.dumps(sample, indent=2),
+            fields_list=", ".join(PROFILE_FIELDS),
+        )
+        self.last_prompt_refs["style_refresh"] = loaded.ref.to_dict()
+        prompt = loaded.text
         spec, r = call_bedrock_json_retry(
             self.client, self.model_id, prompt, STEP1_SCHEMA, "style_spec",
             "Per-field style guide learned from real profiles", temperature=0.5,
@@ -237,11 +248,13 @@ Do not repeat or summarize any specific person's actual details — only describ
 
     def refresh_archetypes(self):
         sample = self._fresh_sample()
-        prompt = f"""Here are {len(sample)} real user profiles from a professional networking product, as JSON objects.
-
-{json.dumps(sample, indent=2)}
-
-Looking at these profiles as whole people (not field by field), identify 6-8 recurring types you see — combinations of industry, role, career stage, and geography that naturally occur together in this population. For each type, give a short label (5-8 words) and a one-sentence description of what distinguishes it."""
+        loaded = load_hub_prompt(
+            "archetype_refresh",
+            sample_count=len(sample),
+            sample_json=json.dumps(sample, indent=2),
+        )
+        self.last_prompt_refs["archetype_refresh"] = loaded.ref.to_dict()
+        prompt = loaded.text
         parsed, r = call_bedrock_json_retry(
             self.client, self.model_id, prompt, STEP2_SCHEMA, "archetype_list",
             "Recurring persona archetypes found across the sampled profiles", temperature=0.5,
@@ -285,23 +298,16 @@ Looking at these profiles as whole people (not field by field), identify 6-8 rec
         style_guide_text = "\n".join(f"- {f}: {style_spec[f]}" for f in PROFILE_FIELDS)
         ref_examples = random.sample(self.full_pool, 2)
 
-        prompt = f"""You are generating ONE fictional user profile for a synthetic test dataset for a professional networking product. This profile must describe a completely made-up person — not a real, identifiable individual.
-
-Field style guide (learned from real profiles):
-{style_guide_text}
-
-Person type to write for: {archetype['label']} — {archetype['description']}
-
-Below are 2 real profiles shown ONLY as style/format reference. Do not copy their names, companies, industries, or any specific facts. Only match their tone and structure.
-
-REAL EXAMPLE 1:
-{json.dumps(ref_examples[0], indent=2)}
-
-REAL EXAMPLE 2:
-{json.dumps(ref_examples[1], indent=2)}
-
-First fill in "reasoning": think through who this fictional person is, without reusing any fact from the examples above.
-Then, using that reasoning, fill in the 8 profile fields consistently with it and with the style guide."""
+        loaded = load_hub_prompt(
+            "generate_profile",
+            style_guide_text=style_guide_text,
+            archetype_label=archetype["label"],
+            archetype_description=archetype["description"],
+            ref_example_1=json.dumps(ref_examples[0], indent=2),
+            ref_example_2=json.dumps(ref_examples[1], indent=2),
+        )
+        prompt = loaded.text
+        prompt_ref = loaded.ref.to_dict()
 
         attempts = []
         parsed = None
@@ -329,9 +335,11 @@ Then, using that reasoning, fill in the 8 profile fields consistently with it an
             if not problems:
                 return {"id": profile_id, "archetype": archetype["label"],
                         "style_version": self.style_version, "archetypes_version": self.archetypes_version,
+                        "prompt_refs": {**self.last_prompt_refs, "generate_profile": prompt_ref},
                         "profile": parsed, "attempts": attempts, "success": True}
         return {"id": profile_id, "archetype": archetype["label"],
                 "style_version": self.style_version, "archetypes_version": self.archetypes_version,
+                "prompt_refs": {**self.last_prompt_refs, "generate_profile": prompt_ref},
                 "profile": parsed, "attempts": attempts, "success": False}
 
     def _log(self, msg: str):
@@ -340,12 +348,14 @@ Then, using that reasoning, fill in the 8 profile fields consistently with it an
     def _log_refresh_manifest(self, kind: str, version: int, usage: dict):
         """Record refresh-call token usage in the manifest too, so cost calculations
         from manifest.jsonl alone aren't missing the style/archetype refresh calls."""
+        role = "style_refresh" if kind == "style" else "archetype_refresh"
         with self.manifest_lock:
             with open(self.manifest_path, "a") as f:
                 f.write(json.dumps({
                     "kind": f"{kind}_refresh", "version": version,
                     "input_tokens": usage.get("inputTokens") or 0,
                     "output_tokens": usage.get("outputTokens") or 0,
+                    "prompt_ref": self.last_prompt_refs.get(role),
                     "ts": time.time(),
                 }) + "\n")
 
@@ -363,6 +373,7 @@ Then, using that reasoning, fill in the 8 profile fields consistently with it an
                     "input_tokens": sum(a.get("input_tokens") or 0 for a in result["attempts"]),
                     "output_tokens": sum(a.get("output_tokens") or 0 for a in result["attempts"]),
                     "style_version": result["style_version"], "archetypes_version": result["archetypes_version"],
+                    "prompt_refs": result.get("prompt_refs"),
                     "ts": time.time(),
                 }) + "\n")
 

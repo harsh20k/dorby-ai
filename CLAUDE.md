@@ -280,6 +280,83 @@ against the `tf_provisioner` account — see "Cost tracking" in
 `docs/profile-generation-local-and-bedrock.md` for details and what to
 update if the target model changes.
 
+### Pairing standalone profiles into labeled pairs (`synth_pipeline/pairing/`)
+
+Turns a pool of unlabeled profiles (from either generator above) into labeled
+pos/neg pairs. **No LLM judge** — labels come from the TF-IDF+Voyage-nano
+fusion scorer, which is the strongest pair scorer measured on the matched
+holdout (AUC 0.6397 / hard-neg 0.6034, beating even Voyage-4-large).
+
+```bash
+export AWS_PROFILE=tf_provisioner AWS_DEFAULT_REGION=us-east-1
+python -m synth_pipeline.pairing \
+  --profile-run artifacts/bedrock_synth/run_<ts> \
+  --batch-id pair_test_001 \
+  --data-dir /Users/harsh/Artifacts/dorby-ai/data   # data/ is gitignored — required from a worktree
+
+# side-by-side graph: real pairs | this batch
+python scripts/build_real_pairs_graph.py \
+  --compare artifacts/pairing/pair_test_001 \
+  --out docs/pairs-comparison-graph.html
+
+# verification add-on, run after building a batch (not a gate)
+python scripts/verify_pairing_scorer.py
+```
+
+Five phases: load profiles (mint `cmsynthp…` ids, drop the CoT `reasoning`
+field) → generate a `searchQuery` per profile via Bedrock (the only LLM call)
+→ rank candidates against each query by TF-IDF and take a log-spaced top band
+→ score with the fusion (fitted on **real train pairs only**) → stage.
+
+**Labels are provisional, not training data.** A model trained on a batch can
+at best imitate the scorer that labeled it; on hard pairs that scorer is right
+~60% of the time. Three things keep this quarantined: batches live in their own
+`artifacts/pairing/<batch_id>/` namespace, **nothing is promoted** into
+`data/dataset_*.json`, and `manifest.json` records the labeler and thresholds.
+Promoting such a batch would repeat the `batch_500_001` mistake in a new form.
+
+Labeling always keeps a **deadband** — `pos` above, `neg` below, near-boundary
+pairs written unlabeled to `excluded/` rather than given a coin-flip label.
+Negatives carry **no `failure_mode`**: a scorer yields a number, not a
+diagnosis, so it's left null rather than guessed.
+
+**`--label-mode quantile` is the default, and the reason matters.** The first
+test run used the real-pair threshold and labeled 164/164 pairs positive: the
+synthetic score distribution (0.57–9.86) does not overlap the real-pair
+threshold region (≈ −2.18) at all, because synthetic profiles are far more
+homogeneous than real contacts *and* `select.py` picks the top-similarity band
+by construction. Quantile mode splits each batch by its own distribution (top
+`--pos-frac` 0.30 / bottom `--neg-frac` 0.30). `--label-mode absolute` keeps the
+old behavior for comparison and now warns when the ranges don't overlap. Note
+this changes what a label means: "better/worse than others offered to this
+seeker in this batch", not "good by the real-pairs standard".
+
+Two related hazards fixed while finding this: contact ids are now derived
+deterministically from `sha256(source_run:profile_id)` (random ids broke re-runs
+and the query checkpoint), and the batch embedding-cache key is content-hashed
+— both `TfidfEncoder.encode()` and `VoyageNanoEncoder.encode()` return a cached
+array whenever `cache_name` exists *without* checking the input texts still
+match, so a fixed key silently served stale embeddings after a query regen.
+
+Why not the existing judge: `judge_node` puts the label into the judge's own
+prompt (`judge.py:56-63`), which was fine when the label came from elsewhere
+and the judge only had veto power, but would have it grading its own answer key
+here.
+
+**`pair_test_001` (20 profiles, 2026-07-23): 52 pos / 52 neg / 70 excluded.**
+Scorer verified exact — `scripts/verify_pairing_scorer.py` reproduces the
+documented holdout AUC 0.6397 to four decimals. But the headline finding is a
+limitation: **TF-IDF query cosine alone predicts the assigned label at 0.868
+AUC**, so most of the label is plain lexical overlap — `select.py` ranks by
+TF-IDF, then a TF-IDF-heavy labeler grades that ranking. Given
+`possible-bugs.md` #3 (plain TF-IDF already beats both fine-tunes), training on
+these labels would largely teach lexical overlap. That's the strongest argument
+for putting a semantic judge back in the labeling path before this becomes
+training data. Topology also diverges sharply from real data (80% of contacts
+carry both labels vs 5% real; 5.2 vs 0.67 edges/node). Full results, the
+distribution-shift finding, and remaining gaps are in
+`docs/profile-generation-local-and-bedrock.md`.
+
 ### Two-tower LoRA fine-tune (`twotower/` + Modal)
 
 LoRA fine-tune of `voyage-4-nano` on the promoted dataset. Architecture and
@@ -422,6 +499,21 @@ stratified sample (`--sample-pct`, default 2%, across pos/neg and all 5
 failure modes) as `in_sample`; the serve script is a stdlib-only local HTTP
 server that write-backs `human_review` verdicts from browser button clicks
 straight into the staged pair's JSON file (no framework dependency added).
+
+`synth_pipeline/pairing/` is a separate, self-contained subpackage — it shares
+`config`/`ids`/`schema` with the LangGraph pipeline above but bypasses the
+graph, the generators, and the judge entirely. Flow is a plain function chain,
+not a graph: `profiles.py` → `query.py` → `select.py` → `label.py` →
+`stage.py`, orchestrated by `run.py`. `bedrock.py` is a deliberate ~40-line
+duplicate of `scripts/bedrock_profile_gen.py::call_bedrock` (a package
+importing from `scripts/` would need a `sys.path` hack). Two invariants worth
+knowing before touching it: `profiles.py::_extract_profile` is an allowlist so
+the generator's CoT `reasoning` field can never leak downstream even if the
+generation schema grows, and `select.py` enforces global uniqueness of
+`(seeker, candidate)` because the pair schema has no query identity and
+`promote.py` dedups on that key. `stage.ENVELOPE_KEYS` is asserted against
+`nodes/writer.py`'s envelope dict by AST in `tests/test_pairing.py`, so the two
+can't drift.
 
 ### `twotower/` — LoRA fine-tune of voyage-4-nano
 
