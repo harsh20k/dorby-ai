@@ -17,10 +17,16 @@ from __future__ import annotations
 
 import argparse
 import json
+import sys
 from pathlib import Path
 from typing import Any, Callable
 
 ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(ROOT))
+
+from dotenv import load_dotenv  # noqa: E402 — needs ROOT/sys.path set first
+
+load_dotenv(ROOT / ".env")
 DEFAULT_POS = ROOT / "data" / "dataset_positive.json"
 DEFAULT_NEG = ROOT / "data" / "dataset_negative.json"
 DEFAULT_OUT = ROOT / "docs" / "real-pairs-graph.html"
@@ -100,6 +106,44 @@ def build_graph(
         out_nodes.append(node)
 
     return {"nodes": out_nodes, "edges": edges}
+
+
+def compute_tfidf_similarity(nodes: list[dict]) -> list[list[float]]:
+    """Pairwise cosine similarity over each node's profile text (TF-IDF).
+
+    Reuses baselines.bert_frozen.text.candidate_to_text, the same field-tagged
+    serialization synth_pipeline/pairing/select.py fits its vocabulary on, so
+    "similar" means the same thing here as it does in the pairing scorer.
+    """
+    from sklearn.feature_extraction.text import TfidfVectorizer
+
+    from baselines.bert_frozen.text import candidate_to_text
+
+    texts = [candidate_to_text(n["profile"]) for n in nodes]
+    vec = TfidfVectorizer(max_features=20000, ngram_range=(1, 2), min_df=1)
+    mat = vec.fit_transform(texts).toarray()  # already L2-normalized by TfidfVectorizer
+    sim = mat @ mat.T
+    return sim.tolist()
+
+
+def compute_voyage_lookingfor_similarity(
+    nodes: list[dict], *, cache_dir: Path
+) -> list[list[float]]:
+    """Pairwise cosine similarity over each node's `lookingFor` text, embedded
+    with voyage-4-large. Per-text disk cache under cache_dir/emb/ (content-hash
+    keyed, from VoyageLargeEncoder itself) makes every re-run after the first
+    free — that's the "save it for reuse later" cache, not a separate one.
+    """
+    import numpy as np
+
+    from baselines.voyage_large.encode import VoyageLargeEncoder
+
+    texts = [(n["profile"].get("lookingFor") or "").strip() or " " for n in nodes]
+    encoder = VoyageLargeEncoder(cache_dir=cache_dir)
+    emb = encoder.encode(texts, input_type="document", label="real_lookingfor")
+    encoder.write_usage_meta()
+    sim = emb @ emb.T
+    return np.asarray(sim, dtype=np.float64).tolist()
 
 
 def load_pairing_batch(batch_dir: Path) -> tuple[list[dict], list[dict], dict[str, dict]]:
@@ -658,6 +702,23 @@ function createGraph(root, spec) {
     }
   }
 
+  // Optional pairwise-similarity clustering force: pulls nodes whose content
+  // similarity is high closer together (targetGap shrinks toward 0 as
+  // similarity -> 1) and, symmetrically, pushes low-similarity pairs further
+  // apart (targetGap grows toward SIM_MAX_DIST as similarity -> 0) — a signed
+  // spring over EVERY pair, not just edges, reusing the dx/dy/d already
+  // computed for repulsion in the same O(n^2) loop below.
+  const SIM_MATRIX = spec.similarityMatrix || null;
+  const SIMILARITY = SIM_MATRIX !== null;
+  // Tuned against the real 297-node graph via a headless port of this exact
+  // physics loop (job tmp dir): correlation(similarity, final distance) =
+  // -0.39, top-50-most-similar pairs ~2.8x closer than bottom-50-least-similar,
+  // while polarizeByLabel's left/right split still holds 99%+ correct — these
+  // two constants keep both forces visually co-present rather than one
+  // dominating (SIM_MAX_DIST close to POLARIZE_TARGET_X's scale).
+  const SIM_MAX_DIST = 500;
+  const SIM_K = 0.01;
+
   let alpha = 1;
   let simRunning = false;
 
@@ -674,6 +735,13 @@ function createGraph(root, spec) {
         dx /= d; dy /= d;
         a.fx += dx * f; a.fy += dy * f;
         b.fx -= dx * f; b.fy -= dy * f;
+        if (SIMILARITY) {
+          const sim = Math.max(0, SIM_MATRIX[i][j]);
+          const targetGap = SIM_MAX_DIST * (1 - sim);
+          const sf = (d - targetGap) * SIM_K;
+          a.fx -= dx * sf; a.fy -= dy * sf;
+          b.fx += dx * sf; b.fy += dy * sf;
+        }
       }
     }
     for (const e of edges) {
@@ -1010,9 +1078,10 @@ def _pane_spec(
     *,
     color_by: str = "role",
     polarize_by_label: bool = False,
+    similarity_matrix: list[list[float]] | None = None,
 ) -> dict:
     stats = graph_stats(graph)
-    return {
+    spec = {
         "key": key,
         "title": title,
         "subtitle": subtitle,
@@ -1027,6 +1096,10 @@ def _pane_spec(
         "nodes": graph["nodes"],
         "edges": graph["edges"],
     }
+    if similarity_matrix is not None:
+        # rounding cuts embedded JSON size substantially with no visible layout impact
+        spec["similarityMatrix"] = [[round(v, 4) for v in row] for row in similarity_matrix]
+    return spec
 
 
 def _to_fragment(html: str) -> str:
@@ -1065,19 +1138,42 @@ def build(
     *,
     compare: Path | None = None,
     fragment: bool = False,
+    similarity_mode: str | None = None,
+    voyage_cache_dir: Path | None = None,
 ) -> dict:
     pos_pairs = json.loads(pos_path.read_text(encoding="utf-8"))
     neg_pairs = json.loads(neg_path.read_text(encoding="utf-8"))
     real = build_graph(pos_pairs, neg_pairs)
+
+    similarity_matrix = None
+    similarity_note = ""
+    if similarity_mode == "tfidf":
+        similarity_matrix = compute_tfidf_similarity(real["nodes"])
+        similarity_note = (
+            " Contacts with similar profile text (TF-IDF cosine over the same "
+            "field-tagged serialization the pairing scorer uses) are pulled "
+            "closer together; dissimilar contacts are pushed further apart."
+        )
+    elif similarity_mode == "voyage_large_lookingfor":
+        cache_dir = voyage_cache_dir or (ROOT / "artifacts" / "voyage_large_lookingfor")
+        similarity_matrix = compute_voyage_lookingfor_similarity(
+            real["nodes"], cache_dir=cache_dir
+        )
+        similarity_note = (
+            " Contacts whose `lookingFor` text is semantically similar (voyage-4-large "
+            "cosine) are pulled closer together; dissimilar ones are pushed further apart."
+        )
 
     specs = [
         _pane_spec(
             "real",
             "Real pairs",
             "Original Boardy seeker→candidate pairs, synthetic contacts excluded. "
-            "Positive-labeled contacts drift left, negative-labeled drift right.",
+            "Positive-labeled contacts drift left, negative-labeled drift right."
+            + similarity_note,
             real,
             polarize_by_label=True,
+            similarity_matrix=similarity_matrix,
         )
     ]
 
@@ -1118,9 +1214,26 @@ def main() -> None:
         help="emit body-only HTML for the Artifact publisher (which supplies "
         "its own document skeleton)",
     )
+    parser.add_argument(
+        "--similarity-mode",
+        choices=("tfidf", "voyage_large_lookingfor"),
+        default=None,
+        help="add a real-pane clustering force pulling profile-similar contacts "
+        "together (and pushing dissimilar ones apart): tfidf = whole-profile TF-IDF "
+        "cosine; voyage_large_lookingfor = voyage-4-large cosine over the "
+        "lookingFor field only, cached to disk for reuse",
+    )
+    parser.add_argument(
+        "--voyage-cache-dir",
+        type=Path,
+        default=None,
+        help="cache dir for voyage_large_lookingfor mode (default: "
+        "artifacts/voyage_large_lookingfor)",
+    )
     args = parser.parse_args()
     stats = build(
-        args.pos, args.neg, args.out, compare=args.compare, fragment=args.fragment
+        args.pos, args.neg, args.out, compare=args.compare, fragment=args.fragment,
+        similarity_mode=args.similarity_mode, voyage_cache_dir=args.voyage_cache_dir,
     )
     summary = ", ".join(
         f"{p['key']}: {p['nodes']} nodes/{p['edges']} edges" for p in stats["panes"]

@@ -49,6 +49,27 @@ self-contained, no server needed.
   10/10 unique names, 10/10 compliance, vs. the prior ~50-80% Anya/Aris
   collapse rate. Paired with the same disjoint-split + cap settings.
 
+## Real-only single-pane similarity visualizations
+
+Two more `build_real_pairs_graph.py` outputs, single-pane (real data only,
+no synth comparison), both keeping the label-polarization force
+(positive-labeled contacts drift left, negative drift right) and adding a
+second physics force that pulls content-similar contacts closer together
+and pushes dissimilar ones further apart — a signed spring over every pair
+of nodes, not just edges. Force strength (`SIM_K=0.01`, `SIM_MAX_DIST=500`
+in `scripts/build_real_pairs_graph.py`) was tuned against a headless port
+of the exact physics loop before shipping (job tmp dir, not committed):
+correlation(similarity, final on-screen distance) ≈ -0.39, top-50-most-similar
+pairs end up ~2.8x closer than bottom-50-least-similar, while the left/right
+label split still holds 99%+ correct with both forces active together.
+
+| file | similarity source | text embedded | cache | git status |
+|---|---|---|---|---|
+| `real-pairs-tfidf-cluster.html` | `--similarity-mode tfidf` | whole-profile TF-IDF (`baselines.bert_frozen.text.candidate_to_text`, same serialization the pairing scorer fits on) | none needed — refit each run, cheap (sklearn, no API) | pending commit |
+| `real-pairs-voyage-lookingfor-cluster.html` | `--similarity-mode voyage_large_lookingfor` | `lookingFor` field only, `voyage-4-large` | `artifacts/voyage_large_lookingfor/emb/*.npy`, content-hash keyed (via `VoyageLargeEncoder`'s own per-text disk cache) — confirmed 297/297 cache hits, 0 new API calls on a second run | pending commit |
+
+The Voyage run cost 297 texts / 111,537 tokens (`artifacts/voyage_large_lookingfor/usage.json`), one-time — every later rebuild of this file or any other visualization using the same cache dir reuses the embeddings for free.
+
 ## Published Artifacts (claude.ai, this account)
 
 `Artifact` publishing (`action: "list"`, `scope: "mine"`) shows 3
@@ -61,8 +82,9 @@ currently-published pages relevant to this project:
 | Holdout comparison browser — Dorby AI | https://claude.ai/code/artifact/95beeed4-9a3d-4a79-906d-cf2d24d0457f | 2026-07-20 | likely `docs/baseline-results-holdout-browser.html` (`scripts/build_holdout_browser.py`, generated 2026-07-20 per file mtime, committed to `main` at `ef9fd8d`/`bdd1631`) — plausible by date match but not confirmed |
 
 **Caveat on the "likely source" column:** this session never called
-`Artifact` to publish anything — all 5 comparison graphs above were only
-opened locally (`open docs/<file>.html`). The 3 published pages listed
+`Artifact` to publish anything — all 7 graphs above (5 comparison, 2
+similarity) were only opened locally (`open docs/<file>.html`). The 3
+published pages listed
 were published in earlier sessions this account doesn't have visibility
 into from here, so the source-file mapping is a best guess from filename/
 date proximity, not a verified fact. If you want a definitive link between
