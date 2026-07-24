@@ -290,22 +290,193 @@ If the target model changes from Gemma 3 27B, both the dashboard's
 `ModelId` dimension and its cost-estimate metric-math pricing constants
 need updating to match.
 
-## Next: pairing (not yet built)
+## Pairing: `synth_pipeline/pairing/` (built)
 
-Once profile generation is solid, turning a pool of independent profiles
-into labeled pos/neg pairs needs three new pieces, reusing existing
-judge infrastructure rather than rebuilding it:
+Turns a pool of independent, unlabeled profiles into labeled pos/neg pairs.
 
-1. **Query generation** — one LLM call per profile turns its `lookingFor`
-   into a `searchQuery` (what they'd type when searching for an intro).
-2. **Candidate picking** — for each (profile, query), select a few other
-   profiles as candidates: some random (easy negatives), some
-   topically-similar via TF-IDF/embedding cosine (hard negatives/positives
-   — similarity alone doesn't imply good/bad, the judge decides that).
-3. **Judge** — run each (seeker, query, candidate) triple through the
-   existing `synth_pipeline/nodes/judge.py` (v2 schema,
-   `would_be_good_intro`) to assign a positive or negative-with-
-   `failure_mode` label, same as the current pipeline.
+```bash
+python -m synth_pipeline.pairing \
+  --profile-run artifacts/bedrock_synth/run_<ts> \
+  --batch-id pair_test_001 \
+  --data-dir /path/to/data          # data/ is gitignored; required from a worktree
+```
 
-The candidate-picking step (2) is the only genuinely new design surface —
-everything else reuses code that already exists in `synth_pipeline/`.
+Five phases, run to completion in order (selection needs the whole TF-IDF
+matrix, so it can't stream per-pair):
+
+| module | does | LLM? |
+|---|---|---|
+| `profiles.py` | load a run, mint `cmsynthp…` ids, drop `reasoning` | no |
+| `query.py` | one `searchQuery` set per profile from `lookingFor` | **yes** (Bedrock) |
+| `select.py` | rank candidates against each query, take a top band | no |
+| `label.py` | score with the TF-IDF+Voyage-nano fusion, label with a deadband | no |
+| `stage.py` | write batch-isolated envelopes | no |
+
+### Why no judge
+
+The original sketch (below, superseded) routed each triple through
+`synth_pipeline/nodes/judge.py`. Two things changed that:
+
+1. **`judge_node` puts the label in the judge's own prompt.**
+   `judge.py:56-63` sends `{"label": ..., "failure_mode": ..., "pair": ...}`.
+   Under the old design that was fine — the label came from elsewhere and the
+   judge only had veto power, so a judge error could only ever *discard* a
+   correct pair, never *create* a wrong one. Under profile-first there is no
+   other label source, so reusing it verbatim would have the judge grading its
+   own answer key.
+2. **Deliberate scope call:** for this batch, labels come from the hybrid
+   scorer instead. Cheaper, deterministic, and it sidesteps the question of
+   how much to trust an unvalidated judge.
+
+### Labeling by hybrid scorer
+
+`baselines/hybrid_tfidf_voyage/fusion.py` is reused directly — it is the
+strongest pair scorer measured on the matched 69-pair holdout:
+
+| scorer | pair AUC | hard-neg AUC |
+|---|---|---|
+| **hybrid TF-IDF+nano** | **0.6397** | **0.6034** |
+| voyage-4-large (prod) | 0.6086 | 0.6017 |
+| tfidf alone | 0.5922 | 0.5017 |
+| voyage-4-nano alone | 0.5793 | 0.5707 |
+
+Fitted on **real train pairs only** (`build_split_bundle(include_synth=False)`),
+so the frozen 69-pair holdout never touches the fit.
+
+Labels use a **deadband**, not a single threshold: `pos` above, `neg` below,
+and everything in between is written to `excluded/` unlabeled. Near-boundary
+pairs are close to coin flips, and labeling them confidently would manufacture
+noise exactly at the decision boundary that matters.
+
+### Finding: real-pair thresholds do not transfer to synthetic pairs
+
+The first `pair_test_001` run labeled **164 pos / 0 neg** — every single pair
+positive. Not a crash; a genuine distribution mismatch, and the main thing the
+20-profile test batch bought us.
+
+| population | fusion score range |
+|---|---|
+| real fit-set threshold region | ≈ **−2.18** |
+| synthetic batch (n=164) | **0.57 … 9.86** (median 3.02) |
+
+The two distributions don't overlap **at all** — the lowest-scoring synthetic
+pair sits 2.5 points above the threshold that would call a real pair positive.
+Two compounding causes:
+
+1. **Homogeneity.** Synthetic profiles come from one model, one style spec, and
+   ~8 archetypes, so any two of them are far more alike than any two real
+   Boardy contacts. Both the TF-IDF and Voyage cosines run high across the board.
+2. **Selection bias.** `select.py` picks the top-similarity band by
+   construction, so the pairs being scored are the most similar ones available.
+
+The fusion score is a z-blend using the *fit set's* mean and standard deviation,
+so a systematically shifted input distribution shifts every score with it. An
+absolute threshold learned on real pairs is therefore meaningless on synthetic
+pairs, and the failure is silent — it produces a confident, uniform, wrong answer.
+
+**Fix:** `--label-mode quantile` (now the default) splits each batch by its own
+score distribution — top `--pos-frac` (0.30) positive, bottom `--neg-frac` (0.30)
+negative, middle 40% excluded. `--label-mode absolute` keeps the old behavior for
+comparison against real data, and now logs a warning when the batch scores fall
+entirely outside the real-pair range.
+
+This changes what a label *means*, and the change is worth being explicit
+about: not "good by the standard real pairs set" but "among the better/worse
+matches offered to this seeker in this batch". Since every candidate was already
+drawn from the top-similarity band, the resulting negatives are hard by
+construction — which is the intent, but it also means the batch has no easy
+negatives at all (see "Still open").
+
+### Two related hazards found and fixed
+
+- **Random contact ids broke re-runs.** IDs were minted with `secrets`, so the
+  same profile got a new identity on every run, invalidating the query
+  checkpoint and making two runs over one profile pool incomparable. Now derived
+  deterministically from `sha256(source_run:profile_id)` — still valid 25-char
+  `cmsynthp…` ids, since hex is a subset of the id alphabet.
+- **Silent stale-embedding reuse.** `TfidfEncoder.encode()` and
+  `VoyageNanoEncoder.encode()` return a cached array whenever the `cache_name`
+  file exists, *without* checking that the input texts still match. A fixed
+  per-batch cache key would have served embeddings for the previous run's
+  queries after a regeneration. The batch cache key is now content-hashed.
+
+**Negatives carry no `failure_mode`.** A scorer produces a number, not a
+diagnosis of *which* axis failed. It's left null rather than guessed, so
+per-mode analysis downstream can't be misled.
+
+### Labels are provisional — not training data
+
+A model trained on this batch can at best learn to imitate the scorer that
+labeled it, and could not then be said to beat that scorer on data it labeled.
+On hard pairs specifically, the scorer is right about 60% of the time.
+
+Three things keep that quarantined: batches live in their own
+`artifacts/pairing/<batch_id>/` namespace, **nothing is promoted** into
+`data/dataset_*.json`, and `manifest.json` records the labeler and thresholds
+so provenance is never ambiguous. Promoting a batch like this would repeat the
+`batch_500_001` mistake in a new form.
+
+### Batch layout
+
+```
+artifacts/pairing/<batch_id>/
+  manifest.json     # config, counts, fusion params, thresholds, token usage
+  profiles.json     # contactId -> {profile_id, archetype, profile}
+  queries.json      # contactId -> [query, ...]
+  pairs/*.json      # {label}_{seekerId}_{candidateId}.json
+  excluded/*.json   # deadband rejects, with drop_reason
+```
+
+Envelopes keep the exact key set `synth_pipeline/nodes/writer.py` writes (a
+test asserts this via AST, so it can't drift), which keeps the review browser
+and `promote.py` available later without rework — they're just not in this
+path. Filenames include the seeker id because one candidate profile now appears
+in many pairs, and the old `{label}_{matchContactId}.json` scheme would collide.
+
+### `pair_test_001` results (20 profiles, 2026-07-23)
+
+20 Bedrock profiles (`run_20260723_212205`, 20/20 clean, $0.128) → 40 queries
+($0.017) → 174 unique candidate pairs → **52 pos / 52 neg / 70 excluded**.
+
+Scorer verified exact: `scripts/verify_pairing_scorer.py` reproduces the
+documented holdout pair AUC of **0.6397** to four decimals (delta −0.0000), so
+the labeler is demonstrably the scorer that was measured.
+
+| diagnostic | value | real-data comparison |
+|---|---|---|
+| seekers carrying both labels | 16/20 (80%) | 9/129 (7%) |
+| candidates carrying both labels | 16/20 (80%) | 9/178 (5%) |
+| edges per node | 5.2 | 0.67 |
+| query↔candidate token jaccard (median) | 0.022 | queries aren't substrings ✓ |
+| **AUC of TF-IDF query cosine → label** | **0.868** | — |
+
+The last row is the significant one. **Most of the label is recoverable from
+plain lexical overlap** — TF-IDF query-candidate cosine alone separates the
+assigned labels at 0.868 AUC, and it correlates 0.70 with the fusion score
+that did the labeling. That is close to circular: `select.py` ranks candidates
+by TF-IDF, then a labeler with a heavy TF-IDF component grades that ranking.
+
+This matters because `docs/possible-bugs.md` #3 already records that plain
+TF-IDF (pair AUC 0.592) beats both fine-tuned runs. A model trained on these
+labels would largely be learning to reproduce lexical overlap — the one thing
+already known not to need learning. It is the strongest argument for putting a
+semantic judge back in the labeling path before any of this becomes training
+data.
+
+### Still open
+
+- **Label ≈ lexical overlap** (0.868 AUC, above). Decoupling selection from
+  labeling — a non-lexical selector, or a judge as labeler — is the main
+  unresolved design question.
+- `select.py` samples only the high-cosine band, so the negative set is
+  uniformly hard. The real holdout contains both easy and hard negatives, and
+  `baselines/metrics.py::slice_metrics` splits on exactly that — a 100%-hard
+  synthetic set is a distribution mismatch of a different kind.
+- **Topology is nothing like real data**: 80% of synthetic contacts carry both
+  labels vs 5% in real data, and the batch is 5.2 edges/node vs 0.67. A
+  fully-connected component also can't be carved into user-disjoint
+  train/train-dev splits the way `twotower/data.py` requires — sharding the
+  profile pool would be needed before this scales.
+- 18 distinct archetypes across 20 profiles (archetypes refresh every 5
+  profiles, so labels accumulate). Archetype coloring in the graph is therefore
+  nearly one color per node, and same-archetype pairs are rare (4 of 104).
