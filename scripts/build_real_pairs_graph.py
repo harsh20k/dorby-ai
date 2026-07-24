@@ -999,10 +999,25 @@ def _pane_spec(
     }
 
 
-def build_panes(specs: list[dict], out_path: Path) -> dict:
+def _to_fragment(html: str) -> str:
+    """Strip the document wrapper, keeping <title>, <style>, and body content.
+
+    The Artifact publisher supplies its own `<!doctype>/<head>/<body>` skeleton
+    and rejects pages that bring their own. Everything else — the token-based
+    palette, both theme blocks, the whole script — carries over untouched.
+    """
+    title = html.split("<title>", 1)[1].split("</title>", 1)[0]
+    style = html.split("<style>", 1)[1].split("</style>", 1)[0]
+    body = html.split("<body>", 1)[1].rsplit("</body>", 1)[0]
+    return f"<title>{title}</title>\n<style>{style}</style>\n{body}"
+
+
+def build_panes(specs: list[dict], out_path: Path, *, fragment: bool = False) -> dict:
     payload = json.dumps({"panes": specs}, ensure_ascii=False, separators=(",", ":"))
     payload = payload.replace("<", "\\u003c")
     html = HTML_TEMPLATE.replace("__EMBEDDED_JSON__", payload)
+    if fragment:
+        html = _to_fragment(html)
     out_path.parent.mkdir(parents=True, exist_ok=True)
     out_path.write_text(html, encoding="utf-8")
     return {
@@ -1019,6 +1034,7 @@ def build(
     out_path: Path,
     *,
     compare: Path | None = None,
+    fragment: bool = False,
 ) -> dict:
     pos_pairs = json.loads(pos_path.read_text(encoding="utf-8"))
     neg_pairs = json.loads(neg_path.read_text(encoding="utf-8"))
@@ -1049,7 +1065,7 @@ def build(
             )
         )
 
-    return build_panes(specs, out_path)
+    return build_panes(specs, out_path, fragment=fragment)
 
 
 def main() -> None:
@@ -1064,8 +1080,16 @@ def main() -> None:
         help="a synth_pipeline.pairing batch dir (artifacts/pairing/<batch_id>) "
         "to render as a second pane",
     )
+    parser.add_argument(
+        "--fragment",
+        action="store_true",
+        help="emit body-only HTML for the Artifact publisher (which supplies "
+        "its own document skeleton)",
+    )
     args = parser.parse_args()
-    stats = build(args.pos, args.neg, args.out, compare=args.compare)
+    stats = build(
+        args.pos, args.neg, args.out, compare=args.compare, fragment=args.fragment
+    )
     summary = ", ".join(
         f"{p['key']}: {p['nodes']} nodes/{p['edges']} edges" for p in stats["panes"]
     )
