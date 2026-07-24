@@ -70,6 +70,43 @@ label split still holds 99%+ correct with both forces active together.
 
 The Voyage run cost 297 texts / 111,537 tokens (`artifacts/voyage_large_lookingfor/usage.json`), one-time — every later rebuild of this file or any other visualization using the same cache dir reuses the embeddings for free.
 
+**Why these two barely show visible clustering:** checked directly by fitting
+PCA/SVD and reading `explained_variance_ratio_` before building anything
+further — TF-IDF's first 2 components explain only **1.67%** of variance
+(3 components: 2.69%); voyage-4-large's `lookingFor` embedding is better but
+still modest, **12.9%** (2 components) / **17.3%** (3 components). A force
+layout with 3 competing forces (repulsion, edge springs, polarize,
+similarity) will visually dilute a signal this size into "no obvious
+clusters" even when the underlying correlation is real (-0.39, verified
+above) — force-directed graphs are simply not a reliable tool for confirming
+whether clustering structure exists. See the direct PCA/SVD scatter plots
+below for the more trustworthy diagnostic.
+
+### Direct PCA/SVD scatter (no physics) — the actual clustering diagnostic
+
+`--layout pca`: nodes placed at the embedding's own first 2 components,
+static, no simulation at all — the label-polarization force is also off here
+(position is 100% determined by the embedding, not by pos/neg label), so
+these are a real, unbiased look at whether the raw embedding space has
+structure. Colored by pairing polarity instead (green = all-positive,
+gray = mixed/no pairs, red = all-negative) so label correlation can still be
+eyeballed against position.
+
+| file | similarity source | components shown | cumulative variance explained |
+|---|---|---|---|
+| `real-pairs-tfidf-pca.html` | TF-IDF (`TruncatedSVD`) | PC1 vs PC2 | 1.67% |
+| `real-pairs-voyage-lookingfor-pca.html` | voyage-4-large `lookingFor` (`PCA`) | PC1 vs PC2 | 12.9% |
+
+**Honest read:** neither should be expected to show dramatic, obvious
+clusters — the cumulative variance numbers above say the real structure
+(whatever it is) lives mostly in dimensions beyond the first 2, especially
+for TF-IDF. The Voyage version is the more informative of the two (7x more
+variance captured) and is the one worth actually looking at for any real
+signal; TF-IDF's is close to a null result. If clearer clustering is the
+goal, the next lever is 3 components (mild further gain) or a nonlinear
+reduction (UMAP/t-SNE) rather than more physics tuning — those are built to
+preserve local neighborhood structure that linear PCA/SVD compresses away.
+
 ## Published Artifacts (claude.ai, this account)
 
 `Artifact` publishing (`action: "list"`, `scope: "mine"`) shows 3
@@ -82,9 +119,9 @@ currently-published pages relevant to this project:
 | Holdout comparison browser — Dorby AI | https://claude.ai/code/artifact/95beeed4-9a3d-4a79-906d-cf2d24d0457f | 2026-07-20 | likely `docs/baseline-results-holdout-browser.html` (`scripts/build_holdout_browser.py`, generated 2026-07-20 per file mtime, committed to `main` at `ef9fd8d`/`bdd1631`) — plausible by date match but not confirmed |
 
 **Caveat on the "likely source" column:** this session never called
-`Artifact` to publish anything — all 7 graphs above (5 comparison, 2
-similarity) were only opened locally (`open docs/<file>.html`). The 3
-published pages listed
+`Artifact` to publish anything — all 9 graphs above (5 comparison, 2
+force-similarity, 2 PCA scatter) were only opened locally
+(`open docs/<file>.html`). The 3 published pages listed
 were published in earlier sessions this account doesn't have visibility
 into from here, so the source-file mapping is a best guess from filename/
 date proximity, not a verified fact. If you want a definitive link between

@@ -444,7 +444,17 @@ function openPanel(n, spec, edges) {
 
 // --- one independent graph instance per pane ---
 function createGraph(root, spec) {
-  const nodes = spec.nodes.map(n => ({...n, x: (Math.random()-0.5)*900, y: (Math.random()-0.5)*900, vx: 0, vy: 0}));
+  const STATIC_LAYOUT = spec.staticLayout === true;
+  const nodes = spec.nodes.map((n, i) => {
+    const [fx, fy] = STATIC_LAYOUT ? spec.fixedPositions[i] : [null, null];
+    return {
+      ...n,
+      x: STATIC_LAYOUT ? fx : (Math.random()-0.5)*900,
+      y: STATIC_LAYOUT ? fy : (Math.random()-0.5)*900,
+      vx: 0, vy: 0,
+      pinned: STATIC_LAYOUT || undefined,
+    };
+  });
   const nodeById = new Map(nodes.map(n => [n.id, n]));
   const edges = spec.edges.filter(e => nodeById.has(e.source) && nodeById.has(e.target));
 
@@ -490,16 +500,16 @@ function createGraph(root, spec) {
   const POLARIZE = spec.polarizeByLabel === true;
   const POLARIZE_TARGET_X = 420;
   const POLARIZE_K = 0.03;
-  if (POLARIZE) {
-    for (const n of nodes) {
-      let pos = 0, neg = 0;
-      for (const e of edges) {
-        if (e.source !== n.id && e.target !== n.id) continue;
-        if (e.label === "pos") pos++; else neg++;
-      }
-      const total = pos + neg;
-      n.polarity = total ? (neg - pos) / total : 0; // -1..1, pos-heavy -> negative (left), neg-heavy -> positive (right)
+  // Computed unconditionally — used by the polarize FORCE (if enabled) and by
+  // colorBy="polarity" (static-layout panes), which are independent concerns.
+  for (const n of nodes) {
+    let pos = 0, neg = 0;
+    for (const e of edges) {
+      if (e.source !== n.id && e.target !== n.id) continue;
+      if (e.label === "pos") pos++; else neg++;
     }
+    const total = pos + neg;
+    n.polarity = total ? (neg - pos) / total : 0; // -1..1, pos-heavy -> negative, neg-heavy -> positive
   }
 
   // Optional pairwise-similarity clustering force: pulls nodes whose content
@@ -664,9 +674,14 @@ function createGraph(root, spec) {
   // --- node coloring ---
   const archetypes = [...new Set(nodes.map(n => n.archetype).filter(Boolean))].sort();
   const archetypeColor = new Map(archetypes.map((a, i) => [a, ARCHETYPE_COLORS[i % ARCHETYPE_COLORS.length]]));
-  const colorBy = spec.colorBy === "archetype" && archetypes.length ? "archetype" : "role";
+  const colorBy = spec.colorBy === "archetype" && archetypes.length ? "archetype"
+    : spec.colorBy === "polarity" ? "polarity" : "role";
   function nodeColor(n) {
     if (colorBy === "archetype") return archetypeColor.get(n.archetype) || "var(--muted)";
+    if (colorBy === "polarity") {
+      const negPct = Math.round(((n.polarity + 1) / 2) * 100); // -1 (all pos) -> 0%, +1 (all neg) -> 100%
+      return `color-mix(in srgb, var(--neg) ${negPct}%, var(--pos) ${100 - negPct}%)`;
+    }
     return ROLE_COLOR[n.role];
   }
 
@@ -694,7 +709,7 @@ function createGraph(root, spec) {
       draggingNode = n;
       n.pinned = true;
       n.vx = 0; n.vy = 0;
-      reheat();
+      if (!STATIC_LAYOUT) reheat();
       ev.stopPropagation();
     });
     nodeLayer.appendChild(g);
@@ -710,6 +725,16 @@ function createGraph(root, spec) {
   if (colorBy === "role") {
     roleLegend.innerHTML = ["seeker", "candidate", "both"].map(rk =>
       `<label><span class="legend-dot" style="background:${ROLE_COLOR[rk]}"></span> ${rk}</label>`
+    ).join("");
+    roleLegend.style.display = "inline-flex";
+    roleLegend.style.gap = "0.75rem";
+  } else if (colorBy === "polarity") {
+    roleLegend.innerHTML = [
+      ["all positive pairs", "var(--pos)"],
+      ["mixed / no pairs", "color-mix(in srgb, var(--neg) 50%, var(--pos) 50%)"],
+      ["all negative pairs", "var(--neg)"],
+    ].map(([label, color]) =>
+      `<label><span class="legend-dot" style="background:${color}"></span> ${label}</label>`
     ).join("");
     roleLegend.style.display = "inline-flex";
     roleLegend.style.gap = "0.75rem";
@@ -825,7 +850,10 @@ function createGraph(root, spec) {
     applyViewBox();
   });
   window.addEventListener("mouseup", () => {
-    if (draggingNode) { draggingNode.pinned = false; draggingNode = null; reheat(); }
+    if (draggingNode) {
+      if (STATIC_LAYOUT) { draggingNode = null; }
+      else { draggingNode.pinned = false; draggingNode = null; reheat(); }
+    }
     panning = false;
     svg.classList.remove("panning");
   });
@@ -843,7 +871,11 @@ function createGraph(root, spec) {
   }, { passive: false });
 
   // Small graphs settle instantly; only the big pane is worth animating.
-  if (REDUCED_MOTION || nodes.length < 60) {
+  if (STATIC_LAYOUT) {
+    // No physics at all — positions are the embedding's own coordinates.
+    render();
+    requestAnimationFrame(() => fitView());
+  } else if (REDUCED_MOTION || nodes.length < 60) {
     for (let it = 0; it < 400; it++) tickPhysics(1);
     render();
     requestAnimationFrame(() => fitView());
