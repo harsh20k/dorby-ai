@@ -253,6 +253,29 @@ Smoke-tested 2026-07-23 (`run_20260723_093500`, `--max-profiles 3
 archetype refresh, ~22-29s per profile. Content sanity-checked — coherent,
 on-archetype, no truncation. Ready for a real batch run.
 
+### Prompts routed through LangSmith Prompt Hub, hub-only (2026-07-24)
+
+The 3 inline f-string prompts (style refresh, archetype refresh, per-profile
+generation) are extracted into committed `scripts/prompts/profile_gen/*.md`
+files and pushed to LangSmith Hub via `scripts/push_profile_gen_prompts.py`
+(current: `-/profile-gen-style-refresh:v1`, `-/profile-gen-archetype-refresh:v1`,
+`-/profile-gen-generate:v1`). `scripts/bedrock_profile_gen.py` loads them at
+runtime via `scripts/profile_gen_prompt_hub.py` — **hub-only, no local-file
+fallback**: unlike `synth_pipeline/prompts/__init__.py` (hub-preferred,
+silent local fallback on pull failure), a hub pull failure here raises
+instead of quietly running un-audited text, since the entire point of this
+change is that every generated profile can be traced to an exact prompt
+commit hash. Each profile's `prompt_refs` field (in its result JSON and
+`manifest.jsonl` line) records the resolved hub identifier + commit hash for
+all 3 roles.
+
+Content is otherwise byte-identical to what shipped before — this was an
+auditability change, not a behavior change. Confirmed by rerunning a
+3-profile batch (`run_20260724_101605`) purely off the hub prompts: it
+reproduced the same name-collapse pattern as every prior run (2 of 3
+"Anya," the third "Anya Volkov") — see "Known issues, not yet fixed" above,
+still not fixed, still declined-blocklist as of this writing.
+
 ## Cost tracking
 
 Bedrock's Converse API returns real `inputTokens`/`outputTokens` usage with
