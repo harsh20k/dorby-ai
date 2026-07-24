@@ -635,6 +635,13 @@ function createGraph(root, spec) {
   const DAMP = 0.85;
   const ALPHA_DECAY = 0.996;
   const ALPHA_MIN = 0.02;
+  // Optional per-pane polarization: pulls every node touched by a positive
+  // edge toward -x and every node touched by a negative edge toward +x, so
+  // the two labels separate into left/right clusters instead of interleaving.
+  // A node with edges of both labels settles at the force-weighted balance
+  // point between them, rather than being hard-classified into one side.
+  const POLARIZE = spec.polarizeByLabel === true;
+  const POLARIZE_STRENGTH = 0.15;
 
   let alpha = 1;
   let simRunning = false;
@@ -662,6 +669,10 @@ function createGraph(root, spec) {
       dx /= d; dy /= d;
       a.fx += dx * f; a.fy += dy * f;
       b.fx -= dx * f; b.fy -= dy * f;
+      if (POLARIZE) {
+        const pull = e.label === "pos" ? -POLARIZE_STRENGTH : POLARIZE_STRENGTH;
+        a.fx += pull; b.fx += pull;
+      }
     }
     for (const n of nodes) {
       n.fx -= n.x * CENTER;
@@ -981,6 +992,7 @@ def _pane_spec(
     graph: dict,
     *,
     color_by: str = "role",
+    polarize_by_label: bool = False,
 ) -> dict:
     stats = graph_stats(graph)
     return {
@@ -988,6 +1000,7 @@ def _pane_spec(
         "title": title,
         "subtitle": subtitle,
         "colorBy": color_by,
+        "polarizeByLabel": polarize_by_label,
         "physics": suggest_physics(graph),
         "stats": (
             f"{stats['nodes']} contacts · {stats['edges']} pairs "
@@ -1044,8 +1057,10 @@ def build(
         _pane_spec(
             "real",
             "Real pairs",
-            "Original Boardy seeker→candidate pairs, synthetic contacts excluded.",
+            "Original Boardy seeker→candidate pairs, synthetic contacts excluded. "
+            "Positive-labeled contacts drift left, negative-labeled drift right.",
             real,
+            polarize_by_label=True,
         )
     ]
 
