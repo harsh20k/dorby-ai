@@ -295,6 +295,9 @@ HOLDOUT_PATHS = {
     "hf_embedding_baai_bge-en-icl": ARTIFACTS
     / "hf_embedding_baai_bge-en-icl"
     / "metrics.json",
+    "hf_embedding_zeroentropy_zembed-1-embedding": ARTIFACTS
+    / "hf_embedding_zeroentropy_zembed-1-embedding"
+    / "metrics.json",
 }
 HOLDOUT_LABELS = {
     "tfidf": "TF-IDF (lexical)",
@@ -306,6 +309,7 @@ HOLDOUT_LABELS = {
     "hf_embedding_intfloat_e5-mistral-7b-instruct": "E5-mistral-7b-instruct (open, Modal)",
     "hf_embedding_nvidia_nv-embed-v2": "NV-Embed-v2 (open, non-commercial, no-instruction approx.)",
     "hf_embedding_baai_bge-en-icl": "BGE-en-ICL (open, Modal, zero-shot)",
+    "hf_embedding_zeroentropy_zembed-1-embedding": "zembed-1-embedding (open, Modal)",
 }
 HOLDOUT_PROTOCOL_NOTE = (
     "frozen 69-pair real holdout (data/synthetic/seed_split.json eval_pair_ids) only — "

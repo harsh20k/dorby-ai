@@ -197,7 +197,10 @@ compatibility fixes beyond the standard sentence-transformers path
 BAAI's own `FlagEmbedding` library instead) — both are now handled via
 `ModelSpec.requires_legacy_transformers` / `ModelSpec.loader`, see the
 findings doc for the full story before trusting NV-Embed-v2's number,
-which is a documented approximation.
+which is a documented approximation. 6 open-weight models tested so far;
+not every one wins — `zeroentropy/zembed-1-embedding` (4B, purpose-built
+for retrieval) scored near chance (0.5052 AUC, worst retrieval MRR of
+anything tested), a genuine result with no plumbing issue found.
 
 ### Synthetic pair generation (LangGraph + LangSmith)
 

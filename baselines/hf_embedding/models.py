@@ -19,6 +19,10 @@ class ModelSpec:
     query_prompt_name: str | None = None
     supports_truncate_dim: bool = False
     loader: str = "sentence_transformers"  # or "flagembedding_icl"
+    uses_encode_methods: bool = False  # calls model.encode_query()/.encode_document()
+    # instead of model.encode(texts, prompt_name=...) — same convention as
+    # voyage-4-nano; some sentence-transformers-compatible models (e.g.
+    # zeroentropy/zembed-1-embedding) expose asymmetric encoding this way instead.
     requires_legacy_transformers: bool = False  # pins transformers==4.44.2 +
     # sentence-transformers==3.0.1 on Modal — needed by trust_remote_code models
     # whose custom modeling file predates transformers' Cache API refactor
@@ -107,6 +111,19 @@ MODEL_REGISTRY: dict[str, ModelSpec] = {
             "also supports prepending in-context few-shot examples to the query "
             "(we run zero-shot, no examples). loader='flagembedding_icl' routes to "
             "FlagICLEncoder in encode.py instead of HFEmbeddingEncoder."
+        ),
+    ),
+    "zeroentropy/zembed-1-embedding": ModelSpec(
+        trust_remote_code=True,
+        query_prompt_name=None,
+        supports_truncate_dim=True,
+        uses_encode_methods=True,
+        notes=(
+            "Apache 2.0. 4B params, Qwen3-4B base. ~8GB weights in bf16 — fits "
+            "comfortably on A10G, no need for A100. Matryoshka dims "
+            "2560/1280/640/320/160/80/40. uses_encode_methods=True: calls "
+            "model.encode_query()/.encode_document() (same convention as "
+            "voyage-4-nano), not ST's prompt_name."
         ),
     ),
 }
