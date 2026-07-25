@@ -29,7 +29,7 @@ from dotenv import load_dotenv  # noqa: E402 — needs ROOT/sys.path set first
 load_dotenv(ROOT / ".env")
 DEFAULT_POS = ROOT / "data" / "dataset_positive.json"
 DEFAULT_NEG = ROOT / "data" / "dataset_negative.json"
-DEFAULT_OUT = ROOT / "docs" / "real-pairs-graph.html"
+DEFAULT_OUT = ROOT / "docs" / "html" / "real-pairs-graph.html"
 
 PROFILE_FIELDS = [
     "positioning",

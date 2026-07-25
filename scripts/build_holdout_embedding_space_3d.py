@@ -27,7 +27,7 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 
 DEFAULT_RUN = ROOT / "artifacts" / "voyage_nano_sectioned_modal" / "embed_space_holdout"
-DEFAULT_OUT = ROOT / "docs" / "holdout-embedding-space-3d.html"
+DEFAULT_OUT = ROOT / "docs" / "html" / "holdout-embedding-space-3d.html"
 
 SECTION_CHARS = 420
 POSITIONING_CHARS = 260

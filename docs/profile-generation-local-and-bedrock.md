@@ -560,7 +560,7 @@ batch `pair_disjoint_001`, reusing cached `queries.json` and fit-pairs
 embeddings, zero new LLM/embedding calls): 2 seekers / 3 candidates picked,
 6 candidates surfaced, capped to **2 pos / 1 neg / 3 excluded** — density
 **2.4 → 0.6 edges/node** on the identical profile pool, in line with real
-data's 0.673. `docs/pairs-comparison-graph-disjoint.html`.
+data's 0.673. `docs/html/pairs-comparison-graph-disjoint.html`.
 n=5 is a mechanism check, not a statistically meaningful validation — worth
 rerunning at real batch scale (20+ profiles) before trusting the density
 number itself.
@@ -613,4 +613,4 @@ Paired (`pair_named_001`, same disjoint-split + per-seeker-cap settings as
 above): 5 seekers / 5 candidates, 25 candidates surfaced, capped to **4 pos
 / 2 neg / 19 excluded** (0.75 edges/node on 8 nodes — small-n noisy but
 still far below the pre-fix density).
-`docs/pairs-comparison-graph-named.html`.
+`docs/html/pairs-comparison-graph-named.html`.

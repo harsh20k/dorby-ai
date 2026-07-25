@@ -27,7 +27,7 @@ load_dotenv(ROOT / ".env")
 
 DEFAULT_POS = ROOT / "data" / "dataset_positive.json"
 DEFAULT_NEG = ROOT / "data" / "dataset_negative.json"
-DEFAULT_OUT = ROOT / "docs" / "real-pairs-voyage-lookingfor-3d-pca.html"
+DEFAULT_OUT = ROOT / "docs" / "html" / "real-pairs-voyage-lookingfor-3d-pca.html"
 DEFAULT_CACHE_DIR = ROOT / "artifacts" / "voyage_large_lookingfor"
 
 PROFILE_FIELDS = [

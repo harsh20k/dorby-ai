@@ -18,7 +18,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 DEFAULT_IN = ROOT / "docs" / "baseline-results-holdout.json"
-DEFAULT_OUT = ROOT / "docs" / "baseline-results-holdout-browser.html"
+DEFAULT_OUT = ROOT / "docs" / "html" / "baseline-results-holdout-browser.html"
 
 # Fixed categorical order (validated palette, slots 1-7) — assigned to
 # models in the order they appear in the source JSON, never re-cycled.
