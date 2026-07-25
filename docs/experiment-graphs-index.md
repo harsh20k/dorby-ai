@@ -23,7 +23,7 @@ wants the full story.
 | Pairs graph — Boardy AI | [published](https://claude.ai/code/artifact/642d0a82-7784-4843-b0ad-5686cf7db24c) | 2026-07-24 | Likely one of the `pairs-comparison-graph*.html` variants above, published via `--fragment` — exact source not traceable from this session |
 | Real pairs graph — Boardy AI | [published](https://claude.ai/code/artifact/ac74ea3a-912d-407a-a040-74d8c62d1edd) | 2026-07-22 (page updated 2026-07-24) | Predates the batches above; likely an early real-only single-pane build |
 | Holdout comparison browser — Dorby AI | [published](https://claude.ai/code/artifact/95beeed4-9a3d-4a79-906d-cf2d24d0457f) | 2026-07-20 | Likely `baseline-results-holdout-browser.html` above, by date match |
-| Does splitting lookingFor into sections help matching? | [published](https://claude.ai/code/artifact/3ec8c0da-9ba1-4de9-b52d-b057507b6163) | 2026-07-24 | lookingFor field-sectioning experiment findings — see `docs/lookingfor-sectioning-findings.md` |
+| Does splitting lookingFor into sections help matching? | [published](https://claude.ai/code/artifact/3ec8c0da-9ba1-4de9-b52d-b057507b6163) | 2026-07-24 | lookingFor field-sectioning: 4 experiments (candidate- vs seeker-sectioned, softer aggregation, hybrid-fusion stacking) — see `docs/lookingfor-sectioning-findings.md` |
 
 Local files open directly in a browser, no server needed
 (`open docs/<file>.html`). Published links work from any device but are
