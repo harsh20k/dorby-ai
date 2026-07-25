@@ -85,16 +85,22 @@ def build_payload(run_dir: Path) -> dict:
 
         cos_to_whole = (emb[secs] @ emb[w]).tolist() if secs else []
         whole_sec_cos.extend(cos_to_whole)
+        dispersion = 0.0
         if len(secs) > 1:
             sim = emb[secs] @ emb[secs].T
             iu = np.triu_indices(len(secs), 1)
             sec_sec_cos.extend(sim[iu].tolist())
+            # 1 - mean pairwise cosine among this contact's own sections: how
+            # unlike each other their separate asks are. See
+            # scripts/analyze_section_dispersion.py.
+            dispersion = 1.0 - float(sim[iu].mean())
 
         nodes.append(
             {
                 "id": cid,
                 "role": role,
                 "pairCount": cmeta["pairCount"],
+                "dispersion": round(dispersion, 4),
                 "positioning": truncate(cmeta["profile"].get("positioning"), POSITIONING_CHARS),
                 "whole": [round(float(v), 5) for v in coords[w]],
                 "sections": [
@@ -149,7 +155,16 @@ def build_payload(run_dir: Path) -> dict:
         "dim": meta["truncate_dim"],
         "maxSections": max(len(n["sections"]) for n in nodes),
     }
-    return {"nodes": nodes, "edges": edges, "stats": stats}
+    payload = {"nodes": nodes, "edges": edges, "stats": stats}
+
+    # Optional: the dispersion write-up renders only if the analysis has been run.
+    analysis_path = run_dir / "dispersion_analysis.json"
+    if analysis_path.exists():
+        payload["analysis"] = json.loads(analysis_path.read_text())
+    else:
+        print(f"note: {analysis_path.name} missing — run scripts/analyze_section_dispersion.py")
+
+    return payload
 
 
 HTML = r"""<title>Holdout contacts in voyage-4-nano space</title>
@@ -158,7 +173,7 @@ HTML = r"""<title>Holdout contacts in voyage-4-nano space</title>
     --ground: #ecefee; --card: #ffffff; --glass: rgba(255,255,255,0.88);
     --ink: #141d20; --ink-soft: #3b4a4d; --muted: #647476; --hairline: #ccd4d2;
     --seeker: #1f7a8c; --candidate: #c2603f; --both: #a97f1f;
-    --pos: #2f8055; --neg: #b8483f;
+    --pos: #2e8b57; --neg: #3a52b0;
     --shadow: 0 8px 28px rgba(20,32,34,0.10);
     --serif: "Iowan Old Style", "Palatino Linotype", Palatino, "Book Antiqua", Georgia, serif;
     --sans: "Avenir Next", Avenir, -apple-system, "Segoe UI", "Helvetica Neue", sans-serif;
@@ -169,7 +184,7 @@ HTML = r"""<title>Holdout contacts in voyage-4-nano space</title>
       --ground: #0f1618; --card: #171f21; --glass: rgba(23,31,33,0.88);
       --ink: #e6edeb; --ink-soft: #b6c5c3; --muted: #8b9c9a; --hairline: #26312f;
       --seeker: #58c8db; --candidate: #f0906a; --both: #ddb455;
-      --pos: #4fb37c; --neg: #e37a6e;
+      --pos: #5cc98a; --neg: #8098ee;
       --shadow: 0 8px 28px rgba(0,0,0,0.42);
     }
   }
@@ -177,14 +192,14 @@ HTML = r"""<title>Holdout contacts in voyage-4-nano space</title>
     --ground: #0f1618; --card: #171f21; --glass: rgba(23,31,33,0.88);
     --ink: #e6edeb; --ink-soft: #b6c5c3; --muted: #8b9c9a; --hairline: #26312f;
     --seeker: #58c8db; --candidate: #f0906a; --both: #ddb455;
-    --pos: #4fb37c; --neg: #e37a6e;
+    --pos: #5cc98a; --neg: #8098ee;
     --shadow: 0 8px 28px rgba(0,0,0,0.42);
   }
   :root[data-theme="light"] {
     --ground: #ecefee; --card: #ffffff; --glass: rgba(255,255,255,0.88);
     --ink: #141d20; --ink-soft: #3b4a4d; --muted: #647476; --hairline: #ccd4d2;
     --seeker: #1f7a8c; --candidate: #c2603f; --both: #a97f1f;
-    --pos: #2f8055; --neg: #b8483f;
+    --pos: #2e8b57; --neg: #3a52b0;
     --shadow: 0 8px 28px rgba(20,32,34,0.10);
   }
 
@@ -235,6 +250,7 @@ HTML = r"""<title>Holdout contacts in voyage-4-nano space</title>
   .dot { width: 10px; height: 10px; border-radius: 50%; flex: none; }
   .dot.hollow { background: none; border: 2px solid currentColor; }
   .tether { width: 18px; height: 0; border-top: 1.5px dotted var(--muted); flex: none; }
+  .wire { width: 18px; height: 2px; border-radius: 1px; flex: none; }
 
   /* ---- controls ---- */
   .controls {
@@ -325,6 +341,8 @@ HTML = r"""<title>Holdout contacts in voyage-4-nano space</title>
       <div class="row"><span class="dot" style="background:var(--both)"></span> Both roles</div>
       <div class="row"><span class="dot hollow" style="color:var(--muted)"></span> One <code style="font-size:11px">lookingFor</code> section</div>
       <div class="row"><span class="tether"></span> Section tethered to its anchor</div>
+      <div class="row"><span class="wire" style="background:var(--pos)"></span> Good match <span class="num" id="lPos" style="color:var(--muted)"></span></div>
+      <div class="row"><span class="wire" style="background:var(--neg)"></span> Bad match <span class="num" id="lNeg" style="color:var(--muted)"></span></div>
     </div>
     <div class="rule"></div>
     <div class="note">First 3 PCA components of the shared 1024-d space, holding <span class="num" id="sEvr"></span> of total variance.</div>
@@ -337,7 +355,7 @@ HTML = r"""<title>Holdout contacts in voyage-4-nano space</title>
       <span class="amp-val" id="ampVal">1.0&times;</span>
     </div>
     <label class="toggle"><input type="checkbox" id="showSections" checked /> Sections</label>
-    <label class="toggle"><input type="checkbox" id="showPairs" /> Labelled pairs</label>
+    <label class="toggle"><input type="checkbox" id="showPairs" checked /> Match lines</label>
     <button class="reset" id="reset">Reset view</button>
     <span class="hint">drag to rotate &middot; scroll to zoom &middot; click an anchor to isolate</span>
   </div>
@@ -394,6 +412,58 @@ HTML = r"""<title>Holdout contacts in voyage-4-nano space</title>
   small differences. Softening the aggregation could not recover Recall@10 partly
   because there was never much spread to aggregate over.</p>
 
+  <h2>Do vague profiles get worse matches?</h2>
+  <p>A contact whose sections disagree with each other is carrying several unrelated
+  asks at once. Call that <strong>dispersion</strong> &mdash; one minus the mean cosine
+  among a contact&rsquo;s own sections. It is worth measuring separately from sheer
+  section count, and it is: the two are almost uncorrelated (<span class="num">r&nbsp;=&nbsp;0.06</span>),
+  so dispersion tracks breadth of intent rather than volume of text.</p>
+
+  <p>Asked directly &mdash; does dispersion tell you whether a pair was labelled good or
+  bad? &mdash; the answer is <strong>no</strong>. Across both sides of the pair and four
+  different shape measures, every ROC-AUC lands between
+  <span class="num" id="q1lo"></span> and <span class="num" id="q1hi"></span>, and nothing
+  survives a permutation test. That is the sensible result: the label describes a
+  <em>relationship</em> between two people, so a property of one profile on its own has
+  no particular reason to predict it.</p>
+
+  <p>Asked the other way &mdash; does dispersion predict how <em>hard</em> a seeker is to
+  serve? &mdash; there is a real effect. Ranking each positive pair&rsquo;s true match
+  against all <span class="num" id="q2corpus"></span> holdout candidates, a seeker&rsquo;s
+  dispersion correlates with how far down their true match falls at
+  <strong id="q2rho"></strong> (Spearman, permutation <span class="num" id="q2p"></span>,
+  95% CI <span class="num" id="q2ci"></span>). It holds at
+  <span class="num" id="q2partial"></span> after controlling for section count, so this is
+  not just &ldquo;longer profiles are harder&rdquo;. <strong>Scattered seekers are harder to
+  match &mdash; not more likely to be given a bad match, but more likely to have their
+  right match buried.</strong></p>
+
+  <p>And that is where sectioning earns its keep. Splitting the holdout&rsquo;s positive
+  queries at the median dispersion:</p>
+
+  <div class="tablewrap">
+    <table>
+      <thead><tr><th>Seeker group</th><th>Queries</th><th>MRR, whole profile</th><th>MRR, sectioned</th><th>Change</th></tr></thead>
+      <tbody id="q3rows"></tbody>
+    </table>
+  </div>
+
+  <p>Essentially <strong>all</strong> of sectioning&rsquo;s benefit goes to the multi-intent
+  seekers. Focused seekers gain nothing, because there was nothing blurred together to
+  separate. This is the mechanism the earlier follow-ups were reaching for: sectioning is
+  not a general improvement to the encoder, it is a targeted repair for profiles that
+  carry several live threads at once &mdash; which also predicts it would be wasted effort
+  on single-topic fields like <code>locationAvailability</code>.</p>
+
+  <p class="note">Sample-size caution: 29 positive queries, split 17 / 12. The correlation&rsquo;s
+  bootstrap interval reaches close to zero at the low end and this was one of several
+  measures examined, so treat it as a well-formed lead rather than a settled number. The
+  retrieval figures on this page are computed from profile text alone, without
+  <code>searchQuery</code>, and so are not comparable to
+  <code>docs/baseline-results-holdout.md</code>; what is comparable is whole-profile
+  against sectioned within this page, which is the contrast the argument rests on.
+  Reproduce with <code>scripts/analyze_section_dispersion.py</code>.</p>
+
   <p class="note">Profile text only &mdash; <code>searchQuery</code> is excluded from every vector
   on this page, on both sides. Cosines are computed on the raw 1024-d vectors, not on the
   3D projection. Sections are split on the blank-line paragraph breaks already present in
@@ -414,6 +484,8 @@ set("sRatio", (S.constellationRatio * 100).toFixed(0) + "%");
 set("sEvr", (S.evrSum * 100).toFixed(1) + "%");
 set("lSeek", S.nSeekers);
 set("lCand", S.nCandidates);
+set("lPos", S.nPositives);
+set("lNeg", S.nNegatives);
 set("pWholeSec", S.wholeSectionCos.toFixed(4));
 set("pWholeSec2", S.wholeSectionCos.toFixed(3));
 set("pAcross", S.acrossContactCos.toFixed(4));
@@ -421,6 +493,29 @@ set("pRatio", (S.constellationRatio * 100).toFixed(0) + "%");
 set("tWholeSec", S.wholeSectionCos.toFixed(4));
 set("tSecSec", S.secSecCos.toFixed(4));
 set("tAcross", S.acrossContactCos.toFixed(4));
+
+/* ---------- dispersion analysis readings ---------- */
+const A = DATA.analysis;
+if (A) {
+  const aucs = A.q1_label_prediction.map(r => r.auc);
+  set("q1lo", Math.min(...aucs).toFixed(3));
+  set("q1hi", Math.max(...aucs).toFixed(3));
+  const q2 = A.q2_retrieval_difficulty;
+  set("q2corpus", A.corpus_size);
+  set("q2rho", "ρ = " + q2.spearman_rho.toFixed(3));
+  set("q2p", "p = " + q2.perm_p.toFixed(3));
+  set("q2ci", "[" + q2.bootstrap_ci95.map(v => v.toFixed(2)).join(", ") + "]");
+  set("q2partial", "ρ = " + q2.partial_rho_controlling_section_count.toFixed(3));
+
+  const nameOf = { focused: "Focused (low dispersion)", multi_intent: "Multi-intent (high dispersion)" };
+  document.getElementById("q3rows").innerHTML = A.q3_who_sectioning_helps.groups.map(g =>
+    "<tr><td>" + nameOf[g.name] + '</td><td class="n">' + g.n +
+    '</td><td class="n">' + g.mrr_whole.toFixed(3) +
+    '</td><td class="n">' + g.mrr_sectioned.toFixed(3) +
+    '</td><td class="n" style="color:' + (g.delta > 0.01 ? "var(--pos)" : "var(--muted)") + '">' +
+    (g.delta >= 0 ? "+" : "") + g.delta.toFixed(3) + "</td></tr>"
+  ).join("");
+}
 
 /* ---------- flatten to draw lists ---------- */
 const css = getComputedStyle(document.documentElement);
@@ -517,9 +612,14 @@ function showTip(h, mx, my) {
   if (h.kind === "whole") {
     html += '<div class="hd">Whole profile</div>';
     html += '<div class="body">' + esc(n.positioning || "—") + "</div>";
+    const mine = pairsByNode.get(n.id) || [];
+    const good = mine.filter(e => e.l === "pos").length;
     html += '<div class="meta">' + n.sections.length + " lookingFor section" +
-      (n.sections.length === 1 ? "" : "s") + " &middot; in " + n.pairCount + " holdout pair" +
-      (n.pairCount === 1 ? "" : "s") + "</div>";
+      (n.sections.length === 1 ? "" : "s") +
+      ' &middot; dispersion <span class="num">' + n.dispersion.toFixed(4) + "</span><br />" +
+      '<span style="color:var(--pos)">' + good + " good</span> &middot; " +
+      '<span style="color:var(--neg)">' + (mine.length - good) + " bad</span> match" +
+      (mine.length === 1 ? "" : "es") + "</div>";
   } else {
     const s = n.sections[h.si];
     html += '<div class="hd">' + esc(s.label) + "</div>";
@@ -552,6 +652,7 @@ showPairs.addEventListener("change", draw);
 document.getElementById("reset").addEventListener("click", () => {
   yaw = 0.6; pitch = -0.28; zoom = 1; focus = null;
   amp = 1; ampEl.value = "1"; ampVal.textContent = "1.0×";
+  showSections.checked = true; showPairs.checked = true;
   draw();
 });
 
@@ -592,10 +693,11 @@ function draw() {
       const a = nodeById.get(e.s), b = nodeById.get(e.t);
       if (!a || !b) continue;
       const faded = focus ? (focus !== e.s && focus !== e.t) : false;
+      const lit = !!(hover && (hover.node.id === e.s || hover.node.id === e.t));
       const pa = project(a.whole), pb = project(b.whole);
       items.push({
         t: "pair", x0: pa.x, y0: pa.y, x: pb.x, y: pb.y, z: (pa.z + pb.z) / 2,
-        col: css.getPropertyValue(e.l === "pos" ? "--pos" : "--neg").trim(), faded,
+        col: css.getPropertyValue(e.l === "pos" ? "--pos" : "--neg").trim(), faded, lit,
       });
     }
   }
@@ -611,8 +713,8 @@ function draw() {
       ctx.restore();
     } else if (it.t === "pair") {
       ctx.save();
-      ctx.globalAlpha = it.faded ? 0.04 : 0.5;
-      ctx.strokeStyle = it.col; ctx.lineWidth = 1.2;
+      ctx.globalAlpha = it.faded ? 0.04 : (it.lit ? 0.95 : 0.6);
+      ctx.strokeStyle = it.col; ctx.lineWidth = it.lit ? 2.2 : 1.4;
       ctx.beginPath(); ctx.moveTo(it.x0, it.y0); ctx.lineTo(it.x, it.y); ctx.stroke();
       ctx.restore();
     } else {
