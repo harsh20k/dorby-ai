@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-20T02:37:33Z",
+  "generated_at": "2026-07-25T13:59:36Z",
   "protocol_note": "frozen 69-pair real holdout (data/synthetic/seed_split.json eval_pair_ids) only \u2014 same population for every row, unlike baseline-results-all.md's full-dataset numbers. See docs/possible-bugs.md #3 and docs/twotower-run-001-results.md.",
   "baselines": {
     "tfidf": {
@@ -678,6 +678,125 @@
         "pos_cand": 29,
         "neg_cand": 40,
         "corpus": 65
+      }
+    },
+    "hf_embedding_qwen_qwen3-embedding-8b": {
+      "model_name": "Qwen/Qwen3-Embedding-8B",
+      "device": "cuda",
+      "max_length": 8192,
+      "truncate_dim": null,
+      "dtype": "auto",
+      "batch_size": 2,
+      "pair": {
+        "roc_auc": 0.6594827586206896,
+        "average_precision": 0.5335242808001402,
+        "best_f1": 0.647887323943662,
+        "best_f1_threshold": 0.5565877556800842,
+        "best_f1_accuracy": 0.6376811594202898,
+        "accuracy_at_0.5": 0.5072463768115942,
+        "mean_cosine_positive": 0.5837828516960144,
+        "mean_cosine_negative": 0.561693549156189,
+        "mean_cosine_gap": 0.02208930253982544,
+        "std_cosine_positive": 0.035043030977249146,
+        "std_cosine_negative": 0.046389684081077576,
+        "score_percentiles": {
+          "positive": {
+            "p10": 0.5440968036651611,
+            "p50": 0.5801771283149719,
+            "p90": 0.6217061042785644
+          },
+          "negative": {
+            "p10": 0.49510415494441984,
+            "p50": 0.5561731457710266,
+            "p90": 0.620156341791153
+          }
+        },
+        "num_positive": 29,
+        "num_negative": 40
+      },
+      "retrieval": {
+        "mrr": 0.403986674245295,
+        "map": 0.403986674245295,
+        "num_queries": 29.0,
+        "mean_rank": 4.758620689655173,
+        "median_rank": 3.0,
+        "recall@1": 0.1724137931034483,
+        "ndcg@1": 0.1724137931034483,
+        "precision@1": 0.1724137931034483,
+        "recall@5": 0.7586206896551724,
+        "ndcg@5": 0.47372988335698446,
+        "precision@5": 0.15172413793103454,
+        "recall@10": 0.896551724137931,
+        "ndcg@10": 0.5173606793076317,
+        "precision@10": 0.08965517241379312,
+        "top1": 0.1724137931034483
+      },
+      "slices": {
+        "intent": {
+          "customers": {
+            "n_pairs": 3,
+            "n_queries": 1,
+            "low_n": true,
+            "pair_auc": null,
+            "mrr": null,
+            "recall@10": null
+          },
+          "fundraise": {
+            "n_pairs": 60,
+            "n_queries": 24,
+            "low_n": false,
+            "pair_auc": 0.6712962962962963,
+            "mrr": 0.42275704619454624,
+            "recall@10": 0.875
+          },
+          "hiring": {
+            "n_pairs": 4,
+            "n_queries": 3,
+            "low_n": true,
+            "pair_auc": null,
+            "mrr": null,
+            "recall@10": null
+          },
+          "partnerships": {
+            "n_pairs": 2,
+            "n_queries": 1,
+            "low_n": true,
+            "pair_auc": null,
+            "mrr": null,
+            "recall@10": null
+          }
+        },
+        "neg_hardness": {
+          "rule": {
+            "overlap": "token Jaccard(seeker_text, match_text) on negative pairs",
+            "easy": "jaccard <= p25 (cutoff=0.1541)",
+            "hard": "jaccard >= p50 (cutoff=0.1717)"
+          },
+          "overlap_stats": {
+            "mean": 0.17360300707756346,
+            "p25": 0.15406203417039332,
+            "p50": 0.17167133380004668,
+            "p75": 0.19362673283644954
+          },
+          "easy": {
+            "n_negatives": 10,
+            "mean_overlap": 0.13839812277487357,
+            "overlap_cutoff": 0.15406203417039332,
+            "low_n": false,
+            "mean_cosine_negative": 0.5440331101417542,
+            "mean_cosine_gap": 0.039749741554260254,
+            "pair_auc": 0.7586206896551724
+          },
+          "hard": {
+            "n_negatives": 20,
+            "mean_overlap": 0.1975300989629716,
+            "overlap_cutoff": 0.17167133380004668,
+            "low_n": false,
+            "mean_cosine_negative": 0.5711420774459839,
+            "mean_cosine_gap": 0.012640774250030518,
+            "pair_auc": 0.6258620689655172
+          }
+        }
       }
     },
     "twotower_run_001": {

@@ -283,6 +283,9 @@ HOLDOUT_PATHS = {
     "voyage_nano": ARTIFACTS / "voyage_nano_holdout" / "metrics.json",
     "voyage_large": ARTIFACTS / "voyage_large_holdout" / "metrics.json",
     "hybrid_tfidf_voyage": ARTIFACTS / "hybrid_tfidf_voyage_holdout" / "metrics.json",
+    "hf_embedding_qwen_qwen3-embedding-8b": ARTIFACTS
+    / "hf_embedding_qwen_qwen3-embedding-8b"
+    / "metrics.json",
 }
 HOLDOUT_LABELS = {
     "tfidf": "TF-IDF (lexical)",
@@ -290,6 +293,7 @@ HOLDOUT_LABELS = {
     "voyage_nano": "Voyage-4-nano",
     "voyage_large": "Voyage-4-large (prod)",
     "hybrid_tfidf_voyage": "Hybrid TF-IDF+nano",
+    "hf_embedding_qwen_qwen3-embedding-8b": "Qwen3-Embedding-8B (open, Modal)",
 }
 HOLDOUT_PROTOCOL_NOTE = (
     "frozen 69-pair real holdout (data/synthetic/seed_split.json eval_pair_ids) only — "
