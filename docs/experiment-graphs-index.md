@@ -9,27 +9,30 @@ wants the full story.
 
 | Name | Where | Built | What it is |
 |---|---|---|---|
-| `pairs-comparison-graph-hub-test.html` | local (`docs/`) | 2026-07-24 | Dual-pane real-vs-synth pairing graph, 3-profile smoke test after routing generation prompts through LangSmith Hub |
-| `pairs-comparison-graph-no-refex.html` | local (`docs/`) | 2026-07-24 | Dual-pane graph, 5-profile batch after dropping redundant reference examples from `generate_profile` |
-| `pairs-comparison-graph-disjoint.html` | local (`docs/`) | 2026-07-24 | Dual-pane graph, same 5 profiles re-paired with disjoint seeker/candidate split + per-seeker cap |
-| `pairs-comparison-graph-named.html` | local (`docs/`) | 2026-07-24 | Dual-pane graph, 10-profile batch after the name-collision fix (10/10 unique names) |
-| `real-pairs-tfidf-cluster.html` | local (`docs/`) | 2026-07-24 | Force-directed real-pairs graph, TF-IDF similarity force added |
-| `real-pairs-voyage-lookingfor-cluster.html` | local (`docs/`) | 2026-07-24 | Force-directed real-pairs graph, voyage-4-large `lookingFor` similarity force |
-| `real-pairs-tfidf-pca.html` | local (`docs/`) | 2026-07-24 | Static PCA/SVD scatter (no physics), TF-IDF — 1.67% variance explained |
-| `real-pairs-voyage-lookingfor-pca.html` | local (`docs/`) | 2026-07-24 | Static PCA scatter, voyage-4-large `lookingFor` — 12.9% variance explained |
-| `real-pairs-voyage-lookingfor-3d-pca.html` | local (`docs/`) | 2026-07-24 | 3D PCA scatter, hand-rolled canvas projector — 17.3% cumulative (PC1–3) |
-| `real-pairs-voyage-lookingfor-3d-manifold.html` | local (`docs/`) | 2026-07-24 | 3D PCA / t-SNE / UMAP scatter with a layout selector |
-| `baseline-results-holdout-browser.html` | local (`docs/`) | 2026-07-20 | Browser for the matched-holdout baseline comparison table |
-| `holdout-embedding-space-3d.html` | local (`docs/`) | 2026-07-25 | 3D PCA map of the 69 holdout contacts in voyage-4-nano space, whole-profile vs. `lookingFor`-sectioned embeddings, with good/bad match lines and a scatter (dispersion) analysis — see `scripts/build_holdout_embedding_space_3d.py` / `scripts/analyze_section_dispersion.py` |
+| [`pairs-comparison-graph-hub-test.html`](file:///Users/harsh/Artifacts/dorby-ai/docs/pairs-comparison-graph-hub-test.html) | local (`docs/`) | 2026-07-24 | Dual-pane real-vs-synth pairing graph, 3-profile smoke test after routing generation prompts through LangSmith Hub |
+| [`pairs-comparison-graph-no-refex.html`](file:///Users/harsh/Artifacts/dorby-ai/docs/pairs-comparison-graph-no-refex.html) | local (`docs/`) | 2026-07-24 | Dual-pane graph, 5-profile batch after dropping redundant reference examples from `generate_profile` |
+| [`pairs-comparison-graph-disjoint.html`](file:///Users/harsh/Artifacts/dorby-ai/docs/pairs-comparison-graph-disjoint.html) | local (`docs/`) | 2026-07-24 | Dual-pane graph, same 5 profiles re-paired with disjoint seeker/candidate split + per-seeker cap |
+| [`pairs-comparison-graph-named.html`](file:///Users/harsh/Artifacts/dorby-ai/docs/pairs-comparison-graph-named.html) | local (`docs/`) | 2026-07-24 | Dual-pane graph, 10-profile batch after the name-collision fix (10/10 unique names) |
+| [`real-pairs-tfidf-cluster.html`](file:///Users/harsh/Artifacts/dorby-ai/docs/real-pairs-tfidf-cluster.html) | local (`docs/`) | 2026-07-24 | Force-directed real-pairs graph, TF-IDF similarity force added |
+| [`real-pairs-voyage-lookingfor-cluster.html`](file:///Users/harsh/Artifacts/dorby-ai/docs/real-pairs-voyage-lookingfor-cluster.html) | local (`docs/`) | 2026-07-24 | Force-directed real-pairs graph, voyage-4-large `lookingFor` similarity force |
+| [`real-pairs-tfidf-pca.html`](file:///Users/harsh/Artifacts/dorby-ai/docs/real-pairs-tfidf-pca.html) | local (`docs/`) | 2026-07-24 | Static PCA/SVD scatter (no physics), TF-IDF — 1.67% variance explained |
+| [`real-pairs-voyage-lookingfor-pca.html`](file:///Users/harsh/Artifacts/dorby-ai/docs/real-pairs-voyage-lookingfor-pca.html) | local (`docs/`) | 2026-07-24 | Static PCA scatter, voyage-4-large `lookingFor` — 12.9% variance explained |
+| [`real-pairs-voyage-lookingfor-3d-pca.html`](file:///Users/harsh/Artifacts/dorby-ai/docs/real-pairs-voyage-lookingfor-3d-pca.html) | local (`docs/`) | 2026-07-24 | 3D PCA scatter, hand-rolled canvas projector — 17.3% cumulative (PC1–3) |
+| [`real-pairs-voyage-lookingfor-3d-manifold.html`](file:///Users/harsh/Artifacts/dorby-ai/docs/real-pairs-voyage-lookingfor-3d-manifold.html) | local (`docs/`) | 2026-07-24 | 3D PCA / t-SNE / UMAP scatter with a layout selector |
+| [`baseline-results-holdout-browser.html`](file:///Users/harsh/Artifacts/dorby-ai/docs/baseline-results-holdout-browser.html) | local (`docs/`) | 2026-07-20 | Browser for the matched-holdout baseline comparison table |
+| [`holdout-embedding-space-3d.html`](file:///Users/harsh/Artifacts/dorby-ai/docs/holdout-embedding-space-3d.html) | local (`docs/`) | 2026-07-25 | 3D PCA map of the 69 holdout contacts in voyage-4-nano space, whole-profile vs. `lookingFor`-sectioned embeddings, with good/bad match lines and a scatter (dispersion) analysis — see `scripts/build_holdout_embedding_space_3d.py` / `scripts/analyze_section_dispersion.py` |
 | Pairs graph — Boardy AI | [published](https://claude.ai/code/artifact/642d0a82-7784-4843-b0ad-5686cf7db24c) | 2026-07-24 | Likely one of the `pairs-comparison-graph*.html` variants above, published via `--fragment` — exact source not traceable from this session |
 | Real pairs graph — Boardy AI | [published](https://claude.ai/code/artifact/ac74ea3a-912d-407a-a040-74d8c62d1edd) | 2026-07-22 (page updated 2026-07-24) | Predates the batches above; likely an early real-only single-pane build |
 | Holdout comparison browser — Dorby AI | [published](https://claude.ai/code/artifact/95beeed4-9a3d-4a79-906d-cf2d24d0457f) | 2026-07-20 | Likely `baseline-results-holdout-browser.html` above, by date match |
 | Does splitting lookingFor into sections help matching? | [published](https://claude.ai/code/artifact/3ec8c0da-9ba1-4de9-b52d-b057507b6163) | 2026-07-24 | lookingFor field-sectioning: 4 experiments (candidate- vs seeker-sectioned, softer aggregation, hybrid-fusion stacking) — see `docs/lookingfor-sectioning-findings.md` |
 | Holdout contacts in voyage-4-nano space | [published](https://claude.ai/code/artifact/5bf01ecd-0731-4f7e-93f3-ee74f8688e21) | 2026-07-25 | Published version of `holdout-embedding-space-3d.html` above |
 
-Local files open directly in a browser, no server needed
-(`open docs/<file>.html`). Published links work from any device but are
-private unless shared from the page's share menu.
+Local file links above are absolute `file://` paths pinned to this repo's
+checkout location on this machine (`/Users/harsh/Artifacts/dorby-ai/docs/`)
+so they open directly in a browser on click, no server needed — they will
+not resolve on another machine or from a different clone path; use
+`open docs/<file>.html` there instead. Published links work from any
+device but are private unless shared from the page's share menu.
 
 ---
 
