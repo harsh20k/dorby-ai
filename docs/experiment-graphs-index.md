@@ -20,10 +20,12 @@ wants the full story.
 | `real-pairs-voyage-lookingfor-3d-pca.html` | local (`docs/`) | 2026-07-24 | 3D PCA scatter, hand-rolled canvas projector — 17.3% cumulative (PC1–3) |
 | `real-pairs-voyage-lookingfor-3d-manifold.html` | local (`docs/`) | 2026-07-24 | 3D PCA / t-SNE / UMAP scatter with a layout selector |
 | `baseline-results-holdout-browser.html` | local (`docs/`) | 2026-07-20 | Browser for the matched-holdout baseline comparison table |
+| `holdout-embedding-space-3d.html` | local (`docs/`) | 2026-07-25 | 3D PCA map of the 69 holdout contacts in voyage-4-nano space, whole-profile vs. `lookingFor`-sectioned embeddings, with good/bad match lines and a scatter (dispersion) analysis — see `scripts/build_holdout_embedding_space_3d.py` / `scripts/analyze_section_dispersion.py` |
 | Pairs graph — Boardy AI | [published](https://claude.ai/code/artifact/642d0a82-7784-4843-b0ad-5686cf7db24c) | 2026-07-24 | Likely one of the `pairs-comparison-graph*.html` variants above, published via `--fragment` — exact source not traceable from this session |
 | Real pairs graph — Boardy AI | [published](https://claude.ai/code/artifact/ac74ea3a-912d-407a-a040-74d8c62d1edd) | 2026-07-22 (page updated 2026-07-24) | Predates the batches above; likely an early real-only single-pane build |
 | Holdout comparison browser — Dorby AI | [published](https://claude.ai/code/artifact/95beeed4-9a3d-4a79-906d-cf2d24d0457f) | 2026-07-20 | Likely `baseline-results-holdout-browser.html` above, by date match |
 | Does splitting lookingFor into sections help matching? | [published](https://claude.ai/code/artifact/3ec8c0da-9ba1-4de9-b52d-b057507b6163) | 2026-07-24 | lookingFor field-sectioning: 4 experiments (candidate- vs seeker-sectioned, softer aggregation, hybrid-fusion stacking) — see `docs/lookingfor-sectioning-findings.md` |
+| Holdout contacts in voyage-4-nano space | [published](https://claude.ai/code/artifact/5bf01ecd-0731-4f7e-93f3-ee74f8688e21) | 2026-07-25 | Published version of `holdout-embedding-space-3d.html` above |
 
 Local files open directly in a browser, no server needed
 (`open docs/<file>.html`). Published links work from any device but are
