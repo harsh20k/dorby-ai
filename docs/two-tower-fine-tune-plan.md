@@ -1,6 +1,17 @@
 # Two-Tower Fine-Tune: Implementation Plan
 
+**Target being learned:** the real accept/decline outcome on intros Boardy's
+production system already recommended — not topical relevance, which production
+already provides. See [objective.md](objective.md) for the canonical framing and
+why that makes the negative class hard by construction.
+
 ## Data composition
+
+> **Note:** the sizes in the table below were the *planned* figures. Actuals as
+> built: **131 real train / 69 real holdout** pairs (user-disjoint, frozen in
+> `data/synthetic/seed_split.json`), with the train pool extended by promoted
+> synthetic pairs. Read `twotower/data.py::build_split_bundle()` for the real
+> numbers; where this doc says "40-pair holdout", it is 69.
 
 
 | Set       | Source                                            | Size | Use                                                                                                      |

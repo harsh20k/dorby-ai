@@ -9,8 +9,16 @@ No-query ablations (`bert_frozen_no_query`, `voyage_nano_no_query`,
 `searchQuery` (`baselines/text_no_query.py`). Metrics land under
 `artifacts/*_no_query/metrics.json` and include `"seeker_text": "profile_only_no_query"`.
 
-Production metrics (accept rate, intro success, etc.) are **out of scope** for
-these offline baselines.
+**What "positive" means here:** the labels are real human outcomes on intros
+Boardy's production system already recommended — positive = accepted/connected,
+negative = declined. So `roc_auc` below is measuring how well a score ranks
+*accepted* intros above *declined* ones, among candidates production already
+judged relevant. See [objective.md](objective.md); this is why absolute values
+sit near 0.6 rather than the 0.8+ typical of relevance-vs-irrelevance tasks.
+
+Live production KPIs (fleet-wide accept rate, intro success dashboards, etc.)
+are **out of scope** — these are offline metrics computed on the frozen labeled
+pairs only.
 
 ## Pair section
 

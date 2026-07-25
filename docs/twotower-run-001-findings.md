@@ -6,6 +6,12 @@ metric tables and technical detail, see
 [`twotower-run-001-results.md`](twotower-run-001-results.md) and
 [`possible-bugs.md`](possible-bugs.md) (#1, #2, #3, #4).
 
+For what the pairs and the target actually mean — real accept/decline outcomes
+on intros production already recommended, plus the <100 ms serving budget — see
+[`objective.md`](objective.md). It explains why the absolute AUCs below sit near
+0.6: the task is separating accepted from declined among *already-plausible*
+intros, not relevant from irrelevant candidates.
+
 ## Verdict
 
 **The fine-tune does not beat the frozen baselines on real data — but we

@@ -5,13 +5,46 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 ## Project
 
 RecSys course project (Prof. Ga Wu) for industry partner Boardy AI — a
-networking/CRM product that recommends contact introductions. Given a user's
-profile + `searchQuery`, decide if a candidate match is a good intro. Boardy's
-production embeddings are Voyage `voyage-4-large` (32k context), not BERT —
-see `docs/boardy-embedding-model.md`. This repo benchmarks frozen baselines
-(BERT, Voyage nano/large) against a LoRA-fine-tuned two-tower model, and
-includes a LangGraph pipeline for synthesizing more training pairs beyond
-the 200-pair seed set.
+networking/CRM product that recommends contact introductions.
+
+**Objective (read `docs/objective.md` first — it is canonical):** all 200 real
+pairs are intros **Boardy's production system already recommended**, so every
+pair passed production's own relevance bar. The label is the **real human
+outcome**: the 100 positives were accepted (the two people actually connected),
+the 100 negatives were declined (did not move forward). The final objective is
+to train on the frozen train split and **correctly predict accept vs. decline
+on the frozen holdout split** (131 train / 69 holdout real pairs, user-disjoint,
+≈70/30, in `data/synthetic/seed_split.json`).
+
+Two consequences that should shape how any result here is read: the real
+negatives are **production's false positives** — plausible-looking intros that
+humans still declined, so there is no easy-negative population in the real data
+— and we are therefore **not modeling topical relevance** (production already
+does that) but the residual "will these two actually connect." That is why
+absolute AUCs sit at ~0.58–0.64, why query↔match lexical overlap is
+near-identical across both classes, and why TF-IDF keyword cosine plateaus.
+
+**Hard latency budget: <100 ms** for a user's query→retrieval round trip. This
+constrains architecture more than the accuracy target does. Out at serving time:
+per-candidate LLM calls, cross-encoders scoring each (seeker, candidate) pair
+online, and realistically any remote embedding API on the serving path —
+including `voyage-4-large` itself, whose round trip alone likely eats the budget
+(it stays the accuracy *reference*, not necessarily a deployable config). In: the
+two-tower/bi-encoder shape, which lets candidates be embedded offline in batch so
+the online path is one query encode + an ANN lookup, flat as the pool grows — the
+main architectural argument for two-tower here, independent of accuracy. A merged
+LoRA adapter adds no serving cost over frozen nano, making fine-tuning the
+cheapest way to buy accuracy under this budget. **No latency benchmark exists in
+this repo yet** — all numbers here are offline accuracy; don't call anything a win
+on accuracy alone.
+
+Boardy's production embeddings are Voyage `voyage-4-large` (32k context), not
+BERT — see `docs/boardy-embedding-model.md`. This repo benchmarks frozen
+baselines (BERT, Voyage nano/large) against a LoRA-fine-tuned two-tower model,
+and includes a LangGraph pipeline for synthesizing more training pairs beyond
+the 200-pair seed set. Note that synthetic negatives are *constructed*
+mismatches (one violated matching axis), which is not the same population as
+"plausible intro a human declined" — see `docs/objective.md`.
 
 **Status:** first full LoRA fine-tune (`twotower/`, `run_001`) did not beat
 the frozen baselines on the real 69-pair holdout (pair AUC 0.578, hard-

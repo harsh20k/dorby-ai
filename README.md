@@ -1,8 +1,64 @@
 # Dorby AI
 
-RecSys course project (Prof. Ga Wu) for industry partner **Boardy AI**. The goal
-is to explore multiple approaches to improve Boardy AI's recommendation
-performance, starting with:
+RecSys course project (Prof. Ga Wu) for industry partner **Boardy AI**.
+
+## Objective
+
+Canonical statement: **[docs/objective.md](docs/objective.md)** — read this
+first.
+
+We were given **200 real labeled pairs**, and what they mean matters more than
+the count. All 200 are introductions **Boardy's production system already
+recommended** — every pair passed production's own relevance bar. The label is
+the **real human outcome** of that recommendation:
+
+| File | Records | Meaning |
+| --- | --- | --- |
+| `data/dataset_positive.json` | 100 | Production suggested it and the humans **accepted** — they actually connected. |
+| `data/dataset_negative.json` | 100 | Production suggested it and the humans **declined** — no follow-through. |
+
+**The final objective:** train on the frozen train split and **correctly
+predict accept vs. decline on the frozen holdout split**. The split is
+user-disjoint and frozen in `data/synthetic/seed_split.json` — **131 train / 69
+holdout** real pairs (≈70/30; the exact ratio falls out of the no-shared-user
+constraint). Holdout accuracy is the number the project is judged on.
+
+Two things follow, and they explain most of the results below:
+
+- **The negatives are production's false positives**, not random mismatches —
+  plausible intros that humans still declined. The real data contains no
+  easy-negative population at all.
+- **We are not modeling topical relevance** (production already handles that);
+  we are modeling the residual *"will these two actually connect."* Hence
+  absolute AUCs around 0.58–0.64, near-identical query↔match lexical overlap in
+  both classes, and TF-IDF keyword cosine plateauing early.
+
+### Latency budget: <100 ms
+
+Accuracy alone isn't a win. A user's query→retrieval round trip must complete
+**well within 100 ms**, which constrains the architecture more than the accuracy
+target does:
+
+- **Out:** per-candidate LLM calls, cross-encoders scoring each (seeker,
+  candidate) pair online, and realistically any remote embedding API on the
+  serving path — including `voyage-4-large` itself, whose network round trip
+  alone likely eats the budget. It stays the accuracy reference, not necessarily
+  a deployable configuration.
+- **In:** the **two-tower / bi-encoder shape**, because it factorizes the score
+  so candidates are embedded *offline* in batch and the online path is just one
+  query encode + an ANN lookup — flat cost as the candidate pool grows. This is
+  the main architectural argument for two-tower here, separate from accuracy.
+- A merged **LoRA adapter costs nothing extra at serving time** versus frozen
+  nano, which makes fine-tuning the cheapest way to buy accuracy under this
+  budget.
+
+**Not yet measured** — every number in this repo is offline accuracy; no latency
+benchmark exists yet. Standing one up (query encode + ANN retrieve, p50/p95 on
+representative hardware) is a prerequisite for declaring any approach a win.
+
+## Approaches
+
+Explore multiple approaches to improve on that holdout number, starting with:
 
 - **Two-tower model** trained on their dataset
 - Try **Mixture of Experts** architecture
