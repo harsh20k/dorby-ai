@@ -1,0 +1,369 @@
+<title>Query-Time Nudge vs. Joint Encoding</title>
+<style>
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #14171a;
+      --surface: #1c2024;
+      --surface-2: #20262a;
+      --ink: #e8eae5;
+      --muted: #93a39c;
+      --border: #2b3237;
+      --accent: #e2a94a;
+      --accent-ink: #1a1406;
+      --offline-fill: #182723;
+      --offline-border: #35544c;
+      --request-fill: #2a2114;
+      --request-border: #6b5024;
+      --bad: #c96a5a;
+      --shadow: rgba(0,0,0,0.35);
+    }
+  }
+  :root {
+    --bg: #f4f5f1;
+    --surface: #ffffff;
+    --surface-2: #fafaf7;
+    --ink: #1a1d1a;
+    --muted: #5e6d67;
+    --border: #dcdfd8;
+    --accent: #b97e26;
+    --accent-ink: #fff8ea;
+    --offline-fill: #e7f1ee;
+    --offline-border: #9fbfb4;
+    --request-fill: #fbf0dc;
+    --request-border: #d9b876;
+    --bad: #a6432f;
+    --shadow: rgba(30,35,30,0.08);
+  }
+  :root[data-theme="dark"] {
+    --bg: #14171a; --surface: #1c2024; --surface-2: #20262a; --ink: #e8eae5;
+    --muted: #93a39c; --border: #2b3237; --accent: #e2a94a; --accent-ink: #1a1406;
+    --offline-fill: #182723; --offline-border: #35544c;
+    --request-fill: #2a2114; --request-border: #6b5024;
+    --bad: #c96a5a; --shadow: rgba(0,0,0,0.35);
+  }
+  :root[data-theme="light"] {
+    --bg: #f4f5f1; --surface: #ffffff; --surface-2: #fafaf7; --ink: #1a1d1a;
+    --muted: #5e6d67; --border: #dcdfd8; --accent: #b97e26; --accent-ink: #fff8ea;
+    --offline-fill: #e7f1ee; --offline-border: #9fbfb4;
+    --request-fill: #fbf0dc; --request-border: #d9b876;
+    --bad: #a6432f; --shadow: rgba(30,35,30,0.08);
+  }
+
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    padding: 2.5rem 1.25rem 4rem;
+    display: flex;
+    justify-content: center;
+  }
+  .page { width: 100%; max-width: 920px; }
+
+  .kicker {
+    font: 600 0.72rem/1 ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 0.6rem;
+  }
+  h1 {
+    font: 600 1.7rem/1.25 Georgia, "Iowan Old Style", "Times New Roman", serif;
+    text-wrap: balance;
+    margin: 0 0 0.5rem;
+    letter-spacing: -0.01em;
+  }
+  .dek {
+    font: 400 0.98rem/1.55 Georgia, "Iowan Old Style", "Times New Roman", serif;
+    color: var(--muted);
+    max-width: 62ch;
+    margin: 0 0 2.4rem;
+  }
+
+  .lane {
+    display: flex;
+    flex-direction: column;
+    gap: 0.9rem;
+    margin-bottom: 2.2rem;
+  }
+  .lane-label {
+    display: flex;
+    align-items: baseline;
+    gap: 0.6rem;
+  }
+  .lane-title {
+    font: 600 0.95rem/1.3 -apple-system, "Segoe UI", Roboto, sans-serif;
+    margin: 0;
+  }
+  .lane-tag {
+    font: 600 0.66rem/1 ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    padding: 0.22rem 0.5rem;
+    border-radius: 3px;
+    white-space: nowrap;
+  }
+  .lane-tag.bad { color: var(--bad); background: color-mix(in srgb, var(--bad) 14%, transparent); }
+  .lane-tag.good { color: var(--accent); background: color-mix(in srgb, var(--accent) 16%, transparent); }
+
+  .flow-scroll { overflow-x: auto; padding-bottom: 0.4rem; }
+  .flow {
+    display: flex;
+    align-items: stretch;
+    gap: 0;
+    min-width: max-content;
+  }
+
+  .node {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 0.85rem 1rem;
+    min-width: 148px;
+    max-width: 178px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.3rem;
+    box-shadow: 0 1px 2px var(--shadow);
+  }
+  .node.offline { background: var(--offline-fill); border-color: var(--offline-border); }
+  .node.request { background: var(--request-fill); border-color: var(--request-border); }
+  .node.heavy { border-color: var(--bad); border-width: 1.5px; }
+  .node.stack { justify-content: flex-start; }
+
+  .node-eyebrow {
+    font: 600 0.6rem/1 ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+  .node-title {
+    font: 600 0.85rem/1.3 -apple-system, "Segoe UI", Roboto, sans-serif;
+  }
+  .node-sub {
+    font: 400 0.72rem/1.35 -apple-system, "Segoe UI", Roboto, sans-serif;
+    color: var(--muted);
+  }
+  .node.heavy .node-title { color: var(--bad); }
+
+  .arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 40px;
+    position: relative;
+    color: var(--muted);
+  }
+  .arrow::before {
+    content: "";
+    width: 100%;
+    height: 1px;
+    background: var(--border);
+  }
+  .arrow::after {
+    content: "";
+    position: absolute;
+    right: 2px;
+    width: 0; height: 0;
+    border-top: 4px solid transparent;
+    border-bottom: 4px solid transparent;
+    border-left: 6px solid var(--border);
+  }
+
+  .converge {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.35rem;
+    min-width: 40px;
+    position: relative;
+  }
+  .converge .bar {
+    flex: 1;
+    border-left: 1px solid var(--border);
+    margin-left: 19px;
+  }
+
+  .stack-col {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    justify-content: center;
+  }
+
+  .plus {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 28px;
+    font: 600 1rem/1 ui-monospace, monospace;
+    color: var(--muted);
+  }
+
+  .note {
+    font: 400 0.82rem/1.5 Georgia, "Iowan Old Style", serif;
+    color: var(--muted);
+    max-width: 60ch;
+    margin-top: 0.4rem;
+  }
+  .note strong { color: var(--ink); font-weight: 600; }
+
+  .legend {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.3rem;
+    margin: 0.4rem 0 2.4rem;
+    padding: 0.85rem 1.1rem;
+    background: var(--surface-2);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+  }
+  .legend-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font: 400 0.78rem/1 -apple-system, "Segoe UI", Roboto, sans-serif;
+    color: var(--muted);
+  }
+  .swatch {
+    width: 11px; height: 11px;
+    border-radius: 2.5px;
+    border: 1px solid var(--border);
+    flex: none;
+  }
+  .swatch.offline { background: var(--offline-fill); border-color: var(--offline-border); }
+  .swatch.request { background: var(--request-fill); border-color: var(--request-border); }
+  .swatch.heavy { background: transparent; border: 1.5px solid var(--bad); }
+
+  .verdict {
+    border-top: 1px solid var(--border);
+    padding-top: 1.6rem;
+    margin-top: 0.4rem;
+  }
+  .verdict h2 {
+    font: 600 0.95rem/1.3 -apple-system, "Segoe UI", Roboto, sans-serif;
+    margin: 0 0 0.5rem;
+  }
+  .verdict p {
+    font: 400 0.92rem/1.6 Georgia, "Iowan Old Style", serif;
+    color: var(--muted);
+    max-width: 64ch;
+    margin: 0;
+  }
+  .verdict code {
+    font: 500 0.85em/1 ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+    background: var(--surface-2);
+    border: 1px solid var(--border);
+    padding: 0.08em 0.4em;
+    border-radius: 4px;
+    color: var(--ink);
+  }
+
+  @media (max-width: 560px) {
+    body { padding: 1.6rem 1rem 3rem; }
+    h1 { font-size: 1.4rem; }
+  }
+</style>
+
+<div class="page">
+  <div class="kicker">dorby-ai / two-tower retrieval</div>
+  <h1>Two ways to combine a profile with a search query</h1>
+  <p class="dek">Today the model reads the seeker's profile and the query together, in one pass, at request time. The alternative below precomputes the profile and only touches the query live &mdash; the same pattern Pinterest and YouTube use for personalized search.</p>
+
+  <div class="legend">
+    <div class="legend-item"><span class="swatch offline"></span> computed offline, in batch</div>
+    <div class="legend-item"><span class="swatch request"></span> computed live, per request</div>
+    <div class="legend-item"><span class="swatch heavy"></span> the expensive step</div>
+  </div>
+
+  <!-- LANE 1: today -->
+  <div class="lane">
+    <div class="lane-label">
+      <p class="lane-title">Today &mdash; joint encoding</p>
+      <span class="lane-tag bad">slow at query time</span>
+    </div>
+    <div class="flow-scroll">
+      <div class="flow">
+        <div class="stack-col">
+          <div class="node request">
+            <div class="node-eyebrow">live</div>
+            <div class="node-title">Seeker profile</div>
+            <div class="node-sub">text</div>
+          </div>
+          <div class="node request">
+            <div class="node-eyebrow">live</div>
+            <div class="node-title">Search query</div>
+            <div class="node-sub">text</div>
+          </div>
+        </div>
+        <div class="plus">+</div>
+        <div class="arrow"></div>
+        <div class="node request heavy">
+          <div class="node-eyebrow">live &middot; full pass</div>
+          <div class="node-title">Two-tower encoder</div>
+          <div class="node-sub">re-reads everything, every search</div>
+        </div>
+        <div class="arrow"></div>
+        <div class="node request">
+          <div class="node-eyebrow">live</div>
+          <div class="node-title">Query vector</div>
+        </div>
+        <div class="arrow"></div>
+        <div class="node offline">
+          <div class="node-eyebrow">nearest-neighbor</div>
+          <div class="node-title">Candidate index</div>
+          <div class="node-sub">precomputed, batch</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- LANE 2: proposed -->
+  <div class="lane">
+    <div class="lane-label">
+      <p class="lane-title">Proposed &mdash; precompute + nudge</p>
+      <span class="lane-tag good">one cheap step live</span>
+    </div>
+    <div class="flow-scroll">
+      <div class="flow">
+        <div class="stack-col">
+          <div class="node offline">
+            <div class="node-eyebrow">offline &middot; batch</div>
+            <div class="node-title">Seeker profile</div>
+            <div class="node-sub">re-embedded on a schedule</div>
+          </div>
+          <div class="node request">
+            <div class="node-eyebrow">live</div>
+            <div class="node-title">Search query</div>
+            <div class="node-sub">only new text each time</div>
+          </div>
+        </div>
+        <div class="converge"><div class="bar"></div></div>
+        <div class="node request">
+          <div class="node-eyebrow">live &middot; light</div>
+          <div class="node-title">Nudge function</div>
+          <div class="node-sub">small learned model, not raw math</div>
+        </div>
+        <div class="arrow"></div>
+        <div class="node request">
+          <div class="node-eyebrow">live</div>
+          <div class="node-title">Nudged vector</div>
+        </div>
+        <div class="arrow"></div>
+        <div class="node offline">
+          <div class="node-eyebrow">nearest-neighbor</div>
+          <div class="node-title">Candidate index</div>
+          <div class="node-sub">same index as above, unchanged</div>
+        </div>
+      </div>
+    </div>
+    <p class="note">Base profile vector and query vector both feed the nudge step; only the query and the nudge itself run per search &mdash; everything else was already sitting in memory.</p>
+  </div>
+
+  <div class="verdict">
+    <h2>Why this isn't just "average the two vectors"</h2>
+    <p>Our current model was trained to read profile and query <em>together</em>, so its vector space has no reason to behave predictably under simple addition. Making the nudge work well means training a small extra piece &mdash; a few-layer network, <code>f(base_vec, query_vec) &rarr; nudged_vec</code> &mdash; whose whole job is to land close to what the full joint pass would have produced. That's a real addition to the model, not just a change to how we serve it.</p>
+  </div>
+</div>
