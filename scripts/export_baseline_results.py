@@ -286,6 +286,15 @@ HOLDOUT_PATHS = {
     "hf_embedding_qwen_qwen3-embedding-8b": ARTIFACTS
     / "hf_embedding_qwen_qwen3-embedding-8b"
     / "metrics.json",
+    "hf_embedding_intfloat_e5-mistral-7b-instruct": ARTIFACTS
+    / "hf_embedding_intfloat_e5-mistral-7b-instruct"
+    / "metrics.json",
+    "hf_embedding_nvidia_nv-embed-v2": ARTIFACTS
+    / "hf_embedding_nvidia_nv-embed-v2"
+    / "metrics.json",
+    "hf_embedding_baai_bge-en-icl": ARTIFACTS
+    / "hf_embedding_baai_bge-en-icl"
+    / "metrics.json",
 }
 HOLDOUT_LABELS = {
     "tfidf": "TF-IDF (lexical)",
@@ -294,6 +303,9 @@ HOLDOUT_LABELS = {
     "voyage_large": "Voyage-4-large (prod)",
     "hybrid_tfidf_voyage": "Hybrid TF-IDF+nano",
     "hf_embedding_qwen_qwen3-embedding-8b": "Qwen3-Embedding-8B (open, Modal)",
+    "hf_embedding_intfloat_e5-mistral-7b-instruct": "E5-mistral-7b-instruct (open, Modal)",
+    "hf_embedding_nvidia_nv-embed-v2": "NV-Embed-v2 (open, non-commercial, no-instruction approx.)",
+    "hf_embedding_baai_bge-en-icl": "BGE-en-ICL (open, Modal, zero-shot)",
 }
 HOLDOUT_PROTOCOL_NOTE = (
     "frozen 69-pair real holdout (data/synthetic/seed_split.json eval_pair_ids) only — "

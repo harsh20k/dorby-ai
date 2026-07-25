@@ -18,6 +18,11 @@ class ModelSpec:
     trust_remote_code: bool = False
     query_prompt_name: str | None = None
     supports_truncate_dim: bool = False
+    loader: str = "sentence_transformers"  # or "flagembedding_icl"
+    requires_legacy_transformers: bool = False  # pins transformers==4.44.2 +
+    # sentence-transformers==3.0.1 on Modal — needed by trust_remote_code models
+    # whose custom modeling file predates transformers' Cache API refactor
+    # (e.g. calls Cache.get_usable_length(), removed in newer transformers).
     notes: str = ""
 
 
@@ -69,6 +74,40 @@ MODEL_REGISTRY: dict[str, ModelSpec] = {
         query_prompt_name="query",
         supports_truncate_dim=False,
         notes="Apache 2.0.",
+    ),
+    "nvidia/NV-Embed-v2": ModelSpec(
+        trust_remote_code=True,
+        query_prompt_name=None,
+        supports_truncate_dim=False,
+        requires_legacy_transformers=True,
+        notes=(
+            "CC-BY-NC-4.0 — NON-COMMERCIAL ONLY, benchmark reference only, cannot "
+            "ship in production. ~15GB weights; needs >=24GB VRAM, prefer A100-40GB. "
+            "requires_legacy_transformers=True: NVIDIA's custom modeling code calls "
+            "Cache.get_usable_length(), removed from transformers>=4.51 during the "
+            "Cache API refactor — confirmed via AttributeError on transformers 4.57. "
+            "Runs on a pinned transformers==4.44.2 + sentence-transformers==3.0.1 "
+            "Modal image instead of the shared default image. query_prompt_name=None: "
+            "NV-Embed-v2 ships no sentence-transformers `prompts` dict at all (empty "
+            "keys, confirmed via ValueError) — it expects a manually-prepended "
+            "`instruction=` string via its own custom .encode(), not ST's prompt_name. "
+            "We run it symmetrically (no query/document distinction) as an "
+            "approximation; this understates its true instruction-tuned performance."
+        ),
+    ),
+    "BAAI/bge-en-icl": ModelSpec(
+        trust_remote_code=True,
+        query_prompt_name="query",
+        supports_truncate_dim=False,
+        loader="flagembedding_icl",
+        notes=(
+            "MIT. 7B, Mistral-7B-based. Not sentence-transformers-loadable — "
+            "confirmed via ValueError('Unrecognized processing class') — this model "
+            "is designed for BAAI's own FlagEmbedding library (FlagICLModel), which "
+            "also supports prepending in-context few-shot examples to the query "
+            "(we run zero-shot, no examples). loader='flagembedding_icl' routes to "
+            "FlagICLEncoder in encode.py instead of HFEmbeddingEncoder."
+        ),
     ),
 }
 

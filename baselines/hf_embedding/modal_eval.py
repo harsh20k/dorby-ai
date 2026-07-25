@@ -26,6 +26,59 @@ image = (
         "scikit-learn>=1.4.0",
         "numpy>=1.26.0",
         "tqdm>=4.66.0",
+        "datasets>=2.19",
+        "einops",
+    )
+    .env(
+        {
+            "HF_HOME": "/cache/huggingface",
+            "TRANSFORMERS_CACHE": "/cache/huggingface",
+            "TOKENIZERS_PARALLELISM": "false",
+        }
+    )
+    .add_local_python_source("baselines", "synth_pipeline")
+    .add_local_dir("data", remote_path="/root/data")
+)
+
+# Some trust_remote_code models ship modeling code that predates transformers'
+# Cache API refactor (e.g. nvidia/NV-Embed-v2 calls the since-removed
+# Cache.get_usable_length()) — this pinned-older image is their alternate path.
+legacy_transformers_image = (
+    modal.Image.debian_slim(python_version="3.11")
+    .pip_install(
+        "torch",
+        "transformers==4.44.2",
+        "sentence-transformers==3.0.1",
+        "accelerate>=0.30",
+        "scikit-learn>=1.4.0",
+        "numpy>=1.26.0",
+        "tqdm>=4.66.0",
+        "datasets>=2.19",
+        "einops",
+    )
+    .env(
+        {
+            "HF_HOME": "/cache/huggingface",
+            "TRANSFORMERS_CACHE": "/cache/huggingface",
+            "TOKENIZERS_PARALLELISM": "false",
+        }
+    )
+    .add_local_python_source("baselines", "synth_pipeline")
+    .add_local_dir("data", remote_path="/root/data")
+)
+
+# BAAI/bge-en-icl isn't sentence-transformers-loadable — it needs BAAI's own
+# FlagEmbedding library (FlagICLModel, see encode.py::FlagICLEncoder).
+flagembedding_image = (
+    modal.Image.debian_slim(python_version="3.11")
+    .pip_install(
+        "torch",
+        "transformers>=4.51,<5",
+        "FlagEmbedding",
+        "accelerate>=0.30",
+        "scikit-learn>=1.4.0",
+        "numpy>=1.26.0",
+        "tqdm>=4.66.0",
     )
     .env(
         {
@@ -89,6 +142,100 @@ def eval_remote(
     }
 
 
+@app.function(
+    image=legacy_transformers_image,
+    gpu="A10G",
+    timeout=45 * 60,
+    volumes={
+        "/results": results,
+        "/cache/huggingface": hf_cache,
+    },
+)
+def eval_remote_legacy_transformers(
+    run_id: str,
+    model: str,
+    batch_size: int = 4,
+    max_length: int = 8192,
+    truncate_dim: int | None = None,
+    dtype: str = "auto",
+    holdout_only: bool = True,
+) -> dict:
+    import json
+    from pathlib import Path
+
+    from baselines.hf_embedding.eval import run_eval
+
+    artifacts_dir = Path("/results") / run_id
+    artifacts_dir.mkdir(parents=True, exist_ok=True)
+
+    metrics = run_eval(
+        data_dir=Path("/root/data"),
+        model_name=model,
+        batch_size=batch_size,
+        max_length=max_length,
+        truncate_dim=truncate_dim,
+        dtype=dtype,
+        artifacts_dir=artifacts_dir,
+        holdout_only=holdout_only,
+        split_path=Path("/root/data/synthetic/seed_split.json"),
+    )
+    (artifacts_dir / "metrics.json").write_text(json.dumps(metrics, indent=2) + "\n")
+    results.commit()
+    return {
+        "run_id": run_id,
+        "model": model,
+        "pair": metrics["pair"],
+        "retrieval": metrics["retrieval"],
+    }
+
+
+@app.function(
+    image=flagembedding_image,
+    gpu="A10G",
+    timeout=45 * 60,
+    volumes={
+        "/results": results,
+        "/cache/huggingface": hf_cache,
+    },
+)
+def eval_remote_flagembedding(
+    run_id: str,
+    model: str,
+    batch_size: int = 4,
+    max_length: int = 8192,
+    truncate_dim: int | None = None,
+    dtype: str = "auto",
+    holdout_only: bool = True,
+) -> dict:
+    import json
+    from pathlib import Path
+
+    from baselines.hf_embedding.eval import run_eval
+
+    artifacts_dir = Path("/results") / run_id
+    artifacts_dir.mkdir(parents=True, exist_ok=True)
+
+    metrics = run_eval(
+        data_dir=Path("/root/data"),
+        model_name=model,
+        batch_size=batch_size,
+        max_length=max_length,
+        truncate_dim=truncate_dim,
+        dtype=dtype,
+        artifacts_dir=artifacts_dir,
+        holdout_only=holdout_only,
+        split_path=Path("/root/data/synthetic/seed_split.json"),
+    )
+    (artifacts_dir / "metrics.json").write_text(json.dumps(metrics, indent=2) + "\n")
+    results.commit()
+    return {
+        "run_id": run_id,
+        "model": model,
+        "pair": metrics["pair"],
+        "retrieval": metrics["retrieval"],
+    }
+
+
 @app.local_entrypoint()
 def main(
     model: str,
@@ -101,15 +248,21 @@ def main(
     gpu: str = "A10G",
 ) -> None:
     """CLI: modal run baselines/hf_embedding/modal_eval.py --model Qwen/Qwen3-Embedding-8B --holdout-only"""
-    from baselines.hf_embedding.models import slugify
+    from baselines.hf_embedding.models import get_model_spec, slugify
 
     if not run_id:
         suffix = "holdout" if holdout_only else "full"
         run_id = f"{slugify(model)}_{suffix}"
 
-    call = eval_remote
+    spec = get_model_spec(model)
+    if spec.loader == "flagembedding_icl":
+        call = eval_remote_flagembedding
+    elif spec.requires_legacy_transformers:
+        call = eval_remote_legacy_transformers
+    else:
+        call = eval_remote
     if gpu and gpu != "A10G":
-        call = eval_remote.with_options(gpu=gpu)
+        call = call.with_options(gpu=gpu)
 
     result = call.remote(
         run_id=run_id,

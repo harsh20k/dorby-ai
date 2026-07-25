@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-25T13:59:36Z",
+  "generated_at": "2026-07-25T14:27:44Z",
   "protocol_note": "frozen 69-pair real holdout (data/synthetic/seed_split.json eval_pair_ids) only \u2014 same population for every row, unlike baseline-results-all.md's full-dataset numbers. See docs/possible-bugs.md #3 and docs/twotower-run-001-results.md.",
   "baselines": {
     "tfidf": {
@@ -795,6 +795,363 @@
             "mean_cosine_negative": 0.5711420774459839,
             "mean_cosine_gap": 0.012640774250030518,
             "pair_auc": 0.6258620689655172
+          }
+        }
+      }
+    },
+    "hf_embedding_intfloat_e5-mistral-7b-instruct": {
+      "model_name": "intfloat/e5-mistral-7b-instruct",
+      "device": "cuda",
+      "max_length": 8192,
+      "truncate_dim": null,
+      "dtype": "auto",
+      "batch_size": 2,
+      "pair": {
+        "roc_auc": 0.5663793103448276,
+        "average_precision": 0.48293562444838495,
+        "best_f1": 0.6105263157894737,
+        "best_f1_threshold": 0.7856608629226685,
+        "best_f1_accuracy": 0.463768115942029,
+        "accuracy_at_0.5": 0.42028985507246375,
+        "mean_cosine_positive": 0.8269034624099731,
+        "mean_cosine_negative": 0.8232074975967407,
+        "mean_cosine_gap": 0.003695964813232422,
+        "std_cosine_positive": 0.020685523748397827,
+        "std_cosine_negative": 0.022663194686174393,
+        "score_percentiles": {
+          "positive": {
+            "p10": 0.7956453800201416,
+            "p50": 0.8290805816650391,
+            "p90": 0.8503517627716064
+          },
+          "negative": {
+            "p10": 0.7941946566104889,
+            "p50": 0.8234061598777771,
+            "p90": 0.8495518922805786
+          }
+        },
+        "num_positive": 29,
+        "num_negative": 40
+      },
+      "retrieval": {
+        "mrr": 0.22444410848659233,
+        "map": 0.22444410848659233,
+        "num_queries": 29.0,
+        "mean_rank": 13.793103448275861,
+        "median_rank": 9.0,
+        "recall@1": 0.06896551724137931,
+        "ndcg@1": 0.06896551724137931,
+        "precision@1": 0.06896551724137931,
+        "recall@5": 0.3448275862068966,
+        "ndcg@5": 0.21715257340534183,
+        "precision@5": 0.06896551724137931,
+        "recall@10": 0.5517241379310345,
+        "ndcg@10": 0.2839412811706945,
+        "precision@10": 0.055172413793103454,
+        "top1": 0.06896551724137931
+      },
+      "slices": {
+        "intent": {
+          "customers": {
+            "n_pairs": 3,
+            "n_queries": 1,
+            "low_n": true,
+            "pair_auc": null,
+            "mrr": null,
+            "recall@10": null
+          },
+          "fundraise": {
+            "n_pairs": 60,
+            "n_queries": 24,
+            "low_n": false,
+            "pair_auc": 0.5520833333333333,
+            "mrr": 0.21988708328434814,
+            "recall@10": 0.5416666666666666
+          },
+          "hiring": {
+            "n_pairs": 4,
+            "n_queries": 3,
+            "low_n": true,
+            "pair_auc": null,
+            "mrr": null,
+            "recall@10": null
+          },
+          "partnerships": {
+            "n_pairs": 2,
+            "n_queries": 1,
+            "low_n": true,
+            "pair_auc": null,
+            "mrr": null,
+            "recall@10": null
+          }
+        },
+        "neg_hardness": {
+          "rule": {
+            "overlap": "token Jaccard(seeker_text, match_text) on negative pairs",
+            "easy": "jaccard <= p25 (cutoff=0.1541)",
+            "hard": "jaccard >= p50 (cutoff=0.1717)"
+          },
+          "overlap_stats": {
+            "mean": 0.17360300707756346,
+            "p25": 0.15406203417039332,
+            "p50": 0.17167133380004668,
+            "p75": 0.19362673283644954
+          },
+          "easy": {
+            "n_negatives": 10,
+            "mean_overlap": 0.13839812277487357,
+            "overlap_cutoff": 0.15406203417039332,
+            "low_n": false,
+            "mean_cosine_negative": 0.8094955682754517,
+            "mean_cosine_gap": 0.017407894134521484,
+            "pair_auc": 0.7137931034482758
+          },
+          "hard": {
+            "n_negatives": 20,
+            "mean_overlap": 0.1975300989629716,
+            "overlap_cutoff": 0.17167133380004668,
+            "low_n": false,
+            "mean_cosine_negative": 0.8307502865791321,
+            "mean_cosine_gap": -0.0038468241691589355,
+            "pair_auc": 0.48793103448275865
+          }
+        }
+      }
+    },
+    "hf_embedding_nvidia_nv-embed-v2": {
+      "model_name": "nvidia/NV-Embed-v2",
+      "device": "cuda",
+      "max_length": 8192,
+      "truncate_dim": null,
+      "dtype": "auto",
+      "batch_size": 2,
+      "pair": {
+        "roc_auc": 0.503448275862069,
+        "average_precision": 0.42200576803625606,
+        "best_f1": 0.5918367346938774,
+        "best_f1_threshold": 0.3629406690597534,
+        "best_f1_accuracy": 0.42028985507246375,
+        "accuracy_at_0.5": 0.5072463768115942,
+        "mean_cosine_positive": 0.5786616802215576,
+        "mean_cosine_negative": 0.5816978812217712,
+        "mean_cosine_gap": -0.003036201000213623,
+        "std_cosine_positive": 0.09497833251953125,
+        "std_cosine_negative": 0.09210221469402313,
+        "score_percentiles": {
+          "positive": {
+            "p10": 0.42843902111053467,
+            "p50": 0.6052877902984619,
+            "p90": 0.6727676391601562
+          },
+          "negative": {
+            "p10": 0.45312603414058683,
+            "p50": 0.5802893936634064,
+            "p90": 0.699189418554306
+          }
+        },
+        "num_positive": 29,
+        "num_negative": 40
+      },
+      "retrieval": {
+        "mrr": 0.10924396120973041,
+        "map": 0.10924396120973041,
+        "num_queries": 29.0,
+        "mean_rank": 22.517241379310345,
+        "median_rank": 18.0,
+        "recall@1": 0.034482758620689655,
+        "ndcg@1": 0.034482758620689655,
+        "precision@1": 0.034482758620689655,
+        "recall@5": 0.13793103448275862,
+        "ndcg@5": 0.07991480570027361,
+        "precision@5": 0.027586206896551727,
+        "recall@10": 0.2413793103448276,
+        "ndcg@10": 0.112958501508411,
+        "precision@10": 0.024137931034482762,
+        "top1": 0.034482758620689655
+      },
+      "slices": {
+        "intent": {
+          "customers": {
+            "n_pairs": 3,
+            "n_queries": 1,
+            "low_n": true,
+            "pair_auc": null,
+            "mrr": null,
+            "recall@10": null
+          },
+          "fundraise": {
+            "n_pairs": 60,
+            "n_queries": 24,
+            "low_n": false,
+            "pair_auc": 0.49189814814814814,
+            "mrr": 0.0735438333027162,
+            "recall@10": 0.16666666666666666
+          },
+          "hiring": {
+            "n_pairs": 4,
+            "n_queries": 3,
+            "low_n": true,
+            "pair_auc": null,
+            "mrr": null,
+            "recall@10": null
+          },
+          "partnerships": {
+            "n_pairs": 2,
+            "n_queries": 1,
+            "low_n": true,
+            "pair_auc": null,
+            "mrr": null,
+            "recall@10": null
+          }
+        },
+        "neg_hardness": {
+          "rule": {
+            "overlap": "token Jaccard(seeker_text, match_text) on negative pairs",
+            "easy": "jaccard <= p25 (cutoff=0.1541)",
+            "hard": "jaccard >= p50 (cutoff=0.1717)"
+          },
+          "overlap_stats": {
+            "mean": 0.17360300707756346,
+            "p25": 0.15406203417039332,
+            "p50": 0.17167133380004668,
+            "p75": 0.19362673283644954
+          },
+          "easy": {
+            "n_negatives": 10,
+            "mean_overlap": 0.13839812277487357,
+            "overlap_cutoff": 0.15406203417039332,
+            "low_n": false,
+            "mean_cosine_negative": 0.5513727068901062,
+            "mean_cosine_gap": 0.027288973331451416,
+            "pair_auc": 0.6
+          },
+          "hard": {
+            "n_negatives": 20,
+            "mean_overlap": 0.1975300989629716,
+            "overlap_cutoff": 0.17167133380004668,
+            "low_n": false,
+            "mean_cosine_negative": 0.6236991882324219,
+            "mean_cosine_gap": -0.04503750801086426,
+            "pair_auc": 0.37586206896551727
+          }
+        }
+      }
+    },
+    "hf_embedding_baai_bge-en-icl": {
+      "model_name": "BAAI/bge-en-icl",
+      "device": "cuda",
+      "max_length": 8192,
+      "truncate_dim": null,
+      "dtype": "auto",
+      "batch_size": 2,
+      "pair": {
+        "roc_auc": 0.5750000000000001,
+        "average_precision": 0.4904936895926705,
+        "best_f1": 0.6021505376344085,
+        "best_f1_threshold": 0.5323935151100159,
+        "best_f1_accuracy": 0.463768115942029,
+        "accuracy_at_0.5": 0.4057971014492754,
+        "mean_cosine_positive": 0.5885339975357056,
+        "mean_cosine_negative": 0.582955539226532,
+        "mean_cosine_gap": 0.005578458309173584,
+        "std_cosine_positive": 0.039093971252441406,
+        "std_cosine_negative": 0.03777731955051422,
+        "score_percentiles": {
+          "positive": {
+            "p10": 0.5353147149085998,
+            "p50": 0.5996454954147339,
+            "p90": 0.6373706459999084
+          },
+          "negative": {
+            "p10": 0.5345053374767303,
+            "p50": 0.5798923373222351,
+            "p90": 0.6286638140678406
+          }
+        },
+        "num_positive": 29,
+        "num_negative": 40
+      },
+      "retrieval": {
+        "mrr": 0.5157030428284888,
+        "map": 0.5157030428284888,
+        "num_queries": 29.0,
+        "mean_rank": 6.827586206896552,
+        "median_rank": 3.0,
+        "recall@1": 0.3793103448275862,
+        "ndcg@1": 0.3793103448275862,
+        "precision@1": 0.3793103448275862,
+        "recall@5": 0.6896551724137931,
+        "ndcg@5": 0.5408558253425707,
+        "precision@5": 0.13793103448275862,
+        "recall@10": 0.7586206896551724,
+        "ndcg@10": 0.5635191764726398,
+        "precision@10": 0.07586206896551725,
+        "top1": 0.3793103448275862
+      },
+      "slices": {
+        "intent": {
+          "customers": {
+            "n_pairs": 3,
+            "n_queries": 1,
+            "low_n": true,
+            "pair_auc": null,
+            "mrr": null,
+            "recall@10": null
+          },
+          "fundraise": {
+            "n_pairs": 60,
+            "n_queries": 24,
+            "low_n": false,
+            "pair_auc": 0.5752314814814815,
+            "mrr": 0.4862877284752285,
+            "recall@10": 0.75
+          },
+          "hiring": {
+            "n_pairs": 4,
+            "n_queries": 3,
+            "low_n": true,
+            "pair_auc": null,
+            "mrr": null,
+            "recall@10": null
+          },
+          "partnerships": {
+            "n_pairs": 2,
+            "n_queries": 1,
+            "low_n": true,
+            "pair_auc": null,
+            "mrr": null,
+            "recall@10": null
+          }
+        },
+        "neg_hardness": {
+          "rule": {
+            "overlap": "token Jaccard(seeker_text, match_text) on negative pairs",
+            "easy": "jaccard <= p25 (cutoff=0.1541)",
+            "hard": "jaccard >= p50 (cutoff=0.1717)"
+          },
+          "overlap_stats": {
+            "mean": 0.17360300707756346,
+            "p25": 0.15406203417039332,
+            "p50": 0.17167133380004668,
+            "p75": 0.19362673283644954
+          },
+          "easy": {
+            "n_negatives": 10,
+            "mean_overlap": 0.13839812277487357,
+            "overlap_cutoff": 0.15406203417039332,
+            "low_n": false,
+            "mean_cosine_negative": 0.5844339728355408,
+            "mean_cosine_gap": 0.004100024700164795,
+            "pair_auc": 0.5655172413793104
+          },
+          "hard": {
+            "n_negatives": 20,
+            "mean_overlap": 0.1975300989629716,
+            "overlap_cutoff": 0.17167133380004668,
+            "low_n": false,
+            "mean_cosine_negative": 0.5831515789031982,
+            "mean_cosine_gap": 0.005382418632507324,
+            "pair_auc": 0.5862068965517242
           }
         }
       }

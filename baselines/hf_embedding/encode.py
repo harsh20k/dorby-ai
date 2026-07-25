@@ -22,7 +22,19 @@ from sentence_transformers import SentenceTransformer
 from baselines.hf_embedding.models import get_model_spec, slugify
 from baselines.voyage_nano.encode import cosine_scores, l2_normalize, pick_device
 
-__all__ = ["HFEmbeddingEncoder", "cosine_scores", "l2_normalize", "pick_device"]
+__all__ = [
+    "HFEmbeddingEncoder",
+    "FlagICLEncoder",
+    "get_encoder_class",
+    "cosine_scores",
+    "l2_normalize",
+    "pick_device",
+]
+
+QUERY_INSTRUCTION = (
+    "Given a search query and a networking user's profile, retrieve candidate "
+    "contact profiles that would make a good introduction match."
+)
 
 
 def _resolve_dtype(dtype: str, device: str) -> torch.dtype | None:
@@ -151,3 +163,92 @@ class HFEmbeddingEncoder:
             + "\n"
         )
         return matrix
+
+
+class FlagICLEncoder:
+    """BAAI/bge-en-icl via BAAI's own FlagEmbedding library (FlagICLModel) —
+    not sentence-transformers-loadable. Same encode() interface and cache-file
+    layout as HFEmbeddingEncoder so eval.py doesn't need to branch on it.
+    Runs zero-shot (no in-context examples), matching how every other baseline
+    here is evaluated."""
+
+    def __init__(
+        self,
+        model_name: str,
+        device: str | None = None,
+        max_length: int = 8192,
+        truncate_dim: int | None = None,
+        dtype: str = "auto",
+        cache_dir: Path | None = None,
+    ) -> None:
+        from FlagEmbedding import FlagICLModel
+
+        self.model_name = model_name
+        self.device = device or pick_device()
+        self.max_length = max_length
+        self.truncate_dim = None  # no Matryoshka support
+        self.cache_dir = (
+            Path(cache_dir) if cache_dir else Path("artifacts/hf_embedding") / slugify(model_name)
+        )
+        self.cache_dir.mkdir(parents=True, exist_ok=True)
+
+        print(f"loading {model_name} via FlagICLModel on {self.device} (max_length={max_length})")
+        self.model = FlagICLModel(
+            model_name,
+            query_instruction_for_retrieval=QUERY_INSTRUCTION,
+            examples_for_task=None,  # zero-shot, no few-shot examples
+            devices=[self.device],
+            use_fp16=(self.device == "cuda"),
+        )
+
+    def encode(
+        self,
+        texts: Sequence[str],
+        *,
+        role: Literal["query", "document"],
+        batch_size: int = 4,
+        show_progress: bool = True,
+        cache_name: str | None = None,
+    ) -> np.ndarray:
+        texts_list = list(texts)
+        if not texts_list:
+            return np.zeros((0, 4096), dtype=np.float32)
+
+        key = cache_name or _cache_key(
+            texts_list, self.model_name, self.max_length, self.truncate_dim, role
+        )
+        cache_path = self.cache_dir / f"emb_{key}.npy"
+        meta_path = self.cache_dir / f"emb_{key}.json"
+
+        if cache_path.exists():
+            return np.load(cache_path)
+
+        encode_fn = self.model.encode_queries if role == "query" else self.model.encode_corpus
+        raw = encode_fn(texts_list, batch_size=batch_size, max_length=self.max_length)
+        matrix = l2_normalize(np.asarray(raw, dtype=np.float32))
+
+        np.save(cache_path, matrix)
+        meta_path.write_text(
+            json.dumps(
+                {
+                    "model_name": self.model_name,
+                    "max_length": self.max_length,
+                    "truncate_dim": None,
+                    "role": role,
+                    "num_texts": len(texts_list),
+                    "dim": int(matrix.shape[1]),
+                    "device": str(self.device),
+                },
+                indent=2,
+            )
+            + "\n"
+        )
+        return matrix
+
+
+def get_encoder_class(model_name: str):
+    """Pick HFEmbeddingEncoder or FlagICLEncoder based on the model's registry loader."""
+    spec = get_model_spec(model_name)
+    if spec.loader == "flagembedding_icl":
+        return FlagICLEncoder
+    return HFEmbeddingEncoder

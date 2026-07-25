@@ -15,7 +15,7 @@ from pathlib import Path
 from typing import Any
 
 from baselines.bert_frozen.text import candidate_to_text, seeker_to_text
-from baselines.hf_embedding.encode import HFEmbeddingEncoder, cosine_scores, pick_device
+from baselines.hf_embedding.encode import cosine_scores, get_encoder_class, pick_device
 from baselines.hf_embedding.models import slugify
 from baselines.holdout import filter_to_holdout
 from baselines.metrics import pair_metrics, print_metrics, retrieval_metrics, slice_metrics
@@ -87,7 +87,8 @@ def run_eval(
     corpus_ids, corpus_texts = build_candidate_corpus(positives, negatives)
     print(f"candidate corpus size: {len(corpus_ids)}")
 
-    encoder = HFEmbeddingEncoder(
+    EncoderClass = get_encoder_class(model_name)
+    encoder = EncoderClass(
         model_name=model_name,
         device=device,
         max_length=max_length,
