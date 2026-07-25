@@ -160,6 +160,50 @@ seeker-sectioning also helps `voyage-4-large` (Boardy's production model,
 currently the best baseline at pair AUC 0.6086 / MRR 0.5287) is the
 natural next check before drawing conclusions about production impact.
 
+## Follow-up: softer aggregation (PR #13)
+
+Hard max keeps only a seeker's single best-matching section; tried
+`topk_mean` (mean of top-2 sections) and `softmax` (temperature-weighted
+average over all sections, T=0.05) as softer alternatives, same holdout,
+same model — see `baselines/voyage_nano_sectioned/aggregate.py`.
+
+| Aggregation | Pair AUC | MRR | Top-1 | Recall@10 |
+|---|---|---|---|---|
+| Baseline (no sectioning) | 0.5793 | 0.4610 | 27.6% | 0.7586 |
+| max (hard) | 0.5957 | 0.4934 | 34.5% | 0.6897 |
+| topk_mean (k=2) | 0.5940 | 0.5127 | 37.9% | 0.6897 |
+| softmax (T=0.05) | 0.5983 | 0.5149 | 37.9% | 0.6897 |
+
+All three sectioned variants land at the identical 0.6897 Recall@10 —
+softening the aggregation improved MRR/top-1 a little further over hard
+max, but did not recover any of the Recall@10 lost to sectioning in the
+first place. Whatever seeker-sectioning trades away at the tail of the
+ranking isn't about the max-vs-average choice.
+
+## Follow-up: layering onto the hybrid TF-IDF+voyage baseline (PR #12)
+
+The strongest frozen baseline before this work was `hybrid_tfidf_voyage`
+(TF-IDF + voyage-4-nano, late-fused; pair AUC 0.6397, MRR 0.4043 — see
+`docs/baseline-results-holdout.md`). Built
+`baselines/hybrid_tfidf_voyage_seeker_sectioned/`: identical to that
+baseline except the voyage channel's seeker/query side uses
+seeker-sectioning (max over sections) instead of one whole-profile
+embedding; TF-IDF and the candidate side are untouched.
+
+| Variant | Pair AUC | MRR | Top-1 | Recall@10 |
+|---|---|---|---|---|
+| Hybrid TF-IDF+voyage (previous best) | 0.6397 | 0.4043 | 27.6% | 0.7931 |
+| Seeker-sectioned voyage alone | 0.5957 | 0.4934 | 34.5% | 0.6897 |
+| **Hybrid + seeker-sectioning** | **0.6483** | **0.4392** | **31.0%** | **0.7931** |
+
+This is now the best frozen baseline measured on this holdout — better
+AUC and MRR than plain hybrid, better top-1, and Recall@10 holds at the
+hybrid's already-strong level (no tradeoff, unlike sectioning alone).
+Average precision is roughly flat (0.520 → 0.516). The fit-set fusion
+still weights TF-IDF heavily (alpha ≈ 0.95 on ~131 real fit pairs), so
+most of the ranking is still lexical, but the sectioned voyage channel's
+contribution clearly pulls through.
+
 ## Reproducing
 
 ```bash

@@ -1,8 +1,8 @@
 # Findings: does splitting `lookingFor` into sections improve matching?
 
-**Status: tested, mixed result — one direction helps, the other doesn't.**
-Full experiment log, per-candidate scores, and repro commands:
-[`lookingfor-sectioning-experiment.md`](lookingfor-sectioning-experiment.md).
+**Status: tested, and the best version of the idea is now the strongest
+frozen baseline we have.** Full experiment log, per-candidate scores, and
+repro commands: [`lookingfor-sectioning-experiment.md`](lookingfor-sectioning-experiment.md).
 
 ## The question
 
@@ -72,11 +72,66 @@ the seeker's other, irrelevant asks. Candidates don't have this same
 per-pair mismatch — whichever ask they're read against, they meant all of
 them — so there's nothing to un-blur on that side.
 
+## Follow-up 1: does a softer aggregation recover the Recall@10 loss?
+
+Hard max (a seeker's single best-matching section) trades away some
+Recall@10. Tried two softer alternatives — mean of the top-2
+sections (`topk_mean`), and a temperature-weighted average over all
+sections (`softmax`, T=0.05) — same holdout, same model, in
+`baselines/voyage_nano_sectioned/aggregate.py` (PR
+[#13](https://github.com/harsh20k/dorby-ai/pull/13)):
+
+| Aggregation | Pair ROC-AUC | MRR | Top-1 | Recall@10 |
+|---|---|---|---|---|
+| Baseline (no sectioning) | 0.579 | 0.461 | 27.6% | **0.759** |
+| max (hard, original) | 0.596 | 0.493 | 34.5% | 0.690 |
+| topk_mean (k=2) | 0.594 | 0.513 | 37.9% | 0.690 |
+| softmax (T=0.05) | **0.598** | **0.515** | 37.9% | 0.690 |
+
+**Answer: no.** All three sectioned variants land at the same 0.690
+Recall@10, well below the baseline's 0.759 — softening the aggregation
+sharpened MRR and top-1 slightly further (both soft modes edge out hard
+max) but did nothing to recover the lost breadth further down the list.
+Whatever seeker-sectioning trades away at Recall@10 isn't about
+max-vs-average; it looks structural to narrowing the seeker's
+representation at all.
+
+## Follow-up 2: does the gain stack with the strongest existing baseline?
+
+The current best frozen baseline before this work was
+`hybrid_tfidf_voyage` (TF-IDF lexical cosine + voyage-4-nano, late-fused):
+pair AUC 0.6397, MRR 0.4043 (`docs/baseline-results-holdout.md`). Built a
+variant that keeps TF-IDF exactly as-is and swaps only the voyage channel
+for seeker-sectioning (PR [#12](https://github.com/harsh20k/dorby-ai/pull/12)):
+
+| Variant | Pair ROC-AUC | MRR | Top-1 | Recall@10 |
+|---|---|---|---|---|
+| Hybrid TF-IDF + voyage-nano (previous best) | 0.6397 | 0.4043 | 27.6% | 0.793 |
+| Seeker-sectioned voyage alone (no TF-IDF) | 0.5957 | 0.4934 | 34.5% | 0.690 |
+| **Hybrid + seeker-sectioning** | **0.6483** | **0.4392** | **31.0%** | **0.793** |
+
+**Answer: yes, it stacks — and without the Recall@10 tradeoff.** This is
+now the strongest frozen baseline measured on this holdout: better pair
+AUC and MRR than plain hybrid, better top-1 than plain hybrid, and
+Recall@10 holds at the hybrid's already-strong 0.793 (TF-IDF's lexical
+channel appears to supply the breadth that sectioning alone gives up,
+while the sectioned voyage channel supplies sharper top-of-list
+precision). Average precision is roughly flat (0.520 → 0.516, within
+noise). The fusion still weights TF-IDF heavily (fit alpha ≈ 0.95 on the
+~131-pair real fit set), so most of the ranking is still lexical — but the
+sectioned voyage channel's contribution clearly pulls through into the
+fused result.
+
 ## Not yet done
 
 - This only tested local `voyage-4-nano`. Boardy's production model,
-  `voyage-4-large`, is currently the strongest baseline (pair AUC 0.609,
-  MRR 0.529) — whether seeker-sectioning's gain holds there is the natural
-  next check before this could matter for production.
+  `voyage-4-large`, is currently the strongest single-model baseline
+  (pair AUC 0.609, MRR 0.529) — whether seeker-sectioning's gain (alone or
+  fused with TF-IDF) holds there is the natural next check before this
+  could matter for production.
 - Only tried against real holdout pairs; not tested against synthetic data
   or the two-tower fine-tune.
+- Why Recall@10 specifically resists both softer aggregation and (mostly)
+  the fusion is still not understood mechanistically — worth a slice-level
+  look (which holdout queries lose rank, and why) before trusting the
+  fusion result fully.
