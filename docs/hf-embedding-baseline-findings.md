@@ -28,6 +28,7 @@ own right.
 | twotower run_001 | 0.5784 | 0.2829 | — | Our fine-tune, overfit (see `possible-bugs.md` #4) |
 | Frozen BERT | 0.4595 | 0.1371 | — | Worse than chance |
 | NV-Embed-v2 | 0.5034 (near chance) | 0.1092 | CC-BY-NC-4.0 (non-commercial) | Caveat below — likely understated |
+| zembed-1-embedding | 0.5052 (near chance) | 0.0643 (worst) | Apache 2.0 | Genuine result, no plumbing issue found — see below |
 
 ## What we built
 
@@ -85,6 +86,18 @@ shows up the same way:
    here ran on A100-40GB instead (documented in
    `docs/modal-training-guide.md`).
 
+4. **A fourth calling convention: `encode_query()`/`.encode_document()`
+   methods instead of `.encode(texts, prompt_name=...)`.**
+   `zeroentropy/zembed-1-embedding` (4B, Apache 2.0, Qwen3-4B-based) uses
+   the same method-based convention as `voyage-4-nano`'s existing custom
+   encoder rather than sentence-transformers' generic `prompt_name` API.
+   Added `ModelSpec.uses_encode_methods` to `HFEmbeddingEncoder` to
+   dispatch to `model.encode_query`/`model.encode_document` when set,
+   rather than writing a whole separate encoder class (unlike BGE-en-ICL,
+   this only needed a one-line branch — still a sentence-transformers
+   model underneath, just a different call surface). Ran cleanly on the
+   default A10G (4B fits comfortably, no A100 needed).
+
 ## Reading the results
 
 - **Qwen3-Embedding-8B winning the classification task but not the
@@ -102,6 +115,15 @@ shows up the same way:
 - **BGE-en-ICL's strong retrieval, weaker classification** is a genuinely
   new data point (not an artifact of how we ran it) worth remembering
   alongside Voyage-4-large as a retrieval-strength option.
+- **zembed-1-embedding scored near-chance on both tasks (0.5052 AUC, worst
+  retrieval MRR of anything tested)** despite being a purpose-built,
+  purpose-trained retrieval model on a similar Qwen3 base to the
+  best-performing Qwen3-Embedding-8B. No plumbing issue was found — the
+  run completed cleanly with sane (non-degenerate) score distributions, so
+  this reads as a genuine mismatch between zembed-1's training domain and
+  this project's networking-intro-matching task, not a harness bug. Worth
+  a second look only if there's reason to think our `encode_query`/
+  `encode_document` usage differs from its intended calling convention.
 
 ## What's left
 

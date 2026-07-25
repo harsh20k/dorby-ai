@@ -132,14 +132,24 @@ class HFEmbeddingEncoder:
             return np.load(cache_path)
 
         prompt_name = self.spec.query_prompt_name if role == "query" else None
-        raw = self.model.encode(
-            texts_list,
-            prompt_name=prompt_name,
-            batch_size=batch_size,
-            show_progress_bar=show_progress,
-            normalize_embeddings=True,
-            convert_to_numpy=True,
-        )
+        if self.spec.uses_encode_methods:
+            encode_fn = self.model.encode_query if role == "query" else self.model.encode_document
+            raw = encode_fn(
+                texts_list,
+                batch_size=batch_size,
+                show_progress_bar=show_progress,
+                normalize_embeddings=True,
+                convert_to_numpy=True,
+            )
+        else:
+            raw = self.model.encode(
+                texts_list,
+                prompt_name=prompt_name,
+                batch_size=batch_size,
+                show_progress_bar=show_progress,
+                normalize_embeddings=True,
+                convert_to_numpy=True,
+            )
         matrix = np.asarray(raw, dtype=np.float32)
         if matrix.ndim == 1:
             matrix = matrix[None, :]
