@@ -373,7 +373,7 @@ python -m synth_pipeline.pairing \
 # side-by-side graph: real pairs | this batch
 python scripts/build_real_pairs_graph.py \
   --compare artifacts/pairing/pair_test_001 \
-  --out docs/pairs-comparison-graph.html
+  --out docs/html/pairs-comparison-graph.html
 
 # verification add-on, run after building a batch (not a gate)
 python scripts/verify_pairing_scorer.py

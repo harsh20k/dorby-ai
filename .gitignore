@@ -38,5 +38,5 @@ wandb/
 # Lean Context
 .lean-ctx/
 # generated graph visualizations (build artifacts; rebuild with scripts/build_real_pairs_graph.py)
-docs/real-pairs-graph.html
-docs/pairs-comparison-graph.html
+docs/html/real-pairs-graph.html
+docs/html/pairs-comparison-graph.html
