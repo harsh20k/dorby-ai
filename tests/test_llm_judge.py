@@ -137,19 +137,21 @@ def test_cache_round_trips_and_prevents_repeat_calls(tmp_path, monkeypatch):
 
     calls: list[str] = []
 
-    def fake(*, system, user, model, temperature, api_key, base_url, run_tags=None):
+    def fake(*, system, user, model, temperature, api_key, base_url, max_tokens=None, run_tags=None):
         calls.append(user)
         return {"match": "yes", "confidence": 70, "reasoning": "r"}
 
     monkeypatch.setattr(judge_mod, "complete_json", fake)
 
+    def make_call_fn(system, user):
+        return judge_mod.make_openrouter_call_fn(
+            system=system, user=user, model="m", temperature=0.0, api_key="k", base_url="http://x"
+        )
+
     requests = [("k1", "sys", "u1"), ("k2", "sys", "u2")]
-    kwargs = dict(
-        model="m", temperature=0.0, api_key="k", base_url="http://x", workers=2
-    )
 
     cache = VerdictCache(tmp_path / "v.json")
-    verdicts, errors = judge_all(requests, cache=cache, **kwargs)
+    verdicts, errors = judge_all(requests, make_call_fn=make_call_fn, cache=cache, workers=2)
     assert not errors
     assert set(verdicts) == {"k1", "k2"}
     assert len(calls) == 2
@@ -157,16 +159,38 @@ def test_cache_round_trips_and_prevents_repeat_calls(tmp_path, monkeypatch):
     # Fresh cache object reading the same file: no further API calls.
     reloaded = VerdictCache(tmp_path / "v.json")
     assert len(reloaded) == 2
-    verdicts2, errors2 = judge_all(requests, cache=reloaded, **kwargs)
+    verdicts2, errors2 = judge_all(requests, make_call_fn=make_call_fn, cache=reloaded, workers=2)
     assert not errors2
     assert len(calls) == 2, "cache hit still called the API"
     assert verdicts2["k1"]["match"] == "yes"
 
 
+def test_openrouter_call_fn_passes_a_capped_max_tokens(monkeypatch):
+    """Regression test for the credit-preflight incident: an unset max_tokens
+    made OpenRouter reserve against the model's absolute ceiling and reject a
+    short JSON completion as unaffordable. The call must always cap it."""
+    import baselines.llm_judge.judge as judge_mod
+
+    seen = {}
+
+    def fake(*, system, user, model, temperature, api_key, base_url, max_tokens=None, run_tags=None):
+        seen["max_tokens"] = max_tokens
+        return {"match": "yes", "confidence": 70}
+
+    monkeypatch.setattr(judge_mod, "complete_json", fake)
+
+    call_fn = judge_mod.make_openrouter_call_fn(
+        system="s", user="u", model="m", temperature=0.0, api_key="k", base_url="http://x"
+    )
+    call_fn()
+    assert seen["max_tokens"] == judge_mod.DEFAULT_MAX_TOKENS
+    assert seen["max_tokens"] is not None
+
+
 def test_judge_all_reports_failures_without_aborting(tmp_path, monkeypatch):
     import baselines.llm_judge.judge as judge_mod
 
-    def fake(*, system, user, model, temperature, api_key, base_url, run_tags=None):
+    def fake(*, system, user, model, temperature, api_key, base_url, max_tokens=None, run_tags=None):
         if user == "bad":
             raise RuntimeError("upstream 500")
         return {"match": "no", "confidence": 60}
@@ -174,12 +198,14 @@ def test_judge_all_reports_failures_without_aborting(tmp_path, monkeypatch):
     monkeypatch.setattr(judge_mod, "complete_json", fake)
     monkeypatch.setattr(judge_mod.time, "sleep", lambda _s: None)
 
+    def make_call_fn(system, user):
+        return judge_mod.make_openrouter_call_fn(
+            system=system, user=user, model="m", temperature=0.0, api_key="k", base_url="http://x"
+        )
+
     verdicts, errors = judge_all(
         [("ok", "sys", "good"), ("bad", "sys", "bad")],
-        model="m",
-        temperature=0.0,
-        api_key="k",
-        base_url="http://x",
+        make_call_fn=make_call_fn,
         cache=VerdictCache(tmp_path / "v.json"),
         workers=2,
         max_attempts=2,
@@ -249,3 +275,110 @@ def test_decision_metrics_matches_pair_accuracy_at_half():
         np.array([verdict_to_score(v) for v in neg]),
     )
     assert d["accuracy"] == pytest.approx(p["accuracy_at_0.5"])
+
+
+# --------------------------------------------------------------------------
+# Bedrock backend
+# --------------------------------------------------------------------------
+
+
+class _FakeBedrockClient:
+    """Stands in for a boto3 bedrock-runtime client's .converse()."""
+
+    def __init__(self, responses):
+        # list of either a converse-shaped dict to return, or an Exception to raise.
+        self._responses = list(responses)
+        self.calls = []
+
+    def converse(self, **kwargs):
+        self.calls.append(kwargs)
+        item = self._responses.pop(0)
+        if isinstance(item, Exception):
+            raise item
+        return item
+
+
+def _converse_response(text: str) -> dict:
+    return {"output": {"message": {"content": [{"text": text}]}}}
+
+
+def _validation_exception() -> Exception:
+    from botocore.exceptions import ClientError
+
+    return ClientError(
+        error_response={"Error": {"Code": "ValidationException", "Message": "not supported"}},
+        operation_name="Converse",
+    )
+
+
+def test_call_bedrock_verdict_uses_structured_output_when_supported():
+    from baselines.llm_judge.bedrock_backend import call_bedrock_verdict
+
+    client = _FakeBedrockClient(
+        [_converse_response('{"reasoning": "ok", "match": "yes", "confidence": 80}')]
+    )
+    result = call_bedrock_verdict(
+        client, model_id="m", system="sys", user="usr", temperature=0.0, max_tokens=200
+    )
+    assert result == {"reasoning": "ok", "match": "yes", "confidence": 80}
+    assert len(client.calls) == 1
+    assert "outputConfig" in client.calls[0]
+
+
+def test_call_bedrock_verdict_falls_back_on_validation_exception():
+    """A model that rejects structured-output enforcement (like Llama 3.3 70B
+    and every Nova variant, per docs/profile-generation-local-and-bedrock.md)
+    must still produce a usable verdict via a plain-JSON-prompted retry,
+    rather than the whole pair failing outright."""
+    from baselines.llm_judge.bedrock_backend import call_bedrock_verdict
+
+    client = _FakeBedrockClient(
+        [
+            _validation_exception(),
+            _converse_response('{"reasoning": "fallback", "match": "no", "confidence": 65}'),
+        ]
+    )
+    result = call_bedrock_verdict(
+        client, model_id="m", system="sys", user="usr", temperature=0.0, max_tokens=200
+    )
+    assert result == {"reasoning": "fallback", "match": "no", "confidence": 65}
+    assert len(client.calls) == 2
+    # The fallback call must not retry structured output — that would just
+    # raise the same ValidationException again.
+    assert "outputConfig" not in client.calls[1]
+
+
+def test_call_bedrock_verdict_reraises_non_validation_errors():
+    """A throttling/network error is retryable by judge_pair's caller, not
+    something this function should silently paper over with a fallback."""
+    from baselines.llm_judge.bedrock_backend import call_bedrock_verdict
+    from botocore.exceptions import ClientError
+
+    throttling = ClientError(
+        error_response={"Error": {"Code": "ThrottlingException", "Message": "slow down"}},
+        operation_name="Converse",
+    )
+    client = _FakeBedrockClient([throttling])
+    with pytest.raises(ClientError):
+        call_bedrock_verdict(
+            client, model_id="m", system="sys", user="usr", temperature=0.0, max_tokens=200
+        )
+
+
+def test_call_bedrock_verdict_handles_free_text_json_in_fallback():
+    """The fallback path must parse the same lenient way the OpenRouter path
+    does (code fences, surrounding prose), not require exact JSON."""
+    from baselines.llm_judge.bedrock_backend import call_bedrock_verdict
+
+    client = _FakeBedrockClient(
+        [
+            _validation_exception(),
+            _converse_response(
+                'Here is my answer:\n```json\n{"reasoning": "r", "match": "yes", "confidence": 90}\n```'
+            ),
+        ]
+    )
+    result = call_bedrock_verdict(
+        client, model_id="m", system="sys", user="usr", temperature=0.0, max_tokens=200
+    )
+    assert result["match"] == "yes"

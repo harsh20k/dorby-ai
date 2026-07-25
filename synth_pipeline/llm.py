@@ -20,6 +20,7 @@ def _chat_model(
     *,
     api_key: str,
     base_url: str,
+    max_tokens: int | None = None,
 ):
     try:
         from langchain_openai import ChatOpenAI
@@ -32,11 +33,17 @@ def _chat_model(
             "Missing API key. Set OPENROUTER_API_KEY in .env "
             "(or OPENAI_API_KEY for an OpenAI-compatible proxy)."
         )
+    # Unset, this defaults to the model's absolute ceiling (e.g. 65536), and
+    # OpenRouter's credit check is a preflight reservation against *that*
+    # figure rather than actual usage — a short JSON-object completion can
+    # get rejected as unaffordable purely because the ceiling wasn't capped.
+    # See baselines/llm_judge/judge.py's DEFAULT_MAX_TOKENS for the incident.
     return ChatOpenAI(
         model=model,
         temperature=temperature,
         api_key=api_key,
         base_url=base_url,
+        max_tokens=max_tokens,
         default_headers={
             # Optional OpenRouter attribution headers
             "HTTP-Referer": "https://github.com/harsh20k/dorby-ai",
@@ -58,6 +65,7 @@ def complete_json(
     cfg: PipelineConfig | None = None,
     run_metadata: dict[str, Any] | None = None,
     run_tags: list[str] | None = None,
+    max_tokens: int | None = None,
 ) -> dict[str, Any]:
     if dry_run:
         if dry_run_payload is None:
@@ -70,7 +78,7 @@ def complete_json(
     api_key = api_key or ""
     base_url = base_url or "https://openrouter.ai/api/v1"
 
-    llm = _chat_model(model, temperature, api_key=api_key, base_url=base_url)
+    llm = _chat_model(model, temperature, api_key=api_key, base_url=base_url, max_tokens=max_tokens)
     config: dict[str, Any] = {}
     if run_metadata:
         config["metadata"] = run_metadata

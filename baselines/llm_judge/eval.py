@@ -21,17 +21,20 @@ import json
 import os
 import sys
 from pathlib import Path
-from typing import Any
+from typing import Any, Callable
 
 import numpy as np
 
 from baselines.bert_frozen.text import profile_to_text
 from baselines.llm_judge.judge import (
     DEFAULT_BASE_URL,
+    DEFAULT_MAX_TOKENS,
     DEFAULT_MODEL,
     VerdictCache,
     judge_all,
     load_env_file,
+    make_bedrock_call_fn,
+    make_openrouter_call_fn,
     model_slug,
     prompt_hash,
     verdict_to_score,
@@ -85,8 +88,7 @@ def run_eval(
     max_failures: int,
     artifacts_dir: Path,
     split_path: Path | None,
-    api_key: str,
-    base_url: str,
+    make_call_fn: Callable[[str, str], Any],
 ) -> dict[str, Any]:
     print(f"model:   {model}")
     print(f"variant: {variant} (searchQuery withheld from the model)")
@@ -114,10 +116,7 @@ def run_eval(
 
     verdicts, errors = judge_all(
         requests,
-        model=model,
-        temperature=temperature,
-        api_key=api_key,
-        base_url=base_url,
+        make_call_fn=make_call_fn,
         cache=cache,
         workers=workers,
         max_attempts=max_attempts,
@@ -257,8 +256,30 @@ def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
         "docs/baseline-results-holdout.md.",
     )
     p.add_argument("--split-path", type=Path, default=None)
-    p.add_argument("--model", default=DEFAULT_MODEL)
-    p.add_argument("--base-url", default=None, help=f"default {DEFAULT_BASE_URL}")
+    p.add_argument(
+        "--backend",
+        choices=["openrouter", "bedrock"],
+        default="openrouter",
+        help="'openrouter' uses OPENROUTER_API_KEY; 'bedrock' uses --aws-profile/--aws-region "
+        "credentials and boto3's Converse API (see baselines/llm_judge/bedrock_backend.py).",
+    )
+    p.add_argument(
+        "--model",
+        default=None,
+        help=f"OpenRouter model id (default {DEFAULT_MODEL}) or Bedrock model id "
+        "(e.g. google.gemma-3-27b-it) depending on --backend.",
+    )
+    p.add_argument("--base-url", default=None, help=f"OpenRouter only; default {DEFAULT_BASE_URL}")
+    p.add_argument("--aws-profile", default="tf_provisioner", help="Bedrock only.")
+    p.add_argument("--aws-region", default="us-east-1", help="Bedrock only.")
+    p.add_argument(
+        "--max-tokens",
+        type=int,
+        default=DEFAULT_MAX_TOKENS,
+        help="Output token cap. The verdict schema needs a few hundred at most — "
+        "left high, OpenRouter's credit preflight check reserves against the "
+        "model's absolute ceiling instead of real usage (see docs/llm-judge-experiment.md).",
+    )
     p.add_argument(
         "--variant",
         choices=sorted(SYSTEM_PROMPTS),
@@ -297,14 +318,51 @@ def main(argv: list[str] | None = None) -> int:
     args = parse_args(argv)
     load_env_file(args.env_file)
 
-    api_key = os.getenv("OPENROUTER_API_KEY") or os.getenv("OPENAI_API_KEY") or ""
-    if not api_key:
-        print(
-            "error: no OPENROUTER_API_KEY (or OPENAI_API_KEY) in the environment. "
-            "Pass --env-file /path/to/.env.",
-            file=sys.stderr,
-        )
-        return 2
+    if args.backend == "openrouter":
+        model = args.model or DEFAULT_MODEL
+        api_key = os.getenv("OPENROUTER_API_KEY") or os.getenv("OPENAI_API_KEY") or ""
+        if not api_key:
+            print(
+                "error: no OPENROUTER_API_KEY (or OPENAI_API_KEY) in the environment. "
+                "Pass --env-file /path/to/.env.",
+                file=sys.stderr,
+            )
+            return 2
+        base_url = args.base_url or DEFAULT_BASE_URL
+
+        def make_call_fn(system: str, user: str):
+            return make_openrouter_call_fn(
+                system=system,
+                user=user,
+                model=model,
+                temperature=args.temperature,
+                api_key=api_key,
+                base_url=base_url,
+                max_tokens=args.max_tokens,
+            )
+
+    else:
+        if not args.model:
+            print("error: --model is required with --backend bedrock", file=sys.stderr)
+            return 2
+        model = args.model
+        from baselines.llm_judge.bedrock_backend import make_client
+
+        try:
+            client = make_client(profile=args.aws_profile, region=args.aws_region)
+        except Exception as exc:  # noqa: BLE001
+            print(f"error: could not create a Bedrock client: {exc}", file=sys.stderr)
+            return 2
+
+        def make_call_fn(system: str, user: str):
+            return make_bedrock_call_fn(
+                client=client,
+                system=system,
+                user=user,
+                model_id=model,
+                temperature=args.temperature,
+                max_tokens=args.max_tokens,
+            )
 
     # The split is deliberately *not* part of the artifacts path: verdict cache
     # keys are pair-identity + prompt-hash, so they are split-independent, and
@@ -312,7 +370,7 @@ def main(argv: list[str] | None = None) -> int:
     # `--split all` is a pure cache hit instead of re-paying for 69 pairs.
     # Only metrics.json is split-scoped.
     artifacts_dir = args.artifacts_dir or Path("artifacts/llm_judge") / (
-        f"{model_slug(args.model)}_{args.variant}"
+        f"{args.backend}_{model_slug(model)}_{args.variant}"
     )
     artifacts_dir.mkdir(parents=True, exist_ok=True)
 
@@ -320,7 +378,7 @@ def main(argv: list[str] | None = None) -> int:
         data_dir=args.data_dir,
         split=args.split,
         variant=args.variant,
-        model=args.model,
+        model=model,
         temperature=args.temperature,
         max_field=args.max_field,
         workers=args.workers,
@@ -328,9 +386,9 @@ def main(argv: list[str] | None = None) -> int:
         max_failures=args.max_failures,
         artifacts_dir=artifacts_dir,
         split_path=args.split_path,
-        api_key=api_key,
-        base_url=args.base_url or DEFAULT_BASE_URL,
+        make_call_fn=make_call_fn,
     )
+    metrics["backend"] = args.backend
     print_report(metrics)
 
     out_path = artifacts_dir / f"metrics_{args.split}.json"

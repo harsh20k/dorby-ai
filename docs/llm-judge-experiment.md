@@ -16,17 +16,36 @@ asserts the query text appears in neither the user prompt nor any system
 prompt, because a regression there would silently turn this into a much easier
 experiment.
 
-Model: `google/gemini-3.1-flash-lite` via OpenRouter, temperature 0. Output is
-a JSON object with `reasoning` (written before deciding), `match` (yes/no) and
-`confidence` (0-100). Cost was ~$0.10 for all 200 pairs; prompts average 18.6k
-characters (~4.6k tokens), max 64k.
+Two call paths, sharing one prompt/scoring pipeline:
+- **OpenRouter** (`--backend openrouter`, default) — any OpenRouter model id.
+- **AWS Bedrock** (`--backend bedrock`) — any Bedrock model id, via the
+  `tf_provisioner` AWS account already used for this project's profile
+  generation. Structured JSON-schema output where the model supports it,
+  falling back to plain-text-prompted JSON otherwise (see
+  `baselines/llm_judge/bedrock_backend.py`).
+
+Four (model, backend) combinations tested so far, all temperature 0, output
+capped at 600 tokens (see "Cost-optimization note" below):
+
+| Model | Backend | ~Cost for 200 pairs |
+|---|---|---|
+| `google/gemini-3.1-flash-lite` | OpenRouter | ~$0.10 |
+| `google.gemma-3-27b-it` | Bedrock | ~$0.03 |
+| `qwen.qwen3-32b-v1:0` | Bedrock | ~$0.03 |
+
+Output is a JSON object with `reasoning` (written before deciding), `match`
+(yes/no) and `confidence` (0-100). Prompts average 18.6k characters (~4.6k
+tokens), max 64k.
 
 ## Headline result
 
-**On the matched 69-pair holdout, the LLM judge beats Voyage-4-large —
-Boardy's production model — on pair AUC (0.6358 vs 0.6086) while being denied
-the search query that Voyage gets. Its hard-negative-slice AUC of 0.6466 is
-the best figure of any model tested in this project.**
+**On the matched 69-pair holdout, the best LLM judge (`gemini-3.1-flash-lite`,
+naive framing) beats Voyage-4-large — Boardy's production model — on pair AUC
+(0.6358 vs 0.6086) while being denied the search query that Voyage gets. Its
+hard-negative-slice AUC of 0.6466 is the best figure of any model tested in
+this project. Two cheaper open-weight judges tested since (Gemma 3 27B,
+Qwen3-32B, both via Bedrock) land lower on AUC but match or beat it on
+hard-negative AUC — see "Which judge model?" below.**
 
 Matched frozen 69-pair holdout, so every row is the same population
 (`docs/baseline-results-holdout.md` is the source for the non-LLM rows):
@@ -35,17 +54,44 @@ Matched frozen 69-pair holdout, so every row is the same population
 |---|---|---|---|---|---|
 | Qwen3-Embedding-8B (open) | **0.6595** | 0.6259 | 0.7586 | 0.5072 | yes |
 | Hybrid TF-IDF+nano | 0.6397 | 0.6034 | 0.7172 | 0.5072 | yes |
-| **LLM judge (naive, no query)** | **0.6358** | **0.6466** | 0.5638 | **0.5942** | **no** |
+| **LLM judge: gemini-3.1-flash-lite (naive)** | **0.6358** | **0.6466** | 0.5638 | **0.5942** | **no** |
 | Voyage-4-large (production) | 0.6086 | 0.6017 | 0.6000 | 0.4348 | yes |
 | TF-IDF (lexical) | 0.5922 | 0.5017 | 0.7552 | 0.5797 | yes |
-| LLM judge (calibrated, no query) | 0.5901 | 0.5879 | 0.5310 | 0.5652 | no |
+| LLM judge: gemini-3.1-flash-lite (calibrated) | 0.5901 | 0.5879 | 0.5310 | 0.5652 | no |
+| LLM judge: gemma-3-27b-it (Bedrock, naive) | 0.5823 | 0.6216 | 0.4931 | 0.5507 | no |
+| LLM judge: qwen3-32b (Bedrock, naive) | 0.5802 | 0.6224 | 0.4966 | 0.5072 | no |
 | twotower arm_a_real_only | 0.5793 | 0.5000 | 0.6552 | 0.4203 | yes |
 | Voyage-4-nano | 0.5793 | 0.5707 | 0.6207 | 0.4348 | yes |
 | twotower run_001 | 0.5784 | 0.4845 | 0.6931 | 0.4203 | yes |
 | Frozen BERT | 0.4595 | 0.4224 | 0.6379 | 0.4203 | yes |
 
-On all 200 real pairs (train + holdout), the naive judge scores pair AUC
-0.6177, AP 0.5804, decision accuracy 0.6050, F1 0.6326.
+On all 200 real pairs (train + holdout), naive `gemini-3.1-flash-lite` scores
+pair AUC 0.6177, AP 0.5804, decision accuracy 0.6050, F1 0.6326.
+
+## Which judge model?
+
+All four (model, framing) combinations land in the same 0.58–0.64 AUC band —
+comfortably above chance, none close to Qwen3-Embedding-8B's ceiling.
+`gemini-3.1-flash-lite` is the clear leader on pair AUC (0.6358), but the two
+Bedrock models actually edge it out on **hard-negative** AUC (0.6216 / 0.6224
+vs 0.6466 — flash-lite is still ahead here too, but the margin over Gemma/Qwen
+is much smaller than the overall-AUC gap suggests) while being noticeably
+weaker on **easy negatives** (0.49–0.50 vs 0.56). Read together with finding
+#1 below, that's consistent with the smaller models being *less* swayed by
+surface lexical similarity, not more — they just don't yet convert that into
+better overall separation.
+
+The three models also disagree on how often to say "yes": flash-lite 56.5%,
+Gemma 71–75%, Qwen 68–70%. Gemma and Qwen over-trigger more, which is the more
+likely explanation for their weaker easy-neg numbers (easy negatives are
+exactly the pairs where a low-lexical-overlap heuristic would say "no"
+confidently — a judge that defaults toward "yes" gives that up).
+
+Cost-wise the Bedrock models are roughly 3x cheaper per 200-pair run, so a
+larger model in the same families (Bedrock also has larger DeepSeek, Mistral,
+and Claude options — see the model list this repo already surveyed) is a
+cheap next experiment if the goal is closing the gap to flash-lite rather than
+just adding cost diversity.
 
 ## The four findings that matter
 
@@ -122,10 +168,28 @@ an explicit paired comparison would be the thing to try.
 - Only `gemini-3.1-flash-lite` was tested. A frontier model would be the
   obvious next probe, and is a `--model` swap.
 
+## Cost-optimization note: the `max_tokens` incident
+
+An early attempt at running `google/gemini-3.6-flash` and `openai/gpt-5.5` as
+additional judges via OpenRouter failed partway through both times with
+`402: insufficient credits` — not because the account was actually out of
+money, but because neither call capped `max_tokens`. OpenRouter's credit
+check is a **preflight reservation against the requested ceiling** (the
+model's absolute max, e.g. 65,536 tokens), not against real usage, so every
+call reserved against 65k tokens even though the real completion is a
+~100-token JSON object. `synth_pipeline.llm.complete_json` now accepts an
+explicit `max_tokens` (plumbed through from `--max-tokens`, default 600 —
+generous for the `reasoning`/`match`/`confidence` schema) so the preflight
+check reserves a sane amount instead. The same cap applies to the Bedrock
+path via `inferenceConfig.maxTokens`. Both partial runs' successful verdicts
+stayed cached rather than being discarded; resuming them (with the cap in
+place) is a `--model` swap away whenever there's appetite to spend on a
+frontier-tier point.
+
 ## Reproducing
 
 ```bash
-# 200 real pairs, the naive framing (the headline row)
+# 200 real pairs, the naive framing (the headline row), via OpenRouter
 python -m baselines.llm_judge.eval --data-dir data --variant naive --split all
 
 # matched 69-pair holdout — free after the run above, the verdict cache is
@@ -135,8 +199,17 @@ python -m baselines.llm_judge.eval --data-dir data --variant naive --split holdo
 # the framing comparison
 python -m baselines.llm_judge.eval --data-dir data --variant calibrated --split all
 
-# another model
+# another OpenRouter model
 python -m baselines.llm_judge.eval --data-dir data --model anthropic/claude-sonnet-4.5
+
+# a Bedrock model instead — uses the tf_provisioner AWS account, no OpenRouter
+# credits needed. See `aws bedrock list-foundation-models` for what's available;
+# not every model supports Bedrock's native structured-output enforcement, and
+# call_bedrock_verdict falls back to plain-text JSON parsing when it doesn't.
+python -m baselines.llm_judge.eval --data-dir data --backend bedrock \
+  --model google.gemma-3-27b-it --variant naive --split all
+python -m baselines.llm_judge.eval --data-dir data --backend bedrock \
+  --model qwen.qwen3-32b-v1:0 --variant naive --split all
 
 # from a git worktree, data/ and .env live in the main checkout
 python -m baselines.llm_judge.eval \
@@ -144,11 +217,18 @@ python -m baselines.llm_judge.eval \
   --env-file /Users/harsh/Artifacts/dorby-ai/.env
 ```
 
-Verdicts cache to `artifacts/llm_judge/<model>_<variant>/verdicts.json`, metrics
-to `metrics_<split>.json` in the same directory. Editing a prompt changes its
-hash and correctly invalidates affected entries — the stale-cache failure mode
-already hit once in this repo (see the `cache_name` note under "Pairing
-standalone profiles" in CLAUDE.md), so it is tested here.
+Verdicts cache to `artifacts/llm_judge/<backend>_<model>_<variant>/verdicts.json`,
+metrics to `metrics_<split>.json` in the same directory. Editing a prompt
+changes its hash and correctly invalidates affected entries — the stale-cache
+failure mode already hit once in this repo (see the `cache_name` note under
+"Pairing standalone profiles" in CLAUDE.md), so it is tested here.
+
+Bedrock usage across every model tested (tokens, invocations, errors,
+latency, and an estimated $/hr per priced model) is visible in the
+`dorby-bedrock-profile-gen` CloudWatch dashboard — regenerate it after adding
+a new priced model via `scripts/update_bedrock_dashboard.py` (token/invocation/
+latency widgets pick up new models automatically via `SEARCH()`; only the
+cost widget needs a `MODEL_PRICING` entry).
 
 ## Suggested next steps
 

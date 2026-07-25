@@ -25,6 +25,12 @@ from synth_pipeline.llm import complete_json
 
 DEFAULT_MODEL = "google/gemini-3.1-flash-lite"
 DEFAULT_BASE_URL = "https://openrouter.ai/api/v1"
+# The verdict schema (reasoning + match + confidence) needs a few hundred
+# tokens at most. Left unset, OpenRouter's credit check reserves against the
+# model's absolute ceiling (e.g. 65536) rather than actual usage, and can
+# reject an account as "can't afford it" for a completion that would really
+# cost a few cents — see docs/llm-judge-experiment.md's cost-optimization note.
+DEFAULT_MAX_TOKENS = 600
 
 
 def model_slug(model: str) -> str:
@@ -141,7 +147,16 @@ class VerdictCache:
             return len(self._data)
 
 
-def _call_once(
+CallFn = Callable[[], dict[str, Any]]
+"""Zero-arg callable returning a raw (unvalidated) model JSON object.
+
+Backend-agnostic on purpose: OpenRouter and Bedrock have unrelated client
+shapes, so the boundary between "make an API call" and "retry / validate /
+cache the result" lives here rather than in a shared call signature.
+"""
+
+
+def make_openrouter_call_fn(
     *,
     system: str,
     user: str,
@@ -149,41 +164,54 @@ def _call_once(
     temperature: float,
     api_key: str,
     base_url: str,
-) -> dict[str, Any]:
-    raw = complete_json(
-        system=system,
-        user=user,
-        model=model,
-        temperature=temperature,
-        api_key=api_key,
-        base_url=base_url,
-        run_tags=["llm-judge-experiment"],
-    )
-    return parse_verdict(raw)
+    max_tokens: int = DEFAULT_MAX_TOKENS,
+) -> CallFn:
+    def call() -> dict[str, Any]:
+        return complete_json(
+            system=system,
+            user=user,
+            model=model,
+            temperature=temperature,
+            api_key=api_key,
+            base_url=base_url,
+            max_tokens=max_tokens,
+            run_tags=["llm-judge-experiment"],
+        )
+
+    return call
 
 
-def judge_pair(
+def make_bedrock_call_fn(
     *,
+    client: Any,
     system: str,
     user: str,
-    model: str,
+    model_id: str,
     temperature: float,
-    api_key: str,
-    base_url: str,
-    max_attempts: int = 4,
-) -> dict[str, Any]:
+    max_tokens: int = DEFAULT_MAX_TOKENS,
+) -> CallFn:
+    from baselines.llm_judge.bedrock_backend import call_bedrock_verdict
+
+    def call() -> dict[str, Any]:
+        return call_bedrock_verdict(
+            client,
+            model_id=model_id,
+            system=system,
+            user=user,
+            temperature=temperature,
+            max_tokens=max_tokens,
+        )
+
+    return call
+
+
+def judge_pair(*, call_fn: CallFn, max_attempts: int = 4) -> dict[str, Any]:
     """One verdict, retrying transient API errors and malformed JSON."""
     last_exc: Exception | None = None
     for attempt in range(max_attempts):
         try:
-            verdict = _call_once(
-                system=system,
-                user=user,
-                model=model,
-                temperature=temperature,
-                api_key=api_key,
-                base_url=base_url,
-            )
+            raw = call_fn()
+            verdict = parse_verdict(raw)
             verdict["attempts"] = attempt + 1
             return verdict
         except Exception as exc:  # noqa: BLE001 — API/parse errors both retryable
@@ -196,10 +224,7 @@ def judge_pair(
 def judge_all(
     requests: list[tuple[str, str, str]],
     *,
-    model: str,
-    temperature: float,
-    api_key: str,
-    base_url: str,
+    make_call_fn: Callable[[str, str], CallFn],
     cache: VerdictCache,
     workers: int = 8,
     max_attempts: int = 4,
@@ -209,6 +234,8 @@ def judge_all(
 
     ``key`` is the cache key and the identity used by the caller to line
     verdicts back up with pairs. Cache hits never re-call the API.
+    ``make_call_fn(system, user)`` binds one request to whichever backend
+    (OpenRouter, Bedrock) the caller configured.
     """
     verdicts: dict[str, dict[str, Any]] = {}
     errors: dict[str, str] = {}
@@ -233,12 +260,7 @@ def judge_all(
         futures = {
             pool.submit(
                 judge_pair,
-                system=system,
-                user=user,
-                model=model,
-                temperature=temperature,
-                api_key=api_key,
-                base_url=base_url,
+                call_fn=make_call_fn(system, user),
                 max_attempts=max_attempts,
             ): key
             for key, system, user in pending
