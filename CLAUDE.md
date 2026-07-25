@@ -45,6 +45,13 @@ now has two working generators — local Ollama and AWS Bedrock — see
 "Standalone profile generation" below and
 `docs/profile-generation-local-and-bedrock.md`. Pairing/labeling those
 profiles into a new pos/neg dataset is designed but not yet built.
+**Separately: a new generalizable open-weight embedding baseline**
+(`baselines/hf_embedding/`, see "Open-weight HF embedding baselines" below)
+found that **Qwen3-Embedding-8B (Apache 2.0, free) beats Voyage-4-large —
+Boardy's own production model — on the core accept/decline task** (pair
+ROC-AUC 0.6595 vs 0.6086), the first model of any kind in this project to
+do so. Full results and two real model-loading compatibility issues found
+and fixed along the way in `docs/hf-embedding-baseline-findings.md`.
 
 ## Setup
 
@@ -122,6 +129,42 @@ profile.
 Note: `voyage-4-nano` needs `transformers>=4.51,<5` (5.x fails to load the
 remote code); requirements.txt already pins this. Cold MPS encode for nano
 takes ~40+ min — subsequent runs hit the artifact cache.
+
+### Open-weight HF embedding baselines (`baselines/hf_embedding/` + Modal)
+
+Generic baseline for any sentence-transformers-loadable open-weight
+embedding model — testing a new one is a `--model` swap, not a new
+package. `models.py` holds a small per-model registry for quirks (query
+prompt name, `trust_remote_code`, Matryoshka truncation, which loading
+library/`transformers` version a model needs). Full findings, the
+compatibility issues hit, and what's left in
+`docs/hf-embedding-baseline-findings.md`.
+
+```bash
+# local (small models only, e.g. Arctic Embed / Qwen3-Embedding-0.6B)
+python -m baselines.hf_embedding.eval --model Snowflake/snowflake-arctic-embed-m --holdout-only --batch-size 8 --max-length 512
+
+# Modal GPU (models too large for local MPS, e.g. any 7-8B model)
+modal run baselines/hf_embedding/modal_eval.py --model Qwen/Qwen3-Embedding-8B --holdout-only --gpu A100-40GB --batch-size 2
+modal volume get dorby-hf-embedding-eval qwen_qwen3-embedding-8b_holdout ./artifacts/hf_embedding_qwen_qwen3-embedding-8b
+
+python scripts/export_baseline_results.py   # wire a new run into docs/baseline-results-holdout.md — register it in HOLDOUT_PATHS/HOLDOUT_LABELS first
+```
+
+**Finding so far: Qwen3-Embedding-8B (Apache 2.0, free) is the first model
+of any kind in this project to beat Boardy's own production model,
+Voyage-4-large, on the core accept/decline task** — pair ROC-AUC 0.6595 vs
+0.6086, also ahead of the previous leader (hybrid TF-IDF+nano, 0.6397).
+Voyage-4-large still leads on precise top-of-list retrieval (MRR 0.5287 vs
+0.4040); BGE-en-ICL turned out to be a strong retrieval model in its own
+right (MRR 0.5157, 2nd-best) despite middling classification. A10G (24GB)
+OOMs on any 7-8B model — use `--gpu A100-40GB`. Two models needed real
+compatibility fixes beyond the standard sentence-transformers path
+(NV-Embed-v2's stale `transformers` Cache API usage; BGE-en-ICL needing
+BAAI's own `FlagEmbedding` library instead) — both are now handled via
+`ModelSpec.requires_legacy_transformers` / `ModelSpec.loader`, see the
+findings doc for the full story before trusting NV-Embed-v2's number,
+which is a documented approximation.
 
 ### Synthetic pair generation (LangGraph + LangSmith)
 
@@ -457,6 +500,17 @@ flags (added to every baseline `eval.py`) — filters to the frozen 69-pair
 `eval_pair_ids` from `data/synthetic/seed_split.json`, so baseline and
 twotower holdout numbers are computed on an identical population. See
 "Two-tower LoRA fine-tune" below and `docs/baseline-results-holdout.md`.
+
+`baselines/hf_embedding/` is a fifth, differently-shaped package: instead of
+one model per package, it's one generic `encode.py`/`eval.py` pair
+parameterized by HF model id, for testing free/open-source embedders
+beyond the Voyage family (see "Open-weight HF embedding baselines" under
+Commands). `models.py`'s `MODEL_REGISTRY` holds per-model quirks; two
+models needed a genuinely different loading path beyond the default
+sentence-transformers one (a pinned-older-`transformers` image for
+NV-Embed-v2, BAAI's own `FlagEmbedding` library for BGE-en-ICL, both
+routed via `ModelSpec` fields) — see
+`docs/hf-embedding-baseline-findings.md` before adding another odd model.
 
 ### `synth_pipeline/` — LangGraph synthetic pair generator
 
