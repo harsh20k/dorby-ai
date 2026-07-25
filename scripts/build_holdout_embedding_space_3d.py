@@ -314,8 +314,8 @@ HTML = r"""<title>Holdout contacts in voyage-4-nano space</title>
 </style>
 
 <div class="bar">
-  <h1>Where the holdout lives in voyage-4-nano space</h1>
-  <span class="sub">115 contacts &middot; 951 <code style="font-family:var(--mono);font-size:12px">lookingFor</code> sections &middot; profile text only, no search query</span>
+  <h1>Our test profiles, whole and split by ask</h1>
+  <span class="sub">115 people &middot; 951 separate asks &middot; profile text only, no search query</span>
   <span class="spacer"></span>
   <span class="eyebrow" id="modelTag"></span>
 </div>
@@ -324,151 +324,150 @@ HTML = r"""<title>Holdout contacts in voyage-4-nano space</title>
   <canvas id="c"></canvas>
   <div class="rail">
     <div class="stat">
-      <span class="k eyebrow">Anchor &rarr; section similarity</span>
+      <span class="k eyebrow">Profile vs. its own asks</span>
       <span class="v" id="sWholeSec"></span>
-      <span class="n">Mean cosine between a contact&rsquo;s whole-profile vector and each of its own section vectors. Across <em>different</em> contacts it is only <span class="num" id="sAcross"></span>.</span>
+      <span class="n">How similar a single-ask version is to the full profile it came from, where 1 means identical. Two <em>different</em> people score just <span class="num" id="sAcross"></span>.</span>
     </div>
     <div class="rule"></div>
     <div class="stat">
-      <span class="k eyebrow">Constellation vs. cloud</span>
+      <span class="k eyebrow">How wide one person spreads</span>
       <span class="v" id="sRatio"></span>
-      <span class="n">A contact&rsquo;s section spread as a fraction of the distance between contacts. Sections stay firmly inside their own contact&rsquo;s neighbourhood.</span>
+      <span class="n">A person&rsquo;s cluster of dots, measured against the distance between people. Splitting keeps everything close to home.</span>
     </div>
     <div class="rule"></div>
     <div class="legend">
-      <div class="row"><span class="dot" style="background:var(--seeker)"></span> Seeker anchor <span class="num" id="lSeek" style="color:var(--muted)"></span></div>
-      <div class="row"><span class="dot" style="background:var(--candidate)"></span> Candidate anchor <span class="num" id="lCand" style="color:var(--muted)"></span></div>
-      <div class="row"><span class="dot" style="background:var(--both)"></span> Both roles</div>
-      <div class="row"><span class="dot hollow" style="color:var(--muted)"></span> One <code style="font-size:11px">lookingFor</code> section</div>
-      <div class="row"><span class="tether"></span> Section tethered to its anchor</div>
+      <div class="row"><span class="dot" style="background:var(--seeker)"></span> Person looking <span class="num" id="lSeek" style="color:var(--muted)"></span></div>
+      <div class="row"><span class="dot" style="background:var(--candidate)"></span> Person suggested <span class="num" id="lCand" style="color:var(--muted)"></span></div>
+      <div class="row"><span class="dot" style="background:var(--both)"></span> Both at once</div>
+      <div class="row"><span class="dot hollow" style="color:var(--muted)"></span> One thing they are asking for</div>
+      <div class="row"><span class="tether"></span> Ask, tied to its profile</div>
       <div class="row"><span class="wire" style="background:var(--pos)"></span> Good match <span class="num" id="lPos" style="color:var(--muted)"></span></div>
       <div class="row"><span class="wire" style="background:var(--neg)"></span> Bad match <span class="num" id="lNeg" style="color:var(--muted)"></span></div>
     </div>
     <div class="rule"></div>
-    <div class="note">First 3 PCA components of the shared 1024-d space, holding <span class="num" id="sEvr"></span> of total variance.</div>
+    <div class="note">The model describes each person with 1,024 numbers. This is the flattest 3D shadow of that, keeping <span class="num" id="sEvr"></span> of the detail &mdash; so treat it as a sketch, not a measurement.</div>
   </div>
 
   <div class="controls">
     <div class="ctl">
-      <label for="amp">Section spread</label>
+      <label for="amp">Spread asks apart</label>
       <input type="range" id="amp" min="1" max="12" step="0.5" value="1" />
       <span class="amp-val" id="ampVal">1.0&times;</span>
     </div>
-    <label class="toggle"><input type="checkbox" id="showSections" checked /> Sections</label>
+    <label class="toggle"><input type="checkbox" id="showSections" checked /> Asks</label>
     <label class="toggle"><input type="checkbox" id="showPairs" checked /> Match lines</label>
     <button class="reset" id="reset">Reset view</button>
-    <span class="hint">drag to rotate &middot; scroll to zoom &middot; click an anchor to isolate</span>
+    <span class="hint">drag to rotate &middot; scroll to zoom &middot; click a person to isolate them</span>
   </div>
 
   <div class="tip" id="tip"></div>
 </div>
 
 <div class="read">
-  <h2>What this is</h2>
-  <p>Every contact in the frozen 69-pair real holdout appears twice over. Once as an
-  <strong>anchor</strong> &mdash; their whole profile, serialised exactly as the baselines
-  serialise it, with the search query deliberately left out. And once per
-  <code>lookingFor</code> section &mdash; the same full profile with <code>lookingFor</code>
-  swapped down to a single one of its asks. That is the precise text variant the
-  sectioning experiment scores against, so this map shows the geometry that experiment
-  is actually operating on.</p>
-  <p>All 1,066 vectors were encoded in one <code>voyage-4-nano</code> pass on an L4, then
-  projected together through a single PCA so that a section&rsquo;s offset from its own
-  anchor is drawn on the same scale as the gap between two different contacts.</p>
+  <h2>What you are looking at</h2>
+  <p>Each of the 115 people in our 69-pair test set gets one <strong>big dot</strong>: their
+  whole profile, turned into a point by the model. Each separate thing they say they are
+  looking for gets its own <strong>small dot</strong>, made by taking that same profile and
+  keeping just one of those asks. Dotted lines tie the small dots back to the big one.
+  Green and blue lines connect the pairs that were labelled a good or a bad match.</p>
+  <p>Two dots close together means the model reads those two profiles as similar. The
+  numbers below are <em>similarity</em> scores running from 0 (nothing in common) to 1
+  (identical text) &mdash; cosine similarity, if you want the term.</p>
 
-  <h2>The thing the map shows</h2>
-  <p>Sectioning barely moves a profile. A section vector sits at a mean cosine of
-  <strong id="pWholeSec"></strong> to its own anchor, while two different contacts sit at
-  <strong id="pAcross"></strong>. Swapping <code>lookingFor</code> down to one ask changes a
-  profile&rsquo;s position by a rounding error next to the distance separating one person
-  from another &mdash; a contact&rsquo;s sections form a tight knot roughly
-  <strong id="pRatio"></strong> the radius of the cloud they sit in. At <span class="num">1.0&times;</span>
-  spread the constellations are almost invisible; that is the honest picture, and the
-  slider only inflates the offsets so the tether structure can be read.</p>
-  <p>The reason is structural. A section variant keeps <em>the entire rest of the
-  profile</em> &mdash; positioning, background, notes, preferences &mdash; and edits one field.
-  The shared text dominates the embedding, so every section inherits almost all of its
-  coordinates from the profile it came out of.</p>
+  <h2>Splitting a profile hardly moves it</h2>
+  <p>That is the headline. When we cut a profile down to a single ask, its point barely
+  shifts. A single-ask version scores <strong id="pWholeSec"></strong> similar to the full
+  profile it came from &mdash; practically the same text. Two <em>different</em> people
+  score <strong id="pAcross"></strong>. So all of a person&rsquo;s dots huddle in a tiny knot
+  about <strong id="pRatio"></strong> as wide as the gap between people.</p>
+  <p>The reason is simple once you see it: a single-ask version still carries the
+  <em>whole rest of the profile</em> &mdash; the background, the notes, the preferences. Only
+  one field changed. Everything else is shared, so it dominates.</p>
+  <p>At <span class="num">1.0&times;</span> spread those knots are nearly invisible on the map.
+  That is the honest picture. The slider just pushes the small dots outward so you can
+  see the shape.</p>
 
   <div class="tablewrap">
     <table>
-      <thead><tr><th>Measurement</th><th>Cosine</th><th>Reading</th></tr></thead>
+      <thead><tr><th>Comparing</th><th>Similarity</th><th>Meaning</th></tr></thead>
       <tbody>
-        <tr><td>Anchor &harr; its own sections</td><td class="n" id="tWholeSec"></td><td>near-identical</td></tr>
-        <tr><td>Section &harr; section, same contact</td><td class="n" id="tSecSec"></td><td>near-identical</td></tr>
-        <tr><td>Anchor &harr; anchor, different contacts</td><td class="n" id="tAcross"></td><td>genuinely far apart</td></tr>
+        <tr><td>A profile vs. its own single-ask versions</td><td class="n" id="tWholeSec"></td><td>nearly the same</td></tr>
+        <tr><td>One person&rsquo;s asks vs. each other</td><td class="n" id="tSecSec"></td><td>nearly the same</td></tr>
+        <tr><td>One person vs. a different person</td><td class="n" id="tAcross"></td><td>clearly different</td></tr>
       </tbody>
     </table>
   </div>
 
-  <h2>Why it matters for the sectioning result</h2>
-  <p>Seeker-sectioning measurably helps at the top of the ranking &mdash; top-1 retrieval
-  went from 27.6% to 34.5% &mdash; and it does that on offsets this small. The signal it
-  adds is real but it is a fine adjustment layered on a position that is set almost
-  entirely by the rest of the profile, not a relocation of the contact.</p>
-  <p>That also frames the Recall@10 question. If every section sits within
-  <span class="num" id="pWholeSec2"></span> cosine of its anchor, the max-over-sections score
-  is being taken over a set of very similar candidates, and which one wins is decided by
-  small differences. Softening the aggregation could not recover Recall@10 partly
-  because there was never much spread to aggregate over.</p>
+  <h2>Why that explains the earlier puzzle</h2>
+  <p>Splitting the seeker&rsquo;s side did help where it counts: the right match landed in
+  first place 34.5% of the time instead of 27.6%. So the gain is real &mdash; it is just a
+  fine adjustment, not a person being moved somewhere new.</p>
+  <p>It also explains why Recall@10 would not budge. We score a person by whichever of
+  their asks fits best. But their asks are all
+  <span class="num" id="pWholeSec2"></span> similar to each other, so &ldquo;pick the best
+  one&rdquo; is choosing between near-copies. Trying gentler ways of combining them could not
+  help, because there was barely any difference to combine.</p>
 
   <h2>Do vague profiles get worse matches?</h2>
-  <p>A contact whose sections disagree with each other is carrying several unrelated
-  asks at once. Call that <strong>dispersion</strong> &mdash; one minus the mean cosine
-  among a contact&rsquo;s own sections. It is worth measuring separately from sheer
-  section count, and it is: the two are almost uncorrelated (<span class="num">r&nbsp;=&nbsp;0.06</span>),
-  so dispersion tracks breadth of intent rather than volume of text.</p>
+  <p>Some people ask for several unrelated things at once. We can measure that: take one
+  person&rsquo;s asks, check how much they differ from each other, and call the result their
+  <strong>scatter</strong>. Someone chasing funding, hiring and partnerships scores high;
+  someone with one clear ask scores low. Usefully, scatter is not just a stand-in for
+  writing a lot &mdash; it barely tracks how many asks someone lists, so it is really
+  measuring range of intent.</p>
 
-  <p>Asked directly &mdash; does dispersion tell you whether a pair was labelled good or
-  bad? &mdash; the answer is <strong>no</strong>. Across both sides of the pair and four
-  different shape measures, every ROC-AUC lands between
-  <span class="num" id="q1lo"></span> and <span class="num" id="q1hi"></span>, and nothing
-  survives a permutation test. That is the sensible result: the label describes a
-  <em>relationship</em> between two people, so a property of one profile on its own has
-  no particular reason to predict it.</p>
+  <p>Ask it head-on &mdash; does scatter tell you if a pair was a good or bad match? &mdash;
+  and the answer is a clean <strong>no</strong>. We tried both sides of the pair and four
+  ways of measuring, and none of them beat a coin flip by enough to matter (all between
+  <span class="num" id="q1lo"></span> and <span class="num" id="q1hi"></span>, where 0.5 is
+  pure chance). Which makes sense: whether two people are a good match is about the two of
+  them together, so one person&rsquo;s profile alone was never going to tell you.</p>
 
-  <p>Asked the other way &mdash; does dispersion predict how <em>hard</em> a seeker is to
-  serve? &mdash; there is a real effect. Ranking each positive pair&rsquo;s true match
-  against all <span class="num" id="q2corpus"></span> holdout candidates, a seeker&rsquo;s
-  dispersion correlates with how far down their true match falls at
-  <strong id="q2rho"></strong> (Spearman, permutation <span class="num" id="q2p"></span>,
-  95% CI <span class="num" id="q2ci"></span>). It holds at
-  <span class="num" id="q2partial"></span> after controlling for section count, so this is
-  not just &ldquo;longer profiles are harder&rdquo;. <strong>Scattered seekers are harder to
-  match &mdash; not more likely to be given a bad match, but more likely to have their
-  right match buried.</strong></p>
+  <p>Ask it the other way, though, and something shows up. Instead of the label, look at
+  how hard a person is to serve: line up all <span class="num" id="q2corpus"></span>
+  candidates and see how far down their true match sits. <strong>Scattered people have
+  their right match buried further down.</strong> The link is moderate
+  (<span class="num" id="q2rho"></span> on a scale where 0 is no link and 1 is perfect) and
+  unlikely to be a fluke &mdash; roughly a <span class="num" id="q2p"></span> chance of
+  seeing it if nothing were really there. It also is not just &ldquo;long profiles are
+  harder&rdquo;: hold the number of asks fixed and it stays put at
+  <span class="num" id="q2partial"></span>.</p>
 
-  <p>And that is where sectioning earns its keep. Splitting the holdout&rsquo;s positive
-  queries at the median dispersion:</p>
+  <p>So scattered people are not handed <em>worse</em> matches. Their <em>right</em> match is
+  just harder to surface.</p>
+
+  <p>And that is exactly who splitting helps. Sort our test seekers into the more focused
+  half and the more scattered half:</p>
 
   <div class="tablewrap">
     <table>
-      <thead><tr><th>Seeker group</th><th>Queries</th><th>MRR, whole profile</th><th>MRR, sectioned</th><th>Change</th></tr></thead>
+      <thead><tr><th>Seeker group</th><th>People</th><th>Before</th><th>After splitting</th><th>Change</th></tr></thead>
       <tbody id="q3rows"></tbody>
     </table>
   </div>
+  <p class="note">Score is MRR &mdash; 1.0 would mean the right match came first every time,
+  0.5 means second on average, 0.25 means fourth.</p>
 
-  <p>Essentially <strong>all</strong> of sectioning&rsquo;s benefit goes to the multi-intent
-  seekers. Focused seekers gain nothing, because there was nothing blurred together to
-  separate. This is the mechanism the earlier follow-ups were reaching for: sectioning is
-  not a general improvement to the encoder, it is a targeted repair for profiles that
-  carry several live threads at once &mdash; which also predicts it would be wasted effort
-  on single-topic fields like <code>locationAvailability</code>.</p>
+  <p>Nearly the whole benefit goes to the scattered group. The focused group gains
+  <em>nothing</em>, because they had nothing blurred together to pull apart. That is the
+  clearest answer yet to whether this idea generalises: <strong>splitting is a targeted
+  fix for people juggling several things at once, not a general upgrade.</strong> It also
+  predicts where it would be wasted &mdash; on single-topic fields like
+  <code>locationAvailability</code>, there is nothing to separate.</p>
 
-  <p class="note">Sample-size caution: 29 positive queries, split 17 / 12. The correlation&rsquo;s
-  bootstrap interval reaches close to zero at the low end and this was one of several
-  measures examined, so treat it as a well-formed lead rather than a settled number. The
-  retrieval figures on this page are computed from profile text alone, without
-  <code>searchQuery</code>, and so are not comparable to
-  <code>docs/baseline-results-holdout.md</code>; what is comparable is whole-profile
-  against sectioned within this page, which is the contrast the argument rests on.
-  Reproduce with <code>scripts/analyze_section_dispersion.py</code>.</p>
+  <p class="note">Worth knowing before leaning on this: it rests on 29 seekers, split 17
+  focused / 12 scattered. That is small, the effect could plausibly be much weaker than
+  measured, and it was one of several things we looked at &mdash; a solid lead, not a
+  settled fact. The rankings here also use profile text with no search query attached, so
+  they are not comparable to the numbers in
+  <code>docs/baseline-results-holdout.md</code>; what <em>is</em> comparable is before
+  against after on this page, which is what the argument uses. Rerun it with
+  <code>scripts/analyze_section_dispersion.py</code>.</p>
 
-  <p class="note">Profile text only &mdash; <code>searchQuery</code> is excluded from every vector
-  on this page, on both sides. Cosines are computed on the raw 1024-d vectors, not on the
-  3D projection. Sections are split on the blank-line paragraph breaks already present in
-  the data, the same literal split
-  <code>baselines/voyage_nano_sectioned/text.py</code> uses.</p>
+  <p class="note">Every point on this page comes from profile text only &mdash; the search
+  query is left out on both sides. Similarity is measured on the full 1,024-number
+  vectors, not the flattened 3D view. Asks are split on the blank lines already in the
+  data, the same way <code>baselines/voyage_nano_sectioned/text.py</code> does it.</p>
 </div>
 
 <script>
@@ -502,12 +501,11 @@ if (A) {
   set("q1hi", Math.max(...aucs).toFixed(3));
   const q2 = A.q2_retrieval_difficulty;
   set("q2corpus", A.corpus_size);
-  set("q2rho", "ρ = " + q2.spearman_rho.toFixed(3));
-  set("q2p", "p = " + q2.perm_p.toFixed(3));
-  set("q2ci", "[" + q2.bootstrap_ci95.map(v => v.toFixed(2)).join(", ") + "]");
-  set("q2partial", "ρ = " + q2.partial_rho_controlling_section_count.toFixed(3));
+  set("q2rho", q2.spearman_rho.toFixed(2));
+  set("q2p", (q2.perm_p * 100).toFixed(0) + "%");
+  set("q2partial", q2.partial_rho_controlling_section_count.toFixed(2));
 
-  const nameOf = { focused: "Focused (low dispersion)", multi_intent: "Multi-intent (high dispersion)" };
+  const nameOf = { focused: "Focused — one clear ask", multi_intent: "Scattered — several at once" };
   document.getElementById("q3rows").innerHTML = A.q3_who_sectioning_helps.groups.map(g =>
     "<tr><td>" + nameOf[g.name] + '</td><td class="n">' + g.n +
     '</td><td class="n">' + g.mrr_whole.toFixed(3) +
@@ -610,13 +608,13 @@ function showTip(h, mx, my) {
   const roleWord = n.role === "both" ? "seeker &amp; candidate" : n.role;
   let html = '<div class="who">' + esc(n.id) + " &middot; " + roleWord + "</div>";
   if (h.kind === "whole") {
-    html += '<div class="hd">Whole profile</div>';
+    html += '<div class="hd">Full profile</div>';
     html += '<div class="body">' + esc(n.positioning || "—") + "</div>";
     const mine = pairsByNode.get(n.id) || [];
     const good = mine.filter(e => e.l === "pos").length;
-    html += '<div class="meta">' + n.sections.length + " lookingFor section" +
+    html += '<div class="meta">' + n.sections.length + " ask" +
       (n.sections.length === 1 ? "" : "s") +
-      ' &middot; dispersion <span class="num">' + n.dispersion.toFixed(4) + "</span><br />" +
+      ' &middot; scatter <span class="num">' + n.dispersion.toFixed(3) + "</span><br />" +
       '<span style="color:var(--pos)">' + good + " good</span> &middot; " +
       '<span style="color:var(--neg)">' + (mine.length - good) + " bad</span> match" +
       (mine.length === 1 ? "" : "es") + "</div>";
@@ -624,8 +622,8 @@ function showTip(h, mx, my) {
     const s = n.sections[h.si];
     html += '<div class="hd">' + esc(s.label) + "</div>";
     html += '<div class="body">' + esc(s.text) + "</div>";
-    html += '<div class="meta">section ' + (h.si + 1) + " of " + n.sections.length +
-      " &middot; cosine to whole profile <span class=\"num\">" + s.cos.toFixed(4) + "</span></div>";
+    html += '<div class="meta">ask ' + (h.si + 1) + " of " + n.sections.length +
+      " &middot; <span class=\"num\">" + s.cos.toFixed(3) + "</span> similar to the full profile</div>";
   }
   tip.innerHTML = html;
   tip.classList.add("on");
