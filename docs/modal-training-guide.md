@@ -116,6 +116,14 @@ Billing is per-second with no idle charges, so a run that finishes in 10
 minutes costs roughly 1/6th the hourly rate — realistically under $0.20 for
 the whole experiment, well inside the free credit.
 
+**Bigger open-weight embedding models (`baselines/hf_embedding/modal_eval.py`)
+need more VRAM than the above.** An A10G (24GB) OOMs loading and encoding
+with an 8B-parameter model (~16GB weights alone in bf16, no headroom left for
+activations) — confirmed live running `Qwen/Qwen3-Embedding-8B`. Bump to
+`--gpu A100-40GB` (or `L40S`, 48GB) for any 7-8B embedding model; T4/L4/A10
+are fine for anything in the ≤4B range (e.g. `Qwen3-Embedding-4B`,
+`gte-Qwen2` at smaller sizes, `bge-m3`, `snowflake-arctic-embed-m`).
+
 ## Notes / gotchas
 
 - **First run is slower** — Modal builds and caches the Docker image; later
