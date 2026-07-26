@@ -1,0 +1,54 @@
+{
+  "id": 39,
+  "archetype": "Quant/Finance - AI Product Builder",
+  "given_name": "Javier Ishikawa",
+  "style_version": 3,
+  "archetypes_version": 7,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Javier Ishikawa is a former high-frequency trader who transitioned into building AI-powered risk management tools for hedge funds. He spent 8 years at a proprietary trading firm, deeply immersed in market microstructure and statistical arbitrage. He found the purely reactive nature of HFT limiting and became fascinated by the potential of machine learning to *predict* rather than just *react* to market movements. He\u2019s now leading a small team at a fintech startup called \u2018Numerai Insights\u2019 focused on developing next-generation portfolio optimization and anomaly detection systems. He\u2019s actively seeking connections with both data scientists specializing in time-series analysis *and* heads of quant research at larger funds \u2013 potential clients and future team members. He\u2019s a bit of a perfectionist and values direct, data-driven communication. He's currently frustrated with the 'AI hype' and wants to connect with people building *real* solutions, not just talking about them. He's open to remote work but prefers a team with a strong in-person presence for brainstorming.",
+    "positioning": "Javier Ishikawa leads the quantitative research and development team at Numerai Insights, a fintech startup revolutionizing portfolio risk management through applied artificial intelligence. Having spent eight years on the front lines of high-frequency trading at Citadel Securities, I developed a deep understanding of market dynamics, latency sensitivity, and the critical importance of robust statistical modeling. While successful in that environment, I recognized the inherent limitations of purely reactive systems. The opportunity to leverage advanced machine learning techniques to *anticipate* market shifts, rather than simply respond to them, became a compelling driver for my transition. \n\nAt Numerai Insights, we are building a suite of AI-powered tools designed to enhance portfolio optimization, detect anomalous market behavior, and provide actionable insights for hedge funds and asset managers. Our core technology employs a novel combination of deep reinforcement learning and Bayesian optimization, allowing us to adapt to evolving market conditions and identify hidden risks. We aren\u2019t focused on \u2018black box\u2019 predictions; transparency and explainability are paramount. \n\nCurrently, I am particularly focused on scaling our anomaly detection system to handle increasingly complex datasets and integrating it with real-time trading infrastructure. I am also actively exploring the application of generative AI to stress-test portfolio strategies under a wider range of simulated market scenarios. The financial industry is at an inflection point, and I believe AI will be the defining factor for success in the years to come \u2013 but only for those who prioritize rigorous research, data integrity, and a pragmatic approach to implementation.",
+    "background": "Javier Ishikawa\n\n**Professional Experience:**\n* **Numerai Insights, Head of Quantitative Research & Development** (2021 \u2013 Present)\n    * Led a team of data scientists and engineers in the development and deployment of AI-powered risk management tools for hedge funds.\n    * Spearheaded the design and implementation of a novel anomaly detection system, resulting in a 15% reduction in portfolio drawdowns during backtesting.\n    * Responsible for all aspects of model development, from data acquisition and cleaning to model validation and performance monitoring.\n    * Secured seed funding based on the demonstrable performance of our core technology.\n* **Citadel Securities, High-Frequency Trader** (2013 \u2013 2021)\n    * Developed and executed automated trading strategies across a range of asset classes, including equities, options, and futures.\n    * Optimized trading algorithms for latency and execution efficiency, consistently achieving top-tier performance metrics.\n    * Conducted in-depth statistical analysis of market microstructure to identify arbitrage opportunities.\n    * Collaborated with technology teams to improve trading infrastructure and data feeds.\n\n**Education:**\n* **Massachusetts Institute of Technology (MIT), PhD, Financial Engineering** (2009 \u2013 2013)\n    * Dissertation: \u201cStatistical Arbitrage in High-Frequency Markets: A Reinforcement Learning Approach.\u201d\n* **Stanford University, BS, Mathematics (with Honors)** (2005 \u2013 2009)\n\n**Skills:** Python, R, TensorFlow, PyTorch, SQL, Time-Series Analysis, Statistical Modeling, Machine Learning, Reinforcement Learning, Portfolio Optimization, Risk Management, Market Microstructure.",
+    "lookingFor": "## Connections I'm Seeking\n\nI'm actively expanding my network with individuals who share a passion for applying cutting-edge AI to solve real-world problems in finance. Specifically, I\u2019m looking for:\n\n* **Data Scientists (Time-Series Focus):** Experienced researchers and engineers specializing in time-series analysis, forecasting, and anomaly detection. I\u2019m particularly interested in individuals with a strong background in deep learning and Bayesian methods. *Please include links to relevant projects or publications.*\n* **Heads of Quant Research (Hedge Funds/Asset Managers):** Leaders responsible for developing and implementing quantitative trading strategies at established firms. I\u2019m keen to discuss potential collaborations and demonstrate how Numerai Insights can enhance your existing risk management capabilities. *I'm not interested in exploratory calls without a clear understanding of your firm's current challenges.*\n* **AI/ML Engineers (FinTech):** Talented engineers with experience building and deploying machine learning models in a production environment. Experience with low-latency systems and real-time data processing is a plus.\n* **Venture Capitalists (FinTech/AI):** Investors focused on early-stage fintech companies with a demonstrable track record of innovation.\n\n**I am *not* currently seeking:**\n* Recruiters pushing generic job openings.\n* Individuals offering purely theoretical or academic solutions without practical application.\n* Sales pitches for unrelated products or services.\n* Conversations centered around 'blockchain' or 'crypto' without a clear connection to quantitative finance.",
+    "notes": "Javier is highly analytical and responds best to data-driven arguments. He's skeptical of hype and prefers to focus on concrete results. He\u2019s a fast learner but doesn't suffer fools gladly. He\u2019s currently frustrated with the lack of rigor in many AI-focused discussions within the financial industry. \n\n* **Key Talking Points:** Emphasize the quantifiable benefits of Numerai Insights\u2019 technology (e.g., reduction in portfolio drawdowns, improved Sharpe ratios). Focus on the explainability of our models.\n* **Potential Sensitivities:** Avoid overly simplistic explanations of complex concepts. Don\u2019t waste his time with generic sales pitches.\n* **Successful Approaches:** Lead with a specific problem that Numerai Insights can solve for their organization. Demonstrate a deep understanding of their current challenges.\n* **Recent Updates:** Javier recently presented our anomaly detection system at the QuantCon conference. He's received a lot of inbound interest, but is actively filtering for genuine potential collaborators.",
+    "locationAvailability": "Javier Ishikawa is currently based in New York City. While he values in-person collaboration, he is open to remote work and has experience managing distributed teams. He is not currently planning to relocate, but would consider opportunities that offer a significant strategic advantage.",
+    "introPreferences": "* When making introductions, please ensure the individual has a demonstrable track record in quantitative finance or AI/ML.\n* I prefer introductions to be concise and focused on the potential for mutual benefit.\n* Please avoid introductions to individuals who are solely focused on sales or recruitment.\n* A brief summary of the individual\u2019s relevant experience and a clear explanation of why they might be a good fit for Numerai Insights is highly appreciated.\n* Do *not* introduce me to anyone who uses buzzwords excessively or lacks a deep understanding of the underlying technology.",
+    "personalPreferences": "Javier Ishikawa prefers to communicate via email or LinkedIn messaging initially. He appreciates concise and well-structured communication and is responsive to thoughtful inquiries.",
+    "meetingAndSchedulingPreferences": "Please send a brief agenda in advance of any scheduled meetings. Javier prefers meetings to be focused and time-efficient, typically lasting no more than 30-45 minutes. He values preparation and expects attendees to have a clear understanding of the topics to be discussed."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 23.865749835968018,
+      "input_tokens": 789,
+      "output_tokens": 1693,
+      "problems": []
+    }
+  ],
+  "success": true
+}

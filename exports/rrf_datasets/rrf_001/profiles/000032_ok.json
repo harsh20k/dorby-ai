@@ -1,0 +1,54 @@
+{
+  "id": 32,
+  "archetype": "Serial Founder, Cross-Border Operator",
+  "given_name": "Wei Pereira",
+  "style_version": 2,
+  "archetypes_version": 6,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Wei Pereira is a seasoned entrepreneur with a background in building and scaling fintech companies in Southeast Asia and now expanding into Latin America. Her distinctive career detail is successfully navigating regulatory hurdles in multiple emerging markets \u2013 she's a 'regulatory whisperer'. She recently secured seed funding for 'NovaPay', a platform facilitating cross-border remittances and micro-loans, specifically targeting the unbanked populations in Brazil and Colombia. She\u2019s looking for strategic partners, investors with experience in LatAm fintech, and key engineering talent to accelerate NovaPay's growth. She is a direct communicator and prioritizes efficiency in networking; she wants introductions to be highly targeted and focused on tangible outcomes. She values cultural sensitivity and deep market understanding in potential partners.",
+    "positioning": "Wei Pereira is the Founder & CEO of NovaPay, a fintech company focused on bridging the financial inclusion gap in Latin America. Having spent the last decade building and scaling successful fintech ventures across Southeast Asia, I\u2019m now applying that experience to the rapidly growing LatAm market. NovaPay simplifies cross-border remittances and provides access to micro-loans for the unbanked, leveraging mobile technology and a deep understanding of local regulatory landscapes. We recently closed a seed round and are focused on building out our engineering team and establishing key partnerships to accelerate user acquisition and market penetration. I specialize in navigating complex regulatory environments and building high-performing teams in emerging markets. My core value proposition is delivering scalable, impactful fintech solutions that empower underserved communities.",
+    "background": "* **Founder & CEO, NovaPay (2023 \u2013 Present):** Led seed fundraising ($2.5M), built initial MVP, and established market entry strategy for Brazil and Colombia.\n* **Regional Director, Southeast Asia, FinTech Solutions Ltd. (2018 \u2013 2022):** Oversaw expansion into Vietnam, Indonesia, and the Philippines, achieving a 300% increase in regional revenue within three years. Managed a team of 50+ across multiple departments.\n* **Head of Regulatory Affairs, PayForward (2015 \u2013 2018):** Successfully secured operating licenses in Myanmar and Cambodia, navigating complex and evolving regulatory frameworks. Developed strong relationships with key government stakeholders.\n* **Co-Founder, MobileMoney Asia (2012 \u2013 2015):** Built and launched a mobile payment platform in Thailand, achieving 100,000+ active users within the first year. Exited to a regional bank in 2015.\n* **Education:** MBA, Harvard Business School (2010 \u2013 2012). BSc. Economics, London School of Economics (2007 \u2013 2010).\n* **Skills:** Fintech, Cross-Border Payments, Microfinance, Regulatory Compliance (LatAm & SEA), Seed Fundraising, Team Leadership, Strategic Partnerships, Market Entry Strategy, Mobile Payments, Digital Financial Inclusion, Portuguese (conversational), Spanish (beginner).",
+    "lookingFor": "NovaPay is currently focused on scaling our operations in Brazil and Colombia and expanding our product offerings. I\u2019m actively seeking introductions to:\n\n* **Series A Investors:** Funds with a proven track record in LatAm fintech, particularly those focused on financial inclusion.\n* **Strategic Partners:** Banks, remittance companies, and mobile network operators interested in collaborating on distribution or technology integration.\n* **Engineering Talent:** Experienced full-stack engineers with expertise in mobile development (React Native preferred) and backend infrastructure (AWS). Specifically looking for individuals with experience building scalable and secure financial applications.\n* **Local Regulatory Experts:** Individuals with deep knowledge of the Brazilian and Colombian financial regulatory landscape.\n\nI\u2019m particularly interested in individuals who have a strong understanding of the challenges and opportunities in serving the unbanked population.  I\u2019m open to discussing potential advisory roles as well.  Please prioritize connections who are decision-makers or have direct access to those who are.",
+    "notes": "* Recently completed a deep dive into the Brazilian Pix system \u2013 very promising for integration.\n* Prioritize introductions to investors who understand the nuances of operating in emerging markets, not just tech investors.\n*  Engineering hires *must* have experience with security best practices (PCI DSS compliance is a plus).\n*  I\u2019m attending Fintech Week Sao Paulo in November \u2013 happy to meet there.\n*  Fluent English and Mandarin. Conversational Portuguese.",
+    "locationAvailability": "I am currently based in S\u00e3o Paulo, Brazil, and am open to travel throughout Latin America and to Southeast Asia as needed. I\u2019m also comfortable working with remote teams and partners.",
+    "introPreferences": "* **Hard Requirements:** Introductions must be to individuals with decision-making authority or direct access to decision-makers.\n* **Soft Preferences:** Experience in LatAm fintech, a demonstrated commitment to financial inclusion, and a proactive approach to building relationships.\n* **Framing:** Please emphasize NovaPay\u2019s focus on serving the unbanked and our unique approach to navigating the regulatory landscape. Highlight my experience in scaling fintech ventures in Southeast Asia.\n* **Avoid:** Introductions to individuals solely interested in speculative investments or those lacking relevant experience.\n* **Preferred intro length:** Concise and focused\u2014under 5 sentences.",
+    "personalPreferences": "I prefer initial contact via LinkedIn or email.",
+    "meetingAndSchedulingPreferences": "Generally available for calls after 2 PM Brazil time. Please send a brief agenda in advance."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 24.465439081192017,
+      "input_tokens": 806,
+      "output_tokens": 1150,
+      "problems": []
+    }
+  ],
+  "success": true
+}

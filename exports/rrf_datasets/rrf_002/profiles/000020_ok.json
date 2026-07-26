@@ -1,0 +1,54 @@
+{
+  "id": 20,
+  "archetype": "Sales & Go-to-Market Strategist",
+  "given_name": "Yusuf Zhang",
+  "style_version": 2,
+  "archetypes_version": 4,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Yusuf Zhang is a seasoned sales leader who transitioned from a high-performing individual contributor role at a rapidly scaling SaaS company to an independent Go-to-Market (GTM) strategist. His distinctive career detail is a significant pivot \u2013 he *built* the sales infrastructure for 'NovaTech Solutions' during its hypergrowth phase, taking it from $5M to $50M ARR in 2.5 years. He\u2019s now focused on advising early-stage (Seed to Series A) B2B SaaS founders, particularly those targeting the developer tools or cybersecurity markets. He\u2019s not looking for investment *for himself*, but actively seeks opportunities to connect his portfolio companies with VCs and strategic partners. He prioritizes founders who are deeply technical and have a clear understanding of their ICP. He\u2019s a pragmatic advisor, leaning towards data-driven strategies and scalable processes rather than 'growth hacking' tactics.",
+    "positioning": "A results-oriented Go-to-Market strategist with a proven track record of scaling revenue for B2B SaaS companies. I specialize in helping early-stage founders refine their sales strategy, build high-performing teams, and establish repeatable revenue processes. My experience stems from architecting and executing the sales expansion at NovaTech Solutions, where we achieved a 10x ARR increase in under three years. I focus on providing actionable frameworks, not just theoretical advice, and am passionate about empowering technical founders to translate innovative products into sustainable businesses. Currently, I\u2019m working with a select portfolio of companies, helping them navigate the complexities of early-stage sales, optimize their customer acquisition costs, and secure follow-on funding. I bring a data-driven approach to GTM, leveraging analytics to identify key leverage points and ensure predictable growth. I'm particularly interested in the intersection of AI and cybersecurity, and believe these areas present significant opportunities for disruptive innovation.",
+    "background": "* **NovaTech Solutions (2019 \u2013 2022): VP of Sales.** Led a team of 30+ sales professionals, responsible for all revenue generation activities. Architected and implemented a new sales process that increased qualified pipeline by 400% and conversion rates by 60%. Drove revenue from $5M to $50M ARR within 2.5 years.\n* **Salesforce (2016 \u2013 2019): Enterprise Account Executive.** Consistently exceeded quota, achieving 150%+ of target in each year. Focused on selling CRM solutions to Fortune 500 companies in the financial services industry. Developed strong negotiation and relationship-building skills.\n* **Education: Stanford University (2012 \u2013 2016): BS in Computer Science.** Minor in Economics. Graduated with honors.\n* **Skills:** Sales Strategy, Go-to-Market Planning, Sales Process Design, Sales Operations, Revenue Operations, CRM (Salesforce, HubSpot), Sales Enablement, Pipeline Management, Forecasting, Data Analysis (Excel, Tableau), Leadership, Team Building, Negotiation, Public Speaking.\n* **Certifications:** Salesforce Certified Sales Cloud Consultant, HubSpot Sales Software Certification.\n* **Awards & Recognition:** NovaTech Solutions 'Top Performer' Award (2020, 2021), Salesforce 'President's Club' (2018, 2019).\n* **Early Career:** Interned at Google in their sales operations team, gaining foundational experience in data analysis and sales optimization.",
+    "lookingFor": "I'm actively seeking introductions to Venture Capital firms focused on Seed and Series A rounds \u2013 particularly those with a thesis around developer tools and cybersecurity. I'm looking to connect my portfolio companies with potential investors who can provide not just capital, but also strategic guidance and network access. I'm also interested in connecting with experienced sales leaders who might be open to advising or mentoring early-stage sales teams. \n\nSpecifically, I\u2019m looking for:\n\n* **VC Partners:** General Partners or Principals at firms investing in B2B SaaS, with a focus on pre-seed to Series A.\n* **Strategic Partners:** Heads of Partnerships or Business Development at larger companies in the cybersecurity or developer tools space.\n* **Fractional Sales Leaders:** Experienced VPs of Sales or CROs willing to provide mentorship and advisory services.\n* **Talent:** High-performing Account Executives with proven track records in selling complex technical solutions. I\u2019m particularly interested in candidates with experience in the developer tools space.",
+    "notes": "* Yusuf is highly selective about the companies he works with \u2013 he prioritizes technical founders with a strong product-market fit.\n* He's currently focusing on companies with ARR under $5M.\n* He's *not* actively looking for new advisory engagements at the moment, but is always open to discussing interesting opportunities.\n* He\u2019s a strong advocate for data-driven sales strategies and avoids \u2018vanity metrics.\u2019\n* Recent portfolio company, 'SecureFlow,' just closed their seed round \u2013 happy to share details upon request.",
+    "locationAvailability": "I'm based in San Francisco, California, and am available for remote meetings and occasional travel to key tech hubs.",
+    "introPreferences": "* **Hard Requirements:** Introductions to VCs *must* be to partners who actively invest in B2B SaaS and have a demonstrable track record in developer tools or cybersecurity.\n* **Soft Preferences:** Introductions to sales leaders should be to individuals with experience scaling sales teams at high-growth startups.\n* **Framing for VCs:** 'Yusuf is a GTM advisor working with several promising early-stage SaaS companies. He\u2019s a former VP of Sales at NovaTech Solutions and has a knack for identifying companies with strong potential.'\n* **Framing for Sales Leaders:** 'Yusuf is a GTM strategist advising a portfolio of early-stage SaaS founders. He\u2019s looking to connect with experienced sales leaders who might be interested in providing mentorship or advisory services.'\n* **Avoid:** Introducing Yusuf to companies actively fundraising for Series B or later.",
+    "personalPreferences": "I prefer to communicate via email for initial contact, and am happy to jump on a quick call afterwards.",
+    "meetingAndSchedulingPreferences": "Generally available for meetings during Pacific Standard Time business hours."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 24.96368098258972,
+      "input_tokens": 804,
+      "output_tokens": 1323,
+      "problems": []
+    }
+  ],
+  "success": true
+}

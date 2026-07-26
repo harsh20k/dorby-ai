@@ -1,0 +1,54 @@
+{
+  "id": 8,
+  "archetype": "Deep Tech Founder, Early Stage",
+  "given_name": "Tariq Abara",
+  "style_version": 1,
+  "archetypes_version": 2,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Tariq Abara is a 34-year-old founder and CEO of 'Synapse Dynamics', a pre-seed stage company developing novel neuromorphic computing hardware. His background is in computational neuroscience and electrical engineering - he did a PhD focusing on biologically inspired algorithms for low-power AI. A distinctive career detail is that *before* starting Synapse Dynamics, he spent two years as a quantitative analyst at a high-frequency trading firm, a detour he took to understand the practical constraints of real-world computation and the need for drastically more efficient hardware. He\u2019s currently focused on raising a seed round and securing pilot customers who need ultra-low latency processing for edge AI applications (specifically, robotics and autonomous vehicles). He\u2019s very technical, passionate about his work, and a bit impatient with 'business speak'. He wants to connect with VCs specializing in deep tech, potential strategic partners in the automotive/robotics industries, and fellow founders who\u2019ve navigated early-stage funding.",
+    "positioning": "As CEO and Founder of Synapse Dynamics, I\u2019m leading the development of a revolutionary neuromorphic computing platform poised to redefine the landscape of edge AI. We're building hardware that mimics the human brain, offering unprecedented energy efficiency and speed for applications demanding real-time processing. My background spans computational neuroscience and electrical engineering, allowing me to bridge the gap between cutting-edge research and practical implementation. Prior to Synapse Dynamics, I honed my understanding of high-performance computing needs at a leading quantitative trading firm, identifying a critical bottleneck in existing architectures. We\u2019re currently focused on securing seed funding to accelerate product development and expand our team. I\u2019m passionate about the potential of neuromorphic computing to unlock a new era of intelligent systems and am actively seeking strategic partners and investors who share this vision. We\u2019re not just building chips; we're building the future of intelligence.",
+    "background": "- **Synapse Dynamics, CEO & Founder** (2022 \u2013 Present)\n    - Spearheaded the conceptualization, development, and early prototyping of a novel neuromorphic computing chip.\n    - Secured initial angel investment of $250K.\n    - Built a core team of 4 engineers with expertise in VLSI design, neuroscience, and software development.\n    - Developed and presented the company's pitch deck to over 50 potential investors.\n    - Focused on identifying and validating key target markets (robotics, autonomous vehicles, medical devices).\n\n- **Quantitive Analyst, Stellar Trading Group** (2020 \u2013 2022)\n    - Developed and implemented high-frequency trading algorithms using Python and C++.\n    - Optimized trading strategies for latency and profitability, leveraging advanced statistical modeling.\n    - Collaborated with infrastructure engineers to improve the performance of trading systems.\n    - Gained deep understanding of the demands of real-time computation in a high-stakes environment.\n\n- **PhD, Computational Neuroscience, Massachusetts Institute of Technology (MIT)** (2016 \u2013 2020)\n    - Dissertation: 'Spiking Neural Networks for Low-Power Pattern Recognition'.\n    - Developed novel algorithms for training spiking neural networks, achieving state-of-the-art performance on benchmark datasets.\n    - Published multiple peer-reviewed papers in leading neuroscience and machine learning conferences.\n    - Mentored undergraduate research assistants.\n\n- **BS, Electrical Engineering, Stanford University** (2012 \u2013 2016)\n    - Graduated *Summa Cum Laude*.\n    - Relevant coursework: VLSI Design, Digital Signal Processing, Machine Learning.\n\n- **Skills:** Python, C++, VLSI Design (Cadence, Synopsys), Machine Learning (TensorFlow, PyTorch), Neuromorphic Computing, Spiking Neural Networks, Signal Processing, Statistical Modeling, Data Analysis, Project Management, Fundraising, Pitching.",
+    "lookingFor": "## Networking Goals\n\n*   **Seed Stage Investors:** Seeking VCs specializing in deep tech, particularly those with experience in hardware and AI. Target check sizes: $2M - $5M.  Prefer investors with a long-term vision and a willingness to support technically complex ventures.\n*   **Strategic Partnerships:** Actively seeking introductions to engineering and product leaders at companies in the robotics, autonomous vehicle, and industrial automation sectors.  We are particularly interested in potential pilot projects and co-development opportunities.\n*   **Fellow Founders:**  Connecting with other early-stage founders (pre-seed to Series A) in the deep tech space to share learnings, exchange advice, and build a supportive network.  Especially interested in those who've successfully navigated seed funding.\n*   **Neuromorphic Computing Experts:**  Looking to connect with researchers and engineers pushing the boundaries of neuromorphic hardware and algorithms.  Collaboration opportunities are of interest.\n\n**Desired Interactions:**  I'm open to informational interviews, introductions to relevant contacts, and discussions about potential investment or partnership opportunities.  I prioritize concise and direct communication and value authentic connections.",
+    "notes": "Tariq is a highly intelligent and driven individual. He\u2019s extremely knowledgeable about his field but can sometimes come across as overly technical or impatient. [03/15/2024: Had a brief call; confirmed he's actively pitching and needs warm introductions to relevant investors].  He's particularly sensitive to 'fluff' and prefers direct, data-driven conversations.  Avoid introductions to generalist investors; focus on those with a proven track record in deep tech.  He\u2019s currently focused on refining his pitch deck and preparing for upcoming investor meetings. [03/20/2024: Follow-up email sent with list of potential investors].  Internal scoring: 'High Potential' - flag for priority outreach.  He's receptive to feedback but needs it to be constructive and specific.  He mentioned a potential partnership with a robotics company - worth exploring further.  Don\u2019t lead with marketing jargon; focus on the technical advantages of his technology.",
+    "locationAvailability": "I am based in Boston, Massachusetts, but am open to connecting with individuals globally via video conference. I frequently travel to industry events and conferences.",
+    "introPreferences": "## Introduction Guidelines\n\n*   **Hard Requirements:**\n    *   Contact must be a decision-maker or key influencer in a relevant organization (VC firm, robotics company, etc.).\n    *   Prioritize introductions to individuals with a demonstrated interest in AI hardware or neuromorphic computing.\n    *   Ensure the contact understands the potential of edge AI and the need for low-power, high-performance computing.\n*   **Soft Preferences:**\n    *   Introductions from mutual connections are highly valued.\n    *   Avoid introductions to marketing or sales professionals unless they have strong technical backgrounds.\n    *   A brief, personalized message highlighting Synapse Dynamics\u2019 unique value proposition is appreciated.",
+    "personalPreferences": "Prefer email for initial contact. Quick calls are fine, but I'm not a fan of lengthy phone conversations.  WhatsApp is acceptable for quick updates.",
+    "meetingAndSchedulingPreferences": "I am generally available for meetings during standard business hours (EST). Please send a calendar invite with a clear agenda."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 28.508016109466553,
+      "input_tokens": 855,
+      "output_tokens": 1536,
+      "problems": []
+    }
+  ],
+  "success": true
+}

@@ -1,0 +1,54 @@
+{
+  "id": 40,
+  "archetype": "Ex-BigCo Fintech Founder/Operator",
+  "given_name": "Theo Fernandez",
+  "style_version": 3,
+  "archetypes_version": 7,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Theo Fernandez is a former VP of Engineering at Capital One, specifically within their digital transformation group. He led a team building out a new microservices architecture for their credit card servicing platform. He left Capital One two years ago to found 'NovaPay,' a fintech startup focused on embedded finance for small businesses, aiming to provide a seamless, API-first payment processing and financial management solution. NovaPay hasn't *failed*, but is facing significant headwinds in a crowded market and is pivoting towards offering its technology as a 'Fintech-as-a-Service' platform rather than a direct-to-consumer product. Theo is now actively seeking strategic partnerships with larger financial institutions or established players in the SMB software space to accelerate adoption of the NovaPay platform and avoid a costly down-round. He\u2019s highly technical, pragmatic, and focused on demonstrable ROI. He\u2019s a bit wary of VCs at this point, preferring to forge relationships with potential customers and partners directly. He\u2019s a strong advocate for developer-first fintech and open banking.",
+    "positioning": "I\u2019m Theo Fernandez, Founder & CEO of NovaPay, a Fintech-as-a-Service platform empowering businesses to seamlessly integrate financial tools directly into their applications. After a decade at Capital One, leading engineering teams through complex digital transformations \u2013 most notably architecting and delivering a new microservices-based platform for credit card servicing \u2013 I recognized a critical gap in the market: the friction inherent in integrating financial services.  NovaPay was born from that observation, initially conceived as a direct-to-business payment processing solution. However, the landscape is evolving rapidly, and we've strategically pivoted to focus on providing our robust, scalable, and secure infrastructure as a platform for other companies to build upon. \n\nWe\u2019ve built a truly developer-first experience, offering comprehensive APIs, SDKs, and robust documentation.  Our core competencies lie in secure payment processing, risk management, and real-time financial data aggregation.  We\u2019re seeing significant interest from companies looking to embed financial features \u2013 lending, payments, expense management \u2013 into their existing workflows without the burden of navigating complex regulatory hurdles and building bespoke infrastructure.  \n\nCurrently, I'm deeply focused on forging strategic partnerships with established financial institutions and SMB software providers who can leverage NovaPay to accelerate their own innovation. I believe the future of fintech isn't about replacing banks, but about augmenting them with flexible, powerful tools that enhance their capabilities and reach. I'm passionate about open banking and the potential for a more accessible and inclusive financial ecosystem.",
+    "background": "Prior to founding NovaPay, I spent ten years at Capital One, culminating in the role of Vice President of Engineering. \n\n* **Capital One (2013 \u2013 2021):**\n    * **VP of Engineering (2018 \u2013 2021):** Led a team of 50+ engineers responsible for the design, development, and deployment of a new microservices architecture for credit card servicing. Delivered a 30% reduction in incident resolution time and a 15% increase in platform scalability.\n    * **Senior Manager, Software Engineering (2015 \u2013 2018):** Managed the development of key features within Capital One\u2019s mobile banking application, focusing on user experience and security.\n    * **Software Engineer (2013 \u2013 2015):** Developed and maintained core components of Capital One\u2019s online banking platform.\n* **Education:**\n    * **Master of Science, Computer Science \u2013 Stanford University (2011 \u2013 2013)**\n    * **Bachelor of Science, Computer Engineering \u2013 Massachusetts Institute of Technology (2007 \u2013 2011)**\n* **Skills:** Java, Python, Go, Kubernetes, AWS, Azure, Microservices Architecture, API Design, Agile Development, Fintech, Payments, Risk Management, Leadership, Strategic Planning.",
+    "lookingFor": "I'm actively seeking connections with individuals and organizations that can contribute to the growth and success of NovaPay. Specifically, I\u2019m looking for:\n\n**Strategic Partnerships:**\n* **Established Financial Institutions:** Banks, credit unions, and other financial institutions interested in leveraging NovaPay\u2019s platform to accelerate their digital transformation and expand their service offerings.\n* **SMB Software Providers:** Companies offering software solutions to small and medium-sized businesses (e.g., accounting software, CRM, POS systems) seeking to integrate financial features into their platforms.\n* **System Integrators:** Partners with experience integrating complex fintech solutions into enterprise environments.\n\n**Key Individuals:**\n* **Heads of Innovation/Digital Transformation:** Within financial institutions and SMB software companies.\n* **VP of Engineering/CTO:** At companies evaluating fintech infrastructure solutions.\n* **Business Development Leaders:** Focused on strategic partnerships and new market opportunities.\n\n**I am *not* currently seeking:**\n* **Seed-stage Venture Capital:** While I\u2019m open to conversations, my immediate focus is on revenue-generating partnerships.\n* **Sales & Marketing Assistance:** We have a lean but effective team in this area.\n* **General Networking:** I\u2019m looking for targeted connections with individuals who have a clear understanding of the fintech landscape and can offer tangible value to NovaPay.",
+    "notes": "Theo is highly analytical and data-driven. He responds well to concrete proposals and quantifiable ROI projections. He's a bit guarded initially, likely due to the challenges NovaPay has faced. Emphasize the technical strength of the platform and the team's experience at Capital One. He's very proud of the architecture he built there. He's not interested in 'hype' or buzzwords; he wants to talk about real-world applications and technical details. He recently attended the Fintech Connect conference in San Francisco and expressed interest in companies exhibiting there, particularly those focused on embedded finance. Last conversation (10/26) revealed he's exploring a potential partnership with a mid-sized regional bank in the Midwest. Follow up on that lead.",
+    "locationAvailability": "I am currently based in New York City, but am open to remote collaboration and travel. NovaPay has a distributed team, so I\u2019m comfortable working with individuals across different time zones. I am willing to relocate for the right strategic opportunity, but prefer to maintain a presence in a major fintech hub.",
+    "introPreferences": "When making introductions, please ensure the following:\n* **Technical Understanding:** The individual should have a solid understanding of API integrations, microservices architecture, and fintech security protocols.\n* **Decision-Making Authority:** Ideally, the connection should be in a position to influence strategic decisions regarding technology partnerships.\n* **Clear Value Proposition:** Articulate how NovaPay\u2019s platform can specifically address their organization\u2019s challenges or opportunities.\n* **Avoid:**\n    * **Generalists:** I\u2019m not interested in introductions to individuals with limited fintech experience.\n    * **Sales-focused individuals:** I prefer to start with technical discussions and build relationships organically.\n    * **Individuals seeking investment in their own startups.**",
+    "personalPreferences": "I prefer to connect initially via LinkedIn or email and am generally responsive to direct messages. I appreciate concise communication and value clear, actionable insights.",
+    "meetingAndSchedulingPreferences": "I prefer meetings to be focused and efficient, with a clear agenda. Please send a brief outline of topics you'd like to discuss in advance. I\u2019m generally available for 30-minute video calls."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 21.21284317970276,
+      "input_tokens": 799,
+      "output_tokens": 1591,
+      "problems": []
+    }
+  ],
+  "success": true
+}

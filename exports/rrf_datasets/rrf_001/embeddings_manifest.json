@@ -1,0 +1,1948 @@
+{
+  "model": "Qwen/Qwen3-Embedding-8B",
+  "dim": 4096,
+  "n_seeker_vectors": 163,
+  "n_candidate_vectors": 52,
+  "n_seekers": 40,
+  "seeker": [
+    {
+      "key": "cmsynthp008533d93a7fc8ddb::whole",
+      "contact_id": "cmsynthp008533d93a7fc8ddb",
+      "role": "seeker",
+      "section_index": -1,
+      "section_text": null,
+      "text_sha256": "4b296db22cf8b020",
+      "row": 0
+    },
+    {
+      "key": "cmsynthp008533d93a7fc8ddb::s0",
+      "contact_id": "cmsynthp008533d93a7fc8ddb",
+      "role": "seeker",
+      "section_index": 0,
+      "section_text": "**Naledi Okafor - Connections & Opportunities**",
+      "text_sha256": "1e0c88f28b2827f8",
+      "row": 1
+    },
+    {
+      "key": "cmsynthp008533d93a7fc8ddb::s1",
+      "contact_id": "cmsynthp008533d93a7fc8ddb",
+      "role": "seeker",
+      "section_index": 1,
+      "section_text": "**I am actively seeking to expand my network with:**",
+      "text_sha256": "407a3bb58dc81902",
+      "row": 2
+    },
+    {
+      "key": "cmsynthp008533d93a7fc8ddb::s2",
+      "contact_id": "cmsynthp008533d93a7fc8ddb",
+      "role": "seeker",
+      "section_index": 2,
+      "section_text": "* **Hiring Managers:** Specifically, Controllers, CFOs, and Deal Team Leaders at: \n    * Middle-market Private Equity Firms ($100M - $5B AUM)\n    * Big 4 M&A Advisory Practices (particularly Transaction Services)\n    * Strategic Acquirers actively engaged in M&A (Industrials, Technology, Healthcare).\n* **CPA Professionals:**\n    * 3-8 years of experience in M&A due diligence, integration, or carve-out accounting.\n    * Strong technical accounting skills (GAAP, SEC reporting).\n    * Experience with financial modeling and data analysis.\n    * Candidates actively or passively seeking new opportunities.",
+      "text_sha256": "2028ba4dfd45e8cc",
+      "row": 3
+    },
+    {
+      "key": "cmsynthp008533d93a7fc8ddb::s3",
+      "contact_id": "cmsynthp008533d93a7fc8ddb",
+      "role": "seeker",
+      "section_index": 3,
+      "section_text": "**I am open to:**",
+      "text_sha256": "a77c560ca3950189",
+      "row": 4
+    },
+    {
+      "key": "cmsynthp008533d93a7fc8ddb::s4",
+      "contact_id": "cmsynthp008533d93a7fc8ddb",
+      "role": "seeker",
+      "section_index": 4,
+      "section_text": "* **Warm Introductions:** To hiring managers within my target firms. Please include a brief note highlighting why a connection would be mutually beneficial.\n* **Referrals:** Of exceptional CPA candidates with M&A experience.\n* **Industry Insights:** Information on upcoming M&A deals or potential talent needs.",
+      "text_sha256": "3f2f617bc7c61971",
+      "row": 5
+    },
+    {
+      "key": "cmsynthp008533d93a7fc8ddb::s5",
+      "contact_id": "cmsynthp008533d93a7fc8ddb",
+      "role": "seeker",
+      "section_index": 5,
+      "section_text": "**I am *not* interested in:**",
+      "text_sha256": "31d13a24a6e7c318",
+      "row": 6
+    },
+    {
+      "key": "cmsynthp008533d93a7fc8ddb::s6",
+      "contact_id": "cmsynthp008533d93a7fc8ddb",
+      "role": "seeker",
+      "section_index": 6,
+      "section_text": "* **Generalist Accounting Roles:** My focus is exclusively on M&A accounting.\n* **Entry-Level Candidates:** I specialize in mid-to-senior level professionals.\n* **Recruiters outside of specialized financial roles.**\n* **Solicitations for irrelevant services (e.g., marketing, IT).**",
+      "text_sha256": "a08c6323a9945602",
+      "row": 7
+    },
+    {
+      "key": "cmsynthp0528667f81f58bdbc::whole",
+      "contact_id": "cmsynthp0528667f81f58bdbc",
+      "role": "seeker",
+      "section_index": -1,
+      "section_text": null,
+      "text_sha256": "a226c3f3cf3c8137",
+      "row": 8
+    },
+    {
+      "key": "cmsynthp1d31c02fa29e70004::whole",
+      "contact_id": "cmsynthp1d31c02fa29e70004",
+      "role": "seeker",
+      "section_index": -1,
+      "section_text": null,
+      "text_sha256": "a80f53c5db2463ca",
+      "row": 9
+    },
+    {
+      "key": "cmsynthp1d31c02fa29e70004::s0",
+      "contact_id": "cmsynthp1d31c02fa29e70004",
+      "role": "seeker",
+      "section_index": 0,
+      "section_text": "**Strategic Partnerships & Collaboration**\n I\u2019m actively seeking connections with leaders who are driving innovation in healthcare operations and digital transformation. Specifically, I\u2019m interested in:\n  * **CEOs/CIOs of mid-to-large hospital systems** who are actively investing in AI and automation.\n  * **Founders/Executives of healthcare technology companies** specializing in workflow automation, predictive analytics, and patient engagement.\n  * **Thought leaders and researchers** focused on the intersection of AI, healthcare, and operational efficiency.",
+      "text_sha256": "8d09d3882007f306",
+      "row": 10
+    },
+    {
+      "key": "cmsynthp1d31c02fa29e70004::s1",
+      "contact_id": "cmsynthp1d31c02fa29e70004",
+      "role": "seeker",
+      "section_index": 1,
+      "section_text": "**Seeking Introductions To:**\n 1. Individuals with experience successfully implementing AI-powered solutions in emergency departments or critical care settings.\n 2. Experts in healthcare data interoperability and API integration (HL7 FHIR, etc.).\n 3. Leaders at organizations utilizing cloud-based platforms (AWS, Azure, Google Cloud) for healthcare applications.",
+      "text_sha256": "da8a5cd1dc562e29",
+      "row": 11
+    },
+    {
+      "key": "cmsynthp1d31c02fa29e70004::s2",
+      "contact_id": "cmsynthp1d31c02fa29e70004",
+      "role": "seeker",
+      "section_index": 2,
+      "section_text": "**I\u2019m *not* currently interested in:**\n * Sales pitches for generic software solutions.\n * Individuals solely focused on revenue cycle management.\n * Networking events lacking a substantive focus on operational improvement.\n * Conversations centered around blockchain or cryptocurrency applications in healthcare (at this time).",
+      "text_sha256": "ca388053d8494587",
+      "row": 12
+    },
+    {
+      "key": "cmsynthp1f4070675e2897cd1::whole",
+      "contact_id": "cmsynthp1f4070675e2897cd1",
+      "role": "seeker",
+      "section_index": -1,
+      "section_text": null,
+      "text_sha256": "4be5486386e40268",
+      "row": 13
+    },
+    {
+      "key": "cmsynthp1f4070675e2897cd1::s0",
+      "contact_id": "cmsynthp1f4070675e2897cd1",
+      "role": "seeker",
+      "section_index": 0,
+      "section_text": "I'm actively seeking connections within the following areas:",
+      "text_sha256": "3b60984afdbcc828",
+      "row": 14
+    },
+    {
+      "key": "cmsynthp1f4070675e2897cd1::s1",
+      "contact_id": "cmsynthp1f4070675e2897cd1",
+      "role": "seeker",
+      "section_index": 1,
+      "section_text": "**Startups (Seed \u2013 Series A):**\n\u2022 Hospitality tech companies based in Europe (particularly Benelux, DACH, and Scandinavia).\n\u2022 Focus areas: Guest experience, revenue management, operational efficiency, sustainability, and innovative F&B solutions.\n\u2022 Must have a demonstrable MVP, early traction (paying customers preferred), and a strong, adaptable founding team.\n\u2022 *Not* interested in companies focused solely on loyalty programs or outdated PMS systems.",
+      "text_sha256": "ce904b2281147506",
+      "row": 15
+    },
+    {
+      "key": "cmsynthp1f4070675e2897cd1::s2",
+      "contact_id": "cmsynthp1f4070675e2897cd1",
+      "role": "seeker",
+      "section_index": 2,
+      "section_text": "**Hotel Operators:**\n\u2022 Heads of Innovation, CTOs, and General Managers at hotel groups with 50+ properties.\n\u2022 Individuals open to piloting new technologies and providing feedback on potential solutions.\n\u2022 Seeking introductions to operators actively exploring sustainability initiatives.",
+      "text_sha256": "e5e01cc5837b1f11",
+      "row": 16
+    },
+    {
+      "key": "cmsynthp1f4070675e2897cd1::s3",
+      "contact_id": "cmsynthp1f4070675e2897cd1",
+      "role": "seeker",
+      "section_index": 3,
+      "section_text": "**Investors:**\n\u2022 Angel investors and VC firms co-investing in the hospitality tech space.\n\u2022 Interested in exploring syndication opportunities and sharing insights on market trends.",
+      "text_sha256": "5e51ffd9036a24d7",
+      "row": 17
+    },
+    {
+      "key": "cmsynthp1f4070675e2897cd1::s4",
+      "contact_id": "cmsynthp1f4070675e2897cd1",
+      "role": "seeker",
+      "section_index": 4,
+      "section_text": "**Mentors/Advisors:**\n\u2022 Experienced hospitality entrepreneurs who have successfully scaled tech companies.\n\u2022 Individuals with deep knowledge of the European investment landscape.",
+      "text_sha256": "5f6195a8081d5839",
+      "row": 18
+    },
+    {
+      "key": "cmsynthp1f4070675e2897cd1::s5",
+      "contact_id": "cmsynthp1f4070675e2897cd1",
+      "role": "seeker",
+      "section_index": 5,
+      "section_text": "**I am *not* looking for:**\n\u2022 Sales pitches for unproven technologies.\n\u2022 Individuals lacking a clear understanding of the hospitality industry.\n\u2022 Connections solely interested in fundraising without a strong business plan.",
+      "text_sha256": "f895728b3d2ffbb1",
+      "row": 19
+    },
+    {
+      "key": "cmsynthp238dd4af1bbf159a5::whole",
+      "contact_id": "cmsynthp238dd4af1bbf159a5",
+      "role": "seeker",
+      "section_index": -1,
+      "section_text": null,
+      "text_sha256": "fe1ba14989d7712b",
+      "row": 20
+    },
+    {
+      "key": "cmsynthp238dd4af1bbf159a5::s0",
+      "contact_id": "cmsynthp238dd4af1bbf159a5",
+      "role": "seeker",
+      "section_index": 0,
+      "section_text": "I'm actively seeking connections to accelerate OncoNav's growth. Specifically, I'm looking for:",
+      "text_sha256": "12bc925f9d598354",
+      "row": 21
+    },
+    {
+      "key": "cmsynthp238dd4af1bbf159a5::s1",
+      "contact_id": "cmsynthp238dd4af1bbf159a5",
+      "role": "seeker",
+      "section_index": 1,
+      "section_text": "**Investors:**\n* Seed-stage VCs specializing in healthcare and AI.\n* Angel investors with experience in the pharmaceutical or biotech industries.\n* Individuals with a demonstrated track record of successful exits.",
+      "text_sha256": "901bcb42e7a87eee",
+      "row": 22
+    },
+    {
+      "key": "cmsynthp238dd4af1bbf159a5::s2",
+      "contact_id": "cmsynthp238dd4af1bbf159a5",
+      "role": "seeker",
+      "section_index": 2,
+      "section_text": "**Strategic Partners:**\n* **Hospital Systems:** CIOs, CMOs, and Heads of Oncology interested in piloting and implementing OncoNav\u2019s platform.\n* **Research Institutions:** Principal Investigators and data scientists collaborating on cancer genomics and treatment optimization.\n* **Pharmaceutical Companies:** Potential partners for data integration and clinical trial support (specifically those *not* directly competing in personalized oncology).",
+      "text_sha256": "07889828be9e5f00",
+      "row": 23
+    },
+    {
+      "key": "cmsynthp238dd4af1bbf159a5::s3",
+      "contact_id": "cmsynthp238dd4af1bbf159a5",
+      "role": "seeker",
+      "section_index": 3,
+      "section_text": "**Advisors:**\n* Experienced healthcare entrepreneurs who have successfully navigated the fundraising and scaling process.\n* Key Opinion Leaders (KOLs) in oncology with a strong research background and clinical network.\n* Individuals with expertise in regulatory affairs related to AI-driven healthcare solutions.",
+      "text_sha256": "8619a9381b7ede7d",
+      "row": 24
+    },
+    {
+      "key": "cmsynthp238dd4af1bbf159a5::s4",
+      "contact_id": "cmsynthp238dd4af1bbf159a5",
+      "role": "seeker",
+      "section_index": 4,
+      "section_text": "**I am *not* interested in:**\n* Multi-level marketing opportunities.\n* Recruiters offering sales positions (I\u2019m building a company, not looking for a job).\n* Individuals without a verifiable track record of success in their respective fields.",
+      "text_sha256": "dfcc840b879733e8",
+      "row": 25
+    },
+    {
+      "key": "cmsynthp24381c0b1953adf8d::whole",
+      "contact_id": "cmsynthp24381c0b1953adf8d",
+      "role": "seeker",
+      "section_index": -1,
+      "section_text": null,
+      "text_sha256": "ca0ce80deef816d7",
+      "row": 26
+    },
+    {
+      "key": "cmsynthp24381c0b1953adf8d::s0",
+      "contact_id": "cmsynthp24381c0b1953adf8d",
+      "role": "seeker",
+      "section_index": 0,
+      "section_text": "I'm actively seeking connections across several key areas.  My priorities are ranked below:",
+      "text_sha256": "c83af84fdd8b4a86",
+      "row": 27
+    },
+    {
+      "key": "cmsynthp24381c0b1953adf8d::s1",
+      "contact_id": "cmsynthp24381c0b1953adf8d",
+      "role": "seeker",
+      "section_index": 1,
+      "section_text": "**1. Technical Co-founder (LLM Expertise):**  I need a CTO-level engineer with deep experience in large language models (LLMs), specifically fine-tuning, prompt engineering, and scalable deployment.  Must have experience building production-ready AI applications.  Equity and significant ownership offered.",
+      "text_sha256": "57e736de55523e63",
+      "row": 28
+    },
+    {
+      "key": "cmsynthp24381c0b1953adf8d::s2",
+      "contact_id": "cmsynthp24381c0b1953adf8d",
+      "role": "seeker",
+      "section_index": 2,
+      "section_text": "**2. Strategic Partnerships (Enterprise Sales):**  I'm looking to connect with individuals at the VP of Sales level or above at major enterprise software companies (Salesforce, Microsoft, Oracle, SAP).  Potential for co-selling agreements or strategic integrations.",
+      "text_sha256": "6aa9408d360cf7f0",
+      "row": 29
+    },
+    {
+      "key": "cmsynthp24381c0b1953adf8d::s3",
+      "contact_id": "cmsynthp24381c0b1953adf8d",
+      "role": "seeker",
+      "section_index": 3,
+      "section_text": "**3. Potential Acquisition Targets:**  I'm interested in identifying early-stage startups (pre-Series A) with complementary technologies or datasets in the sales intelligence or data enrichment space.  Specifically, companies focused on intent data or account-based marketing (ABM).",
+      "text_sha256": "d1e14355ae10b992",
+      "row": 30
+    },
+    {
+      "key": "cmsynthp24381c0b1953adf8d::s4",
+      "contact_id": "cmsynthp24381c0b1953adf8d",
+      "role": "seeker",
+      "section_index": 4,
+      "section_text": "**4. Angel Investors:**  Seeking introductions to angel investors with a track record of investing in B2B SaaS and AI startups.",
+      "text_sha256": "8dd032c49a486486",
+      "row": 31
+    },
+    {
+      "key": "cmsynthp24381c0b1953adf8d::s5",
+      "contact_id": "cmsynthp24381c0b1953adf8d",
+      "role": "seeker",
+      "section_index": 5,
+      "section_text": "**I am *not* interested in:**\n* General networking requests without a specific value proposition.\n* Individuals offering services like marketing agencies or SEO consultants (unless they have demonstrated expertise in AI-driven growth).\n* Pitches for unrelated business ventures.\n* Recruiters (unless for exceptionally senior engineering roles).",
+      "text_sha256": "eca9957e8ee2e413",
+      "row": 32
+    },
+    {
+      "key": "cmsynthp3b0faf6a15a8d3352::whole",
+      "contact_id": "cmsynthp3b0faf6a15a8d3352",
+      "role": "seeker",
+      "section_index": -1,
+      "section_text": null,
+      "text_sha256": "1ec05ee4eacddec8",
+      "row": 33
+    },
+    {
+      "key": "cmsynthp3b0faf6a15a8d3352::s0",
+      "contact_id": "cmsynthp3b0faf6a15a8d3352",
+      "role": "seeker",
+      "section_index": 0,
+      "section_text": "I'm actively expanding my network within the healthcare technology space, with a specific focus on connecting with individuals who are driving innovation and adoption of new technologies. I'm particularly interested in:",
+      "text_sha256": "5fa4f11c7a88cda8",
+      "row": 34
+    },
+    {
+      "key": "cmsynthp3b0faf6a15a8d3352::s1",
+      "contact_id": "cmsynthp3b0faf6a15a8d3352",
+      "role": "seeker",
+      "section_index": 1,
+      "section_text": "**Priority Connections:**\n*   **VPs of Clinical Informatics** at large hospital systems (500+ beds) \u2013 I\u2019m seeking conversations around strategic technology initiatives and opportunities for collaboration.\n*   **Directors of Pharmacy** at academic medical centers \u2013 I want to understand their challenges with medication management systems and explore potential solutions.\n*   **Founders/CEOs** of early-stage (Series A/B) digital health startups focused on AI-driven clinical decision support or precision medicine \u2013 I\u2019m keen to learn about emerging technologies and explore potential partnerships.",
+      "text_sha256": "b776a5179e74bbe3",
+      "row": 35
+    },
+    {
+      "key": "cmsynthp3b0faf6a15a8d3352::s2",
+      "contact_id": "cmsynthp3b0faf6a15a8d3352",
+      "role": "seeker",
+      "section_index": 2,
+      "section_text": "**Secondary Connections:**\n*   **Chief Medical Information Officers (CMIOs)** \u2013 to gain insights into overall clinical technology strategy.\n*   **Implementation Specialists** at EHR vendors (Epic, Cerner) \u2013 to exchange best practices and explore integration opportunities.",
+      "text_sha256": "b8b322fae82599c6",
+      "row": 36
+    },
+    {
+      "key": "cmsynthp3b0faf6a15a8d3352::s3",
+      "contact_id": "cmsynthp3b0faf6a15a8d3352",
+      "role": "seeker",
+      "section_index": 3,
+      "section_text": "**I am *not* currently looking to connect with:**\n*   Sales representatives solely focused on pitching products.\n*   Individuals outside of the healthcare technology sector.\n*   Recruiters (unless specifically related to advisory roles).",
+      "text_sha256": "51e24940fd77a08f",
+      "row": 37
+    },
+    {
+      "key": "cmsynthp3b0faf6a15a8d3352::s4",
+      "contact_id": "cmsynthp3b0faf6a15a8d3352",
+      "role": "seeker",
+      "section_index": 4,
+      "section_text": "My current focus is on the West Coast and East Coast, but I\u2019m open to connecting with individuals nationwide.",
+      "text_sha256": "4826f4789e25ea2c",
+      "row": 38
+    },
+    {
+      "key": "cmsynthp3c06eeca8eb73f28c::whole",
+      "contact_id": "cmsynthp3c06eeca8eb73f28c",
+      "role": "seeker",
+      "section_index": -1,
+      "section_text": null,
+      "text_sha256": "1f06ef5e6f98cc44",
+      "row": 39
+    },
+    {
+      "key": "cmsynthp3c06eeca8eb73f28c::s0",
+      "contact_id": "cmsynthp3c06eeca8eb73f28c",
+      "role": "seeker",
+      "section_index": 0,
+      "section_text": "## Networking Objectives",
+      "text_sha256": "60f2de954afc9b43",
+      "row": 40
+    },
+    {
+      "key": "cmsynthp3c06eeca8eb73f28c::s1",
+      "contact_id": "cmsynthp3c06eeca8eb73f28c",
+      "role": "seeker",
+      "section_index": 1,
+      "section_text": "* **Co-Investment Opportunities:** Actively seeking to partner with other VCs on seed and Series A rounds in climate tech and sustainable food. Particularly interested in companies with strong IP and demonstrable traction.\n* **Deep Tech Founders:** Connecting with founders building innovative solutions based on scientific breakthroughs in areas like energy, materials, agriculture, and biotechnology.\n* **VC Professionals:** Expanding my network of venture capitalists specializing in deep tech and impact investing, especially those with a track record of supporting early-stage companies.\n* **Industry Experts:** Seeking introductions to thought leaders and advisors in the climate tech and sustainable food sectors who can provide valuable insights and guidance.",
+      "text_sha256": "3368fdbefe69762f",
+      "row": 41
+    },
+    {
+      "key": "cmsynthp3c06eeca8eb73f28c::s2",
+      "contact_id": "cmsynthp3c06eeca8eb73f28c",
+      "role": "seeker",
+      "section_index": 2,
+      "section_text": "**Ideal Contacts:**\n* Partners and Principals at venture capital firms focused on seed/Series A.\n* CEOs and CTOs of early-stage companies in climate tech and sustainable food.\n* Researchers and professors working on cutting-edge technologies.\n* Individuals with experience in scaling early-stage companies.",
+      "text_sha256": "dfb408b1d8309ec9",
+      "row": 42
+    },
+    {
+      "key": "cmsynthp3d979d26ddf5a324a::whole",
+      "contact_id": "cmsynthp3d979d26ddf5a324a",
+      "role": "seeker",
+      "section_index": -1,
+      "section_text": null,
+      "text_sha256": "25b515791a28fe1b",
+      "row": 43
+    },
+    {
+      "key": "cmsynthp401298448ab2a1897::whole",
+      "contact_id": "cmsynthp401298448ab2a1897",
+      "role": "seeker",
+      "section_index": -1,
+      "section_text": null,
+      "text_sha256": "154679112d128a1e",
+      "row": 44
+    },
+    {
+      "key": "cmsynthp401298448ab2a1897::s0",
+      "contact_id": "cmsynthp401298448ab2a1897",
+      "role": "seeker",
+      "section_index": 0,
+      "section_text": "I'm actively expanding my network of Limited Partners (LPs) \u2013 particularly those with a focus on emerging markets and early-stage investments. I\u2019m looking for LPs who are patient capital providers and understand the unique challenges and opportunities of the Indian startup ecosystem. I\u2019m open to introductions to family offices and institutional investors with a minimum ticket size of $500K.",
+      "text_sha256": "c1bd90962654d8dc",
+      "row": 45
+    },
+    {
+      "key": "cmsynthp401298448ab2a1897::s1",
+      "contact_id": "cmsynthp401298448ab2a1897",
+      "role": "seeker",
+      "section_index": 1,
+      "section_text": "I'm also seeking introductions to exceptional pre-seed and seed-stage founders in India, particularly those working on innovative solutions in Fintech, Healthtech, and Climate Tech. I\u2019m especially interested in founders who demonstrate a strong understanding of their target market and a clear path to scalability. I\u2019m *not* currently looking for later-stage opportunities.",
+      "text_sha256": "f30ff299eaecd4f0",
+      "row": 46
+    },
+    {
+      "key": "cmsynthp401298448ab2a1897::s2",
+      "contact_id": "cmsynthp401298448ab2a1897",
+      "role": "seeker",
+      "section_index": 2,
+      "section_text": "Finally, I'm looking to connect with other experienced fundraising advisors in India to share best practices and collaborate on opportunities. I\u2019m open to strategic partnerships that can expand my reach and impact.",
+      "text_sha256": "6a92ee216a8798c4",
+      "row": 47
+    },
+    {
+      "key": "cmsynthp4545a7031681b333b::whole",
+      "contact_id": "cmsynthp4545a7031681b333b",
+      "role": "seeker",
+      "section_index": -1,
+      "section_text": null,
+      "text_sha256": "1812928b8aa17656",
+      "row": 48
+    },
+    {
+      "key": "cmsynthp47c00f8cd8b58e433::whole",
+      "contact_id": "cmsynthp47c00f8cd8b58e433",
+      "role": "seeker",
+      "section_index": -1,
+      "section_text": null,
+      "text_sha256": "180f4e467679ce88",
+      "row": 49
+    },
+    {
+      "key": "cmsynthp47c00f8cd8b58e433::s0",
+      "contact_id": "cmsynthp47c00f8cd8b58e433",
+      "role": "seeker",
+      "section_index": 0,
+      "section_text": "I\u2019m actively exploring Product Leadership opportunities at Seed to Series A AI startups focused on solving tangible problems for marketing and sales teams. I\u2019m particularly interested in companies applying AI to areas like lead scoring, predictive analytics, content personalization, or sales automation. I\u2019m seeking a role where I can leverage my experience in growth, experimentation, and customer value to build and scale a successful product.",
+      "text_sha256": "97eae75a0553f5fd",
+      "row": 50
+    },
+    {
+      "key": "cmsynthp47c00f8cd8b58e433::s1",
+      "contact_id": "cmsynthp47c00f8cd8b58e433",
+      "role": "seeker",
+      "section_index": 1,
+      "section_text": "Specifically, I'm looking for:",
+      "text_sha256": "95eea70aa6e8f8fb",
+      "row": 51
+    },
+    {
+      "key": "cmsynthp47c00f8cd8b58e433::s2",
+      "contact_id": "cmsynthp47c00f8cd8b58e433",
+      "role": "seeker",
+      "section_index": 2,
+      "section_text": "* **Introductions to founders** of promising AI startups in the marketing/sales tech space.\n* **Connections to early-stage investors** (Seed, Pre-Seed, Angel) who are actively investing in AI.\n* **Mentorship from experienced startup leaders** who have successfully navigated the challenges of building and scaling an AI-powered product.\n* **Information about companies** that aren\u2019t actively advertising roles but might be open to discussing opportunities.",
+      "text_sha256": "240b0f64ff48a483",
+      "row": 52
+    },
+    {
+      "key": "cmsynthp47c00f8cd8b58e433::s3",
+      "contact_id": "cmsynthp47c00f8cd8b58e433",
+      "role": "seeker",
+      "section_index": 3,
+      "section_text": "I'm not currently interested in roles at larger, more established companies or in areas of AI that are purely research-focused. I need to be in a position to make a significant impact and shape the product vision.",
+      "text_sha256": "8fba7d442c234aeb",
+      "row": 53
+    },
+    {
+      "key": "cmsynthp5026b4bd883613e56::whole",
+      "contact_id": "cmsynthp5026b4bd883613e56",
+      "role": "seeker",
+      "section_index": -1,
+      "section_text": null,
+      "text_sha256": "96639c042ca6c136",
+      "row": 54
+    },
+    {
+      "key": "cmsynthp7784fac59d946c8fa::whole",
+      "contact_id": "cmsynthp7784fac59d946c8fa",
+      "role": "seeker",
+      "section_index": -1,
+      "section_text": null,
+      "text_sha256": "a187812d9994800f",
+      "row": 55
+    },
+    {
+      "key": "cmsynthp7784fac59d946c8fa::s0",
+      "contact_id": "cmsynthp7784fac59d946c8fa",
+      "role": "seeker",
+      "section_index": 0,
+      "section_text": "I'm actively seeking strategic partnerships with complementary consultancies. Specifically, I\u2019m looking for firms specializing in:",
+      "text_sha256": "ff69e54e6f7f8cba",
+      "row": 56
+    },
+    {
+      "key": "cmsynthp7784fac59d946c8fa::s1",
+      "contact_id": "cmsynthp7784fac59d946c8fa",
+      "role": "seeker",
+      "section_index": 1,
+      "section_text": "* **Penetration Testing & Vulnerability Assessments:**  We need a reliable partner to offer comprehensive security audits alongside our infrastructure work.  Ideal firms have a strong track record with startups and a deep understanding of cloud security best practices.\n* **Data Science & Machine Learning:**  We're seeing increasing demand for data engineering and ML infrastructure support. A partnership would allow us to expand our offerings without building that expertise in-house immediately.",
+      "text_sha256": "671165e1ea9f0ee5",
+      "row": 57
+    },
+    {
+      "key": "cmsynthp7784fac59d946c8fa::s2",
+      "contact_id": "cmsynthp7784fac59d946c8fa",
+      "role": "seeker",
+      "section_index": 2,
+      "section_text": "I\u2019m also open to connecting with potential investors interested in supporting SynergyFlow\u2019s growth. We\u2019re currently bootstrapped and exploring options for Series A funding to accelerate our expansion.  I\u2019m particularly interested in investors with experience in the B2B SaaS and consulting space.",
+      "text_sha256": "42668a707a5414e0",
+      "row": 58
+    },
+    {
+      "key": "cmsynthp7784fac59d946c8fa::s3",
+      "contact_id": "cmsynthp7784fac59d946c8fa",
+      "role": "seeker",
+      "section_index": 3,
+      "section_text": "Finally, I\u2019m always looking to connect with talented DevOps engineers and cloud architects.  We\u2019re a growing team, and I\u2019m committed to attracting top talent.  I'm especially interested in individuals with experience in infrastructure-as-code (Terraform, CloudFormation) and containerization (Docker, Kubernetes).",
+      "text_sha256": "5b4e3213dc29f080",
+      "row": 59
+    },
+    {
+      "key": "cmsynthp79cbb8d7d1ff15137::whole",
+      "contact_id": "cmsynthp79cbb8d7d1ff15137",
+      "role": "seeker",
+      "section_index": -1,
+      "section_text": null,
+      "text_sha256": "03c7791ae7b94fd3",
+      "row": 60
+    },
+    {
+      "key": "cmsynthp79cbb8d7d1ff15137::s0",
+      "contact_id": "cmsynthp79cbb8d7d1ff15137",
+      "role": "seeker",
+      "section_index": 0,
+      "section_text": "ShiftFlow is currently seeking $750,000 in seed funding to scale our sales and marketing efforts, expand our engineering team, and accelerate product development. We are particularly interested in investors with experience in the hospitality tech space or SaaS businesses.",
+      "text_sha256": "8d947bc429b4d3b1",
+      "row": 61
+    },
+    {
+      "key": "cmsynthp79cbb8d7d1ff15137::s1",
+      "contact_id": "cmsynthp79cbb8d7d1ff15137",
+      "role": "seeker",
+      "section_index": 1,
+      "section_text": "I\u2019m also actively looking to connect with:",
+      "text_sha256": "26333e089c17860e",
+      "row": 62
+    },
+    {
+      "key": "cmsynthp79cbb8d7d1ff15137::s2",
+      "contact_id": "cmsynthp79cbb8d7d1ff15137",
+      "role": "seeker",
+      "section_index": 2,
+      "section_text": "* **POS/PMS providers:** Exploring potential integration partnerships to provide a seamless experience for our customers.\n* **Hotel chain executives:** Seeking pilot programs and early adoption opportunities.\n* **Experienced SaaS founders:** Mentorship and advice on scaling a startup.\n* **Talent:** Specifically, a Senior Full-Stack Engineer with experience in React and Node.js and a Head of Sales with a proven track record in the hospitality industry.",
+      "text_sha256": "bb45054315f715d7",
+      "row": 63
+    },
+    {
+      "key": "cmsynthp79cbb8d7d1ff15137::s3",
+      "contact_id": "cmsynthp79cbb8d7d1ff15137",
+      "role": "seeker",
+      "section_index": 3,
+      "section_text": "I'm open to introductions to individuals who can provide strategic guidance, potential investment, or valuable connections within the hospitality ecosystem. I'm available for brief introductory calls to discuss ShiftFlow and explore potential synergies.",
+      "text_sha256": "eb196166c52b289b",
+      "row": 64
+    },
+    {
+      "key": "cmsynthp8174ada2b035c551f::whole",
+      "contact_id": "cmsynthp8174ada2b035c551f",
+      "role": "seeker",
+      "section_index": -1,
+      "section_text": null,
+      "text_sha256": "9b787587f2867f13",
+      "row": 65
+    },
+    {
+      "key": "cmsynthp888e4ff76a94e4518::whole",
+      "contact_id": "cmsynthp888e4ff76a94e4518",
+      "role": "seeker",
+      "section_index": -1,
+      "section_text": null,
+      "text_sha256": "14b741d087c0d5fd",
+      "row": 66
+    },
+    {
+      "key": "cmsynthp8d119ab236cfaf438::whole",
+      "contact_id": "cmsynthp8d119ab236cfaf438",
+      "role": "seeker",
+      "section_index": -1,
+      "section_text": null,
+      "text_sha256": "98d9c7f3e6576fdc",
+      "row": 67
+    },
+    {
+      "key": "cmsynthp8e8b58963a9d2621e::whole",
+      "contact_id": "cmsynthp8e8b58963a9d2621e",
+      "role": "seeker",
+      "section_index": -1,
+      "section_text": null,
+      "text_sha256": "d061cc21285f2eac",
+      "row": 68
+    },
+    {
+      "key": "cmsynthp92c76e7e75597c53c::whole",
+      "contact_id": "cmsynthp92c76e7e75597c53c",
+      "role": "seeker",
+      "section_index": -1,
+      "section_text": null,
+      "text_sha256": "7db13a4ca8995aee",
+      "row": 69
+    },
+    {
+      "key": "cmsynthp92c76e7e75597c53c::s0",
+      "contact_id": "cmsynthp92c76e7e75597c53c",
+      "role": "seeker",
+      "section_index": 0,
+      "section_text": "## Connections & Opportunities",
+      "text_sha256": "a2de83ee754b0bb1",
+      "row": 70
+    },
+    {
+      "key": "cmsynthp92c76e7e75597c53c::s1",
+      "contact_id": "cmsynthp92c76e7e75597c53c",
+      "role": "seeker",
+      "section_index": 1,
+      "section_text": "I'm actively seeking connections to accelerate TerraNova Biosciences' growth and impact. Specifically, I'm looking for:",
+      "text_sha256": "2ae511c13a2702f3",
+      "row": 71
+    },
+    {
+      "key": "cmsynthp92c76e7e75597c53c::s2",
+      "contact_id": "cmsynthp92c76e7e75597c53c",
+      "role": "seeker",
+      "section_index": 2,
+      "section_text": "* **Seed-Stage Investors:** Individuals or firms with a demonstrated interest in AgTech, synthetic biology, and sustainable agriculture.  Investment size: $1M - $3M.  We prioritize investors who bring more than just capital \u2013 strategic guidance and industry connections are highly valued.\n* **Strategic Advisors:**  Experienced professionals in the following areas:\n    * **Regenerative Agriculture:** Experts with deep knowledge of soil health, cover cropping, and no-till farming practices.\n    * **Synthetic Biology Commercialization:**  Individuals with a proven track record of successfully bringing synthetic biology products to market.\n    * **Regulatory Affairs (AgTech):**  Someone familiar with the regulatory landscape for seed coatings and agricultural biotechnology.\n* **Potential Partners:**  Companies with complementary technologies or market access in the agricultural sector.  We're particularly interested in exploring partnerships with companies focused on biologicals, precision agriculture, and sustainable farming practices.\n* **Introductions to:**\n    * Key opinion leaders in the regenerative agriculture movement.\n    * Venture capitalists specializing in climate tech.",
+      "text_sha256": "b3f81378ff50bd5d",
+      "row": 72
+    },
+    {
+      "key": "cmsynthp92c76e7e75597c53c::s3",
+      "contact_id": "cmsynthp92c76e7e75597c53c",
+      "role": "seeker",
+      "section_index": 3,
+      "section_text": "**I am *not* currently looking for:**\n    * Marketing or PR support \u2013 we're focused on product development at this stage.\n    * Large-scale manufacturing partnerships \u2013 we're still in the early stages of scaling.",
+      "text_sha256": "8f00da923d3d55d4",
+      "row": 73
+    },
+    {
+      "key": "cmsynthp96513cc1db9f918e8::whole",
+      "contact_id": "cmsynthp96513cc1db9f918e8",
+      "role": "seeker",
+      "section_index": -1,
+      "section_text": null,
+      "text_sha256": "c93b4ff84e15a51e",
+      "row": 74
+    },
+    {
+      "key": "cmsynthp96513cc1db9f918e8::s0",
+      "contact_id": "cmsynthp96513cc1db9f918e8",
+      "role": "seeker",
+      "section_index": 0,
+      "section_text": "I'm actively seeking connections in the following areas:",
+      "text_sha256": "91c1e90956b86af9",
+      "row": 75
+    },
+    {
+      "key": "cmsynthp96513cc1db9f918e8::s1",
+      "contact_id": "cmsynthp96513cc1db9f918e8",
+      "role": "seeker",
+      "section_index": 1,
+      "section_text": "**Investors:**\n* Seed-stage VCs specializing in AI and data infrastructure.\n* Angel investors with a track record of successful early-stage investments.\n* Individuals with experience scaling SaaS companies.\n* *Not* interested in investors who lack a technical understanding of our space.",
+      "text_sha256": "6812e3cf15cf8b8e",
+      "row": 76
+    },
+    {
+      "key": "cmsynthp96513cc1db9f918e8::s2",
+      "contact_id": "cmsynthp96513cc1db9f918e8",
+      "role": "seeker",
+      "section_index": 2,
+      "section_text": "**Potential Clients (Pilot Programs):**\n* Data-driven organizations in financial services, healthcare, and retail.\n* Companies struggling with data quality issues impacting their AI initiatives.\n* Decision-makers (CIOs, CTOs, Heads of Data Science) open to exploring innovative solutions.",
+      "text_sha256": "c0882094f04d3f6c",
+      "row": 77
+    },
+    {
+      "key": "cmsynthp96513cc1db9f918e8::s3",
+      "contact_id": "cmsynthp96513cc1db9f918e8",
+      "role": "seeker",
+      "section_index": 3,
+      "section_text": "**Advisors & Mentors:**\n* Experienced entrepreneurs who have successfully navigated the startup landscape.\n* Experts in data governance, data quality, and AI ethics.\n* Individuals with strong networks in the enterprise software space.",
+      "text_sha256": "120bd7dcdf3d2134",
+      "row": 78
+    },
+    {
+      "key": "cmsynthp96513cc1db9f918e8::s4",
+      "contact_id": "cmsynthp96513cc1db9f918e8",
+      "role": "seeker",
+      "section_index": 4,
+      "section_text": "**Key Partnerships:**\n* Strategic alliances with data integration and ETL providers.\n* Collaborations with leading AI platform vendors.",
+      "text_sha256": "951beb778af69ade",
+      "row": 79
+    },
+    {
+      "key": "cmsynthp96513cc1db9f918e8::s5",
+      "contact_id": "cmsynthp96513cc1db9f918e8",
+      "role": "seeker",
+      "section_index": 5,
+      "section_text": "I\u2019m *not* looking for sales pitches for unrelated products or services. I\u2019m focused on building genuine relationships with individuals who can add value to SynapseAI.",
+      "text_sha256": "d16ba7759a5103ad",
+      "row": 80
+    },
+    {
+      "key": "cmsynthp9d2127aa4d59510ef::whole",
+      "contact_id": "cmsynthp9d2127aa4d59510ef",
+      "role": "seeker",
+      "section_index": -1,
+      "section_text": null,
+      "text_sha256": "cf4ab6dd87c759c4",
+      "row": 81
+    },
+    {
+      "key": "cmsynthp9d2127aa4d59510ef::s0",
+      "contact_id": "cmsynthp9d2127aa4d59510ef",
+      "role": "seeker",
+      "section_index": 0,
+      "section_text": "## Connections & Opportunities",
+      "text_sha256": "94a5a2e6ef650464",
+      "row": 82
+    },
+    {
+      "key": "cmsynthp9d2127aa4d59510ef::s1",
+      "contact_id": "cmsynthp9d2127aa4d59510ef",
+      "role": "seeker",
+      "section_index": 1,
+      "section_text": "I\u2019m actively seeking connections with individuals who can support Nexus\u2019s growth and impact. Specifically, I'm looking for:",
+      "text_sha256": "38382ea592560f88",
+      "row": 83
+    },
+    {
+      "key": "cmsynthp9d2127aa4d59510ef::s2",
+      "contact_id": "cmsynthp9d2127aa4d59510ef",
+      "role": "seeker",
+      "section_index": 2,
+      "section_text": "* **Advisors with experience scaling early-stage platforms:** I\u2019d love to connect with individuals who have successfully navigated the challenges of scaling a community-driven platform, particularly in the edtech space. Experience with user growth, community moderation, and data analytics is highly valued.\n* **Mentors in global community building:** I'm keen to learn from experienced community builders who understand the nuances of fostering engagement across diverse cultures and time zones.\n* **Potential University Partners:**  I'm interested in connecting with deans, department heads, and student organization leaders at universities interested in integrating Nexus into their curriculum or offering it as a resource for their students.\n* **Early-stage EdTech Investors:** While we recently closed our seed round, I\u2019m always open to building relationships with investors who share our vision for the future of education.\n* **Talented Engineers (Full-Stack & Data Science):**  We are growing our team and are looking for passionate engineers to help us build the next generation of Nexus.",
+      "text_sha256": "9aaf9f621c9f6a00",
+      "row": 84
+    },
+    {
+      "key": "cmsynthp9d2127aa4d59510ef::s3",
+      "contact_id": "cmsynthp9d2127aa4d59510ef",
+      "role": "seeker",
+      "section_index": 3,
+      "section_text": "**I am *not* currently looking for:**",
+      "text_sha256": "526e63f0da35c98f",
+      "row": 85
+    },
+    {
+      "key": "cmsynthp9d2127aa4d59510ef::s4",
+      "contact_id": "cmsynthp9d2127aa4d59510ef",
+      "role": "seeker",
+      "section_index": 4,
+      "section_text": "* Sales or marketing support \u2013 we have a dedicated team for those areas.\n* Individuals solely interested in job opportunities for themselves (unless they are a strong engineering candidate).\n* Cold outreach offering generic services.",
+      "text_sha256": "7276e69be520beb1",
+      "row": 86
+    },
+    {
+      "key": "cmsynthpa6c12620ea688f58f::whole",
+      "contact_id": "cmsynthpa6c12620ea688f58f",
+      "role": "seeker",
+      "section_index": -1,
+      "section_text": null,
+      "text_sha256": "4a69477478a5fd27",
+      "row": 87
+    },
+    {
+      "key": "cmsynthpabefb74485dc8bc83::whole",
+      "contact_id": "cmsynthpabefb74485dc8bc83",
+      "role": "seeker",
+      "section_index": -1,
+      "section_text": null,
+      "text_sha256": "649d0cd6e5586b59",
+      "row": 88
+    },
+    {
+      "key": "cmsynthpacc7a071ec3199240::whole",
+      "contact_id": "cmsynthpacc7a071ec3199240",
+      "role": "seeker",
+      "section_index": -1,
+      "section_text": null,
+      "text_sha256": "26ae7020ef502a1d",
+      "row": 89
+    },
+    {
+      "key": "cmsynthpacc7a071ec3199240::s0",
+      "contact_id": "cmsynthpacc7a071ec3199240",
+      "role": "seeker",
+      "section_index": 0,
+      "section_text": "I\u2019m currently focused on expanding my network within the fintech ecosystem and identifying promising investment opportunities. I\u2019m particularly interested in connecting with:",
+      "text_sha256": "c747421b03ad6714",
+      "row": 90
+    },
+    {
+      "key": "cmsynthpacc7a071ec3199240::s1",
+      "contact_id": "cmsynthpacc7a071ec3199240",
+      "role": "seeker",
+      "section_index": 1,
+      "section_text": "**Founders (Seed - Series B):**\n*   Building companies focused on financial inclusion, particularly those leveraging AI/ML.\n*   Operating in the areas of embedded finance, alternative lending, regtech, and payments infrastructure.\n*   Demonstrating strong unit economics and a clear path to profitability.\n*   Ideally, female founders or teams with diverse leadership.",
+      "text_sha256": "fc559110e998c59d",
+      "row": 91
+    },
+    {
+      "key": "cmsynthpacc7a071ec3199240::s2",
+      "contact_id": "cmsynthpacc7a071ec3199240",
+      "role": "seeker",
+      "section_index": 2,
+      "section_text": "**Industry Experts & Advisors:**\n*   Individuals with deep expertise in specific fintech verticals (e.g., fraud prevention, KYC/AML).\n*   Operators with a proven track record of scaling fintech businesses.\n*   Thought leaders in the AI/ML space.",
+      "text_sha256": "012d6d8b2e50deec",
+      "row": 92
+    },
+    {
+      "key": "cmsynthpacc7a071ec3199240::s3",
+      "contact_id": "cmsynthpacc7a071ec3199240",
+      "role": "seeker",
+      "section_index": 3,
+      "section_text": "**VCs & Angel Investors:**\n*   Partners at firms focused on fintech and growth-stage investing.\n*   Angel investors with a strong network and a passion for fintech innovation.",
+      "text_sha256": "939c6d2a29be3c7c",
+      "row": 93
+    },
+    {
+      "key": "cmsynthpacc7a071ec3199240::s4",
+      "contact_id": "cmsynthpacc7a071ec3199240",
+      "role": "seeker",
+      "section_index": 4,
+      "section_text": "**I\u2019m *not* currently interested in:**\n*   Web3/Crypto projects (unless they have a clear and compelling use case beyond speculation).\n*   Companies with unsustainable business models or overly inflated valuations.\n*   Opportunities that lack a strong focus on customer value.",
+      "text_sha256": "b98f56c3b8155e5c",
+      "row": 94
+    },
+    {
+      "key": "cmsynthpae8610186d71d9029::whole",
+      "contact_id": "cmsynthpae8610186d71d9029",
+      "role": "seeker",
+      "section_index": -1,
+      "section_text": null,
+      "text_sha256": "ac58e183106fb61d",
+      "row": 95
+    },
+    {
+      "key": "cmsynthpae8610186d71d9029::s0",
+      "contact_id": "cmsynthpae8610186d71d9029",
+      "role": "seeker",
+      "section_index": 0,
+      "section_text": "## Networking Goals",
+      "text_sha256": "a93598a0cafbb821",
+      "row": 96
+    },
+    {
+      "key": "cmsynthpae8610186d71d9029::s1",
+      "contact_id": "cmsynthpae8610186d71d9029",
+      "role": "seeker",
+      "section_index": 1,
+      "section_text": "I'm actively seeking to expand my network within the e-commerce and reverse logistics ecosystem. I'm particularly interested in connecting with:",
+      "text_sha256": "f0b5d77820dfcba8",
+      "row": 97
+    },
+    {
+      "key": "cmsynthpae8610186d71d9029::s2",
+      "contact_id": "cmsynthpae8610186d71d9029",
+      "role": "seeker",
+      "section_index": 2,
+      "section_text": "* **Technology Providers:** Companies offering innovative solutions for automated product grading, diagnostics, repair, data erasure, and inventory management for returned electronics.\n* **Investors:** Individuals or firms focused on the circular economy, sustainable e-commerce, and companies with strong ESG (Environmental, Social, and Governance) profiles.\n* **Industry Peers:** Heads of Reverse Logistics or Supply Chain professionals at other e-commerce companies (particularly in the electronics, consumer goods, and apparel sectors) to share best practices and explore potential collaborations.\n* **Sustainability Consultants:** Experts in developing and implementing sustainable reverse logistics strategies.",
+      "text_sha256": "e8e9aae5e6cebfb8",
+      "row": 98
+    },
+    {
+      "key": "cmsynthpae8610186d71d9029::s3",
+      "contact_id": "cmsynthpae8610186d71d9029",
+      "role": "seeker",
+      "section_index": 3,
+      "section_text": "I'm open to informational interviews, strategic partnerships, and potential investment opportunities. I\u2019m especially keen on introductions to individuals who can help NovaCycle scale our reverse logistics operations while maintaining our commitment to environmental responsibility.",
+      "text_sha256": "6c86bc23203dbd73",
+      "row": 99
+    },
+    {
+      "key": "cmsynthpb0498f6ee594d9fbf::whole",
+      "contact_id": "cmsynthpb0498f6ee594d9fbf",
+      "role": "seeker",
+      "section_index": -1,
+      "section_text": null,
+      "text_sha256": "27811e8dc9438eac",
+      "row": 100
+    },
+    {
+      "key": "cmsynthpb0498f6ee594d9fbf::s0",
+      "contact_id": "cmsynthpb0498f6ee594d9fbf",
+      "role": "seeker",
+      "section_index": 0,
+      "section_text": "## Connections I'm Seeking",
+      "text_sha256": "2c4051fbc31fbb10",
+      "row": 101
+    },
+    {
+      "key": "cmsynthpb0498f6ee594d9fbf::s1",
+      "contact_id": "cmsynthpb0498f6ee594d9fbf",
+      "role": "seeker",
+      "section_index": 1,
+      "section_text": "* **Angel Investors:** Specifically looking for individuals with a proven track record in fintech investing and a genuine interest in supporting early-stage AI companies.  Ideal check size: $50k - $250k.\n* **Seed Stage VCs:** Exploring potential partnerships with venture capital firms specializing in seed-stage fintech investments.  We're looking for investors who can offer not just capital, but also strategic guidance and access to their network.\n* **Strategic Partners:** Companies with established relationships with SMBs (e.g., accounting software providers, POS systems, business associations) who would be interested in integrating CrediFlow\u2019s technology into their offerings.\n* **Experienced Advisors:**  Seeking mentors with expertise in scaling AI-driven fintech businesses, navigating regulatory hurdles, and building high-performing teams.  I\u2019m particularly interested in individuals with experience in credit scoring and risk management.",
+      "text_sha256": "495a9733872d7143",
+      "row": 102
+    },
+    {
+      "key": "cmsynthpb0498f6ee594d9fbf::s2",
+      "contact_id": "cmsynthpb0498f6ee594d9fbf",
+      "role": "seeker",
+      "section_index": 2,
+      "section_text": "I'm open to virtual introductions and brief informational calls to explore potential synergies. Please prioritize connections who can offer tangible value to CrediFlow\u2019s growth.",
+      "text_sha256": "edd88ebfe4de03cf",
+      "row": 103
+    },
+    {
+      "key": "cmsynthpba0efd280c8e4fb0d::whole",
+      "contact_id": "cmsynthpba0efd280c8e4fb0d",
+      "role": "seeker",
+      "section_index": -1,
+      "section_text": null,
+      "text_sha256": "e4776046398858d5",
+      "row": 104
+    },
+    {
+      "key": "cmsynthpba0efd280c8e4fb0d::s0",
+      "contact_id": "cmsynthpba0efd280c8e4fb0d",
+      "role": "seeker",
+      "section_index": 0,
+      "section_text": "## Networking Objectives",
+      "text_sha256": "c8fd1a1260639e3f",
+      "row": 105
+    },
+    {
+      "key": "cmsynthpba0efd280c8e4fb0d::s1",
+      "contact_id": "cmsynthpba0efd280c8e4fb0d",
+      "role": "seeker",
+      "section_index": 1,
+      "section_text": "*   **Early-Stage Founders:** Seeking to connect with ambitious founders building innovative climate tech and sustainable agriculture companies at the pre-seed and seed stages. Particularly interested in companies with strong IP, scalable solutions, and a clear path to profitability.\n*   **Venture Capital Partners:** Looking to build relationships with other VCs specializing in climate tech and sustainable agriculture to co-invest and share deal flow.\n*   **Industry Experts & Advisors:** Seeking introductions to individuals with deep expertise in specific areas of climate tech (e.g., carbon capture, alternative proteins, precision agriculture) who can provide mentorship and guidance to our portfolio companies.\n*   **Angel Investors:** Connecting with angel investors focused on impact investing to broaden our network and identify promising early-stage opportunities.",
+      "text_sha256": "1144faa5d5748c2f",
+      "row": 106
+    },
+    {
+      "key": "cmsynthpba0efd280c8e4fb0d::s2",
+      "contact_id": "cmsynthpba0efd280c8e4fb0d",
+      "role": "seeker",
+      "section_index": 2,
+      "section_text": "**Desired Interactions:**",
+      "text_sha256": "daafd7905fabd02f",
+      "row": 107
+    },
+    {
+      "key": "cmsynthpba0efd280c8e4fb0d::s3",
+      "contact_id": "cmsynthpba0efd280c8e4fb0d",
+      "role": "seeker",
+      "section_index": 3,
+      "section_text": "*   Warm introductions to relevant founders and investors.\n*   Opportunities to participate in industry events and conferences.\n*   Information sharing on emerging trends and technologies in the climate tech and sustainable agriculture sectors.\n*   Feedback on our investment thesis and portfolio companies.",
+      "text_sha256": "54535409ad906f27",
+      "row": 108
+    },
+    {
+      "key": "cmsynthpbd4f281a4397c443b::whole",
+      "contact_id": "cmsynthpbd4f281a4397c443b",
+      "role": "seeker",
+      "section_index": -1,
+      "section_text": null,
+      "text_sha256": "d4d8c8f58f036450",
+      "row": 109
+    },
+    {
+      "key": "cmsynthpc4f6fd50f3c842edc::whole",
+      "contact_id": "cmsynthpc4f6fd50f3c842edc",
+      "role": "seeker",
+      "section_index": -1,
+      "section_text": null,
+      "text_sha256": "a4494aefd8606217",
+      "row": 110
+    },
+    {
+      "key": "cmsynthpc4f6fd50f3c842edc::s0",
+      "contact_id": "cmsynthpc4f6fd50f3c842edc",
+      "role": "seeker",
+      "section_index": 0,
+      "section_text": "I am actively seeking connections with individuals and organizations who share my passion for sustainable and ethical supply chains. Specifically, I am looking for:",
+      "text_sha256": "ee90db9b9e22d971",
+      "row": 111
+    },
+    {
+      "key": "cmsynthpc4f6fd50f3c842edc::s1",
+      "contact_id": "cmsynthpc4f6fd50f3c842edc",
+      "role": "seeker",
+      "section_index": 1,
+      "section_text": "**Investors:**\n * Seed and Series A investors focused on supply chain technology and sustainability.\n * Individuals with experience investing in blockchain-based solutions.\n * Investment amounts ranging from $500k to $2M for potential spin-off ventures.",
+      "text_sha256": "4e2ca4ff9e3ee9fd",
+      "row": 112
+    },
+    {
+      "key": "cmsynthpc4f6fd50f3c842edc::s2",
+      "contact_id": "cmsynthpc4f6fd50f3c842edc",
+      "role": "seeker",
+      "section_index": 2,
+      "section_text": "**Technology Partners:**\n * Companies specializing in blockchain development, particularly those with experience in supply chain applications.\n * AI and IoT solution providers focused on supply chain optimization and traceability.\n * Companies offering secure data storage and management solutions.",
+      "text_sha256": "17d02b3e7a9d17a5",
+      "row": 113
+    },
+    {
+      "key": "cmsynthpc4f6fd50f3c842edc::s3",
+      "contact_id": "cmsynthpc4f6fd50f3c842edc",
+      "role": "seeker",
+      "section_index": 3,
+      "section_text": "**Industry Experts:**\n * Individuals with deep expertise in supply chain finance and risk management.\n * Professionals with experience in scaling sustainable sourcing initiatives.\n * Thought leaders in the circular economy and responsible consumption.",
+      "text_sha256": "6d79b18b09adfb29",
+      "row": 114
+    },
+    {
+      "key": "cmsynthpc4f6fd50f3c842edc::s4",
+      "contact_id": "cmsynthpc4f6fd50f3c842edc",
+      "role": "seeker",
+      "section_index": 4,
+      "section_text": "**I am *not* interested in:**\n * Connections related to fast fashion or unsustainable business practices.\n * Individuals offering purely speculative investment opportunities.\n * Networking events focused solely on self-promotion.\n * Recruiters \u2013 I am not currently seeking employment opportunities, but am open to discussing advisory roles.",
+      "text_sha256": "aebccfb5a52615c9",
+      "row": 115
+    },
+    {
+      "key": "cmsynthpc68abd6e975af81ae::whole",
+      "contact_id": "cmsynthpc68abd6e975af81ae",
+      "role": "seeker",
+      "section_index": -1,
+      "section_text": null,
+      "text_sha256": "3ba2e0d664d024d6",
+      "row": 116
+    },
+    {
+      "key": "cmsynthpc68abd6e975af81ae::s0",
+      "contact_id": "cmsynthpc68abd6e975af81ae",
+      "role": "seeker",
+      "section_index": 0,
+      "section_text": "I'm actively seeking connections with individuals and organizations that can contribute to the growth and success of NovaPay. Specifically, I\u2019m looking for:",
+      "text_sha256": "f58725c9853a3015",
+      "row": 117
+    },
+    {
+      "key": "cmsynthpc68abd6e975af81ae::s1",
+      "contact_id": "cmsynthpc68abd6e975af81ae",
+      "role": "seeker",
+      "section_index": 1,
+      "section_text": "**Strategic Partnerships:**\n* **Established Financial Institutions:** Banks, credit unions, and other financial institutions interested in leveraging NovaPay\u2019s platform to accelerate their digital transformation and expand their service offerings.\n* **SMB Software Providers:** Companies offering software solutions to small and medium-sized businesses (e.g., accounting software, CRM, POS systems) seeking to integrate financial features into their platforms.\n* **System Integrators:** Partners with experience integrating complex fintech solutions into enterprise environments.",
+      "text_sha256": "ae666afa2b365631",
+      "row": 118
+    },
+    {
+      "key": "cmsynthpc68abd6e975af81ae::s2",
+      "contact_id": "cmsynthpc68abd6e975af81ae",
+      "role": "seeker",
+      "section_index": 2,
+      "section_text": "**Key Individuals:**\n* **Heads of Innovation/Digital Transformation:** Within financial institutions and SMB software companies.\n* **VP of Engineering/CTO:** At companies evaluating fintech infrastructure solutions.\n* **Business Development Leaders:** Focused on strategic partnerships and new market opportunities.",
+      "text_sha256": "62110488f8654f9e",
+      "row": 119
+    },
+    {
+      "key": "cmsynthpc68abd6e975af81ae::s3",
+      "contact_id": "cmsynthpc68abd6e975af81ae",
+      "role": "seeker",
+      "section_index": 3,
+      "section_text": "**I am *not* currently seeking:**\n* **Seed-stage Venture Capital:** While I\u2019m open to conversations, my immediate focus is on revenue-generating partnerships.\n* **Sales & Marketing Assistance:** We have a lean but effective team in this area.\n* **General Networking:** I\u2019m looking for targeted connections with individuals who have a clear understanding of the fintech landscape and can offer tangible value to NovaPay.",
+      "text_sha256": "3d413960532d1d19",
+      "row": 120
+    },
+    {
+      "key": "cmsynthpc6e19571eac191e44::whole",
+      "contact_id": "cmsynthpc6e19571eac191e44",
+      "role": "seeker",
+      "section_index": -1,
+      "section_text": null,
+      "text_sha256": "951b233d6b001598",
+      "row": 121
+    },
+    {
+      "key": "cmsynthpc6e19571eac191e44::s0",
+      "contact_id": "cmsynthpc6e19571eac191e44",
+      "role": "seeker",
+      "section_index": 0,
+      "section_text": "FlowState AI is currently focused on closing our Series A round and expanding our engineering team. I\u2019m actively seeking introductions to venture capital firms specializing in logistics tech and AI, particularly those with a demonstrated history of supporting companies at the growth stage. We\u2019re looking for investors who understand the complexities of the supply chain and can provide strategic support beyond capital.",
+      "text_sha256": "7f7f47ab90e2c64b",
+      "row": 122
+    },
+    {
+      "key": "cmsynthpc6e19571eac191e44::s1",
+      "contact_id": "cmsynthpc6e19571eac191e44",
+      "role": "seeker",
+      "section_index": 1,
+      "section_text": "Specifically, I'm interested in:",
+      "text_sha256": "86a90b3be204885e",
+      "row": 123
+    },
+    {
+      "key": "cmsynthpc6e19571eac191e44::s2",
+      "contact_id": "cmsynthpc6e19571eac191e44",
+      "role": "seeker",
+      "section_index": 2,
+      "section_text": "* **VC Partners:** Targeting firms with $50M+ to deploy and experience in B2B SaaS.\n* **Strategic Investors:** Logistics providers (e.g., UPS, FedEx, DHL) interested in exploring potential partnerships and integration opportunities.\n* **Senior Machine Learning Engineers:** Experienced in reinforcement learning, particularly those with a background in robotics or optimization problems. We need individuals who can hit the ground running and contribute to our core platform.\n* **Head of Sales:** A seasoned sales leader with a proven track record of selling complex software solutions to enterprise clients in the logistics space.",
+      "text_sha256": "17da247632a1667f",
+      "row": 124
+    },
+    {
+      "key": "cmsynthpc6e19571eac191e44::s3",
+      "contact_id": "cmsynthpc6e19571eac191e44",
+      "role": "seeker",
+      "section_index": 3,
+      "section_text": "I'm also open to connecting with other founders in the AI/ML space to share learnings and best practices.",
+      "text_sha256": "38af72c0027ea2fd",
+      "row": 125
+    },
+    {
+      "key": "cmsynthpcb30388428922c60d::whole",
+      "contact_id": "cmsynthpcb30388428922c60d",
+      "role": "seeker",
+      "section_index": -1,
+      "section_text": null,
+      "text_sha256": "1170074951e8a1db",
+      "row": 126
+    },
+    {
+      "key": "cmsynthpcb30388428922c60d::s0",
+      "contact_id": "cmsynthpcb30388428922c60d",
+      "role": "seeker",
+      "section_index": 0,
+      "section_text": "I'm actively seeking opportunities to contribute my GTM expertise to high-potential SaaS companies. My current focus is on:",
+      "text_sha256": "2878e06d4591cfec",
+      "row": 127
+    },
+    {
+      "key": "cmsynthpcb30388428922c60d::s1",
+      "contact_id": "cmsynthpcb30388428922c60d",
+      "role": "seeker",
+      "section_index": 1,
+      "section_text": "**1. Board Advisory Roles:**  I'm particularly interested in serving on the advisory boards of Series B/C companies with revenue between $10M - $50M.  I can offer strategic guidance on sales strategy, GTM optimization, and revenue forecasting.",
+      "text_sha256": "f00d743f6dcbf981",
+      "row": 128
+    },
+    {
+      "key": "cmsynthpcb30388428922c60d::s2",
+      "contact_id": "cmsynthpcb30388428922c60d",
+      "role": "seeker",
+      "section_index": 2,
+      "section_text": "**2. Interim Leadership Positions (CRO/VP Sales/VP Marketing):**  I'm open to stepping in as an interim executive to provide leadership and stability during periods of transition or rapid growth.  Ideal engagements are 3-6 months in duration.",
+      "text_sha256": "92eb3e4909c87065",
+      "row": 129
+    },
+    {
+      "key": "cmsynthpcb30388428922c60d::s3",
+      "contact_id": "cmsynthpcb30388428922c60d",
+      "role": "seeker",
+      "section_index": 3,
+      "section_text": "**Ideal Company Profile:**\n* **Stage:** Series B/C\n* **Revenue:** $10M - $50M ARR\n* **Industry:** SaaS (specifically, B2B)\n* **Challenge:** Struggling to achieve predictable revenue growth despite a strong product.\n* **Geography:** US-based preferred, but open to remote opportunities.",
+      "text_sha256": "03bb435f3fbbeac2",
+      "row": 130
+    },
+    {
+      "key": "cmsynthpcb30388428922c60d::s4",
+      "contact_id": "cmsynthpcb30388428922c60d",
+      "role": "seeker",
+      "section_index": 4,
+      "section_text": "**Ideal Connections:**\n* **Venture Capitalists:**  Partners at firms investing in Series B/C SaaS companies.\n* **Operating Executives:**  CROs, VPs of Sales, and VPs of Marketing at fast-growing SaaS companies.\n* **Founders:**  CEOs of companies fitting the ideal company profile.",
+      "text_sha256": "055152eea280e866",
+      "row": 131
+    },
+    {
+      "key": "cmsynthpcb30388428922c60d::s5",
+      "contact_id": "cmsynthpcb30388428922c60d",
+      "role": "seeker",
+      "section_index": 5,
+      "section_text": "**Not a Good Fit:**\n* Pre-seed/Seed stage companies\n* Companies in mature, slow-growth markets (e.g., traditional manufacturing)\n* Companies requiring a hands-on sales leader \u2013 I'm focused on strategic roles.",
+      "text_sha256": "96399afc675cea75",
+      "row": 132
+    },
+    {
+      "key": "cmsynthpd15434c6644535c9c::whole",
+      "contact_id": "cmsynthpd15434c6644535c9c",
+      "role": "seeker",
+      "section_index": -1,
+      "section_text": null,
+      "text_sha256": "24d90a211587a760",
+      "row": 133
+    },
+    {
+      "key": "cmsynthpd15434c6644535c9c::s0",
+      "contact_id": "cmsynthpd15434c6644535c9c",
+      "role": "seeker",
+      "section_index": 0,
+      "section_text": "## Open to New Opportunities",
+      "text_sha256": "429bd17ce100d155",
+      "row": 134
+    },
+    {
+      "key": "cmsynthpd15434c6644535c9c::s1",
+      "contact_id": "cmsynthpd15434c6644535c9c",
+      "role": "seeker",
+      "section_index": 1,
+      "section_text": "I am actively seeking a VP of Operations role at a growth-stage (Series B/C) SaaS company, ideally within the MarTech space. My ideal company will value data-driven decision-making and a collaborative work environment.",
+      "text_sha256": "d9345eb9ff2c7129",
+      "row": 135
+    },
+    {
+      "key": "cmsynthpd15434c6644535c9c::s2",
+      "contact_id": "cmsynthpd15434c6644535c9c",
+      "role": "seeker",
+      "section_index": 2,
+      "section_text": "* **Target Companies:** SaaS companies focused on marketing automation, CRM, analytics, or related technologies.\n* **Target Roles:** VP of Operations, Head of Operations, Director of Operations (with clear path to VP).\n* **Target Contacts:** CEOs, CFOs, COOs, VPs of Sales, VPs of Marketing, Investors (Series B/C).\n* **Desired Interactions:** Introductions to relevant hiring managers, informational interviews to learn more about company culture and opportunities, connections with investors who are actively funding companies in my target space.\n* **Location Preference:** Remote-first companies or companies with a strong remote work policy. Open to opportunities in North America and Europe.",
+      "text_sha256": "aa0e754f1f1a9177",
+      "row": 136
+    },
+    {
+      "key": "cmsynthpdba82c4f59a03948f::whole",
+      "contact_id": "cmsynthpdba82c4f59a03948f",
+      "role": "seeker",
+      "section_index": -1,
+      "section_text": null,
+      "text_sha256": "373f756142f8cee3",
+      "row": 137
+    },
+    {
+      "key": "cmsynthpdba82c4f59a03948f::s0",
+      "contact_id": "cmsynthpdba82c4f59a03948f",
+      "role": "seeker",
+      "section_index": 0,
+      "section_text": "We are currently raising a Series B round to accelerate our product roadmap and expand our go-to-market efforts. I\u2019m actively seeking introductions to venture capital firms specializing in infrastructure and AI, specifically those with a demonstrated understanding of the edge computing landscape.  We're looking for partners who can provide not just capital, but also strategic guidance and access to their network.",
+      "text_sha256": "562db8ae1aae0e10",
+      "row": 138
+    },
+    {
+      "key": "cmsynthpdba82c4f59a03948f::s1",
+      "contact_id": "cmsynthpdba82c4f59a03948f",
+      "role": "seeker",
+      "section_index": 1,
+      "section_text": "I\u2019m also focused on building out our engineering team.  Specifically, I\u2019m looking for:",
+      "text_sha256": "c6f7a5a2b51aef62",
+      "row": 139
+    },
+    {
+      "key": "cmsynthpdba82c4f59a03948f::s2",
+      "contact_id": "cmsynthpdba82c4f59a03948f",
+      "role": "seeker",
+      "section_index": 2,
+      "section_text": "* **Senior Rust Engineers:** Deep experience with systems programming and a passion for building highly performant, reliable software.\n* **Distributed Systems Engineers:** Proven track record of designing and implementing scalable, fault-tolerant systems.\n* **DevOps Engineers:** Expertise in Kubernetes, CI/CD pipelines, and cloud infrastructure automation.",
+      "text_sha256": "f9dcc9c7b98421b6",
+      "row": 140
+    },
+    {
+      "key": "cmsynthpdba82c4f59a03948f::s3",
+      "contact_id": "cmsynthpdba82c4f59a03948f",
+      "role": "seeker",
+      "section_index": 3,
+      "section_text": "Finally, I'm interested in connecting with potential strategic partners in the robotics, autonomous vehicle, and IoT spaces who could benefit from our platform and contribute to our product development. I'm open to exploring co-marketing and technology integration opportunities.",
+      "text_sha256": "aed66650bfd66d14",
+      "row": 141
+    },
+    {
+      "key": "cmsynthpe5c0ca04f17e29935::whole",
+      "contact_id": "cmsynthpe5c0ca04f17e29935",
+      "role": "seeker",
+      "section_index": -1,
+      "section_text": null,
+      "text_sha256": "95e50fe4b24a560c",
+      "row": 142
+    },
+    {
+      "key": "cmsynthpe8c46b0a7320c081b::whole",
+      "contact_id": "cmsynthpe8c46b0a7320c081b",
+      "role": "seeker",
+      "section_index": -1,
+      "section_text": null,
+      "text_sha256": "8e7844b3807a0abe",
+      "row": 143
+    },
+    {
+      "key": "cmsynthpe8c46b0a7320c081b::s0",
+      "contact_id": "cmsynthpe8c46b0a7320c081b",
+      "role": "seeker",
+      "section_index": 0,
+      "section_text": "I'm actively seeking connections and opportunities in the following areas:",
+      "text_sha256": "45ede499a9f12ce2",
+      "row": 144
+    },
+    {
+      "key": "cmsynthpe8c46b0a7320c081b::s1",
+      "contact_id": "cmsynthpe8c46b0a7320c081b",
+      "role": "seeker",
+      "section_index": 1,
+      "section_text": "\u2022 **Investors:** Angel investors and venture capital firms with a focus on early-stage startups, particularly those interested in the intersection of technology and luxury. Seed to Series A funding rounds are of most interest.\n\u2022 **Luxury Brand Executives:** Heads of Innovation, Digital Transformation, and Marketing at established luxury brands (fashion, hospitality, automotive, etc.). I\u2019m looking to explore potential partnership opportunities and demonstrate the value of integrating innovative technologies.\n\u2022 **Tech Founders:** Founders of early-stage startups developing solutions specifically for the luxury market (AI, Web3, AR/VR, personalization, supply chain, etc.). I\u2019m scouting for companies to participate in my upcoming accelerator program.\n\u2022 **Mentors & Advisors:** Experienced entrepreneurs and industry leaders who can provide guidance and support as I scale Kairos Collective and launch the accelerator program.\n\u2022 **Specific Expertise Needed:** AI/ML specialists with experience in personalization and recommendation engines; Web3 developers with a focus on blockchain authentication and NFT applications; experts in luxury brand strategy and consumer behavior.",
+      "text_sha256": "5dae35246050be0b",
+      "row": 145
+    },
+    {
+      "key": "cmsynthpe99c0483d92a26a9c::whole",
+      "contact_id": "cmsynthpe99c0483d92a26a9c",
+      "role": "seeker",
+      "section_index": -1,
+      "section_text": null,
+      "text_sha256": "510f2223af85d03a",
+      "row": 146
+    },
+    {
+      "key": "cmsynthpe99c0483d92a26a9c::s0",
+      "contact_id": "cmsynthpe99c0483d92a26a9c",
+      "role": "seeker",
+      "section_index": 0,
+      "section_text": "I'm actively seeking connections to accelerate Aether Dynamics' growth, specifically focused on US expansion and Series A funding. Here's a breakdown:",
+      "text_sha256": "956de621d3bd0c95",
+      "row": 147
+    },
+    {
+      "key": "cmsynthpe99c0483d92a26a9c::s1",
+      "contact_id": "cmsynthpe99c0483d92a26a9c",
+      "role": "seeker",
+      "section_index": 1,
+      "section_text": "**Priority 1: US-Based Venture Capitalists**\n    * **Focus:** Deep Tech, AI, Materials Science, Computational Science.\n    * **Stage:** Series A (targeting $10-15M raise).\n    * **Ideal Profile:** Partners with a track record of investing in capital-intensive, technically complex startups.  Experience with European companies a plus.\n    * **Not a good fit:** VCs focused solely on software or consumer-facing applications.",
+      "text_sha256": "d5d397bc82002f32",
+      "row": 148
+    },
+    {
+      "key": "cmsynthpe99c0483d92a26a9c::s2",
+      "contact_id": "cmsynthpe99c0483d92a26a9c",
+      "role": "seeker",
+      "section_index": 2,
+      "section_text": "**Priority 2: Strategic Advisors/Mentors**\n    * **Background:** Experience successfully scaling deep tech companies in the US market.\n    * **Expertise:**  US fundraising landscape, transatlantic business development, navigating cultural differences in investor relations.\n    * **Ideal Profile:**  Former founders or C-level executives with a strong technical background.",
+      "text_sha256": "3d6cf8d5fac91862",
+      "row": 149
+    },
+    {
+      "key": "cmsynthpe99c0483d92a26a9c::s3",
+      "contact_id": "cmsynthpe99c0483d92a26a9c",
+      "role": "seeker",
+      "section_index": 3,
+      "section_text": "**Priority 3: Potential Pilot Customers (US-based)**\n    * **Industries:** Automotive, Aerospace, Energy, Advanced Manufacturing.\n    * **Role:**  Head of R&D, Chief Technology Officer, Materials Science Director.\n    * **Company Stage:**  Large corporations with established R&D budgets and a clear need for materials innovation.",
+      "text_sha256": "fe9006d5fbfee829",
+      "row": 150
+    },
+    {
+      "key": "cmsynthpe99c0483d92a26a9c::s4",
+      "contact_id": "cmsynthpe99c0483d92a26a9c",
+      "role": "seeker",
+      "section_index": 4,
+      "section_text": "I\u2019m also open to introductions to individuals involved in relevant industry consortia or government funding programs in the US.",
+      "text_sha256": "fc89ac03331c9816",
+      "row": 151
+    },
+    {
+      "key": "cmsynthpef7a1a938aa2da3a3::whole",
+      "contact_id": "cmsynthpef7a1a938aa2da3a3",
+      "role": "seeker",
+      "section_index": -1,
+      "section_text": null,
+      "text_sha256": "d4f5feb258b8da6a",
+      "row": 152
+    },
+    {
+      "key": "cmsynthpef7a1a938aa2da3a3::s0",
+      "contact_id": "cmsynthpef7a1a938aa2da3a3",
+      "role": "seeker",
+      "section_index": 0,
+      "section_text": "Ingrid Almeida is actively seeking opportunities to invest in and advise pre-seed and seed-stage startups focused on responsible AI. She is particularly interested in companies developing solutions in healthcare, climate tech, and sustainable energy. She is looking for founders who demonstrate a strong technical foundation, a clear vision for their product, and a commitment to ethical AI principles.",
+      "text_sha256": "e3e8ac333b93181f",
+      "row": 153
+    },
+    {
+      "key": "cmsynthpef7a1a938aa2da3a3::s1",
+      "contact_id": "cmsynthpef7a1a938aa2da3a3",
+      "role": "seeker",
+      "section_index": 1,
+      "section_text": "Ingrid is open to serving on advisory boards or taking board seats in companies where she can add significant value. She is also eager to connect with other investors and ecosystem builders in the Boston and New York areas to share insights and explore potential collaborations.",
+      "text_sha256": "addefff502254f83",
+      "row": 154
+    },
+    {
+      "key": "cmsynthpef7a1a938aa2da3a3::s2",
+      "contact_id": "cmsynthpef7a1a938aa2da3a3",
+      "role": "seeker",
+      "section_index": 2,
+      "section_text": "Specifically, she is looking for: \n* Founders with strong technical backgrounds (PhD, Masters in CS/ML/Stats preferred).\n* Companies actively addressing bias and fairness in their AI models.\n* Teams with a diverse and inclusive culture.\n* Businesses with a clear path to revenue generation and scalability.",
+      "text_sha256": "71e4537e8a75dc0d",
+      "row": 155
+    },
+    {
+      "key": "cmsynthpef7a1a938aa2da3a3::s3",
+      "contact_id": "cmsynthpef7a1a938aa2da3a3",
+      "role": "seeker",
+      "section_index": 3,
+      "section_text": "Ingrid is *not* currently seeking full-time employment but is open to discussing strategic partnerships.",
+      "text_sha256": "bb7adb9b43498ff1",
+      "row": 156
+    },
+    {
+      "key": "cmsynthpfcb4eab14ee0e81e4::whole",
+      "contact_id": "cmsynthpfcb4eab14ee0e81e4",
+      "role": "seeker",
+      "section_index": -1,
+      "section_text": null,
+      "text_sha256": "0099699ae6dc3bc7",
+      "row": 157
+    },
+    {
+      "key": "cmsynthpfcb4eab14ee0e81e4::s0",
+      "contact_id": "cmsynthpfcb4eab14ee0e81e4",
+      "role": "seeker",
+      "section_index": 0,
+      "section_text": "## Key Connections & Opportunities",
+      "text_sha256": "62636d7b7b76f09a",
+      "row": 158
+    },
+    {
+      "key": "cmsynthpfcb4eab14ee0e81e4::s1",
+      "contact_id": "cmsynthpfcb4eab14ee0e81e4",
+      "role": "seeker",
+      "section_index": 1,
+      "section_text": "**Investors:**\n*   Seed-stage and Series A investors with a strong track record in fintech, particularly those focused on B2B SaaS and embedded finance.\n*   Strategic investors \u2013 E-commerce platforms, payment processors, and SaaS providers interested in exploring integration opportunities.\n*   *Specifically seeking* investors who are founders themselves or have operated in a startup environment \u2013 I prioritize founder-first relationships.",
+      "text_sha256": "7d4c6ae12572502d",
+      "row": 159
+    },
+    {
+      "key": "cmsynthpfcb4eab14ee0e81e4::s2",
+      "contact_id": "cmsynthpfcb4eab14ee0e81e4",
+      "role": "seeker",
+      "section_index": 2,
+      "section_text": "**Talent:**\n*   Senior Full-Stack Engineers with experience building scalable and secure financial applications.\n*   Product Managers with a deep understanding of the SMB market and a passion for user-centered design.\n*   Head of Growth \u2013 experienced in B2B SaaS go-to-market strategies.",
+      "text_sha256": "14da1f4566348deb",
+      "row": 160
+    },
+    {
+      "key": "cmsynthpfcb4eab14ee0e81e4::s3",
+      "contact_id": "cmsynthpfcb4eab14ee0e81e4",
+      "role": "seeker",
+      "section_index": 3,
+      "section_text": "**Partnerships:**\n*   E-commerce platforms (Shopify, WooCommerce, BigCommerce) \u2013 exploring API integrations and co-marketing opportunities.\n*   Payment processors (Stripe, Adyen, PayPal) \u2013 collaborative integrations to enhance our payment capabilities.\n*   SaaS providers serving SMBs (accounting software, CRM, marketing automation) \u2013 complementary integrations to create a holistic financial management solution.",
+      "text_sha256": "42920d66ed8ac03d",
+      "row": 161
+    },
+    {
+      "key": "cmsynthpfcb4eab14ee0e81e4::s4",
+      "contact_id": "cmsynthpfcb4eab14ee0e81e4",
+      "role": "seeker",
+      "section_index": 4,
+      "section_text": "**Exclusions:**\n*   Individuals solely offering advisory services without a clear commitment to investment or partnership.\n*   Recruiters focusing on non-technical roles (we have a dedicated HR partner for those needs).",
+      "text_sha256": "54fe88f6c68f47f1",
+      "row": 162
+    }
+  ],
+  "candidate": [
+    {
+      "key": "cmsynthp0612ef4eb84a9e470",
+      "contact_id": "cmsynthp0612ef4eb84a9e470",
+      "role": "candidate",
+      "section_index": null,
+      "section_text": null,
+      "text_sha256": "8f7c7ac63ce81a50",
+      "row": 0
+    },
+    {
+      "key": "cmsynthp0642591f07b444659",
+      "contact_id": "cmsynthp0642591f07b444659",
+      "role": "candidate",
+      "section_index": null,
+      "section_text": null,
+      "text_sha256": "d2944769626fc364",
+      "row": 1
+    },
+    {
+      "key": "cmsynthp117a4468e0eca3a4f",
+      "contact_id": "cmsynthp117a4468e0eca3a4f",
+      "role": "candidate",
+      "section_index": null,
+      "section_text": null,
+      "text_sha256": "e88fef48a11706fd",
+      "row": 2
+    },
+    {
+      "key": "cmsynthp1dae057b47e5d8a82",
+      "contact_id": "cmsynthp1dae057b47e5d8a82",
+      "role": "candidate",
+      "section_index": null,
+      "section_text": null,
+      "text_sha256": "d9b84395b2ab72ff",
+      "row": 3
+    },
+    {
+      "key": "cmsynthp1fb5fa34e709b635f",
+      "contact_id": "cmsynthp1fb5fa34e709b635f",
+      "role": "candidate",
+      "section_index": null,
+      "section_text": null,
+      "text_sha256": "007a1d10cab90b89",
+      "row": 4
+    },
+    {
+      "key": "cmsynthp228fc74358cdf5441",
+      "contact_id": "cmsynthp228fc74358cdf5441",
+      "role": "candidate",
+      "section_index": null,
+      "section_text": null,
+      "text_sha256": "c911f8030444d129",
+      "row": 5
+    },
+    {
+      "key": "cmsynthp248ffc8cb7cffcfbb",
+      "contact_id": "cmsynthp248ffc8cb7cffcfbb",
+      "role": "candidate",
+      "section_index": null,
+      "section_text": null,
+      "text_sha256": "a3b32dc1c1dafb7c",
+      "row": 6
+    },
+    {
+      "key": "cmsynthp2c0c56721673f629c",
+      "contact_id": "cmsynthp2c0c56721673f629c",
+      "role": "candidate",
+      "section_index": null,
+      "section_text": null,
+      "text_sha256": "b47371ca1970c021",
+      "row": 7
+    },
+    {
+      "key": "cmsynthp30f09f78e75839f1d",
+      "contact_id": "cmsynthp30f09f78e75839f1d",
+      "role": "candidate",
+      "section_index": null,
+      "section_text": null,
+      "text_sha256": "cda9e02ea7b69bcc",
+      "row": 8
+    },
+    {
+      "key": "cmsynthp34d601ed1a22d2aa6",
+      "contact_id": "cmsynthp34d601ed1a22d2aa6",
+      "role": "candidate",
+      "section_index": null,
+      "section_text": null,
+      "text_sha256": "0a31a2645c0eb4a1",
+      "row": 9
+    },
+    {
+      "key": "cmsynthp3a5f0d1b6ca7dbac3",
+      "contact_id": "cmsynthp3a5f0d1b6ca7dbac3",
+      "role": "candidate",
+      "section_index": null,
+      "section_text": null,
+      "text_sha256": "3cbb7b00116da474",
+      "row": 10
+    },
+    {
+      "key": "cmsynthp3ebb601411a314115",
+      "contact_id": "cmsynthp3ebb601411a314115",
+      "role": "candidate",
+      "section_index": null,
+      "section_text": null,
+      "text_sha256": "c65e95128395343a",
+      "row": 11
+    },
+    {
+      "key": "cmsynthp45b740df6124177e0",
+      "contact_id": "cmsynthp45b740df6124177e0",
+      "role": "candidate",
+      "section_index": null,
+      "section_text": null,
+      "text_sha256": "cd10f263c874d524",
+      "row": 12
+    },
+    {
+      "key": "cmsynthp48347f465027a18e1",
+      "contact_id": "cmsynthp48347f465027a18e1",
+      "role": "candidate",
+      "section_index": null,
+      "section_text": null,
+      "text_sha256": "bc576fdb9ab981fb",
+      "row": 13
+    },
+    {
+      "key": "cmsynthp5a39ce0d66cb509ef",
+      "contact_id": "cmsynthp5a39ce0d66cb509ef",
+      "role": "candidate",
+      "section_index": null,
+      "section_text": null,
+      "text_sha256": "732e831fac761484",
+      "row": 14
+    },
+    {
+      "key": "cmsynthp5e1ef41295c4bb250",
+      "contact_id": "cmsynthp5e1ef41295c4bb250",
+      "role": "candidate",
+      "section_index": null,
+      "section_text": null,
+      "text_sha256": "c900d2f00a2ce042",
+      "row": 15
+    },
+    {
+      "key": "cmsynthp5e5ff7338bb1153cb",
+      "contact_id": "cmsynthp5e5ff7338bb1153cb",
+      "role": "candidate",
+      "section_index": null,
+      "section_text": null,
+      "text_sha256": "38f227a0db282376",
+      "row": 16
+    },
+    {
+      "key": "cmsynthp5fe9f7db606bc98cc",
+      "contact_id": "cmsynthp5fe9f7db606bc98cc",
+      "role": "candidate",
+      "section_index": null,
+      "section_text": null,
+      "text_sha256": "42b58436be959b06",
+      "row": 17
+    },
+    {
+      "key": "cmsynthp60bdf76902d097aa5",
+      "contact_id": "cmsynthp60bdf76902d097aa5",
+      "role": "candidate",
+      "section_index": null,
+      "section_text": null,
+      "text_sha256": "837fec882eda506d",
+      "row": 18
+    },
+    {
+      "key": "cmsynthp646616bb2ec90b0d7",
+      "contact_id": "cmsynthp646616bb2ec90b0d7",
+      "role": "candidate",
+      "section_index": null,
+      "section_text": null,
+      "text_sha256": "71a473f656788d6b",
+      "row": 19
+    },
+    {
+      "key": "cmsynthp6512df7b1b9622b66",
+      "contact_id": "cmsynthp6512df7b1b9622b66",
+      "role": "candidate",
+      "section_index": null,
+      "section_text": null,
+      "text_sha256": "10bd519e3cc0b6b2",
+      "row": 20
+    },
+    {
+      "key": "cmsynthp66ec78186852ed9d8",
+      "contact_id": "cmsynthp66ec78186852ed9d8",
+      "role": "candidate",
+      "section_index": null,
+      "section_text": null,
+      "text_sha256": "0518052ff9e61e26",
+      "row": 21
+    },
+    {
+      "key": "cmsynthp69438ac6cfc2989f3",
+      "contact_id": "cmsynthp69438ac6cfc2989f3",
+      "role": "candidate",
+      "section_index": null,
+      "section_text": null,
+      "text_sha256": "514812201d19718d",
+      "row": 22
+    },
+    {
+      "key": "cmsynthp6fc3a244356c9c8c4",
+      "contact_id": "cmsynthp6fc3a244356c9c8c4",
+      "role": "candidate",
+      "section_index": null,
+      "section_text": null,
+      "text_sha256": "868b56c81efa7d72",
+      "row": 23
+    },
+    {
+      "key": "cmsynthp77f94fde051bc4b21",
+      "contact_id": "cmsynthp77f94fde051bc4b21",
+      "role": "candidate",
+      "section_index": null,
+      "section_text": null,
+      "text_sha256": "b8fed9435f428cbb",
+      "row": 24
+    },
+    {
+      "key": "cmsynthp7beddedfab59ab943",
+      "contact_id": "cmsynthp7beddedfab59ab943",
+      "role": "candidate",
+      "section_index": null,
+      "section_text": null,
+      "text_sha256": "f4509a5c13080ef9",
+      "row": 25
+    },
+    {
+      "key": "cmsynthp80951eef416a03473",
+      "contact_id": "cmsynthp80951eef416a03473",
+      "role": "candidate",
+      "section_index": null,
+      "section_text": null,
+      "text_sha256": "0c5a26a1688c33f3",
+      "row": 26
+    },
+    {
+      "key": "cmsynthp876398b4874105d24",
+      "contact_id": "cmsynthp876398b4874105d24",
+      "role": "candidate",
+      "section_index": null,
+      "section_text": null,
+      "text_sha256": "405dab76eafd86dc",
+      "row": 27
+    },
+    {
+      "key": "cmsynthp8d37411c71b730f45",
+      "contact_id": "cmsynthp8d37411c71b730f45",
+      "role": "candidate",
+      "section_index": null,
+      "section_text": null,
+      "text_sha256": "6cbf6d17b585da52",
+      "row": 28
+    },
+    {
+      "key": "cmsynthp8e4b796558b32f9b6",
+      "contact_id": "cmsynthp8e4b796558b32f9b6",
+      "role": "candidate",
+      "section_index": null,
+      "section_text": null,
+      "text_sha256": "6f3c23d9ae990392",
+      "row": 29
+    },
+    {
+      "key": "cmsynthp90c019af90b7bfb0c",
+      "contact_id": "cmsynthp90c019af90b7bfb0c",
+      "role": "candidate",
+      "section_index": null,
+      "section_text": null,
+      "text_sha256": "59347ef875c5cf2b",
+      "row": 30
+    },
+    {
+      "key": "cmsynthp926b78cb3a434b8b0",
+      "contact_id": "cmsynthp926b78cb3a434b8b0",
+      "role": "candidate",
+      "section_index": null,
+      "section_text": null,
+      "text_sha256": "418926195828e417",
+      "row": 31
+    },
+    {
+      "key": "cmsynthp9b603dc373613c470",
+      "contact_id": "cmsynthp9b603dc373613c470",
+      "role": "candidate",
+      "section_index": null,
+      "section_text": null,
+      "text_sha256": "3ef2a187e5c38cb0",
+      "row": 32
+    },
+    {
+      "key": "cmsynthp9c394ee1f194410e9",
+      "contact_id": "cmsynthp9c394ee1f194410e9",
+      "role": "candidate",
+      "section_index": null,
+      "section_text": null,
+      "text_sha256": "72843ab14b076cac",
+      "row": 33
+    },
+    {
+      "key": "cmsynthpa1871fb254cf9dea2",
+      "contact_id": "cmsynthpa1871fb254cf9dea2",
+      "role": "candidate",
+      "section_index": null,
+      "section_text": null,
+      "text_sha256": "1ebc073386247c28",
+      "row": 34
+    },
+    {
+      "key": "cmsynthpa7027c1ab0ab64043",
+      "contact_id": "cmsynthpa7027c1ab0ab64043",
+      "role": "candidate",
+      "section_index": null,
+      "section_text": null,
+      "text_sha256": "08e60b1e2683c23f",
+      "row": 35
+    },
+    {
+      "key": "cmsynthpaa719fc2fb56e0145",
+      "contact_id": "cmsynthpaa719fc2fb56e0145",
+      "role": "candidate",
+      "section_index": null,
+      "section_text": null,
+      "text_sha256": "60d6c3e1122ccc82",
+      "row": 36
+    },
+    {
+      "key": "cmsynthpaf8f21ca94470276b",
+      "contact_id": "cmsynthpaf8f21ca94470276b",
+      "role": "candidate",
+      "section_index": null,
+      "section_text": null,
+      "text_sha256": "32c0b879016de2b9",
+      "row": 37
+    },
+    {
+      "key": "cmsynthpb1193bedd574afa53",
+      "contact_id": "cmsynthpb1193bedd574afa53",
+      "role": "candidate",
+      "section_index": null,
+      "section_text": null,
+      "text_sha256": "e1ba02e3619b84c5",
+      "row": 38
+    },
+    {
+      "key": "cmsynthpb50234c02b905f7a6",
+      "contact_id": "cmsynthpb50234c02b905f7a6",
+      "role": "candidate",
+      "section_index": null,
+      "section_text": null,
+      "text_sha256": "97dcfd9f2503e3c3",
+      "row": 39
+    },
+    {
+      "key": "cmsynthpbc22b71f1a3b187e6",
+      "contact_id": "cmsynthpbc22b71f1a3b187e6",
+      "role": "candidate",
+      "section_index": null,
+      "section_text": null,
+      "text_sha256": "0f82046c50b0b8d8",
+      "row": 40
+    },
+    {
+      "key": "cmsynthpc0aa3ebe660c38e43",
+      "contact_id": "cmsynthpc0aa3ebe660c38e43",
+      "role": "candidate",
+      "section_index": null,
+      "section_text": null,
+      "text_sha256": "88ada52ad84d3149",
+      "row": 41
+    },
+    {
+      "key": "cmsynthpc3418ca257e035053",
+      "contact_id": "cmsynthpc3418ca257e035053",
+      "role": "candidate",
+      "section_index": null,
+      "section_text": null,
+      "text_sha256": "75d85973a1acc92e",
+      "row": 42
+    },
+    {
+      "key": "cmsynthpc87e2c076554ea879",
+      "contact_id": "cmsynthpc87e2c076554ea879",
+      "role": "candidate",
+      "section_index": null,
+      "section_text": null,
+      "text_sha256": "bd3bd4f213027048",
+      "row": 43
+    },
+    {
+      "key": "cmsynthpc9d9853ec3db8fb16",
+      "contact_id": "cmsynthpc9d9853ec3db8fb16",
+      "role": "candidate",
+      "section_index": null,
+      "section_text": null,
+      "text_sha256": "38b0a33a70c0223c",
+      "row": 44
+    },
+    {
+      "key": "cmsynthpd73d1695ca0eeb8ce",
+      "contact_id": "cmsynthpd73d1695ca0eeb8ce",
+      "role": "candidate",
+      "section_index": null,
+      "section_text": null,
+      "text_sha256": "2ea4ae67993e24fc",
+      "row": 45
+    },
+    {
+      "key": "cmsynthpd77989e50f08dc2db",
+      "contact_id": "cmsynthpd77989e50f08dc2db",
+      "role": "candidate",
+      "section_index": null,
+      "section_text": null,
+      "text_sha256": "bb27f4b125c24e86",
+      "row": 46
+    },
+    {
+      "key": "cmsynthpde9d39b820481a9ba",
+      "contact_id": "cmsynthpde9d39b820481a9ba",
+      "role": "candidate",
+      "section_index": null,
+      "section_text": null,
+      "text_sha256": "d2b15375e981cbec",
+      "row": 47
+    },
+    {
+      "key": "cmsynthpe1b39f65e6622ea68",
+      "contact_id": "cmsynthpe1b39f65e6622ea68",
+      "role": "candidate",
+      "section_index": null,
+      "section_text": null,
+      "text_sha256": "4ac0c26448d699a4",
+      "row": 48
+    },
+    {
+      "key": "cmsynthpe21d4121635f9f4c9",
+      "contact_id": "cmsynthpe21d4121635f9f4c9",
+      "role": "candidate",
+      "section_index": null,
+      "section_text": null,
+      "text_sha256": "d18377e6c490429c",
+      "row": 49
+    },
+    {
+      "key": "cmsynthpe97156102e84f0d26",
+      "contact_id": "cmsynthpe97156102e84f0d26",
+      "role": "candidate",
+      "section_index": null,
+      "section_text": null,
+      "text_sha256": "95455c86625da426",
+      "row": 50
+    },
+    {
+      "key": "cmsynthpf8458e41f38e62656",
+      "contact_id": "cmsynthpf8458e41f38e62656",
+      "role": "candidate",
+      "section_index": null,
+      "section_text": null,
+      "text_sha256": "a2ad9f6a1ca664f7",
+      "row": 51
+    }
+  ],
+  "batch_id": "rrf_001",
+  "profile_run": "run_20260726_105943"
+}

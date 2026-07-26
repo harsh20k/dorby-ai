@@ -1,0 +1,54 @@
+{
+  "id": 76,
+  "archetype": "India-Focused Fundraising/Advisory",
+  "given_name": "Noor Haruna",
+  "style_version": 5,
+  "archetypes_version": 14,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Noor Haruna is a second-generation Indian-American who spent her early career in venture capital in the US, specializing in seed-stage tech. She returned to India 5 years ago with a specific mission: to bridge the gap between early-stage Indian startups and global investors. She\u2019s built a reputation for spotting promising founders *before* they hit mainstream accelerator programs, and is particularly adept at helping them refine their pitch for international audiences. A distinctive detail is her background in behavioral economics \u2013 she often uses these principles to help startups frame their market opportunity and investor narratives. Currently, she's focused on expanding her network of LP connections (Limited Partners) to increase the ticket size she can facilitate for her portfolio companies. She's extremely pragmatic and values directness, but is also deeply committed to fostering a more inclusive startup ecosystem in India.",
+    "positioning": "I\u2019m a fundraising advisor and connector dedicated to empowering the next generation of Indian founders. After a decade in venture capital in Silicon Valley, I returned to India to focus on the incredible innovation happening here. My sweet spot is working with pre-seed and seed-stage startups, particularly those tackling complex problems with scalable, technology-driven solutions. I specialize in helping founders articulate their vision to global investors, refine their fundraising strategies, and navigate the complexities of due diligence. I\u2019ve recently been focused on building stronger relationships with international Limited Partners to unlock larger funding rounds for my portfolio. I believe in a data-driven approach to fundraising, informed by behavioral economics, and prioritize transparency and long-term partnership with the founders I support. I\u2019m passionate about building a more equitable and accessible startup ecosystem in India.",
+    "background": "- **Principal, VentureForward (2019 \u2013 Present)**\n  * Led deal sourcing and due diligence for 15+ pre-seed and seed-stage investments in Indian startups across sectors including Fintech, Edtech, and Healthtech.\n  * Mentored founders on pitch deck development, financial modeling, and investor communication, resulting in a 75% success rate in securing follow-on funding.\n  * Established and maintained relationships with a network of 50+ angel investors and venture capital firms in India, the US, and Europe.\n  * Developed and implemented a proprietary framework for evaluating market opportunity based on principles of behavioral economics.\n  * Oversaw the creation of a comprehensive investor relations strategy, increasing LP engagement by 40%.\n\n- **Associate, Stellar Capital (2015 \u2013 2019)**\n  * Supported senior investment professionals in all aspects of the investment process, from initial screening to portfolio management.\n  * Conducted market research and competitive analysis to identify promising investment opportunities.\n  * Assisted in the preparation of investment memos and presentations for the investment committee.\n  * Managed a pipeline of potential investment targets and maintained relationships with key industry contacts.\n  * Proficient in financial modeling, valuation analysis, and due diligence procedures.\n\n- **Investment Banking Analyst, Goldman Sachs (Summer 2014)**\n  * Assisted in the execution of M&A transactions and capital markets offerings.\n  * Prepared financial models and presentations for client meetings.\n  * Conducted industry research and analysis.\n\n- **Education:** MBA, Stanford Graduate School of Business (2015); B.A. Economics, Yale University (2013) \u2013 *Phi Beta Kappa*.",
+    "lookingFor": "I'm actively expanding my network of Limited Partners (LPs) \u2013 particularly those with a focus on emerging markets and early-stage investments. I\u2019m looking for LPs who are patient capital providers and understand the unique challenges and opportunities of the Indian startup ecosystem. I\u2019m open to introductions to family offices and institutional investors with a minimum ticket size of $500K. \n\nI'm also seeking introductions to exceptional pre-seed and seed-stage founders in India, particularly those working on innovative solutions in Fintech, Healthtech, and Climate Tech. I\u2019m especially interested in founders who demonstrate a strong understanding of their target market and a clear path to scalability. I\u2019m *not* currently looking for later-stage opportunities. \n\nFinally, I'm looking to connect with other experienced fundraising advisors in India to share best practices and collaborate on opportunities. I\u2019m open to strategic partnerships that can expand my reach and impact.",
+    "notes": "Noor is highly respected within the Indian startup community, known for her directness and her ability to deliver candid feedback. She's very focused on maximizing outcomes for her founders, and isn't afraid to push back on investors if she feels they're not offering fair terms. She prioritizes founders who are coachable and demonstrate a strong work ethic. Recent conversations indicate she's frustrated with the prevalence of 'pattern matching' among some US investors \u2013 she actively seeks out founders who challenge conventional wisdom. Approaching her with a well-researched investment thesis and a clear understanding of the Indian market is crucial. A warm introduction from a mutual connection is highly recommended.",
+    "locationAvailability": "I\u2019m primarily based in Mumbai, India, but travel frequently to Delhi and Bangalore. I\u2019m also available for virtual meetings with investors and founders globally.",
+    "introPreferences": "- **Hard Requirements:** Any introduction *must* include a concise executive summary highlighting the key investment thesis and potential ROI.\n- **Soft Preferences:** I prefer introductions to LPs who have a demonstrated track record of investing in early-stage Indian startups. \n- **Do Not:** Introduce me to founders who haven\u2019t already validated their product-market fit. I\u2019m not interested in pre-idea stage concepts. \n- **Ideal Introducers:** Individuals with strong relationships within the Indian VC ecosystem and a deep understanding of the local market. \n- **Briefing Note:** Please share any relevant background information about the individual you're introducing me to, including their investment preferences and risk tolerance.",
+    "personalPreferences": "I prefer concise and direct communication. Email is my primary mode of communication, but I\u2019m also responsive on LinkedIn. I appreciate proactive updates and a no-nonsense approach.",
+    "meetingAndSchedulingPreferences": "- Please include a brief agenda with all meeting requests.\n- I typically schedule meetings in 30-minute or 60-minute blocks.\n- Please share any relevant materials (pitch decks, financial models) at least 24 hours in advance."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 21.950146913528442,
+      "input_tokens": 843,
+      "output_tokens": 1368,
+      "problems": []
+    }
+  ],
+  "success": true
+}

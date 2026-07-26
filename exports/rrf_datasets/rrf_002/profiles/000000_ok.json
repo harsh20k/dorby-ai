@@ -1,0 +1,54 @@
+{
+  "id": 0,
+  "archetype": "Deep Tech Founder, Early Stage",
+  "given_name": "Kavya Tanaka",
+  "style_version": 1,
+  "archetypes_version": 1,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Kavya Tanaka is a 32-year-old founder and CEO of 'Synapse Dynamics,' a pre-seed stage company developing novel neuromorphic computing hardware. Her background is highly unusual \u2013 a PhD in Biophysics followed by three years as a quantitative trader at a high-frequency trading firm. This combination gives her a unique perspective on building efficient, low-latency computing solutions. She left the trading world because she felt constrained by applying her skills to financial gain, wanting to contribute to fundamental advancements in AI. Synapse Dynamics is currently focused on building a prototype chip for edge AI applications, specifically in robotics and autonomous vehicles. She's actively fundraising a seed round and looking for strategic advisors with experience in hardware manufacturing and scaling early-stage deep tech companies. She\u2019s very data-driven and appreciates direct communication. She\u2019s a bit introverted but passionate about her work and will enthusiastically explain the technical details to anyone genuinely interested.",
+    "positioning": "As Founder and CEO of Synapse Dynamics, I\u2019m leading the development of next-generation neuromorphic computing hardware. We\u2019re tackling the limitations of traditional von Neumann architectures by creating chips that mimic the human brain\u2019s energy efficiency and parallel processing capabilities. My background blends biophysics and quantitative finance, providing a unique lens for optimizing computational performance. Currently, we\u2019re focused on a prototype chip designed for edge AI applications, targeting robotics and autonomous systems. We\u2019re building a team of exceptional engineers and scientists, and are poised to disrupt the AI hardware landscape. I\u2019m passionate about translating cutting-edge research into tangible, real-world solutions and am actively seeking strategic partners and investors who share this vision. Our core value proposition is delivering significant performance gains and reduced power consumption for AI workloads at the edge, unlocking a new wave of intelligent devices.",
+    "background": "- **Synapse Dynamics, CEO & Founder** (2022 \u2013 Present)\n -- Led seed fundraising efforts, developing pitch decks and investor relations materials.\n -- Spearheaded the technical roadmap, overseeing chip architecture design and initial prototyping.\n -- Built and managed a core team of 5 engineers and researchers.\n -- Secured initial grant funding from the National Science Foundation (NSF).\n\n- **Jane Street Capital, Quantitative Trader** (2019 \u2013 2022)\n -- Developed and implemented high-frequency trading algorithms using Python and C++.\n -- Conducted rigorous statistical analysis of market data to identify trading opportunities.\n -- Managed risk and optimized trading strategies in a fast-paced, high-pressure environment.\n -- Collaborated with engineers to improve trading infrastructure and latency.\n\n- **Massachusetts Institute of Technology (MIT), PhD in Biophysics** (2015 \u2013 2019)\n -- Dissertation: \u2018Stochastic Dynamics of Protein Folding and its Implications for Neuromorphic Computing.\u2019\n -- Developed novel computational models to simulate protein folding pathways.\n -- Published research in peer-reviewed journals ( *Nature Physics*, *Biophysical Journal*).\n -- Awarded the MIT Presidential Fellowship.\n\n- **Stanford University, BS in Physics, Minor in Computer Science** (2011 \u2013 2015)\n -- Graduated *Summa Cum Laude*.\n -- Undergraduate research assistant in the Stanford Synchrotron Radiation Lightsource.\n\n**Skills:** Neuromorphic Computing, Biophysics, Quantitative Finance, Python, C++, Machine Learning, Deep Learning, Statistical Modeling, Data Analysis, Hardware Design, Algorithm Development, Fundraising, Team Leadership, Grant Writing.",
+    "lookingFor": "## Networking Goals\n\n*   **Strategic Advisors:** Seeking experienced individuals with a proven track record in hardware manufacturing, supply chain management, and scaling early-stage deep tech companies. Ideally, individuals with experience in the semiconductor industry.\n*   **Seed Investors:** Connecting with venture capital firms specializing in deep tech, AI hardware, and robotics. Focus on firms with a history of providing follow-on funding.\n*   **Potential Customers:** Identifying early adopters in the robotics and autonomous vehicle sectors who could benefit from our neuromorphic computing solutions. Looking for technical leads and engineering managers.\n*   **Industry Experts:** Seeking introductions to thought leaders in neuromorphic computing, AI, and edge computing to gain insights and validate our technical approach.\n\n**Desired Interactions:**\n\n*   Informational interviews to learn from experienced professionals.\n*   Introductions to relevant investors and advisors.\n*   Feedback on our technology and business plan.\n*   Collaboration opportunities on research and development projects.",
+    "notes": "[03/15/2024] Kavya is highly responsive to data-driven arguments. Avoid overly optimistic projections without concrete evidence. She values technical depth. [03/18/2024] She\u2019s been attending the AI Hardware & Edge Computing conference \u2013 good potential for follow-up. [03/22/2024] Prioritize introductions to individuals with direct experience scaling hardware startups. She\u2019s particularly interested in companies that have successfully navigated the foundry process. \n\n**Platform Notes:**\n\n*   Tagged as 'Deep Tech Founder' and 'AI Hardware'.\n*   High engagement with content related to neuromorphic computing and edge AI.\n*   Open to receiving direct messages regarding relevant opportunities.\n*   She's currently reviewing materials from 'Quantum Ventures' - monitor for potential engagement.",
+    "locationAvailability": "Kavya Tanaka is based in Cambridge, Massachusetts, but is open to connecting with individuals globally via video conference. She is frequently traveling for investor meetings and conferences.",
+    "introPreferences": "## Introduction Guidelines\n\n**Hard Requirements:**\n\n*   **Relevance:** Introductions *must* be to individuals directly involved in hardware manufacturing, venture capital (deep tech focus), or robotics/autonomous vehicle engineering.\n*   **Level:** Prioritize introductions to partners, directors, VPs, or C-level executives.\n*   **Context:** Briefly explain Synapse Dynamics' focus on neuromorphic computing for edge AI.\n\n**Soft Preferences:**\n\n*   **Warm Introductions:** Prefer introductions facilitated by a mutual connection.\n*   **Concise Emails:** Keep introduction emails brief and to the point.\n*   **Avoid:** Introductions to marketing or sales professionals \u2013 Kavya is focused on technical and strategic connections.",
+    "personalPreferences": "Prefers email for initial contact. Open to quick calls/video chats after initial email exchange. Not active on social media.",
+    "meetingAndSchedulingPreferences": "Generally prefers 30-minute introductory calls. Flexible with scheduling, but prefers meetings to be scheduled with at least 24 hours' notice."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 27.53519892692566,
+      "input_tokens": 854,
+      "output_tokens": 1414,
+      "problems": []
+    }
+  ],
+  "success": true
+}

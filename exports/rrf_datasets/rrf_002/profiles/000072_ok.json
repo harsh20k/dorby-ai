@@ -1,0 +1,54 @@
+{
+  "id": 72,
+  "archetype": "Serial Founder, Impact-Driven, US-Based",
+  "given_name": "Aisha Nkosi",
+  "style_version": 5,
+  "archetypes_version": 13,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Aisha Nkosi is a serial social entrepreneur currently focused on building a climate tech company, 'TerraForm Analytics', that uses AI-powered satellite imagery to help smallholder farmers in Sub-Saharan Africa optimize crop yields and mitigate climate risk. She previously had a successful exit with a fintech company focused on financial inclusion in East Africa, 'Harambee Finance', which she sold to a larger microfinance institution. A distinctive detail is her strong background in geospatial data science *before* becoming an entrepreneur \u2013 she holds a PhD in Geography with a specialization in remote sensing. This technical expertise is central to her current venture. She's very mission-driven, but pragmatic and understands the need for scalability and profitability. She\u2019s actively seeking seed funding and strategic partnerships to expand TerraForm Analytics' reach and impact. She\u2019s known for being direct, highly analytical, and valuing efficiency in communication and collaboration.",
+    "positioning": "Aisha Nkosi is a seasoned entrepreneur and geospatial data scientist dedicated to leveraging technology for sustainable development. Currently, as Founder and CEO of TerraForm Analytics, I\u2019m building a platform that empowers smallholder farmers in Africa with actionable insights derived from advanced satellite imagery and machine learning. My career has been defined by a commitment to bridging the gap between innovation and impact, demonstrated by my previous success with Harambee Finance, a fintech platform focused on expanding financial access. I'm passionate about scaling climate-resilient agriculture and believe data-driven solutions are crucial to addressing the challenges of food security and environmental sustainability. My expertise lies in the intersection of geospatial analysis, AI, and financial technology, and I\u2019m actively seeking collaborators who share a vision for a more equitable and sustainable future. I thrive in fast-paced environments and prioritize building high-performing, mission-aligned teams.",
+    "background": "- **Founder & CEO, TerraForm Analytics** (2022 \u2013 Present)\n   * Led seed round fundraising of $1.5M to develop and deploy AI-powered agricultural analytics platform.\n   * Built and manage a team of data scientists, software engineers, and agricultural experts.\n   * Developed proprietary algorithms for crop health monitoring, yield prediction, and climate risk assessment using satellite imagery (Planet Labs, Sentinel).\n   * Secured pilot partnerships with agricultural cooperatives in Kenya and Tanzania.\n   * Implemented a cloud-based infrastructure (AWS) for data processing and storage.\n\n- **Founder & CEO, Harambee Finance** (2017 \u2013 2021)\n   * Conceptualized, launched, and scaled a mobile-first microfinance platform serving underserved communities in East Africa.\n   * Grew user base to over 50,000 active borrowers within three years.\n   * Secured Series A funding of $5M from impact investors.\n   * Successfully exited to Equity Bank, a leading regional financial institution (2021).\n\n- **Research Scientist, National Geospatial-Intelligence Agency (NGA)** (2015 \u2013 2017)\n   * Conducted research on advanced remote sensing techniques for environmental monitoring and disaster response.\n   * Developed and implemented algorithms for image classification and object detection.\n   * Published peer-reviewed research in leading geospatial journals.\n\n- **Education:**\n   * PhD, Geography (Specialization: Remote Sensing), University of California, Berkeley (2015)\n   * MS, Geography, University of Wisconsin-Madison (2012)\n   * BS, Environmental Science, Stanford University (2010)\n\n- **Skills:** Python, TensorFlow, PyTorch, GIS (ArcGIS, QGIS), Remote Sensing (Landsat, Sentinel, Planet), Machine Learning, Data Visualization, Financial Modeling, Business Development, Team Leadership.",
+    "lookingFor": "I'm currently focused on scaling TerraForm Analytics and expanding our impact across Sub-Saharan Africa.  Specifically, I am actively seeking:\n\n* **Seed Funding (Series A):**  Looking for investors with a demonstrated commitment to climate tech and impact investing, ideally with experience in the African agricultural sector.  Targeting $5-10M to support platform expansion and team growth.\n* **Strategic Partnerships:**  Open to collaborations with agricultural commodity buyers, NGOs, and government agencies to facilitate adoption of our technology and reach a wider network of farmers.  Ideal partners would have existing on-the-ground presence and strong relationships with local communities.\n* **Technical Advisors:**  Seeking experienced advisors in AI/ML, satellite imagery processing, and cloud infrastructure to provide guidance on technical roadmap and scalability.\n* **Talent:**  I'm always open to connecting with exceptional data scientists, software engineers, and agricultural specialists passionate about solving real-world problems.  Strong Python skills and experience with geospatial data are highly valued.  I\u2019m particularly interested in individuals with experience working in emerging markets.",
+    "notes": "Aisha is a highly driven and analytical entrepreneur. She's very clear about her vision for TerraForm Analytics and is focused on building a sustainable, scalable business. She\u2019s not interested in \u2018fluff\u2019 or lengthy presentations; she values direct communication and data-driven insights. She\u2019s been somewhat critical of \u2018tech-bro\u2019 approaches to impact investing, preferring partners who demonstrate genuine commitment to local communities. She recently mentioned frustration with a potential investor who seemed more interested in PR than actual impact.  Approaching her with a concrete proposal that demonstrates a clear understanding of the challenges and opportunities in African agriculture will be key. She\u2019s receptive to introductions to individuals with strong technical expertise and a proven track record of success in the climate tech space. She is very protective of her time and prefers initial conversations to be brief and focused.",
+    "locationAvailability": "I\u2019m primarily based in the San Francisco Bay Area but travel frequently to East Africa, particularly Kenya and Tanzania. I\u2019m open to virtual meetings but prioritize in-person interactions when possible.",
+    "introPreferences": "* **Hard Requirements:** Any introduction *must* be to someone who understands the complexities of the African agricultural landscape or has significant experience in climate tech.  No unsolicited sales pitches.\n* **Soft Preferences:**  I prefer introductions to individuals who are known for being direct, analytical, and results-oriented.  Prior experience with geospatial data science or impact investing is a plus.\n* **Do Not Introduce Me To:** Generalist venture capitalists or individuals who lack a deep understanding of the challenges facing smallholder farmers.\n* **Please Include:** A brief summary of the individual's relevant experience and a clear explanation of *why* they would be a valuable connection for TerraForm Analytics.  A LinkedIn profile link is essential.\n* **Preferred Introduction Style:** Concise and to-the-point.  Avoid excessive praise or hyperbole.",
+    "personalPreferences": "I prefer email communication for initial outreach. I respond quickly to well-written, concise messages that demonstrate a clear understanding of my work. I value transparency and directness in all my interactions.",
+    "meetingAndSchedulingPreferences": "Please include a brief agenda with any meeting requests. I prefer 30-minute meetings to start. I am flexible with scheduling, but please provide at least 24 hours' notice. I use Calendly for scheduling: [fictional Calendly link]."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 24.51664686203003,
+      "input_tokens": 854,
+      "output_tokens": 1526,
+      "problems": []
+    }
+  ],
+  "success": true
+}

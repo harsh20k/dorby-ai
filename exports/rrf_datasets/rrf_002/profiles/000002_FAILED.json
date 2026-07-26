@@ -1,0 +1,74 @@
+{
+  "id": 2,
+  "archetype": "Experienced Tech Co-founder/CTO",
+  "given_name": "Daniel Abara",
+  "style_version": 1,
+  "archetypes_version": 2,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Daniel Abara is a seasoned CTO and fractional tech lead specializing in rapidly prototyping and launching MVPs for early-stage startups. He\u2019s particularly strong in full-stack JavaScript (Node, React, Next.js) and cloud infrastructure (AWS, serverless). A distinctive detail is that he *always* takes a significant equity stake in the companies he joins, believing strongly in aligning incentives. He's currently looking for opportunities to co-found or join very early-stage ventures (pre-seed, seed) where he can significantly impact the technical direction and speed of execution. He\u2019s less interested in joining established companies needing incremental improvements and more focused on building something from the ground up. He\u2019s pragmatic, data-driven, and prioritizes delivering value quickly. He's becoming increasingly interested in the intersection of AI/ML and developer tools.",
+    "positioning": "A highly adaptable and results-oriented CTO and fractional technology leader with a proven track record of building and scaling MVPs for innovative startups. I specialize in translating complex business problems into elegant and scalable technical solutions, leveraging a full-stack JavaScript expertise and deep understanding of cloud architecture. Currently focused on identifying and collaborating with ambitious founders at the pre-seed and seed stages, offering not just technical guidance but a significant vested interest in the company\u2019s success. My approach centers around rapid iteration, data-driven decision-making, and a relentless focus on delivering tangible value. I excel at building high-performing engineering teams and fostering a culture of innovation. I\u2019m particularly excited by opportunities to apply AI and machine learning to improve developer workflows and accelerate product development. I\u2019m not merely a builder; I\u2019m a strategic partner committed to driving sustainable growth and achieving long-term success.",
+    "background": "- **CTO & Co-founder, NovaText (2021 \u2013 Present):** Led all technical aspects of NovaText, a conversational AI platform for customer support. Responsible for architecture, development, and deployment of the core product. Successfully secured $1.5M seed funding. Implemented serverless architecture on AWS, resulting in a 40% reduction in infrastructure costs. Negotiated and secured 15% equity in the company.\n- **Principal Engineer, Streamline Solutions (2019 \u2013 2021):** Managed a team of 5 engineers in the development of a SaaS platform for supply chain management. Spearheaded the migration from a monolithic architecture to a microservices-based architecture using Node.js and Kubernetes. Increased development velocity by 30% through the implementation of CI/CD pipelines.\n- **Senior Software Engineer, Apex Digital (2017 \u2013 2019):** Developed and maintained key features for Apex Digital\u2019s flagship e-commerce platform. Implemented A/B testing frameworks and data analytics pipelines to optimize user experience and conversion rates. Contributed to the development of a new mobile application using React Native.\n- **Education:**\n    - **Master of Science in Computer Science, Stanford University (2015 \u2013 2017):** Specialization in Artificial Intelligence.\n    - **Bachelor of Science in Computer Engineering, Massachusetts Institute of Technology (2011 \u2013 2015):**\n- **Skills:** JavaScript (Node.js, React, Next.js, TypeScript), Python, AWS (Lambda, S3, DynamoDB, API Gateway), Kubernetes, Docker, PostgreSQL, MongoDB, CI/CD (Jenkins, GitLab CI), Agile methodologies, Machine Learning (TensorFlow, PyTorch), RESTful APIs, Microservices Architecture, Serverless Computing, Data Analytics.",
+    "lookingFor": "## Networking Goals\n\n*   **Early-Stage Founders:** Seeking to connect with ambitious founders (pre-seed/seed) with innovative ideas and a clear vision. I\u2019m particularly interested in opportunities where I can contribute my technical expertise as a co-founder or fractional CTO.\n*   **Angel Investors & Venture Capitalists:** Building relationships with investors who focus on early-stage technology startups. Looking for introductions to potential funding sources for promising ventures.\n*   **AI/ML Experts:** Expanding my network with individuals specializing in artificial intelligence and machine learning, specifically those focused on developer tools and automation.\n*   **Potential Partners:** Identifying potential strategic partners for NovaText, particularly companies in the customer support, conversational AI, or cloud computing space.\n\n## Ideal Connection Profile\n\n*   **Title:** Founder, CEO, Partner, Angel Investor, Venture Capitalist, Head of Engineering\n*   **Industry:** Software, SaaS, Artificial Intelligence, Machine Learning, Fintech, Healthcare\n*   **Company Stage:** Pre-Seed, Seed, Early-Stage Startup",
+    "notes": "Daniel is a highly selective individual. He prioritizes equity in any engagement and is not interested in purely advisory roles. [03/15/2024 - Note: He has expressed strong interest in companies building tools for developers using AI]. He\u2019s been actively reviewing profiles in the AI/ML and developer tooling spaces. He recently engaged with a profile of a founder building a code completion tool, but the conversation stalled due to equity expectations. [03/22/2024 - Action Item: Flag profiles with 'equity' or 'co-founder' in their positioning]. He responds best to concise, direct introductions that highlight the potential for mutual benefit, specifically referencing his equity requirements. Avoid introductions to large, established companies. He\u2019s currently evaluating a potential co-founder opportunity in the healthcare space \u2013 keep an eye out for updates.  Internal score: 8/10 (High potential for valuable connections, but requires careful vetting and introduction strategy).",
+    "locationAvailability": "I am based in San Francisco, California, but am comfortable collaborating remotely with teams and individuals located anywhere in the world. I frequently travel for meetings and conferences.",
+    "introPreferences": "## Hard Requirements\n\n*   **Equity Discussion:** Introductions *must* include a pre-briefing about the company\u2019s willingness to discuss equity as part of any engagement.\n*   **Early-Stage Focus:** Prioritize connections with companies at the pre-seed or seed stage.\n*   **Technical Challenge:** The company should be tackling a significant technical challenge that requires a strong CTO.\n\n## Soft Preferences\n\n*   **AI/ML Alignment:**  Connections in the AI/ML space are highly preferred.\n*   **Founder-Led:** Introductions directly to the founder(s) are ideal.\n*   **Avoid:** Introductions to companies primarily seeking cost-cutting measures or incremental improvements to existing systems.",
+    "personalPreferences": "Email is best for initial contact. I'm also available on LinkedIn. I prefer asynchronous communication to minimize interruptions.",
+    "meetingAndSchedulingPreferences": "I generally prefer 30-minute introductory calls. I'm available for meetings most weekdays, with advance notice. Please share a calendar link when requesting a meeting."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 29.03681516647339,
+      "input_tokens": 853,
+      "output_tokens": 1497,
+      "problems": [
+        "background: possible truncation (ends with '...gile, Scrum, Lean Startup')"
+      ]
+    },
+    {
+      "attempt": 2,
+      "elapsed_s": 28.62800407409668,
+      "input_tokens": 853,
+      "output_tokens": 1578,
+      "problems": [
+        "background: possible truncation (ends with '...gile, Scrum, Lean Startup')"
+      ]
+    },
+    {
+      "attempt": 3,
+      "elapsed_s": 24.36502981185913,
+      "input_tokens": 853,
+      "output_tokens": 1468,
+      "problems": [
+        "lookingFor: possible truncation (ends with '...Seed, Early-Stage Startup')"
+      ]
+    }
+  ],
+  "success": false
+}

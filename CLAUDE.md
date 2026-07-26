@@ -436,6 +436,86 @@ carry both labels vs 5% real; 5.2 vs 0.67 edges/node). Full results, the
 distribution-shift finding, and remaining gaps are in
 `docs/profile-generation-local-and-bedrock.md`.
 
+### RRF pairing + LLM judge (`synth_pipeline/pairing_rrf/`) — full doc: `docs/rrf-pairing-pipeline.md`
+
+Second-generation labeling path, replacing the fusion *scorer* used by
+`synth_pipeline/pairing/` with **two independent retrieval channels plus an LLM
+judge**, so retrieval and labeling come from different model families and no
+scorer grades its own ranking (the 0.868-AUC circularity that undermined
+`pair_test_001`).
+
+Flow: profiles → disjoint split → one query per `lookingFor` section (Bedrock) →
+Qwen3-Embedding-8B on Modal, N+1 seeker vectors (whole profile + one per section)
+→ `.npy` files, then Chroma → dense top-10 ‖ BM25 top-10 → weighted RRF (dense
+2:1, `rrf_k=60`) → top-5 → `google/gemini-3.1-flash-lite` judge, one call per
+pair, no deadband → pos / hard-negative.
+
+```bash
+export AWS_PROFILE=tf_provisioner AWS_DEFAULT_REGION=us-east-1
+
+# the reusable template — every knob lives in a preset, not in flags
+python scripts/generate_rrf_dataset.py                                   # defaults
+python scripts/generate_rrf_dataset.py --preset my_run.json              # tuned
+python scripts/generate_rrf_dataset.py --profile-run <dir> --skip-generate
+python scripts/generate_rrf_dataset.py --dry-run                         # plan only
+
+# prompts are hub-only — push before any paid run
+python -m synth_pipeline.pairing_rrf.push_prompts --tag v1
+
+# browse a batch — three tabs in one self-contained file, zero network requests:
+#   Pairs      leakage/circularity probes + every pair's retrieval provenance
+#              and judge reasoning
+#   Topology   force-directed graph, this batch beside the 200 real pairs
+#   Embeddings the Qwen3 vectors in 3D (PCA), seeker anchors with their
+#              lookingFor asks tethered, pos/neg pair edges
+# (the other build_*_browser scripts don't understand this layout — no
+# failure_mode, no human-review gate)
+python scripts/build_rrf_browser.py --batch-id rrf_002
+open artifacts/pairing_rrf/rrf_002/_browser.html
+
+# degrades instead of failing: --no-real drops the comparison pane when data/
+# is absent (it's gitignored), and without numpy/sklearn the embeddings tab is
+# hidden while the first two still build
+```
+
+Presets live in `synth_pipeline/pairing_rrf/presets/`; the preset that produced a
+batch is copied into its output so results are reproducible. Stages
+(`generate_profiles`/`pairing`/`judge`/`export`) toggle independently, and
+`queries.json` + the judge cache make re-runs cheap.
+
+**First run `rrf_002`: 275 pairs (64 pos / 211 neg), $0.62 judge cost, ≈$1.40
+all in.** Two findings worth carrying forward: the judge's yes-rate collapsed
+from the experiment's 56.5% to 23.3% on retrieved synthetic candidates (harder,
+more homogeneous population — expect ~3 negatives per positive), and a
+**duplicate-pair defect** was found and fixed — a seeker's several queries can
+retrieve the same candidate, and judged independently 25 keys came back labeled
+both `pos` and `neg`. `fuse.deduplicate_pairs()` now enforces global
+`(seeker, candidate)` uniqueness by default.
+
+Prompts are **hub-only with no local fallback** (`prompt_hub.py`), matching
+`scripts/profile_gen_prompt_hub.py`: `-/pair-rrf-query:v1`, `-/pair-rrf-judge:v1`.
+Note `PROFILE_GEN_PROMPT_GENERATE` must be pinned to v3+ — unpinned it falls back
+to `LANGSMITH_PROMPT_TAG=v1` and every profile dies with
+`KeyError: 'ref_example_1'`.
+
+Labels are a model's opinion, not real accept/decline outcomes. Batches stay in
+`artifacts/pairing_rrf/<batch_id>/`, are exported to the git-tracked
+`exports/rrf_datasets/`, and **nothing is promoted** into `data/dataset_*.json`.
+
+**Trainability probes on `rrf_002`** (table in `docs/rrf-pairing-pipeline.md`):
+the generation-artifact leak that destroyed `run_001` is gone — candidate-profile-
+only prediction is 0.634 AUC, not 99.2% accuracy — and lexical circularity dropped
+from `pair_test_001`'s 0.868 to 0.701. The live weakness is **per-node base rate**:
+seeker identity alone, with no text at all, predicts the label at 0.687, because
+**12 of 40 seekers were rejected on every candidate**. So do not train a plain
+pairwise classifier on this batch; train **within a seeker**, which cancels that
+base rate by construction. 28 of 40 seekers carry both classes, giving **249
+(anchor, +, −) triplets** — `run_001`'s pool had 5 of 91, which is the sole reason
+`two-tower-fine-tune-plan.md` picked `ContrastiveLoss` over
+`MultipleNegativesRankingLoss`. That constraint is now lifted. Judge accuracy on
+the hard slice is 0.5942, so any model trained here must be scored on the **real**
+holdout, never on held-out synthetic pairs.
+
 ### Two-tower LoRA fine-tune (`twotower/` + Modal)
 
 LoRA fine-tune of `voyage-4-nano` on the promoted dataset. Architecture and

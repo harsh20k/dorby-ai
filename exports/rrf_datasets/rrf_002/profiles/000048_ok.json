@@ -1,0 +1,54 @@
+{
+  "id": 48,
+  "archetype": "Ex-Big Tech Founder, AI Focus",
+  "given_name": "Omar Haddad",
+  "style_version": 3,
+  "archetypes_version": 9,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Omar Haddad is a 42-year-old ex-Google engineering leader who spent 15 years building large-scale infrastructure systems. He left to found 'SynapseAI,' a startup focused on providing AI-powered data quality solutions for enterprise clients. His distinctive career detail is leading a critical project at Google that dramatically improved the reliability of their internal data pipelines \u2013 a pain point he\u2019s now directly addressing with SynapseAI. He\u2019s currently in a seed funding round and actively seeking strategic investors and early adopter clients. He's technically deep but understands the need to articulate value in business terms. He's slightly impatient and values direct communication, but is generally approachable and collaborative. He's based in San Francisco but open to remote work for the right team member.",
+    "positioning": "I\u2019m Omar Haddad, founder and CEO of SynapseAI, a company dedicated to solving the critical, yet often overlooked, problem of data quality in the age of artificial intelligence. At SynapseAI, we\u2019re building intelligent data validation and cleansing tools that empower businesses to confidently deploy and scale AI initiatives. For too long, the promise of AI has been stifled by 'garbage in, garbage out' \u2013 poor data quality leading to unreliable models and flawed insights. We're changing that. \n\nMy background is deeply rooted in building robust and scalable data infrastructure. During my 15 years at Google, I led the engineering effort for Project Chimera, a system-wide overhaul of our internal data pipeline reliability. This project resulted in a 40% reduction in data-related incidents and saved the company an estimated $25 million annually. It was a complex undertaking, requiring deep expertise in distributed systems, data governance, and machine learning \u2013 skills I now leverage daily at SynapseAI.\n\nCurrently, we\u2019re focused on securing our seed funding round and onboarding a select group of pilot customers. We're targeting companies in the financial services, healthcare, and retail sectors, where data integrity is paramount. I\u2019m passionate about building a team of exceptional engineers and data scientists who share our vision for a future where AI is powered by trustworthy data. I believe SynapseAI is uniquely positioned to become the leading provider of AI-powered data quality solutions, and I\u2019m actively seeking partners and advisors who can help us achieve that goal.",
+    "background": "Omar Haddad\n\n**Founder & CEO, SynapseAI** (2023 - Present)\n* Leading all aspects of the company, including product development, fundraising, and go-to-market strategy.\n* Developing and executing a technical roadmap for AI-powered data quality solutions.\n* Building and managing a high-performing team of engineers and data scientists.\n\n**Senior Staff Engineer, Google** (2008 - 2023)\n* Led the engineering team for Project Chimera, a critical initiative to improve data pipeline reliability across Google\u2019s infrastructure. Achieved a 40% reduction in data-related incidents.\n* Designed and implemented scalable data processing systems using technologies such as Hadoop, Spark, and Kubernetes.\n* Mentored and coached junior engineers, fostering a culture of innovation and collaboration.\n\n**Education:**\n* **Ph.D., Computer Science**, Stanford University (2008)\n* **B.S., Computer Engineering**, Massachusetts Institute of Technology (2004)\n\n**Skills:** Python, Java, Scala, Kubernetes, Hadoop, Spark, Machine Learning, Data Governance, Distributed Systems, Cloud Computing (GCP, AWS, Azure)",
+    "lookingFor": "I'm actively seeking connections in the following areas:\n\n**Investors:**\n* Seed-stage VCs specializing in AI and data infrastructure.\n* Angel investors with a track record of successful early-stage investments.\n* Individuals with experience scaling SaaS companies.\n* *Not* interested in investors who lack a technical understanding of our space.\n\n**Potential Clients (Pilot Programs):**\n* Data-driven organizations in financial services, healthcare, and retail.\n* Companies struggling with data quality issues impacting their AI initiatives.\n* Decision-makers (CIOs, CTOs, Heads of Data Science) open to exploring innovative solutions.\n\n**Advisors & Mentors:**\n* Experienced entrepreneurs who have successfully navigated the startup landscape.\n* Experts in data governance, data quality, and AI ethics.\n* Individuals with strong networks in the enterprise software space.\n\n**Key Partnerships:**\n* Strategic alliances with data integration and ETL providers.\n* Collaborations with leading AI platform vendors.\n\nI\u2019m *not* looking for sales pitches for unrelated products or services. I\u2019m focused on building genuine relationships with individuals who can add value to SynapseAI.",
+    "notes": "Omar is highly intelligent and articulate but can be direct and impatient. He prioritizes technical depth and expects others to understand the complexities of the problem SynapseAI is solving. When discussing Project Chimera, emphasize the quantifiable results (40% reduction in incidents, $25M savings). He\u2019s currently very focused on fundraising and is sensitive to any perceived lack of progress. He responds well to data-driven arguments and appreciates concise communication. Recent conversations suggest he\u2019s particularly interested in exploring partnerships with companies offering complementary data integration solutions. He\u2019s been receptive to introductions to investors with a strong technical background.",
+    "locationAvailability": "I am currently based in San Francisco, California. While I prefer to build a strong core team locally, I am open to remote work arrangements for exceptional candidates. I am willing to consider relocating for strategic opportunities, but my primary focus is on building SynapseAI's presence in the Bay Area.",
+    "introPreferences": "When making introductions, please ensure:\n* The individual has a demonstrable understanding of AI and data infrastructure.\n* They have a proven track record of success in their respective field.\n* They are genuinely interested in learning more about SynapseAI and our mission.\n* *Avoid* introducing me to individuals who are primarily focused on marketing or sales \u2013 I\u2019m looking for technical and strategic connections.\n* Please provide a brief summary of the individual\u2019s background and why you believe they would be a valuable connection for me.",
+    "personalPreferences": "I prefer to communicate via email or LinkedIn initially. I'm generally responsive and appreciate concise, well-written messages. I'm happy to jump on a call after an initial exchange.",
+    "meetingAndSchedulingPreferences": "Please send a brief agenda in advance of any scheduled meetings. I value efficiency and prefer meetings to be focused and action-oriented. I am typically available for 30-minute meetings."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 23.143738985061646,
+      "input_tokens": 796,
+      "output_tokens": 1416,
+      "problems": []
+    }
+  ],
+  "success": true
+}

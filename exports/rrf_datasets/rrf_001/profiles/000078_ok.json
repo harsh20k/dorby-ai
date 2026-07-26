@@ -1,0 +1,54 @@
+{
+  "id": 78,
+  "archetype": "Neurotech Founder, Early Commercialization",
+  "given_name": "Tariq Castillo",
+  "style_version": 5,
+  "archetypes_version": 14,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Tariq Castillo is a 38-year-old founder and CEO of 'Synapse Solutions,' a neurotech startup focused on non-invasive brain-computer interfaces for rehabilitation. His distinctive career detail is a prior 8-year stint as a combat medic in the US Army Special Forces, which deeply informed his passion for restoring function to those with neurological impairments. He's currently laser-focused on securing Series A funding to scale manufacturing and begin larger-scale clinical trials, and is actively seeking strategic partnerships with hospitals and rehabilitation centers. He\u2019s highly data-driven, a bit impatient, and deeply values authenticity. He\u2019s a strong leader but can be dismissive of ideas that aren't backed by solid evidence. He prioritizes impact and speed of execution.",
+    "positioning": "As CEO of Synapse Solutions, I\u2019m leading the charge in revolutionizing neurological rehabilitation through accessible and effective brain-computer interface technology. We\u2019re developing a non-invasive system that empowers individuals recovering from stroke, traumatic brain injury, and other neurological conditions to regain motor function and improve their quality of life. My background blends a deep understanding of human physiology, honed during eight years as a combat medic with US Army Special Forces, with a passion for cutting-edge neurotechnology. Currently, we\u2019ve completed successful pilot studies demonstrating significant improvements in patient outcomes, and we\u2019re poised for a pivotal stage of growth. I\u2019m actively seeking strategic investors and partners who share our vision of a future where neurological recovery is accelerated and more widely available.  I\u2019m particularly focused on building a high-performing team and establishing Synapse Solutions as a leader in this rapidly evolving field.  I believe in data-driven decision-making and a relentless pursuit of innovation.",
+    "background": "* **CEO & Founder, Synapse Solutions** (2021 \u2013 Present)\n    * Secured seed funding of $2.5M to develop and prototype a non-invasive BCI system for stroke rehabilitation.\n    * Led a team of 10 engineers, neuroscientists, and clinicians in the design, development, and testing of the Synapse Restore device.\n    * Oversaw successful completion of pilot clinical trials demonstrating a 30% average improvement in motor function scores among participants.\n    * Established key partnerships with leading rehabilitation hospitals for ongoing clinical validation.\n    * Developed and implemented a comprehensive intellectual property strategy, resulting in two pending patent applications.\n* **Combat Medic, US Army Special Forces** (2013 \u2013 2021)\n    * Provided advanced medical care in austere and high-stress environments.\n    * Managed medical logistics and coordinated patient evacuation procedures.\n    * Received extensive training in trauma care, emergency medicine, and field surgery.\n    * Consistently recognized for leadership and clinical excellence.\n* **Research Assistant, Neural Engineering Lab, MIT** (2012 \u2013 2013)\n    * Assisted with research on closed-loop neural stimulation for chronic pain management.\n    * Conducted data analysis and prepared research reports for publication.\n    * Gained experience in electrophysiology, neuroimaging, and data processing techniques.\n* **B.S., Biomedical Engineering, Johns Hopkins University** (2009 \u2013 2013)\n    * Minor in Computer Science.\n    * Dean\u2019s List all semesters.\n    * President, Biomedical Engineering Society.",
+    "lookingFor": "I\u2019m currently focused on securing Series A funding \u2013 ideally in the $8-12M range \u2013 to scale manufacturing and initiate larger, multi-center clinical trials. I\u2019m looking for investors with a proven track record in the neurotech space and a long-term investment horizon. I'm also actively seeking strategic partnerships with leading hospitals and rehabilitation centers to expand our clinical access and accelerate adoption of the Synapse Restore device. Specifically, I'm interested in institutions with strong neurology departments and a commitment to innovation. I\u2019m open to advisory board members with deep expertise in regulatory affairs (FDA 510(k) pathway experience is *critical*) and BCI commercialization. I am also exploring potential collaborations with companies specializing in wearable sensor technology and data analytics.  I'm *not* interested in purely financial investors lacking industry knowledge or a genuine passion for our mission.",
+    "notes": "Tariq is a highly driven and articulate leader with a clear vision for Synapse Solutions. His military background has instilled in him a strong sense of discipline and a results-oriented approach. He\u2019s exceptionally bright and quick to grasp complex technical details. However, he can be impatient with ambiguity and prefers data-driven insights over speculative discussions. He\u2019s very protective of his team and values loyalty. Recent conversations indicate he\u2019s increasingly concerned about competition from larger, established players in the neurotech market. He responds well to directness and appreciates individuals who demonstrate a deep understanding of the industry. Be prepared to present a strong value proposition and avoid overpromising.  He's currently vetting several potential investors and is prioritizing those who offer more than just capital.",
+    "locationAvailability": "I\u2019m based in Boston, MA, and frequently travel to conferences and potential partner sites across the US. I am open to remote meetings but prefer in-person interactions when possible, particularly for crucial partnership discussions.",
+    "introPreferences": "* **Hard Requirements:** Anyone I\u2019m introduced to must have a demonstrable understanding of the neurotech landscape, ideally with experience in BCI or rehabilitation technology.\n* **Soft Preferences:** Introductions to individuals with a strong network within the medical device industry are highly valued.\n* **Avoid:** Do *not* introduce me to individuals who are primarily focused on tangential technologies (e.g., general wellness apps) or those lacking a clear understanding of the regulatory challenges associated with medical devices.\n* **Ideal Intro:** A partner at a venture capital firm specializing in healthcare, with a portfolio company in a related field, who can offer strategic guidance and potential co-investment opportunities.\n* **Briefing is Essential:** Please provide a concise summary of the individual\u2019s background, relevant experience, and potential value proposition *before* making the introduction.",
+    "personalPreferences": "I prefer concise and direct communication. I respond best to emails that get straight to the point, outlining the key information and desired outcome. I'm generally available for calls during business hours, but please schedule in advance. I appreciate punctuality and preparation.",
+    "meetingAndSchedulingPreferences": "Please use Calendly for scheduling. Come prepared with a clear agenda and supporting materials. I value efficient meetings and prefer to focus on actionable items. Brief pre-reads are appreciated."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 21.539180040359497,
+      "input_tokens": 839,
+      "output_tokens": 1387,
+      "problems": []
+    }
+  ],
+  "success": true
+}

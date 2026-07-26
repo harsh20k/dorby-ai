@@ -1,0 +1,54 @@
+{
+  "id": 24,
+  "archetype": "Toronto-Based AI/Fintech Founder",
+  "given_name": "Thabo Wang",
+  "style_version": 2,
+  "archetypes_version": 5,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Thabo Wang is a first-time founder, 32, building 'NovaCredit AI', a platform leveraging machine learning to provide personalized credit scoring and loan products to underbanked populations in Canada. He previously spent 7 years at a large Canadian bank (RBC) in risk modeling, but grew frustrated with the slow pace of innovation and lack of focus on financial inclusion. He\u2019s recently closed a small seed round ($750k CAD) and is now focused on building out his core engineering team and securing pilot partnerships with smaller credit unions. He\u2019s deeply embedded in the Toronto fintech scene, a frequent attendee of industry events, and actively mentors early-stage founders. He\u2019s very technical, enjoys being hands-on, but recognizes he needs to delegate more as NovaCredit AI grows. He's looking for experienced AI engineers, advisors with experience scaling fintech startups, and potential strategic investors for a Series A.",
+    "positioning": "Thabo Wang is the Founder & CEO of NovaCredit AI, a fintech startup revolutionizing access to credit for underserved Canadians. We\u2019re building an AI-powered credit scoring system that looks beyond traditional metrics to provide a more accurate and inclusive assessment of creditworthiness. Having spent seven years in risk modeling at RBC, I recognized a critical gap in the market: millions of Canadians are unfairly penalized by outdated credit scoring models. NovaCredit AI addresses this by leveraging machine learning to analyze alternative data sources, unlocking financial opportunities for those historically excluded from the traditional financial system. We've recently closed a seed round and are focused on building out our MVP and securing key partnerships. My core value proposition is a deep understanding of both the technical complexities of AI/ML and the regulatory landscape of the Canadian financial sector, coupled with a passionate commitment to financial inclusion.",
+    "background": "* **NovaCredit AI, Founder & CEO** (Jan 2023 \u2013 Present)\n    * Led the company from concept to seed stage, securing $750k CAD in funding.\n    * Developed and validated the core AI model for alternative credit scoring, achieving a 15% improvement in predictive accuracy compared to traditional models.\n    * Built and managed a small team of data scientists and engineers.\n    * Established initial partnerships with two credit unions for pilot program implementation.\n* **RBC, Senior Risk Modeler** (June 2016 \u2013 Dec 2022)\n    * Developed and implemented statistical models for credit risk assessment, covering a portfolio of $50 billion in assets.\n    * Led the migration of legacy risk models to a cloud-based platform, resulting in a 20% reduction in operational costs.\n    * Mentored junior modelers and analysts, fostering a collaborative team environment.\n    * Presented model validation results to regulatory bodies (OSFI).\n* **University of Toronto, Master of Science in Statistics** (Sept 2014 \u2013 May 2016)\n    * Thesis: \u201cBayesian Network Modeling for Credit Default Prediction.\u201d\n    * GPA: 3.9/4.0\n* **University of Waterloo, Bachelor of Science in Mathematics (Co-op)** (Sept 2010 \u2013 May 2014)\n    * Relevant Coursework: Statistical Modeling, Machine Learning, Data Mining, Financial Engineering.\n    * Co-op experience at Manulife Financial, working on actuarial modeling projects.\n* **Technical Skills:** Python (Pandas, NumPy, Scikit-learn, TensorFlow, PyTorch), SQL, Cloud Computing (AWS, Azure), Statistical Modeling, Machine Learning, Data Visualization (Tableau, Power BI), Risk Management, Regulatory Compliance (OSFI, PIPEDA).",
+    "lookingFor": "I\u2019m actively seeking connections within the Toronto fintech ecosystem to accelerate NovaCredit AI\u2019s growth. Specifically, I'm looking for:\n\n* **Experienced AI/ML Engineers:** Senior-level engineers with expertise in building and deploying machine learning models in a production environment. Experience with fintech applications is a strong plus.\n* **Fintech Advisors:** Individuals with a track record of successfully scaling early-stage fintech startups. Expertise in fundraising, regulatory compliance, and partnership development is highly valued.\n* **Strategic Investors:** Angel investors or venture capitalists interested in participating in a Series A round. We are targeting $3-5 million to expand our team, scale our platform, and expand our market reach.\n* **Potential Credit Union Partners:**  I\u2019d welcome introductions to decision-makers at smaller and medium-sized credit unions interested in piloting our alternative credit scoring solution.\n\nI'm open to informational interviews, mentorship opportunities, and potential collaborations.  I\u2019m particularly interested in learning from others who have navigated the challenges of building a fintech company in Canada.",
+    "notes": "* Thabo is very passionate about financial inclusion \u2013 this is a key driver for him.\n* Recently attended the FinTech Forward conference in Toronto (Oct 26-27). \n* Seed round was slightly oversubscribed \u2013 indicates strong market interest.\n* He\u2019s a bit hesitant to give up too much equity in the Series A - be mindful of that.\n* Very responsive and quick to follow up.",
+    "locationAvailability": "Thabo Wang is based in Toronto, Ontario and is open to remote meetings and occasional travel within Canada and the US.",
+    "introPreferences": "* **Hard Requirements:**\n    * Introductions must be to individuals with demonstrable experience in AI/ML or fintech.\n    * Please avoid introducing me to generalist investors or individuals with no relevant industry background.\n* **Soft Preferences:**\n    * Preference for introductions to individuals who have a history of supporting or mentoring early-stage founders.\n    * Ideally, connections should have a strong network within the Toronto fintech community.\n* **Suggested Framing:**\n    * \u201cThabo is building NovaCredit AI, a promising fintech startup leveraging AI to improve access to credit. He\u2019s looking for [specific ask] and I thought you might be a valuable connection.\u201d\n    * Avoid framing the introduction as a \u2018pitch\u2019 \u2013 focus on building a relationship and exploring potential synergies.",
+    "personalPreferences": "Thabo prefers initial contact via email.",
+    "meetingAndSchedulingPreferences": "Generally available for calls after 2 PM EST."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 18.217528104782104,
+      "input_tokens": 805,
+      "output_tokens": 1326,
+      "problems": []
+    }
+  ],
+  "success": true
+}

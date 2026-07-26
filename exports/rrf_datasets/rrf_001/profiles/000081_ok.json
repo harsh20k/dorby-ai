@@ -1,0 +1,54 @@
+{
+  "id": 81,
+  "archetype": "Ex-Big Tech, Now Founder",
+  "given_name": "Leilani Ishikawa",
+  "style_version": 6,
+  "archetypes_version": 14,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Leilani Ishikawa is a former Senior Staff Software Engineer at Google, specializing in large-scale distributed systems and machine learning infrastructure. She spent 8 years there, becoming deeply frustrated with the internal tooling for model deployment and monitoring \u2013 a process she felt was overly complex and slowed down innovation. She left Google 18 months ago to found 'Aetherflow', a platform designed to simplify MLOps for smaller to medium-sized businesses. Aetherflow focuses on automated model validation, drift detection, and explainability, offering a 'no-code' interface to make these critical functions accessible to data scientists without extensive DevOps expertise. She's currently fundraising for a Series A, and is actively building out her engineering and sales teams. She values directness, technical depth, and a bias for action in her network. She\u2019s highly focused on building a strong engineering culture and avoiding the bureaucratic pitfalls she experienced at Google.",
+    "positioning": "I'm Leilani Ishikawa, founder and CEO of Aetherflow, a platform empowering data science teams to deploy and monitor machine learning models with unprecedented ease. After eight years building scalable infrastructure at Google, I recognized a critical gap in the market: the complexity of MLOps was stifling innovation, particularly for companies lacking dedicated DevOps resources. Aetherflow addresses this head-on, offering a no-code solution for model validation, drift detection, and explainability. We\u2019re rapidly gaining traction with customers in the fintech and healthcare sectors, and are focused on scaling our platform and expanding our team. My expertise lies in distributed systems, machine learning engineering, and building high-performing engineering cultures. I\u2019m passionate about democratizing access to powerful AI tools and believe Aetherflow is uniquely positioned to lead this charge.",
+    "background": "- **Founder & CEO, Aetherflow** (2022 \u2013 Present)\n  * Led all aspects of company formation, including product vision, fundraising, team building, and go-to-market strategy.\n  * Secured Seed funding of $3.5M from prominent venture capital firms.\n  * Developed and launched Aetherflow's core platform, achieving 30+ paying customers within the first year.\n  * Built a remote-first engineering team focused on rapid iteration and customer feedback.\n\n- **Senior Staff Software Engineer, Google** (2014 \u2013 2022)\n  * Led the design and implementation of a new distributed tracing system for Google\u2019s internal machine learning infrastructure, resulting in a 20% reduction in model deployment time.\n  * Mentored junior engineers and contributed to Google\u2019s internal engineering best practices.\n  * Spearheaded the adoption of Kubernetes and TensorFlow Extended (TFX) across multiple teams.\n  * Contributed to open-source projects related to machine learning observability and model serving.\n  * Received Google Founders\u2019 Award for contributions to internal tooling.\n\n- **Software Engineer, Amazon** (2012 \u2013 2014)\n  * Developed and maintained key components of Amazon\u2019s recommendation engine.\n  * Worked with large-scale datasets and implemented performance optimizations to improve recommendation accuracy.\n\n- **Education:**\n  * M.S., Computer Science, Stanford University (2012)\n  * B.S., Computer Science, Massachusetts Institute of Technology (2010)",
+    "lookingFor": "I'm currently focused on closing our Series A round and am actively seeking conversations with investors who understand the MLOps space and have a track record of supporting high-growth SaaS companies. I\u2019m particularly interested in firms with expertise in AI/ML infrastructure and a long-term investment horizon. \n\nOn the talent front, I\u2019m building out our engineering and sales teams. I'm looking for a VP of Engineering with experience scaling a remote-first engineering organization and a strong background in distributed systems. For sales, I'm seeking Account Executives with a proven ability to sell complex technical solutions to enterprise customers. \n\nI'm also open to connecting with other founders in the AI/ML space to share learnings and explore potential synergies. I'm always interested in discussing the challenges and opportunities in this rapidly evolving field. I\u2019m particularly keen to speak with companies who might benefit from integrating with Aetherflow\u2019s platform.",
+    "notes": "Leilani is highly intelligent and articulate, with a clear vision for Aetherflow. She's deeply technical and won't suffer fools gladly \u2013 avoid overly simplistic pitches or attempts to 'explain' MLOps to her. She's motivated by a genuine desire to solve a pain point she experienced firsthand at Google. She\u2019s very focused on building a strong, independent company culture that avoids the bureaucracy of big tech. Recent conversations indicate she\u2019s prioritizing investors who can offer strategic guidance beyond just capital. She\u2019s been somewhat frustrated by the lack of technical depth in some investor meetings, so ensure any introductions are well-briefed and prepared to discuss the technical details of Aetherflow's platform. She's receptive to introductions to potential key hires, especially experienced engineering leaders.",
+    "locationAvailability": "I'm primarily focused on connections in the San Francisco Bay Area and remotely. I\u2019m open to travel for key meetings, but prefer virtual interactions whenever possible.",
+    "introPreferences": "- **Hard Requirements:** Introductions *must* be to individuals with demonstrable experience in either venture capital (Series A and beyond) or leadership roles in relevant technical fields (MLOps, data science infrastructure).\n- **Soft Preferences:** I appreciate introductions to people who are known for their directness, intellectual curiosity, and willingness to challenge assumptions. \n- **Avoid:** Please do *not* introduce me to sales/marketing consultants offering generic 'growth hacking' strategies. I'm also not interested in introductions to individuals who are primarily focused on early-stage (pre-seed) funding.\n- **Briefing is key:** Ensure the person you're introducing me to understands Aetherflow\u2019s value proposition and has reviewed our website (aetherflow.com) prior to the introduction.\n- **Context matters:** Briefly explain *why* you think this connection would be valuable for me, highlighting specific areas of potential synergy.",
+    "personalPreferences": "I prefer concise and direct communication. Email is my primary mode of communication, but I\u2019m also responsive on LinkedIn. I appreciate thoughtful, well-structured messages and avoid overly casual language in professional contexts.",
+    "meetingAndSchedulingPreferences": "- Please include a brief agenda with all meeting requests.\n- I generally prefer 30-minute meetings to start.\n- I use Calendly for scheduling: [link to Calendly - placeholder].\n- I value punctuality and preparation."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 22.349236965179443,
+      "input_tokens": 857,
+      "output_tokens": 1419,
+      "problems": []
+    }
+  ],
+  "success": true
+}

@@ -1,0 +1,72 @@
+{
+  "batch_id": "rrf_001",
+  "config": {
+    "profile_run": "artifacts/bedrock_synth/run_20260726_105943",
+    "batch_id": "rrf_001",
+    "data_dir": "/Users/harsh/Artifacts/dorby-ai/data",
+    "artifacts_dir": "/Users/harsh/Artifacts/dorby-ai/artifacts",
+    "embed_model": "Qwen/Qwen3-Embedding-8B",
+    "bedrock_model": "google.gemma-3-27b-it",
+    "region": "us-east-1",
+    "seeker_frac": 0.43,
+    "recall_k": 10,
+    "top_k": 5,
+    "max_pairs_per_seeker": null,
+    "min_dense_similarity": null,
+    "dense_weight": 2.0,
+    "lexical_weight": 1.0,
+    "rrf_k": 60,
+    "seed": 42,
+    "limit": null,
+    "judge_concurrency": 4,
+    "use_chroma": true,
+    "embed_batch_size": 2,
+    "embed_max_length": 4096,
+    "embed_device": null,
+    "embed_backend": "modal",
+    "skip_judge": false
+  },
+  "pairs_shortlisted": 675,
+  "pairs_labeled": 675,
+  "calls_per_labeled_pair": 1.0,
+  "balance": {
+    "positive": 189,
+    "negative": 486,
+    "positive_frac": 0.28,
+    "nodes": 91,
+    "edges": 675,
+    "edges_per_node": 7.4176,
+    "real_reference": {
+      "edges_per_node": 0.673,
+      "positive_frac": 0.5
+    }
+  },
+  "cost": {
+    "bedrock_query_generation": {
+      "calls": 25,
+      "input_tokens": 44588,
+      "output_tokens": 1161,
+      "total_tokens": 45749
+    },
+    "openrouter_judge": {
+      "calls": 675,
+      "prompt_tokens": 2024095,
+      "completion_tokens": 77955,
+      "total_tokens": 2102050,
+      "cost_usd": 0.622956
+    },
+    "measured_judge_cost_usd": 0.622956,
+    "note": "Judge cost is the exact amount OpenRouter billed, read from each response's usage payload. Bedrock token counts are real; convert to dollars with scripts/estimate_bedrock_cost.py."
+  },
+  "timings_seconds": {
+    "load_and_split": 0.01,
+    "query_generation": 28.89,
+    "embedding": 86.83,
+    "index_build": 0.36,
+    "recall": 0.16,
+    "fusion": 0.01,
+    "judging": 211.84,
+    "labeling": 0.1
+  },
+  "wall_seconds": 328.2
+}

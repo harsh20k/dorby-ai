@@ -1,0 +1,63 @@
+{
+  "id": 7,
+  "archetype": "University-Linked Deep Tech Innovator",
+  "given_name": "Takumi Eriksson",
+  "style_version": 1,
+  "archetypes_version": 2,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Takumi Eriksson is a 34-year-old Swedish-Japanese engineer and entrepreneur. He recently spun out a company, 'Aether Dynamics,' from the KTH Royal Institute of Technology in Stockholm, commercializing a novel microfluidic chip technology developed during his PhD. The core innovation lies in highly efficient and precise liquid handling at the nanoscale, aiming to revolutionize point-of-care diagnostics and personalized medicine. He's the CEO, but still heavily involved in the technical aspects. He\u2019s actively fundraising (Seed round) and looking for strategic partners who can help scale manufacturing and navigate regulatory hurdles, particularly in the US market. He\u2019s passionate about his work but also recognizes the need to build a strong business around the technology, meaning he\u2019s open to mentorship and advice from experienced entrepreneurs. He has a somewhat blunt, direct communication style \u2013 a result of his engineering background \u2013 but is genuinely enthusiastic and collaborative.",
+    "positioning": "As CEO of Aether Dynamics, I'm leading the commercialization of a groundbreaking microfluidic platform poised to disrupt the point-of-care diagnostics landscape. Aether Dynamics emerged from cutting-edge research at KTH Royal Institute of Technology, focused on manipulating fluids at the nanoscale with unprecedented precision and efficiency. Our technology allows for rapid, affordable, and highly accurate analysis of biological samples, opening doors for personalized medicine, rapid disease detection, and decentralized healthcare. I oversee all aspects of the business, from fundraising and strategic partnerships to product development and regulatory compliance. My background in microfluidics and my experience building Aether Dynamics from the ground up allow me to effectively bridge the gap between scientific innovation and market demand. I\u2019m actively seeking strategic investors and partners to accelerate our growth and bring this transformative technology to a global audience. We are not just building a company; we are building a future where diagnostics are accessible to everyone.",
+    "background": "- **CEO, Aether Dynamics (2023 \u2013 Present)**\n  - Led the spin-out of the company from KTH Royal Institute of Technology, securing initial seed funding of $500k.\n  - Responsible for overall strategy, business development, investor relations, and team building.\n  - Managed the development of a prototype diagnostic device targeting early-stage sepsis detection.\n  - Currently navigating FDA pre-submission process.\n- **PhD Candidate, KTH Royal Institute of Technology, Stockholm (2018 \u2013 2022)**\n  - Thesis: 'Microfluidic Manipulation of Single Cells for High-Throughput Drug Screening'.\n  - Developed a novel microfluidic chip design enabling precise control of fluid flow at the nanoscale.\n  - Published 5 peer-reviewed articles in leading scientific journals (Lab on a Chip, Microfluidics and Nanofluidics).\n  - Awarded the KTH Royal Institute of Technology Doctoral Research Award (2021).\n- **Research Assistant, University of Tokyo (2016 \u2013 2018)**\n  - Conducted research on bio-inspired microfluidic devices for lab-on-a-chip applications.\n  - Collaborated with researchers from various disciplines, including biology, chemistry, and engineering.\n- **M.Sc. in Mechanical Engineering, KTH Royal Institute of Technology, Stockholm (2014 \u2013 2016)**\n  - Specialization: Micro- and Nano-systems.\n  - GPA: 4.8/5.0\n- **B.Sc. in Engineering Physics, Uppsala University, Sweden (2011 \u2013 2014)**\n\n**Skills:** Microfluidics, Lab-on-a-Chip, BioMEMS, Nanotechnology, Fluid Dynamics, Python, MATLAB, Data Analysis, Scientific Writing, Project Management, Fundraising, Business Development, FDA Regulatory Compliance.",
+    "lookingFor": "## Networking Objectives\n\n*   **Strategic Investors:** Seeking Seed round investors with experience in diagnostics, biotech, or medtech. We are looking for partners who can provide not only capital but also valuable industry connections and expertise.\n*   **Manufacturing Partners:** Identifying contract manufacturing organizations (CMOs) specializing in microfluidic devices and medical device assembly, ideally with experience scaling production for FDA-regulated products. US-based CMOs are highly preferred.\n*   **Industry Mentors:** Connecting with experienced entrepreneurs and executives in the diagnostics and medical device space. Seeking guidance on scaling a deep-tech startup, navigating regulatory challenges, and building a strong team.\n*   **Regulatory Consultants:** Establishing relationships with consultants specializing in FDA 510(k) submissions and regulatory strategy for medical devices.\n*   **Potential Collaborators:** Exploring potential partnerships with hospitals, research institutions, and pharmaceutical companies for clinical validation and co-development opportunities.\n\nI'm particularly interested in introductions to individuals in leadership positions (VP level and above) within relevant organizations. I value direct, efficient communication and a willingness to share insights and experiences.",
+    "notes": "Takumi is a highly technical founder \u2013 needs help translating technical advantages into compelling business value. [03/15/2024 \u2013 Initial profile assessment complete]. He\u2019s actively attending the MedCity INVEST conference next week \u2013 potential introduction opportunity. [03/20/2024 \u2013 Added conference attendance]. He\u2019s responded positively to previous introductions to investors focused on digital health, but hasn\u2019t progressed beyond initial conversations \u2013 likely due to a lack of clarity around go-to-market strategy. [03/28/2024 \u2013 Follow-up required on investor interactions]. \n\n**Intro Guidance:**\n*   Prioritize introductions to individuals with experience in scaling hardware startups.\n*   Brief contacts on the technical innovation *after* establishing their interest in the market opportunity.\n*   Avoid introductions to purely software-focused investors. \n*   Mention the KTH spin-out \u2013 it carries significant weight. \n*   Aether Dynamics is currently utilizing the platform's 'Startup Spotlight' feature \u2013 monitor engagement.",
+    "locationAvailability": "I am based in Stockholm, Sweden, but frequently travel to the US for fundraising and business development. I am readily available for remote meetings and discussions with individuals worldwide.",
+    "introPreferences": "## Introduction Criteria\n\n*   **Hard Requirements:**\n    *   Contact must have a demonstrable track record of success in the diagnostics or medical device industry.\n    *   Contact should be at a Director level or higher within their organization.\n    *   Contact must have a clear understanding of the challenges and opportunities in the point-of-care diagnostics market.\n*   **Soft Preferences:**\n    *   Prioritize introductions to individuals with experience in early-stage venture capital or strategic partnerships.\n    *   Contacts with a strong network in the US healthcare ecosystem are highly valued.\n    *   A warm introduction with a personalized message highlighting Aether Dynamics' unique value proposition is essential.",
+    "personalPreferences": "Prefer email for initial contact. Happy to connect on LinkedIn. Occasional WhatsApp is acceptable for quick follow-ups.",
+    "meetingAndSchedulingPreferences": "Generally available for meetings during European business hours. Please provide a clear agenda in advance. I prefer concise, focused meetings with actionable outcomes."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 22.014929056167603,
+      "input_tokens": 843,
+      "output_tokens": 1468,
+      "problems": [
+        "notes: possible truncation (ends with '...e, Metamaterials, SeriesA')"
+      ]
+    },
+    {
+      "attempt": 2,
+      "elapsed_s": 20.438091039657593,
+      "input_tokens": 843,
+      "output_tokens": 1532,
+      "problems": []
+    }
+  ],
+  "success": true
+}

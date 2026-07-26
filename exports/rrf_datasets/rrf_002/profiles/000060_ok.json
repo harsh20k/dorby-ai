@@ -1,0 +1,54 @@
+{
+  "id": 60,
+  "archetype": "Toronto AI Startup Founder",
+  "given_name": "Isabela Abara",
+  "style_version": 4,
+  "archetypes_version": 11,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Isabela Abara is a 34-year-old, second-time founder currently building 'SynapseFlow,' a stealth AI startup focused on applying generative AI to optimize supply chain logistics. Her first venture, a sustainable packaging company, was acquired two years ago, providing her with capital and the confidence to tackle a more technically challenging space. She\u2019s highly analytical, driven by efficiency, and acutely aware of the talent gap in the Toronto AI scene. She\u2019s *specifically* looking for experienced machine learning engineers with a strong background in time-series data and reinforcement learning. She\u2019s a pragmatic leader, focused on building a lean, high-performing team. A distinctive detail: she spent a year as a logistics consultant *before* starting her first company, giving her deep domain expertise in the problem SynapseFlow is solving. She\u2019s a strong believer in ethical AI and is subtly looking for individuals who share that value.",
+    "positioning": "SynapseFlow is revolutionizing supply chain management through the power of generative AI. We\u2019re tackling the pervasive inefficiencies that plague global logistics, resulting in billions of dollars in wasted resources and unnecessary delays. Our core platform leverages advanced machine learning models to predict disruptions, optimize routing, and automate critical decision-making processes \u2013 ultimately creating a more resilient and sustainable supply chain ecosystem. We focus on mid-to-large enterprise clients in the manufacturing and retail sectors, offering a tailored solution that integrates seamlessly with existing ERP systems. \n\nSince entering stealth mode six months ago, we\u2019ve achieved significant milestones, including the development of a proprietary algorithm demonstrating a 15% reduction in transportation costs in simulated environments and securing seed funding from a leading Canadian venture capital firm. We\u2019re currently building out our minimum viable product (MVP) and are laser-focused on attracting top-tier engineering talent to accelerate our development timeline.  I\u2019m passionately building a team that isn\u2019t just technically brilliant, but also deeply committed to building responsible and ethical AI solutions.  We believe that AI should augment human capabilities, not replace them, and we're committed to transparency and accountability in everything we do. We\u2019re not simply automating existing processes; we\u2019re reimagining the future of supply chain logistics, creating a system that is more efficient, sustainable, and responsive to the ever-changing demands of the global market.  We're solving a significant pain point for businesses and contributing to a more sustainable future \u2013 and it\u2019s incredibly rewarding to be at the forefront of this innovation.",
+    "background": "* **Founder & CEO, SynapseFlow (2023 \u2013 Present):** Leading all aspects of startup development, from product vision and fundraising to team building and strategic partnerships.\n* **Founder & CEO, EcoPack Solutions (2018 \u2013 2022):** Successfully launched and scaled a sustainable packaging company, achieving profitability within two years and culminating in acquisition by GreenTech Innovations.\n* **Management Consultant, LogiServe (2017 \u2013 2018):** Provided strategic consulting services to Fortune 500 companies, specializing in supply chain optimization and logistics efficiency. Developed a deep understanding of the challenges and opportunities within the industry.\n* **M.Eng., Mechanical Engineering, University of Toronto (2014 \u2013 2018):** Focused on robotics and automation, with a thesis exploring the application of machine learning to predictive maintenance.\n* **Skills:** Generative AI, Machine Learning, Supply Chain Management, Logistics, Entrepreneurship, Leadership, Strategic Planning, Fundraising, Python, Data Analysis, Team Building.\n* **Awards & Recognition:** \u201830 Under 30\u2019 \u2013 Sustainable Business (2021), Canadian Innovation Award (EcoPack Solutions, 2020).",
+    "lookingFor": "* **Senior Machine Learning Engineers:** 3+ years experience, specializing in time-series data, reinforcement learning, and generative AI.  Experience with PyTorch or TensorFlow is a must.\n* **Full-Stack Engineers (AI Focus):**  Experience building and deploying AI-powered applications.  Familiarity with cloud platforms (AWS, Azure, GCP) is highly desirable.\n* **AI/ML Researchers (PhD preferred):**  Passionate about pushing the boundaries of AI and applying research to real-world problems.\n* **Early-Stage Investors:**  Angel investors or seed-stage VCs with a focus on AI and logistics.\n* **Advisors:**  Experienced entrepreneurs or industry experts with a strong track record in scaling tech startups.\n* **Connections to Toronto AI Talent Pool:** Introductions to strong candidates actively or passively seeking new opportunities.\n* **Potential Strategic Partners:** Companies with complementary technologies or access to relevant data sources in the supply chain space.\n* **Specifically *not* looking for:** Sales/Marketing roles at this stage \u2013 we\u2019re engineering-focused right now.",
+    "notes": "Isabela is incredibly driven and focused, but also very approachable. She's a quick learner and thrives in fast-paced environments. She\u2019s genuinely passionate about building a sustainable and ethical AI company. She\u2019s currently spending a lot of time networking within the Toronto tech community and attending AI/ML conferences. She recently presented a preliminary overview of SynapseFlow at a closed-door event for investors and received very positive feedback. \n\n* Be mindful of her time \u2013 she's exceptionally busy. \n* When making introductions, emphasize the technical challenges SynapseFlow is tackling and the opportunity to work on cutting-edge AI solutions.\n* She's particularly interested in candidates who demonstrate a strong sense of ownership and a willingness to learn.\n* She\u2019s very sensitive to \u2018hype\u2019 and prefers a pragmatic, data-driven approach. Avoid overly optimistic or unsubstantiated claims.\n* She is subtly evaluating potential hires for their understanding of and commitment to ethical AI principles.",
+    "locationAvailability": "Isabela is based in Toronto, Ontario, and is primarily focused on building a team within the Greater Toronto Area. She is open to remote work for exceptional candidates, but prefers individuals who can collaborate in person.",
+    "introPreferences": "* **Hard Requirements:** Introductions to individuals with demonstrable experience in the areas listed in 'Looking For'.  No junior-level candidates, please.\n* **Preferred Industries:** AI/ML, Logistics, Supply Chain, Manufacturing, Retail.\n* **Preferred Backgrounds:** PhDs, Masters degrees, or equivalent experience in computer science, engineering, or a related field.\n* **Ideal Connections:** Individuals who are proactive, intellectually curious, and passionate about solving complex problems.\n* **Avoid:** Introductions to recruiters (she's currently managing recruitment internally), sales/marketing professionals, or individuals without a strong technical background.  Please *don't* introduce anyone who primarily focuses on blockchain or cryptocurrency.",
+    "personalPreferences": "Isabela prefers initial contact via LinkedIn or email. She responds best to concise and well-written messages that clearly articulate the value proposition of the connection. She is generally available for brief introductory calls.",
+    "meetingAndSchedulingPreferences": "Isabela prefers virtual meetings via Zoom or Google Meet. She typically schedules meetings in 30-minute increments. Please include a brief agenda when requesting a meeting."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 20.26986289024353,
+      "input_tokens": 802,
+      "output_tokens": 1513,
+      "problems": []
+    }
+  ],
+  "success": true
+}

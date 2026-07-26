@@ -1,0 +1,54 @@
+{
+  "id": 37,
+  "archetype": "Experienced Sales Leader, Now Founder",
+  "given_name": "Soraya Ibrahim",
+  "style_version": 3,
+  "archetypes_version": 7,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Soraya Ibrahim is a former VP of Sales at a mid-sized pharmaceutical company specializing in oncology drugs. She consistently exceeded sales targets, particularly in a challenging new market launch (a novel immunotherapy). However, she grew frustrated with the bureaucracy and slow pace of innovation within the corporate structure. She left to found 'OncoNav', a platform leveraging AI to personalize cancer treatment plans based on genomic data and real-world evidence. OncoNav is currently in seed funding, and Soraya is focused on building strategic partnerships with hospitals, research institutions, and potential investors. She's a direct, results-oriented leader who values data-driven decision-making and is highly network-focused, seeking advisors, investors, and key opinion leaders to accelerate OncoNav\u2019s growth. She\u2019s very particular about who she connects with \u2013 she needs people who understand the complexities of healthcare and have a demonstrable track record of success.",
+    "positioning": "As Founder & CEO of OncoNav, I\u2019m building the future of personalized cancer care. We\u2019re leveraging the power of artificial intelligence and real-world data to deliver tailored treatment recommendations, moving beyond the \u2018one-size-fits-all\u2019 approach that too often leaves patients with suboptimal outcomes. My previous 18 years in pharmaceutical sales leadership \u2013 culminating in the role of VP of Sales at NovaPharm \u2013 provided me with a deep understanding of the oncology landscape, the challenges faced by healthcare professionals, and the critical need for innovative solutions. At NovaPharm, I spearheaded the successful launch of \u2018ImmuCore\u2019, a novel immunotherapy, consistently exceeding revenue projections by an average of 25% quarter-over-quarter within a highly competitive market. This success wasn\u2019t accidental; it was built on a foundation of data-driven strategies, a relentless focus on customer needs, and the ability to build and lead high-performing teams. Now, with OncoNav, I\u2019m applying that same rigor and passion to a more impactful mission: empowering patients and providers with the information they need to make the best possible treatment decisions. We are currently in seed funding and actively seeking strategic partners to accelerate our platform development and expand our reach. The opportunity to fundamentally change the cancer care paradigm is immense, and I'm assembling a team and network to realize that vision.",
+    "background": "Soraya Ibrahim\n\n**Professional Experience:**\n* **Founder & CEO, OncoNav** (2023 \u2013 Present): Leading all aspects of a seed-stage AI-driven personalized cancer care platform, including strategy, fundraising, product development, and partnership acquisition.\n* **VP of Sales, NovaPharm** (2018 \u2013 2023): Responsible for leading a 75+ person sales team focused on oncology products. Oversaw national sales strategy, key account management, and new product launches. Achieved consistent double-digit revenue growth, with ImmuCore launch exceeding projections by 25% quarterly.\n* **Regional Sales Director, BioGenix** (2015 \u2013 2018): Managed a team of sales managers across the Southeast region, driving sales performance and expanding market share for a portfolio of specialty pharmaceuticals.\n* **District Sales Manager, PharmaCorp** (2008 \u2013 2015): Progressively responsible roles with increasing scope and complexity, consistently exceeding sales targets and demonstrating leadership potential.\n\n**Education:**\n* **MBA, Harvard Business School** (2008)\n* **BS, Biology, Stanford University** (2006)\n\n**Skills:** Sales Leadership, Strategic Planning, Business Development, Fundraising, Oncology, Pharmaceutical Sales, AI/ML (basic understanding), Data Analysis, Team Building, Key Account Management.",
+    "lookingFor": "I'm actively seeking connections to accelerate OncoNav's growth. Specifically, I'm looking for:\n\n**Investors:**\n* Seed-stage VCs specializing in healthcare and AI.\n* Angel investors with experience in the pharmaceutical or biotech industries.\n* Individuals with a demonstrated track record of successful exits.\n\n**Strategic Partners:**\n* **Hospital Systems:** CIOs, CMOs, and Heads of Oncology interested in piloting and implementing OncoNav\u2019s platform.\n* **Research Institutions:** Principal Investigators and data scientists collaborating on cancer genomics and treatment optimization.\n* **Pharmaceutical Companies:** Potential partners for data integration and clinical trial support (specifically those *not* directly competing in personalized oncology).\n\n**Advisors:**\n* Experienced healthcare entrepreneurs who have successfully navigated the fundraising and scaling process.\n* Key Opinion Leaders (KOLs) in oncology with a strong research background and clinical network.\n* Individuals with expertise in regulatory affairs related to AI-driven healthcare solutions.\n\n**I am *not* interested in:**\n* Multi-level marketing opportunities.\n* Recruiters offering sales positions (I\u2019m building a company, not looking for a job).\n* Individuals without a verifiable track record of success in their respective fields.",
+    "notes": "Soraya is extremely focused and direct. She responds best to concise, data-driven communication. She values efficiency and dislikes small talk. Emphasize any shared connections within the pharmaceutical industry or venture capital space. She is very proud of the ImmuCore launch at NovaPharm \u2013 mentioning that success is a good way to build rapport. She is currently in a very sensitive fundraising stage, so avoid asking detailed financial questions initially. Recent conversation with Dr. Anya Sharma (potential advisor) went well, but she needs to see a more detailed demonstration of the platform's predictive capabilities. She's actively monitoring competitor activity in the personalized oncology space and is keen to differentiate OncoNav through superior data quality and AI algorithms.",
+    "locationAvailability": "I am currently based in Boston, Massachusetts. While I prefer in-person meetings when possible, I am fully open to remote communication and travel as needed. I am not currently considering relocation, but am willing to travel frequently to meet with potential investors and partners throughout the US.",
+    "introPreferences": "When making introductions, please ensure:\n* The individual has a demonstrable track record of success in their field.\n* They have a clear understanding of the healthcare landscape, preferably with experience in oncology or AI.\n* They are genuinely interested in learning about OncoNav and exploring potential synergies.\n* **Do not** introduce me to individuals who are solely focused on networking or self-promotion.\n* **Do not** introduce me to individuals who are currently employed by direct competitors in the personalized oncology space.\n* A brief context explaining *why* you thought this connection would be valuable is highly appreciated.",
+    "personalPreferences": "I prefer to communicate via email or LinkedIn initially. I am a quick responder and appreciate direct, concise messaging. I typically check LinkedIn several times daily.",
+    "meetingAndSchedulingPreferences": "Please send a brief agenda in advance of any scheduled meetings. I value punctuality and efficient use of time. I prefer meetings to be focused and action-oriented, with clear objectives and follow-up steps."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 26.588928937911987,
+      "input_tokens": 796,
+      "output_tokens": 1483,
+      "problems": []
+    }
+  ],
+  "success": true
+}

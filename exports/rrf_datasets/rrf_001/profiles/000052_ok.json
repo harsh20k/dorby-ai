@@ -1,0 +1,54 @@
+{
+  "id": 52,
+  "archetype": "AI-Focused Early Stage Founder",
+  "given_name": "Fatima Torres",
+  "style_version": 4,
+  "archetypes_version": 10,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Fatima Torres is a first-time founder, 32, with a background in computational linguistics and a brief but impactful stint at a large language model (LLM) safety research lab. She left that lab feeling frustrated by the *reactive* nature of safety research \u2013 constantly patching vulnerabilities *after* they emerged. This drove her to found 'Aura Insights,' a company building proactive AI risk assessment tools for developers integrating LLMs into their products. Aura Insights doesn\u2019t focus on preventing misuse (content moderation is a separate problem), but on identifying *inherent* biases and vulnerabilities within the LLM *before* deployment, helping developers build more robust and equitable applications. She's currently pre-seed, having bootstrapped initial development and is now seeking seed funding. She\u2019s very technically fluent, a strong communicator, and deeply passionate about responsible AI, but can sometimes get lost in the technical details when explaining Aura Insights to non-technical audiences. She\u2019s particularly sensitive to being positioned as \u2018just another AI safety company\u2019 and wants to emphasize the *proactive*, *developer-focused* aspects of her work.",
+    "positioning": "Aura Insights is revolutionizing the way developers build with Large Language Models. We\u2019re tackling a critical, often overlooked challenge: the inherent risks embedded *within* the models themselves, before they manifest as real-world harms. Existing AI safety solutions are largely reactive, focused on content moderation and misuse detection \u2013 essentially playing \u2018whack-a-mole\u2019 with emergent issues. Aura Insights takes a fundamentally different approach. \n\nOur platform provides developers with a suite of tools to proactively identify and mitigate biases, vulnerabilities, and unexpected behaviors within LLMs *during* the development lifecycle. We analyze model outputs across a diverse range of inputs, uncovering hidden patterns and potential failure points that would otherwise go undetected. This allows developers to build more robust, equitable, and trustworthy AI applications from the ground up. \n\nWe\u2019re specifically targeting companies integrating LLMs into customer-facing products \u2013 from fintech and healthcare to education and legal tech. These industries are particularly sensitive to fairness, accuracy, and reliability, and require a higher level of assurance than current AI safety measures can provide. Early adopters have seen a 30-40% reduction in potential bias-related issues and a significant improvement in model stability. We recently completed a successful pilot program with a leading edtech company, demonstrating Aura Insights\u2019 ability to identify and mitigate gender bias in a personalized learning platform. We\u2019re now focused on scaling our platform and expanding our coverage to include a wider range of LLM architectures and use cases. At Aura Insights, we aren\u2019t just building tools; we\u2019re building confidence in the future of AI.",
+    "background": "* **2023 \u2013 Present: Founder & CEO, Aura Insights.** Leading all aspects of company strategy, product development, and fundraising. Responsible for building and scaling the Aura Insights platform and securing initial pilot customers.\n* **2021 \u2013 2023: Research Scientist, Nova AI Safety Lab.** Conducted research on the robustness and interpretability of large language models. Specialized in adversarial attacks and bias detection, publishing findings in peer-reviewed conferences (ACL, EMNLP).\n* **2019 \u2013 2021: Data Scientist, LexiCorp.** Developed and deployed natural language processing models for customer support automation and sentiment analysis. Led a team of junior data scientists, mentoring them in best practices for model development and deployment.\n* **2017 \u2013 2019: M.S. Computational Linguistics, Stanford University.** Thesis focused on the application of deep learning to low-resource language translation. Awarded the Dean\u2019s Fellowship for academic excellence.\n* **2013 \u2013 2017: B.A. Linguistics & Computer Science, University of California, Berkeley.** Graduated *summa cum laude*.",
+    "lookingFor": "* **Seed Investors:** Seeking $1.5M to scale our engineering team, expand our platform\u2019s capabilities, and accelerate customer acquisition.\n* **LLM Developers:** Interested in connecting with engineers and researchers actively building with LLMs, particularly those facing challenges related to bias, fairness, or robustness.\n* **Strategic Partners:** Exploring partnerships with AI infrastructure providers and consulting firms specializing in responsible AI.\n* **Advisors:** Seeking experienced entrepreneurs and AI experts to provide guidance on scaling a pre-seed startup.\n* **Early Adopters:** Companies willing to pilot our platform and provide valuable feedback.\n* **Connections to relevant accelerator programs (Y Combinator, Techstars, etc.).\n* **Individuals with experience in B2B SaaS sales to technical audiences.**",
+    "notes": "Fatima is exceptionally bright and passionate about her work. She\u2019s a strong communicator when discussing the *problem* Aura Insights solves, but can sometimes get bogged down in the technical details of the *solution*. When making introductions, frame Aura Insights as a solution to a clear business pain point \u2013 the risk of deploying biased or unreliable AI. She\u2019s very sensitive to being categorized as \u2018just another AI safety company\u2019 \u2013 emphasize the proactive and developer-focused aspects of her approach. She recently attended the AI Summit in New York and is actively following developments in the LLM space. She\u2019s currently prioritizing investor meetings and is open to feedback on her pitch deck. She's also exploring potential collaborations with academic researchers. Be aware that she\u2019s fiercely independent and values direct, honest communication.",
+    "locationAvailability": "Fatima is currently based in San Francisco, California, and is open to travel for investor meetings and industry events. She\u2019s not currently considering relocation but is flexible regarding remote collaboration.",
+    "introPreferences": "* **Hard Requirements:** Individuals with direct experience in AI/ML, especially LLMs. Investors actively deploying capital into pre-seed/seed stage AI companies.\n* **Soft Preferences:** Founders who have successfully scaled B2B SaaS products. Individuals with a strong network within the AI research community.\n* **Do Not Introduce:** Content moderation companies. Individuals primarily focused on AI ethics without a technical background. Recruiters \u2013 she\u2019s not currently hiring.\n* **Preferred introduction format:** A short, personalized email highlighting the connection\u2019s relevant experience and why they might be a good fit for Aura Insights. A warm introduction is *always* preferred over a cold outreach.",
+    "personalPreferences": "Fatima prefers to communicate via email initially, followed by a brief phone call if there\u2019s a good fit. She\u2019s a quick responder and values concise, actionable communication.",
+    "meetingAndSchedulingPreferences": "Fatima is generally available for meetings during standard business hours (PST). She prefers video calls over phone calls when possible."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 24.179603099822998,
+      "input_tokens": 804,
+      "output_tokens": 1408,
+      "problems": []
+    }
+  ],
+  "success": true
+}

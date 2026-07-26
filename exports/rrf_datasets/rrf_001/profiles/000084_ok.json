@@ -1,0 +1,73 @@
+{
+  "id": 84,
+  "archetype": "Early-Stage Operator, Seeking Technical Co-founder",
+  "given_name": "Marcus Nguyen",
+  "style_version": 6,
+  "archetypes_version": 15,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Marcus Nguyen is a 32-year-old founder who has built a successful, albeit small, direct-to-consumer brand in the sustainable home goods space. He's a natural marketer and sales person \u2013 he *understands* his customer deeply \u2013 but he built the initial version of his e-commerce platform and backend using no-code tools and a patchwork of freelancers. This has worked to get to $300k ARR, validating the market, but it\u2019s now a significant bottleneck. He needs a technical co-founder to rebuild the platform for scalability and add features he can\u2019t currently implement (like a subscription service and personalized recommendations). He's charming, persuasive, and a bit of a hustler, but genuinely humble about his technical limitations. He's keenly aware that he needs someone with serious engineering chops and a complementary skillset, not just a 'code monkey'. He\u2019s based in Austin, TX, and is actively networking to find the right partner. He\u2019s open to equity offers and wants a co-founder who is equally passionate about sustainability.",
+    "positioning": "I\u2019m building a future where conscious consumerism isn't a niche, but the norm. As the founder of 'Everbloom Home,' I\u2019ve created a direct-to-consumer brand offering beautifully designed, sustainably sourced home goods. We\u2019re focused on minimizing environmental impact at every stage \u2013 from ethically sourced materials to carbon-neutral shipping \u2013 and empowering consumers to make responsible choices without compromising on style or quality. \n\nI\u2019ve always been driven by a desire to solve problems with creativity and a deep understanding of customer needs.  Before Everbloom, I spent several years in brand management, honing my skills in market research, product development, and storytelling. However, the experience that truly ignited my entrepreneurial spirit was a volunteer stint with a small artisan cooperative in Vietnam, where I witnessed firsthand the impact of ethical sourcing and the power of supporting local communities.  This experience directly informed the core values of Everbloom.\n\nWe\u2019ve achieved significant traction in the past 18 months, growing to $300,000 in annual recurring revenue with a loyal and engaged customer base.  This validation proves there's a strong market demand for beautifully designed, sustainable home goods.  However, our current tech stack \u2013 built on no-code solutions and managed through a network of freelancers \u2013 is now hindering our ability to scale and innovate.  I\u2019m no longer a bottleneck on the marketing and sales side, but I *am* on the product development side.\n\nI'm actively seeking a technical co-founder to join me on this journey. Someone who shares my passion for sustainability, possesses a strong engineering background, and is eager to build a scalable, innovative platform that can revolutionize the home goods industry. I envision a partner who can lead the development of a robust, feature-rich platform\u2014including a personalized recommendation engine, a flexible subscription model, and seamless integration with our supply chain.  I bring the vision, the market understanding, and the initial traction; I need a technical leader to bring the platform to life and drive our next phase of growth.",
+    "background": "- **Founder & CEO, Everbloom Home** (Austin, TX) | January 2022 \u2013 Present\n    * Spearheaded all aspects of business development, including product strategy, marketing, sales, and operations.\n    * Grew revenue to $300k ARR within 18 months through targeted digital marketing campaigns and a strong focus on customer experience.\n    * Established a sustainable supply chain with ethically sourced materials and carbon-neutral shipping practices.\n    * Managed a team of freelancers for website development, content creation, and customer support.\n    * Proficient in Shopify, Klaviyo, Google Analytics, and various social media marketing platforms.\n\n- **Brand Manager, TerraNova Lifestyle** (Remote) | June 2018 \u2013 December 2021\n    * Developed and executed marketing strategies for a portfolio of sustainable lifestyle brands.\n    * Conducted market research and analyzed consumer trends to identify growth opportunities.\n    * Managed product launches and collaborated with cross-functional teams to ensure successful execution.\n    * Increased brand awareness and engagement through targeted advertising and content marketing initiatives.\n\n- **Education:** Bachelor of Science in Marketing, University of Texas at Austin | 2014 \u2013 2018\n- **Skills:** Brand Building, Digital Marketing, E-commerce, Sustainable Business Practices, Customer Relationship Management, Project Management, Team Leadership, Market Research, Strategic Planning, Sales & Negotiation.",
+    "lookingFor": "I\u2019m on a focused search for a technical co-founder to join Everbloom Home. My ideal partner is a hands-on engineer who\u2019s excited about building a sustainable brand and tackling challenging technical problems. \n\n**Must-Haves:**\n* **Full-Stack Engineering Expertise:**  Proficiency in modern web development technologies (e.g., React, Node.js, Python, PostgreSQL).  Experience building and scaling e-commerce platforms is *highly* preferred.\n* **Architectural Vision:**  Ability to design and implement a scalable and maintainable technical architecture.\n* **Ownership Mentality:** A proactive, self-motivated individual who takes ownership of their work and is comfortable working independently.\n* **Passion for Sustainability:**  A genuine commitment to environmental responsibility and ethical business practices.\n\n**Ideal Attributes:**\n* **Experience with Subscription Models:**  Experience building and managing subscription-based services.\n* **Data Science/Machine Learning Skills:**  Ability to leverage data to personalize the customer experience and optimize marketing campaigns.\n* **Prior Startup Experience:**  Familiarity with the challenges and rewards of building a startup from the ground up.\n\n**Not a Good Fit:**\n* **Freelancers/Contractors:** I'm looking for a dedicated co-founder, not a temporary resource.\n* **Project Managers without Engineering Skills:**  I need someone who can *build* the platform, not just manage the process.\n* **Individuals solely motivated by financial gain:**  Shared values and a long-term commitment are essential.\n\n**Prioritized Search:**\n1.  Full-Stack Engineers with E-commerce experience in Austin, TX\n2.  Remote Full-Stack Engineers with a proven track record of building scalable platforms\n3.  Engineers open to relocating to Austin, TX.",
+    "notes": "Had a good initial conversation with Liam O'Connell last week. He\u2019s a solid engineer, but seemed more interested in the technical challenge than the sustainability aspect of Everbloom.  I\u2019ll follow up, but he\u2019s currently a low priority. \n\n* I\u2019m actively attending tech meetups in Austin, focusing on React and Node.js groups. \n* Spoke with Sarah Chen at Amplify Capital; she suggested I connect with a few of her portfolio companies who might have engineers looking for co-founding opportunities.  I'll follow up on those leads this week.\n* When making introductions, *please* emphasize the sustainability aspect of Everbloom. It\u2019s a core differentiator and a key factor in my decision-making process. \n* I'm open to quick introductory calls, but prefer a more in-depth discussion after an initial review of their portfolio or GitHub profile.",
+    "locationAvailability": "I'm based in Austin, Texas, and am actively working within the Central Time Zone. I\u2019m frequently attending events and networking opportunities in the Austin tech community. I\u2019m open to virtual meetings with candidates located anywhere in the US, and potentially open to travel for key meetings with promising candidates.",
+    "introPreferences": "- **Hard Requirements:** Introductions should be to individuals with demonstrable full-stack engineering experience and a portfolio showcasing relevant projects.  They *must* have a strong understanding of web development technologies (React, Node.js, Python). \n- **Soft Preferences:**  I appreciate introductions to individuals who have experience in the e-commerce space, particularly those who have worked on subscription models or personalization engines.  A shared passion for sustainability is a significant plus.\n- **Intro Style:**  Please provide a concise overview of the individual\u2019s technical skills, experience, and interests, highlighting their potential fit with Everbloom\u2019s mission and technical needs.  A brief mention of their personality and communication style is also helpful. Avoid overly lengthy introductions \u2013 I prefer to get straight to the point.\n- **Profiles to Avoid:**  Avoid introducing me to individuals who are primarily focused on project management or design. I need a technical leader, not a manager or designer.  Also, please avoid introducing me to individuals who are currently employed full-time and are not actively seeking a co-founding opportunity.",
+    "personalPreferences": "I prefer to connect initially via email to schedule a call.  I'm most responsive on Slack and LinkedIn. Feel free to send me a quick message to let me know you've made an introduction - it helps me prioritize!",
+    "meetingAndSchedulingPreferences": "- I generally block off Friday afternoons for focused work. \n- I'm available for 30-60 minute introductory calls. \n- I prefer Google Meet for video conferencing."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 27.542421102523804,
+      "input_tokens": 856,
+      "output_tokens": 1787,
+      "problems": [
+        "background: possible truncation (ends with '...Professional (PMP) - 2018')",
+        "meetingAndSchedulingPreferences: possible truncation (ends with '...[fictional Calendly link]')"
+      ]
+    },
+    {
+      "attempt": 2,
+      "elapsed_s": 31.707146883010864,
+      "input_tokens": 856,
+      "output_tokens": 1898,
+      "problems": [
+        "background: possible truncation (ends with '... Individual Qualification')"
+      ]
+    },
+    {
+      "attempt": 3,
+      "elapsed_s": 31.94740915298462,
+      "input_tokens": 856,
+      "output_tokens": 1954,
+      "problems": []
+    }
+  ],
+  "success": true
+}

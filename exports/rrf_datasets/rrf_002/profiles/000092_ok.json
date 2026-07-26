@@ -1,0 +1,54 @@
+{
+  "id": 92,
+  "archetype": "CPA/Accounting M&A Specialist",
+  "given_name": "Felix Ishikawa",
+  "style_version": 6,
+  "archetypes_version": 16,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Felix Ishikawa is a highly specialized M&A consultant focused *exclusively* on the CPA and accounting firm space. He doesn\u2019t do general M&A; he's a niche player. He spent the first 10 years of his career *inside* a Top 10 CPA firm, rising to a partner level role in their internal M&A integration team. This gives him unparalleled insight into the unique challenges and opportunities within these firms \u2013 understanding their partnership structures, client relationships, and cultural nuances. He left to found 'Ishikawa Advisory' to specifically address the growing consolidation within the mid-market CPA space. He's currently focused on identifying and connecting firms for sale with strategic acquirers, but increasingly, he's being asked to help firms source key talent *before* or *after* a deal closes \u2013 particularly specialists in areas like valuation, tax, and forensics. He's meticulous, data-driven, and values long-term relationships. He\u2019s not looking for quick flips; he wants to build lasting value for his clients. He's slightly reserved and values direct communication. He's currently expanding his network to include PE firms specializing in professional services.",
+    "positioning": "I am Felix Ishikawa, founder of Ishikawa Advisory, a boutique consultancy dedicated exclusively to mergers, acquisitions, and strategic growth within the CPA and accounting firm landscape. For over a decade, I operated *within* a Big Four firm, leading post-merger integration efforts and gaining a uniquely intimate understanding of the complexities inherent in combining these partnership-based organizations. This experience revealed a critical gap in the market: a lack of advisors who truly understood the nuances of CPA firm dynamics, beyond simply applying generic M&A principles. \n\nIshikawa Advisory bridges that gap. We don't just facilitate transactions; we architect successful integrations and strategic expansions, focusing on preserving client relationships, retaining key talent, and maximizing long-term value. We serve a diverse clientele, ranging from regional CPA firms seeking to expand their service offerings through acquisition to national firms looking to consolidate market share. We also work with private equity firms identifying opportunities within the professional services sector.\n\nMy approach is deeply analytical, informed by data-driven insights and a relentless focus on due diligence. I\u2019m not interested in volume; I prioritize quality engagements where I can genuinely add value. I specialize in navigating the unique challenges of partnership agreements, succession planning, and cultural integration \u2013 elements often overlooked by generalist M&A firms.  I\u2019m particularly adept at identifying and quantifying \u2018hidden value\u2019 within CPA firms, such as specialized expertise or untapped market segments. Ultimately, my goal is to empower CPA firms to thrive in an increasingly competitive landscape.",
+    "background": "- **Founder & Managing Director, Ishikawa Advisory** (2018 \u2013 Present)\n    * Established and lead a specialized M&A consultancy focused exclusively on CPA and accounting firms.\n    * Advised on over 25 successful M&A transactions, ranging in size from $5M to $50M in revenue.\n    * Developed proprietary valuation models tailored to the unique characteristics of CPA firms.\n    * Built a network of strategic acquirers and potential sellers within the industry.\n    * Expanded service offerings to include talent sourcing and integration support.\n\n- **Partner, M&A Integration, [Fictional Big Four Firm - 'Hawthorne & Bell']** (2008 \u2013 2018)\n    * Led cross-functional teams responsible for integrating acquired CPA firms into Hawthorne & Bell\u2019s operations.\n    * Managed due diligence processes, including financial analysis, operational assessments, and cultural evaluations.\n    * Developed and implemented integration plans to ensure seamless transitions and minimize disruption.\n    * Oversaw the retention of key client relationships and personnel during integration.\n    * Mentored junior team members and fostered a collaborative work environment.\n\n- **Education:**\n    * MBA, Finance, University of California, Berkeley (2006)\n    * BS, Accounting, Stanford University (2004)\n- **Certifications:**\n    * Certified Public Accountant (CPA)\n    * Chartered Financial Analyst (CFA) \u2013 Level II (inactive)",
+    "lookingFor": "My current focus is expanding my network within the following areas:\n\n**1. Strategic Acquirers (Priority #1):**\n    * **Profile:** Private equity firms specializing in professional services (particularly accounting, tax, and advisory). Corporate development teams within larger accounting/consulting firms actively pursuing acquisitions.  Focus on firms with AUM > $500M or revenue > $1B.\n    * **Geography:** US, Canada, UK, Australia\n    * **Job Titles:** Partner, Managing Director, VP of Corporate Development, Investment Principal\n\n**2. CPA & Accounting Firm Owners/Managing Partners (Priority #2):**\n    * **Profile:** Firms with $3M - $20M in annual revenue, demonstrating consistent profitability and a strong client base. Firms considering a sale within the next 12-24 months.  Specialization in areas like Forensic Accounting, Valuation, or International Tax is a plus.\n    * **Geography:** Primarily US, but open to international opportunities.\n    * **Firm Characteristics:**  Strong leadership, established brand reputation, diverse service offerings.\n\n**3. Talent Acquisition Specialists (Emerging Focus):**\n    * **Profile:** Executive recruiters specializing in the CPA and accounting profession, particularly those with experience sourcing specialized talent (e.g., valuation experts, forensic accountants, international tax specialists).\n    * **Geography:** US nationwide.\n\n**Not a Good Fit:**\n    * Generalist M&A advisors lacking specific experience in the CPA/accounting space.\n    * Firms seeking purely financial engineering deals without a focus on long-term strategic value.\n    * Individuals offering unsolicited marketing services.",
+    "notes": "Recent activity:\n\n* Spoke with David Chen at 'Apex Partners' (PE firm) last week. He\u2019s actively looking for add-on acquisitions for their existing portfolio company, a national tax advisory firm.  He\u2019s particularly interested in firms with strong state and local tax practices. I'll follow up with a list of potential targets.\n* Had a productive call with Sarah Miller, Managing Partner at 'Brighton & Associates' (CPA firm in California). They are beginning to explore a potential sale in Q1 2025.  They are concerned about maintaining their firm\u2019s culture post-acquisition.  Important to emphasize my experience in cultural integration during future conversations.\n* Received a lukewarm response from John Davis at 'Global Accounting Partners'. He seemed primarily focused on price and wasn\u2019t interested in discussing long-term strategic value.  Low priority for future outreach.\n\nKey Insight: There\u2019s increasing demand for specialized talent in areas like ESG reporting and cybersecurity within CPA firms. This is creating opportunities for firms to differentiate themselves and attract top talent.\n\nRequest: If you know anyone at 'Silver Ridge Capital' (PE firm), please let me know. I've been trying to connect with them for several months.",
+    "locationAvailability": "I am based in San Francisco, California, but frequently travel to major metropolitan areas across the United States to meet with clients. I will be in New York City and Chicago during the weeks of October 23rd and November 6th respectively. I\u2019m open to virtual meetings as well.",
+    "introPreferences": "Please adhere to the following when making introductions:\n\n**Hard Requirements:**\n* **Context is Key:** Briefly explain *why* you are connecting us, specifically highlighting how my expertise in the CPA/accounting M&A space might be valuable to the recipient.\n* **Targeted Introductions:** Only introduce me to individuals who meet the criteria outlined in my 'Looking For' section.  Avoid broad, speculative introductions.\n* **Warm Introductions Only:** Cold emails have a very low success rate.  A personal connection is essential.\n\n**Soft Preferences:**\n* **Brief & Concise Emails:** Keep introduction emails short and to the point.  Focus on the value proposition.\n* **LinkedIn Connection Request:**  Encourage the recipient to connect with me on LinkedIn after the introduction.\n* **Avoid Sales Pitches:**  Do not attempt to sell my services during the introduction.  Let me handle that.\n\n**Avoid:**\n* Introducing me to individuals who are already actively engaged with other M&A advisors.\n* Introducing me to individuals who are not decision-makers or key influencers within their organization.",
+    "personalPreferences": "I prefer to communicate via email initially. Once a rapport is established, I\u2019m happy to connect via phone or video conference. I respond promptly to emails during business hours. Please avoid contacting me through social media platforms.",
+    "meetingAndSchedulingPreferences": "I generally block off Fridays for focused work and prefer to schedule meetings between 9:00 AM and 5:00 PM PST. I utilize Calendly for scheduling: [Fictional Calendly Link]."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 36.2823600769043,
+      "input_tokens": 845,
+      "output_tokens": 1926,
+      "problems": []
+    }
+  ],
+  "success": true
+}

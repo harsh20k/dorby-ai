@@ -1,0 +1,54 @@
+{
+  "id": 68,
+  "archetype": "European Tech Founder, US Expansion",
+  "given_name": "Soraya Tanaka",
+  "style_version": 5,
+  "archetypes_version": 12,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Soraya Tanaka is a 38-year-old British-Japanese founder and CEO of 'Aether Dynamics,' a London-based AI-powered supply chain optimization platform. She previously worked as a quantitative analyst at Goldman Sachs, developing a deep understanding of complex systems and data modeling. Aether Dynamics has been successful in the European market, particularly with automotive and aerospace clients, but Soraya is now aggressively pursuing Series B funding and US market entry, with a specific focus on the Californian tech ecosystem. A distinctive career detail is her side-hustle during her PhD \u2013 building and selling custom algorithmic trading bots, which funded her initial research and instilled a strong entrepreneurial spirit. She\u2019s highly analytical, direct, and values efficiency, but also passionate about sustainability and ethical AI. She's currently overwhelmed with pitches and is *very* selective about who she spends time with.",
+    "positioning": "I\u2019m Soraya Tanaka, CEO and founder of Aether Dynamics, a leading AI-powered supply chain optimization platform. We help complex industries \u2013 automotive, aerospace, pharmaceuticals \u2013 build resilience and agility into their operations through predictive analytics and intelligent automation. After a successful seed and Series A round, we\u2019ve demonstrably improved our clients\u2019 operational efficiency by an average of 18%, reducing waste and improving forecasting accuracy. We\u2019re now focused on scaling our operations and expanding into the US market, specifically targeting the West Coast tech hub. My background in quantitative finance and a PhD in complex systems informs our data-driven approach, and I'm a firm believer in the power of AI to drive sustainable and ethical business practices. I\u2019m actively seeking strategic partnerships and investors who share this vision.",
+    "background": "* **Aether Dynamics, London, UK (2018 \u2013 Present)**\n  * **CEO & Founder:** Led all aspects of company strategy, fundraising, product development, and market expansion. Secured \u00a315M in seed and Series A funding.\n  * **Key Achievements:**\n    * Developed and launched a proprietary AI engine for supply chain forecasting, resulting in a 18% average efficiency improvement for clients.\n    * Built a high-performing team of data scientists, engineers, and supply chain experts.\n    * Established key partnerships with leading automotive and aerospace manufacturers in Europe.\n    * Successfully navigated the challenges of Brexit and the COVID-19 pandemic, maintaining consistent growth.\n* **Goldman Sachs, London, UK (2014 \u2013 2018)**\n  * **Quantitative Analyst:** Developed and implemented algorithmic trading strategies for fixed income markets.\n  * **Responsibilities:**\n    * Conducted statistical analysis and modeling to identify profitable trading opportunities.\n    * Developed and maintained Python-based trading algorithms.\n    * Collaborated with traders and technology teams to improve trading infrastructure.\n* **University of Oxford, Oxford, UK (2011 \u2013 2014)**\n  * **PhD, Complex Systems:** Research focused on the application of agent-based modeling to supply chain dynamics.\n  * **Dissertation:** 'Resilience in Complex Adaptive Systems: A Supply Chain Perspective'.\n  * **Side Project:** Developed and sold custom algorithmic trading bots to fund research (profitable, undisclosed revenue).\n* **Certifications:**\n  * CFA Level I\n  * Certified ScrumMaster (CSM)",
+    "lookingFor": "I'm currently focused on securing a Series B funding round of $20-30M to fuel our US expansion. We're looking for investors with experience in B2B SaaS, AI, and supply chain technology, ideally with a portfolio presence in the US market. Beyond capital, we're seeking strategic partners who can provide access to key customers, industry expertise, and mentorship. Specifically, I\u2019m interested in connecting with VCs specializing in Climate Tech and Sustainable Supply Chains. I\u2019m also open to introductions to potential US-based Head of Sales and Marketing talent \u2013 individuals with demonstrable experience scaling a SaaS business in the US. Ideal candidates will have a strong network within the manufacturing and logistics sectors. I'm *not* interested in purely financial investors; we need partners who understand our long-term vision and can add value beyond capital.",
+    "notes": "Soraya is incredibly sharp and data-driven. She\u2019s very focused on ROI and won't waste time on pitches that aren't well-prepared. She\u2019s received a lot of inbound interest and is currently prioritizing investors who can demonstrate a deep understanding of the supply chain landscape and a commitment to sustainable practices. She\u2019s particularly sensitive to pitches that overhype AI or lack a clear understanding of the complexities of her target industries. Recent conversations indicate she's frustrated with the lack of technical due diligence from some investors. Approaching her with a concise, data-backed proposal outlining a clear path to US market penetration will be most effective. Don\u2019t lead with generic \u2018AI is the future\u2019 statements; focus on the specific value Aether Dynamics brings to its clients.",
+    "locationAvailability": "I\u2019m currently based in London, but frequently travel to the US, particularly to the San Francisco Bay Area. I will be spending significant time on the West Coast over the next six months.",
+    "introPreferences": "* **Hard Requirements:** Any introduction *must* be to a Partner-level investor at a reputable VC firm with a demonstrated track record in B2B SaaS or Supply Chain Tech. Introductions to potential US-based Head of Sales/Marketing must include a detailed LinkedIn profile and a brief summary of their relevant experience.\n* **Soft Preferences:** I prefer introductions from people who have a pre-existing relationship with the target contact. A warm introduction is *significantly* more effective than a cold email.\n* **Do Not:** Introduce me to angel investors or individuals who are not directly involved in investment decisions. Do not introduce me to consultants or service providers unless I specifically request it. Avoid lengthy email chains; keep introductions concise and to the point. Do not forward my LinkedIn profile without asking first.",
+    "personalPreferences": "I prefer direct and concise communication. I respond best to emails that are well-structured and clearly articulate the value proposition. I\u2019m generally available for brief calls, but prefer to schedule longer meetings with a clear agenda. I am not a fan of overly formal or verbose language.",
+    "meetingAndSchedulingPreferences": "Please use Calendly for scheduling. Send a brief agenda 24 hours prior to any meeting. I prefer video calls over phone calls whenever possible. Please be punctual."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 18.749948024749756,
+      "input_tokens": 843,
+      "output_tokens": 1368,
+      "problems": []
+    }
+  ],
+  "success": true
+}
