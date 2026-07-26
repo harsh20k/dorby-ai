@@ -48,6 +48,7 @@ LABELS = {
 JUDGE_RUNS = {
     "gemini-3.1-flash-lite (naive)": "openrouter_google_gemini_3_1_flash_lite_naive",
     "gemini-3.1-flash-lite (calibrated)": "openrouter_google_gemini_3_1_flash_lite_calibrated",
+    "gemini-3.1-flash-lite (structured_cot)": "openrouter_google_gemini_3_1_flash_lite_structured_cot",
     "gemma-3-27b-it (Bedrock, naive)": "bedrock_google_gemma_3_27b_it_naive",
     "qwen3-32b (Bedrock, naive)": "bedrock_qwen_qwen3_32b_v1_0_naive",
 }
@@ -77,6 +78,12 @@ def build_data() -> dict:
     judge_detail = []
     for name, dirname in JUDGE_RUNS.items():
         path = LLM_JUDGE_ARTIFACTS / dirname / "metrics_holdout.json"
+        if not path.exists():
+            # artifacts/ is gitignored -- a run made in a different checkout
+            # (e.g. the Bedrock combos, run in an earlier worktree session)
+            # simply isn't on disk here. Skip rather than crash the build.
+            print(f"  skip {name}: {path} not found")
+            continue
         m = json.loads(path.read_text())
         p, dec, h = m["pair"], m["decision"], m["slices"]["neg_hardness"]
         rows.append(

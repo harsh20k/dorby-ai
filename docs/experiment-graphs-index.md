@@ -22,7 +22,7 @@ wants the full story.
 | [`baseline-results-holdout-browser.html`](file:///Users/harsh/Artifacts/dorby-ai/docs/html/baseline-results-holdout-browser.html) | local (`docs/html/`) | 2026-07-20 | Browser for the matched-holdout baseline comparison table |
 | [`holdout-embedding-space-3d.html`](file:///Users/harsh/Artifacts/dorby-ai/docs/html/holdout-embedding-space-3d.html) | local (`docs/html/`) | 2026-07-25 | 3D PCA map of the 69 holdout contacts in voyage-4-nano space, whole-profile vs. `lookingFor`-sectioned embeddings, with good/bad match lines and a scatter (dispersion) analysis — see `scripts/build_holdout_embedding_space_3d.py` / `scripts/analyze_section_dispersion.py` |
 | [`holdout-field-isolation-embedding-space-3d.html`](file:///Users/harsh/Artifacts/dorby-ai/docs/html/holdout-field-isolation-embedding-space-3d.html) | local (`docs/html/`) | 2026-07-26 | 3D PCA map of the same 115 holdout contacts, but every profile field and every `lookingFor` ask embedded **alone** (no other field present) instead of swapped into an otherwise-whole profile — see "Field isolation experiment" below |
-| [`llm-judge-comparison.html`](file:///Users/harsh/Artifacts/dorby-ai/docs/html/llm-judge-comparison.html) | local (`docs/html/`) | 2026-07-25 | Ranked pair-AUC bar chart + hard/easy-neg breakdown for all four LLM-judge (model, framing) combinations against every embedding baseline, matched 69-pair holdout — see `scripts/build_llm_judge_browser.py` / `docs/llm-judge-experiment.md` |
+| [`llm-judge-comparison.html`](file:///Users/harsh/Artifacts/dorby-ai/docs/html/llm-judge-comparison.html) | local (`docs/html/`) | 2026-07-25, rebuilt 2026-07-26 | Ranked pair-AUC bar chart + hard/easy-neg breakdown for LLM-judge (model, framing) combinations against every embedding baseline, matched 69-pair holdout — see `scripts/build_llm_judge_browser.py` / `docs/llm-judge-experiment.md`. 2026-07-26 rebuild adds the new `structured_cot` variant (see "LLM judge: does forcing multi-aspect CoT help?" below); the two Bedrock combos and `calibrated` are cached artifacts from an earlier session not present in this checkout (`artifacts/` is gitignored), so the chart currently shows `naive` + `structured_cot` only |
 | LLM judge vs. embedding baselines | [published](https://claude.ai/code/artifact/12f8f93b-8fc4-41e5-bc13-b05ce8ab45fa) | 2026-07-25 | Published version of `llm-judge-comparison.html` above |
 | Pairs graph — Boardy AI | [published](https://claude.ai/code/artifact/642d0a82-7784-4843-b0ad-5686cf7db24c) | 2026-07-24 | Likely one of the `pairs-comparison-graph*.html` variants above, published via `--fragment` — exact source not traceable from this session |
 | Real pairs graph — Boardy AI | [published](https://claude.ai/code/artifact/ac74ea3a-912d-407a-a040-74d8c62d1edd) | 2026-07-22 (page updated 2026-07-24) | Predates the batches above; likely an early real-only single-pane build |
@@ -283,6 +283,50 @@ modal volume get dorby-sectioning-eval embed_space_fields_holdout/meta.json \
     artifacts/voyage_nano_field_isolation/meta.json --force
 python scripts/load_field_isolation_to_chroma.py --reset
 python scripts/build_field_isolation_embedding_space_3d.py
+```
+
+## LLM judge: does forcing multi-aspect CoT help? (`llm-judge-comparison.html`, `structured_cot`)
+
+Run before scaling `rrf_002`'s synthetic profile pool to 500, to check whether
+the judge that labels pairs could simply be made more accurate by asking it to
+reason harder — score six fixed-weight aspects (location/availability,
+ask-offer alignment, skill/domain evidence, seniority/stage fit,
+domain/industry fit, practical constraints) with cited evidence, then
+aggregate to a verdict, instead of `naive`'s direct yes/no. Same model
+(`google/gemini-3.1-flash-lite`), same profiles, same missing `searchQuery` —
+only the prompt changes. Full design and mechanism discussion in
+`docs/llm-judge-experiment.md`'s `structured_cot` section;
+`baselines/llm_judge/structured.py` recomputes the verdict from the six raw
+scores using fixed canonical weights, not whatever weight the model echoes
+back, so the model can't quietly reweight an aspect to swing its own answer.
+
+**Finding: it didn't help — a small, uniform step backward.** Both variants
+run back-to-back in the same session on the identical matched 69-pair holdout:
+
+| | naive | structured_cot |
+|---|---|---|
+| Pair ROC-AUC | **0.6409** | 0.6336 |
+| Decision accuracy | **0.6087** | 0.5507 |
+| Hard-negative AUC | **0.6543** | 0.6267 |
+| Says "yes" | 55.1% | 75.4% |
+
+Naive wins on every metric. The mechanism shows up in the yes-rate jump:
+averaging six independently-scored 0-5 aspects **regresses toward the
+decision boundary** rather than sharpening judgment — a pair with one weak
+aspect and five middling ones still lands close to 0.5, so `structured_cot`
+says "yes" far more often (75.4% vs 55.1%) without being more often right.
+Decomposition bought per-pair audit evidence (six cited justifications
+instead of 2-4 sentences) at ~2.5× the output tokens, not accuracy.
+**Decision: `naive` stays the labeling judge** for the next synthetic batch;
+`structured_cot` is not adopted.
+
+Rerun with:
+
+```bash
+python -m baselines.llm_judge.push_prompts --tag v1   # only needed after editing the prompt
+python -m baselines.llm_judge.eval --data-dir data --variant naive --split holdout
+python -m baselines.llm_judge.eval --data-dir data --variant structured_cot --split holdout
+python3 scripts/build_llm_judge_browser.py
 ```
 
 ## Published Artifacts (claude.ai, this account)

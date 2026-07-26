@@ -205,13 +205,19 @@ def make_bedrock_call_fn(
     return call
 
 
-def judge_pair(*, call_fn: CallFn, max_attempts: int = 4) -> dict[str, Any]:
+ParseFn = Callable[[dict[str, Any]], dict[str, Any]]
+"""Raw model JSON -> validated verdict dict with at least {match, confidence, reasoning}."""
+
+
+def judge_pair(
+    *, call_fn: CallFn, max_attempts: int = 4, parse_fn: ParseFn = parse_verdict
+) -> dict[str, Any]:
     """One verdict, retrying transient API errors and malformed JSON."""
     last_exc: Exception | None = None
     for attempt in range(max_attempts):
         try:
             raw = call_fn()
-            verdict = parse_verdict(raw)
+            verdict = parse_fn(raw)
             verdict["attempts"] = attempt + 1
             return verdict
         except Exception as exc:  # noqa: BLE001 — API/parse errors both retryable
@@ -228,6 +234,7 @@ def judge_all(
     cache: VerdictCache,
     workers: int = 8,
     max_attempts: int = 4,
+    parse_fn: ParseFn = parse_verdict,
     on_progress: Callable[[int, int], None] | None = None,
 ) -> tuple[dict[str, dict[str, Any]], dict[str, str]]:
     """Judge every ``(key, system, user)`` request. Returns (verdicts, errors).
@@ -262,6 +269,7 @@ def judge_all(
                 judge_pair,
                 call_fn=make_call_fn(system, user),
                 max_attempts=max_attempts,
+                parse_fn=parse_fn,
             ): key
             for key, system, user in pending
         }

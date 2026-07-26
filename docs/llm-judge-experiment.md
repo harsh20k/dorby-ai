@@ -146,6 +146,74 @@ almost entirely from the yes/no decision, not from confidence ordering. Do not
 use this field to rank or to gate; if a soft score is wanted, token logprobs or
 an explicit paired comparison would be the thing to try.
 
+## `structured_cot`: does forcing multi-aspect CoT scoring help? (2026-07-26)
+
+Motivated by wanting to know, before scaling the `rrf_002`-style pipeline to
+500 profiles, whether the judge that labels synthetic pairs could simply be
+made more accurate by asking it to reason harder — the same "score six
+weighted aspects, then aggregate" pattern production intro-matching UIs use,
+rather than the naive variant's direct "would this be a good match?" call.
+
+**Design.** Same model (`google/gemini-3.1-flash-lite`), same profiles, same
+missing `searchQuery` — the only thing that changes from `naive` is the
+prompt. `structured_cot` (`baselines/llm_judge/prompts/structured_cot.md`)
+requires the model to score six fixed-weight aspects with cited evidence
+before answering:
+
+| Aspect | Weight |
+|---|---|
+| Location & availability | 15% |
+| Ask/offer alignment (does what one wants match what the other offers) | 25% |
+| Skill/domain evidence | 20% |
+| Seniority/stage fit | 15% |
+| Domain/industry fit | 15% |
+| Practical constraints | 10% |
+
+The verdict is **not** the model's own stated confidence — `baselines/
+llm_judge/structured.py::parse_structured_verdict` recomputes `weighted_score
+= Σ(canonical_weight × score/5)` from the six scores using the *canonical*
+weights above, discarding whatever weight the model echoed back, so a model
+that quietly reweights one aspect to swing its own answer can't move the
+number that gets measured. `match` = "yes" iff `weighted_score >= 0.5`;
+`confidence = |weighted_score − 0.5| × 200`.
+
+**Result, matched 69-pair holdout, both variants run back-to-back in the same
+session for a clean comparison** (`python -m baselines.llm_judge.eval
+--variant {naive,structured_cot} --split holdout`):
+
+| | naive | structured_cot |
+|---|---|---|
+| Pair ROC-AUC | **0.6409** | 0.6336 |
+| Decision accuracy | **0.6087** | 0.5507 |
+| Hard-negative AUC | **0.6543** | 0.6267 |
+| Easy-negative AUC | 0.5603 | 0.5603 |
+| Says "yes" | 55.1% | 75.4% |
+
+**Forcing step-by-step aspect scoring did not help — it was a small, uniform
+step backward.** Pair AUC, decision accuracy, and hard-negative AUC all moved
+in the same direction, naive ahead of `structured_cot` on every one. (These
+naive numbers, 0.6409/0.6543, are close to but not identical to the
+0.6358/0.6466 documented above — same model, same prompt, same population,
+re-run in a fresh session; the small drift is most likely `temperature=0`
+non-determinism on OpenRouter, not a regression, and doesn't change which
+variant wins.)
+
+The mechanism is visible in the yes-rate: `structured_cot` says "yes" 75.4% of
+the time versus naive's 55.1%, which reads as **regression to the middle, not
+sharper judgment**. Six independently-scored aspects on a 0-5 scale average
+out — a pair with one weak aspect and five middling ones still lands close to
+0.5 — so the aggregate score clusters tighter around the decision boundary
+than one holistic yes/no with self-reported confidence does. Decomposition
+bought interpretability (every verdict now comes with six pieces of cited
+evidence instead of 2-4 sentences) but not accuracy, at roughly 2.5× the
+output tokens per call.
+
+**Decision: keep `naive` as the labeling judge.** `structured_cot` does not
+replace it for the next synthetic batch. The per-aspect evidence remains
+useful as a debugging/audit tool on individual pairs even though the
+aggregate score isn't an improvement — see `docs/html/llm-judge-comparison.html`
+for both alongside every embedding baseline.
+
 ## What this does not show
 
 - **This cannot ship on the serving path.** A per-candidate LLM call is

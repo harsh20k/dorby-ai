@@ -215,6 +215,7 @@ accept/decline outcome on the 200 real seed pairs. Full writeup in
 python -m baselines.llm_judge.eval --data-dir data --variant naive --split all
 python -m baselines.llm_judge.eval --data-dir data --variant naive --split holdout  # free: shared cache
 python -m baselines.llm_judge.eval --data-dir data --variant calibrated --split all
+python -m baselines.llm_judge.eval --data-dir data --variant structured_cot --split holdout
 python -m baselines.llm_judge.eval --data-dir data --model anthropic/claude-sonnet-4.5
 # Bedrock backend instead of OpenRouter (tf_provisioner AWS account, no OpenRouter credits needed)
 python -m baselines.llm_judge.eval --data-dir data --backend bedrock --model google.gemma-3-27b-it
@@ -250,6 +251,14 @@ ceiling.** Things worth carrying forward:
   0.5901 — it only made the model more skeptical (yes-rate 56.5%→30.4%), not
   more discriminating. Stated `confidence` is also useless (88.6 when right vs
   88.2 when wrong) — the signal is all in the yes/no, not the confidence.
+- **Forcing multi-aspect CoT scoring didn't help either.** `structured_cot`
+  (score six weighted aspects with evidence, aggregate in code, see
+  `baselines/llm_judge/structured.py`) scored *below* `naive` on the identical
+  holdout, run back-to-back: pair AUC 0.6336 vs 0.6409, decision accuracy
+  0.5507 vs 0.6087, hard-neg AUC 0.6267 vs 0.6543. Averaging six independent
+  0-5 scores regresses toward the boundary (yes-rate jumped to 75.4% from
+  55.1%) rather than sharpening the call. `naive` stays the labeling judge for
+  the next synthetic batch. Full writeup in `docs/llm-judge-experiment.md`.
 
 **This is not deployable** — a per-candidate LLM call is out of scope under the
 <100 ms budget, and there are no retrieval metrics for it (no shared vector
