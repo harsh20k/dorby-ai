@@ -21,6 +21,7 @@ wants the full story.
 | [`real-pairs-voyage-lookingfor-3d-manifold.html`](file:///Users/harsh/Artifacts/dorby-ai/docs/html/real-pairs-voyage-lookingfor-3d-manifold.html) | local (`docs/html/`) | 2026-07-24 | 3D PCA / t-SNE / UMAP scatter with a layout selector |
 | [`baseline-results-holdout-browser.html`](file:///Users/harsh/Artifacts/dorby-ai/docs/html/baseline-results-holdout-browser.html) | local (`docs/html/`) | 2026-07-20 | Browser for the matched-holdout baseline comparison table |
 | [`holdout-embedding-space-3d.html`](file:///Users/harsh/Artifacts/dorby-ai/docs/html/holdout-embedding-space-3d.html) | local (`docs/html/`) | 2026-07-25 | 3D PCA map of the 69 holdout contacts in voyage-4-nano space, whole-profile vs. `lookingFor`-sectioned embeddings, with good/bad match lines and a scatter (dispersion) analysis — see `scripts/build_holdout_embedding_space_3d.py` / `scripts/analyze_section_dispersion.py` |
+| [`holdout-field-isolation-embedding-space-3d.html`](file:///Users/harsh/Artifacts/dorby-ai/docs/html/holdout-field-isolation-embedding-space-3d.html) | local (`docs/html/`) | 2026-07-26 | 3D PCA map of the same 115 holdout contacts, but every profile field and every `lookingFor` ask embedded **alone** (no other field present) instead of swapped into an otherwise-whole profile — see "Field isolation experiment" below |
 | Pairs graph — Boardy AI | [published](https://claude.ai/code/artifact/642d0a82-7784-4843-b0ad-5686cf7db24c) | 2026-07-24 | Likely one of the `pairs-comparison-graph*.html` variants above, published via `--fragment` — exact source not traceable from this session |
 | Real pairs graph — Boardy AI | [published](https://claude.ai/code/artifact/ac74ea3a-912d-407a-a040-74d8c62d1edd) | 2026-07-22 (page updated 2026-07-24) | Predates the batches above; likely an early real-only single-pane build |
 | Holdout comparison browser — Dorby AI | [published](https://claude.ai/code/artifact/95beeed4-9a3d-4a79-906d-cf2d24d0457f) | 2026-07-20 | Likely `baseline-results-holdout-browser.html` above, by date match |
@@ -201,6 +202,82 @@ want for an honest "is there visual clustering" read, but unlike PCA there
 is no axis meaning and no variance-explained number to quote; only relative
 neighborhoods in the picture are trustworthy, not absolute distances or
 directions.
+
+## Field isolation experiment (`holdout-field-isolation-embedding-space-3d.html`)
+
+Sibling to the `holdout-embedding-space-3d.html` experiment above, isolated
+in its own package: `baselines/voyage_nano_field_isolation/`. That earlier
+run swapped one `lookingFor` section into an otherwise-unchanged profile, so
+every embedded row still carried the whole profile's context and the finding
+was "splitting barely moves the point" (whole↔section cosine 0.89-0.90). This
+run tests the opposite condition: what if a field carries **no** other
+context at all?
+
+For each of the 115 unique contacts in the frozen 69-pair real holdout:
+
+- one **whole** embedding (unchanged, `profile_to_text(profile)`)
+- one **field-alone** embedding per non-empty profile field — just
+  `"positioning: ..."` alone, nothing else (up to 8 per contact)
+- one **section-alone** embedding per `lookingFor` paragraph — just
+  `"lookingFor: <that one paragraph>"` alone (only when `lookingFor` has more
+  than one paragraph; single-paragraph contacts are already covered by the
+  `lookingFor` field-alone row)
+
+All 1,808 texts (115 whole + 755 field-alone + 938 section-alone) were
+encoded in one `voyage-4-nano` pass on Modal (`modal_embed_space.py`, L4 GPU;
+`batch_size=16` OOM'd on 24GB with this row mix, `batch_size=4` ran clean in
+~1 min). Unlike the sibling experiment, embeddings are then pulled from the
+Modal volume and loaded into a **local persistent Chroma collection**
+(`scripts/load_field_isolation_to_chroma.py` →
+`artifacts/voyage_nano_field_isolation/chroma/`, open-source, no server) —
+the visualization script reads vectors back out of Chroma rather than the
+raw `.npy`, so the DB is a real link in the pipeline, not just an extra copy.
+
+**Finding: isolating a field moves it much further than swapping one did.**
+Whole↔field-alone cosine averages **0.705** (vs. 0.89-0.90 in the sectioned
+run) and whole↔section-alone averages **0.684** — both far looser, since
+there's no shared profile text left to anchor the vector near its owner. A
+person's own fields spread out to ~2.3x the average inter-person distance
+(`constellationRatio`), vs. a tight little knot in the sectioned run.
+
+**A second, new question this isolation makes possible:** do same-named
+fields cluster by *topic* (e.g. all `notes` fields resemble each other)
+regardless of whose they are, or does person identity still dominate even in
+isolation? Per-field breakdown (`meanCosToWhole` vs.
+`meanCosAcrossContacts`, both cosine on raw 1024-d vectors):
+
+| field | n | vs. own whole profile | vs. same field, other people |
+|---|---|---|---|
+| positioning | 115 | 0.890 | 0.549 |
+| background | 115 | 0.850 | 0.580 |
+| lookingFor | 115 | 0.852 | 0.595 |
+| notes | 114 | 0.700 | 0.563 |
+| introPreferences | 100 | 0.731 | 0.680 |
+| locationAvailability | 114 | 0.450 | 0.676 |
+| meetingAndSchedulingPreferences | 15 | 0.391 | 0.751 |
+| personalPreferences | 67 | 0.366 | 0.756 |
+
+`positioning`/`background`/`lookingFor` stay clearly person-specific even
+alone (own-profile cosine well above the across-people baseline of ~0.58).
+`locationAvailability`, `personalPreferences`, and
+`meetingAndSchedulingPreferences` invert that: they're *more* similar to
+other people's same field than to their own owner's whole profile — those
+fields read as boilerplate/scheduling logistics once isolated, carrying
+almost no person-identifying signal on their own. That's a genuinely new
+result the sectioned-swap experiment couldn't surface, since those fields
+were never isolated there.
+
+Rerun with:
+
+```bash
+modal run baselines/voyage_nano_field_isolation/modal_embed_space.py --batch-size 4
+modal volume get dorby-sectioning-eval embed_space_fields_holdout/embeddings.npy \
+    artifacts/voyage_nano_field_isolation/embeddings.npy --force
+modal volume get dorby-sectioning-eval embed_space_fields_holdout/meta.json \
+    artifacts/voyage_nano_field_isolation/meta.json --force
+python scripts/load_field_isolation_to_chroma.py --reset
+python scripts/build_field_isolation_embedding_space_3d.py
+```
 
 ## Published Artifacts (claude.ai, this account)
 
