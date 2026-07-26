@@ -160,6 +160,9 @@ def build_payload(db_dir: Path, collection_name: str, meta_path: Path) -> dict:
 
     nodes.sort(key=lambda n: -(len(n["fields"]) + len(n["sections"])))
 
+    present_fields = {f["field"] for n in nodes for f in n["fields"]}
+    field_order_present = [f for f in FIELD_ORDER if f in present_fields]
+
     whole_vecs = emb[[whole_idx[c] for c in whole_idx]]
     across = whole_vecs @ whole_vecs.T
     iu = np.triu_indices(len(whole_vecs), 1)
@@ -227,6 +230,7 @@ def build_payload(db_dir: Path, collection_name: str, meta_path: Path) -> dict:
         "dim": meta["truncate_dim"],
         "maxFields": max(len(n["fields"]) for n in nodes),
         "maxSections": max((len(n["sections"]) for n in nodes), default=0),
+        "fieldOrder": field_order_present,
         "perField": [
             {"field": f, **per_field_stats[f]} for f in FIELD_ORDER if f in per_field_stats
         ],
@@ -318,6 +322,19 @@ HTML = r"""<title>Holdout contacts, isolated fields, in voyage-4-nano space</tit
   .tether { width: 18px; height: 0; border-top: 1.5px dotted var(--muted); flex: none; }
   .wire { width: 18px; height: 2px; border-radius: 1px; flex: none; }
 
+  .fieldpicker { display: flex; flex-direction: column; gap: 7px; }
+  .fp-head { display: flex; align-items: center; justify-content: space-between; }
+  .fp-actions { display: flex; gap: 6px; }
+  button.fp-btn {
+    font-family: var(--mono); font-size: 9.5px; letter-spacing: 0.06em; text-transform: uppercase;
+    background: none; border: 1px solid var(--hairline); color: var(--muted);
+    padding: 2px 7px; border-radius: 2px; cursor: pointer;
+  }
+  button.fp-btn:hover { border-color: var(--field); color: var(--field); }
+  .field-row { display: flex; align-items: center; gap: 7px; font-size: 12px; color: var(--ink-soft); cursor: pointer; }
+  .field-row input { accent-color: var(--field); }
+  .field-swatch { width: 9px; height: 9px; border-radius: 50%; flex: none; }
+
   .controls {
     position: absolute; left: 16px; right: 16px; bottom: 16px;
     display: flex; align-items: center; gap: 18px; flex-wrap: wrap;
@@ -402,11 +419,21 @@ HTML = r"""<title>Holdout contacts, isolated fields, in voyage-4-nano space</tit
       <div class="row"><span class="dot" style="background:var(--seeker)"></span> Person looking <span class="num" id="lSeek" style="color:var(--muted)"></span></div>
       <div class="row"><span class="dot" style="background:var(--candidate)"></span> Person suggested <span class="num" id="lCand" style="color:var(--muted)"></span></div>
       <div class="row"><span class="dot" style="background:var(--both)"></span> Both at once</div>
-      <div class="row"><span class="dot hollow" style="color:var(--field)"></span> One field, alone</div>
-      <div class="row"><span class="dot hollow tiny" style="color:var(--section)"></span> One ask, alone</div>
+      <div class="row"><span class="dot hollow tiny" style="color:var(--section)"></span> One ask, alone (lookingFor only)</div>
       <div class="row"><span class="tether"></span> Tied back to its parent</div>
       <div class="row"><span class="wire" style="background:var(--pos)"></span> Good match <span class="num" id="lPos" style="color:var(--muted)"></span></div>
       <div class="row"><span class="wire" style="background:var(--neg)"></span> Bad match <span class="num" id="lNeg" style="color:var(--muted)"></span></div>
+    </div>
+    <div class="rule"></div>
+    <div class="fieldpicker">
+      <div class="fp-head">
+        <span class="eyebrow">Fields shown</span>
+        <span class="fp-actions">
+          <button type="button" class="fp-btn" id="fieldsAll">all</button>
+          <button type="button" class="fp-btn" id="fieldsNone">none</button>
+        </span>
+      </div>
+      <div id="fieldChecks"></div>
     </div>
     <div class="rule"></div>
     <div class="note">The model describes each person with 1,024 numbers. This is the flattest 3D shadow of that, keeping <span class="num" id="sEvr"></span> of the detail &mdash; so treat it as a sketch, not a measurement.</div>
@@ -418,7 +445,7 @@ HTML = r"""<title>Holdout contacts, isolated fields, in voyage-4-nano space</tit
       <input type="range" id="amp" min="1" max="12" step="0.5" value="1" />
       <span class="amp-val" id="ampVal">1.0&times;</span>
     </div>
-    <label class="toggle"><input type="checkbox" id="showFields" checked /> Fields</label>
+    <label class="toggle"><input type="checkbox" id="showWhole" checked /> Profile points</label>
     <label class="toggle"><input type="checkbox" id="showSections" checked /> Asks</label>
     <label class="toggle"><input type="checkbox" id="showPairs" checked /> Match lines</label>
     <button class="reset" id="reset">Reset view</button>
@@ -519,6 +546,33 @@ document.getElementById("fieldRows").innerHTML = S.perField.map(f =>
 const css = getComputedStyle(document.documentElement);
 const hue = { seeker: "--seeker", candidate: "--candidate", both: "--both" };
 function colorOf(role) { return css.getPropertyValue(hue[role]).trim() || "#888"; }
+
+// One distinct, theme-stable color per field (golden-angle hue spacing so
+// adjacent fields never land on similar hues regardless of list length).
+const fieldColors = new Map(S.fieldOrder.map((f, i) => [f, `hsl(${(i * 137.508) % 360}deg 55% 55%)`]));
+function fieldColorOf(field) { return fieldColors.get(field) || "#888"; }
+
+const selectedFields = new Set(S.fieldOrder);
+const fieldChecksEl = document.getElementById("fieldChecks");
+fieldChecksEl.innerHTML = S.fieldOrder.map(f =>
+  '<label class="field-row"><input type="checkbox" data-field="' + f + '" checked />' +
+  '<span class="field-swatch" style="background:' + fieldColorOf(f) + '"></span>' + f + "</label>"
+).join("");
+fieldChecksEl.querySelectorAll("input[data-field]").forEach(inp => {
+  inp.addEventListener("change", () => {
+    const f = inp.dataset.field;
+    if (inp.checked) selectedFields.add(f); else selectedFields.delete(f);
+    draw();
+  });
+});
+document.getElementById("fieldsAll").addEventListener("click", () => {
+  fieldChecksEl.querySelectorAll("input[data-field]").forEach(inp => { inp.checked = true; selectedFields.add(inp.dataset.field); });
+  draw();
+});
+document.getElementById("fieldsNone").addEventListener("click", () => {
+  fieldChecksEl.querySelectorAll("input[data-field]").forEach(inp => { inp.checked = false; selectedFields.delete(inp.dataset.field); });
+  draw();
+});
 
 const nodeById = new Map();
 DATA.nodes.forEach((n, i) => { n.i = i; nodeById.set(n.id, n); });
@@ -638,7 +692,7 @@ function showTip(h, mx, my) {
 
 const ampEl = document.getElementById("amp");
 const ampVal = document.getElementById("ampVal");
-const showFields = document.getElementById("showFields");
+const showWhole = document.getElementById("showWhole");
 const showSections = document.getElementById("showSections");
 const showPairs = document.getElementById("showPairs");
 let amp = 1;
@@ -647,13 +701,14 @@ ampEl.addEventListener("input", () => {
   ampVal.textContent = amp.toFixed(1) + "×";
   draw();
 });
-showFields.addEventListener("change", draw);
+showWhole.addEventListener("change", draw);
 showSections.addEventListener("change", draw);
 showPairs.addEventListener("change", draw);
 document.getElementById("reset").addEventListener("click", () => {
   yaw = 0.6; pitch = -0.28; zoom = 1; focus = null;
   amp = 1; ampEl.value = "1"; ampVal.textContent = "1.0×";
-  showFields.checked = true; showSections.checked = true; showPairs.checked = true;
+  showWhole.checked = true; showSections.checked = true; showPairs.checked = true;
+  fieldChecksEl.querySelectorAll("input[data-field]").forEach(inp => { inp.checked = true; selectedFields.add(inp.dataset.field); });
   draw();
 });
 
@@ -670,8 +725,9 @@ function draw() {
   ctx.clearRect(0, 0, W, H);
   hits = [];
 
-  const drawFields = showFields.checked;
-  const drawSections = showSections.checked;
+  const drawWhole = showWhole.checked;
+  const lookingForOn = selectedFields.has("lookingFor");
+  const drawSections = showSections.checked && lookingForOn;
   const dim = id => focus && focus !== id;
   const items = [];
 
@@ -679,25 +735,27 @@ function draw() {
     const wp = project(n.whole);
     const faded = dim(n.id);
     const col = colorOf(n.role);
-    items.push({ t: "node", kind: "whole", node: n, x: wp.x, y: wp.y, z: wp.z, s: wp.s, col, faded });
-
-    // field dots hang off the whole-profile anchor
-    if (drawFields) {
-      for (let si = 0; si < n.fields.length; si++) {
-        const f = n.fields[si];
-        const p = offsetPoint(n.whole, f.xyz);
-        const fp = project(p);
-        items.push({ t: "tether", x0: wp.x, y0: wp.y, x: fp.x, y: fp.y, z: (wp.z + fp.z) / 2, col: "var(--field)", faded });
-        items.push({ t: "node", kind: "field", node: n, si, x: fp.x, y: fp.y, z: fp.z, s: fp.s, col: "var(--field)", faded });
-      }
+    if (drawWhole) {
+      items.push({ t: "node", kind: "whole", node: n, x: wp.x, y: wp.y, z: wp.z, s: wp.s, col, faded });
     }
 
-    // section dots hang off their parent (the lookingFor field dot if drawn, else whole)
+    // field dots hang off the whole-profile anchor, one at a time per checkbox
+    for (let si = 0; si < n.fields.length; si++) {
+      const f = n.fields[si];
+      if (!selectedFields.has(f.field)) continue;
+      const fcol = fieldColorOf(f.field);
+      const p = offsetPoint(n.whole, f.xyz);
+      const fp = project(p);
+      items.push({ t: "tether", x0: wp.x, y0: wp.y, x: fp.x, y: fp.y, z: (wp.z + fp.z) / 2, col: fcol, faded });
+      items.push({ t: "node", kind: "field", node: n, si, x: fp.x, y: fp.y, z: fp.z, s: fp.s, col: fcol, faded });
+    }
+
+    // section dots hang off the lookingFor field dot, only when lookingFor is selected
     if (drawSections) {
+      const anchor = offsetPoint(n.whole, n.fields.find(f => f.field === "lookingFor")?.xyz ?? n.whole);
+      const anchorProj = project(anchor);
       for (let si = 0; si < n.sections.length; si++) {
         const s = n.sections[si];
-        const anchor = drawFields ? offsetPoint(n.whole, s.anchor) : n.whole;
-        const anchorProj = drawFields ? project(anchor) : wp;
         const p = offsetPoint(anchor, s.xyz);
         const sp = project(p);
         items.push({ t: "tether", x0: anchorProj.x, y0: anchorProj.y, x: sp.x, y: sp.y, z: (anchorProj.z + sp.z) / 2, col: "var(--section)", faded });
