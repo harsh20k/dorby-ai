@@ -202,6 +202,94 @@ not every one wins — `zeroentropy/zembed-1-embedding` (4B, purpose-built
 for retrieval) scored near chance (0.5052 AUC, worst retrieval MRR of
 anything tested), a genuine result with no plumbing issue found.
 
+### LLM judge (`baselines/llm_judge/`)
+
+A different shape of experiment from every baseline above: no embeddings, no
+training, no retrieval. Feed an LLM both **complete** profiles of a real pair
+and ask directly whether the intro is a good match — **and never give it the
+`searchQuery`**, which all other baselines get. Scored against the real human
+accept/decline outcome on the 200 real seed pairs. Full writeup in
+`docs/llm-judge-experiment.md`.
+
+```bash
+python -m baselines.llm_judge.eval --data-dir data --variant naive --split all
+python -m baselines.llm_judge.eval --data-dir data --variant naive --split holdout  # free: shared cache
+python -m baselines.llm_judge.eval --data-dir data --variant calibrated --split all
+python -m baselines.llm_judge.eval --data-dir data --model anthropic/claude-sonnet-4.5
+# Bedrock backend instead of OpenRouter (tf_provisioner AWS account, no OpenRouter credits needed)
+python -m baselines.llm_judge.eval --data-dir data --backend bedrock --model google.gemma-3-27b-it
+python -m baselines.llm_judge.eval --data-dir data --backend bedrock --model qwen.qwen3-32b-v1:0
+# from a worktree, data/ and .env live in the main checkout:
+#   --data-dir /Users/harsh/Artifacts/dorby-ai/data --env-file /Users/harsh/Artifacts/dorby-ai/.env
+```
+
+**Findings: `gemini-3.1-flash-lite` (OpenRouter, ~$0.10/200 pairs) beats
+Voyage-4-large — Boardy's production model — on the matched 69-pair holdout
+(pair AUC 0.6358 vs 0.6086) *without* the search query, and its hard-negative
+slice AUC of 0.6466 is the best of any model tested in this project. Two
+cheaper open-weight judges added since via the Bedrock backend — Gemma 3 27B
+and Qwen3-32B (~$0.03/200 pairs each) — land lower on overall AUC (0.5823,
+0.5802) but each edge flash-lite out on hard-negative AUC alone (0.6216,
+0.6224 vs 0.6466 — still behind, but a much smaller gap than the headline AUC
+suggests); all four (model, framing) combinations sit in the same 0.58-0.64
+band, comfortably above chance, none near Qwen3-Embedding-8B's 0.6595
+ceiling.** Things worth carrying forward:
+
+- **It is the only model where hard-neg AUC exceeds easy-neg AUC** (0.6466 vs
+  0.5638); every embedding baseline drops steeply on hard negatives (TF-IDF
+  0.7552→0.5017). Since the easy/hard split is token-overlap-defined, that
+  inversion is direct evidence the LLM is not scoring lexical similarity — and
+  hard negatives are the only population that exists in production. It is also
+  the cleanest counter to `possible-bugs.md` #3: TF-IDF's 0.5922 is earned
+  almost entirely on the easy slice.
+- **Accuracy @ 0.5 is 0.5942, best in the table** — usable decisions with no
+  fitted threshold, where the embedding baselines sit at/below chance there
+  (Voyage-large 0.4348) because cosine has no calibrated decision point.
+- **Adding true information hurt.** The `calibrated` variant (tells the model
+  production already vetted relevance + the 50/50 base rate) *dropped* AUC to
+  0.5901 — it only made the model more skeptical (yes-rate 56.5%→30.4%), not
+  more discriminating. Stated `confidence` is also useless (88.6 when right vs
+  88.2 when wrong) — the signal is all in the yes/no, not the confidence.
+
+**This is not deployable** — a per-candidate LLM call is out of scope under the
+<100 ms budget, and there are no retrieval metrics for it (no shared vector
+space), which is why it is not merged into `docs/baseline-results-holdout.md`.
+Its value is as an accuracy reference, as a **labeler** for
+`synth_pipeline/pairing/` (whose current TF-IDF+nano labels are ~0.868-AUC
+predictable from plain query cosine — this is the semantic judge that doc asks
+for), and as a distillation target.
+
+Verdicts cache to `artifacts/llm_judge/<backend>_<model>_<variant>/verdicts.json`
+keyed by pair identity + **prompt hash**, so editing a prompt correctly
+invalidates affected entries and `--split holdout` after `--split all` is a
+pure cache hit. `tests/test_llm_judge.py` covers that plus the load-bearing
+invariant that `searchQuery` never reaches the prompt.
+
+**Cost-optimization incident:** an early attempt to run `google/gemini-3.6-flash`
+and `openai/gpt-5.5` via OpenRouter failed partway through both times with
+`402: insufficient credits` — not genuine account exhaustion, but because
+neither call capped `max_tokens`. OpenRouter's credit check reserves against
+the *requested ceiling* (the model's absolute max, e.g. 65536) rather than
+actual usage, so a ~100-token JSON completion got rejected as unaffordable.
+Both backends now take an explicit `--max-tokens` (default 600, plenty for
+the verdict schema) — `synth_pipeline.llm.complete_json` gained an optional
+`max_tokens` param for this (backward-compatible, defaults to `None` for
+existing callers).
+
+Bedrock model access via `baselines/llm_judge/bedrock_backend.py`
+(`--backend bedrock --model <bedrock-model-id>`, e.g. `google.gemma-3-27b-it`
+or `qwen.qwen3-32b-v1:0`, using the same `tf_provisioner` AWS account as
+profile generation): tries Bedrock's native structured-JSON-schema output
+first, falls back to plain-text-prompted JSON (parsed the same lenient way
+as the OpenRouter path) on `ValidationException` — the same failure mode
+`docs/profile-generation-local-and-bedrock.md` found for Llama 3.3 70B and
+every Nova variant, handled here without needing to hardcode an exclusion
+list. Bedrock usage across every model tested (tokens, invocations, errors,
+latency, per-model $/hr) is on the `dorby-bedrock-profile-gen` CloudWatch
+dashboard, regenerated via `scripts/update_bedrock_dashboard.py` — its
+token/invocation/latency widgets use `SEARCH()` expressions that pick up any
+new model automatically; only the cost widget needs a `MODEL_PRICING` entry.
+
 ### Synthetic pair generation (LangGraph + LangSmith)
 
 Pipeline: train-only seed sample → generate one label → heuristic filter

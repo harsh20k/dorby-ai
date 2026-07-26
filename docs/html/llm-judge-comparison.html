@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>LLM judge vs. embedding baselines — Dorby AI</title>
+<style>
+  :root {
+    color-scheme: light;
+    --surface-1: #fcfcfb;
+    --page: #f9f9f7;
+    --ink: #0b0b0b;
+    --ink-2: #52514e;
+    --muted: #898781;
+    --grid: #e1e0d9;
+    --border: rgba(11,11,11,0.10);
+    --panel: #ffffff;
+    --baseline: #2a78d6;
+    --judge: #eb6834;
+    --good: #0ca30c;
+    --good-bg: #e3f6e3;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:where(:not([data-theme="light"])) {
+      color-scheme: dark;
+      --surface-1: #1a1a19;
+      --page: #0d0d0d;
+      --ink: #ffffff;
+      --ink-2: #c3c2b7;
+      --muted: #898781;
+      --grid: #2c2c2a;
+      --border: rgba(255,255,255,0.10);
+      --panel: #161615;
+      --baseline: #3987e5;
+      --judge: #d95926;
+      --good: #0ca30c;
+      --good-bg: #103010;
+    }
+  }
+  :root[data-theme="dark"] {
+    color-scheme: dark;
+    --surface-1: #1a1a19;
+    --page: #0d0d0d;
+    --ink: #ffffff;
+    --ink-2: #c3c2b7;
+    --muted: #898781;
+    --grid: #2c2c2a;
+    --border: rgba(255,255,255,0.10);
+    --panel: #161615;
+    --baseline: #3987e5;
+    --judge: #d95926;
+    --good: #0ca30c;
+    --good-bg: #103010;
+  }
+
+  * { box-sizing: border-box; }
+  html, body { margin: 0; min-height: 100%; }
+  body {
+    font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+    color: var(--ink);
+    background: var(--page);
+    line-height: 1.45;
+  }
+  :where(a, button, input, [tabindex]):focus-visible {
+    outline: 2px solid var(--good);
+    outline-offset: 2px;
+    border-radius: 4px;
+  }
+  @media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
+
+  .wrap { width: min(1180px, calc(100% - 2rem)); margin: 0 auto; padding: 2rem 0 4rem; }
+
+  header.hero { display: grid; gap: 0.6rem; margin-bottom: 1.6rem; }
+  .brand { font-size: clamp(1.6rem, 3.6vw, 2.2rem); letter-spacing: -0.02em; margin: 0; font-weight: 700; }
+  .lede { margin: 0; max-width: 60rem; color: var(--ink-2); font-size: 0.95rem; }
+  .lede code { background: var(--surface-1); border: 1px solid var(--border); border-radius: 4px; padding: 0.05rem 0.35rem; font-size: 0.85em; }
+  .meta { margin: 0; font-size: 0.8rem; color: var(--muted); }
+
+  .legend { display: flex; gap: 1.2rem; align-items: center; margin-top: 0.9rem; font-size: 0.85rem; color: var(--ink-2); }
+  .legend .swatch { display: inline-flex; align-items: center; gap: 0.45rem; }
+  .legend .dot { width: 0.7rem; height: 0.7rem; border-radius: 3px; flex: none; }
+
+  .chart-card {
+    background: var(--panel); border: 1px solid var(--border); border-radius: 12px;
+    padding: 1.4rem 1.4rem 1rem; margin-top: 1rem;
+  }
+  .chart-title { font-size: 0.95rem; font-weight: 700; margin: 0 0 0.15rem; }
+  .chart-sub { font-size: 0.78rem; color: var(--muted); margin: 0 0 1rem; }
+
+  .bar-row {
+    display: grid; grid-template-columns: 15rem 1fr 4.2rem; align-items: center;
+    gap: 0.7rem; padding: 0.28rem 0; position: relative;
+  }
+  .bar-row .name {
+    font-size: 0.82rem; text-align: right; white-space: nowrap; overflow: hidden;
+    text-overflow: ellipsis; color: var(--ink-2);
+  }
+  .bar-row.is-judge .name { color: var(--ink); font-weight: 600; }
+  .bar-track { position: relative; height: 1.15rem; background: var(--grid); border-radius: 4px; overflow: visible; }
+  .bar-fill {
+    position: absolute; top: 0; left: 0; height: 100%; border-radius: 4px;
+    min-width: 4px;
+  }
+  .bar-row .value {
+    font-family: ui-monospace, "SF Mono", "Cascadia Code", Menlo, Consolas, monospace;
+    font-variant-numeric: tabular-nums; font-size: 0.82rem; text-align: right;
+  }
+  .bar-row:hover .bar-track { outline: 2px solid var(--ink); outline-offset: 1px; }
+  .chance-line {
+    position: absolute; top: -0.2rem; bottom: -0.2rem; width: 1px;
+    background: var(--muted); opacity: 0.55;
+  }
+  .chance-label {
+    position: absolute; font-size: 0.68rem; color: var(--muted); top: -1.05rem; transform: translateX(-50%);
+  }
+
+  .section-title { margin: 1.7rem 0 0.2rem; font-size: 0.95rem; font-weight: 700; }
+  .section-sub { margin: 0 0 0.4rem; font-size: 0.78rem; color: var(--muted); }
+
+  .findings { display: grid; gap: 0.7rem; margin-top: 0.6rem; }
+  .finding {
+    background: var(--panel); border: 1px solid var(--border); border-radius: 10px;
+    padding: 0.9rem 1.1rem; font-size: 0.87rem; color: var(--ink-2);
+  }
+  .finding b { color: var(--ink); }
+
+  .table-scroll {
+    margin-top: 0.8rem; overflow-x: auto; border: 1px solid var(--border);
+    border-radius: 10px; background: var(--panel);
+  }
+  table { border-collapse: collapse; width: 100%; font-size: 0.84rem; }
+  thead th {
+    position: sticky; top: 0; background: var(--surface-1); text-align: right;
+    padding: 0.6rem 0.8rem; font-weight: 700; white-space: nowrap;
+    border-bottom: 1px solid var(--grid);
+  }
+  thead th:first-child { text-align: left; }
+  tbody td, tbody th {
+    padding: 0.5rem 0.8rem; border-bottom: 1px solid var(--grid); white-space: nowrap;
+  }
+  tbody th { text-align: left; font-weight: 600; color: var(--ink-2); }
+  tbody td {
+    text-align: right; color: var(--ink);
+    font-family: ui-monospace, "SF Mono", "Cascadia Code", Menlo, Consolas, monospace;
+    font-variant-numeric: tabular-nums; font-size: 0.82rem;
+  }
+  tbody tr:last-child td, tbody tr:last-child th { border-bottom: none; }
+  tbody tr:hover td, tbody tr:hover th { background: color-mix(in srgb, var(--ink) 4%, transparent); }
+  tbody tr.is-judge th { color: var(--judge); }
+  td.na { color: var(--muted); }
+
+  @media (max-width: 640px) {
+    .wrap { width: min(100%, calc(100% - 1.25rem)); padding-top: 1.25rem; }
+    .bar-row { grid-template-columns: 8rem 1fr 3.4rem; }
+  }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <header class="hero">
+      <h1 class="brand">LLM judge vs. embedding baselines</h1>
+      <p class="lede">
+        Can an LLM predict accept/decline from two full profiles alone, with
+        <strong>no <code>searchQuery</code></strong> — the one thing every
+        embedding baseline below gets? Matched frozen 69-pair real holdout,
+        so every row is the same population. Full writeup:
+        <code>docs/llm-judge-experiment.md</code>.
+      </p>
+      <p class="meta" id="meta-line"></p>
+      <div class="legend">
+        <span class="swatch"><span class="dot" style="background:var(--baseline)"></span>Embedding baseline (gets the query)</span>
+        <span class="swatch"><span class="dot" style="background:var(--judge)"></span>LLM judge (no query)</span>
+      </div>
+    </header>
+
+    <main>
+      <div class="chart-card">
+        <p class="chart-title">Pair ROC-AUC, ranked</p>
+        <p class="chart-sub">Dashed line = chance (0.5). Bar length is AUC on this 0.5–1.0 scale.</p>
+        <div id="chart-auc"></div>
+      </div>
+
+      <div class="chart-card">
+        <p class="chart-title">Hard-negative AUC vs. easy-negative AUC</p>
+        <p class="chart-sub">
+          Every real negative is production's own false positive — a plausible-looking intro a human still declined —
+          so hard negatives (lexically similar to the query, superficially plausible) are the only population that exists
+          at serving time. Sorted by hard-neg AUC.
+        </p>
+        <div id="chart-hardness"></div>
+      </div>
+
+      <p class="section-title">Findings</p>
+      <div class="findings" id="findings"></div>
+
+      <p class="section-title">Full comparison table</p>
+      <p class="section-sub">All metrics, matched 69-pair holdout. MRR is retrieval-only — no LLM-judge row has one (see below).</p>
+      <div class="table-scroll">
+        <table id="full-table"></table>
+      </div>
+
+      <p class="section-title">LLM-judge run detail</p>
+      <p class="section-sub">All four (model, framing) combinations tested — decision behavior, not just the AUC summary above.</p>
+      <div class="table-scroll">
+        <table id="judge-table"></table>
+      </div>
+    </main>
+  </div>
+
+  <script id="data" type="application/json">{"generated_at": "2026-07-25T15:43:39Z", "protocol_note": "frozen 69-pair real holdout (data/synthetic/seed_split.json eval_pair_ids) only \u2014 same population for every row, unlike baseline-results-all.md's full-dataset numbers. See docs/possible-bugs.md #3 and docs/twotower-run-001-results.md.", "rows": [{"name": "Qwen3-Embedding-8B (open)", "kind": "baseline", "gets_query": true, "pair_auc": 0.6594827586206896, "accuracy_at_half": 0.5072463768115942, "best_f1": 0.647887323943662, "hard_auc": 0.6258620689655172, "easy_auc": 0.7586206896551724, "mrr": 0.403986674245295}, {"name": "Hybrid TF-IDF+nano", "kind": "baseline", "gets_query": true, "pair_auc": 0.639655172413793, "accuracy_at_half": 0.5072463768115942, "best_f1": 0.631578947368421, "hard_auc": 0.6034482758620691, "easy_auc": 0.7172413793103448, "mrr": 0.4043028322440087}, {"name": "LLM judge: gemini-3.1-flash-lite (naive)", "kind": "llm_judge", "gets_query": false, "pair_auc": 0.6357758620689655, "accuracy_at_half": 0.5942028985507246, "best_f1": 0.6, "hard_auc": 0.646551724137931, "easy_auc": 0.5637931034482758, "mrr": null}, {"name": "Voyage-4-large (production)", "kind": "baseline", "gets_query": true, "pair_auc": 0.6086206896551725, "accuracy_at_half": 0.43478260869565216, "best_f1": 0.6153846153846154, "hard_auc": 0.6017241379310345, "easy_auc": 0.6, "mrr": 0.528667801726667}, {"name": "TF-IDF (lexical)", "kind": "baseline", "gets_query": true, "pair_auc": 0.5922413793103449, "accuracy_at_half": 0.5797101449275363, "best_f1": 0.6363636363636365, "hard_auc": 0.5017241379310344, "easy_auc": 0.7551724137931035, "mrr": 0.2474815913137905}, {"name": "LLM judge: gemini-3.1-flash-lite (calibrated)", "kind": "llm_judge", "gets_query": false, "pair_auc": 0.5900862068965518, "accuracy_at_half": 0.5652173913043478, "best_f1": 0.6052631578947368, "hard_auc": 0.5879310344827586, "easy_auc": 0.5310344827586206, "mrr": null}, {"name": "LLM judge: gemma-3-27b-it (Bedrock, naive)", "kind": "llm_judge", "gets_query": false, "pair_auc": 0.5823275862068966, "accuracy_at_half": 0.5507246376811594, "best_f1": 0.6075949367088608, "hard_auc": 0.621551724137931, "easy_auc": 0.49310344827586206, "mrr": null}, {"name": "LLM judge: qwen3-32b (Bedrock, naive)", "kind": "llm_judge", "gets_query": false, "pair_auc": 0.5801724137931035, "accuracy_at_half": 0.5072463768115942, "best_f1": 0.6086956521739131, "hard_auc": 0.6224137931034484, "easy_auc": 0.496551724137931, "mrr": null}, {"name": "Voyage-4-nano", "kind": "baseline", "gets_query": true, "pair_auc": 0.5793103448275863, "accuracy_at_half": 0.43478260869565216, "best_f1": 0.5979381443298969, "hard_auc": 0.5706896551724138, "easy_auc": 0.6206896551724138, "mrr": 0.46104957904626953}, {"name": "twotower arm_a_real_only", "kind": "baseline", "gets_query": true, "pair_auc": 0.5793103448275863, "accuracy_at_half": 0.42028985507246375, "best_f1": 0.6097560975609757, "hard_auc": 0.5, "easy_auc": 0.6551724137931034, "mrr": 0.3882152169591429}, {"name": "twotower run_001", "kind": "baseline", "gets_query": true, "pair_auc": 0.578448275862069, "accuracy_at_half": 0.42028985507246375, "best_f1": 0.6190476190476191, "hard_auc": 0.4844827586206897, "easy_auc": 0.6931034482758621, "mrr": 0.282930784473066}, {"name": "BGE-en-ICL (open)", "kind": "baseline", "gets_query": true, "pair_auc": 0.5750000000000001, "accuracy_at_half": 0.4057971014492754, "best_f1": 0.6021505376344085, "hard_auc": 0.5862068965517242, "easy_auc": 0.5655172413793104, "mrr": 0.5157030428284888}, {"name": "E5-mistral-7b-instruct (open)", "kind": "baseline", "gets_query": true, "pair_auc": 0.5663793103448276, "accuracy_at_half": 0.42028985507246375, "best_f1": 0.6105263157894737, "hard_auc": 0.48793103448275865, "easy_auc": 0.7137931034482758, "mrr": 0.22444410848659233}, {"name": "zembed-1-embedding (open)", "kind": "baseline", "gets_query": true, "pair_auc": 0.5051724137931035, "accuracy_at_half": 0.5797101449275363, "best_f1": 0.6041666666666666, "hard_auc": 0.47586206896551725, "easy_auc": 0.5241379310344828, "mrr": 0.0643481222215541}, {"name": "NV-Embed-v2 (open, approx.)", "kind": "baseline", "gets_query": true, "pair_auc": 0.503448275862069, "accuracy_at_half": 0.5072463768115942, "best_f1": 0.5918367346938774, "hard_auc": 0.37586206896551727, "easy_auc": 0.6, "mrr": 0.10924396120973041}, {"name": "Frozen BERT", "kind": "baseline", "gets_query": true, "pair_auc": 0.45948275862068966, "accuracy_at_half": 0.42028985507246375, "best_f1": 0.6153846153846154, "hard_auc": 0.4224137931034483, "easy_auc": 0.6379310344827586, "mrr": 0.1370748200674727}], "judge_detail": [{"name": "gemini-3.1-flash-lite (naive)", "backend": "openrouter", "variant": "naive", "n": 69, "pair_auc": 0.6357758620689655, "decision_accuracy": 0.5942028985507246, "f1": 0.5882352941176471, "yes_rate": 0.5652173913043478, "yes_rate_pos": 0.6896551724137931, "yes_rate_neg": 0.475, "mean_confidence": 88.84057971014492, "mean_confidence_correct": 89.26829268292683, "mean_confidence_wrong": 88.21428571428571, "hard_auc": 0.646551724137931, "easy_auc": 0.5637931034482758}, {"name": "gemini-3.1-flash-lite (calibrated)", "backend": "openrouter", "variant": "calibrated", "n": 69, "pair_auc": 0.5900862068965518, "decision_accuracy": 0.5652173913043478, "f1": 0.4, "yes_rate": 0.30434782608695654, "yes_rate_pos": 0.3448275862068966, "yes_rate_neg": 0.275, "mean_confidence": 86.95652173913044, "mean_confidence_correct": 87.94871794871794, "mean_confidence_wrong": 85.66666666666667, "hard_auc": 0.5879310344827586, "easy_auc": 0.5310344827586206}, {"name": "gemma-3-27b-it (Bedrock, naive)", "backend": "bedrock", "variant": "naive", "n": 69, "pair_auc": 0.5823275862068966, "decision_accuracy": 0.5507246376811594, "f1": 0.6075949367088608, "yes_rate": 0.7246376811594203, "yes_rate_pos": 0.8275862068965517, "yes_rate_neg": 0.65, "mean_confidence": 83.1159420289855, "mean_confidence_correct": 82.76315789473684, "mean_confidence_wrong": 83.54838709677419, "hard_auc": 0.621551724137931, "easy_auc": 0.49310344827586206}, {"name": "qwen3-32b (Bedrock, naive)", "backend": "bedrock", "variant": "naive", "n": 69, "pair_auc": 0.5801724137931035, "decision_accuracy": 0.5072463768115942, "f1": 0.5526315789473685, "yes_rate": 0.6811594202898551, "yes_rate_pos": 0.7241379310344828, "yes_rate_neg": 0.65, "mean_confidence": 82.76811594202898, "mean_confidence_correct": 83.14285714285714, "mean_confidence_wrong": 82.38235294117646, "hard_auc": 0.6224137931034484, "easy_auc": 0.496551724137931}]}</script>
+  <script>
+    const DATA = JSON.parse(document.getElementById("data").textContent);
+
+    document.getElementById("meta-line").textContent =
+      `${DATA.protocol_note} · baseline numbers generated ${DATA.generated_at}`;
+
+    function fmt(x, digits = 4) {
+      return x === null || x === undefined || Number.isNaN(x) ? "—" : x.toFixed(digits);
+    }
+    function pct(x, digits = 1) {
+      return x === null || x === undefined ? "—" : (x * 100).toFixed(digits) + "%";
+    }
+
+    // ---- bar chart: Pair AUC, ranked ----
+    function renderBarChart(container, rows, valueKey, opts = {}) {
+      const min = opts.min ?? 0.5, max = opts.max ?? 0.7;
+      const chanceAt = opts.chance;
+      const el = document.getElementById(container);
+      el.innerHTML = "";
+      for (const r of rows) {
+        const v = r[valueKey];
+        if (v === null || v === undefined) continue;
+        const pctWidth = Math.max(0, Math.min(100, ((v - min) / (max - min)) * 100));
+        const row = document.createElement("div");
+        row.className = "bar-row" + (r.kind === "llm_judge" ? " is-judge" : "");
+        row.innerHTML = `
+          <div class="name" title="${r.name}">${r.name}</div>
+          <div class="bar-track">
+            <div class="bar-fill" style="width:${pctWidth}%; background:${r.kind === "llm_judge" ? "var(--judge)" : "var(--baseline)"}"></div>
+            ${chanceAt !== undefined ? `<div class="chance-line" style="left:${((chanceAt - min) / (max - min)) * 100}%"></div>` : ""}
+          </div>
+          <div class="value">${fmt(v)}</div>
+        `;
+        row.title = `${r.name}: ${valueKey} = ${fmt(v)}`;
+        el.appendChild(row);
+      }
+    }
+
+    renderBarChart("chart-auc", DATA.rows, "pair_auc", { min: 0.45, max: 0.68, chance: 0.5 });
+
+    const hardnessRows = [...DATA.rows]
+      .filter((r) => r.hard_auc !== null && r.hard_auc !== undefined)
+      .sort((a, b) => b.hard_auc - a.hard_auc);
+    renderBarChart("chart-hardness", hardnessRows, "hard_auc", { min: 0.35, max: 0.68, chance: 0.5 });
+
+    // ---- findings ----
+    const findingsEl = document.getElementById("findings");
+    const findings = [
+      `<b>gemini-3.1-flash-lite (naive)</b> is the only LLM judge that beats Voyage-4-large — Boardy's own production
+       model — on pair AUC (0.6358 vs 0.6086), while never seeing the search query Voyage gets.`,
+      `<b>Hard-negative AUC tells a different story than the headline ranking.</b> Both Bedrock judges
+       (Gemma 3 27B, Qwen3-32B) actually edge out flash-lite here (0.6216 / 0.6224 vs 0.6466 — still behind, but the
+       gap shrinks a lot). Every embedding baseline except the strongest few collapses much harder from easy to hard
+       negatives than any LLM judge does.`,
+      `<b>The "calibrated" prompt — telling the model production already vetted relevance and the base rate is 50/50 —
+       made flash-lite worse</b> (AUC 0.6358 → 0.5901), by making it answer "yes" far less often (56.5% → 30.4%)
+       rather than discriminating better.`,
+      `<b>All four LLM-judge combinations land in the same 0.58–0.64 band</b> — comfortably above chance, well short of
+       Qwen3-Embedding-8B's 0.6595 ceiling. None of this is deployable: a per-candidate LLM call is out of scope
+       under the project's &lt;100ms serving budget, and there's no retrieval column for any LLM-judge row because
+       ranking a full candidate corpus per query would need tens of thousands of calls.`,
+    ];
+    for (const f of findings) {
+      const div = document.createElement("div");
+      div.className = "finding";
+      div.innerHTML = f;
+      findingsEl.appendChild(div);
+    }
+
+    // ---- full comparison table ----
+    const fullCols = [
+      ["Model", (r) => r.name, "left"],
+      ["Pair AUC", (r) => fmt(r.pair_auc)],
+      ["Hard-neg AUC", (r) => fmt(r.hard_auc)],
+      ["Easy-neg AUC", (r) => fmt(r.easy_auc)],
+      ["Best F1", (r) => fmt(r.best_f1)],
+      ["Acc @ 0.5", (r) => fmt(r.accuracy_at_half)],
+      ["MRR", (r) => (r.mrr === null || r.mrr === undefined ? '<span class="na">n/a</span>' : fmt(r.mrr))],
+      ["Gets query?", (r) => (r.gets_query ? "yes" : "no")],
+    ];
+    const fullTable = document.getElementById("full-table");
+    fullTable.innerHTML = `
+      <thead><tr>${fullCols.map(([label], i) => `<th style="${i===0?'text-align:left':''}">${label}</th>`).join("")}</tr></thead>
+      <tbody>
+        ${DATA.rows.map((r) => `
+          <tr class="${r.kind === "llm_judge" ? "is-judge" : ""}">
+            ${fullCols.map(([label, fn], i) => i === 0
+              ? `<th>${fn(r)}</th>`
+              : `<td>${fn(r)}</td>`
+            ).join("")}
+          </tr>
+        `).join("")}
+      </tbody>
+    `;
+
+    // ---- LLM-judge detail table ----
+    const judgeCols = [
+      ["Run", (r) => r.name, "left"],
+      ["Backend", (r) => r.backend],
+      ["n", (r) => r.n],
+      ["Pair AUC", (r) => fmt(r.pair_auc)],
+      ["Decision acc.", (r) => fmt(r.decision_accuracy)],
+      ["F1", (r) => fmt(r.f1)],
+      ["Yes-rate", (r) => pct(r.yes_rate)],
+      ["Yes-rate (pos)", (r) => pct(r.yes_rate_pos)],
+      ["Yes-rate (neg)", (r) => pct(r.yes_rate_neg)],
+      ["Mean conf.", (r) => r.mean_confidence.toFixed(1)],
+      ["Conf. when right", (r) => r.mean_confidence_correct.toFixed(1)],
+      ["Conf. when wrong", (r) => r.mean_confidence_wrong.toFixed(1)],
+    ];
+    const judgeTable = document.getElementById("judge-table");
+    judgeTable.innerHTML = `
+      <thead><tr>${judgeCols.map(([label], i) => `<th style="${i===0?'text-align:left':''}">${label}</th>`).join("")}</tr></thead>
+      <tbody>
+        ${DATA.judge_detail.map((r) => `
+          <tr>
+            ${judgeCols.map(([label, fn], i) => i === 0
+              ? `<th>${fn(r)}</th>`
+              : `<td>${fn(r)}</td>`
+            ).join("")}
+          </tr>
+        `).join("")}
+      </tbody>
+    `;
+  </script>
+</body>
+</html>
