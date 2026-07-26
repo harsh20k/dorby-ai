@@ -27,6 +27,10 @@ wants the full story.
 | Holdout comparison browser — Dorby AI | [published](https://claude.ai/code/artifact/95beeed4-9a3d-4a79-906d-cf2d24d0457f) | 2026-07-20 | Likely `baseline-results-holdout-browser.html` above, by date match |
 | Does splitting lookingFor into sections help matching? | [published](https://claude.ai/code/artifact/3ec8c0da-9ba1-4de9-b52d-b057507b6163) | 2026-07-24 | lookingFor field-sectioning: 4 experiments (candidate- vs seeker-sectioned, softer aggregation, hybrid-fusion stacking) — see `docs/lookingfor-sectioning-findings.md` |
 | Holdout contacts in voyage-4-nano space | [published](https://claude.ai/code/artifact/5bf01ecd-0731-4f7e-93f3-ee74f8688e21) | 2026-07-25 | Published version of `holdout-embedding-space-3d.html` above |
+| Query-Time Nudge vs. Joint Encoding | [published](https://claude.ai/code/artifact/d491b7db-0db8-458a-8148-78001c084e30) | 2026-07-25 | Not traceable to a local `docs/html/` file from this session |
+| LLM judge vs. embedding baselines | [published](https://claude.ai/code/artifact/12f8f93b-8fc4-41e5-bc13-b05ce8ab45fa) | 2026-07-25 | Not traceable to a local `docs/html/` file from this session |
+| Which fields carry a person's identity? | [published](https://claude.ai/code/artifact/c3daa30f-4b68-4312-ba4b-8e69e4c77550) | 2026-07-26 | Published version of `holdout-field-isolation-embedding-space-3d.html` above (field isolation experiment) |
+| Synthetic Pair Pipeline — Proposed Flow | [published](https://claude.ai/code/artifact/5455a3ec-2c0f-4926-8e08-bc705868a6cf) | 2026-07-26 | Not traceable to a local `docs/html/` file from this session |
 
 Local file links above are absolute `file://` paths pinned to this repo's
 checkout location on this machine (`/Users/harsh/Artifacts/dorby-ai/docs/html/`)
@@ -281,12 +285,20 @@ python scripts/build_field_isolation_embedding_space_3d.py
 
 ## Published Artifacts (claude.ai, this account)
 
-See the unified table at the top of this doc for all 4 currently-published
-pages. The first 3 predate this worktree's sessions, so their exact source
-file among the local HTMLs above is a best guess from filename/date
-proximity, not a verified fact — the 4th (lookingFor sectioning findings)
-was published directly from this session and is definitively traceable to
-`docs/lookingfor-sectioning-findings.md`. If you want a guaranteed link
+See the unified table at the top of this doc for all 9 currently-published
+pages (checked live via `Artifact` `action: "list"` on 2026-07-26). The
+first 3 (`Pairs graph`, `Real pairs graph`, `Holdout comparison browser`)
+predate this worktree's sessions, so their exact source file among the
+local HTMLs above is a best guess from filename/date proximity, not a
+verified fact. `Does splitting lookingFor into sections help matching?`
+and `Holdout contacts in voyage-4-nano space` were published directly from
+sessions in this worktree and are definitively traceable to
+`docs/lookingfor-sectioning-findings.md` and
+`holdout-embedding-space-3d.html` respectively, as is `Which fields carry
+a person's identity?` (the field isolation experiment above). `Query-Time
+Nudge vs. Joint Encoding`, `LLM judge vs. embedding baselines`, and
+`Synthetic Pair Pipeline — Proposed Flow` are not traceable to a specific
+local file from this session's history. If you want a guaranteed link
 between a specific experiment and a shareable URL going forward, publish
 the file explicitly (`Artifact` with `--fragment` output for local HTMLs,
 per commit `0ade0ca`) rather than relying on this guesswork.
