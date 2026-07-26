@@ -777,6 +777,17 @@ svg.graph.panning{cursor:grabbing}
 .ctlrow label{font-size:12.5px;color:var(--ink-2);display:inline-flex;gap:4px;
   align-items:center;cursor:pointer}
 input[type=range]{width:120px;accent-color:var(--accent)}
+.findings{margin-top:22px;padding-top:18px;border-top:1px solid var(--line-2)}
+.findings h3{font-size:15px;margin:0 0 8px}
+.findings p{font-size:13.5px;color:var(--ink-2);line-height:1.55;max-width:860px}
+.findtbl{width:100%;max-width:860px;border-collapse:collapse;font-size:13px;margin:12px 0 18px}
+.findtbl th{text-align:left;font-weight:600;color:var(--ink-2);font-size:11.5px;
+  text-transform:uppercase;letter-spacing:.02em;padding:5px 10px 5px 0;border-bottom:1px solid var(--line-2)}
+.findtbl td{padding:5px 10px 5px 0;border-bottom:1px solid var(--line-2);font-family:var(--mono);
+  font-variant-numeric:tabular-nums}
+.findtbl td:first-child{font-family:inherit}
+.findings .caveat{background:var(--neg-bg);color:var(--neg);border-radius:7px;padding:10px 12px;
+  font-size:13px;max-width:860px;margin-top:6px}
 .fieldctl{display:inline-flex;flex-wrap:wrap;gap:9px;align-items:center}
 .fieldctl label{font-size:12.5px;color:var(--ink-2);display:inline-flex;gap:4px;
   align-items:center;cursor:pointer}
@@ -857,6 +868,7 @@ _MARKUP = r"""
     </div>
     <div class="rail" id="embedRail"></div>
   </div>
+  <div id="embedFindings"></div>
 </section>
 """
 
@@ -1493,6 +1505,62 @@ BUILD.embed = function(){
           "embedded and retrieved, but no pair reached the judge") : ""}
        ${row("model", "")}</div>
      <div style="font:11px var(--mono);color:var(--ink-3);word-break:break-all">${esc(E.model)}</div>`;
+
+  if (E.hasFields){
+    const compareRows = [
+      ["field-alone vs. own whole profile", "0.705", "0.600"],
+      ["ask-alone vs. own whole profile", "0.684", "0.593"],
+      ["own fields vs. each other", "—", "0.437"],
+      ["own asks vs. each other", "—", "0.571"],
+      ["whole vs. whole, different people", "0.579", "0.489"],
+      ["constellation ratio (own-field spread ÷ inter-person gap)", "~229%", "~110%"],
+    ];
+    const perField = [
+      ["positioning", "0.890 / 0.549", "0.770 / 0.477"],
+      ["background", "0.850 / 0.580", "0.672 / 0.520"],
+      ["lookingFor", "0.852 / 0.595", "0.733 / 0.544"],
+      ["notes", "0.700 / 0.563", "0.666 / 0.513"],
+      ["introPreferences", "0.731 / 0.680", "0.714 / 0.649"],
+      ["locationAvailability", "0.450 / 0.676", "0.465 / 0.680"],
+      ["personalPreferences", "0.366 / 0.756", "0.376 / 0.797"],
+      ["meetingAndSchedulingPreferences", "0.391 / 0.751", "0.402 / 0.731"],
+    ];
+    const tbl = (head, rows) =>
+      `<table class="findtbl"><thead><tr>${head.map(h => `<th>${h}</th>`).join("")}</tr></thead>` +
+      `<tbody>${rows.map(r => `<tr>${r.map(c => `<td>${c}</td>`).join("")}</tr>`).join("")}</tbody></table>`;
+    $("#embedFindings").innerHTML =
+      `<div class="findings">
+         <h3>Original (real holdout) vs. this synthetic batch — field-isolation findings</h3>
+         <p>Isolating a field moves it a lot more than swapping one in and out ever did. A lone
+         field scores well below its owner's whole profile, and well above a random stranger's
+         whole profile — loosely related to its owner, but not indistinguishable from anyone
+         else's. That pattern holds in both the original real-pair holdout (voyage-4-nano) and
+         this synthetic batch (Qwen3-Embedding-8B), though the two used different embedding
+         models, so only the gaps between rows — not the raw numbers — are comparable across
+         the two columns.</p>
+         ${tbl(["comparing", "original (real, 115 contacts)", "this batch (synthetic, 92 contacts)"], compareRows)}
+         <p><b>Do same-named fields cluster by topic, or by person?</b> Per-field, "vs. own whole
+         profile" then "vs. same field, other people" (cosine on raw vectors). When the second
+         number is close to or above the first, that field reads as generic/boilerplate once
+         isolated — carrying almost no person-identifying signal on its own.</p>
+         ${tbl(["field", "original: own / other-people", "this batch: own / other-people"], perField)}
+         <p>The ranking is the same in both datasets: <code>positioning</code>/<code>background</code>/
+         <code>lookingFor</code>/<code>notes</code>/<code>introPreferences</code> stay person-specific
+         even alone; <code>locationAvailability</code>, <code>personalPreferences</code>, and
+         <code>meetingAndSchedulingPreferences</code> invert and read as generic logistics. That match
+         suggests the synthetic profile generator reproduces the same "which fields carry identity"
+         structure as real Boardy profiles — a real structural agreement, not a coincidence of
+         similar-looking numbers.</p>
+         <div class="caveat"><b>This is a profile-shape check only — it says nothing about pairing/
+         labeling quality.</b> It only checked whether individual fake profiles read like real ones.
+         It did not check whether the accept/decline label between two people is correct — a batch
+         can have very realistic-looking people in it and still pair them up wrong. That question is
+         answered separately in <code>docs/rrf-pairing-pipeline.md</code>, and more weakly: 12 of this
+         batch's 40 seekers were rejected on every candidate they were shown (a red flag for how those
+         labels were assigned), and the judge model only agreed with itself 59.4% of the time on the
+         hardest pairs.</div>
+       </div>`;
+  }
 
   const showSeek = $("#showSeek"), showCand = $("#showCand");
   const showSections = $("#showSections"), showPairs = $("#showPairs");
