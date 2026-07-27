@@ -329,6 +329,24 @@ python -m baselines.llm_judge.eval --data-dir data --variant structured_cot --sp
 python3 scripts/build_llm_judge_browser.py
 ```
 
+## Two-tower distillation: LLM-judge soft labels vs. hard 0/1 labels (2026-07-26)
+
+No HTML for this one — a training-run comparison, not a visualization.
+Logged here anyway since it's a small, complete experiment: same recipe as
+`arm_a_real_only` (LoRA on voyage-4-nano, 5 epochs, 111 real-only train
+pairs), with the training label swapped from the hard accept/decline 0/1 to
+the naive LLM judge's continuous confidence-signed score. Full writeup,
+mechanism, and caveats in
+[`twotower-run-001-findings.md`](twotower-run-001-findings.md#distillation-experiment-llm-judge-soft-labels-instead-of-hard-01-2026-07-26).
+
+**Finding: distilling the judge's soft score beat every twotower run to
+date on real-holdout pair AUC** (0.604 vs. Arm A's 0.579, `run_001`'s
+0.578), also ahead of TF-IDF's 0.592 — traded off against a drop in
+retrieval MRR (0.359 vs. Arm A's 0.388). One caveat: checkpoint selection
+fell back to the final epoch rather than a validated best (the best
+train-dev checkpoint had been pruned by `save_total_limit`), so treat this
+as a promising lead rather than a confirmed win.
+
 ## Published Artifacts (claude.ai, this account)
 
 See the unified table at the top of this doc for all 9 currently-published
