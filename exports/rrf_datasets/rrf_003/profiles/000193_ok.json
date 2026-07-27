@@ -1,0 +1,54 @@
+{
+  "id": 193,
+  "archetype": "AI/ML Engineer Turned Founder",
+  "given_name": "Jamal Rossi",
+  "style_version": 12,
+  "archetypes_version": 32,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Jamal Rossi is a former Senior Machine Learning Engineer at a large fintech company, specializing in fraud detection. He left to found 'Aether Insights,' a company building an AI-powered market intelligence platform for small and medium-sized e-commerce businesses. His distinctive career detail is a brief stint as a research assistant at MIT's Media Lab focused on generative adversarial networks (GANs) \u2013 a skill he\u2019s now leveraging to predict emerging product trends. He's currently seeking seed funding and strategic partnerships to scale his platform and expand its feature set. He\u2019s highly technical and wants to be seen as a thought leader in the application of AI to e-commerce. He\u2019s detail-oriented and values direct, efficient communication. He's based in Boston but open to travel for key opportunities.",
+    "positioning": "I\u2019m the Founder & CEO of Aether Insights, a next-generation market intelligence platform empowering e-commerce businesses to anticipate demand and optimize inventory. We leverage cutting-edge AI, specifically a novel application of generative modeling techniques, to forecast emerging product trends with unprecedented accuracy. Previously, I led the fraud detection engineering team at NovaPay, where we reduced fraudulent transactions by 27% within a single quarter. At Aether Insights, we\u2019re focused on leveling the playing field for SMBs, providing them with the same data-driven insights previously only accessible to large corporations. We\u2019re currently in the late seed stage, demonstrating significant traction with a growing cohort of beta users. We're particularly strong in identifying micro-trends *before* they hit mainstream visibility. I'm passionate about building intelligent systems that solve real-world problems and am always open to connecting with individuals who share that vision. If you're interested in the intersection of AI, e-commerce, and predictive analytics, I\u2019d love to connect.",
+    "background": "* **Founder & CEO, Aether Insights** (2023 \u2013 Present)\n    * Led all aspects of company formation, product development, and go-to-market strategy.\n    * Secured initial seed funding and built a core engineering team.\n    * Developed and deployed proprietary AI models for trend forecasting, achieving 85% accuracy in beta testing.\n    * Managed customer acquisition and onboarding for initial beta program.\n* **Senior Machine Learning Engineer, NovaPay** (2020 \u2013 2023)\n    * Led the development and implementation of machine learning models for fraud detection, resulting in a 27% reduction in fraudulent transactions.\n    * Mentored junior engineers and contributed to the development of internal ML best practices.\n    * Collaborated with data scientists and product managers to define and prioritize ML initiatives.\n* **Research Assistant, MIT Media Lab** (2019 \u2013 2020)\n    * Conducted research on generative adversarial networks (GANs) for image synthesis and manipulation.\n    * Published research findings in a peer-reviewed conference proceedings.\n    * Developed and implemented Python-based algorithms for GAN training and evaluation.\n* **Software Engineer Intern, Amazon** (Summer 2018)\n    * Developed and maintained software components for Amazon\u2019s fulfillment center automation systems.\n* **Education:**\n    * **M.S., Computer Science, Massachusetts Institute of Technology (MIT)** (2018 \u2013 2020)\n    * **B.S., Computer Engineering, Carnegie Mellon University** (2014 \u2013 2018)\n* **Skills:** Python, TensorFlow, PyTorch, Scikit-learn, SQL, AWS, Cloud Computing, Data Mining, Machine Learning, Deep Learning, Generative Adversarial Networks (GANs), Statistical Modeling, Agile Development.",
+    "lookingFor": "I'm actively seeking connections with individuals who can help Aether Insights accelerate its growth. Specifically, I'm looking for:\n\n* **Seed-stage investors** with a focus on AI and e-commerce \u2013 ideally, firms with a portfolio of similar companies.\n* **Strategic partners** with established e-commerce platforms or access to large datasets.\n* **Founders** of successful SaaS companies who can provide mentorship and guidance.\n* **Potential advisors** with expertise in market intelligence and predictive analytics.\n\nI'm particularly interested in introductions to investors based in the Boston/Cambridge area, but am open to conversations with individuals nationwide. I\u2019m also keen to connect with data scientists experienced in time-series forecasting and anomaly detection.",
+    "notes": "Jamal is exceptionally bright and technically proficient. He\u2019s very focused on demonstrating the technical superiority of his platform, sometimes to the detriment of focusing on broader market messaging. He recently completed a demo for a potential investor who expressed concern about the complexity of the underlying technology and the need for a more user-friendly interface. He\u2019s receptive to feedback but can be defensive when challenged on the technical details. He mentioned a potential partnership with a smaller e-commerce aggregator, but the details are still preliminary. He\u2019s very responsive and eager to learn.",
+    "locationAvailability": "I am currently based in Boston, Massachusetts, and am open to travel for strategic meetings and investment opportunities.",
+    "introPreferences": "* **Hard Requirements:** Introductions should be to individuals with direct investment authority or decision-making power within relevant companies.\n* **Soft Preferences:** Introductions to individuals with a demonstrated track record of success in the AI or e-commerce space are highly valued.\n* **Intro Style:** Please highlight my technical expertise and the unique value proposition of Aether Insights \u2013 our focus on *predictive* intelligence, not just reactive analytics. A concise summary of my background and the problem we\u2019re solving is appreciated. Avoid overly promotional language; I prefer a direct and factual approach.\n* **Avoid:** Introductions to general networking events or individuals without a clear connection to my stated goals.",
+    "personalPreferences": "I prefer initial contact via LinkedIn or email. I\u2019m most responsive to concise and well-structured communications.",
+    "meetingAndSchedulingPreferences": "I generally prefer short, focused meetings (30-45 minutes) with a clear agenda. I\u2019m comfortable with video conferencing (Zoom, Google Meet) and am available during standard business hours. Please send a brief overview of the proposed discussion points in advance."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 18.09437894821167,
+      "input_tokens": 789,
+      "output_tokens": 1324,
+      "problems": []
+    }
+  ],
+  "success": true
+}

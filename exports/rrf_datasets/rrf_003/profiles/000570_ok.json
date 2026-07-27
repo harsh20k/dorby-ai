@@ -1,0 +1,54 @@
+{
+  "id": 570,
+  "archetype": "Experienced Enterprise Sales Leader",
+  "given_name": "Olivia Lindqvist",
+  "style_version": 35,
+  "archetypes_version": 95,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Olivia Lindqvist is a seasoned Enterprise Sales Leader currently focused on expanding market share for a cloud-based cybersecurity platform. Her distinctive career detail is a five-year stint at McKinsey & Company *after* completing her MBA, which gave her a deep understanding of organizational strategy and C-suite decision-making \u2013 a significant advantage in complex enterprise sales. She's now aiming to leverage that strategic insight to move into a VP of Sales role, ideally at a high-growth SaaS company targeting the financial services or healthcare sectors. She's very deliberate about her network, seeking connections that can provide mentorship on scaling sales organizations and access to key decision-makers in her target industries. She values authenticity and is wary of 'spray and pray' networking approaches. She wants to be seen as a strategic thought leader, not just a deal closer.",
+    "positioning": "A results-oriented and strategically-minded Enterprise Sales Leader with a proven track record of exceeding revenue targets and building high-performing teams. My unique background, combining management consulting experience from McKinsey & Company with deep expertise in cloud-based cybersecurity solutions, allows me to effectively navigate complex enterprise sales cycles and articulate value propositions to C-suite executives. I excel at understanding a client\u2019s overarching business challenges and tailoring solutions that drive tangible ROI. Currently, I am focused on expanding market penetration for [Fictional Company: Aegis Cybernetics]\u2019s flagship platform, leveraging a consultative sales approach and fostering long-term client relationships. \n\nI am actively seeking opportunities to leverage my experience in scaling sales organizations and driving revenue growth. I am particularly interested in connecting with leaders in the financial services and healthcare industries to explore potential synergies and collaborative opportunities. I aim to be positioned as a trusted advisor and thought leader in the cybersecurity space, known for my strategic insight and ability to deliver impactful results. I welcome connections from VPs of Sales, Heads of Revenue Operations, and strategic advisors focused on high-growth SaaS companies.  I am a firm believer in building authentic relationships based on mutual value and long-term collaboration.  My goal is not simply to close deals, but to become a trusted partner in my clients\u2019 success.",
+    "background": "- **Aegis Cybernetics, Senior Director of Enterprise Sales** (2020 \u2013 Present)\n    * Consistently exceeded annual revenue targets by an average of 25%, driving significant growth in key strategic accounts.\n    * Led and mentored a team of 12 Account Executives, fostering a culture of collaboration, accountability, and continuous improvement.\n    * Developed and implemented a new sales methodology focused on value-based selling and consultative engagement, resulting in a 15% increase in average deal size.\n    * Spearheaded the successful launch of a new product offering, securing key pilot programs with Fortune 500 clients.\n    * Collaborated with marketing and product teams to refine messaging and positioning, aligning sales efforts with overall business objectives.\n    * Implemented Salesforce automation to improve sales efficiency and forecasting accuracy.\n\n- **McKinsey & Company, Consultant** (2015 \u2013 2020)\n    * Advised C-suite executives at leading financial services and healthcare organizations on strategic initiatives related to digital transformation, operational efficiency, and organizational restructuring.\n    * Led cross-functional teams to conduct in-depth analyses, develop data-driven recommendations, and implement impactful solutions.\n    * Developed expertise in financial modeling, market analysis, and change management.\n    * Successfully delivered projects with a combined economic impact of over $50 million for clients.\n    * Gained extensive experience presenting to boards of directors and executive committees.\n\n- **Oracle, Sales Representative** (2013 \u2013 2015)\n    * Exceeded quota consistently, achieving President\u2019s Club recognition in both years.\n    * Managed a territory of mid-market accounts, focusing on selling Oracle\u2019s database and cloud solutions.\n    * Developed strong relationships with key decision-makers and influencers within target organizations.\n    * Demonstrated proficiency in the sales process, from lead generation to deal closure.\n\n- **Education: Harvard Business School, MBA** (2011 \u2013 2013)\n    * Concentration in Strategy and Finance.\n    * Dean\u2019s List.\n\n- **Education: Stanford University, BS in Economics** (2007 \u2013 2011)\n    * Graduated *Summa Cum Laude*.",
+    "lookingFor": "I am actively seeking to expand my network with individuals who can contribute to my professional growth and help me achieve my career aspirations. Specifically, I am looking for:\n\n* **Mentorship:** Connections with experienced VPs of Sales or CROs at high-growth SaaS companies, particularly those with a background in cybersecurity, who are willing to share insights on scaling sales organizations and navigating the challenges of hyper-growth.\n* **Industry Insights:** Introductions to key decision-makers (CIOs, CISOs, CFOs) in the financial services and healthcare sectors.\n* **Strategic Partnerships:** Opportunities to explore potential synergies and collaborations with companies offering complementary solutions to Aegis Cybernetics.\n* **Thought Leadership:** Engagement with individuals who are actively shaping the future of cybersecurity and are passionate about sharing their expertise.\n\nI am particularly interested in connecting with individuals at companies with 500+ employees and annual revenues exceeding $100 million. I am open to both formal mentorship relationships and informal networking conversations.  I\u2019m not interested in unsolicited product pitches or recruitment offers that don\u2019t align with my stated career goals. I am prioritizing quality over quantity in my networking efforts.",
+    "notes": "* Olivia mentioned during a recent call that she's currently reading 'The Sales Acceleration Formula' and is keen to discuss its principles. \n* She expressed frustration with the lack of strategic alignment between sales and marketing at her current company. \n* She is actively researching companies like CrowdStrike and Palo Alto Networks. \n* She is attending the RSA Conference in San Francisco next month and is looking for introductions to relevant contacts there. \n* Follow up: Send her the article on 'Building a Data-Driven Sales Culture' next week.",
+    "locationAvailability": "I am currently based in Boston, Massachusetts, but am open to remote connections and occasional travel. I am willing to travel to major tech hubs such as Silicon Valley, New York City, and Austin for strategic meetings.",
+    "introPreferences": "* When making an introduction, please provide context on how the connection aligns with my stated interests and career goals. A brief note highlighting shared experiences or mutual connections is highly appreciated.\n* I prefer introductions to be made via LinkedIn messaging, rather than email, unless otherwise requested.\n* Please avoid overly promotional or sales-focused introductions. I am seeking genuine connections based on mutual value.\n* Please ensure the individual you are introducing me to is aware of my background and is open to a conversation. A pre-brief would be ideal.\n* I appreciate concise and well-written introduction messages that clearly articulate the value proposition of the connection.\n* Do *not* include my contact information in the introduction message without my prior consent.",
+    "personalPreferences": "I prefer to connect on LinkedIn and respond to messages within 24-48 hours. I'm a morning person and generally more responsive to communication before noon EST. I appreciate thoughtful and personalized messages.",
+    "meetingAndSchedulingPreferences": "Please send a calendar invite with a brief agenda prior to our meeting. I prefer meetings to be 30-60 minutes in length.  I always appreciate a quick recap of key takeaways after our conversation."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 25.5819251537323,
+      "input_tokens": 857,
+      "output_tokens": 1602,
+      "problems": []
+    }
+  ],
+  "success": true
+}

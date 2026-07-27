@@ -1,0 +1,78 @@
+{
+  "id": 622,
+  "archetype": "Toronto Tech Leader, Diverse Background",
+  "given_name": "Yara Reyes",
+  "style_version": 38,
+  "archetypes_version": 105,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Yara Reyes is a product leader currently heading up growth at a seed-stage AI-powered marketing analytics platform called 'InsightfulFlow'. She has an unusual background for a tech leader \u2013 she started in brand strategy at a large CPG firm (Procter & Gamble) before pivoting to a data science bootcamp and then moving into product management. This gives her a unique blend of analytical rigor and customer empathy. She's actively fundraising for InsightfulFlow's Series A and building out her network of potential advisors and strategic partners, particularly those with experience scaling SaaS businesses. She's particularly interested in connecting with investors who understand the nuances of B2B marketing tech and are committed to supporting diverse founding teams. She's a pragmatic leader who values direct communication and avoids overly formal introductions.",
+    "positioning": "Yara Reyes is a growth-focused product leader driving innovation at InsightfulFlow, an AI-powered marketing analytics platform. With a background spanning both brand strategy and data science, Yara brings a unique perspective to product development and go-to-market strategy. She's passionate about leveraging data to empower marketers and build solutions that deliver measurable ROI. Currently, Yara is leading InsightfulFlow\u2019s Series A fundraising efforts and expanding the company\u2019s strategic partnerships to accelerate growth. She is dedicated to fostering a data-driven culture and building high-performing teams.",
+    "background": "<ul>\n  <li><b>InsightfulFlow</b> (Toronto, ON) \u2013 <i>VP, Growth</i> (2022 - Present)</li>\n    <ul>\n      <li>Led the product strategy and execution for InsightfulFlow's growth initiatives, resulting in a 3x increase in monthly recurring revenue in the last 18 months.</li>\n      <li>Spearheaded the development and launch of a new AI-powered feature that improved customer retention by 15%.</li>\n      <li>Built and mentored a high-performing growth team consisting of product managers, data scientists, and marketing specialists.</li>\n      <li>Currently leading the Series A fundraising process, engaging with venture capital firms and angel investors.</li>\n    </ul>\n  <li><b>Procter & Gamble</b> (Cincinnati, OH) \u2013 <i>Associate Brand Manager</i> (2018 - 2020)</li>\n    <ul>\n      <li>Managed a $20M+ marketing budget for a leading consumer packaged goods brand.</li>\n      <li>Developed and executed integrated marketing campaigns across various channels, including digital, social, and traditional media.</li>\n      <li>Conducted market research and analyzed consumer data to identify growth opportunities.</li>\n    </ul>\n  <li><b>General Assembly</b> (Toronto, ON) \u2013 <i>Data Science Immersive</i> (2020)</li>\n    <ul>\n      <li>Completed a 12-week intensive data science program, gaining proficiency in Python, SQL, machine learning, and data visualization.</li>\n      <li>Developed several data science projects, including a customer churn prediction model.</li>\n    </ul>\n  <li><b>University of Western Ontario</b> (London, ON) \u2013 <i>BA, Honours Business Administration</i> (2014 - 2018)</li>\n    <ul>\n      <li>Graduated with Honours, specializing in Marketing and Finance.</li>\n      <li>Active member of the Ivey Business Club.</li>\n    </ul>\n  <li><b>Skills:</b> Product Management, Growth Marketing, Data Analytics, Machine Learning, SQL, Python, A/B Testing, Customer Acquisition, SaaS, Brand Strategy, Leadership, Fundraising</li>\n</ul>",
+    "lookingFor": "<ul>\n  <li><b>Series A Investors:</b> Seeking investors with a proven track record of supporting B2B SaaS companies, particularly in the marketing technology space.  Investment size: $5M - $10M.</li>\n  <li><b>Strategic Advisors:</b> Looking for experienced operators who have successfully scaled similar businesses and can provide guidance on growth strategy, sales, and marketing.</li>\n  <li><b>Potential Partners:</b>  Exploring integrations with complementary marketing platforms (CRM, marketing automation, etc.).</li>\n  <li><b>Connections to CMOs/VPs of Marketing:</b>  Seeking introductions to marketing leaders at mid-to-large sized companies for potential customer interviews and beta testing.</li>\n  <li><b>Do not</b> connect me with recruiters at this time.</li>\n  <li><b>Do not</b> send unsolicited pitches for services - I\u2019m only interested in introductions.</li>\n</ul>",
+    "notes": "Yara is highly responsive and appreciates direct communication. She is currently prioritizing investor meetings and strategic partnership discussions. Her background is somewhat unique for a VP of Growth, and she actively highlights her dual expertise in marketing and data science. Recent conversations indicate a strong interest in building a diverse and inclusive team at InsightfulFlow. Data quality is high, consistently updating her profile with fundraising progress.",
+    "locationAvailability": "Toronto, Canada",
+    "introPreferences": "<ul>\n  <li><b>Ideal Introductions:</b> Warm introductions are *strongly* preferred. A brief context explaining the connection\u2019s relevance to InsightfulFlow is essential.</li>\n  <li><b>Investor Profile:</b>  Focus on investors who have experience in B2B SaaS, specifically marketing tech.  Stage preference: Series A.</li>\n  <li><b>Advisor Profile:</b>  Looking for operators with 10+ years of experience scaling SaaS businesses, ideally with a background in growth or marketing.</li>\n  <li><b>Keep it concise:</b>  Avoid lengthy introductions or unnecessary background information.</li>\n  <li><b>Hard Requirement:</b>  Any potential investor must demonstrate a commitment to diversity and inclusion.</li>\n  <li><b>Do not</b> introduce me to anyone who is solely focused on early-stage (pre-seed) investments.</li>\n</ul>",
+    "personalPreferences": "I prefer asynchronous communication (email or LinkedIn messaging) to start. I'm generally available for quick calls, but appreciate a brief agenda beforehand.",
+    "meetingAndSchedulingPreferences": "I\u2019m happy to schedule 30-minute introductory calls. Please propose a few specific times that work for you, and I'll confirm. I generally prefer to handle scheduling directly."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 21.733181953430176,
+      "input_tokens": 823,
+      "output_tokens": 1230,
+      "problems": [
+        "background: possible truncation (ends with '...a, Confluence.</li>\n</ul>')",
+        "lookingFor: possible truncation (ends with '...ob postings.**</li>\n</ul>')",
+        "introPreferences: possible truncation (ends with '...ional history.</li>\n</ul>')"
+      ]
+    },
+    {
+      "attempt": 2,
+      "elapsed_s": 17.92971420288086,
+      "input_tokens": 823,
+      "output_tokens": 1121,
+      "problems": [
+        "background: possible truncation (ends with '...eadership & Team Building')"
+      ]
+    },
+    {
+      "attempt": 3,
+      "elapsed_s": 22.0723819732666,
+      "input_tokens": 823,
+      "output_tokens": 1321,
+      "problems": [
+        "background: possible truncation (ends with '...p, Fundraising</li>\n</ul>')",
+        "lookingFor: possible truncation (ends with '...introductions.</li>\n</ul>')",
+        "introPreferences: possible truncation (ends with '...) investments.</li>\n</ul>')"
+      ]
+    }
+  ],
+  "success": false
+}

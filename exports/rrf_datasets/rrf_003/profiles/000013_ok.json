@@ -1,0 +1,63 @@
+{
+  "id": 13,
+  "archetype": "Product Leader, AI & Engagement",
+  "given_name": "Marcus Haddad",
+  "style_version": 1,
+  "archetypes_version": 3,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Marcus Haddad is a seasoned Product Leader with a strong background in growth and engagement, specifically within consumer-facing mobile applications. He\u2019s spent the last 8 years at a mid-sized social media company, culminating in leading the growth product team. His distinctive detail is a successful pivot to AI-powered personalization within that team, significantly improving user retention. He's now actively seeking a role at an early-stage AI startup where he can leverage this experience to build and scale innovative products. He\u2019s very focused on companies building *generative* AI features, believing that's where the biggest growth opportunities lie. He's a data-driven leader, a strong communicator, and comfortable navigating ambiguity \u2013 core traits honed by working in a fast-paced social media environment. He's not necessarily looking for a 'head of product' role immediately, but is open to a senior individual contributor position where he can directly impact product strategy and execution. He's also a bit of a 'hands-on' PM, still enjoying diving into analytics and user research.",
+    "positioning": "A results-oriented Product Leader with a proven track record of driving significant growth and engagement in consumer-facing mobile applications. My expertise lies in leveraging data, experimentation, and \u2013 increasingly \u2013 artificial intelligence to create impactful product experiences. I recently led the successful integration of AI-powered personalization features within a major social media platform, resulting in a 15% increase in daily active users and a 10% improvement in long-term retention. I\u2019m currently focused on identifying opportunities to apply my skills and experience to a high-growth, early-stage AI startup. I believe my ability to quickly translate complex technologies into user-friendly features, combined with a strong understanding of growth metrics, makes me a valuable asset to any team building the next generation of AI-powered products. I'm actively exploring roles where I can contribute to a company poised to disrupt its market through innovative AI applications.",
+    "background": "- **Principal Product Manager, SocialSpark (2016 \u2013 Present)**\n  - Led a team of 5 Product Managers focused on growth, engagement, and retention for a 50M+ monthly active user mobile application.\n  - Spearheaded the development and launch of AI-powered personalization features (recommendation engine, content curation) resulting in a 15% increase in DAU and 10% improvement in 60-day retention.\n  - Managed the product roadmap, prioritized features based on data analysis and user research, and oversaw the entire product development lifecycle.\n  - Increased conversion rates by 8% through A/B testing and optimization of key user flows.\n  - Collaborated closely with engineering, design, and marketing teams to ensure successful product launches.\n- **Product Manager, SocialSpark (2014 \u2013 2016)**\n  - Managed the development of new features for the SocialSpark mobile app, focusing on user onboarding and community building.\n  - Conducted user research, analyzed market trends, and identified opportunities for product improvement.\n  - Launched a new in-app messaging feature, resulting in a 20% increase in user-to-user communication.\n- **Associate Product Manager, InnovateTech (2013 \u2013 2014)**\n  - Assisted in the development of a new cloud-based platform for small businesses.\n  - Conducted competitive analysis and market research.\n- **Education:**\n  - **MBA, Stanford Graduate School of Business (2011 \u2013 2013)**\n  - **BS, Computer Science, Massachusetts Institute of Technology (2007 \u2013 2011)**\n- **Skills:** Product Management, Growth Hacking, A/B Testing, Data Analysis (SQL, Python), User Research, Agile Methodologies, AI/ML (basic understanding), Mobile Product Development, User Experience (UX), Product Strategy, Leadership.",
+    "lookingFor": "### Opportunities\n\n*   **AI Startup Roles:** Seeking a Product Leadership role (Senior PM or above) at an early-stage (Seed - Series A) AI startup, particularly those focused on generative AI applications.\n*   **Mentorship/Advisory:** Open to informal mentorship or advisory roles with promising AI founders.\n*   **Introductions:**  Specifically seeking introductions to founders and hiring managers at AI startups building consumer-facing products.\n\n### Ideal Company Profile\n\n*   **Stage:** Seed to Series A\n*   **Focus:** Generative AI, personalization, or innovative applications of AI in consumer products.\n*   **Team:** Strong technical team with a clear vision and a passion for building impactful products.\n*   **Culture:** Collaborative, data-driven, and fast-paced.",
+    "notes": "Marcus is *very* focused on generative AI right now. He's been reading a lot about the space and is actively experimenting with tools like ChatGPT and Midjourney. He's had a couple of initial conversations with companies in the conversational AI space but hasn't found the right fit yet. He mentioned he's slightly skeptical of the hype around 'AI everything' and is looking for a company with a genuinely innovative application. He's a bit of a perfectionist and can get deeply involved in the details of product development. He\u2019s also a bit hesitant to move *immediately* \u2013 he\u2019s enjoying the relative stability of his current role but wants to be strategic about his next move. Don't push 'Head of Product' roles too hard initially; he's open to a strong IC role. We discussed his LinkedIn profile being slightly outdated \u2013 he plans to update it next week.",
+    "locationAvailability": "Based in San Francisco, CA, but open to remote opportunities or relocation for the right role.",
+    "introPreferences": "* **Hard Requirement:**  Must be a connection at an AI startup (Seed - Series A) focused on consumer applications.\n* **Strong Preference:**  Founder or hiring manager (VP Engineering/Product acceptable).\n* **Soft Preference:**  Experience in personalization, recommendation systems, or generative AI.\n* **Avoid:**  Introductions to recruiters unless specifically requested.\n* **Introduction Note:** Please highlight my experience with AI-powered personalization at SocialSpark when making the introduction.",
+    "personalPreferences": "I prefer initial communication via LinkedIn messaging or email. I'm generally responsive but can be slow to reply if deeply focused on a project. I enjoy a direct and concise communication style. I\u2019m happy to jump on a quick call to discuss opportunities, but I prefer to receive a brief overview of the company and role beforehand. I'm not a big fan of overly formal networking events.",
+    "meetingAndSchedulingPreferences": "Generally available for 30-60 minute video calls after 2 PM PST. I prefer meetings with a clear agenda."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 19.148478984832764,
+      "input_tokens": 769,
+      "output_tokens": 1304,
+      "problems": [
+        "background: possible truncation (ends with '...gy, Go-to-Market Strategy')"
+      ]
+    },
+    {
+      "attempt": 2,
+      "elapsed_s": 25.230175018310547,
+      "input_tokens": 769,
+      "output_tokens": 1448,
+      "problems": []
+    }
+  ],
+  "success": true
+}

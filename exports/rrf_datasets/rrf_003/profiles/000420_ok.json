@@ -1,0 +1,54 @@
+{
+  "id": 420,
+  "archetype": "Deep Tech/Robotics Investor & Advisor",
+  "given_name": "Fatima Nkosi",
+  "style_version": 26,
+  "archetypes_version": 70,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Fatima Nkosi is a seasoned deep tech investor with a background in robotics engineering. She transitioned from a highly technical role *building* robots to *funding* the next generation of roboticists and AI developers. A key detail is her early career spent at a small, now-acquired robotics firm specializing in agricultural automation \u2013 this gives her a very practical understanding of the challenges and opportunities in hardware-focused startups. Currently, she's an independent advisor and angel investor, actively seeking pre-seed and seed stage companies focused on robotics, computer vision, and AI applied to industrial automation, logistics, and sustainable agriculture. She\u2019s particularly interested in companies with strong IP and a clear path to commercialization, and is known for her rigorous technical due diligence. She\u2019s actively expanding her network to include more founders from underrepresented backgrounds and is looking for co-investment opportunities. She's pragmatic, direct, and values efficiency in communication.",
+    "positioning": "I am an independent advisor and angel investor focused on the future of robotics and intelligent automation. My passion lies in identifying and supporting early-stage companies building innovative solutions in areas like industrial robotics, computer vision, agricultural technology, and advanced logistics. I bring a unique perspective to investment decisions, combining a deep technical understanding of robotics engineering with a keen business acumen. \n\nPrior to transitioning to the investment side, I spent several years as a robotics engineer, leading the development of autonomous systems for agricultural applications. This hands-on experience instilled in me a strong appreciation for the complexities of bringing hardware-based solutions to market. I understand the challenges founders face \u2013 not just in developing cutting-edge technology, but also in navigating the intricacies of manufacturing, supply chain management, and regulatory compliance.\n\nCurrently, I\u2019m actively seeking companies demonstrating strong intellectual property, a defensible market position, and a clear path to revenue generation. I\u2019m particularly interested in teams tackling real-world problems with innovative, scalable solutions. I'm also a strong advocate for diversity and inclusion within the tech industry and actively seek opportunities to invest in and mentor founders from underrepresented backgrounds. Recent focus has been on companies leveraging AI to optimize robotic performance and reduce operational costs. I'm currently advising three portfolio companies on their Series A fundraising rounds and exploring potential co-investment opportunities in the agtech space.",
+    "background": "- **Independent Advisor & Angel Investor** (2020 \u2013 Present)\n  * Providing strategic guidance and seed funding to early-stage deep tech startups, primarily in robotics and AI.\n  * Conducting technical due diligence, market analysis, and financial modeling for investment opportunities.\n  * Mentoring founders on product development, fundraising, and team building.\n\n- **Lead Robotics Engineer, Agritech Robotics Inc.** (2016 \u2013 2020)\n  * Led the design, development, and testing of autonomous agricultural robots for harvesting and crop monitoring.\n  * Managed a team of engineers and technicians, overseeing all aspects of the robotics development lifecycle.\n  * Secured key patents for novel robotic systems and algorithms.\n  * Successfully deployed pilot programs with major agricultural clients.\n\n- **Robotics Research Intern, Carnegie Mellon Robotics Institute** (Summer 2015)\n  * Conducted research on advanced robotics algorithms for navigation and manipulation.\n  * Published research findings in a peer-reviewed conference proceeding.\n\n- **Education:**\n  * **PhD, Robotics Engineering**, Massachusetts Institute of Technology (MIT), Cambridge, MA (2016)\n  * **MS, Electrical Engineering**, Stanford University, Stanford, CA (2012)\n  * **BS, Computer Science**, University of California, Berkeley, CA (2010)\n\n- **Skills:** Robotics, Computer Vision, Machine Learning, AI, Python, C++, ROS, SLAM, Autonomous Navigation, Hardware Design, Technical Due Diligence, Financial Modeling, Venture Capital, Seed Investing, Agricultural Technology, Industrial Automation, Strategic Advisory.",
+    "lookingFor": "I am actively seeking connections with:\n\n* **Early-Stage Founders:** Specifically, pre-seed and seed-stage companies developing innovative robotics and AI solutions for industrial automation, logistics, and sustainable agriculture. I'm particularly interested in companies with a strong technical foundation and a clear path to commercialization.\n* **Co-Investors:** Angel investors and venture capitalists who share my investment philosophy and are interested in collaborating on deals. I'm looking for partners who can provide value beyond capital, such as industry expertise and network connections.\n* **Industry Experts:** Individuals with deep knowledge of robotics, AI, and related fields who can provide insights and guidance on potential investment opportunities. I value perspectives from both academia and industry.\n\nI am *not* currently interested in:\n\n* Companies focused solely on software without a clear hardware component.\n* Companies in the consumer robotics space.\n* Opportunities requiring significant capital outlay beyond my typical investment range ($50k - $250k).\n\nI'm hoping to expand my network within the agtech and logistics sectors. I'm also keen to connect with founders from diverse backgrounds who are building the future of robotics. I am open to discussing potential investment opportunities and providing mentorship to promising startups. My goal is to identify and support the next generation of roboticists and AI developers who are solving real-world problems.",
+    "notes": "* Fatima is very direct and appreciates concise communication. She dislikes lengthy pitches and prefers to get straight to the technical details.\n* She\u2019s a strong advocate for diversity in tech and is actively looking to invest in underrepresented founders. Highlighting diversity initiatives is a plus.\n* She was particularly impressed with a recent demo of a computer vision system for quality control in manufacturing, and is currently exploring similar opportunities.\n* She\u2019s a regular attendee at the Robotics Summit and the AI in Business conference. \n* Avoid pitching her opportunities that lack a clear technical differentiator. She\u2019s a technical investor and prioritizes innovation.\n* Previous introduction from [Name] went well \u2013 she appreciated the clear, concise overview of the company's technology.",
+    "locationAvailability": "Based in Boston, MA. Open to remote meetings and limited travel to conferences and site visits, primarily within the US. Willing to consider opportunities in Europe with sufficient notice.",
+    "introPreferences": "* **Ideal Introductions:** Founders leading pre-seed or seed-stage robotics/AI companies with a compelling technical advantage.\n* **Information to Include:**\n    * A brief (1-2 sentence) summary of the company's core technology.\n    * A link to a demo or technical documentation.\n    * The founder's background and relevant experience.\n    * The amount of funding they are seeking.\n* **Information to Avoid:**\n    * Overly hyped or marketing-focused language.\n    * Detailed financial projections without supporting data.\n    * Long email chains \u2013 please keep introductions concise.\n* **Introduction Style:** Warm, but professional and direct. A brief personal connection (e.g., a shared interest or experience) is appreciated, but not essential. \n* **Follow-up:** Please don't follow up unless specifically requested. I will reach out if I am interested in learning more.",
+    "personalPreferences": "Prefers to connect via email initially. LinkedIn messages are acceptable for quick follow-ups.",
+    "meetingAndSchedulingPreferences": "* Generally available for 30-minute introductory calls.\n* Prefers video calls over phone calls.\n* Eastern Time Zone (ET) is preferred.\n* Please provide several time options when requesting a meeting."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 26.510996103286743,
+      "input_tokens": 767,
+      "output_tokens": 1598,
+      "problems": []
+    }
+  ],
+  "success": true
+}

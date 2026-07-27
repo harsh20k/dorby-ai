@@ -1,0 +1,54 @@
+{
+  "id": 893,
+  "archetype": "AI/Tech Sales & Scouting Leader",
+  "given_name": "Nadia Castillo",
+  "style_version": 55,
+  "archetypes_version": 150,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Nadia Castillo is a seasoned AI/Tech Sales & Scouting Leader currently focused on identifying and partnering with early-stage companies developing generative AI applications for the financial services sector. Her distinctive career detail is a prior 7-year stint as a quantitative analyst at a major hedge fund, giving her a strong technical foundation and understanding of the pain points in that industry. She's currently building out a strategic partnership program at 'Innovate Finance,' a fintech venture studio, and is actively looking for promising startups to bring into their portfolio. She's pragmatic and data-driven, valuing clear communication and demonstrable ROI. She's not interested in 'hype' and is laser-focused on real-world applications.",
+    "positioning": "Nadia Castillo leads strategic partnerships and new venture scouting at Innovate Finance, a leading fintech venture studio. Leveraging a unique background blending quantitative finance and technology sales, she identifies and cultivates relationships with high-potential, early-stage companies focused on generative AI solutions for financial services. She recently spearheaded a successful pilot program integrating an AI-powered fraud detection platform, resulting in a 15% reduction in false positives for a key portfolio company. Nadia is passionate about bridging the gap between cutting-edge AI development and practical financial applications, and is actively seeking innovative founders and investors to collaborate with. Now is an ideal time to connect \u2013 Innovate Finance is actively deploying capital and building the next generation of fintech leaders.",
+    "background": "- **Innovate Finance**, *Director of Strategic Partnerships & Venture Scouting* (2021 \u2013 Present)\n  - Developed and executed a partnership strategy focused on generative AI startups, resulting in three portfolio investments within the last 18 months.\n  - Managed a pipeline of over 100 potential investment opportunities, conducting due diligence and leading negotiations.\n  - Led a pilot program integrating an AI-powered fraud detection platform, achieving a 15% reduction in false positives.\n- **Quantify Capital**, *Quantitative Analyst* (2014 \u2013 2021)\n  - Developed and maintained complex financial models for algorithmic trading strategies.\n  - Conducted research on market microstructure and statistical arbitrage opportunities.\n  - Collaborated with software engineers to implement and optimize trading algorithms.\n- **Massachusetts Institute of Technology (MIT)**, *Master of Science, Financial Engineering* (2012 \u2013 2014)\n- **University of California, Berkeley**, *Bachelor of Science, Mathematics* (2008 \u2013 2012)\n- **Skills:** Python, R, SQL, Machine Learning (Regression, Classification, Clustering), Deep Learning (TensorFlow, PyTorch), Financial Modeling, Data Analysis, Business Development, Venture Capital, Due Diligence.\n- **Certifications:** CFA Level 1 (Completed)",
+    "lookingFor": "## Investors\n- Angel investors and VCs specializing in early-stage AI and fintech.\n- Individuals with a proven track record of supporting successful AI startups.\n\n## Founders\n- Early-stage founders building generative AI solutions for financial services (fraud detection, risk management, algorithmic trading, customer service).\n- Teams with a strong technical foundation and a clear understanding of the financial industry.\n\n## Potential Partners\n- Established financial institutions seeking to integrate AI solutions.\n- Data providers with unique datasets relevant to financial modeling and AI development.",
+    "notes": "- Nadia is highly analytical and prioritizes data-driven decision-making.\n- Responds best to concise and well-structured communication.\n- Prefers to focus on quantifiable results and demonstrable ROI.\n- Has expressed frustration with overly hyped AI solutions lacking real-world applications.\n- Previously mentioned a strong network within the quantitative finance community.\n- Is particularly interested in companies addressing regulatory compliance challenges with AI.",
+    "locationAvailability": "Based in New York City, but open to remote connections and travel as needed.",
+    "introPreferences": "## Hard Requirements\n- Introductions should be to founders *actively* seeking funding or strategic partnerships.\n- Contacts must have a demonstrable AI/ML component to their offering.\n- Introductions to investors with a specific focus on fintech and/or AI are preferred.\n\n## Soft Preferences\n- Warm introductions are highly valued; cold outreach is less effective.\n- Introductions should include a brief summary of the company\u2019s technology and traction.\n- Avoid introductions to consultants or service providers.",
+    "personalPreferences": "Nadia is direct and efficient in her communication style. She appreciates brevity and clarity. LinkedIn messaging is her preferred initial point of contact.",
+    "meetingAndSchedulingPreferences": "Prefers 30-minute introductory calls to assess potential synergies. Generally available during East Coast business hours."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 17.29405903816223,
+      "input_tokens": 767,
+      "output_tokens": 993,
+      "problems": []
+    }
+  ],
+  "success": true
+}

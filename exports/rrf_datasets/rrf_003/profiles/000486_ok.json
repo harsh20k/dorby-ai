@@ -1,0 +1,54 @@
+{
+  "id": 486,
+  "archetype": "European Founder, US Expansion",
+  "given_name": "Ravi Bianchi",
+  "style_version": 30,
+  "archetypes_version": 82,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Ravi Bianchi is a 38-year-old Italian-American founder who built a successful, bootstrapped SaaS company in the European B2B marketing tech space. He\u2019s now aggressively pursuing expansion into the US market, focusing on the West Coast (specifically, the Bay Area and LA). He\u2019s looking for seed funding to accelerate growth and establish a US presence, but is *very* focused on finding investors who understand the nuances of the European market and aren\u2019t simply looking for a \u2018copy-paste\u2019 strategy. He\u2019s technically strong, a bit of a perfectionist, and can come across as reserved initially but is passionate about his product and a strong leader once he trusts you. A distinctive career detail is that he initially trained as a classical pianist before pivoting to computer science \u2013 this informs his design sensibility and attention to detail. He's currently prioritizing networking with VCs specializing in B2B SaaS and potential strategic partners in the US marketing technology ecosystem.",
+    "positioning": "I\u2019m Ravi Bianchi, founder and CEO of OptiFlow, a B2B marketing analytics platform revolutionizing campaign performance for mid-sized companies across Europe. After years of witnessing firsthand the inefficiencies in marketing attribution, I built OptiFlow to provide a truly holistic and actionable view of marketing ROI. We\u2019ve achieved significant traction in the DACH region and Benelux countries, consistently delivering 30%+ improvements in campaign performance for our clients. \n\nCurrently, I\u2019m laser-focused on expanding OptiFlow\u2019s reach into the US market. I believe the US represents a massive opportunity, but I\u2019m committed to a thoughtful, strategic entry \u2013 one that leverages our European success while adapting to the unique dynamics of the American landscape. I'm particularly interested in connecting with individuals who understand the challenges and opportunities of scaling a European tech company in the US. \n\nMy background blends technical expertise with a deep understanding of marketing principles. I\u2019m a firm believer in data-driven decision-making and building products that are both powerful and intuitive. I\u2019m excited to explore potential partnerships, secure seed funding, and build a world-class team to drive OptiFlow's growth in the US.",
+    "background": "* **OptiFlow (Founder & CEO)** \u2013 2018 \u2013 Present\n    * Led all aspects of company strategy, product development, sales, and marketing.\n    * Successfully bootstrapped the company to profitability within 18 months.\n    * Grew the customer base to 75+ paying clients across Europe, generating $1.5M ARR.\n    * Developed and launched OptiFlow\u2019s core analytics platform, utilizing Python, Django, and PostgreSQL.\n    * Oversaw a remote team of 10 engineers and marketing professionals.\n* **Data Insights GmbH (Senior Data Scientist)** \u2013 2016 \u2013 2018\n    * Developed predictive models for customer churn and lifetime value.\n    * Led the implementation of A/B testing frameworks to optimize marketing campaigns.\n    * Presented data-driven insights to senior management, influencing key business decisions.\n* **Freelance Software Developer** \u2013 2014 \u2013 2016\n    * Developed custom web applications for various clients using JavaScript, HTML, and CSS.\n    * Managed projects from inception to completion, ensuring client satisfaction.\n* **Education:**\n    * **Master of Science in Computer Science** \u2013 Technical University of Munich, Germany \u2013 2014\n    * **Bachelor of Arts in Music (Piano Performance)** \u2013 Conservatorio di Musica Benedetto Marcello, Venice, Italy \u2013 2012\n* **Skills:** Python, Django, PostgreSQL, JavaScript, HTML, CSS, Data Analysis, Machine Learning, A/B Testing, Marketing Analytics, SaaS, B2B Sales, Team Leadership, Strategic Planning, German (Fluent), Italian (Native), English (Fluent).",
+    "lookingFor": "I\u2019m actively seeking connections with individuals who can help OptiFlow successfully enter and scale within the US market. Specifically, I\u2019m looking for:\n\n* **Seed-stage VCs:** Firms with a proven track record of investing in B2B SaaS companies and a strong understanding of the European tech landscape. I'm *not* interested in firms that advocate for simply replicating our European strategy in the US.\n* **Strategic Partners:** Companies in the US marketing technology ecosystem that could benefit from integrating with OptiFlow or co-marketing opportunities.\n* **Experienced Mentors:** Individuals with experience scaling SaaS businesses in the US, particularly those with knowledge of the competitive landscape and go-to-market strategies.\n* **Marketing Leaders:** Professionals with expertise in US B2B marketing, specifically in the analytics and attribution space.\n\nIntroduce me to potential investors who prioritize long-term growth over hyper-growth. Connect me with marketing leaders at companies like HubSpot, Marketo, and Salesforce. I\u2019m also keen to speak with founders who have successfully navigated the US market expansion process.",
+    "notes": "Ravi is quite reserved initially, but incredibly passionate about his product once he warms up. He's a very analytical thinker and values data-driven insights. He\u2019s a bit of a perfectionist and can be slow to commit without thoroughly evaluating all options. He's recently been attending several US-based marketing tech conferences (Content Marketing World, MarTech) and is actively building his US network. \n\nHe's currently prioritizing conversations with investors who demonstrate a genuine interest in understanding OptiFlow\u2019s unique value proposition and the European market. He\u2019s *not* interested in pitches that focus solely on revenue growth without considering long-term sustainability. \n\nHe mentioned in a recent call that he's particularly wary of 'spray and pray' marketing approaches and is looking for partners who share his commitment to quality and customer success. Avoid emphasizing quick wins or unrealistic growth projections. He\u2019s very proud of the bootstrapped nature of OptiFlow and doesn't want to be perceived as solely focused on fundraising.",
+    "locationAvailability": "I\u2019m currently based in Munich, Germany, but I\u2019m frequently traveling to the US West Coast (San Francisco, Los Angeles) for meetings and networking. I\u2019m open to relocation to the US in the future, depending on funding and strategic opportunities.",
+    "introPreferences": "* **Hard Requirements:** Introductions should explicitly mention OptiFlow's European traction and the desire for a strategic US expansion, *not* a complete overhaul. The person being introduced to should have a decision-making role (either investment or partnership authority).\n* **Soft Preferences:** Please include a brief summary of my background, highlighting my technical expertise and the unique value proposition of OptiFlow. A personal connection or shared interest is always appreciated. \n* **Avoid:** Don\u2019t position OptiFlow as a \u2018me-too\u2019 product or suggest that we simply need to replicate existing US solutions. Do not introduce me to junior-level employees or individuals without decision-making authority. Do not overhype \u2013 I prefer a realistic and honest assessment of potential opportunities. Keep introductions concise and focused on the potential for mutual benefit.",
+    "personalPreferences": "I generally respond to messages on LinkedIn and email. I prefer direct and concise communication. I'm most responsive during European business hours (CET).",
+    "meetingAndSchedulingPreferences": "I'm available for video calls (Zoom or Google Meet) and am generally flexible with scheduling, but please be mindful of the time zone difference. I typically need at least 24 hours' notice for scheduling meetings."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 22.420682907104492,
+      "input_tokens": 814,
+      "output_tokens": 1614,
+      "problems": []
+    }
+  ],
+  "success": true
+}

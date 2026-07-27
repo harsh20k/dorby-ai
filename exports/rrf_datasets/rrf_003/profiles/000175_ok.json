@@ -1,0 +1,54 @@
+{
+  "id": 175,
+  "archetype": "Executive in Transition, Broad Expertise",
+  "given_name": "Maria Bianchi",
+  "style_version": 11,
+  "archetypes_version": 29,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Maria Bianchi is a recently ousted (but not disgraced) COO of a mid-sized logistics firm, 'SwiftRoute Solutions'. She was brought in to streamline operations and implement a new ERP system, which she successfully did, but clashed with the CEO over long-term strategic direction \u2013 specifically, a push into a highly speculative new market. She's now looking for another COO role, ideally in a more stable, established company, or potentially a consultancy position where she can leverage her operational expertise. She\u2019s pragmatic, data-driven, and a strong communicator, but can come across as blunt. Her distinctive career detail is a prior stint in the military logistics corps, which heavily influenced her approach to problem-solving and efficiency.",
+    "positioning": "A highly accomplished and results-oriented operations executive, Maria Bianchi brings over 20 years of experience driving efficiency, optimizing processes, and delivering substantial cost savings across diverse industries. Most recently, as COO of SwiftRoute Solutions, I led a successful enterprise-wide implementation of a new ERP system, resulting in a 15% reduction in operational expenses and improved supply chain visibility. Prior roles have included leadership positions in both private sector logistics and a distinguished tenure with the U.S. Army Logistics Corps, where I honed my skills in complex problem-solving and resource management. My expertise lies in identifying bottlenecks, implementing scalable solutions, and building high-performing teams. I am passionate about leveraging data-driven insights to transform operations and achieve sustainable growth. I excel at navigating complex organizational structures and delivering impactful results, even in challenging environments. Currently seeking a leadership opportunity where I can apply my operational expertise to drive significant value.",
+    "background": "- **SwiftRoute Solutions, COO** (2019 \u2013 2024)\n  -- Led all operational aspects of a $75M logistics company, including supply chain management, warehousing, transportation, and customer service.\n  -- Spearheaded the successful implementation of a new SAP S/4HANA ERP system, managing a $3M budget and a cross-functional team of 25.\n  -- Reduced operational costs by 15% through process optimization and automation initiatives.\n  -- Oversaw a team of 150+ employees across multiple locations.\n  -- Key Technologies: SAP S/4HANA, Lean Six Sigma, Business Intelligence tools (Tableau, Power BI).\n\n- **Apex Logistics, VP of Operations** (2015 \u2013 2019)\n  -- Responsible for the operational performance of a regional distribution center, serving a network of over 200 retail locations.\n  -- Implemented a new warehouse management system (WMS), improving inventory accuracy and order fulfillment rates.\n  -- Managed a budget of $10M and a team of 80+ employees.\n  -- Technologies: Manhattan Associates WMS, Oracle Transportation Management (OTM).\n\n- **U.S. Army Logistics Corps, Captain** (2005 \u2013 2015)\n  -- Commanded and led logistics units in support of global operations.\n  -- Managed large-scale supply chains, ensuring timely delivery of critical resources to deployed forces.\n  -- Expertise in logistics planning, transportation management, and inventory control.\n  -- Received numerous awards and commendations for outstanding leadership and performance.\n\n- **Education:**\n  -- MBA, Harvard Business School (2004)\n  -- BS, Supply Chain Management, University of Maryland (2002)\n\n- **Certifications:**\n  -- Lean Six Sigma Black Belt\n  -- APICS Certified Supply Chain Professional (CSCP)",
+    "lookingFor": "I am actively seeking a senior leadership role, preferably as a COO or VP of Operations, within a well-established organization that values operational excellence and a data-driven approach. I am open to considering interim or consulting engagements as well, leveraging my expertise to drive immediate impact. \n\n**Do connect if:**\n  * You are a CEO or Board Member of a company undergoing operational challenges or seeking to optimize existing processes.\n  * You are a recruiter specializing in executive-level operations roles.\n  * You are a partner at a management consulting firm focused on supply chain and logistics.\n\n**Don't connect if:**\n  * You are offering multi-level marketing opportunities.\n  * You are seeking investment for a speculative startup with no proven business model.\n  * You are a recruiter focusing solely on entry-level positions.\n\nI am particularly interested in opportunities within the manufacturing, distribution, and transportation industries. I am open to relocation but prefer opportunities based on the East Coast. I\u2019m keen to discuss how my experience can contribute to sustained growth and profitability.",
+    "notes": "Maria is a direct communicator \u2013 she won't sugarcoat challenges. Her departure from SwiftRoute was amicable, though she clearly feels she was correct to challenge the CEO\u2019s strategy. She\u2019s eager to land a new role quickly, and her LinkedIn activity reflects that. She\u2019s highly responsive and appreciates direct, concise communication. There's a slight discrepancy in dates listed on her LinkedIn profile regarding her time at Apex Logistics - verified with a former colleague, the dates provided here are accurate.",
+    "locationAvailability": "Based in Boston, MA (Eastern Time Zone). Willing to travel as needed.",
+    "introPreferences": "When making introductions, please emphasize my experience with large-scale ERP implementations and my demonstrated ability to drive cost savings. \n\n* **Hard Requirements:** The introduction *must* be to someone with decision-making authority regarding operational leadership.\n* **Soft Preferences:** An introduction to someone who has experienced similar operational challenges would be ideal.\n* **Intro Style:**  A brief, direct email highlighting my key skills and experience, with a clear call to action (e.g., 'I thought you two should connect to discuss potential synergies.') is preferred. Avoid overly effusive language or lengthy summaries.  Focus on quantifiable results \u2013 the 15% cost savings at SwiftRoute is a key selling point.",
+    "personalPreferences": "Prefers email communication initially. Responds best to concise, data-driven messages. Not a fan of long phone calls without a clear agenda.",
+    "meetingAndSchedulingPreferences": "- Please check my calendar availability via Calendly (link available upon request).\n- I prefer meetings to have a clear agenda circulated at least 24 hours in advance.\n- I am generally available for virtual meetings during East Coast business hours."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 18.940937042236328,
+      "input_tokens": 865,
+      "output_tokens": 1375,
+      "problems": []
+    }
+  ],
+  "success": true
+}

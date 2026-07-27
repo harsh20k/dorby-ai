@@ -1,0 +1,54 @@
+{
+  "id": 4,
+  "archetype": "Hospitality Tech Dealmaker",
+  "given_name": "Valeria Yamamoto",
+  "style_version": 1,
+  "archetypes_version": 1,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Valeria Yamamoto is a seasoned hospitality tech investment professional currently focused on sourcing and executing strategic acquisitions for a boutique private equity firm specializing in hotel technology. Her distinctive career detail is a prior operational role as a Revenue Manager for a large hotel chain \u2013 giving her a unique understanding of the pain points tech solutions *actually* solve for hotel operators. She's currently heavily focused on identifying companies with strong traction in AI-powered revenue management, guest experience personalization, and sustainable hospitality solutions. She\u2019s actively looking to expand her network of founders, operators, and fellow investors to accelerate deal flow and identify promising investment opportunities. She\u2019s particularly interested in companies that can demonstrate a clear ROI for hotels, given the current economic climate.",
+    "positioning": "Valeria Yamamoto is a Principal at Stellar Hospitality Partners, a private equity firm dedicated to transforming the hospitality landscape through strategic technology investments. Leveraging a unique background blending financial acumen with deep operational experience in hotel revenue management, I specialize in identifying and scaling innovative technology solutions that drive tangible value for hotel owners and operators. I\u2019m currently leading Stellar\u2019s efforts in sourcing and executing acquisitions within the revenue management, guest experience, and sustainability tech spaces. My focus is on companies demonstrating proven traction and a clear path to profitability in the current market. I'm actively seeking connections with founders building cutting-edge hospitality tech, operators open to piloting innovative solutions, and fellow investors with complementary expertise \u2013 particularly those focused on seed and Series A funding rounds. Connecting with me now unlocks access to a network focused on driving real impact in the hospitality technology sector.",
+    "background": "- **Principal, Stellar Hospitality Partners** (2021 \u2013 Present)\n  - Led due diligence and execution of 3 successful acquisitions totaling $75M in enterprise value.\n  - Developed and implemented a proprietary investment thesis focused on AI-driven revenue optimization in hospitality.\n  - Mentored junior investment team members on financial modeling, deal structuring, and industry analysis.\n  - Increased portfolio company revenue by an average of 20% within the first year post-acquisition.\n\n- **Revenue Manager, Grandview Hotels & Resorts** (2017 \u2013 2021)\n  - Managed revenue optimization strategies for a portfolio of 10 hotels, generating a 15% increase in RevPAR over four years.\n  - Implemented a new revenue management system (IBS) resulting in a 10% reduction in distribution costs.\n  - Collaborated with marketing and sales teams to develop targeted promotions and packages.\n  - Consistently exceeded revenue targets and achieved top performer status within the revenue management team.\n\n- **Financial Analyst, Deloitte Consulting** (2015 \u2013 2017)\n  - Provided financial modeling and analysis support for consulting engagements in the hospitality and leisure industry.\n  - Developed detailed financial projections and valuation models for potential investment opportunities.\n  - Assisted in the preparation of client presentations and reports.\n\n- **Education:**\n  - MBA, Stanford Graduate School of Business (2015)\n  - BS, Hotel Administration, Cornell University (2013) - *Summa Cum Laude*\n\n- **Skills:** Financial Modeling, Valuation, Due Diligence, Revenue Management, M&A, Investment Analysis, Strategic Planning, Data Analysis, Hospitality Technology, Market Research, Negotiation.",
+    "lookingFor": "## Networking Requests\n\n- **Introductions to Founders:** Seeking introductions to founders of seed to Series A stage hospitality tech companies focused on:\n  - AI-powered revenue management\n  - Guest experience personalization (hyper-personalization, chatbots, etc.)\n  - Sustainable hospitality solutions (energy management, water conservation, waste reduction)\n\n- **Operator Partnerships:**  Looking to connect with General Managers, Revenue Managers, and IT Directors at hotel groups (50+ properties) open to piloting and implementing new technologies.\n\n- **Investor Connections:**  Interested in building relationships with other investors (VCs, PEs) focused on hospitality tech to co-invest and share deal flow.\n\n- **Industry Experts:**  Seeking connections with thought leaders and consultants specializing in hospitality technology trends and market dynamics.",
+    "notes": "Valeria is exceptionally well-connected within the hospitality operator space, a direct result of her prior role. She's very focused on ROI right now, given the current economic headwinds. She mentioned in our last conversation she's frustrated with 'shiny object' tech that doesn't deliver measurable results. She has a strong preference for data-driven solutions and is wary of hype. She was previously very interested in VR/AR applications for hotels, but has deprioritized those due to perceived lack of immediate ROI. She's attending the Hospitality Innovation Summit in Las Vegas next month and is actively seeking meetings there. Be mindful of her time \u2013 she\u2019s incredibly busy. She's a fast talker and gets straight to the point.",
+    "locationAvailability": "Based in San Francisco, CA, but actively networking across North America and open to virtual connections globally.",
+    "introPreferences": "- **Hard Requirements:**\n  - Industry: Hospitality Technology (specifically revenue management, guest experience, or sustainability)\n  - Seniority: Founder/CEO, VP of Engineering, or Director of Innovation\n\n- **Soft Preferences:**\n  - Companies with demonstrable traction (existing customers, revenue growth)\n  - Individuals with a strong technical background\n  - Connections at companies actively seeking funding or partnerships\n\n- **Introduction Guidance:** Please include a brief summary of the connection's company and their specific needs/interests in the introduction email.  Avoid overly lengthy introductions \u2013 keep it concise and focused.",
+    "personalPreferences": "Valeria prefers to connect initially via LinkedIn, then move to email for more detailed conversations. She responds quickly to well-written, concise messages and appreciates direct communication. She\u2019s not a big fan of lengthy back-and-forth and prefers to schedule a quick call to discuss opportunities. She\u2019s active on Twitter, but primarily uses it for industry news and insights \u2013 she doesn't typically engage in lengthy discussions there.",
+    "meetingAndSchedulingPreferences": "Prefers 30-minute introductory calls via Zoom.  Please send a brief agenda beforehand."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 23.06145191192627,
+      "input_tokens": 771,
+      "output_tokens": 1322,
+      "problems": []
+    }
+  ],
+  "success": true
+}

@@ -1,0 +1,54 @@
+{
+  "id": 824,
+  "archetype": "Serial Founder, Multi-Exit Operator",
+  "given_name": "Sofia Okafor",
+  "style_version": 50,
+  "archetypes_version": 139,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Sofia Okafor is a seasoned serial entrepreneur with a knack for identifying overlooked market niches and rapidly scaling businesses within them. Her most notable exit was \u2018BloomLocal,\u2019 a hyperlocal flower delivery service she sold to 1-800-Flowers in 2018. However, her first two ventures were in very different spaces \u2013 sustainable agriculture tech and a mobile gaming studio \u2013 demonstrating a broad range of adaptability. Currently, she\u2019s focused on angel investing and advising early-stage startups, particularly those leveraging AI for supply chain optimization. She's looking to connect with founders tackling complex logistical problems and investors interested in co-syndicating on promising seed rounds. She\u2019s known for being direct, pragmatic, and valuing efficiency above all else. She's also a passionate amateur astronomer.",
+    "positioning": "Sofia Okafor is a venture investor and strategic advisor focused on early-stage companies disrupting traditional supply chain models. Having successfully founded and exited multiple businesses, including BloomLocal, she brings a unique blend of operational expertise and market insight to her current role. She specializes in identifying and nurturing high-growth potential in companies leveraging technology, particularly AI, to streamline logistics and improve efficiency. Sofia excels at quickly assessing business viability, building effective teams, and navigating the challenges of scaling a startup. She\u2019s a pragmatic problem solver who consistently delivers tangible results for her portfolio companies.",
+    "background": "\u2022 **Angel Investor & Advisor** (2021 \u2013 Present)\n    - Actively invests in and advises 8 early-stage startups focused on AI-driven supply chain solutions.\n    - Mentored founders on fundraising, go-to-market strategy, and team building, resulting in a combined $25M in follow-on funding.\n    - Leveraged network to facilitate key strategic partnerships for portfolio companies.\n\u2022 **Founder & CEO, BloomLocal** (2015 \u2013 2018)\n    - Built and scaled a hyperlocal flower delivery service, achieving profitability within 18 months.\n    - Led the company through a successful acquisition by 1-800-Flowers for an undisclosed sum.\n    - Pioneered a sustainable sourcing model, partnering with local flower farms to reduce environmental impact.\n\u2022 **Founder & CEO, AgriTech Solutions** (2012 \u2013 2015)\n    - Developed and launched a precision agriculture platform utilizing sensor technology to optimize crop yields.\n    - Secured $1.2M in seed funding from angel investors and venture capital firms.\n    - Led a team of engineers and data scientists to build and deploy a scalable software solution.\n\u2022 **Founder & Creative Director, PixelPulse Games** (2009 \u2013 2012)\n    - Created and launched three successful mobile games, generating over 1 million downloads.\n    - Managed a team of designers and developers, overseeing all aspects of game development and marketing.\n    - Established strategic partnerships with mobile app stores and advertising networks.\n\u2022 **MBA, Stanford Graduate School of Business** (2007 \u2013 2009)\n    - Focused on Entrepreneurship and Marketing.\n    - President of the Entrepreneurship Club.\n\u2022 **BS, Computer Science, Massachusetts Institute of Technology** (2003 \u2013 2007)\n    - Graduated *Cum Laude* with a focus on Artificial Intelligence.",
+    "lookingFor": "\u2022 Founders building AI-powered solutions for logistics and supply chain management.\n\u2022 Angel investors and VCs interested in co-syndicating on seed-stage deals in the supply chain tech space.\n\u2022 Individuals with deep expertise in blockchain applications for supply chain traceability.\n\u2022 Connections to potential strategic partners for portfolio companies (e.g., large retailers, logistics providers).\n\u2022 Mentors for founders within my portfolio \u2013 particularly those with experience scaling tech companies.\n\u2022 Discussions on emerging trends in AI and their impact on global supply chains.\n\u2022 Introductions to exceptional talent \u2013 engineers, data scientists, and supply chain experts.",
+    "notes": "Sofia is incredibly direct and values efficiency. Don't waste her time with lengthy introductions or overly optimistic projections. She prefers concise communication and data-driven insights. She's very responsive to well-crafted, targeted requests. \n\n*   **Recent Update:** Just led a $2M seed round for 'LogiFlow,' a startup using AI to optimize last-mile delivery routes. \n*   **Astronomy:** A passionate amateur astronomer \u2013 feel free to bring it up if you share the interest, but don\u2019t lead with it.\n*   **BloomLocal:** She occasionally gets asked about BloomLocal \u2013 happy to share learnings, but prefers to focus on current ventures.\n*   **Avoid:** Don't pitch her 'idea-stage' concepts without a clear MVP or demonstrable traction.",
+    "locationAvailability": "Based in San Francisco, CA, with frequent travel to New York and occasional international trips. Open to remote meetings.",
+    "introPreferences": "\u2022 When making introductions, clearly state the mutual benefit \u2013 why this connection will be valuable for *both* parties.\n\u2022 Focus on specific expertise or experience, rather than generic compliments.\n\u2022 Avoid introducing Sofia to people who haven't done their homework on her background and investment focus.\n\u2022 Keep introductions concise and to the point \u2013 she appreciates brevity.\n\u2022 Prioritize introductions to founders with demonstrable traction and a clear path to profitability. \n\u2022 Don't introduce her to anyone seeking 'general advice' \u2013 she prefers to focus on concrete opportunities.",
+    "personalPreferences": "Prefers email for initial contact; Slack for ongoing communication with portfolio companies.",
+    "meetingAndSchedulingPreferences": "Prefers 30-minute meetings. Back-to-back meetings are common, so please be punctual."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 22.113903760910034,
+      "input_tokens": 761,
+      "output_tokens": 1215,
+      "problems": []
+    }
+  ],
+  "success": true
+}

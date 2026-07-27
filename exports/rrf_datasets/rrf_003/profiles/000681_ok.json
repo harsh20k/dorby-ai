@@ -1,0 +1,54 @@
+{
+  "id": 681,
+  "archetype": "Serial Entrepreneur, Now Fintech",
+  "given_name": "Viktor Eriksson",
+  "style_version": 42,
+  "archetypes_version": 114,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Viktor Eriksson is a Swedish-born serial entrepreneur with a strong technical background. He previously built and sold a successful e-commerce platform focused on Scandinavian design, giving him experience with cross-border logistics and payment processing \u2013 which revealed the pain points of international transactions. He's now intensely focused on solving these problems using blockchain technology. His current venture, 'Njord Finance', aims to provide frictionless, low-cost cross-border payments for small and medium-sized businesses (SMBs) in emerging markets, leveraging stablecoins and decentralized finance (DeFi). He's particularly interested in markets underserved by traditional banking infrastructure. He\u2019s raised a seed round and is actively seeking Series A funding and strategic partnerships. He's a direct, data-driven individual who values efficiency and transparency.",
+    "positioning": "I'm the founder and CEO of Njord Finance, a fintech company revolutionizing cross-border payments for SMBs. We're tackling the $133 trillion global payments market, specifically focusing on the inefficiencies and high costs faced by businesses in emerging economies. Traditional banking systems often impose exorbitant fees and lengthy processing times, hindering growth and limiting access to global markets. Njord Finance provides a faster, cheaper, and more transparent alternative by leveraging stablecoins and DeFi infrastructure. \n\nOur core solution utilizes a proprietary network of liquidity pools and smart contracts to facilitate near-instantaneous settlements with significantly reduced fees \u2013 typically 80-90% lower than traditional methods. We\u2019re initially targeting businesses in Southeast Asia and Latin America, with a particular focus on the apparel, agriculture, and technology sectors.  We\u2019ve already onboarded 50+ beta clients and are processing over $500k in monthly transaction volume. We\u2019re currently raising a Series A round to scale our operations, expand our geographic reach, and build out our product suite to include integrated invoicing and lending solutions. We believe Njord Finance isn\u2019t just building a payments platform, but a gateway to global economic opportunity.",
+    "background": "- **Njord Finance (2022 - Present)**: Founder & CEO. Led seed fundraising ($2.5M). Built and launched MVP, secured 50+ beta clients, achieving $500k+ monthly transaction volume. Responsible for overall strategy, product development, and fundraising.\n- **SkandiHaus (2016 - 2021)**: Founder & CEO. Developed and scaled a leading e-commerce platform for Scandinavian design products. Managed all aspects of the business, from sourcing and logistics to marketing and customer service. Successfully exited to a private equity firm.\n- **Spotify (2014 - 2016)**: Software Engineer. Contributed to the development of Spotify\u2019s backend infrastructure, specializing in data pipelines and real-time analytics.\n- **Education:**\n    - **KTH Royal Institute of Technology, Stockholm (2010 - 2014)**: M.Sc. in Computer Science, specializing in Distributed Systems.\n    - **University of California, Berkeley (2013)**: Semester abroad - Data Science.\n- **Skills:** Blockchain Technology, DeFi, Stablecoins, Smart Contracts (Solidity), Cross-Border Payments, Fintech, E-commerce, Software Engineering (Java, Python, Go), Data Analytics, Product Management, Fundraising, Leadership, Agile Development.\n- **Certifications:** Certified Blockchain Expert (CBE).\n- **Awards & Recognition:** Nordic Startup Awards - Fintech Startup of the Year (2023 - Finalist).",
+    "lookingFor": "I'm actively seeking connections with individuals who can contribute to the growth and success of Njord Finance. My priorities are categorized below:\n\n**Investors:**\n*   **Series A Venture Capital Firms:** Specifically, firms with a focus on fintech, blockchain, and emerging markets.  I'm looking for partners who can provide not just capital, but also strategic guidance and access to their network.\n*   **Strategic Investors:** Financial institutions or corporations interested in exploring partnerships in the cross-border payments space.  We're open to exploring potential acquisitions down the line.\n*   **Angel Investors:** Individuals with a strong track record in fintech or blockchain and a willingness to provide mentorship.\n\n**Partnerships:**\n*   **Liquidity Providers:**  Organizations with substantial holdings of stablecoins or other digital assets, willing to provide liquidity to our network.\n*   **Payment Processors:**  Companies with existing infrastructure in key target markets (Southeast Asia, Latin America) who can help us integrate with local payment systems.\n*   **Technology Partners:**  Firms specializing in blockchain development, security auditing, or regulatory compliance.\n*   **Advisors:** Experts in international law, financial regulations, and emerging market dynamics.\n\nI'm particularly interested in individuals with experience in DeFi protocols, stablecoin issuance, and navigating the regulatory landscape for digital assets. I value transparency, a data-driven approach, and a shared vision for a more inclusive financial system.",
+    "notes": "Profile information sourced from Viktor's LinkedIn and company website. He's been actively engaging with posts related to DeFi and cross-border payments. Recent conversation (2024-02-15) confirmed his Series A raise is underway and he is prioritizing investor meetings. He is very responsive but prefers concise communication. He mentioned a slight preference for introductions to investors who have previously invested in companies leveraging stablecoins specifically. Avoid introducing him to purely crypto speculation ventures \u2013 he\u2019s focused on practical applications of blockchain.",
+    "locationAvailability": "Currently based in Stockholm, Sweden, but open to frequent travel and remote collaboration. Willing to relocate for the right opportunity.",
+    "introPreferences": "Please adhere to the following guidelines when making introductions:\n\n*   **Do:** Clearly state the value proposition for the connection. How will this individual/organization benefit from connecting with Njord Finance?\n*   **Do:** Briefly highlight any relevant experience or expertise the person has that aligns with our current needs (as outlined in my 'Looking For' section).\n*   **Do:** Keep introductions concise and focused \u2013 no more than 3-4 sentences.\n*   **Don't:** Introduce me to individuals who are solely focused on NFTs or speculative crypto assets. My focus is on building a sustainable fintech solution.\n*   **Don't:** Send unsolicited materials or lengthy pitch decks. I prefer to learn about potential partners through a brief conversation.\n*   **Preferred Communication:** LinkedIn InMail is best for initial contact. Follow up with a brief email if appropriate.",
+    "personalPreferences": "Prefers coffee over tea. Enjoys discussing the future of finance and the impact of technology on emerging markets.",
+    "meetingAndSchedulingPreferences": "I generally prefer short, focused video calls (30-45 minutes). I'm available most mornings (CET) and typically avoid scheduling meetings on Fridays. Please send a calendar invite with a clear agenda."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 26.022890329360962,
+      "input_tokens": 792,
+      "output_tokens": 1470,
+      "problems": []
+    }
+  ],
+  "success": true
+}

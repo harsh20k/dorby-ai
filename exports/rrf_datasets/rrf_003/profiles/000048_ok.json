@@ -1,0 +1,54 @@
+{
+  "id": 48,
+  "archetype": "Early-Stage Founder, India Focus",
+  "given_name": "Soraya Nkosi",
+  "style_version": 3,
+  "archetypes_version": 9,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Soraya Nkosi is a first-time founder, originally from the US but now based in Bangalore, India. She\u2019s building \u2018Anya,\u2019 a SaaS platform leveraging AI to provide personalized financial literacy and investment guidance to the burgeoning middle class in Tier 2 and 3 Indian cities. Her distinctive career detail is a previous 7-year stint as a behavioral economist at a large fintech in the US, giving her a strong understanding of user psychology and financial product design, but limited operational experience *running* a company. She\u2019s currently seed-stage, having raised a small pre-seed round from angel investors, and is focused on securing Series A funding and scaling her team. She\u2019s highly data-driven and keenly aware of the unique challenges of the Indian market \u2013 including language diversity, varying levels of digital literacy, and the prevalence of cash transactions. She's actively seeking mentors with scaling experience and investors specializing in fintech within the Indian market. She's very direct and appreciates efficient communication.",
+    "positioning": "Soraya Nkosi is the Founder & CEO of Anya, an AI-powered financial literacy and investment platform designed to empower the next 100 million Indian investors. We\u2019re bridging the gap between financial aspiration and informed action, specifically targeting the underserved middle class in Tier 2 & 3 cities. Anya delivers personalized insights, educational content, and accessible investment options, all tailored to individual financial goals and risk profiles.  The Indian financial landscape is ripe for disruption, but requires a hyper-localized approach that understands cultural nuances and addresses the unique challenges of digital adoption.  We've moved beyond generic financial advice, offering a truly *personalized* experience that builds trust and drives positive financial outcomes. Our core differentiator lies in our proprietary AI engine, trained on a massive dataset of Indian financial behaviors and market trends.  We\u2019re not just building a fintech company; we\u2019re fostering financial inclusion and building a more financially secure future for India.  **One-liner:** Anya: Democratizing financial empowerment through personalized AI-driven guidance.",
+    "background": "- **Founder & CEO, Anya** (Bangalore, India) \u2013 2023 \u2013 Present\n    * Spearheaded the ideation, development, and launch of Anya, a SaaS platform utilizing AI to provide personalized financial literacy and investment guidance.\n    * Secured initial pre-seed funding of $250,000 from angel investors focused on the Indian fintech space.\n    * Led the development of Anya\u2019s core AI engine, focusing on behavioral economics principles and Indian market data.\n    * Built and manage a remote team of 12 engineers, designers, and content creators.\n    * Currently focused on user acquisition, product iteration, and preparing for a Series A funding round.\n\n- **Senior Behavioral Economist, FinTech Solutions Inc.** (New York, USA) \u2013 2016 \u2013 2023\n    * Led a team of researchers in applying behavioral economics principles to improve the design and effectiveness of financial products.\n    * Conducted A/B testing and user research to optimize product features and user experiences.\n    * Developed and implemented strategies to increase customer engagement and reduce churn.\n    * Published research papers on behavioral finance and presented findings at industry conferences.\n    * Collaborated with product managers and engineers to translate research insights into actionable product improvements.\n\n- **Research Associate, Center for Behavioral Economics** (Boston, USA) \u2013 2014 \u2013 2016\n    * Assisted in the design and execution of research studies on consumer behavior and decision-making.\n    * Analyzed data and prepared reports summarizing research findings.\n    * Contributed to the development of research proposals and grant applications.\n\n- **Education:**\n    * **PhD, Economics (Behavioral Focus)** \u2013 Massachusetts Institute of Technology (MIT), Cambridge, MA \u2013 2014\n    * **BA, Economics** \u2013 Stanford University, Stanford, CA \u2013 2010\n\n- **Skills:**\n    * Behavioral Economics\n    * Fintech\n    * AI/Machine Learning (basic understanding)\n    * Data Analysis (Python, R, SQL)\n    * User Research\n    * Product Management\n    * Team Leadership\n    * Financial Modeling\n    * Market Research\n    * Hindi (conversational)",
+    "lookingFor": "Seeking strategic connections within the Indian fintech ecosystem to accelerate Anya's growth. Specifically:\n\n* **Series A Investors:** Funds actively investing in seed/Series A stage fintech companies in India, with a focus on financial inclusion and AI-driven solutions.  Target check size: $3-5M.\n* **Mentors:** Experienced founders or operators who have successfully scaled fintech companies in emerging markets, particularly India. Expertise in user acquisition, regulatory compliance, and team building is highly valued.\n* **Strategic Partners:** Potential collaborations with microfinance institutions, regional banks, or digital payment providers to expand Anya\u2019s reach and distribution network.\n* **Talent:** Experienced engineers specializing in AI/ML, particularly those with experience in natural language processing and personalization. Looking for individuals comfortable working in a fast-paced startup environment.\n* **Industry Experts:** Individuals with deep understanding of the Indian financial landscape, particularly regarding consumer behavior, regulatory challenges, and market trends.  Open to advisory roles.\n\nI'm particularly interested in connecting with individuals who have a proven track record of building successful, impactful businesses in India. I\u2019m available for virtual coffee chats and informational interviews.",
+    "notes": "* Last week\u2019s call with Rohan from Matrix Partners was promising \u2013 he wants to see our user growth metrics for the next month. Follow-up scheduled for Nov 15th.\n*  Anya\u2019s biggest challenge right now is scaling content creation in multiple regional languages. Need to explore outsourcing options.\n*  Soraya is very focused on impact. She\u2019s driven by a genuine desire to improve financial literacy in India.\n*  Sensitive about discussing pre-seed valuation \u2013 she feels it was undervalued but doesn\u2019t want to dwell on it. \n*  She\u2019s been actively engaging with the NITI Aayog's Atal Innovation Mission \u2013 potential for grant opportunities.\n*  Remind to ask about her experience navigating the regulatory landscape (RBI guidelines).",
+    "locationAvailability": "Currently based in Bangalore, India.  Open to occasional travel within India.  Primarily focused on building a remote-first team and can operate effectively regardless of location.  Not planning to relocate outside of India at this time.",
+    "introPreferences": "When making introductions, please:\n\n* Briefly mention my background in behavioral economics and my experience at FinTech Solutions Inc. This adds credibility.\n* Highlight Anya's focus on Tier 2 & 3 Indian cities \u2013 this is a key differentiator.\n* Frame Anya as a solution for financial *inclusion* rather than just a fintech product.\n* Avoid introductions to venture capitalists who don\u2019t have a demonstrated interest in the Indian market.\n* Keep introductions concise and to the point \u2013 I value efficiency.\n*  Please share a quick blurb about *why* you think the connection would be valuable for both parties.",
+    "personalPreferences": "I prefer communication via email or WhatsApp. Please avoid lengthy voice notes.",
+    "meetingAndSchedulingPreferences": "I'm in the Indian Standard Time (IST) zone (GMT+5:30).  Generally available for meetings between 10:00 AM and 6:00 PM IST.  Please send a calendar invite with a clear agenda.  I prefer 30-minute meetings to start."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 31.33073115348816,
+      "input_tokens": 813,
+      "output_tokens": 1621,
+      "problems": []
+    }
+  ],
+  "success": true
+}

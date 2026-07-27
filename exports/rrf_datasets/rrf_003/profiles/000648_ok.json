@@ -1,0 +1,54 @@
+{
+  "id": 648,
+  "archetype": "Emerging Market Fintech Founder",
+  "given_name": "Zainab Pereira",
+  "style_version": 40,
+  "archetypes_version": 108,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Zainab Pereira is a Nigerian-British founder in her late 20s, currently building 'AjoVest', a micro-investment platform leveraging rotating savings and credit associations (ROSCAs \u2013 traditionally called 'Ajo' in Nigeria) to provide access to low-risk investment opportunities for informal sector workers in Lagos. She previously worked as a data scientist at a London-based fintech, but left to return to Nigeria and apply her skills to solve financial inclusion challenges closer to home. A distinctive detail is that she *built* the initial AjoVest MVP entirely herself during a 6-month coding bootcamp after realizing no existing solutions quite fit the needs of the Ajo communities she was researching. She's currently seeking seed funding to scale the platform and expand its features, and is laser-focused on investors who understand the nuances of the African market and the informal economy. She's highly analytical, driven by data, and deeply committed to empowering financial independence within her community.",
+    "positioning": "AjoVest is a micro-investment platform designed to democratize access to financial tools for the millions of Nigerians participating in Rotating Savings and Credit Associations (ROSCAs), commonly known as \u2018Ajo\u2019. We are bridging the gap between traditional, informal savings practices and modern investment opportunities. Recognizing that Ajo is a cornerstone of financial life for many in the informal sector, AjoVest leverages the trust and discipline inherent in these groups, while adding a layer of technology to enhance returns and mitigate risk. Our core value proposition is three-fold: increased accessibility, improved returns, and enhanced financial literacy. Currently, Ajo returns are limited to the cycle length and rely heavily on the integrity of the group. AjoVest introduces a secure, transparent platform where Ajo contributions are pooled and invested in low-risk, diversified portfolios tailored to the Nigerian market \u2013 primarily government bonds and carefully vetted commercial paper.  We are targeting individuals earning between \u20a630,000 - \u20a6150,000 per month, with a particular focus on market traders, artisans, and small business owners. Our technology stack is built on a secure, scalable cloud infrastructure utilizing Python, Django, and PostgreSQL, ensuring data privacy and platform reliability. We differentiate ourselves through our deep understanding of the Ajo ecosystem and our commitment to building a culturally relevant and user-friendly product.  We aren't simply digitizing Ajo; we are evolving it to unlock its full potential for wealth creation.",
+    "background": "- **Founder & CEO, AjoVest** (Jan 2023 \u2013 Present): Leading all aspects of product development, fundraising, and operations for a micro-investment platform targeting the Nigerian informal sector. Successfully launched MVP and onboarded 500+ users within the first 6 months.\n- **Data Scientist, FinTech Innovations Ltd.** (London, UK) (Jun 2020 \u2013 Dec 2022): Developed and deployed machine learning models for fraud detection and credit risk assessment, improving accuracy by 15% and reducing fraud losses by 10%.\n- **Research Intern, Centre for Financial Inclusion** (Accra, Ghana) (Summer 2019): Conducted field research on financial access barriers for smallholder farmers, contributing to a policy report on inclusive financial services.\n- **BSc, Computer Science, Imperial College London** (2016 \u2013 2020): First-class honors. Dissertation focused on the application of blockchain technology to microfinance.\n- **Coding Bootcamp, Decagon** (Lagos, Nigeria) (Sept 2022 - Feb 2023): Intensive full-stack development program, where I independently built the initial AjoVest MVP.\n- **Volunteer, STEMettes** (London, UK) (2018-2020): Mentored young women interested in pursuing careers in STEM.",
+    "lookingFor": "I am actively seeking seed funding to scale AjoVest and expand our impact within the Nigerian market. We are looking to raise $500,000 to enhance our platform with features like automated investment rebalancing, personalized financial advice, and integration with mobile money platforms. Specifically, I'm seeking connections with:\n\n*   **Venture Capital firms** with a focus on pre-seed/seed stage investments in African fintech, particularly those with experience in the informal economy.\n*   **Angel Investors** who understand the nuances of the Nigerian market and are passionate about financial inclusion.\n*   **Potential strategic partners** \u2013 mobile network operators, microfinance institutions, and fintech companies with complementary services.\n\nI am particularly interested in investors who can offer more than just capital \u2013 mentorship, industry connections, and strategic guidance would be invaluable. I\u2019m also open to exploring partnerships that can help us expand our reach and improve our product offering.",
+    "notes": "Zainab is incredibly sharp and passionate. She's a fast learner and very data-driven. She recently spoke at the Lagos Fintech Week conference \u2013 positive reception. Be mindful that she\u2019s very focused on investors who *truly* understand the Nigerian context; avoid generic 'emerging markets' pitches. She's currently prioritizing investor meetings over marketing opportunities.",
+    "locationAvailability": "I am currently based in Lagos, Nigeria, and frequently travel between Lagos and London for investor meetings. I am open to relocating for the right opportunity, but my primary focus is on building AjoVest in Nigeria. I will be attending TechCrunch Disrupt in San Francisco in October 2024.",
+    "introPreferences": "When making introductions, please emphasize my technical background and my hands-on approach to building AjoVest. It's important to highlight that I built the initial MVP myself, demonstrating my commitment and technical capabilities.  \n\n**Hard Requirements:**\n*   Investor/Partner with demonstrable experience in the African fintech space.\n*   Genuine interest in financial inclusion and empowering the informal sector.\n\n**Soft Preferences:**\n*   Individuals who have a track record of supporting female founders.\n*   Connections who are familiar with the challenges and opportunities of operating in Nigeria.",
+    "personalPreferences": "I prefer to connect initially via LinkedIn or email. WhatsApp is fine for quick follow-ups.",
+    "meetingAndSchedulingPreferences": "I am generally available for meetings between 9:00 AM and 5:00 PM West African Time (WAT).  I prefer video calls over phone calls, and I typically respond to emails within 24 hours. Please send a calendar invite with a clear agenda to ensure I am well-prepared."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 23.025964736938477,
+      "input_tokens": 805,
+      "output_tokens": 1387,
+      "problems": []
+    }
+  ],
+  "success": true
+}

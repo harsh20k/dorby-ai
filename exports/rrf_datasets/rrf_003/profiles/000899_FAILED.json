@@ -1,0 +1,74 @@
+{
+  "id": 899,
+  "archetype": "Founder Experience/Community Builder",
+  "given_name": "Maria Tanaka",
+  "style_version": 55,
+  "archetypes_version": 152,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Maria Tanaka is a serial entrepreneur currently focused on building 'SynergyHub', a platform designed to facilitate cross-industry collaboration and resource sharing among early-stage founders. Her distinctive career detail is a five-year stint as a behavioral economist at a boutique consulting firm *before* pivoting to tech. This background informs her approach to community building \u2013 she\u2019s intensely focused on incentive structures and network effects. She's bootstrapped SynergyHub to a decent MVP stage and is now seeking seed funding. She\u2019s very active in the female founder space, aiming to address the funding gap, and prioritizes genuine connection over 'spray and pray' networking. She's a bit of a data-driven extrovert \u2013 loves analyzing community engagement alongside actually *doing* the networking.",
+    "positioning": "I'm the founder of SynergyHub, a platform dedicated to unlocking the power of collaborative ecosystems for early-stage founders. We\u2019re tackling the pervasive issue of founder isolation and resource scarcity, particularly in the pre-seed and seed stages. SynergyHub isn't just another networking tool; it's a curated environment designed to foster meaningful connections, knowledge exchange, and reciprocal support.  We've built an MVP focused on skill-based matching and resource sharing, and we\u2019re seeing significant traction \u2013 a 30% MoM growth in active users and a consistently high NPS score.  \n\nMy background in behavioral economics deeply influences our approach. We're not just throwing founders together; we're designing the platform to *incentivize* collaboration and build a thriving, self-sustaining community. We're currently focused on expanding our platform\u2019s features to include facilitated workshops, mentorship programs, and access to a vetted network of service providers. We believe strongly that a rising tide lifts all boats, and SynergyHub is built to be that rising tide for the next generation of founders.",
+    "background": "- **Founder & CEO, SynergyHub** (2022 \u2013 Present)\n  - Spearheaded the ideation, development, and launch of SynergyHub, a collaborative platform for early-stage founders.\n  - Led all aspects of product development, marketing, and fundraising (currently seed stage).\n  - Built and cultivated a vibrant community of over 500 founders across diverse industries.\n  - Implemented data-driven strategies to optimize user engagement and platform growth.\n\n- **Senior Consultant, Behavioral Insights Group** (2017 \u2013 2022)\n  - Provided expert consulting services to Fortune 500 companies on consumer behavior, market research, and strategic decision-making.\n  - Led projects focused on incentive design, behavioral nudges, and the optimization of customer journeys.\n  - Developed and presented data-driven recommendations to executive leadership teams.\n  - Managed client relationships and ensured project delivery within budget and timeline.\n\n- **Research Associate, Stanford Behavioral Economics Lab** (2015 \u2013 2017)\n  - Conducted research on cognitive biases, decision-making under uncertainty, and the impact of social norms on individual behavior.\n  - Assisted in the design and execution of experiments, data analysis, and report writing.\n  - Co-authored publications in peer-reviewed academic journals.\n\n- **Education:**\n  - **Ph.D., Behavioral Economics, Stanford University** (2015 \u2013 2017)\n  - **M.S., Economics, Massachusetts Institute of Technology (MIT)** (2013 \u2013 2015)\n  - **B.A., Economics & Psychology, University of California, Berkeley** (2009 \u2013 2013)\n\n- **Certifications & Skills:**\n  - Certified Scrum Product Owner (CSPO)\n  - Proficient in Python, R, SQL\n  - Expertise in statistical modeling, data visualization, and A/B testing\n  - Strong communication, presentation, and interpersonal skills",
+    "lookingFor": "I\u2019m currently raising a $750k seed round to scale SynergyHub\u2019s platform and expand our community reach. I\u2019m specifically seeking investors who understand the power of network effects and are passionate about supporting early-stage founders, especially those from underrepresented backgrounds. We're looking for partners who bring not just capital, but also strategic guidance and access to their network.\n\nI'm also actively seeking introductions to: \n  * **Strategic Partners:** Companies offering complementary services to early-stage startups (e.g., legal tech, accounting software, CRM platforms).\n  * **Angel Investors:** Individuals with a track record of investing in pre-seed and seed-stage companies.\n  * **Venture Capital Firms:** Firms specializing in seed-stage investments in SaaS and community-driven platforms.\n\nIdeally, I'd like to connect with founders who are facing the challenges SynergyHub addresses - those who are feeling isolated, struggling to find the right resources, or seeking collaborative opportunities.  I'm always open to learning from other community builders and sharing best practices.  I\u2019m particularly interested in connecting with individuals leading or involved with female founder focused initiatives.",
+    "notes": "Maria is incredibly articulate and passionate about her vision for SynergyHub. She\u2019s very data-driven and impressed me with her understanding of community dynamics.  She's aware of the challenges of scaling a community and is proactively thinking about moderation and quality control. \n\n* **Recent Interaction:** Coffee chat on 10/26. Discussed potential partnerships with a legal tech startup. \n* **Key Takeaway:** She\u2019s a strong advocate for equitable access to resources for founders. \n* **Follow-up:** Send her the contact information for the legal tech founder I mentioned. \n* **Caveat:** She can be very focused on metrics, sometimes to the detriment of prioritizing qualitative feedback. Remind her to balance data with user stories.",
+    "locationAvailability": "I'm based in San Francisco, California, and frequently travel to New York and Los Angeles for networking events. I'm open to remote calls and occasional travel as needed.",
+    "introPreferences": "When making introductions to me, please prioritize relevance over sheer volume.  I\u2019m very selective about who I spend my time with. Warm introductions are *always* preferred. Please provide context about why you think the connection would be beneficial for both parties \u2013 a simple \u2018you should talk\u2019 isn\u2019t helpful. \n\n**Hard Requirements:**\n* The person should have a demonstrable interest in supporting early-stage founders.\n* They should have a proven track record of success in their respective field.\n* Please *do not* introduce me to sales reps unless I specifically request it.\n\nI appreciate concise and informative introductions \u2013 a brief summary of the person\u2019s background and what they can offer.  Avoid lengthy emails or overly enthusiastic language.  I value authenticity and directness.",
+    "personalPreferences": "I prefer email for initial contact and am responsive on LinkedIn. WhatsApp is okay for quick follow-ups, but please respect my time and avoid sending messages outside of business hours.",
+    "meetingAndSchedulingPreferences": "I typically schedule 30-minute calls to start, allowing us to assess mutual fit.  I\u2019m available for meetings most weekdays between 9 AM and 5 PM PST. Please include a brief agenda in your meeting request so I can prepare accordingly.  I prefer video calls over phone calls whenever possible, as I find it easier to build rapport. I generally respond to scheduling requests within 24-48 hours."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 24.70746898651123,
+      "input_tokens": 799,
+      "output_tokens": 1779,
+      "problems": [
+        "background: possible truncation (ends with '...e Analytics Certification')"
+      ]
+    },
+    {
+      "attempt": 2,
+      "elapsed_s": 30.842703819274902,
+      "input_tokens": 799,
+      "output_tokens": 1683,
+      "problems": [
+        "background: possible truncation (ends with '...bound Marketing Certified')"
+      ]
+    },
+    {
+      "attempt": 3,
+      "elapsed_s": 27.053546905517578,
+      "input_tokens": 799,
+      "output_tokens": 1606,
+      "problems": [
+        "background: possible truncation (ends with '... and interpersonal skills')"
+      ]
+    }
+  ],
+  "success": false
+}

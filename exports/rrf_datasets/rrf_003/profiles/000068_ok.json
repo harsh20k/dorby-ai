@@ -1,0 +1,54 @@
+{
+  "id": 68,
+  "archetype": "Toronto AI Ecosystem Builder",
+  "given_name": "Rafael Wang",
+  "style_version": 5,
+  "archetypes_version": 12,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Rafael Wang is a second-generation immigrant with a strong technical background (computer science degree) but has pivoted into a community-building/ecosystem role. He *was* a successful machine learning engineer at a large tech firm, but left to found a non-profit, 'Toronto AI Collective,' because he felt the city\u2019s AI talent wasn\u2019t well-connected and lacked support, especially for early-stage founders. He\u2019s a natural connector, genuinely enjoys bringing people together, and is extremely proud of Toronto\u2019s burgeoning AI scene. He's actively seeking funding and partnerships to scale the Collective's programs. He is very data-driven, even in his community work, tracking engagement and impact metrics closely. He\u2019s relatively young (early 30s) and energetic, but also pragmatic and understands the challenges of building a sustainable organization. A distinctive detail: He's a competitive Go player, often using analogies from the game to explain complex systems thinking.",
+    "positioning": "As Founder and Executive Director of the Toronto AI Collective, I\u2019m dedicated to accelerating the growth of Toronto\u2019s artificial intelligence ecosystem. We bridge the gap between researchers, startups, established enterprises, and government to foster collaboration and drive innovation. Recently, we launched a mentorship program connecting seasoned AI professionals with emerging founders, resulting in a 30% increase in seed funding secured by participating startups.  Our goal is to establish Toronto as a global leader in responsible AI development and deployment, and we achieve this through community events, educational workshops, and strategic partnerships. I believe that a thriving AI ecosystem requires inclusivity and accessibility, and I\u2019m passionate about creating opportunities for diverse talent.",
+    "background": "- **University of Toronto (2014-2018):** Bachelor of Science in Computer Science, specializing in Machine Learning. Graduated with Honors, thesis focused on reinforcement learning for robotics.\n- **Google (2018-2021):** Machine Learning Engineer. Developed and deployed machine learning models for Google Assistant, specifically focused on natural language understanding. Contributed to a 15% improvement in query accuracy.\n- **Shopify (2021-2022):** Senior Machine Learning Engineer. Led a team responsible for building fraud detection systems. Reduced fraudulent transactions by 22% through the implementation of new algorithms and data pipelines.\n- **Toronto AI Collective (2022-Present):** Founder & Executive Director. Established the non-profit organization with a mission to build a vibrant AI community in Toronto.\n    - Secured seed funding of $75,000 from local angel investors.\n    - Organized over 20 workshops and networking events, attracting over 500 attendees.\n    - Launched a mentorship program pairing 20 AI startups with industry experts.\n    - Developed partnerships with leading AI research institutions, including the Vector Institute.\n    - Spearheaded the creation of a bi-weekly AI newsletter with over 1,000 subscribers.\n- **Certifications:** TensorFlow Developer Certificate (2019), AWS Certified Machine Learning \u2013 Specialty (2020).\n- **Volunteer Experience:** Mentor at Lighthouse Labs coding bootcamp (2019-2020).",
+    "lookingFor": "- Introductions to venture capital firms specializing in early-stage AI investments (Seed/Series A).\n- Connections with corporate innovation leaders at large Canadian companies interested in AI partnerships.\n- Individuals with experience in non-profit fundraising and grant writing.\n- Advisors with expertise in community building and scaling non-profit organizations.\n- Potential speakers for our upcoming AI ethics workshop.\n- Introductions to government officials involved in AI policy and funding initiatives.\n- Warm introductions to founders of AI startups in the healthcare and fintech sectors.\n- Mentors with experience in scaling tech companies.",
+    "notes": "- Rafael is incredibly responsive and enthusiastic. He\u2019s a quick communicator and always follows up.\n- He's very metrics-driven and appreciates data-backed suggestions. He\u2019s tracking membership growth, event attendance, and funding raised by mentored startups.\n- He\u2019s currently focused on securing a major sponsorship to expand the Toronto AI Collective\u2019s programs.\n- He mentioned a strong interest in learning about successful AI ecosystem models in other cities (e.g., Montreal, Boston).",
+    "locationAvailability": "Based in Toronto, Ontario. Open to remote meetings and occasional travel within Canada and the US.",
+    "introPreferences": "- **Must-Have:** Individuals with direct decision-making power regarding investment or partnership opportunities.\n- **Preferred:** Experience within the Canadian AI landscape.\n- **Good to Have:** A demonstrated commitment to fostering innovation and supporting early-stage startups.\n- **Avoid:** Sales pitches or unsolicited product demos.\n- **Framing:** Position Rafael as a passionate community builder dedicated to strengthening Toronto\u2019s AI ecosystem.\n- **Dealbreaker:** Individuals who are not genuinely interested in collaboration or supporting the growth of the Toronto AI community.\n- **Ideal Connection:** VP of Innovation, Partner at a Venture Capital firm, Director of AI Strategy.",
+    "personalPreferences": "I prefer email for initial contact, and I\u2019m generally available for calls during business hours. I\u2019m a big fan of concise and to-the-point communication.",
+    "meetingAndSchedulingPreferences": "I\u2019m comfortable with Zoom or Google Meet. Please send a calendar invite with a brief agenda beforehand."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 868.175106048584,
+      "input_tokens": 841,
+      "output_tokens": 1131,
+      "problems": []
+    }
+  ],
+  "success": true
+}

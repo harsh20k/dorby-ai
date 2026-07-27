@@ -1,0 +1,54 @@
+{
+  "id": 12,
+  "archetype": "Serial Founder, Legal Tech Inclination",
+  "given_name": "Isabela Moreau",
+  "style_version": 1,
+  "archetypes_version": 2,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Isabela Moreau is a 38-year-old serial founder currently building a stealth AI-powered contract analysis platform. Her background is unusual \u2013 she started as a software engineer specializing in NLP, then went to law school *after* building a successful (and exited) SaaS product for small business accounting. This gives her a unique perspective: she understands the technical challenges of AI and the practical pain points of legal professionals. She\u2019s looking for early-stage investors comfortable with technical risk, and advisors with deep experience in legal tech sales and scaling. She's very focused on speed and execution, and slightly impatient with overly academic or theoretical discussions. Her previous exit happened quickly, and she\u2019s trying to replicate that velocity. She's intentionally operating in stealth this time, so is cautious about broad public announcements. She\u2019s a direct communicator, values efficiency, and isn\u2019t a big fan of small talk.",
+    "positioning": "I\u2019m building the next generation of contract intelligence. My current venture, operating in stealth, leverages cutting-edge AI to automate and streamline the contract review process, drastically reducing risk and increasing efficiency for legal teams. Having previously founded and successfully exited a SaaS platform in a different sector, I understand the intricacies of building and scaling a high-growth technology business. My unique background \u2013 combining a strong engineering foundation with a Juris Doctor degree \u2013 allows me to bridge the gap between technical innovation and practical legal needs. I'm actively seeking strategic advisors and seed-stage investors who share our vision for transforming the legal landscape through AI. Connect with me if you're passionate about legal tech, understand the power of AI, and are looking to get involved in a high-potential, rapidly scaling opportunity.",
+    "background": "\u2022 **Founder & CEO, LedgerLogic (2018 \u2013 2022):** Led the development and launch of a cloud-based accounting software solution for small businesses. Grew user base to 15,000+ paying customers within 18 months. Successfully exited to Intuit for an undisclosed sum.\n\u2022 **Software Engineer, DataSynthetix (2015 \u2013 2018):** Developed and implemented Natural Language Processing (NLP) algorithms for sentiment analysis and text summarization. Contributed to a 20% improvement in algorithm accuracy.\n\u2022 **Juris Doctor (J.D.), Stanford Law School (2013 \u2013 2015):** Focused on Intellectual Property and Technology Law. Graduated *Cum Laude*. Member of the Stanford Law Review.\n\u2022 **Bachelor of Science (B.S.), Computer Science, Massachusetts Institute of Technology (MIT) (2009 \u2013 2013):** Specialization in Artificial Intelligence. Thesis: 'Scalable Algorithms for Large-Scale Text Analysis'.\n\u2022 **Skills:** Python, Java, NLP, Machine Learning, Contract Law, Intellectual Property, SaaS, Product Management, Team Leadership, Fundraising, Go-to-Market Strategy.\n\u2022 **Affiliations:** Member of the American Bar Association (ABA), Section of Science & Technology Law.",
+    "lookingFor": "### Investment\n\u2022 Seed-stage investors with a demonstrated track record of backing technical founders and AI-focused startups.\n\u2022 Investment size: $2M - $5M.\n\u2022 Willingness to accept technical risk and embrace a fast-paced development cycle.\n\n### Advisory\n\u2022 Experienced legal tech advisors with a strong network in the legal industry.\n\u2022 Expertise in sales, marketing, and scaling a SaaS product within the legal vertical.\n\u2022 Individuals who have successfully navigated the complexities of selling to large law firms.\n\n### Strategic Partnerships\n\u2022 Potential integration partners with complementary technologies in the legal tech space (e.g., e-discovery platforms, document management systems).",
+    "notes": "Isabela is incredibly driven and moves quickly. She's very focused on execution and less interested in long, drawn-out strategic discussions. She's intentionally operating in stealth and is hesitant to share too many details about her current venture publicly. She mentioned her previous exit happened quickly, and she's aiming for a similar timeline this time around. She can sometimes come across as blunt, but that's primarily due to her efficiency-focused mindset. She\u2019s been actively researching investors specializing in AI and legal tech for the past month and has a clear idea of her target profile. Recent conversation indicated a slight frustration with the due diligence process \u2013 she wants to move *fast*. She's less interested in purely financial investors and prioritizes those who can bring strategic value.",
+    "locationAvailability": "Based in Palo Alto, California, but open to connecting with individuals globally.",
+    "introPreferences": "\u2022 **Hard Requirement:** Individuals with direct experience investing in or advising AI-powered legal tech companies.\n\u2022 **Strong Preference:** Partners at VC firms (Seed/Series A) known for their technical expertise.\n\u2022 **Soft Preference:** Legal professionals with a strong understanding of AI and a demonstrated interest in innovation.\n\u2022 **Avoid:** Introductions to generalist investors or individuals without a deep understanding of the legal tech market.\n\u2022 **Introduction Note:** Please briefly highlight the connection's experience with AI and their understanding of the legal industry.",
+    "personalPreferences": "Isabela prefers direct and concise communication. She\u2019s most responsive on email and Slack. She\u2019s not a fan of long email chains and appreciates a clear call to action. She's generally available for quick calls but prefers to avoid lengthy introductory meetings. She values efficiency and respects people\u2019s time.",
+    "meetingAndSchedulingPreferences": "Prefers 30-minute introductory calls to assess fit and alignment."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 23.25768232345581,
+      "input_tokens": 773,
+      "output_tokens": 1189,
+      "problems": []
+    }
+  ],
+  "success": true
+}

@@ -1,0 +1,54 @@
+{
+  "id": 873,
+  "archetype": "Early-Stage AI/ML Researcher",
+  "given_name": "Amir Kowalski",
+  "style_version": 53,
+  "archetypes_version": 147,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Amir Kowalski is a PhD candidate in Computer Science at Carnegie Mellon University, specializing in adversarial machine learning for cybersecurity applications. He's a highly promising researcher with a strong publication record, but his distinctive detail is a background in formal verification *before* transitioning to ML. This gives him a unique perspective on the robustness and trustworthiness of AI systems, something he actively leverages in his work. He's nearing the end of his PhD and is beginning to explore opportunities in both industry research labs and potentially founding a startup focused on AI security. He\u2019s actively networking to connect with potential advisors, investors, and collaborators who can help him navigate this transition and bring his research to market. He's particularly interested in connections within companies focused on autonomous systems and threat detection.",
+    "positioning": "Amir Kowalski is a PhD candidate at Carnegie Mellon University developing novel defenses against adversarial attacks on machine learning models, with a focus on applications in cybersecurity. His research blends techniques from formal verification and deep learning to enhance the robustness and reliability of AI systems. Recently, Amir presented his work on certified defenses at NeurIPS, demonstrating significant improvements in model resilience. He\u2019s passionate about bridging the gap between academic research and real-world applications, and believes trustworthy AI is critical for a secure future. Amir is actively seeking collaborations and mentorship to translate his research into impactful solutions and explore entrepreneurial opportunities in the AI security space.",
+    "background": "- **Carnegie Mellon University**, Pittsburgh, PA - PhD Candidate, Computer Science (Expected Graduation: May 2025)\n  * Dissertation: \u201cFormal Guarantees for Robustness in Deep Learning: Applications to Cybersecurity\u201d\n  * Relevant Coursework: Machine Learning, Deep Learning, Formal Methods, Cybersecurity, Cryptography, Network Security\n  * Research Focus: Adversarial Machine Learning, Robustness Certification, Formal Verification, Threat Detection\n  * Publications: 3 peer-reviewed publications in top-tier conferences (NeurIPS, ICML, CCS)\n\n- **Massachusetts Institute of Technology (MIT)**, Cambridge, MA - Master of Engineering, Electrical Engineering and Computer Science (2021)\n  * GPA: 4.0/4.0\n  * Thesis: \u201cVerification of Cyber-Physical Systems using Model Checking\u201d\n\n- **University of California, Berkeley** - Bachelor of Science, Computer Science (2019)\n  * Dean\u2019s List, Phi Beta Kappa\n\n- **Skills:** Python, TensorFlow, PyTorch, Keras, C++, Formal Verification (SMT solvers \u2013 Z3, Yices), Machine Learning Algorithms (CNNs, RNNs, GANs), Data Analysis (Pandas, NumPy), Cybersecurity Principles, Threat Modeling, Statistical Analysis, Scientific Writing\n\n- **Awards and Recognition:**\n  * Carnegie Mellon University Graduate Fellowship (2021-Present)\n  * MIT Graduate Research Fellowship (2019-2021)",
+    "lookingFor": "- **Industry Research Labs:** Seeking connections with researchers at leading AI/ML research labs (e.g., Google Brain, OpenAI, Microsoft Research) focusing on AI security.\n- **Startup Founders/Advisors:** Interested in connecting with entrepreneurs and advisors in the AI security space, particularly those focused on early-stage ventures.\n- **Seed/Angel Investors:** Exploring potential funding opportunities for a startup based on his research.\n- **Cybersecurity Professionals:** Seeking insights from professionals working in cybersecurity to understand real-world challenges and needs.\n- **Potential Collaborators:** Looking for researchers working on complementary areas (e.g., anomaly detection, intrusion prevention) to explore collaborative research projects.\n- **Mentorship:** Seeking guidance from experienced researchers and industry leaders on career paths and entrepreneurial endeavors.\n- **Connections to Autonomous Systems Companies:** Particularly interested in companies developing safety-critical autonomous systems (e.g., self-driving cars, robotics).",
+    "notes": "- Amir is extremely focused on the *provable* security of ML models \u2013 he\u2019s skeptical of purely empirical defenses.\n- He recently attended the Black Hat conference and is actively following developments in adversarial AI attacks.\n- He\u2019s currently refining a prototype tool for automatically verifying the robustness of image classification models.\n- He\u2019s open to discussing potential consulting opportunities related to AI security assessment.",
+    "locationAvailability": "Amir Kowalski is currently based in Pittsburgh, PA. He is open to relocation for the right opportunity and will be attending the RSA Conference in San Francisco in May 2025.",
+    "introPreferences": "- **Hard Requirements:** Introductions should be to individuals with a strong technical background in AI/ML and/or cybersecurity.\n- **Hard Requirements:** No recruiters or sales pitches, please.\n- **Soft Preferences:** Introductions to people who have experience building and scaling AI-based security products are highly valued.\n- **Soft Preferences:** Prefer introductions that highlight a shared research interest or a specific problem area.\n- **Avoid:** Introductions to individuals in purely managerial roles without technical expertise.\n- **Introduction Style:** A concise email introducing Amir's research and highlighting the potential for collaboration is preferred.\n- **Desired Outcome:** Introductions that lead to meaningful conversations and potential collaborations.",
+    "personalPreferences": "Amir prefers to communicate via email initially. He\u2019s a quick responder and values clear, concise communication. He is comfortable with video calls after an initial email exchange.",
+    "meetingAndSchedulingPreferences": "Amir is generally available for meetings during weekday afternoons (EST). He appreciates receiving a brief agenda beforehand to prepare for the discussion."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 16.27905821800232,
+      "input_tokens": 734,
+      "output_tokens": 1173,
+      "problems": []
+    }
+  ],
+  "success": true
+}

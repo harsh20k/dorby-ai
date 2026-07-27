@@ -1,0 +1,54 @@
+{
+  "id": 637,
+  "archetype": "Healthcare AI, Multi-Exit Operator",
+  "given_name": "Mikael Sokolov",
+  "style_version": 39,
+  "archetypes_version": 106,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Mikael Sokolov is a seasoned AI/ML engineer and entrepreneur who's had two successful exits \u2013 one in fintech and one in cybersecurity. He's now focused on applying his expertise to healthcare, specifically in diagnostic imaging. He believes AI can dramatically improve the speed and accuracy of diagnoses, reducing costs and improving patient outcomes. His current venture, \u2018Clarity Diagnostics\u2019, is developing a novel AI platform that analyzes medical images (X-rays, CT scans, MRIs) to assist radiologists in detecting subtle anomalies often missed by the human eye. He\u2019s seeking strategic partnerships with hospital networks and potential Series A investors. He's a very direct communicator, values efficiency, and isn't afraid to challenge conventional wisdom. He\u2019s based in Boston, but frequently travels to the West Coast for fundraising.",
+    "positioning": "Clarity Diagnostics is revolutionizing the field of medical imaging through the application of cutting-edge artificial intelligence. We are building a platform designed to augment the capabilities of radiologists, not replace them. Our core technology leverages a proprietary convolutional neural network architecture, trained on a massive, ethically sourced dataset of anonymized medical images. This allows Clarity Diagnostics to identify subtle patterns and anomalies indicative of disease with unprecedented accuracy and speed.  \n\nOur value proposition is threefold: improved diagnostic accuracy leading to better patient outcomes, reduced workload for radiologists allowing them to focus on complex cases, and decreased healthcare costs through earlier and more precise diagnoses. We are initially targeting hospitals and imaging centers specializing in oncology, cardiology, and neurology. The current market is dominated by fragmented solutions offering limited functionality; Clarity Diagnostics provides a comprehensive, end-to-end solution seamlessly integrated into existing radiology workflows. We are not simply building another image analysis tool; we are building a diagnostic partner.  We are currently in late-stage clinical trials and anticipate FDA clearance within the next 12-18 months.  Our competitive advantage lies in the sophistication of our AI model, the quality of our training data, and our commitment to user-centric design.",
+    "background": "- **Founder & CEO, Clarity Diagnostics** (2021 \u2013 Present): Led all aspects of company formation, fundraising, product development, and clinical trial planning. Secured seed funding of $5M.\n- **CTO, ShieldTech Solutions** (2017 \u2013 2021): Led the engineering team responsible for developing a next-generation threat detection platform utilizing machine learning. Successfully exited to Palo Alto Networks for $120M.\n- **Lead Data Scientist, FinWise Analytics** (2014 \u2013 2017): Developed and deployed machine learning models for fraud detection and risk assessment in the financial services industry. Contributed to a 30% reduction in fraudulent transactions. Exited to Capital One for $85M.\n- **Research Scientist, MIT Computer Science and Artificial Intelligence Laboratory (CSAIL)** (2012 \u2013 2014): Conducted research in the field of deep learning and computer vision. Published several peer-reviewed papers in top-tier conferences.\n- **Ph.D., Computer Science, Massachusetts Institute of Technology (MIT)** (2008 \u2013 2012): Dissertation focused on the application of Bayesian networks to medical diagnosis.\n- **M.S., Computer Science, Stanford University** (2006 \u2013 2008)\n- **B.S., Computer Science, California Institute of Technology (Caltech)** (2002 \u2013 2006)",
+    "lookingFor": "I am actively seeking strategic partnerships and investment opportunities to accelerate the growth of Clarity Diagnostics. Specifically, I am looking to connect with:\n\n* **Hospital Networks:**  Chief Medical Officers, Heads of Radiology, and Innovation Officers at leading hospital systems interested in piloting and implementing our AI-powered diagnostic platform.\n* **Series A Investors:** Venture capital firms with a focus on healthcare AI, particularly those with experience in medical imaging and diagnostics. We\u2019re targeting a $15-20M round to scale our team, expand our clinical trials, and prepare for commercial launch.\n* **Key Opinion Leaders (KOLs):**  Renowned radiologists and medical experts who can provide guidance on product development and clinical validation.\n* **Potential Strategic Partners:** Companies with complementary technologies or market access in the healthcare space.  I'm open to exploring co-marketing and distribution agreements.\n\nI prioritize investors who understand the complexities of the healthcare regulatory landscape and can provide valuable operational expertise. I am particularly interested in firms with a strong track record of supporting companies through FDA clearance and commercialization.",
+    "notes": "Mikael is very focused on speed and ROI. He\u2019s not interested in lengthy pitches or hypothetical discussions. He appreciates directness and data-driven arguments. He recently spoke with Sarah Chen at Sequoia, and she suggested connecting with someone in their healthcare AI portfolio. He\u2019s a bit skeptical of overly optimistic claims and prefers a pragmatic approach.",
+    "locationAvailability": "I am currently based in Boston, Massachusetts, but travel frequently to the San Francisco Bay Area for fundraising and industry events. I am open to relocating if necessary, but prefer to maintain a presence in Boston for access to the region\u2019s strong talent pool and research institutions.",
+    "introPreferences": "When making introductions, please emphasize:\n\n* **My track record of successful exits:**  Highlight my experience building and scaling companies in both fintech and cybersecurity.\n* **The clinical validation of Clarity Diagnostics:**  Focus on the potential for our platform to improve diagnostic accuracy and patient outcomes.\n* **Our unique technology:** Briefly explain our proprietary AI model and its advantages over existing solutions.\n\n**Hard Requirements:** Contacts must have decision-making authority or significant influence within their organizations.\n**Soft Preferences:**  I prefer introductions to individuals who are open to disruptive technologies and have a demonstrated interest in AI. Avoid overly bureaucratic or risk-averse individuals. Please keep the introduction concise and to the point.",
+    "personalPreferences": "I prefer short, direct messages via email or LinkedIn. I\u2019m generally available for quick calls but prefer to schedule longer meetings in advance.",
+    "meetingAndSchedulingPreferences": "I am generally available for meetings between 9 am and 5 pm EST. I prefer to use Google Meet or Zoom for video conferencing. Please send a calendar invite with a clear agenda at least 24 hours in advance. I respond promptly to meeting requests and appreciate punctuality."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 18.333110809326172,
+      "input_tokens": 808,
+      "output_tokens": 1353,
+      "problems": []
+    }
+  ],
+  "success": true
+}

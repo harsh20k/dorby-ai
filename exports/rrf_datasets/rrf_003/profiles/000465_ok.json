@@ -1,0 +1,54 @@
+{
+  "id": 465,
+  "archetype": "Experienced Healthcare Operator/Founder",
+  "given_name": "Lucas Lindqvist",
+  "style_version": 28,
+  "archetypes_version": 78,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Lucas Lindqvist is a Swedish-American healthcare executive who spent 15 years building operational excellence within large hospital systems, specifically focusing on streamlining data flow between disparate electronic health record (EHR) systems. He became deeply frustrated by the lack of true interoperability, seeing it as a major barrier to improved patient care and cost reduction. He recently left his VP of Operations role at a major Boston teaching hospital to found 'Synapse Health,' a company building a secure, AI-powered data harmonization layer for healthcare providers. Synapse Health isn\u2019t building *another* EHR; it's designed to sit *on top* of existing systems, making them work together. He's currently in seed funding stage, targeting hospital systems with 500+ beds and is particularly interested in exploring partnerships with international healthcare organizations, leveraging his fluency in Swedish, German, and English. He's a pragmatic, data-driven leader who values direct communication and demonstrable results. He's a bit of a perfectionist and can be slow to trust, but is fiercely loyal once a relationship is established.",
+    "positioning": "I\u2019m Lucas Lindqvist, Founder & CEO of Synapse Health. We\u2019re tackling the biggest challenge in healthcare today: data silos. Despite decades of investment in Electronic Health Records, critical patient information remains fragmented, hindering clinical decision-making, driving up costs, and ultimately impacting patient outcomes. Synapse Health provides a secure, AI-driven data harmonization layer that seamlessly integrates with existing EHR systems \u2013 we don\u2019t replace them, we *connect* them. \n\nWe\u2019re focused on empowering hospitals and health systems to unlock the full potential of their data, enabling real-time insights, predictive analytics, and personalized care. Our initial traction has been strong, demonstrating a 30% reduction in data reconciliation time and a 15% improvement in data accuracy during pilot programs. \n\nWe\u2019re currently raising a $3M seed round to scale our platform and expand our team. I\u2019m actively seeking connections with healthcare investors, strategic partners in the interoperability space, and experienced advisors who can help us navigate the complex regulatory landscape. If you\u2019re passionate about transforming healthcare through data, I\u2019d love to connect. Let's discuss how Synapse Health can build a more connected, efficient, and patient-centric healthcare system.",
+    "background": "* **Synapse Health, Boston, MA (2023 \u2013 Present)**\n    *Founder & CEO:* Leading all aspects of company strategy, product development, fundraising, and team building. Developed and validated the core technology and business model.\n    *Secured $500k pre-seed funding from angel investors.*\n    *Built a core team of 5 engineers and data scientists.*\n\n* **Massachusetts General Hospital, Boston, MA (2018 \u2013 2023)**\n    *Vice President of Operations:* Responsible for operational efficiency and performance across multiple clinical departments, including radiology, cardiology, and oncology. Managed a budget of $150M and a team of 200+ employees.\n    *Led a cross-functional team to implement a new clinical documentation system, resulting in a 20% reduction in documentation errors and a 10% increase in physician satisfaction.*\n    *Championed the adoption of data analytics tools to identify and address operational bottlenecks, leading to a 12% reduction in patient wait times.*\n\n* **Cleveland Clinic, Cleveland, OH (2013 \u2013 2018)**\n    *Director of Healthcare Informatics:* Led the implementation and optimization of EHR systems, focusing on data integration and interoperability. Managed a team of 15 informatics specialists.\n    *Successfully integrated multiple EHR systems following a major hospital merger, ensuring seamless data flow and minimal disruption to clinical operations.*\n    *Developed and implemented data governance policies to ensure data quality and compliance.*\n\n* **Karolinska Institutet, Stockholm, Sweden (2011 \u2013 2013)**\n    *Research Associate:* Conducted research on the impact of health IT on patient outcomes. Published several peer-reviewed articles in leading medical journals.\n\n* **Education:**\n    *Harvard Business School, Boston, MA \u2013 MBA (2011)\n    *Karolinska Institutet, Stockholm, Sweden \u2013 PhD, Medical Informatics (2011)\n    *Uppsala University, Uppsala, Sweden \u2013 MS, Computer Science (2007)\n    *Uppsala University, Uppsala, Sweden \u2013 BS, Computer Science (2005)",
+    "lookingFor": "I'm actively seeking strategic connections to accelerate Synapse Health's growth. Specifically, I'm looking to connect with:\n\n* **Healthcare Investors:** Seed-stage VCs with a focus on healthcare IT and interoperability. We're aiming to close a $3M round in the next 60-90 days.\n* **Hospital System Executives (CIOs, CMOs, COOs):**  Specifically, those leading organizations with 500+ beds who are actively exploring solutions to improve data integration and analytics capabilities.  I'd appreciate introductions to decision-makers.\n* **Interoperability Experts:** Individuals with deep expertise in HL7 FHIR, APIs, and healthcare data standards.  We're always looking for advisors to help us navigate the evolving regulatory landscape.\n* **Potential Strategic Partners:** Companies offering complementary solutions in areas such as population health management, predictive analytics, and remote patient monitoring. \n\nI'm particularly interested in exploring opportunities in the European market, leveraging my language skills and understanding of international healthcare systems.  I\u2019m also open to discussing potential advisory roles with individuals who have experience scaling healthcare startups.  \n\n* **Ideal Connection Profile:**  Someone with a proven track record of success in healthcare innovation, a strong network within the industry, and a genuine passion for improving patient care.",
+    "notes": "Lucas is very focused on data security and privacy \u2013 emphasize any connections with strong security credentials. He's been burned in the past by overly optimistic sales pitches, so avoid hyperbole and focus on concrete results. He\u2019s currently engaged in conversations with two potential investors (Redwood Health Ventures and Optum Ventures) \u2013 be mindful of potential conflicts of interest. \n\n* **Recent Conversation:** Spoke with Dr. Anya Sharma (former CMIO at Stanford Health) last week. She offered to make an introduction to her network of hospital CIOs. Follow up on this.\n* **Priority:** Closing the seed round is the absolute top priority.\n* **Caveat:** He can be quite detail-oriented and may ask a lot of probing questions. Prepare connections accordingly.\n* **Sensitivity:** He\u2019s sensitive about the perceived competition from larger EHR vendors. Frame Synapse Health as a *complement* to existing systems, not a replacement.",
+    "locationAvailability": "Based in Boston, MA, with frequent travel to potential client sites. Open to remote meetings and collaborations. Willing to travel internationally, particularly within Europe.",
+    "introPreferences": "* **Hard Requirements:**\n    * Connection must have a demonstrable track record in healthcare (investing, operating, advising).\n    * Connection must be able to articulate a clear understanding of the challenges of healthcare interoperability.\n* **Soft Preferences:**\n    * Connection should have a network of contacts within hospital systems or healthcare IT companies.\n    * Connection should be a strong communicator and a collaborative thinker.\n* **Introduction Framing:**\n    * Briefly highlight Synapse Health's mission to solve the data fragmentation problem.\n    * Emphasize Lucas's experience building operational excellence within large hospital systems.\n    * Focus on the potential for mutual benefit and collaboration.",
+    "personalPreferences": "I prefer direct and concise communication. Email is generally best for initial contact, but I\u2019m happy to schedule a quick call to discuss opportunities. I value honest feedback and am open to constructive criticism. I'm typically available for meetings during Eastern Time business hours.",
+    "meetingAndSchedulingPreferences": "* Prefer short, focused meetings with clear agendas.\n* Happy to debrief briefly after introductions to assess fit.\n* Please provide at least 24 hours' notice for scheduling requests."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 30.30710506439209,
+      "input_tokens": 877,
+      "output_tokens": 1747,
+      "problems": []
+    }
+  ],
+  "success": true
+}

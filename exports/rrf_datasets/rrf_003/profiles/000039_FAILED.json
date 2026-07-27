@@ -1,0 +1,74 @@
+{
+  "id": 39,
+  "archetype": "Early-Stage Founder, Operator-First",
+  "given_name": "Kenji Moreau",
+  "style_version": 3,
+  "archetypes_version": 8,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Kenji Moreau is a first-time founder in the precision agriculture space. He spent 10 years as a robotics engineer at a major agricultural equipment manufacturer (Deere & Company), specifically focusing on autonomous harvesting systems. He *left* Deere not because he was unhappy, but because he felt stifled by the bureaucracy and wanted to build a more nimble, adaptable solution for smaller farms. His company, \u2018RootWise\u2019, is developing AI-powered sensor networks and predictive analytics to optimize irrigation and fertilization for specialty crops \u2013 think vineyards, orchards, and high-value vegetable farms. He\u2019s fiercely pragmatic and focused on demonstrable ROI for his customers. He's currently fundraising a seed round and actively seeking advisors with experience scaling hardware-focused startups. He's a quiet, analytical leader who prioritizes data and demonstrable results. He's not a 'visionary' in the traditional sense, but a deeply capable *builder*.",
+    "positioning": "RootWise is revolutionizing specialty crop management through hyper-local, data-driven insights. We empower farmers to maximize yield and minimize resource waste with our AI-powered sensor networks and predictive analytics platform. For too long, precision agriculture has been focused on massive commodity crops, leaving smaller, high-value farms behind. RootWise fills that gap, providing affordable, easy-to-deploy solutions that deliver immediate ROI. My background at Deere honed my understanding of the challenges and opportunities in agricultural robotics, but it also revealed a critical need for agile, customer-centric solutions. We aren\u2019t selling \u2018future farms\u2019; we\u2019re delivering tangible improvements *today*. I\u2019m focused on building a sustainable business that benefits both farmers and the environment. **RootWise: Data-driven agriculture for the discerning grower.** Currently leading RootWise through seed funding and initial customer acquisition, prioritizing scalable hardware deployment and robust data analytics.",
+    "background": "- **Founder & CEO, RootWise** (2023 \u2013 Present)\n  - Spearheaded the development and launch of RootWise\u2019s core sensor network and AI analytics platform.\n  - Secured initial pilot program contracts with three commercial vineyards in Napa Valley.\n  - Led seed fundraising efforts, currently in due diligence with several angel investors and micro-VCs.\n  - Managed all aspects of company operations, including product development, marketing, sales, and finance.\n\n- **Robotics Engineer, Deere & Company** (2013 \u2013 2023)\n  - Led a team of five engineers in the development of autonomous harvesting systems for combine harvesters.\n  - Designed and implemented control algorithms for robotic manipulators, resulting in a 15% increase in harvesting efficiency.\n  - Managed the integration of sensor data (LiDAR, computer vision, GPS) into real-time decision-making systems.\n  - Contributed to the patent filing for a novel crop detection algorithm.\n  - Consistently exceeded performance expectations, receiving multiple \u2018Innovation Award\u2019 nominations.\n\n- **Research Assistant, Robotics Institute, Carnegie Mellon University** (2011 \u2013 2013)\n  - Conducted research on sensor fusion and machine learning algorithms for autonomous navigation.\n  - Published research papers in peer-reviewed journals (IEEE Robotics and Automation Letters).\n  - Assisted in the development of a prototype autonomous underwater vehicle.\n\n- **Education:**\n  - **M.S., Robotics, Carnegie Mellon University** (2013)\n  - **B.S., Mechanical Engineering, Massachusetts Institute of Technology** (2011)\n\n- **Skills:**\n  - Robotics (ROS, Python, C++)\n  - Machine Learning (TensorFlow, PyTorch)\n  - Data Analytics (SQL, Tableau)\n  - Sensor Fusion (LiDAR, Computer Vision, GPS)\n  - Agricultural Technology\n  - Project Management\n  - Fundraising\n  - Team Leadership",
+    "lookingFor": "I\u2019m actively seeking connections with individuals who can accelerate RootWise\u2019s growth. Specifically:\n\n* **Seed-stage investors:** Focusing on AgTech, ClimateTech, or hardware-focused funds with check sizes between $500k - $2M.\n* **Advisors:** Experienced entrepreneurs who have successfully scaled hardware startups, particularly in agricultural or industrial settings.  Strong preference for those with prior exits.\n* **Strategic Partners:** Companies with established distribution networks within the specialty crop market (e.g., irrigation equipment suppliers, fertilizer companies, agricultural consultants).\n* **Early Adopters:**  Vineyards, orchards, and specialty crop farmers willing to participate in pilot programs and provide valuable feedback.\n\nI'm particularly interested in connecting with individuals in the California agricultural ecosystem, but am open to opportunities nationally.  I'm not currently looking for full-time employees, but may consider key advisor roles.  I'm available for brief introductory calls to discuss potential collaborations.",
+    "notes": "\u2022 Met with Sarah Chen (AgTech VC) last week - positive initial conversation, follow-up scheduled. She wants to see more traction data. \n\u2022 Need to refine pitch deck to emphasize scalability of the hardware component. \n\u2022 Talked to David Lee (former CTO of FarmBeats) - he suggested exploring integration with existing farm management software. Good idea - add to product roadmap.\n\u2022 Kenji is generally reserved but *very* responsive to data and logical arguments. Avoid overly enthusiastic pitches or unsubstantiated claims.\n\u2022 He prioritizes practical solutions and demonstrable ROI above all else. \n\u2022 Sensitive about being perceived as a 'tech bro' \u2013 emphasize the benefit to farmers and sustainability. \n\u2022 Follow up on LinkedIn connection request from Mark Olsen (potential advisor).",
+    "locationAvailability": "Currently based in San Francisco, CA.  Open to travel within the US and occasional international trips.  Remote work is acceptable for advisors and partners, but we require a physical presence near our pilot farms for core engineering and deployment.",
+    "introPreferences": "When introducing me to someone, please:\n\n* Briefly mention my background at Deere and the focus of RootWise (AI-powered sensor networks for specialty crops).\n* Highlight the mutual benefit of the connection \u2013 how can they help us, or how can we help them?\n* Avoid introductions to purely \u2018networking\u2019 contacts with no clear value proposition.\n* Please preface the introduction with a quick text or message to confirm they\u2019re open to connecting.\n* Ideally, include a specific question or talking point to kickstart the conversation (e.g., \u201cKenji is building a fascinating solution for vineyard irrigation \u2013 I thought you might be interested in his approach.\u201d)",
+    "personalPreferences": "I prefer to communicate via email initially. WhatsApp is fine for quick follow-ups.",
+    "meetingAndSchedulingPreferences": "I\u2019m in the Pacific Time Zone (PST). I generally have availability in the afternoons. Please send a calendar invite with a brief agenda and any relevant materials. I prefer 30-minute meetings initially."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 25.823246002197266,
+      "input_tokens": 807,
+      "output_tokens": 1594,
+      "problems": [
+        "background: possible truncation (ends with '...pment\n  - Team Leadership')"
+      ]
+    },
+    {
+      "attempt": 2,
+      "elapsed_s": 22.014365911483765,
+      "input_tokens": 807,
+      "output_tokens": 1641,
+      "problems": [
+        "background: possible truncation (ends with '...rship, Project Management')"
+      ]
+    },
+    {
+      "attempt": 3,
+      "elapsed_s": 20.90943193435669,
+      "input_tokens": 807,
+      "output_tokens": 1485,
+      "problems": [
+        "background: possible truncation (ends with '...ising\n  - Team Leadership')"
+      ]
+    }
+  ],
+  "success": false
+}

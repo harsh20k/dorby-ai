@@ -1,0 +1,54 @@
+{
+  "id": 532,
+  "archetype": "Growth-Stage Cybersecurity Professional",
+  "given_name": "Yusuf Nguyen",
+  "style_version": 32,
+  "archetypes_version": 89,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Yusuf Nguyen is a seasoned cybersecurity professional, currently the CEO & Founder of 'Sentinel Shield,' a rapidly growing MDR (Managed Detection & Response) provider focused on the SME market in DACH (Germany, Austria, Switzerland). He\u2019s a former penetration tester with a unique background \u2013 he initially specialized in industrial control systems (ICS) security, which gives him a deep understanding of operational technology vulnerabilities often overlooked by traditional cybersecurity firms. He's now aggressively scaling Sentinel Shield, seeking Series A funding and strategic partnerships to expand their service offerings and geographic reach. He's very technically astute, but understands he needs to build out the sales & marketing side. He\u2019s direct, pragmatic, and values efficiency. He\u2019s looking for introductions to VCs specializing in B2B SaaS, potential channel partners with existing SME client bases in DACH, and experienced sales leaders with a strong cybersecurity background.",
+    "positioning": "Sentinel Shield is revolutionizing cybersecurity for small and medium-sized enterprises (SMEs) in the DACH region. We provide a comprehensive Managed Detection & Response (MDR) service, proactively identifying and mitigating threats before they impact our clients\u2019 businesses. Unlike traditional security solutions that are often too complex and expensive for SMEs, Sentinel Shield offers an affordable, easy-to-deploy, and highly effective security posture. Our core differentiator lies in our expertise in Operational Technology (OT) security \u2013 a critical but often neglected area for SMEs with even limited industrial operations. We\u2019ve achieved significant traction in the last 18 months, onboarding over 75 clients and achieving a 300% year-over-year growth in ARR, currently at $2.5M. We\u2019re poised for rapid expansion and are actively seeking strategic partnerships and investment to accelerate our growth and broaden our service portfolio to include vulnerability management and security awareness training.",
+    "background": "* **CEO & Founder, Sentinel Shield (2022 \u2013 Present):** Leading all aspects of the business, including strategy, product development, sales, and operations. Responsible for securing seed funding, building a high-performing team, and establishing key partnerships.\n* **Lead Penetration Tester & ICS Security Specialist, CyberNexus (2018 \u2013 2022):** Conducted penetration testing and vulnerability assessments for critical infrastructure clients, specializing in industrial control systems (ICS) and SCADA environments. Developed and delivered customized security training programs for operational teams.\n* **Security Consultant, SecureIT Solutions (2016 \u2013 2018):** Provided cybersecurity consulting services to a diverse range of clients, including risk assessments, security policy development, and incident response planning.\n* **Education:** MSc in Information Security, ETH Zurich (2016). BSc in Computer Science, University of Stuttgart (2014).\n* **Certifications:** OSCP (Offensive Security Certified Professional), CISSP (Certified Information Systems Security Professional), GICSP (Global Industrial Cyber Security Professional).\n* **Notable Achievement (CyberNexus):** Led a team that discovered and mitigated a critical vulnerability in a major European power grid\u2019s SCADA system, preventing a potential nationwide blackout.",
+    "lookingFor": "### Investment\n* **Series A VCs:** Targeting funds with a focus on B2B SaaS and cybersecurity, with investment ranges of $5M - $10M.  Preference for firms with experience in the DACH market.\n* **Angel Investors:**  Individuals with a strong cybersecurity background and a history of successful exits.\n\n### Partnerships\n* **Channel Partners:**  Managed Service Providers (MSPs) and IT consulting firms with an established SME client base in Germany, Austria, and Switzerland.\n* **Technology Partners:** Companies offering complementary security solutions, such as vulnerability management platforms or security awareness training providers.\n\n### Expertise\n* **Experienced Sales Leader:**  Seeking a VP of Sales or Head of Sales with a proven track record of selling cybersecurity solutions to SMEs.\n* **Marketing Expertise:**  Guidance on scaling marketing efforts and building brand awareness in the DACH region.",
+    "notes": "Yusuf is a highly intelligent and technically proficient leader. He's very direct and prefers concise communication. He's passionate about protecting SMEs from cyber threats and genuinely believes Sentinel Shield can make a significant impact. He can sometimes get lost in the technical details, so framing discussions around business value is crucial. He\u2019s particularly proud of his ICS security background and often uses it to highlight Sentinel Shield\u2019s unique capabilities. He's currently laser-focused on securing Series A funding and is actively networking with potential investors. Be prepared to discuss metrics and growth projections. He appreciates efficiency and dislikes lengthy, unproductive meetings.  He's generally responsive but prefers substantive conversations over small talk.",
+    "locationAvailability": "Based in Munich, Germany.  Open to remote meetings and occasional travel within Europe, particularly to Berlin, Vienna, and Zurich.",
+    "introPreferences": "* **Hard Requirements:** Introductions to VCs *must* have a demonstrable track record of investing in B2B SaaS cybersecurity companies. Introductions to potential partners *must* have a strong existing SME client base in the DACH region. \n* **Soft Preferences:**  Prioritize introductions to individuals who understand the unique challenges faced by SMEs in cybersecurity.  Emphasize Sentinel Shield\u2019s expertise in OT security and our strong growth trajectory.  Avoid introductions to firms focused solely on enterprise-level security solutions. When making an introduction, briefly highlight the shared professional background or common connections between Yusuf and the recipient.",
+    "personalPreferences": "I prefer initial contact via LinkedIn or email.  Please keep follow-up concise and focused. I'm not a big fan of long email threads.",
+    "meetingAndSchedulingPreferences": "I prefer meetings to be focused and efficient, with a clear agenda. Please share any relevant materials beforehand. I typically join meetings 5-10 minutes late to handle urgent matters, so please don\u2019t interpret this as a lack of respect. A quick recap of key takeaways and action items after the meeting is greatly appreciated."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 20.958860158920288,
+      "input_tokens": 786,
+      "output_tokens": 1266,
+      "problems": []
+    }
+  ],
+  "success": true
+}

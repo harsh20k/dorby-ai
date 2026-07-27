@@ -1,0 +1,54 @@
+{
+  "id": 726,
+  "archetype": "Deep Tech/Biotech Founder Connector",
+  "given_name": "Alejandro Ibrahim",
+  "style_version": 44,
+  "archetypes_version": 121,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Alejandro Ibrahim is a seasoned venture capitalist specializing in early-stage deep tech and biotech. His distinctive career detail is a PhD in computational biology *before* entering finance, giving him unique credibility with scientific founders. He's currently focused on leading Seed/Series A rounds for companies tackling significant problems in synthetic biology, personalized medicine, and advanced materials. He's not looking for \u2018lifestyle businesses\u2019 \u2013 he wants ambitious founders building fundamentally new technologies with strong IP and a clear path to scaled impact. He's very active in the ecosystem, frequently speaking at conferences and mentoring founders. He values direct, scientifically rigorous communication. He's relatively new to the firm (6 months) and is actively building his network of high-potential founders to demonstrate his deal-sourcing ability.",
+    "positioning": "Alejandro Ibrahim is a Principal at Nova Ventures, a venture capital firm investing in the future of deep tech. I focus on identifying and supporting exceptional founders building breakthrough technologies in synthetic biology, personalized medicine, and advanced materials science. My background as a computational biologist allows me to deeply understand the technical challenges and opportunities facing these companies, enabling me to provide more than just capital \u2013 I offer strategic guidance and scientific validation. \n\nCurrently, I'm leading Nova\u2019s efforts to expand our portfolio in the rapidly evolving field of cellular agriculture and biomanufacturing. We\u2019ve recently closed a significant investment in GenSyn, a company pioneering novel protein engineering techniques, and I\u2019m actively seeking similar opportunities with strong IP and demonstrable product-market fit. \n\nConnecting with me is valuable if you're a founder tackling ambitious scientific challenges, seeking a partner who understands your technology, or are interested in exploring potential collaborations within the Nova Ventures network. I'm particularly keen to discuss companies with pre-seed or seed stage funding needs, demonstrating proof-of-concept data, and aiming for significant market disruption.",
+    "background": "- **Principal, Nova Ventures** (Jan 2024 \u2013 Present)\n  - Lead deal sourcing, due diligence, and investment execution for early-stage deep tech and biotech companies.\n  - Currently managing a portfolio of 5 companies with a combined valuation exceeding $150M.\n  - Spearheading Nova's investment strategy in cellular agriculture and biomanufacturing.\n  - Mentoring portfolio founders on scientific strategy, team building, and fundraising.\n\n- **Consultant, McKinsey & Company** (Jun 2020 \u2013 Dec 2023)\n  - Focused on life sciences and healthcare, advising pharmaceutical and biotech companies on R&D strategy, market access, and digital transformation.\n  - Led projects involving complex data analysis and modeling, resulting in significant cost savings and revenue growth for clients.\n  - Developed a proprietary framework for assessing the commercial potential of novel therapeutics.\n\n- **Postdoctoral Researcher, Massachusetts Institute of Technology (MIT)** (Sep 2017 \u2013 May 2020)\n  - Conducted research in computational biology, focusing on the development of machine learning algorithms for predicting protein structure and function.\n  - Published multiple peer-reviewed articles in leading scientific journals, including *Nature* and *Science*.\n  - Secured a competitive research grant from the National Institutes of Health (NIH).\n\n- **PhD, Computational Biology, Stanford University** (Sep 2013 \u2013 Jun 2017)\n  - Dissertation: \u201cPredictive Modeling of Protein-Protein Interactions Using Deep Learning.\u201d\n  - GPA: 3.9/4.0; Ranked top 5% of graduating class.\n  - Recipient of the Stanford Graduate Fellowship.\n\n- **BS, Biology, California Institute of Technology (Caltech)** (Sep 2009 \u2013 Jun 2013)\n  - Minor in Computer Science.\n  - Undergraduate research assistant in a synthetic biology lab.\n  - Dean\u2019s List all semesters.",
+    "lookingFor": "- Founders building in synthetic biology, personalized medicine, and advanced materials.\n- Companies with strong IP and a clear technological advantage.\n- Seed/Series A stage companies seeking $2M - $10M in funding.\n- Individuals with a PhD or equivalent research experience.\n- Founders actively seeking strategic guidance and mentorship, not just capital.\n- Introductions to exceptional founders operating in stealth mode.\n- Opportunities to collaborate with other VCs and angel investors in the deep tech space.\n- *Not* interested in purely software-based companies without a significant hardware or biological component.",
+    "notes": "Alejandro is extremely bright and articulate, with a genuine passion for science. He\u2019s very direct in his communication and appreciates concise, data-driven pitches. He\u2019s a quick study and can rapidly grasp complex technical concepts. He's relatively new to Nova, so he's keen to build his reputation as a strong deal-sourcer. Be prepared for detailed technical questions. \n\nWe discussed his frustration with founders who overpromise and underdeliver on scientific milestones. He prefers to see demonstrable proof-of-concept data before getting too involved. He mentioned he\u2019s particularly interested in companies that are addressing unmet needs in the agricultural sector.\n\nHe's actively attending the SynBioBeta conference next month and is looking for pre-arranged meetings with promising founders. He\u2019s also a regular attendee of the BioWorld West conference.",
+    "locationAvailability": "Based in Menlo Park, California, with frequent travel to Boston and San Diego.",
+    "introPreferences": "- Warm email introductions are preferred. Please include a brief summary of the founder's background, the company's technology, and the funding stage.\n- Highlight any relevant publications or patents.\n- Avoid introducing me to companies that are purely software-focused or lack a strong scientific foundation.\n- If the founder has a strong connection to Stanford or MIT, please mention it.",
+    "personalPreferences": "Prefers to follow up via email initially, then schedule a brief call.",
+    "meetingAndSchedulingPreferences": "Generally available for 30-minute introductory calls. Please send a brief deck or executive summary in advance."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 23.976594924926758,
+      "input_tokens": 753,
+      "output_tokens": 1297,
+      "problems": []
+    }
+  ],
+  "success": true
+}

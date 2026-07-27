@@ -1,0 +1,54 @@
+{
+  "id": 566,
+  "archetype": "Early-Stage Founder, Seeking Traction",
+  "given_name": "Javier Eriksson",
+  "style_version": 35,
+  "archetypes_version": 95,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Javier Eriksson is a first-time founder in his early 30s, building a B2B SaaS platform for optimizing logistics for small to medium-sized trucking companies. He previously spent 8 years in supply chain consulting, specifically focused on efficiency improvements. He\u2019s a pragmatic, data-driven individual, slightly introverted but very passionate about solving the pain points he witnessed firsthand during his consulting days. He\u2019s currently focused on securing seed funding and early adopter customers. He\u2019s Swedish-American, having grown up moving between the two countries, giving him a global perspective. He\u2019s technically proficient but relies heavily on a small, remote engineering team. He\u2019s very aware he needs mentorship and connections to navigate the startup world effectively.",
+    "positioning": "Javier Eriksson is the Founder & CEO of RouteWise, a SaaS platform designed to streamline dispatch, route optimization, and real-time tracking for independent trucking businesses. Having spent nearly a decade consulting on supply chain inefficiencies, I identified a significant gap in affordable, user-friendly technology for smaller carriers. RouteWise empowers these businesses to compete more effectively, reduce operating costs, and improve driver satisfaction. We\u2019re currently focused on securing seed funding and onboarding our first 20 paying customers to demonstrate traction and validate our core assumptions. I'm passionate about building a solution that truly supports the backbone of our economy.",
+    "background": "- **Founder & CEO, RouteWise** (2023 \u2013 Present) \u2013 Leading all aspects of company formation, product development, fundraising, and go-to-market strategy.\n- **Senior Consultant, Global Logistics Solutions** (2015 \u2013 2023) \u2013 Managed and delivered supply chain optimization projects for Fortune 500 clients across various industries.\n- **Consultant, Global Logistics Solutions** (2015) - Entry level consulting position focusing on data analysis and reporting.\n- **Supply Chain Analyst Intern, Volvo Logistics** (Summer 2014) \u2013 Supported logistics planning and performance analysis.\n- **B.S., Industrial Engineering & Management, Chalmers University of Technology (Sweden)** (2011 \u2013 2015) \u2013 Focused on optimization, simulation, and data analysis.\n- **Project Lead, University Logistics Competition** (2014) \u2013 Led a team to design and implement an optimized logistics solution, placing top 10 nationally.\n- **Proficient in:** SQL, Python (data analysis), Tableau, Excel (advanced modeling), Lean Six Sigma methodologies.\n- **Certified:** APICS Certified Supply Chain Professional (CSCP)",
+    "lookingFor": "- **Seed Stage Investors:** Seeking investors with experience in B2B SaaS, logistics tech, or transportation.\n- **Mentors:** Experienced founders who have successfully navigated seed funding and early growth stages.\n- **Early Adopter Customers:** Independent trucking companies (5-20 trucks) willing to pilot RouteWise and provide feedback.\n- **Strategic Partnerships:** Potential collaborations with trucking associations or industry-specific software providers.\n- **Advisors:** Individuals with expertise in sales, marketing, and product development within the trucking industry.\n- **Networking:** Connecting with other founders in the logistics/supply chain space to share learnings and best practices.\n- **Talent:** Experienced full-stack engineers comfortable with remote work and rapid iteration.",
+    "notes": "- Javier is highly responsive and appreciates direct communication. \n- He\u2019s actively attending virtual industry events focused on logistics and transportation tech. \n- Recently joined the 'Logistics Founders' Slack group \u2013 check for activity there. \n- Showed interest in a conversation with Anya Sharma (investor at VentureScale) last week. \n- Prioritizes data-driven approaches and is looking for practical advice.",
+    "locationAvailability": "Based in Austin, Texas, but open to remote meetings and travel within the US.",
+    "introPreferences": "- **Ideal Introductions:** Seed-stage VCs specializing in B2B SaaS, particularly those with a portfolio in logistics or transportation. Founders who\u2019ve successfully raised a seed round and scaled a similar business.\n- **Good Introductions:** Experienced logistics consultants, trucking company owners/operators with 5-20 trucks.\n- **Avoid:** Introductions to large enterprise sales teams or individuals solely focused on consumer-facing logistics apps.\n- **Introduction Style:** Please briefly explain the connection\u2019s relevance to RouteWise \u2013 Javier prefers concise and targeted introductions.\n- **Hard No:** Recruiters. He has a team in place.\n- **Soft Preference:** Individuals who are active on LinkedIn and demonstrate a genuine interest in the logistics industry.",
+    "personalPreferences": "I prefer email for initial contact, but I'm happy to jump on a quick call if that's easier. I\u2019m a morning person and respond best to concise, well-structured communications.",
+    "meetingAndSchedulingPreferences": "I generally prefer 30-minute introductory calls via Zoom. I\u2019m flexible with scheduling, but please provide a few options in advance."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 17.216034173965454,
+      "input_tokens": 763,
+      "output_tokens": 1059,
+      "problems": []
+    }
+  ],
+  "success": true
+}

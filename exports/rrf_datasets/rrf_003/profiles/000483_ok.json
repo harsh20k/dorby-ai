@@ -1,0 +1,54 @@
+{
+  "id": 483,
+  "archetype": "Operator-Investor, Growth Focused",
+  "given_name": "Soraya Haddad",
+  "style_version": 29,
+  "archetypes_version": 81,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Soraya Haddad is a seasoned marketing executive with a particularly strong track record in scaling early-stage SaaS companies. She spent the first decade of her career at larger, more established firms, but deliberately pivoted to the startup world eight years ago, craving the fast-paced environment and the opportunity to build things from the ground up. She\u2019s now looking to leverage her experience, *not* by taking a traditional executive role, but by investing in or advising promising pre-seed/seed stage SaaS companies, particularly those focused on B2B solutions. A key detail: Soraya successfully navigated a company through a major pivot \u2013 a complete overhaul of their target market and product offering \u2013 which dramatically turned things around. She\u2019s proud of this and keen to help other founders avoid common pitfalls and make tough calls. She's very direct and values efficiency, so her profile reflects that. She's based in Boston but willing to work remotely and travel occasionally.",
+    "positioning": "I\u2019m a growth-focused operator with a deep passion for building and scaling SaaS businesses. For the past eight years, I\u2019ve dedicated myself to the startup ecosystem, helping companies navigate the complexities of early-stage growth. I specialize in transforming marketing strategies from foundational to scalable, and I\u2019m particularly adept at identifying and capitalizing on emerging market opportunities. My career began in the structured environment of enterprise marketing, but I quickly realized my true calling lay in the dynamism and impact of the startup world. I thrive on challenges, and I\u2019m driven by a desire to empower founders and help them realize their visions.\n\nMost recently, as VP of Marketing at NovaTech Solutions, I led the team through a critical company pivot \u2013 a complete redirection of our target market and product offering. This wasn\u2019t just a cosmetic change; it required a fundamental shift in our messaging, strategy, and execution. The results were transformative: we achieved a 300% increase in qualified leads within six months and secured a significant round of Series A funding. This experience solidified my belief in the power of agility, data-driven decision-making, and a relentless focus on customer needs.\n\nI\u2019m now actively seeking opportunities to leverage my expertise as an investor or advisor, partnering with ambitious founders who are building innovative B2B SaaS solutions. I believe in hands-on mentorship and providing strategic guidance, not just writing checks. If you\u2019re building something groundbreaking and need a seasoned operator in your corner, I\u2019d love to connect.",
+    "background": "- **NovaTech Solutions, VP of Marketing** (2020 \u2013 2023)\n    - Led marketing strategy and execution, resulting in a 300% increase in qualified leads following a successful company pivot.\n    - Managed a team of 15 marketing professionals across content, demand generation, product marketing, and communications.\n    - Secured $8M in Series A funding through impactful marketing campaigns and compelling investor presentations.\n    - Oversaw a marketing budget of $2M, consistently delivering ROI exceeding industry benchmarks.\n\n- **Apex Digital, Senior Marketing Manager** (2016 \u2013 2020)\n    - Spearheaded the launch of three new SaaS products, driving significant revenue growth.\n    - Developed and implemented data-driven marketing campaigns, utilizing analytics to optimize performance.\n    - Managed key relationships with marketing agencies and technology vendors.\n\n- **GlobalTech Solutions, Marketing Associate** (2012 \u2013 2016)\n    - Supported the execution of large-scale marketing initiatives, gaining valuable experience in brand management and market research.\n    - Contributed to the development of marketing materials and presentations.\n\n- **Education:**\n    - **Harvard Business School, MBA** (2010 \u2013 2012)\n    - **Massachusetts Institute of Technology (MIT), BS in Marketing** (2006 \u2013 2010)\n\n- **Skills:** SaaS Marketing, Growth Marketing, Demand Generation, Product Marketing, Marketing Strategy, Marketing Analytics, Team Leadership, Budget Management, Public Speaking, Pivot Strategy, Investor Relations.",
+    "lookingFor": "I\u2019m actively seeking opportunities to invest in or advise pre-seed and seed-stage B2B SaaS companies. I\u2019m particularly interested in companies addressing underserved markets or leveraging innovative technologies. \n\n* **Target Profiles:** Founders (ideally technical co-founders), Angel Investors, Seed Funds, other Operators with investment experience.\n* **Desired Characteristics:** Companies with strong founding teams, demonstrable traction (even at an early stage), a clear understanding of their target market, and a willingness to embrace data-driven decision-making.\n* **Stage:** Pre-Seed, Seed\n* **Focus:** B2B SaaS\n* **Location:** US-based (though open to remote teams)\n\n**Please do *not* send me:** Cold pitches for consumer-facing apps, crypto projects, or opportunities requiring a full-time executive role. I'm looking for investment/advisory roles, not employment.",
+    "notes": "* Recently attended the SaaStr Annual conference \u2013 excellent networking opportunity. \n* Very interested in companies utilizing AI/ML to solve complex B2B challenges.\n* I\u2019m on the advisory board of Seedling Analytics, so please avoid introducing me to direct competitors.\n* I prioritize quick, direct communication \u2013 no lengthy email chains, please.\n* I have a standing meeting on Tuesdays from 2-4pm EST.",
+    "locationAvailability": "I am currently based in Boston, Massachusetts, and am open to remote collaboration. I am willing to travel occasionally for key meetings and events, primarily within the United States. However, I prioritize efficient use of time and prefer to leverage video conferencing whenever possible.",
+    "introPreferences": "When making introductions, please adhere to the following guidelines:\n\n* **Hard Requirements:**\n    - The company *must* be a B2B SaaS business.\n    - The founder(s) should be actively seeking investment or strategic guidance.\n    - The introduction should be concise and focused on the company\u2019s key value proposition.\n* **Recommended Emphasis:**\n    - Highlight the founder\u2019s technical expertise and the company\u2019s unique competitive advantage.\n    - Briefly mention my experience leading successful company pivots.\n    - Frame the connection as a potential opportunity for mutual learning and collaboration.\n* **Avoid:**\n    - Generic introductions without specific context.\n    - Overly lengthy descriptions of the company\u2019s history or business model.\n    - Introducing me to companies that don't meet the criteria outlined in my \u2018Looking For\u2019 section.\n* **Ideal Introduction Phrasing:** \"Soraya, I\u2019m connecting you with [Founder Name] from [Company Name]. They\u2019re building [brief description of the company], and I thought your experience with scaling SaaS businesses, particularly your success navigating a company pivot, would be incredibly valuable to them.\"",
+    "personalPreferences": "Email is my preferred method of communication. Please avoid reaching out via LinkedIn messaging unless absolutely necessary.",
+    "meetingAndSchedulingPreferences": "I generally avoid meetings on Fridays. Please schedule meetings via Calendly: [fictional Calendly link]."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 20.989200115203857,
+      "input_tokens": 826,
+      "output_tokens": 1524,
+      "problems": []
+    }
+  ],
+  "success": true
+}

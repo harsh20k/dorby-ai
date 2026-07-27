@@ -1,0 +1,54 @@
+{
+  "id": 83,
+  "archetype": "European Founder, US Market Expansion",
+  "given_name": "Mikael Petrov",
+  "style_version": 6,
+  "archetypes_version": 14,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Mikael Petrov is a 38-year-old Swedish founder and CEO of 'Aether Dynamics,' a company specializing in AI-powered predictive maintenance solutions for industrial robotics. He previously spent 8 years as a lead robotics engineer at ABB, developing advanced control systems. Aether Dynamics has achieved significant traction in the Nordic and DACH regions, and Mikael is now laser-focused on expanding into the US market. He's seeking Series A funding and strategic partnerships with US-based manufacturing companies and automation integrators. He\u2019s highly technical, a bit reserved initially, but passionate about his company's potential. A distinctive career detail is that he holds a patent for a novel algorithm improving robot path planning, which is core to Aether Dynamics' technology. He's looking for warm introductions to VCs specializing in industrial tech and execs at companies like Rockwell Automation, Siemens US, or similar.",
+    "positioning": "As CEO and Founder of Aether Dynamics, I\u2019m driving the next generation of predictive maintenance for industrial robotics. We\u2019ve developed a cutting-edge AI platform that dramatically reduces downtime, optimizes performance, and lowers operational costs for manufacturers. Leveraging advanced machine learning algorithms \u2013 including a patented approach to robot path planning \u2013 we analyze real-time sensor data to predict equipment failures *before* they happen.  Our success in the European market, with deployments across automotive, aerospace, and heavy machinery sectors, has validated our core technology and established a strong foundation for growth.  Now, we\u2019re strategically focused on expanding into the US market, and I\u2019m actively seeking partners and investors who share our vision for a more efficient and resilient future of manufacturing. I bring a deep technical understanding of robotics, coupled with a proven track record of building and scaling a high-performing team. I'm passionate about bridging the gap between AI innovation and real-world industrial applications, and I\u2019m confident Aether Dynamics is poised to become a leader in this rapidly evolving field.",
+    "background": "- **CEO & Founder, Aether Dynamics (Stockholm, Sweden)** \u2013 2018 \u2013 Present\n  * Secured seed funding of \u20ac2.5M and Series Seed of \u20ac7M.\n  * Led the development and launch of Aether Dynamics\u2019 core AI-powered predictive maintenance platform.\n  * Built and managed a team of 30+ engineers, data scientists, and sales professionals.\n  * Achieved 300% revenue growth in the last two years, with a focus on the Nordic and DACH regions.\n  * Established key partnerships with leading industrial automation companies in Europe.\n  * Hold a patent (EU Patent No. 3248792) for \u2018Optimized Path Planning Algorithm for Robotic Systems.\u2019\n\n- **Lead Robotics Engineer, ABB (V\u00e4ster\u00e5s, Sweden)** \u2013 2010 \u2013 2018\n  * Led the design and implementation of advanced control systems for ABB\u2019s industrial robots.\n  * Managed a team of 5 engineers in the development of new robotic applications.\n  * Contributed to the development of ABB\u2019s next-generation robot platform.\n  * Developed and implemented algorithms for improving robot accuracy and efficiency.\n  * Responsible for testing and validating robotic systems in real-world industrial environments.\n\n- **Research Assistant, KTH Royal Institute of Technology (Stockholm, Sweden)** \u2013 2008 \u2013 2010\n  * Conducted research on advanced robotics and machine learning.\n  * Published research papers in peer-reviewed journals and conferences.\n  * Assisted in the development of robotic prototypes and simulations.",
+    "lookingFor": "I'm actively seeking connections to facilitate Aether Dynamics\u2019 expansion into the US market. Specifically, I\u2019m looking for:\n\n* **Series A Investors:** VCs specializing in industrial tech, AI, and manufacturing.  Investment size: $10-15M.  We have a strong data room prepared.\n* **Strategic Partners:** US-based manufacturing companies (automotive, aerospace, heavy machinery) interested in piloting and deploying our predictive maintenance solution.\n* **Automation Integrators:** Companies with a strong presence in the US industrial automation market who can help us scale our deployments.\n* **Industry Advisors:** Experienced professionals with a deep understanding of the US manufacturing landscape.\n\nI\u2019m open to introductory calls and meetings to discuss potential synergies and how Aether Dynamics can add value to your organization. I'm particularly interested in connecting with individuals at Rockwell Automation, Siemens US, FANUC America, and similar companies.",
+    "notes": "Mikael is a highly intelligent and technically proficient founder. He can be a little reserved in initial interactions, but once he trusts you, he's very open and collaborative. He's *very* proud of the technology behind Aether Dynamics and will happily dive deep into the technical details. \n\n* **Recent Update:** Just completed a successful pilot program with a major automotive manufacturer in Germany \u2013 strong case study material.\n* **Do:** Focus on the ROI of Aether Dynamics \u2013 reducing downtime and improving efficiency.\n* **Don't:** Oversell the 'AI' aspect without grounding it in practical industrial applications. He dislikes buzzwords.\n* **Intro Strategy:** Highlight specific use cases relevant to the recipient\u2019s business. A warm intro is *essential* \u2013 he\u2019s not great at cold outreach.",
+    "locationAvailability": "I am based in Stockholm, Sweden, but frequently travel. I will be in Boston and New York City from November 6th-17th for meetings and industry events.",
+    "introPreferences": "* **Hard Requirements:**\n  * Recipient must be a decision-maker or key influencer within a relevant organization (VC firm, manufacturing company, automation integrator).\n  * Recipient should have a demonstrable interest in industrial technology and/or AI.\n  * Introductions *must* include a personalized message explaining why Aether Dynamics would be a good fit for the recipient.\n\n* **Soft Preferences:**\n  * Prior experience with predictive maintenance or industrial IoT is a plus.\n  * Connections at companies actively investing in digital transformation initiatives are highly valued.\n  * Avoid introducing me to generalist investors or individuals with limited technical understanding.\n  * Please *do not* forward my LinkedIn profile without a personal introduction.  I prefer direct connections.",
+    "personalPreferences": "I enjoy hiking and sailing when I have free time. I'm a big fan of Scandinavian design and architecture. I prefer concise and direct communication \u2013 please get straight to the point.",
+    "meetingAndSchedulingPreferences": "I am available for virtual meetings via Zoom or Google Meet. Please propose a few specific times that work for you, and I will do my best to accommodate. I generally prefer meetings to be scheduled at least 24 hours in advance."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 27.23584508895874,
+      "input_tokens": 790,
+      "output_tokens": 1459,
+      "problems": []
+    }
+  ],
+  "success": true
+}

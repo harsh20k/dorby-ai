@@ -1,0 +1,54 @@
+{
+  "id": 408,
+  "archetype": "Early-Stage Climate Tech Founder",
+  "given_name": "Mateus Weber",
+  "style_version": 25,
+  "archetypes_version": 68,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Mateus Weber is a 34-year-old Brazilian-American founder focused on agricultural carbon removal. He has a PhD in soil science and previously worked as a research scientist at a large agricultural biotech firm, but became frustrated with the slow pace of change and the lack of focus on *actual* carbon sequestration. He\u2019s now building \u2018TerraGenesis\u2019, a company deploying biochar production directly on farms, turning agricultural waste into a soil amendment that locks carbon away for centuries while improving soil health and crop yields. He\u2019s currently raising a Seed round and is particularly focused on investors with a deep understanding of both climate tech *and* agriculture. A distinctive career detail is his time spent working on a small, family-run coffee plantation in Brazil after finishing his undergraduate degree - this instilled in him a strong connection to the land and the challenges faced by farmers. He\u2019s very data-driven but passionate and believes strongly in the power of regenerative agriculture.",
+    "positioning": "TerraGenesis is revolutionizing agricultural carbon removal by bringing biochar production directly to the farm. We empower farmers to transform agricultural waste into a valuable soil amendment, simultaneously enhancing soil health, boosting crop yields, and creating a permanent carbon sink. Unlike many carbon offset schemes, we focus on verifiable, long-term carbon sequestration, offering a tangible and impactful solution for businesses seeking to meet their sustainability goals. We\u2019re currently completing pilot programs with several large-scale farms in California and the Midwest, demonstrating significant carbon removal rates and positive economic returns for our partners. Our business model is designed for scalability and accessibility, making regenerative carbon farming a viable option for farms of all sizes.",
+    "background": "* **TerraGenesis, Founder & CEO** (January 2023 \u2013 Present)\n    * Led all aspects of company formation, including business plan development, fundraising strategy, and team building.\n    * Secured initial seed funding of $250k from angel investors and grant funding.\n    * Oversaw the design and implementation of pilot biochar production systems on three commercial farms.\n    * Developed and refined TerraGenesis\u2019s carbon monitoring, reporting, and verification (MRV) protocol.\n    * Built and maintain relationships with key stakeholders, including farmers, investors, and carbon market participants.\n* **AgriTech Innovations, Research Scientist** (June 2018 \u2013 December 2022)\n    * Conducted research on soil microbiome interactions and their impact on crop health and yield.\n    * Led a team of research assistants in field trials and laboratory experiments.\n    * Published several peer-reviewed articles in leading agricultural science journals.\n    * Developed and patented a novel bio-stimulant technology.\n    * Presented research findings at national and international conferences.\n* **Fazenda Sol Nascente, Farmhand/Assistant Manager** (July 2015 \u2013 August 2016) - Brazil\n    * Assisted with all aspects of coffee farm operations, including planting, harvesting, and processing.\n    * Gained hands-on experience in sustainable farming practices and agricultural management.\n    * Managed a small team of seasonal workers.\n* **University of California, Berkeley, PhD, Soil Science** (September 2016 \u2013 June 2018)\n    * Dissertation: 'The Role of Biochar in Enhancing Carbon Sequestration and Soil Fertility in Agricultural Systems'.\n    * Relevant coursework: Soil Chemistry, Microbiology, Environmental Science, Data Analysis.\n* **Stanford University, BS, Environmental Science** (September 2012 \u2013 June 2016)\n    * Minor: Economics\n    * Dean's List all semesters.",
+    "lookingFor": "We are currently seeking $2 million in seed funding to scale our biochar production systems and expand our pilot programs. Ideal investors have a proven track record in climate tech, particularly within the agricultural sector, and understand the complexities of carbon markets. We are also actively seeking strategic partnerships with:\n\n* **Large Agricultural Companies:** To integrate TerraGenesis's biochar solutions into their existing supply chains.\n* **Carbon Offset Buyers:** Companies and organizations looking to purchase high-quality, verifiable carbon credits.\n* **Agricultural Equipment Manufacturers:** To collaborate on the development of specialized biochar production equipment.\n\nWe are also building a small, highly motivated team and are currently looking to hire a Head of Operations with experience in agricultural logistics and supply chain management.",
+    "notes": "Spoke with Sarah Chen at Green Ventures last week - she expressed interest but wants to see more data from our California pilot program. Will send her a detailed report by the end of the week. Need to follow up with David Lee at CarbonDirect regarding potential MRV partnership. He was non-committal but seemed intrigued. Discrepancy in carbon sequestration rates reported from the Iowa pilot - investigating potential data logging errors. \n\n* Action Item: Send Sarah Chen pilot program report. \n* Action Item: Follow up with David Lee. \n* Action Item: Investigate Iowa pilot data.",
+    "locationAvailability": "Based in San Francisco, California, with operations currently focused on California and the Midwest.",
+    "introPreferences": "I\u2019m particularly interested in connecting with investors who have a strong understanding of regenerative agriculture and carbon markets. When making introductions, please emphasize TerraGenesis\u2019s unique approach to on-farm biochar production and our commitment to verifiable carbon sequestration. \n\n* **Hard Requirements:** No introductions to venture firms that primarily focus on software or fintech.\n* **Soft Preferences:** Introductions to individuals with a background in soil science or agricultural engineering are highly valued.  Avoid direct introductions to individuals at Breakthrough Energy Ventures - we've already had preliminary conversations that didn't align.  Framing should highlight the economic benefits for farmers, alongside the climate impact.",
+    "personalPreferences": "I'm a big believer in asynchronous communication. Email is generally best, and I check it several times a day. I prefer shorter, focused meetings. I'm an early riser!",
+    "meetingAndSchedulingPreferences": "I\u2019m generally available for virtual meetings in the mornings (PST). Please send a brief agenda in advance. I aim to respond to all meeting requests within 24 hours."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 17.713874101638794,
+      "input_tokens": 764,
+      "output_tokens": 1310,
+      "problems": []
+    }
+  ],
+  "success": true
+}

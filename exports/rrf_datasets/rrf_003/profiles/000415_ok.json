@@ -1,0 +1,63 @@
+{
+  "id": 415,
+  "archetype": "APAC Biotech/Deep Tech Investor",
+  "given_name": "Astrid Mensah",
+  "style_version": 26,
+  "archetypes_version": 70,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Astrid Mensah is a serial entrepreneur and currently the Founder & CEO of 'Synapse Bio', a synthetic biology company focused on developing novel biomaterials for advanced wound healing. Her distinctive career detail is a prior PhD in materials science *and* an MBA, giving her a rare blend of deep scientific understanding and business acumen. Synapse Bio is currently focused on the Japanese market due to the country\u2019s aging population and advanced healthcare system, making it an ideal testbed for their technology. She's aggressively seeking Series A funding and strategic partnerships with Japanese pharmaceutical companies. Astrid is highly data-driven, values direct communication, and is very protective of her time. She\u2019s looking for investors who understand the complexities of biotech and can offer more than just capital \u2013 specifically, connections to the Japanese healthcare ecosystem.",
+    "positioning": "Synapse Bio is revolutionizing wound care through the power of synthetic biology. We engineer living materials that accelerate healing, reduce scarring, and ultimately improve patient outcomes. Targeting the significant unmet needs of chronic wound management, particularly in aging populations, our lead product is a bio-integrated dressing poised to disrupt the $20 billion advanced wound care market. We are currently finalizing pre-clinical trials and preparing for regulatory submission in Japan, leveraging the country\u2019s streamlined approval pathways for innovative medical devices. Synapse Bio is seeking strategic investors and partners to accelerate our commercialization and expand our product pipeline.",
+    "background": "- **Founder & CEO, Synapse Bio** (2021 \u2013 Present)\n  * Spearheaded the founding and development of Synapse Bio, securing seed funding of $3M and building a high-performing team of scientists and engineers.\n  * Led the development of Synapse Bio\u2019s core technology platform, resulting in three patent applications filed for novel biomaterial compositions.\n  * Established strategic partnerships with leading research institutions in Japan to validate the efficacy of Synapse Bio\u2019s products.\n  * Oversaw all aspects of business operations, including product development, regulatory affairs, and financial management.\n\n- **Management Consultant, Bain & Company** (2017 \u2013 2021)\n  * Advised Fortune 500 companies across the healthcare and life sciences industries on strategic initiatives, including market entry, product launches, and operational improvements.\n  * Led project teams of 3-5 consultants, managing project scope, timelines, and deliverables.\n  * Developed financial models and conducted market research to support client decision-making.\n  * Specialized in the Japanese healthcare market, gaining deep insights into the regulatory landscape and competitive dynamics.\n\n- **Research Assistant, MIT Materials Science & Engineering** (2015 \u2013 2017)\n  * Conducted research on the synthesis and characterization of novel biomaterials for tissue engineering applications.\n  * Published research findings in peer-reviewed journals and presented at international conferences.\n  * Managed laboratory operations and mentored undergraduate research students.\n\n- **Education:**\n  * **MBA, Harvard Business School** (2017)\n  * **PhD, Materials Science & Engineering, Massachusetts Institute of Technology** (2015)\n  * **BS, Chemical Engineering, Stanford University** (2013)\n\n- **Skills:** Synthetic Biology, Biomaterials, Tissue Engineering, Wound Healing, Business Strategy, Market Analysis, Financial Modeling, Project Management, Japanese Language (conversational).",
+    "lookingFor": "We are currently raising a $10-15M Series A round to fund our Phase I/II clinical trials and scale up manufacturing. Specifically, we are seeking:\n\n* **Investors with experience in biotech and medical devices:** Preference for funds with a demonstrated track record of successful exits in the advanced wound care space.\n* **Strategic partners with a strong presence in Japan:** We are particularly interested in collaborations with Japanese pharmaceutical companies and distributors.\n* **Advisors with expertise in regulatory affairs in Japan:** Guidance navigating the PMDA approval process is crucial.\n* **Potential candidates for key leadership roles:** Including a Head of Clinical Operations and a VP of Business Development (Japan-based preferred).",
+    "notes": "Astrid had a very positive, but brief, call with Kenji Tanaka at Mitsubishi Pharma last week. He expressed initial interest in a potential partnership but is awaiting the results of our pre-clinical data. Follow up with Kenji on October 26th. \n\n* **Action Item:** Send Kenji the updated pre-clinical data package.\n* **Potential Issue:** Astrid noted that some investors have underestimated the complexity of scaling up biomaterial production. Need to proactively address this concern during pitch meetings.\n* **Observation:** Astrid is extremely focused on speed to market in Japan and is willing to consider non-traditional financing options to accelerate the process.",
+    "locationAvailability": "Tokyo, Japan & Cambridge, Massachusetts (US).",
+    "introPreferences": "I am open to connecting with investors and potential partners who can add value to Synapse Bio. \n\n* **Hard Requirements:** Any introduction *must* come with a clear understanding of the investor\u2019s/partner\u2019s thesis and potential synergies with our company. Please avoid introductions to generalist investors or individuals with no relevant experience in biotech or the Japanese market.\n* **Soft Preferences:** I prefer introductions to be concise and focused on the value proposition of Synapse Bio. Please highlight our Japan-first strategy and our potential to disrupt the advanced wound care market. \n* **Avoid:** Introductions to venture capitalists known for overly aggressive terms or a short-term investment horizon. Also, please avoid introductions to individuals at companies we\u2019ve previously engaged with and decided were not a good fit.",
+    "personalPreferences": "I respond best to concise, data-driven communication. Email is preferred, but I\u2019m also available on LinkedIn. Please be mindful of the time difference when scheduling calls.",
+    "meetingAndSchedulingPreferences": "I generally prefer short, focused meetings with a clear agenda. Please send a brief summary of the meeting topics in advance. I\u2019m a morning person, so early morning meetings (JST) are ideal."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 25.59870481491089,
+      "input_tokens": 766,
+      "output_tokens": 1408,
+      "problems": [
+        "background: possible truncation (ends with '...lysis, Financial Modeling')"
+      ]
+    },
+    {
+      "attempt": 2,
+      "elapsed_s": 17.92939019203186,
+      "input_tokens": 766,
+      "output_tokens": 1288,
+      "problems": []
+    }
+  ],
+  "success": true
+}

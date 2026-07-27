@@ -1,0 +1,63 @@
+{
+  "id": 201,
+  "archetype": "Turnaround/Repeat Founder, Scaling Focus",
+  "given_name": "Grace Ishikawa",
+  "style_version": 13,
+  "archetypes_version": 34,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Grace Ishikawa is a seasoned tech founder, having previously built and successfully exited a SaaS company focused on marketing automation. She's now focused on her second venture, \u2018Nova Insights,\u2019 a data analytics platform for the rapidly evolving creator economy. Nova Insights aims to provide creators with actionable insights to maximize revenue and audience engagement. She's currently laser-focused on scaling the sales and marketing teams, securing Series B funding, and expanding the platform's feature set to handle increasingly complex creator data. She's actively seeking connections with experienced sales leaders, potential investors specializing in creator tech, and individuals with deep expertise in data science and machine learning\u2014specifically those familiar with time-series data and predictive modeling. She\u2019s known for being direct, data-driven, and valuing efficient communication. Her previous exit gave her a certain level of freedom to be selective about partners and investors, prioritizing those who genuinely understand her vision.",
+    "positioning": "As Founder & CEO of Nova Insights, I'm building the intelligence layer for the creator economy. We empower creators \u2013 from independent YouTubers to large-scale podcast networks \u2013 with the data they need to understand their audience, optimize their content, and dramatically increase their revenue. Having previously led a successful marketing automation SaaS company to acquisition, I\u2019ve honed a deep understanding of scaling technology businesses and building high-performing teams. My passion lies in identifying underserved markets and leveraging data to unlock exponential growth. Nova Insights isn\u2019t just about analytics; it\u2019s about democratizing access to the insights that drive creator success. We\u2019re currently in a period of rapid expansion, seeking strategic partners and talented individuals who share our vision of a creator-first future. I specialize in turning complex data sets into actionable strategies, and I'm committed to fostering a data-driven culture within Nova Insights.",
+    "background": "- **Nova Insights, Founder & CEO** (January 2022 \u2013 Present)\n  * Led seed funding round of $5M, achieving 3x revenue growth within the first 18 months.\n  * Assembled and manages a team of 25 engineers, data scientists, and sales professionals.\n  * Spearheading product development roadmap, focusing on advanced analytics and predictive modeling capabilities.\n  * Responsible for all aspects of company strategy, operations, and investor relations.\n\n- **MarketSpark, Founder & CEO** (June 2016 \u2013 December 2021)\n  * Built and scaled a marketing automation platform serving over 500 SMB clients.\n  * Successfully exited to HubSpot in December 2021 for an undisclosed sum.\n  * Oversaw all aspects of product development, marketing, sales, and customer success.\n  * Recognized as a \u201cTop 10 Rising SaaS Star\u201d by TechCrunch in 2019.\n\n- **Google, Product Manager** (August 2013 \u2013 May 2016)\n  * Managed the launch of new features for Google Analytics, focusing on user behavior analysis.\n  * Conducted market research and competitive analysis to identify emerging trends.\n  * Collaborated with engineering and design teams to deliver innovative product solutions.\n\n- **Education:**\n  * **Stanford University, MBA** (2011 \u2013 2013), Focus: Entrepreneurship & Marketing\n  * **Massachusetts Institute of Technology (MIT), BS in Computer Science** (2007 \u2013 2011)\n\n- **Skills:** SaaS, Data Analytics, Machine Learning, Predictive Modeling, Product Management, Marketing Automation, Team Leadership, Fundraising, Investor Relations, Go-to-Market Strategy, Time-Series Analysis, SQL, Python, Data Visualization (Tableau, Power BI).",
+    "lookingFor": "I'm actively seeking connections to accelerate Nova Insights\u2019 growth trajectory. My priorities are:\n\n* **Series B Investors:** Funds specializing in creator economy, SaaS, or data analytics with a proven track record of supporting rapid scaling.  I\u2019m looking for partners who understand the nuances of our market and can provide strategic guidance.\n* **VP of Sales:** An experienced sales leader with a demonstrable history of building and scaling high-performing sales teams in a SaaS environment.  Experience with data-driven sales methodologies is a must.\n* **Data Science Expertise:** Individuals with deep expertise in time-series data analysis, predictive modeling, and machine learning.  Experience with creator data is a significant plus.\n* **Strategic Advisors:**  Experienced founders who've successfully navigated Series B funding and scaling challenges.\n\nI'm also open to connecting with:\n\n*  Creators (especially those with large audiences) for feedback on our platform.\n*  Partnerships with creator platforms and agencies.",
+    "notes": "- Grace is highly focused on fundraising currently (Series B).\n- Previous exit provides leverage but also a high bar for potential investors.\n- Strong data-driven approach; prefers concise, metrics-focused communication.\n- Met briefly at the Creator Economy Summit in October; expressed interest in connecting with potential VP of Sales candidates.\n- Followed up on LinkedIn; shared Nova Insights\u2019 latest funding update.\n- Potential referral from Alex Chen (mutual connection, investor at Paradigm).",
+    "locationAvailability": "I am based in San Francisco, California, but am comfortable with remote interactions and occasional travel to meet with investors or potential team members. We are a fully remote-first company.",
+    "introPreferences": "When making introductions, please:\n\n* **Hard Requirement:** Ensure the individual understands the creator economy and the challenges creators face.\n* **Preferred:** Highlight any experience the contact has with data analytics or SaaS scaling.\n* **Useful Context:** Briefly mention Nova Insights\u2019 mission to empower creators with data-driven insights.\n* **Communication Style:** I prefer direct and concise introductions.  Avoid lengthy emails; a brief LinkedIn message with a clear value proposition is ideal.\n* **Avoid:** Introductions to individuals solely focused on general tech trends without specific creator economy expertise.",
+    "personalPreferences": "I'm a big fan of long-distance running and enjoy spending time outdoors when I'm not focused on Nova Insights. I prefer quick, direct communication and value efficiency in all interactions.",
+    "meetingAndSchedulingPreferences": "- Prefer short, focused meetings (30-45 minutes).\n- Always appreciate a brief agenda sent in advance.\n- Quick follow-up after meetings is appreciated."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 19.671927213668823,
+      "input_tokens": 847,
+      "output_tokens": 1338,
+      "problems": [
+        "lookingFor: possible truncation (ends with '...ustry Experts > Investors')"
+      ]
+    },
+    {
+      "attempt": 2,
+      "elapsed_s": 28.36266541481018,
+      "input_tokens": 847,
+      "output_tokens": 1358,
+      "problems": []
+    }
+  ],
+  "success": true
+}

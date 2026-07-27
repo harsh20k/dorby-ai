@@ -1,0 +1,63 @@
+{
+  "id": 984,
+  "archetype": "Serial Founder, Tech Executive Toronto",
+  "given_name": "Chidi Haruna",
+  "style_version": 60,
+  "archetypes_version": 165,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Chidi Haruna is a seasoned tech executive who spent 15 years at Shopify, rising to VP of Engineering for their Payments division. He left to found 'NovaScale,' a platform aimed at simplifying and accelerating the regulatory compliance process for fintech startups. He's acutely aware of the pain points of scaling a fintech company, particularly around navigating complex regulations, and NovaScale is designed to address that directly. He's now in a seed funding round and actively seeking strategic investors and advisors with experience in both fintech and regulatory technology. He's a pragmatic, data-driven leader, and while approachable, values efficiency and direct communication. He's based in Toronto and committed to building within the Canadian ecosystem.",
+    "positioning": "I am the Founder & CEO of NovaScale, a regulatory compliance platform for fintech startups. We streamline the often-opaque and costly process of achieving and maintaining regulatory approvals, allowing early-stage companies to focus on innovation and growth.  NovaScale provides a centralized dashboard, automated document generation, and expert guidance tailored to specific fintech verticals like payments, lending, and crypto.  We've built a core minimum viable product and have already onboarded five pilot customers, demonstrating a 40% reduction in their compliance timelines and a projected cost savings of 30%.  My background at Shopify, particularly leading the Payments Engineering team through significant regulatory changes, highlighted the critical need for a solution like NovaScale. We\u2019re currently raising a seed round to expand our engineering team and accelerate customer acquisition.  Our mission is to empower the next generation of fintech innovators by removing regulatory hurdles and fostering a more inclusive financial landscape.",
+    "background": "* **NovaScale, Founder & CEO** (2023 \u2013 Present)\n    * Led all aspects of company formation, including product vision, fundraising, team building, and go-to-market strategy.\n    * Secured initial pilot customers and validated product-market fit.\n    * Developed and implemented NovaScale\u2019s core regulatory compliance framework.\n* **Shopify, VP of Engineering, Payments** (2008 \u2013 2023)\n    * Managed a team of 70+ engineers responsible for the development and maintenance of Shopify\u2019s payment infrastructure.\n    * Oversaw the integration of new payment methods and the expansion of Shopify Payments into new international markets.\n    * Led engineering efforts to ensure compliance with PCI DSS, PSD2, and other relevant regulations.\n    * Successfully launched Shopify Balance, a financial service for merchants, navigating complex regulatory approvals.\n    * Implemented agile development methodologies and fostered a culture of innovation within the engineering team.\n* **Accenture, Software Engineer** (2006 \u2013 2008)\n    * Developed and implemented software solutions for clients in the financial services industry.\n    * Gained experience with a variety of technologies, including Java, C++, and Oracle.\n* **University of Waterloo, Bachelor of Computer Science** (2002 \u2013 2006)\n    * Specialization in Software Engineering.\n    * Dean\u2019s List all four years.\n    * Co-op placements at RIM (Research In Motion) and Google.\n* **Certifications:**\n    * Project Management Professional (PMP)\n    * Certified Information Systems Security Professional (CISSP)",
+    "lookingFor": "I'm actively seeking connections that can accelerate NovaScale's growth. Specifically:\n\n* **Strategic Investors:** Seed-stage VCs with a focus on fintech and regulatory technology. I\u2019m particularly interested in firms with portfolio companies that can offer synergistic opportunities.  Ideal investment size is $2M - $4M.\n* **Fintech Advisors:** Experienced operators who have successfully scaled fintech companies and navigated complex regulatory landscapes.  I\u2019m looking for individuals with specific expertise in payments, lending, and crypto compliance.\n* **Regulatory Experts:**  Consultants with deep knowledge of Canadian and US fintech regulations.  We are looking for advice on expanding our scope to include other jurisdictions.\n* **Early-Stage Fintech Founders:** I\u2019m eager to connect with other founders building innovative fintech solutions.  Sharing insights and best practices is invaluable.\n* **Talent Acquisition:**  We are currently hiring for a Senior Full-Stack Engineer with experience in React and Node.js, and a Regulatory Compliance Specialist with a legal background.  Referrals are greatly appreciated!\n\nI\u2019m open to informational interviews and exploring potential partnerships.  I\u2019m prioritizing connections that can provide tangible value to NovaScale\u2019s mission of simplifying regulatory compliance for fintech startups.  I\u2019m *not* currently seeking marketing or PR assistance.",
+    "notes": "* Chidi is highly articulate and well-prepared. He clearly understands the problem NovaScale is solving and presents a compelling vision.\n* During our call on 2024-02-29, he emphasized the importance of finding investors who understand the nuances of the fintech regulatory landscape.\n* He is very focused on data-driven decision-making and is tracking key metrics closely.\n* He mentioned a previous (unsuccessful) attempt to build a similar product in 2018, which informed his current approach.  This suggests a strong learning agility.\n* Initial LinkedIn outreach response time was quick (under 2 hours).\n* Potential red flag: He seems slightly averse to aggressive sales tactics \u2013 prefers a more consultative approach.",
+    "locationAvailability": "Based in Toronto, Canada, with willingness to travel to key fintech hubs in North America for investor meetings and industry events.",
+    "introPreferences": "When making introductions to Chidi, please adhere to the following:\n\n* **Hard Requirements:**\n    * Ensure the person has demonstrable experience in fintech *or* regulatory technology.\n    * Verify the individual's LinkedIn profile and confirm their current role.\n    * Do *not* introduce Chidi to individuals solely focused on consumer-facing fintech apps without a strong compliance component.\n* **Soft Preferences:**\n    * Prioritize introductions to individuals who have a history of successful exits or significant funding rounds.\n    * Highlight any relevant connections to the Canadian fintech ecosystem.\n    * Briefly explain *why* you think the connection would be valuable to NovaScale.\n* **Introduction Style:**\n    * Keep the introduction concise and focused on the mutual benefit.\n    * Avoid overly promotional language.\n    * Frame the introduction as a request for a quick informational chat rather than a formal meeting.\n* **Do\u2019s:** Briefly mention NovaScale\u2019s pilot program success and Chidi\u2019s background at Shopify.\n* **Don\u2019ts:**  Do not introduce Chidi to sales representatives or individuals offering generic consulting services. Do not make assumptions about his funding needs \u2013 let him lead that conversation.",
+    "personalPreferences": "I prefer email communication initially.  I'm generally available for calls between 10 AM and 4 PM EST. I respond to messages within 24 hours.",
+    "meetingAndSchedulingPreferences": ""
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 31.20169997215271,
+      "input_tokens": 808,
+      "output_tokens": 1463,
+      "problems": [
+        "background: possible truncation (ends with '...ons Architect \u2013 Associate')"
+      ]
+    },
+    {
+      "attempt": 2,
+      "elapsed_s": 26.436705827713013,
+      "input_tokens": 808,
+      "output_tokens": 1480,
+      "problems": []
+    }
+  ],
+  "success": true
+}

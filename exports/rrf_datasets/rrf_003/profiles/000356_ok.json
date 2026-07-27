@@ -1,0 +1,63 @@
+{
+  "id": 356,
+  "archetype": "Early Career Tech, Global Mobility",
+  "given_name": "Maria Abara",
+  "style_version": 22,
+  "archetypes_version": 59,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Maria Abara is a recent Computer Science graduate (2023) with a specialization in AI/ML. She\u2019s highly motivated and proactively sought international experience during her studies, completing a significant internship at a robotics firm in Germany. This experience ignited a passion for applying AI solutions to industrial automation, specifically in logistics and supply chain. She\u2019s currently working as a Junior Data Scientist at a fast-growing logistics tech startup in the US, but actively looking to connect with professionals in the European automation space \u2013 especially those involved in early-stage ventures. Her goal is to eventually lead AI implementation projects within European manufacturing and logistics, and she's building her network to facilitate that transition. She\u2019s eager to learn from experienced professionals and explore potential opportunities for collaboration or future employment. She's detail-oriented, a fast learner, and comfortable presenting technical information to both technical and non-technical audiences.",
+    "positioning": "A highly motivated and results-oriented Junior Data Scientist with a strong foundation in Artificial Intelligence and Machine Learning. I recently graduated with honors from Carnegie Mellon University, specializing in AI/ML, and am currently applying my skills to optimize logistics and supply chain operations at FlowState Logistics. My academic background, coupled with a valuable international internship experience at KUKA Robotics in Germany, has instilled in me a global perspective and a passion for leveraging technology to solve complex industrial challenges. I\u2019m particularly interested in the intersection of AI, robotics, and automation, and I\u2019m eager to connect with individuals driving innovation in these fields. I\u2019m adept at building and deploying machine learning models, performing data analysis, and communicating technical insights effectively. I'm currently focused on improving prediction accuracy for delivery times, but always keen to explore new applications of AI in optimizing logistical processes. I believe in a collaborative approach to problem-solving and am excited to contribute to impactful projects.",
+    "background": "- **FlowState Logistics, San Francisco, CA** \u2013 *Junior Data Scientist* (August 2023 \u2013 Present)\n  * Developed and deployed machine learning models to predict delivery times with 15% improvement in accuracy, utilizing Python, scikit-learn, and TensorFlow.\n  * Collaborated with engineering and operations teams to identify key performance indicators (KPIs) and translate business needs into data-driven solutions.\n  * Conducted data cleaning, feature engineering, and model evaluation to ensure model robustness and reliability.\n  * Contributed to the development of a real-time data pipeline for monitoring logistics operations.\n  * Company size: 150 employees, Series B funding.\n\n- **KUKA Robotics, Augsburg, Germany** \u2013 *AI/ML Intern* (Summer 2022)\n  * Assisted in the development of a computer vision system for robotic quality control, using OpenCV and deep learning techniques.\n  * Contributed to the training and evaluation of object detection models for identifying defects in manufactured parts.\n  * Collaborated with a team of engineers to integrate the computer vision system into existing robotic production lines.\n  * Gained practical experience in deploying machine learning models in a real-world industrial setting.\n  * Company size: 14,000 employees, global leader in robotics.\n\n- **Carnegie Mellon University, Pittsburgh, PA** \u2013 *Bachelor of Science in Computer Science* (August 2019 \u2013 May 2023)\n  * GPA: 3.9/4.0, Dean\u2019s List all semesters.\n  * Specialization: Artificial Intelligence and Machine Learning.\n  * Relevant Coursework: Machine Learning, Deep Learning, Data Mining, Statistical Modeling, Robotics, Computer Vision.\n  * Capstone Project: Developed a reinforcement learning algorithm for autonomous navigation of a simulated warehouse environment.\n\n- **Skills:**\n  * Programming Languages: Python (expert), Java (proficient), R (intermediate).\n  * Machine Learning Libraries: scikit-learn, TensorFlow, PyTorch, Keras.\n  * Data Visualization Tools: Tableau, Matplotlib, Seaborn.\n  * Cloud Computing: AWS (basic).\n  * Databases: SQL, PostgreSQL.\n  * Robotics: ROS, OpenCV.\n  * Languages: English (native), German (conversational).",
+    "lookingFor": "I am actively seeking to expand my network within the European automation and robotics industry. I am particularly interested in connecting with professionals who are working on innovative applications of AI and machine learning in manufacturing, logistics, and supply chain management. I'm eager to learn from experienced leaders and explore potential opportunities for collaboration or future employment. \n\nSpecifically, I\u2019m looking for:\n\n* **Founders and early-stage team members** at European startups focused on industrial automation.\n* **Experienced Data Scientists and Machine Learning Engineers** working on similar projects in Europe, for mentorship and knowledge sharing.\n* **Venture Capitalists and Angel Investors** who are actively investing in the European robotics and AI space.\n* **Recruiters** specializing in tech roles within Europe.\n\nI am open to informational interviews, introductions to relevant contacts, and discussions about potential collaboration opportunities. I\u2019m particularly interested in companies that have a strong commitment to innovation and a collaborative work environment. My long-term goal is to contribute to the advancement of AI in European manufacturing, and I believe that building a strong network is crucial to achieving that goal. I\u2019m especially keen to understand the unique challenges and opportunities within the European market.",
+    "notes": "Spoke with Klaus Schmidt (Head of Data Science at Siemens Logistics) on 11/15. He suggested I connect with Anya Petrova at a smaller robotics startup in Berlin \u2013 \u2018Automatica Solutions\u2019. He mentioned Anya is looking for junior data scientists with international experience. Added Anya to connection request list. Also, Klaus mentioned the importance of understanding EU regulations around data privacy when working with industrial data. Need to research GDPR implications. Followed up with FlowState Logistics team about potential collaboration on a project with a German partner \u2013 no immediate leads yet. Maria expressed strong interest in relocation to Germany or the Netherlands within the next 2-3 years. She's proactively learning about visa requirements and the job market in those countries. Reminder: Send Maria a link to the recent article on AI-powered logistics in Germany.",
+    "locationAvailability": "Currently based in San Francisco, CA, but open to remote connections and actively exploring opportunities in Europe.",
+    "introPreferences": "I\u2019m highly interested in introductions to individuals who meet the following criteria:\n\n* **Hard Requirements:**\n  * Must be working in the field of AI, machine learning, or robotics, specifically within the context of industrial automation.\n  * Must be based in Europe (Germany, Netherlands, Belgium, Switzerland preferred).\n  * Must have at least 5 years of experience in the field.\n\n* **Soft Preferences:**\n  * Individuals with experience in the logistics or supply chain industry are highly desirable.\n  * Founders or key decision-makers at early-stage startups are particularly interesting.\n  * Individuals with a strong technical background and a proven track record of innovation.\n\nPlease avoid introductions to individuals in sales or marketing roles unless they have a strong technical understanding of the underlying technology. I'm also not currently interested in roles that are purely research-focused \u2013 I\u2019m looking for opportunities to apply my skills to real-world problems.",
+    "personalPreferences": "I prefer concise and direct communication. Email is my preferred method of contact, but I\u2019m also responsive on LinkedIn. I\u2019m a quick learner and enjoy tackling challenging problems. I\u2019m always open to new ideas and perspectives.",
+    "meetingAndSchedulingPreferences": "I\u2019m available for virtual meetings during standard Pacific Time business hours. Please send a brief agenda in advance so I can prepare accordingly. I appreciate a clear and concise meeting structure, with a defined set of objectives and a plan for follow-up. A short debrief email summarizing key takeaways would be greatly appreciated."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 22.905445098876953,
+      "input_tokens": 777,
+      "output_tokens": 1671,
+      "problems": [
+        "background: possible truncation (ends with '...ment: Agile methodologies')"
+      ]
+    },
+    {
+      "attempt": 2,
+      "elapsed_s": 25.012577056884766,
+      "input_tokens": 777,
+      "output_tokens": 1680,
+      "problems": []
+    }
+  ],
+  "success": true
+}

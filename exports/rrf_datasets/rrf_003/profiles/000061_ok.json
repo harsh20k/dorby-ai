@@ -1,0 +1,54 @@
+{
+  "id": 61,
+  "archetype": "Serial Entrepreneur with Diverse Background",
+  "given_name": "Yusuf Oduya",
+  "style_version": 4,
+  "archetypes_version": 11,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Yusuf Oduya is a serial entrepreneur currently focused on building 'AgriConnect,' a B2B SaaS platform connecting smallholder farmers in Sub-Saharan Africa directly with wholesale buyers. He previously spent a decade in financial modeling for infrastructure projects, then unexpectedly pivoted to founding a successful (and later sold) e-commerce company specializing in ethically sourced African textiles. This unusual blend of finance and retail gives him a unique perspective \u2013 he understands both the capital needs of growing businesses *and* the importance of market access. He's now seeking seed funding for AgriConnect and strategic partnerships to expand its reach. He's a very direct communicator, values efficiency, and is always open to a quick phone call over lengthy email chains. He\u2019s particularly interested in impact investors and individuals with experience scaling tech solutions in emerging markets.",
+    "positioning": "I\u2019m the founder and CEO of AgriConnect, a platform designed to revolutionize the agricultural supply chain in Sub-Saharan Africa. We\u2019re tackling the critical issue of market access for smallholder farmers, empowering them to receive fair prices for their produce while providing wholesale buyers with a reliable and transparent sourcing solution. Since launching our beta program six months ago, we\u2019ve onboarded over 500 farmers and facilitated transactions exceeding $100,000. AgriConnect isn\u2019t just about technology; it\u2019s about building a more equitable and sustainable food system, and I\u2019m passionate about driving that change. We are currently preparing for a seed funding round and aggressively expanding our team.",
+    "background": "- **2023 \u2013 Present: Founder & CEO, AgriConnect.** Spearheaded the development and launch of a B2B SaaS platform connecting smallholder farmers with wholesale buyers in Sub-Saharan Africa. Managed all aspects of the business including product development, fundraising, and team building.\n- **2018 \u2013 2022: Founder & CEO, Zawadi Textiles.** Built and scaled an e-commerce business specializing in ethically sourced African textiles, achieving 30% year-over-year revenue growth for three consecutive years. Successfully exited the business through acquisition by a larger fair-trade organization.\n- **2013 \u2013 2018: Financial Modeler, Global Infrastructure Partners.** Developed complex financial models to evaluate and support infrastructure investments in emerging markets, totaling over $2 billion in project value. Led due diligence processes and presented investment recommendations to senior management.\n- **2011 \u2013 2013: Associate, Ernst & Young.** Provided financial advisory services to clients in the energy and utilities sector, focusing on mergers and acquisitions and project finance.\n- **Education:** MBA, Harvard Business School (2011). BSc, Finance, University of Cape Town (2009).\n- **Certifications:** CFA Level 1 (Completed 2010). \n- Successfully navigated complex logistics and supply chain challenges in the textiles industry, demonstrating adaptability and problem-solving skills.\n- Consistently exceeded revenue targets at Global Infrastructure Partners, showcasing strong analytical and financial modeling abilities.\n- Proficient in financial modeling, data analysis, and market research.",
+    "lookingFor": "- Introductions to Seed-Stage Impact Investors focused on AgTech in Africa.\n- Connections with experienced advisors who have successfully scaled SaaS businesses in emerging markets.\n- Potential partnerships with agricultural cooperatives or NGOs operating in Sub-Saharan Africa.\n- Wholesale buyers (food processors, exporters) interested in sourcing directly from smallholder farmers.\n- Individuals with expertise in mobile payments and financial inclusion for rural communities.\n- Introductions to relevant industry publications and thought leaders in the AgTech space.\n- Seeking mentorship from seasoned entrepreneurs who have experience navigating the challenges of building a business in Africa.\n- Warm introductions to potential strategic partners with established distribution networks.",
+    "notes": "- Yusuf is a very direct and pragmatic communicator. He appreciates concise updates and prefers phone calls to lengthy email threads.\n- He\u2019s extremely focused on AgriConnect\u2019s traction and fundraising efforts currently. \n- He mentioned a previous positive experience with introductions from [connector's name] \u2013 follow up with them for best practices.\n- He\u2019s particularly interested in investors who understand the nuances of the African market. \n- He\u2019s open to advisory roles for promising AgTech startups in exchange for equity.\n- Recently completed a pitch deck refinement based on feedback from a workshop at Y Combinator.",
+    "locationAvailability": "Based in Nairobi, Kenya, but open to remote meetings and occasional travel to the US and Europe.",
+    "introPreferences": "- **Must-Have:** Investor or advisor with demonstrable experience in African markets.\n- **Good-to-Have:** Background in AgTech or SaaS.\n- **Dealbreaker:** Investors solely focused on short-term ROI without considering social impact.\n- **Framing:** Emphasize AgriConnect's unique value proposition \u2013 empowering smallholder farmers and improving supply chain efficiency.\n- **Connection Level:** Prefer introductions to partners/principals, not junior associates.\n- **Avoid:** Introductions to individuals solely interested in philanthropic donations \u2013 we are a for-profit venture.\n- **Preferred Introduction Style:** Brief and to-the-point, highlighting mutual connections or shared interests.",
+    "personalPreferences": "I respond best to direct communication \u2013 feel free to pick up the phone if you have a quick question. I\u2019m a big fan of efficiency and appreciate people who get straight to the point.",
+    "meetingAndSchedulingPreferences": "I prefer short, focused meetings (30-45 minutes) and am comfortable using Calendly for scheduling. I generally respond to meeting requests within 24 hours."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 21.316732168197632,
+      "input_tokens": 845,
+      "output_tokens": 1187,
+      "problems": []
+    }
+  ],
+  "success": true
+}

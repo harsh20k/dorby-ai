@@ -1,0 +1,54 @@
+{
+  "id": 197,
+  "archetype": "Music Tech Infrastructure Builder",
+  "given_name": "Kavya Lopes",
+  "style_version": 13,
+  "archetypes_version": 33,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Kavya Lopes is a 32-year-old founder and CEO of 'Resonate Data,' a company building a data pipeline and analytics platform specifically for independent musicians and small to mid-sized record labels. Her distinctive career detail is a background in classical Indian percussion \u2013 she was a professionally trained tabla player \u2013 which informs her deep understanding of the nuances of musical creation and the challenges faced by artists. This isn't just a business for her; it\u2019s about empowering creators. Resonate Data is currently in seed stage, having demonstrated promising early traction with a cohort of beta users. Kavya is actively seeking seed funding and strategic partnerships with larger music tech companies or data analytics providers. She is a very technically capable leader, comfortable discussing architecture and API integrations, but also skilled at articulating the business value proposition to non-technical audiences. She\u2019s fiercely independent, focused on building a sustainable business, and slightly wary of overly aggressive VC approaches. She prioritizes authenticity and genuine connection.",
+    "positioning": "As Founder & CEO of Resonate Data, I\u2019m building the essential data infrastructure for the future of independent music. The music industry is drowning in data \u2013 streams, social engagement, sales, licensing \u2013 but independent artists and labels lack the tools to actually *understand* it. Resonate Data solves this. We provide a unified data pipeline that aggregates data from disparate sources, cleans and normalizes it, and delivers actionable insights through a user-friendly analytics platform. We\u2019re currently focused on empowering artists to optimize their release strategies, understand their audience, and maximize their revenue.  We've achieved impressive early traction with a curated beta program, demonstrating a clear market need and a strong product-market fit.  My background in both music (as a trained tabla player) and technology allows me to uniquely understand the challenges and opportunities in this space. I\u2019m particularly passionate about leveling the playing field for independent creators and believe data is the key. I\u2019m looking to connect with individuals who share this vision and can help us scale Resonate Data into the leading data platform for the independent music ecosystem.  We're building more than just a platform; we\u2019re building a future where artists own their data and control their destiny.",
+    "background": "- **CEO & Founder, Resonate Data** (2023 \u2013 Present) \n  - Led seed fundraising efforts, securing initial angel investment. \n  - Oversaw product development, from MVP to beta launch, focusing on user experience and data accuracy. \n  - Built and managed a small, agile engineering team.\n- **Senior Data Engineer, Streamline Analytics** (2020 \u2013 2023) \n  - Designed, built, and maintained ETL pipelines for large-scale data processing.\n  - Developed data models and dashboards for client reporting.\n  - Led the integration of new data sources into existing platforms.\n- **Data Science Consultant, Various Clients** (2018 \u2013 2020) \n  - Provided data analysis and machine learning solutions to clients in various industries.\n- **Education:** \n  - **M.S., Data Science**, Stanford University (2018)\n  - **B.A., Computer Science**, University of California, Berkeley (2016)\n- **Skills:** Python, SQL, AWS (S3, EC2, Lambda), Data Modeling, ETL, Machine Learning, Tableau, Data Visualization, Agile Development, Music Theory, Tabla Performance (Professional Level)",
+    "lookingFor": "I'm actively seeking connections to accelerate Resonate Data's growth. Specifically, I'm looking for:\n\n*   **Seed Stage Investors:** Funds with a focus on music tech, data analytics, or B2B SaaS.  I'm particularly interested in investors who understand the unique dynamics of the music industry and are aligned with our mission of empowering independent artists.\n*   **Strategic Partners:** Companies with complementary technologies or market access, such as digital distribution platforms, music marketing agencies, or data analytics providers.\n*   **Founders:**  Other founders in the music tech space to share learnings and best practices. I value authentic connections and open dialogue.\n*   **Introductions:** Introductions to key decision-makers at companies like Spotify, Apple Music (especially their developer relations teams), and leading music data providers.\n*   **Mentors:** Experienced entrepreneurs who have successfully scaled data-driven businesses.",
+    "notes": "Kavya is incredibly articulate and passionate about her vision for Resonate Data. She's technically very strong, able to dive deep into the details of the platform's architecture. She's also a skilled storyteller, capable of conveying the value proposition to a non-technical audience. She\u2019s expressed some frustration with early investor conversations that didn\u2019t fully grasp the nuances of the independent music market. She\u2019s currently focused on closing a seed round in the next quarter and is prioritizing investors who can offer more than just capital \u2013 strategic guidance and industry connections are highly valued. Recently mentioned exploring potential integrations with existing music production software.",
+    "locationAvailability": "Currently based in San Francisco, California. Open to travel for key meetings and potential relocation is a possibility in the future, depending on investment and partnership opportunities.",
+    "introPreferences": "*   **Hard Requirements:** Introductions should be to individuals with decision-making authority at relevant companies (e.g., VP of Engineering, Head of Strategy).\n*   **Soft Preferences:** I prefer introductions to people who have a demonstrated interest in music tech or data analytics.\n*   **Intro Style:** Please provide a brief context about Resonate Data and highlight my background and passion for empowering independent artists. A sentence or two about why you think the connection would be valuable is appreciated. Avoid overly promotional language \u2013 authenticity is key.\n*   **Avoid:** Introductions to junior-level employees or individuals who are unlikely to be able to provide meaningful feedback or support.",
+    "personalPreferences": "I prefer initial contact via LinkedIn or email. I respond best to concise and well-written messages.",
+    "meetingAndSchedulingPreferences": "I typically prefer 30-minute introductory calls to assess mutual fit. I'm comfortable with Zoom or Google Meet.  Please come prepared with specific questions about Resonate Data and your potential areas of collaboration.  I find it helpful to receive a brief agenda beforehand."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 22.30723285675049,
+      "input_tokens": 788,
+      "output_tokens": 1333,
+      "problems": []
+    }
+  ],
+  "success": true
+}

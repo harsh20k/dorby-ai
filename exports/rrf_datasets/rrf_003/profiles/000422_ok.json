@@ -1,0 +1,54 @@
+{
+  "id": 422,
+  "archetype": "Healthcare/Impact Focused Founder",
+  "given_name": "Diego Sokolov",
+  "style_version": 26,
+  "archetypes_version": 71,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Diego Sokolov is a 38-year-old founder and CEO of 'Synapse Bio,' a biotech startup focused on developing personalized diagnostics for early-stage neurodegenerative diseases, specifically utilizing liquid biopsies and AI-driven analysis. His distinctive career detail is a prior 7-year stint as a quantitative analyst at a large hedge fund *before* pivoting to biology \u2013 a background he leverages heavily in Synapse Bio\u2019s data analysis and funding strategy. He's deeply committed to accessible healthcare and sees Synapse Bio as a vehicle for dramatically improving early detection rates, particularly for underserved populations. He's currently seeking Series A funding and strategic partnerships with pharmaceutical companies and large hospital networks. He\u2019s a bit of a workaholic, intensely focused, and can sometimes come across as overly direct, but is ultimately very collaborative and driven by a genuine desire to make a difference. He's comfortable with remote work but prefers in-person meetings for key strategic discussions. He\u2019s highly analytical and values data-driven introductions.",
+    "positioning": "As CEO of Synapse Bio, I\u2019m leading a team dedicated to revolutionizing the early diagnosis of neurodegenerative diseases. We\u2019re tackling a massive, unmet need: the current diagnostic landscape for conditions like Alzheimer\u2019s and Parkinson\u2019s is reactive, often identifying disease *after* significant neurological damage has occurred. Synapse Bio is changing that. We're developing a non-invasive, highly accurate diagnostic platform based on liquid biopsies \u2013 analyzing biomarkers in blood \u2013 coupled with proprietary AI algorithms. This allows for early detection, potentially years before symptoms manifest, opening a critical window for intervention and improved patient outcomes.\n\nOur core technology focuses on identifying subtle molecular changes indicative of early neurodegeneration. We\u2019ve recently completed a successful Phase 1 clinical trial demonstrating high sensitivity and specificity in a pilot cohort. We\u2019re now focused on scaling our operations, expanding our biomarker panel, and preparing for a larger, multi-center Phase 2 trial. A key component of our strategy is ensuring accessibility; we\u2019re actively exploring partnerships to make our diagnostics affordable and available to diverse patient populations, regardless of socioeconomic status or geographic location. We're not just building a company; we're building a future where neurodegenerative diseases are detected and managed proactively, improving the lives of millions.\n\nI\u2019m particularly proud of the team we\u2019ve assembled \u2013 a brilliant mix of biologists, data scientists, and engineers. We've also secured a unique blended finance model, combining traditional venture capital with impact investment funds, reflecting our commitment to both financial returns and social impact.",
+    "background": "- **CEO & Founder, Synapse Bio** (2020 \u2013 Present)\n  - Led the company from inception through seed funding, Phase 1 clinical trials, and ongoing Series A fundraising.\n  - Responsible for overall strategy, business development, fundraising, and team leadership.\n  - Successfully navigated regulatory hurdles and established key partnerships with leading research institutions.\n\n- **Quantitative Analyst, Blackwood Capital** (2013 \u2013 2020)\n  - Developed and implemented algorithmic trading strategies, specializing in statistical arbitrage and risk management.\n  - Managed a portfolio exceeding $500 million, consistently exceeding performance benchmarks.\n  - Led a team of junior analysts and mentored new hires.\n  - *Distinctive detail:* This experience provided a strong foundation in data analysis, modeling, and financial strategy \u2013 skills directly applicable to the challenges of building a biotech startup.\n\n- **Research Assistant, Stanford University \u2013 Department of Neurology** (2011 \u2013 2013)\n  - Conducted research on the molecular mechanisms of Alzheimer\u2019s disease under Dr. Eleanor Vance.\n  - Contributed to several peer-reviewed publications on amyloid beta and tau protein aggregation.\n  - Gained valuable experience in laboratory techniques, data analysis, and scientific writing.\n\n- **Education:**\n  - **PhD, Biomedical Informatics**, Stanford University (2011 \u2013 2013)\n  - **MS, Financial Engineering**, Columbia University (2009 \u2013 2011)\n  - **BS, Mathematics & Biology**, Massachusetts Institute of Technology (2005 \u2013 2009)\n\n- **Skills:** Liquid Biopsy, AI/Machine Learning, Data Analysis (Python, R), Statistical Modeling, Financial Modeling, Business Development, Fundraising, Team Leadership, Regulatory Affairs, Clinical Trial Management.",
+    "lookingFor": "I'm actively seeking strategic connections to accelerate Synapse Bio\u2019s growth and impact. Specifically, I'm focused on:\n\n* **Series A Investors:** Funds with a demonstrated track record of investing in early-stage biotech companies, particularly those with a strong social impact component. We\u2019re looking for investors who understand the long-term potential of personalized diagnostics and are aligned with our mission.\n* **Pharmaceutical Partnerships:** Collaboration opportunities with established pharmaceutical companies to co-develop and commercialize our diagnostic platform. We\u2019re open to licensing agreements, joint ventures, and strategic acquisitions.\n* **Hospital Network Partnerships:** Relationships with large hospital networks to integrate our diagnostics into clinical workflows and expand access to our technology. We are particularly interested in networks with strong neurology departments and a commitment to innovation.\n* **Key Opinion Leaders (KOLs):** Connections to leading neurologists and researchers in the field of neurodegenerative diseases. Their expertise and guidance would be invaluable as we move forward with clinical trials and commercialization.\n* **Experienced Board Members:** Individuals with significant experience in the biotech industry, particularly in areas such as regulatory affairs, commercialization, and finance. I\u2019m looking for advisors who can provide strategic guidance and mentorship.\n\nI am *not* currently looking for general mentorship or networking opportunities. My priority is to identify individuals and organizations that can directly contribute to Synapse Bio\u2019s success. I\u2019m highly focused on quantifiable impact and data-driven decision-making, so please come prepared to discuss specific opportunities and metrics.",
+    "notes": "* Diego is extremely data-driven. Introductions should highlight quantifiable results and potential ROI.\n* He's passionate about the social impact of his work. Highlighting alignment with his mission is crucial.\n* He responded positively to a recent introduction to Dr. Anya Sharma (neurologist at UCSF) \u2013 a potential KOL. Follow up on that connection.\n* He mentioned being frustrated with the slow pace of regulatory approvals. Be mindful of this when discussing potential partnerships.\n* He\u2019s currently reading 'The Innovator\u2019s Dilemma' \u2013 a potential conversation starter.\n* He's very responsive on LinkedIn but prefers direct email for more detailed discussions.\n* Avoid pitching services related to generic marketing or PR; he's focused on targeted, strategic outreach.\n* He's been attending the JP Morgan Healthcare Conference for the past two years \u2013 a good place to potentially connect.",
+    "locationAvailability": "Based in the San Francisco Bay Area. Open to remote meetings, but prefers in-person meetings with potential investors and strategic partners in the Bay Area, Boston, and New York.",
+    "introPreferences": "* **Target Profiles:** Series A investors (healthcare/biotech focus), C-suite executives at pharmaceutical companies, heads of neurology departments at major hospital networks, leading neurodegenerative disease researchers.\n* **Introduction Style:** Concise and data-driven. Focus on the potential impact of Synapse Bio and the value proposition for the target individual/organization.\n* **Information to Include:**\n  - A brief overview of Synapse Bio\u2019s technology and clinical progress.\n  - Key metrics from our Phase 1 trial (sensitivity, specificity).\n  - Our current fundraising status and target investment amount.\n  - The specific reason why this connection is relevant to Synapse Bio\u2019s goals.\n* **Information to Avoid:**\n  - Overly enthusiastic or hyperbolic language.\n  - Technical jargon without clear explanation.\n  - Requests for general advice or mentorship.\n* **Preferred Introduction Length:** 3-5 sentences maximum.\n* **Follow-up:** Please let me know if the introduction was successful and if a follow-up meeting is scheduled.",
+    "personalPreferences": "Prefers direct email communication \u2013 diego.sokolov@synapsebio.com.  Not active on Twitter.",
+    "meetingAndSchedulingPreferences": "- Prefers video conferencing (Zoom, Google Meet) for initial meetings.\n- Available for meetings between 9:00 AM - 6:00 PM PST.\n- Typically requires 24-48 hours\u2019 notice for scheduling.\n- Comfortable with short (30-minute) introductory calls or longer (60-90 minute) deep-dive discussions."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 33.89037203788757,
+      "input_tokens": 760,
+      "output_tokens": 1832,
+      "problems": []
+    }
+  ],
+  "success": true
+}

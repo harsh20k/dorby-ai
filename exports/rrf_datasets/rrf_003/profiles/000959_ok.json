@@ -1,0 +1,54 @@
+{
+  "id": 959,
+  "archetype": "Experienced Exec, Transitioning/Advising",
+  "given_name": "Diego Nakamura",
+  "style_version": 59,
+  "archetypes_version": 161,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Diego Nakamura is a former VP of Engineering at a rapidly scaling fintech company, \u2018NovaPay\u2019, who recently left to explore advisory roles and potentially launch a venture focused on AI-powered fraud detection. He\u2019s deeply technical but has proven ability to translate that expertise into business strategy. A distinctive career detail is his prior 5 years spent as a cryptography researcher at MIT - this gives him unique credibility in the security space. He's looking for connections to seed-stage fintech founders, VCs specializing in security, and potential co-founders with strong AI/ML backgrounds. He's very particular about who he spends time with and prioritizes deep technical conversations. He is based in San Francisco and open to remote advisory work.",
+    "positioning": "A seasoned technology leader with a proven track record of building and scaling high-performing engineering teams, I\u2019m currently focused on exploring opportunities as an advisor to early-stage fintech companies and evaluating potential ventures in the AI-driven fraud prevention space. My background spans deep technical expertise \u2013 rooted in cryptography research at MIT \u2013 and practical experience leading engineering efforts at NovaPay, where we scaled the platform to support millions of users and processed billions in transaction volume. I thrive on tackling complex technical challenges and translating them into impactful business outcomes. I\u2019m particularly passionate about leveraging AI and machine learning to enhance security and mitigate risk in the financial services sector. I'm actively seeking to connect with founders building innovative solutions, investors focused on the future of fintech, and fellow technologists pushing the boundaries of what\u2019s possible. I believe my experience in building robust, scalable systems, coupled with my deep understanding of security protocols, can be a valuable asset to the right team or project. I\u2019m always open to engaging in thoughtful conversations about the future of fintech and the role of AI in shaping it.",
+    "background": "- **NovaPay, VP of Engineering** (2018 \u2013 2023)\n  * Led a team of 75+ engineers responsible for the development and maintenance of NovaPay\u2019s core platform, including payment processing, risk management, and user authentication.\n  * Successfully scaled the engineering organization to support 5x user growth and a 10x increase in transaction volume.\n  * Implemented a new microservices architecture, resulting in a 30% reduction in system latency and improved scalability.\n  * Oversaw the integration of advanced fraud detection systems, reducing fraudulent transactions by 20%.\n  * Managed a $15M+ engineering budget, ensuring efficient resource allocation and project delivery.\n\n- **MIT, Research Scientist** (2013 \u2013 2018)\n  * Conducted research in cryptography and information security, specializing in elliptic curve cryptography and zero-knowledge proofs.\n  * Published 10+ peer-reviewed papers in leading academic conferences.\n  * Collaborated with industry partners to translate research findings into practical security solutions.\n  * Mentored graduate students in cryptography and security research.\n\n- **Stanford University, Ph.D. in Computer Science** (2009 \u2013 2013)\n  * Dissertation focused on the development of novel cryptographic protocols for secure multi-party computation.\n  * Received the departmental fellowship for outstanding academic performance.\n\n- **University of California, Berkeley, B.S. in Computer Science** (2005 \u2013 2009)\n  * Graduated *summa cum laude* with honors in Computer Science.\n  * Active member of the ACM International Collegiate Programming Contest team.",
+    "lookingFor": "I'm currently exploring opportunities to leverage my experience as an advisor and potentially as a co-founder. I\u2019m particularly interested in connecting with individuals and organizations in the following areas:\n\n* **Seed-Stage Fintech Founders:** I\u2019m looking to advise founders building innovative solutions in areas like fraud prevention, payments infrastructure, and decentralized finance (DeFi). I'm most interested in companies with a strong technical foundation and a clear path to market.\n* **VCs specializing in Security:** I\u2019m seeking connections with venture capitalists who are actively investing in security-focused fintech companies. I\u2019m happy to provide technical due diligence and insights on emerging security threats.\n* **AI/ML Engineers & Researchers:** I\u2019m open to exploring potential co-founding opportunities with individuals possessing deep expertise in artificial intelligence and machine learning, specifically as it applies to fraud detection and risk management.\n\nSpecifically, I\u2019m looking for individuals who:\n* Have a strong technical background and a deep understanding of the fintech landscape.\n* Are passionate about building innovative and impactful solutions.\n* Are comfortable engaging in challenging technical discussions.\n* Are seeking a strategic advisor who can provide valuable insights and guidance.",
+    "notes": "* Priority: Identifying potential co-founders with strong AI/ML skills. \n* Caveat: Diego is *very* selective about who he spends time with. He prioritizes deep technical conversations over networking events. \n* Signal: He\u2019ll respond positively to requests for technical feedback or introductions to relevant experts. \n* Context: He recently left NovaPay and is still figuring out his next move. He\u2019s open to advisory roles but also considering launching a new venture. Recent LinkedIn activity focused on AI security articles.",
+    "locationAvailability": "Based in San Francisco, CA. Open to remote work and occasional travel.",
+    "introPreferences": "* Introductions should be to founders raising Seed or Series A rounds \u2013 no later-stage companies.\n* VCs should be partners, not associates.\n* Please include a concise summary of the individual\u2019s technical expertise and relevant experience in your introduction.\n* Avoid introductions to sales or marketing professionals \u2013 Diego is focused on connecting with technical leaders and investors.\n* Do *not* send generic connection requests. A personalized message highlighting a shared interest is essential.\n* Preferred communication method: Email initially, followed by a brief call if there\u2019s a strong mutual fit.",
+    "personalPreferences": "Prefers direct and concise communication. Appreciates thoughtful questions and genuine curiosity about the technical details.",
+    "meetingAndSchedulingPreferences": "* Prefers video calls over phone calls.\n* Typically available for meetings during business hours (PST).\n* Please provide a brief agenda in advance of any scheduled meetings."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 24.092419147491455,
+      "input_tokens": 911,
+      "output_tokens": 1326,
+      "problems": []
+    }
+  ],
+  "success": true
+}

@@ -1,0 +1,54 @@
+{
+  "id": 890,
+  "archetype": "Experienced Pharma/Healthcare Leader",
+  "given_name": "Olamide Patel",
+  "style_version": 54,
+  "archetypes_version": 150,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Olamide Patel is a recently 'retired' (though actively consulting) pharmaceutical executive with 20+ years in drug development, specifically focused on oncology. She spent the majority of her career at large pharma, but her last role was leading a small, innovative biotech through a successful Series B funding round. She's now pivoting to advising early-stage healthcare startups, particularly those focused on personalized medicine and AI-driven diagnostics. A key, distinctive detail is she *strongly* believes the current VC landscape undervalues truly novel science and over-prioritizes hype \u2013 she's looking for genuinely promising ventures and investors who share that view. She\u2019s based in Boston, a hub for biotech, and wants to leverage her network to help promising companies navigate the complexities of fundraising and clinical trials. She's a direct communicator, values efficiency, and isn't afraid to challenge conventional wisdom.",
+    "positioning": "Olamide Patel brings over two decades of experience in pharmaceutical development and commercialization, with a proven track record of successfully navigating the complexities of the drug lifecycle. Most recently, as VP of Development at NovaGen Therapeutics, she spearheaded the company\u2019s Series B funding, securing $65M to advance their lead oncology candidate into Phase 2 clinical trials. Olamide possesses a deep understanding of regulatory pathways, clinical trial design, and market access strategies, coupled with a keen eye for identifying and nurturing groundbreaking scientific innovations. She is now focused on leveraging her expertise to advise and invest in early-stage healthcare startups poised to disrupt the industry, and is actively seeking connections with founders and investors who share a commitment to scientific rigor. Connecting with Olamide now offers access to a seasoned perspective during a critical period of innovation in healthcare.",
+    "background": "- **NovaGen Therapeutics (2019 \u2013 2023):** Vice President, Development. Led all preclinical and clinical development activities, including IND submissions, clinical trial design and execution, and data analysis. Successfully secured $65M in Series B funding.\n- **AstraZeneca (2010 \u2013 2019):** Director, Clinical Development, Oncology. Managed a portfolio of Phase 2 and 3 clinical trials across multiple oncology indications. Led cross-functional teams and presented clinical data at major medical conferences.\n- **Pfizer (2003 \u2013 2010):** Senior Research Scientist, Drug Discovery. Contributed to the discovery and development of novel small molecule inhibitors targeting cancer pathways. Authored multiple peer-reviewed publications.\n- **Education:** PhD, Pharmacology, University of California, San Francisco (2003); BS, Biology, Massachusetts Institute of Technology (1999)\n- **Skills:** Clinical Trial Design, Regulatory Affairs (FDA, EMA), Drug Development, Oncology, Personalized Medicine, Data Analysis, Team Leadership, Scientific Communication, Series B Fundraising, Biotech Strategy.\n- **Certifications:** Project Management Professional (PMP)\n- **Awards & Recognition:** AstraZeneca President\u2019s Award for Scientific Excellence (2016)\n- **Publications:** 15+ peer-reviewed publications in leading scientific journals.\n- **Board Memberships:** Advisory Board, BioTech Innovators Network (2023-present)\n- **Speaking Engagements:** Regular speaker at industry conferences on topics related to oncology drug development and personalized medicine.\n- **Patent Portfolio:** Co-inventor on 3 patents related to novel cancer therapies.",
+    "lookingFor": "## Investment Opportunities\n- Seed and Series A stage healthcare startups focused on oncology, diagnostics, or AI-driven drug discovery.\n- Companies with strong intellectual property and a clear path to clinical validation.\n- Ventures led by experienced and passionate founders.\n\n## Strategic Partnerships\n- Opportunities to serve as an advisor or board member for innovative healthcare companies.\n- Collaboration with research institutions and academic centers.\n\n## Investor Connections\n- Venture capitalists and angel investors with a demonstrated track record of supporting early-stage healthcare companies.\n- Investors who prioritize scientific rigor and long-term value creation over short-term hype.",
+    "notes": "- Olamide is very direct and values concise communication. Avoid lengthy introductions.\n- She\u2019s deeply skeptical of companies making unsubstantiated claims. Data and scientific validation are paramount.\n- She\u2019s particularly interested in companies leveraging AI/ML to personalize cancer treatment.\n- She\u2019s been burned by overly optimistic projections in the past, so realistic timelines and financial models are crucial.\n- She actively monitors trends in the personalized medicine space and is a thought leader in the field.\n- She is currently exploring angel investing opportunities, but primarily focuses on advisory roles.",
+    "locationAvailability": "Olamide Patel is based in Boston, Massachusetts, and is open to remote consultations and collaborations with companies and individuals globally.",
+    "introPreferences": "## Hard Requirements\n- Introductions should be to individuals directly involved in decision-making (e.g., founders, CEOs, lead investors).\n- The connection should be relevant to her stated interests: early-stage healthcare startups, oncology, AI/ML, or relevant investment firms.\n- Introductions must include a concise summary of the company/individual's background and value proposition.\n\n## Soft Preferences\n- Prior relationships or mutual connections are a plus, but not essential.\n- Introductions to investors with a history of funding scientifically driven companies are highly valued.\n- Avoid introductions to individuals primarily focused on marketing or public relations.",
+    "personalPreferences": "Olamide prefers direct and efficient communication. She responds best to concise emails with clear agendas. She\u2019s not a fan of overly formal networking events and prefers more focused, one-on-one conversations.",
+    "meetingAndSchedulingPreferences": "Olamide generally prefers virtual meetings initially, followed by in-person meetings if a strong connection is established. She typically requires 24-48 hours\u2019 notice for scheduling."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 21.81191897392273,
+      "input_tokens": 762,
+      "output_tokens": 1236,
+      "problems": []
+    }
+  ],
+  "success": true
+}

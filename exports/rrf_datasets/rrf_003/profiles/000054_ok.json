@@ -1,0 +1,54 @@
+{
+  "id": 54,
+  "archetype": "European-Based Tech & AI Builder",
+  "given_name": "Aisha Jansen",
+  "style_version": 4,
+  "archetypes_version": 10,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Aisha Jansen is a 34-year-old Dutch founder and CEO of 'Ethical AI Solutions,' a startup focused on providing AI governance and risk assessment tools for financial institutions. Her distinctive career detail is a prior stint as a policy advisor for the Dutch government specializing in data privacy, which gives her a unique perspective on the regulatory landscape surrounding AI. She\u2019s currently fundraising for a Series A round and seeking strategic partnerships with larger fintech companies. Aisha is deeply committed to responsible AI development and frequently speaks at industry events about the importance of ethical considerations. She\u2019s pragmatic and data-driven, but also passionate about building a future where AI benefits society as a whole. She's ambitious, but also realistic about the challenges of navigating the complex European regulatory environment.",
+    "positioning": "As CEO of Ethical AI Solutions, I\u2019m dedicated to helping financial institutions navigate the complexities of AI implementation responsibly. We provide a comprehensive suite of tools for AI risk assessment, bias detection, and model governance, ensuring compliance with evolving regulations like the EU AI Act. Our platform empowers organizations to deploy AI solutions with confidence, mitigating potential legal and reputational risks. We\u2019ve recently secured a pilot program with ABN AMRO, demonstrating strong market validation and the growing demand for ethical AI practices. We\u2019re focused on becoming the leading provider of AI governance solutions for the European financial sector.",
+    "background": "\u2022 **CEO & Founder, Ethical AI Solutions (2022 \u2013 Present):** Led all aspects of company formation, product development, fundraising (seed round of \u20ac750k secured in 2023), and market entry. Built a team of 12 engineers, data scientists, and regulatory experts. Currently leading Series A fundraising efforts targeting \u20ac3M. \n\u2022 **Policy Advisor, Dutch Ministry of Justice and Security (2018 \u2013 2022):** Specialized in data privacy and AI policy, contributing to the development of national strategies for responsible data use. Led a task force on algorithmic accountability, proposing recommendations for regulatory frameworks. Authored several white papers on the ethical implications of AI in law enforcement. \n\u2022 **Data Scientist, ING (2016 \u2013 2018):** Developed machine learning models for fraud detection and risk assessment, improving accuracy by 15% and reducing false positives by 10%. Collaborated with cross-functional teams to implement data-driven solutions. \n\u2022 **MSc, Artificial Intelligence, Delft University of Technology (2014 \u2013 2016):** Focused on machine learning, deep learning, and data mining. Thesis: 'Bias Detection and Mitigation in Machine Learning Models'. Graduated *cum laude*. \n\u2022 **BSc, Computer Science, University of Amsterdam (2011 \u2013 2014):** Strong foundation in software engineering and data structures. Active member of the university\u2019s AI research group. \n\u2022 **Certified Information Privacy Professional (CIPP/E) \u2013 2020**\n\u2022 Regularly speak at conferences like AI Summit London and European Fintech Week.",
+    "lookingFor": "\u2022 Introductions to VCs specializing in Fintech and AI (Series A stage, \u20ac2-5M investment size).\n\u2022 Connections at Tier 1 banks (e.g., BNP Paribas, Deutsche Bank, Santander) \u2013 specifically Heads of AI Risk or Compliance.\n\u2022 Potential partnerships with established fintech companies offering complementary services (e.g., KYC/AML solutions).\n\u2022 Mentorship from experienced SaaS founders who have successfully scaled companies in the European market.\n\u2022 Expert advisors with deep knowledge of EU AI regulations and financial compliance.\n\u2022 Introductions to legal firms specializing in AI and data privacy law in Europe.\n\u2022 Feedback on our product roadmap from Chief Data Officers in the financial sector.\n\u2022 Warm introductions to potential clients within the insurance industry.",
+    "notes": "\u2022 Aisha is very knowledgeable about the EU AI Act and often uses it as a framework for her conversations. \n\u2022 She\u2019s currently prioritizing fundraising and strategic partnerships. \n\u2022 She's a strong advocate for responsible AI and is passionate about her company\u2019s mission. \n\u2022 She recently presented at the AI Summit in London and received positive feedback on her insights into AI governance. \n\u2022 She prefers concise and data-driven communication.",
+    "locationAvailability": "Based in Amsterdam, Netherlands. Open to remote meetings and occasional travel within Europe.",
+    "introPreferences": "\u2022 **Must-Have:** Individuals working in AI Risk, Compliance, or Innovation within financial institutions. \n\u2022 **Strongly Preferred:** Decision-makers or key influencers with budget authority.\n\u2022 **Good to Have:** Individuals with a demonstrated interest in ethical AI and responsible technology.\n\u2022 **Avoid:** Introductions to individuals solely focused on AI development without a risk/compliance perspective.\n\u2022 **Framing:** Please emphasize Ethical AI Solutions\u2019 focus on mitigating regulatory risk and ensuring responsible AI deployment.\n\u2022 **Dealbreaker:** Individuals who are dismissive of the importance of AI governance.\n\u2022 **Ideal Connection Type:** Heads of AI Risk, Chief Compliance Officers, Chief Data Officers.",
+    "personalPreferences": "I prefer initial contact via LinkedIn message and am generally responsive during business hours. I appreciate a brief, concise message outlining the purpose of the connection.",
+    "meetingAndSchedulingPreferences": "I typically prefer 30-minute introductory calls via Zoom or Google Meet. Please use Calendly to schedule a time that works for both of us: [insert Calendly link here]."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 18.5265212059021,
+      "input_tokens": 847,
+      "output_tokens": 1151,
+      "problems": []
+    }
+  ],
+  "success": true
+}

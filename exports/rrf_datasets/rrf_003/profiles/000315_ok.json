@@ -1,0 +1,54 @@
+{
+  "id": 315,
+  "archetype": "Deep Tech Founder, Academic Origins",
+  "given_name": "Malia Lopes",
+  "style_version": 19,
+  "archetypes_version": 52,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Malia Lopes is a 38-year-old founder and CEO of 'Synapse Insights', a deep tech startup leveraging advanced Bayesian networks and causal inference to predict and mitigate supply chain disruptions. Her background is in computational statistics and materials science, earning a PhD from MIT. A key detail is that her initial research was focused on predicting material failures in aerospace components, which she's cleverly pivoted to apply to the broader problem of supply chain resilience. She's currently focused on closing a Series A round to scale her platform and expand into new industry verticals. She's deeply technical, but understands the need to translate complex algorithms into actionable business intelligence. She's pragmatic, data-driven, and a bit impatient with 'fluff'. She's looking for investors with deep tech experience and strategic advisors who understand the nuances of building a scalable AI platform.",
+    "positioning": "I\u2019m Malia Lopes, CEO and Founder of Synapse Insights. We\u2019re building the next generation of supply chain risk management \u2013 moving beyond reactive monitoring to *predictive* resilience. Too many companies are caught off guard by disruptions, relying on outdated models and incomplete data. Synapse Insights leverages proprietary Bayesian network technology, initially developed during my doctoral research, to model complex causal relationships within global supply chains. This allows us to identify vulnerabilities *before* they impact operations, providing actionable intelligence to optimize sourcing, inventory, and logistics. \n\nWe\u2019ve achieved significant traction with early adopters in the semiconductor and automotive industries, demonstrating a consistent 20-35% reduction in disruption-related costs. We're currently focused on expanding our data coverage and enhancing our platform's predictive capabilities.  I\u2019m passionate about applying cutting-edge AI to solve real-world problems, and I believe Synapse Insights has the potential to fundamentally change how businesses manage risk in an increasingly volatile global landscape. \n\nMy background is deeply rooted in quantitative analysis and materials science. I\u2019ve spent the last decade translating complex scientific principles into scalable, commercially viable solutions. I\u2019m a firm believer in the power of data-driven decision-making and am constantly seeking opportunities to learn and collaborate with other innovators in the AI and supply chain space.  We're at a critical inflection point, and I'm actively seeking partners to accelerate our growth and impact.",
+    "background": "- **CEO & Founder, Synapse Insights** (2021 \u2013 Present)\n    - Led all aspects of company formation, including fundraising, product development, and go-to-market strategy.\n    - Secured seed funding of $2.5M from leading venture capital firms specializing in deep tech.\n    - Developed and launched Synapse Insights\u2019 core platform, utilizing Python, TensorFlow, and cloud infrastructure (AWS).\n    - Built and managed a team of data scientists, engineers, and supply chain experts.\n    - Key Accomplishment: Achieved 30% month-over-month revenue growth for the past six months with a 90% customer retention rate.\n\n- **Postdoctoral Researcher, MIT Materials Science and Engineering** (2019 \u2013 2021)\n    - Conducted research on probabilistic modeling of material degradation and failure under extreme conditions.\n    - Developed novel algorithms for predicting component lifespan and optimizing maintenance schedules.\n    - Published multiple peer-reviewed articles in leading scientific journals (e.g., *Materials Science & Engineering A*, *Acta Materialia*).\n    - Utilized: Abaqus, COMSOL, MATLAB, Python (NumPy, SciPy, Pandas).\n\n- **PhD, Computational Statistics, Stanford University** (2015 \u2013 2019)\n    - Dissertation: \u201cBayesian Network Approaches to Causal Inference in Complex Systems.\u201d\n    - Focused on developing and applying Bayesian network models to analyze high-dimensional data.\n    - Awarded the Stanford Graduate Fellowship and the National Science Foundation Graduate Research Fellowship.\n    - Proficient in: R, Stan, JAGS, SQL.\n\n- **Research Intern, NASA Ames Research Center** (Summer 2014)\n    - Assisted in the development of data analysis pipelines for space exploration missions.\n    - Gained experience in data mining, machine learning, and statistical modeling.\n\n- **BS, Mathematics & Computer Science, Caltech** (2011 \u2013 2015)\n    - Graduated *summa cum laude* with honors.\n    - Relevant Coursework: Probability, Statistics, Machine Learning, Data Structures, Algorithms, Linear Algebra.",
+    "lookingFor": "I\u2019m currently focused on closing our Series A funding round ($8-12M) to accelerate product development, expand our sales and marketing efforts, and broaden our industry coverage. I'm specifically looking to connect with:\n\n* **Investors:** Venture capital firms with a strong track record of investing in deep tech, AI, and supply chain solutions.  I'm interested in partners who understand the complexities of our technology and can provide strategic guidance.\n* **Strategic Advisors:** Individuals with deep expertise in supply chain management, risk mitigation, and enterprise software sales.  I value experience scaling AI-driven platforms.\n* **Industry Experts:** Professionals with a strong network within the automotive, semiconductor, and pharmaceutical industries.  I'm seeking introductions to potential customers and partners.\n* **Talent:**  I\u2019m building a world-class team and am always open to connecting with exceptional data scientists, machine learning engineers, and supply chain specialists. \n\nI'm open to informational calls and introductions.  I'm particularly interested in learning about best practices for scaling a deep tech company and navigating the challenges of enterprise sales.  I'm *not* currently looking for service providers (e.g., marketing agencies) unless they have a proven track record with similar companies.",
+    "notes": "Malia is very focused and direct \u2013 she appreciates efficiency. She dislikes overly promotional pitches and prefers to get straight to the point.  She's a fast learner and quickly assesses the value proposition of any potential connection.  She mentioned in a previous conversation that she's particularly interested in investors who have experience with companies that have successfully pivoted their core technology. - Follow up with her regarding the supply chain conference in Munich next month. - She's open to a quick 15-minute call to discuss potential synergies.",
+    "locationAvailability": "Based in Boston, MA, USA. Open to remote meetings and travel as needed.",
+    "introPreferences": "- **Hard Requirement:** Any introduction should be to a decision-maker or someone with significant influence within the target organization (VP level or above).\n- **Soft Preference:** Introductions to investors with a technical background are highly preferred \u2013 someone who can understand the nuances of our Bayesian network technology.\n- **Avoid:** Please *do not* introduce me to individuals who are primarily focused on marketing or sales without a strong understanding of the underlying technology.\n- **Introduction Style:** A concise and personalized email introducing Synapse Insights and highlighting the specific value we can bring to the recipient is ideal.  Please include a brief summary of *why* you think we should connect. - I prefer introductions that are warm, but not overly effusive.",
+    "personalPreferences": "Data-driven, analytical, direct communication, prefers asynchronous communication initially.",
+    "meetingAndSchedulingPreferences": "- I typically block off 30-60 minutes for initial meetings.\n- Please propose a few specific times that work for you, including time zone.\n- I prefer to meet via video conference (Zoom or Google Meet)."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 30.011829137802124,
+      "input_tokens": 857,
+      "output_tokens": 1601,
+      "problems": []
+    }
+  ],
+  "success": true
+}

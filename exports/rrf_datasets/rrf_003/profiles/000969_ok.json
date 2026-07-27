@@ -1,0 +1,63 @@
+{
+  "id": 969,
+  "archetype": "Serial Founder, Now Investor-Focused",
+  "given_name": "Olivia Tanaka",
+  "style_version": 59,
+  "archetypes_version": 162,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Olivia Tanaka is a serial founder with two successful exits in the SaaS space, both focused on developer tools. Her distinctive career detail is a deep, almost obsessive understanding of the developer lifecycle and pain points. She recently launched \u2018Aether Ventures\u2019, a seed-stage fund specifically investing in early-stage developer tooling startups. She\u2019s *very* focused on pre-seed and seed rounds, actively looking for founders who demonstrate deep technical expertise and a clear understanding of their target developer segment. She\u2019s less interested in \u2018lifestyle\u2019 businesses and more focused on companies with the potential for rapid scaling and significant market disruption. She\u2019s known for being direct, analytical, and providing significant operational support to her portfolio companies, leveraging her own experience building and scaling businesses. She\u2019s currently raising her second fund and is also quietly scouting for a Head of Platform to build out community and developer relations for Aether.",
+    "positioning": "I\u2019m Olivia Tanaka, Founder & Managing Partner at Aether Ventures, a seed-stage venture fund focused exclusively on the future of developer tooling. Having spent the last decade building and scaling two SaaS companies from zero to exit \u2013 first with CodeFlow, a CI/CD platform acquired by GitLab, and later with DebugLabs, a debugging-as-a-service tool acquired by JetBrains \u2013 I\u2019ve developed a deep conviction that the developer experience is ripe for innovation. \n\nAether Ventures isn\u2019t just about capital; it\u2019s about partnering with exceptional founders who are building tools that fundamentally improve the lives of developers. We provide hands-on support, leveraging my operational background to help our portfolio companies navigate the challenges of early-stage growth. We\u2019re looking for ambitious teams tackling complex problems with elegant, developer-first solutions. Currently, we are actively deploying capital from Fund I and beginning the fundraising process for Fund II, targeting a $50M close. I'm passionate about identifying and supporting the next generation of developer tooling leaders and building a portfolio of companies that will define the future of software development.",
+    "background": "- **Aether Ventures,** *Founder & Managing Partner* (2023 \u2013 Present)\n  - Led the launch and initial fundraise for a $20M seed-stage venture fund focused on developer tooling.\n  - Developed and implemented the fund\u2019s investment thesis and sourcing strategy, resulting in 5 portfolio companies within the first 9 months.\n  - Actively mentors portfolio founders on product strategy, go-to-market, and scaling operations.\n\n- **DebugLabs,** *Founder & CEO* (2018 \u2013 2022)\n  - Founded and scaled a debugging-as-a-service platform, achieving $15M ARR and a successful acquisition by JetBrains.\n  - Led all aspects of the business, including product development, engineering, sales, and marketing.\n  - Secured $8M in seed and Series A funding from leading venture capital firms.\n  - Built and managed a team of 40+ engineers, designers, and product managers.\n\n- **CodeFlow,** *Co-founder & CTO* (2015 \u2013 2018)\n  - Co-founded a CI/CD platform, achieving $5M ARR and a successful acquisition by GitLab.\n  - Led the engineering team in the development and deployment of a highly scalable and reliable CI/CD pipeline.\n  - Oversaw all technical aspects of the business, including infrastructure, security, and data privacy.\n\n- **Stanford University,** *MS in Computer Science* (2013 \u2013 2015)\n  - Focused on distributed systems and cloud computing.\n  - Published research on fault tolerance in large-scale data centers.\n\n- **Massachusetts Institute of Technology (MIT),** *BS in Computer Science* (2009 \u2013 2013)\n  - Graduated *Cum Laude* with a concentration in artificial intelligence.",
+    "lookingFor": "I\u2019m actively seeking connections with founders building the next generation of developer tools. Specifically, I\u2019m interested in companies tackling challenges in areas like observability, testing, security, and AI-powered development assistance. I\u2019m particularly excited about solutions that address the needs of modern, cloud-native development workflows. \n\n**I\u2019m looking to connect with:**\n\n*   **Seed-stage Founders:** Pre-seed and seed-stage companies with demonstrable traction and a clear vision for scaling. I\u2019m looking for founders who are deeply technical and understand the pain points of their target developer segment.\n*   **Angel Investors:** Individuals with a strong understanding of the developer tooling market and a track record of successful investments.\n*   **Potential Limited Partners (LPs):** Institutions and individuals interested in investing in Aether Ventures Fund II.\n*   **Head of Platform Candidates:** Experienced community builders and developer relations professionals who can help us build a thriving ecosystem around our portfolio companies. 5+ years experience building and scaling developer communities is a must.\n\nI\u2019m *not* currently interested in connecting with service providers or individuals offering unsolicited marketing services.",
+    "notes": "* Priority: Fund II fundraising - actively seeking LP introductions. \n* Caveat: Very selective \u2013 high bar for investment. Focus is *strictly* developer tooling. \n* Signal: Regularly posts on X (@OliviaTanaka) about developer tooling trends. \n* Context: Recently spoke at DevCon on the future of AI-assisted debugging. Follow-up with attendees is ongoing. \n* Reminder: She's incredibly busy - direct, concise communication is best. Avoid long introductory emails.",
+    "locationAvailability": "Based in San Francisco, CA. Open to travel for promising investment opportunities.",
+    "introPreferences": "* Introductions to founders *must* include a link to their product demo or a well-articulated problem statement. \n* For LP introductions, please include a brief overview of the LP\u2019s investment strategy and previous investments in venture capital. Minimum check size of $250k preferred.\n* I prefer introductions to be made via warm email introductions \u2013 LinkedIn requests without context will likely be ignored.\n* Please cc me on the intro email; do not simply forward a thread. \n* Please pre-vet the individual before making an introduction to ensure they align with my investment focus.",
+    "personalPreferences": "Prefers direct and data-driven communication. Not a fan of overly verbose emails or unnecessary small talk.",
+    "meetingAndSchedulingPreferences": "* Prefers 30-minute introductory calls. \n* Uses Calendly for scheduling: [fictional calendly link].\n* Responds best to emails with clear subject lines and concise bullet points."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 16.791933059692383,
+      "input_tokens": 913,
+      "output_tokens": 1233,
+      "problems": [
+        "background: possible truncation (ends with '...9) - Leading with Finance')"
+      ]
+    },
+    {
+      "attempt": 2,
+      "elapsed_s": 21.524691104888916,
+      "input_tokens": 913,
+      "output_tokens": 1424,
+      "problems": []
+    }
+  ],
+  "success": true
+}

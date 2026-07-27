@@ -1,0 +1,54 @@
+{
+  "id": 221,
+  "archetype": "MusicTech Founder - Regulation Focused",
+  "given_name": "Camille Ibrahim",
+  "style_version": 14,
+  "archetypes_version": 37,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Camille Ibrahim is a French-Lebanese founder in her early 30s, building 'Harmonia,' a blockchain-based royalty distribution platform for musicians. She spent her 20s as a classically trained violinist, then transitioned to music tech working at a major label in digital rights management. This experience deeply frustrated her with the opacity and inefficiency of current royalty systems, fueling her desire to create Harmonia. She's technically proficient, understands the music industry intimately, but *critically* lacks deep expertise in the evolving regulatory landscape surrounding blockchain and digital assets in Europe. She\u2019s recently secured seed funding and is under pressure to demonstrate compliance, making finding legal counsel her top priority. She is based in Berlin, aiming to establish Harmonia as a key player in the European music tech scene.",
+    "positioning": "Camille Ibrahim is the Founder and CEO of Harmonia, a blockchain platform revolutionizing royalty distribution for musicians. Leveraging distributed ledger technology, Harmonia offers unparalleled transparency and efficiency in tracking and paying artists. We are currently focused on expanding our platform\u2019s capabilities and ensuring full regulatory compliance within the European Union. I am actively seeking connections with legal professionals specializing in blockchain, digital assets, and intellectual property law to navigate the complex regulatory landscape and scale Harmonia sustainably. My background uniquely positions me to understand both the technological and artistic needs within this evolving industry.",
+    "background": "- **Founder & CEO, Harmonia** (Berlin, Germany) \u2013 2023 \u2013 Present\n  * Led seed funding round of \u20ac1.2M.\n  * Spearheaded the development of Harmonia\u2019s core blockchain infrastructure.\n  * Managed a team of 5 engineers and 2 designers.\n- **Digital Rights Management Specialist, Universal Music Group** (Paris, France) \u2013 2018 \u2013 2023\n  * Managed digital rights for a catalog of over 500 artists.\n  * Implemented new anti-piracy measures, resulting in a 15% reduction in unauthorized downloads.\n  * Collaborated with legal teams on copyright infringement cases.\n- **Violinist, Orchestre National de France** (Paris, France) \u2013 2015 \u2013 2018 (Freelance)\n  * Performed with the orchestra on national and international tours.\n  * Gained experience in intellectual property rights related to musical compositions.\n- **Education:**\n  * **Master of Science in Music Technology, Sorbonne University** (Paris, France) \u2013 2013 \u2013 2015\n  * **Bachelor of Music (Violin Performance), Conservatoire National Sup\u00e9rieur de Musique et de Danse de Paris** (Paris, France) \u2013 2010 \u2013 2013\n- **Skills:** Blockchain Technology, Smart Contracts (Solidity), Digital Rights Management (DRM), Music Law, Intellectual Property, Project Management, Team Leadership, French (Native), English (Fluent), German (Conversational).",
+    "lookingFor": "I am urgently seeking introductions to:\n* **Legal Counsel specializing in Blockchain & Digital Assets regulation within the EU.** Specifically, expertise in MiCA (Markets in Crypto-Assets) is *critical*.\n* **Compliance professionals with experience navigating financial regulations related to digital currencies.**\n* **Venture Capital firms with a focus on early-stage MusicTech and Blockchain startups.**\n\nI'm also open to connecting with founders of other blockchain-based platforms facing similar regulatory challenges. I'm particularly interested in learning about best practices for achieving compliance and building sustainable business models. I\u2019m less interested in general tech investors without specific experience in the music or blockchain space. I'd value a short, informational call to discuss Harmonia\u2019s challenges and explore potential collaborations.",
+    "notes": "Spoke with Camille on 10/26. She\u2019s incredibly driven and passionate about solving the royalty problem. Legal compliance is a major blocker right now \u2013 she\u2019s feeling the pressure. Mentioned she\u2019s been getting conflicting advice from different sources. Needs someone pragmatic and experienced, not just theoretical. She's wary of firms that overpromise and underdeliver. Keep an eye out for anyone with a strong understanding of German regulations, as she's considering establishing a significant operational presence there.",
+    "locationAvailability": "Camille Ibrahim is based in Berlin, Germany, and is primarily focused on the European market.",
+    "introPreferences": "Hard Requirements:\n* Introductions *must* be to individuals with demonstrable expertise in EU blockchain/digital asset regulation.\n* Prioritize lawyers or compliance professionals currently working with blockchain companies.\n* Exclude introductions to general practice lawyers or those with no specific blockchain experience.\n\nSoft Preferences:\n* Ideal contacts have experience with MiCA and related EU legislation.\n* A brief, personalized note highlighting the connection\u2019s relevant experience is highly appreciated.\n* Introduction style should be direct and concise \u2013 focus on Harmonia\u2019s need for legal/compliance support, not a lengthy company overview.",
+    "personalPreferences": "I prefer initial contact via LinkedIn messaging or email. I\u2019m generally responsive during European business hours. Please avoid unsolicited sales pitches.",
+    "meetingAndSchedulingPreferences": "I am generally available for brief introductory calls during the week. Please send a calendar invite with a few proposed times, and I will confirm as soon as possible. I prefer video calls over phone calls."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 16.84044313430786,
+      "input_tokens": 751,
+      "output_tokens": 1144,
+      "problems": []
+    }
+  ],
+  "success": true
+}

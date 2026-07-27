@@ -1,0 +1,54 @@
+{
+  "id": 595,
+  "archetype": "Toronto-Based Multi-Stage Founder",
+  "given_name": "Daniel Jansen",
+  "style_version": 36,
+  "archetypes_version": 100,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Daniel Jansen is a 42-year-old serial entrepreneur based in Toronto. He\u2019s currently balancing two active ventures: 'Synapse Solutions', a B2B SaaS platform for automated market research, and 'Nova AgriTech', an early-stage venture focused on precision farming technology using drone data analysis. A key detail is that he *successfully* exited a previous company, 'DataBloom', a marketing analytics firm, three years ago \u2013 this provides credibility and access to capital but also creates a pattern of quickly building and scaling. He\u2019s actively seeking Series A funding for Synapse Solutions and strategic partnerships for Nova AgriTech. He\u2019s very focused on efficiency and hates wasting time, so introductions need to be highly targeted and relevant. He values direct communication and is known for being somewhat impatient with fluff. He\u2019s a graduate of the University of Waterloo, and actively mentors students there.",
+    "positioning": "Daniel Jansen is a seasoned technology entrepreneur dedicated to building innovative solutions that drive measurable results. As Founder & CEO of Synapse Solutions, we empower businesses to make data-driven decisions with our cutting-edge automated market research platform. We're disrupting the traditional market research landscape, offering a cost-effective and highly scalable alternative to legacy methods. Simultaneously, as Founder of Nova AgriTech, I'm leading the charge in applying advanced drone technology and AI to optimize agricultural practices, increasing yields and reducing environmental impact. My focus is on building high-performing teams, securing strategic partnerships, and rapidly scaling ventures to achieve significant market share. Having previously exited DataBloom, a successful marketing analytics firm, I bring a proven track record of identifying market opportunities, building and launching innovative products, and delivering strong returns for investors.  I am passionately committed to fostering a thriving technology ecosystem in Toronto and beyond, and am actively seeking collaborators and investors who share this vision. We are targeting mid-to-large enterprises across multiple sectors with Synapse Solutions, and large-scale agricultural operations with Nova AgriTech.",
+    "background": "- **Synapse Solutions, Founder & CEO (2021 - Present):** Led all aspects of product development, fundraising, and go-to-market strategy. Secured seed funding of $2.5M. Launched the platform and onboarded 20+ enterprise clients, demonstrating a 30% month-over-month revenue growth in the last quarter.\n- **Nova AgriTech, Founder (2022 - Present):** Spearheaded the development of a proprietary drone-based data analysis system for precision agriculture. Secured initial pilot programs with three major agricultural producers in Ontario. Currently seeking seed funding to expand operations and scale the technology.\n- **DataBloom, Founder & CEO (2016 - 2020):** Built and scaled a marketing analytics platform from concept to a profitable business with over 50 employees. Successfully exited the company through acquisition by a larger marketing technology firm, delivering a 3x return to investors.\n- **TechLead Solutions, Senior Software Engineer (2012 - 2016):**  Developed and maintained critical software components for a leading financial technology company. Led a team of junior engineers and contributed to the design and implementation of key features. Consistently exceeded performance expectations and received multiple awards for innovation.\n- **University of Waterloo, Bachelor of Computer Science (2008 - 2012):** Graduated with Honours, specializing in Artificial Intelligence.  Active member of the University's entrepreneurial club and participated in several startup competitions.",
+    "lookingFor": "I'm currently focused on two key areas for networking and partnership opportunities. For Synapse Solutions, I'm actively seeking Series A investors with experience in B2B SaaS and a strong understanding of the market research industry.  Ideal investors have a portfolio that includes companies with similar growth trajectories and are willing to provide strategic guidance alongside capital. I am also looking for introductions to potential enterprise clients in the financial services, retail, and healthcare sectors.  \n\nFor Nova AgriTech, I\u2019m exploring strategic partnerships with established agricultural companies, drone technology providers, and AI specialists. We\u2019re particularly interested in collaborations that can accelerate our product development and expand our market reach.  I'm open to discussing joint ventures, licensing agreements, and potential acquisition opportunities. \n\nSpecifically, I'm interested in connecting with:\n- Venture Capitalists (Series A focus, B2B SaaS/AgriTech)\n- C-Level Executives at large agricultural businesses\n- Heads of Innovation at major corporations\n- Individuals with expertise in precision agriculture and drone technology\n- Angel investors with a demonstrated track record in early-stage startups.",
+    "notes": "- Spoke with Sarah Chen (Kleiner Perkins) last week \u2013 lukewarm response to Synapse Solutions, mentioned concerns about market saturation. Follow up with alternative VC firms.\n- Daniel is a direct communicator; avoid lengthy introductions or overly promotional pitches.\n- Highly responsive to data-driven presentations and quantifiable results.\n- Mentioned a strong preference for investors who can offer more than just capital \u2013 strategic guidance is key.\n- Successfully closed a pilot program with Maple Leaf Farms for Nova AgriTech - good talking point.\n- Avoid pitching Nova AgriTech to investors solely focused on software \u2013 needs to be framed as a data-driven agricultural solution.\n- University of Waterloo alumni network is a strong connection point.",
+    "locationAvailability": "I am based in Toronto, Ontario, and frequently travel within North America. I am also comfortable with remote meetings and collaborations.",
+    "introPreferences": "When making introductions, please adhere to the following:\n\n* **Hard Requirements:**\n    - The contact must be a decision-maker or key influencer within their organization.\n    - They must have a demonstrable interest in either B2B SaaS (for Synapse Solutions) or precision agriculture (for Nova AgriTech).\n    - They must have a publicly available LinkedIn profile.\n* **Soft Preferences:**\n    - Prior connection to the University of Waterloo is a plus.\n    - Experience with scaling technology companies is highly valued.\n    - Avoid introducing me to individuals who are primarily focused on early-stage ideation \u2013 I\u2019m looking for partners who can help accelerate existing ventures.\n- Please provide a concise and targeted introduction, highlighting the specific relevance of the connection to my current priorities.  Keep it brief \u2013 I value efficiency.\n- A warm introduction with a clear ask is preferred over a cold email.\n- Please pre-vet the contact to ensure they are genuinely interested in exploring a potential collaboration.",
+    "personalPreferences": "Email preferred for initial contact. Direct, concise communication. Appreciate data-driven insights. No social media outreach, please.",
+    "meetingAndSchedulingPreferences": "I generally prefer short, focused meetings with a clear agenda. I'm flexible with scheduling and happy to accommodate different time zones."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 27.848942041397095,
+      "input_tokens": 778,
+      "output_tokens": 1436,
+      "problems": []
+    }
+  ],
+  "success": true
+}

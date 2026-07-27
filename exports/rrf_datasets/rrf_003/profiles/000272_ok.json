@@ -1,0 +1,54 @@
+{
+  "id": 272,
+  "archetype": "Early-Stage Founder, Tech-Driven",
+  "given_name": "Anh Dubois",
+  "style_version": 17,
+  "archetypes_version": 45,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Anh Dubois is a first-time founder, currently building 'SynapseFlow,' an AI-powered workflow automation platform for biotech research. Her background is unusual \u2013 a PhD in Biophysics followed by 5 years as a quantitative data scientist at a large pharmaceutical company. This experience gives her a unique perspective on the pain points in drug discovery and a deep understanding of the technical challenges. She's currently in seed fundraising, looking for investors with experience in both AI and life sciences. She's very focused on finding advisors who have successfully built and scaled similar SaaS products. She\u2019s intensely pragmatic and values direct, data-driven conversations. She's relatively new to the 'founder networking' scene and is still learning the ropes, but is highly motivated and quick to learn. She's based in Boston, and while open to remote connections, prioritizes building relationships with people who understand the local biotech ecosystem.",
+    "positioning": "Anh Dubois is the Founder and CEO of SynapseFlow, an AI-driven workflow automation platform designed to accelerate research in the biotechnology sector. Recognizing the significant time and resources lost to manual processes and data silos, Anh is building a solution that streamlines complex research workflows, empowering scientists to focus on innovation. Prior to founding SynapseFlow, Anh spent five years applying advanced data science techniques to drug discovery at PharmacoCorp, where she developed a novel algorithm for predicting protein-ligand interactions, resulting in a 15% reduction in lead optimization cycle time. She\u2019s passionate about bridging the gap between cutting-edge AI and the critical needs of scientific research, believing that automation is key to unlocking the next generation of breakthroughs. SynapseFlow is currently in seed stage, focused on validating its core technology and building strategic partnerships within the biotech community. Anh is a strong advocate for open science and data accessibility and believes that collaborative innovation is the future of research.",
+    "background": "- **Founder & CEO, SynapseFlow** (Boston, MA) \u2013 *October 2023 \u2013 Present*\n  * Spearheading all aspects of company creation, from initial concept and market validation to product development, fundraising, and team building.\n  * Developed and implemented SynapseFlow\u2019s core AI algorithms for automated data extraction, analysis, and workflow orchestration.\n  * Successfully secured initial pre-seed funding through angel investors.\n  * Currently leading seed round fundraising efforts, targeting venture capital firms specializing in AI and life sciences.\n\n- **Quantitative Data Scientist, PharmacoCorp** (Cambridge, MA) \u2013 *June 2018 \u2013 September 2023*\n  * Led the development and implementation of machine learning models to predict drug efficacy and toxicity, significantly accelerating the drug discovery process.\n  * Designed and built data pipelines for integrating diverse datasets, including genomic data, clinical trial data, and chemical structures.\n  * Collaborated with cross-functional teams of biologists, chemists, and clinicians to identify and address key research challenges.\n  * Published three peer-reviewed articles in leading scientific journals on the application of AI to drug discovery.\n  * Mentored junior data scientists in machine learning techniques and best practices.\n\n- **Postdoctoral Researcher, Massachusetts Institute of Technology (MIT)** (Cambridge, MA) \u2013 *September 2016 \u2013 May 2018*\n  * Conducted research on the biophysical properties of proteins and their role in cellular signaling.\n  * Developed and applied advanced experimental techniques, including fluorescence microscopy and single-molecule spectroscopy.\n  * Published five peer-reviewed articles in high-impact scientific journals.\n\n- **PhD, Biophysics, Stanford University** (Stanford, CA) \u2013 *September 2012 \u2013 August 2016*\n  * Dissertation: 'Structural Dynamics of Protein-Protein Interactions'.\n  * Awarded the National Science Foundation Graduate Research Fellowship.\n  * Developed novel computational methods for simulating protein dynamics.\n\n- **Research Assistant, Stanford University** (Stanford, CA) \u2013 *June 2010 \u2013 August 2012*\n  * Assisted with research on the development of new drug delivery systems.\n  * Gained experience in cell culture, molecular biology, and biochemistry.",
+    "lookingFor": "I\u2019m actively seeking connections with individuals who can contribute to the growth of SynapseFlow. Specifically, I'm looking for:\n\n* **Seed-stage investors** with a demonstrated track record of investing in AI-driven SaaS companies, particularly within the life sciences sector. I'm open to discussing opportunities with firms that can provide not only capital but also strategic guidance.\n* **Advisors** who have successfully scaled similar SaaS products, ideally those with a deep understanding of the biotech research landscape. I\u2019m particularly interested in individuals with experience in sales, marketing, and product development.\n* **Potential early adopters** \u2013 Biotech research labs that are facing challenges with workflow automation and data management. I'm eager to gather feedback and validate our product with real-world users.\n* **Connections to key opinion leaders** in the biotech industry who can help us build brand awareness and credibility.\n\nI am *not* currently seeking:\n* Recruiters \u2013 We are not actively hiring at this time.\n* Individuals offering unsolicited marketing services.\n* Contacts from large pharmaceutical companies interested in acquisition \u2013 we're focused on building an independent, sustainable business.",
+    "notes": "Profile created from LinkedIn and company website. Anh appears highly focused and data-driven. Initial outreach via a mutual connection (Dr. Eleanor Vance) suggests she's receptive to direct, concise communication. She mentioned a strong preference for understanding the investor's thesis *before* a meeting. Discrepancy noted: LinkedIn lists a slightly different start date for PharmacoCorp (June 2018 vs. July 2018 on company website \u2013 will confirm). Key takeaway: Approach with a clear value proposition and a focus on quantifiable results.",
+    "locationAvailability": "Based in Boston, Massachusetts (Eastern Time Zone). Open to virtual meetings.",
+    "introPreferences": "When making introductions to Anh, please adhere to the following:\n\n* **Hard Requirements:**\n  * The connection *must* have a clear understanding of either AI/ML or the biotech/pharmaceutical industry. A background in both is ideal.\n  * The connection should be at the Director level or above (or equivalent in an academic setting).\n  * Please avoid introducing Anh to individuals who are solely focused on general venture capital \u2013 she\u2019s looking for sector-specific expertise.\n\n* **Soft Preferences:**\n  * A brief summary of *why* you think Anh and the connection would benefit from connecting is highly appreciated. Focus on shared interests or potential synergies.\n  * If introducing to a potential advisor, please highlight their experience in scaling SaaS products.\n  * Avoid introductions to individuals solely focused on sales \u2013 she\u2019s currently prioritizing strategic partnerships and fundraising.",
+    "personalPreferences": "I prefer initial communication via email. I respond best to succinct, data-driven messages. Please avoid lengthy introductory emails \u2013 I appreciate brevity and directness. I\u2019m generally available for brief calls after an initial email exchange.",
+    "meetingAndSchedulingPreferences": "Please send a calendar invite with a concise agenda outlining the key discussion points. I prefer to keep meetings focused and efficient. A short pre-read (e.g., a brief deck or article) is always appreciated. I generally debrief internally within 24 hours of any external meeting."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 28.305495738983154,
+      "input_tokens": 803,
+      "output_tokens": 1579,
+      "problems": []
+    }
+  ],
+  "success": true
+}

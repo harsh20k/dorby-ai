@@ -1,0 +1,54 @@
+{
+  "id": 877,
+  "archetype": "Strategic Operator, India/Global Reach",
+  "given_name": "Soraya Garcia",
+  "style_version": 54,
+  "archetypes_version": 148,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Soraya Garcia is a seasoned operations leader currently focused on scaling a Series B fintech company targeting the Indian market. She has a strong background in supply chain optimization and digital transformation, honed during a decade at Unilever in India and then leading operations for a fast-growing e-commerce platform. Her distinctive career detail is a successful turnaround of a struggling manufacturing facility in rural Maharashtra \u2013 she implemented lean manufacturing principles and fostered a strong local workforce, significantly improving efficiency and reducing costs. Now, at 'FinFlow,' she's leveraging that experience to build robust, scalable operations that can navigate the complexities of the Indian financial landscape while maintaining a globally competitive edge. She's actively looking to connect with investors specializing in emerging markets, other operational leaders with India experience, and potential strategic partners to expand FinFlow's reach.",
+    "positioning": "Soraya Garcia is a results-oriented operations executive with a proven track record of building and scaling high-performing teams and streamlining complex processes. Currently, as Head of Operations at FinFlow, a rapidly growing fintech company, I'm focused on establishing a robust operational foundation to support our expansion across India. My expertise lies in leveraging technology and data-driven insights to optimize supply chains, improve efficiency, and drive sustainable growth. I\u2019m passionate about fostering a culture of continuous improvement and empowering local teams to achieve ambitious goals. I\u2019m eager to connect with individuals who share a passion for innovation in the fintech space and a commitment to building impactful businesses in emerging markets.",
+    "background": "- **Head of Operations, FinFlow** (2022 \u2013 Present)\n  * Leading all operational aspects of FinFlow\u2019s India business, including supply chain management, logistics, customer support, and risk & compliance.\n  * Implementing scalable processes and technologies to support rapid growth and maintain operational excellence.\n  * Building and mentoring a high-performing operations team of 50+ members.\n  * Key technologies: Salesforce, AWS, SQL, Python (data analysis).\n\n- **Director of Operations, QuickMart** (2018 \u2013 2022)\n  * Oversaw operations for a leading e-commerce platform in India, managing a network of 20+ fulfillment centers.\n  * Led cross-functional teams to improve order fulfillment rates, reduce shipping costs, and enhance customer satisfaction.\n  * Implemented automation solutions to streamline warehouse operations and improve inventory management.\n  * Successfully scaled operations to support a 3x increase in order volume.\n\n- **Supply Chain Manager, Unilever India** (2012 \u2013 2018)\n  * Managed the end-to-end supply chain for a portfolio of personal care products, including sourcing, procurement, manufacturing, and distribution.\n  * Led a successful turnaround of a manufacturing facility in Maharashtra, implementing lean manufacturing principles and improving efficiency by 25%.\n  * Developed and implemented supply chain optimization strategies to reduce costs and improve service levels.\n  * Key skills: Lean Six Sigma, SAP, Demand Forecasting, Vendor Management.\n\n- **Education:**\n  * MBA, Indian Institute of Management (IIM) Ahmedabad, India (2010 \u2013 2012)\n  * Bachelor of Engineering, Computer Science, University of Mumbai, India (2006 \u2013 2010)",
+    "lookingFor": "- **Investors:** Seeking connections with venture capitalists and angel investors specializing in Series B/C funding for fintech companies operating in emerging markets.\n- **Operational Leaders (India Focus):**  Interested in connecting with experienced operations professionals with a strong understanding of the Indian business landscape, particularly within the fintech or e-commerce sectors.\n- **Strategic Partners:**  Exploring potential partnerships with companies offering complementary technologies or services that can enhance FinFlow\u2019s capabilities (e.g., payment gateways, KYC/AML solutions).\n- **Mentors/Advisors:**  Looking for guidance from seasoned entrepreneurs and industry experts who have successfully scaled businesses in India.\n- **Talent Acquisition:** Always open to connecting with high-potential candidates with experience in operations, supply chain, and fintech.",
+    "notes": "- Soraya is particularly interested in discussing strategies for navigating the regulatory complexities of the Indian financial sector.\n- She recently attended the Fintech India conference in Mumbai and is keen to share insights from the event.\n- Prioritizing building out the risk and compliance function within FinFlow.\n- She values authentic connections and prefers to have a quick introductory call before committing to longer meetings.",
+    "locationAvailability": "Soraya Garcia is currently based in Mumbai, India, and is open to travel within India and internationally. She anticipates attending industry events in Bangalore and Delhi in the coming months.",
+    "introPreferences": "- **Hard Requirements:** Introductions should be to individuals at the VP level or higher, with a clear connection to the fintech industry or emerging market investment.\n- **Soft Preferences:**  Prioritize introductions to individuals with a demonstrated track record of operational excellence and a data-driven approach.\n- **Avoid:** Please do not introduce Soraya to individuals selling generic consulting services or recruitment agencies.\n- **Introduction Style:** A brief, personalized introduction highlighting the mutual benefit of connecting is preferred.  Focus on shared interests or relevant experience.\n- **Follow-up:** Please include a LinkedIn profile link and a brief summary of the individual's relevant experience.",
+    "personalPreferences": "- Prefers to connect via LinkedIn initially. \n- Responds best to concise and direct communication. \n- Values authenticity and transparency in networking interactions.",
+    "meetingAndSchedulingPreferences": "- Please share a brief agenda prior to any scheduled meetings.\n- Comfortable with both video calls and in-person meetings."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 23.241265773773193,
+      "input_tokens": 732,
+      "output_tokens": 1195,
+      "problems": []
+    }
+  ],
+  "success": true
+}

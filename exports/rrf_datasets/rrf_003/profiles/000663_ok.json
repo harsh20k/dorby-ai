@@ -1,0 +1,54 @@
+{
+  "id": 663,
+  "archetype": "Global Tech Leader, Flexible Location",
+  "given_name": "Maria Rossi",
+  "style_version": 41,
+  "archetypes_version": 110,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Maria Rossi is a seasoned technology leader with a deep background in AI-driven cybersecurity, specifically focusing on threat intelligence and proactive defense. Her distinctive career detail is a 5-year stint leading a small, highly specialized cybersecurity team *within* a major international intelligence agency (discreetly worded, of course). This experience instilled in her a unique understanding of advanced threat actors and a pragmatic, results-oriented approach. She\u2019s currently scaling a Series B cybersecurity startup, 'Aegis Insights,' but is increasingly looking to leverage her network for potential advisory roles with larger organizations or even a board position within the next 18-24 months. She's open to relocation, particularly to hubs like London, Berlin, or the Bay Area, but is currently based in Amsterdam. She is *very* particular about who she connects with \u2013 she values genuine expertise and a shared commitment to ethical AI development. She's not interested in 'tire kickers' or purely sales-focused connections.",
+    "positioning": "Maria Rossi is the Chief Technology Officer at Aegis Insights, a rapidly growing cybersecurity startup revolutionizing threat intelligence through advanced AI and machine learning. She leads the engineering, research, and product development teams, driving innovation in proactive threat detection and response. With over 15 years of experience in the cybersecurity landscape, Maria is a recognized thought leader in the application of artificial intelligence to combat evolving cyber threats. She excels at building and scaling high-performing engineering teams, translating complex technical challenges into actionable solutions, and fostering a culture of continuous innovation. Maria's unique background, including experience in national security, allows her to anticipate emerging threats and develop cutting-edge defenses that protect organizations from sophisticated attacks. She is dedicated to building a more secure digital future, underpinned by ethical and responsible AI practices.",
+    "background": "- **Chief Technology Officer, Aegis Insights (2021 \u2013 Present)**\n  * Spearheaded the development and launch of Aegis Insights\u2019 flagship threat intelligence platform, resulting in a 300% increase in user acquisition within the first year.\n  * Built and scaled a team of 30+ engineers, data scientists, and security researchers.\n  * Secured $25M in Series B funding based on product roadmap and technical vision.\n  * Oversaw the integration of cutting-edge AI/ML algorithms for anomaly detection and threat prediction, improving accuracy by 45%.\n\n- **Lead Cybersecurity Analyst, [Redacted \u2013 International Governmental Agency] (2016 \u2013 2021)**\n  * Led a specialized team focused on identifying and mitigating advanced persistent threats (APTs).\n  * Developed and implemented novel techniques for proactive threat hunting and vulnerability assessment.\n  * Collaborated with international partners on joint cybersecurity initiatives.\n  * Received commendation for contributions to national security (details classified).\n\n- **Senior Security Engineer, SecureTech Solutions (2013 \u2013 2016)**\n  * Designed and implemented security solutions for Fortune 500 clients.\n  * Conducted penetration testing and vulnerability assessments to identify security weaknesses.\n  * Developed and delivered security awareness training programs.\n\n- **Education:**\n  * PhD, Computer Science (specialization: Machine Learning & Security), Delft University of Technology, Netherlands (2013)\n  * MSc, Information Security, University of Rome 'La Sapienza', Italy (2009)\n  * BSc, Computer Engineering, University of Bologna, Italy (2007)\n\n- **Skills:** Python, Java, C++, Machine Learning (TensorFlow, PyTorch), Deep Learning, Threat Intelligence, Penetration Testing, Vulnerability Assessment, Cloud Security (AWS, Azure, GCP), Cybersecurity Frameworks (NIST, ISO 27001), Data Analysis, Team Leadership, Strategic Planning.",
+    "lookingFor": "I\u2019m currently focused on expanding Aegis Insights\u2019 reach and impact. I\u2019m particularly interested in connecting with leaders at large enterprises (Fortune 500) who are grappling with sophisticated cyber threats and seeking innovative solutions. I'm also exploring opportunities to leverage my expertise in advisory roles or on boards of directors within the cybersecurity space.\n\nSpecifically, I'm looking for:\n\n* **CISOs and Security Directors:** At companies in the financial, healthcare, and critical infrastructure sectors.\n* **Venture Capitalists:** Focused on Series C/D investments in cybersecurity companies.\n* **Board Members:** With experience in scaling technology businesses and navigating the cybersecurity landscape.\n* **AI/ML Experts:** With a strong ethical framework and experience applying AI to security challenges.\n* **Potential strategic partners:** Companies offering complementary security solutions or threat intelligence feeds.\n\nI'm open to informational interviews and building mutually beneficial relationships. I\u2019m also keen to learn about emerging trends and best practices in the cybersecurity industry.",
+    "notes": "Maria is a highly intelligent and articulate professional with a strong technical background. She is very selective about her network and prioritizes quality over quantity. Her experience in the intelligence community means she is discreet and values confidentiality. She is comfortable discussing technical details but prefers high-level strategic conversations initially. She\u2019s not interested in pitches for unrelated products or services. Recent conversations suggest she is subtly testing the waters for potential board opportunities \u2013 a direct ask is likely within the next 6-12 months. She's a very fast learner and quickly assesses the credibility of individuals. Data quality on her previous role is limited due to the sensitive nature of the work. She prefers to communicate via email initially, then move to brief video calls if there's a strong fit.",
+    "locationAvailability": "I am currently based in Amsterdam, Netherlands, but I am open to relocation for the right opportunity. I am comfortable with remote collaboration, but prefer occasional in-person meetings for strategic discussions.",
+    "introPreferences": "When making introductions to Maria, please keep the following in mind:\n\n* **Hard Requirements:**\n  * The individual must hold a senior leadership position (Director level or above).\n  * The individual\u2019s organization must be actively investing in cybersecurity.\n  * The individual should demonstrate a genuine interest in AI-driven security solutions.\n\n* **Soft Preferences:**\n  * Experience with cloud security and threat intelligence platforms is a plus.\n  * A track record of successful innovation in the cybersecurity space is highly valued.\n  * A shared commitment to ethical AI development is essential.\n\n* **Introduction Messaging:**\n  * Briefly highlight the individual\u2019s relevant experience and accomplishments.\n  * Emphasize the potential for mutual benefit and collaboration.\n  * Avoid overly promotional language or sales pitches.\n  * Specifically mention *why* you thought Maria and this individual would connect \u2013 a shared interest, a complementary skillset, etc. \n  * Frame the introduction as a 'warm connection' rather than a cold outreach.",
+    "personalPreferences": "I prefer to communicate via email for initial contact. I respond promptly to well-written, concise messages. I am generally available for video calls during European business hours. I appreciate directness and transparency in communication.",
+    "meetingAndSchedulingPreferences": "I prefer meetings to be focused and efficient, with a clear agenda. 30-minute meetings are generally sufficient for initial discussions. I am flexible with scheduling, but please provide at least 24 hours' notice. I find pre-read materials helpful for maximizing meeting productivity."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 23.505851984024048,
+      "input_tokens": 812,
+      "output_tokens": 1571,
+      "problems": []
+    }
+  ],
+  "success": true
+}

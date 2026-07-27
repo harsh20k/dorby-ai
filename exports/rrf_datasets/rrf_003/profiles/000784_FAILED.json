@@ -1,0 +1,74 @@
+{
+  "id": 784,
+  "archetype": "AI Infrastructure & Solo Founder",
+  "given_name": "Mei Sokolov",
+  "style_version": 48,
+  "archetypes_version": 133,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Mei Sokolov is a 38-year-old solo founder building 'SynapseFlow', a low-code AI workflow orchestration platform aimed at other early-stage startups. She's deeply technical, having spent years as a machine learning engineer at a FAANG company, but deliberately pivoted *away* from large-scale AI to focus on making AI accessible and manageable for smaller teams. A key detail: she self-funded SynapseFlow after a particularly frustrating experience building a complex AI-powered feature at her previous job, realizing the tooling gap for non-enterprise teams. She\u2019s laser-focused on growth, but is very wary of venture capital, preferring a sustainable, bootstrapping approach. Her network is crucial \u2013 she needs early adopters, strategic advisors with operational experience, and potential integrations partners. She\u2019s brilliant, direct, and values efficiency above all else.",
+    "positioning": "I\u2019m the founder of SynapseFlow, a platform designed to empower early-stage startups to rapidly deploy and manage AI workflows without requiring a team of data scientists. Having spent years building and scaling machine learning systems at Google, I witnessed firsthand the immense potential of AI, but also the significant barriers to entry for most companies. SynapseFlow addresses this challenge by providing a low-code, intuitive interface that simplifies the entire AI lifecycle \u2013 from data ingestion and model training to deployment and monitoring. \n\nI\u2019m passionate about democratizing access to AI and enabling innovative companies to leverage its power to drive growth. I\u2019m currently focused on expanding our integration ecosystem and building out key features based on user feedback. My core competencies lie in machine learning, software architecture, and product development, and I pride myself on delivering practical solutions to complex problems. \n\nI believe successful AI implementation isn't about having the most sophisticated algorithms; it's about having the right tools and workflows to apply them effectively. SynapseFlow is built on that principle. I\u2019m actively seeking collaborations that can accelerate our mission and help us reach more startups who are ready to embrace the future of AI.",
+    "background": "* **Founder & CEO, SynapseFlow** (2022 \u2013 Present)\n    * Developed and launched SynapseFlow, a low-code AI workflow orchestration platform.\n    * Led all aspects of product development, engineering, marketing, and sales.\n    * Achieved 150+ paying customers within the first 18 months, primarily through organic growth and word-of-mouth.\n    * Secured key integrations with popular data sources and AI models.\n* **Senior Machine Learning Engineer, Google** (2016 \u2013 2022)\n    * Led the development of machine learning models for ad targeting and personalization.\n    * Reduced ad spend waste by 12% through improved model accuracy.\n    * Mentored junior engineers and contributed to the development of internal ML best practices.\n    * Collaborated with cross-functional teams to deploy models at scale.\n* **Data Scientist, Airbnb** (2014 \u2013 2016)\n    * Developed and implemented algorithms for fraud detection and risk assessment.\n    * Improved fraud detection rates by 18%.\n    * Conducted A/B testing to optimize pricing and inventory management.\n* **Education:**\n    * **Ph.D., Computer Science (Machine Learning), Stanford University** (2010 \u2013 2014)\n    * **B.S., Mathematics, Massachusetts Institute of Technology (MIT)** (2006 \u2013 2010)\n* **Skills:**\n    * **Programming Languages:** Python, Java, SQL, JavaScript\n    * **Machine Learning Frameworks:** TensorFlow, PyTorch, scikit-learn\n    * **Cloud Platforms:** AWS, Google Cloud Platform (GCP), Azure\n    * **Databases:** PostgreSQL, MySQL, MongoDB\n    * **DevOps Tools:** Docker, Kubernetes, Jenkins\n    * **Soft Skills:** Problem-solving, Communication, Leadership, Teamwork, Time Management",
+    "lookingFor": "* **Strategic Advisors:** Experienced founders and operators who have successfully scaled SaaS businesses, *particularly* those with a bootstrapping mindset. I\u2019m looking for mentorship on growth strategies, fundraising alternatives, and operational efficiency.\n* **Potential Integration Partners:** Companies offering complementary tools and services for early-stage startups (e.g., CRM platforms, marketing automation tools, data analytics platforms). I'm open to exploring mutually beneficial integrations.\n* **Early Adopters & Beta Testers:** Startups actively using or planning to use AI in their workflows. I value direct feedback and am eager to build a community of passionate users.\n* **Angel Investors (Selective):** While I'm primarily focused on bootstrapping, I'm open to connecting with angel investors who understand and support our vision and are aligned with our long-term goals.\n\n**Do not connect if:**\n* You are a venture capitalist aggressively pitching funding.\n* You are a recruiter offering generic job opportunities.\n* You are selling marketing services or SEO packages.\n* You are offering unsolicited advice without understanding our business.",
+    "notes": "Mei is incredibly sharp and direct. She appreciates concise communication and dislikes fluff. Recent interactions reveal she's deeply protective of her time and prioritizes value-add conversations. She\u2019s currently focused on refining SynapseFlow\u2019s user onboarding flow and improving its documentation. A personality assessment suggests she\u2019s a high \u2018driver\u2019 and \u2018achiever\u2019 \u2013 she needs to see tangible progress and is motivated by solving difficult problems. I recommend framing introductions around specific challenges SynapseFlow can address for the target contact, and highlighting our focus on simplicity and accessibility. Don't waste her time with lengthy explanations or vague proposals. She\u2019s very receptive to data-driven insights and practical suggestions.",
+    "locationAvailability": "Based in San Francisco, California, USA (Pacific Time). Open to remote collaboration and occasional travel for strategic meetings.",
+    "introPreferences": "When making introductions to Mei, please emphasize the following:\n\n* **Specific pain points:** Highlight how the person you're introducing can directly address a challenge SynapseFlow is facing (e.g., scaling infrastructure, improving user acquisition).\n* **Relevant experience:** Focus on their track record of success in similar contexts (e.g., bootstrapping a SaaS company, building successful integrations).\n* **Conciseness:** Keep the introduction brief and to the point. Mei values efficiency.\n* **Avoid buzzwords:** Skip the jargon and focus on concrete results.\n\n**Hard Requirements:**\n* The person should have a proven track record of success.\n* They should be genuinely interested in AI and its potential for startups.\n\n**Soft Preferences:**\n* Prior experience with low-code/no-code platforms is a plus.\n* A willingness to share knowledge and provide honest feedback.",
+    "personalPreferences": "I prefer direct communication via email or LinkedIn. I'm generally responsive, but please allow up to 24-48 hours for a reply. I appreciate concise, well-structured messages. WhatsApp is fine for quick check-ins if we\u2019ve already established a connection.",
+    "meetingAndSchedulingPreferences": "I prefer 30-minute meetings to assess fit before committing to longer discussions. Please use Calendly to schedule a time that works for both of us."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 30.205981016159058,
+      "input_tokens": 766,
+      "output_tokens": 1718,
+      "problems": [
+        "background: possible truncation (ends with '...ent, Technical Leadership')"
+      ]
+    },
+    {
+      "attempt": 2,
+      "elapsed_s": 26.724247932434082,
+      "input_tokens": 766,
+      "output_tokens": 1581,
+      "problems": [
+        "background: possible truncation (ends with '...sis, Valuation Techniques')"
+      ]
+    },
+    {
+      "attempt": 3,
+      "elapsed_s": 26.418477058410645,
+      "input_tokens": 766,
+      "output_tokens": 1560,
+      "problems": [
+        "background: possible truncation (ends with '...Teamwork, Time Management')"
+      ]
+    }
+  ],
+  "success": false
+}

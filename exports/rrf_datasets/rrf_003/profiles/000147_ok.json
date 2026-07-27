@@ -1,0 +1,54 @@
+{
+  "id": 147,
+  "archetype": "Media/Podcast Tech Innovator",
+  "given_name": "Mikael Pereira",
+  "style_version": 10,
+  "archetypes_version": 25,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Mikael Pereira is a veteran of digital audio, starting in traditional radio production and transitioning seamlessly into the podcasting boom. He was *early* \u2013 very early \u2013 to podcasting, building and scaling a successful independent network focused on narrative non-fiction. He sold that network five years ago but has remained deeply involved in the space, now focusing on the *technology* that powers podcasting \u2013 specifically, dynamic ad insertion, audience analytics, and interactive audio experiences. He\u2019s currently leading product at 'AuraCast', a startup developing AI-powered tools for podcast creators to personalize content and increase listener engagement. A key differentiator for Mikael is his strong understanding of the *creative* side of audio; he doesn\u2019t just understand the tech, he understands what makes a compelling story. He's actively looking for strategic partners, potential investors, and engineers skilled in machine learning and audio processing. He's driven by a desire to elevate the podcasting medium beyond simply 'radio on demand' and into a truly interactive and personalized experience.",
+    "positioning": "A seasoned media technology executive, Mikael Pereira is currently spearheading product development at AuraCast, a next-generation audio platform. My core competency lies in bridging the gap between creative content and cutting-edge technology, specifically within the podcasting and digital audio landscape. I\u2019m focused on leveraging AI and machine learning to unlock new opportunities for audience engagement, personalized content delivery, and dynamic monetization strategies. With a proven track record of building and scaling successful digital audio networks, I bring a unique perspective to the challenges and opportunities facing the industry. I specialize in product strategy, audience analytics, dynamic ad insertion (DAI), and the development of interactive audio experiences. My value proposition centers on translating complex technical solutions into tangible benefits for content creators and listeners alike, fostering a more immersive and rewarding audio ecosystem. I'm passionate about innovating within the podcasting space and believe personalized audio is the future.",
+    "background": "Mikael Pereira\u2019s career spans over two decades in digital media, beginning with a foundation in traditional radio production at KEXP Seattle (2002-2006), where he honed his skills in audio engineering, storytelling, and content creation. This experience proved invaluable as he transitioned into the burgeoning podcasting industry in 2007, founding \u2018Echo Bloom Networks\u2019 \u2013 an independent podcast network specializing in narrative non-fiction.\n\n* **Echo Bloom Networks (2007-2019):** As Founder & CEO, Mikael oversaw all aspects of the business, from content acquisition and production to marketing, distribution, and monetization. Key achievements include:\n    *  Grew the network to over 20 original podcasts with a combined monthly listenership exceeding 500,000.\n    *  Secured key partnerships with advertisers including Patagonia, REI, and Squarespace.\n    *  Pioneered the use of dynamic ad insertion (DAI) within the independent podcasting space, increasing ad revenue by 35%.\n    *  Developed and implemented a data-driven content strategy, leveraging audience analytics to identify and cultivate successful podcast concepts.\n* **Strategic Advisor \u2013 Pacific Northwest Media Group (2019-2021):** Following the acquisition of Echo Bloom Networks, Mikael served as a strategic advisor, focusing on digital audio strategy and innovation.\n* **AuraCast (2021-Present):** Currently, as Head of Product, Mikael leads the product vision, roadmap, and execution for AuraCast\u2019s AI-powered audio platform. Responsibilities include:\n    *  Defining and prioritizing product features based on market research, user feedback, and competitive analysis.\n    *  Collaborating with engineering, design, and marketing teams to deliver innovative audio experiences.\n    *  Managing a team of product managers and designers.\n    *  Technologies utilized: AWS, Google Cloud Platform, Python, TensorFlow, various podcasting platforms (Libsyn, Buzzsprout, Anchor), and audio editing software (Adobe Audition, Pro Tools).",
+    "lookingFor": "I am actively seeking connections with individuals who share a passion for innovation in the podcasting and digital audio space. My ideal connections fall into the following categories:\n\n* **AI/ML Engineers:** Specifically, engineers with experience in audio processing, speech recognition, and personalized recommendation systems. I'm interested in exploring collaborations on advanced audio analytics and dynamic content generation.\n* **Venture Capitalists/Angel Investors:** Seeking investors interested in supporting early-stage companies disrupting the podcasting industry. I'm looking for partners who understand the long-term potential of personalized audio.\n* **Podcast Network Executives:** Interested in discussing potential partnerships and integrations with AuraCast's technology. I'm particularly interested in networks focused on narrative storytelling and immersive audio experiences.\n* **Strategic Advisors (Audio Tech):** Individuals with deep expertise in audio technology, monetization strategies, and audience engagement.\n\n**Specifically *not* looking for:**\n    * Recruiters (unless specifically targeting AI/ML roles).\n    * Individuals solely focused on traditional radio broadcasting.\n    * Content creators seeking general podcasting advice (I\u2019m focused on the technology side).\n\n--**Hierarchy of Interest**--\n    1.  AI/ML Engineers\n    2.  VCs/Angel Investors\n    3.  Podcast Network Executives\n    4.  Strategic Advisors\n\nI'm open to informational interviews, strategic partnerships, and potential investment opportunities. I value individuals who are proactive, collaborative, and passionate about pushing the boundaries of audio innovation.",
+    "notes": "* Mikael is a very responsive contact, but prefers initial outreach via LinkedIn messaging. \n* He recently presented at the 'Audio Future Summit' (Oct 26th) \u2013 good conversation starter. \n* He's currently evaluating several SDK integrations for AuraCast, so discussions around APIs and developer tools are relevant. \n*  Confirmed interest in exploring potential partnerships with Spotify and Amazon Music, but is cautious about platform dependency.\n*  Data Quality: Background section details verified through LinkedIn and company website.  Need to confirm specific revenue figures from Echo Bloom Networks acquisition.",
+    "locationAvailability": "Currently based in Seattle, Washington. I am open to remote collaboration and limited travel for strategic meetings and industry events.",
+    "introPreferences": "When introducing me, please emphasize my background as a *creator* first, and a technologist second. Many people see me as 'just tech,' and that misses a crucial part of my perspective. \n\n* **Highlight:** My experience building and scaling Echo Bloom Networks. This demonstrates my understanding of the challenges and opportunities facing content creators.\n* **Focus:** My current work at AuraCast, specifically our AI-powered tools for personalized audio experiences.\n* **Avoid:** Overly technical jargon. Keep the introduction concise and focused on the *value* I bring.\n* **Preferred Framing:** Position me as a thought leader in the audio technology space, someone who is passionate about innovating and elevating the podcasting medium.\n* **Ideal Introduction Target Profile:** Executives at podcast networks, AI/ML engineers with audio experience, and investors interested in the future of digital audio. I prefer introductions to be warm and personalized, with a clear explanation of why a connection would be mutually beneficial. A brief context about the person making the introduction is always appreciated.",
+    "personalPreferences": "I prefer communication via LinkedIn messaging or email. Quick, direct feedback is appreciated. I'm a fan of concise summaries and bullet points \u2013 saves everyone time!",
+    "meetingAndSchedulingPreferences": "Generally available for meetings during standard business hours (PST). I prefer 30-minute meetings and am flexible with video conferencing platforms."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 30.204033136367798,
+      "input_tokens": 778,
+      "output_tokens": 1628,
+      "problems": []
+    }
+  ],
+  "success": true
+}

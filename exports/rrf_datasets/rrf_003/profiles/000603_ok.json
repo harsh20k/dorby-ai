@@ -1,0 +1,54 @@
+{
+  "id": 603,
+  "archetype": "Fintech Compliance & Risk Leader",
+  "given_name": "Viktor Mahmoud",
+  "style_version": 37,
+  "archetypes_version": 101,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Viktor Mahmoud is a highly experienced, but relatively recent, founder. He spent 15+ years as a senior compliance officer at major banks (Goldman Sachs, JP Morgan) specializing in AML and fraud detection. He became frustrated with the antiquated, manual processes and lack of truly effective AI-driven solutions in the RegTech space. He left JP Morgan two years ago to build 'SentinelAI', a platform leveraging advanced machine learning to automate and improve financial crime compliance. He's now focused on scaling SentinelAI, securing Series A funding, and expanding his team. He\u2019s extremely detail-oriented and values direct communication. He\u2019s particularly interested in connecting with VCs focused on fintech and regulatory technology, as well as experienced engineering leaders who can help scale his platform. A distinctive detail: Viktor is a classically trained pianist and uses analogies from music to explain complex technical concepts \u2013 and occasionally gets lost in those analogies.",
+    "positioning": "SentinelAI is revolutionizing financial crime compliance. For too long, banks and fintechs have relied on outdated, manual processes and rule-based systems that are easily circumvented by sophisticated criminals. This results in billions lost annually to fraud and money laundering, and significant regulatory penalties. SentinelAI is a next-generation RegTech platform that leverages cutting-edge machine learning algorithms to provide proactive, real-time detection of suspicious activity. Our platform dynamically adapts to evolving fraud patterns, significantly reducing false positives and improving the efficiency of compliance teams. We offer a modular suite of solutions, including transaction monitoring, KYC/AML screening, and fraud prevention, all integrated into a single, intuitive interface.  We've achieved significant traction in the past year, onboarding three Tier 1 banks as pilot customers and demonstrating a 40% reduction in false positive rates compared to legacy systems. We are currently seeking Series A funding to accelerate product development, expand our sales and marketing efforts, and scale our infrastructure to meet growing demand.  SentinelAI isn\u2019t just about compliance; it's about empowering financial institutions to operate with confidence and integrity in an increasingly complex regulatory landscape. We\u2019re orchestrating a future where financial crime is proactively prevented, not reactively investigated.",
+    "background": "- **SentinelAI, Founder & CEO** (2022 \u2013 Present): Led the company from concept to a fully functional platform with three pilot customers. Responsible for all aspects of the business, including product development, fundraising, sales, and marketing. Successfully secured seed funding of $2M.\n- **JPMorgan Chase, Vice President, AML Investigations** (2017 \u2013 2022): Managed a team of 20+ investigators responsible for investigating complex financial crime cases, including money laundering, terrorist financing, and fraud. Developed and implemented new AML procedures that resulted in a 15% decrease in regulatory findings.\n- **Goldman Sachs, Associate, Compliance** (2013 \u2013 2017): Conducted risk assessments, monitored compliance programs, and assisted with regulatory examinations. Specialized in sanctions compliance and trade surveillance.\n- **Education:**\n   - **MBA, Finance**, Columbia Business School, New York, NY (2011 \u2013 2013)\n   - **BA, Economics**, Yale University, New Haven, CT (2007 \u2013 2011)\n- **Skills:** AML, KYC, Fraud Detection, Risk Management, Regulatory Compliance (BSA, FATCA, GDPR), Machine Learning, Python, Data Analysis, SQL, Leadership, Team Management, Strategic Planning, Public Speaking.\n- **Certifications:** Certified Anti-Money Laundering Specialist (CAMS)",
+    "lookingFor": "- Introductions to Series A VCs specializing in Fintech and RegTech (specifically those with a demonstrated interest in AI/ML applications).\n- Experienced VP of Engineering with a proven track record of scaling SaaS platforms (experience with cloud infrastructure \u2013 AWS, Azure \u2013 is essential).\n- Senior Data Scientists specializing in anomaly detection and fraud prevention (experience with graph databases a plus).\n- Connections to Chief Compliance Officers (CCOs) at mid-to-large sized banks and fintech companies.\n- Potential advisors with deep expertise in financial crime regulations and technology.",
+    "notes": "Viktor is incredibly knowledgeable about the RegTech space and passionate about his vision for SentinelAI. He communicates very directly and is not afraid to challenge assumptions. He often uses musical analogies to explain complex technical concepts, which can be insightful but occasionally requires clarification. He's highly focused on building a strong engineering team and is very discerning about potential hires. He values transparency and authenticity in his interactions.  He's currently prioritizing fundraising and partnership opportunities. Avoid discussing overly simplistic 'solutions' to complex compliance problems \u2013 he appreciates nuance and a deep understanding of the challenges. Follow-up after initial contact is crucial; he responds promptly to well-thought-out communication.",
+    "locationAvailability": "Currently based in New York City, but willing to travel frequently for investor meetings and industry events. Remote work arrangements are possible for key hires.",
+    "introPreferences": "- **Must-Haves:** Any introduction to a VC *must* include a brief overview of SentinelAI\u2019s traction with pilot customers and our demonstrated reduction in false positive rates.  The VC should have a portfolio focused on Fintech or RegTech. \n- **Soft Preferences:**  VCs who have previously invested in companies leveraging AI/ML for compliance are highly desirable.  \n- **Engineering Candidates:**  Candidates should have 5+ years of experience scaling SaaS platforms and a strong understanding of cloud infrastructure.  Highlight their experience with building and managing high-performing engineering teams. \n- **Framing:** When making an introduction to a CCO, emphasize SentinelAI\u2019s ability to improve compliance efficiency and reduce regulatory risk.  Position us as a strategic partner, not just a vendor.  Please *do not* position us as a 'plug-and-play' solution \u2013 Viktor dislikes that framing.",
+    "personalPreferences": "Prefers email for initial contact.  He\u2019s a quick responder, but appreciates concise and well-structured communication. He is occasionally prone to rambling when explaining technical details, so feel free to gently steer the conversation back on track.",
+    "meetingAndSchedulingPreferences": "Generally available for meetings during business hours (EST).  Prefers video calls to phone calls.  Please send a brief agenda in advance of any meeting. He values punctuality and appreciates it when people come prepared."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 21.09591317176819,
+      "input_tokens": 842,
+      "output_tokens": 1344,
+      "problems": []
+    }
+  ],
+  "success": true
+}

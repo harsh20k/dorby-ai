@@ -1,0 +1,54 @@
+{
+  "id": 321,
+  "archetype": "Networking & Partnership Focused Founder",
+  "given_name": "Diego Johansson",
+  "style_version": 20,
+  "archetypes_version": 53,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Diego Johansson is the founder and CEO of 'Synapse Dynamics,' a pre-seed AI-powered materials discovery platform. He has a PhD in computational materials science and previously spent five years at a large automotive manufacturer, where he became frustrated with the slow pace of materials innovation. Synapse Dynamics aims to drastically accelerate the discovery of new materials for sustainable energy applications \u2013 specifically, next-generation battery electrolytes and high-efficiency solar cell components. He's currently focused on securing seed funding and landing pilot projects with key players in the energy storage and renewable energy sectors. A distinctive detail is that he self-funded the initial development of the core AI algorithms using winnings from a competitive robotics grant he received during his PhD. This demonstrates both technical prowess and resourcefulness. He\u2019s very focused on partnerships that provide access to real-world materials data for model training and validation.",
+    "positioning": "Synapse Dynamics is revolutionizing materials science through the application of advanced artificial intelligence. We are building a platform that dramatically reduces the time and cost associated with discovering and developing novel materials, initially focusing on the critical need for improved energy storage and generation technologies. Our core value proposition lies in our proprietary AI algorithms, capable of predicting material properties with unprecedented accuracy, significantly accelerating the innovation cycle. We target battery manufacturers, solar energy companies, and research institutions seeking a competitive edge through materials breakthroughs. \n\nCurrently, we are refining our platform\u2019s predictive capabilities through a closed alpha program with three leading battery research labs. Recent updates include the integration of a novel graph neural network architecture that has demonstrably improved prediction accuracy for ionic conductivity \u2013 a crucial property for battery electrolyte design. We\u2019ve also implemented a streamlined data ingestion pipeline, allowing for faster and more efficient model training.  Our long-term vision extends beyond energy to encompass materials discovery for aerospace, biomedical, and other high-impact industries. We believe that AI-driven materials science is the key to unlocking a more sustainable and technologically advanced future, and Synapse Dynamics is positioned to lead this transformation.  We are actively seeking strategic partners to accelerate our growth and broaden our impact.",
+    "background": "Diego Johansson, PhD\n\n* **Founder & CEO, Synapse Dynamics** (2023 \u2013 Present)\n    * Leading all aspects of company strategy, product development, fundraising, and team building.\n    * Secured initial seed funding through personal investment & competitive grant winnings.\n    * Developed and implemented core AI algorithms for materials property prediction.\n    * Established partnerships with three leading battery research labs for alpha testing.\n* **Materials Scientist, NovaDrive Automotive** (2018 \u2013 2023)\n    * Led research and development efforts focused on advanced materials for electric vehicle batteries.\n    * Managed a team of three engineers in the characterization and testing of novel battery materials.\n    * Contributed to the development of a new cathode material that resulted in a 15% increase in energy density.\n    * Identified and evaluated potential suppliers of advanced materials.\n* **Research Assistant, Stanford University \u2013 Materials Science Department** (2016 \u2013 2018)\n    * Conducted research on computational modeling of materials properties.\n    * Published three peer-reviewed articles in leading materials science journals.\n    * Developed and maintained software tools for materials simulation.\n* **Education:**\n    * PhD, Computational Materials Science, Stanford University (2016 \u2013 2023)\n    * MS, Materials Science, University of California, Berkeley (2014 \u2013 2016)\n    * BS, Mechanical Engineering, Massachusetts Institute of Technology (2010 \u2013 2014)\n* **Skills:** Python, Machine Learning (TensorFlow, PyTorch), Materials Modeling (DFT, Molecular Dynamics), Data Analysis, Scientific Computing, Project Management, Team Leadership, Technical Communication\n* **Awards & Recognition:**\n    * Robotics Innovation Grant (2021) - $50,000\n    * Stanford Graduate Fellowship (2016-2023)",
+    "lookingFor": "I'm actively seeking connections within the following areas:\n\n* **Strategic Partnerships:** Companies in the battery manufacturing, solar energy, and materials science industries interested in co-development or pilot projects.\n* **Seed Funding:** Venture capital firms specializing in deep tech, AI, and cleantech, with investment sizes between $2M - $5M.\n* **Key Hires:** Experienced machine learning engineers with a background in materials science or chemistry. Particularly interested in candidates proficient in graph neural networks.\n* **Data Partnerships:** Organizations with access to large, high-quality materials datasets for model training and validation.\n* **Advisors:** Seasoned entrepreneurs and industry experts in the energy storage and AI sectors.",
+    "notes": "* Diego is highly technical and appreciates direct, data-driven conversations.\n* He is currently validating the scalability of the Synapse Dynamics platform.\n* Be mindful of his limited bandwidth \u2013 he\u2019s very focused on core development and fundraising.\n* Avoid introductions to generalist investors; he prefers those with a deep understanding of materials science and AI.\n* He's particularly interested in introductions to individuals at QuantumScape, Solid Power, and First Solar.",
+    "locationAvailability": "I am currently based in Palo Alto, California, and frequently travel to industry conferences and potential partner locations. I will be attending the Energy Storage International USA conference in Long Beach, CA, from November 14-16.",
+    "introPreferences": "When making introductions, please adhere to the following:\n\n1. **Investor Profile:** Focus on seed-stage VCs investing $2M - $5M in deep tech, specifically AI-driven materials science or cleantech.\n2. **Company Stage:**  I\u2019m not interested in conversations with large corporations at this stage, unless they are seeking a pilot project.\n3. **Connection Type:**  Warm introductions are *essential*. A brief email outlining the potential synergy between Synapse Dynamics and the recipient is highly appreciated.\n4. **Hard Requirement:**  The recipient should have a demonstrable understanding of either materials science or artificial intelligence \u2013 ideally both.\n5. **Soft Preference:**  Prior experience with battery technology or solar energy is a significant plus.",
+    "personalPreferences": "I prefer email for initial contact and am generally responsive within 24-48 hours.  I\u2019m open to brief introductory calls to discuss potential collaborations.  LinkedIn is fine for initial connection requests, but please include a personalized message.",
+    "meetingAndSchedulingPreferences": "I am flexible with scheduling and happy to accommodate various time zones. Please use Calendly ([link to Calendly, placeholder]) to book a meeting."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 27.276909828186035,
+      "input_tokens": 801,
+      "output_tokens": 1424,
+      "problems": []
+    }
+  ],
+  "success": true
+}

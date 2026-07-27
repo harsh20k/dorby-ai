@@ -1,0 +1,54 @@
+{
+  "id": 194,
+  "archetype": "Scaling B2B SaaS Operator",
+  "given_name": "Javier Dubois",
+  "style_version": 13,
+  "archetypes_version": 32,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Javier Dubois is a VP of Growth at 'Synapse Solutions,' a B2B SaaS company providing AI-powered marketing analytics for mid-market enterprises. He's a data-driven operator with a strong background in performance marketing, but his distinctive detail is a prior stint as a management consultant *within* a private equity firm. This gives him a unique perspective \u2013 he understands both building and *evaluating* businesses. Synapse is currently at $12M ARR and Javier is focused on accelerating growth, particularly expanding into new verticals and refining their customer acquisition cost (CAC). He's actively seeking connections with other growth leaders at companies in a similar stage to benchmark strategies and learn from their experiences. He's particularly interested in advice around international expansion and optimizing sales-led growth motions. He presents as analytical, pragmatic, and slightly impatient - always looking for actionable insights. He's likely to be direct and ask pointed questions.",
+    "positioning": "As VP of Growth at Synapse Solutions, I'm leading the charge to scale our AI-powered marketing analytics platform to the next level. We help mid-market enterprises unlock actionable insights from their marketing data, dramatically improving campaign performance and ROI. We\u2019ve achieved significant traction in the e-commerce vertical, and are now aggressively expanding into the financial services and healthcare industries. My focus is on building a repeatable, scalable growth engine \u2013 optimizing our customer acquisition strategy, improving conversion rates, and driving sustainable revenue growth. Previously, I spent three years as a consultant embedded within a private equity firm, evaluating dozens of SaaS businesses. This experience provided me with a unique perspective on what truly drives value and accelerates growth. I'm always open to connecting with fellow growth leaders, particularly those navigating similar challenges at the $10M - $100M ARR stage. I\u2019m especially keen to discuss strategies for international expansion and optimizing sales-led growth models. If you're passionate about data-driven growth and building high-performing teams, let's connect.",
+    "background": "- **VP of Growth, Synapse Solutions** (2022 \u2013 Present)\n  - Led the growth team, responsible for all aspects of customer acquisition, activation, and retention.\n  - Increased ARR from $5M to $12M in 18 months.\n  - Reduced CAC by 20% through optimization of paid channels and content marketing.\n  - Launched a new partner program resulting in a 15% increase in qualified leads.\n- **Consultant, Sterling Partners** (2019 \u2013 2022)\n  - Embedded within portfolio companies to drive revenue growth and operational improvements.\n  - Conducted due diligence on potential acquisition targets, focusing on SaaS businesses.\n  - Developed and implemented growth strategies for portfolio companies across various industries.\n- **Senior Performance Marketing Manager, BloomTech** (2017 \u2013 2019)\n  - Managed a $2M+ annual budget for paid advertising campaigns.\n  - Increased lead generation by 30% through A/B testing and data analysis.\n  - Implemented attribution modeling to improve campaign ROI.\n- **Education:** MBA, Stanford Graduate School of Business (2015 \u2013 2017)\n- **Education:** BA, Economics, University of California, Berkeley (2011 \u2013 2015)\n- **Skills:** SQL, Google Analytics, HubSpot, Salesforce, Paid Advertising (Google Ads, Facebook Ads), A/B Testing, Data Analysis, Growth Hacking, Strategic Planning, Private Equity, SaaS.",
+    "lookingFor": "I\u2019m actively seeking connections with other VP of Growth or CMOs at B2B SaaS companies with ARR between $10M and $100M. I'm particularly interested in:\n\n*   **Peer advice:** Benchmarking strategies for scaling growth, especially around international expansion (specifically EMEA).\n*   **Introductions to investors:**  Looking to connect with Series B/C investors focused on high-growth SaaS companies.  I\u2019m not actively fundraising *now*, but building relationships for the future.\n*   **Partnerships:** Exploring potential strategic partnerships with companies offering complementary solutions to Synapse Solutions (e.g., CRM platforms, data enrichment tools).\n*   **Insights on sales-led growth:**  We\u2019re currently evaluating a shift towards a more sales-led growth model and would appreciate hearing from those who have successfully implemented this strategy.\n*   **Individuals with experience in the financial services or healthcare verticals.**",
+    "notes": "Javier is highly analytical and direct in his communication. He's clearly driven by data and focused on quantifiable results. He mentioned during a recent introductory call that he's frustrated with 'vanity metrics' and prioritizes metrics that directly impact revenue. He\u2019s very aware of the competitive landscape and is constantly seeking ways to gain an edge. He expressed a slight skepticism towards overly 'trendy' growth tactics, preferring proven strategies. He seemed particularly interested in understanding the nuances of different international markets and the challenges of adapting a SaaS product for global audiences. He\u2019s a fast mover and expects quick responses.",
+    "locationAvailability": "Currently based in San Francisco, CA. Open to occasional travel, but not actively seeking relocation.",
+    "introPreferences": "*   **Hard Requirements:**  Must be a VP of Growth/CMO or an investor focused on B2B SaaS.\n*   **Soft Preferences:** Experience scaling a company from $10M to $100M ARR is highly valued.\n*   **Intro Style:**  Please highlight my background in private equity and my focus on data-driven growth. Frame the introduction as a potential opportunity for knowledge sharing and mutual learning. Avoid overly effusive language - I prefer a direct and professional approach.  Mention my interest in international expansion if the contact has relevant experience.\n*   **Avoid:** Introducing me to junior-level marketing professionals or individuals with limited experience in the SaaS space.",
+    "personalPreferences": "I prefer quick, concise communication via email or LinkedIn. I'm not a big fan of lengthy phone calls unless absolutely necessary.",
+    "meetingAndSchedulingPreferences": "*   I prefer meetings to be focused and agenda-driven. Please send a brief outline of topics you'd like to discuss in advance.\n*   I'm available for 30-minute Zoom calls or quick coffee meetings. \n*   I respond most quickly to calendar invites sent via Calendly."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 22.91321110725403,
+      "input_tokens": 796,
+      "output_tokens": 1363,
+      "problems": []
+    }
+  ],
+  "success": true
+}

@@ -1,0 +1,63 @@
+{
+  "id": 539,
+  "archetype": "Microsoft Exec, AI Transformation",
+  "given_name": "Tariq Vargas",
+  "style_version": 33,
+  "archetypes_version": 91,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Tariq Vargas is a seasoned Microsoft executive focused on accelerating AI transformation within the Independent Software Vendor (ISV) ecosystem. He's a former developer who transitioned into a leadership role, giving him a unique technical understanding that informs his strategic approach. A pivotal moment in his career was leading the integration of a cutting-edge AI module into a key ISV partner\u2019s flagship product, resulting in a 30% increase in their enterprise sales. Now, he's focused on scaling that success across a wider portfolio of partners, building out the Microsoft AI ecosystem, and ensuring ISVs have the talent and resources to effectively leverage Microsoft\u2019s AI offerings. He\u2019s particularly interested in finding ISVs focused on vertical solutions \u2013 healthcare, finance, and manufacturing \u2013 and connecting them with the right Microsoft teams and resources. He\u2019s known for being direct, results-oriented, and a strong advocate for his partners.",
+    "positioning": "As a Director within Microsoft\u2019s ISV & Strategic Partnerships organization, I lead initiatives focused on driving AI adoption and innovation among our key Independent Software Vendor partners. My core mission is to empower these partners to build and deploy transformative AI solutions leveraging the Microsoft AI platform \u2013 Azure OpenAI Service, Azure Cognitive Services, and the broader Power Platform. I bridge the gap between Microsoft\u2019s AI advancements and the specific needs of ISVs, providing strategic guidance, technical support, and go-to-market assistance. \n\nI bring a unique perspective to this role, stemming from my background as a software engineer. This technical foundation allows me to deeply understand the challenges and opportunities ISVs face when integrating AI into their products. I\u2019m passionate about identifying partners with innovative ideas and connecting them with the right Microsoft resources to accelerate their AI journey. A recent success involved collaborating with \u2018HealthTech Solutions\u2019 to integrate Azure OpenAI into their diagnostic imaging platform, resulting in a 30% increase in enterprise contracts within six months.\n\nCurrently, I'm focused on expanding our AI-ready ISV network and building a robust ecosystem capable of delivering intelligent solutions across key industries. I specialize in fostering strategic alliances, navigating complex technical integrations, and driving measurable business outcomes. I\u2019m uniquely positioned to help ISVs unlock the full potential of AI, transform their offerings, and compete effectively in the rapidly evolving market. I'm actively seeking to foster partnerships that will redefine industry standards and create lasting value for our mutual customers.",
+    "background": "- **Director, ISV & Strategic Partnerships, Microsoft** (2021 \u2013 Present): Leading a team dedicated to accelerating AI adoption within the ISV ecosystem. Responsible for strategic planning, partner engagement, technical enablement, and go-to-market execution.\n- **Senior Program Manager, Microsoft** (2018 \u2013 2021): Managed cross-functional teams to deliver key features and enhancements for Azure Cognitive Services. Spearheaded the integration of new AI models and APIs.\n- **Software Engineer, Microsoft** (2015 \u2013 2018): Developed and maintained core components of Microsoft\u2019s data analytics platform. Focused on performance optimization and scalability.\n- **Software Developer, Acme Corp** (2013 \u2013 2015): Designed and implemented web applications using Java and Spring frameworks.\n- **M.S., Computer Science, Stanford University** (2011 \u2013 2013): Focused on Machine Learning and Artificial Intelligence.\n- **B.S., Computer Engineering, Massachusetts Institute of Technology** (2007 \u2013 2011): Graduated with honors.\n- **Microsoft Certified: Azure Solutions Architect Expert** (2022)\n- **Microsoft Certified: Azure AI Engineer Associate** (2021)\n- **Proficient in:** Python, Java, C++, Azure, AWS, Machine Learning Algorithms, Deep Learning Frameworks (TensorFlow, PyTorch), Data Analytics, DevOps, Agile methodologies.",
+    "lookingFor": "I'm actively seeking connections with ISV leaders who are exploring or actively implementing AI solutions within their products. Specifically, I'm interested in:\n\n- **CEOs and CTOs of ISVs** focused on healthcare, finance, and manufacturing.\n- **VP of Engineering** at ISVs looking to integrate Azure OpenAI Service or other Azure Cognitive Services.\n- **Partnerships Directors** at ISVs seeking to expand their AI capabilities through collaboration with Microsoft.\n- **Individuals with expertise in vertical AI solutions** \u2013 leveraging AI to address specific industry challenges.\n- **Introductions to ISVs** who are early adopters of generative AI and are looking to scale their deployments.\n- Opportunities to collaborate on **joint go-to-market initiatives** with ISVs.\n- Discussions around **talent acquisition strategies** for AI engineers and data scientists within the ISV space.\n- Connections to **venture capitalists** investing in AI-powered ISVs.\n- I am open to discussing advisory roles or potential investments in promising AI startups.",
+    "notes": "Spoke with Sarah Chen (HealthTech Solutions) \u2013 very positive about the Azure OpenAI integration. She mentioned needing help with scaling their infrastructure to handle increased demand. Follow up with Raj Patel (Azure Infrastructure team) to discuss potential solutions. \n\nHad a brief call with David Lee (FinTech Innovations). They\u2019re intrigued by Azure AI but concerned about data security and compliance. Need to schedule a deeper dive with our security experts. \n\nKey takeaway from the ISV AI Summit: Many ISVs are struggling to find skilled AI talent. We need to develop more comprehensive training programs and resources. \n\nReminder: Prepare a case study on the HealthTech Solutions success story for the upcoming partner conference. \n\nTariq is a very direct communicator and wants quick results. Avoid lengthy presentations; focus on tangible benefits. He prioritizes ISVs with clear AI strategies and demonstrable ROI.",
+    "locationAvailability": "Based in Redmond, WA. Willing to travel extensively within North America and Europe. Open to remote meetings and collaborations.",
+    "introPreferences": "- **Industry Focus:** Healthcare, Finance, Manufacturing, Retail.\n- **Company Size:** Mid-sized to large ISVs (100+ employees).\n- **Role Types:** C-level executives, VP of Engineering, Partnerships Directors, Chief Data Scientists.\n- **Desired Qualities:** Visionary leaders, strong technical understanding, proven track record of innovation, commitment to AI adoption.\n- **Avoid:** Individuals who are purely focused on sales or marketing without a deep understanding of the technical aspects of AI.\n- **Ideal Connection:** Someone actively exploring AI solutions and looking for strategic guidance from Microsoft.",
+    "personalPreferences": "I prefer concise and direct communication. Email is my primary mode of communication, but I'm also available on Microsoft Teams. Brief, informative messages are greatly appreciated.",
+    "meetingAndSchedulingPreferences": "I prefer 30-minute meetings with a clear agenda. Please send a calendar invite with a brief description of the meeting topic."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 21.191992044448853,
+      "input_tokens": 828,
+      "output_tokens": 1531,
+      "problems": [
+        "background: possible truncation (ends with '...systems, Sales Enablement')"
+      ]
+    },
+    {
+      "attempt": 2,
+      "elapsed_s": 31.75313091278076,
+      "input_tokens": 828,
+      "output_tokens": 1464,
+      "problems": []
+    }
+  ],
+  "success": true
+}

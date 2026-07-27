@@ -1,0 +1,54 @@
+{
+  "id": 540,
+  "archetype": "Toronto AI Startup Founder, Early Stage",
+  "given_name": "Lucas Garcia",
+  "style_version": 33,
+  "archetypes_version": 91,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Lucas Garcia is a first-time founder, 32, based in Toronto. He has a background as a corporate lawyer specializing in intellectual property, which he leveraged to identify a gap in the market for AI-powered contract review. He founded 'LexiFlow,' a startup developing an AI platform to automate legal document analysis for small and medium-sized businesses. He\u2019s currently focused on seed funding and building out his core engineering team. He\u2019s deeply pragmatic, prioritizing demonstrable value and rapid iteration over theoretical perfection. He's relatively new to the startup world and is actively seeking mentorship and advice, especially around scaling and fundraising. He\u2019s comfortable being very direct and values efficiency. He's also very focused on building a strong company culture, valuing transparency and a collaborative environment. He's looking for investors who understand the legal tech space and engineers who are comfortable with a fast-paced, early-stage environment.",
+    "positioning": "I'm Lucas Garcia, founder and CEO of LexiFlow, an AI-powered legal tech startup based in Toronto. We\u2019re building a platform that drastically reduces the time and cost associated with reviewing legal documents, specifically targeting the underserved SMB market. My background is in law \u2013 I spent five years at Blake, Cassels & Graydon focusing on intellectual property litigation \u2013 and I saw firsthand how inefficient and expensive traditional contract review processes can be.  LexiFlow isn\u2019t about replacing lawyers; it\u2019s about empowering them and their clients with a powerful tool to streamline workflows and focus on higher-value strategic work.\n\nWe've recently completed a successful beta program with several local law firms, demonstrating a 70% reduction in review time for standard contracts. This initial traction has validated our core technology and market demand.  Currently, I\u2019m leading our seed funding round and aggressively building out our engineering team. I\u2019m passionate about leveraging AI to democratize access to legal services and believe LexiFlow has the potential to fundamentally change how businesses approach legal risk.\n\nI\u2019m uniquely positioned to bridge the gap between legal expertise and cutting-edge AI technology. My legal background gives me a deep understanding of the nuances of contract law and the pain points of legal professionals, while my dedication to building LexiFlow allows me to translate that knowledge into a practical, scalable solution. I\u2019m seeking strategic investors and talented engineers who share our vision for a more efficient and accessible legal landscape.  I\u2019m particularly strong at quickly identifying and mitigating legal risks within a rapidly evolving technological landscape.",
+    "background": "- **Founder & CEO, LexiFlow** (Toronto, ON) \u2013 2023 \u2013 Present\n    * Led all aspects of startup development, from initial concept and market research to product development, beta testing, and fundraising.\n    * Secured initial seed funding commitments totaling $250,000.\n    * Developed and implemented LexiFlow\u2019s core AI algorithms and platform architecture (working closely with contract engineers).\n    * Built and managed a small team of developers and legal consultants.\n\n- **Associate Lawyer, Blake, Cassels & Graydon LLP** (Toronto, ON) \u2013 2018 \u2013 2023\n    * Specialized in intellectual property litigation, including patent infringement, trademark disputes, and copyright claims.\n    * Conducted legal research, drafted pleadings, and assisted with trial preparation.\n    * Managed a portfolio of client matters, ensuring timely and effective representation.\n    * Developed expertise in contract law and legal document review.\n\n- **Juris Doctor (JD), University of Toronto Faculty of Law** (Toronto, ON) \u2013 2015 \u2013 2018\n    * Graduated *cum laude*.\n    * Active participant in the Technology & Intellectual Property Law Society.\n    * Completed a summer internship at the Canadian Intellectual Property Office.\n\n- **Bachelor of Arts (Honours), Political Science, Western University** (London, ON) \u2013 2011 \u2013 2015\n    * Graduated with distinction.\n    * President of the Western Debate Society.\n\n- **Skills:** Python, LegalTech, Contract Law, Intellectual Property, AI/ML (basic understanding), Fundraising, Team Leadership, Legal Research, Litigation, Negotiation, Public Speaking.",
+    "lookingFor": "I'm actively seeking connections to accelerate LexiFlow\u2019s growth. Specifically, I'm focused on:\n\n* **Seed Investors:**  Individuals or firms with experience in legal tech or AI, capable of providing $500k - $1M in seed funding.\n* **AI/ML Engineers:**  Experienced engineers specializing in Natural Language Processing (NLP) and Machine Learning, particularly with experience in document analysis.\n* **Early-Stage Startup Mentors:**  Individuals who have successfully scaled a tech startup, particularly in the B2B SaaS space.\n* **Legal Tech Advisors:**  Seasoned professionals in the legal technology industry who can provide guidance on product development and market strategy.\n* **Connections to potential pilot customers:** Law firms and corporate legal departments interested in exploring AI-powered contract review solutions.\n* **Talent Acquisition Specialists:**  Contacts who can help us identify and recruit top engineering talent in Toronto.\n\nI'm open to discussing potential partnerships and collaborations with companies that align with our vision. I'm also keen to learn from other founders and share my experiences.  I\u2019m primarily targeting investors and engineers in the Toronto-Waterloo corridor, but am open to remote contributors.",
+    "notes": "Spoke with Sarah Chen (Accel) yesterday \u2013 she\u2019s lukewarm on legal tech at the moment, but suggested connecting with David Lee at Amplify Ventures. Will follow up with David next week.  Need to refine the pitch deck to better highlight our competitive advantage (speed and accuracy of our AI model).  Engineering team is a major bottleneck \u2013 need to prioritize hiring.  Had a good conversation with Mark Thompson (ex-Kira Systems) \u2013 he recommended focusing on specific contract types (e.g., NDAs, service agreements) to improve model accuracy.  He also stressed the importance of building a strong data pipeline.  Remember to ask potential investors about their portfolio companies in the legal space.",
+    "locationAvailability": "Currently based in Toronto, Ontario.  I\u2019m open to occasional travel for investor meetings and conferences.  Remote work is acceptable for engineering candidates.",
+    "introPreferences": "* **Industry:** Legal Tech, AI/ML, SaaS.\n* **Company Size:**  Seed-stage to Series A startups, Venture Capital firms.\n* **Role:**  Founders, Investors, Engineers (NLP/ML focus), Legal Tech Advisors.\n* **Qualities:**  Pragmatic, Data-driven, Experienced in scaling tech companies, Understanding of the legal industry.  I\u2019m *not* interested in introductions to purely academic researchers or individuals without a demonstrable track record of success.  I prefer people who are direct communicators and get straight to the point.  Someone who understands the challenges of building an early-stage startup is a huge plus.",
+    "personalPreferences": "I prefer concise and direct communication. Email is best for initial contact. I'm generally available for quick phone calls during business hours. I respond quickly to emails and appreciate clear agendas for meetings.",
+    "meetingAndSchedulingPreferences": "I prefer to schedule meetings via Calendly.  I typically require a brief agenda beforehand to ensure a productive conversation.  I'm comfortable with both virtual and in-person meetings."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 21.844563245773315,
+      "input_tokens": 827,
+      "output_tokens": 1584,
+      "problems": []
+    }
+  ],
+  "success": true
+}

@@ -1,0 +1,54 @@
+{
+  "id": 734,
+  "archetype": "Healthcare/AI Strategist & Advisor",
+  "given_name": "Alejandro Ishikawa",
+  "style_version": 45,
+  "archetypes_version": 123,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Alejandro Ishikawa is a seasoned healthcare strategist who pivoted into AI about 5 years ago, becoming a sought-after advisor for hospitals and health tech startups. His distinctive career detail is a prior decade as a practicing emergency room physician, giving him deep clinical understanding *and* a frustration with systemic inefficiencies that fuels his passion for AI solutions. He\u2019s now less interested in direct clinical work and more focused on bridging the gap between AI developers and healthcare providers, ensuring AI implementation is clinically relevant, ethical, and improves patient outcomes. He's currently exploring angel investing opportunities in early-stage health AI companies and is looking to expand his network of both technical experts and healthcare leaders. He's particularly interested in AI applications for preventative care and chronic disease management. He's highly selective about engagements, prioritizing projects with demonstrable impact and a strong ethical framework.",
+    "positioning": "Alejandro Ishikawa is a healthcare and AI strategist dedicated to transforming patient care through responsible innovation. With a decade of experience as an emergency room physician, I understand the critical challenges facing healthcare providers firsthand. I now leverage this clinical foundation, coupled with deep expertise in artificial intelligence, to advise hospitals, health systems, and health tech startups on the strategic implementation of AI solutions. My focus is on identifying opportunities to improve operational efficiency, enhance diagnostic accuracy, and ultimately, deliver better patient outcomes. I specialize in translating complex AI concepts into actionable strategies, ensuring alignment with clinical workflows and ethical considerations. Currently, I'm advising three leading hospital networks on their AI roadmaps and exploring angel investment opportunities in early-stage companies focused on preventative care and chronic disease management. I help organizations move beyond the hype and build AI solutions that truly make a difference.",
+    "background": "- **Chief Medical Information Officer (CMIO), NovaHealth Systems** (2020 - 2023)\n  - Led the development and implementation of AI-powered diagnostic tools, resulting in a 15% reduction in diagnostic errors and a 10% improvement in patient throughput.\n  - Oversaw the integration of machine learning algorithms into electronic health records (EHRs) for predictive analytics and risk stratification.\n  - Managed a team of data scientists, clinicians, and IT professionals.\n  - Key Skills: AI implementation, EHR integration, Predictive Analytics, Team Leadership, Clinical Workflow Optimization\n\n- **AI Strategy Consultant, Ishikawa Consulting** (2018 - 2020)\n  - Provided strategic guidance to healthcare organizations on the adoption of AI technologies.\n  - Conducted market research and competitive analysis to identify emerging AI trends.\n  - Developed and delivered presentations and workshops on AI in healthcare.\n  - Key Skills: AI Strategy, Market Research, Competitive Analysis, Public Speaking, Consulting\n\n- **Emergency Room Physician, City General Hospital** (2008 - 2018)\n  - Provided direct patient care in a high-volume emergency department.\n  - Led multidisciplinary teams in the treatment of critically ill patients.\n  - Developed and implemented clinical protocols to improve patient safety and efficiency.\n  - Key Skills: Emergency Medicine, Critical Care, Clinical Leadership, Patient Management, Diagnostic Skills\n\n- **Education:**\n  - **MD, Stanford University School of Medicine** (2004 - 2008)\n  - **BS, Biology, Massachusetts Institute of Technology** (2000 - 2004)\n\n- **Languages:** English (Native), Spanish (Fluent)",
+    "lookingFor": "I\u2019m actively seeking connections with individuals at the intersection of healthcare and artificial intelligence. Specifically, I\u2019m interested in:\n\n* **AI/ML Engineers & Data Scientists:** Professionals with expertise in developing and deploying AI solutions for healthcare applications, particularly in areas like computer vision, natural language processing, and time-series analysis. I\u2019m keen to learn about cutting-edge technologies and potential collaborations.\n* **Healthcare Executives (CIOs, CMOs, CDOs):** Leaders responsible for driving innovation and digital transformation within hospitals and health systems. I\u2019m interested in understanding their strategic priorities and challenges related to AI adoption.\n* **Health Tech Startup Founders & CEOs:** Entrepreneurs building innovative AI-powered solutions for healthcare. I\u2019m evaluating potential angel investment opportunities and am eager to connect with companies tackling significant clinical problems.\n* **Venture Capitalists & Angel Investors:** Investors focused on the healthcare AI space. I\u2019m looking to share insights and explore potential co-investment opportunities.\n\nI\u2019m particularly interested in connecting with individuals working on:\n\n- AI-powered preventative care solutions\n- AI applications for chronic disease management\n- Ethical AI frameworks for healthcare\n- AI tools for improving clinical decision-making\n\n**I am *not* interested in** connections from individuals selling generic AI platforms without a clear healthcare focus, or those involved in multi-level marketing schemes. I also prefer not to connect with recruiters unless they are representing a highly specific, strategic role.",
+    "notes": "Alejandro is prioritizing speaking engagements at healthcare AI conferences in Q4. He's currently reviewing pitch decks for three potential angel investments. \n\n* **Reminder:** Follow up with Dr. Ramirez regarding the potential collaboration on the predictive analytics project at St. Luke's Hospital.\n* **Priority:** Secure a meeting with the CEO of 'Synapse Health' - they are presenting at HIMSS next month.\n* **Potential Risk:** Be mindful of confidentiality agreements when discussing client projects.\n* **Recent Conversation:** Had a productive call with Liam Chen (AI Engineer at Google Health) - explore potential synergies.\n* He prefers to receive updates on promising AI startups directly, rather than through broad newsletters.",
+    "locationAvailability": "Based in San Francisco, CA, but open to remote collaboration and travel within the US.",
+    "introPreferences": "When making introductions to Alejandro Ishikawa, please adhere to the following guidelines:\n\n* **Hard Requirements:**\n  - The connection *must* have a demonstrable link to healthcare or AI.\n  - The introduction message *must* clearly articulate the potential value for Alejandro \u2013 what can *they* offer him, or what collaboration opportunities exist?\n* **Soft Preferences:**\n  - Prioritize introductions to individuals with a strong track record of innovation.\n  - Highlight any relevant publications, presentations, or awards.\n  - Frame the introduction as a mutual learning opportunity.\n* **Introduction Message Structure:**\n  - Briefly introduce yourself and your connection to both parties.\n  - Clearly state the reason for the introduction and highlight the potential benefits for Alejandro.\n  - Include a specific call to action (e.g., 'I thought you two would have a great conversation about X').\n* **Avoid:** Generic introductions or requests for informational interviews without a clear purpose.",
+    "personalPreferences": "I prefer to communicate via email initially. For ongoing conversations, WhatsApp is acceptable. Please avoid lengthy email threads; concise and focused communication is appreciated. I\u2019m generally responsive within 24-48 hours.",
+    "meetingAndSchedulingPreferences": "I typically schedule meetings 30 minutes apart to allow for preparation and follow-up. Please send a brief agenda in advance of any scheduled meetings."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 20.440377950668335,
+      "input_tokens": 816,
+      "output_tokens": 1528,
+      "problems": []
+    }
+  ],
+  "success": true
+}

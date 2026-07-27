@@ -1,0 +1,54 @@
+{
+  "id": 614,
+  "archetype": "Global Mobility & AI Consultant",
+  "given_name": "Sana Diallo",
+  "style_version": 38,
+  "archetypes_version": 103,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Sana Diallo is a seasoned consultant specializing in the burgeoning field of AI-driven global mobility solutions. She's spent the last decade helping logistics companies and automotive manufacturers implement AI to optimize supply chains, manage autonomous vehicle fleets, and navigate increasingly complex international regulations. A distinctive element of her career is a 2-year stint embedded with a major African logistics firm, giving her uniquely deep understanding of emerging market challenges and opportunities. Currently, Sana is building 'FlowState AI,' a platform designed to provide a single source of truth for cross-border logistics compliance, leveraging AI to predict regulatory changes and automate documentation. She\u2019s seeking strategic investors and key partnerships to scale the platform beyond its initial pilot program and expand its geographic reach. She\u2019s very focused on building a diverse team and is particularly interested in connecting with AI engineers with experience in developing for low-resource environments.",
+    "positioning": "The global logistics landscape is undergoing a seismic shift. Companies are grappling with escalating complexity \u2013 fluctuating regulations, supply chain disruptions, and the urgent need for sustainable practices. FlowState AI is positioned to be the leading intelligence platform empowering businesses to navigate this new reality. We offer a proactive, AI-powered solution that moves beyond reactive compliance to predictive risk management. Our core value proposition is simple: reduce friction, accelerate delivery, and unlock growth in global trade. \n\nFlowState AI isn\u2019t just a software solution; it\u2019s a strategic partner. We aggregate and analyze vast datasets \u2013 from customs regulations and trade agreements to geopolitical events and environmental factors \u2013 to provide real-time insights and automated documentation. This allows our clients to anticipate challenges, optimize routes, and minimize delays. Our platform features include a dynamic compliance engine, AI-driven risk scoring, automated document generation, and a collaborative workflow management system.\n\nWe\u2019ve recently completed a successful pilot program with \u2018TransAfrica Logistics\u2019, a major player in the African market, demonstrating a 20% reduction in customs clearance times and a 15% decrease in overall logistics costs. We are now actively seeking seed funding to expand our team, scale our platform, and accelerate our market penetration.  FlowState AI is not merely adapting to the future of global trade; we are building it.",
+    "background": "- **Founder & CEO, FlowState AI** (2023 - Present)\n  - Leading the development and commercialization of an AI-powered platform for global logistics compliance.\n  - Secured initial seed funding and established strategic partnerships with key industry players.\n  - Oversaw the successful completion of a pilot program with TransAfrica Logistics, demonstrating significant cost savings and efficiency gains.\n\n- **Senior Consultant, Global Mobility Solutions, Accenture** (2019 - 2023)\n  - Advised Fortune 500 companies on the implementation of AI and machine learning solutions for supply chain optimization and autonomous vehicle management.\n  - Led cross-functional teams in the development and delivery of complex consulting projects.\n  - Specialized in regulatory compliance and risk management within the automotive and logistics industries.\n\n- **Embedded Consultant, Zenith Logistics (Nigeria)** (2017 - 2019)\n  - Seconded to a leading African logistics firm to develop and implement solutions for improving operational efficiency and navigating local regulatory challenges. This included building a custom logistics tracking system.\n  - Gained invaluable experience in emerging market dynamics and the unique challenges of cross-border trade in Africa.\n\n- **Education:**\n  - **MBA, Stanford Graduate School of Business** (2015 - 2017)\n  - **MS, Industrial Engineering, Georgia Institute of Technology** (2013 - 2015)\n  - **BS, Mechanical Engineering, Massachusetts Institute of Technology (MIT)** (2009 - 2013)\n\n- **Skills:** AI/ML, Supply Chain Management, Logistics, Regulatory Compliance, Risk Management, Data Analytics, Python, SQL, Project Management, Strategic Consulting, Cross-Cultural Communication.",
+    "lookingFor": "- Introductions to Seed/Series A investors focused on AI and Logistics (specifically those with a portfolio in supply chain tech).\n- Connections to CTOs or Heads of Engineering at large logistics companies (DHL, FedEx, Maersk) \u2013 looking for potential pilot partnerships and feedback on platform features.\n- AI Engineers with experience in developing and deploying models in low-resource environments (especially those familiar with African markets).\n- Regulatory experts specializing in international trade law and customs compliance.\n- Individuals with deep connections within the African logistics ecosystem.",
+    "notes": "Sana is exceptionally articulate and passionate about her vision for FlowState AI. She\u2019s very well-informed about the competitive landscape and has a clear understanding of the challenges and opportunities in the global logistics market. Her experience in Africa is a significant differentiator.  She\u2019s laser-focused on building a scalable and sustainable business. \n\n- She\u2019s particularly sensitive to the need for diversity and inclusion within her team and actively seeks out candidates from underrepresented backgrounds.\n- She\u2019s a quick study and adapts easily to new information. \n- Be prepared to discuss the technical details of her platform; she enjoys diving deep into the specifics of the AI models and algorithms.\n- She\u2019s receptive to constructive feedback but is also confident in her vision. Don't offer unsolicited advice without framing it as a question or suggestion.",
+    "locationAvailability": "Sana is currently based in San Francisco, California, but is frequently traveling. She is open to remote collaboration and travel internationally as needed.",
+    "introPreferences": "- **Must-Haves:** Any introduction to an investor *must* be someone who has a demonstrable track record of investing in early-stage AI companies. Introductions to engineers should be those with at least 3 years of experience deploying models in production.\n- **Soft Preferences:**  Investors with experience in the logistics sector are highly preferred. For engineering introductions, experience with containerization (Docker, Kubernetes) is a plus.\n- **Introduction Framing:** When making an introduction to an investor, emphasize FlowState AI's unique focus on emerging markets and its potential to disrupt the traditional logistics compliance landscape. When introducing her to engineers, highlight the opportunity to work on a cutting-edge AI platform with real-world impact.  Please briefly mention my connection to Sana and that I believe her company aligns with their investment/expertise.",
+    "personalPreferences": "Sana prefers initial contact via LinkedIn messaging. She's responsive but generally avoids phone calls unless scheduled in advance.",
+    "meetingAndSchedulingPreferences": "Sana is generally available for meetings between 10 AM - 12 PM PST or 2 PM - 4 PM PST. She prefers video calls (Zoom or Google Meet) and appreciates a brief agenda sent in advance. Follow-up emails with key takeaways and action items are always appreciated."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 22.994699001312256,
+      "input_tokens": 845,
+      "output_tokens": 1443,
+      "problems": []
+    }
+  ],
+  "success": true
+}

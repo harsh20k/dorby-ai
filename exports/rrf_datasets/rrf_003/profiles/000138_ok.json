@@ -1,0 +1,54 @@
+{
+  "id": 138,
+  "archetype": "AI Founder with Legal/Finance Background",
+  "given_name": "Naledi Suzuki",
+  "style_version": 9,
+  "archetypes_version": 23,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Naledi Suzuki is a 38-year-old founder currently building 'LexiFlow', an AI-powered contract analysis and risk mitigation platform specifically for the renewable energy project finance sector. Her unique background is a former securities lawyer specializing in project finance, specifically relating to large-scale infrastructure. She left a partner track position at a major firm to pursue the idea after realizing the inefficiencies and risks inherent in manual contract review for these complex deals. She\u2019s seeking strategic advisors, potential investors with sector expertise, and early adopter clients to validate and scale LexiFlow. She's highly analytical, data-driven, and understands the intricacies of both the legal and financial worlds. She\u2019s comfortable with technical discussions around AI but prioritizes practical application and ROI.",
+    "positioning": "A seasoned legal and financial professional turned AI entrepreneur, I am focused on revolutionizing contract lifecycle management within the renewable energy sector. As the founder of LexiFlow, I\u2019m building a cutting-edge platform leveraging natural language processing and machine learning to automate contract analysis, identify critical risks, and accelerate deal closing. My background as a former securities lawyer specializing in project finance provides me with a deep understanding of the complex legal and financial considerations inherent in large-scale renewable energy projects. I excel at translating intricate legal language into actionable insights, and I am passionate about creating solutions that drive efficiency, reduce risk, and unlock value for stakeholders across the renewable energy ecosystem. I offer a unique blend of legal acumen, financial expertise, and technical vision, positioning LexiFlow to become the industry standard for contract intelligence.",
+    "background": "Prior to founding LexiFlow (2022 - Present), I spent over a decade in legal practice, culminating in a Partner-track position at Latham & Watkins (2015-2022).\n\n* **Latham & Watkins, Partner (Track)**: Specialized in project finance transactions, with a focus on renewable energy projects (solar, wind, hydro).  Led due diligence teams, negotiated complex contractual agreements, and advised clients on regulatory compliance. Managed teams of associates and paralegals. Consistently exceeded billable hour targets.\n    * Successfully closed over $5 billion in renewable energy financing deals.\n    * Developed and implemented a standardized contract review process that reduced errors by 15%.\n    * Mentored junior associates and fostered a collaborative team environment.\n* **Milbank LLP, Associate** (2010-2015):  Focused on project development and financing, gaining foundational experience in contract drafting, negotiation, and risk assessment.  \n    * Supported senior partners on landmark renewable energy projects across North America.\n    * Proficient in drafting and negotiating key project documents, including power purchase agreements (PPAs), financing agreements, and construction contracts.\n    * Developed expertise in relevant regulatory frameworks (FERC, state PUCs).\n\n**Education:**\n* **Harvard Law School, J.D.** (2010) - *Cum Laude*, Harvard Law Review\n* **Stanford University, B.S. Economics** (2007) - *Phi Beta Kappa*\n\n**Technical Skills:** Proficient in Python (basic), NLP libraries (spaCy, NLTK), machine learning concepts, contract lifecycle management (CLM) systems (familiar with Ironclad, Conga), data analysis tools (Excel, Tableau). LexiFlow utilizes a proprietary AI engine built on a transformer model, fine-tuned on a massive dataset of renewable energy contracts.",
+    "lookingFor": "I\u2019m actively seeking connections within the following categories:\n\n* **Strategic Advisors:** Individuals with deep experience in scaling AI startups, particularly in the legal tech or fintech space.  Specifically, looking for advisors who have successfully navigated Series A/B fundraising rounds.\n* **Renewable Energy Project Finance Professionals:**  VPs of Finance, General Counsels, and Project Directors at leading renewable energy developers and investors (e.g., NextEra Energy, Brookfield Renewable, BlackRock Renewable Power). I want to understand their pain points with contract management.\n* **Venture Capital Investors:**  Firms specializing in early-stage AI and/or climate tech investments.  Specifically targeting firms with a portfolio focused on B2B SaaS solutions.\n* **Early Adopter Clients:**  Renewable energy companies willing to pilot LexiFlow and provide valuable feedback.  Preference for companies with a high volume of complex contracts.\n\n**Do Not Surface:**\n* Recruiters (unless specifically targeting AI/ML engineering talent)\n* Marketing/Sales professionals offering generic services (I have a dedicated marketing team)\n* Individuals outside of the renewable energy or legal/financial sectors\n* General AI enthusiasts without a demonstrated understanding of the complexities of contract law and finance.\n\nI\u2019m particularly interested in individuals who are active on LinkedIn groups related to renewable energy, project finance, and legal technology.",
+    "notes": "*Naledi is highly responsive but prefers initial contact via email. She\u2019s currently prioritizing client acquisition and fundraising. \n* Recent conversation with John Davies (VC at GreenTech Ventures) indicated strong interest, but he wants to see more traction data first.\n* She\u2019s been attending the RE+ conference and is actively networking there. \n* Data quality on her education section is confirmed accurate.\n* She's mentioned a desire to connect with someone who has experience building a similar platform in a highly regulated industry.",
+    "locationAvailability": "Currently based in San Francisco, California. Open to remote meetings and occasional travel to key industry events and investor meetings.",
+    "introPreferences": "When making introductions to Naledi, please adhere to the following:\n\n* **Highlight Shared Interests:**  Emphasize any common connections or shared interests related to renewable energy, AI, or legal tech.  A brief mention of how their work aligns with LexiFlow\u2019s mission is highly appreciated.\n* **Focus on Value Proposition:**  Clearly articulate the potential value that the connection could bring to Naledi and LexiFlow.  Avoid generic introductions.\n* **Keep it Concise:**  Naledi is extremely busy, so keep the introduction brief and to the point (under 150 words).\n* **Avoid Technical Jargon:** While Naledi is technically savvy, avoid overly technical explanations of AI concepts. Focus on the practical applications and benefits of LexiFlow.\n* **Do NOT introduce:** Individuals who are solely looking for investment opportunities or job seekers. \n* **Preferred Communication Style:** She prefers a direct and professional tone. A brief summary of the connection\u2019s background and their potential relevance to LexiFlow is sufficient.",
+    "personalPreferences": "I respond best to concise, data-driven communication. Feel free to share relevant articles or insights. I\u2019m generally available on email and LinkedIn messaging.",
+    "meetingAndSchedulingPreferences": "I typically schedule meetings 30-60 minutes in advance. I prefer video calls (Zoom) over phone calls."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 26.34150981903076,
+      "input_tokens": 774,
+      "output_tokens": 1470,
+      "problems": []
+    }
+  ],
+  "success": true
+}

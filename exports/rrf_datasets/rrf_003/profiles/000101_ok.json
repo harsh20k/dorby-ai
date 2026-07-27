@@ -1,0 +1,54 @@
+{
+  "id": 101,
+  "archetype": "Corporate Exit to Founder",
+  "given_name": "Viktor Silva",
+  "style_version": 7,
+  "archetypes_version": 17,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Viktor Silva is a former Senior Manager of Supply Chain Optimization at Amazon, where he spent 8 years building and scaling logistics networks. He specialized in utilizing machine learning to predict demand and optimize delivery routes, significantly reducing costs and improving delivery times. He left Amazon six months ago to found 'FlowState Logistics,' a startup focused on providing AI-powered, hyper-localized delivery solutions for small and medium-sized businesses. He's currently in seed funding, having bootstrapped the initial MVP and secured a small angel investment. He's looking for connections to potential investors, strategic partners in the last-mile delivery space, and experienced advisors who've successfully scaled logistics startups. He\u2019s very data-driven and appreciates direct, concise communication. He's a bit of a 'roll up your sleeves' type, valuing action over endless meetings.",
+    "positioning": "As Founder & CEO of FlowState Logistics, I'm tackling the significant inefficiencies plaguing last-mile delivery for SMBs. We\u2019re building a platform that leverages cutting-edge AI and hyperlocal logistics networks to provide a cost-effective, reliable, and transparent delivery experience. My background at Amazon, specifically within Supply Chain Optimization, equipped me with a deep understanding of scalable logistics infrastructure and predictive analytics. We identified a clear gap in the market: existing solutions are often geared towards enterprise-level clients, leaving smaller businesses underserved and facing exorbitant delivery costs. FlowState Logistics addresses this by dynamically optimizing delivery routes based on real-time demand, traffic patterns, and courier availability. We\u2019ve already demonstrated a 20% cost reduction in pilot programs with local retailers. Currently, we are closing our seed round to expand our network and refine our AI algorithms. We're not just building a delivery service; we\u2019re building the future of efficient, accessible logistics for everyone.",
+    "background": "* **FlowState Logistics, Founder & CEO** (Oct 2023 \u2013 Present)\n    * Led all aspects of startup development, including product vision, fundraising, team building, and go-to-market strategy.\n    * Developed and launched MVP demonstrating a 20% reduction in delivery costs for pilot clients.\n    * Secured $150k in angel investment.\n    * Currently leading seed funding round with a target of $750k.\n* **Amazon, Senior Manager, Supply Chain Optimization** (June 2015 \u2013 Sept 2023)\n    * Managed a team of 12 data scientists and engineers focused on optimizing Amazon\u2019s last-mile delivery network.\n    * Led the development and implementation of a machine learning model to predict delivery demand, resulting in a 15% reduction in delivery times.\n    * Oversaw a $5M annual budget for technology and infrastructure improvements.\n    * Collaborated with cross-functional teams (engineering, operations, marketing) to launch new delivery programs.\n    * Streamlined logistics processes, improving efficiency and reducing operational costs by 10% annually.\n* **Deloitte Consulting, Consultant** (June 2013 \u2013 May 2015)\n    * Provided consulting services to clients in the retail and logistics industries, focusing on supply chain management and process improvement.\n    * Developed and presented recommendations to clients on optimizing their logistics networks.\n* **Education:**\n    * **Massachusetts Institute of Technology (MIT), Sloan School of Management, MBA** (2011 \u2013 2013)\n        * Concentration: Operations Management\n    * **University of California, Berkeley, BS, Industrial Engineering & Operations Research** (2007 \u2013 2011)\n        * GPA: 3.9/4.0\n* **Skills:** Supply Chain Management, Logistics, Machine Learning, AI, Data Analysis, Predictive Modeling, Python, SQL, Operations Research, Project Management, Team Leadership, Strategic Planning, Fundraising, Go-to-Market Strategy, Lean Six Sigma.",
+    "lookingFor": "I'm actively seeking connections within the following areas to accelerate FlowState Logistics' growth:\n\n* **Investors:** Seed-stage VCs specializing in logistics, supply chain tech, or AI-driven solutions. I'm looking for investors who understand the complexities of the last-mile delivery space and can provide strategic guidance in addition to capital.\n* **Strategic Partners:** Companies operating in the last-mile delivery ecosystem (e.g., fleet management software providers, delivery network aggregators, warehousing solutions). We\u2019re exploring partnerships to expand our network and offer a more comprehensive suite of services to our clients.\n* **Advisors:** Experienced entrepreneurs who have successfully scaled logistics or technology startups. I'm particularly interested in individuals with expertise in go-to-market strategy, fundraising, and team building.\n* **Potential Clients:** SMBs in the retail, food & beverage, and e-commerce sectors who are looking for affordable and reliable delivery solutions. I'd welcome introductions to decision-makers responsible for logistics and operations.\n\nI\u2019m also open to discussing potential collaborations and knowledge-sharing opportunities within the broader logistics tech community.",
+    "notes": "Viktor is very direct and appreciates concise communication. He responds best to data-driven pitches and avoids fluff. He's currently prioritizing investor meetings and strategic partnership discussions. Recent conversation (11/15) focused on refining his pitch deck for the seed round. He's a bit skeptical of overly optimistic projections and prefers realistic assessments. \n\n* **Action Item:** Send Viktor relevant articles on AI applications in logistics.\n* **Reminder:** He mentioned being interested in connecting with someone at [Competitor Company Name].",
+    "locationAvailability": "I am currently based in San Francisco, California, but frequently travel for business. I'm open to remote meetings and can travel to key locations as needed.",
+    "introPreferences": "When making introductions, please:\n\n* Briefly highlight my background at Amazon and the problem FlowState Logistics is solving.\n* Emphasize our focus on SMBs and our AI-powered approach.\n* Only introduce me to individuals who are genuinely relevant to my stated goals (investors, partners, advisors).\n* Avoid lengthy, generic introductions. Keep it concise and focused on the value proposition.\n* I\u2019m particularly receptive to warm introductions from mutual connections.",
+    "personalPreferences": "* Prefer email for initial contact.\n* Quick response times are appreciated.\n* I\u2019m most active on LinkedIn during business hours.\n* I value directness and transparency.",
+    "meetingAndSchedulingPreferences": "I generally prefer 30-minute introductory calls. I\u2019m available for meetings most weekdays. Please send a calendar invite with a clear agenda."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 23.54831314086914,
+      "input_tokens": 826,
+      "output_tokens": 1418,
+      "problems": []
+    }
+  ],
+  "success": true
+}

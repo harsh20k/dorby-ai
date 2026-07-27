@@ -1,0 +1,54 @@
+{
+  "id": 94,
+  "archetype": "University Grad, Early Career Operator",
+  "given_name": "Valeria Oduya",
+  "style_version": 6,
+  "archetypes_version": 16,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Valeria Oduya is a recent graduate (May 2023) with a Bachelor's in Computer Science from MIT, specializing in AI/ML. She\u2019s currently a full-stack engineer at \u2018Nova Insights\u2019, a stealth-mode startup focused on using generative AI to create personalized learning pathways for corporate training. Her distinctive career detail is a highly successful internship at a biotech firm, where she developed a data pipeline for genomic sequencing data \u2013 a bit of a pivot from her current role, but showcasing strong analytical and data engineering skills. She's ambitious, eager to learn, and actively networking to understand the broader AI landscape and explore potential future opportunities, particularly around ethical AI development. She\u2019s looking to connect with experienced engineers, AI researchers, and potential investors. She's enthusiastic but still developing her professional 'voice', so her profile will reflect a blend of technical competence and eager curiosity.",
+    "positioning": "I'm Valeria Oduya, a full-stack engineer at Nova Insights, where we\u2019re building the future of corporate learning through personalized, AI-driven pathways. We\u2019re leveraging cutting-edge generative AI models to dynamically adapt training content to individual employee needs, dramatically improving knowledge retention and skill development. My primary focus is on developing and maintaining the backend infrastructure, including API design and database management, using Python, Flask, and PostgreSQL. I also contribute to the frontend using React.js. We recently closed a seed funding round led by Amplify Ventures, and we\u2019re currently in a high-growth phase, rapidly iterating on our MVP and scaling our platform. Before Nova Insights, I gained valuable experience as a data engineering intern at GenSys Biotech, where I designed and implemented a robust data pipeline for processing high-throughput genomic sequencing data. I\u2019m passionate about the intersection of AI and education, and believe that technology has the power to unlock human potential. I\u2019m consistently seeking ways to improve and optimize our systems, and I'm excited to contribute to a company that's making a real impact.",
+    "background": "- **Nova Insights, Full-Stack Engineer** (June 2023 \u2013 Present)\n    * Designed and implemented RESTful APIs using Flask and Python for core learning pathway functionality.\n    * Developed and maintained PostgreSQL database schemas, ensuring data integrity and scalability.\n    * Contributed to the frontend development using React.js, focusing on user interface components and data visualization.\n    * Collaborated with the AI/ML team to integrate generative AI models into the learning platform.\n    * Participated in code reviews and contributed to improving software development best practices.\n\n- **GenSys Biotech, Data Engineering Intern** (Summer 2022)\n    * Developed a data pipeline using Python and Apache Airflow to process and analyze large-scale genomic sequencing data.\n    * Implemented data quality checks and validation procedures to ensure data accuracy and reliability.\n    * Collaborated with bioinformaticians to understand data requirements and optimize pipeline performance.\n    * Gained experience with cloud computing platforms (AWS) and data storage solutions (S3).\n\n- **Massachusetts Institute of Technology (MIT), Cambridge, MA** (September 2019 \u2013 May 2023)\n    * Bachelor of Science in Computer Science, GPA: 3.8/4.0\n    * Specialization: Artificial Intelligence and Machine Learning\n    * Relevant Coursework: Machine Learning, Deep Learning, Data Structures and Algorithms, Database Systems, Software Engineering.\n    * Dean\u2019s List all semesters.\n    * Undergraduate Research Assistant \u2013 AI Lab (Fall 2021 \u2013 Spring 2022): Assisted with research on reinforcement learning algorithms.\n\n- **Skills:** Python, JavaScript, React.js, Flask, PostgreSQL, Apache Airflow, AWS (S3, EC2), Git, Docker, Machine Learning (Scikit-learn, TensorFlow), Data Visualization (Matplotlib, Seaborn), Data Analysis (Pandas, NumPy).",
+    "lookingFor": "I'm actively expanding my network within the AI and EdTech spaces. I'm particularly interested in connecting with engineers who have experience scaling AI-powered applications and building robust backend systems. I\u2019m also keen to learn from researchers working on the ethical implications of AI and best practices for responsible AI development.\n\nSpecifically, I\u2019m looking for:\n\n* **Mentorship:** Guidance from experienced engineers on navigating the challenges of building and scaling a startup.\n* **Industry Insights:** Information about emerging trends in AI and EdTech.\n* **Potential Investors:** Connections to angel investors or venture capitalists interested in early-stage AI startups.\n* **Collaboration Opportunities:** Exploring potential collaborations on open-source projects or research initiatives.\n\nI\u2019m open to informational interviews and would love to hear about your experiences and perspectives. I am also interested in learning about companies that prioritize a strong engineering culture and a commitment to innovation.",
+    "notes": "Valeria is a bright and enthusiastic recent grad. She\u2019s eager to learn and quick to pick up new concepts. She's still refining her networking \u2018pitch\u2019 and sometimes defaults to overly technical explanations. Remind her to focus on the business value of her work when speaking with non-technical audiences. \n\n* **Recent Conversation:** Spoke with her on 10/26 regarding her interest in attending the AI Ethics conference in November. She\u2019s looking for potential connections there.\n* **Follow-up:** Send her links to articles on scalable backend architectures.\n* **Communication Preference:** She responds best to direct messages and is very prompt with replies.",
+    "locationAvailability": "I am currently based in Cambridge, Massachusetts, and primarily work remotely, but am available for occasional on-site meetings in the Boston area. I am open to exploring fully remote opportunities in the future.",
+    "introPreferences": "When introducing me, please highlight my recent experience at Nova Insights and my internship at GenSys Biotech. Focus on my full-stack engineering skills and my passion for applying AI to solve real-world problems. \n\n* I appreciate introductions to individuals who are actively involved in the AI/ML community.\n* Please avoid overly formal introductions \u2013 I prefer a more conversational tone.\n* Briefly mention my MIT background to establish credibility, but don't dwell on it.\n* It's helpful if you can mention a shared interest or connection to facilitate a more engaging conversation.",
+    "personalPreferences": "- Prefer to connect via LinkedIn direct message initially.\n- Happy to jump on a quick Zoom call.\n- I'm an early riser and often check messages before 9 AM EST.\n- I'm always open to learning about new technologies and ideas.",
+    "meetingAndSchedulingPreferences": "I'm generally flexible with scheduling and can accommodate meetings during standard business hours. Please send a calendar invite with a clear agenda. I prefer 30-minute meetings for initial introductions."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 30.666337966918945,
+      "input_tokens": 825,
+      "output_tokens": 1459,
+      "problems": []
+    }
+  ],
+  "success": true
+}

@@ -1,0 +1,54 @@
+{
+  "id": 502,
+  "archetype": "Global/Legal Background Founder",
+  "given_name": "Sana Lindqvist",
+  "style_version": 31,
+  "archetypes_version": 84,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Sana Lindqvist is a 38-year-old Finnish-American founder and CEO of 'Veridia Trust,' a company building blockchain-based infrastructure for managing and verifying fiduciary duties across international jurisdictions. Her unique background is a Juris Doctor (JD) with a specialization in international finance law, coupled with several years working as in-house counsel at a large Scandinavian investment firm, Nordea. She saw firsthand the friction and opacity in verifying compliance and ethical conduct within cross-border investments, particularly concerning ESG factors. Veridia Trust aims to solve this by creating an immutable record of fiduciary actions, enhancing transparency and accountability. She's currently seeking Series A funding to scale the platform and expand its capabilities. Sana is highly analytical, detail-oriented (a lawyer\u2019s trait!), and focused on long-term sustainability and ethical governance. She's a first-time founder, so mentorship and strategic introductions are vital to her. She prioritizes building genuine relationships over quick wins and values advisors who understand the complexities of both legal frameworks and emerging technologies.",
+    "positioning": "As CEO and Founder of Veridia Trust, I\u2019m driven by a fundamental belief that trust is the bedrock of a functioning global economy. My background in international finance law illuminated a critical gap: the lack of verifiable transparency in fiduciary responsibility, especially in cross-border transactions. Traditional methods rely heavily on self-reporting and opaque processes, creating vulnerabilities to conflicts of interest and hindering responsible investment. \n\nVeridia Trust is building a solution. We leverage blockchain technology to create an immutable audit trail of fiduciary actions, ensuring accountability and simplifying regulatory compliance. Our platform allows fund managers, trustees, and other fiduciaries to demonstrably prove adherence to their ethical and legal obligations, fostering greater investor confidence and promoting sustainable, responsible investing. \n\nWe've recently completed a successful pilot program with a consortium of family offices, demonstrating a 30% reduction in compliance costs and a significant improvement in transparency. We are now focused on scaling our platform, expanding our jurisdictional coverage, and building strategic partnerships with key players in the financial and legal industries. I'm passionate about building a future where trust is not assumed, but *verified*.",
+    "background": "* **Veridia Trust, CEO & Founder** (2021 \u2013 Present)\n    * Led all aspects of company formation, fundraising (Seed round secured in Q1 2022), product development, and go-to-market strategy.\n    * Oversaw the development and launch of Veridia Trust's MVP, focusing on core features for audit trail creation and verification.\n    * Secured pilot program with three family offices, resulting in positive user feedback and demonstrable cost savings.\n    * Built a core team of 8 engineers, legal experts, and business development professionals.\n* **Nordea Investment Funds S.A., In-House Counsel** (2016 \u2013 2021)\n    * Provided legal counsel on a wide range of investment fund matters, including regulatory compliance (UCITS, AIFMD), fund formation, and transactional work.\n    * Specialized in cross-border transactions, advising on legal and tax implications in multiple jurisdictions (EU, US, Asia).\n    * Managed relationships with external legal counsel and regulatory authorities.\n    * Developed and implemented internal compliance procedures related to ESG investing and anti-money laundering (AML).\n* **White & Case LLP, Associate Attorney** (2014 \u2013 2016)\n    * Focused on international finance law, assisting with debt and equity financings, mergers and acquisitions, and project finance transactions.\n    * Conducted legal due diligence, drafted transaction documents, and advised clients on complex legal issues.\n* **Harvard Law School, Juris Doctor (JD)** (2011 \u2013 2014)\n    * Concentrated in International Finance Law.\n    * Served as Editor of the Harvard International Law Journal.\n    * Awarded the Dean\u2019s Scholar Prize for academic excellence.\n* **University of Helsinki, Master of Laws (LL.M.)** (2008 \u2013 2011)\n    * Graduated *summa cum laude*.\n    * Thesis focused on the legal implications of cross-border financial regulation.\n\n**Skills:** Blockchain Technology, Smart Contracts, Legal Compliance (UCITS, AIFMD, GDPR, KYC/AML), International Finance Law, Venture Capital, Corporate Governance, ESG Investing, Contract Negotiation, Due Diligence, Risk Management, Fluent in English, Finnish, and Swedish.",
+    "lookingFor": "* **Fundraising (Series A):**\n    * Seeking $8-12 million to scale platform development, expand jurisdictional coverage, and grow the sales and marketing team.\n    * Target valuation: $30-40 million post-money.\n    * Ideal investors: Venture funds specializing in Fintech, Blockchain, and LegalTech with a demonstrated commitment to responsible investing.\n* **Strategic Introductions:**\n    * **Investors:** Seeking introductions to partners at Accel, Andreessen Horowitz, and Lightspeed Venture Partners.\n    * **LegalTech Influencers:** Connections with thought leaders and industry analysts in the LegalTech space (e.g., experts at Gartner, Forrester).\n    * **Potential Pilot Partners:** Introductions to CIOs or Heads of Compliance at large asset management firms ($100B+ AUM).\n* **Advisory Support:**\n    * Mentorship from experienced Fintech founders and legal professionals.\n    * Guidance on scaling a blockchain-based platform and navigating complex regulatory landscapes.\n* **Hiring:**\n    * **Blockchain Engineers:** Senior-level engineers with experience in Solidity, Rust, or Go.\n    * **Business Development Manager:** Experienced professional with a strong network in the financial services industry.",
+    "notes": "Sana is highly intelligent and articulate. She\u2019s deeply knowledgeable about the legal and technical aspects of her business. Initial Boardy score: 8/10 (High Potential). \n\n* **Caution:** She can be very detail-oriented, which can sometimes lead to analysis paralysis. Encourage her to prioritize rapid iteration and market testing. \n* **Sensitivity:** She's passionate about ethical governance and sustainability. Avoid investors with a questionable track record in these areas. \n* **Follow-up:** She requested information on our network's experience with blockchain-based compliance solutions. Provide a relevant case study during the next touchpoint.",
+    "locationAvailability": "Based in New York City, but frequently travels to Europe. Open to remote meetings.",
+    "introPreferences": "To ensure a productive introduction, please adhere to the following:\n\n* **Hard Requirements:**\n    * **Investor Focus:** Investors *must* have a demonstrated interest in Fintech, Blockchain, or LegalTech. Generalist funds are not a good fit.\n    * **ESG Alignment:** Investors should have a clear commitment to ESG investing and responsible business practices. \n    * **Stage:** Investors should be comfortable with Series A investments.\n* **Soft Preferences:**\n    * **Existing Portfolio:** Investors with portfolio companies in the compliance or financial transparency space are preferred.\n    * **Intro Style:** A warm, personalized introduction highlighting the shared values and potential synergies between Veridia Trust and the investor is highly appreciated. Avoid cold emails or mass introductions.\n    * **Avoid:** Do not introduce me to investors who are solely focused on short-term financial gains. I\u2019m building a long-term, sustainable business.",
+    "personalPreferences": "I prefer initial contact via LinkedIn Messaging. I'm responsive to email but often prioritize asynchronous communication.",
+    "meetingAndSchedulingPreferences": "Please send a calendar invite with a brief agenda. I generally prefer meetings to be no longer than 30 minutes initially to assess fit."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 30.18137812614441,
+      "input_tokens": 861,
+      "output_tokens": 1647,
+      "problems": []
+    }
+  ],
+  "success": true
+}

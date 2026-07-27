@@ -1,0 +1,54 @@
+{
+  "id": 473,
+  "archetype": "Early-Stage Venture/Fund Builder",
+  "given_name": "Grace Johansson",
+  "style_version": 29,
+  "archetypes_version": 79,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Grace Johansson is a seasoned operator in the venture capital ecosystem, but *not* a traditional VC investor. She spent her early career as a software engineer, then transitioned into operational roles at several high-growth startups, consistently building out the systems and processes that enabled scaling. She realized the biggest bottleneck in the venture world wasn\u2019t necessarily finding great companies, but the *fund managers* themselves \u2013 many brilliant investors struggle with the operational complexity of launching and scaling a fund.  She now focuses on building infrastructure to support emerging fund managers, specifically those focused on pre-seed and seed stage investments.  She's currently the Head of Operations at 'Ascend Capital Platforms', a company building a full-stack platform for emerging fund managers, covering everything from LP database management to fund administration. She's looking to connect with other 'venture infrastructure' builders, emerging fund managers needing operational support, and LPs interested in allocating to new funds. A key detail: she\u2019s a strong believer in open-source tools for venture and actively contributes to several projects in her spare time, positioning her as a thought leader in the space.",
+    "positioning": "I\u2019m passionate about unlocking the potential of the next generation of venture investors. For too long, the focus in venture has been almost exclusively on the companies themselves, while the critical infrastructure supporting fund managers \u2013 particularly those just starting out \u2013 has been overlooked.  This creates a significant bottleneck, preventing brilliant investors from deploying capital effectively and ultimately hindering innovation. \n\nAt Ascend Capital Platforms, I lead operations, overseeing the development and implementation of a comprehensive platform designed to streamline and scale the entire fund lifecycle. We\u2019re building tools to manage LP relationships, automate fund administration, facilitate deal flow, and provide data-driven insights to help emerging managers make smarter investment decisions.  My role involves everything from defining product roadmap based on direct user feedback to building and leading a high-performing operations team.\n\nPrior to Ascend, I spent five years at ScaleFactor (acquired by Klarna), where I was instrumental in building out their financial operations infrastructure. Before that, I honed my technical skills as a software engineer at Palantir, learning the importance of robust, scalable systems.  I bring a unique blend of technical expertise, operational rigor, and a deep understanding of the venture landscape to everything I do.\n\nI'm eager to connect with individuals who share my vision for a more efficient and accessible venture ecosystem.  Whether you're an emerging fund manager seeking operational support, a fellow venture infrastructure builder, or an LP looking to diversify your portfolio, I\u2019d love to chat.",
+    "background": "- **Ascend Capital Platforms**, *Head of Operations* (2022 \u2013 Present)\n    - Leading all operational aspects of a full-stack platform for emerging fund managers.\n    - Responsible for product roadmap, team building, and execution.\n    - Increased platform adoption by 150% in the first year.\n    - Successfully launched key features including LP database management and automated fund reporting.\n- **ScaleFactor** (acquired by Klarna), *Director of Financial Operations* (2017 \u2013 2022)\n    - Built and scaled the financial operations infrastructure for a rapidly growing fintech company.\n    - Managed a team of 20+ accountants and financial analysts.\n    - Implemented new accounting systems and processes, resulting in a 20% reduction in month-end close time.\n- **Palantir Technologies**, *Software Engineer* (2015 \u2013 2017)\n    - Developed and maintained software applications for data analysis and visualization.\n    - Gained experience in agile development methodologies and large-scale data processing.\n- **Education**: Stanford University, B.S. Computer Science (2015)\n- **Skills**: Venture Capital Operations, Fund Administration, LP Management, Financial Modeling, Product Management, Agile Development, Python, SQL, Data Analysis, Team Leadership, Open-Source Contributions (specifically to Dealroom and Crunchbase APIs)",
+    "lookingFor": "I'm actively seeking connections with:\n\n* **Emerging Fund Managers (Pre-Seed/Seed Focus):** Especially those building specialized funds (e.g., climate tech, biotech, frontier tech). I'm happy to provide operational advice and explore potential platform integration.\n* **Venture Infrastructure Builders:** Individuals working on tools and platforms that support venture capital firms (e.g., CRM, deal flow management, fund administration).\n* **Limited Partners (LPs):** Interested in exploring allocations to new and emerging fund managers.\n* **Developers contributing to open-source venture tools.** I\u2019m always keen to collaborate.\n\nI'm *not* currently looking for direct investment opportunities or requests for company valuations. Please no cold outreach for sales pitches.",
+    "notes": "* Recently spoke with Sarah Chen (XYZ Ventures) about potential integration opportunities \u2013 follow up next week.\n* Prioritizing platform scalability and security in Q3.\n* Very interested in learning about new LP database solutions.\n* Avoid bringing up topics related to crypto \u2013 I'm not focused on that space.\n* She\u2019s very active on Twitter (@GraceJohanssonVC) and often shares insightful articles and commentary.",
+    "locationAvailability": "I am currently based in San Francisco, California, and primarily work remotely. I am open to occasional travel for conferences and meetings, particularly on the East Coast and within California.  I'm flexible with time zones and comfortable collaborating with teams across the globe.",
+    "introPreferences": "When making introductions to Grace, please keep the following in mind:\n\n* **Hard Requirements:**\n    - The connection *must* be relevant to venture capital operations or emerging fund management.\n    - Briefly explain *why* you believe this connection would be valuable for Grace.\n* **Strongly Preferred:**\n    - Highlight any specific pain points the individual is facing that Ascend Capital Platforms might be able to address.\n    - Mention if they are familiar with or actively using any venture infrastructure tools.\n* **What to Emphasize:**\n    - Grace's experience building and scaling operational infrastructure at ScaleFactor.\n    - Her deep understanding of the challenges faced by emerging fund managers.\n    - Her commitment to open-source tools and collaboration.\n* **What to Avoid:**\n    - Generic introductions without a clear value proposition.\n    - Requests for job opportunities (for yourself or others).\n    - Introductions to individuals who are solely focused on company building (Grace is focused on the *infrastructure* around venture).\n* **Example Introduction Line:** 'Grace, I wanted to introduce you to [Name], who is building [Tool/Platform] for fund managers and is facing similar challenges to those Ascend is solving.'",
+    "personalPreferences": "Please reach out via email (grace.johansson@ascendcapital.com) initially. I check Slack infrequently.  I'm generally responsive within 24-48 hours.",
+    "meetingAndSchedulingPreferences": "I'm typically available for meetings Tuesday-Thursday. Please avoid scheduling calls before 10:00 AM PST."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 26.56770920753479,
+      "input_tokens": 836,
+      "output_tokens": 1512,
+      "problems": []
+    }
+  ],
+  "success": true
+}

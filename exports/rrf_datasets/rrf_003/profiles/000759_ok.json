@@ -1,0 +1,54 @@
+{
+  "id": 759,
+  "archetype": "Early-Stage Founder, Seeking Legal Expertise",
+  "given_name": "Theo Haddad",
+  "style_version": 46,
+  "archetypes_version": 128,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Theo Haddad is the 32-year-old founder and CEO of 'SynapseFlow', a pre-seed AI-powered workflow automation platform targeting small to medium-sized marketing agencies. He's a former data scientist with a unique background: he spent 3 years as a forensic data analyst for a boutique firm specializing in financial fraud before pivoting to the more proactive world of workflow solutions. This experience ingrained in him a hyper-awareness of compliance and data security \u2013 something he *really* wants to get right from the start with SynapseFlow. He's currently laser-focused on securing seed funding and building out the legal and compliance framework for his platform, and is actively exploring options involving equity-based compensation for legal counsel to conserve cash. He\u2019s energetic, a bit of a perfectionist, and very data-driven in his approach to everything.",
+    "positioning": "I'm Theo Haddad, Founder & CEO of SynapseFlow, a platform revolutionizing workflow automation for marketing agencies. We're tackling the massive inefficiency in campaign execution by leveraging AI to intelligently map, automate, and optimize complex marketing processes. Our core value proposition is simple: drastically reduce wasted time and resources, leading to increased profitability for our agency partners. We're currently in a focused pre-seed phase, demonstrating strong early traction with a cohort of beta users reporting an average 20% increase in campaign throughput. We've recently shifted our focus from broad automation to a niche targeting agencies with $500k-$5M in annual revenue, allowing us to refine our product and messaging for maximum impact. We are building a platform that is not just powerful, but also fundamentally *secure* and compliant, a critical differentiator in today\u2019s data-driven landscape.  I\u2019m passionate about building a company that empowers agencies to deliver exceptional results while maintaining the highest ethical standards.",
+    "background": "\u2022 **Forensic Data Analyst, Veritas Investigations (2016 \u2013 2019):** Conducted in-depth data analysis to uncover financial fraud, utilizing statistical modeling, data mining techniques, and expert witness testimony. Managed complex datasets, identified anomalies, and prepared comprehensive reports for legal proceedings. Successfully contributed to the resolution of cases involving over $5 million in fraudulent activity.\n\u2022 **Data Scientist, NovaTech Solutions (2019 \u2013 2021):** Developed and implemented machine learning algorithms to optimize marketing campaigns, resulting in a 15% increase in conversion rates for key clients. Led the development of a predictive analytics model to identify high-potential leads, improving sales team efficiency by 10%. Collaborated with cross-functional teams to integrate data-driven insights into product development.\n\u2022 **Independent Consultant - Workflow Optimization (2021 \u2013 2022):** Provided consulting services to small businesses, helping them streamline their operations and improve efficiency through automation. Developed customized workflow solutions using a variety of tools and technologies. Gained valuable insights into the challenges faced by small businesses in managing complex processes.\n\u2022 **Founder & CEO, SynapseFlow (2022 \u2013 Present):** Conceptualized, developed, and launched SynapseFlow, an AI-powered workflow automation platform for marketing agencies. Secured initial seed funding from angel investors. Built a small but talented team of engineers and designers. Currently focused on scaling the platform and expanding our customer base.  Key accomplishments include:\n    * Successfully onboarded 15 beta users, gathering valuable feedback and iterating on the product.\n    * Developed a robust AI engine capable of automating a wide range of marketing tasks.\n    * Established strategic partnerships with key technology providers.\n    *  Achieved a 40% month-over-month growth in user engagement during the beta phase.\n    *  Completed a comprehensive market analysis identifying a significant opportunity in the agency automation space.\n\u2022 **Education:** Master of Science in Data Science, University of California, Berkeley (2016). Bachelor of Science in Mathematics, Stanford University (2014).",
+    "lookingFor": "I\u2019m actively seeking connections with legal professionals specializing in startup law, data privacy (specifically GDPR and CCPA), and intellectual property. I\u2019m particularly interested in individuals with experience working with AI-driven platforms and a strong understanding of the regulatory landscape. I'm open to discussing equity-based compensation arrangements to align incentives and conserve early-stage capital. \n\n\u2022 **Pilot Partners (Legal Firms):**  I'm looking to build relationships with firms willing to explore a long-term partnership, potentially taking equity in SynapseFlow in lieu of traditional hourly fees.  We need guidance on:\n    * Terms of Service and Privacy Policy creation\n    * Data security and compliance protocols\n    * Intellectual property protection\n\u2022 **Build Clients (Experienced Legal Counsel):**  I\u2019m interested in connecting with experienced attorneys who can serve as advisors and mentors. I value practical, actionable advice and a proactive approach to risk management. \n\u2022 **Networking Contacts:**  Introductions to VCs or angel investors with a focus on SaaS and AI companies would be incredibly valuable.  I'm also looking to connect with other founders who have successfully navigated the legal challenges of building a high-growth startup.\n\u2022 **Compliance Experts:** Individuals with deep expertise in marketing compliance (CAN-SPAM, TCPA, etc.) are highly sought after. We want to ensure our platform enables agencies to run compliant campaigns.",
+    "notes": "\u2022 Theo is *very* concerned about getting the legal foundation right. He\u2019s seen firsthand the impact of non-compliance (from his Veritas days). \n\u2022 He\u2019s a fast learner but can get bogged down in details.  A lawyer who can explain complex issues concisely will be a huge win.\n\u2022 He\u2019s mentioned being open to a 'sweat equity' arrangement \u2013 he\u2019s genuinely cash-strapped but believes in the long-term potential of SynapseFlow. \n\u2022 Last conversation (10/26): He\u2019s starting to explore options for SOC 2 compliance.  Keep that in mind for potential introductions.\n\u2022  Avoid overly aggressive sales pitches. He responds best to a consultative approach.",
+    "locationAvailability": "Based in San Francisco, CA, and open to remote collaboration.",
+    "introPreferences": "\u2022 **Hard Requirements:** Attorneys *must* have experience working with technology startups, preferably in the SaaS space.  A demonstrable understanding of AI and data privacy regulations is non-negotiable.\n\u2022 **Soft Preferences:**  I\u2019d prefer someone who is proactive, communicative, and genuinely interested in helping SynapseFlow succeed.  A strong network within the venture capital community is a plus.\n\u2022 **Framing for Introductions:**  Please emphasize SynapseFlow's focus on ethical AI and its commitment to data security.  Highlight our traction with beta users and our potential to disrupt the marketing agency workflow space.  Mention my background in forensic data analysis - it demonstrates my commitment to compliance.\n\u2022 **Avoid:** Introducing me to large, impersonal law firms. I\u2019m looking for a partner, not just a vendor.\n\u2022 **Ideal Introduction:** 'Theo is building a fascinating AI-powered workflow automation platform for marketing agencies. Given your experience with [relevant legal area], I thought you two should connect. He\u2019s particularly interested in exploring equity-based compensation for legal counsel.'",
+    "personalPreferences": "I prefer email communication initially, followed by a brief call to discuss potential collaboration. I'm a morning person and generally respond quickly to messages.  I appreciate directness and honesty.",
+    "meetingAndSchedulingPreferences": "Please send a brief agenda before our meeting. I value efficiency and come prepared with specific questions. I\u2019m happy to share a deck outlining SynapseFlow\u2019s vision and progress.  I typically follow up with a summary of key takeaways and action items within 24 hours."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 27.34779381752014,
+      "input_tokens": 733,
+      "output_tokens": 1651,
+      "problems": []
+    }
+  ],
+  "success": true
+}

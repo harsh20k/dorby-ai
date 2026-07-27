@@ -1,0 +1,63 @@
+{
+  "id": 45,
+  "archetype": "AI/ML Focused Operator/Founder",
+  "given_name": "Elena Kowalski",
+  "style_version": 3,
+  "archetypes_version": 9,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Elena Kowalski is a 38-year-old founder and CEO of 'Synapse Insights,' a seed-stage startup focused on building AI-powered predictive maintenance solutions for the renewable energy sector (specifically wind farms). Her distinctive career detail is a prior 8-year stint as a data scientist *within* a large wind turbine manufacturer, giving her deep domain expertise \u2013 she understands the physics of turbine failure *and* the nuances of applying ML to solve it. She's now fundraising a Series A to scale Synapse Insights' pilot program and expand into solar energy applications. She's a technically strong leader who can speak to both the engineering and business aspects of her company. She\u2019s looking for investors with experience in industrial AI, strategic partnerships with energy companies, and potentially a Chief Revenue Officer to help scale sales and marketing.",
+    "positioning": "Elena Kowalski is the Founder & CEO of Synapse Insights, revolutionizing asset management in the renewable energy sector through the power of predictive maintenance. We\u2019re building the future of sustainable energy by minimizing downtime and maximizing efficiency using cutting-edge AI and machine learning. Synapse Insights isn\u2019t just about preventing failures; it's about proactively optimizing performance and extending asset lifecycles. Our core technology leverages a proprietary blend of physics-informed machine learning models and real-time sensor data analysis to accurately predict component failures in wind and solar farms\u2014before they happen. \n\nInitially, Synapse Insights focused solely on wind turbine gearbox failure prediction, a historically costly and complex challenge. We've successfully completed a year-long pilot program with 'Northern Power Systems,' demonstrating a 30% reduction in unscheduled maintenance and a 15% increase in energy production. We are now pivoting to a platform approach \u2013 expanding our capabilities to cover broader turbine components and integrating solar farm monitoring. This expansion is driven by strong customer demand and represents a significant market opportunity. \n\nMy expertise lies at the intersection of data science, mechanical engineering, and renewable energy. I\u2019m passionate about leveraging AI to create a more sustainable future and building a world-class team to deliver on that vision.  *One-liner:*  Synapse Insights empowers renewable energy companies to unlock the full potential of their assets through intelligent, predictive maintenance.",
+    "background": "- **Synapse Insights, Founder & CEO** (2022 \u2013 Present)\n  - Led all aspects of the company, from initial concept and technology development to fundraising, pilot program execution, and team building.\n  - Secured seed funding of $1.2M from angel investors and early-stage venture capital firms.\n  - Oversaw the development and deployment of our core predictive maintenance platform, achieving a 30% reduction in unscheduled maintenance during the Northern Power Systems pilot.\n  - Developed and implemented the company's go-to-market strategy.\n\n- **Vestas, Senior Data Scientist** (2014 \u2013 2022)\n  - Led the development of machine learning models for predicting component failures in wind turbines, focusing on gearbox, blade, and generator health.\n  - Collaborated with engineering teams to integrate predictive maintenance insights into operational workflows.\n  - Managed large-scale datasets from wind farms across North America, utilizing cloud-based data processing and storage solutions (AWS, Azure).\n  -  Mentored junior data scientists and engineers.\n  - Published research papers on predictive maintenance in renewable energy at industry conferences.\n\n- **University of California, Berkeley, Ph.D. in Mechanical Engineering** (2010 \u2013 2014)\n  - Dissertation: 'Data-Driven Modeling of Fatigue Crack Propagation in Wind Turbine Blades.'\n  -  Specialization:  Computational Mechanics, Machine Learning, and Renewable Energy.\n\n- **Massachusetts Institute of Technology (MIT), B.S. in Mechanical Engineering** (2006 \u2013 2010)\n\n**Skills:** Machine Learning (Python, TensorFlow, PyTorch, Scikit-learn), Data Science (Data Mining, Statistical Modeling, Data Visualization), Predictive Maintenance, Renewable Energy (Wind/Solar), Time Series Analysis, Cloud Computing (AWS, Azure), SQL, Signal Processing, Physics-Informed Machine Learning, Team Leadership, Fundraising, Strategic Planning.\n\n**Certifications:** AWS Certified Machine Learning \u2013 Specialty, Certified Data Science Professional (CDSP)",
+    "lookingFor": "Currently focused on closing our Series A round ($5-7M) to scale Synapse Insights and expand our platform.  Specifically seeking:\n\n* **Investors:**  VC firms specializing in industrial AI, climate tech, or energy tech.  Looking for partners who can provide not only capital but also strategic guidance and access to industry networks.\n* **Strategic Partnerships:**  Renewable energy companies (wind and solar farm operators, manufacturers) interested in piloting or integrating our predictive maintenance solutions.  Open to joint development projects and data sharing agreements.\n* **Advisor/Board Member:** Experienced executive with a strong track record in scaling SaaS businesses in the industrial sector.\n* **Chief Revenue Officer (CRO):**  A proven sales leader with experience selling AI-powered solutions to enterprise customers.  Must have a strong understanding of the renewable energy market.\n\nGeographic focus: North America and Europe.  Open to remote collaboration, but prefer partners with a presence in key energy markets.  Ideally, we are looking for partners who understand the complexities of the energy sector and the importance of reliability and efficiency.  I'm available for introductory calls to discuss potential collaborations.",
+    "notes": "\u2022 Spoke with David Chen (Lightspeed Venture Partners) last week \u2013 positive initial conversation, sending follow-up deck. He's interested in our pilot results. \n\u2022  Northern Power Systems very happy with pilot \u2013 potential for a larger, multi-year contract.  Follow up with Sarah Miller (NPS Head of Operations) next week. \n\u2022  Need to refine pitch deck to emphasize the scalability of our platform and the total addressable market. \n\u2022  Elena is very comfortable discussing the technical details of the platform but can also articulate the business value. \n\u2022  Avoid pitching her on purely 'general purpose' AI solutions \u2013 she\u2019s focused on domain expertise. \n\u2022  She's *very* busy \u2013 keep introductions concise & focused.",
+    "locationAvailability": "Based in Boston, MA.  Willing to travel for key meetings and investor pitches.  Also comfortable with remote meetings and collaboration.  Prefer partners located in North America or Europe.",
+    "introPreferences": "When making introductions, please:\n\n* Briefly highlight Synapse Insights' focus on predictive maintenance for renewable energy.\n* Emphasize the successful pilot program with Northern Power Systems and the 30% reduction in unscheduled maintenance.\n* Frame the introduction as an opportunity to explore potential investment, partnership, or advisory roles.\n* Avoid introducing me to individuals solely focused on consumer AI or unrelated industries.\n* Include a brief bio of the person you're introducing me to, highlighting their relevant experience and interests.\n* Keep the intro email concise and focused on the value proposition for both parties.",
+    "personalPreferences": "I prefer initial communication via email.  Happy to jump on a call after a brief exchange.  I check Slack occasionally but prefer not to use it for first contact.",
+    "meetingAndSchedulingPreferences": "I\u2019m in the Eastern Time Zone (EST).  Generally available for meetings during business hours, but flexible for early morning or late afternoon calls.  Please send a calendar invite with a clear agenda.  I prefer meetings to be no longer than 30 minutes initially."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 25.17270517349243,
+      "input_tokens": 804,
+      "output_tokens": 1649,
+      "problems": [
+        "background: possible truncation (ends with '...   - Statistical Modeling')"
+      ]
+    },
+    {
+      "attempt": 2,
+      "elapsed_s": 21.935028076171875,
+      "input_tokens": 804,
+      "output_tokens": 1619,
+      "problems": []
+    }
+  ],
+  "success": true
+}

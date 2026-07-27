@@ -1,0 +1,54 @@
+{
+  "id": 11,
+  "archetype": "Deep Tech Investor, Robotics Emphasis",
+  "given_name": "Anh Pereira",
+  "style_version": 1,
+  "archetypes_version": 2,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Anh Pereira is a Partner at Nova Robotics Ventures, a relatively new (~3 years old) but quickly growing venture capital firm focused *exclusively* on early-stage (Seed & Series A) robotics and AI companies. Her distinctive detail is that she started as a robotics engineer herself, holding a PhD in the field, before transitioning to the investment side. This gives her a strong technical due diligence capability that sets her apart. Currently, Nova Robotics is raising its second fund, and Anh is heavily focused on sourcing exceptional deals \u2013 particularly those with female or underrepresented minority founders \u2013 and building relationships with key players in the robotics ecosystem. She's looking to expand Nova\u2019s network of technical advisors and is very interested in connecting with founders who are solving fundamental problems in areas like embodied AI, manipulation, and logistics automation. She's extremely pragmatic and data-driven, but also values founders with a strong vision and a willingness to take risks.",
+    "positioning": "As a Partner at Nova Robotics Ventures, I focus on identifying and investing in the next generation of groundbreaking robotics and AI companies. My background as a robotics engineer \u2013 holding a PhD from MIT \u2013 allows me to perform deep technical due diligence and truly understand the challenges and opportunities facing founders in this space. We are currently deploying capital from our first fund and actively raising our second, targeting Seed and Series A investments. I\u2019m particularly passionate about supporting diverse founding teams and backing companies addressing fundamental limitations in areas like embodied intelligence, advanced manipulation, and autonomous logistics.  I\u2019m actively seeking connections with exceptional founders, technical advisors with deep expertise in robotics, and fellow investors with complementary focus areas.  Connecting with me now means gaining access to a fast-moving fund with a highly technical lens and a commitment to building long-term partnerships.",
+    "background": "- **Nova Robotics Ventures, Partner** (2021 \u2013 Present)\n  - Led due diligence and investment in 8 portfolio companies, resulting in a combined valuation exceeding $250M.\n  - Spearheaded the firm\u2019s diversity and inclusion initiatives, increasing representation of underrepresented founders to 30% of total investments.\n  - Developed and implemented Nova\u2019s technical due diligence framework, improving accuracy of investment assessments.\n  - Currently leading fundraising efforts for Nova Robotics Fund II ($150M target).\n\n- **Boston Dynamics, Robotics Engineer** (2018 \u2013 2021)\n  - Designed and implemented control algorithms for advanced legged robots, improving stability and maneuverability by 15%.\n  - Published 3 peer-reviewed papers in leading robotics conferences (ICRA, IROS, RSS).\n  - Mentored junior engineers and contributed to the development of the company's intellectual property portfolio.\n\n- **Massachusetts Institute of Technology (MIT), PhD, Robotics** (2014 \u2013 2018)\n  - Dissertation: \u201cReinforcement Learning for Robust Robot Manipulation in Cluttered Environments.\u201d\n  - Awarded the MIT Presidential Fellowship.\n  - Research focused on developing novel algorithms for robot grasping and manipulation.\n\n- **Carnegie Mellon University, BS, Mechanical Engineering** (2010 \u2013 2014)\n  - Graduated *Summa Cum Laude*.\n  - President of the Robotics Club.",
+    "lookingFor": "## Investment Opportunities\n- Seed & Series A stage robotics and AI companies.\n- Companies addressing fundamental challenges in embodied AI, manipulation, logistics, and perception.\n- Founders with strong technical backgrounds and a clear vision.\n- Diverse founding teams (women, underrepresented minorities).\n\n## Advisory Network\n- Technical advisors with expertise in robotics, AI, and related fields.\n- Industry veterans with experience in scaling robotics companies.\n- Experts in regulatory compliance for robotics and autonomous systems.\n\n## Investor Connections\n- Co-investment opportunities in promising robotics startups.\n- Syndication partners for future rounds of funding.",
+    "notes": "Anh is incredibly sharp and quickly cuts to the core of technical issues. She\u2019s very direct in her communication style and appreciates brevity. She recently mentioned frustration with pitches that lack a clear technical foundation \u2013 she wants to see tangible progress, not just a compelling story. She\u2019s currently prioritizing companies with demonstrable traction, even if it\u2019s early-stage. She\u2019s been actively attending robotics conferences (RoboBusiness, Automate) and is looking to build relationships with key opinion leaders in those spaces. She\u2019s a strong advocate for diversity in tech and is actively seeking to invest in underrepresented founders. Avoid overly salesy pitches; she values authenticity and technical depth.",
+    "locationAvailability": "Based in Boston, MA, but open to connecting with founders and investors globally.",
+    "introPreferences": "- **Hard Requirement:** Individuals with a deep technical understanding of robotics or AI.\n- **Hard Requirement:** Founders actively raising Seed/Series A funding (or advisors who can connect us to them).\n- **Soft Preference:** Individuals with experience in scaling hardware startups.\n- **Soft Preference:** Connections within the logistics automation space.\n- **Avoid:** Introductions to consultants or service providers unless specifically requested. \n- **Introduction Note:** Please include a brief summary of the individual\u2019s technical expertise and current focus in your introduction.",
+    "personalPreferences": "I prefer concise and data-driven communication. Email is generally best for initial contact, but I'm also responsive on LinkedIn. I\u2019m happy to jump on a quick call if there\u2019s a clear reason to do so. I'm not a big fan of long, rambling emails \u2013 get straight to the point! I appreciate founders who are proactive and prepared.",
+    "meetingAndSchedulingPreferences": "Prefers 30-minute introductory calls. Please share a brief deck or one-pager beforehand."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 17.307693004608154,
+      "input_tokens": 772,
+      "output_tokens": 1222,
+      "problems": []
+    }
+  ],
+  "success": true
+}

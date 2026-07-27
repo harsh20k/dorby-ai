@@ -1,0 +1,54 @@
+{
+  "id": 993,
+  "archetype": "Healthcare Operator Turned Tech Founder",
+  "given_name": "Grace Haruna",
+  "style_version": 61,
+  "archetypes_version": 166,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Grace Haruna is a former hospital administrator with a strong background in revenue cycle management. She spent 10+ years working within large hospital systems, witnessing firsthand the enormous administrative burden and inefficiencies that plague healthcare billing and patient financial experience. This led her to found 'ClarityFlow,' a platform using AI to automate prior authorization and claims denial management for hospitals. ClarityFlow is currently in seed stage, having secured a small angel round, and Grace is focused on building out the engineering team and securing pilot programs with larger hospital networks. She\u2019s deeply practical and data-driven, valuing efficiency and demonstrable ROI. She's less interested in 'disrupting' healthcare and more focused on *fixing* it. A key characteristic is her frustration with tech solutions that don\u2019t understand the realities of hospital operations \u2013 she\u2019s building ClarityFlow to be different.",
+    "positioning": "I\u2019m the founder and CEO of ClarityFlow, a platform designed to dramatically reduce administrative costs and improve revenue capture for hospitals and health systems. We\u2019re tackling the $350 billion problem of prior authorization and claims denials through intelligent automation. My background as a hospital administrator gave me a deep understanding of the pain points hospitals face daily, and ClarityFlow is built *by* healthcare operators *for* healthcare operators. We\u2019re currently focused on building out our core AI engine and securing pilot programs with leading hospital networks. We\u2019ve recently completed a successful alpha test with a 300-bed hospital, demonstrating a 20% reduction in denial rates and a significant decrease in administrative time spent on prior authorizations. We're building traction and seeking partners to accelerate our growth and expand our impact.",
+    "background": "- **Founder & CEO, ClarityFlow** (2023 \u2013 Present)\n  -- Led seed funding round of $750k from angel investors focused on healthcare technology.\n  -- Developed and launched ClarityFlow\u2019s alpha platform, securing a pilot program with St. Jude\u2019s Regional Medical Center.\n  -- Built and manage a small, remote team of engineers and healthcare consultants.\n  -- Responsible for all aspects of the business, including product development, sales, marketing, and operations.\n\n- **Director of Revenue Cycle, City General Hospital** (2018 \u2013 2023)\n  -- Managed a team of 30+ responsible for all aspects of hospital billing and collections.\n  -- Implemented a new electronic health record (EHR) system, resulting in a 15% increase in clean claim submission rates.\n  -- Led initiatives to reduce claim denials by 10% through improved documentation and coding practices.\n  -- Oversaw the implementation of a patient financial counseling program, improving patient satisfaction and reducing bad debt.\n  -- Technologies used: Epic, Cerner, Meditech, various claim scrubbing software.\n\n- **Revenue Cycle Manager, County Memorial Hospital** (2015 \u2013 2018)\n  -- Managed the day-to-day operations of the revenue cycle department.\n  -- Developed and implemented policies and procedures to ensure compliance with billing regulations.\n  -- Trained and mentored staff on best practices for revenue cycle management.\n  -- Regularly reported on key performance indicators (KPIs) to hospital leadership.\n\n- **Billing Specialist, University Hospital** (2013 \u2013 2015)\n  -- Responsible for accurate and timely billing of patient accounts.\n  -- Resolved billing disputes and addressed patient inquiries.\n  -- Maintained knowledge of current billing codes and regulations.\n\n- **Education:**\n  -- **Master of Health Administration (MHA)**, University of California, Berkeley (2013)\n  -- **Bachelor of Science in Business Administration**, Stanford University (2011)\n\n- **Certifications:** Certified Professional Coder (CPC)",
+    "lookingFor": "- Introductions to hospital CFOs and VPs of Revenue Cycle Management at large health systems (500+ beds).\n- Investors specializing in seed-stage healthcare technology companies.\n- Partnerships with EHR vendors to integrate ClarityFlow into existing workflows.\n- Advisors with experience scaling healthcare SaaS businesses.\n- Potential engineering talent with expertise in AI/ML, specifically in natural language processing (NLP) and robotic process automation (RPA).\n- Beta testing sites for ClarityFlow\u2019s expanded feature set, particularly hospitals focused on value-based care.",
+    "notes": "- Grace is very direct and pragmatic. She doesn't have time for buzzwords or overly optimistic projections. She values data and demonstrable results.\n- She expressed frustration with previous attempts to solve prior authorization issues with overly complex or poorly integrated solutions.\n- She\u2019s highly motivated to improve the financial health of hospitals and reduce the administrative burden on healthcare workers.\n- Last conversation (10/26/2023) focused on her challenges in finding engineers with *both* technical skills and healthcare domain expertise. Offer to connect her with a contact at a specialized healthcare AI recruiting firm.\n- Key takeaway: Focus on ClarityFlow\u2019s ROI and its practical application within existing hospital systems. Avoid framing it as a disruptive technology.",
+    "locationAvailability": "Based in San Francisco, CA, and generally available for virtual meetings. Open to travel for key partnerships or investor meetings.",
+    "introPreferences": "- Please prioritize introductions to individuals with direct decision-making authority over revenue cycle management at large health systems.\n- When making an introduction, please highlight ClarityFlow\u2019s focus on ROI and its ability to integrate seamlessly into existing workflows.\n- Avoid introducing her to individuals solely focused on \u201cinnovation\u201d or \u201cdigital transformation\u201d \u2013 she\u2019s looking for practical solutions to real problems.\n- A warm introduction with a brief summary of the connection\u2019s relevant experience is preferred.",
+    "personalPreferences": "I prefer concise communication and direct feedback. Email is generally best for initial contact, and I\u2019m responsive to well-structured inquiries.",
+    "meetingAndSchedulingPreferences": "- Please provide a brief agenda in advance of any scheduled meeting.\n- I typically prefer 30-minute meetings to maximize efficiency.\n- I'm comfortable with video conferencing via Zoom or Google Meet."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 22.677546977996826,
+      "input_tokens": 751,
+      "output_tokens": 1300,
+      "problems": []
+    }
+  ],
+  "success": true
+}

@@ -1,0 +1,54 @@
+{
+  "id": 387,
+  "archetype": "Prediction Markets Community & Builder",
+  "given_name": "Alejandro Volkov",
+  "style_version": 24,
+  "archetypes_version": 64,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Alejandro Volkov is a seasoned community builder and platform architect focused on decentralized prediction markets. He's spent the last 15 years oscillating between traditional finance (specifically risk management) and early-stage blockchain projects. A distinctive detail is he *failed* to launch a popular, centralized prediction market platform in 2018 due to regulatory hurdles, which deeply informed his current belief in the necessity of fully decentralized, permissionless systems. He now focuses on tooling and community growth for protocols aiming to solve the oracle problem and improve liquidity in prediction markets. He\u2019s actively seeking strategic partnerships with data providers and institutional investors who understand the long-term potential of these markets. He's a pragmatic idealist - believes in the power of prediction markets but understands the challenges of user adoption and scaling. He\u2019s based in Lisbon, Portugal, leveraging the growing crypto/web3 ecosystem there.",
+    "positioning": "Alejandro Volkov is a leading architect and community strategist in the decentralized prediction markets space. Currently advising several early-stage protocols focused on building robust and scalable prediction market infrastructure, Alejandro brings a unique blend of financial risk management expertise and blockchain technology proficiency. Having previously led the development of a centralized prediction platform (a valuable learning experience), he is now passionately dedicated to fostering the growth of truly decentralized solutions. Alejandro specializes in identifying and mitigating key challenges surrounding oracle accuracy, liquidity provision, and user experience within these markets. He\u2019s a strong advocate for open-source development and collaborative governance models, believing they are crucial for long-term success. He's actively seeking to connect with individuals and organizations committed to realizing the full potential of prediction markets as a powerful forecasting and decision-making tool.",
+    "background": "- **Current Advisor:** Polymarket Labs (2023 \u2013 Present)\n  * Providing strategic guidance on community growth, tokenomics, and protocol development.\n  * Focused on improving user onboarding and retention metrics.\n  * Mentoring core team members on best practices for decentralized governance.\n\n- **Founder & CEO, Foresight Markets (2017 \u2013 2020)**\n  * Led the development and launch of a centralized prediction market platform.\n  * Secured seed funding of $2M from angel investors.\n  * Managed a team of 15 engineers, designers, and marketers.\n  * *Challenge:* Platform ultimately shut down due to unforeseen regulatory complications.\n\n- **Quantitative Analyst, Global Risk Advisors (2013 \u2013 2017)**\n  * Developed and implemented statistical models for risk assessment and hedging.\n  * Specialized in options pricing and volatility modeling.\n  * Conducted research on market microstructure and behavioral finance.\n  * Consistently exceeded performance targets, contributing to a 15% reduction in portfolio risk.\n\n- **Financial Engineer, Deutsche Bank (2010 \u2013 2013)**\n  * Assisted in the development of structured financial products.\n  * Performed data analysis and financial modeling using Python and Excel.\n  * Collaborated with traders and portfolio managers on risk management strategies.\n\n- **Education:**\n  * Master of Financial Engineering, Columbia University (2010)\n  * Bachelor of Science in Mathematics, Moscow State University (2008)\n\n- **Certifications:**\n  * FRM (Financial Risk Manager)\n  * CFA Level I\n\n- **Key Skills:** Solidity, Python, Risk Management, Financial Modeling, Community Building, Decentralized Finance (DeFi), Oracle Design, Tokenomics, Smart Contract Auditing (basic understanding).",
+    "lookingFor": "Alejandro Volkov is actively seeking connections within the decentralized prediction markets ecosystem to accelerate the growth and adoption of these powerful tools. He\u2019s particularly interested in forging partnerships with:\n\n- **Data Providers:** Companies offering reliable and verifiable real-world data feeds crucial for accurate market resolution. Seeking providers specializing in sports, politics, economics, and weather data.\n- **Institutional Investors:** Funds and family offices with a long-term vision for the future of prediction markets and a willingness to invest in early-stage protocols.\n- **Oracle Solutions:** Projects developing innovative oracle mechanisms to ensure data integrity and prevent manipulation.\n- **Liquidity Providers:** Individuals and firms interested in providing liquidity to prediction markets, earning rewards, and contributing to market efficiency.\n\nHe\u2019s also keen to connect with:\n\n- **Experienced Community Managers:** Individuals with a proven track record of building and engaging online communities within the blockchain space.\n- **Smart Contract Developers:** Skilled developers proficient in Solidity and experienced in building secure and scalable smart contracts.\n\nAlejandro is open to discussing advisory roles, investment opportunities, and potential collaborations focused on advancing the state of the art in prediction markets.",
+    "notes": "Alejandro is very open about the failure of Foresight Markets \u2013 he views it as a crucial learning experience. He's less enthusiastic about centralized approaches now and will quickly steer conversations towards decentralized solutions. He's currently heavily involved with Polymarket Labs and is a strong advocate for their approach. He recently presented at Devcon on oracle design best practices. He's traveling to Lisbon Blockchain Week in November. Avoid pitching him centralized solutions. He's very focused on solving the 'cold start' problem for liquidity in new prediction markets.",
+    "locationAvailability": "Alejandro Volkov is based in Lisbon, Portugal, and is open to remote collaboration. He is willing to travel for key events and strategic meetings.",
+    "introPreferences": "When making introductions to Alejandro Volkov, please adhere to the following:\n\n- **Hard Requirements:**\n  * Individuals/companies must have a demonstrable interest in prediction markets or related technologies (e.g., oracles, DeFi).\n  * Introductions to individuals with technical expertise (developers, data scientists) should include a brief overview of their relevant skills and experience.\n  * Introductions to investors should include details of their investment thesis and portfolio.\n\n- **Soft Preferences:**\n  * Prioritize introductions to individuals who are actively building in the space, rather than simply observing it.\n  * A short, personalized message highlighting the potential synergy between Alejandro and the introducee is highly appreciated.\n  * Avoid introductions to individuals solely focused on speculative trading or short-term gains.\n\n- **Introduction Style:**\n  * A brief email introduction is preferred. Avoid lengthy LinkedIn messages.\n  * Clearly state the reason for the introduction and the potential value for both parties.\n\n- **Avoid:**\n  * Introductions to individuals selling generic blockchain services (e.g., marketing agencies with no specific prediction market expertise).",
+    "personalPreferences": "Alejandro prefers initial communication via LinkedIn messaging or email. He\u2019s generally responsive but can be slow to reply during periods of intense focus. Follow-up is appreciated, but please avoid excessive messaging. He\u2019s comfortable with asynchronous communication and prefers detailed information upfront to minimize back-and-forth. He's a big fan of concise, well-structured communication.",
+    "meetingAndSchedulingPreferences": "- Prefers meetings to be focused and agenda-driven.\n- 30-minute introductory calls are ideal.\n- Please send a brief meeting agenda in advance.\n- Available most weekdays, flexible with scheduling within reasonable time zones."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 25.754779815673828,
+      "input_tokens": 733,
+      "output_tokens": 1552,
+      "problems": []
+    }
+  ],
+  "success": true
+}

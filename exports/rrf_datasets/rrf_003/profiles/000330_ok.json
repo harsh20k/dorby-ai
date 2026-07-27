@@ -1,0 +1,64 @@
+{
+  "id": 330,
+  "archetype": "Enterprise Tech Executive, AI Focus",
+  "given_name": "Liang Almeida",
+  "style_version": 20,
+  "archetypes_version": 55,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Liang Almeida is a seasoned Chief Technology Officer (CTO) currently leading the AI transformation at 'NovaDynamics', a large, established industrial automation firm. He spent the first half of his career as a core software engineer at Siemens, where he *personally* spearheaded the initial integration of machine learning into their PLC systems \u2013 a project considered highly innovative at the time but ultimately shelved due to hardware limitations. This experience fuels his current drive to ensure NovaDynamics doesn't repeat the same mistakes, focusing on practical, scalable AI solutions grounded in existing infrastructure. He's now laser-focused on moving NovaDynamics beyond basic predictive maintenance with AI towards fully autonomous systems and digital twins. He's actively seeking strategic partnerships and investment to accelerate their AI roadmap, particularly in areas like edge computing and robust sensor fusion. He\u2019s a bit skeptical of \u2018AI hype\u2019 and prioritizes demonstrable ROI over flashy demos.",
+    "positioning": "As Chief Technology Officer at NovaDynamics, I\u2019m leading a company-wide initiative to fundamentally redefine industrial automation through the power of Artificial Intelligence. NovaDynamics has a long and proud history of providing robust, reliable automation solutions to complex industrial challenges, particularly in the energy, manufacturing, and logistics sectors. Our core value proposition remains delivering increased efficiency, reduced downtime, and optimized performance for our clients. However, the next wave of innovation isn\u2019t simply about incremental improvements; it\u2019s about creating genuinely intelligent systems. \n\nWe\u2019re moving beyond traditional predictive maintenance \u2013 which we\u2019ve successfully implemented with conventional analytics \u2013 to build fully autonomous control loops powered by advanced machine learning and deep reinforcement learning. This includes developing sophisticated digital twin environments that allow our clients to simulate, optimize, and proactively manage their operations. A recent key pivot has been our increased investment in edge computing infrastructure, recognizing the critical need for real-time data processing and reduced latency in industrial environments. This allows for faster decision-making and improved resilience in scenarios where cloud connectivity is intermittent or unavailable.\n\nMy focus is on identifying and integrating cutting-edge AI technologies \u2013 particularly in sensor fusion, anomaly detection, and adaptive control \u2013 to deliver tangible business outcomes for our customers. We are committed to ensuring our AI solutions are not \u2018black boxes\u2019 but are transparent, explainable, and seamlessly integrated into our existing product ecosystem. Ultimately, NovaDynamics aims to be a leader in the \u2018lights-out\u2019 factory of the future.",
+    "background": "My career has been dedicated to bridging the gap between theoretical advancements in software and practical applications in industrial engineering. \n\n* **NovaDynamics (2018 \u2013 Present):** Chief Technology Officer. Responsible for all aspects of technology strategy, research and development, and IT infrastructure.  Led the successful integration of a new cloud-native data platform, resulting in a 30% reduction in data processing costs and a 15% improvement in data accessibility. Currently overseeing a $50M investment in AI-driven product development.\n* **Siemens (2005 \u2013 2018):** Progressed from Software Engineer to Principal Engineer.  Key achievements include:\n    * Developed and led the initial implementation of machine learning algorithms within Siemens\u2019 Simatic PLC systems (2010-2012). While ahead of its time, this project laid the groundwork for current advancements in industrial AI.  Successfully reduced PLC cycle times by 8% through optimized control algorithms.\n    * Managed a team of 10 engineers responsible for the development and maintenance of core software components for Siemens\u2019 industrial automation suite.\n    * Spearheaded the adoption of Agile development methodologies within the engineering department, improving project delivery speed by 20%.\n* **Education:** PhD, Electrical Engineering, Massachusetts Institute of Technology (MIT).  MS, Computer Science, Stanford University. BS, Computer Engineering, Carnegie Mellon University.\n* **Skills:** Artificial Intelligence, Machine Learning, Deep Learning, Edge Computing, Cloud Computing (AWS, Azure, GCP), Digital Twins, Industrial Automation, PLC Programming, Python, C++, Java, Agile Development, Data Analytics, Cybersecurity.\n* **Certifications:** AWS Certified Machine Learning \u2013 Specialty; Certified Data Science Professional (CDSP).",
+    "lookingFor": "I am actively exploring strategic partnerships and investment opportunities to accelerate NovaDynamics\u2019 AI roadmap. Specifically, I\u2019m interested in:\n\n* **Investment:** Series B/C funding for companies developing innovative AI solutions for industrial applications. Target investment size: $10M - $30M.  Preference for companies with demonstrable traction and a clear path to profitability.\n* **Partnerships:**\n    * **Edge Computing Providers:** Companies offering robust and scalable edge computing platforms optimized for industrial environments.\n    * **Sensor Fusion Specialists:** Experts in integrating data from multiple sensor types to create a comprehensive and accurate view of industrial processes.\n    * **AI Talent:** Senior AI/ML engineers with experience in industrial applications, particularly in reinforcement learning and anomaly detection. \n* **Introductions:** Connections to VPs of Innovation or CTOs at large industrial companies who are actively exploring AI solutions.",
+    "notes": "* Liang is cautious about overhyped AI solutions. Focus on demonstrable ROI and practical applications.\n* He's particularly interested in companies that can address the challenges of deploying AI in harsh industrial environments.\n* Previous conversations with [Name Redacted - VC Firm] were positive, but they passed due to sector focus.\n* Avoid introducing companies focused solely on \u2018AI for marketing\u2019 or similar non-industrial applications.\n* He values direct communication and prefers concise, data-driven presentations.\n* Open to informal coffee chats with potential partners.",
+    "locationAvailability": "I am currently based in Boston, Massachusetts, and frequently travel to our headquarters in Munich, Germany. I will be attending the 'Industrial AI Summit' in Chicago from November 7th-9th.",
+    "introPreferences": "When making introductions, please adhere to the following:\n\n1. **Investor Profile:** Focus on venture capital firms with a strong track record of investing in industrial technology companies. Preference for firms with a deep understanding of AI and a long-term investment horizon.\n2. **Company Stage:** I am primarily interested in Series A/B/C stage companies with a minimum of $5M in annual recurring revenue (ARR).\n3. **Connection Type:** Introductions to decision-makers \u2013 ideally VPs of Innovation, CTOs, or CEOs \u2013 are preferred. Avoid introductions to junior-level employees.\n4. **Introduction Style:** A brief, personalized email highlighting the potential synergies between NovaDynamics and the target company is ideal. Please include a concise summary of the target company\u2019s value proposition and key differentiators.",
+    "personalPreferences": "I prefer to connect via LinkedIn initially. Email is also acceptable, but please keep communications concise and focused. I am generally responsive but may be slow to reply during peak travel periods.",
+    "meetingAndSchedulingPreferences": "I am flexible with meeting times and can accommodate both in-person and virtual meetings."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 20.68425488471985,
+      "input_tokens": 795,
+      "output_tokens": 1542,
+      "problems": [
+        "background: possible truncation (ends with '...hine Learning \u2013 Specialty')",
+        "meetingAndSchedulingPreferences: possible truncation (ends with '...endly Link - Placeholder]')"
+      ]
+    },
+    {
+      "attempt": 2,
+      "elapsed_s": 20.045547008514404,
+      "input_tokens": 795,
+      "output_tokens": 1473,
+      "problems": []
+    }
+  ],
+  "success": true
+}

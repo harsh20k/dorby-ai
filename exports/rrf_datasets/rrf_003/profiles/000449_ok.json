@@ -1,0 +1,54 @@
+{
+  "id": 449,
+  "archetype": "Fintech/Proptech Product Leader",
+  "given_name": "Takumi Ibrahim",
+  "style_version": 28,
+  "archetypes_version": 75,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Takumi Ibrahim is a seasoned product leader currently focused on scaling a PropTech startup leveraging AI for automated property valuation and investment. His distinctive detail is a prior, successful (but ultimately sold) foray into algorithmic trading \u2013 a skillset he's now applying to the real estate market. He's aiming to raise a Series B round and is actively seeking advisors with experience in both Fintech *and* PropTech scaling. He's very data-driven and values direct communication. He\u2019s a relatively private person, but deeply engaged in the emerging AI ethics space. He's comfortable with remote work but values occasional in-person connection for strategic brainstorming.",
+    "positioning": "A product leader passionate about building scalable, AI-powered solutions that democratize access to financial and real estate opportunities. Currently, as Head of Product at NovaVest, I\u2019m focused on driving traction for our automated investment platform, which utilizes machine learning to provide accurate property valuations and streamline the investment process. Prior to NovaVest, I spent five years developing algorithmic trading strategies at Quantify Capital, where I honed my skills in data analysis, model building, and risk management. I\u2019m a firm believer in the power of technology to disrupt traditional industries and create a more efficient and equitable market. My focus is on identifying key market opportunities, defining a clear product strategy, and assembling high-performing teams to deliver innovative solutions. I\u2019m actively seeking connections with investors and advisors who share my vision for the future of PropTech and understand the complexities of scaling a data-intensive platform. Ultimately, I aim to build a sustainable, impactful company that empowers individuals to build wealth through smart real estate investment.",
+    "background": "- **Head of Product, NovaVest** (October 2021 \u2013 Present)\n  * Led product strategy, roadmap, and execution for NovaVest's AI-powered property investment platform.\n  * Grew user base by 300% and increased platform transaction volume by 250% in the last 18 months.\n  * Managed a team of 8 product managers, designers, and data scientists.\n  * Implemented A/B testing frameworks and data-driven decision-making processes.\n  * Technologies used: Python, SQL, AWS (Sagemaker, EC2, S3), Figma, Jira, Amplitude.\n\n- **Lead Quantitative Analyst, Quantify Capital** (June 2016 \u2013 September 2021)\n  * Developed and implemented algorithmic trading strategies across multiple asset classes (equities, FX, commodities).\n  * Backtested and optimized trading models using historical data and statistical analysis.\n  * Monitored market trends and identified new trading opportunities.\n  * Collaborated with engineers to deploy and maintain trading systems.\n  * Technologies used: Python (Pandas, NumPy, Scikit-learn), C++, Bloomberg Terminal, SQL.\n\n- **Data Science Intern, Redwood Investments** (Summer 2015)\n  * Assisted in the development of risk management models.\n  * Performed data analysis and visualization using Excel and R.\n  * Gained experience in the financial services industry.\n\n- **B.S. in Mathematics, Stanford University** (2012 \u2013 2016)\n  * Minor in Computer Science.\n  * Relevant coursework: Statistics, Machine Learning, Financial Modeling, Data Structures and Algorithms.",
+    "lookingFor": "I\u2019m currently focused on securing Series B funding for NovaVest and expanding our market reach. I'm particularly interested in connecting with:\n\n* **Investors:** Venture capitalists specializing in Fintech and PropTech, with a track record of supporting high-growth startups.  Specifically looking for firms with experience in capital-intensive, data-driven businesses.\n* **Advisors:** Experienced product leaders who have successfully scaled similar platforms.  Experience with marketplace dynamics and regulatory compliance in real estate is a major plus.\n* **Potential Partners:**  Real estate brokerages and financial institutions interested in integrating NovaVest\u2019s technology into their existing workflows.\n* **Senior Engineering Talent:** Looking to expand our AI/ML team with experienced engineers specializing in large-scale data processing and model deployment.\n\nI\u2019m open to informational interviews and strategic discussions.  I'm also happy to share insights into the challenges and opportunities in the PropTech space.",
+    "notes": "- Data on NovaVest's growth is impressive, but verify claims regarding user acquisition cost. \n- Takumi is somewhat reserved and doesn't readily share personal details. Focus introductions on professional objectives.\n- He's a member of the AI Ethics Council, but prefers not to publicly discuss his involvement.\n- Previously considered a larger acquisition offer from a competitor, but ultimately decided to remain independent. May be open to future strategic acquisitions.\n- Strong emphasis on data privacy and responsible AI development.",
+    "locationAvailability": "I\u2019m based in San Francisco, California, but comfortable with remote collaboration. I\u2019m willing to travel for key meetings and conferences.",
+    "introPreferences": "* **Do:** Introduce me as a product leader with a unique background in both Fintech and PropTech.\n* **Do:** Highlight NovaVest's traction and potential for market disruption.\n* **Don't:** Oversell my AI expertise \u2013 I prefer a data-driven, pragmatic approach.\n* **Don't:** Focus on my previous role at Quantify Capital unless it\u2019s directly relevant to the introduction.\n* I appreciate concise introductions that focus on shared interests and potential synergies.",
+    "personalPreferences": "I prefer email for initial contact and am generally responsive. Direct, data-backed feedback is always appreciated. I'm not a fan of overly formal communication.",
+    "meetingAndSchedulingPreferences": "Generally available for virtual meetings. Prefer to keep meetings focused and action-oriented. Calendly link available upon request."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 28.25897192955017,
+      "input_tokens": 818,
+      "output_tokens": 1238,
+      "problems": []
+    }
+  ],
+  "success": true
+}

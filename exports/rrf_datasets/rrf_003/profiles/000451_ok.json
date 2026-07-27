@@ -1,0 +1,54 @@
+{
+  "id": 451,
+  "archetype": "Deep Tech Seed Investor",
+  "given_name": "Rosa Diallo",
+  "style_version": 28,
+  "archetypes_version": 76,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Rosa Diallo is a serial entrepreneur with a PhD in Robotics who recently founded 'Kinetic Bloom', a company developing AI-powered precision agriculture robots. Her background is deeply technical, but she's quickly learning the fundraising game. She's currently seeking seed funding and strategic partnerships to scale production and expand her market reach. A distinctive career detail is a brief stint as a field engineer for a major agricultural equipment manufacturer *before* pursuing her PhD \u2013 this gives her a unique understanding of the practical challenges farmers face. She\u2019s very focused on impact, specifically addressing food security and sustainable farming practices. She\u2019s polished, but can sometimes get lost in technical details when explaining her company. She's a bit wary of 'hype' and values genuine technical due diligence.",
+    "positioning": "I'm Rosa Diallo, founder and CEO of Kinetic Bloom, where we\u2019re building the next generation of agricultural robots. We're tackling the critical challenge of food security by leveraging cutting-edge AI and robotics to optimize crop yields and minimize environmental impact.  Our robots autonomously monitor plant health, precisely apply resources like water and fertilizer, and even perform selective harvesting, all while reducing labor costs and improving sustainability. We\u2019ve demonstrated significant traction in pilot programs, showing a 20-30% increase in yield for participating farms.  I'm passionate about translating complex robotics research into tangible solutions for the agricultural market.  Currently, we\u2019re focused on closing our seed round to scale production, expand our team, and accelerate our go-to-market strategy. I believe in a future where technology empowers farmers to feed the world more efficiently and sustainably, and Kinetic Bloom is at the forefront of that revolution.",
+    "background": "- **CEO & Founder, Kinetic Bloom** (2022 \u2013 Present)\n    * Led all aspects of company formation, including business plan development, fundraising, product development, and team building.\n    * Secured initial pre-seed funding through angel investors and grant applications.\n    * Oversaw the development and deployment of a prototype agricultural robot, demonstrating core functionality and achieving positive pilot program results.\n    * Managed a small team of engineers and researchers, fostering a collaborative and innovative work environment.\n    * Technologies utilized: ROS, Python, Computer Vision (OpenCV, TensorFlow), Embedded Systems, Agricultural Sensors.\n\n- **Field Engineer, AgriCorp Solutions** (2018 \u2013 2019)\n    * Provided on-site technical support and maintenance for large-scale agricultural machinery.\n    * Diagnosed and resolved mechanical, electrical, and hydraulic issues in a timely manner.\n    * Collaborated with farmers to understand their needs and provide tailored solutions.\n    * Gained firsthand experience with the challenges and opportunities in modern agriculture.\n\n- **PhD Candidate, Robotics, Massachusetts Institute of Technology (MIT)** (2019 \u2013 2022)\n    * Dissertation: \u2018AI-Powered Precision Manipulation for Agricultural Robotics\u2019 \u2013 focused on developing algorithms for autonomous fruit picking and plant health assessment.\n    * Conducted independent research, published peer-reviewed papers in leading robotics conferences (ICRA, IROS).\n    * Developed and implemented novel control algorithms and machine learning models.\n    * Mentored undergraduate research students.\n\n- **Research Assistant, Robotics Lab, Carnegie Mellon University** (2017 \u2013 2019)\n    * Assisted in the development of robotic systems for various applications.\n    * Conducted experiments, analyzed data, and wrote technical reports.\n    * Gained experience with robot design, fabrication, and programming.\n\n- **BS, Mechanical Engineering, Stanford University** (2013 \u2013 2017)\n    * Relevant coursework: Robotics, Control Systems, Machine Learning, Computer Vision.",
+    "lookingFor": "I\u2019m actively seeking seed funding to accelerate Kinetic Bloom\u2019s growth and bring our technology to market.  Specifically, I\u2019m looking for investors with a strong understanding of deep tech, robotics, and the agricultural industry.  I'm also keen to connect with potential strategic partners who can provide access to distribution channels, manufacturing expertise, or complementary technologies.\n\n* **Investors:** Seed-stage VCs specializing in robotics, AI, and AgTech.  Looking for firms with a track record of supporting technically complex companies.\n* **Industry Experts:** Individuals with deep experience in precision agriculture, agricultural equipment manufacturing, or food supply chain logistics.\n* **Potential Partners:** Companies specializing in agricultural sensors, data analytics, or farm management software.\n* **Advisors:** Experienced entrepreneurs and business leaders who can provide guidance on scaling a hardware startup.\n\nI\u2019m open to discussing potential board positions for strategic investors and would appreciate introductions to relevant individuals within your network. I'm also building a world-class engineering team, so introductions to talented robotics engineers and AI specialists are always welcome.",
+    "notes": "- Rosa\u2019s PhD research is highly regarded within the robotics community. Verify the practical applicability of her algorithms \u2013 she can get very focused on the technical aspects.\n- She previously expressed concerns about overly aggressive venture capitalists. Prioritize investors known for a patient, collaborative approach.\n- Kinetic Bloom has a strong social impact narrative, which resonates with Rosa. Highlight this during initial conversations.\n- She is a member of the \u2018Women in Robotics\u2019 organization and actively promotes STEM education.\n- Initial market focus is on specialty crops (e.g., berries, grapes) \u2013 assess if this is a scalable strategy.\n- Be prepared to discuss the competitive landscape \u2013 there are several other companies developing agricultural robots.",
+    "locationAvailability": "I\u2019m based in Boston, Massachusetts, but am willing to travel to meet with investors and partners. I\u2019m also comfortable with remote meetings and can dedicate significant time to building relationships.",
+    "introPreferences": "* **Do:** Emphasize the strong technical foundation of Kinetic Bloom and my background as a robotics PhD.\n* **Do:** Highlight the positive results from our pilot programs and the potential for significant ROI.\n* **Do:** Frame Kinetic Bloom as a solution to a critical problem \u2013 food security and sustainable agriculture.\n* **Don\u2019t:** Oversimplify the technology \u2013 I appreciate thoughtful, technically informed questions.\n* **Don\u2019t:** Present Kinetic Bloom as \u2018just another robotics company\u2019 \u2013 we have a unique focus and a clear value proposition.\n* **Ideal Introduction:** A warm introduction from a trusted source who can vouch for my technical expertise and entrepreneurial drive.",
+    "personalPreferences": "I prefer concise and direct communication. I\u2019m always open to constructive feedback and appreciate honest assessments. Email is my preferred method of contact initially.",
+    "meetingAndSchedulingPreferences": "Flexible with scheduling. Happy to do quick calls first."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 24.803811073303223,
+      "input_tokens": 814,
+      "output_tokens": 1418,
+      "problems": []
+    }
+  ],
+  "success": true
+}

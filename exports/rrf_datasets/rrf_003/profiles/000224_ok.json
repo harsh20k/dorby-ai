@@ -1,0 +1,54 @@
+{
+  "id": 224,
+  "archetype": "AI-Native Founder, Early Traction",
+  "given_name": "Wei Nkosi",
+  "style_version": 14,
+  "archetypes_version": 37,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Wei Nkosi is the founder and CEO of 'Synapse Bloom,' a pre-seed AI-powered platform connecting independent agricultural researchers with smallholder farmers in Sub-Saharan Africa. Wei has a unique background: a PhD in computational linguistics *and* five years experience working directly with farmers in Kenya, giving her a rare blend of technical AI expertise and on-the-ground understanding of the problem space. Synapse Bloom recently completed a successful pilot program demonstrating a 20% increase in crop yield for participating farmers, and Wei is now aggressively fundraising a seed round and seeking strategic partnerships with agricultural NGOs and impact investors. She\u2019s highly focused on building a strong advisory board with expertise in both AI and African agriculture.",
+    "positioning": "I\u2019m Wei Nkosi, founder and CEO of Synapse Bloom, an AI-driven platform empowering smallholder farmers in Sub-Saharan Africa with localized, data-driven insights. We\u2019re bridging the gap between cutting-edge agricultural research and the farmers who need it most, leading to increased yields and improved livelihoods. Having spent years working directly with farming communities, I'm passionate about leveraging technology for sustainable impact. Currently, we're seeking seed funding and strategic partnerships to scale our platform and expand our reach across the continent.",
+    "background": "- **Founder & CEO, Synapse Bloom** (2023 - Present)\n  * Led the development and launch of Synapse Bloom\u2019s AI-powered platform, utilizing natural language processing to translate complex research into actionable advice for farmers.\n  * Secured initial pilot program funding and oversaw successful implementation with 500+ farmers in Kenya, resulting in a 20% average yield increase.\n  * Responsible for all aspects of company operations, including product development, fundraising, and team building.\n- **Agricultural Field Officer, One Acre Fund** (2018 - 2023)\n  * Provided direct support and training to smallholder farmers in Kenya, focusing on sustainable agricultural practices.\n  * Conducted field research to identify key challenges and opportunities facing farmers in the region.\n  * Managed a portfolio of 300+ farmers, ensuring timely delivery of inputs and ongoing support.\n- **PhD, Computational Linguistics, Stanford University** (2014 - 2018)\n  * Dissertation: \u201cCross-Lingual Information Retrieval for Low-Resource Languages: Applications in Agricultural Extension.\u201d\n  * Developed novel algorithms for natural language processing and machine translation.\n  * Published research in leading computational linguistics conferences (ACL, EMNLP).\n- **Skills:** Python, Machine Learning (TensorFlow, PyTorch), Natural Language Processing (NLP), Data Analysis (Pandas, NumPy), Swahili (Fluent), Project Management, Fundraising, Stakeholder Management, Agricultural Extension, Impact Investing.",
+    "lookingFor": "I\u2019m actively seeking connections with:\n- **Seed-stage investors** focused on impact investing and/or agricultural technology. We\u2019re raising $1.5M to scale our platform and expand into new markets.\n- **Strategic partners** within agricultural NGOs (e.g., Oxfam, Heifer International) to facilitate on-the-ground implementation and farmer outreach.\n- **AI/ML experts** with experience in agricultural applications. I'm building an advisory board and would love to connect with individuals who can provide technical guidance.\n- **Individuals with experience scaling tech platforms in Sub-Saharan Africa.** Operational insights are invaluable as we grow.\n\nSpecifically, I'm hoping to connect with someone at Accel Impact or a similar fund who has a strong understanding of the African agritech landscape. I\u2019m also very interested in an introduction to Dr. Anya Sharma at the CGIAR, as her work on climate-smart agriculture aligns perfectly with our mission.",
+    "notes": "Wei is incredibly articulate and passionate about her mission. She\u2019s very data-driven and has a clear vision for Synapse Bloom. She mentioned her biggest challenge right now is finding the right advisors with both AI *and* African agricultural expertise. She's attending the AgriTech Summit in Nairobi next month \u2013 potential opportunity for an in-person meeting. Follow up on potential connection to Anya Sharma.",
+    "locationAvailability": "Based in Nairobi, Kenya, with a focus on expanding operations throughout Sub-Saharan Africa.",
+    "introPreferences": "## Hard Requirements:\n* **Prioritize:** Investors with a demonstrated track record of investing in early-stage African tech companies.\n* **Exclude:** Individuals solely focused on financial services or unrelated industries.\n* **Always include:** A brief mention of Synapse Bloom\u2019s pilot program results (20% yield increase) and our mission to empower smallholder farmers.\n\n## Soft Preferences:\n* Ideally, the introduction should come from someone Wei already has a weak tie with \u2013 a mutual connection increases the likelihood of a response.\n* Please flag if the contact has experience with AI-driven solutions in agriculture.\n* Keep the introduction concise and focused on Wei\u2019s fundraising goals and partnership opportunities.",
+    "personalPreferences": "I prefer to connect initially via LinkedIn or email. I'm responsive on WhatsApp, but please text first to confirm availability.",
+    "meetingAndSchedulingPreferences": "I\u2019m generally available for calls and video conferences during East African business hours (9:00 AM - 5:00 PM EAT). Please provide at least 24 hours\u2019 notice for scheduling."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 19.153223991394043,
+      "input_tokens": 769,
+      "output_tokens": 1142,
+      "problems": []
+    }
+  ],
+  "success": true
+}

@@ -1,0 +1,63 @@
+{
+  "id": 703,
+  "archetype": "AI Platform Builder, Main Street Focus",
+  "given_name": "Marcus Ishikawa",
+  "style_version": 43,
+  "archetypes_version": 118,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Marcus Ishikawa is a seasoned product leader with a deep background in geospatial data and a recent pivot into applying AI to solve problems for Main Street businesses. His distinctive career detail is a prior 7-year stint building mapping infrastructure for a large logistics company, giving him unique insight into operational challenges. He\u2019s now focused on building an AI-powered platform for local service businesses (plumbers, electricians, HVAC) to optimize scheduling, routing, and customer communication \u2013 essentially, bringing the benefits of sophisticated logistics tech downmarket. He's seeking connections with investors, advisors with experience scaling B2B SaaS, and potential early adopter customers. He's particularly interested in individuals who understand the pain points of small business owners and have a passion for democratizing access to powerful technology.",
+    "positioning": "A results-oriented product leader with 12+ years of experience transforming complex data into actionable insights, I\u2019m now dedicated to empowering Main Street businesses with cutting-edge AI. My background in geospatial technology, particularly within the demanding logistics sector, has instilled in me a deep understanding of operational efficiency and the critical role of optimization. I recently launched \u2018FieldFlow\u2019, an AI platform designed to streamline scheduling, routing, and customer communication for local service providers. We\u2019ve already seen a 20% increase in appointment completion rates for early beta users and a 15% reduction in fuel costs. I\u2019m passionate about bridging the technology gap for small businesses and am actively seeking strategic partnerships and investment to accelerate FieldFlow\u2019s growth. I thrive in fast-paced environments and am adept at translating technical complexities into compelling value propositions. I am seeking to connect with investors specializing in B2B SaaS, advisors with experience in the home services market, and potential customers eager to leverage AI to improve their bottom line.",
+    "background": "- **Founder & CEO, FieldFlow** (2023 \u2013 Present)\n\t- Led the conceptualization, development, and launch of FieldFlow, an AI-powered platform for local service businesses. \n\t- Secured seed funding of $500k from angel investors.\n\t- Built and manage a small but agile team of engineers and designers.\n\t- Utilizing skills in: Product Strategy, AI/ML, SaaS, Business Development, Team Leadership.\n\n- **Senior Product Manager, LogiTrack Solutions** (2016 \u2013 2023)\n\t- Spearheaded the development of core mapping and routing algorithms used by a major logistics company, impacting over 10,000 drivers daily.\n\t- Managed a product roadmap with a $2M annual budget.\n\t- Collaborated with engineering, data science, and operations teams to deliver scalable and reliable solutions.\n\t- Key achievements included reducing delivery times by 8% and improving route optimization accuracy by 12%.\n\t- Skills utilized: Product Management, Agile Methodologies, Geospatial Analysis, Data Visualization, SQL, Python.\n\n- **Geospatial Analyst, CityPlan Insights** (2012 \u2013 2016)\n\t- Conducted spatial analysis and mapping projects for urban planning initiatives.\n\t- Developed GIS applications using ArcGIS and other geospatial software.\n\t- Presented findings to city officials and stakeholders.\n\t- Skills utilized: GIS, ArcGIS, Spatial Analysis, Data Modeling, Communication.\n\n- **Education:**\n\t- **Master of Science in Geographic Information Science**, University of California, Berkeley (2010 \u2013 2012)\n\t- **Bachelor of Science in Computer Science**, Stanford University (2006 \u2013 2010)\n\n- **Certifications:**\n\t- Certified Scrum Product Owner (CSPO)",
+    "lookingFor": "I'm actively seeking connections to propel FieldFlow's growth and impact. Specifically, I'm interested in:\n\n* **Investors:** Angel investors or venture capitalists with a focus on B2B SaaS and a strong understanding of the small business market.\n* **Advisors:** Individuals with experience scaling SaaS companies, particularly those serving the home services industry. I'm looking for guidance on go-to-market strategy, sales and marketing, and team building.\n* **Early Adopter Customers:** Local service businesses (plumbers, electricians, HVAC, etc.) who are actively seeking to improve their operational efficiency and customer experience. I\u2019m open to pilot programs and feedback.\n* **Partnerships:** Strategic alliances with companies offering complementary services to local businesses (e.g., CRM providers, marketing automation platforms).\n\nI'm particularly keen to connect with individuals who can offer insights into the unique challenges faced by small business owners and those who are passionate about democratizing access to powerful technology. I'm open to virtual meetings and am available for introductory calls.",
+    "notes": "Profile is based on a founder actively fundraising. Emphasis should be placed on FieldFlow\u2019s traction (20% appointment increase, 15% fuel reduction) and Marcus\u2019s unique background in logistics. Avoid framing him as just another \u2018AI enthusiast\u2019 \u2013 highlight the operational experience. He\u2019s very focused on *practical* AI applications, not theoretical ones. He is receptive to introductions to anyone who can help him refine his pitch deck or connect him with relevant investors. Data source: synthesized profile based on observed patterns and persona guidelines.",
+    "locationAvailability": "Based in San Francisco, CA, but open to remote connections and travel within the US.",
+    "introPreferences": "* **Hard Requirements:** Do *not* introduce Marcus to individuals solely focused on consumer-facing AI applications. He's strictly B2B.\n* **Soft Preferences:** Prioritize introductions to investors with a portfolio of similar companies (B2B SaaS, Main Street focus).\n* **Framing:** When making introductions, emphasize Marcus\u2019s experience building scalable mapping infrastructure for LogiTrack and his current focus on solving real-world problems for local service businesses. Position FieldFlow as 'AI-powered logistics for Main Street'.\n* **Avoid:** Overly technical explanations of the AI algorithms. Focus on the business value.",
+    "personalPreferences": "Prefers concise communication, quick responses, and direct feedback. Open to LinkedIn messaging and email. Not a fan of long email chains.",
+    "meetingAndSchedulingPreferences": "Flexible with scheduling. Prefers 30-minute introductory calls. Happy to let the introducer handle initial scheduling."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 20.503122091293335,
+      "input_tokens": 873,
+      "output_tokens": 1361,
+      "problems": [
+        "background: possible truncation (ends with '...ied Developer \u2013 Associate')"
+      ]
+    },
+    {
+      "attempt": 2,
+      "elapsed_s": 18.430952310562134,
+      "input_tokens": 873,
+      "output_tokens": 1366,
+      "problems": []
+    }
+  ],
+  "success": true
+}

@@ -1,0 +1,54 @@
+{
+  "id": 885,
+  "archetype": "Healthcare AI Security Specialist",
+  "given_name": "Malia Ishikawa",
+  "style_version": 54,
+  "archetypes_version": 149,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Malia Ishikawa is a highly specialized cybersecurity professional focused on the intersection of AI and healthcare. She\u2019s spent the last decade building security protocols for medical devices and now is deeply involved in securing the AI models *within* those devices and the data they utilize. A distinctive detail is she previously worked as a penetration tester for a major medical device manufacturer, giving her intimate knowledge of vulnerabilities. She's currently leading a seed-stage startup, 'Aegis AI Health', building a platform that proactively identifies and mitigates adversarial attacks on healthcare AI, focusing on ensuring data integrity and patient safety. She's actively seeking strategic investors and partnerships with hospitals looking to implement AI solutions responsibly. She\u2019s pragmatic and data-driven, but also deeply concerned with the ethical implications of AI in healthcare.",
+    "positioning": "Malia Ishikawa is the Founder & CEO of Aegis AI Health, a company dedicated to securing the next generation of healthcare AI. With a decade of experience in medical device cybersecurity, she recognized a critical gap in the market: the vulnerabilities inherent in the AI models powering these devices. Aegis AI Health delivers a proactive, AI-powered security platform that protects patient data and ensures the integrity of AI-driven diagnoses and treatments. Malia\u2019s unique background as a former penetration tester provides her with a rare, \u2018attacker\u2019s mindset\u2019 that informs the development of robust defense mechanisms. Now is an ideal time to connect as Aegis AI Health is closing its seed round and actively seeking pilot partnerships with leading healthcare institutions.",
+    "background": "- **Founder & CEO, Aegis AI Health** (2023 \u2013 Present)\n    - Led seed funding round of $2.5M, focused on building a proactive AI security platform for healthcare.\n    - Developed and implemented a novel adversarial attack detection system for medical imaging AI.\n    - Built a core team of AI/ML engineers and cybersecurity experts.\n- **Lead Security Engineer, MedTech Innovations Inc.** (2019 \u2013 2023)\n    - Spearheaded the security architecture for a new line of connected insulin pumps, ensuring compliance with FDA regulations and HIPAA.\n    - Led vulnerability assessments and penetration testing, identifying and mitigating critical security flaws.\n    - Developed and delivered security training programs for engineering teams.\n- **Penetration Tester, BioSecure Systems** (2016 \u2013 2019)\n    - Conducted black-box and white-box penetration testing on a wide range of medical devices, including pacemakers, defibrillators, and diagnostic imaging equipment.\n    - Identified and exploited zero-day vulnerabilities, providing actionable recommendations for remediation.\n    - Authored detailed security reports and presented findings to clients.\n- **M.S., Cybersecurity, Stanford University** (2014 \u2013 2016)\n    - Focused on applied cryptography and machine learning for security.\n    - Thesis: \u2018Adversarial Machine Learning in Medical Imaging: A Threat Model.\u2019\n- **B.S., Computer Science, Massachusetts Institute of Technology (MIT)** (2010 \u2013 2014)\n    - Minor in Biology.\n- **Certifications:** CISSP, CEH, Certified Ethical Hacker, AWS Certified Security \u2013 Specialty\n- **Skills:** Python, TensorFlow, PyTorch, Machine Learning, Deep Learning, Cybersecurity, Penetration Testing, Vulnerability Assessment, HIPAA Compliance, FDA Regulations, Data Privacy, Risk Management, Cloud Security (AWS, Azure)",
+    "lookingFor": "## Investors\n- Seed and Series A investors with a focus on healthcare AI and cybersecurity.\n- Individuals with experience scaling early-stage companies in regulated industries.\n- Investors who understand the unique challenges and opportunities of securing AI in healthcare.\n\n## Strategic Partners\n- Leading hospitals and healthcare systems interested in piloting Aegis AI Health\u2019s platform.\n- Companies developing AI-powered diagnostic or treatment solutions.\n- Organizations focused on healthcare data privacy and security.\n\n## Advisors\n- Experienced cybersecurity entrepreneurs with a track record of successful exits.\n- Subject matter experts in medical AI and regulatory compliance.",
+    "notes": "- Highly responsive and prefers concise communication. \n- Deeply passionate about the ethical implications of AI in healthcare. \n- Values data-driven decision-making and quantifiable results.\n- Has previously expressed frustration with overly complex security solutions.\n- Prioritizes patient safety above all else. \n- Responds well to well-researched inquiries demonstrating understanding of the healthcare AI landscape.",
+    "locationAvailability": "Based in Boston, MA, but open to remote meetings and collaborations with partners globally.",
+    "introPreferences": "## Hard Requirements\n- Introductions to investors actively deploying capital in healthcare AI security.\n- Connections to CISOs or heads of innovation at large hospital systems.\n- Individuals with a strong technical background and understanding of AI/ML.\n\n## Soft Preferences\n- Introductions should be warm and personalized, highlighting the mutual benefit of a connection.\n- Avoid introductions to individuals solely focused on general AI or venture capital without a healthcare focus.\n- Prefers introductions from people she already has a connection with (1st or 2nd degree).",
+    "personalPreferences": "Malia is direct and appreciates a straightforward approach. She prefers email as her primary communication channel, but is responsive on LinkedIn. She values efficiency and avoids unnecessary small talk.",
+    "meetingAndSchedulingPreferences": "Prefers 30-minute introductory calls to assess potential synergies. Generally available during standard business hours (EST)."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 18.837585926055908,
+      "input_tokens": 771,
+      "output_tokens": 1165,
+      "problems": []
+    }
+  ],
+  "success": true
+}

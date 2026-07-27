@@ -1,0 +1,54 @@
+{
+  "id": 207,
+  "archetype": "Australian Fintech/Trading Infrastructure Builder",
+  "given_name": "Thabo Jansen",
+  "style_version": 13,
+  "archetypes_version": 34,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Thabo Jansen is a highly-specialized software engineer with a deep background in low-latency trading systems, specifically focused on order management systems (OMS). He\u2019s built and scaled OMS platforms at both a large investment bank and a smaller, rapidly growing fintech. A distinctive detail: he spent two years *embedded* with a trading desk at Macquarie Bank, which gave him incredibly practical, user-focused insight into the pain points of traders. He\u2019s now a technical co-founder at 'AuraFlow', a Sydney-based fintech building a next-generation OMS targeting smaller hedge funds and prop trading firms. He\u2019s looking to expand AuraFlow\u2019s network \u2013 seeking potential integrations with prime brokers, data providers, and strategic investors, and also talent to scale the engineering team. He's pragmatic, values direct communication, and is driven by building robust, reliable systems that genuinely improve trader workflow.",
+    "positioning": "As a Technical Co-founder at AuraFlow, I lead the engineering efforts in building a cutting-edge Order Management System (OMS) designed for the modern trading landscape. We\u2019re tackling the challenges faced by smaller hedge funds and proprietary trading firms \u2013 providing institutional-grade execution management, risk controls, and connectivity, all within a scalable and accessible platform. My background includes extensive experience architecting and implementing low-latency trading infrastructure, honed through roles at [Macquarie Bank] and [Velocity Trading Solutions].  I specialize in high-throughput systems, distributed architecture, and ensuring the reliability of critical trading components.  I am passionate about bridging the gap between complex technology and the practical needs of traders, delivering solutions that empower them to execute strategies efficiently and confidently.  AuraFlow isn\u2019t just building an OMS; we\u2019re building a performance advantage for our clients.",
+    "background": "- **AuraFlow, Sydney, NSW** - *Technical Co-founder* (2022 \u2013 Present)\n  - Led the architecture, development, and deployment of AuraFlow\u2019s core OMS platform.\n  - Implemented key features including smart order routing, algorithmic execution, and real-time risk monitoring.\n  - Managed a small team of engineers, fostering a culture of rapid iteration and quality.\n  - Secured seed funding of $1.5M based on demonstrated platform capabilities.\n\n- **Velocity Trading Solutions, Sydney, NSW** - *Senior Software Engineer* (2019 \u2013 2022)\n  - Developed and maintained high-frequency trading components for a leading Australian HFT firm.\n  - Focused on optimizing order execution latency and throughput, achieving a 15% reduction in average execution time.\n  - Contributed to the design and implementation of a new risk management system.\n  - Technologies used: C++, Linux, FPGA, Network Programming.\n\n- **Macquarie Bank, Sydney, NSW** - *Software Engineer (Embedded with Equities Trading Desk)* (2017 \u2013 2019)\n  - Embedded directly within the equities trading desk, gaining first-hand understanding of trader workflows and pain points.\n  - Developed and maintained tools for order management, trade capture, and position monitoring.\n  - Collaborated with traders to identify and implement improvements to existing systems.\n\n- **Education:**\n  - **University of New South Wales (UNSW), Sydney, NSW** \u2013 *Bachelor of Engineering (Software Engineering)* (2013 \u2013 2016)\n  - Relevant Coursework: Distributed Systems, Algorithms, Data Structures, Financial Modelling.\n\n- **Skills:** C++, Python, Java, Linux, AWS, Kubernetes, Docker, Low-Latency Programming, Distributed Systems, Order Management Systems (OMS), Risk Management, FPGA Programming, Financial Markets.",
+    "lookingFor": "I\u2019m actively seeking connections to accelerate AuraFlow\u2019s growth and impact.  Specifically, I\u2019m interested in:\n\n* **Strategic Investors:**  Angel investors or VC firms specializing in fintech and trading infrastructure, with a demonstrated understanding of the OMS space.\n* **Prime Brokerage Partnerships:**  Exploring potential integrations with prime brokers to streamline connectivity and execution for our clients.\n* **Market Data Providers:**  Connecting with reliable and cost-effective market data providers to enhance our platform\u2019s functionality.\n* **Experienced Engineers:**  Expanding our engineering team with talented C++ developers with a passion for building high-performance, low-latency systems.  Senior-level candidates with OMS experience are highly preferred.\n* **Potential Clients:** Connecting with smaller hedge funds and prop trading firms actively seeking a modern, scalable OMS solution.\n\nI\u2019m particularly keen on introductions to individuals who understand the challenges faced by smaller trading firms and are passionate about leveling the playing field with institutional-grade technology.",
+    "notes": "- Thabo is very technically focused and appreciates direct, concise communication.\n- He's currently prioritizing engineering hires and securing strategic partnerships.\n- Mentioned frustration with the complexity and cost of existing OMS solutions \u2013 a key driver for building AuraFlow.\n- Discussed potential for future integrations with crypto exchanges.\n- Follow up: Send article on newest low-latency networking technologies.",
+    "locationAvailability": "I am based in Sydney, Australia, but am comfortable with remote communication and occasional travel within Australia and internationally to meet with partners and investors.",
+    "introPreferences": "When making introductions, please:\n\n* **Hard Requirements:**  Ensure the contact has a direct connection to the fintech or trading infrastructure space.  Avoid generic networking introductions.\n* **Soft Preferences:**  Prioritize introductions to individuals with technical backgrounds or decision-making authority.\n* **Context is Key:** Briefly explain AuraFlow\u2019s value proposition and why a connection would be mutually beneficial.\n* **Preferred Communication:**  LinkedIn message or email is preferred for initial contact.  I'm responsive and appreciate a brief, well-crafted message.\n* **Avoid:**  Warm introductions to sales/marketing personnel \u2013 I prefer to connect directly with technical leaders or decision-makers.",
+    "personalPreferences": "I enjoy staying up-to-date with the latest advancements in low-latency networking and distributed systems. Outside of work, I\u2019m a keen cyclist and enjoy exploring the trails around Sydney.  I generally respond to messages quickly during business hours.",
+    "meetingAndSchedulingPreferences": "- Prefer short, focused meetings (30-45 minutes).\n- I'm generally available for meetings during Australian Eastern Standard Time (AEST).\n- Happy to jump on a quick call for initial introductions."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 26.211276054382324,
+      "input_tokens": 843,
+      "output_tokens": 1370,
+      "problems": []
+    }
+  ],
+  "success": true
+}

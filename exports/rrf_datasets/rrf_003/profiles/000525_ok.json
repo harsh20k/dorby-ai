@@ -1,0 +1,54 @@
+{
+  "id": 525,
+  "archetype": "US Real Estate & Tech Entrepreneur",
+  "given_name": "Valeria Bianchi",
+  "style_version": 32,
+  "archetypes_version": 88,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Valeria Bianchi is a 38-year-old, second-generation Italian-American entrepreneur based in Miami. She\u2019s built a career on identifying undervalued real estate in emerging markets and then applying proptech solutions to dramatically increase profitability and tenant experience. Her distinctive career detail is a brief, but impactful, stint as a data scientist at a hedge fund specializing in real estate investment trusts (REITs) *before* diving fully into operational roles. This gave her a unique perspective on valuation and risk assessment. Currently, she's the founder and CEO of \u2018Aura Living\u2019, a company building \u2018smart\u2019 co-living spaces targeted at digital nomads and remote workers in sunbelt cities. Aura Living isn\u2019t just about providing housing; it\u2019s about fostering a community and offering bundled services (high-speed internet, co-working access, curated local experiences) through a proprietary mobile app. She's aiming for rapid scaling, seeking Series A funding, and is open to strategic partnerships with construction companies and property management firms. She\u2019s very direct, data-driven, and appreciates efficiency. She's also acutely aware of the need to balance tech innovation with the core fundamentals of real estate \u2013 location, quality, and community.",
+    "positioning": "Aura Living is revolutionizing the co-living experience for the modern, mobile workforce. We identify and acquire underutilized properties in high-growth sunbelt cities \u2013 currently focused on Miami, Austin, and Nashville \u2013 and transform them into vibrant, tech-enabled communities. Unlike traditional co-living spaces, Aura Living leverages a proprietary mobile app to provide residents with a seamless, all-in-one experience, including streamlined rent payments, community event access, curated local recommendations, and high-speed internet. Our target market is digital nomads, remote workers, and young professionals seeking a flexible, community-driven lifestyle. We differentiate ourselves through a data-driven approach to property selection, a focus on design and aesthetics, and a commitment to fostering genuine connections among residents. We\u2019ve seen 300% YoY growth in occupancy rates across our existing portfolio and are currently generating $1.2M in ARR. We are poised to become the leading provider of smart co-living solutions in the US.",
+    "background": "- **Founder & CEO, Aura Living** (2021 \u2013 Present): Leading all aspects of strategy, fundraising, operations, and product development. Successfully launched three Aura Living locations in Miami, Austin, and Nashville. \n- **Data Scientist, Blackwood Capital** (2019 \u2013 2021): Developed and implemented quantitative models for evaluating REIT investments, focusing on property valuation, risk assessment, and market analysis. Contributed to a $50M+ investment portfolio. \n- **Project Manager, Bianchi Properties** (2015 \u2013 2019): Managed the renovation and development of over 20 residential properties, overseeing budgets, timelines, and contractor relationships. Increased property value by an average of 25% through strategic improvements. \n- **Real Estate Agent, Coldwell Banker** (2013 \u2013 2015): Assisted clients with buying, selling, and leasing residential properties in the Miami market. Developed strong negotiation and client management skills. \n- **Education:** MBA, University of Pennsylvania, Wharton School of Business (2013). BSc, Economics, Georgetown University (2009). \n- **Skills:** Real Estate Development, PropTech, Data Science (Python, R, SQL), Financial Modeling, Investment Analysis, Project Management, Negotiation, Leadership, Community Building.",
+    "lookingFor": "## Strategic Partnerships\n- **Construction Companies:** Experienced firms with a proven track record in multi-family renovations and new construction in sunbelt markets. Seeking partners for scaling our property portfolio.\n- **Property Management Firms:** Tech-forward companies with expertise in managing co-living spaces and resident experience.\n\n## Investment\n- **Series A Investors:** Venture capital firms with a focus on proptech, real estate, and the future of work. Target investment size: $10M - $15M.\n- **Family Offices:** Interested in long-term, stable investments with strong growth potential.\n\n## Expertise\n- **AI/ML Engineers:** Experienced in developing and deploying machine learning models for property valuation, tenant screening, and demand forecasting.\n- **Growth Marketing Specialists:** Expertise in digital marketing, social media, and community building to drive resident acquisition.",
+    "notes": "Valeria is highly articulate and data-driven. She's very focused on metrics and ROI. She\u2019s a fast mover and appreciates direct communication. She's previously expressed frustration with investors who don't understand the nuances of the real estate market. She\u2019s particularly keen on finding partners who can bring operational expertise to the table. \n\n- **Caution:** Avoid overly technical jargon without explaining its relevance to the real estate business. \n- **Highlight:** Her background in data science at Blackwood Capital is a key differentiator and demonstrates her analytical capabilities. \n- **Current Priority:** Securing Series A funding is her immediate focus. She's actively pitching and needs warm introductions to relevant investors.",
+    "locationAvailability": "Valeria is based in Miami, Florida, and is open to travel for key meetings and investor presentations. She\u2019s comfortable with remote meetings but prefers in-person connections when possible, especially for building relationships.",
+    "introPreferences": "- **Hard Requirements:** Introductions should be to individuals with decision-making authority (e.g., Partners at VC firms, CEOs of construction companies). The introducer should have a pre-existing relationship with the target.\n- **Soft Preferences:** Introductions to individuals with a demonstrated interest in proptech, the future of work, or the sunbelt real estate market are highly preferred. The introduction should emphasize Aura Living\u2019s strong growth metrics and unique value proposition. Please provide a brief context about *why* you think this connection would be valuable to Valeria. She appreciates concise, impactful introductions.",
+    "personalPreferences": "I prefer initial contact via email. Please feel free to connect on LinkedIn. I'm generally responsive, but please allow 24-48 hours for a reply. I'm not a big fan of long email threads \u2013 let's schedule a quick call if needed.",
+    "meetingAndSchedulingPreferences": "I prefer meetings to be focused and efficient. Please send a brief agenda in advance. I typically join meetings 5-10 minutes late to allow for buffer. I\u2019m happy to schedule follow-up calls to discuss specific topics in more detail. Post-meeting, a short summary of key takeaways would be greatly appreciated."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 27.405121564865112,
+      "input_tokens": 781,
+      "output_tokens": 1404,
+      "problems": []
+    }
+  ],
+  "success": true
+}

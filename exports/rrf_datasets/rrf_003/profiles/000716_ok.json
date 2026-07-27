@@ -1,0 +1,54 @@
+{
+  "id": 716,
+  "archetype": "Fintech Founder, Infrastructure Builder",
+  "given_name": "Nadia Volkov",
+  "style_version": 44,
+  "archetypes_version": 120,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Nadia Volkov is a serial fintech founder currently focused on building out a layer-2 scaling solution for stablecoin transactions. Her background is deeply rooted in cryptography and distributed systems, initially honed during her time working on early blockchain protocols. A key differentiator is her experience *building* and operating a stablecoin \u2013 she wasn\u2019t just an investor or user, she faced the regulatory hurdles and scaling challenges firsthand. This experience led her to believe the biggest bottleneck isn\u2019t creating stablecoins, but efficiently and cheaply *moving* them. She\u2019s looking for seed-stage investors who understand the infrastructure space and strategic partners with existing integrations into major DeFi protocols. She\u2019s pragmatic and values technical depth over hype. Her current venture, 'AetherFlow', is pre-seed and she is actively seeking advisors and early team members with expertise in Rust, ZK-proofs, and payment system architecture.",
+    "positioning": "A highly analytical and results-oriented fintech entrepreneur with 8+ years of experience building and scaling blockchain-based financial solutions. Nadia Volkov specializes in identifying and resolving critical infrastructure challenges within the rapidly evolving stablecoin ecosystem. Following a successful, though ultimately challenging, run as co-founder and CTO of \u2018NovaPay\u2019 \u2013 a USD-backed stablecoin processing over $50M in daily volume \u2013 Nadia recognized the acute need for a cost-effective and scalable layer-2 solution. This insight drove the creation of AetherFlow, a next-generation platform designed to dramatically reduce transaction fees and improve throughput for stablecoin payments. Nadia possesses a deep understanding of cryptography, distributed ledger technology, and regulatory compliance. Currently seeking strategic investors and engineering talent to accelerate AetherFlow\u2019s development and deployment. Passionate about building the future of decentralized finance and bridging the gap between traditional finance and Web3.",
+    "background": "- **AetherFlow, Founder & CEO** (2023 \u2013 Present)\n  - Leading all aspects of company strategy, fundraising, and product development for a layer-2 scaling solution for stablecoin transactions.\n  - Focused on architecting a high-throughput, low-latency payment network utilizing ZK-proofs and optimized consensus mechanisms.\n  - Skills: Product Vision, Fundraising, Team Building, System Architecture, Cryptography, Solidity, Rust.\n\n- **NovaPay, Co-founder & CTO** (2018 \u2013 2022)\n  - Co-founded and led the technical development of NovaPay, a USD-backed stablecoin.\n  - Oversaw the design and implementation of the stablecoin\u2019s smart contracts, wallet infrastructure, and API integrations.\n  - Successfully scaled the platform to process over $50 million in daily transaction volume while maintaining 99.99% uptime.\n  - Navigated complex regulatory landscape and ensured compliance with AML/KYC requirements.\n  - Skills: Smart Contract Development (Solidity), Blockchain Architecture, Security Auditing, Regulatory Compliance, Team Management, AWS, DevOps.\n\n- **CipherTech, Cryptography Engineer** (2016 \u2013 2018)\n  - Conducted research and development in advanced cryptographic techniques, with a focus on zero-knowledge proofs and homomorphic encryption.\n  - Contributed to the development of secure communication protocols and data privacy solutions.\n  - Skills: Cryptography, Zero-Knowledge Proofs, Homomorphic Encryption, Python, C++, Security Engineering.\n\n- **Education:**\n  - **Massachusetts Institute of Technology (MIT)**, Cambridge, MA \u2013 Master of Science in Computer Science (Cryptography concentration), 2016\n  - **Stanford University**, Stanford, CA \u2013 Bachelor of Science in Computer Science, 2014\n\n- **Certifications:**\n  - Certified Blockchain Expert (CBE)",
+    "lookingFor": "I'm actively seeking connections with individuals and organizations who can contribute to the growth of AetherFlow. Specifically:\n\n* **Seed-Stage Investors:**  Those with a demonstrated track record of investing in infrastructure-focused fintech companies, particularly in the blockchain/Web3 space.  I'm looking for investors who understand the technical complexities and long-term potential of layer-2 scaling solutions.\n* **ZK-Proof Experts:** Engineers and researchers with deep expertise in zero-knowledge proofs, specifically SNARKs and STARKs.  Experience with implementing ZK-proofs in production environments is highly valued.\n* **Rust Developers:**  Proficient Rust developers with experience building high-performance, low-latency systems.  Experience with asynchronous programming and systems-level development is a plus.\n* **DeFi Protocol Integrators:** Individuals with established relationships and technical expertise within major DeFi protocols (e.g., Uniswap, Aave, Compound).  I\u2019m interested in exploring potential integrations to expand AetherFlow\u2019s reach.\n* **Payment System Architects:** Professionals with experience designing and implementing large-scale payment processing systems. Knowledge of PCI DSS compliance and fraud prevention is essential.\n\nI am open to advisory roles from experienced founders who have successfully navigated the challenges of building and scaling fintech infrastructure.",
+    "notes": "Nadia is highly technical and prioritizes substance over style. Avoid overly promotional language or promises of quick returns. Emphasize her experience *running* a stablecoin operation \u2013 this is a key differentiator. She is very focused on the technical challenges of scaling stablecoin transactions and is not interested in general Web3 hype. She's comfortable discussing the failed aspects of NovaPay and learning from those experiences, but avoid dwelling on negative aspects without framing them as learning opportunities. She's currently very bandwidth constrained.",
+    "locationAvailability": "Based in San Francisco, California, but open to remote collaboration and travel as needed.",
+    "introPreferences": "* **Hard Requirements:** Do *not* introduce Nadia to VCs who primarily focus on consumer-facing applications or NFTs.\n* **Soft Preferences:** Ideal introductions are to technical investors or engineers who have a deep understanding of blockchain infrastructure. Introductions to potential advisors with experience in regulatory compliance for stablecoins are also highly valued.\n* **Framing:** When introducing Nadia, emphasize her practical experience building and operating a stablecoin, and her focus on solving the critical infrastructure challenges of scaling stablecoin transactions. Position AetherFlow as a foundational layer for the future of decentralized finance, not just another DeFi protocol.",
+    "personalPreferences": "Prefers asynchronous communication (email/Slack) initially.  Fast responder, but prefers focused discussions.  Avoid lengthy phone calls unless pre-scheduled.",
+    "meetingAndSchedulingPreferences": "Generally prefers to schedule 30-minute introductory calls. Comfortable with video conferencing.  Please coordinate schedules via email."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 23.547077894210815,
+      "input_tokens": 876,
+      "output_tokens": 1406,
+      "problems": []
+    }
+  ],
+  "success": true
+}

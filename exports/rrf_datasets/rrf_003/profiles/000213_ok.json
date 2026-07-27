@@ -1,0 +1,54 @@
+{
+  "id": 213,
+  "archetype": "Systems-Thinker, Behavioral Intelligence Builder",
+  "given_name": "Ravi Suzuki",
+  "style_version": 14,
+  "archetypes_version": 35,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Ravi Suzuki is a 38-year-old co-founder and CTO of 'Symbiotic Insights,' a pre-seed startup developing a behavioral analytics platform for employee well-being. His distinctive career detail is a prior 8-year stint as a behavioral economist at a large consulting firm (Deloitte), where he became frustrated with the limitations of traditional survey-based methods for understanding employee sentiment. He's now building a solution using passive data collection (with full privacy safeguards) and AI to provide a more nuanced and actionable understanding of workplace dynamics. He's currently fundraising a seed round and seeking early adopter companies interested in piloting the platform. He\u2019s a quiet, analytical leader, preferring data-driven decisions and thoughtful collaboration. He\u2019s deeply committed to ethical AI practices and building technology that genuinely improves people\u2019s lives.",
+    "positioning": "As CTO and co-founder of Symbiotic Insights, I'm building the future of workplace well-being. We leverage passive data analysis and cutting-edge AI to provide organizations with a deeper, more accurate understanding of employee sentiment and behavioral patterns. Traditional methods like annual surveys often fall short, providing lagging indicators and susceptible to bias. Our platform delivers real-time, actionable insights, enabling proactive interventions to improve employee engagement, reduce burnout, and foster a more positive and productive work environment. My background in behavioral economics, coupled with a strong engineering team, allows us to not only collect and analyze data but also to interpret it through a human-centered lens. We\u2019re focused on building a privacy-preserving solution that empowers organizations to create truly thriving workplaces. We're currently seeking seed funding to scale our platform and expand our team, and are actively onboarding early adopter clients.",
+    "background": "- **Symbiotic Insights, Co-founder & CTO** (November 2022 \u2013 Present)\n  * Led the technical development of a behavioral analytics platform utilizing passive data streams (communication patterns, collaboration tools usage) and machine learning algorithms.\n  * Architected a secure and privacy-compliant data infrastructure adhering to GDPR and CCPA regulations.\n  * Managed a team of 3 engineers, overseeing all aspects of software development, deployment, and maintenance.\n  * Secured initial seed funding of $250,000 through angel investors.\n\n- **Deloitte Consulting, Behavioral Economist** (June 2014 \u2013 October 2022)\n  * Advised Fortune 500 clients on employee engagement, organizational change management, and workforce optimization strategies.\n  * Developed and implemented behavioral interventions to improve employee productivity and reduce attrition rates. Quantifiable results included a 15% reduction in employee turnover at a major retail client.\n  * Led the design and analysis of large-scale employee surveys and focus groups.\n  * Published research on the impact of workplace design on employee well-being in the *Journal of Applied Behavioral Science*.\n\n- **Massachusetts Institute of Technology (MIT), PhD, Economics** (September 2010 \u2013 May 2014)\n  * Dissertation: \u201cThe Cognitive Biases Underlying Investment Decisions in Emerging Markets.\u201d\n  * Relevant Coursework: Behavioral Economics, Econometrics, Data Science, Machine Learning.\n\n- **University of California, Berkeley, BA, Economics** (September 2006 \u2013 May 2010)\n  * Graduated *Summa Cum Laude*.\n\n**Skills:** Python, Machine Learning (Scikit-learn, TensorFlow), Data Visualization (Tableau, matplotlib), Statistical Modeling, Behavioral Economics, Data Privacy (GDPR, CCPA), Cloud Computing (AWS, Azure), Agile Development, Team Leadership.",
+    "lookingFor": "I'm actively seeking connections with individuals who can support Symbiotic Insights' growth. Specifically, I'm looking for:\n\n* **Seed-stage investors** focused on HR Tech, AI, and/or workplace well-being. We are aiming to raise $1.5M to scale our platform and expand our team.\n* **Early adopter companies** (500+ employees) in the tech, finance, or healthcare industries interested in piloting our platform. We're offering discounted access and dedicated support.\n* **Strategic advisors** with experience in scaling SaaS businesses and navigating the complexities of data privacy regulations.\n* **Talented engineers** with expertise in machine learning, data engineering, and cloud infrastructure.\n\nI'm particularly interested in connecting with individuals who share our commitment to ethical AI and building technology that genuinely improves people\u2019s lives. Feel free to reach out if you have relevant insights or connections.",
+    "notes": "- Ravi is very focused on data privacy and ethical AI - a key differentiator for Symbiotic Insights.\n- He's a bit reserved in initial interactions, but very open to detailed technical discussions.\n- He\u2019s currently prioritizing investor meetings and onboarding pilot customers.\n- Mentioned a potential partnership with a leading HR consulting firm \u2013 follow up on this.\n- He\u2019s open to introductions to other founders in the HR Tech space for peer learning.",
+    "locationAvailability": "I am based in San Francisco, California, but am comfortable with remote meetings and occasional travel to meet with potential investors and clients. I'm available to connect with individuals across all time zones.",
+    "introPreferences": "When making introductions, please highlight:\n\n* **My background in behavioral economics:** This provides credibility and differentiates us from purely tech-driven solutions.\n* **Our focus on privacy-preserving data analysis:** This is a key selling point for many organizations.\n* **Our early traction with pilot customers:** Demonstrates market validation.\n\n**Hard Requirements:** Introductions should be to decision-makers (VP level or higher) with budget authority.\n**Soft Preferences:**  I prefer concise, informative introductions that clearly articulate the potential value proposition for the recipient.  A brief summary of their company's challenges related to employee well-being would be helpful.",
+    "personalPreferences": "I'm a big fan of minimalist design and enjoy hiking in my free time. I prefer email communication initially, but am happy to hop on a call after a brief exchange.",
+    "meetingAndSchedulingPreferences": "- Prefer 30-minute introductory calls.\n- I am generally responsive within 24 hours.\n- I appreciate a clear agenda before meetings."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 18.53105902671814,
+      "input_tokens": 848,
+      "output_tokens": 1349,
+      "problems": []
+    }
+  ],
+  "success": true
+}

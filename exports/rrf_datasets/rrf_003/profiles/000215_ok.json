@@ -1,0 +1,72 @@
+{
+  "id": 215,
+  "archetype": "US-Focused, Peer Network Builder",
+  "given_name": "Zainab Kimura",
+  "style_version": 14,
+  "archetypes_version": 37,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Zainab Kimura is a 38-year-old founder and CEO of 'Synergy Circles,' a relatively new (2 years old) company focused on building highly curated peer advisory groups for mid-level to senior leaders in the tech and healthcare sectors. Her distinctive career detail is a prior 10-year stretch as a behavioral psychologist specializing in team dynamics. This informs her approach to building these groups - she's not just matching titles, but meticulously assessing personality profiles and leadership styles to ensure group cohesion and impactful discussions. She's now in a growth phase, seeking strategic partnerships with leadership development firms and executive coaching organizations, and expanding Synergy Circles\u2019 program offerings (e.g., workshops, retreats). She\u2019s laser-focused on scaling within the US market, particularly on the East and West Coasts. She\u2019s highly active in relevant LinkedIn groups and is skilled at quickly assessing potential connections. She's very intentional about her network and prioritizes quality over quantity.",
+    "positioning": "Zainab Kimura is the Founder and CEO of Synergy Circles, a platform dedicated to fostering high-impact peer advisory groups for leaders in technology and healthcare. Leveraging a background in behavioral psychology, Zainab designs and facilitates circles that prioritize psychological safety and actionable insights. Synergy Circles is currently experiencing rapid growth, driven by the demand for authentic leadership development. I am actively seeking strategic partnerships to expand our reach and program offerings, and connect with individuals passionate about cultivating thriving leadership communities. I\u2019m particularly interested in discussing collaborative opportunities in leadership development and executive coaching.",
+    "background": "- **Founder & CEO, Synergy Circles** (2022 \u2013 Present) \u2013 Leading all aspects of a rapidly growing peer advisory group company. Responsible for strategy, operations, business development, and program design.\n- **Lead Behavioral Psychologist, Thrive Consulting Group** (2012 \u2013 2022) \u2013 Specialized in team dynamics, leadership assessment, and organizational development. Led over 50 team effectiveness interventions.\n- **Consultant, McKinsey & Company** (2010 \u2013 2012) \u2013 Supported large-scale organizational change initiatives across various industries.\n- **Education:** PhD, Behavioral Psychology, University of Pennsylvania (2010)\n- **Education:** BA, Psychology, Stanford University (2006)\n- **Skills:** Leadership Development, Team Dynamics, Group Facilitation, Organizational Psychology, Strategic Partnerships, Business Development, Executive Coaching, Program Design, Behavioral Assessment (DISC, MBTI, Enneagram), Change Management, Public Speaking.\n- **Certifications:** Certified Executive Coach (ICF)\n- **Publications:** Authored articles on team effectiveness and psychological safety in *Harvard Business Review* online.\n- **Awards:** '40 Under 40' \u2013 Philadelphia Business Journal (2021)\n- **Volunteer Experience:** Mentor, Techstars Startup Accelerator Program\n- **Languages:** English (Native), French (Fluent)\n- **Key Projects at Synergy Circles:** Launched \u2018Innovate\u2019 circle for VP-level tech leaders; Developed a proprietary assessment tool for matching members based on psychological profiles.",
+    "lookingFor": "I'm actively seeking connections with:\n- **Leadership Development Firm Executives:**  Specifically those open to exploring partnership opportunities to integrate Synergy Circles into their program offerings.\n- **Executive Coaches:**  Interested in potential collaborations and cross-referral opportunities.\n- **VPs and Directors of Learning & Development:** Within large tech and healthcare organizations; seeking to understand their challenges in leadership development.\n- **Investors** focused on scaling fast-growing, innovative businesses in the leadership development space.\n\nI'm particularly keen on discussing:\n-  Joint webinar opportunities focused on the benefits of peer advisory groups.\n-  Strategic partnerships to deliver custom-designed circles for their clients.\n-  Potential integration of Synergy Circles\u2019 assessment tool into existing leadership programs.\n\nI\u2019m *not* currently looking for sales pitches for unrelated services. I prioritize meaningful connections with individuals who understand the value of curated peer networks.",
+    "notes": "Zainab is very articulate and quick to grasp the core value proposition. She\u2019s highly intentional about her networking and has a clear vision for Synergy Circles. She mentioned a potential partnership with a large healthcare system is in the early stages of discussion. We should remind her about the upcoming leadership conference in San Francisco \u2013 she\u2019d be a great speaker. Be mindful that she's very protective of her time and prefers concise communication.",
+    "locationAvailability": "Zainab Kimura is based in Philadelphia, PA, with a focus on networking opportunities on the East and West Coasts of the United States.",
+    "introPreferences": "## Hard Requirements:\n- Introductions should be to individuals at the VP level or above, or to decision-makers in leadership development firms.\n- Prioritize introductions to people within the tech and healthcare industries.\n-  Ensure the recipient is likely to be open to discussing partnerships or new leadership development approaches.\n\n## Soft Preferences:\n-  A brief (2-3 sentence) context explaining the mutual benefit of the connection is highly appreciated.\n-  Highlight Zainab\u2019s unique background in behavioral psychology when relevant.\n-  Avoid introducing her to junior-level individuals or those with no decision-making authority.\n-  A LinkedIn message *before* a direct email introduction is preferred. The intro message should briefly outline Synergy Circles and ask if a connection would be welcome.",
+    "personalPreferences": "- I prefer initial contact via LinkedIn message or email.\n-  I\u2019m generally responsive during East Coast business hours (9 am - 5 pm EST).",
+    "meetingAndSchedulingPreferences": "I am available for virtual meetings and occasional travel for in-person connections. Please send a calendar invite with a brief agenda. I generally prefer 30-minute introductory calls."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 21.24759030342102,
+      "input_tokens": 762,
+      "output_tokens": 1187,
+      "problems": [
+        "background: possible truncation (ends with '...aking, Community Building')"
+      ]
+    },
+    {
+      "attempt": 2,
+      "elapsed_s": 15.679969787597656,
+      "input_tokens": 762,
+      "output_tokens": 1127,
+      "problems": [
+        "background: possible truncation (ends with '...t Relationship Management')"
+      ]
+    },
+    {
+      "attempt": 3,
+      "elapsed_s": 17.348524808883667,
+      "input_tokens": 762,
+      "output_tokens": 1230,
+      "problems": []
+    }
+  ],
+  "success": true
+}

@@ -1,0 +1,73 @@
+{
+  "batch_id": "rrf_003",
+  "config": {
+    "profile_run": "/Users/harsh/Artifacts/dorby-ai/artifacts/bedrock_synth/run_20260726_211556",
+    "batch_id": "rrf_003",
+    "data_dir": "/Users/harsh/Artifacts/dorby-ai/data",
+    "artifacts_dir": "/Users/harsh/Artifacts/dorby-ai/artifacts",
+    "embed_model": "Qwen/Qwen3-Embedding-8B",
+    "bedrock_model": "google.gemma-3-27b-it",
+    "region": "us-east-1",
+    "seeker_frac": 0.43,
+    "recall_k": 10,
+    "top_k": 5,
+    "max_pairs_per_seeker": null,
+    "min_dense_similarity": null,
+    "dense_weight": 2.0,
+    "lexical_weight": 1.0,
+    "rrf_k": 60,
+    "seed": 42,
+    "limit": null,
+    "judge_concurrency": 4,
+    "use_chroma": true,
+    "embed_batch_size": 2,
+    "embed_max_length": 4096,
+    "embed_device": null,
+    "embed_backend": "modal",
+    "dedupe_pairs": true,
+    "skip_judge": false
+  },
+  "pairs_shortlisted": 2619,
+  "pairs_labeled": 2619,
+  "calls_per_labeled_pair": 1.0,
+  "balance": {
+    "positive": 1175,
+    "negative": 1444,
+    "positive_frac": 0.4486,
+    "nodes": 923,
+    "edges": 2619,
+    "edges_per_node": 2.8375,
+    "real_reference": {
+      "edges_per_node": 0.673,
+      "positive_frac": 0.5
+    }
+  },
+  "cost": {
+    "bedrock_query_generation": {
+      "calls": 1195,
+      "input_tokens": 2073788,
+      "output_tokens": 56178,
+      "total_tokens": 2129966
+    },
+    "openrouter_judge": {
+      "calls": 2619,
+      "prompt_tokens": 7741247,
+      "completion_tokens": 305890,
+      "total_tokens": 8047137,
+      "cost_usd": 2.394147
+    },
+    "measured_judge_cost_usd": 2.394147,
+    "note": "Judge cost is the exact amount OpenRouter billed, read from each response's usage payload. Bedrock token counts are real; convert to dollars with scripts/estimate_bedrock_cost.py."
+  },
+  "timings_seconds": {
+    "load_and_split": 0.09,
+    "query_generation": 1541.92,
+    "embedding": 288.82,
+    "index_build": 0.6,
+    "recall": 7.64,
+    "fusion": 0.07,
+    "judging": 857.92,
+    "labeling": 0.27
+  },
+  "wall_seconds": 2697.3
+}

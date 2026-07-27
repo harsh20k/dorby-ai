@@ -1,0 +1,54 @@
+{
+  "id": 469,
+  "archetype": "NYC/Bay Area Climate Tech Founder",
+  "given_name": "Malia Santos",
+  "style_version": 29,
+  "archetypes_version": 79,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Malia Santos is a first-time founder, 32, based in Brooklyn, NY. She's the CEO of 'Terraform Insights,' a pre-seed climate tech startup using satellite imagery and machine learning to optimize urban green space for carbon sequestration and heat island mitigation. She has a background in geospatial data science and previously worked at a large environmental consulting firm, but always felt constrained by the slow pace of change. A distinctive career detail is she received a Fulbright scholarship to study urban forestry in Brazil post-college, which sparked her passion for data-driven environmental solutions. She's currently aggressively fundraising a seed round and looking for strategic advisors with experience in both climate tech *and* scaling SaaS businesses. She's very focused on impact *and* profitability and wants to avoid purely 'impact washing' investors. She\u2019s also keen to connect with other female founders in the space.",
+    "positioning": "I\u2019m building Terraform Insights to fundamentally change how cities approach climate resilience. We leverage cutting-edge satellite imagery and machine learning algorithms to identify optimal locations for urban green infrastructure \u2013 think trees, green roofs, and parks \u2013 maximizing their impact on carbon sequestration, heat island effect reduction, and biodiversity.  For too long, urban planning has lacked the granular data needed to make truly informed decisions about green space deployment. We\u2019re bridging that gap, providing cities and developers with actionable insights that drive measurable environmental improvements. \n\nMy background is rooted in geospatial data science. Before founding Terraform Insights, I spent five years at AECOM, leading data analysis for large-scale environmental impact assessments. While rewarding, I found myself increasingly frustrated with the bureaucratic hurdles and slow pace of change within a large organization. I knew there was a faster, more innovative way to tackle these challenges.  My Fulbright scholarship in Brazil, researching urban forestry and community-based conservation, solidified my commitment to finding data-driven solutions to environmental problems. \n\nTerraform Insights isn\u2019t just about planting trees; it\u2019s about building a data-driven platform that empowers cities to create a more sustainable and equitable future.  We\u2019re seeking partners who share that vision and are committed to building a scalable, impactful business. I'm passionate about connecting with individuals who believe in the power of technology to address climate change and are eager to contribute to a more resilient urban landscape.  I\u2019m confident that Terraform Insights can become a leading force in the climate tech space, and I\u2019m excited to connect with those who want to join us on this journey.",
+    "background": "- **CEO & Founder, Terraform Insights** (Jan 2023 \u2013 Present)\n  - Led all aspects of startup development, from initial concept and market research to product development and fundraising.\n  - Secured $150k in pre-seed funding from angel investors.\n  - Developed and validated core machine learning algorithms for identifying optimal green infrastructure locations (90% accuracy rate in pilot program).\n  - Built and launched a minimum viable product (MVP) demonstrating key functionality.\n\n- **Senior Data Scientist, AECOM** (June 2018 \u2013 Dec 2022)\n  - Led data analysis and modeling for environmental impact assessments for large-scale infrastructure projects.\n  - Developed and implemented geospatial data analysis workflows using Python, ArcGIS, and remote sensing data.\n  - Managed a team of junior data scientists and provided technical guidance.\n  - Contributed to the successful completion of over 20 environmental impact assessments.\n\n- **Fulbright Scholar, Universidade Federal de Vi\u00e7osa, Brazil** (Aug 2016 \u2013 May 2017)\n  - Conducted research on urban forestry and community-based conservation practices.\n  - Collaborated with local researchers and community organizations.\n  - Published research findings in peer-reviewed journals.\n\n- **Education:**\n  - M.S., Geospatial Data Science, Columbia University (2018)\n  - B.A., Environmental Science, Dartmouth College (2016) - *Magna Cum Laude*\n\n- **Skills:** Python, Machine Learning (Scikit-learn, TensorFlow), Remote Sensing, GIS (ArcGIS, QGIS), Data Visualization (Tableau, Matplotlib), Statistical Modeling, Project Management, Fundraising, Leadership, Public Speaking.",
+    "lookingFor": "I'm actively seeking connections with individuals who can help Terraform Insights accelerate its growth and impact. Specifically, I'm looking for:\n\n- **Seed Stage Investors:** VCs focused on Climate Tech, particularly those with experience in SaaS and geospatial technologies.  I\u2019m *not* interested in purely impact-focused funds without a strong understanding of financial scalability.\n- **Strategic Advisors:** Experienced entrepreneurs and executives with a track record of scaling early-stage startups, ideally within the climate tech or geospatial industries.\n- **Potential Pilot Partners:** City planners and sustainability officers in major US cities (NYC, LA, Chicago, San Francisco) who are interested in exploring the potential of our platform.\n- **Female Founders:**  I\u2019m actively seeking to build a strong network with other women building climate tech companies.  Let\u2019s connect and support each other!\n\nI\u2019m less interested in general networking requests or individuals offering services that aren\u2019t directly relevant to our current needs (e.g., marketing agencies without a climate tech focus).",
+    "notes": "- Recently completed a pitch deck refinement based on feedback from a mentor at Techstars.\n- Currently in conversations with three potential lead investors.\n- Very focused on closing our seed round within the next 6-8 weeks.\n- Received a warm intro to [Investor Name] from [Mutual Connection] \u2013 follow up needed.\n- Prioritizing advisors with experience in enterprise sales; that's a key gap in our team's expertise.\n- Avoid mentioning the competitor, 'GreenVision,' unless directly asked \u2013 we\u2019re positioning ourselves differently.",
+    "locationAvailability": "I am currently based in Brooklyn, New York, but frequently travel to San Francisco and Los Angeles for investor meetings and industry events. I am comfortable working remotely and am open to relocating if necessary for the right opportunity. I\u2019m generally available for calls and meetings across all US time zones.",
+    "introPreferences": "When making introductions to me, please:\n\n- **Hard Requirements:**\n  - The connection *must* have a direct relevance to Terraform Insights\u2019 current needs (fundraising, strategic advice, pilot partnerships).\n  - Ensure the connection understands our mission and value proposition (briefly summarize our platform in the intro).\n- **Strongly Preferred:**\n  - Highlight any shared connections or common interests.\n  - Briefly mention the connection\u2019s experience or expertise in climate tech, SaaS, or geospatial technologies.\n- **What to Emphasize:**\n  - My strong technical background and passion for environmental sustainability.\n  - The unique value proposition of Terraform Insights \u2013 our ability to provide data-driven insights for optimizing urban green infrastructure.\n- **What to Avoid:**\n  - Generic introductions without a clear connection to our work.\n  - Introductions to individuals who are unlikely to be interested in investing in or partnering with an early-stage climate tech startup.\n  - Overly lengthy introductions \u2013 keep it concise and focused.\n  - Using the phrase 'thought leader' \u2013 I prefer to let my work speak for itself. \n\n**Ideal Intro Phrase:** 'Malia is the founder of Terraform Insights, a company using satellite imagery and machine learning to help cities optimize their green infrastructure. I thought you two might connect given [Connection's] work in [Relevant Field].'",
+    "personalPreferences": "Email is the best way to reach me initially. I occasionally check LinkedIn messages, but response times may be slower.",
+    "meetingAndSchedulingPreferences": "I generally prefer to schedule meetings at least 24 hours in advance.  Mondays and Fridays are often heavily booked."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 28.567973136901855,
+      "input_tokens": 828,
+      "output_tokens": 1679,
+      "problems": []
+    }
+  ],
+  "success": true
+}

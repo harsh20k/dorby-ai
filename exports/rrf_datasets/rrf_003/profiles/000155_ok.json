@@ -1,0 +1,54 @@
+{
+  "id": 155,
+  "archetype": "Sales & AI Advisory/Bridge Role",
+  "given_name": "Yusuf Nakamura",
+  "style_version": 10,
+  "archetypes_version": 26,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Yusuf Nakamura is a relatively young (34) sales leader who\u2019s identified a gap in the market: helping traditionally non-technical companies *rapidly* adopt and leverage generative AI. He doesn't build the AI; he finds the right tools, integrates them into existing workflows, and trains sales teams to use them effectively, focusing on revenue impact. His distinctive career detail is a brief, but impactful, stint as an early employee at a GenAI startup that was acquired, giving him practical, hands-on experience beyond just the sales pitch. He positions himself as a 'bridge' between the complex world of AI development and the pragmatic needs of sales organizations. He's now freelancing/consulting while also quietly building a small network of specialist AI implementers he can subcontract to, essentially building a lean 'agency' without the overhead. He\u2019s very focused on finding clients with clear revenue goals and a willingness to experiment, and also seeking partnerships with AI vendors who need a sales acceleration partner. He's ambitious, data-driven, and slightly impatient with companies stuck in 'analysis paralysis'.",
+    "positioning": "A results-oriented sales and AI advisory professional, I empower organizations to unlock the transformative potential of Generative AI. I specialize in bridging the gap between cutting-edge AI technologies and practical sales applications, driving revenue growth through rapid implementation and targeted training. My approach isn\u2019t about abstract concepts; it\u2019s about delivering measurable ROI. I excel at identifying the *right* AI solutions for specific sales challenges \u2013 from personalized content creation and lead scoring to automated sales sequences and data-driven insights. Having been an early adopter and contributor at [fictional startup name] 'NovaAI', I possess a unique blend of technical understanding and sales acumen. Currently, I'm focused on partnering with forward-thinking companies to accelerate their AI adoption, offering both strategic advisory services and agile, remote implementation support. I'm passionate about helping sales teams become more efficient, effective, and ultimately, more successful in the age of AI. I don't just sell AI; I deliver results.",
+    "background": "* **Freelance AI Sales & Implementation Consultant** (Jan 2023 \u2013 Present)\n    *  Consulted with 7+ mid-market companies across SaaS, Fintech, and Healthcare verticals on GenAI strategy and implementation.\n    *  Increased sales qualified leads by an average of 25% within 90 days of AI implementation for client companies.\n    *  Developed and delivered customized sales training programs focused on leveraging GenAI tools for improved prospecting, qualification, and closing rates.\n    *  Managed project budgets up to $50,000 per client, ensuring on-time and within-budget project delivery.\n* **Head of Sales Enablement, NovaAI** (June 2021 \u2013 Dec 2022) \u2013 *Acquired by Datacore Solutions.*\n    *  Led the sales enablement function for a rapidly growing GenAI startup specializing in automated content generation.\n    *  Developed and implemented a comprehensive sales training program that onboarded 20+ new sales representatives within the first six months.\n    *  Increased sales team proficiency in using NovaAI\u2019s platform, resulting in a 15% increase in average deal size.\n    *  Collaborated with product and marketing teams to refine messaging and positioning based on sales feedback.\n* **Senior Account Executive, SalesForce** (Aug 2018 \u2013 May 2021)\n    *  Consistently exceeded quota, achieving 120% of target in 2020 and 115% in 2019.\n    *  Managed a portfolio of 50+ key accounts, focusing on enterprise-level clients in the financial services industry.\n    *  Developed and executed strategic account plans to drive revenue growth and expand market share.\n* **Education:**\n    * **Master of Business Administration (MBA)**, University of California, Berkeley \u2013 Haas School of Business (2016-2018)\n    * **Bachelor of Science (BS), Economics**, Stanford University (2012-2016) \u2013 *Dean\u2019s List all semesters*.",
+    "lookingFor": "## Strategic Partnerships & Client Opportunities\n\nI\u2019m actively seeking connections that align with my focus on accelerating AI adoption within sales organizations.\n\n**Ideal Client Profile:**\n*  Companies with $20M+ in annual revenue.\n*  Sales teams of 20+ representatives.\n*  A clear understanding of their revenue goals and a willingness to invest in AI solutions.\n*  Leaders open to experimentation and data-driven decision-making.\n\n**Partnership Opportunities:**\n* **GenAI Vendors:** I'm interested in collaborating with AI companies seeking to expand their reach within the sales sector. I can provide sales acceleration services, including lead generation, demo support, and sales training.\n* **Sales Consulting Firms:** Exploring potential sub-contracting or referral partnerships to expand service offerings.\n* **AI Implementation Specialists:** Building a network of vetted AI implementers for larger projects. Looking for individuals with expertise in specific AI tools and platforms (e.g., OpenAI, Jasper, Copy.ai).\n\nI\u2019m particularly interested in connecting with VPs of Sales, Sales Operations Managers, and Chief Revenue Officers who are actively exploring AI solutions. I'm also open to discussing potential advisory roles and speaking engagements related to AI and sales.",
+    "notes": "Yusuf is highly responsive and very focused on quantifiable results. He's a bit of a 'move fast and break things' type, which can be refreshing, but also requires clear communication regarding expectations and timelines. He's recently been sharing articles about AI-powered sales forecasting and seems particularly interested in tools that integrate with Salesforce. He's been actively liking posts from several AI venture capitalists on LinkedIn, suggesting he may be keeping an eye on funding opportunities. He's generally open to quick calls, but prefers to schedule a brief discovery session before committing to longer meetings.",
+    "locationAvailability": "Based in San Francisco, CA, but comfortable working remotely and available for travel within the US as needed.",
+    "introPreferences": "* **Hard Requirements:**\n    *  Target must be a decision-maker (VP of Sales or above) at a company with demonstrable revenue.\n    *  Target must be actively exploring or considering AI solutions for their sales team.\n* **Soft Preferences:**\n    *  Experience with Salesforce or other major CRM platforms is a plus.\n    *  Interest in innovative technologies and a willingness to experiment.\n    *  Industry focus: SaaS, Fintech, Healthcare are preferred, but open to others.\n* **Avoid:**\n    *  Introductory requests from individuals selling unrelated services (e.g., marketing automation, HR software).\n    *  Targets who are solely focused on 'research' or 'information gathering\u2019 \u2013 I\u2019m looking for active implementers.\n    *  Introductions to junior-level employees or individuals without decision-making authority.\n\nPlease include a brief context explaining *why* you think this connection would be valuable for both parties.",
+    "personalPreferences": "Prefers initial contact via LinkedIn message or email. Quick and direct communication is appreciated.",
+    "meetingAndSchedulingPreferences": ""
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 28.132460832595825,
+      "input_tokens": 814,
+      "output_tokens": 1554,
+      "problems": []
+    }
+  ],
+  "success": true
+}

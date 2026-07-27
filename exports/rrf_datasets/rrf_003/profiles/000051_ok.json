@@ -1,0 +1,54 @@
+{
+  "id": 51,
+  "archetype": "Early-Stage Founder, Operator-First",
+  "given_name": "Yusuf Santos",
+  "style_version": 4,
+  "archetypes_version": 9,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Yusuf Santos is a first-time founder, 32, currently building 'FlowState,' a project management tool specifically for creative agencies. He spent the first 8 years of his career at Bain & Company, specializing in operational efficiency for marketing and media firms. He *hated* the consulting lifestyle \u2013 the travel, the powerpoints, the lack of tangible building \u2013 but the insights he gained into agency workflows and pain points are the foundation of FlowState. He's intensely focused on solving a real problem for a specific niche, and is deliberately avoiding venture capital for now, bootstrapping and focusing on organic growth. He's a pragmatic operator, less interested in 'disruption' and more in 'making things run smoother.' He\u2019s very direct and values efficiency in communication. He\u2019s acutely aware of the 'shiny object syndrome' prevalent in the startup world and is laser-focused on execution. He\u2019s based in Lisbon, Portugal, and deliberately chose that location for the cost of living and creative energy.",
+    "positioning": "FlowState is a project management tool designed *by* and *for* creative agencies. We're not trying to be another all-purpose PM solution; we address the unique challenges of managing creative work \u2013 version control, feedback loops, client approvals, and the inherent ambiguity of the creative process. I spent eight years at Bain consulting for these agencies, and I saw firsthand how existing tools fall short. They're either too rigid for creative workflows or too chaotic to provide real oversight. FlowState bridges that gap, offering a visual, intuitive platform that streamlines project delivery and boosts team productivity. \n\nWe're currently in a closed beta with a handful of agencies, and early feedback has been overwhelmingly positive. We\u2019re focusing on a 'land and expand' strategy, starting with smaller agencies (10-30 employees) and demonstrating tangible ROI before scaling. This isn\u2019t about chasing hyper-growth; it\u2019s about building a sustainable business that genuinely solves a problem for a specific market. My one-liner? **FlowState: Project Management for Creative Minds.**\n\nWe recently pivoted from a broader marketing tech offering to focus solely on agencies based on the beta feedback. It was a difficult decision, but ultimately necessary. We realized we could be *exceptional* for one segment rather than mediocre for many. We're now doubling down on features like integrated proofing, automated time tracking tailored for creative tasks, and robust client communication tools. We\u2019re prioritizing integrations with Adobe Creative Cloud and Figma.",
+    "background": "- **Founder & CEO, FlowState** (2023 \u2013 Present)\n  - Led all aspects of product development, fundraising (bootstrapped), and go-to-market strategy.\n  - Managed a small, remote team of developers and designers.\n  - Oversaw user acquisition and customer success during closed beta.\n  - Conducted extensive user research and iterative product design.\n\n- **Consultant, Bain & Company** (2015 \u2013 2023)\n  - Focused on operational improvement projects for marketing and media clients.\n  - Managed project teams and delivered data-driven recommendations.\n  - Developed expertise in process optimization, performance management, and change management.\n  - Key projects included:\n    - Redesigning the project intake and workflow process for a global advertising agency, resulting in a 15% increase in project completion rate.\n    - Implementing a new marketing analytics dashboard for a media conglomerate, improving campaign ROI visibility by 20%.\n    - Leading a cost optimization initiative for a digital marketing firm, identifying $500K in annual savings.\n\n- **Education:**\n  - **MBA, Stanford Graduate School of Business** (2013 \u2013 2015)\n  - **BA, Economics, University of California, Berkeley** (2009 \u2013 2013)\n\n- **Skills:**\n  - Project Management (Agile, Scrum)\n  - Data Analysis (Excel, SQL, Tableau)\n  - Process Optimization\n  - Change Management\n  - Product Development\n  - User Research\n  - Strategic Planning\n  - Client Management\n  - Figma, Adobe Creative Suite (basic proficiency)",
+    "lookingFor": "Currently seeking strategic connections within the creative agency space. Specifically:\n\n* **Agency Owners/Creative Directors:**  Interested in early access to FlowState and providing feedback.  Looking for agencies with 10-30 employees, across various creative disciplines (design, advertising, video production).\n* **Experienced Agency Operators:** Individuals who have scaled agencies and understand the operational challenges we're addressing.  Mentorship/advice welcome.\n* **Potential Beta Users:** Agencies willing to commit to a dedicated trial period and provide consistent feedback.\n* **Integrations Partners:**  Individuals at Adobe or Figma who can discuss potential API integrations.\n\nNot actively seeking investment at this stage.  However, open to connecting with angel investors with a track record of supporting bootstrapped SaaS companies.  Prefer investors who understand the agency landscape and are patient with long-term growth.  \n\nLocation: Primarily interested in connections in Europe (particularly Portugal, UK, Germany) and North America. Willing to connect remotely with anyone globally.",
+    "notes": "\u2022 Had a good chat with Anya Petrova (Lead Designer at 'PixelBloom') last week - she's keen to test FlowState. Follow up next week.\n\u2022 Avoid discussing VC funding unless *they* bring it up. It's a sensitive topic \u2013 I want to maintain control.\n\u2022 Key takeaway from user interviews: Agencies are *desperate* for better version control. Prioritize this feature.\n\u2022 LinkedIn is fine for initial contact, but prefer email for longer conversations (yusuf.santos@flowstate.io).\n\u2022 Working on a case study with 'CreativeFlow' - should be ready in 2 weeks.",
+    "locationAvailability": "Based in Lisbon, Portugal.  Fully remote-friendly and comfortable working across time zones.  Willing to travel occasionally for key meetings and industry events, but prefer to minimize travel.",
+    "introPreferences": "Please keep introductions concise and focused.  \n\n* **When introducing me to an agency owner:** Briefly mention FlowState's focus on creative agency project management and highlight my background at Bain.  Frame it as 'a tool to help streamline their workflows'.\n* **Avoid:** Introductions to VCs unless I specifically request them.  Also, please don't position FlowState as 'disruptive' or 'revolutionary'. We're building a practical solution, not trying to change the world.\n* **Key information to include:**  My LinkedIn profile link and a brief sentence about the person you're introducing me to (e.g., 'Sarah runs a 15-person design agency specializing in branding').",
+    "personalPreferences": "I prefer email communication (yusuf.santos@flowstate.io) and respond quickly. I\u2019m not a big fan of long back-and-forths on LinkedIn.",
+    "meetingAndSchedulingPreferences": "I'm in the GMT+1 time zone.  Generally available for meetings between 9am and 6pm Lisbon time.  Please send a calendar invite with a clear agenda.  I prefer short, focused meetings \u2013 30 minutes is usually sufficient."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 28.405488967895508,
+      "input_tokens": 818,
+      "output_tokens": 1575,
+      "problems": []
+    }
+  ],
+  "success": true
+}

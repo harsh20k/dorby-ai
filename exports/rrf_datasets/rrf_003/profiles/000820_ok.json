@@ -1,0 +1,54 @@
+{
+  "id": 820,
+  "archetype": "Operational Transformation & RevOps Expert",
+  "given_name": "Beatriz Fernandez",
+  "style_version": 50,
+  "archetypes_version": 138,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Beatriz Fernandez is a seasoned RevOps leader with a strong background in Lean Six Sigma and a distinctive career pivot from manufacturing process improvement to SaaS revenue operations. She excels at bridging the gap between sales, marketing, and customer success, focusing on data-driven optimization and system implementation (specifically Salesforce). She\u2019s currently focused on scaling a Series B startup's revenue engine and is proactively networking to connect with other RevOps leaders, potential vendors for advanced analytics tools, and individuals with experience scaling operations in high-growth environments. She\u2019s approachable but direct, valuing efficiency and measurable results. A key detail: she spent 5 years embedded in a Toyota manufacturing plant early in her career, which heavily informs her methodical, data-focused approach.",
+    "positioning": "Beatriz Fernandez is a results-oriented Revenue Operations leader dedicated to building scalable and efficient revenue engines for high-growth SaaS companies. She specializes in aligning sales, marketing, and customer success teams through process optimization, data analysis, and strategic technology implementation. With a foundation in Lean Six Sigma methodologies and extensive experience with Salesforce ecosystems, Beatriz identifies and eliminates revenue leaks, accelerating growth and maximizing ROI. She\u2019s passionate about transforming complex operational challenges into streamlined, data-driven solutions, and is adept at fostering collaboration across departments.",
+    "background": "- **Director of Revenue Operations, NovaTech Solutions (2021 \u2013 Present):** Led the implementation of Salesforce Sales Cloud and Marketing Cloud, resulting in a 30% increase in lead conversion rates and a 20% reduction in sales cycle length. Developed and implemented a standardized lead scoring model, improving sales team efficiency by 15%. Managed a team of 3 RevOps analysts, providing mentorship and guidance on data analysis and process improvement.\n- **Senior Manager, Process Improvement, Stellar Dynamics (2018 \u2013 2021):** Spearheaded cross-functional projects to optimize key business processes, leveraging Lean Six Sigma principles to reduce waste and improve efficiency. Achieved a 10% reduction in operational costs through process automation and standardization. Collaborated with IT to implement new workflow management systems.\n- **Process Engineer, Toyota Manufacturing (2013 \u2013 2018):** Implemented Kaizen events to identify and resolve bottlenecks in the production process, improving overall throughput by 8%. Developed and maintained process documentation, ensuring adherence to quality standards. Received Toyota\u2019s Excellence in Engineering award in 2016.\n- **Education: Master of Business Administration (MBA), Stanford University (2011 \u2013 2013)** - Concentration in Operations Management.\n- **Education: Bachelor of Science in Industrial Engineering, University of California, Berkeley (2007 \u2013 2011)** - Graduated *Summa Cum Laude*.",
+    "lookingFor": "- Connections with other RevOps leaders at Series B/C SaaS companies.\n- Individuals with experience implementing advanced revenue analytics platforms (e.g., Clari, Gong).\n- Salesforce architects with expertise in complex integrations and data modeling.\n- Mentorship opportunities related to scaling RevOps functions in hyper-growth environments.\n- Thought leadership around emerging trends in revenue operations and AI-powered sales tools.\n- Opportunities to share best practices and collaborate on RevOps challenges.\n- Interested in learning about innovative approaches to sales compensation and territory management.",
+    "notes": "Beatriz is extremely data-driven and appreciates concise, fact-based communication. She values efficiency and dislikes unnecessary meetings. She's a firm believer in the 'Gemba Walk' principle \u2013 she likes to understand processes firsthand. \n\n*   She's currently evaluating new tools for predictive lead scoring and is open to vendor demos.\n*   She's a strong advocate for data quality and is always looking for ways to improve data hygiene.\n*   She's recently completed a certification in Salesforce Platform App Builder.\n*   Avoid overly promotional or salesy pitches \u2013 she prefers authentic connections and collaborative discussions.\n*   She's a big fan of process mapping and visual workflows.",
+    "locationAvailability": "Based in San Francisco, CA. Available for remote meetings and occasional travel within the US.",
+    "introPreferences": "- Introductions should highlight the individual\u2019s expertise in a specific area relevant to RevOps (e.g., Salesforce, data analytics, process improvement).\n- Avoid introductions to general sales or marketing roles; she\u2019s looking for peers and specialists.\n- Briefly mention any shared interests or connections to build rapport.\n- Keep the introduction concise and focused on the potential value of the connection.\n- Please *do not* introduce her to recruiters unless she specifically requests it.",
+    "personalPreferences": "Prefers email for initial contact.",
+    "meetingAndSchedulingPreferences": "- Prefers 30-minute meetings to maximize efficiency.\n- Generally available during standard business hours (PST).\n- Comfortable with video conferencing (Zoom, Google Meet)."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 17.303817987442017,
+      "input_tokens": 759,
+      "output_tokens": 1032,
+      "problems": []
+    }
+  ],
+  "success": true
+}

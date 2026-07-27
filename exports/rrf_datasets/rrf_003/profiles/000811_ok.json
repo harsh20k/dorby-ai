@@ -1,0 +1,63 @@
+{
+  "id": 811,
+  "archetype": "European Hospitality/Tech Connector",
+  "given_name": "Jamal Almeida",
+  "style_version": 50,
+  "archetypes_version": 137,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Jamal Almeida is a seasoned hospitality technology consultant with a strong focus on the DACH region (Germany, Austria, Switzerland). He spent the first half of his career in hotel operations, which gives him a unique perspective when advising tech startups. His distinctive career detail is a three-year stint leading the digital transformation of a small, family-owned luxury hotel group in the Swiss Alps \u2013 a project that involved integrating a complex suite of systems and turning a traditionally-run business into a tech-forward operation. He's now focused on connecting promising hospitality tech startups with investors and hotel groups across Europe, leveraging his operational experience and network. He's particularly interested in solutions that enhance guest experience and streamline hotel operations, especially those with a sustainability focus. He's based in Zurich but travels frequently.",
+    "positioning": "Jamal Almeida bridges the gap between innovative hospitality technology and the operational realities of hotels across Europe. He leverages a deep understanding of hotel management, honed through years on the front lines, to identify and champion solutions that truly deliver value. Jamal specializes in connecting early-stage startups with the right investors and operators, accelerating their growth and driving adoption of cutting-edge technologies. He\u2019s particularly adept at navigating the complexities of the DACH market and ensuring a strong ROI for all stakeholders. He focuses on solutions that enhance the guest journey and optimize hotel efficiency, with a growing emphasis on sustainable practices.",
+    "background": "- **Independent Hospitality Technology Consultant** (2021 \u2013 Present): Advises hospitality startups on market entry strategy, investor readiness, and product-market fit, with a focus on the DACH region. Successfully secured seed funding for two startups and facilitated pilot programs with major hotel chains.\n- **Digital Transformation Lead, Alpenrose Hotels & Resorts** (2018 \u2013 2021): Led the complete digital overhaul of a portfolio of four luxury hotels in the Swiss Alps. Implemented a new PMS, CRM, and online booking engine, resulting in a 20% increase in direct bookings and improved guest satisfaction scores.\n- **Front Office Manager, The Grand Bellevue, Gstaad** (2015 \u2013 2018): Managed a team of 15 front desk staff, ensuring exceptional guest service and operational efficiency. Oversaw revenue management and implemented strategies to maximize occupancy rates.\n- **Rooms Division Manager, Hotel Sacher, Vienna** (2012 \u2013 2015): Responsible for the smooth operation of all rooms division departments, including housekeeping, concierge, and guest relations. Contributed to maintaining the hotel's five-star rating.\n- **Bachelor of Science in Hospitality Management, Ecole h\u00f4teli\u00e8re de Lausanne** (2008 \u2013 2012): Graduated with honors, specializing in revenue management and digital marketing. Completed an internship at the Four Seasons Hotel, London.",
+    "lookingFor": "- Investors actively deploying capital in the hospitality tech space, particularly those with a focus on Series A and Seed rounds.\n- Hospitality operators (Hotel GMs, Revenue Managers, IT Directors) seeking innovative solutions to improve efficiency and guest experience.\n- Startups developing technologies related to guest engagement, revenue management, sustainability, and operational automation.\n- Connections within the Swiss hospitality ecosystem \u2013 particularly in Zurich and the German-speaking cantons.\n- Mentorship opportunities for early-stage founders.\n- Individuals interested in discussing the future of hospitality technology and the challenges facing the industry.",
+    "notes": "Jamal is a very direct communicator \u2013 he values efficiency and transparency. He\u2019s passionate about helping startups succeed but isn't afraid to provide honest feedback. \n\n* He\u2019s currently researching AI-powered solutions for personalized guest experiences.\n* He frequently attends hospitality tech conferences in Europe (e.g., HITEC Europe, Hospitality Tomorrow).\n* He\u2019s fluent in German, English, and Portuguese.\n* He's a keen skier and hiker, and often incorporates these activities into business trips to the Alps.\n* He\u2019s been asked to be a guest speaker at a hospitality tech event in Berlin next month \u2013 could be a good networking opportunity for introductions.",
+    "locationAvailability": "Based in Zurich, Switzerland, with frequent travel throughout Europe. Available for remote meetings and calls.",
+    "introPreferences": "- Please only introduce Jamal to individuals who are genuinely relevant to his areas of interest (hospitality tech, investment, DACH region).\n- When making an introduction, briefly highlight the connection point \u2013 why you think Jamal and the other person would benefit from connecting.\n- Avoid introductions to individuals who are simply \u2018looking for investment\u2019 without a clear business plan or demonstrable traction.\n- Jamal prefers concise and informative introductions \u2013 avoid lengthy emails or overly enthusiastic language.\n- He appreciates introductions to individuals who are open to sharing their insights and perspectives.",
+    "personalPreferences": "Prefers email for initial contact. Quick responses are appreciated.",
+    "meetingAndSchedulingPreferences": "- Jamal is generally available for video calls during standard European business hours.\n- He prefers to schedule meetings in advance to ensure he\u2019s adequately prepared."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 15.051663875579834,
+      "input_tokens": 758,
+      "output_tokens": 1092,
+      "problems": [
+        "background: possible truncation (ends with '...witzerland) \u2013 2010 \u2013 2013')"
+      ]
+    },
+    {
+      "attempt": 2,
+      "elapsed_s": 19.93838882446289,
+      "input_tokens": 758,
+      "output_tokens": 1062,
+      "problems": []
+    }
+  ],
+  "success": true
+}

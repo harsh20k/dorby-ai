@@ -1,0 +1,54 @@
+{
+  "id": 407,
+  "archetype": "Global Engineer Talent Connector",
+  "given_name": "Yara Zhang",
+  "style_version": 25,
+  "archetypes_version": 68,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Yara Zhang is the founder and CEO of 'Globally Skilled,' a platform connecting US-based tech companies with pre-vetted, highly skilled software engineers in Southeast Asia (specifically Vietnam and the Philippines). Her distinctive career detail is a prior decade spent *as* a software engineer, initially in China, then relocating to the US on an H1-B visa. This experience fuels her passion for streamlining the international tech talent pipeline. She\u2019s currently seeking Series A funding to scale Globally Skilled's operations, expand its vetting capabilities (including skills assessments and cultural fit analysis), and build out a dedicated relocation support team. She\u2019s very focused on companies struggling with the US talent shortage and willing to embrace remote-first or relocation-supported models. She\u2019s pragmatic, data-driven, and deeply understands the challenges faced by both companies *and* international engineers.",
+    "positioning": "Globally Skilled is revolutionizing how US tech companies access top-tier engineering talent. We solve the critical shortage of skilled software engineers by connecting businesses with a pre-vetted pool of highly qualified professionals in Southeast Asia, primarily Vietnam and the Philippines. Our platform goes beyond simple job boards; we provide comprehensive skills assessments, cultural fit analysis, and streamlined onboarding support. We\u2019re currently in a rapid growth phase, having successfully placed engineers in over 30 companies, and are poised to become the leading solution for companies seeking a diverse and cost-effective engineering workforce. We differentiate ourselves through our rigorous vetting process and commitment to ensuring a seamless experience for both employers and engineers, ultimately reducing time-to-hire and improving retention rates.",
+    "background": "* **Globally Skilled, CEO & Founder** (2021 \u2013 Present)\n    * Led all aspects of company strategy, product development, fundraising, and operations.\n    * Secured seed funding of $750K, demonstrating strong market validation.\n    * Built and scaled a remote team of 15, including engineers, recruiters, and customer success managers.\n    * Developed and implemented a proprietary vetting process that reduces engineer attrition by 40% compared to industry averages.\n    * Oversaw the successful placement of 30+ engineers with US-based tech companies.\n* **TechForward Solutions, Senior Software Engineer** (2016 \u2013 2021)\n    * Designed, developed, and deployed key features for a high-traffic e-commerce platform using Java, Spring, and AWS.\n    * Led a team of 3 junior engineers, providing mentorship and technical guidance.\n    * Implemented performance optimizations that resulted in a 20% increase in website speed.\n    * Successfully migrated legacy systems to a microservices architecture.\n* **InnovateTech, Software Engineer** (2013 \u2013 2016)\n    * Contributed to the development of a mobile application using Python and Android SDK.\n    * Participated in agile development sprints, contributing to all phases of the software development lifecycle.\n    * Gained experience in database design and management using MySQL.\n* **Tsinghua University, Beijing, China, Master of Science in Computer Science** (2011 \u2013 2013)\n    * GPA: 3.9/4.0\n    * Research focus: Distributed Systems\n* **Shanghai Jiao Tong University, Bachelor of Science in Computer Science** (2007 \u2013 2011)\n    * GPA: 3.8/4.0\n    * Relevant coursework: Data Structures, Algorithms, Database Systems, Operating Systems\n\nSkills: Java, Python, AWS, Spring, Android SDK, MySQL, Agile Methodologies, Leadership, Team Management, International Recruitment, Software Engineering, Relocation Assistance.",
+    "lookingFor": "We are currently seeking Series A funding to accelerate our growth and expand our impact. Specifically, we are targeting:\n\n* **Investors:** Venture capital firms with a focus on future of work, HR tech, or global talent marketplaces. We're looking for investors who understand the complexities of international recruitment and are committed to building a diverse and inclusive tech workforce.\n* **Investment Amount:** $5M - $8M\n* **Strategic Partners:** Companies offering complementary services such as immigration law, global payroll, or benefits administration. We\u2019re open to exploring partnerships that enhance our value proposition and streamline the onboarding process for our clients.\n* **Advisory Board Members:** Experienced leaders in the tech industry with a proven track record of scaling successful companies. We value mentorship and guidance from individuals who can help us navigate the challenges of rapid growth.\n* **Key Hires:** We are actively recruiting a Head of Engineering and a Head of Sales.  Candidates should have experience in building and scaling high-performing teams and a strong understanding of the tech industry.",
+    "notes": "Spoke with Alex Chen at Sequoia Capital on 10/26. He expressed interest but wanted to see more traction on the relocation support side.  Action item: prioritize building out the relocation support team and gather data on its impact. \n\n* Update: Initial data from our pilot relocation program shows a 90% engineer retention rate after 6 months \u2013 a significant improvement over industry averages. This should be a strong selling point for investors.\n* Potential Issue: Competition is heating up. A new player, 'GlobalTech Connect,' has entered the market. Need to refine our messaging to emphasize our rigorous vetting process and superior customer service.\n* Follow up with Maria Rodriguez at Accel next week. She previously expressed interest in the future of work space.",
+    "locationAvailability": "San Francisco, CA (Headquarters) and remote operations supporting Southeast Asia.",
+    "introPreferences": "I'm always open to connecting with VCs focused on future of work and HR tech. Please frame introductions by highlighting Globally Skilled\u2019s unique approach to vetting international talent and our commitment to reducing the tech talent shortage. \n\n* **Hard Requirements:** Please avoid introducing me to recruiters or companies offering generic staffing solutions. We are *not* a staffing agency.\n* **Soft Preferences:** Introductions to CTOs and VPs of Engineering at companies struggling to find qualified engineers in the US are highly valued.  I'm also interested in connecting with individuals with experience in international relocation and immigration.\n* **Avoid:** Please do not connect me with individuals from 'GlobalTech Connect' - we are currently assessing our competitive strategy.",
+    "personalPreferences": "I prefer asynchronous communication \u2013 email or Slack are best. I\u2019m generally available for calls between 9am-12pm PST. I am a big fan of podcasts about technological innovation.",
+    "meetingAndSchedulingPreferences": "Please send a brief agenda before any scheduled meeting.  I typically follow up with a summary of key takeaways and action items within 24 hours."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 23.959736824035645,
+      "input_tokens": 760,
+      "output_tokens": 1436,
+      "problems": []
+    }
+  ],
+  "success": true
+}

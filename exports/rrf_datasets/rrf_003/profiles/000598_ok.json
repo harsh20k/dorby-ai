@@ -1,0 +1,54 @@
+{
+  "id": 598,
+  "archetype": "Full-Stack Founder, Rapid Iteration",
+  "given_name": "Yusuf Weber",
+  "style_version": 37,
+  "archetypes_version": 100,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Yusuf Weber is a 34-year-old full-stack founder currently building 'SynapseFlow,' a no-code automation platform for marketing agencies. He previously spent 5 years at a large enterprise software company (Salesforce) but left to pursue the agility of startup life. A distinctive detail is that he self-funded SynapseFlow for the first 18 months completely through freelance web development work, demonstrating extreme resourcefulness and commitment. He\u2019s now seeking seed funding and strategic partnerships to scale. He\u2019s very technically capable and wants to talk *shop* with potential investors, not just high-level strategy. He\u2019s laser-focused on marketing agencies \u2013 they're his ideal customer and he\u2019s built SynapseFlow specifically to solve their pain points. He\u2019s a direct communicator, values efficiency, and dislikes overly formal networking approaches.",
+    "positioning": "I\u2019m Yusuf Weber, founder of SynapseFlow \u2013 a no-code automation platform designed to dramatically improve efficiency and profitability for marketing agencies. We empower agencies to automate repetitive tasks, streamline workflows, and deliver exceptional client results, all without requiring a single line of code. The current marketing landscape demands agility and rapid response times. Agencies are drowning in manual processes and struggling to scale. SynapseFlow solves this by offering a user-friendly, visual interface that allows agencies to build complex automations in minutes, not days. We\u2019re not just building software; we\u2019re building a competitive advantage for our clients. Our initial traction has been phenomenal, with several agencies reporting a 30-50% reduction in time spent on campaign management and a corresponding increase in client satisfaction. We\u2019re currently focused on expanding our integration library and building out key features based on direct user feedback, ensuring SynapseFlow remains the leading automation solution for the modern marketing agency. We\u2019re targeting agencies with 10-50 employees, specializing in social media marketing, paid advertising, and email marketing \u2013 those most burdened by manual processes and seeking scalable solutions.",
+    "background": "- **Founder & CEO, SynapseFlow (Jan 2022 \u2013 Present):** Led all aspects of product development, fundraising, marketing, and sales. Successfully launched MVP within 3 months, achieving initial traction with 15 paying agency clients. Personally responsible for initial codebase development (full-stack JavaScript, Node.js, React). Currently managing a small remote team of 2 developers.\n- **Senior Software Engineer, Salesforce (June 2017 \u2013 Dec 2021):** Developed and maintained key features for Salesforce Marketing Cloud, specializing in automation and integration services. Consistently exceeded performance expectations, contributing to the successful launch of multiple major product releases. Led a team of junior engineers in the development of a new API integration module, resulting in a 20% increase in integration efficiency.\n- **Freelance Web Developer (2015 - 2017):** Built and maintained websites for small businesses, gaining valuable experience in client management and project delivery. This experience funded the initial stages of SynapseFlow.\n- **B.S. Computer Science, University of California, Berkeley (2013 \u2013 2017):** Graduated with honors, specializing in software engineering and database management. Completed a senior thesis on the application of machine learning to marketing automation.",
+    "lookingFor": "I'm actively seeking seed funding to accelerate SynapseFlow\u2019s growth and expand our team. I\u2019m particularly interested in connecting with:\n\n* **Seed-stage investors** with a focus on SaaS and marketing technology.\n* **Strategic partners** \u2013 specifically marketing agencies willing to become early adopters and provide valuable feedback.\n* **Experienced advisors** who have successfully scaled SaaS businesses.\n* **Potential integrations partners** \u2013 platforms like HubSpot, Mailchimp, and ActiveCampaign.\n\nI'm open to introductions to individuals who can provide mentorship, strategic guidance, or potential investment opportunities. I\u2019m *not* interested in purely financial investors who lack industry knowledge or a genuine interest in the marketing technology space. I\u2019m looking for partners who understand the challenges agencies face and are excited about the potential of no-code automation.",
+    "notes": "* Yusuf is highly technical and enjoys diving deep into product details. Don\u2019t shy away from technical discussions \u2013 he\u2019ll appreciate it. \n* He self-funded for a long period \u2013 extremely resourceful and committed.\n* He\u2019s very focused on the agency market. Avoid pitching solutions for enterprise-level marketing teams.\n* Last conversation with [Investor Name] \u2013 positive, but they\u2019re waiting to see more traction. Follow up in 2 weeks.\n* Successful approach: Mentioning specific pain points faced by agencies resonates strongly.\n* He's been attending the 'Marketing Automation Summit' - good place to connect.",
+    "locationAvailability": "I am based in San Francisco, California, but am comfortable with remote communication and travel as needed. I regularly attend industry events on the West Coast.",
+    "introPreferences": "* **Hard Requirements:** Must be a decision-maker or have direct access to decision-makers at relevant organizations (VC firms, marketing agencies, integration platforms).\n* **Soft Preferences:** Experience with SaaS, marketing technology, or automation platforms.\n* **Ideal Contact Profile:** Partner-level at a VC firm, CEO/Founder of a marketing agency (10-50 employees), Head of Partnerships at a relevant technology platform.\n* **Introduction Style:** Brief, concise, and focused on the mutual benefit of a connection. Avoid overly promotional or generic introductions. Highlight SynapseFlow\u2019s unique value proposition for marketing agencies.\n* **Avoid:** Introducing me to junior-level employees or individuals with limited decision-making authority. Avoid introductions that are purely exploratory without a clear purpose.",
+    "personalPreferences": "Prefers direct communication. Email is fine for initial contact, but I'm responsive on LinkedIn. I value efficiency \u2013 please get straight to the point.",
+    "meetingAndSchedulingPreferences": "I'm flexible with meeting times and can accommodate various scheduling tools. Generally prefer a quick call to assess fit before scheduling a longer meeting."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 25.187994241714478,
+      "input_tokens": 788,
+      "output_tokens": 1291,
+      "problems": []
+    }
+  ],
+  "success": true
+}

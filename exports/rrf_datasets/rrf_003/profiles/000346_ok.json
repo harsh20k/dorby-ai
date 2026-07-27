@@ -1,0 +1,63 @@
+{
+  "id": 346,
+  "archetype": "Deep Tech/AI Founder Seeking Funding",
+  "given_name": "Rafael Reyes",
+  "style_version": 21,
+  "archetypes_version": 58,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Rafael Reyes is a 38-year-old founder with a PhD in Robotics from MIT. He spent 8 years at Tesla, initially in Autopilot, then moving into special projects involving advanced sensor fusion for manufacturing quality control. He left Tesla to found 'Synapse Robotics,' a company developing AI-powered robotic vision systems for precision agriculture, specifically focused on automating fruit harvesting. He\u2019s a deeply technical founder, sometimes struggles with \u2018selling the vision\u2019, and is currently in a seed round, looking for investors with a strong understanding of both robotics *and* agriculture. He\u2019s very focused on demonstrable ROI for farmers \u2013 his pitch isn't about futuristic robots, it's about increasing yield and reducing labor costs. He\u2019s good at explaining the tech, but needs help articulating market size and go-to-market strategy. He tends to over-engineer solutions initially, a trait he's actively working on mitigating. He\u2019s based in Salinas, California, intentionally located in the heart of the agricultural industry.",
+    "positioning": "I\u2019m Rafael Reyes, founder and CEO of Synapse Robotics. We\u2019re revolutionizing precision agriculture with AI-powered robotic vision systems designed to automate fruit harvesting. Current harvesting practices are incredibly labor-intensive and facing severe shortages, impacting food security and profitability. Synapse Robotics addresses this directly by deploying robots equipped with our proprietary AI algorithms capable of identifying, assessing ripeness, and delicately harvesting fruit with minimal damage. \n\nWe've developed a fully functional prototype and completed successful pilot programs with several large-scale strawberry and apple farms in California, demonstrating a 40% reduction in labor costs and a 15% increase in yield. Our competitive advantage lies in our unique sensor fusion technology, combining LiDAR, hyperspectral imaging, and deep learning to achieve unparalleled accuracy and robustness in challenging outdoor environments. \n\nWe are currently raising a $3M seed round to scale our production, expand our team, and accelerate our go-to-market strategy. We\u2019re targeting initial deployments in high-value fruit crops, with a clear roadmap for expansion into other agricultural applications. We\u2019re not just building robots; we\u2019re building a more sustainable and efficient future for food production. We are seeking partners who understand the challenges and opportunities within the AgTech space and can contribute beyond capital \u2013 strategic guidance and industry connections are invaluable.",
+    "background": "* **Synapse Robotics, Founder & CEO** (2022 \u2013 Present)\n    * Led all aspects of company formation, including technology development, fundraising, and team building.\n    * Secured initial seed funding commitments totaling $750k.\n    * Developed and deployed functional prototypes for strawberry and apple harvesting, demonstrating significant ROI in pilot programs.\n    * Managed a team of 5 engineers and researchers.\n* **Tesla, Senior Robotics Engineer** (2014 \u2013 2022)\n    * Initially focused on the development and testing of Autopilot perception systems, specializing in sensor fusion and object detection.\n    * Transitioned to a special projects team focused on applying robotics and computer vision to improve manufacturing quality control.\n    * Led the development of an AI-powered inspection system that reduced defect rates by 25%.\n    * Mentored junior engineers and contributed to the development of internal training programs.\n* **Massachusetts Institute of Technology (MIT), PhD, Robotics** (2010 \u2013 2014)\n    * Dissertation: \u201cDynamic Sensor Fusion for Robust Robotic Perception in Unstructured Environments.\u201d\n    * Research focused on developing algorithms for real-time 3D mapping and object recognition using LiDAR and visual data.\n    * Published multiple peer-reviewed papers in leading robotics conferences.\n* **Carnegie Mellon University, BS, Computer Science** (2006 \u2013 2010)\n    * Minor in Electrical and Computer Engineering.\n    * Graduated *Summa Cum Laude*.\n\n**Skills:** Robotics, Computer Vision, Deep Learning, Sensor Fusion (LiDAR, Hyperspectral Imaging), Python, C++, ROS, Machine Learning, Algorithm Development, Project Management, Team Leadership, Fundraising, Agricultural Technology.",
+    "lookingFor": "I\u2019m actively seeking strategic investors and advisors to help Synapse Robotics scale. Specifically, I\u2019m looking for:\n\n* **Seed-stage investors:** Firms with a demonstrated track record of investing in AgTech and/or Robotics, with check sizes between $250k - $500k.  We are open to convertible notes and SAFEs.\n* **Industry advisors:** Individuals with deep experience in the agricultural industry, particularly those with connections to large-scale farming operations.\n* **Robotics/AI engineers:**  Specifically, experienced embedded systems engineers and computer vision specialists.  We're looking for individuals who aren't afraid to get their hands dirty and work on real-world problems.\n* **Potential strategic partners:**  Companies involved in agricultural equipment manufacturing, supply chain management, or data analytics.\n\n**Hard Requirements:**\n    * Understanding of the challenges and opportunities in the agricultural sector.\n    * Demonstrated experience in scaling technology companies.\n\n**Soft Preferences:**\n    * Interest in sustainable agriculture and food security.\n    * Willingness to provide mentorship and guidance.\n    * Network within the AgTech ecosystem.",
+    "notes": "Spoke with Rafael on 10/26. He\u2019s incredibly sharp technically, but needs help framing the investment opportunity beyond the technology itself. He's very focused on the technical details of the robot and struggles to articulate the total addressable market effectively. He\u2019s receptive to feedback and actively seeking guidance on his pitch deck. He mentioned he's been getting a lot of interest from angel investors but is prioritizing firms with operational expertise.  Internal scoring: Tech \u2013 9/10, Market \u2013 6/10, Fundraising Readiness \u2013 7/10.  Intro to [Investor Name] (specializes in AgTech) is a high priority.  He mentioned a recent conversation with [Competitor Company CEO] that went poorly \u2013 avoid mentioning them during introductions.",
+    "locationAvailability": "I'm based in Salinas, California, but frequently travel to potential pilot farm locations. I\u2019m open to remote meetings and can travel to investor locations as needed.",
+    "introPreferences": "* **Hard Requirements:**\n    * Introductions should be to individuals with direct investment authority or significant influence over investment decisions.\n    * The introduction email should clearly highlight Synapse Robotics\u2019 potential ROI for farmers.\n* **Soft Preferences:**\n    * Introductions to investors with a demonstrated interest in both Robotics *and* Agriculture are ideal.\n    * Please frame the introduction as a conversation about a promising technology addressing a critical need in the food supply chain.\n    * Avoid overly technical language in the introduction email - focus on the business value proposition.\n    * A brief mention of our successful pilot programs would be beneficial.",
+    "personalPreferences": "I prefer initial contact via email.  I generally respond to emails within 24-48 hours.  LinkedIn messaging is okay for follow-up.  I'm most responsive during Pacific Standard Time business hours.",
+    "meetingAndSchedulingPreferences": "I'm flexible with meeting times and can accommodate various schedules. I prefer to be directly involved in scheduling to ensure alignment. I\u2019m happy to jump on a quick call to discuss the opportunity further."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 30.13089680671692,
+      "input_tokens": 816,
+      "output_tokens": 1500,
+      "problems": [
+        "lookingFor: possible truncation (ends with '...o sustainable agriculture')"
+      ]
+    },
+    {
+      "attempt": 2,
+      "elapsed_s": 21.56044292449951,
+      "input_tokens": 816,
+      "output_tokens": 1568,
+      "problems": []
+    }
+  ],
+  "success": true
+}

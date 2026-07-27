@@ -1,0 +1,63 @@
+{
+  "id": 300,
+  "archetype": "Real Estate & Tech Veteran",
+  "given_name": "Aiko Oduya",
+  "style_version": 18,
+  "archetypes_version": 50,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Aiko Oduya is a seasoned professional with a unique blend of traditional real estate expertise and cutting-edge technology implementation. She spent the first half of her career in commercial real estate development, focusing on large-scale mixed-use projects. A pivotal moment came when she spearheaded the integration of AI-powered building management systems into a flagship development, drastically reducing operational costs and improving tenant satisfaction. This experience ignited her passion for PropTech. Now, she\u2019s the CEO and founder of 'TerraNova Insights,' a company developing a predictive analytics platform for commercial real estate investment \u2013 identifying undervalued properties with high potential based on hyperlocal data and machine learning. She\u2019s currently in Series A funding and is looking for strategic investors who understand both real estate fundamentals *and* the power of data science. She's highly focused on ESG metrics and incorporating sustainability into her platform\u2019s analytics.",
+    "positioning": "TerraNova Insights is revolutionizing commercial real estate investment through the power of predictive analytics. We\u2019re solving the critical problem of information asymmetry in a traditionally opaque market, providing investors with data-driven insights to identify undervalued assets and maximize returns. Our proprietary platform leverages machine learning and hyperlocal data sets \u2013 including demographic trends, economic indicators, and environmental factors \u2013 to forecast property performance with unprecedented accuracy. We are currently in a strong position following a successful seed round, demonstrating significant traction with early adopter clients and a rapidly growing pipeline.  TerraNova Insights differentiates itself through our commitment to ESG principles, integrating sustainability metrics into our valuation models, and our team\u2019s unique blend of real estate and technology expertise. We're not just predicting the future of property; we're building a more sustainable and profitable one.",
+    "background": "Aiko Oduya\u2019s career has been defined by a consistent drive to innovate within the real estate industry.\n\n* **TerraNova Insights, CEO & Founder (2021 \u2013 Present):** Leading all aspects of the company, from product development and fundraising to team building and strategic partnerships. Successfully secured $2M in seed funding and onboarded several key pilot clients. Spearheading the development of the core predictive analytics platform and defining the company\u2019s long-term vision.\n* **Sterling Properties, VP of Development (2015 \u2013 2021):** Oversaw the development of over $500M in mixed-use commercial projects, including the landmark 'Innovation District' in Austin, TX. Championed the integration of smart building technologies, resulting in a 20% reduction in operating costs and a 15% increase in tenant retention.  Managed cross-functional teams, including architects, engineers, contractors, and marketing professionals.\n* **CBRE, Associate (2012 \u2013 2015):** Conducted market research, financial analysis, and due diligence for commercial real estate transactions. Supported senior brokers in the negotiation of lease agreements and property sales. Developed expertise in property valuation and investment analysis.\n\n**Education:**\n* **Stanford University, MBA (2010 \u2013 2012):** Concentration in Finance and Entrepreneurship. Graduated with honors.\n* **University of California, Berkeley, BA in Economics (2006 \u2013 2010):**  Minor in Urban Planning.\n\n**Skills & Certifications:**\n* Real Estate Development & Investment\n* Financial Modeling & Analysis\n* Machine Learning & Data Science (Proficient in Python, R)\n* Smart Building Technologies & IoT\n* LEED AP (Leadership in Energy and Environmental Design Accredited Professional)\n* Project Management (PMP Certified)",
+    "lookingFor": "## Networking & Partnership Opportunities\n\n* **Series A Investors:** Seeking strategic investors with a proven track record in PropTech, SaaS, or data analytics. Ideal investor profile: $20M - $50M fund size, focus on early-stage growth, and a commitment to sustainable investing.\n* **Strategic Partnerships:** Exploring collaborations with real estate data providers, property management companies, and technology vendors to expand our data sources and platform capabilities.\n* **Advisory Board Members:** Seeking experienced real estate executives and technology leaders to provide guidance and mentorship.\n\n## Talent Acquisition\n\n* **Data Scientist (Senior):**  Expertise in time series analysis, predictive modeling, and machine learning algorithms. Experience in the real estate domain is a plus.\n* **Business Development Manager:** Proven ability to build and maintain relationships with key stakeholders in the commercial real estate industry. Strong sales and communication skills required.",
+    "notes": "* Aiko is a highly articulate and passionate speaker, particularly when discussing the intersection of real estate and technology. \n* She is very focused on ESG and sustainability, and it's a key differentiator for TerraNova Insights. Highlight this when making introductions.\n* Recently attended the PropTech Summit in New York and is actively following up with several potential investors.\n* Prefers concise and data-driven communication. Avoid overly technical jargon unless she initiates it.",
+    "locationAvailability": "Based in Austin, Texas, with willingness to travel to key investor hubs and industry events.",
+    "introPreferences": "## Hard Requirements\n* **Investors:** Must have a demonstrable understanding of both real estate *and* the technology underpinning it.  Generalist funds are less ideal.\n* **Partners:**  Must be able to provide access to high-quality, granular real estate data.\n\n## Soft Preferences\n* **Introducers:**  Ideally, introductions should come from individuals with a strong network within the PropTech ecosystem.\n* **Communication Style:**  Aiko prefers direct and concise communication.  Avoid lengthy email chains and focus on key takeaways.\n* **Topics to Emphasize:**  TerraNova Insights' unique data advantage, commitment to ESG, and strong early traction.",
+    "personalPreferences": "I prefer to connect initially via LinkedIn and appreciate a brief summary of the connection's background before a call. I'm most responsive to emails that get straight to the point.",
+    "meetingAndSchedulingPreferences": "Please send calendar invites with a clear agenda. I generally prefer 30-minute meetings."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 21.700567722320557,
+      "input_tokens": 744,
+      "output_tokens": 1290,
+      "problems": [
+        "background: possible truncation (ends with '...and investment principles')"
+      ]
+    },
+    {
+      "attempt": 2,
+      "elapsed_s": 26.115503787994385,
+      "input_tokens": 744,
+      "output_tokens": 1291,
+      "problems": []
+    }
+  ],
+  "success": true
+}

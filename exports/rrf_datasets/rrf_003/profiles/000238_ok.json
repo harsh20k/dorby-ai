@@ -1,0 +1,63 @@
+{
+  "id": 238,
+  "archetype": "International Founder - Emerging Markets",
+  "given_name": "Hassan Bianchi",
+  "style_version": 15,
+  "archetypes_version": 39,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Hassan Bianchi is a first-generation Italian-South African entrepreneur. He founded 'Ubuntu Logistics,' a tech-enabled logistics company focused on streamlining cross-border trade within Africa. His distinctive career detail is a prior stint as a commodities trader, giving him deep understanding of supply chains and the challenges faced by businesses operating in the region. He's now aggressively seeking Series A funding and strategic partnerships to expand Ubuntu Logistics\u2019 reach beyond Southern Africa into West and North Africa, and ultimately, globally. He is highly focused on impact investing and building a sustainable business model that benefits local communities. He\u2019s comfortable with a direct, no-nonsense communication style and values efficiency.",
+    "positioning": "Hassan Bianchi is the Founder and CEO of Ubuntu Logistics, a rapidly growing logistics platform connecting businesses across Africa. We\u2019re leveraging technology to solve critical challenges in cross-border trade, reducing friction and increasing efficiency for our clients. Having recently secured seed funding, we are now focused on scaling our operations and expanding our service offerings. I\u2019m passionate about fostering economic growth within Africa and building a company that prioritizes both profit and positive social impact. I\u2019m actively seeking connections with investors, potential partners, and industry experts who share this vision.",
+    "background": "- **Founder & CEO, Ubuntu Logistics** (2021 \u2013 Present)\n  * Led all aspects of company formation, strategy, and execution, securing $750K in seed funding.\n  * Developed and launched a proprietary logistics platform integrating real-time tracking, customs clearance, and payment solutions.\n  * Built a team of 30+ employees across South Africa, Namibia, and Botswana.\n  * Achieved 300% year-over-year revenue growth in 2023.\n- **Commodities Trader, Trafigura** (2018 \u2013 2021)\n  * Managed a portfolio of agricultural commodities across Southern Africa, including maize, wheat, and soybeans.\n  * Developed strong relationships with farmers, suppliers, and buyers throughout the region.\n  * Gained deep understanding of supply chain logistics, risk management, and international trade finance.\n- **Education: University of Cape Town** (2014 \u2013 2017)\n  * Bachelor of Commerce in Economics, *Summa Cum Laude*.\n  * President of the University Economics Society.\n- **Skills:** Supply Chain Management, Logistics, International Trade, Fintech, Fundraising, Strategic Planning, Team Leadership, Risk Management, Commodities Trading, Business Development, Python (basic proficiency).",
+    "lookingFor": "I\u2019m currently focused on securing Series A funding to fuel our expansion into West and North Africa. Specifically, I\u2019m looking to connect with:\n\n* **Venture Capital firms** specializing in African tech and logistics.\n* **Strategic partners** with complementary expertise in areas like fintech, customs brokerage, or warehousing.\n* **Investors** with a strong commitment to impact investing and sustainable development.\n* **Mentors** with experience scaling tech companies in emerging markets.\n\nI'm open to introductions to individuals at firms like TLcom Capital, Partech Africa, and Novastar Ventures. I'm also keen to learn from founders who've successfully navigated similar challenges in the African context.  I\u2019m particularly interested in individuals who can provide insights into navigating the regulatory landscape in Nigeria and Ghana.",
+    "notes": "Hassan is direct and highly focused. He\u2019s very clear about his funding needs and expansion plans. He mentioned a previous negative experience with an investor who didn\u2019t understand the nuances of the African market \u2013 prioritize investors with actual on-the-ground experience. He's attending TechCrunch Disrupt Berlin next month, potentially a good venue for introductions. Follow up on the potential connection with the partner at TLcom Capital \u2013 initial email sent.",
+    "locationAvailability": "Hassan is based in Cape Town, South Africa, but frequently travels throughout the African continent.",
+    "introPreferences": "Hard Requirements:\n* **Prioritize introductions to investment partners at Series A stage or later.** I\u2019m not currently seeking angel investors.\n* **Ensure the contact has demonstrable experience investing in African tech companies.**\n* **Exclude introductions to individuals solely focused on consumer-facing businesses.** We are B2B focused.\n\nSoft Preferences:\n* **A brief, personalized introduction highlighting Ubuntu Logistics\u2019 impact potential is highly appreciated.**\n* **Focus on the scalability of our platform and our strong revenue growth.**\n* **If possible, include a connection point \u2013 shared alumni network, mutual acquaintance, etc.**",
+    "personalPreferences": "I prefer to connect initially via LinkedIn or email.  WhatsApp is okay for quick follow-ups once a relationship is established.",
+    "meetingAndSchedulingPreferences": "I\u2019m generally available for virtual meetings during South African business hours (GMT+2). I\u2019m also open to in-person meetings when traveling. Please provide a clear agenda in advance of any scheduled meeting."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 25.20602512359619,
+      "input_tokens": 753,
+      "output_tokens": 1394,
+      "problems": [
+        "background: possible truncation (ends with '...lder Farmers\u2019.</li>\n</ul>')"
+      ]
+    },
+    {
+      "attempt": 2,
+      "elapsed_s": 16.466593980789185,
+      "input_tokens": 753,
+      "output_tokens": 1053,
+      "problems": []
+    }
+  ],
+  "success": true
+}

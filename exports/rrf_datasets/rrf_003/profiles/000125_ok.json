@@ -1,0 +1,54 @@
+{
+  "id": 125,
+  "archetype": "Toronto-Based Product & Community Builder",
+  "given_name": "Rafael Mendes",
+  "style_version": 8,
+  "archetypes_version": 21,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Rafael Mendes is a seasoned Product Leader currently focused on building and scaling communities *around* product-led growth strategies. He's not just shipping features; he's obsessed with how to foster user advocacy and turn customers into active contributors. A distinctive detail is his background in early-stage hardware startups \u2013 a relatively unusual path for a product leader now deeply immersed in SaaS and digital communities. He\u2019s now at 'Synapse Collective', a boutique consultancy helping SaaS companies build thriving communities. He's actively looking to connect with founders of early-stage (Seed-Series A) B2B SaaS companies who recognize the power of community but need help structuring and executing a strategy. He\u2019s also keen to connect with other community builders to share best practices and explore potential collaborations. He's a bit of a 'maker' himself, running a small side project focused on open-source tools for community management.",
+    "positioning": "As Head of Product & Community at Synapse Collective, I specialize in architecting and scaling product-led community strategies for B2B SaaS companies. We help organizations move beyond traditional marketing funnels and cultivate vibrant ecosystems of engaged users, advocates, and contributors. My core philosophy centers on the belief that the most sustainable growth is fueled by genuine connection and shared value. We don\u2019t just *build* communities; we engineer them for impact \u2013 driving product adoption, reducing churn, and unlocking invaluable user insights. \n\nI leverage a unique blend of technical product management expertise, honed through years in the hardware space, and a deep understanding of modern community building best practices. This allows me to bridge the gap between product development and community engagement, ensuring that both are strategically aligned and mutually reinforcing. At Synapse Collective, we focus on developing bespoke community platforms, implementing effective moderation strategies, and establishing robust feedback loops that directly inform product roadmaps. We\u2019re particularly adept at helping companies leverage gamification, content marketing, and event-based experiences to foster a sense of belonging and drive meaningful participation. We\u2019re seeing incredible results with clients \u2013 from a 40% increase in trial-to-paid conversions to a 25% reduction in customer support tickets. Ultimately, my goal is to empower organizations to transform their customers into their biggest fans and most valuable assets.",
+    "background": "- **Head of Product & Community, Synapse Collective** (2022 - Present)\n  * Leading the strategy and execution of community-led growth initiatives for B2B SaaS clients.\n  * Developed and launched a proprietary framework for assessing community readiness and identifying key growth opportunities.\n  * Increased client community engagement by an average of 65% within the first six months of implementation.\n\n- **Senior Product Manager, NovaTech Solutions** (2019 - 2022)\n  * Led the product roadmap for a flagship IoT platform, managing a team of engineers, designers, and data scientists.\n  * Successfully launched three new product features that resulted in a 20% increase in user acquisition.\n  * Oversaw the integration of user feedback into the product development process.\n\n- **Product Engineer, Stellar Dynamics** (2016 - 2019) \u2013 *Early stage hardware startup*\n  * Focused on the hardware/software integration for a novel wearable device.  Responsible for prototyping, testing, and manufacturing support.\n  * Key contributor to the successful launch of the company\u2019s first product.\n  * Gained valuable experience in fast-paced, resource-constrained environments.\n\n- **Education:**\n  * **Master of Science in Engineering, University of Waterloo** (2014 - 2016)\n  * **Bachelor of Science in Computer Science, Queen\u2019s University** (2010 - 2014)\n\n- **Skills:** Product Management, Community Building, SaaS, IoT, Agile Methodologies, User Research, Data Analysis, Growth Hacking, Content Strategy, Moderation, Platform Development (Discord, Slack, Circle).",
+    "lookingFor": "I'm actively seeking connections with:\n\n* **Founders (Seed-Series A) of B2B SaaS companies:** Specifically, those who recognize the potential of community but are struggling to define a clear strategy or execute effectively.\n* **Community Builders & Leaders:** Individuals passionate about building and scaling online communities, particularly within the SaaS space. I\u2019m always eager to exchange ideas and best practices.\n* **VCs/Investors focused on PLG (Product Led Growth):** Interested in discussing emerging trends and potential investment opportunities in the community-led growth space.\n* **Partnerships with complementary service providers:** Companies offering services that align with our community-building offerings (e.g., content marketing agencies, analytics platforms). \n\nI'm particularly interested in companies leveraging innovative approaches to community engagement, such as tokenization, decentralized governance, or AI-powered moderation.",
+    "notes": "Rafael is a fantastic resource for anyone looking to build a truly engaged community. He\u2019s very pragmatic and avoids \u2018vanity metrics\u2019. He\u2019s currently testing a new framework for community health scoring \u2013 happy to share details. He\u2019s *very* busy, so be concise. His side project is called 'CommUnity' - an open-source toolkit for community admins. He\u2019s a big advocate for asynchronous communication. Recent talk at ProductCon Toronto on 'Building Communities That Scale'.  He's a huge fan of the 'Lenny's Newsletter' community.",
+    "locationAvailability": "I am based in Toronto, Canada, and primarily work remotely. I am open to travel within North America for client meetings and industry events.",
+    "introPreferences": "Please adhere to the following when making introductions:\n\n**Hard Requirements:**\n* **Relevance:** Ensure the connection is genuinely relevant to my areas of expertise (B2B SaaS, community building, PLG).\n* **Specificity:** Clearly articulate *why* you believe the connection would be valuable for both parties.\n* **Conciseness:** Keep the introduction brief and to the point \u2013 maximum 5 sentences.\n\n**Soft Preferences:**\n* **Warm Introductions:** I strongly prefer warm introductions over cold outreach.\n* **LinkedIn Messaging:** Initial contact via LinkedIn is preferred.\n* **Avoid Sales Pitches:** Do not introduce me to individuals solely to sell me a product or service.\n* **Focus on Mutual Value:** Frame the introduction as an opportunity for collaboration or knowledge sharing.\n* **No unsolicited advice on community platforms.** I\u2019ve tried them all!",
+    "personalPreferences": "I'm a pretty laid-back person and prefer a casual communication style. I\u2019m a big coffee enthusiast and enjoy discussing emerging technologies and product design. I'm generally responsive on LinkedIn, but please allow up to 24-48 hours for a reply as I often have a packed schedule.  I'm a bit of a running geek and always up for discussing running routes in Toronto.",
+    "meetingAndSchedulingPreferences": "I typically schedule meetings via Calendly.  I prefer mornings (EST) for calls and am generally unavailable on Fridays."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 27.132962942123413,
+      "input_tokens": 803,
+      "output_tokens": 1518,
+      "problems": []
+    }
+  ],
+  "success": true
+}

@@ -1,0 +1,54 @@
+{
+  "id": 67,
+  "archetype": "Hedge Fund Quant, AI Exploration",
+  "given_name": "Aiko Johansson",
+  "style_version": 5,
+  "archetypes_version": 11,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Aiko Johansson is a former senior quantitative analyst at a large, established hedge fund (Two Sigma) who recently left to found 'Algorithmic Horizons,' a small, venture-backed startup focused on applying reinforcement learning to options pricing and volatility arbitrage. She's technically brilliant, but relatively new to the founder/fundraising world. Her distinctive career detail is a PhD in astrophysics, which she leveraged to build sophisticated time-series models for financial markets. She\u2019s seeking connections to potential institutional investors, data providers specializing in alternative datasets, and experienced advisors who\u2019ve successfully scaled similar AI-driven fintech ventures. She's very data-driven in her communication and prefers direct, concise interactions. She\u2019s based in New York but open to remote collaboration.",
+    "positioning": "I\u2019m the founder and CEO of Algorithmic Horizons, a fintech startup revolutionizing options trading through the application of cutting-edge reinforcement learning algorithms. We\u2019re building a proprietary platform to identify and capitalize on subtle arbitrage opportunities in options markets, specifically targeting volatility surface inefficiencies. We recently closed a seed round led by Amplify Partners and are currently focused on expanding our model coverage and securing strategic data partnerships. Our core value proposition lies in generating consistent alpha through dynamic, adaptive trading strategies, offering institutional investors a unique and uncorrelated source of returns. We aim to be the leader in AI-powered options market making.",
+    "background": "- **PhD, Astrophysics, California Institute of Technology (Caltech)** \u2013 Dissertation focused on time-series analysis of astronomical data, developing novel algorithms for pattern recognition and prediction. This foundational work directly informs our current modeling approach.\n- **Senior Quantitative Analyst, Two Sigma Investments (2018 \u2013 2023)**: Led the development and implementation of statistical arbitrage models, resulting in a 15% increase in portfolio alpha generation within the first year.\n- Managed a team of four junior quants, mentoring them in model development, backtesting, and risk management.\n- Spearheaded the integration of alternative data sources (satellite imagery, social media sentiment) into existing trading strategies, improving predictive accuracy by 8%.\n- Responsible for the full model lifecycle \u2013 from research and development to production deployment and ongoing monitoring.\n- **Quantitative Researcher, Jane Street Capital (Summer 2017)**: Interned on the volatility trading desk, gaining practical experience in options pricing and risk management.\n- **Research Assistant, Harvard University (2016 \u2013 2018)**: Assisted Professor Anya Sharma with research on high-frequency trading algorithms.\n- Published three peer-reviewed papers in leading astrophysics journals, demonstrating strong analytical and research skills.\n- Proficient in Python (NumPy, Pandas, TensorFlow, PyTorch), C++, and SQL.\n- Certified Financial Risk Manager (FRM).\n- Bachelor of Science, Physics, Massachusetts Institute of Technology (MIT) \u2013 Summa Cum Laude.",
+    "lookingFor": "- Introductions to institutional investors (hedge funds, family offices) with an interest in AI-driven investment strategies.\n- Connections to data providers specializing in alternative datasets relevant to options pricing (e.g., geolocation data, news sentiment analysis).\n- Experienced advisors who have successfully scaled AI/ML-based fintech startups, particularly in the trading space.\n- Potential partners for backtesting and validation of our trading models.\n- Individuals with expertise in regulatory compliance for algorithmic trading.\n- Warm introductions to the heads of quant trading at major investment banks.\n- Mentorship regarding seed-stage fundraising and investor relations.\n- Connections to talent specializing in reinforcement learning and high-frequency trading.",
+    "notes": "- Aiko is incredibly sharp and highly analytical. She responds best to data-driven arguments and concise communication. \n- She recently mentioned being overwhelmed with the fundraising process, so any advice or support in that area would be greatly appreciated.\n- She's actively attending AI in Finance conferences and is eager to network.\n- She\u2019s currently exploring partnerships for cloud computing infrastructure.\n- She\u2019s open to discussing potential collaborations on research projects.",
+    "locationAvailability": "Based in New York City, but comfortable with remote meetings and travel as needed.",
+    "introPreferences": "- **Must-Have:** Individuals with direct investment decision-making authority at institutional investment firms (AUM >$500M).\n- **Strongly Preferred:** Experience with or demonstrated interest in AI/ML-driven investment strategies.\n- **Good-to-Have:** Prior experience with options trading or volatility arbitrage.\n- **Dealbreaker:** Individuals solely focused on early-stage, pre-revenue ventures.\n- **Framing:** Emphasize Algorithmic Horizon's unique approach to options pricing using reinforcement learning and its potential for generating uncorrelated alpha.\n- **Avoid:** Introductions to individuals with limited financial expertise or those solely focused on speculative technologies.",
+    "personalPreferences": "I prefer initial contact via LinkedIn or email. I'm most responsive to concise, well-structured messages.",
+    "meetingAndSchedulingPreferences": "I generally prefer 30-minute introductory calls. I use Calendly for scheduling and am available most weekdays."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 21.700801849365234,
+      "input_tokens": 845,
+      "output_tokens": 1074,
+      "problems": []
+    }
+  ],
+  "success": true
+}

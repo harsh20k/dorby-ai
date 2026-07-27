@@ -1,0 +1,54 @@
+{
+  "id": 199,
+  "archetype": "Bank-Grade Engineer, Indie Builder",
+  "given_name": "Sana Moreau",
+  "style_version": 13,
+  "archetypes_version": 33,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Sana Moreau is a former lead systems engineer at a large European bank (Deutsche Kredit AG) specializing in high-frequency trading infrastructure. She spent 8 years building and maintaining extremely reliable, low-latency systems subject to intense regulatory scrutiny (MiFID II, etc.). She's deeply proficient in Rust, Go, and Kubernetes, and has a strong understanding of financial regulations. She left to found 'FlowState Automation,' a small company building no-code/low-code automation tools for small and medium-sized businesses focused on supply chain optimization. Her core value proposition is bringing bank-grade reliability and security to the SMB automation space, something she found lacking in existing solutions. She's currently seeking seed funding and strategic partnerships with logistics companies and venture capital firms specializing in industrial automation. She's a pragmatic engineer, less interested in 'bleeding edge' tech and more focused on solving real-world problems with robust, proven solutions. She\u2019s very deliberate in her networking, prioritizing quality over quantity.",
+    "positioning": "I'm the founder of FlowState Automation, building accessible automation solutions for supply chain optimization. My background is in financial technology, where I spent eight years at Deutsche Kredit AG designing and implementing ultra-reliable, low-latency systems for high-frequency trading. This experience instilled in me a deep understanding of the critical importance of data integrity, security, and operational resilience \u2013 qualities often missing in the rapidly evolving automation landscape. FlowState Automation aims to bridge that gap, providing SMBs with tools that are not only powerful and flexible but also trustworthy and dependable. We focus on delivering practical, measurable results by streamlining workflows, reducing errors, and optimizing resource allocation. I\u2019m passionate about empowering businesses to thrive through the intelligent application of automation, without the complexity and risk often associated with it. I'm actively seeking partnerships to expand our reach and impact.",
+    "background": "- **Founder & CEO, FlowState Automation** (2023 \u2013 Present)\n  * Led the development of a no-code/low-code automation platform focused on supply chain management.\n  * Secured initial seed funding of $250,000 from angel investors.\n  * Developed and launched MVP, acquiring 15 paying customers within the first six months.\n  * Responsible for product strategy, engineering, marketing, and sales.\n- **Lead Systems Engineer, Deutsche Kredit AG** (2015 \u2013 2023)\n  * Led a team of five engineers responsible for the design, implementation, and maintenance of high-frequency trading systems.\n  * Spearheaded the migration of critical trading infrastructure to Kubernetes, resulting in a 20% reduction in operational costs and improved scalability.\n  * Implemented robust monitoring and alerting systems, reducing system downtime by 15%.\n  * Ensured compliance with MiFID II and other regulatory requirements.\n  * Key contributor to the development of a new order management system, utilizing Rust and Go for performance and reliability.\n- **Education:**\n  * **Master of Science in Computer Science**, ETH Zurich (2013 \u2013 2015)\n  * **Bachelor of Science in Computer Science**, University of Oxford (2010 \u2013 2013)\n- **Skills:** Rust, Go, Kubernetes, Docker, AWS, GCP, Kafka, PostgreSQL, MiFID II Compliance, System Design, Distributed Systems, DevOps, Agile Methodologies, Financial Modeling, Data Analysis.",
+    "lookingFor": "I\u2019m currently focused on expanding FlowState Automation\u2019s reach and impact. I\u2019m actively seeking connections with:\n\n* **Venture Capital firms** specializing in seed-stage funding for industrial automation and SaaS companies. We are preparing for a Series A round in Q2 2024.\n* **Logistics and Supply Chain companies** interested in piloting or integrating our automation platform. I'm particularly interested in companies facing challenges with inventory management, order fulfillment, and last-mile delivery.\n* **Experienced advisors** with expertise in scaling SaaS businesses and navigating the complexities of the logistics industry.\n* **Potential strategic partners** who can provide access to new markets or complementary technologies.\n\n**Priority:** VC funding and strategic logistics partnerships are my top priorities. I\u2019m open to informational interviews with individuals who have relevant experience or insights. I'm also interested in connecting with other indie builders in the automation space to share learnings and explore potential collaborations.",
+    "notes": "- Followed up with David Chen (VC) \u2013 expressed interest, requesting a deck.\n- Sana is very focused on reliability and security, stemming from her banking background.\n- Mentioned a potential integration with a specific ERP system (NetSuite) \u2013 worth exploring.\n- She is cautious about over-hyping her product and prefers to demonstrate value through tangible results.\n-  Needs introductions to logistics VPs or Heads of Innovation.\n-  Avoid overly technical discussions initially, focus on business problems solved.",
+    "locationAvailability": "I am based in Berlin, Germany, but am comfortable working remotely and traveling within Europe and occasionally to the US. I'm flexible and happy to schedule calls or meetings to accommodate different time zones.",
+    "introPreferences": "When making introductions, please:\n\n* **Clearly articulate the value proposition of FlowState Automation** \u2013 focus on reliability, security, and ease of use.\n* **Highlight my background in financial technology** \u2013 this adds credibility and differentiates us from other automation providers.\n* **Target individuals involved in supply chain optimization or digital transformation initiatives.**\n* **Hard Requirement:** Introductions should be to decision-makers or key influencers with budget authority.\n* **Soft Preference:** I prefer warm introductions with a brief context provided beforehand. A short email summarizing the connection and mutual interests is appreciated.",
+    "personalPreferences": "I'm a big fan of functional programming and enjoy hiking in my free time. I prefer concise and direct communication \u2013 feel free to get straight to the point.  I respond best to email.",
+    "meetingAndSchedulingPreferences": "* Prefer initial calls (30-45 minutes).\n* Quick follow-up on action items is appreciated.\n*  I generally respond to emails within 24 hours."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 22.201125144958496,
+      "input_tokens": 839,
+      "output_tokens": 1306,
+      "problems": []
+    }
+  ],
+  "success": true
+}

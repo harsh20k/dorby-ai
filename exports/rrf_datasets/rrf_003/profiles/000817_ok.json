@@ -1,0 +1,54 @@
+{
+  "id": 817,
+  "archetype": "Deep Tech/AI Researcher-Turned-Founder",
+  "given_name": "Olivia Haddad",
+  "style_version": 50,
+  "archetypes_version": 138,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Olivia Haddad is a former robotics researcher specializing in reinforcement learning for complex manipulation tasks. She left a tenured track position at MIT to found 'Kinetic Intelligence', a startup developing AI-powered robotic solutions for precision agriculture. Her company is currently seed-funded and focused on building a prototype for automated fruit picking. She's a deeply technical founder, still very hands-on with the AI development, and is now focused on scaling the team and securing Series A funding. She's open to connecting with investors, potential strategic partners in the agriculture industry, and experienced engineering leaders who can help her build out her team. A key detail is that while brilliant, she's slightly uncomfortable with 'selling' and prefers to discuss the technical merits of her work. She\u2019s very focused on ethical AI and sustainable practices.",
+    "positioning": "Olivia Haddad is the Founder and CEO of Kinetic Intelligence, a robotics startup revolutionizing precision agriculture with advanced AI. We're building intelligent robotic systems capable of automating complex tasks like fruit picking, reducing labor costs, and minimizing food waste. My background in reinforcement learning allows me to tackle challenges previously considered insurmountable in robotic manipulation. I\u2019m passionate about leveraging AI for sustainable solutions and building a team that\u2019s pushing the boundaries of what\u2019s possible in agricultural technology. I'm focused on securing Series A funding and forging strategic partnerships to accelerate our impact.",
+    "background": "\u2022 **Founder & CEO, Kinetic Intelligence** (2023 \u2013 Present)\n    * Led seed fundraising round of $2.5M, securing funding from leading venture capital firms focused on AgTech and Robotics.\n    * Defined product roadmap and oversaw initial prototype development of an AI-powered robotic fruit picker.\n    * Built a core team of engineers and researchers specializing in robotics, computer vision, and machine learning.\n    * Established key partnerships with agricultural research institutions for data collection and validation.\n\u2022 **Research Scientist, MIT Computer Science and Artificial Intelligence Laboratory (CSAIL)** (2018 \u2013 2023)\n    * Led a research group focused on reinforcement learning for robotic manipulation, publishing over 15 peer-reviewed papers in top AI conferences (ICML, NeurIPS, ICLR).\n    * Developed novel algorithms for sample-efficient reinforcement learning, significantly reducing the training time required for complex robotic tasks.\n    * Secured grant funding totaling $1.2M from NSF and DARPA.\n    * Mentored graduate and undergraduate students in robotics and AI research.\n\u2022 **PhD in Computer Science, Stanford University** (2014 \u2013 2018)\n    * Dissertation: 'Scalable Reinforcement Learning for High-Dimensional Robotic Control.'\n    * Awarded the Best Dissertation Award from the Stanford Department of Computer Science.\n\u2022 **BS in Computer Engineering, Carnegie Mellon University** (2010 \u2013 2014)\n    * Graduated *Summa Cum Laude* with honors in Robotics.",
+    "lookingFor": "\u2022 Investors with experience in AgTech and Robotics \u2013 Series A focus.\n\u2022 Strategic partners in the agricultural industry \u2013 particularly companies with established distribution networks.\n\u2022 Experienced engineering leaders \u2013 specifically, a VP of Engineering to help scale our team and infrastructure.\n\u2022 Mentors who have successfully navigated the challenges of building and scaling a deep tech startup.\n\u2022 Individuals interested in the intersection of AI, robotics, and sustainable agriculture.\n\u2022 Connections to potential pilot farms for testing and validation of our technology.",
+    "notes": "Olivia is brilliant but can be a bit shy when it comes to 'pitching' the business. She *loves* to dive deep into the technical details, so feel free to ask about the underlying AI algorithms. She's a strong advocate for ethical AI and sustainable practices, so framing discussions around these themes will resonate well. \n\n* She recently presented at the AgriTechX conference \u2013 a recording of the presentation is available on the Kinetic Intelligence website.\n* She\u2019s currently reading 'The Innovator's Dilemma' and is very interested in discussing Clayton Christensen's theories.\n* Avoid overly aggressive sales tactics. Focus on building a genuine connection and understanding her vision.",
+    "locationAvailability": "Based in Boston, MA, but frequently travels to California (Silicon Valley) for investor meetings and to agricultural regions for field testing.",
+    "introPreferences": "\u2022 Please focus introductions on shared technical interests or a mutual connection to the AgTech space.\n\u2022 Avoid introductions to purely sales/marketing-focused individuals \u2013 she prefers to connect with those who understand the underlying technology.\n\u2022 Highlight any relevant experience the connection has with robotics, AI, or agriculture.\n\u2022 A brief note summarizing *why* you think the connection would be valuable to Olivia is greatly appreciated.\n\u2022 Don\u2019t overhype \u2013 she prefers a straightforward and honest introduction.",
+    "personalPreferences": "Prefers email communication initially; is responsive on LinkedIn.",
+    "meetingAndSchedulingPreferences": "Generally prefers video calls over in-person meetings initially. Availability is limited due to travel and fundraising commitments \u2013 please schedule meetings at least a week in advance."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 17.843621730804443,
+      "input_tokens": 758,
+      "output_tokens": 1079,
+      "problems": []
+    }
+  ],
+  "success": true
+}

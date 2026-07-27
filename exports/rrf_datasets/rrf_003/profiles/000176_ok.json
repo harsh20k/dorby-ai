@@ -1,0 +1,54 @@
+{
+  "id": 176,
+  "archetype": "Serial Founder/Operator, Global Reach",
+  "given_name": "Zainab Suzuki",
+  "style_version": 11,
+  "archetypes_version": 29,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Zainab Suzuki is a seasoned entrepreneur with a background deeply rooted in supply chain technology, specifically focusing on ethical and sustainable sourcing. She\u2019s founded and successfully exited two companies \u2013 one focused on blockchain-based traceability for coffee, and another on AI-powered logistics optimization for fair-trade textiles. Her distinctive detail is a strong commitment to impact investing and building businesses that demonstrably improve worker conditions and environmental outcomes. She\u2019s now looking for a challenging leadership role (potentially a COO or CEO position) in a company aligning with these values, or to start a new venture addressing similar challenges. She operates globally, having spent significant time in both Southeast Asia and South America establishing supply chains. She's very direct and values efficiency, but also deeply cares about the human element of business.",
+    "positioning": "Zainab Suzuki is a results-oriented leader specializing in the intersection of supply chain innovation, ethical sourcing, and technology-driven optimization. As a serial entrepreneur, I\u2019ve consistently delivered impactful solutions that enhance transparency, improve efficiency, and promote sustainability across complex global networks. My experience encompasses the full lifecycle of building and scaling businesses, from initial concept and fundraising through to successful exit. I am adept at leveraging emerging technologies \u2013 including blockchain, AI, and IoT \u2013 to address critical challenges in supply chain management. I excel at building high-performing teams, fostering collaborative partnerships, and navigating the intricacies of international markets. I'm passionate about driving positive change through responsible business practices and creating value for all stakeholders. I thrive in dynamic environments and am eager to apply my expertise to a challenging leadership role or a new entrepreneurial endeavor.",
+    "background": "- **Founder & CEO, Traceable Bean (2018 \u2013 2022):** Led the development and launch of a blockchain-based platform for tracing coffee beans from farm to cup, ensuring fair prices for farmers and transparency for consumers. Secured $3M in seed funding and achieved a successful acquisition by a major coffee distributor.\n  - *Technologies Used:* Blockchain (Hyperledger Fabric), Smart Contracts, IoT sensors, Mobile App Development (React Native), Data Analytics (Python).\n- **Founder & CEO, WeaverAI (2015 \u2013 2018):** Pioneered an AI-powered logistics optimization platform for fair-trade textile supply chains, reducing transportation costs by 15% and improving delivery times by 20%. Raised $1.5M in angel investment.\n  - *Technologies Used:* Machine Learning (TensorFlow, PyTorch), Logistics Optimization Algorithms, Data Mining, Cloud Computing (AWS).\n- **Supply Chain Consultant, Deloitte Consulting (2012 \u2013 2015):** Advised Fortune 500 companies on supply chain strategy, risk management, and technology implementation.\n  - *Responsibilities:* Process mapping, data analysis, vendor selection, project management.\n- **Education:** MBA, Stanford Graduate School of Business (2012)\n  - *Relevant Coursework:* Supply Chain Management, Entrepreneurship, Data Analytics, Global Strategy\n- **Education:** B.S., Industrial Engineering, Massachusetts Institute of Technology (2010)\n  - *Relevant Coursework:* Operations Research, Statistics, Simulation Modeling\n- **Certifications:** Certified Supply Chain Professional (CSCP)\n- **Languages:** English (Native), Japanese (Fluent), Spanish (Conversational)",
+    "lookingFor": "I\u2019m actively exploring leadership opportunities within organizations dedicated to sustainable and ethical supply chain practices. I\u2019m particularly interested in companies leveraging technology to drive positive impact. I am open to both executive roles (COO, CEO) and the possibility of launching a new venture. \n\n* **Do:**\n  - Connections to impact investors focused on supply chain innovation.\n  - Introductions to companies with strong ESG commitments.\n  - Discussions with founders building purpose-driven businesses.\n  - Opportunities to advise on supply chain strategy.\n* **Don\u2019t:**\n  - Requests for mentorship (I\u2019m happy to share insights, but not seeking to be a mentor).\n  - Pitches for unrelated business ventures (focus is firmly on supply chain/sustainability).\n  - Cold outreach regarding sales or marketing services.\n\nI'm specifically interested in organizations operating in Southeast Asia and Latin America, regions where I have established networks and a deep understanding of the local context. I'm looking for individuals who are passionate about creating a more equitable and sustainable world.",
+    "notes": "Zainab is exceptionally well-networked within the ethical sourcing and impact investing space. She\u2019s very direct and doesn\u2019t mince words, but is highly intelligent and genuinely committed to her values. She\u2019s mentioned a slight preference for companies that are already generating revenue rather than early-stage startups. Confirmed she's independently wealthy and isn't *needing* a job, but is actively seeking a fulfilling challenge.",
+    "locationAvailability": "Based in Singapore. Frequent travel to South America and Europe.",
+    "introPreferences": "When making introductions, please emphasize my experience building and exiting successful supply chain technology companies. \n\n* **Hard Requirements:** The introduction must be to someone with decision-making authority regarding strategy or investment.\n* **Soft Preferences:** Highlight my focus on ethical sourcing and impact investing.\n* **Intro Style:** Concise and direct. Avoid lengthy background descriptions. Focus on the potential synergy between my expertise and the recipient\u2019s organization.\n\nSpecifically, please mention my experience with blockchain and AI in supply chain contexts. Avoid framing me as simply a \u2018tech expert\u2019 \u2013 I'm a business leader first and foremost. A brief mention of my exits is helpful to establish credibility.",
+    "personalPreferences": "Prefers asynchronous communication (email, Slack) initially. Responds quickly but dislikes unnecessary meetings.",
+    "meetingAndSchedulingPreferences": "- Please share a brief agenda in advance of any meetings.\n- I prefer video calls to phone calls.\n- I have a flexible schedule but generally avoid meetings before 9:00 AM or after 6:00 PM Singapore time.\n- Calendar access can be granted upon request."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 17.652469873428345,
+      "input_tokens": 870,
+      "output_tokens": 1285,
+      "problems": []
+    }
+  ],
+  "success": true
+}

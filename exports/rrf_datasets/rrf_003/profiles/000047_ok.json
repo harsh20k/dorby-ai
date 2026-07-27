@@ -1,0 +1,54 @@
+{
+  "id": 47,
+  "archetype": "Repeat Entrepreneur, Diverse Background",
+  "given_name": "Rafael Haddad",
+  "style_version": 3,
+  "archetypes_version": 8,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Rafael Haddad is a 48-year-old serial entrepreneur who has successfully exited three companies: a fintech platform focused on micro-lending in Brazil, a sustainable packaging materials firm, and a direct-to-consumer personalized nutrition brand. He\u2019s originally from S\u00e3o Paulo, Brazil, and immigrated to the US for university. A key detail is that each of his successful ventures addressed a problem he personally experienced \u2013 the difficulty his family faced accessing credit in Brazil, his frustration with plastic waste, and his own struggles with optimizing his health. He's now focused on building a platform leveraging AI to personalize preventative healthcare, specifically targeting chronic disease management. He is actively seeking Series A funding and strategic partnerships with healthcare providers and insurance companies. He\u2019s very comfortable with ambiguity and rapid pivots, but deeply values data-driven decision making. He's known for being a charismatic leader but also intensely focused on operational efficiency. He's a big believer in 'founder-market fit' and is hyper-focused on problems he understands viscerally.",
+    "positioning": "Rafael Haddad is building the future of proactive health. As Founder & CEO of Aether Health, we\u2019re developing an AI-powered platform that delivers hyper-personalized preventative care plans, focusing on early detection and management of chronic diseases. We\u2019re not just reacting to illness; we\u2019re predicting and preventing it. My background is rooted in solving complex problems with innovative technology, and I\u2019ve consistently identified opportunities where personal experience fuels market need. Having successfully built and exited companies in fintech, sustainable materials, and personalized nutrition, I bring a unique blend of operational expertise, fundraising acumen, and a deep understanding of scaling disruptive businesses. Aether Health is poised to revolutionize the $4.3 trillion US healthcare market, shifting the paradigm from reactive sick care to proactive well-being. We believe everyone deserves access to personalized insights that empower them to live longer, healthier lives. Our core differentiation lies in our proprietary AI algorithms, which integrate genomic data, lifestyle factors, and real-time biometric feedback to deliver actionable recommendations. We're currently focused on securing Series A funding to accelerate product development, expand our clinical trials, and scale our go-to-market strategy. I\u2019m passionate about building a world where preventative care is not a luxury, but a fundamental right.",
+    "background": "- **Aether Health, Founder & CEO** (2022 \u2013 Present)\n  - Spearheaded the development of an AI-driven preventative healthcare platform, securing seed funding of $5M.\n  - Built a high-performing team of data scientists, engineers, and healthcare professionals.\n  - Developed and validated core AI algorithms for chronic disease risk prediction.\n  - Currently leading Series A fundraising efforts, targeting $20M.\n\n- **NutriGenix, Founder & CEO** (2017 \u2013 2021) \u2013 *Exited to WellnessCo*\n  - Launched a direct-to-consumer personalized nutrition platform utilizing DNA analysis and lifestyle data.\n  - Grew revenue to $15M annually within three years, achieving profitability.\n  - Successfully negotiated acquisition by WellnessCo for $45M.\n  - Key skills utilized: market analysis, product development, digital marketing, team leadership.\n\n- **EcoPack Solutions, Founder & CEO** (2013 \u2013 2017) \u2013 *Exited to GreenTech Industries*\n  - Developed and manufactured sustainable packaging materials from agricultural waste.\n  - Secured contracts with major food and beverage companies, driving significant revenue growth.\n  - Led the company through a successful acquisition by GreenTech Industries for $30M.\n  - Expertise demonstrated: materials science, supply chain management, sales & negotiation.\n\n- **CrediFacil, Co-Founder & CTO** (2009 \u2013 2013)\n  - Co-founded a fintech platform providing micro-loans to underserved communities in Brazil.\n  - Developed and implemented the platform\u2019s core technology infrastructure.\n  - Expanded access to credit for over 10,000 individuals and small businesses.\n  - Skills applied: software development, database management, risk assessment.\n\n- **Education:**\n  - **Massachusetts Institute of Technology (MIT)**, Cambridge, MA \u2013 MBA, Finance (2007-2009)\n  - **University of S\u00e3o Paulo (USP)**, S\u00e3o Paulo, Brazil \u2013 Bachelor of Science, Computer Engineering (2003-2007)\n\n- **Certifications:**\n  - Project Management Professional (PMP)\n  - Certified Data Science Professional (CDSP)",
+    "lookingFor": "I\u2019m actively seeking connections to accelerate Aether Health\u2019s growth. Specifically, I\u2019m looking for:\n\n* **Series A Investors:** Funds with a focus on digital health, AI, and preventative care. Investment size: $5M - $10M.\n* **Strategic Partners:** Healthcare providers (hospital systems, clinics) interested in piloting our platform and integrating it into their care pathways.\n* **Insurance Companies:** Partners to explore value-based care models and reimbursement strategies.\n* **Key Opinion Leaders (KOLs):** Physicians and researchers in the fields of genomics, chronic disease management, and AI in healthcare.\n* **Experienced Advisors:** Individuals with a proven track record of scaling healthcare technology companies.\n\nI\u2019m particularly interested in connecting with individuals based in the Boston/Cambridge area, but open to remote collaboration. I'm keen to discuss potential synergies and explore opportunities for collaboration. I'm also open to informal conversations to share insights and learn from others in the healthcare innovation space. I'm available for brief introductory calls to assess mutual fit.",
+    "notes": "\u2022 Had a great call with Dr. Anya Sharma at Boston General \u2013 she\u2019s intrigued by the AI component and wants a deeper dive demo. Follow up next week.\n\u2022 Met with Benchmark Capital \u2013 positive initial reaction, but concerned about market saturation. Need to refine our competitive positioning.\n\u2022 Reminder: Be mindful of HIPAA compliance when discussing patient data.\n\u2022 Rafael is *extremely* data-driven. Don't rely on hype; bring the numbers. \n\u2022 He\u2019s passionate about the \u2018founder-market fit\u2019 angle \u2013 emphasize how his personal experiences shaped Aether Health\u2019s mission.\n\u2022 He\u2019s currently reading \u2018The Innovator\u2019s Dilemma\u2019 again \u2013 good conversation starter.\n\u2022 Don't push too hard on valuation during initial conversations.",
+    "locationAvailability": "Based in Boston, MA. Open to remote collaboration and frequent travel. Willing to consider relocating for the right opportunity, but prefer to remain on the East Coast.",
+    "introPreferences": "* When making introductions, please highlight Aether Health\u2019s focus on *preventative* care and our unique AI-driven approach.\n* Emphasize my experience building and exiting successful companies in multiple industries.\n* Avoid introducing me to individuals solely focused on \u2018sick care\u2019 or traditional healthcare models.\n* Include a brief summary of the person\u2019s expertise and how it aligns with Aether Health\u2019s needs.\n* A short, concise intro is preferred \u2013 focus on the key value proposition.\n* Please flag any potential conflicts of interest upfront.",
+    "personalPreferences": "I prefer to communicate via email initially, then move to brief phone calls. WhatsApp is fine for quick follow-ups.",
+    "meetingAndSchedulingPreferences": "I\u2019m in the Eastern Time Zone (ET). Generally available for meetings between 9 AM and 5 PM ET. Please send a calendar invite with a clear agenda. I prefer meetings to be concise and focused \u2013 30 minutes is often sufficient."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 33.971622943878174,
+      "input_tokens": 804,
+      "output_tokens": 1630,
+      "problems": []
+    }
+  ],
+  "success": true
+}

@@ -1,0 +1,54 @@
+{
+  "id": 402,
+  "archetype": "Ex-Finance, Now Tech Founder",
+  "given_name": "Naledi Chen",
+  "style_version": 25,
+  "archetypes_version": 67,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Naledi Chen is a 38-year-old founder who spent 12 years in high-frequency trading at Goldman Sachs before becoming disillusioned with the lack of transparency and accessibility in the financial markets. She founded 'Lumina Insights', a fintech company building an AI-powered platform to provide retail investors with institutional-grade research and analysis. A key detail is that she self-funded the initial stages of Lumina Insights, bootstrapping the MVP to $500k ARR, and is now seeking a seed round to scale. She's extremely data-driven, a bit impatient, and very focused on building a diverse and high-performing team. She's looking for investors who understand the nuances of both finance *and* AI, and who aren\u2019t afraid to challenge her assumptions. She prioritizes direct communication and hates fluff.",
+    "positioning": "Lumina Insights is democratizing access to sophisticated financial analysis. We leverage cutting-edge AI to distill complex market data into actionable insights, empowering retail investors to make informed decisions. We\u2019re solving the critical problem of information asymmetry, which historically favored institutional players. Currently, we're focused on providing predictive analytics for US equities, with plans to expand into options and crypto. What sets us apart is our proprietary algorithm, built on years of experience in high-frequency trading, and our commitment to transparent, unbiased research. We\u2019ve organically grown to $500k ARR in under a year and are now poised for rapid scaling with seed funding.",
+    "background": " * **Founder & CEO, Lumina Insights** (2022 \u2013 Present)\n    * Led all aspects of company formation, product development, marketing, and fundraising.\n    * Developed and launched Lumina Insights\u2019 core AI-powered analytics platform.\n    * Achieved $500k ARR within the first year of operation through organic growth and a strong focus on user acquisition.\n    * Built and managed a remote team of engineers, data scientists, and financial analysts.\n    * Secured initial key partnerships with data providers and financial news outlets.\n * **Vice President, High-Frequency Trading, Goldman Sachs** (2010 \u2013 2022)\n    * Managed a team of quantitative traders responsible for developing and executing automated trading strategies across multiple asset classes.\n    * Led the development of a new algorithmic trading system that resulted in a 15% increase in trading profitability.\n    * Conducted extensive research on market microstructure and statistical arbitrage opportunities.\n    * Collaborated with technology teams to optimize trading infrastructure and improve system performance.\n    * Mentored and trained junior traders in quantitative modeling and risk management.\n * **Education:**\n    * **Massachusetts Institute of Technology (MIT)**, Cambridge, MA \u2013 PhD, Financial Engineering (2010)\n    * **Stanford University**, Stanford, CA \u2013 BS, Mathematics (2006), *Summa Cum Laude*\n * **Skills:** Python, Machine Learning, Statistical Modeling, Algorithmic Trading, Financial Analysis, Risk Management, Team Leadership, Strategic Planning, Data Visualization (Tableau, Power BI).",
+    "lookingFor": "We are currently raising a $3M seed round to accelerate product development, expand our research coverage, and scale our marketing and sales efforts. Specifically, we are seeking:\n* **Seed-stage Venture Capital Firms:** Firms with a demonstrated track record of investing in fintech and AI companies, particularly those focused on financial infrastructure.\n* **Strategic Investors:** Individuals or firms with deep expertise in quantitative finance, data science, or retail investing.\n* **Advisors:** Seasoned entrepreneurs or industry veterans who can provide guidance on scaling a fintech startup and navigating the regulatory landscape.\n* **AI/ML Engineers:** Senior engineers with experience building and deploying machine learning models in a production environment (specifically time-series forecasting).  Must have experience with Python and cloud platforms (AWS, GCP, Azure).\n* **Financial Data Engineers:** Engineers proficient in data pipeline construction and maintenance, with experience working with financial APIs and databases.",
+    "notes": "Spoke with Sarah at Sequoia last week \u2013 she was intrigued but wants to see more user engagement metrics. Need to pull a detailed report on weekly/monthly active users. Also, follow up with David at Andreessen Horowitz; he expressed interest but is currently oversubscribed.  Potential for a partnership with Bloomberg \u2013 initiated contact with their innovation team.  Important: Naledi is *very* sensitive to investors who push for rapid, unsustainable growth at the expense of product quality. She prioritizes building a long-term, defensible business.  Action item: Prepare a concise deck highlighting our unit economics and customer acquisition cost.",
+    "locationAvailability": "San Francisco, CA (primary operations) and remote.",
+    "introPreferences": "I'm open to connecting with investors and potential team members who align with Lumina Insights' mission. \n* **Hard Requirements:**\n    * Any introduction *must* come with a clear explanation of why the connection is mutually beneficial.\n    * Please avoid introducing me to individuals who are solely focused on \u2018lifestyle\u2019 investments or lack a deep understanding of financial markets.\n* **Soft Preferences:**\n    * I value concise, direct communication. Please keep introductions brief and to the point.\n    * I'm particularly interested in connecting with individuals who have experience scaling fintech companies or building AI-powered products.\n    * Please flag any potential conflicts of interest before making an introduction. \n* **Avoid:** Fundraisers who haven\u2019t done their homework on our company.",
+    "personalPreferences": "I prefer email for initial contact. I'm generally available for calls between 10am-12pm PST.  I respond best to data-driven pitches.",
+    "meetingAndSchedulingPreferences": "I prefer brief, focused meetings with a clear agenda. Please send a short outline of discussion points in advance. I always follow up with a summary of action items after each meeting."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 22.815810918807983,
+      "input_tokens": 762,
+      "output_tokens": 1252,
+      "problems": []
+    }
+  ],
+  "success": true
+}

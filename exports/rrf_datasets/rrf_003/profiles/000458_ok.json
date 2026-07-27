@@ -1,0 +1,54 @@
+{
+  "id": 458,
+  "archetype": "Deep Tech/Hardware Seed Investor",
+  "given_name": "Priya Mueller",
+  "style_version": 28,
+  "archetypes_version": 76,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Priya Mueller is a seasoned hardware seed investor with a unique background \u2013 she *built* and *sold* a successful IoT sensor company focused on agricultural optimization before transitioning to the VC side. This gives her a deeply practical understanding of the challenges hardware startups face, beyond just financial modeling. She's currently focused on finding companies tackling climate tech challenges with demonstrable IP and a clear path to manufacturability. She\u2019s particularly interested in companies that address inefficiencies in supply chains, sustainable materials, and precision agriculture. Priya is known for being a very direct, no-nonsense investor, but also highly supportive of founders she believes in. She values technical depth and a realistic understanding of the 'valley of death' for hardware startups.",
+    "positioning": "I'm a General Partner at Nova Ventures, a seed-stage fund investing in the future of climate tech hardware. We\u2019re focused on backing ambitious founders building solutions to pressing environmental challenges. Having previously founded and exited SensorAg, an IoT company revolutionizing precision agriculture, I deeply understand the unique hurdles hardware startups face \u2013 from navigating complex supply chains and manufacturing to achieving scalable production.  I\u2019m particularly keen on opportunities in sustainable materials, circular economy technologies, and innovative approaches to resource management. \n\nRight now, we're actively deploying capital from our $75M Fund I and are aggressively seeking companies demonstrating breakthrough innovation with strong IP protection. We lead rounds between $500k and $3M.  We don\u2019t shy away from capital-intensive ventures, but demand a clear path to profitability and a demonstrable understanding of the manufacturing process. \n\nI\u2019m looking to connect with exceptional founders tackling significant climate challenges. If you\u2019re building a hard tech company with the potential to create lasting impact, or if you know someone who is, let\u2019s talk.  I\u2019m especially interested in speaking with individuals who have deep technical expertise and a pragmatic, execution-focused mindset.",
+    "background": "* **Nova Ventures, General Partner** (2021 \u2013 Present)\n    * Led investments in 6 seed-stage climate tech hardware companies, including [Company A - Sustainable Packaging] and [Company B - Precision Irrigation].\n    * Spearheaded the development of Nova Ventures\u2019 hardware diligence framework, focusing on manufacturability and supply chain risk assessment.\n    * Active board member and advisor to portfolio companies, providing strategic guidance on product development, fundraising, and team building.\n    * Increased portfolio company success rate by 20% through proactive mentorship and resource allocation.\n* **SensorAg, Founder & CEO** (2016 \u2013 2021)\n    * Founded and scaled an IoT company providing real-time data analytics for precision agriculture, increasing crop yields by an average of 15% for early adopters.\n    * Secured $8M in venture capital funding across two seed rounds.\n    * Led a team of 30+ engineers, data scientists, and agricultural specialists.\n    * Successfully exited via acquisition by AgriTech Solutions in 2021.\n* **Intel Corporation, Hardware Engineer** (2013 \u2013 2016)\n    * Developed and tested embedded systems for Intel\u2019s IoT division.\n    * Contributed to the design and implementation of low-power wireless communication protocols.\n    * Received Intel\u2019s Innovation Award for contributions to the development of a new sensor technology.\n* **Massachusetts Institute of Technology (MIT), Ph.D. Electrical Engineering** (2009 \u2013 2013)\n    * Dissertation: \u201cLow-Power Wireless Sensor Networks for Environmental Monitoring.\u201d\n    * GPA: 3.9/4.0\n    * Recipient of the National Science Foundation Graduate Research Fellowship.\n* **Stanford University, B.S. Electrical Engineering** (2005 \u2013 2009)\n    * Graduated *Summa Cum Laude*.\n    * President of the IEEE Student Branch.",
+    "lookingFor": "I\u2019m actively seeking introductions to exceptional founders building hard tech companies tackling climate change. Specifically, I'm focused on companies operating in the following areas:\n\n*   **Sustainable Materials:** Innovations in bio-based plastics, alternative cement, and recycled materials.\n*   **Circular Economy Technologies:** Solutions for waste reduction, resource recovery, and product lifecycle management.\n*   **Precision Agriculture:** Technologies that optimize resource utilization, reduce environmental impact, and improve crop yields.\n*   **Supply Chain Resilience:** Hardware solutions that enhance transparency, traceability, and efficiency in global supply chains.\n\nI'm also looking to connect with:\n\n*   **Angel investors** actively deploying capital in the climate tech space.\n*   **Experienced hardware engineers and manufacturing experts** who can serve as advisors to our portfolio companies.\n*   **Talented individuals** with backgrounds in supply chain management, materials science, and environmental engineering \u2013 potentially for advisory roles or future portfolio company hires.\n\nIdeally, introductions should be warm \u2013 a mutual connection is highly valued.  We are currently targeting a first close on Fund II in Q2 2024 and are always open to exploring new investment opportunities.",
+    "notes": "Priya is very direct and values efficiency. She gets frustrated with overly optimistic projections and prefers founders who are brutally honest about the challenges they face. \n\n*   Recent conversation with [Contact Name] at [Firm Name] \u2013 they recommended [Founder Name] at [Company Name], focusing on [Technology]. Will follow up.\n*   She's currently prioritizing companies with demonstrable traction \u2013 prototypes are good, but early revenue is *much* better.\n*   Avoid introducing her to companies with purely software-based solutions unless there\u2019s a very strong hardware component.\n*   She's a big believer in 'first principles' thinking and gets excited by founders who can articulate the fundamental physics behind their technology.\n*   She's attending the ClimateTech VC Summit in San Francisco next month \u2013 a good opportunity for introductions.",
+    "locationAvailability": "Based in Palo Alto, California, with frequent travel to meet with promising startups across North America and Europe. Open to remote meetings.",
+    "introPreferences": "* **Hard Requirements:**\n    *   Hardware-focused \u2013 not purely software.\n    *   Demonstrable IP or a clear path to patent protection.\n    *   Founders with deep technical expertise.\n    *   Addressing a significant climate challenge.\n* **Soft Preferences:**\n    *   Early-stage (pre-seed or seed).\n    *   Companies with a clear understanding of manufacturing and supply chain considerations.\n    *   Founders who are coachable and open to feedback.\n* **Introduction Framing:**\n    *   Briefly highlight the founder\u2019s technical background and the problem they\u2019re solving.\n    *   Emphasize any existing traction (e.g., pilot programs, early revenue).\n    *   Clearly articulate the company\u2019s value proposition and potential impact.",
+    "personalPreferences": "I prefer concise communication and appreciate direct feedback. Email is generally the best way to reach me initially. I'm a morning person and tend to respond quickest before noon PST.  I\u2019m often heads-down in deep work, so quick summaries are appreciated.",
+    "meetingAndSchedulingPreferences": "*   Prefer 30-minute introductory calls.\n    *   I typically debrief internally with my team immediately after meetings.\n    *   Please send a brief meeting agenda in advance."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 28.259554147720337,
+      "input_tokens": 876,
+      "output_tokens": 1587,
+      "problems": []
+    }
+  ],
+  "success": true
+}

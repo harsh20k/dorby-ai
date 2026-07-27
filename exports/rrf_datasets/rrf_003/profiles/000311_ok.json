@@ -1,0 +1,54 @@
+{
+  "id": 311,
+  "archetype": "Global Operator - AI & Transformation",
+  "given_name": "Hassan Abara",
+  "style_version": 19,
+  "archetypes_version": 52,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Hassan Abara is a seasoned AI transformation consultant with a strong background in financial technology, specifically fraud detection and risk management. He spent a decade building AI solutions *within* large banks before realizing the bigger impact he could have advising multiple institutions. A distinctive detail: he spent three years embedded with a small, innovative fintech in Nairobi, Kenya, which significantly shaped his perspective on applying AI in resource-constrained environments and for financial inclusion. He's currently leading a small consultancy focused on helping mid-sized financial institutions in emerging markets adopt and scale AI solutions, but is actively seeking seed funding to build out a proprietary AI platform tailored to their specific needs. He\u2019s very focused on practical, impactful AI, rather than purely theoretical advancements. He\u2019s a direct communicator and values efficiency.",
+    "positioning": "I\u2019m Hassan Abara, and I help financial institutions in emerging markets unlock the power of Artificial Intelligence. For too long, the benefits of AI have been concentrated in developed economies, leaving a significant opportunity to improve financial services \u2013 and lives \u2013 in regions with the greatest need. My firm, Abara AI, bridges that gap. We specialize in tailoring and implementing AI solutions for fraud prevention, risk assessment, and customer personalization, specifically designed for the unique challenges faced by banks and fintechs operating in complex, rapidly evolving markets. \n\nMy journey began with a decade spent building and deploying AI systems within established financial institutions, including roles at Barclays and HSBC. However, my time embedded with a groundbreaking fintech in Nairobi fundamentally shifted my thinking. Witnessing firsthand the transformative potential of AI to address financial inclusion challenges \u2013 despite limited infrastructure and data \u2013 ignited my passion for democratizing access to these technologies. \n\nCurrently, we\u2019re focused on a pilot program with a regional bank in Ghana, demonstrating a 30% reduction in fraudulent transactions using a novel behavioral biometrics model. We\u2019re proving the ROI of pragmatic AI. Now, we\u2019re looking to scale our impact. We\u2019re building a platform that will drastically reduce the time and cost associated with AI implementation for these institutions, allowing them to compete more effectively and serve their communities better. I'm passionate about building solutions that deliver tangible results and drive real economic empowerment.",
+    "background": "- **Founder & CEO, Abara AI** (2022 - Present)\n    - Leading a boutique consultancy specializing in AI implementation for financial institutions in emerging markets (Africa, Southeast Asia, Latin America).\n    - Key responsibilities include client acquisition, solution design, project management, and team leadership. \n    - Currently focused on fundraising for a proprietary AI platform.\n    - Technologies used: Python, TensorFlow, PyTorch, AWS, Azure, SQL, data visualization tools (Tableau, Power BI).\n\n- **AI Solutions Architect, Barclays** (2018 - 2022)\n    - Designed and implemented AI-powered fraud detection systems, resulting in a 15% reduction in fraudulent losses.\n    - Led a team of data scientists and engineers in developing machine learning models for credit risk assessment.\n    - Utilized advanced statistical modeling, machine learning algorithms (e.g., random forests, gradient boosting), and big data technologies (e.g., Hadoop, Spark).\n\n- **Senior Data Scientist, HSBC** (2015 - 2018)\n    - Developed and deployed machine learning models for anti-money laundering (AML) compliance.\n    - Conducted data analysis and feature engineering to improve model accuracy and performance.\n    - Collaborated with regulatory compliance teams to ensure adherence to industry standards.\n\n- **AI/ML Engineer, Kopo Kopo (Nairobi, Kenya)** (2013 - 2015) - *Key Career Detail*\n    - Embedded within a rapidly growing fintech providing credit scoring and loan disbursement solutions to small businesses.\n    - Developed and maintained machine learning models for credit risk assessment in a data-scarce environment.\n    - Gained invaluable experience adapting AI solutions to the unique challenges of emerging markets.\n\n- **Education:**\n    - **MSc, Machine Learning**, Imperial College London (2013)\n    - **BSc, Computer Science**, University of California, Berkeley (2011)\n\n- **Skills:** Machine Learning, Deep Learning, Artificial Intelligence, Fraud Detection, Risk Management, Data Science, Python, TensorFlow, PyTorch, Cloud Computing (AWS, Azure), SQL, Data Visualization, Agile Methodologies, Financial Modelling, Emerging Markets Expertise, Strategic Consulting.",
+    "lookingFor": "I'm currently seeking seed funding to accelerate the development and deployment of our proprietary AI platform. We're targeting a $1M seed round to expand our engineering team, refine our core algorithms, and scale our sales and marketing efforts. \n\nSpecifically, I'm looking to connect with:\n\n*   **Venture Capital firms** specializing in fintech and AI, with a focus on emerging markets.\n*   **Angel investors** with experience in the financial services industry and a passion for impact investing.\n*   **Strategic partners** - Banks and financial institutions operating in emerging markets interested in piloting our platform or collaborating on joint ventures.\n*   **Advisors** with expertise in AI, fintech, and international business development.\n\nI\u2019m open to discussing potential investment opportunities, strategic partnerships, and advisory roles. I value direct communication and a data-driven approach. I\u2019m less interested in purely theoretical discussions and more focused on practical applications and tangible results.",
+    "notes": "Hassan is a very focused individual. He\u2019s not interested in lengthy networking conversations \u2013 he wants to get straight to the point. He's extremely knowledgeable about the nuances of AI in emerging markets and can quickly assess whether a potential connection is a good fit. - Remind him to mention the Ghana pilot when discussing traction. - He\u2019s particularly sensitive to companies that promise \u2018AI magic\u2019 without understanding the on-the-ground realities in these markets. - He prefers to speak directly with decision-makers.",
+    "locationAvailability": "London, UK. Open to remote collaboration globally.",
+    "introPreferences": "When making introductions, please adhere to the following:\n\n*   **Hard Requirement:** The introduction *must* be to someone with decision-making authority regarding investment or strategic partnerships within a relevant organization (fintech VC, bank executive, etc.).\n*   **Soft Preference:** Prioritize individuals with experience in emerging markets, particularly Africa or Southeast Asia.\n*   **Introduction Style:** Keep the introduction concise and focused on my firm\u2019s value proposition. Highlight our work in Ghana and our focus on practical AI solutions.\n*   **Avoid:** Introducing me to individuals who are purely academic or research-focused. I'm looking for partners, not collaborators on theoretical projects.",
+    "personalPreferences": "Direct communication, data-driven, results-oriented, efficient.",
+    "meetingAndSchedulingPreferences": "- Prefer short, focused calls (30-45 minutes).\n- Available for meetings during standard UK business hours (GMT). \n- Please send a brief agenda in advance."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 25.660330057144165,
+      "input_tokens": 846,
+      "output_tokens": 1505,
+      "problems": []
+    }
+  ],
+  "success": true
+}

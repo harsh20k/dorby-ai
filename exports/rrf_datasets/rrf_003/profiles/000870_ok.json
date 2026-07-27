@@ -1,0 +1,54 @@
+{
+  "id": 870,
+  "archetype": "Global Tech Recruiter & Community Builder",
+  "given_name": "Marcus Pereira",
+  "style_version": 53,
+  "archetypes_version": 147,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Marcus Pereira is a seasoned Global Tech Recruiter, but with a unique focus \u2013 building remote engineering teams *specifically* in emerging markets like Brazil, India, and Southeast Asia. He\u2019s not just filling roles, he\u2019s actively cultivating tech talent pools in these regions, believing strongly in distributed workforces and the untapped potential outside of traditional tech hubs. He\u2019s currently at 'NovaTech Solutions', a rapidly growing AI-powered logistics platform, tasked with scaling their engineering team globally. His current goal is to establish NovaTech as an employer of choice for top tech talent in these emerging markets, and he\u2019s heavily involved in community building initiatives to achieve that. He\u2019s very active on LinkedIn, sharing insights on international recruitment, remote work best practices, and the tech landscapes of these regions.",
+    "positioning": "As a Global Tech Recruiter at NovaTech Solutions, I specialize in identifying and attracting top engineering talent from emerging markets to fuel our rapid growth. I\u2019m passionate about building high-performing, globally distributed teams and believe that innovation thrives when diverse perspectives are included. My focus is on creating a seamless and positive candidate experience, fostering long-term relationships, and becoming a trusted advisor to both hiring managers and prospective employees. I'm currently leading the expansion of our engineering presence in Brazil, India, and Southeast Asia, leveraging my deep understanding of local tech ecosystems and cultural nuances. I\u2019m always open to connecting with individuals passionate about global tech, remote work, and building inclusive teams.",
+    "background": "- **NovaTech Solutions, Global Tech Recruiter** (2021 \u2013 Present)\n  * Responsible for full-cycle recruitment of software engineers, data scientists, and machine learning specialists across multiple international locations.\n  * Developed and implemented sourcing strategies specifically targeting emerging tech hubs in Brazil, India, and Southeast Asia.\n  * Partnered with engineering leadership to define role requirements, develop job descriptions, and establish interview processes.\n  * Managed candidate pipelines, conducted technical screenings, and negotiated offers.\n  * Increased diversity in engineering hires by 25% within the last year.\n  * Utilized Applicant Tracking Systems (ATS) such as Greenhouse and Lever.\n  * Implemented Boolean search and LinkedIn Recruiter strategies to identify passive candidates.\n\n- **Global Talent Partners, Senior Technical Recruiter** (2018 \u2013 2021)\n  * Focused on recruiting for Series A and Series B funded startups in the FinTech and SaaS industries.\n  * Managed end-to-end recruitment processes, from initial sourcing to onboarding.\n  * Built and maintained strong relationships with key stakeholders, including hiring managers and candidates.\n  * Experience with US and EU immigration processes (H-1B, Visa sponsorship).\n\n- **University of S\u00e3o Paulo, Brazil, Bachelor of Arts in International Relations** (2014 \u2013 2018)\n  * Minor in Economics\n  * Relevant coursework: Global Politics, International Economics, Cross-Cultural Communication\n\n- **Skills:** Technical Recruiting, Sourcing (LinkedIn Recruiter, Boolean Search), ATS (Greenhouse, Lever), Employer Branding, Candidate Experience, Diversity & Inclusion, Interviewing Techniques, Negotiation, International Recruitment, Remote Team Building, Data Analytics (basic proficiency with Excel and Google Sheets), Portuguese (Native), English (Fluent).",
+    "lookingFor": "- **Mentorship:** Seeking experienced VPs of Engineering or Heads of Talent Acquisition who have successfully built and scaled global remote teams.\n- **Industry Insights:** Interested in connecting with individuals who have deep knowledge of the tech landscapes in Brazil, India, and Southeast Asia.\n- **Potential Candidates:** Always open to connecting with talented software engineers, data scientists, and machine learning specialists based in these regions.\n- **Recruitment Tools & Technologies:** Exploring innovative recruitment tools and technologies that can enhance our sourcing and engagement strategies.\n- **Partnerships:** Seeking partnerships with universities and coding bootcamps in emerging markets to build our talent pipeline.\n- **Referrals:** I greatly value referrals for hard-to-fill engineering roles, particularly in AI/ML.\n- **Community Building:** Connecting with individuals interested in building communities around remote work and global tech.",
+    "notes": "- Marcus is particularly interested in discussing best practices for overcoming cultural barriers in international recruitment.\n- He recently attended a webinar on the future of work in Southeast Asia and is keen to implement some of the strategies discussed.\n- He's currently prioritizing building a strong employer brand presence in Brazil.\n- He is a strong advocate for inclusive hiring practices and believes in creating a level playing field for all candidates.",
+    "locationAvailability": "I am currently based in Austin, Texas, but frequently travel to Brazil and India for recruitment events and team meetings. I am open to exploring opportunities that require relocation in the future.",
+    "introPreferences": "- **Hard Requirements:** Introductions should be to individuals with demonstrable experience in global tech recruitment or leadership roles in relevant tech companies.\n- **Soft Preferences:** I prefer introductions that are concise and highlight the potential synergy between myself and the connection.\n- **Avoid:** Please do not introduce me to sales representatives or individuals offering recruitment services \u2013 I\u2019m focused on networking and knowledge sharing.\n- **Context is Key:** A brief explanation of *why* you think this connection would be valuable is greatly appreciated.\n- **Target Roles:** VP of Engineering, Head of Talent Acquisition, Senior Engineering Manager, Tech Lead with international experience.\n- **Preferred Industries:** AI, Machine Learning, Logistics, FinTech, SaaS.",
+    "personalPreferences": "I prefer to connect via LinkedIn messaging initially. I'm also comfortable with email. I appreciate concise and direct communication.",
+    "meetingAndSchedulingPreferences": "Please share a brief agenda if you'd like to schedule a meeting. I'm generally available for 30-minute virtual coffee chats or introductory calls."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 21.295390844345093,
+      "input_tokens": 732,
+      "output_tokens": 1231,
+      "problems": []
+    }
+  ],
+  "success": true
+}

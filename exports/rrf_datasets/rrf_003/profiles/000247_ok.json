@@ -1,0 +1,54 @@
+{
+  "id": 247,
+  "archetype": "US-Based Investor, Broad Tech Thesis",
+  "given_name": "Marcus Johansson",
+  "style_version": 15,
+  "archetypes_version": 40,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Marcus Johansson is a seasoned venture capitalist, currently a Principal at a mid-sized firm (NovaPoint Ventures). He's built a strong track record investing in early-stage SaaS and Fintech companies. A distinctive detail is his previous experience *as* a founder \u2013 he co-founded and exited a small, successful marketing automation platform, giving him a founder's perspective that investors appreciate. He's now focused on finding the next generation of disruptive companies, particularly those leveraging AI/ML, and is keen to expand his network to access more deal flow and potentially syndicate on larger rounds. He\u2019s subtly looking for signals that could lead to a Partner-track opportunity at NovaPoint or a similar firm. He's very direct and values efficiency in communication.",
+    "positioning": "As a Principal at NovaPoint Ventures, I focus on identifying and investing in high-growth, early-stage technology companies, primarily within the SaaS and Fintech sectors. My investment thesis centers on businesses demonstrating clear product-market fit, scalable business models, and strong founding teams. Having previously experienced the challenges and rewards of building a company from the ground up \u2013 as co-founder and former CTO of 'MarketSpark,' a marketing automation platform acquired by HubSpot in 2019 \u2013 I bring a unique, operator-focused perspective to the investment process. I don\u2019t just analyze spreadsheets; I understand the grit required to navigate the complexities of early-stage growth. \n\nI\u2019m deeply interested in the transformative potential of Artificial Intelligence and Machine Learning across various industries, and actively seek out companies leveraging these technologies to solve significant problems. My current portfolio includes companies in areas like embedded finance, vertical SaaS for underserved markets, and AI-powered developer tools. I believe the next wave of innovation will be driven by companies that can seamlessly integrate AI into existing workflows, creating substantial value for both businesses and end-users. \n\nI\u2019m a strong believer in collaborative investing and am always open to exploring syndication opportunities with other leading venture firms. I view myself as a partner to founders, providing not only capital but also strategic guidance, operational support, and access to a valuable network of industry experts. Ultimately, my goal is to help build enduring companies that positively impact the world.",
+    "background": "- **NovaPoint Ventures, Principal** (2021 \u2013 Present)\n   - Led due diligence and investment for 8 companies totaling $45M in committed capital.\n   - Spearheaded NovaPoint\u2019s investment in 'FinFlow,' a Series A fintech company experiencing 300% YoY revenue growth.\n   - Mentored portfolio companies on product strategy, go-to-market execution, and fundraising.\n   - Increased deal flow by 40% through targeted networking and industry events.\n- **MarketSpark, Co-founder & CTO** (2015 \u2013 2019)\n   - Developed and launched a cloud-based marketing automation platform, achieving $5M ARR within three years.\n   - Led a team of 10 engineers in the design, development, and deployment of scalable software solutions.\n   - Successfully negotiated and closed the acquisition of MarketSpark by HubSpot for an undisclosed amount.\n- **Accenture, Software Engineer** (2013 \u2013 2015)\n   - Designed and implemented software solutions for Fortune 500 clients in the financial services industry.\n   - Gained experience in Agile development methodologies and full-stack technologies.\n- **Massachusetts Institute of Technology (MIT), Master of Science in Computer Science** (2011 \u2013 2013)\n- **Harvard University, Bachelor of Arts in Computer Science** (2007 \u2013 2011)",
+    "lookingFor": "I am actively seeking connections with:\n- Founders of early-stage (Seed \u2013 Series A) SaaS and Fintech companies with strong traction and innovative solutions.\n- Venture capitalists and angel investors interested in co-investing opportunities, particularly in the AI/ML space.\n- Individuals working in emerging technology sectors who can provide insights into market trends and potential investment targets.\n- Experienced operators with a proven track record of scaling early-stage companies \u2013 I\u2019m always looking for potential advisors for my portfolio companies.\n\nI'm particularly interested in learning about companies tackling challenges in:\n- Embedded finance and the future of banking.\n- Vertical SaaS solutions for niche industries.\n- AI-powered tools for developers and data scientists.\n\nI\u2019m open to informational calls and introductions to promising startups. I\u2019m also keen to explore potential board observer roles.",
+    "notes": "Marcus is very direct and focused. He's a quick study and values concise communication. He mentioned during a recent event he's aiming to lead a larger deal (Series B+) in the next 6-9 months and feels he needs to demonstrate leadership on a larger investment. He\u2019s subtly exploring opportunities for advancement within NovaPoint. \n\n- Last spoke with him on 10/26, discussing the challenges of fundraising in the current climate. He expressed frustration with lengthy pitch decks and inefficient due diligence processes.\n- He specifically requested introductions to LPs at prominent VC firms.\n- He\u2019s attending the TechCrunch Disrupt conference next week and is keen to connect.",
+    "locationAvailability": "I am currently based in Boston, Massachusetts, and am open to remote meetings. I\u2019m willing to travel for promising investment opportunities.",
+    "introPreferences": "- **Hard Requirements:** Introductions must be to founders with demonstrable traction (at least $100k MRR) or to VCs with a track record of successful investments in SaaS/Fintech.\n- **Soft Preferences:** I appreciate introductions to individuals who are well-respected within their respective fields and have a strong network of connections.\n- **Avoid:** Warm introductions to sales or marketing professionals \u2013 I prefer to connect directly with decision-makers.\n- **Introduction Style:** I prefer concise and targeted introductions that highlight the key reasons why a connection would be mutually beneficial. A brief summary of the individual\u2019s background and relevant experience is appreciated.",
+    "personalPreferences": "I prefer email for initial contact. I check my email several times a day and respond promptly. I\u2019m generally available for calls during business hours (EST). I'm not a big fan of lengthy back-and-forth; I value efficiency and directness. I\u2019m a morning person and prefer to schedule meetings before noon whenever possible.",
+    "meetingAndSchedulingPreferences": "I generally prefer 30-minute Zoom meetings to efficiently cover the key discussion points."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 18.63348889350891,
+      "input_tokens": 815,
+      "output_tokens": 1386,
+      "problems": []
+    }
+  ],
+  "success": true
+}

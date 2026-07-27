@@ -1,0 +1,54 @@
+{
+  "id": 28,
+  "archetype": "Growth & Sales Leader, SaaS",
+  "given_name": "Mikael Martins",
+  "style_version": 2,
+  "archetypes_version": 5,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Mikael Martins is a recently transitioned sales leader from Oracle, specializing in SaaS solutions for the financial services sector. He spent 15+ years climbing the ranks there, becoming known for consistently exceeding targets and building high-performing teams. He specifically spearheaded a successful expansion into the wealth management space, which is a point of pride. He's now looking for an advisory or operational role at a high-growth Series B/C SaaS startup, ideally one focused on fintech or related enterprise software. He's *not* interested in returning to a large corporate environment. He\u2019s very data-driven and enjoys mentoring. He\u2019s a pragmatic, direct communicator and values efficiency in networking.",
+    "positioning": "A results-oriented sales and growth leader with 15+ years of experience driving revenue and market share at Oracle. Mikael Martins possesses a proven track record of building and scaling high-performing sales teams, consistently exceeding quota, and penetrating new markets. Most recently, he led the expansion of Oracle\u2019s financial services SaaS offerings into the wealth management sector, achieving a 35% YoY growth rate. Mikael is adept at developing and executing go-to-market strategies, fostering strong client relationships, and leveraging data analytics to optimize sales performance. Currently exploring opportunities to leverage his expertise in a fast-paced, entrepreneurial environment. He is particularly interested in advisory or operational roles within Series B/C stage SaaS companies focused on fintech, enterprise software, or data analytics. Seeking to contribute to a company with a strong vision and a commitment to innovation, and open to roles which allow for mentorship of junior sales professionals.",
+    "background": "* **Oracle, Senior Director, Sales \u2013 Financial Services (2016 \u2013 2024)**\n    * Led a team of 30+ sales representatives responsible for driving revenue across a portfolio of SaaS solutions targeting the financial services industry.\n    * Consistently exceeded annual sales quota, achieving an average of 130% attainment over the past five years.\n    * Spearheaded the successful launch and expansion of Oracle\u2019s wealth management SaaS offering, resulting in a 35% YoY growth rate and securing key accounts including Fidelity and Charles Schwab.\n    * Developed and implemented a new sales training program that improved team performance by 20%.\n    * Collaborated with product management and marketing teams to identify and address market opportunities.\n    * Managed a $15M+ annual sales budget.\n* **Oracle, Director, Sales \u2013 Financial Services (2012 \u2013 2016)**\n    * Managed a team of 15 sales representatives focused on selling Oracle\u2019s core financial services applications.\n    * Increased sales within the assigned territory by 25% year-over-year.\n    * Identified and cultivated relationships with key decision-makers at leading financial institutions.\n    * Mentored and coached sales representatives to improve their skills and performance.\n    * Contributed to the development of sales strategies and tactics.\n* **Oracle, Sales Manager \u2013 Financial Services (2008 \u2013 2012)**\n    * Responsible for the sales of Oracle\u2019s database and middleware products to financial services clients.\n    * Consistently exceeded individual sales quota.\n    * Developed and maintained strong relationships with clients.\n    * Conducted product demonstrations and presentations.\n    * Managed the sales cycle from lead generation to contract negotiation.\n* **Sun Microsystems, Sales Representative (2005 \u2013 2008)**\n    * Sold Sun Microsystems\u2019 server and storage solutions to a range of clients.\n    * Achieved consistently high sales performance.\n    * Developed a strong understanding of the IT infrastructure landscape.",
+    "lookingFor": "Mikael Martins is actively seeking an advisory or operational role within a high-growth Series B or C stage SaaS company. My ideal scenario involves leveraging my deep understanding of the sales process, team leadership, and the financial services sector to accelerate growth. I\u2019m particularly interested in companies focused on:\n\n* **Fintech:** (Payments, Lending, Wealth Management, Insurance Tech)\n* **Enterprise Software:** (CRM, ERP, Data Analytics, Cybersecurity)\n* **SaaS Business Development:** Opportunities to contribute to strategic partnerships and expansion initiatives.\n\nI am open to both full-time and advisory engagements. I\u2019m keen to connect with founders, VPs of Sales/Growth, and investors who are building innovative solutions and looking for experienced leadership to help scale their businesses. I\u2019m *not* interested in roles within large, established corporations or positions that lack strategic impact.  I'm also open to mentoring opportunities within the startup ecosystem.",
+    "notes": "Mikael is a very direct and pragmatic communicator. He responds quickly to well-crafted messages that demonstrate an understanding of his background and goals. He\u2019s less responsive to generic connection requests. He recently mentioned a strong preference for companies that prioritize data-driven decision-making. He\u2019s currently evaluating a couple of opportunities but remains open to new possibilities. Be mindful that he\u2019s actively networking and has a clear idea of what he\u2019s looking for. He values efficiency and appreciates concise communication.",
+    "locationAvailability": "Currently located in San Francisco, California. Open to roles requiring travel within the US and potentially relocation for the right opportunity.",
+    "introPreferences": "* **Hard Requirements:** Do *not* introduce Mikael to recruiting firms offering roles at Fortune 500 companies.\n* **Soft Preferences:** Introductions to founders or VPs of Sales/Growth at Series B/C fintech SaaS companies are highly valued.\n* **Introduction Framing:** Please highlight Mikael\u2019s experience scaling sales teams and his success in the wealth management sector. Emphasize his data-driven approach and his desire to contribute to a fast-paced, entrepreneurial environment.\n* **Avoid:** Avoid introductions to companies that are pre-seed or have limited funding.",
+    "personalPreferences": "Prefers initial contact via LinkedIn messaging.  Follow-up can be via email. He\u2019s not active on Twitter.  He appreciates concise communication and a clear articulation of the value proposition.",
+    "meetingAndSchedulingPreferences": "Generally prefers virtual meetings initially, followed by in-person meetings if appropriate.  Uses Google Calendar for scheduling."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 23.73909592628479,
+      "input_tokens": 860,
+      "output_tokens": 1328,
+      "problems": []
+    }
+  ],
+  "success": true
+}

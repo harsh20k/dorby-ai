@@ -1,0 +1,54 @@
+{
+  "id": 966,
+  "archetype": "Experienced Tech Executive & Advisor",
+  "given_name": "Javier Weber",
+  "style_version": 59,
+  "archetypes_version": 161,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Javier Weber is a seasoned tech executive with a strong background in scaling SaaS businesses, particularly in the marketing technology space. He spent over a decade at Adobe, then jumped to a fast-growing MarTech startup, 'BrightSignal,' where he was instrumental in taking them to acquisition. Now, he's a fractional COO/Advisor, focusing on early-stage (Seed to Series B) companies needing help with operational efficiency, go-to-market strategy, and scaling. A distinctive detail: he actively invests *time* (not necessarily capital) in a small portfolio of companies he advises, taking on significant operational roles for equity. He's looking to expand that portfolio, specifically with companies tackling AI-driven marketing solutions. He's very direct, values efficiency, and isn't afraid to challenge assumptions. He\u2019s based in Austin, Texas, and prioritizes getting straight to the point.",
+    "positioning": "I\u2019m Javier Weber, a fractional COO and strategic advisor focused on accelerating growth for early-stage SaaS companies. Having spent years building and scaling within both enterprise environments like Adobe and high-velocity startups like BrightSignal (acquired by Salesforce), I bring a unique blend of operational rigor and entrepreneurial agility. I specialize in helping companies navigate the critical phases between Seed and Series B, optimizing go-to-market strategies, establishing scalable operational frameworks, and driving revenue traction. \n\nCurrently, I'm deeply involved with a small portfolio of companies, taking on significant operational responsibility in exchange for equity. I\u2019m particularly excited by the potential of AI to revolutionize marketing, and I\u2019m actively seeking opportunities to partner with founders building innovative solutions in this space. I'm not a 'board-only' advisor; I roll up my sleeves and get things done. My value proposition is simple: I bring proven experience, a relentless focus on execution, and a commitment to building sustainable, high-growth businesses. I\u2019m always open to connecting with ambitious founders and investors shaping the future of marketing technology.",
+    "background": "- **Adobe (2008 \u2013 2018)**: Various leadership roles culminating in Senior Director, Global Marketing Operations. Managed a team of 50+ responsible for marketing automation, campaign analytics, and technology infrastructure. Led the implementation of Marketo across all marketing teams, resulting in a 25% increase in lead conversion rates. Oversaw a $15M annual budget.\n- **BrightSignal (2018 \u2013 2022)**: Chief Operating Officer. Responsible for all operational aspects of the business, including product, engineering, marketing, sales, and customer success. Scaled the team from 20 to 150 employees. Drove a 300% increase in ARR during tenure. Led the due diligence process and successful acquisition by Salesforce for $120M.\n- **Independent Advisor/Fractional COO (2022 \u2013 Present)**: Providing strategic guidance and operational support to a portfolio of early-stage SaaS companies. Current portfolio includes: \u2018Lexi AI\u2019 (AI-powered content generation), \u2018Nova Insights\u2019 (Predictive analytics for e-commerce), and \u2018StreamlineHQ\u2019 (Marketing workflow automation).\n- **Education:** MBA, Harvard Business School (2008). BS, Computer Science, Stanford University (2006). Graduated *Summa Cum Laude*.",
+    "lookingFor": "I'm actively expanding my advisory portfolio and seeking connections with founders building disruptive AI-driven marketing technology solutions. I\u2019m particularly interested in companies tackling challenges in areas like personalization, customer journey optimization, and marketing analytics.\n\n**Specifically, I\u2019m looking for:**\n\n*   **Founders (Seed - Series B):**  Ambitious, data-driven leaders with a clear vision and a strong team. Must be coachable and willing to embrace a hands-on advisory approach.\n*   **Investors (Angel/Seed/Series A):**  VCs and angel investors focused on the MarTech space, particularly those with experience in AI. I\u2019m happy to provide insights on potential investment opportunities.\n*   **Potential Partners:** Companies with complementary technologies or services that could benefit my portfolio companies. Strategic alliances and co-marketing opportunities are of interest.\n*   **Talent:** Experienced marketing operations professionals, data scientists, and engineers with a passion for building innovative solutions. I often assist my portfolio companies with key hires.\n\nI'm *not* interested in connecting with individuals offering generic consulting services or those lacking a demonstrable track record of success.",
+    "notes": "* Priority: Identifying 1-2 strong AI MarTech companies to deeply engage with over the next quarter. \n* Caveat: Javier is *very* direct. Don't sugarcoat things with him. He values honesty and transparency. \n* Signal: Mentions of 'operational efficiency,' 'go-to-market strategy,' or 'scaling' are good conversation starters. \n* Context: He prefers to take equity in lieu of large cash retainers for advisory work. Recent conversation indicated a strong preference for companies with demonstrable early traction (e.g., >$50k MRR).",
+    "locationAvailability": "Based in Austin, Texas. Willing to travel to key tech hubs (SF, NYC, Boston) for promising opportunities.",
+    "introPreferences": "* Introductions should be concise and highlight the *specific* problem the founder is solving and their current traction metrics (ARR, MRR, customer growth).\n* Only introduce me to founders who have a clear understanding of their unit economics.\n* Do *not* introduce me to companies without a functional product or demonstrable customer validation.\n* Preferred introduction method: Direct email with a brief summary and LinkedIn profile link. No lengthy email chains.\n* Minimum check size for investor introductions: $500k. I'm not interested in connecting with micro-VCs.",
+    "personalPreferences": "Prefers direct communication and appreciates efficiency. Doesn't typically engage in small talk.",
+    "meetingAndSchedulingPreferences": "* Prefers Zoom meetings. \n*  Please include a brief agenda when scheduling a meeting. \n*  Generally responds to emails within 24-48 hours."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 17.534282207489014,
+      "input_tokens": 904,
+      "output_tokens": 1311,
+      "problems": []
+    }
+  ],
+  "success": true
+}

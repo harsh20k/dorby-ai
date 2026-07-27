@@ -1,0 +1,54 @@
+{
+  "id": 844,
+  "archetype": "Experienced Exec Seeking Founder Role",
+  "given_name": "Jamal Novak",
+  "style_version": 52,
+  "archetypes_version": 142,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Jamal Novak is a recently-departed CTO of a moderately successful, but ultimately acquired, fintech startup focused on embedded finance for small businesses. He\u2019s a highly technical leader with a strong background in building scalable infrastructure, but he felt constrained by the acquisition and a shift towards a more conservative product roadmap. He\u2019s now actively looking to found a company again, ideally in the AI/ML space, specifically around applications for automating complex financial workflows. He wants to leverage his experience *building* things, not just managing them. He\u2019s comfortable with risk, but prefers to address it with solid engineering principles. He's 48, has a family, and is looking for a venture-backed opportunity that allows for a reasonable work-life balance (though he\u2019s willing to put in the hours when needed). He's a pragmatic visionary \u2013 he doesn't chase hype, but understands the potential of transformative technologies.",
+    "positioning": "A seasoned technology leader with a proven track record in scaling high-growth fintech companies, I\u2019m currently exploring opportunities to leverage my expertise as a founder. Most recently, as CTO of NovaPay, I spearheaded the development of a robust and scalable embedded finance platform that processed over $500M in transactions annually, achieving a 300% increase in platform usage within 18 months. I\u2019m passionate about building innovative solutions that empower small businesses and streamline complex financial processes. \n\nMy core strength lies in translating business requirements into elegant, scalable technical architectures. I excel at assembling and mentoring high-performing engineering teams, fostering a culture of innovation and continuous improvement. At NovaPay, I implemented a DevOps pipeline that reduced deployment times by 60% and significantly improved system reliability. I'm now eager to apply this experience to a new challenge \u2013 building a company from the ground up.\n\nI'm particularly interested in the intersection of AI/ML and finance, specifically opportunities to automate intricate workflows and unlock new levels of efficiency. I believe there's a significant untapped potential in leveraging these technologies to address the pain points of underserved markets. I am actively seeking seed and Series A funding opportunities, and highly value partners who share a long-term vision for disruptive innovation.\n\nI\u2019m not simply looking for a job; I\u2019m looking for a mission. I want to build something impactful, something that solves real problems, and something that I can be proud of. I'm excited to connect with fellow entrepreneurs, investors, and advisors who share this passion.",
+    "background": "- **CTO, NovaPay (2019 \u2013 2024):** Led all aspects of technology, including engineering, infrastructure, security, and data science. Oversaw a team of 40+ engineers. Successfully scaled the platform to handle rapid growth, achieving a 300% increase in transaction volume within 18 months. Implemented a robust DevOps pipeline, reducing deployment times by 60% and improving system reliability. Managed a technology budget of $8M annually. Led the technical due diligence process during the company's acquisition by Stellar Financial.\n- **VP of Engineering, FinTech Solutions Inc. (2016 \u2013 2019):** Managed a team of 25 engineers responsible for developing and maintaining the company\u2019s core lending platform. Led the migration of the platform to a microservices architecture, improving scalability and resilience. Introduced agile development methodologies, resulting in a 20% increase in team velocity.\n- **Senior Software Engineer, Global Payments Corp. (2010 \u2013 2016):** Developed and maintained critical components of the company\u2019s payment processing infrastructure. Contributed to the design and implementation of a new fraud detection system, reducing fraudulent transactions by 15%. Mentored junior engineers and actively participated in code reviews.\n- **Skills:** Python, Java, AWS (Certified Solutions Architect), Kubernetes, Docker, Microservices Architecture, DevOps, Agile Methodologies, Machine Learning (TensorFlow, PyTorch), Data Engineering (Spark, Hadoop), SQL, NoSQL databases (MongoDB, Cassandra), Cybersecurity.\n- **Education:** PhD, Computer Science, Stanford University (2010). Thesis: \u201cScalable Distributed Systems for Real-Time Data Processing.\u201d\n- **Education:** MS, Computer Science, Massachusetts Institute of Technology (2007).\n- **Education:** BS, Computer Engineering, Carnegie Mellon University (2005).\n- **Certifications:** AWS Certified Solutions Architect \u2013 Associate, Certified ScrumMaster (CSM).\n- **Awards & Recognition:** \u201cTech Leader of the Year\u201d \u2013 NovaPay (2022). Featured in \u201cForbes 30 Under 30\u201d \u2013 FinTech (2018).\n- **Projects:** Contributor to several open-source projects related to distributed systems and machine learning. Developed a personal project utilizing ML to predict stock market trends (hobby project, not for financial advice!).",
+    "lookingFor": "I am actively seeking opportunities to found a new venture, ideally a seed-stage or Series A company in the AI/ML-driven fintech space. I'm particularly interested in companies tackling complex financial workflows, automating compliance, or providing innovative solutions for small and medium-sized businesses.\n\nSpecifically, I'm looking for:\n- **Co-founders:** Individuals with complementary skills (business development, marketing, sales) and a shared passion for building disruptive technologies.\n- **Seed/Series A Investors:** Venture capitalists with a track record of supporting early-stage fintech companies. I\u2019m open to discussing investment opportunities ranging from $2M to $10M.\n- **Advisors:** Experienced entrepreneurs and industry experts who can provide guidance and mentorship.\n- **Strategic Partnerships:** Collaboration opportunities with established fintech companies or technology providers.\n\nI am open to considering remote opportunities, but prefer a location within the Eastern Time Zone. I\u2019m eager to connect with individuals who are passionate about innovation and committed to building impactful solutions.  I am available for introductory calls and meetings to discuss potential collaborations.",
+    "notes": "Jamal is a highly intelligent and articulate individual with a strong technical background. He\u2019s incredibly driven but comes across as pragmatic and grounded. He's clearly frustrated with the bureaucracy and risk aversion that came with the NovaPay acquisition and is genuinely excited about the prospect of building something new. \n\nHe\u2019s very selective about the opportunities he pursues and is not interested in simply taking a job for the sake of it. He\u2019s looking for a venture that aligns with his values and allows him to leverage his technical expertise. Be prepared to discuss the technical details of your venture and demonstrate a clear vision for the future. He\u2019s a strong advocate for data-driven decision-making and will likely ask probing questions about your business model and market analysis. \n\nHe\u2019s also a family man and values work-life balance, so be mindful of that when discussing expectations. Don\u2019t pitch him a \u2018burn the midnight oil\u2019 startup unless it\u2019s truly exceptional. He responds well to direct communication and appreciates transparency.",
+    "locationAvailability": "Currently based in Boston, Massachusetts. I am open to relocating for the right opportunity, but prefer a location on the East Coast. Remote work is a possibility, but I value in-person collaboration.",
+    "introPreferences": "- **Hard Requirement:** Introductions to active seed/Series A investors focused on AI/ML and/or Fintech.\n- **Strong Preference:** Introductions to founders actively seeking a CTO or technical co-founder.\n- **Soft Preference:** Introductions to advisors with experience scaling early-stage startups.\n- **Intro Style:** Concise and direct. Please highlight the potential synergies between Jamal and the individual you are introducing him to. Avoid overly effusive language.\n- **Do:** Mention his experience at NovaPay and his PhD from Stanford.\n- **Don't:** Position him as desperate or solely focused on funding. He's looking for the right fit, not just any investment.\n- **Avoid:** Introductions to recruiters unless specifically requested. He\u2019s actively networking and prefers direct connections.",
+    "personalPreferences": "Prefers asynchronous communication for initial outreach. I'm a coffee drinker and enjoy discussing technology over a good cup.",
+    "meetingAndSchedulingPreferences": "Generally flexible with meeting times, but prefers scheduling meetings at least 24 hours in advance. I respond promptly to emails and LinkedIn messages."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 29.864153146743774,
+      "input_tokens": 806,
+      "output_tokens": 1772,
+      "problems": []
+    }
+  ],
+  "success": true
+}

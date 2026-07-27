@@ -1,0 +1,54 @@
+{
+  "id": 344,
+  "archetype": "Toronto-Based Tech Founder/Operator",
+  "given_name": "Omar Ishikawa",
+  "style_version": 21,
+  "archetypes_version": 57,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Omar Ishikawa is a first-time founder, 31, currently leading 'SynapseFlow,' a B2B SaaS platform focused on automating data pipeline observability for modern data stacks. He previously spent 6 years at Shopify, starting as a junior data analyst and rising to a Senior Product Manager role within the Revenue Science team. A key differentiator for Omar is his deep understanding of both the technical *and* business sides of data \u2013 he\u2019s comfortable writing SQL and discussing P&L statements with equal fluency. He\u2019s a recent Y Combinator graduate (W24 batch) and is currently in a seed round, aiming to raise $3M to scale the engineering team and expand sales & marketing. He's very focused on building a strong, diverse team and values intellectual honesty and a bias towards action. He's originally from Vancouver but has fully embraced the Toronto tech scene.",
+    "positioning": "I\u2019m Omar Ishikawa, founder and CEO of SynapseFlow. We\u2019re tackling a critical pain point for data teams: the lack of real-time visibility into the health and performance of their data pipelines. In today\u2019s data-driven world, broken pipelines mean broken insights, leading to costly delays and inaccurate decision-making. SynapseFlow provides automated monitoring, alerting, and root cause analysis for modern data stacks \u2013 think Snowflake, BigQuery, dbt, Fivetran, and more. \n\nWe graduated from Y Combinator (W24) just last month and have already secured early traction with several key customers, including a pilot program with a Fortune 500 retail company. We\u2019re seeing a strong product-market fit, with customers reporting a 40% reduction in pipeline downtime and a significant increase in data engineer productivity. \n\nCurrently, we\u2019re focused on closing our $3M seed round to accelerate product development and expand our go-to-market strategy. We\u2019re particularly excited about building out our engineering team with top talent and establishing a strong presence in the Toronto tech ecosystem.  We believe SynapseFlow has the potential to become the industry standard for data pipeline observability, and we're looking for partners who share our vision.",
+    "background": "* **SynapseFlow, Toronto, ON** (Jan 2024 \u2013 Present)\n    * **Founder & CEO:** Led all aspects of company formation, product development, fundraising, and early customer acquisition.  Responsible for defining company vision, strategy, and culture.\n    * **Key Achievements:** Secured Y Combinator acceptance (W24 batch); closed initial angel investment of $500K; launched MVP and onboarded 5 paying customers.\n    * **Skills:** Startup Leadership, SaaS, Data Observability, Product Management, Fundraising, Go-to-Market Strategy, Team Building.\n\n* **Shopify, Toronto, ON** (Aug 2018 \u2013 Dec 2023)\n    * **Senior Product Manager, Revenue Science:** Led product initiatives focused on improving merchant conversion rates and revenue optimization. Managed a cross-functional team of engineers, data scientists, and designers.\n    * **Key Achievements:** Increased checkout conversion rate by 15% through A/B testing and feature optimization; launched a new personalized recommendation engine that generated a 10% uplift in average order value; mentored junior product managers.\n    * **Skills:** Product Management, A/B Testing, Data Analysis, SQL, Python, User Research, Agile Development, Cross-Functional Team Leadership.\n\n* **Shopify, Toronto, ON** (Aug 2018 \u2013 Dec 2023)\n    * **Data Analyst:** Developed and maintained key performance indicators (KPIs) for the revenue organization.  Performed data analysis to identify trends and opportunities for improvement.\n    * **Key Achievements:** Automated the creation of weekly revenue reports, saving the team 10+ hours per week; identified a key segmentation opportunity that led to a targeted marketing campaign with a 20% conversion rate.\n    * **Skills:** Data Analysis, SQL, Excel, Data Visualization, Reporting, KPI Development.\n\n* **University of British Columbia, Vancouver, BC** (Sept 2014 \u2013 May 2018)\n    * **Bachelor of Science in Computer Science:** Graduated with honors.  Focused coursework on data science, machine learning, and software engineering.\n    * **Relevant Coursework:** Database Systems, Data Mining, Machine Learning, Algorithms and Data Structures.",
+    "lookingFor": "I'm actively seeking connections to help SynapseFlow scale and achieve our ambitious goals.  Specifically, I'm focused on:\n\n* **Seed Stage Investors:**  We're currently raising a $3M seed round.  Ideal investors have a strong track record of backing B2B SaaS companies, particularly in the data infrastructure space.  We're looking for partners who can provide not only capital but also strategic guidance and access to their network.\n* **Experienced Data Engineers/Architects:**  We're building out our engineering team and are looking for talented individuals with deep expertise in data pipeline technologies (Snowflake, BigQuery, dbt, Fivetran, Airflow, etc.).\n* **Sales & Marketing Leaders:**  As we move beyond the MVP stage, we need experienced sales and marketing professionals to help us reach a wider audience and drive revenue growth.  Experience selling to data teams is a strong plus.\n* **Mentors & Advisors:**  I'm always open to connecting with experienced founders and operators who can provide guidance and support as I navigate the challenges of building a startup.\n\n**Hard Requirements:**  Experience investing in or building B2B SaaS companies.  \n**Soft Preferences:**  Toronto-based investors/operators.  Individuals with a strong understanding of the modern data stack.",
+    "notes": "Omar is incredibly articulate and passionate about SynapseFlow. He's very data-driven in his thinking and clearly understands the technical complexities of the problem he's solving. He\u2019s responsive and engaged in conversation, but can sometimes get lost in the technical details \u2013 prompting to focus on the business implications is often helpful.  He mentions being heavily influenced by the YC curriculum and frequently references learnings from the program. He\u2019s currently a 7/10 on our 'founder quality' scoring system, with potential to move higher as he demonstrates further execution. He mentioned a previous conversation with [Investor Name] went well but didn\u2019t result in a term sheet - worth probing on that during follow-up.  He's prioritizing investors with operational experience.",
+    "locationAvailability": "I'm based in Toronto, Ontario, but am comfortable with remote meetings and occasional travel to other tech hubs.",
+    "introPreferences": "* **Hard Requirements:** Introductions to partners at leading seed-stage VC firms (e.g., Amplify Partners, Index Ventures, Sequoia Capital).\n* **Soft Preferences:** Introductions to experienced data engineers/architects at companies like Snowflake, Databricks, and Fivetran. \n* **Introduction Framing:** Please highlight SynapseFlow\u2019s traction with early customers and our unique approach to data pipeline observability. Emphasize Omar\u2019s background at Shopify and his deep understanding of the data landscape. \n* **Avoid:** Introducing Omar to individuals who are not relevant to our current fundraising or hiring needs.  Avoid introductions to generalist investors who lack experience in the B2B SaaS space.",
+    "personalPreferences": "I prefer to communicate via email or LinkedIn.  I typically respond to messages within 24-48 hours.  I'm also open to quick calls to discuss potential collaborations.",
+    "meetingAndSchedulingPreferences": "I'm flexible with meeting times and happy to work around your schedule. I prefer to be directly involved in scheduling to ensure alignment.  I'm comfortable with video conferencing (Zoom, Google Meet)."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 29.412163019180298,
+      "input_tokens": 816,
+      "output_tokens": 1663,
+      "problems": []
+    }
+  ],
+  "success": true
+}

@@ -1,0 +1,63 @@
+{
+  "id": 491,
+  "archetype": "High-Achieving Sales & MBA Founder",
+  "given_name": "Nadia Ibrahim",
+  "style_version": 30,
+  "archetypes_version": 83,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Nadia Ibrahim is a recent MBA graduate from a top-tier program (Harvard Business School) with a strong background in B2B SaaS sales, specifically at a hyper-growth startup (Notion). She consistently exceeded quota, becoming a top performer, and developed a strong understanding of Go-To-Market strategies. She left Notion to pursue her MBA with the explicit goal of founding a company focused on solving inefficiencies in the sales tech stack \u2013 specifically, a platform to improve sales forecasting accuracy using AI. She's currently in the early stages of validating her idea, actively networking for potential co-founders, early-stage investors, and pilot customers. She's highly data-driven, articulate, and possesses a natural ability to build rapport. She is ambitious, but grounded, and values authenticity in her network.",
+    "positioning": "A results-oriented leader with a proven track record of driving revenue growth in the B2B SaaS space, I\u2019m now channeling my experience and newly honed business acumen toward building a company that revolutionizes sales forecasting. My time at Notion, a company I deeply admire, instilled in me a passion for creating products that genuinely empower users and streamline complex workflows. I consistently ranked among the top 10% of sales representatives, exceeding quota by an average of 140% each quarter, and was recognized for my ability to identify and close strategic accounts. \n\nCurrently, I\u2019m focused on tackling a pervasive problem I witnessed firsthand: the inherent inaccuracies in traditional sales forecasting. I believe AI-powered solutions can dramatically improve forecast reliability, leading to better resource allocation, more informed decision-making, and ultimately, increased revenue. I\u2019m actively exploring opportunities to connect with individuals who share this vision \u2013 particularly those with expertise in AI/ML, sales tech, and early-stage venture capital. \n\nI'm eager to engage in discussions about the future of sales, innovative forecasting methodologies, and the challenges facing sales leaders today. I'm especially interested in connecting with founders who have successfully navigated the early stages of building a SaaS company, and investors who are passionate about supporting disruptive technologies.",
+    "background": "- **Harvard Business School, Boston, MA** | Master of Business Administration (MBA) | May 2024\n  * Concentrations: Entrepreneurial Management, Technology & Operations Management\n  * Relevant Coursework: New Venture Creation, Product Management, Data Analytics, Marketing Strategy\n  * Dean\u2019s List, Case Competition Finalist\n\n- **Notion, San Francisco, CA** | Account Executive | June 2021 \u2013 August 2023\n  * Consistently exceeded quarterly quota by an average of 140%, ranking in the top 10% of the sales team.\n  * Managed a portfolio of 80+ strategic accounts, driving expansion revenue through upsells and cross-sells.\n  * Developed and implemented a new outreach strategy targeting key decision-makers, resulting in a 20% increase in qualified leads.\n  * Collaborated with marketing and product teams to provide customer feedback and inform product roadmap.\n  * Recognized with the \u201cPresident\u2019s Club\u201d award for outstanding sales performance in 2022.\n\n- **Salesforce, San Francisco, CA** | Business Development Representative | June 2020 \u2013 June 2021\n  * Qualified inbound leads and scheduled demos for Account Executives.\n  * Consistently exceeded monthly quota for qualified opportunities.\n  * Developed a strong understanding of the Salesforce sales cycle and CRM platform.\n\n- **University of California, Berkeley, CA** | Bachelor of Science in Economics | May 2020\n  * GPA: 3.9/4.0, *Summa Cum Laude*\n  * Relevant Coursework: Econometrics, Statistics, Microeconomics, Game Theory\n  * Dean's List all semesters\n\n- **Skills:** Sales (B2B SaaS, Solution Selling, Consultative Selling), Sales Forecasting, CRM (Salesforce, HubSpot), Data Analysis (Excel, SQL, Python - basic proficiency), AI/ML (foundational understanding), Product Management (agile methodologies), Leadership, Communication, Negotiation.",
+    "lookingFor": "I am actively seeking connections with individuals who can contribute to the launch and growth of my new venture. Specifically, I\u2019m looking to:\n\n* **Connect with potential co-founders:** Ideally, someone with strong technical expertise in AI/ML and a passion for building innovative sales tech solutions.  Experience with time-series forecasting is a major plus.\n* **Identify early-stage investors:**  I\u2019m interested in speaking with seed-stage venture capitalists and angel investors who focus on B2B SaaS and AI/ML.\n* **Find pilot customers:**  I\u2019m eager to gather feedback on my concept from sales leaders and teams who are actively seeking to improve their forecasting accuracy.\n* **Introduce me to mentors:**  I'm looking for experienced entrepreneurs who have successfully navigated the challenges of building and scaling a SaaS business. \n* **Network with experts in the sales tech landscape:**  I want to stay informed about the latest trends and technologies in the industry.",
+    "notes": "Nadia is exceptionally articulate and driven. She thoroughly researches anyone she connects with and comes prepared with thoughtful questions. She's very direct in her communication and appreciates a straightforward approach.  She's currently in 'learning mode,' heavily focused on validating her business idea and gathering feedback. \n\nRecent conversation (05/15/2024): She mentioned being particularly interested in connecting with folks who have experience building and deploying AI models in a sales context. She's *not* looking for general mentorship; she wants specific expertise related to her problem space.\n\n**Do not** position her as someone who *needs* funding immediately. She\u2019s still in the very early stages of exploration. Focus on her desire for strategic connections and feedback. \n\nShe is open to virtual coffee chats and is very responsive. She is currently exploring different tech stacks for her MVP \u2013 a conversation starter could be to share relevant tools or frameworks.",
+    "locationAvailability": "Nadia is currently based in Boston, MA, but is open to remote collaboration and travel. She\u2019s flexible regarding location for the right opportunity.",
+    "introPreferences": "* **Hard Requirements:** When making an introduction, *always* mention that Nadia is a recent HBS graduate and former top performer at Notion. Highlight her focus on AI-powered sales forecasting.  \n* **Soft Preferences:** Include a brief sentence about *why* you think the connection would be valuable for Nadia, referencing specific expertise or shared interests.\n* **Do Not:** Introduce her to anyone solely based on their title or company name. Focus on their specific skills and experience.\n* **Preferred Connection Type:** Warm introductions are *highly* preferred.  LinkedIn connection requests without a personalized message will likely be ignored.\n* **Information to Include:** Briefly mention Nadia\u2019s background in B2B SaaS sales and her current focus on building a company. Emphasize her data-driven approach and her desire to learn from others.",
+    "personalPreferences": "Nadia prefers concise and direct communication. She responds quickly to messages and appreciates a professional tone.",
+    "meetingAndSchedulingPreferences": "Nadia is available for meetings during standard East Coast business hours (9am-5pm EST). She prefers to use Zoom for video calls and is comfortable with 30-minute or 60-minute meetings. Please provide a calendar link when scheduling."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 22.52154302597046,
+      "input_tokens": 821,
+      "output_tokens": 1660,
+      "problems": [
+        "background: possible truncation (ends with '...ed Sales Cloud Consultant')"
+      ]
+    },
+    {
+      "attempt": 2,
+      "elapsed_s": 21.934769868850708,
+      "input_tokens": 821,
+      "output_tokens": 1602,
+      "problems": []
+    }
+  ],
+  "success": true
+}

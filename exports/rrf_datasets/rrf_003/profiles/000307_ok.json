@@ -1,0 +1,54 @@
+{
+  "id": 307,
+  "archetype": "Enterprise Sales Leader, Fintech Focus",
+  "given_name": "Rosa Santos",
+  "style_version": 19,
+  "archetypes_version": 51,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Rosa Santos is a seasoned enterprise sales leader with 15+ years of experience, primarily in the financial technology space. She spent the first decade of her career at Oracle, selling complex financial services software to large banks in North America. A pivotal moment came when she was headhunted to lead the expansion of a US-based payments processor, Stripe, into the Latin American market. She successfully built and scaled their enterprise sales team across Brazil, Mexico, and Colombia, achieving significant revenue growth. Now, she's left Stripe to found 'LatAm Scale,' a consultancy helping North American fintechs successfully enter and expand within the LatAm market. Her distinct career detail is her deep understanding of both North American enterprise sales methodologies *and* the nuances of doing business in LatAm \u2013 a combination highly sought after. She\u2019s currently raising a seed round for LatAm Scale and actively seeking strategic partnerships with venture capital firms focused on the region. She is very focused on companies providing embedded finance solutions.",
+    "positioning": "I\u2019m Rosa Santos, founder of LatAm Scale, a consultancy dedicated to accelerating the growth of North American fintechs in the dynamic Latin American market. For years, I witnessed firsthand the challenges \u2013 and incredible opportunities \u2013 of expanding into this region while leading enterprise sales at Stripe. Too often, promising technologies stumble due to a lack of localized understanding, cultural sensitivity, and established networks. LatAm Scale bridges that gap. We offer a comprehensive suite of services, from market entry strategy and regulatory navigation to sales team building and lead generation. My background at Oracle honed my skills in navigating complex enterprise sales cycles, while my tenure at Stripe provided invaluable experience scaling a high-growth fintech across Brazil, Mexico, and Colombia. I\u2019m passionate about fostering innovation and enabling access to financial services throughout Latin America. Currently, I\u2019m focused on building out LatAm Scale\u2019s advisory board and securing seed funding to expand our team and service offerings. I\u2019m particularly excited about supporting companies focused on embedded finance solutions, believing they hold the key to unlocking financial inclusion across the region. I\u2019m actively seeking connections with VCs and fintech leaders who share this vision.",
+    "background": "- **LatAm Scale, Founder & CEO** (Jan 2024 \u2013 Present)\n    * Established LatAm Scale to address the unique challenges faced by North American fintechs entering the Latin American market.\n    * Developed and implemented market entry strategies for three clients, resulting in a projected 30% increase in regional revenue within the first year.\n    * Built a network of key industry contacts, including regulatory experts, payment processors, and local banking partners.\n\n- **Stripe, Head of Enterprise Sales, LatAm** (June 2018 \u2013 Dec 2023)\n    * Responsible for building and leading the enterprise sales team across Brazil, Mexico, and Colombia.\n    * Grew enterprise revenue in the region by 400% over five years, consistently exceeding sales targets.\n    * Developed and implemented sales training programs tailored to the LatAm market.\n    * Managed a team of 25+ sales representatives, providing coaching, mentorship, and performance management.\n    * Key technologies utilized: Salesforce, Outreach, Gong, LinkedIn Sales Navigator, Hubspot.\n\n- **Oracle, Senior Sales Representative** (Aug 2010 \u2013 May 2018)\n    * Sold complex financial services software solutions to Fortune 500 banks and financial institutions in North America.\n    * Consistently ranked among the top 10% of sales representatives nationwide.\n    * Developed and maintained strong relationships with key decision-makers at client organizations.\n    * Managed the full sales cycle, from lead generation to contract negotiation and closing.\n    * Technologies used: Siebel CRM, Oracle EBS, Microsoft Office Suite.\n\n- **Education:**\n    * **MBA, Stanford Graduate School of Business** (2008 \u2013 2010)\n    * **BA, Economics, University of California, Berkeley** (2004 \u2013 2008)\n\n- **Skills:** Enterprise Sales, Fintech, Market Entry Strategy, Business Development, Sales Management, Team Leadership, Negotiation, Strategic Planning, CRM (Salesforce, Siebel), LatAm Market Expertise, Portuguese (Fluent), Spanish (Fluent).",
+    "lookingFor": "I'm currently seeking strategic partnerships and investment to fuel the growth of LatAm Scale. Specifically, I'm looking to connect with:\n\n* **Venture Capital firms:** Focused on seed and Series A funding for fintech companies, particularly those with a LatAm focus. I\u2019m interested in discussing potential investment opportunities in LatAm Scale.\n* **Fintech Executives:** Leaders at North American fintech companies considering expansion into Latin America. I\u2019m open to exploring potential consulting engagements.\n* **LatAm Banking & Financial Services Leaders:** Individuals with deep knowledge of the LatAm financial landscape who might be interested in joining LatAm Scale\u2019s advisory board.\n* **Embedded Finance Companies:** I am particularly interested in connecting with companies offering embedded finance solutions, as I see significant potential for growth in this area within LatAm.\n\nI'm also open to informal conversations with individuals interested in learning more about the LatAm fintech market. I\u2019m available for virtual coffee chats and brief introductory calls. I'm *not* currently looking for direct employment opportunities, but am always open to exploring potential partnerships.",
+    "notes": "Rosa is a highly driven and articulate individual with a strong track record of success. She's very knowledgeable about the LatAm market and passionate about helping fintechs succeed there. \u2013 Initial outreach should focus on highlighting the unique value proposition of LatAm Scale and its ability to de-risk market entry. She responds well to data-driven pitches and appreciates a concise, direct communication style. - Follow up on her LinkedIn activity regarding embedded finance; she\u2019s been actively sharing articles on the topic. - She mentioned being open to introductions to potential advisory board members with regulatory expertise in Brazil.",
+    "locationAvailability": "Based in Miami, Florida, USA. Open to remote collaboration and travel within Latin America.",
+    "introPreferences": "When making introductions, please keep the following in mind:\n\n* **Hard Requirement:** Any introduction should be to someone at the VP level or above, or a partner at a VC firm. I don\u2019t have time for junior-level conversations.\n* **Strong Preference:** Introductions to individuals with a proven track record of successful LatAm market entry are highly valued.\n* **Soft Preference:** I appreciate concise and personalized introductions that highlight the specific relevance of the connection to LatAm Scale.\n* **Avoid:** Please do *not* introduce me to sales representatives or business development professionals unless they have significant decision-making authority. Also, avoid cold introductions \u2013 a brief warm-up message beforehand is appreciated.",
+    "personalPreferences": "Direct communication, data-driven insights, strategic thinking, fast-paced environments.",
+    "meetingAndSchedulingPreferences": "- Prefer 30-minute introductory calls.\n- Available for meetings during US Eastern Time business hours.\n- Please send a brief agenda in advance of any scheduled meeting."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 29.228044986724854,
+      "input_tokens": 850,
+      "output_tokens": 1510,
+      "problems": []
+    }
+  ],
+  "success": true
+}

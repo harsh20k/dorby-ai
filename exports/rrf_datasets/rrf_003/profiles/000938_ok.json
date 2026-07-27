@@ -1,0 +1,54 @@
+{
+  "id": 938,
+  "archetype": "Healthcare/AI Operator-Investor",
+  "given_name": "Thabo Sokolov",
+  "style_version": 57,
+  "archetypes_version": 157,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Thabo Sokolov is a first-time founder, but not a first-time healthcare operator. He spent a decade at major hospital systems, noticing the inefficiencies in diagnostic imaging workflows, specifically the bottleneck created by radiologist workload and the potential for AI to alleviate it. He\u2019s built \u2018ClarityDX\u2019, an AI-powered platform that prioritizes and pre-reads radiology scans, flagging critical cases for immediate attention. He\u2019s deeply technical, understands the clinical needs, and is now fundraising for Series A to scale sales and expand the AI model\u2019s capabilities beyond initial focus areas (chest x-rays & CT scans). He\u2019s looking for investors with operational healthcare experience and a willingness to get their hands dirty, and advisors who can help navigate the complex regulatory landscape. A key, slightly unusual detail: Thabo spent two years as a competitive chess player in his youth, a skill he credits with his strategic thinking and ability to anticipate multiple steps ahead \u2013 he subtly weaves chess analogies into his conversations.",
+    "positioning": "I\u2019m Thabo Sokolov, founder and CEO of ClarityDX. We\u2019re building the operating system for radiology, leveraging cutting-edge AI to dramatically improve diagnostic speed and accuracy. ClarityDX is a cloud-native platform that integrates seamlessly with existing PACS systems, providing radiologists with a prioritized worklist and intelligent pre-reads of imaging scans. \n\nCurrently focused on chest x-rays and CT scans, our AI algorithms identify critical findings \u2013 pneumothorax, pulmonary embolism, fractures \u2013 with 94% accuracy, reducing turnaround time by up to 30%. This translates directly into improved patient outcomes and reduced costs for hospitals. \n\nWe\u2019ve completed successful pilot programs with three major hospital networks \u2013 UCSF, Mount Sinai, and Northwestern \u2013 demonstrating significant improvements in key metrics. We are currently raising a $15M Series A to expand our sales team, accelerate product development (adding MRI and ultrasound support), and secure FDA clearance for our expanded feature set. \n\nThe team is comprised of seasoned radiologists, AI engineers from Stanford and MIT, and experienced healthcare operators. We're not just building AI; we're building a scalable, clinically-validated solution that solves a critical pain point in healthcare. We believe that AI is not a replacement for radiologists, but a powerful tool to augment their expertise and improve patient care.",
+    "background": "- **Founder & CEO, ClarityDX** (2021 \u2013 Present)\n    - Led seed fundraising round of $3M from leading healthcare venture firms.\n    - Built and launched ClarityDX platform, securing pilot programs with UCSF, Mount Sinai, and Northwestern.\n    - Developed and implemented go-to-market strategy, focusing on strategic partnerships with hospital systems.\n    - Assembled a team of 15+ engineers, radiologists, and healthcare professionals.\n- **Clinical Innovation Manager, Northwestern Memorial Hospital** (2019 \u2013 2021)\n    - Led the implementation of new digital health technologies across radiology and cardiology departments.\n    - Managed cross-functional teams to improve clinical workflows and patient experience.\n    - Identified and evaluated emerging technologies with potential to improve patient care.\n    - Saved the hospital approximately $500,000 annually through process improvements and technology adoption.\n- **Radiology Resident, University of California, San Francisco (UCSF)** (2016 \u2013 2019)\n    - Completed residency training in diagnostic radiology, specializing in chest imaging.\n    - Conducted research on the application of AI in radiology, publishing findings in peer-reviewed journals.\n    - Received the \u2018Resident of the Year\u2019 award for clinical excellence and research contributions.\n- **Management Consultant, McKinsey & Company** (2014 \u2013 2016)\n    - Advised healthcare clients on strategy, operations, and technology implementation.\n    - Developed data-driven solutions to improve hospital efficiency and patient outcomes.\n- **Education:**\n    - **MD, Stanford University School of Medicine** (2012 \u2013 2016)\n    - **BS, Biomedical Engineering, Massachusetts Institute of Technology (MIT)** (2008 \u2013 2012) - *Summa Cum Laude*.\n- **Skills:** AI/ML, Medical Imaging, Diagnostic Radiology, Healthcare IT, Strategic Planning, Business Development, Team Leadership, Data Analysis, Python, PACS Systems, FDA Regulatory Processes.\n- **Awards & Recognition:** UCSF Resident of the Year (2019), MIT Dean\u2019s List (2008-2012), National Merit Scholar.",
+    "lookingFor": "I'm actively seeking connections with individuals who can contribute to ClarityDX's growth and impact. Specifically, I\u2019m focused on building relationships within the following areas:\n\n* **Series A Investors:** We\u2019re looking for investors with $15-25M check size capacity and a demonstrable track record of success in healthcare AI. Operational experience within hospital systems is *highly* valued. We\u2019re not just looking for capital; we want partners who understand the complexities of our market and can provide strategic guidance.\n* **Strategic Advisors:** Individuals with deep expertise in FDA regulatory pathways for medical devices, particularly AI-driven diagnostics. Experience navigating 510(k) submissions and De Novo classifications is crucial.\n* **Key Opinion Leaders (KOLs):** Leading radiologists and hospital administrators who can champion ClarityDX within their institutions and provide valuable feedback on our product development.\n* **Potential Sales Partners:** Individuals with established relationships with hospital C-suites and radiology department heads. We're exploring strategic partnerships to accelerate our market penetration.\n* **AI/ML Engineering Talent:** Specifically, engineers specializing in computer vision and deep learning, with experience working with medical imaging data. Experience with PyTorch or TensorFlow is a plus.\n\nI'm particularly interested in introductions to investors who see the healthcare landscape as a complex game \u2013 one where anticipating multiple moves ahead is critical. I value partners who understand the long-term vision and are willing to invest in building a truly transformative solution. I'm open to virtual meetings and travel to key industry events.",
+    "notes": "* Thabo is passionate about his mission and can get very detailed about the technical aspects of ClarityDX. Keep introductions focused on the business value and patient impact.\n* He recently closed a successful pilot with Northwestern, which has significantly boosted his confidence. He\u2019s eager to share these results.\n* He\u2019s a bit sensitive about being perceived as \u2018just another AI hype machine\u2019 \u2013 emphasize the clinical validation and real-world results.\n* He\u2019s a big chess enthusiast and sometimes uses analogies \u2013 don\u2019t be surprised if he talks about \u2018positioning\u2019 or \u2018strategic moves.\u2019\n* He's currently prioritizing meetings with investors who have a strong understanding of the radiology workflow.\n* Last conversation (11/15) indicated a slight preference for investors who are willing to take a board seat.",
+    "locationAvailability": "I'm based in San Francisco, California, and am available for meetings both in-person and remotely. I'm willing to travel to key industry events and investor locations as needed.",
+    "introPreferences": "When making introductions, please keep the following in mind:\n\n* **Hard Requirements:** The individual should have a demonstrable track record of success in healthcare investing or a deep understanding of the radiology market.\n* **Soft Preferences:** Prior experience with AI/ML companies is a plus, but not essential. A genuine interest in improving patient care is crucial.\n* **Intro Style:** I prefer concise and targeted introductions. Please highlight the individual\u2019s relevant experience and their potential value to ClarityDX. Avoid lengthy introductions or generic pitches.\n* **What to Emphasize:** My background as a physician and healthcare operator, the strong clinical validation of our platform, and our potential to dramatically improve patient outcomes.\n* **What to Avoid:** Overhyping the AI aspect or downplaying the regulatory challenges. I\u2019m looking for realistic and pragmatic partners.\n* I appreciate a brief heads-up before the introduction, outlining the individual\u2019s background and potential areas of synergy.",
+    "personalPreferences": "I prefer to communicate via email initially, and am happy to jump on a call if it\u2019s a good fit. I\u2019m generally responsive and value clear, concise communication.",
+    "meetingAndSchedulingPreferences": "I typically prefer 30-minute introductory calls. I\u2019m available most weekdays and can often accommodate short-notice requests. Please send a calendar invite with a clear agenda to ensure a productive meeting. I respond quickly to calendar invites and confirmations."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 38.089797019958496,
+      "input_tokens": 869,
+      "output_tokens": 1810,
+      "problems": []
+    }
+  ],
+  "success": true
+}

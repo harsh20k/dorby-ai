@@ -1,0 +1,63 @@
+{
+  "id": 558,
+  "archetype": "Operator Turned Scout/Investor",
+  "given_name": "Daniel Patel",
+  "style_version": 34,
+  "archetypes_version": 94,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Daniel Patel is a former Head of Growth at a moderately successful B2B SaaS company, 'Streamline Solutions', which was acquired two years ago. He was instrumental in scaling their user base from 50k to 300k in 18 months through data-driven marketing and innovative growth hacking strategies. While he enjoyed the acquisition, he found himself drawn more to the *potential* of early-stage companies than the day-to-day operations of a larger org. He\u2019s now working as an independent scout for two small venture capital firms (focused on seed/pre-seed) and angel investors, leveraging his operator experience to identify high-potential founders. He\u2019s actively building his network to find promising startups in the marketing tech and future-of-work spaces, and he\u2019s beginning to make small personal angel investments. He\u2019s very focused on founder quality and demonstrable traction \u2013 he\u2019s skeptical of hype and prefers to see actual results. He\u2019s pragmatic, data-driven, and values transparency.",
+    "positioning": "Daniel Patel is a former growth leader turned early-stage investor scout, focused on identifying and supporting the next generation of innovative startups. Having successfully scaled Streamline Solutions\u2019 user base through data-driven marketing, he now applies that experience to evaluating emerging companies. He\u2019s passionate about backing ambitious founders tackling complex problems in marketing technology and the future of work. Currently, Daniel leverages his operator background to assess market opportunities, conduct due diligence, and provide valuable insights to venture capital firms and angel investors. He\u2019s particularly interested in companies demonstrating strong product-market fit and a clear path to sustainable growth.",
+    "background": "* Head of Growth, Streamline Solutions (2018 \u2013 2022): Led growth strategy, resulting in 6x user growth and successful acquisition. Managed a team of 8 marketing and analytics professionals.\n* Growth Marketing Manager, InnovateTech (2016 \u2013 2018): Developed and executed digital marketing campaigns, increasing lead generation by 150%.\n* Marketing Analyst, Global Dynamics (2014 \u2013 2016): Conducted market research, analyzed campaign performance, and provided data-driven recommendations.\n* Bachelor of Science in Business Administration, University of California, Berkeley (2010 \u2013 2014)\n* Proficient in: Google Analytics, Mixpanel, HubSpot, Salesforce, SQL, A/B Testing, SEO/SEM, Content Marketing.\n* Key Achievement: Implemented a viral referral program at Streamline Solutions, contributing to 30% of new user acquisition.\n* Acquisition Experience: Directly involved in the due diligence process during Streamline Solutions\u2019 acquisition.\n* Mentorship: Regularly mentors early-stage founders through local startup accelerators.\n* Angel Investor: Made 3 small angel investments in pre-seed stage startups (Q4 2023).\n* Scout for: Peak Ventures & Nova Capital (since Jan 2023)\n* Speaker: Presented on growth hacking strategies at the MarketingTech Conference (2021).",
+    "lookingFor": "* Seed/Pre-Seed Stage Startups: Actively sourcing companies with innovative solutions in marketing technology and future of work.\n* Founders with Demonstrated Traction: Prioritizing founders who have already achieved measurable results (e.g., revenue, user growth).\n* Marketing Tech Focus: Specifically interested in companies leveraging AI, automation, or data analytics to improve marketing effectiveness.\n* Future of Work Solutions: Exploring companies addressing remote work, employee engagement, or workforce management.\n* Angel Investor Network: Connecting with other angel investors to co-invest in promising startups.\n* Venture Capital Partnerships: Seeking opportunities to expand scouting partnerships with VC firms.\n* Platform/Tool Demos: Happy to explore new tools and platforms that could benefit the startups I scout for.\n* Strong Technical Co-founders: Founders who have a firm grasp on the technology behind their product.",
+    "notes": "* Very active on Twitter, sharing insights on growth marketing and venture capital. (@DanielPatelGrowth)\n* Responded positively to a recent introduction with a founder in the AI-powered content creation space.\n* Prioritizes founder quality over flashy ideas.\n* Mentioned being frustrated with overly optimistic valuations in recent conversations.\n* Part of the 'Growth Hackers' Slack community.",
+    "locationAvailability": "Based in San Francisco, CA. Open to remote calls and occasional travel to meet founders on the West Coast.",
+    "introPreferences": "* **Do** introduce me to founders who have already launched an MVP and are generating revenue.\n* **Do** introduce me to founders with a strong technical background and a clear understanding of their target market.\n* **Do** introduce me to angel investors who are actively deploying capital in the seed stage.\n* **Don\u2019t** introduce me to founders who are still in the idea stage or haven't begun building their product.\n* **Don\u2019t** introduce me to companies focused on industries outside of marketing tech or future of work (e.g., biotech, hardware).\n* **Don\u2019t** introduce me to individuals selling marketing services - I'm interested in *investing* in companies.\n* **Preferred Introduction Style:** A brief, concise email highlighting the founder's accomplishments and traction.\n* **Important:** Please share any relevant metrics (e.g., MRR, user growth, conversion rates) upfront.",
+    "personalPreferences": "I prefer to connect initially via email. I'm generally responsive but can be slow to respond to LinkedIn messages. I value direct and honest communication.",
+    "meetingAndSchedulingPreferences": "I generally prefer 30-minute introductory calls via Zoom. I'm flexible with scheduling but prefer to avoid meetings before 10 AM PST."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 16.05948495864868,
+      "input_tokens": 760,
+      "output_tokens": 1109,
+      "problems": [
+        "meetingAndSchedulingPreferences: possible truncation (ends with '...endly Link - placeholder]')"
+      ]
+    },
+    {
+      "attempt": 2,
+      "elapsed_s": 20.172706842422485,
+      "input_tokens": 760,
+      "output_tokens": 1221,
+      "problems": []
+    }
+  ],
+  "success": true
+}

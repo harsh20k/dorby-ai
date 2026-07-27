@@ -1,0 +1,54 @@
+{
+  "id": 253,
+  "archetype": "Learning & Enablement Leader (Big Tech)",
+  "given_name": "Kenji Dubois",
+  "style_version": 16,
+  "archetypes_version": 41,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Kenji Dubois is a seasoned Learning & Enablement leader who spent 15 years at Google, culminating in leading global sales enablement for their Cloud division. He\u2019s a data-driven, systems-thinking individual passionate about building scalable learning ecosystems. He left Google two years ago to found \u2018SkillForge\u2019, a platform focused on micro-learning and skills validation for the AI/ML engineering space. He\u2019s seeking strategic partnerships with larger tech companies to integrate SkillForge into their internal learning pathways and is also open to advisory roles leveraging his deep experience. A key distinction is his focus on *demonstrable* skill proficiency \u2013 he's less interested in completion rates and more in proving actual competency gains. He\u2019s a quiet leader, preferring to let data and results speak for themselves, but is actively building his network to accelerate SkillForge\u2019s growth.",
+    "positioning": "A highly accomplished Learning & Enablement executive with a proven track record of building and scaling impactful learning solutions within fast-paced, global organizations, I am now focused on revolutionizing skills development in the rapidly evolving field of Artificial Intelligence and Machine Learning. My experience at Google, where I most recently led global sales enablement for Google Cloud, provided me with invaluable insights into the challenges of keeping a large, technical workforce at the forefront of innovation. I architected and implemented learning strategies that demonstrably improved sales performance, accelerated product adoption, and fostered a culture of continuous learning. I identified a critical gap in the market \u2013 the need for a learning platform that goes beyond traditional course completion metrics and focuses on verifiable skill mastery. This insight led to the founding of SkillForge, a platform dedicated to providing micro-learning modules coupled with robust skills validation assessments. I am passionate about leveraging data analytics to personalize learning experiences, optimize content delivery, and ultimately, drive measurable business outcomes. I am seeking opportunities to partner with forward-thinking organizations to integrate SkillForge into their existing learning ecosystems, empowering their teams with the skills they need to succeed in the age of AI. I believe in learning as a continuous process, not a one-time event, and I am dedicated to building solutions that support lifelong learning and career growth.",
+    "background": "- **Founder & CEO, SkillForge** (2022 \u2013 Present)\n  - Led all aspects of company strategy, product development, and fundraising. Secured seed funding within 6 months of launch.\n  - Developed a proprietary skills validation methodology focused on practical application and demonstrable competency.\n  - Built a minimum viable product (MVP) with a 4.8/5 user satisfaction rating.\n- **Global Head of Sales Enablement, Google Cloud** (2018 \u2013 2022)\n  - Responsible for the strategy, design, and delivery of learning programs for a 5,000+ global sales organization.\n  - Increased sales rep productivity by 15% through targeted learning interventions, measured by quota attainment.\n  - Led the implementation of a new Learning Management System (LMS) resulting in a 20% reduction in training costs.\n- **Learning & Development Manager, Google** (2013 \u2013 2018)\n  - Designed and delivered training programs across various functions, including engineering, marketing, and product management.\n  - Developed a blended learning curriculum incorporating online modules, instructor-led workshops, and on-the-job coaching.\n  - Partnered with business leaders to identify skill gaps and develop customized learning solutions.\n- **Instructional Designer, Adobe Systems** (2008 \u2013 2013)\n  - Created engaging and effective e-learning modules using industry-standard authoring tools (Articulate Storyline, Captivate).\n  - Conducted needs analyses and collaborated with subject matter experts to develop relevant and impactful training content.",
+    "lookingFor": "- Strategic partnerships with large tech companies (e.g., Microsoft, Amazon, Meta) to integrate SkillForge into their internal learning platforms.\n- Advisory roles leveraging my expertise in learning & enablement, particularly within the AI/ML space.\n- Introductions to VPs of Learning & Development, Chief Learning Officers, and Heads of Engineering at leading tech organizations.\n- Investors interested in supporting the growth of innovative learning technologies.\n- Opportunities to speak at industry conferences and share insights on the future of skills development.",
+    "notes": "Kenji is a very thoughtful and data-driven individual. He\u2019s not a \u2018hype\u2019 person, preferring to focus on demonstrable results. He mentioned he\u2019s particularly interested in companies actively investing in upskilling their AI/ML engineering teams. He\u2019s currently exploring a potential pilot program with a mid-sized fintech company. (Conversation 10/26/2023). He\u2019s committed to attending the AI in Business Conference in November and is looking for connections there. He\u2019s a bit hesitant to actively \u2018network\u2019 in the traditional sense, preferring more organic connections and referral-based introductions. He is open to a quick 15-minute call to discuss SkillForge further.",
+    "locationAvailability": "Currently based in San Francisco, California, and open to remote collaboration. Willing to relocate for the right opportunity.",
+    "introPreferences": "- **Hard Requirements:** Introductions to decision-makers (VP level or above) with budget authority for learning & development initiatives.\n- **Soft Preferences:** Individuals who are actively exploring new learning technologies and have a demonstrated commitment to employee upskilling.\n- **Ideal Introduction Style:** A brief, personalized email highlighting SkillForge\u2019s unique value proposition and my relevant experience. Avoid lengthy introductions or overly promotional language.\n- **Avoid:** Introductions to HR generalists or individuals focused solely on compliance training.\n- **Specific Targets:** Leaders within Microsoft Azure, Amazon AWS, and Meta AI.",
+    "personalPreferences": "I prefer to communicate via email initially, followed by a brief phone call if appropriate. I\u2019m a morning person and generally respond to emails within 24 hours. I appreciate concise and to-the-point communication. I\u2019m not a big fan of overly formal networking events.",
+    "meetingAndSchedulingPreferences": "I am flexible and happy to schedule meetings via video conference. Please send a calendar invite with a clear agenda."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 24.268898963928223,
+      "input_tokens": 813,
+      "output_tokens": 1303,
+      "problems": []
+    }
+  ],
+  "success": true
+}

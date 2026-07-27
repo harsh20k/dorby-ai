@@ -1,0 +1,73 @@
+{
+  "id": 257,
+  "archetype": "AI/ML Researcher, Academic & Industry",
+  "given_name": "Olamide Almeida",
+  "style_version": 16,
+  "archetypes_version": 42,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Olamide Almeida is a highly specialized AI/ML researcher with a PhD in Computational Linguistics. Her distinctive career detail is a deliberate pivot *from* a tenured faculty position at a prestigious university to founding a stealth startup, 'LexiFlow,' focused on applying advanced Natural Language Processing (NLP) to automated contract review and risk assessment for the legal tech space. She became frustrated with the slow pace of academic impact and wanted to build something immediately useful. LexiFlow is pre-seed, currently focused on building an MVP for a specific niche \u2013 complex commercial real estate leases \u2013 and Olamide is aggressively fundraising and seeking strategic advisors. She's a very direct, data-driven communicator, not overly interested in 'fluff,' and values genuine technical depth in potential collaborators. She's simultaneously maintaining a small research presence, publishing occasionally to stay current and attract top talent.",
+    "positioning": "I founded LexiFlow to address a significant pain point in the legal industry: the incredibly time-consuming and error-prone process of contract review. Current solutions are either too broad and lack precision, or require significant manual effort. LexiFlow leverages state-of-the-art NLP, specifically transformer models fine-tuned on a massive corpus of legal documents, to automate the identification of key clauses, potential risks, and compliance issues within contracts. \n\nWe\u2019re initially targeting the commercial real estate sector, focusing on lease agreements \u2013 a multi-billion dollar market ripe for disruption. Our wedge is providing a 90% accuracy rate in identifying \u2018change of control\u2019 clauses, a common source of disputes. We\u2019ve completed initial pilot testing with two regional law firms, demonstrating a 75% reduction in review time. We are currently raising a $750k pre-seed round to expand our engineering team and scale our model training infrastructure. Our ideal customer is a mid-sized law firm or corporate legal department handling a high volume of complex contracts. We\u2019re building a platform that drastically reduces legal costs, minimizes risk exposure, and frees up legal professionals to focus on higher-value work.",
+    "background": "* **Founder & CEO, LexiFlow** (2023 \u2013 Present)\n    * Led all aspects of startup formation, including market research, product development, fundraising, and team building.\n    * Developed and implemented core NLP algorithms for contract analysis, achieving 90% accuracy in key clause identification.\n    * Secured pilot programs with two regional law firms, demonstrating significant time and cost savings.\n    * Managed pre-seed fundraising efforts, currently in advanced discussions with several angel investors.\n* **Associate Professor, Department of Linguistics, University of California, Berkeley** (2018 \u2013 2023)\n    * Secured $500k in research funding from the National Science Foundation for projects in computational linguistics and NLP.\n    * Published 15+ peer-reviewed papers in top-tier conferences (ACL, EMNLP, NAACL) and journals.\n    * Mentored 5 PhD students and 10+ undergraduate research assistants.\n    * Developed and taught graduate-level courses in NLP, machine learning, and computational semantics.\n    * Led a research lab focused on developing novel methods for natural language understanding and generation.\n* **Research Scientist, Google AI** (2016 \u2013 2018)\n    * Conducted research on large-scale language models and their applications to machine translation.\n    * Contributed to the development of a new neural machine translation system, resulting in a 10% improvement in translation quality.\n    * Collaborated with engineers to deploy research prototypes into production systems.\n    * Managed a team of research interns and provided technical guidance.\n* **PhD, Computational Linguistics, Stanford University** (2012 \u2013 2016)\n    * Dissertation: \u201cA Probabilistic Framework for Semantic Role Labeling with Limited Supervision.\u201d\n    * GPA: 3.9/4.0\n    * Recipient of the Stanford Graduate Fellowship.\n* **BS, Computer Science & Linguistics, Massachusetts Institute of Technology** (2008 \u2013 2012)\n    * Minor in Mathematics\n    * Graduated *summa cum laude*.",
+    "lookingFor": "I'm actively seeking connections with individuals who can accelerate LexiFlow's growth. Specifically, I'm looking for:\n\n* **Angel Investors:**  Individuals with experience in legal tech, SaaS, or AI/ML, and a willingness to participate in a $750k pre-seed round.  I'm particularly interested in investors who can provide strategic guidance beyond capital.\n* **Experienced Legal Tech Operators:**  Individuals with a proven track record of scaling early-stage legal tech companies.  I need help with go-to-market strategy, sales, and customer success.\n* **NLP/ML Engineers:**  Talented engineers with expertise in transformer models, fine-tuning, and deployment. We're building a world-class engineering team.\n* **Strategic Advisors:**  Law firm partners or general counsel with deep knowledge of the commercial real estate market.\n\nI'm open to informational interviews with founders building innovative AI-powered solutions, *especially* if they\u2019ve navigated the challenges of applying cutting-edge research to real-world problems. I\u2019m not currently seeking board members, but I\u2019m always interested in learning from other entrepreneurs.",
+    "notes": "Olamide is exceptionally focused and doesn\u2019t have much bandwidth for small talk. She responds best to concise, data-driven communication.  Be prepared to discuss technical details.  \n\n* **Data Quality Warning:** LexiFlow is still very early stage. Traction is promising but limited.  Don\u2019t overhype the product. \n* **Recent Conversation (2024-02-15):** Discussed potential partnership with [Name Redacted] at [Firm Redacted].  She was impressed with the tech demo but has concerns about scalability.\n* **Intro Guidance:**  Highlight any experience with legal tech or AI/ML.  Focus on her technical expertise and the potential for disruption in the legal market.  Avoid overly optimistic valuations.",
+    "locationAvailability": "I am currently based in San Francisco, California, but am open to remote meetings and occasional travel to key industry events and investor locations.",
+    "introPreferences": "* **Hard Requirements:**  Any introduction to investors *must* have a demonstrable interest in AI/ML or legal tech.  No generalist investors, please.\n* **Soft Preferences:** I prefer introductions to individuals who have a technical background or a strong understanding of the challenges facing the legal industry.\n* **Intro Style:**  Please keep the introduction concise and focus on LexiFlow\u2019s core value proposition: automating contract review with state-of-the-art NLP.  Highlight the pilot program results and the size of the target market.  Do *not* position this as a 'lifestyle business.'  I'm building a company with significant scale potential.\n* **Avoid:** Introductions to recruiters or individuals offering marketing services at this stage.",
+    "personalPreferences": "I prefer to communicate via email initially, then move to a quick video call if there\u2019s a good fit. I'm generally responsive and appreciate directness. I don't typically check LinkedIn messages frequently, so email is best.  Follow-up within a week is appreciated, but please respect my time.",
+    "meetingAndSchedulingPreferences": "Please use this Calendly link to schedule a meeting: [https://calendly.com/olamide-almeida/30min]."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 22.231523990631104,
+      "input_tokens": 801,
+      "output_tokens": 1494,
+      "problems": [
+        "meetingAndSchedulingPreferences: possible truncation (ends with '...om/olamide-almeida/30min]')"
+      ]
+    },
+    {
+      "attempt": 2,
+      "elapsed_s": 26.710543155670166,
+      "input_tokens": 801,
+      "output_tokens": 1455,
+      "problems": [
+        "background: possible truncation (ends with '...hine Learning \u2013 Specialty')",
+        "meetingAndSchedulingPreferences: possible truncation (ends with '...om/olamide-almeida/30min]')"
+      ]
+    },
+    {
+      "attempt": 3,
+      "elapsed_s": 27.74897003173828,
+      "input_tokens": 801,
+      "output_tokens": 1620,
+      "problems": []
+    }
+  ],
+  "success": true
+}

@@ -1,0 +1,65 @@
+{
+  "id": 624,
+  "archetype": "AI-Focused Product Leader, Toronto",
+  "given_name": "Alejandro Kowalski",
+  "style_version": 38,
+  "archetypes_version": 105,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Alejandro Kowalski is a seasoned product leader with a strong technical background, specifically in machine learning. He previously *founded* a small, AI-powered marketing analytics company that was acquired by a larger firm, giving him both startup experience and a successful exit. He\u2019s now looking to leverage that experience in a more significant role, ideally within a high-growth AI startup in Toronto. He's particularly interested in companies applying AI to solve complex problems, valuing practical applications over purely research-focused endeavors. He\u2019s pragmatic, data-driven, and very focused on achieving measurable results. He\u2019s currently in a senior PM role but is actively seeking a leadership position with more ownership and impact. He\u2019s a bit skeptical of hype and prefers to focus on demonstrable value.",
+    "positioning": "Alejandro Kowalski is a product leader with a proven track record of building and scaling AI-powered solutions. Having successfully founded and exited a marketing analytics startup, he brings a unique blend of technical depth, entrepreneurial spirit, and strategic vision. Currently leading product initiatives at NovaTech Solutions, Alejandro specializes in translating complex AI technologies into user-centric products that drive measurable business outcomes. He\u2019s passionate about leveraging machine learning to solve real-world problems and is seeking opportunities to contribute to a rapidly growing, innovative organization. Alejandro is adept at navigating the full product lifecycle, from ideation and prototyping to launch and iteration.",
+    "background": "- **NovaTech Solutions, Senior Product Manager** (2021 \u2013 Present)\n  * Led the product development of \u2018Predictive Insights\u2019, an AI-driven feature that increased user engagement by 25% and reduced churn by 15%.\n  * Managed a cross-functional team of engineers, designers, and data scientists.\n  * Responsible for market research, competitive analysis, and defining product roadmaps.\n  * Implemented A/B testing frameworks to optimize product performance.\n\n- **Founder & CEO, Insightful Analytics** (2018 \u2013 2021) \u2013 *Acquired by DataStream Corp.*\n  * Conceptualized, developed, and launched an AI-powered marketing analytics platform targeting small to medium-sized businesses.\n  * Secured seed funding of $500k and led the company through a successful acquisition.\n  * Built and managed a team of 8, encompassing engineering, sales, and marketing.\n  * Developed and maintained the core machine learning algorithms using Python and TensorFlow.\n\n- **Data Scientist, Stellar Dynamics** (2016 \u2013 2018)\n  * Developed and deployed machine learning models for fraud detection and risk assessment.\n  * Conducted data analysis and visualization to identify key trends and patterns.\n  * Collaborated with engineers to integrate models into existing systems.\n\n- **Education:**\n  * **Master of Science in Computer Science (Specialization: Machine Learning)**, University of Waterloo (2014 \u2013 2016)\n  * **Bachelor of Science in Engineering Science** (Major: Electrical Engineering), Queen\u2019s University (2010 \u2013 2014)\n\n- **Skills:** Python, TensorFlow, PyTorch, SQL, Data Visualization (Tableau, Power BI), Agile Methodologies, Product Management, Machine Learning, Deep Learning, Statistical Modeling, A/B Testing, Go-to-Market Strategy.",
+    "lookingFor": "## Opportunities\n- Leadership roles (Director of Product, Head of Product) at high-growth AI startups in Toronto.\n- Companies focused on applying AI to tangible, revenue-generating problems (e.g., healthcare, fintech, supply chain).\n- Opportunities to build and scale products from the ground up.\n- Mentorship opportunities \u2013 keen to share experience with aspiring product managers.\n\n## Connections\n- Investors specializing in early-stage AI companies.\n- Founders of Toronto-based AI startups (Series A and beyond).\n- Senior Engineering Leaders at AI companies for technical discussions.\n\n**Do Not** contact me with research-only roles or opportunities outside of the Greater Toronto Area.",
+    "notes": "Alejandro is a highly sought-after candidate currently receiving a significant number of inbound requests. He\u2019s particularly discerning, prioritizing companies with a strong technical foundation and a clear path to profitability. Recent conversations indicate a strong preference for companies that have already demonstrated product-market fit. He\u2019s expressed some frustration with overly ambitious pitches lacking concrete data. Data quality is good, though he hasn\u2019t updated his LinkedIn profile to reflect his recent contributions to a new internal feature at NovaTech.",
+    "locationAvailability": "Toronto, Ontario, Canada",
+    "introPreferences": "- Ideally, introductions should highlight the *specific* problem the target company is solving with AI and its current stage of funding.\n- Please introduce me as a seasoned product leader with a successful startup exit, emphasizing my experience scaling AI-powered products.\n- Target individuals should have decision-making authority regarding product strategy or investment.\n- **Hard Requirement:** The company *must* be based in the Greater Toronto Area.\n- **Soft Preference:** Experience with B2B SaaS models is a plus.\n- **Do Not** introduce me to individuals solely focused on academic research or roles without significant product ownership.\n- Keep introductions concise and focused \u2013 less is more.",
+    "personalPreferences": "I prefer asynchronous communication initially \u2013 email or LinkedIn messaging. I\u2019m generally available for short calls to explore opportunities further.",
+    "meetingAndSchedulingPreferences": "I typically require 24-48 hours notice for meetings. I prefer a clear agenda beforehand and value efficient use of time. Follow-up summaries are appreciated."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 23.549503087997437,
+      "input_tokens": 823,
+      "output_tokens": 1259,
+      "problems": [
+        "background: possible truncation (ends with '..., Python, SQL.</li>\n</ul>')",
+        "lookingFor: possible truncation (ends with '...r AI/ML focus.</li>\n</ul>')",
+        "introPreferences: possible truncation (ends with '...introductions.</li>\n</ul>')"
+      ]
+    },
+    {
+      "attempt": 2,
+      "elapsed_s": 16.586790800094604,
+      "input_tokens": 823,
+      "output_tokens": 1198,
+      "problems": []
+    }
+  ],
+  "success": true
+}

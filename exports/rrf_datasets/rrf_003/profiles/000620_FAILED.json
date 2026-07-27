@@ -1,0 +1,77 @@
+{
+  "id": 620,
+  "archetype": "Global Operator, Emerging Market Focus",
+  "given_name": "Hassan Vargas",
+  "style_version": 38,
+  "archetypes_version": 104,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Hassan Vargas is a seasoned operations executive with a deep focus on scaling tech-enabled businesses in Sub-Saharan Africa. He\u2019s spent the last 15 years building and optimizing operations for companies entering and expanding within these markets. A distinctive career detail is his early success scaling a mobile money platform in Rwanda \u2013 he was instrumental in driving user adoption through hyperlocal marketing and agent network optimization. Now, he's looking for seed/Series A investment opportunities in the agritech and fintech spaces focused on the African continent, and wants to leverage his network to advise and potentially join a promising startup as an operator or board member. He\u2019s particularly interested in companies utilizing AI/ML for predictive analytics in agriculture. He\u2019s pragmatic, data-driven, and highly values strong local partnerships.",
+    "positioning": "Hassan Vargas is a strategic operations leader with a proven track record of successfully launching and scaling technology businesses in complex emerging markets. Specializing in Sub-Saharan Africa, he leverages a deep understanding of mobile-first technologies and localized solutions to drive rapid growth and operational efficiency. Hassan excels at building high-performing teams, forging strong local partnerships, and navigating the unique challenges of operating in frontier markets. He is currently exploring opportunities to apply his expertise to innovative startups poised for significant impact on the African continent.",
+    "background": "\u2022 **Chief Operating Officer, AgriConnect Solutions (2021 \u2013 Present):** Led the operational expansion of AgriConnect, a precision agriculture platform, into Kenya and Tanzania. Oversaw supply chain logistics, farmer onboarding, data analytics implementation, and agent network management, resulting in a 40% increase in farmer yield and a 30% reduction in operational costs. \n\u2022 **Regional Director, MobilePay Africa (2016 \u2013 2021):** Spearheaded the expansion of MobilePay's mobile money platform across Rwanda, Uganda, and Zambia. Responsible for developing and executing market entry strategies, building and managing agent networks, and ensuring regulatory compliance. Key achievement: Drove user adoption in Rwanda by 300% within two years through hyperlocal marketing campaigns and strategic partnerships with local businesses.\n\u2022 **Operations Manager, Kibo Energy (2013 \u2013 2016):** Managed logistical operations for Kibo Energy's renewable energy projects in Tanzania and Mozambique. Focused on supply chain optimization, vendor management, and project implementation. \n\u2022 **Consultant, Deloitte (2011 \u2013 2013):** Provided consulting services to multinational corporations entering African markets, focusing on market analysis, operational strategy, and risk management.\n\u2022 **Education:** MBA, Stanford Graduate School of Business (2009-2011). BSc. Electrical Engineering, Massachusetts Institute of Technology (2005-2009).\n\u2022 **Skills:** Operations Management, Supply Chain Management, Strategic Planning, Market Entry Strategy, Mobile Money, Fintech, Agritech, Data Analytics, Team Leadership, P&L Management, French (Fluent), Swahili (Conversational).",
+    "lookingFor": "\u2022 **Seed/Series A Investment Opportunities:** Actively seeking promising startups in the agritech and fintech sectors focusing on Sub-Saharan Africa. Preference for companies utilizing AI/ML for predictive analytics, particularly in agriculture.\n\u2022 **Advisory Roles:** Open to serving as an advisor or board member for high-growth startups operating in Africa.\n\u2022 **Connections to Venture Capital Funds:** Seeking introductions to VCs specializing in African investments, particularly those with a focus on impact investing.\n\u2022 **Founders building for the African Market:** Want to connect with founders who deeply understand the nuances of operating in African markets.\n\u2022 **Do Not:** Contact me with opportunities outside of Africa. I'm not interested in roles that are solely remote without a strong connection to on-the-ground operations in the region.",
+    "notes": "Hassan is highly active on LinkedIn and frequently shares articles related to African tech and investment. He recently attended the Africa Tech Summit in Kigali and is actively following several promising startups identified there. He\u2019s currently prioritizing opportunities with a strong social impact component. Recent engagement suggests a strong preference for companies addressing challenges in food security and financial inclusion. Data quality is rated high, based on recent interactions and consistent profile updates.",
+    "locationAvailability": "Nairobi, Kenya",
+    "introPreferences": "\u2022 **Ideal Candidates:** Founders with demonstrated traction and a clear understanding of their target market in Africa. Operational expertise is a major plus.\n\u2022 **Introduction Style:** A concise email highlighting the startup's key metrics, business model, and the founder's background. Focus on the problem they're solving and the potential for scalability.\n\u2022 **Hard Requirement:** The startup *must* have a significant operational presence in Africa \u2013 not just a remote team.\n\u2022 **Soft Preference:** Experience with mobile-first solutions and a strong commitment to local partnerships.\n\u2022 **Do Not:** Introduce me to companies still in the ideation phase without a minimum viable product (MVP).",
+    "personalPreferences": "I prefer to connect via LinkedIn initially and am generally responsive to direct messages. I value efficient communication and appreciate concise updates.",
+    "meetingAndSchedulingPreferences": "I\u2019m available for virtual meetings and can travel to key African hubs (Nairobi, Lagos, Accra) with sufficient notice. I prefer to keep initial meetings focused and action-oriented."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 19.041968822479248,
+      "input_tokens": 819,
+      "output_tokens": 1124,
+      "problems": [
+        "background: possible truncation (ends with '...ench (fluent).</li>\n</ul>')",
+        "lookingFor: possible truncation (ends with '...services team.</li>\n</ul>')",
+        "locationAvailability: suspiciously short (14 chars)",
+        "introPreferences: possible truncation (ends with '...gic alignment.</li>\n</ul>')"
+      ]
+    },
+    {
+      "attempt": 2,
+      "elapsed_s": 14.64100694656372,
+      "input_tokens": 819,
+      "output_tokens": 1020,
+      "problems": [
+        "locationAvailability: suspiciously short (14 chars)"
+      ]
+    },
+    {
+      "attempt": 3,
+      "elapsed_s": 19.594401121139526,
+      "input_tokens": 819,
+      "output_tokens": 1123,
+      "problems": [
+        "locationAvailability: suspiciously short (14 chars)"
+      ]
+    }
+  ],
+  "success": false
+}

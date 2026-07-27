@@ -1,0 +1,54 @@
+{
+  "id": 891,
+  "archetype": "Brand Builder, Youth/Culture Focused",
+  "given_name": "Yara Ibrahim",
+  "style_version": 54,
+  "archetypes_version": 150,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Yara Ibrahim is a 32-year-old founder and CEO of 'Bloom,' a Gen Z-focused sustainable fashion brand that\u2019s gained traction through TikTok and influencer marketing. Her distinctive career detail is that she *started* Bloom as a highly successful Depop seller, organically building a loyal following before scaling into a fully-fledged brand. She's now seeking Series A funding to expand production, broaden product lines (moving into accessories and beauty), and further solidify Bloom's brand presence within the ethical fashion space. She\u2019s very active on social media, particularly TikTok and Instagram, and positions herself as a thought leader in sustainable fashion and youth marketing. She wants to connect with investors who understand the Gen Z market and are aligned with her brand values, as well as potential strategic partners in manufacturing and distribution.",
+    "positioning": "As the founder and CEO of Bloom, I'm driving the future of sustainable fashion for Gen Z. We've built a thriving brand rooted in community and transparency, proving that style and ethics *can* coexist. Starting Bloom from a successful Depop shop gave me invaluable insight into the direct needs and preferences of our target audience \u2013 a knowledge base that informs every decision we make. Currently, we\u2019re experiencing rapid growth and are poised to become a leading voice in the ethical fashion movement. I\u2019m actively seeking connections with investors and partners to accelerate our expansion and amplify our impact, and I'm particularly open to conversations about innovative marketing strategies and scalable production models.",
+    "background": "- **CEO & Founder, Bloom** (2021 \u2013 Present)\n    - Led all aspects of brand development, from product design and sourcing to marketing and sales, resulting in a 300% revenue increase year-over-year.\n    - Secured seed funding of $500K, leveraging early traction and a strong social media presence.\n    - Developed and implemented a fully transparent supply chain, prioritizing ethical labor practices and sustainable materials.\n    - Spearheaded Bloom\u2019s viral TikTok marketing strategy, achieving over 10 million views and a dedicated follower base.\n- **Top-Rated Seller, Depop** (2019 \u2013 2021)\n    - Curated and sold vintage and upcycled clothing, building a loyal customer base of over 50,000 followers.\n    - Consistently achieved a 5-star seller rating, demonstrating exceptional customer service and product quality.\n    - Identified a gap in the market for affordable, sustainable fashion, which inspired the creation of Bloom.\n- **Marketing Intern, Everlane** (Summer 2018)\n    - Assisted with social media marketing campaigns, content creation, and data analysis.\n    - Gained valuable experience in brand building and direct-to-consumer marketing.\n- **Education: Bachelor of Science in Business Administration, University of California, Berkeley** (2014 \u2013 2018)\n    - Minor in Environmental Studies.\n    - Dean\u2019s List, all semesters.\n- **Skills:** Digital Marketing (TikTok, Instagram, Facebook Ads), Brand Strategy, Supply Chain Management, Sustainability, Financial Modeling, Team Leadership, Public Speaking, Content Creation, Influencer Marketing.\n- **Certifications:** Sustainable Apparel Coalition (SAC) Higg Index Training.",
+    "lookingFor": "- **Series A Investors:**\n    - Seeking investors with a proven track record of supporting consumer brands, particularly those targeting Gen Z.\n    - Preference for investors who align with Bloom\u2019s values of sustainability and ethical production.\n    - Target investment amount: $2-3 million.\n- **Strategic Manufacturing Partners:**\n    - Looking for partners with expertise in sustainable textile production and ethical labor practices.\n    - Interested in exploring opportunities for scaling production while maintaining high quality and transparency.\n- **Distribution Partnerships:**\n    - Open to exploring partnerships with retailers that align with Bloom\u2019s brand aesthetic and target audience. (e.g., Urban Outfitters, Nordstrom).\n- **Mentors/Advisors:**\n    - Seeking guidance from experienced entrepreneurs and industry leaders in the fashion and sustainability sectors.",
+    "notes": "- Yara is *extremely* active on TikTok \u2013 check her personal and Bloom\u2019s profiles for a feel for her brand voice.\n- She\u2019s very data-driven and responds well to pitches that include clear metrics and ROI projections.\n- She's passionate about sustainability and will quickly identify insincerity in that area.\n- Prefers concise communication and dislikes lengthy email chains.\n- She's been approached by several fast-fashion brands for collaborations but has consistently declined, solidifying her brand\u2019s commitment to ethical practices.",
+    "locationAvailability": "Based in Los Angeles, California, but open to remote meetings and travel for key opportunities.",
+    "introPreferences": "- **Hard Requirements:**\n    - Introductions to VCs specializing in consumer brands and/or sustainability.\n    - Connections to individuals with experience in scaling direct-to-consumer fashion brands.\n- **Soft Preferences:**\n    - Introductions to individuals who have a strong understanding of the Gen Z market.\n    - Warm introductions with a clear explanation of why the connection would be mutually beneficial.\n    - Avoid introductions to individuals solely focused on traditional retail or wholesale.",
+    "personalPreferences": "I prefer to connect initially via LinkedIn or Instagram DM. I'm a quick responder and appreciate direct, concise communication. I\u2019m always open to a quick call to discuss potential collaborations.",
+    "meetingAndSchedulingPreferences": "I generally prefer Zoom meetings and am flexible with scheduling, but please provide at least 24 hours' notice."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 20.167301177978516,
+      "input_tokens": 765,
+      "output_tokens": 1187,
+      "problems": []
+    }
+  ],
+  "success": true
+}

@@ -1,0 +1,54 @@
+{
+  "id": 228,
+  "archetype": "Healthcare Software/Dev Outsourcing Leader",
+  "given_name": "Malia Ibrahim",
+  "style_version": 14,
+  "archetypes_version": 38,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Malia Ibrahim is a seasoned leader in healthcare software outsourcing, currently VP of Client Solutions at NovaTech Solutions. Her distinctive career detail is a prior background as a registered nurse, giving her unique insight into the needs of healthcare providers. She\u2019s leveraging this understanding to build NovaTech\u2019s portfolio of clients in the telehealth and remote patient monitoring space. She's actively networking to expand NovaTech's reach amongst hospital systems and innovative healthcare startups, seeking strategic partnerships and new business opportunities. Her focus is on demonstrating NovaTech's ability to deliver high-quality, compliant software solutions that improve patient outcomes and operational efficiency. She's particularly interested in connections who can introduce her to decision-makers in these target areas.",
+    "positioning": "Malia Ibrahim is a results-driven VP of Client Solutions at NovaTech Solutions, specializing in delivering tailored software development and consulting services to the healthcare industry. With a unique background as a former registered nurse, she deeply understands the clinical and operational challenges facing healthcare providers. At NovaTech, Malia leads a team focused on building long-term client relationships and identifying innovative solutions for telehealth, remote patient monitoring, and healthcare data analytics. She is actively seeking to connect with leaders in hospital systems and emerging healthcare companies to explore collaborative opportunities and drive impactful technology solutions. Her goal is to leverage technology to improve patient care and streamline healthcare processes.",
+    "background": "- **VP of Client Solutions, NovaTech Solutions** (2020 \u2013 Present): Leading a team responsible for client acquisition, relationship management, and solution design for healthcare clients. Increased client retention by 25% through proactive engagement and value delivery.\n- **Senior Project Manager, HealthTech Innovations** (2017 \u2013 2020): Managed the full software development lifecycle for multiple projects, including a successful implementation of an electronic health record (EHR) system for a large hospital network.\n- **Registered Nurse, St. Luke\u2019s Hospital** (2013 \u2013 2017): Provided direct patient care in a fast-paced emergency department, gaining valuable insight into clinical workflows and pain points.\n- **Education:** Master of Science in Healthcare Informatics, University of California, Berkeley (2017). Bachelor of Science in Nursing, University of Michigan (2013).\n- **Skills:** Agile Methodologies, Project Management (PMP Certified), Healthcare IT Standards (HIPAA, HL7, FHIR), Software Development Lifecycle (SDLC), Client Relationship Management (CRM), Telehealth Solutions, EHR/EMR Systems, Data Analytics, Nursing Practice, Requirements Gathering, Risk Management.\n- **Certifications:** PMP, Certified Professional in Healthcare Information and Management Systems (CPHIMS - in progress).\n- **Awards & Recognition:** NovaTech Solutions 'Client Champion' Award (2022, 2023).",
+    "lookingFor": "I'm actively seeking connections within the following areas:\n- **Hospital System Executives:** Specifically CIOs, CMIOs, and VPs of Innovation responsible for technology strategy and implementation.\n- **Healthcare Startup Founders & Leaders:** Focused on telehealth, remote patient monitoring, digital therapeutics, and healthcare data analytics.\n- **Potential Strategic Partners:** Technology vendors with complementary solutions to NovaTech's capabilities (e.g., AI/ML, cybersecurity, cloud infrastructure).\n- **Introductions to decision-makers:** I'm particularly interested in warm introductions to individuals who are actively exploring software outsourcing options or seeking innovative technology solutions.\n- I'm also open to informational interviews with individuals who have successfully navigated the complexities of healthcare IT implementation. I\u2019m keen to learn about emerging trends and best practices.",
+    "notes": "Malia is a strong advocate for patient-centered technology and genuinely passionate about improving healthcare through innovation. She mentioned a current project focusing on a remote cardiac monitoring platform \u2013 a good potential talking point. She\u2019s very responsive and values direct communication. Caution: she\u2019s very busy and prioritizes connections that offer clear strategic value. Follow up within a week of initial contact.",
+    "locationAvailability": "Malia Ibrahim is based in San Francisco, California, with a focus on clients and partnerships across the United States.",
+    "introPreferences": "Hard Requirements:\n- Prioritize introductions to individuals with decision-making authority related to software procurement or technology strategy within healthcare organizations.\n- Exclude introductions to individuals solely focused on sales or marketing roles \u2013 I prefer to connect directly with those responsible for driving technology implementation.\n\nSoft Preferences:\n- The introduction should briefly mention NovaTech\u2019s expertise in healthcare software development and our commitment to delivering compliant, high-quality solutions.\n- Highlight any shared connections or common interests to facilitate a more meaningful conversation.\n- The best introduction style is a concise email with a clear subject line indicating the purpose of the connection.",
+    "personalPreferences": "- I prefer initial contact via LinkedIn messaging or email.\n- Please avoid cold calls \u2013 I typically respond more effectively to written communication.",
+    "meetingAndSchedulingPreferences": "I am generally available for virtual meetings during Pacific Standard Time business hours. I prefer a brief introductory call (15-20 minutes) before scheduling a more in-depth discussion. Please send a calendar invite with a clear agenda."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 22.556386709213257,
+      "input_tokens": 753,
+      "output_tokens": 1096,
+      "problems": []
+    }
+  ],
+  "success": true
+}

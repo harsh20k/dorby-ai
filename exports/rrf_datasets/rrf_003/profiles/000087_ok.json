@@ -1,0 +1,54 @@
+{
+  "id": 87,
+  "archetype": "Student Founder, Campus Community Focus",
+  "given_name": "Felix Garcia",
+  "style_version": 6,
+  "archetypes_version": 15,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Felix Garcia is a recent Computer Science graduate from MIT, currently the CEO and co-founder of 'CampusConnect,' a platform designed to streamline student organization management and event discovery. He noticed firsthand the chaos of coordinating events and resources across dozens of clubs while heavily involved in the student government. CampusConnect leverages a micro-services architecture with a React frontend and a Python/Flask backend, and recently completed a $150k pre-seed round from a local angel investor group focused on student ventures. While technically proficient, Felix\u2019s strength lies in community building and sales \u2013 he\u2019s the primary driver of onboarding new student organizations. He's actively seeking advisors with experience scaling early-stage SaaS platforms and potential partnerships with university administration to integrate CampusConnect more deeply into the campus ecosystem. He\u2019s energetic, a fast learner, and slightly overwhelmed by the demands of being a first-time founder.",
+    "positioning": "As CEO and co-founder of CampusConnect, I\u2019m dedicated to solving the pervasive challenges of student organization management and event discovery. We\u2019ve built a platform that empowers student leaders to focus on their missions, not administrative overhead. CampusConnect streamlines everything from event scheduling and resource allocation to member communication and financial tracking.  We\u2019ve seen incredible early traction at MIT, onboarding over 60 student organizations in the last semester and facilitating over 200 events.  This success demonstrates a clear market need and validates our core thesis: students are craving a unified platform to connect and collaborate. We recently closed a $150k pre-seed round, which we\u2019re strategically deploying to expand our engineering team and scale our reach to other universities.  Our architecture, built on a robust micro-services foundation with React, Python, and Flask, allows for rapid iteration and scalability.  I\u2019m passionate about fostering a vibrant campus community and believe CampusConnect is the key to unlocking greater student engagement and impact.  We're not just building software; we're building a more connected and efficient campus experience.",
+    "background": "* **CEO & Co-Founder, CampusConnect** (January 2024 \u2013 Present)\n    * Led the development and launch of CampusConnect, a SaaS platform for student organization management.\n    * Secured $150k in pre-seed funding from a local angel investor group.\n    * Oversaw user acquisition, onboarding over 60 student organizations at MIT.\n    * Managed a team of three part-time developers and a marketing intern.\n    * Spearheaded sales and partnership efforts, establishing key relationships with student government leaders.\n    * Implemented agile development methodologies, ensuring rapid iteration and product improvement.\n* **Undergraduate Research Assistant, MIT Computer Science & Artificial Intelligence Lab (CSAIL)** (September 2022 \u2013 December 2023)\n    * Assisted in research on natural language processing and machine learning applications.\n    * Developed and tested algorithms for sentiment analysis and text summarization.\n    * Contributed to the publication of a research paper at a leading AI conference.\n    * Gained experience in data analysis, statistical modeling, and software development.\n* **President, MIT Student Government** (September 2021 \u2013 June 2022)\n    * Led a team of 20 student representatives in advocating for student interests.\n    * Managed a budget of $50,000 and oversaw the allocation of funds to student organizations.\n    * Organized campus-wide events and initiatives to promote student engagement.\n    * Developed and implemented policies to improve student life.\n* **Education, Massachusetts Institute of Technology (MIT)** (September 2020 \u2013 June 2024)\n    * Bachelor of Science in Computer Science, GPA: 3.9/4.0\n    * Relevant Coursework: Data Structures and Algorithms, Database Systems, Software Engineering, Machine Learning, Artificial Intelligence.\n    * Dean\u2019s List all semesters.\n* **Skills:** Python, Flask, React, JavaScript, HTML, CSS, SQL, Git, Agile Development, Project Management, Leadership, Public Speaking, Data Analysis, Machine Learning, Natural Language Processing, SaaS, Microservices, Customer Relationship Management (CRM).",
+    "lookingFor": "I'm actively seeking connections within the startup ecosystem, particularly individuals with experience scaling early-stage SaaS platforms. I'm especially interested in learning from founders who've successfully navigated the challenges of university-focused ventures.  \n\nSpecifically, I'm looking for:\n\n* **Mentors:** Experienced entrepreneurs who can provide guidance on product development, marketing, and fundraising.\n* **Advisors:**  Industry experts with a strong understanding of the SaaS landscape.\n* **Potential University Partnerships:** Individuals within university administration who can help us integrate CampusConnect into the campus infrastructure.\n* **Angel Investors:**  Further investment opportunities to accelerate growth and expansion.\n* **Early Adopter Universities:**  Institutions interested in piloting CampusConnect on their campus.\n\nI\u2019m open to informational interviews, strategic discussions, and potential collaboration opportunities.  I'm eager to share our vision for CampusConnect and learn from others in the field.  I'm also keen to connect with fellow student founders to share best practices and build a supportive network.",
+    "notes": "Felix is incredibly enthusiastic and quick to respond. He gets excited easily and sometimes jumps into detailed technical explanations without gauging the other person\u2019s level of understanding.  He\u2019s very focused on getting CampusConnect adopted by as many universities as possible, and this is his primary conversation driver.  \n\n* **Recent Conversation (2/15):** Discussed potential integration with MIT\u2019s existing event calendar system.  Follow up needed to connect him with the relevant IT contact.\n* **Communication Preference:**  Prefers email initially, followed by a quick call. \n* **Potential Roadblock:** Can sometimes be overly optimistic about timelines.",
+    "locationAvailability": "I am currently based in Cambridge, Massachusetts, and primarily focused on the East Coast startup scene. While I'm happy to travel for key meetings, I'm also comfortable working remotely and leveraging virtual communication tools.",
+    "introPreferences": "When making introductions, please highlight my passion for building a stronger campus community and my dedication to solving real problems for student organizations.  I appreciate introductions to individuals who are genuinely interested in supporting student entrepreneurs. \n\n*  Please briefly mention the $150k pre-seed round. \n*  Focus on the rapid traction we\u2019ve achieved at MIT. \n*  Avoid overly technical descriptions of the platform unless the recipient has a strong technical background. \n*  I value concise and informative introductions that clearly articulate the potential for collaboration.",
+    "personalPreferences": "* Preferred communication: Email first, then phone.\n*  I\u2019m a morning person and respond best to messages before noon.\n*  I enjoy grabbing coffee to chat \u2013 happy to meet in person if schedules align.\n*  LinkedIn is my primary professional networking platform.",
+    "meetingAndSchedulingPreferences": "I\u2019m generally flexible with meeting times, but please provide at least 24 hours\u2019 notice. I prefer video calls over phone calls whenever possible. I use Google Calendar for scheduling and am happy to share my availability."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 37.51844310760498,
+      "input_tokens": 823,
+      "output_tokens": 1534,
+      "problems": []
+    }
+  ],
+  "success": true
+}

@@ -1,0 +1,54 @@
+{
+  "id": 753,
+  "archetype": "Operator-Turned-Founder, Tech Infrastructure",
+  "given_name": "Leilani Olsen",
+  "style_version": 46,
+  "archetypes_version": 127,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Leilani Olsen is a former Head of DevOps at a Series B fintech company, now founder of 'SynapseFlow', a company building observability tools specifically for LLM-powered applications. Her distinctive detail is deeply understanding the *operational* pain points of deploying and maintaining AI infrastructure \u2013 she wasn't a model builder, but the person who had to keep the models *running* reliably and cost-effectively. This experience fuels SynapseFlow's focus on practical observability, not just flashy dashboards. She's currently raising a Seed round and seeking strategic advisors and early adopter customers. She's a pragmatic, no-nonsense operator at heart, even as a founder, and values direct communication and demonstrable results. She's based in Denver, but open to remote connections.",
+    "positioning": "Leilani Olsen is the Founder & CEO of SynapseFlow, a next-generation observability platform purpose-built for Large Language Model (LLM) applications. We empower engineering teams to proactively identify and resolve performance bottlenecks, cost anomalies, and reliability issues within their AI infrastructure.  Unlike traditional monitoring solutions, SynapseFlow focuses on the unique challenges of LLM observability \u2013 tracing prompts, tracking token usage, and analyzing model drift in real-time.  We're targeting fast-growing AI startups and enterprise innovation teams who are moving beyond experimentation and into production deployments.  SynapseFlow is currently in closed beta with several key customers demonstrating significant reductions in LLM infrastructure costs and improved application uptime. We're shifting our focus from feature completeness to building out a strong developer community and streamlining our onboarding process.  Our core value proposition is simple: 'Keep your AI running, reliably and affordably.'",
+    "background": "\u2022 **Founder & CEO, SynapseFlow** (October 2023 \u2013 Present)\n    * Led all aspects of company formation, including product vision, fundraising strategy, and team building.\n    * Secured initial pre-seed funding from angel investors with expertise in AI and DevOps.\n    * Developed and launched a closed beta program with a cohort of early adopter customers.\n    * Defined and implemented the core product roadmap based on direct customer feedback.\n\n\u2022 **Head of DevOps, NovaFinance** (January 2021 \u2013 September 2023)\n    * Built and scaled the DevOps infrastructure for a rapidly growing fintech company, supporting a complex microservices architecture.\n    * Led a team of 8 DevOps engineers responsible for CI/CD pipelines, infrastructure automation, and system monitoring.\n    * Implemented a new infrastructure-as-code (IaC) strategy using Terraform, reducing infrastructure provisioning time by 60%.\n    * Drove a 25% reduction in cloud infrastructure costs through optimization and automation.\n    * Championed the adoption of Kubernetes and containerization technologies, improving application scalability and resilience.\n    * Oversaw incident response and troubleshooting, ensuring high availability and performance of critical systems.\n\n\u2022 **Senior DevOps Engineer, StellarData Solutions** (June 2018 \u2013 December 2020)\n    * Designed, implemented, and maintained CI/CD pipelines using Jenkins and GitLab CI.\n    * Automated infrastructure provisioning and configuration management using Ansible.\n    * Monitored system performance and identified bottlenecks using Prometheus and Grafana.\n    * Collaborated with development teams to improve application deployment processes.\n    * Contributed to the development of internal tooling to automate common DevOps tasks.\n\n\u2022 **DevOps Engineer, CloudSpark Technologies** (August 2016 \u2013 May 2018)\n    * Gained foundational experience in DevOps principles and practices.\n    * Assisted in the migration of applications to the cloud (AWS).\n    * Supported the development and maintenance of infrastructure automation scripts.\n    * Participated in on-call rotation for incident response.\n\n\u2022 **Bachelor of Science in Computer Science, University of Colorado Boulder** (2012 \u2013 2016)",
+    "lookingFor": "I'm actively seeking connections with individuals who can accelerate SynapseFlow's growth and impact.  Specifically, I'm focused on three key areas:\n\n\u2022 **Pilot Partners:**  AI-first companies (seed to Series A) actively deploying LLMs in production who are experiencing observability challenges. We're looking for partners willing to provide candid feedback on our platform in exchange for early access and preferential pricing. Ideal profiles include VP of Engineering, Head of AI/ML, or Lead DevOps Engineer.  We prioritize companies using frameworks like LangChain or LlamaIndex.\n\n\u2022 **Build Clients:** Companies with established AI initiatives looking for a robust and scalable observability solution. We\u2019re targeting organizations with dedicated AI/ML teams and a clear understanding of the operational complexities of LLMs.  I'm interested in connecting with Directors of AI Infrastructure, Chief Technology Officers, or Heads of Data Science.\n\n\u2022 **Strategic Advisors:**  Experienced founders and operators with a proven track record in the DevOps, AI/ML, or observability space.  I'm particularly interested in individuals who have successfully navigated the challenges of scaling a technical infrastructure company.  I'm looking for advisors who can provide guidance on fundraising, product strategy, and go-to-market execution.\n\n\u2022 **Seed Stage Investors:**  VC firms specializing in AI infrastructure and developer tools.  We're seeking investors who understand the unique challenges of LLM observability and are aligned with our long-term vision.  I\u2019m particularly interested in funds with a portfolio focused on practical AI applications, not just theoretical research.\n\nI\u2019m open to informational calls and strategic conversations.  Please include a brief note highlighting your relevant experience and how you might be able to help.",
+    "notes": "- Leilani is *very* focused on practical observability - she's seen firsthand what happens when things break in production.  Avoid pitching her on 'pretty dashboards' without substance.\n- She's a direct communicator, appreciates brevity, and isn't afraid to ask tough questions.\n- She\u2019s currently prioritizing customer acquisition over feature development. \n-  She mentioned she had a good conversation with Anya Sharma (from Stellar Ventures) last week about potential seed funding \u2013 follow up with Anya for a warm intro if possible.\n-  She's particularly interested in connecting with anyone who has experience building observability tools for Kubernetes.\n-  Do *not* introduce her to marketing agencies right now.",
+    "locationAvailability": "Based in Denver, Colorado, and open to remote collaboration.",
+    "introPreferences": "When making introductions to Leilani, please adhere to the following guidelines:\n\n\u2022 **Hard Requirements:**\n    * The individual must have a direct role in the engineering or infrastructure space.\n    * They should be at a company actively deploying LLMs in production.\n    * They should be able to articulate specific observability challenges they are facing.\n\n\u2022 **Soft Preferences:**\n    * Experience with Kubernetes and containerization technologies is a plus.\n    * Familiarity with observability tools like Prometheus, Grafana, or Datadog is helpful.\n    * A demonstrated interest in AI/ML and the operational challenges of LLMs is highly valued.\n\n\u2022 **Framing:**\n    * Briefly highlight the connection between the individual\u2019s experience and SynapseFlow\u2019s value proposition.\n    * Emphasize the potential for SynapseFlow to help them solve specific observability challenges.\n    * Keep the introduction concise and focused - Leilani values efficiency.",
+    "personalPreferences": "I prefer email for initial contact and am available for short, focused calls. I appreciate direct and honest communication.",
+    "meetingAndSchedulingPreferences": "Please send a brief agenda in advance of any scheduled meetings. I prefer meetings to be no longer than 30 minutes unless there's a clear need for more time.  I'm generally available during standard business hours (Mountain Time).  Prompt follow-up is greatly appreciated."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 25.467249155044556,
+      "input_tokens": 733,
+      "output_tokens": 1679,
+      "problems": []
+    }
+  ],
+  "success": true
+}

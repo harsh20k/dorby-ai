@@ -1,0 +1,54 @@
+{
+  "id": 136,
+  "archetype": "AI/ML Researcher & Academic",
+  "given_name": "Amara Vargas",
+  "style_version": 9,
+  "archetypes_version": 23,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Amara Vargas is a rising star in the field of Explainable AI (XAI), currently a Research Scientist at MIT\u2019s Computer Science and Artificial Intelligence Laboratory (CSAIL). Her distinctive career detail is a prior stint as a forensic accountant \u2013 she brings a unique, rigorous perspective to the problem of AI transparency, viewing model 'decisions' as needing auditing. She's currently focused on developing novel methods for post-hoc explainability, specifically targeting complex deep learning models used in high-stakes applications like medical diagnosis. She\u2019s actively seeking collaborations with industry partners to translate her research into real-world impact and is also mentoring PhD students. She\u2019s ambitious and driven, but also very collaborative and committed to ethical AI development.",
+    "positioning": "Dr. Amara Vargas is a Research Scientist at the MIT Computer Science and Artificial Intelligence Laboratory (CSAIL), specializing in Explainable AI (XAI) and trustworthy machine learning. My research centers on developing robust and interpretable methods for understanding the decision-making processes of complex AI models, with a particular emphasis on deep learning applications in healthcare and finance. I leverage techniques from causal inference, information theory, and algorithmic auditing to create post-hoc explanations that are both accurate and human-understandable. Prior to my academic career, I worked as a forensic accountant, which instilled in me a strong commitment to transparency and accountability \u2013 principles I now apply to the field of AI. I\u2019m passionate about bridging the gap between theoretical research and practical implementation, and I actively seek opportunities to collaborate with industry leaders to deploy XAI solutions that mitigate risk and build trust in AI systems. I offer expertise in model interpretability, fairness assessment, and the development of explainability metrics.",
+    "background": "\u2022 **Massachusetts Institute of Technology (MIT), CSAIL (2020 \u2013 Present):** Research Scientist \u2013 Leading research projects focused on post-hoc explainability for deep learning models. Secured $500k in funding as PI for an NSF-sponsored project investigating counterfactual explanations for medical diagnostic systems. Mentored 3 PhD students and 2 undergraduate researchers.\n\u2022 **Stanford University (2016 \u2013 2020):** PhD, Computer Science \u2013 Dissertation: *'Causal Pathways to Transparency: A Framework for Interpretable Deep Learning'*. Awarded the ACM SIGKDD Dissertation Award. Developed a novel algorithm for identifying and visualizing causal relationships within neural networks.\n\u2022 **Ernst & Young (EY) (2014 \u2013 2016):** Forensic Accountant \u2013 Conducted financial investigations, fraud detection, and risk assessments for Fortune 500 companies. Developed expertise in data analysis, pattern recognition, and regulatory compliance. Led a team analyzing a $10 million embezzlement scheme, resulting in successful prosecution.\n\u2022 **University of California, Berkeley (2010 \u2013 2014):** BA, Mathematics & Economics \u2013 *Summa Cum Laude*. Published a research paper on algorithmic trading strategies in the *Journal of Financial Economics*.\n\n**Technical Skills:** Python (TensorFlow, PyTorch, scikit-learn), R, C++, SQL, Data Visualization (Tableau, matplotlib, seaborn), Statistical Modeling, Causal Inference, Deep Learning, Machine Learning, Algorithmic Auditing, Explainable AI (XAI) techniques (LIME, SHAP, Integrated Gradients).",
+    "lookingFor": "I am actively seeking connections with professionals in the following areas:\n\n\u2013 **Industry Leaders in AI/ML:** Specifically, individuals involved in deploying AI solutions in regulated industries (healthcare, finance, law). I'm interested in understanding the practical challenges of implementing XAI in real-world scenarios.\n\u2013 **Researchers in Related Fields:** Experts in causal inference, fairness, accountability, and transparency (FAT) in AI. I'm open to collaborative research opportunities.\n\u2013 **Venture Capitalists & Angel Investors:** Focused on AI/ML startups developing innovative XAI solutions. I am interested in discussing potential spin-off opportunities for my research.\n\u2013 **PhD Students:** Highly motivated students interested in pursuing research in XAI. I am currently accepting applications for research assistant positions.\n\n**Specifically *not* interested in:**\n\n\u2013 General sales pitches for AI/ML products.\n\u2013 Recruiters offering roles outside of research science.\n\u2013 Individuals seeking general career advice (I'm happy to connect, but my primary focus is research collaboration).\n\u2013 Discussions around blockchain applications of AI (unless it directly relates to explainability/transparency).",
+    "notes": "\u2022 Amara is a highly responsive and engaged networker. She's particularly enthusiastic about discussing the ethical implications of AI.\n\u2022 She recently presented at NeurIPS and has a strong social media presence on Twitter (@AmaraVargasXAI) \u2013 check her latest posts for current research interests.\n\u2022 She expressed a preference for introductions that highlight shared research interests or potential collaboration opportunities. Avoid overly promotional language.\n\u2022 Initial contact via LinkedIn is preferred. Follow-up via email is acceptable.",
+    "locationAvailability": "Currently based in Cambridge, Massachusetts. Open to remote collaboration and limited travel for conferences and workshops.",
+    "introPreferences": "When making introductions to Amara, please adhere to the following guidelines:\n\n\u2022 **Highlight Shared Interests:** Focus on the potential for collaboration or knowledge exchange. Briefly mention any overlapping research areas or common connections.\n\u2022 **Keep it Concise:** Amara is very busy, so keep the introduction brief and to the point. A few sentences are sufficient.\n\u2022 **Focus on Expertise:** Emphasize the other person's expertise and how it aligns with Amara\u2019s research interests in XAI, particularly in healthcare or finance.\n\u2022 **Avoid Sales Pitches:** Do not pitch products or services. Amara is primarily interested in research collaboration and intellectual exchange.\n\u2022 **Mention Publications (if relevant):** If the person has published relevant research, include a link to their publication.\n\u2022 **Preferred Communication:** Initial contact via LinkedIn is best. Follow up with a short email summarizing the connection.",
+    "personalPreferences": "I prefer concise communication and direct feedback. LinkedIn messaging is my primary channel, but email (amara.vargas@mit.edu) is also acceptable. I'm generally available for quick chats.",
+    "meetingAndSchedulingPreferences": "I typically require at least 24 hours' notice for meetings. I am most available for virtual meetings during weekday mornings (EST)."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 23.01033902168274,
+      "input_tokens": 777,
+      "output_tokens": 1352,
+      "problems": []
+    }
+  ],
+  "success": true
+}

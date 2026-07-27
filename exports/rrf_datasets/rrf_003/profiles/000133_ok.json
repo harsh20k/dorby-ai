@@ -1,0 +1,72 @@
+{
+  "id": 133,
+  "archetype": "Family Office Investor (Tech/Consumer)",
+  "given_name": "Felix Santos",
+  "style_version": 9,
+  "archetypes_version": 23,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Felix Santos is a Principal at 'Evergreen Crest', a multi-family office focused on direct investments in growth-stage tech and consumer brands. He\u2019s a bit of an unusual hire for a family office \u2013 he comes from a fairly hardcore engineering background (Stanford PhD in Robotics) before pivoting to finance after a successful exit as an early employee at a warehouse automation company. This technical DNA gives him a unique ability to deeply assess the viability of tech, particularly around manufacturing and supply chain. He\u2019s currently leading Evergreen Crest\u2019s search for Series A/B companies with defensible tech *and* strong consumer traction, specifically looking for opportunities where they can take a board seat and actively contribute to scaling operations. He's known to be direct, analytical, and a bit impatient with 'fluff'. He values efficiency and demonstrable results, and is wary of overly hyped trends. He\u2019s also building a personal brand as a thought leader in the evolving landscape of supply chain tech.",
+    "positioning": "As Principal at Evergreen Crest, I lead direct investment efforts focusing on Series A and B growth equity opportunities within the technology and consumer sectors. Evergreen Crest distinguishes itself through a long-term investment horizon and a hands-on operational approach, providing portfolio companies with not just capital, but also strategic guidance and access to a robust network of industry experts. My primary focus is identifying companies demonstrating demonstrable traction in the market coupled with a fundamentally sound technological foundation. I\u2019m particularly interested in businesses leveraging technology to disrupt traditional consumer behaviors or optimize complex supply chains. We believe that enduring value is created by companies that solve real problems with innovative solutions, and we actively seek out founders who share this philosophy. Currently, I'm spearheading the due diligence process for several exciting opportunities in the personalized consumer goods and advanced logistics spaces. My background in robotics and automation allows me to rigorously evaluate the technological underpinnings of potential investments, ensuring a deep understanding of scalability and competitive advantage. We aim to partner with exceptional teams and provide the resources and expertise necessary to accelerate their growth and achieve long-term success. Ultimately, Evergreen Crest isn't just deploying capital; we're building partnerships based on shared vision and a commitment to excellence.",
+    "background": "- **Principal, Evergreen Crest** (2021 - Present)\n   - Lead investment strategy and execution for Series A/B investments in tech and consumer sectors.\n   - Spearheaded due diligence process, including technical assessments, financial modeling, and market analysis.\n   - Active board observer/member for portfolio companies, providing strategic guidance and operational support.\n   - Currently managing a pipeline of over 50 potential investment opportunities.\n- **Early Engineer, AutoFlow Robotics** (2017 - 2020)\n   - Key contributor to the development and deployment of automated warehouse solutions.\n   - Led a team of engineers in the design and implementation of robotic picking and packing systems.\n   - Contributed to the company's successful acquisition by a larger logistics provider.\n- **PhD, Robotics, Stanford University** (2013 - 2017)\n   - Dissertation: 'Adaptive Control Strategies for Multi-Robot Systems in Dynamic Environments'.\n   - Research focused on artificial intelligence, machine learning, and robotics.\n   - Published multiple peer-reviewed articles in leading robotics journals.\n- **BS, Electrical Engineering, Massachusetts Institute of Technology (MIT)** (2009 - 2013)\n   - Graduated *Cum Laude* with honors.\n   - Relevant coursework: control systems, signal processing, machine learning.",
+    "lookingFor": "I am actively seeking connections with:\n\n- **Founders:** Leading growth-stage tech and consumer companies (Series A/B) with demonstrated traction and a clear path to profitability. Preference for companies with a strong technical foundation and a differentiated value proposition.\n- **Other Investors:** Co-investment opportunities within our target sectors. We are particularly interested in partnering with investors who share our long-term investment horizon and hands-on approach.\n- **Industry Experts:** Individuals with deep expertise in supply chain technology, consumer brand building, and digital marketing. Looking for advisors and potential board members.\n- **Venture Capital Partners:** Specifically those focused on similar stages and sectors, to share insights and potential deal flow.\n\nI\u2019m *not* currently interested in seed-stage opportunities or companies outside of the tech and consumer spaces.",
+    "notes": "Felix is very direct. No fluff. He *will* ask challenging technical questions. He's seen a lot of hype and isn't easily impressed. He's currently deep in diligence on 'NovaGoods' (personalized skincare) and 'LogiChain' (supply chain visibility). He's particularly interested in companies solving problems in manufacturing and logistics. He\u2019s been giving talks on the future of supply chain tech - might be good to mention if you're making an intro to someone in that space. He prefers email initially. Avoid lengthy introductions \u2013 get straight to the point. He\u2019s traveling the week of the 15th.",
+    "locationAvailability": "I am based in San Francisco, California, but am comfortable with remote meetings and occasional travel to visit potential investment opportunities.",
+    "introPreferences": "- **Hard Requirements:**\n  - Connection *must* be a founder/CEO of a Series A/B company in tech or consumer.\n  - Company *must* have demonstrable revenue and a clear path to profitability.\n  - Introducer *must* have a pre-existing relationship with the person they are introducing.\n- **Soft Preferences:**\n  - Companies demonstrating innovative use of technology (AI, ML, Robotics) are highly favored.\n  - Founders with strong technical backgrounds are a plus.\n  - Introductions should be concise and highlight the key investment thesis of the company.\n- **Do Not:**\n  - Send unsolicited pitches or business plans.\n  - Introduce me to seed-stage companies.\n  - Make introductions without a pre-existing relationship.\n  - Use overly promotional or hyperbolic language.",
+    "personalPreferences": "I appreciate direct communication and value efficiency. I'm a bit of a data nerd and enjoy diving deep into the details. Outside of work, I'm passionate about hiking and exploring new technologies. I respond best to concise emails and prefer to schedule calls directly through Calendly (link available upon request). I'm always open to discussing interesting ideas and learning from others, but I do appreciate a respectful use of my time.",
+    "meetingAndSchedulingPreferences": "I generally prefer 30-minute introductory calls. My Calendly link is available upon request."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 29.18025231361389,
+      "input_tokens": 804,
+      "output_tokens": 1598,
+      "problems": [
+        "background: possible truncation (ends with '...tiation, Board Governance')"
+      ]
+    },
+    {
+      "attempt": 2,
+      "elapsed_s": 28.386377096176147,
+      "input_tokens": 804,
+      "output_tokens": 1640,
+      "problems": [
+        "background: possible truncation (ends with '...ics, Portfolio Management')"
+      ]
+    },
+    {
+      "attempt": 3,
+      "elapsed_s": 23.526395082473755,
+      "input_tokens": 804,
+      "output_tokens": 1405,
+      "problems": []
+    }
+  ],
+  "success": true
+}

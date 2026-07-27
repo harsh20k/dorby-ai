@@ -1,0 +1,72 @@
+{
+  "id": 592,
+  "archetype": "European Fintech Founder/Operator",
+  "given_name": "Jing Petrov",
+  "style_version": 37,
+  "archetypes_version": 100,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Jing Petrov is a 42-year-old Bulgarian-German dual citizen who founded and successfully exited a pan-European payments processing company focused on the SME market. She's now based in New York, actively building a new venture leveraging AI to automate regulatory compliance for fintechs \u2013 a pain point she experienced acutely with her first company. She\u2019s seeking seed funding, strategic partners with expertise in US regulatory frameworks, and potential early adopters for a pilot program. She's highly data-driven, intensely focused on efficiency, and a bit skeptical of hype. Her previous exit gives her credibility, but she wants to avoid being perceived as simply chasing the latest trend. She's acutely aware of the challenges of US market entry and needs strong local connections.",
+    "positioning": "I\u2019m building CompliAI, a next-generation RegTech platform leveraging advanced AI to automate and streamline regulatory compliance for fintechs. Having previously navigated the complex European regulatory landscape while scaling a pan-European payments business, I acutely understand the significant cost and resource burden compliance places on rapidly growing companies. CompliAI isn\u2019t about simply *checking boxes*; it\u2019s about embedding compliance directly into the product development lifecycle, reducing friction, and accelerating time-to-market. We focus on automating KYC/AML processes, transaction monitoring, and reporting requirements, specifically tailored to the unique challenges faced by early-stage fintechs. Our mission is to empower innovation by removing the compliance bottleneck. We\u2019re targeting seed-stage to Series A fintechs operating in lending, payments, and digital asset spaces, offering a modular, API-first solution that integrates seamlessly with existing tech stacks. We\u2019re currently running a closed beta with select partners and are rapidly expanding our AI model training dataset. We're not just automating tasks; we\u2019re building a system that *learns* and adapts to evolving regulatory requirements.",
+    "background": "- **Founder & CEO, EuroPay Solutions (2015 \u2013 2022):** Led the creation and execution of a pan-European payments processing solution specifically designed for small and medium-sized enterprises (SMEs). Grew revenue from \u20ac0 to \u20ac35M ARR within 5 years, serving over 10,000 SME clients across 12 countries. Successfully secured Series A (\u20ac8M) and Series B (\u20ac20M) funding rounds. Oversaw all aspects of the business, including product development, sales & marketing, operations, and legal/compliance. Key achievement: Reduced average customer compliance costs by 40% through automated reporting and streamlined KYC processes.\n- **Head of Product, PayTech Innovations (2012 \u2013 2015):** Responsible for the product roadmap and development of a mobile payment gateway. Led a team of 8 product managers and engineers. Launched three new mobile payment solutions, resulting in a 25% increase in transaction volume.\n- **Senior Business Analyst, Deutsche Bank (2008 \u2013 2012):** Conducted market research, competitive analysis, and business requirements gathering for new financial products and services. Contributed to the development of a new risk management framework. \n- **Education:** MBA, INSEAD (2006-2008); MSc in Financial Engineering, Technical University of Munich (2004-2006); BSc in Mathematics, Sofia University (2000-2004). Fluent in Bulgarian, German, English, and conversational French.",
+    "lookingFor": "I'm actively seeking connections with individuals who can accelerate CompliAI\u2019s growth and impact. Specifically, I\u2019m interested in:\n\n* **Seed-stage investors:** Specifically VCs with a strong focus on fintech, AI, and RegTech, and a proven track record of supporting early-stage companies in the US market.\n* **Strategic partners:** Companies with deep expertise in US regulatory frameworks (e.g., BSA/AML, GDPR, CCPA) and established relationships with regulatory bodies.\n* **Early adopters:** Fintechs operating in lending, payments, or digital assets who are seeking to streamline their compliance processes and gain a competitive advantage. We\u2019re offering exclusive access to our beta program in exchange for valuable feedback.\n* **Mentors & Advisors:** Experienced fintech founders who have successfully navigated the US market and can provide guidance on market entry strategies, fundraising, and scaling.\n* **Introductions:** Warm introductions to key decision-makers at potential investor firms and partner organizations are highly valued. I\u2019m particularly interested in connecting with individuals at firms like Andreessen Horowitz, Sequoia Capital, and Ribbit Capital.",
+    "notes": "* Jing is currently closing a small pre-seed round but preparing for a larger seed raise in Q1 2024. \n* She's very responsive but prefers concise communication. Avoid lengthy emails or overly promotional pitches. \n* She values data-driven insights and is skeptical of 'buzzword bingo'. Focus on quantifiable results and demonstrable value. \n* Recent conversation with [Investor Name] at [VC Firm] \u2013 positive initial feedback, but concerned about market saturation. Follow-up needed focusing on CompliAI's unique AI advantage. \n* Successful approach: Highlight her prior exit and the tangible cost savings achieved at EuroPay Solutions. \n* Avoid pitching anything related to crypto without a clear understanding of her views \u2013 she\u2019s cautious about the space.",
+    "locationAvailability": "I am currently based in New York City and frequently travel for business. I am open to remote meetings and can accommodate various time zones.",
+    "introPreferences": "I have specific criteria for introductions. Please adhere to the following:\n\n* **Hard Requirements:**\n    * Individuals must be at a Director level or above within their organization.\n    * They must have direct responsibility for compliance, product, or investment decisions.\n    * They must be actively involved in the fintech ecosystem.\n* **Soft Preferences:**\n    * Experience with AI/ML applications in financial services is a strong plus.\n    * Familiarity with the challenges faced by early-stage fintechs is highly desirable.\n    * A willingness to engage in a thoughtful conversation about the future of RegTech.\n* **Introduction Style:** A brief, personalized email introducing me and highlighting the potential synergy between CompliAI and the recipient\u2019s organization is preferred. Avoid generic templates or mass emails.\n* **Do Not Introduce:** Junior-level employees, individuals solely focused on sales or marketing, or those with no direct connection to the fintech industry.",
+    "personalPreferences": "LinkedIn messaging preferred for initial contact. I\u2019m a quick responder, but value brevity. Direct, data-focused communication is appreciated. I'm not a fan of overly formal networking events.",
+    "meetingAndSchedulingPreferences": "I am flexible with meeting times and prefer to schedule calls directly through Calendly. I generally block off 30-60 minutes for introductory meetings."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 24.16308307647705,
+      "input_tokens": 784,
+      "output_tokens": 1476,
+      "problems": [
+        "background: possible truncation (ends with '...mics, University of Sofia')"
+      ]
+    },
+    {
+      "attempt": 2,
+      "elapsed_s": 18.013652801513672,
+      "input_tokens": 784,
+      "output_tokens": 1234,
+      "problems": [
+        "reasoning: possible truncation (ends with '... SMEs in Eastern Europe (')"
+      ]
+    },
+    {
+      "attempt": 3,
+      "elapsed_s": 25.665844917297363,
+      "input_tokens": 784,
+      "output_tokens": 1458,
+      "problems": []
+    }
+  ],
+  "success": true
+}

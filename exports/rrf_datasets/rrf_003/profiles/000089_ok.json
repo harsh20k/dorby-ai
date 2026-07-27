@@ -1,0 +1,54 @@
+{
+  "id": 89,
+  "archetype": "Ex-BigCorp, Now Founder/Operator",
+  "given_name": "Ravi Dubois",
+  "style_version": 6,
+  "archetypes_version": 15,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Ravi Dubois is a former Senior Data Scientist at Meta, specializing in recommendation algorithms. He left to found 'Synapse Insights,' a B2B SaaS platform leveraging generative AI to create personalized marketing content at scale. He\u2019s currently focused on securing Series A funding and expanding their client base beyond their initial cohort of e-commerce businesses. He\u2019s very metrics-driven, a bit of a perfectionist, and values direct, efficient communication. He\u2019s proud of his technical background but understands the need to \u2018sell\u2019 the vision of Synapse Insights, so is actively networking for advisors and potential investors. A key differentiator for Synapse Insights is its focus on *ethical* AI marketing \u2013 avoiding manipulative or deceptive practices, a value Ravi strongly believes in.",
+    "positioning": "I\u2019m the founder and CEO of Synapse Insights, a generative AI platform revolutionizing content personalization for B2B and B2C marketing teams. We're tackling the critical challenge of content fatigue and declining engagement by delivering hyper-personalized experiences at scale. At Synapse Insights, we don\u2019t just generate content; we engineer connection. Our proprietary algorithms analyze customer data \u2013 ethically and responsibly, of course \u2013 to craft messaging that resonates on an individual level. We\u2019ve seen impressive traction with our early adopters, demonstrating a 30% increase in click-through rates and a 15% boost in conversion rates. We recently completed a successful seed round led by Amplify Ventures, and are now strategically positioned to scale our operations and expand our market reach. Prior to founding Synapse Insights, I spent five years at Meta, leading the development of recommendation algorithms for Facebook Marketplace. This experience instilled in me a deep understanding of data science, machine learning, and the power of personalization. I\u2019m passionate about building a company that not only delivers exceptional results but also upholds the highest ethical standards in the rapidly evolving landscape of artificial intelligence.",
+    "background": "* **Synapse Insights, Founder & CEO** (2023 \u2013 Present)\n    * Led all aspects of company formation, from initial concept and market research to product development, fundraising, and team building.\n    * Secured $2.5M in seed funding from Amplify Ventures and angel investors.\n    * Developed and launched the Synapse Insights platform, achieving initial market validation with 15 paying customers.\n    * Built and managed a team of 8 engineers, marketers, and data scientists.\n    * Spearheaded the development of a proprietary generative AI model focused on ethical content creation.\n* **Meta, Senior Data Scientist** (2018 \u2013 2023)\n    * Led the development and implementation of recommendation algorithms for Facebook Marketplace, impacting millions of users.\n    * Increased click-through rates on recommended items by 12% through A/B testing and model optimization.\n    * Mentored junior data scientists, fostering a collaborative and innovative team environment.\n    * Presented research findings at internal and external conferences.\n    * Collaborated with engineering teams to deploy machine learning models into production.\n* **Deloitte Consulting, Data Analytics Consultant** (2016 \u2013 2018)\n    * Provided data analytics and consulting services to clients in the financial services and healthcare industries.\n    * Developed and implemented data visualization dashboards using Tableau and Power BI.\n    * Performed statistical analysis and data mining to identify key business insights.\n    * Supported the development of data-driven strategies for clients.\n* **Education:**\n    * **Stanford University, PhD in Computer Science** (2012 \u2013 2016) - Specialization: Machine Learning\n    * **Massachusetts Institute of Technology (MIT), BS in Mathematics** (2008 \u2013 2012) - Minor: Economics\n* **Skills:** Python, TensorFlow, PyTorch, SQL, Data Visualization (Tableau, Power BI), Machine Learning, Deep Learning, Generative AI, Natural Language Processing (NLP), A/B Testing, Statistical Modeling, Business Intelligence, Leadership, Team Management, Fundraising, Strategic Planning.",
+    "lookingFor": "I\u2019m actively seeking connections with individuals who can help accelerate Synapse Insights\u2019 growth. Specifically, I\u2019m looking for:\n\n* **Series A Investors:** Firms with a focus on SaaS, AI, and marketing technology. I'm interested in discussing our traction, roadmap, and potential for significant ROI.\n* **Strategic Advisors:** Experienced entrepreneurs or industry veterans with a proven track record in scaling B2B SaaS companies. I value mentorship and guidance on navigating the challenges of rapid growth.\n* **Potential Partnerships:** Companies offering complementary marketing technologies or services. We\u2019re open to exploring integration opportunities and co-marketing initiatives.\n* **Key Opinion Leaders (KOLs):** Influencers in the marketing and AI space who can help amplify our message and build brand awareness.\n\nI\u2019m also open to connecting with other founders to share learnings and build a supportive community. I\u2019m particularly interested in discussing strategies for building ethical and responsible AI solutions.  Please reach out if you have relevant expertise or connections \u2013 I\u2019m always happy to schedule a brief introductory call.",
+    "notes": "Ravi is highly responsive but prefers concise communication. He's very data-focused and will likely ask detailed questions about metrics and ROI. He\u2019s passionate about the ethical implications of AI and will steer conversations towards responsible development. \n\n* **Recent Conversation (Oct 26th):** Discussed potential partnership with a marketing automation platform - follow up to send case study.\n* **Priority:** Securing Series A funding within the next quarter.\n* **Avoid:** Vague pitches or overly optimistic projections. He appreciates transparency and honesty.",
+    "locationAvailability": "I am based in San Francisco, California, and am primarily focused on building Synapse Insights remotely, though I am available for travel to meet with investors and partners as needed.",
+    "introPreferences": "* I appreciate introductions to investors who specifically focus on early-stage SaaS companies.\n* Please provide context about *why* you think the connection would be valuable for Synapse Insights \u2013 a simple 'you should talk' isn't helpful.\n* Focus on highlighting our traction and the unique value proposition of our platform (ethical AI-powered personalization).\n* I prefer introductions that are warm and personalized, rather than cold emails or LinkedIn connection requests.\n* Please mention my background at Meta \u2013 it often opens doors and establishes credibility.",
+    "personalPreferences": "* Preferred communication method: Email (ravi.dubois@synapseinsights.com).\n* I\u2019m a morning person and respond best to messages received before noon PST.\n* I\u2019m fairly active on LinkedIn, but prefer in-depth conversations via email or phone.",
+    "meetingAndSchedulingPreferences": "I generally prefer 30-minute introductory calls.  I\u2019m flexible with scheduling, but please provide a few specific time options when requesting a meeting. I utilize Calendly for easy scheduling: [link to Calendly]."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 36.9790141582489,
+      "input_tokens": 835,
+      "output_tokens": 1481,
+      "problems": []
+    }
+  ],
+  "success": true
+}

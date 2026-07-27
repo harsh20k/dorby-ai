@@ -1,0 +1,54 @@
+{
+  "id": 182,
+  "archetype": "Pharmaceutical/Healthcare Veteran, Diversified Portfolio",
+  "given_name": "Liang Dubois",
+  "style_version": 12,
+  "archetypes_version": 30,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Liang Dubois is a seasoned pharmaceutical executive with a 25+ year career spanning R&D, commercialization, and business development at major players like Pfizer and Novartis. However, she experienced a significant career inflection point five years ago when a novel drug she championed, despite showing initial promise, failed in late-stage trials. This led to a re-evaluation of her risk tolerance and a move towards a diversified portfolio \u2013 she now holds a full-time operational role at a health-tech startup focused on AI-driven diagnostics, while simultaneously investing in and advising several early-stage real estate and biotech ventures. She\u2019s actively seeking connections to accelerate the growth of her startup and identify new investment opportunities, particularly those blending healthcare and technology. Her distinctive detail is a deep understanding of the regulatory hurdles in the pharmaceutical industry, which she leverages in her advisory roles.",
+    "positioning": "As Chief Operating Officer at DiagnostAI, I\u2019m leading the operational scaling of a groundbreaking platform leveraging artificial intelligence to revolutionize early disease detection. Our mission is to move beyond reactive healthcare to proactive, preventative care, improving patient outcomes and reducing systemic costs. In the last year, we\u2019ve achieved significant traction, securing Series A funding and initiating pilot programs with three major hospital networks. My focus is on streamlining our go-to-market strategy, building robust partnerships, and ensuring regulatory compliance as we prepare for broader commercial launch. Prior to DiagnostAI, I spent over two decades in the pharmaceutical industry, holding leadership positions at Pfizer and Novartis. I\u2019m particularly passionate about identifying and nurturing innovative companies at the intersection of healthcare and technology, and I\u2019m always open to discussing potential synergies. I\u2019m a firm believer that the future of healthcare is data-driven, and I'm looking to connect with individuals who share that vision and can contribute to building a healthier future.",
+    "background": "- **Chief Operating Officer, DiagnostAI** (2021 \u2013 Present) \n  * Responsible for all operational aspects of the company, including product development, regulatory affairs, marketing, and sales.\n  * Led the successful completion of Series A funding round, securing $20M in investment.\n  * Oversaw the implementation of pilot programs with three major hospital networks, demonstrating a 40% improvement in early detection rates.\n- **Vice President, Business Development, Novartis** (2015 \u2013 2021)\n  * Led cross-functional teams to identify, evaluate, and execute strategic partnerships and licensing agreements.\n  * Negotiated and closed deals with a combined value of over $500M.\n  * Managed a team of 10 business development professionals.\n- **Director, Clinical Development, Pfizer** (2008 \u2013 2015)\n  * Led the clinical development of several novel pharmaceutical compounds, including [redacted \u2013 drug name for privacy].\n  * Managed a budget of $50M and a team of 20 clinical research scientists.\n- **Medical Science Liaison, Pfizer** (2003 \u2013 2008)\n  * Served as a scientific expert on Pfizer\u2019s cardiovascular products.\n  * Built and maintained relationships with key opinion leaders in the cardiology field.\n- **Education:** PhD, Pharmacology, University of California, San Francisco (2003)\n  * MBA, Harvard Business School (2015)\n- **Skills:** Pharmaceutical Development, Business Development, Regulatory Affairs, Clinical Trials, Strategic Planning, Leadership, Team Management, AI in Healthcare, Venture Capital (basic), Real Estate Investment (beginner).",
+    "lookingFor": "I\u2019m actively expanding my network to support the growth of DiagnostAI and explore new investment opportunities. Specifically, I\u2019m looking for:\n\n* **Strategic Investors:** Individuals or firms with a proven track record of investing in health-tech, particularly AI-driven diagnostics.\n* **Potential Partners:** Hospital systems, insurance providers, or other healthcare organizations interested in piloting or implementing our platform.\n* **Founders:** Leaders of early-stage companies with innovative technologies that complement our platform, especially in areas like personalized medicine or remote patient monitoring.\n* **Experienced Advisors:** Individuals with expertise in scaling health-tech companies, navigating regulatory hurdles, or building successful commercialization strategies.\n\nI\u2019m particularly interested in connections in the Boston/Cambridge and San Francisco Bay areas, but am open to opportunities nationwide. I'm open to introductions to Series B/C investors focused on digital health.",
+    "notes": "Liang is highly articulate and clearly passionate about her work at DiagnostAI. She's a strong operator and brings a wealth of experience from the traditional pharmaceutical world. However, she's still relatively new to the venture capital space, and her real estate investments seem primarily driven by diversification rather than deep expertise. Her recent LinkedIn activity shows increased engagement with content related to AI ethics and data privacy, suggesting a growing awareness of these critical issues. She mentioned in a recent call that securing FDA clearance is a top priority for DiagnostAI and a potential bottleneck for their growth.",
+    "locationAvailability": "I am currently based in Boston, Massachusetts, and am not actively seeking relocation at this time.",
+    "introPreferences": "* **Hard Requirements:** Introductions should be to individuals at the Director level or above within relevant organizations.\n* **Soft Preferences:** I value introductions to people with a demonstrated track record of success and a willingness to engage in thoughtful discussion.\n* **Intro Style:** Please provide a brief overview of my background and the specific reason for the introduction, highlighting the potential mutual benefit.  Focus on my operational experience and interest in scaling innovative healthcare solutions. Avoid overly promotional language.\n* **Avoid:** Introductions to junior-level employees or individuals solely focused on sales/marketing.",
+    "personalPreferences": "I prefer initial contact via LinkedIn message or email. I respond best to concise and well-structured communication.",
+    "meetingAndSchedulingPreferences": "* I generally prefer 30-minute introductory calls to assess mutual fit.\n* I\u2019m available for meetings most weekdays between 10:00 AM and 4:00 PM EST.\n* Please send a brief agenda prior to any scheduled meeting to ensure we make the most of our time."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 27.827730894088745,
+      "input_tokens": 793,
+      "output_tokens": 1313,
+      "problems": []
+    }
+  ],
+  "success": true
+}

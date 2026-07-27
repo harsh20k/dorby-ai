@@ -1,0 +1,54 @@
+{
+  "id": 831,
+  "archetype": "Defense Tech/Industrial Reindustrialization Focus",
+  "given_name": "Lucas Reyes",
+  "style_version": 51,
+  "archetypes_version": 140,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Lucas Reyes is a former Naval Officer (specifically, a submarine warfare officer) who transitioned into the private sector with a focus on applying advanced manufacturing and AI to bolster US defense industrial capacity. He's currently the CEO of 'ForgeCore Technologies,' a startup specializing in rapid prototyping and small-batch production of specialized components for defense contractors using additive manufacturing. A distinctive detail is his deep understanding of military specifications and the lengthy procurement processes, which he's trying to disrupt with faster, more agile solutions. He's actively seeking Series A funding and strategic partnerships with larger defense primes and government agencies. He\u2019s very direct, values efficiency, and is deeply patriotic \u2013 this informs his communication style. He\u2019s slightly skeptical of \u2018hype\u2019 in the tech world and prefers concrete results. He\u2019s based in Pittsburgh, PA, drawn by the city\u2019s manufacturing history and emerging robotics ecosystem.",
+    "positioning": "Lucas Reyes is a results-oriented leader bridging the gap between cutting-edge technology and national security imperatives. As CEO of ForgeCore Technologies, I'm spearheading a revolution in domestic defense manufacturing through the application of advanced additive manufacturing and AI-driven design optimization. My background as a Naval Officer, specifically in submarine warfare, instilled in me a profound understanding of the critical need for resilient, readily available, and technologically superior defense capabilities. \n\n ForgeCore is focused on dramatically reducing lead times and costs for specialized defense components. We\u2019re not just 3D printing parts; we\u2019re building a vertically integrated platform that encompasses design for manufacturability, materials science innovation, and rigorous quality control \u2013 all tailored to meet stringent military specifications. We\u2019ve already demonstrated a 40% reduction in lead times for key components compared to traditional manufacturing methods, and are currently scaling to meet growing demand.\n\n I\u2019m passionate about reindustrializing America and strengthening our national defense posture. This isn\u2019t simply a business venture for me; it\u2019s a commitment to ensuring our warfighters have the tools they need to succeed. I\u2019m actively seeking strategic partners and investors who share this vision and are committed to long-term, sustainable growth in the defense tech sector. I'm particularly interested in exploring collaborations that leverage ForgeCore\u2019s rapid prototyping capabilities with established primes\u2019 existing programs.",
+    "background": "- **ForgeCore Technologies, CEO** (2022 \u2013 Present)\n    * Founded and leads a rapidly growing startup focused on additive manufacturing for defense applications.\n    * Secured seed funding of $2.5M and established key partnerships with initial defense contractors.\n    * Developed and implemented a proprietary AI-driven design optimization platform, reducing component weight by an average of 15% while maintaining structural integrity.\n    * Built a team of 25+ engineers, materials scientists, and manufacturing specialists.\n    * Oversaw successful completion of multiple pilot projects demonstrating significant cost and lead-time reductions.\n\n- **United States Navy, Submarine Warfare Officer** (2016 \u2013 2022)\n    * Qualified in all aspects of submarine operations, including navigation, weapons systems, and reactor plant operation.\n    * Served as Damage Control Assistant and Main Propulsion Assistant aboard a fast-attack submarine.\n    * Led a team of 10+ sailors in critical maintenance and repair operations.\n    * Recognized for exceptional performance and leadership, receiving the Navy Commendation Medal.\n    * Completed extensive training in systems engineering, risk management, and operational planning.\n\n- **Massachusetts Institute of Technology (MIT), Cambridge, MA** (2012 \u2013 2016)\n    * Bachelor of Science in Mechanical Engineering, *Magna Cum Laude*.\n    * Focused on advanced manufacturing, materials science, and robotics.\n    * Conducted research on novel additive manufacturing techniques for high-performance materials.\n    * Member of the MIT Robotics Club and the Formula SAE team.\n\n- **Skills:** Additive Manufacturing (SLM, DED, Binder Jetting), AI/ML (Design Optimization, Predictive Maintenance), Materials Science (Metals, Polymers, Composites), Systems Engineering, DFMA, Lean Manufacturing, Project Management, Naval Operations, Leadership, Risk Management, Strategic Planning, Government Contracting (ITAR, DFARS).\n\n- **Certifications:** Six Sigma Black Belt, Project Management Professional (PMP)",
+    "lookingFor": "I\u2019m currently focused on scaling ForgeCore Technologies and expanding our impact on the defense industrial base. My primary goals are centered around securing Series A funding and forging strategic partnerships with established players in the defense ecosystem.\n\n* **Strategic Partnerships:** I am actively seeking introductions to decision-makers at major defense primes (Lockheed Martin, Boeing, Northrop Grumman, Raytheon) to explore collaborative opportunities. Specifically, I\u2019m interested in integrating ForgeCore\u2019s rapid prototyping and small-batch production capabilities into their existing programs.\n* **Series A Investors:**  We are in the process of raising a Series A round to expand our manufacturing capacity, accelerate product development, and grow our team. I\u2019m looking for investors with a deep understanding of the defense tech landscape and a long-term investment horizon.\n* **Government Agency Contacts:**  I\u2019m keen to connect with individuals at DARPA, AFRL, and other government agencies involved in advanced manufacturing and defense innovation.  I believe ForgeCore\u2019s technology aligns well with their strategic objectives.\n* **Mentorship & Advisory Support:**  I'm open to connecting with experienced entrepreneurs and industry veterans who can provide guidance and mentorship as we navigate the challenges of scaling a deep-tech startup. \n* **Talent Acquisition:** We are constantly looking for top talent in engineering, materials science, and manufacturing. Any introductions to qualified candidates would be greatly appreciated.",
+    "notes": "Lucas is highly focused and direct in his communication. He appreciates efficiency and dislikes ambiguity. He\u2019s deeply passionate about his mission and is very articulate about the national security implications of his work. He\u2019s a former military officer, so expect a no-nonsense approach. \n\nHe is *very* particular about data security and compliance with government regulations (ITAR, DFARS). Any introductions should be vetted to ensure they are trustworthy and have a legitimate need to know. \n\nHe\u2019s currently navigating a complex fundraising process and is under considerable pressure to deliver results. Be mindful of his time and avoid unnecessary requests. He responds best to concise, well-structured communication.",
+    "locationAvailability": "Lucas is based in Pittsburgh, Pennsylvania, and is open to travel as needed. He is primarily focused on building a strong presence within the US defense industrial base and does not anticipate relocating internationally.",
+    "introPreferences": "* **Hard Requirement:** Any introduction to a defense prime *must* be to someone at the VP level or higher with decision-making authority related to new technology adoption.\n* **Soft Preference:** Introductions to individuals with a background in advanced manufacturing or materials science are highly valued.\n* **Intro Style:**  Keep introductions concise and focused on the mutual benefits of a potential collaboration. Briefly highlight ForgeCore\u2019s capabilities and the potential for cost savings and lead-time reductions.\n* **Avoid:**  Do not introduce Lucas to venture capitalists who lack experience in the defense tech sector.\n* **Do:**  Clearly articulate the value proposition of ForgeCore in terms of national security and industrial competitiveness.\n* **Do:** Pre-vet any potential connections to ensure they understand and respect data security protocols.",
+    "personalPreferences": "Lucas is a keen cyclist and enjoys spending time outdoors when he\u2019s not focused on ForgeCore. He\u2019s a fast mover and expects the same from those he works with.",
+    "meetingAndSchedulingPreferences": "Lucas prefers to start meetings with a brief agenda and a clear statement of objectives. He is generally responsive to email communication and is available for virtual meetings during business hours."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 30.368284225463867,
+      "input_tokens": 804,
+      "output_tokens": 1649,
+      "problems": []
+    }
+  ],
+  "success": true
+}

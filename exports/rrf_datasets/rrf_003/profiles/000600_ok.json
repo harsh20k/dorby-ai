@@ -1,0 +1,54 @@
+{
+  "id": 600,
+  "archetype": "AI Founder, Europe-Based, Technical",
+  "given_name": "Kai Lindqvist",
+  "style_version": 37,
+  "archetypes_version": 100,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Kai Lindqvist is a 38-year-old Finnish founder currently building 'NeuralFlow,' an AI-powered platform for optimizing complex supply chains. He previously spent 8 years as a lead engineer at Ericsson, specializing in low-latency network protocols, which is where his fascination with efficient systems and data flow began. A key detail is that he *self-funded* NeuralFlow for the first 18 months, bootstrapping it to a demonstrable MVP before seeking external investment. This makes him cautious about dilution and highly focused on demonstrable traction. He\u2019s very technically astute, sometimes to the point of getting lost in the details, and prioritizes engineering excellence. He\u2019s based in Helsinki and is looking for Series A funding and a strong Head of Sales with experience in enterprise software. He\u2019s pragmatic, direct, and values efficiency in communication. He\u2019s not interested in \u2018fluff\u2019 or overly optimistic projections.",
+    "positioning": "NeuralFlow is revolutionizing supply chain management through the application of advanced AI and machine learning. The current landscape is plagued by inefficiencies, siloed data, and reactive problem-solving. Businesses are losing billions annually to disruptions, delays, and inaccurate forecasting. NeuralFlow offers a proactive, intelligent solution. Our platform ingests data from across the entire supply chain \u2013 from raw material sourcing to final delivery \u2013 and uses proprietary algorithms to identify potential bottlenecks, predict disruptions, and optimize resource allocation in real-time. We aren't simply providing visibility; we're orchestrating a dynamic, self-healing supply chain ecosystem. \n\nWe've achieved significant traction in the past six months, onboarding three pilot customers \u2013 a major Finnish forestry company, a Swedish automotive parts manufacturer, and a German logistics provider \u2013 all of whom have reported a 15-20% reduction in supply chain costs and a significant improvement in on-time delivery rates. This early success has validated our core technology and demonstrated the immense market potential. We are now poised for rapid scaling and are actively seeking a Series A investment to expand our engineering team, accelerate product development, and broaden our market reach.  NeuralFlow isn\u2019t just about making supply chains *faster*; it\u2019s about making them *resilient* and *intelligent* \u2013 a critical advantage in today\u2019s volatile global economy. We are building the future of supply chain orchestration, one optimized flow at a time.",
+    "background": "- **NeuralFlow, Founder & CEO** (Helsinki, Finland) \u2013 January 2022 \u2013 Present\n    - Spearheaded the development and launch of NeuralFlow\u2019s AI-powered supply chain optimization platform.\n    - Led all aspects of the business, including product strategy, engineering, fundraising, and customer acquisition.\n    - Successfully secured three key pilot customers demonstrating significant ROI.\n    - Built and managed a small, high-performing engineering team.\n\n- **Ericsson, Lead Network Engineer** (Helsinki, Finland) \u2013 June 2014 \u2013 December 2021\n    - Led the development and implementation of low-latency network protocols for 5G infrastructure.\n    - Responsible for the design, testing, and deployment of critical network components.\n    - Mentored junior engineers and contributed to the development of best practices.\n    - Awarded \u2018Innovation Award\u2019 for contributions to network performance optimization.\n\n- **Aalto University, MSc, Electrical Engineering & Computer Science** (Espoo, Finland) \u2013 2012 \u2013 2014\n    - Specialization in Signal Processing and Machine Learning.\n    - Thesis: \u2018Adaptive Resource Allocation in Wireless Networks\u2019.\n\n- **University of Helsinki, BSc, Physics** (Helsinki, Finland) \u2013 2009 \u2013 2012\n\n- **Skills:** Python, TensorFlow, PyTorch, Kubernetes, Docker, AWS, Data Modeling, Supply Chain Management, Machine Learning, Deep Learning, Network Engineering, C++, Agile Development, Go.",
+    "lookingFor": "- Introductions to Series A investors with a focus on B2B SaaS and AI.\n- A Head of Sales with 8+ years of experience selling enterprise software solutions, *specifically* into supply chain or logistics organizations. Must have a proven track record of closing large deals.\n- Experienced AI/ML engineers specializing in time-series forecasting and anomaly detection \u2013 ideally with experience in productionizing models at scale.\n- Connections to potential strategic partners in the logistics and supply chain industry.\n- Introductions to thought leaders and analysts covering the AI-driven supply chain space.",
+    "notes": "Kai is highly intelligent and deeply technical. He can get very granular when discussing the platform\u2019s architecture and algorithms. He\u2019s pragmatic and data-driven, prioritizing demonstrable results over hype. He's cautious about giving up equity and values investors who understand the technical complexities of the business. He's self-funded for a significant period, indicating strong ownership and resourcefulness. \n\n*   **Key Takeaway:** Focus on the technical merits and ROI of NeuralFlow. Avoid overly salesy language.\n*   **Potential Issue:** He may be resistant to suggestions that deviate from his core engineering principles.\n*   **Guidance:** Prepare to discuss technical details in depth. Demonstrate a genuine understanding of the supply chain challenges and the potential of AI to address them.\n*   He responds best to concise, direct communication. Long emails with excessive marketing language will likely be ignored.",
+    "locationAvailability": "Currently based in Helsinki, Finland. I am open to occasional travel to meet with investors and partners, but I am not planning to relocate at this time. Remote work is acceptable for key hires.",
+    "introPreferences": "- **Hard Requirements:** Any investor introduction *must* have a demonstrated track record of investing in AI/ML-focused companies, preferably in the B2B SaaS space. Any Head of Sales candidate *must* have verifiable experience selling to enterprise-level supply chain organizations.\n- **Soft Preferences:** I prefer introductions to investors who have a strong technical background or have previously invested in companies with complex technological offerings. For sales candidates, experience with a land-and-expand sales strategy is highly desirable.\n- **Introduction Framing:** When making an introduction, please highlight the demonstrable traction NeuralFlow has achieved with its pilot customers and the platform\u2019s unique technical capabilities. Emphasize the potential for significant ROI and the opportunity to disrupt the multi-billion dollar supply chain management market. Avoid overly optimistic projections \u2013 I value realism and transparency.",
+    "personalPreferences": "I prefer direct communication via email. Please avoid LinkedIn InMail unless absolutely necessary.  I check email several times a day.",
+    "meetingAndSchedulingPreferences": "I am generally available for meetings during European business hours (9:00 AM - 5:00 PM CET). I prefer short, focused meetings with a clear agenda. Please send a brief meeting request with a proposed agenda and any relevant materials in advance. I\u2019m comfortable with video conferencing (Zoom or Google Meet)."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 19.65736675262451,
+      "input_tokens": 850,
+      "output_tokens": 1471,
+      "problems": []
+    }
+  ],
+  "success": true
+}

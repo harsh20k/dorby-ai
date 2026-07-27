@@ -1,0 +1,54 @@
+{
+  "id": 59,
+  "archetype": "Family Office/Venture Capital Investor",
+  "given_name": "Sanjay Mahmoud",
+  "style_version": 4,
+  "archetypes_version": 10,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Sanjay Mahmoud is a second-time founder currently building 'NovaScale,' a platform designed to streamline due diligence for family offices investing in pre-seed and seed-stage startups. He previously spent a significant portion of his career as a forensic accountant specializing in venture capital fund audits \u2013 a somewhat unusual background for a tech founder. This experience gave him deep insight into the pain points of both investors *and* founders during the due diligence process. He\u2019s now leveraging that knowledge to create a more efficient, transparent, and ultimately, faster funding cycle. He's actively seeking connections to family offices and angel investors to pilot NovaScale and gain early traction. He's polished, data-driven, and very aware of the importance of building trust with sophisticated investors. He's a bit of a workaholic and prefers direct communication.",
+    "positioning": "I'm the founder and CEO of NovaScale, a platform revolutionizing the due diligence process for early-stage venture capital. We\u2019re tackling the significant bottleneck of slow, inefficient due diligence that delays funding and increases risk for both investors and startups. NovaScale provides a secure, collaborative space for streamlined data sharing, automated verification, and comprehensive risk assessment. We\u2019re initially focused on family offices and angel investors deploying capital in pre-seed and seed rounds, helping them make faster, more informed investment decisions. We recently completed our beta program with promising results, demonstrating a 30% reduction in average due diligence timelines for participating investors.",
+    "background": "* **NovaScale, Founder & CEO (2023 \u2013 Present):** Leading all aspects of company strategy, product development, fundraising, and operations. Secured seed funding of $750k from angel investors.\n* **Blackwood Forensics, Partner (2018 \u2013 2023):** Specialized in forensic accounting and financial investigations within the venture capital and private equity industries. Led over 20 full-scope audits of venture capital funds, identifying and mitigating financial risks totaling over $50 million.\n* **Deloitte, Senior Associate (2015 \u2013 2018):** Conducted financial statement audits for publicly traded companies in the technology sector. Managed client engagements and supervised teams of junior auditors.\n* **Education:** MBA, Stanford Graduate School of Business (2013 \u2013 2015). B.S. Accounting, University of California, Berkeley (2009 \u2013 2013). *Summa Cum Laude*.\n* **Certifications:** Certified Public Accountant (CPA), Certified Fraud Examiner (CFE).\n* **Key Accomplishments at Blackwood:** Developed a proprietary risk assessment model for venture capital fund investments, adopted by the firm as standard practice. Published a white paper on emerging fraud risks in the startup ecosystem.\n* Consistently exceeded client expectations, receiving positive feedback on audit quality and communication.\n* Mentored junior auditors, fostering their professional development.\n* Played a key role in securing several high-profile clients for the firm.",
+    "lookingFor": "* Introductions to Family Office Principals involved in direct startup investing.\n* Connections to Angel Investor networks focused on pre-seed and seed-stage deals.\n* Investors with experience in the fintech or SaaS space (particularly those focused on B2B solutions).\n* Potential pilot partners \u2013 family offices willing to test NovaScale\u2019s platform.\n* Advice from seasoned founders who have successfully navigated the fundraising process.\n* Introductions to VCs who are limited partners (LPs) in family offices \u2013 potentially a future expansion market.\n* Warm introductions are *strongly* preferred; cold outreach is rarely effective.\n* Seeking investors who understand the value of due diligence efficiency and transparency.\n* Interested in discussing potential strategic partnerships with complementary service providers.",
+    "notes": "* Sanjay is incredibly responsive and detail-oriented. Expect quick follow-ups.\n* He\u2019s very proud of his forensic accounting background and often frames NovaScale as a solution born from firsthand experience with due diligence inefficiencies.\n* He\u2019s currently prioritizing securing pilot customers \u2013 revenue is secondary at this stage.\n* He mentioned being frustrated with the lack of standardized data formats in the startup fundraising process.\n* He is a strong believer in data security and privacy \u2013 NovaScale\u2019s platform is built with these principles in mind.\n* Last conversation focused on the challenges of building trust with family offices.",
+    "locationAvailability": "Based in San Francisco, California. Open to remote meetings and occasional travel.",
+    "introPreferences": "* **Must-Have:** Direct connection to a decision-maker at a Family Office or Angel Investor network.\n* **Preferred:** Individuals with a demonstrated track record of early-stage investing.\n* **Dealbreaker:** Introductions to individuals who are not actively deploying capital.\n* **Framing:** Please emphasize NovaScale\u2019s ability to reduce due diligence timelines and mitigate financial risks.\n* **Avoid:** Introductions to individuals solely focused on late-stage venture capital.\n* **Ideal Intro:** 'Sanjay is building a platform to significantly improve the efficiency of your due diligence process, something I know you've been looking to optimize.'\n* **Connection Level:** Partner level or higher preferred.",
+    "personalPreferences": "I prefer concise and direct communication. Email is generally best for initial contact.",
+    "meetingAndSchedulingPreferences": "I typically use Calendly for scheduling meetings. I'm flexible with meeting formats \u2013 happy to do Zoom, phone calls, or in-person meetings when appropriate."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 22.115181922912598,
+      "input_tokens": 842,
+      "output_tokens": 1150,
+      "problems": []
+    }
+  ],
+  "success": true
+}

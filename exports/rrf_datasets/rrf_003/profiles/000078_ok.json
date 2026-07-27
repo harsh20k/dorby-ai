@@ -1,0 +1,54 @@
+{
+  "id": 78,
+  "archetype": "Academic/Entrepreneur, Neurotech & HCI",
+  "given_name": "Hassan Ibrahim",
+  "style_version": 5,
+  "archetypes_version": 13,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Hassan Ibrahim is a 38-year-old neuroscientist turned entrepreneur. He completed his PhD at MIT\u2019s Media Lab, focusing on non-invasive brain-computer interfaces (BCIs) for therapeutic applications, specifically stroke rehabilitation. He then spent two years as a research scientist at Neuralink, gaining invaluable experience in the practical challenges of scaling BCI technology. However, he became frustrated with the focus on high-bandwidth, invasive solutions and believed there was a significant unmet need for accessible, affordable, and *non-invasive* BCIs for everyday cognitive enhancement \u2013 things like focus, learning, and stress management. He left Neuralink to found 'CognitoFlow', a startup developing a wearable EEG device and AI-powered software to personalize neurofeedback training. He\u2019s currently raising a Series A round and is focused on building strategic partnerships with universities and clinical research institutions to validate his technology. He's passionate about democratizing access to neurotechnology and believes it can significantly improve quality of life. He's a bit of a perfectionist and deeply technical, sometimes struggling to articulate the 'big picture' vision simply enough for investors. He values genuine intellectual curiosity in potential collaborators.",
+    "positioning": "I\u2019m Hassan Ibrahim, founder and CEO of CognitoFlow, a neurotechnology startup pioneering accessible and personalized brain-computer interfaces for cognitive enhancement. My background is deeply rooted in neuroscience and human-computer interaction, stemming from my doctoral research at MIT\u2019s Media Lab and subsequent experience as a research scientist at Neuralink. While my time at Neuralink provided invaluable insight into the complexities of advanced BCI systems, I recognized a critical gap in the market: the lack of affordable, non-invasive solutions for everyday cognitive wellbeing. \n\nCognitoFlow is addressing this gap with a novel wearable EEG device coupled with proprietary AI algorithms. Our technology allows users to monitor their brain activity in real-time and receive personalized neurofeedback training to improve focus, reduce stress, and enhance learning capabilities. We\u2019re not aiming to replace human effort, but rather to augment it, providing individuals with tools to unlock their cognitive potential. \n\nCurrently, we\u2019re focused on securing Series A funding to scale our R&D efforts, expand our clinical validation studies, and build out our engineering and marketing teams. I'm particularly interested in connecting with investors who share our vision of democratizing access to neurotechnology and are committed to long-term impact.  I bring a unique blend of scientific rigor, engineering expertise, and entrepreneurial drive to this endeavor, and I\u2019m confident that CognitoFlow is poised to become a leader in the rapidly evolving field of cognitive enhancement.",
+    "background": "- **Founder & CEO, CognitoFlow** (2022 \u2013 Present)\n  - Led seed funding round of $1.5M.\n  - Developed and patented core technology for wearable EEG device and AI-powered neurofeedback algorithms.\n  - Built and managed a team of neuroscientists, engineers, and software developers.\n  - Currently leading Series A fundraising efforts.\n\n- **Research Scientist, Neuralink** (2020 \u2013 2022)\n  - Conducted research on high-bandwidth brain-computer interfaces for medical applications.\n  - Contributed to the development of novel neural recording and stimulation techniques.\n  - Collaborated with cross-functional teams to address challenges in hardware and software integration.\n  - Published research findings in peer-reviewed journals and presented at international conferences.\n\n- **PhD Candidate, Massachusetts Institute of Technology (MIT) Media Lab** (2016 \u2013 2020)\n  - Dissertation: \u201cClosed-Loop Neurofeedback for Motor Recovery Following Stroke.\u201d\n  - Developed and validated a non-invasive BCI system for stroke rehabilitation.\n  - Secured research funding through grants and fellowships.\n  - Mentored undergraduate research assistants.\n\n- **Research Assistant, Stanford University Neurosciences Institute** (2014 \u2013 2016)\n  - Assisted with research on the neural mechanisms of learning and memory.\n  - Conducted data analysis and statistical modeling.\n  - Co-authored research publications.\n\n- **B.S., Neuroscience, University of California, Berkeley** (2010 \u2013 2014)\n  - Graduated *Summa Cum Laude*.",
+    "lookingFor": "I'm actively seeking connections with individuals and organizations who can contribute to the growth of CognitoFlow. Specifically, I'm looking for:\n\n- **Series A Investors:**  Individuals or firms with a demonstrated interest in neurotechnology, digital health, or cognitive enhancement. We're looking for partners who can provide not only capital but also strategic guidance and industry expertise.\n- **Clinical Research Partners:**  Universities and hospitals conducting research on stroke rehabilitation, ADHD, anxiety, or other conditions where neurofeedback may be beneficial. We're interested in collaborations to validate our technology and explore new applications.\n- **Experienced Advisors:** Individuals with a track record of success in scaling hardware startups, particularly in the consumer electronics or medical device space.\n- **Strategic Partnerships:**  Companies in the wellness, fitness, or education sectors who may be interested in integrating our technology into their products or services.\n\nI am open to introductory calls to discuss potential synergies and explore collaborative opportunities.",
+    "notes": "Hassan is brilliant but can get lost in the technical details. Frame conversations around the *impact* of CognitoFlow, not just the technology. He's deeply passionate about his work and genuinely believes it can make a difference. He can be a bit skeptical of hype and prefers data-driven arguments. \n\n* **Recent Update:** Just presented preliminary clinical trial data at NeuroTech Leaders Forum - very positive reception. \n* **Do:**  Come prepared with thoughtful questions about the science behind the technology.  Demonstrate a genuine understanding of the BCI landscape.\n* **Don\u2019t:**  Pitch him overly simplistic 'brain training' apps. He's looking for serious, scientifically-validated solutions. Avoid vague promises or unrealistic expectations.",
+    "locationAvailability": "I am based in San Francisco, California, and frequently travel for fundraising and conferences. I will be attending the Consumer Electronics Show (CES) in January and the Neurotech Leaders Forum in March.",
+    "introPreferences": "- **Hard Requirements:**\n  - Individuals with a strong background in neuroscience, engineering, or business.\n  - Decision-makers or individuals with significant influence within their organizations.\n  - People who have demonstrated a genuine interest in neurotechnology or cognitive enhancement.\n\n- **Soft Preferences:**\n  - Individuals with a track record of successful investments in early-stage startups.\n  - People who are actively involved in the clinical research community.\n  - Individuals who are passionate about improving human wellbeing.\n\n- **Please DO NOT introduce me to:**\n  - Individuals who are solely interested in 'get rich quick' schemes.\n  - People who lack a basic understanding of neuroscience or BCI technology.\n  - Recruiters (unless specifically requested).",
+    "personalPreferences": "I enjoy hiking and playing chess in my free time. I prefer email for initial contact, but am happy to schedule a call afterwards. I'm a big fan of science fiction and often draw inspiration from futuristic concepts.",
+    "meetingAndSchedulingPreferences": "I am generally available for meetings during weekdays. Please use Calendly (link available upon request) to schedule a time that works for both of us. I prefer video calls whenever possible."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 26.52347707748413,
+      "input_tokens": 786,
+      "output_tokens": 1596,
+      "problems": []
+    }
+  ],
+  "success": true
+}

@@ -1,0 +1,54 @@
+{
+  "id": 242,
+  "archetype": "Healthcare Software/M&A Veteran (US)",
+  "given_name": "Jamal Kowalski",
+  "style_version": 15,
+  "archetypes_version": 39,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Jamal Kowalski is a seasoned healthcare executive who transitioned from a long career in commercial leadership at established pharmaceutical companies to advising and investing in healthcare software startups, specifically those with M&A potential. A distinctive detail: he spent 5 years early in his career as a hospital administrator, giving him unique insight into the clinical side of healthcare. He's now looking to leverage his experience to either lead a high-growth healthcare software company or actively participate in M&A deals as an advisor/investor. He's based in Boston but open to remote opportunities and travel. He\u2019s pragmatic, direct, and values efficiency in networking. He wants introductions to decision-makers \u2013 not just networking events.",
+    "positioning": "A highly accomplished and results-oriented healthcare executive, Jamal Kowalski brings over 20 years of experience navigating the complexities of the US healthcare landscape. My career has been defined by a consistent ability to drive revenue growth, build high-performing teams, and forge strategic partnerships. Having spent the early part of my career within hospital administration, I developed a deep understanding of the clinical realities and operational challenges faced by healthcare providers \u2013 a perspective that has been invaluable throughout my commercial leadership roles.  More recently, I\u2019ve focused on identifying and advising promising healthcare software companies, particularly those poised for acquisition or further investment. I specialize in assessing market opportunities, validating business models, and streamlining commercialization strategies. I\u2019m passionate about leveraging technology to improve patient outcomes and reduce healthcare costs, and I believe my unique blend of clinical understanding, commercial acumen, and M&A experience makes me a valuable asset to any organization focused on innovation and growth. I\u2019m actively seeking opportunities where I can apply my expertise to build and scale disruptive healthcare solutions or facilitate successful M&A transactions. I am particularly interested in companies leveraging AI and machine learning to improve clinical workflows and patient engagement.",
+    "background": "- **Managing Director, Keystone Healthcare Advisors**, Boston, MA (2021 \u2013 Present)\n  - Advised 8 healthcare software companies on go-to-market strategy, resulting in a 60% increase in average revenue growth.\n  - Led due diligence efforts for 3 potential acquisitions, providing critical insights into target companies' financial and operational performance.\n  - Secured $15M in seed funding for a portfolio company specializing in remote patient monitoring.\n- **Vice President, Commercial Operations, BioPharma Solutions Inc.**, Cambridge, MA (2015 \u2013 2021)\n  - Oversaw a team of 75 sales and marketing professionals, driving a 20% year-over-year increase in sales revenue.\n  - Launched 3 new pharmaceutical products, exceeding initial sales projections by 15%.\n  - Implemented a new CRM system, resulting in a 10% improvement in sales efficiency.\n- **Regional Sales Director, NovaMed Pharmaceuticals**, New York, NY (2008 \u2013 2015)\n  - Managed a team of 20 sales representatives, consistently exceeding sales targets by an average of 12%.\n  - Developed and implemented a new sales training program, improving sales rep performance by 18%.\n- **Hospital Administrator, St. Luke\u2019s Hospital**, Boston, MA (2003 \u2013 2008)\n  - Managed a $10M budget, ensuring efficient allocation of resources.\n  - Implemented new patient care protocols, improving patient satisfaction scores by 5%.\n  - Led a cross-functional team to streamline hospital operations, resulting in a 8% reduction in administrative costs.",
+    "lookingFor": "- Leadership roles (CEO, COO, VP of Commercial) within high-growth healthcare software companies ($10M - $100M revenue).\n- Advisory or investment opportunities in healthcare software companies with strong M&A potential.\n- Connections to PE firms and venture capital groups specializing in healthcare.\n- Introductions to CEOs and CFOs of healthcare software companies actively seeking strategic partnerships or acquisitions.\n- Networking with individuals involved in healthcare M&A transactions.\n- Companies focusing on AI/ML applications in healthcare, particularly around diagnostics and personalized medicine.",
+    "notes": "Jamal is a very direct communicator and appreciates concise, actionable information. He attended a healthcare innovation conference in San Francisco last month and is actively following up on several leads. He expressed particular interest in companies addressing interoperability challenges. He mentioned he's currently evaluating a potential advisory role with a telehealth startup. He is committed to a board seat with a promising digital therapeutics company by Q1 2024. He prefers to keep initial conversations focused on business opportunities and avoids lengthy small talk. Last spoke with him on 10/26/2023 regarding a potential connection to a fund at Andreessen Horowitz. He liked the idea and asked me to follow up with the partner directly.",
+    "locationAvailability": "Jamal Kowalski is currently based in Boston, Massachusetts, and is open to remote work or relocation for the right opportunity. He is willing to travel frequently within the US.",
+    "introPreferences": "- **Hard Requirements:** Introductions must be to decision-makers (C-level executives, VPs, Partners) at companies or firms with a demonstrated commitment to healthcare innovation.\n- **Soft Preferences:** Introductions to individuals with experience in healthcare M&A, particularly those with a track record of successful transactions.\n- **Introduction Style:** Prefer a warm introduction via email, highlighting my relevant experience and expertise.  Please include a brief summary of why I should connect with the target individual.\n- **Avoid:** Introductions to junior-level employees or individuals in purely marketing/PR roles.\n- **Ideal Connections:** Partners at Healthcare-focused PE firms, CEOs of Series B/C Healthcare Software companies, CFOs of companies exploring an exit.",
+    "personalPreferences": "I prefer email communication for initial contact and am generally responsive within 24 hours. I am most productive in the mornings and am open to scheduling virtual meetings. I do not respond well to LinkedIn InMail requests without a personalized message. Please avoid sending me unsolicited marketing materials.",
+    "meetingAndSchedulingPreferences": "I generally prefer 30-minute virtual meetings to assess potential opportunities. I am flexible with scheduling and can adapt to accommodate busy calendars."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 18.14256191253662,
+      "input_tokens": 819,
+      "output_tokens": 1323,
+      "problems": []
+    }
+  ],
+  "success": true
+}

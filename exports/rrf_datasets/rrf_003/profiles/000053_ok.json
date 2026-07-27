@@ -1,0 +1,54 @@
+{
+  "id": 53,
+  "archetype": "Healthcare/Robotics Deep Tech Founder",
+  "given_name": "Valeria Eriksson",
+  "style_version": 4,
+  "archetypes_version": 9,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Valeria Eriksson is a Swedish-American founder in her early 30s, deeply passionate about using robotics to improve geriatric care. She has a PhD in Robotics from MIT, but took a detour into venture capital *before* starting her company, giving her a unique understanding of both the technical and financial sides of building a startup. Her current company, 'ElderFlow Robotics,' is developing a mobile robotic assistant for in-home elderly care, focusing on medication reminders, fall detection, and social engagement. She\u2019s currently in a seed funding round and actively seeking advisors with experience scaling hardware startups and navigating FDA regulations. Her background is strong academically and she is highly data-driven, but can sometimes be overly focused on technical details and less attuned to marketing/sales. She values directness and efficiency in communication.",
+    "positioning": "I\u2019m the founder and CEO of ElderFlow Robotics, a company revolutionizing in-home care for the aging population. We\u2019re developing a mobile robotic companion designed to proactively support seniors, enhancing their independence and quality of life. ElderFlow addresses the growing need for affordable and accessible elderly care, especially as the population ages and caregiver shortages increase. We\u2019ve recently completed a successful beta test with a local assisted living facility, demonstrating a 30% reduction in fall-related incidents among participants. I\u2019m focused on securing seed funding and building a world-class team to bring ElderFlow to market.",
+    "background": "- **PhD, Robotics, Massachusetts Institute of Technology (MIT)**, 2018. Dissertation: 'Adaptive Control Algorithms for Human-Robot Collaboration in Assistive Environments'. GPA: 4.0/4.0. Awarded the George C. Dorsch Memorial Prize for outstanding research. \n- **Principal, NovaVentures Capital**, 2018 \u2013 2021. Led due diligence on 12 seed-stage healthcare technology companies, with a focus on digital health and medical devices. Managed a portfolio of $15M in investments, resulting in a 2x return on invested capital.\n- **Research Intern, Toyota Research Institute (TRI)**, Summer 2017. Developed and implemented computer vision algorithms for autonomous driving applications. Published research paper at IEEE International Conference on Robotics and Automation (ICRA).\n- **Software Engineer, iRobot Corporation**, Summer 2016. Contributed to the development of software for the Roomba robotic vacuum cleaner. Focused on improving navigation and obstacle avoidance algorithms.\n- **B.S., Computer Science & Engineering, Stanford University**, 2016. Minor in Biology. Graduated *Summa Cum Laude*.\n- **Certifications:** Project Management Professional (PMP), Six Sigma Green Belt.\n- Successfully secured $250k in non-dilutive funding through SBIR grant applications.\n- Led a team of 5 engineers in the prototyping and development of the ElderFlow robotic platform.\n- Deep expertise in ROS (Robot Operating System), Python, C++, and machine learning algorithms.",
+    "lookingFor": "- Introductions to Seed-stage VCs specializing in robotics, healthcare, and deep tech (e.g., Khosla Ventures, Sequoia, Andreessen Horowitz).\n- Advisors with experience scaling hardware startups \u2013 particularly those navigating FDA 510(k) clearance.\n- Potential pilot partners: large assisted living facilities and home healthcare agencies (50+ beds/clients).\n- Experts in geriatric care and user experience design for elderly populations.\n- Connections to manufacturing partners with experience in low-volume, high-precision robotics assembly.\n- Individuals with experience in healthcare reimbursement models (Medicare/Medicaid).\n- Anyone familiar with the ethical considerations of deploying robots in sensitive care settings.\n- Warm introductions to key opinion leaders in the field of gerontology.",
+    "notes": "- Valeria is incredibly sharp and technically proficient, but sometimes gets lost in the weeds. Keep conversations focused on the big picture and market opportunity.\n- She's very responsive via email but prefers concise communication. Avoid lengthy reports or presentations initially.\n- Recently presented at the Robotics in Healthcare conference \u2013 a good conversation starter.\n- She's actively fundraising and under pressure to close a seed round by the end of Q3.\n- She mentioned being particularly interested in investors who can provide strategic guidance, not just capital.\n- Be prepared to discuss the competitive landscape and ElderFlow\u2019s differentiation.",
+    "locationAvailability": "Based in Boston, MA. Open to remote meetings and occasional travel for key partnerships or fundraising opportunities.",
+    "introPreferences": "- **Hard:** Must have experience in robotics, healthcare, or venture capital.\n- **Hard:** No introductions to individuals solely focused on marketing or PR at this stage.\n- **Soft:** Preference for introductions to individuals with a strong technical background.\n- **Soft:** Ideal connections have a proven track record of successfully scaling hardware startups.\n- **Framing:** When making an introduction, emphasize ElderFlow\u2019s potential to address a significant market need and improve the lives of seniors.\n- **Dealbreaker:** Avoid introductions to individuals who are actively involved with competing robotics companies.\n- **Preferred Connection Level:** Partner level or above at VC firms.",
+    "personalPreferences": "I prefer direct and concise communication. Please avoid overly formal language or lengthy email chains.",
+    "meetingAndSchedulingPreferences": "I typically prefer 30-minute introductory calls scheduled via Calendly. I\u2019m available most afternoons Eastern Time."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 15.778123140335083,
+      "input_tokens": 846,
+      "output_tokens": 1146,
+      "problems": []
+    }
+  ],
+  "success": true
+}

@@ -1,0 +1,74 @@
+{
+  "id": 256,
+  "archetype": "Serial Founder, E-commerce & Fintech",
+  "given_name": "Mikael Torres",
+  "style_version": 16,
+  "archetypes_version": 42,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Mikael Torres is a serial founder, currently focused on a B2B embedded finance solution for small e-commerce brands. He previously founded and successfully exited a direct-to-consumer subscription box company, 'Curated Comforts,' which specialized in ethically sourced home goods. A key learning from that experience was the pain point of accessing affordable and integrated financial tools for smaller businesses \u2013 traditionally underserved by larger fintech providers. He\u2019s now building 'FlowState Finance,' aiming to be the 'financial operating system' for the next generation of e-commerce entrepreneurs. He\u2019s highly analytical, data-driven, and prioritizes building strong, transparent relationships. He's seeking seed funding and strategic partnerships. He\u2019s known for being direct, valuing efficiency in communication, and being a strong advocate for his team.",
+    "positioning": "FlowState Finance is building the financial operating system for modern e-commerce. We\u2019re solving the critical problem of fragmented and expensive financial tooling for small, fast-growing brands. Too many e-commerce founders spend valuable time wrestling with disparate systems for payments, lending, expense management, and forecasting. FlowState Finance consolidates these functions into a single, integrated platform, offering a seamless experience and significantly reducing operational overhead. \n\nOur MVP launched six months ago, and we\u2019ve already onboarded 35 beta customers, generating $15,000 in MRR. Early adoption indicates a strong demand for our \u2018Revenue-Based Financing as a Service\u2019 wedge, which allows brands to access capital without diluting equity. Our ideal customer profile is a direct-to-consumer e-commerce brand doing between $500k - $5M in ARR, with a focus on sustainable and ethical practices. We\u2019re currently focused on building out our core lending infrastructure and expanding our integration partnerships, aiming for $100k ARR by the end of Q1 next year.",
+    "background": " * **Founder & CEO, FlowState Finance** (Oct 2023 \u2013 Present)\n    * Led seed stage fundraising efforts, currently in close of $2M round.\n    * Defined product roadmap and oversaw the development of initial MVP.\n    * Built and managed a team of 8 engineers, designers, and customer success managers.\n    * Established key partnerships with payment processors and data analytics providers.\n\n * **Founder & CEO, Curated Comforts** (Jan 2018 \u2013 Sep 2023) \u2013 *Acquired by Havenly*\n    * Conceptualized, launched, and scaled a direct-to-consumer subscription box business focused on ethically sourced home goods.\n    * Grew revenue to $8M ARR within 5 years, achieving profitability within the first 18 months.\n    * Managed a team of 30+ employees across marketing, operations, and customer service.\n    * Oversaw P&L, inventory management, and supply chain logistics.\n    * Successfully negotiated and executed the acquisition by Havenly, a home design platform.\n\n * **Senior Financial Analyst, Goldman Sachs** (Jun 2015 \u2013 Dec 2017)\n    * Conducted financial modeling, valuation analysis, and due diligence for M&A transactions in the retail sector.\n    * Developed and presented investment recommendations to senior management.\n    * Streamlined financial reporting processes, improving efficiency by 15%.\n    * Maintained a strong understanding of capital markets and macroeconomic trends.\n\n * **Education: Stanford University, MBA** (2013 \u2013 2015) \u2013 *Arjay Miller Scholar*\n    * Focused on Entrepreneurship and Finance.\n    * Led the Venture Capital Club, organizing speaker series and pitch competitions.\n\n * **Education: University of California, Berkeley, BS Economics** (2009 \u2013 2013) \u2013 *Summa Cum Laude*\n    * Dean\u2019s List all semesters.\n    * Member of the Phi Beta Kappa honor society.",
+    "lookingFor": "I\u2019m actively seeking connections with individuals who can accelerate FlowState Finance\u2019s growth. Specifically, I\u2019m looking to connect with:\n\n* **Seed and Series A Investors:** Funds with a focus on B2B SaaS, Fintech, and E-commerce. I\u2019m particularly interested in investors who understand the challenges faced by small business owners.\n* **E-commerce Operators:** Experienced leaders at successful D2C brands who can provide valuable insights into our target customer\u2019s needs.\n* **Fintech Founders:** Individuals who have built and scaled successful fintech companies, particularly in the embedded finance space. I\u2019m keen to learn from their experiences and explore potential synergies.\n* **Strategic Partners:** Companies offering complementary services to e-commerce businesses, such as marketing automation platforms, logistics providers, or data analytics firms.\n\nI\u2019m open to advisory roles and mentorship opportunities. Ideally, I'm looking for people who are proactive, solution-oriented, and have a passion for empowering entrepreneurs.",
+    "notes": "Mikael is a very direct communicator \u2013 gets straight to the point. He values efficiency and doesn\u2019t have a lot of time for small talk. Very data-driven in his approach. \n\n* **Data Quality:** LinkedIn profile is well-maintained and accurate. \n* **Recent Conversation (11/15/2023):** Discussed potential partnership with a logistics provider. He's interested, but needs to see a clear value proposition for his customers.\n* **Intro Guidance:** When making introductions to investors, emphasize FlowState Finance\u2019s rapid growth and strong customer retention. Avoid overly technical jargon. He's currently prioritizing investors with a strong track record in embedded finance.",
+    "locationAvailability": "I am currently based in San Francisco, California, but am open to remote meetings and occasional travel to key industry events.",
+    "introPreferences": " * **Hard Requirement:** Investor must have experience investing in B2B SaaS or Fintech.\n * **Soft Preference:** Familiarity with the e-commerce landscape is a plus.\n * **Intro Style:** Keep it concise and focused on the potential for collaboration. Please highlight FlowState Finance\u2019s current traction and our vision for the future of embedded finance. Do *not* lead with a lengthy backstory about me.\n * **Ideal Connection:** Partner level at a VC firm, or a founder of a successful fintech company. \n * **Avoid:** General networking requests or introductions to individuals outside of my target profile.",
+    "personalPreferences": "I prefer to communicate via email or LinkedIn message initially. I\u2019m typically quick to respond, but I appreciate a concise and well-structured message. Follow-up is appreciated, but please avoid excessive persistence. I\u2019m a big believer in building genuine relationships, so authenticity is key.",
+    "meetingAndSchedulingPreferences": "Please use this link to schedule a meeting: [https://calendly.com/mikaeltorres/flowstate-finance-intro]"
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 23.142004013061523,
+      "input_tokens": 808,
+      "output_tokens": 1507,
+      "problems": [
+        "meetingAndSchedulingPreferences: possible truncation (ends with '...kaeltorres/novapay-intro]')"
+      ]
+    },
+    {
+      "attempt": 2,
+      "elapsed_s": 25.08596396446228,
+      "input_tokens": 808,
+      "output_tokens": 1589,
+      "problems": [
+        "meetingAndSchedulingPreferences: possible truncation (ends with '...res/flowstate-seed-round]')"
+      ]
+    },
+    {
+      "attempt": 3,
+      "elapsed_s": 25.70081901550293,
+      "input_tokens": 808,
+      "output_tokens": 1487,
+      "problems": [
+        "meetingAndSchedulingPreferences: possible truncation (ends with '.../flowstate-finance-intro]')"
+      ]
+    }
+  ],
+  "success": false
+}

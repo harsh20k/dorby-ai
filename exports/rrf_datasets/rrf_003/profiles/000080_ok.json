@@ -1,0 +1,63 @@
+{
+  "id": 80,
+  "archetype": "AI/Web3 Founder, Early Stage",
+  "given_name": "Liang Kaur",
+  "style_version": 6,
+  "archetypes_version": 14,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Liang Kaur is a 34-year-old founder deeply embedded in the intersection of AI and Web3, specifically focusing on AI-powered tools for decentralized content creation and ownership. She previously spent 7 years as a machine learning engineer at a major music streaming service, where she spearheaded the development of their personalized recommendation engine. A key, slightly unusual detail is her side hustle during that time: she was a prolific, anonymous NFT artist, gaining a small but dedicated following. This experience gave her firsthand insight into the needs and frustrations of Web3 creators, fueling her current startup. She's currently raising a seed round and looking for strategic investors and advisors who understand both the technical complexities of AI *and* the cultural nuances of Web3. She\u2019s passionate, data-driven, and a bit of a perfectionist, but ultimately focused on empowering creators.",
+    "positioning": "I\u2019m Liang Kaur, founder of 'MuseForge', a platform leveraging generative AI to empower creators in the decentralized web. We\u2019re building tools that dramatically lower the barrier to entry for producing high-quality, unique digital assets, and ensuring creators retain true ownership and control over their work. My background is rooted in machine learning; I spent seven years at Streamify, leading the development of their core recommendation algorithms \u2013 a system serving millions of users daily. However, my passion extends beyond traditional tech. As an anonymous NFT artist myself, I experienced the burgeoning Web3 creator economy firsthand, identifying a critical gap: the need for accessible, AI-powered tools that unlock creative potential without sacrificing artistic integrity. MuseForge is my answer. We\u2019re focused on building a sustainable ecosystem where creators can thrive, supported by cutting-edge AI and the principles of decentralization. I\u2019m actively seeking partners who share this vision and are excited to shape the future of digital creation.",
+    "background": "* **Founder & CEO, MuseForge** (2023 \u2013 Present)\n    * Led seed stage fundraising, currently closing a $1.5M round.\n    * Defined product vision, roadmap, and go-to-market strategy for an AI-powered decentralized content creation platform.\n    * Assembled and managed a remote team of 5 engineers and 2 designers.\n    * Developed and launched a beta version of the MuseForge platform, achieving 1000+ active users within the first month.\n* **Senior Machine Learning Engineer, Streamify** (2016 \u2013 2023)\n    * Led the development and deployment of Streamify's personalized music recommendation engine, resulting in a 15% increase in user engagement and a 10% increase in subscription conversions.\n    * Mentored junior engineers and contributed to the development of internal ML best practices.\n    * Designed and implemented A/B testing frameworks for evaluating new recommendation algorithms.\n    * Collaborated with data scientists and product managers to identify and prioritize new features.\n    * Successfully scaled the recommendation engine to handle a growing user base and increasing data volume.\n* **Machine Learning Engineer, DataSpark** (2014 \u2013 2016)\n    * Developed and implemented machine learning models for fraud detection in financial transactions.\n    * Conducted data analysis and feature engineering to improve model accuracy.\n    * Contributed to the development of a real-time fraud detection system.\n* **Research Assistant, Stanford University \u2013 AI Lab** (2012 \u2013 2014)\n    * Assisted with research on deep learning and computer vision.\n    * Published research papers in peer-reviewed conferences.\n    * Developed and maintained software tools for data analysis and visualization.",
+    "lookingFor": "I'm actively seeking connections with:\n\n* **Seed-stage investors** specializing in AI/Web3, with a demonstrated track record of supporting ambitious, technically-complex startups.\n* **Experienced advisors** with expertise in decentralized content creation, NFT marketplaces, and AI model deployment.\n* **Potential partners** \u2013 specifically, platforms or projects in the creator economy space who could benefit from integrating MuseForge\u2019s AI tools. I'm interested in exploring API integrations and co-marketing opportunities.\n* **Talented engineers** with a strong background in generative AI, blockchain development, and front-end technologies. We are currently expanding our engineering team.\n\nI\u2019m particularly interested in speaking with individuals who understand the challenges faced by creators in Web3 and are passionate about building a more equitable and sustainable digital ecosystem. I'm open to introductory calls and would appreciate thoughtful connections.",
+    "notes": "Liang is incredibly sharp and driven, but can get lost in the technical details. She *needs* someone who can push her to articulate the business value proposition concisely. She's also very protective of her vision for MuseForge and isn\u2019t easily swayed. She's been operating somewhat in stealth mode, so be mindful of not divulging too much information about her previous NFT work \u2013 she's still somewhat private about that. Don\u2019t pitch her anything that isn\u2019t genuinely innovative or creator-centric. She's seen a lot of 'me-too' projects. A warm intro from someone she respects in the AI or Web3 space is *highly* preferred.",
+    "locationAvailability": "I am based in San Francisco, California, and frequently travel to industry events in New York and Los Angeles. I\u2019m available for virtual meetings globally.",
+    "introPreferences": "* **Hard Requirements:**\n    * Individuals with a demonstrable understanding of both AI *and* Web3 technologies.\n    * Professionals with a track record of successful investments or advisory roles in early-stage startups.\n    * People who are genuinely passionate about empowering creators.\n* **Soft Preferences:**\n    * Connections within prominent VC firms focused on AI/Web3.\n    * Individuals with experience building and scaling decentralized platforms.\n    * Those with a strong network within the NFT and digital art communities.\n* **Do Not Introduce:**\n    * Individuals solely interested in short-term financial gains.\n    * Anyone pitching generic 'blockchain solutions' without a clear understanding of the creator economy.\n    * People who are likely to be overly critical or dismissive of Web3 concepts.",
+    "personalPreferences": "I enjoy digital art (both creating and collecting!), hiking, and experimenting with new AI tools. I prefer asynchronous communication (email or Slack) for initial contact, and am generally responsive within 24 hours.",
+    "meetingAndSchedulingPreferences": "I'm generally available for 30-minute introductory calls or longer meetings as needed. Please use Calendly (link available upon request) to schedule a time that works for both of us. I prefer video calls whenever possible."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 31.543184757232666,
+      "input_tokens": 796,
+      "output_tokens": 1571,
+      "problems": [
+        "background: possible truncation (ends with '...hematics\n  - GPA: 3.8/4.0')"
+      ]
+    },
+    {
+      "attempt": 2,
+      "elapsed_s": 19.72319006919861,
+      "input_tokens": 796,
+      "output_tokens": 1419,
+      "problems": []
+    }
+  ],
+  "success": true
+}

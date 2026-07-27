@@ -1,0 +1,54 @@
+{
+  "id": 913,
+  "archetype": "Corporate Leader Turned Startup Founder",
+  "given_name": "Theo Yamamoto",
+  "style_version": 56,
+  "archetypes_version": 154,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Theo Yamamoto is a former VP of Engineering at a major automotive manufacturer (Stellantis) who recently founded 'AetherDrive', a startup focused on AI-powered predictive maintenance for electric vehicle fleets. He\u2019s a deeply technical leader, but now spends a lot of time fundraising and building a team. His distinctive career detail is a patent he holds for a novel battery thermal management system, which is core to AetherDrive\u2019s technology. He\u2019s looking for seed investors, experienced AI/ML engineers, and strategic advisors with automotive industry connections. He's *very* focused on efficiency and data-driven decision-making \u2013 a habit from his corporate background \u2013 and can come across as direct. He\u2019s based in Detroit, but willing to travel for the right opportunities. He prioritizes quality over quantity in networking and wants introductions to be highly targeted.",
+    "positioning": "As Founder & CEO of AetherDrive, I\u2019m leading the charge in revolutionizing fleet management for the electric vehicle era. We leverage cutting-edge AI and machine learning to predict component failures *before* they impact operations, minimizing downtime and maximizing ROI for fleet owners. My background as a VP of Engineering at Stellantis provided me with invaluable insights into the complexities of automotive engineering and the urgent need for proactive maintenance solutions. I\u2019ve spent the last 20+ years scaling engineering teams, driving innovation in battery technology, and optimizing manufacturing processes. At AetherDrive, I\u2019m focused on building a world-class team, securing strategic partnerships, and scaling our platform to become the industry standard for EV fleet intelligence. We\u2019re not just predicting failures; we\u2019re building a future of reliable, sustainable transportation.",
+    "background": "* **AetherDrive, Detroit, MI (2023 - Present)**\n    * **Founder & CEO:** Led seed funding round ($2.5M), built core engineering team (5 FTE), and developed MVP of AI-powered predictive maintenance platform.\n    * Developed and patented novel AI algorithm for predicting battery degradation with 92% accuracy.\n    * Secured pilot program with two major regional logistics companies.\n* **Stellantis, Auburn Hills, MI (2010 \u2013 2023)**\n    * **VP of Engineering:** Managed a team of 150+ engineers across multiple departments (Battery Technology, Thermal Management, Powertrain Control).\n    * Spearheaded the development of next-generation battery thermal management systems, resulting in a 15% increase in battery lifespan and a 10% reduction in cooling energy consumption.\n    * Oversaw the implementation of Agile methodologies across engineering teams, improving project delivery speed by 20%.\n    * Awarded Stellantis Innovation Award for contributions to electric vehicle technology.\n* **General Motors, Warren, MI (2005 \u2013 2010)**\n    * **Senior Engineer, Battery Systems:** Led the design and validation of battery packs for hybrid electric vehicles.\n    * Contributed to the development of GM\u2019s first-generation Volt battery system.\n* **Education:**\n    * **PhD, Electrical Engineering, Stanford University (2005)** \u2013 Dissertation: \u201cAdvanced Modeling and Control of Lithium-Ion Batteries\u201d\n    * **MS, Electrical Engineering, Massachusetts Institute of Technology (2002)**\n    * **BS, Electrical Engineering, University of Michigan (2000)**\n* **Skills:** AI/ML, Predictive Maintenance, Battery Technology, Thermal Management, Electric Vehicles, Software Development (Python, TensorFlow, PyTorch), Agile Methodologies, Leadership, Team Management, Strategic Planning, Fundraising, Automotive Engineering, Systems Engineering, Data Analysis.",
+    "lookingFor": "I\u2019m actively seeking strategic connections to accelerate AetherDrive\u2019s growth. Specifically, I\u2019m interested in:\n\n* **Seed Investors:** Angel investors and seed funds with a focus on automotive tech, AI/ML, and sustainability. I\u2019m looking for partners who understand the EV landscape and can provide not just capital, but also valuable industry expertise.\n* **Experienced AI/ML Engineers:** Talented engineers with a strong background in time-series analysis, anomaly detection, and predictive modeling. We are building a cutting-edge platform, and I need top-tier talent to drive innovation.\n* **Automotive Industry Advisors:** Seasoned professionals with deep connections within automotive OEMs and fleet management companies. I\u2019m looking for guidance on navigating the industry, forging strategic partnerships, and scaling our business.\n* **Potential Fleet Partners:** Fleet operators (logistics, delivery, rental) interested in piloting our predictive maintenance solution.  We're looking to demonstrate the ROI of AetherDrive in real-world scenarios.\n\nI\u2019m particularly interested in connecting with individuals who have a proven track record of success in scaling early-stage startups.  I prefer concise, direct communication and value introductions that are well-thought-out and targeted.  I'm open to virtual meetings and travel to key industry events.",
+    "notes": "* Theo is very data-driven and responds well to quantifiable results. Avoid overly hype-y pitches.\n* He\u2019s a bit reserved initially, but warms up quickly when discussing technical details.\n* He's currently in a funding round and is sensitive to time constraints.\n* Mentioned his patent in our last call \u2013 he's proud of it.\n* Avoid introducing him to generalist investors; he wants sector specialists.",
+    "locationAvailability": "Based in Detroit, Michigan, and willing to travel nationally for key meetings and investment opportunities. Remote meetings are also readily available.",
+    "introPreferences": "* **Hard Requirements:**\n    * Individuals with direct experience in the automotive, fleet management, or AI/ML sectors.\n    * Professionals at the VP level or higher, or those with demonstrable decision-making authority.\n    * Contacts actively involved in investment decisions (for investor introductions).\n* **Soft Preferences:**\n    * Introductions should highlight the potential synergies between AetherDrive and the contact\u2019s organization.\n    * Please provide a brief context note explaining *why* you think this connection would be valuable to Theo.\n    * Avoid \u2018cold\u2019 introductions; a warm connection is always preferred.  A shared connection or prior interaction is highly beneficial.",
+    "personalPreferences": "Prefers email for initial contact. Quick, direct communication is appreciated. No LinkedIn messages, please.",
+    "meetingAndSchedulingPreferences": "Generally available for 30-60 minute meetings. Mornings (EST) are usually best. I prefer video calls to phone calls. Please send a calendar invite with a clear agenda. I am efficient with my time and value concise, focused discussions. Back-to-back meetings are difficult, so please allow buffer time between appointments."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 24.36611771583557,
+      "input_tokens": 836,
+      "output_tokens": 1428,
+      "problems": []
+    }
+  ],
+  "success": true
+}

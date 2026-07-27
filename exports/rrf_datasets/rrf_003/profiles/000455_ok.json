@@ -1,0 +1,63 @@
+{
+  "id": 455,
+  "archetype": "Rust/Infrastructure Focused Founder",
+  "given_name": "Lucas Patel",
+  "style_version": 28,
+  "archetypes_version": 77,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Lucas Patel is a 34-year-old founder and CTO of 'SynapseFlow,' a pre-seed startup building a high-performance, distributed data pipeline platform optimized for machine learning workloads. He's a deeply technical founder, a Rust aficionado, and previously spent 5 years at a high-frequency trading firm where he honed his skills in low-latency systems and concurrency. This experience is *the* differentiating factor \u2013 he\u2019s not just building another data pipeline; he\u2019s applying HFT-level engineering principles to the ML infrastructure space. He\u2019s currently fundraising a seed round and needs introductions to VCs specializing in infrastructure and AI. He\u2019s exceptionally focused and values directness, disliking fluff or time wasted on irrelevant conversations. He\u2019s also very particular about the technical expertise of anyone he connects with - he needs people who *understand* the challenges he's tackling at a fundamental level.",
+    "positioning": "SynapseFlow is revolutionizing the way machine learning teams manage and process data. We\u2019re building a distributed data pipeline platform engineered from the ground up in Rust, delivering unparalleled performance and reliability for demanding AI workloads. Current data pipelines struggle with scalability, latency, and operational complexity \u2013 leading to bottlenecks in model training and deployment. SynapseFlow solves this by leveraging a novel architecture inspired by high-frequency trading systems, ensuring data flows seamlessly and efficiently, even at massive scale. We're targeting data science teams at Series B/C AI companies and research institutions facing challenges with real-time data ingestion, transformation, and feature engineering. We\u2019ve already secured early traction with two pilot customers demonstrating a 3x improvement in pipeline throughput compared to existing solutions. We're currently raising a $3M seed round to expand our engineering team and accelerate product development. I\u2019m actively seeking connections with investors who understand the intricacies of infrastructure software and the rapidly evolving landscape of machine learning. Specifically, I'm looking to connect with partners who can offer not only capital, but also strategic guidance and access to potential customers. Let's talk if you're passionate about building the future of AI infrastructure.",
+    "background": "- **SynapseFlow, Founder & CTO** (2023 \u2013 Present)\n  * Led all aspects of technical strategy, architecture, and development of SynapseFlow\u2019s distributed data pipeline platform.\n  * Spearheaded the design and implementation of a novel data processing engine in Rust, achieving significant performance gains over existing solutions.\n  * Secured early traction with two pilot customers, demonstrating a 3x improvement in pipeline throughput.\n  * Responsible for fundraising efforts, preparing pitch decks and engaging with potential investors.\n\n- **Quantify Capital, Senior Software Engineer** (2018 \u2013 2023)\n  * Developed and maintained low-latency trading systems for high-frequency trading algorithms.\n  * Optimized critical code paths for performance, reducing latency by up to 20%.\n  * Designed and implemented robust monitoring and alerting systems to ensure system stability.\n  * Collaborated with quantitative researchers to translate trading strategies into production code.\n  * Mentored junior engineers in best practices for software development and system design.\n\n- **Massachusetts Institute of Technology (MIT), Master of Science in Computer Science** (2016 \u2013 2018)\n  * Specialization in Distributed Systems and Machine Learning.\n  * Thesis: \u201cOptimizing Data Consistency in Distributed Databases.\u201d\n  * GPA: 3.9/4.0\n\n- **University of California, Berkeley, Bachelor of Science in Computer Science** (2012 \u2013 2016)\n  * Relevant Coursework: Operating Systems, Data Structures and Algorithms, Database Systems, Artificial Intelligence.\n  * Dean\u2019s List all semesters.\n  * Undergraduate Research Assistant in the Berkeley AI Research (BAIR) Lab.",
+    "lookingFor": "I'm currently focused on closing our seed round and building out the core engineering team at SynapseFlow. I\u2019m seeking introductions to:\n\n* **Seed-stage VCs** specializing in infrastructure, developer tools, and AI/ML. We are targeting firms with a demonstrated track record of supporting technical founders.\n* **Experienced engineers** proficient in Rust, distributed systems, and data engineering. We're looking for individuals who thrive in a fast-paced, startup environment and are passionate about solving complex technical challenges. Specifically, a senior engineer with experience in building fault-tolerant systems would be incredibly valuable.\n* **Data science leaders** at Series B/C AI companies who are actively seeking to improve their data pipeline infrastructure. We\u2019re looking for early adopters who can provide valuable feedback and help us refine our product.\n\nI'm also open to connecting with:\n\n* **Angel investors** with expertise in the ML infrastructure space.\n* **Technical advisors** with a strong background in Rust and distributed systems.\n* **Potential strategic partners** who can help us expand our reach and accelerate our growth.",
+    "notes": "Lucas is *extremely* focused. Keep introductions concise and directly relevant to his stated needs. He doesn\u2019t have time for extended pleasantries. \n\n* **Recent Conversation:** Spoke with Sarah Chen (Kleiner Perkins) last week. She was impressed with the technical depth but expressed concern about market size. Need to refine messaging around the total addressable market.\n* **Priorities:** Fundraising, engineering team growth, securing a key enterprise pilot.\n* **Sensitivity:** He dislikes being pitched to - prefers framing conversations as exploratory discussions. Avoid overly aggressive sales tactics.\n* **Current Focus:** Refining the pitch deck to address investor concerns about scalability and competitive landscape. \n* **Important:** He *loves* talking about the technical details of SynapseFlow. Don't shy away from deep dives if the connection has a strong technical background.",
+    "locationAvailability": "Based in San Francisco, CA. Open to remote meetings and occasional travel to meet with investors and potential team members.",
+    "introPreferences": "* **Hard Requirements:**\n  * VC partners with a demonstrable history of investing in infrastructure or AI/ML startups.\n  * Engineers with 3+ years of professional Rust experience.\n  * Data science leaders with experience managing large-scale data pipelines.\n* **Soft Preferences:**\n  * Introductions from individuals with a strong technical background.\n  * Connections who have previously worked at companies like Snowflake, Databricks, or similar.\n* **Framing:** When making an introduction, emphasize the technical innovation of SynapseFlow and its potential to disrupt the data pipeline market. Briefly highlight the person\u2019s relevant experience and why they would be a valuable connection for Lucas. Avoid generic introductions \u2013 specificity is key.",
+    "personalPreferences": "I prefer direct communication and value transparency. Email is generally best for initial contact. I respond quickly to well-articulated questions and appreciate constructive feedback. I'm not a fan of drawn-out meetings; let\u2019s get straight to the point.",
+    "meetingAndSchedulingPreferences": "- Please send a brief agenda beforehand.\n- I prefer 30-minute meetings initially.\n- I\u2019m generally available during Pacific Standard Time business hours.\n- Concise debrief notes post-meeting are appreciated."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 29.15373921394348,
+      "input_tokens": 877,
+      "output_tokens": 1782,
+      "problems": [
+        "background: possible truncation (ends with '...Dean\u2019s List all semesters')"
+      ]
+    },
+    {
+      "attempt": 2,
+      "elapsed_s": 24.77905035018921,
+      "input_tokens": 877,
+      "output_tokens": 1543,
+      "problems": []
+    }
+  ],
+  "success": true
+}

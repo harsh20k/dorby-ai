@@ -1,0 +1,54 @@
+{
+  "id": 685,
+  "archetype": "Technical Founder, Deep Tech Background",
+  "given_name": "Elena Lindqvist",
+  "style_version": 42,
+  "archetypes_version": 114,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Elena Lindqvist is a 38-year-old Swedish-American founder and CEO of 'Aether Systems,' a pre-seed AI company focused on developing predictive maintenance solutions for industrial robotics using novel time-series analysis techniques. Her distinctive career detail is a PhD in theoretical physics, which she leveraged into a post-doc in machine learning before realizing the power of applying those skills to tangible industrial problems. She\u2019s fiercely independent, a bit of a perfectionist, and deeply committed to building a sustainable, ethically-minded company. Currently, she\u2019s focused on securing seed funding and pilot customers. She\u2019s very selective about who she connects with \u2013 she values deep technical understanding and a shared vision for responsible AI. She avoids 'hype-driven' individuals and prefers direct, no-nonsense communication.",
+    "positioning": "I\u2019m Elena Lindqvist, CEO and founder of Aether Systems. We\u2019re building the next generation of predictive maintenance for industrial robotics, leveraging cutting-edge time-series AI to drastically reduce downtime and improve operational efficiency. Traditional predictive maintenance often relies on reactive data analysis, missing critical leading indicators. Aether Systems proactively identifies potential failures *before* they occur, saving our clients significant costs and maximizing asset utilization. We\u2019re currently focused on the manufacturing and logistics sectors, with a particular emphasis on companies utilizing complex robotic systems. I\u2019m passionate about bridging the gap between theoretical research and practical application, and building AI solutions that are both powerful and responsible. I\u2019m eager to connect with investors specializing in deep tech, industry leaders in robotics and automation, and fellow founders navigating the challenges of scaling an AI startup. Let's discuss how Aether Systems can revolutionize your operations, or explore potential synergies for collaborative innovation.",
+    "background": "- **CEO & Founder, Aether Systems** (January 2023 \u2013 Present)\n    - Led all aspects of company formation, including business plan development, fundraising strategy, and initial product development.\n    - Developed and implemented core AI algorithms for predictive maintenance, resulting in a demonstrable 15% improvement in prediction accuracy compared to existing solutions during internal testing.\n    - Secured pre-seed funding of $250,000 from angel investors.\n    - Built a small, high-performing team of engineers and data scientists.\n\n- **Postdoctoral Research Fellow, Machine Learning Department, Stanford University** (September 2020 \u2013 December 2022)\n    - Conducted research in time-series analysis and anomaly detection, publishing three peer-reviewed papers in leading machine learning conferences (NeurIPS, ICML, ICLR).\n    - Developed novel algorithms for forecasting complex systems, with applications in finance and energy.\n    - Mentored graduate students in machine learning techniques.\n\n- **PhD, Theoretical Physics, Massachusetts Institute of Technology (MIT)** (September 2016 \u2013 August 2020)\n    - Dissertation: \u201cQuantum Field Theory in Curved Spacetime and its Applications to Cosmology.\u201d\n    - Awarded the MIT Presidential Fellowship for outstanding academic achievement.\n    - Developed advanced mathematical models for understanding the early universe.\n\n- **Research Intern, CERN, Geneva, Switzerland** (Summer 2015)\n    - Contributed to data analysis for the Large Hadron Collider experiments.\n    - Gained experience in large-scale data processing and statistical analysis.\n\n- **BS, Physics, California Institute of Technology (Caltech)** (September 2012 \u2013 June 2016)\n    - Graduated *summa cum laude* with honors.\n    - Conducted undergraduate research in astrophysics and cosmology.",
+    "lookingFor": "I'm actively seeking connections to help Aether Systems accelerate its growth and impact. Specifically, I'm looking for:\n\n* **Seed-Stage Investors:** Individuals or firms with a demonstrated track record of investing in deep tech, particularly AI and robotics companies.  We are aiming to raise $2M to scale our engineering team and expand our pilot programs.\n* **Potential Pilot Customers:**  Manufacturing and logistics companies utilizing advanced robotics systems (ABB, Fanuc, KUKA preferred) who are interested in exploring predictive maintenance solutions. We are open to initial pilot programs with favorable terms.\n* **Industry Advisors:** Experienced professionals in industrial automation and robotics with a strong understanding of market needs and challenges. I\u2019m looking for guidance on go-to-market strategy and product development.\n* **AI/ML Engineers:** Senior engineers with expertise in time-series analysis, anomaly detection, and model deployment.  Strong Python skills and experience with cloud platforms (AWS, Azure, GCP) are highly desirable.\n\n**I am *not* currently interested in:**\n* General business consultants without specific expertise in AI or industrial automation.\n* Individuals seeking mentorship or career advice.\n* Recruiters pitching irrelevant positions.",
+    "notes": "- Elena is incredibly focused and direct.  Short, concise communication is best.\n- She's very protective of her time and prioritizes meaningful conversations over networking for the sake of it.\n- She recently presented at the 'AI in Manufacturing' conference in Boston \u2013 a good conversation starter.\n- She is fluent in both English and Swedish.\n- She\u2019s a strong advocate for ethical AI and is wary of companies prioritizing profit over responsible development.\n- She's mentioned wanting to connect with someone who has successfully navigated the complexities of industrial IoT deployments.",
+    "locationAvailability": "Based in Boston, Massachusetts, and frequently travels for investor meetings and industry events. Open to remote meetings and occasional travel to key client locations.",
+    "introPreferences": "When making introductions to Elena, please keep the following in mind:\n\n* **Ideal Contacts:**  VPs of Engineering, Heads of Innovation, or C-level executives at robotics manufacturers or large-scale logistics companies.\n* **Information to Include:** Briefly highlight the contact's relevant experience and their company\u2019s specific challenges related to robotic maintenance.  Mention any existing AI/ML initiatives they are leading.\n* **Things to Avoid:**  Avoid overly enthusiastic or 'hype-driven' language. Elena prefers data-driven discussions and a pragmatic approach. Do *not* position the introduction as a 'quick win' or 'easy solution'.\n\n**Intro Style:** I prefer brief, direct introductions that focus on shared interests and potential synergies. A simple email with a concise summary of the contact\u2019s background and a clear reason for the connection is ideal.\n\n**Preferred Context:**  If you have a personal connection to either Elena or the contact, please mention it.  A warm introduction is always appreciated.",
+    "personalPreferences": "Email is the best way to reach me initially. I generally respond within 24-48 hours. I appreciate clear and concise communication.",
+    "meetingAndSchedulingPreferences": "I\u2019m generally available for meetings during Eastern Time business hours. Please use Calendly (link available upon request) to schedule a time. I prefer 30-60 minute meetings focused on specific topics."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 21.084812879562378,
+      "input_tokens": 887,
+      "output_tokens": 1487,
+      "problems": []
+    }
+  ],
+  "success": true
+}

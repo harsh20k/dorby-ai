@@ -1,0 +1,63 @@
+{
+  "id": 675,
+  "archetype": "Solo Technical Builder, Agentic AI",
+  "given_name": "Kavya Zhang",
+  "style_version": 41,
+  "archetypes_version": 113,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Kavya Zhang is a 32-year-old solo founder building 'FlowState,' an agentic workflow platform aimed at streamlining complex data analysis for biotech researchers. Her distinctive career detail is a prior 5-year stint as a quantitative biologist *before* pivoting to software engineering. This gives her a unique understanding of the pain points in her target market. She\u2019s entirely self-funded currently, bootstrapping the platform and focusing on a 'developer-first' approach to attract early adopters. Kavya is deeply technical, preferring to build rather than manage, and is now seeking seed funding and strategic partnerships to scale FlowState beyond the MVP stage. She's very focused on finding investors who understand the nuances of AI agents and aren't solely focused on 'hype' metrics. She's also keen to connect with potential integration partners in the bioinformatics space.",
+    "positioning": "I'm the founder of FlowState, a platform designed to empower biotech researchers with the power of agentic workflows. We're tackling the significant bottleneck of data analysis in fields like genomics, proteomics, and drug discovery. Researchers spend an inordinate amount of time wrangling data, running repetitive analyses, and stitching together disparate tools. FlowState automates these processes by allowing users to define complex analytical tasks as interconnected 'agents' that operate autonomously. \n\nOur core value proposition is dramatically reducing time-to-insight and freeing up researchers to focus on higher-level interpretation and innovation. We're initially targeting academic labs and small biotech companies, offering a flexible, cloud-based solution that integrates seamlessly with existing bioinformatics pipelines. Currently, we have 15 active beta users generating positive feedback on the platform's usability and speed. We're focused on expanding our agent library and building out robust API integrations.  Our immediate goal is to secure seed funding to accelerate development and expand our customer acquisition efforts, ultimately becoming the leading agentic workflow platform for the life sciences.",
+    "background": "- **Founder & CEO, FlowState** (2023 - Present)\n  * Leading all aspects of product development, engineering, and business strategy.\n  * Architected and built the core agentic workflow engine using Python, LangChain, and a serverless infrastructure on AWS.\n  * Responsible for user acquisition, beta testing, and iterative product refinement.\n  * Secured initial beta users through direct outreach and conference presentations.\n- **Postdoctoral Research Fellow, University of California, San Francisco** (2018 - 2023)\n  * Conducted research in quantitative biology, specializing in single-cell RNA sequencing data analysis.\n  * Developed and implemented computational pipelines for gene expression profiling and biomarker discovery.\n  * Proficient in statistical modeling, machine learning, and bioinformatics tools (R, Python, Bioconductor).\n  * Published 3 first-author papers in peer-reviewed journals.\n- **Software Engineering Bootcamp, Hack Reactor** (2023 \u2013 Intensive)\n  * Accelerated full-stack web development training focused on JavaScript, Node.js, and React.\n  * Completed multiple project-based assignments demonstrating proficiency in software design and implementation.\n- **Ph.D., Biology, Stanford University** (2014 \u2013 2018)\n  * Dissertation focused on the computational modeling of cellular signaling networks.\n- **B.S., Molecular Biology, Massachusetts Institute of Technology (MIT)** (2010 \u2013 2014)\n\n**Skills:** Python, LangChain, AWS (Lambda, S3, API Gateway), Docker, JavaScript, React, R, Bioconductor, Machine Learning, Statistical Modeling, Bioinformatics, Data Analysis, Agentic AI, Workflow Automation, Cloud Computing, Scientific Computing.",
+    "lookingFor": "I'm actively seeking connections with individuals who can contribute to the growth of FlowState.  My priorities are:\n\n**1. Seed Investors:**\n   * **Focus:**  VCs specializing in AI, biotech, or developer tools.  I'm *not* interested in generalist funds. \n   * **Ideal Profile:**  Partners with a technical background and a deep understanding of agentic AI and its potential in scientific research.  Experience investing in early-stage, technically-driven startups is crucial.  I'm looking for more than just capital \u2013 I'm seeking strategic guidance and network access.\n   * **Deal Size:** $1M - $2M seed round.\n\n**2. Strategic Partners (Bioinformatics Companies):**\n   * **Goal:**  Explore potential integrations with leading bioinformatics software and data platforms.\n   * **Ideal Partner:** Companies with established customer bases in genomics, proteomics, or drug discovery. A willingness to collaborate on joint development efforts and co-marketing initiatives is highly valued.\n\n**3.  Expert Advisors (Agentic AI & Workflow Automation):**\n   * **Need:** Mentorship and guidance on scaling the platform's agentic capabilities and optimizing developer experience.\n   * **Ideal Profile:**  Experienced engineers or researchers with a proven track record in building and deploying complex AI-powered workflows.\n\n**4.  Early Adopter Researchers:**\n   * I'm always open to connecting with researchers who are interested in testing and providing feedback on FlowState.  I'm particularly interested in those working on challenging data analysis problems where automation could have a significant impact.",
+    "notes": "Kavya's profile and LinkedIn activity indicate a strong technical background and a clear vision for FlowState. She\u2019s highly responsive and engaged in relevant online communities (e.g., AI/ML forums, biotech developer groups).  Information sourced from LinkedIn, FlowState website, and a recent interview on a biotech podcast.  She\u2019s very focused on the technical aspects of her platform and less interested in marketing/sales discussions at this stage.  She explicitly requested introductions to investors with a strong technical understanding of AI agents.",
+    "locationAvailability": "Currently based in San Francisco, CA, but open to remote collaboration and potential relocation for the right opportunity.",
+    "introPreferences": "Please read my positioning statement *before* making an introduction.  I'm extremely busy and appreciate concise, targeted introductions. \n\n* **DO:**  Clearly state the introducer\u2019s relationship to the person they\u2019re introducing me to and why you think a connection would be mutually beneficial.  Highlight any relevant technical expertise or experience.  If introducing an investor, *specifically* mention their investment focus and any relevant portfolio companies.\n* **DON'T:**  Send generic requests or introductions without context.  Don't introduce me to marketing agencies or sales consultants at this time.  Avoid individuals who primarily focus on 'hype' technologies without a strong understanding of underlying engineering principles.\n* **Communication:** I prefer initial contact via LinkedIn message or email.  I respond best to concise, data-driven communication.",
+    "personalPreferences": "Prefers asynchronous communication (email/LinkedIn) initially. Quickest response times are typically weekday mornings.",
+    "meetingAndSchedulingPreferences": "I generally prefer 30-minute introductory calls to assess potential synergies. I\u2019m available for calls most weekday mornings PST. Please send a calendar invite with a brief agenda."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 28.922117948532104,
+      "input_tokens": 784,
+      "output_tokens": 1491,
+      "problems": [
+        "background: possible truncation (ends with '...hine Learning \u2013 Specialty')"
+      ]
+    },
+    {
+      "attempt": 2,
+      "elapsed_s": 29.188905000686646,
+      "input_tokens": 784,
+      "output_tokens": 1523,
+      "problems": []
+    }
+  ],
+  "success": true
+}

@@ -1,0 +1,64 @@
+{
+  "id": 295,
+  "archetype": "Experienced Operator, Seeking New Role",
+  "given_name": "Omar Ishikawa",
+  "style_version": 18,
+  "archetypes_version": 49,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Omar Ishikawa is a seasoned operations leader with a strong background in scaling high-growth SaaS companies. He spent the last 8 years at 'NovaTech Solutions', a moderately successful marketing automation platform, rising from a Director of Operations to a VP role. A distinctive detail is that he spearheaded NovaTech's international expansion into the APAC region, which, while ultimately successful, was fraught with logistical and cultural challenges he navigated skillfully. He\u2019s now looking for a similar role \u2013 VP of Operations or equivalent \u2013 at a Series B/C funded company with ambitious growth plans, ideally in the AI/ML space. He\u2019s pragmatic, data-driven, and prioritizes building efficient, repeatable processes. He's not necessarily seeking a 'shiny object' but a company with a solid foundation and a clear path to profitability. He's relatively private and prefers direct communication.",
+    "positioning": "A results-oriented and strategic operations leader with a proven track record of scaling high-growth SaaS businesses. I specialize in building and optimizing operational infrastructure to support rapid expansion, particularly in international markets. At NovaTech Solutions, I led the team responsible for streamlining core business processes, resulting in a 30% reduction in operational costs and a 25% improvement in customer onboarding efficiency. I\u2019m now focused on identifying a challenging opportunity to leverage my expertise in a company poised for exponential growth, ideally within the burgeoning AI/ML landscape. I thrive in dynamic environments and excel at translating strategic vision into actionable operational plans. I'm passionate about building high-performing teams and fostering a culture of continuous improvement. My focus is always on building sustainable, scalable systems that drive both top-line revenue and bottom-line profitability.",
+    "background": " \n\n**Professional Experience:**\n\n* **NovaTech Solutions, San Francisco, CA** (2016 \u2013 Present)\n    * **Vice President of Operations** (2020 \u2013 Present): Led a team of 50+ across operations, customer success, and IT. Responsible for P&L management of operational budgets, process optimization, and strategic planning. Oversaw the successful integration of three acquisitions, streamlining post-merger operations and realizing $1.2M in synergies.\n    * **Director of Operations** (2016 \u2013 2020): Built and scaled the operational infrastructure to support NovaTech\u2019s hyper-growth phase. Implemented a new CRM system (Salesforce) and automated key workflows, resulting in a 15% increase in sales productivity. Spearheaded the company\u2019s expansion into the APAC region, establishing regional offices in Singapore and Tokyo. Managed complex logistics, regulatory compliance, and cultural adaptation challenges.\n* **Zenith Consulting, New York, NY** (2014 \u2013 2016)\n    * **Management Consultant:** Advised Fortune 500 clients on operational efficiency and process improvement initiatives. Focused on supply chain optimization and lean manufacturing principles.\n\n**Education:**\n\n* **Massachusetts Institute of Technology (MIT), Cambridge, MA** (2010 \u2013 2014)\n    * Bachelor of Science in Industrial Engineering\n    * Minor in Economics\n\n**Skills & Certifications:**\n\n* **Skills:** Process Optimization, P&L Management, Strategic Planning, CRM Implementation (Salesforce), Data Analysis (SQL, Tableau), Project Management, International Expansion, Cross-Functional Team Leadership, Lean Six Sigma, Agile Methodologies\n* **Certifications:** Lean Six Sigma Black Belt, Project Management Professional (PMP)",
+    "lookingFor": "## Opportunities\n\n*   **Role:** VP of Operations, Head of Operations, or similar leadership position.\n*   **Company Stage:** Series B or C funded, demonstrating strong traction and a clear path to profitability.\n*   **Industry:** Preference for AI/ML, SaaS, or related technology sectors.\n\n## Connections\n\n*   **Investors:** Seeking introductions to venture capitalists specializing in Series B/C funding rounds, particularly those with a focus on operational scaling.\n*   **Executive Recruiters:** Interested in connecting with recruiters specializing in operations leadership roles within high-growth tech companies.\n*   **Founders/CEOs:** Open to direct connections with founders and CEOs of companies aligning with my experience and interests.\n\n## Assistance\n\n*   **Mentorship:** Willing to mentor aspiring operations professionals.\n*   **Advisory:** Open to exploring advisory roles with early-stage startups.",
+    "notes": "* Omar is a very direct communicator. He appreciates brevity and data-driven insights. Avoid excessive hype or vague promises.\n* He is currently passively exploring opportunities but is open to compelling pitches.\n* Last conversation (10/26/2023) indicated a strong interest in companies that prioritize operational excellence over rapid, unsustainable growth.\n* He mentioned a previous negative experience with a company that lacked a strong financial foundation \u2013 flag companies with questionable unit economics.",
+    "locationAvailability": "Based in San Francisco, CA, and willing to consider remote opportunities with occasional travel.",
+    "introPreferences": "## Hard Requirements\n*   Introductions to investors actively deploying capital in Series B/C rounds.\n*   Connections to founders/CEOs of companies in the AI/ML or SaaS space with over $20M in ARR.\n*   Recruiters specializing in senior operations leadership roles.\n\n## Soft Preferences\n*   Prefer introductions from individuals with a strong understanding of operational scaling.\n*   Emphasis during introductions should be on my experience in international expansion and process optimization.\n*   Avoid introductions to companies that are pre-seed or still in the problem/solution fit stage.",
+    "personalPreferences": "I prefer to connect via LinkedIn initially. Please keep messages concise and focused on the potential value of the connection.",
+    "meetingAndSchedulingPreferences": "Please send calendar invites with a brief agenda. I typically respond to scheduling requests within 24 hours."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 18.223783254623413,
+      "input_tokens": 739,
+      "output_tokens": 1222,
+      "problems": [
+        "background: possible truncation (ends with '...fessional (PMP) Certified')",
+        "lookingFor: possible truncation (ends with '... Developer Tools, Fintech')"
+      ]
+    },
+    {
+      "attempt": 2,
+      "elapsed_s": 16.971471071243286,
+      "input_tokens": 739,
+      "output_tokens": 1265,
+      "problems": []
+    }
+  ],
+  "success": true
+}

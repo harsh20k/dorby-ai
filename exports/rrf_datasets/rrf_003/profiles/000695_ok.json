@@ -1,0 +1,54 @@
+{
+  "id": 695,
+  "archetype": "Toronto-Based AI/Startup Operator",
+  "given_name": "Thabo Mahmoud",
+  "style_version": 42,
+  "archetypes_version": 116,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Thabo Mahmoud is a highly adaptable AI/ML engineer with a strong operational bent. He's spent the last few years building and scaling AI products within larger companies, but is now actively seeking a role in an early-stage Toronto startup where he can have a more significant impact and wear multiple hats. A distinctive career detail is his short stint as a data science consultant for a small, ethically-focused NGO in Kenya post-university, which solidified his desire to use AI for positive impact. He\u2019s pragmatic and focused on delivering value, not just pursuing cutting-edge research. He\u2019s looking for a role that combines technical challenge with a strong sense of ownership and a fast-paced environment. He values transparency and a collaborative team culture. He's comfortable with full-stack development, and is particularly interested in companies applying AI to climate tech, healthcare, or fintech. He's not interested in purely research-focused roles or companies with unclear ethical guidelines.",
+    "positioning": "I\u2019m a results-oriented AI/ML Engineer with a passion for building and scaling impactful products. Having spent the last five years at [Large Tech Company Name] and [Mid-Sized Fintech Company Name], I\u2019ve honed my skills in developing, deploying, and monitoring machine learning models across diverse applications. I specialize in translating complex business problems into practical AI solutions, focusing on efficiency, scalability, and demonstrable ROI. I\u2019m currently seeking a challenging role within a high-growth Toronto startup where I can leverage my experience to drive innovation and contribute to a dynamic team. I excel at bridging the gap between data science and engineering, and am comfortable operating across the entire ML lifecycle. I\u2019m particularly drawn to companies tackling real-world challenges in areas like climate tech, healthcare, and financial inclusion. I am actively looking to connect with founders and engineering leaders building the next generation of AI-powered solutions. Let's chat if you're building something exciting and believe my experience could be a valuable asset!",
+    "background": "- **Senior Machine Learning Engineer, Nova Financial (Toronto, ON) \u2013 2021 \u2013 2023:** Led the development and deployment of fraud detection models, resulting in a 15% reduction in fraudulent transactions and a $2M annual cost savings. Managed a team of two junior engineers, providing mentorship and guidance on best practices in ML development. Implemented MLOps pipelines using Kubeflow and AWS SageMaker for automated model training, evaluation, and deployment.\n- **Machine Learning Engineer, TechForward Solutions (Toronto, ON) \u2013 2019 \u2013 2021:** Developed and maintained machine learning models for personalized recommendations, improving click-through rates by 10%. Collaborated with product managers and data scientists to define project requirements and deliver impactful solutions. Gained experience with a wide range of ML algorithms, including deep learning, natural language processing, and time series analysis.\n- **Data Science Consultant, Bright Futures Initiative (Nairobi, Kenya) \u2013 2018 (6 months):** Developed a predictive model to identify communities most vulnerable to climate change impacts, enabling targeted resource allocation for disaster preparedness. This involved working with limited datasets and adapting models to resource-constrained environments. This experience reinforced my commitment to using AI for social good.\n- **Research Assistant, University of Toronto \u2013 2016 \u2013 2018:** Assisted Professor [Professor's Name] with research on reinforcement learning for robotics. Published one peer-reviewed paper in a leading AI conference. Gained a strong foundation in statistical modeling and machine learning theory.\n- **Bachelor of Science in Computer Science, University of Toronto \u2013 2014 \u2013 2018:** Graduated with honors, specializing in Artificial Intelligence. Relevant coursework included Machine Learning, Data Mining, Statistics, and Algorithm Design.",
+    "lookingFor": "I'm actively seeking a full-time Machine Learning Engineering role within a fast-growing, early-stage startup in Toronto. I\u2019m particularly interested in companies that are leveraging AI to solve meaningful problems. \n\n**Ideal Connections:**\n* **Founders & CTOs:** Of seed to Series A stage startups in Toronto, specifically in Climate Tech, Fintech, or Healthcare.\n* **Engineering Leaders:**  Managing teams of 3-10 engineers, with a focus on AI/ML.\n* **Venture Capitalists:** Investing in early-stage AI/ML companies in Canada.\n\n**Specific Asks:**\n* **Introductions:** To founders and engineering leaders at companies aligned with my interests.\n* **Information:** About upcoming funding rounds and potential open positions.\n* **Pilot Customer Opportunities:**  If you're building a product where my expertise could be valuable for testing and feedback.\n\n**Not Interested In:**\n*  Purely research-focused roles.\n*  Companies without a clear ethical framework.\n*  Roles requiring extensive travel (I prefer a remote-friendly or hybrid setup).\n*  Recruiters focusing on contract positions.",
+    "notes": "- Thabo is a very pragmatic engineer - he's less interested in complex theoretical problems and more focused on delivering tangible results.\n- He's a strong communicator and collaborator, and enjoys mentoring junior engineers.\n- He\u2019s been actively attending Toronto AI/ML meetups (specifically the 'AI Toronto' group) and is a regular on the local startup event circuit.\n- He recently completed a course on MLOps best practices on Coursera.\n- He\u2019s very passionate about the ethical implications of AI and will likely ask pointed questions about a company\u2019s approach to responsible AI development.\n- Best initial contact is via LinkedIn message - he checks it frequently.",
+    "locationAvailability": "Based in Toronto, ON. Available for meetings in the downtown core or remotely. Willing to travel within the GTA.",
+    "introPreferences": "When making an introduction, please:\n\n* **Highlight my experience in scaling ML models in production.** This is a key differentiator.\n* **Mention my passion for applying AI to solve real-world problems.** I\u2019m looking for companies with a strong mission.\n* **Focus on the specific challenges the company is facing.** I want to understand how my skills can contribute to their success.\n\n**Hard Requirements:**\n* The person you introduce me to must be a decision-maker (Founder, CTO, or Engineering Manager).\n* The company must be based in Toronto or have a significant presence in the city.\n\n**Soft Preferences:**\n*  I appreciate introductions that are concise and to the point.\n*  Please avoid overly lengthy emails or generic copy-paste messages.\n*  Context is key \u2013 briefly explain why you think we\u2019d be a good fit.",
+    "personalPreferences": "I prefer to communicate via email initially. Quick questions can also be sent via LinkedIn message. I\u2019m generally responsive during business hours.",
+    "meetingAndSchedulingPreferences": "I'm flexible with meeting times and am happy to adjust to accommodate others' schedules. I generally prefer 30-60 minute meetings. Please use a Calendly link or propose a few specific times when scheduling."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 28.047488927841187,
+      "input_tokens": 889,
+      "output_tokens": 1505,
+      "problems": []
+    }
+  ],
+  "success": true
+}

@@ -1,0 +1,74 @@
+{
+  "id": 270,
+  "archetype": "Defense Tech & Reindustrialization Builder",
+  "given_name": "Hana Ishikawa",
+  "style_version": 17,
+  "archetypes_version": 45,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Hana Ishikawa is a first-time founder in her late 30s, deeply rooted in operational excellence gained from a decade in military logistics and then a subsequent five years in scaling supply chains for a high-growth manufacturing company. Her current venture, 'ForgeLine,' tackles the critical bottleneck in domestic defense manufacturing \u2013 rapid prototyping and small-batch production of specialized components. She's *not* building a flashy AI-powered solution; she's building the infrastructure to reliably *make things* in the US again, with a focus on speed and resilience. She's pragmatic, data-driven, and acutely aware of the long sales cycles and stringent requirements of the defense industry. A distinctive detail: she completed a fully-funded fellowship at MIT Lincoln Laboratory focused on advanced manufacturing techniques post-military service, which is where the ForgeLine concept originated. She's looking for early-stage investors who understand \u2018hard tech\u2019 and aren't solely focused on software, as well as strategic partners with existing DoD contracts and manufacturing facilities. She\u2019s direct, expects brevity, and values demonstrated competence over networking fluff.",
+    "positioning": "ForgeLine is addressing the critical lack of agile, domestic manufacturing capacity for specialized defense components. The US defense industrial base is plagued by long lead times, single-source dependencies, and a limited ability to rapidly prototype and field innovative solutions. We solve this by providing a distributed network of advanced manufacturing facilities, coupled with a proprietary workflow software platform, that drastically reduces prototyping timelines and unlocks small-batch production at scale. \n\nOur wedge is precision machining and additive manufacturing of complex metal parts for niche defense applications - think specialized sensors, custom actuators, and replacement parts for legacy systems. We\u2019ve secured letters of intent totaling $800k in ARR with three Tier-2 defense contractors and are currently finalizing our MVP production line.  Our ideal customer is a DoD prime contractor needing rapid turnaround on low-volume, high-complexity parts, or a government agency seeking to re-shore critical supply chains. We differentiate ourselves from existing players through our focus on operational efficiency, end-to-end traceability, and a commitment to building a resilient, fully domestic supply chain. We\u2019re building the \u2018system\u2019 to re-industrialize defense manufacturing, not just another point solution.",
+    "background": "* **Massachusetts Institute of Technology (MIT) Lincoln Laboratory (2018 \u2013 2019):** Advanced Manufacturing Fellow. Conducted research on directed energy deposition (DED) and laser powder bed fusion (LPBF) processes for additive manufacturing of high-performance alloys. Led a team of three engineers in developing a novel process control system that improved part density by 15% and reduced material waste by 8%. \n* **Lockheed Martin (2013 \u2013 2018):** Logistics Officer & Supply Chain Manager. Managed a $50M budget for spare parts and components supporting F-35 fighter jet program. Implemented a new inventory management system that reduced stockouts by 20% and lowered carrying costs by 10%.  Responsible for coordinating shipments to global operating bases, ensuring on-time delivery and adherence to strict regulatory requirements. Earned the Joint Service Commendation Medal for exceptional performance. \n* **United States Marine Corps (2009 \u2013 2013):** Platoon Commander & Logistics Officer. Led a platoon of 40 Marines in combat operations in Afghanistan.  Managed all logistical aspects of the platoon\u2019s operations, including supply procurement, transportation, and maintenance.  Demonstrated leadership and problem-solving skills in high-pressure environments. \n* **General Electric (GE) Aviation (2018 \u2013 2023):** Senior Supply Chain Specialist.  Led the implementation of a new supplier quality management program for critical turbine engine components.  Negotiated contracts with key suppliers, resulting in $2M in annual cost savings.  Managed a team of four analysts responsible for monitoring supplier performance and identifying areas for improvement. Drove improvements in on-time delivery from 85% to 98%.\n* **Education:** United States Naval Academy, B.S. Systems Engineering (2009).  Master of Engineering, Advanced Manufacturing, MIT (2020). \n* **Certifications:** APICS Certified Supply Chain Professional (CSCP). Six Sigma Black Belt.",
+    "lookingFor": "I\u2019m actively seeking strategic partners and investors who share our vision for a revitalized American defense industrial base.  I\u2019m particularly interested in connecting with:\n\n* **Early-stage venture capital firms:** Focused on \u2018hard tech\u2019 and deep tech, specifically those with experience investing in manufacturing, supply chain, or defense technologies.  Fund sizes in the $50M - $150M range are ideal.\n* **DoD Prime Contractors:** Looking to expand their internal manufacturing capabilities or outsource specialized production runs.  We can serve as an extension of their existing facilities, providing agility and scalability.\n* **Experienced Operators:** Individuals with a proven track record of scaling manufacturing businesses, particularly in regulated industries.  We need expertise in lean manufacturing, quality control, and supply chain optimization.\n* **Government Relations Professionals:**  Familiar with the defense procurement process and capable of navigating the complexities of working with the DoD.\n\nI\u2019m not looking for generalist investors or those without a deep understanding of the challenges facing the defense industry.  I prioritize demonstrated expertise and a long-term commitment to building resilient, domestic supply chains.",
+    "notes": "Hana is extremely focused and direct. She\u2019s not interested in small talk or extended networking events.  She responds best to concise, data-driven communication.  \n\n* **Data Quality:** Has been consistently accurate and responsive. \n* **Recent Conversation (10/26):** Discussed potential partnership with Raytheon Technologies - exploring a pilot program for rapid prototyping of sensor components. \n* **Intro Guidance:**  Focus introductions on ForgeLine's ability to *deliver* \u2013 emphasize the LOIs and the concrete progress on the MVP. Avoid overly hyped language or promises of disruption. She appreciates brevity. \n* **Caveat:** Can be skeptical of investors who haven't demonstrated a clear understanding of the defense industry's unique requirements.",
+    "locationAvailability": "I am currently based in Boston, Massachusetts, but am open to travel to key manufacturing hubs and investor locations. I am comfortable with remote collaboration and meetings.",
+    "introPreferences": "When making introductions, please adhere to the following:\n\n* **Hard Requirements:**  Investor must have a demonstrable track record of investing in \u2018hard tech\u2019 companies (manufacturing, robotics, materials science).  Minimum investment size of $2M.\n* **Soft Preferences:**  Connections with individuals who have prior military or defense industry experience are highly valued.  Existing relationships with DoD prime contractors are a plus.\n* **Intro Style:** Keep introductions brief and focused on the problem ForgeLine solves and our current traction (LOIs, MVP progress).  Avoid overly effusive praise or speculative claims.  I prefer to do my own due diligence and form my own opinions.\n* **Avoid:** Introductions to generalist investors or individuals with limited experience in the defense or manufacturing sectors.",
+    "personalPreferences": "I prefer to communicate via email initially. I\u2019m generally responsive, but I prioritize focused work time.  I'm happy to schedule a quick call after an initial email exchange.  I typically don't respond to LinkedIn messages that are overly generic or sales-focused.",
+    "meetingAndSchedulingPreferences": "Please use this link to schedule a meeting: [https://calendly.com/hana-ishikawa/30min]"
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 20.602449893951416,
+      "input_tokens": 800,
+      "output_tokens": 1541,
+      "problems": [
+        "meetingAndSchedulingPreferences: possible truncation (ends with '....com/hana.ishikawa/30min]')"
+      ]
+    },
+    {
+      "attempt": 2,
+      "elapsed_s": 30.77086591720581,
+      "input_tokens": 800,
+      "output_tokens": 1601,
+      "problems": [
+        "meetingAndSchedulingPreferences: possible truncation (ends with '...[fictional Calendly link]')"
+      ]
+    },
+    {
+      "attempt": 3,
+      "elapsed_s": 28.61864709854126,
+      "input_tokens": 800,
+      "output_tokens": 1631,
+      "problems": [
+        "meetingAndSchedulingPreferences: possible truncation (ends with '....com/hana-ishikawa/30min]')"
+      ]
+    }
+  ],
+  "success": false
+}

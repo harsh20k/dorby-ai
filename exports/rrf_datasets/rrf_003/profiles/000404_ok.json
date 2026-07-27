@@ -1,0 +1,63 @@
+{
+  "id": 404,
+  "archetype": "Experienced Exec, Now Building",
+  "given_name": "Marcus Kaur",
+  "style_version": 25,
+  "archetypes_version": 68,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Marcus Kaur is a former VP of Sales at a rapidly growing SaaS company specializing in marketing automation, HubSpot competitor 'LeadSpark'. He spent 15 years in increasingly senior sales roles, culminating in turning LeadSpark\u2019s EMEA operations profitable within 18 months. He\u2019s now founded \u2018SynapseFlow\u2019, a platform aiming to streamline the complex process of B2B outbound sales sequences, focusing on hyper-personalization at scale. He\u2019s frustrated by the reliance on generic, low-response cold outreach and believes AI can significantly improve connection rates. He's currently seed-stage, having bootstrapped the initial MVP and is now looking for seed funding and strategic advisors. He\u2019s very data-driven, slightly impatient, and values direct communication. He's based in London but frequently travels to the US East Coast.",
+    "positioning": "SynapseFlow is revolutionizing B2B outbound sales by making hyper-personalization scalable and efficient. We empower sales teams to move beyond generic cold outreach and forge genuine connections with their ideal customers. Our platform leverages AI to analyze target accounts, identify key decision-makers, and craft highly relevant messaging that resonates. We\u2019re currently focused on the mid-market SaaS space, offering a solution that significantly improves connection rates and accelerates deal cycles. Having recently completed a successful beta program with impressive results, we are now seeking seed funding to scale our engineering team and expand our market reach. We differentiate ourselves through our commitment to data privacy and our focus on providing actionable insights, not just automated messaging.",
+    "background": "- **Founder & CEO, SynapseFlow** (2023 \u2013 Present)\n   * Led the conceptualization, development, and launch of SynapseFlow\u2019s MVP.\n   * Secured initial pilot customers and gathered critical user feedback.\n   * Developed and implemented the company\u2019s go-to-market strategy.\n   * Responsible for all aspects of business development, fundraising, and operations.\n\n- **VP, EMEA Sales, LeadSpark** (2018 \u2013 2023)\n   * Oversaw all sales activities across the EMEA region, managing a team of 40+ sales professionals.\n   * Successfully turned the EMEA region profitable within 18 months, exceeding revenue targets by 35%.\n   * Implemented a new sales methodology focused on consultative selling and value-based pricing.\n   * Led the expansion of LeadSpark\u2019s market share in key European countries.\n\n- **Regional Sales Director, LeadSpark** (2015 \u2013 2018)\n   * Managed a team of 10 Account Executives responsible for driving revenue growth in the UK & Ireland.\n   * Consistently exceeded sales quotas, achieving President\u2019s Club recognition in 2016 and 2017.\n   * Developed and implemented a new training program for new sales hires.\n\n- **Account Executive, Salesforce** (2010 \u2013 2015)\n   * Responsible for selling Salesforce solutions to mid-market companies in the financial services industry.\n   * Consistently ranked among the top 10% of Account Executives globally.\n\n- **Education:**\n   * **MBA, London Business School** (2008 \u2013 2010)\n   * **BA (Hons) Economics, University of Oxford** (2005 \u2013 2008)",
+    "lookingFor": "We are currently raising a $2M seed round to accelerate product development and expand our sales and marketing efforts. Specifically, we\u2019re seeking:\n\n* **Seed-stage Venture Capital Firms:** Targeting firms with a focus on B2B SaaS, AI/ML, and sales technology. We\u2019re looking for partners who can provide not only capital but also strategic guidance and access to their network.\n* **Strategic Advisors:** Experienced sales leaders or founders of successful B2B SaaS companies who can offer mentorship and advice on scaling our business.\n* **Early-Stage Sales Engineers:** We need a talented engineer with experience in building scalable APIs and integrating with existing CRM systems (Salesforce, HubSpot).  Experience with Python and cloud platforms (AWS, Azure, GCP) is a plus.\n* **Potential Partnerships:** Exploring potential integrations with CRM and marketing automation platforms to expand our reach and offer a more comprehensive solution to our customers.",
+    "notes": "Spoke with Sarah Chen at Amplify Ventures last week. She was impressed with our traction but expressed concerns about market competition. Will follow up with a more detailed competitive analysis. Also, need to schedule a call with David Lee at Sequoia to get his perspective. \n\n* **Action Item:** Finalize pitch deck revisions based on Sarah's feedback.\n* **Follow-up:** Send David Lee a personalized introduction via a mutual connection (John Patterson).\n* **Discrepancy:** LinkedIn profile still needs updating to reflect current role and company. \n* **Key Relationship:** Maintaining a strong relationship with early beta customers is crucial for obtaining testimonials and case studies.",
+    "locationAvailability": "London, UK, with frequent travel to the US East Coast.",
+    "introPreferences": "I'm actively seeking introductions to: \n\n* **VC Partners at firms focused on B2B SaaS:** Particularly those with a demonstrated track record in sales tech. \n* **Founders of companies that have successfully scaled outbound sales efforts:** I value practical advice from those who have 'been there, done that'.\n* **Head of Sales at mid-market SaaS companies:** To gather insights into their current challenges and potential needs.\n\n**Please avoid introductions to:**\n* **Firms primarily focused on consumer-facing applications.**\n* **Individuals who are not actively involved in investment or strategic decision-making.\n\n**Framing for introductions:** Please emphasize SynapseFlow\u2019s focus on *data-driven* hyper-personalization and our potential to significantly improve sales efficiency.  Mention the successful beta program results and our strong team.",
+    "personalPreferences": "Prefer email for initial contact. I\u2019m a morning person and generally respond quickest before 11 AM GMT.  I appreciate concise communication and direct questions.",
+    "meetingAndSchedulingPreferences": "I generally prefer 30-minute introductory calls. Please send a brief agenda beforehand.  I'm happy to jump on video calls, but I'm also comfortable with phone calls if that's more convenient."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 26.948542833328247,
+      "input_tokens": 760,
+      "output_tokens": 1355,
+      "problems": [
+        "locationAvailability: suspiciously short (14 chars)"
+      ]
+    },
+    {
+      "attempt": 2,
+      "elapsed_s": 22.3226261138916,
+      "input_tokens": 760,
+      "output_tokens": 1361,
+      "problems": []
+    }
+  ],
+  "success": true
+}

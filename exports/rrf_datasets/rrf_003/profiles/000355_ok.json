@@ -1,0 +1,54 @@
+{
+  "id": 355,
+  "archetype": "European Tech Founder, US Expansion",
+  "given_name": "Diego Castillo",
+  "style_version": 22,
+  "archetypes_version": 59,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Diego Castillo is a Spanish founder, 38, who built a successful SaaS company in the European logistics space. He's now pivoting that core technology into a new venture, 'FlowRoute,' focused on optimizing last-mile delivery for e-commerce businesses *specifically* targeting the US market. He\u2019s raised a seed round from European investors but needs Series A funding and key partnerships within the US. He's technically brilliant but less experienced in US business culture and fundraising, making him reliant on strong, strategic connections. A distinctive detail is his background in applied mathematics \u2013 he\u2019s not just a business leader but a deeply analytical problem-solver. He's very direct and values efficiency, but isn\u2019t naturally a networker, so needs focused introductions. He\u2019s currently based in Madrid but is making frequent trips to the US East Coast.",
+    "positioning": "I'm Diego Castillo, founder and CEO of FlowRoute, a technology company revolutionizing last-mile delivery. Having successfully navigated the complexities of the European logistics market with my previous venture, I\u2019m now laser-focused on bringing that expertise \u2013 and a significantly upgraded technological solution \u2013 to the United States. FlowRoute leverages advanced route optimization, real-time tracking, and predictive analytics to dramatically reduce delivery costs and improve customer satisfaction for e-commerce businesses. \n\nWe\u2019ve developed a proprietary algorithm that goes beyond traditional route planning, dynamically adapting to traffic, weather, and even driver behavior to ensure optimal efficiency.  What sets us apart is our ability to integrate seamlessly with existing e-commerce platforms and delivery networks. We're not trying to replace systems; we\u2019re making them *smarter*.\n\nCurrently, we are actively seeking strategic partnerships and Series A funding to accelerate our US expansion. I'm passionate about solving complex logistical challenges and building a world-class team. I\u2019m eager to connect with individuals who share this vision and can contribute to FlowRoute\u2019s success. I believe the US market presents a huge opportunity for disruption in this space, and I\u2019m confident FlowRoute is uniquely positioned to capitalize on it.",
+    "background": "- **FlowRoute, CEO & Founder (2023 - Present):** Leading all aspects of the company, from product development and fundraising to sales and marketing.  Successfully secured \u20ac2M in seed funding from European angel investors and VCs. Currently piloting the platform with three US-based e-commerce clients, demonstrating a 15-20% reduction in average delivery costs.\n- **LogiSmart Solutions, CEO & Founder (2016 - 2022):** Founded and scaled a SaaS platform for logistics management, serving over 100 clients across Europe. Achieved 30% year-over-year revenue growth for five consecutive years.  Successfully exited the company through acquisition by a larger logistics provider in 2022.\n- **Quantify Analytics, Data Scientist (2013 - 2016):**  Developed and implemented advanced statistical models for fraud detection and risk management in the financial services industry.  Led a team of analysts in building a real-time fraud prevention system that reduced fraudulent transactions by 25%.\n- **Education:** PhD in Applied Mathematics, Universidad Complutense de Madrid (2013).  Thesis focused on optimization algorithms for complex systems.  MSc in Mathematics, Universidad Aut\u00f3noma de Madrid (2009). BSc in Mathematics, Universidad Aut\u00f3noma de Madrid (2007).\n- **Skills:** Route Optimization, Logistics Management, SaaS, Fundraising, Series A, Data Science, Machine Learning, Predictive Analytics, Statistical Modeling, Python, SQL, Team Leadership, Business Strategy, US Market Entry, Agile Methodologies, E-commerce, Last-Mile Delivery, Algorithm Design, Market Analysis.\n- **Awards & Recognition:**  \u201cEuropean Startup Founder of the Year\u201d \u2013 TechCrunch Disrupt Berlin (2018).  \u201cTop 100 Innovators in Logistics\u201d \u2013 Supply Chain Dive (2020).\n- **Languages:** Spanish (Native), English (Fluent), German (Conversational).",
+    "lookingFor": "I'm actively seeking connections that can accelerate FlowRoute's growth in the US market.  Specifically, I'm looking for individuals with deep experience in the US logistics and e-commerce landscape.\n\n- **US-Based Venture Capitalists:**  Specifically targeting Series A investors with a focus on logistics, supply chain, or SaaS. We\u2019re looking for partners who understand the complexities of our market and can provide strategic guidance as we scale.  Ideally, funds with investment sizes between $5M - $15M.\n- **Strategic Partners:**  I'm interested in connecting with companies offering complementary services to FlowRoute, such as e-commerce platform providers (Shopify, Magento), delivery network operators (FedEx, UPS, DHL), and warehouse management system (WMS) vendors.  Joint go-to-market strategies are a key focus.\n- **Experienced Advisors:**  Mentors with proven track records in scaling SaaS businesses in the US are highly valuable. I\u2019m particularly interested in individuals who have successfully navigated the challenges of US fundraising and market entry.\n- **Industry Experts:**  Individuals with deep knowledge of the US last-mile delivery market, including trends, regulations, and competitive dynamics. I\u2019m eager to learn from those with firsthand experience.\n- **Founders:**  Connections with other European founders who have successfully expanded into the US are invaluable. Learning from their experiences and avoiding common pitfalls is a priority.\n- **Potential Clients:** While not the primary focus, introductions to key decision-makers at US-based e-commerce companies with significant delivery volumes would be beneficial.",
+    "notes": "Diego is extremely direct and focused. He appreciates efficiency and dislikes small talk. He's currently in Boston for a week, meeting with potential investors. Had a brief conversation with him on 10/26, he's frustrated with the lack of understanding of the European logistics nuances from some US VCs. He mentioned he's particularly keen to connect with someone who understands the complexities of urban delivery in the US. He's also slightly hesitant about relying too much on US-style 'hype' in his pitch \u2013 he prefers to let the data speak for itself.  Remind him to emphasize the scalability of the platform.  He's very open to feedback but doesn't respond well to vague suggestions.  He asked specifically about connections at Bain Capital.  Avoid introductions to generalist investors; he wants sector specialists.",
+    "locationAvailability": "Based in Madrid, Spain, but frequently traveling to the US East Coast (Boston, New York). Open to remote connections.",
+    "introPreferences": "I'm very specific about the types of introductions that are valuable to me.  My time is limited, so please only make introductions if they align with my current priorities.\n\n- **Hard Requirements:**\n    - The connection must have a demonstrable track record of success in the US logistics or e-commerce space.\n    - They must be at a decision-making level (VP, Director, Partner).\n    - They should be open to a brief introductory call (15-20 minutes).\n- **Soft Preferences:**\n    - Experience with SaaS companies is a plus.\n    - Familiarity with European startups is helpful but not essential.\n    - A willingness to provide candid feedback is highly appreciated.\n- **Avoid:**\n    - Introductions to individuals who are merely curious about FlowRoute.\n    - Introductions to junior-level employees.\n    - Warm introductions that are overly generic or lack context.  Please provide a brief summary of why this connection would be valuable to me.",
+    "personalPreferences": "I prefer direct communication and concise emails. I'm not a fan of lengthy back-and-forth.  LinkedIn is my preferred platform for initial contact.  I respond best to data-driven arguments and clear, actionable insights. I\u2019m a morning person and generally check emails first thing.",
+    "meetingAndSchedulingPreferences": "I prefer short, focused meetings with a clear agenda. Please send a calendar invite with a brief outline of the topics to be discussed. I'm available for video calls or in-person meetings (when in the US).  Please allow for at least 24 hours' notice for scheduling.  I always send a brief follow-up email after each meeting summarizing key takeaways and action items."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 30.421372890472412,
+      "input_tokens": 774,
+      "output_tokens": 1786,
+      "problems": []
+    }
+  ],
+  "success": true
+}

@@ -1,0 +1,54 @@
+{
+  "id": 71,
+  "archetype": "AI-Driven Business Transformation Leader",
+  "given_name": "Emeka Sokolov",
+  "style_version": 5,
+  "archetypes_version": 12,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Emeka Sokolov is a highly sought-after independent consultant specializing in AI-driven business transformation, with a particular niche in applying Generative AI to supply chain optimization. He spent 15 years at a major logistics firm, culminating in leading their internal AI task force, but left to pursue independent consulting after feeling constrained by the bureaucracy. He\u2019s now focused on helping mid-sized companies (revenue $50M - $500M) unlock value from AI, and is actively seeking partnerships with venture capital firms investing in AI-powered supply chain solutions. He's a pragmatic, results-oriented leader who dislikes 'AI hype' and prioritizes demonstrable ROI. He's also a bit of a polyglot, fluent in Russian (from his mother\u2019s side) and having a working knowledge of Mandarin, which has been helpful in navigating global supply chains.",
+    "positioning": "I am a seasoned business transformation leader specializing in the strategic implementation of Artificial Intelligence and Generative AI technologies. My core expertise lies in identifying opportunities for AI to drive tangible business value, particularly within complex operational environments. Having spent over a decade in the logistics industry, I've witnessed firsthand the transformative power of AI when applied thoughtfully and strategically. I\u2019m now an independent consultant, partnering with mid-market organizations ($50M - $500M revenue) to navigate the complexities of AI adoption, from initial assessment and proof-of-concept development to full-scale implementation and ongoing optimization. \n\nMy approach is deeply pragmatic. I prioritize solutions that deliver measurable ROI and avoid the pitfalls of 'AI for AI's sake.' I excel at translating complex technical concepts into clear, actionable strategies for executive leadership.  Currently, I am particularly focused on the application of Generative AI to revolutionize supply chain management \u2013 optimizing forecasting, enhancing resilience, and driving significant cost savings. I\u2019m passionate about building robust, ethical, and future-proof AI solutions that empower businesses to thrive in a rapidly evolving landscape. I believe the future of competitive advantage lies in mastering the intersection of AI and operational excellence.",
+    "background": "- **Independent AI Transformation Consultant** (2022 \u2013 Present)\n  - Leading strategic assessments of AI readiness for mid-market companies across diverse industries.\n  - Developing and implementing AI roadmaps focused on delivering measurable ROI.\n  - Specializing in Generative AI applications for supply chain optimization, including demand forecasting, inventory management, and logistics planning.\n  - Successfully delivered a pilot program for a regional food distributor, resulting in a 15% reduction in inventory holding costs.\n\n- **Head of AI Task Force, Global Logistics Solutions (GLS)** (2018 \u2013 2022)\n  - Led a cross-functional team responsible for identifying and implementing AI solutions across the entire supply chain.\n  - Oversaw the development and deployment of a machine learning-based demand forecasting model, improving forecast accuracy by 20%.\n  - Championed the adoption of robotic process automation (RPA) to streamline key logistics processes, resulting in significant efficiency gains.\n  - Managed a budget of $2M for AI-related initiatives.\n\n- **Senior Supply Chain Analyst, Global Logistics Solutions (GLS)** (2013 \u2013 2018)\n  - Conducted in-depth analysis of supply chain data to identify areas for improvement.\n  - Developed and implemented optimization strategies to reduce costs and improve efficiency.\n  - Collaborated with cross-functional teams to ensure seamless execution of supply chain initiatives.\n  - Led the implementation of a new warehouse management system (WMS).\n\n- **Logistics Coordinator, Transcontinental Shipping Inc.** (2010 \u2013 2013)\n  - Coordinated the movement of goods across international borders.\n  - Managed relationships with carriers and customs brokers.\n  - Ensured compliance with all relevant regulations.\n  - Gained foundational experience in supply chain operations.",
+    "lookingFor": "I'm actively seeking connections with:\n\n* **Venture Capital firms** investing in early-stage AI-powered supply chain solutions.  I'm looking to provide due diligence support and potentially act as an advisory board member.\n* **CEOs and COOs** of mid-sized companies ($50M - $500M revenue) who are exploring the potential of AI to transform their businesses.  I'm open to discussing potential consulting engagements.\n* **AI/ML Engineers** specializing in Generative AI and supply chain applications. I'm always interested in expanding my network of talented professionals.\n* **Strategic Partners:** Companies offering complementary technologies or services in the AI/supply chain space.  I\u2019m interested in exploring potential joint ventures or referral partnerships.\n\nI'm particularly interested in learning about innovative applications of Generative AI in areas such as predictive maintenance, risk management, and sustainability within the supply chain.  I\u2019m available for informational calls and am happy to share my insights and experience.",
+    "notes": "Emeka is very direct and focused on results. He\u2019s not a fan of abstract discussions and prefers to quickly get to the core business problem. He\u2019s incredibly knowledgeable about supply chain logistics and AI, and can quickly assess a company\u2019s AI readiness. \n\n* **Recent Update:** He just completed a successful pilot project with a food distributor, so he has a fresh case study to share.\n* **Do:**  Be prepared to discuss specific business challenges and potential ROI.\n* **Don't:** Pitch him 'AI hype' or solutions that lack a clear business case. He will politely but firmly disengage. \n* **Caution:** He's currently quite busy, so be respectful of his time. A brief, well-crafted introduction is key.",
+    "locationAvailability": "I am based in Chicago, Illinois, and am available for travel within North America and occasionally internationally. I have upcoming travel planned to London in late October.",
+    "introPreferences": "* **Hard Requirements:**\n  - Introduction must come from someone with a demonstrable understanding of either AI *or* supply chain management.\n  - The recipient should be a decision-maker (CEO, COO, VP of Operations, or equivalent).\n  - The introduction should clearly state the potential value proposition for both parties.\n\n* **Soft Preferences:**\n  - I prefer introductions to individuals with a proactive and innovative mindset.\n  - Introductions to individuals within the food & beverage, pharmaceutical, or manufacturing industries are particularly welcome.\n  - Please avoid introducing me to junior-level employees or individuals who are clearly not actively seeking AI solutions.\n  - A personalized note highlighting the recipient's specific challenges and how my expertise might address them is greatly appreciated.",
+    "personalPreferences": "I enjoy reading science fiction, playing chess, and learning new languages. I prefer email communication initially, and am generally responsive within 24 hours. I\u2019m a coffee drinker.",
+    "meetingAndSchedulingPreferences": "I'm generally available for calls and meetings during standard business hours (Central Time). Please use a scheduling link (Calendly link available upon request) to book a time that works for both of us. I prefer video calls whenever possible."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 871.1406090259552,
+      "input_tokens": 786,
+      "output_tokens": 1534,
+      "problems": []
+    }
+  ],
+  "success": true
+}

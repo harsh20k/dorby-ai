@@ -1,0 +1,54 @@
+{
+  "id": 828,
+  "archetype": "Recruiting Leader, Startup Focused",
+  "given_name": "Diego Mendes",
+  "style_version": 51,
+  "archetypes_version": 139,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Diego Mendes is a former Head of Talent at a moderately successful Series B fintech company, 'NovaPay'. He built their engineering team from 5 to 50+ people. He left NovaPay after a disagreement with the CEO over scaling strategy \u2013 Diego advocated for slower, more deliberate hiring emphasizing cultural fit, while the CEO pushed for rapid expansion. He\u2019s now running 'Mendes Talent', a boutique agency specifically focused on pre-seed to Series A startups in the climate tech and sustainable energy spaces. He\u2019s very passionate about backing founders solving real-world problems. He's a strong believer in the 'founder-first' approach to recruiting, prioritizing understanding the founder's vision before diving into technical requirements. He\u2019s actively building his network to find more high-potential startups and top-tier engineering talent. He's a bit of a coffee snob and always up for a virtual coffee chat.",
+    "positioning": "Diego Mendes is the founder of Mendes Talent, a specialized recruitment agency dedicated to connecting exceptional engineering talent with early-stage climate tech and sustainable energy startups. Having previously scaled engineering teams at NovaPay, I understand the unique challenges founders face when building their core teams. I don\u2019t just fill roles; I partner with founders to define their ideal candidate profiles, ensuring cultural alignment and long-term success. My agency prioritizes a founder-first approach, focusing on understanding the vision and values of each company before sourcing candidates. I\u2019m passionate about supporting innovation that drives a more sustainable future.",
+    "background": "\u2022 **Founder, Mendes Talent** (2023 \u2013 Present)\n\t\t\u2013 Launched and scaled a boutique recruitment agency specializing in pre-seed to Series A climate tech & sustainable energy startups.\n\t\t\u2013 Personally sourced and placed key engineering leadership roles for 5 startups, averaging a 20% faster time-to-fill than industry benchmarks.\n\t\t\u2013 Developed a proprietary candidate sourcing methodology focused on identifying talent with both technical expertise and a passion for sustainability.\n\n\u2022 **Head of Talent, NovaPay** (2019 \u2013 2023)\n\t\t\u2013 Led all aspects of talent acquisition, from strategy and sourcing to interviewing and onboarding.\n\t\t\u2013 Scaled the engineering team from 5 to 55+ engineers, supporting the company\u2019s rapid growth and Series B funding round.\n\t\t\u2013 Implemented a data-driven recruitment process, reducing cost-per-hire by 15% and improving candidate quality.\n\t\t\u2013 Championed diversity and inclusion initiatives, increasing female representation in engineering by 8%.\n\n\u2022 **Senior Technical Recruiter, GreenTech Solutions** (2016 \u2013 2019)\n\t\t\u2013 Focused on recruiting software engineers and data scientists for a leading renewable energy company.\n\t\t\u2013 Successfully filled over 75 technical positions, contributing to the company\u2019s expansion into new markets.\n\t\t\u2013 Built strong relationships with key stakeholders, understanding their hiring needs and providing tailored recruitment solutions.\n\n\u2022 **B.A., Psychology, University of California, Berkeley** (2012 \u2013 2016)\n\t\t\u2013 Minor in Computer Science.\n\t\t\u2013 Relevant coursework included organizational psychology, behavioral economics, and human-computer interaction.",
+    "lookingFor": "\u2022 Founders of pre-seed to Series A climate tech and sustainable energy startups.\n\u2022 Engineering leaders (CTOs, VPs of Engineering, Directors of Engineering) at early-stage companies.\n\u2022 Investors actively deploying capital in the climate tech space \u2013 looking for potential portfolio company synergies.\n\u2022 Talent acquisition professionals interested in discussing best practices for recruiting in the startup ecosystem.\n\u2022 Individuals with a strong passion for sustainability and a desire to make a positive impact.\n\u2022 Mentorship opportunities \u2013 always keen to learn from experienced entrepreneurs and investors.",
+    "notes": "Diego is *very* passionate about climate tech. He gets genuinely excited talking about innovative solutions. He's a quick study and can rapidly grasp complex technical concepts. He\u2019s a big believer in building long-term relationships and isn\u2019t afraid to offer unsolicited advice (usually good advice!). He\u2019s recently started a small blog on LinkedIn about building engineering teams at startups \u2013 check it out! He\u2019s still occasionally contacted by NovaPay, but politely declines any offers to return.  He prefers to connect via LinkedIn initially, then move to a quick Zoom call. Don't pitch him recruitment software \u2013 he\u2019s tried most of them!",
+    "locationAvailability": "Based in San Francisco, CA, but frequently travels to meet with startups on the East Coast and is open to remote collaboration.",
+    "introPreferences": "\u2022 Please mention my background at NovaPay \u2013 it provides immediate credibility.\n\u2022 Highlight any shared connections to the climate tech or sustainable energy space.\n\u2022 Avoid overly formal introductions \u2013 I prefer a casual and conversational tone.\n\u2022 Focus on the value I can bring to the connection \u2013 my expertise in building early-stage engineering teams.\n\u2022 Don\u2019t introduce me to companies that are clearly beyond the pre-seed to Series A stage \u2013 my agency isn\u2019t equipped to handle larger-scale recruitment projects.",
+    "personalPreferences": "Prefers asynchronous communication when possible; loves a good oat latte.",
+    "meetingAndSchedulingPreferences": "Generally available for 30-minute Zoom calls. Prefers mornings (PST) for focused discussions.  Please send a calendar invite with a brief agenda."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 22.25788688659668,
+      "input_tokens": 752,
+      "output_tokens": 1180,
+      "problems": []
+    }
+  ],
+  "success": true
+}

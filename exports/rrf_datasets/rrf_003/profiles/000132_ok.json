@@ -1,0 +1,54 @@
+{
+  "id": 132,
+  "archetype": "Technical Co-founder/CTO for Hire",
+  "given_name": "Mikael Ishikawa",
+  "style_version": 8,
+  "archetypes_version": 22,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Mikael Ishikawa is a highly experienced, full-stack engineer who pivoted into a technical leadership role after successfully scaling a previous startup's platform. His distinctive detail is a deep, almost academic understanding of distributed systems architecture, honed through building and maintaining a real-time data pipeline for a high-frequency trading firm *before* his startup experience. He's now actively seeking a co-founder/CTO opportunity in a pre-seed or seed stage company focused on either fintech, AI/ML infrastructure, or sustainable tech. He's very particular about the technical foundation of a startup and prioritizes building scalable, robust systems from the outset, even if it means more upfront work. He's not interested in 'move fast and break things' - he prefers 'build right and scale sustainably'. He\u2019s comfortable being very hands-on initially but wants to build a team quickly. He\u2019s extremely direct and values clear communication.",
+    "positioning": "I am a seasoned technical leader with a passion for building scalable and resilient systems. As a potential co-founder or early-stage CTO, I bring a unique blend of hands-on engineering expertise and strategic architectural vision. My core competency lies in translating complex business requirements into robust, high-performance technical solutions. I specialize in architecting and implementing distributed systems, leveraging cloud-native technologies (AWS, GCP, Azure) and modern data engineering practices. I excel at building and mentoring high-performing engineering teams, fostering a culture of innovation and technical excellence. \n\nI\u2019m currently focused on identifying opportunities to contribute to disruptive startups that are tackling significant challenges in the fintech, AI/ML infrastructure, or sustainable technology sectors. I believe that a solid technical foundation is paramount to long-term success, and I am driven by the opportunity to build platforms that can scale to meet the demands of rapid growth. I don't just *implement* technology; I *design* for scalability, reliability, and maintainability from the ground up. I'm adept at navigating the trade-offs between speed of development and technical debt, always prioritizing long-term architectural integrity. My experience building a real-time data pipeline for a high-frequency trading firm gave me a deep understanding of low-latency systems, and my startup experience taught me the importance of agility and iterative development. I\u2019m looking for a team that values technical rigor and a commitment to building exceptional products.",
+    "background": "- **Technical Co-founder/CTO (Seeking Opportunity)** - Present\n- **Lead Engineer, NovaTech Solutions** (2018 - 2022): Led a team of 8 engineers in the development and maintenance of a cloud-based SaaS platform. Successfully scaled the platform to support a 300% increase in user base while maintaining 99.99% uptime.  Implemented CI/CD pipelines and automated testing frameworks, resulting in a 40% reduction in deployment time.  Key technologies: Python, Django, PostgreSQL, AWS (EC2, S3, RDS, Lambda).\n- **Senior Software Engineer, Quantify Capital** (2015 - 2018): Designed and implemented a real-time data pipeline for high-frequency trading algorithms. Optimized system performance to achieve sub-millisecond latency.  Proficient in C++, Java, and distributed messaging systems (Kafka, RabbitMQ).\n- **Software Engineer, Zenith Systems** (2013 - 2015): Developed and maintained web applications using Java, Spring, and MySQL. Contributed to the design and implementation of RESTful APIs.\n- **Education:**\n    - **M.S., Computer Science, Stanford University** (2011 - 2013) - Focus: Distributed Systems\n    - **B.S., Computer Engineering, Massachusetts Institute of Technology (MIT)** (2007 - 2011)\n- **Skills:** Python, Java, C++, Go, Django, Spring, AWS, GCP, Azure, Kubernetes, Docker, Kafka, RabbitMQ, PostgreSQL, MySQL, CI/CD, Agile methodologies, System Architecture, Distributed Systems, Machine Learning (basic).",
+    "lookingFor": "I am actively seeking a co-founder or early-stage CTO role in a pre-seed or seed stage company. Specifically, I'm interested in opportunities that align with the following criteria:\n\n*   **Sector Focus:** Fintech (specifically decentralized finance), AI/ML Infrastructure (tools and platforms), or Sustainable Technology (energy, agriculture, materials science).\n*   **Stage:** Pre-seed or Seed. I'm looking to be involved from the ground up.\n*   **Team:** Founders with a strong vision, a complementary skillset, and a demonstrated commitment to building a high-quality product.\n*   **Technical Challenge:** A complex technical problem that requires a robust and scalable solution.\n*   **Equity & Role:** Seeking significant equity and a leadership role with decision-making authority regarding the technical direction of the company.\n\nI am open to discussing potential opportunities and providing technical guidance to promising startups. I am particularly interested in connecting with angel investors and venture capitalists who are focused on these sectors.",
+    "notes": "Mikael is *very* focused on technical excellence. Don't pitch him anything without a clear technical roadmap. He's skeptical of 'hype' and prioritizes substance over buzzwords. He's previously turned down roles due to poor architectural decisions. \n\n*   Recent conversation with [Name of VC] - they mentioned he\u2019s a stickler for code quality.\n*   He\u2019s currently reading 'Designing Data-Intensive Applications' - good conversation starter.\n*   Avoid mentioning 'no-code' or 'low-code' platforms - he's strongly against them.\n*   He prefers direct communication and dislikes excessive fluff.",
+    "locationAvailability": "I am based in the San Francisco Bay Area, but I am open to remote work and travel as needed. I am flexible regarding location for the right opportunity.",
+    "introPreferences": "*Hard Requirements*:\n    *   The introducer must have a technical background or a strong understanding of the startup ecosystem.\n    *   The introduction must be concise and clearly articulate the value proposition of the company.\n    *   The company must have a clear technical vision and a well-defined problem statement.\n\n*Soft Preferences*:\n    *   Introductions to founders who are actively seeking technical leadership.\n    *   Introductions to investors who are focused on fintech, AI/ML, or sustainable tech.\n    *   Avoid introductions to companies that are solely focused on marketing or sales.\n    *   Please provide a brief overview of the company's technology stack and architectural approach.\n\n*Do Not Do*:\n    *   Do not introduce me to companies that are still in the 'idea' phase without a clear technical plan.\n    *   Do not oversell the company or make unrealistic promises.\n    *   Do not send generic introductions without any personalization.",
+    "personalPreferences": "I prefer direct and efficient communication. I'm a fairly reserved person initially, but I'm happy to engage in technical discussions. Outside of work, I enjoy hiking, reading (especially non-fiction), and experimenting with new technologies. I respond best to email and Slack. Please avoid lengthy phone calls unless absolutely necessary.",
+    "meetingAndSchedulingPreferences": "I\u2019m generally available for meetings during standard business hours (PST). Please use Calendly [link to calendly] to schedule a meeting. I prefer video calls over phone calls."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 22.31321406364441,
+      "input_tokens": 806,
+      "output_tokens": 1601,
+      "problems": []
+    }
+  ],
+  "success": true
+}

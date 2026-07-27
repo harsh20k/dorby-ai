@@ -1,0 +1,54 @@
+{
+  "id": 768,
+  "archetype": "AI-Focused Founder, Early Stage",
+  "given_name": "Layla Martins",
+  "style_version": 47,
+  "archetypes_version": 129,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Layla Martins is a first-time founder in the AI space, specifically focused on applying generative AI to personalized education. She has a strong technical background (PhD in Computational Linguistics) but *deliberately* spent several years in a non-technical role (product management at a large edtech company) to understand user needs and market dynamics before launching her startup, 'LearnFlow'. This experience is a key differentiator she emphasizes. LearnFlow is currently in a closed beta, demonstrating promising early user engagement, and Layla is actively fundraising a seed round and seeking strategic partnerships with established educational institutions and AI infrastructure providers. She's highly analytical, a bit reserved initially, and values direct, data-driven communication. She's acutely aware of the 'hype' around AI and wants to position LearnFlow as a practical, impactful solution, not just another buzzword-driven product.",
+    "positioning": "Layla Martins is the founder of LearnFlow, an AI-powered platform revolutionizing personalized learning experiences. Leveraging cutting-edge generative AI, LearnFlow dynamically adapts to each student\u2019s unique learning style and pace, dramatically improving knowledge retention and engagement. Prior to founding LearnFlow, Layla spent five years leading product initiatives at EduSpark, gaining invaluable insights into the challenges and opportunities within the edtech landscape. Currently, we are focused on expanding our closed beta program and demonstrating quantifiable learning outcomes. I\u2019m actively seeking connections with seed-stage investors specializing in AI and edtech, as well as potential partnerships with universities and school districts interested in piloting innovative learning solutions.",
+    "background": " * **PhD, Computational Linguistics, Stanford University (2018-2022):** Dissertation focused on natural language generation for adaptive tutoring systems. Developed novel algorithms that improved student performance by 15% in pilot studies. Published three peer-reviewed papers in top-tier computational linguistics conferences. \n * **Product Manager, EduSpark (2022-2024):** Led the development and launch of 'SkillBoost,' a mobile learning app for K-12 students, resulting in a 20% increase in user acquisition within the first quarter. Managed a cross-functional team of 8 engineers, designers, and marketers. Conducted extensive user research to identify unmet needs in personalized learning. Oversaw A/B testing and data analysis to optimize product features and user experience. \n * **Research Assistant, Stanford AI Lab (2017-2018):** Assisted Professor Daphne Koller with research on probabilistic graphical models for educational data mining. Contributed to the development of a predictive model that identified students at risk of falling behind in STEM courses with 85% accuracy. \n * **Software Engineering Intern, Google (Summer 2017):** Developed a tool for automated code review using machine learning, reducing bug detection time by 10%. \n * **B.S., Computer Science, Massachusetts Institute of Technology (2014-2018):** Graduated *summa cum laude* with a concentration in Artificial Intelligence. Awarded the Karl Taylor Compton Prize for outstanding undergraduate research.",
+    "lookingFor": "* Seed-stage investors with a focus on AI and EdTech (pre-seed to $3M).\n* Strategic partnerships with universities and school districts for pilot programs.\n* Introductions to AI infrastructure providers (e.g., cloud computing, model hosting).\n* Mentorship from experienced AI founders who have successfully navigated seed funding.\n* Connections to advisors with expertise in curriculum development and learning science.\n* Individuals with experience scaling early-stage SaaS products.\n* Do not introduce me to VCs who are solely focused on 'hot' trends without a deep understanding of the underlying technology.\n* Do not connect me with sales-focused individuals \u2013 I\u2019m looking for strategic partners, not leads.",
+    "notes": " [11/15/2024] - Had a good initial call with Layla. Very sharp, well-articulated vision for LearnFlow. She\u2019s *very* focused on demonstrating real learning outcomes, not just AI 'magic'.\n* She\u2019s slightly hesitant to talk about the technical details of her model \u2013 wants to protect IP.\n* Mentioned she\u2019s been burned by overly aggressive sales pitches in the past. \n* [11/20/2024] - Follow-up email: She sent a link to their beta demo. User interface is clean and intuitive. Early engagement metrics are promising (70% weekly active users).\n* Key takeaway: Emphasize the *pedagogical* benefits of LearnFlow, not just the AI. She responds well to data and concrete examples.",
+    "locationAvailability": "Layla is based in Palo Alto, California, and is open to remote work. She is willing to travel to meet with investors and partners on the East Coast and in Europe, with reasonable notice.",
+    "introPreferences": "* **Hard Requirement:** Introductions *must* come with a personalized note explaining why the connection is relevant to LearnFlow\u2019s current needs (fundraising, partnerships, mentorship).\n* **Soft Preference:** I prefer introductions to individuals who have a demonstrated track record of success in the AI or EdTech space. \n* **Ideal Intro Style:** Concise and direct. Avoid lengthy, overly enthusiastic emails. Focus on the recipient\u2019s expertise and how it could benefit LearnFlow.\n* **Do Not:** Send a generic LinkedIn connection request without any context.\n* **Do Not:** Introduce me to individuals who are solely focused on marketing or PR. \n* **Example Good Introduction:** 'Hi Layla, I'm connecting you with [Name], a partner at [VC firm] who specializes in seed-stage AI investments. They recently invested in [Company] and have a strong understanding of the personalized learning market.'",
+    "personalPreferences": "Layla prefers to communicate via email initially, then is open to short phone calls. She is generally responsive but can be slow to reply if she's deeply focused on development.",
+    "meetingAndSchedulingPreferences": "Layla is flexible with meeting times and is comfortable using Calendly for scheduling. She prefers video calls over phone calls when possible."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 23.97646689414978,
+      "input_tokens": 807,
+      "output_tokens": 1303,
+      "problems": []
+    }
+  ],
+  "success": true
+}

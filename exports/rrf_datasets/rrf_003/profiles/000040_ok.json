@@ -1,0 +1,54 @@
+{
+  "id": 40,
+  "archetype": "Global Founder, Systems-Level Thinker",
+  "given_name": "Theo Kaur",
+  "style_version": 3,
+  "archetypes_version": 7,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Theo Kaur is a British-Indian founder currently building 'Symbiotic Infrastructure,' a company focused on creating decentralized, resilient supply chain solutions using blockchain and AI. Her distinctive career detail is a prior decade spent as a logistics consultant *within* the UN World Food Programme, giving her deep, firsthand experience of supply chain failures and the human cost of inefficiency. This experience fuels her current mission \u2013 not just to optimize supply chains, but to fundamentally redesign them for equity and sustainability. She's aiming for Series A funding and strategic partnerships with large NGOs and ethical consumer brands. She operates with a systems-thinking approach, viewing supply chains not just as logistical challenges, but as complex socio-economic systems. She\u2019s globally mobile and comfortable navigating complex regulatory environments. Her 'one-liner' is: 'Building supply chains that nourish people and planet, not just profits.'",
+    "positioning": "Symbiotic Infrastructure is pioneering a new era of supply chain transparency and resilience. We\u2019re not simply digitizing existing processes; we're reimagining them from the ground up. For too long, supply chains have been optimized for cost reduction at the expense of ethical sourcing, environmental sustainability, and equitable distribution. My decade with the UN World Food Programme exposed me to the devastating consequences of these trade-offs \u2013 wasted food, exploited labor, and communities left vulnerable to disruption. \n\nSymbiotic Infrastructure leverages blockchain\u2019s immutable ledger and AI-powered predictive analytics to create a 'digital twin' of the supply chain, providing end-to-end visibility and accountability. This allows us to identify and mitigate risks, optimize resource allocation, and ensure fair compensation for all stakeholders. We\u2019re currently focused on proving our model within the cocoa and coffee industries, two sectors notoriously plagued by opacity and exploitation. \n\nWe are building a platform that empowers consumers to make informed choices, brands to uphold their ethical commitments, and producers to receive a fair price for their goods. Our core offering is a modular, scalable platform that integrates seamlessly with existing ERP systems. We believe that a truly sustainable supply chain requires collaboration, transparency, and a commitment to shared value. We\u2019re not just building technology; we\u2019re building a movement towards a more just and equitable global economy. We are currently raising a Series A to scale our platform and expand into new commodity markets.",
+    "background": "- **Founder & CEO, Symbiotic Infrastructure** (2021 \u2013 Present)\n  - Led seed funding round of $1.5M.\n  - Developed and launched MVP of blockchain-based supply chain tracking platform.\n  - Built a team of 15 engineers, data scientists, and supply chain experts.\n  - Secured pilot projects with three ethical coffee brands.\n\n- **Logistics Consultant, UN World Food Programme** (2011 \u2013 2021)\n  - Managed logistics operations for large-scale food aid programs in Sub-Saharan Africa and Southeast Asia.\n  - Led teams responsible for procurement, transportation, and distribution of food assistance to vulnerable populations.\n  - Developed and implemented innovative solutions to improve supply chain efficiency and reduce food waste.\n  - Specialized in last-mile delivery solutions in challenging environments.\n  - Authored internal reports on supply chain vulnerabilities and recommendations for improvement.\n\n- **Supply Chain Analyst, Maersk Line** (2009 \u2013 2011)\n  - Analyzed global shipping data to identify trends and optimize transportation routes.\n  - Developed and implemented cost-saving measures for container shipping operations.\n  - Collaborated with cross-functional teams to improve supply chain performance.\n\n- **Education:**\n  - **MBA, INSEAD** (2008 \u2013 2010)\n  - **BA, Economics, University of Oxford** (2005 \u2013 2008)\n\n- **Skills:** Blockchain, Supply Chain Management, Logistics, Data Analytics, AI/ML, Project Management, Strategic Planning, Fundraising, Team Leadership, International Development, Risk Management, Stakeholder Engagement, Conflict Resolution.\n\n- **Certifications:** Certified Supply Chain Professional (CSCP), Blockchain Essentials (IBM)",
+    "lookingFor": "I'm actively seeking connections with individuals and organizations who share our vision of a more sustainable and equitable supply chain. Specifically:\n\n* **Series A Investors:** Impact investors with a focus on supply chain innovation, blockchain technology, or sustainable agriculture.  Target check sizes: $5M - $10M.\n* **Strategic Partnerships:** Large NGOs (e.g., Oxfam, Save the Children) interested in leveraging our platform to improve the transparency and efficiency of their supply chains.\n* **Ethical Consumer Brands:** Companies committed to sourcing sustainable and ethically produced goods, particularly in the coffee, cocoa, and textiles industries.  Interested in pilot programs and long-term partnerships.\n* **Blockchain Developers:** Experienced blockchain engineers with expertise in Solidity and smart contract development.  Looking for individuals to join our core engineering team.\n* **Supply Chain Experts:** Individuals with deep knowledge of specific commodity markets (e.g., coffee, cocoa, palm oil) and a passion for sustainable sourcing.\n\nI'm also open to connecting with thought leaders and advisors who can provide guidance and mentorship as we scale our business. I\u2019m especially interested in discussions around decentralized governance models for supply chains and the role of AI in promoting ethical sourcing. Geographic focus is global, but particularly interested in opportunities in Africa, South America, and Southeast Asia.",
+    "notes": "* Had a great call with Anya Sharma (Impact VC) last week \u2013 she\u2019s intrigued but wants to see more traction with the coffee pilot. Follow up next week with updated metrics.\n*  Mention UN WFP experience *early* in conversations \u2013 it\u2019s a key differentiator.\n*  Be prepared to explain the technical aspects of our platform in a non-technical way.\n*  Current priority: Secure at least one major brand partnership before the end of Q3.\n*  Sensitive around discussing specific supply chain vulnerabilities of current pilot partners - keep conversations high-level until NDA is in place.\n*  Theo is very passionate about the social impact of her work. Don\u2019t focus solely on ROI.",
+    "locationAvailability": "Based primarily in London, UK, but frequently travel internationally.  Fully remote work is possible and often preferred, particularly for collaboration with global teams.  Willing to relocate for strategic opportunities.",
+    "introPreferences": "When making introductions, please highlight:\n\n* My background at the UN World Food Programme and the personal motivation behind Symbiotic Infrastructure.\n* The unique combination of blockchain and AI that powers our platform.\n* Our focus on creating tangible social and environmental impact.\n*  My ability to navigate complex regulatory environments.\n\nPlease avoid introducing me to individuals solely focused on traditional supply chain cost reduction. I'm looking for partners who share our values and are committed to building a more sustainable future. A brief, personalized note explaining the connection is always appreciated.",
+    "personalPreferences": "I prefer communication via email initially, and am also responsive on WhatsApp. I appreciate concise and direct messaging.",
+    "meetingAndSchedulingPreferences": "I\u2019m in the GMT time zone.  Generally available for meetings between 9:00 AM and 6:00 PM GMT. Please allow at least 24 hours\u2019 notice for scheduling. Video calls are preferred, but phone calls are also acceptable."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 33.057214975357056,
+      "input_tokens": 813,
+      "output_tokens": 1565,
+      "problems": []
+    }
+  ],
+  "success": true
+}

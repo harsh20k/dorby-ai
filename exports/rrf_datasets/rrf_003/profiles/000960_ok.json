@@ -1,0 +1,54 @@
+{
+  "id": 960,
+  "archetype": "AI/Data Founder, Early Stage",
+  "given_name": "Tariq Diallo",
+  "style_version": 59,
+  "archetypes_version": 161,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Tariq Diallo is a first-time founder in the AI space, specifically focused on applying generative AI to personalize education. He\u2019s a former data scientist at a large edtech company, where he became frustrated with the \u2018one-size-fits-all\u2019 approach to learning. He\u2019s a very strong technical leader but less experienced in fundraising and scaling a business. He\u2019s currently raising a seed round and actively seeking advisors with experience in both AI and edtech. A distinctive detail is that he self-funded the initial MVP development using savings from a successful side hustle \u2013 building custom data pipelines for small businesses. He's highly analytical and values data-driven decision-making, but can sometimes get lost in the technical details and needs help with the 'big picture' strategy. He's enthusiastic and passionate about his mission, but also pragmatic and realistic about the challenges ahead.",
+    "positioning": "I\u2019m Tariq Diallo, founder of LearnFlow, an AI-powered platform that dynamically adapts educational content to each student\u2019s unique learning style and pace. We're tackling the critical issue of personalized learning, moving beyond static curricula to deliver truly effective educational experiences. My background is deeply rooted in data science and machine learning, honed during my time at EduNexus, where I led the development of their recommendation engine.  I identified a significant gap in the market \u2013 a lack of truly adaptive learning solutions leveraging the latest advancements in generative AI. This realization led me to build LearnFlow, initially as a side project, fueled by revenue from freelance data engineering work. \n\nWe\u2019ve achieved early traction with a pilot program at three high schools, demonstrating a 20% improvement in student engagement and a 15% increase in test scores.  We\u2019re currently focused on scaling our platform and expanding our content library. I'm looking to connect with investors who understand the transformative potential of AI in education, and experienced operators who can help us navigate the challenges of scaling a fast-growing startup.  I believe LearnFlow has the potential to revolutionize how people learn, and I\u2019m excited to build a team and a product that makes a real difference.",
+    "background": "- **Founder & CEO, LearnFlow** (Jan 2023 \u2013 Present)\n  - Spearheaded the conceptualization, development, and launch of LearnFlow, an AI-driven personalized learning platform.\n  - Self-funded initial MVP development through revenue generated from freelance data engineering projects.\n  - Led pilot program implementation with three high schools, achieving a 20% increase in student engagement and 15% improvement in test scores.\n  - Currently leading seed round fundraising efforts, targeting $1.5M to scale platform and expand content.\n\n- **Senior Data Scientist, EduNexus** (June 2019 \u2013 Dec 2022)\n  - Led the development and implementation of a recommendation engine utilizing collaborative filtering and content-based filtering techniques, resulting in a 10% increase in user retention.\n  - Managed a team of three junior data scientists, providing mentorship and technical guidance.\n  - Conducted A/B testing to optimize algorithm performance and improve user experience.\n  - Collaborated with product and engineering teams to integrate data science solutions into the core product.\n\n- **Data Engineer (Freelance)** (Jan 2018 \u2013 June 2019)\n  - Developed custom data pipelines for small businesses, utilizing Python, SQL, and cloud-based data warehousing solutions (AWS, Google Cloud).\n  - Delivered projects on time and within budget, consistently exceeding client expectations.\n  - Built a strong reputation for delivering high-quality, scalable data solutions.\n\n- **Education:**\n  - **Master of Science in Data Science**, Stanford University (2017 - 2019)\n  - **Bachelor of Science in Computer Science**, Massachusetts Institute of Technology (2013 \u2013 2017)",
+    "lookingFor": "I\u2019m actively seeking connections with individuals who can contribute to the growth of LearnFlow. Specifically, I\u2019m looking for:\n\n**Fundraising:**\n- Angel investors and seed-stage VCs with a demonstrated interest in AI and EdTech.\n- Individuals with experience in leading seed rounds and navigating due diligence.\n- Minimum check size: $50k\n\n**Advisory:**\n- Experienced EdTech founders who have successfully scaled companies.\n- AI/ML experts with a strong understanding of generative AI applications.\n- Individuals with a proven track record in building and scaling data science teams.\n\n**Partnerships:**\n- School districts and educational institutions interested in piloting and implementing LearnFlow.\n- Content creators and curriculum developers seeking to leverage our AI-powered platform.\n\nI'm also open to connecting with talented engineers (specifically specializing in front-end development and AI/ML) who are passionate about revolutionizing education. I value individuals who are proactive, data-driven, and committed to making a positive impact.  I\u2019m particularly interested in those with experience in large language models (LLMs) and reinforcement learning.",
+    "notes": "- Priority: Seed funding. Actively pitching, closing targeted at $1.5M.\n- Caveat: Tariq is *very* technical. Needs help translating technical details into compelling investor narratives.\n- Signal: High engagement rate in pilot program is a strong positive signal.\n- Context: Self-funded the initial development \u2013 demonstrates commitment and resourcefulness.\n- Recent Update: Just completed a demo for a prominent EdTech VC firm. Feedback was positive but they are taking their time.\n- Reminder: He\u2019s very responsive to data-driven arguments and ROI projections.",
+    "locationAvailability": "Based in San Francisco, CA. Open to travel for key meetings and conferences.",
+    "introPreferences": "- Introductions to investors *must* include a brief summary of their investment thesis and previous EdTech investments.\n- When making introductions to potential advisors, please highlight their relevant experience and expertise.\n- Please avoid \u201cwarm\u201d introductions \u2013 Tariq prefers concise, direct introductions with a clear value proposition.\n- Do not forward his pitch deck without his explicit permission.\n- Preferred communication method for initial contact: LinkedIn message with a brief personalized note.",
+    "personalPreferences": "Enjoys discussing the ethical implications of AI and is a big fan of science fiction.",
+    "meetingAndSchedulingPreferences": "- Prefers video calls over phone calls.\n- Typically available for meetings between 10 AM and 5 PM PST.\n- Responds quickly to scheduling requests via Calendly link (available upon request)."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 19.58209776878357,
+      "input_tokens": 915,
+      "output_tokens": 1406,
+      "problems": []
+    }
+  ],
+  "success": true
+}

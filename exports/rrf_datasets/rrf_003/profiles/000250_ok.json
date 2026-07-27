@@ -1,0 +1,54 @@
+{
+  "id": 250,
+  "archetype": "Fintech/Payments Infrastructure Builder",
+  "given_name": "Rosa Singh",
+  "style_version": 15,
+  "archetypes_version": 41,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Rosa Singh is a seasoned engineering leader specializing in the backend infrastructure for cross-border payments. Her distinctive career detail is having spent 5 years building out the real-time fraud detection system at a rapidly scaling African fintech, 'Zawadi Pay', giving her deep experience with the unique challenges of emerging markets. She\u2019s now looking to leverage that experience in a more globally focused role, ideally at a Series B/C stage company building the next generation of payment rails. She's very focused on scalability, security, and regulatory compliance. She's a pragmatic leader, valuing data-driven decisions and a collaborative engineering culture. She's not interested in 'hype' technologies but proven solutions that solve real problems. She's currently feeling a bit underutilized in her current role and is actively exploring opportunities that will challenge her technically and allow her to have a significant impact.",
+    "positioning": "A highly accomplished and results-oriented Engineering Leader with over 12 years of experience architecting, building, and scaling high-performance, secure payment infrastructure. My expertise lies in designing resilient systems capable of handling massive transaction volumes while adhering to complex regulatory landscapes. I\u2019m passionate about bridging the gap between innovation and reliability in the fintech space and possess a proven track record of leading and mentoring high-performing engineering teams. Currently, I lead a team responsible for core payment processing at NovaPay, focusing on optimizing transaction throughput and reducing operational costs. However, my career has been fundamentally shaped by my time at Zawadi Pay, where I spearheaded the development of a real-time fraud detection system that significantly reduced losses and enabled rapid expansion into new African markets. This experience instilled in me a deep understanding of the unique challenges and opportunities presented by emerging economies. I'm now seeking a leadership role in a forward-thinking organization where I can leverage my expertise to build and scale the next generation of global payment solutions. I believe my ability to translate complex business requirements into robust technical architectures, coupled with my commitment to fostering a collaborative and data-driven engineering culture, makes me a valuable asset to any team focused on innovation and growth. I\u2019m particularly interested in roles that involve architecting solutions for cross-border payments, decentralized finance, or open banking initiatives.",
+    "background": "- **NovaPay**, *Principal Engineer, Payments Infrastructure* (2021 - Present)\n    - Led a team of 8 engineers in the design and implementation of enhancements to the core payment processing engine, resulting in a 15% increase in transaction throughput.\n    - Reduced operational costs by 10% through optimization of database queries and caching strategies.\n    - Oversaw the integration of new payment methods, including mobile money and local bank transfers.\n    - Implemented robust monitoring and alerting systems to proactively identify and resolve performance issues.\n- **Zawadi Pay**, *Senior Software Engineer / Tech Lead* (2016 - 2021)\n    - Architected and built a real-time fraud detection system utilizing machine learning algorithms, reducing fraudulent transactions by 25% within the first year.\n    - Scaled the payment infrastructure to support a 300% increase in transaction volume while maintaining 99.99% uptime.\n    - Led the technical due diligence process for Series A funding, presenting the system architecture and scalability roadmap to investors.\n    - Mentored junior engineers and fostered a culture of code quality and continuous improvement.\n- **GlobalTech Solutions**, *Software Engineer* (2012 - 2016)\n    - Developed and maintained Java-based backend systems for a large-scale e-commerce platform.\n    - Contributed to the design and implementation of RESTful APIs for integration with third-party services.\n    - Gained experience with Agile development methodologies and continuous integration/continuous deployment (CI/CD) pipelines.",
+    "lookingFor": "- Leadership roles (Director of Engineering, VP of Engineering, Principal Architect) focused on payments infrastructure.\n- Companies in the Series B/C funding stage with a global outlook.\n- Opportunities to leverage my experience in building scalable and secure payment systems.\n- Companies working on innovative solutions in cross-border payments, decentralized finance, or open banking.\n- Networking with other engineering leaders in the fintech space.\n- Seeking introductions to hiring managers at companies like Stripe, Adyen, Checkout.com, or similar.\n- Open to roles in the US (specifically the Bay Area or New York) or remote positions with a significant US overlap.",
+    "notes": "Rosa is highly analytical and detail-oriented. She\u2019s a strong communicator, able to articulate complex technical concepts to both technical and non-technical audiences. She expressed frustration with the pace of innovation at NovaPay and is actively seeking a more challenging and impactful role. She mentioned she's particularly interested in companies that prioritize engineering excellence and foster a culture of continuous learning.  We discussed her strong interest in mentoring and her desire to build a high-performing team. (Conversation date: 2024-02-29). She asked about potential connections to individuals at Stripe\u2019s infrastructure team. She\u2019s committed to finishing her current project at NovaPay (estimated completion: end of Q2 2024) but is open to exploring opportunities immediately.",
+    "locationAvailability": "Rosa is currently based in London, UK, but is open to relocation to the United States, particularly the Bay Area or New York City. She is also comfortable with fully remote positions.",
+    "introPreferences": "- **Hard Requirements:** Introductions to Engineering Leaders (Directors, VPs) or CTOs at companies fitting the criteria outlined in 'Looking For'.\n- **Soft Preferences:** Introductions to individuals with experience building large-scale payment systems in emerging markets.\n- **Desired Introduction Style:** Warm introductions with a brief overview of Rosa\u2019s background and expertise, highlighting her experience at Zawadi Pay.  Please include a sentence about her current situation \u2013 proactively exploring opportunities.\n- **Avoid:** Introductions to recruiters unless specifically requested.\n- **Ideal Connection:** Someone who can speak to the engineering culture at the target company and the challenges of building a global payments infrastructure.",
+    "personalPreferences": "I prefer to communicate via email initially, followed by a brief phone call. I'm most responsive during UK business hours (GMT). I appreciate concise and direct communication. I'm generally available for meetings with 24 hours' notice.",
+    "meetingAndSchedulingPreferences": "I prefer video meetings over phone calls when first connecting."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 18.121734857559204,
+      "input_tokens": 808,
+      "output_tokens": 1359,
+      "problems": []
+    }
+  ],
+  "success": true
+}

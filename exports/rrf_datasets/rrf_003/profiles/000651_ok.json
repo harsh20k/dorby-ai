@@ -1,0 +1,54 @@
+{
+  "id": 651,
+  "archetype": "Prediction Market Community Builder",
+  "given_name": "Kai Kimura",
+  "style_version": 40,
+  "archetypes_version": 108,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Kai Kimura is a 32-year-old, second-time founder deeply embedded in the prediction market space. He previously built a successful (though small) decentralized forecasting platform focused on geopolitical events, which he exited to a larger data analytics firm. He\u2019s now building 'Foresight Foundry,' a platform designed to *enable* others to build thriving prediction market communities \u2013 essentially a 'community-as-a-service' offering. He\u2019s pragmatic and focused on adoption, believing prediction markets have huge potential but need better tooling and community management support. He\u2019s particularly interested in connecting with individuals running or planning community-driven projects, potential investors specializing in web3 infrastructure, and experienced community managers. A distinctive detail: During his exit, he stipulated a portion of the sale proceeds be used to fund open-source prediction market research grants, giving him credibility within the space.",
+    "positioning": "Kai Kimura is the Founder & CEO of Foresight Foundry, a platform empowering creators and organizations to launch, grow, and monetize thriving prediction market communities. Having previously built and successfully exited a decentralized forecasting platform, Kai understands firsthand the challenges and opportunities within the prediction market ecosystem. He's passionate about democratizing access to accurate forecasting and believes that vibrant communities are the key to unlocking the full potential of this technology. Foresight Foundry provides the infrastructure, tools, and support needed to build and scale successful prediction markets, fostering a future where collective intelligence drives better decision-making. Kai is a frequent speaker and writer on the topic of prediction markets, community building, and the future of decentralized information.",
+    "background": "- **Foresight Foundry (2023 \u2013 Present)**: Founder & CEO. Leading all aspects of product development, fundraising, and business strategy for a platform designed to enable the creation and scaling of prediction market communities.\n- **GeoPulse (2019 \u2013 2023)**: Founder & CEO. Developed and launched a decentralized forecasting platform specializing in geopolitical events. Successfully grew the platform to 10,000+ active users and secured seed funding. Achieved a successful exit through acquisition by Data Insights Corp in Q4 2023.\n    * Led a team of 8 engineers, designers, and marketers.\n    * Oversaw all aspects of platform development, including smart contract design and front-end development.\n    * Negotiated and closed the acquisition deal with Data Insights Corp.\n    * Established a $50,000 grant fund dedicated to open-source prediction market research.\n- **Data Insights Corp (2023 - Present)**: Advisor (post-acquisition). Providing strategic guidance on integrating GeoPulse\u2019s forecasting technology into Data Insights Corp\u2019s existing product offerings.\n- **University of California, Berkeley (2015 \u2013 2019)**: B.S. in Computer Science. Minor in Political Science. Graduated *summa cum laude*.\n    * Relevant coursework included: Machine Learning, Distributed Systems, Game Theory, and Statistics.\n    * President of the Berkeley Forecasting Club. Organized and hosted regular prediction market competitions.",
+    "lookingFor": "I\u2019m actively seeking connections with individuals who are building or considering building prediction market-based communities. I\u2019m especially keen to connect with founders tackling unique forecasting challenges, particularly in areas like climate change, supply chain resilience, or scientific research. I\u2019m also interested in speaking with experienced community managers who have a track record of fostering engagement and growth in web3 environments. \n\nSpecifically, I'm looking for:\n\n* **Seed-stage investors** focused on web3 infrastructure and decentralized technologies.\n* **Potential partners** who can provide access to data feeds or integrate Foresight Foundry with existing platforms.\n* **Thought leaders** in the prediction market space willing to collaborate on content or participate in events.\n* **Community builders** who are experimenting with innovative governance models and incentive structures.\n\nI'm happy to offer advice, share learnings from my experience with GeoPulse, and explore potential synergies between our projects.",
+    "notes": "Kai is highly responsive and genuinely passionate about prediction markets. He\u2019s very focused on practical applications and adoption, and tends to be skeptical of overly theoretical approaches. He\u2019s a strong advocate for open-source development and believes in the power of collective intelligence. He\u2019s currently in the midst of a seed funding round for Foresight Foundry and is actively seeking strategic investors. He\u2019s been attending several major web3 conferences in the past month (Devcon, EthCC) and is actively networking within those communities. He mentioned a potential partnership with a university research lab focused on behavioral economics. Data quality on GeoPulse user base is strong, but adoption rates outside of the core geopolitical forecasting niche were a challenge. He prefers direct, concise communication and appreciates a well-defined agenda for meetings.",
+    "locationAvailability": "Kai is based in San Francisco, California, but is comfortable conducting meetings remotely. He is open to limited travel for key investor meetings or industry events.",
+    "introPreferences": "When making introductions to Kai, please highlight the following:\n\n* **Hard Requirements:** Individuals with demonstrable experience in community building, web3 development, or prediction market technology.\n* **Soft Preferences:** Individuals with a strong understanding of game theory, behavioral economics, or data analytics.\n* **Intro Message Template:** 'Hi Kai, I\u2019m connecting you with [Name]. They're [brief description of their role/expertise] and have been following Foresight Foundry with great interest. I thought you\u2019d both benefit from a conversation given [Name\u2019s] work on [relevant project/area of expertise] and your focus on enabling community growth in the prediction market space.'\n\n* **Avoid:** Introducing individuals who are solely interested in speculative trading or short-term financial gains. Kai is primarily focused on building a sustainable ecosystem for long-term forecasting and collective intelligence.\n* **Ideal Introductions:** Individuals actively launching or planning prediction market communities, or investors with a proven track record of supporting web3 infrastructure projects.",
+    "personalPreferences": "I prefer to communicate via email initially (kai.kimura@foresightfoundry.com). I'm generally responsive, but please allow up to 24 hours for a reply. I appreciate concise and well-structured communication.",
+    "meetingAndSchedulingPreferences": "I typically prefer 30-minute meetings to start, allowing us to assess potential synergies quickly. I'm most available during PST business hours. Please send a calendar invite with a clear agenda beforehand. I'm a big fan of keeping meetings focused and action-oriented, so please come prepared with specific questions or discussion points."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 19.0908420085907,
+      "input_tokens": 809,
+      "output_tokens": 1401,
+      "problems": []
+    }
+  ],
+  "success": true
+}

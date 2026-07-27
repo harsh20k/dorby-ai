@@ -1,0 +1,54 @@
+{
+  "id": 833,
+  "archetype": "AI-Native Product Leader & Founder",
+  "given_name": "Thabo Kowalski",
+  "style_version": 51,
+  "archetypes_version": 140,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Thabo Kowalski is a 38-year-old product leader with a somewhat unusual background. He started in the gaming industry, specifically in massively multiplayer online role-playing games (MMORPGs), where he honed his skills in user engagement, retention, and data-driven design. He then pivoted to more general consumer product, but always maintained a fascination with how game mechanics could be applied to non-game contexts to drive motivation and learning. Currently, Thabo is founding a company building AI-powered 'personal operating systems' \u2013 tools that use AI to help individuals optimize their workflows, skill development, and overall productivity. He's looking for seed funding, strategic advisors with AI/ML expertise, and early adopters to test his platform. He\u2019s particularly interested in applications within knowledge work and creative fields. He\u2019s a pragmatic optimist, highly analytical, and values authenticity. He\u2019s Polish on his mother\u2019s side, hence the Kowalski surname, and spent his childhood moving between South Africa and Europe. This international background influences his global outlook and his comfort working with diverse teams.",
+    "positioning": "I'm Thabo Kowalski, a product leader and founder currently building a next-generation personal operating system powered by AI. My career has been driven by a fascination with understanding human motivation and building experiences that foster sustained engagement. I spent years in the gaming industry, leading product for large-scale MMORPGs, where I learned the art of crafting compelling loops and leveraging data to optimize player experience. This foundation has fundamentally shaped my approach to product development \u2013 focusing on intrinsic motivation, personalized feedback, and iterative improvement. \n\nNow, I\u2019m translating those principles to the realm of personal and professional development. I believe that AI can unlock human potential by providing personalized insights, automating tedious tasks, and facilitating continuous learning. My current venture aims to empower individuals to become more intentional, productive, and fulfilled. We\u2019re focused on building an intelligent platform that adapts to your unique needs and helps you achieve your goals. \n\nWe\u2019re currently in the pre-seed stage, building out our MVP and seeking strategic partners who share our vision. I\u2019m deeply passionate about the intersection of AI, behavioral science, and human-computer interaction, and I\u2019m eager to connect with individuals who are equally excited about the future of work and personal growth. I'm actively looking for advisors with experience scaling AI/ML products and investors who understand the long-term potential of this space.",
+    "background": "- **Founder & CEO, FlowState AI (2023 \u2013 Present):** Leading all aspects of product development, fundraising, and team building for an AI-powered personal operating system. Responsible for defining product vision, strategy, and roadmap. Currently focused on securing seed funding and building a strong core team.\n- **Group Product Manager, SkillForge (2020 \u2013 2023):** Led a team of product managers responsible for the core learning platform, driving a 30% increase in user engagement and a 20% improvement in course completion rates. Oversaw the launch of a new personalized learning recommendation engine powered by machine learning.\n- **Senior Product Manager, Nova Games (2016 \u2013 2020):** Managed the product roadmap for *Aethelgard*, a large-scale MMORPG with over 5 million active users. Led the development and launch of several major expansions, resulting in a 15% increase in monthly recurring revenue. Focused on optimizing player retention through data-driven design and community engagement.\n- **Product Manager, Zenith Interactive (2014 \u2013 2016):** Launched and iterated on a mobile strategy game, achieving a 4.5-star rating on the App Store and a top 10 ranking in the strategy category. Responsible for user acquisition, monetization, and A/B testing.\n- **Skills:** Product Strategy, Product Roadmap, AI/ML, User Research, Data Analysis (SQL, Python), Agile Development, Lean Startup, User Interface (UI) / User Experience (UX), Gamification, A/B Testing, Growth Hacking, Team Leadership, Public Speaking.\n- **Education:** **Stanford University, Graduate School of Business (2012 \u2013 2014):** MBA, with a focus on Product Management and Entrepreneurship.\n- **University of Cape Town (2008 \u2013 2012):** Bachelor of Science in Computer Science (Honors).\n- **Certifications:** Certified Scrum Product Owner (CSPO), Google Analytics Certified.",
+    "lookingFor": "I\u2019m currently focused on building a strong network of advisors and investors to support the growth of FlowState AI. I\u2019m particularly interested in connecting with individuals who have experience scaling AI/ML-powered products and navigating the complexities of the venture capital landscape.\n\nSpecifically, I\u2019m seeking:\n- **Seed-stage investors:** Individuals or firms with a track record of investing in early-stage AI and productivity tools.\n- **AI/ML advisors:** Experts in machine learning, natural language processing, and reinforcement learning who can provide guidance on our technical roadmap.\n- **Product/Growth advisors:** Seasoned product leaders with experience scaling consumer-facing applications.\n- **Early adopters:** Individuals in knowledge work and creative fields who are eager to test our platform and provide feedback.\n\nI\u2019m also open to strategic partnerships with companies that align with our vision of empowering individuals to achieve their full potential. I'm actively looking for introductions to VCs specializing in AI and future of work.  I\u2019m available for virtual coffee chats and introductory calls to discuss potential collaborations.",
+    "notes": "Thabo is a highly articulate and driven individual with a clear vision for his company. His background in gaming gives him a unique perspective on user engagement, and he\u2019s clearly passionate about applying those principles to the realm of personal and professional development. He\u2019s very data-driven and analytical, and he\u2019s not afraid to challenge conventional wisdom. He\u2019s also a good storyteller and can effectively communicate his ideas. \n\nHowever, he's still early in his founding journey and is relatively new to the fundraising process. He may benefit from guidance on crafting a compelling pitch deck and navigating the investor landscape. Be mindful that he\u2019s very focused on the technical aspects of his product and may need prompting to discuss the broader market opportunity. He is very particular about the quality of connections, so ensure any introductions are genuinely relevant and aligned with his stated goals.",
+    "locationAvailability": "Thabo is currently based in San Francisco, California, but is open to remote collaboration and travel as needed. He anticipates spending significant time in New York and London over the next six months for investor meetings and industry events.",
+    "introPreferences": "- **Hard Requirement:** Any introduction *must* be to someone with direct experience in AI/ML or venture capital.\n- **Soft Preference:** Introductions to individuals with a background in behavioral science or gamification are highly valued.\n- **Intro Style:** Thabo prefers concise, personalized introductions that highlight the specific value proposition for both parties. Avoid generic 'warm intros'.\n- **Do:** Briefly explain *why* you think the connection would be valuable for Thabo, referencing his specific interests and goals.\n- **Don\u2019t:** Send unsolicited materials or pitch decks. Let Thabo lead the conversation.\n- **Preferred Contact:** Initially via LinkedIn message followed by a brief email.\n- **Avoid:** Introductions to sales or marketing professionals \u2013 he\u2019s currently focused on product and funding.",
+    "personalPreferences": "Thabo is a big fan of science fiction and enjoys playing strategy games in his spare time. He's a fast learner and appreciates direct, honest feedback.",
+    "meetingAndSchedulingPreferences": "Thabo is generally flexible with meeting times but prefers to schedule calls at least 24 hours in advance. He's comfortable with video conferencing and prefers to keep meetings focused and efficient."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 26.960504055023193,
+      "input_tokens": 807,
+      "output_tokens": 1684,
+      "problems": []
+    }
+  ],
+  "success": true
+}

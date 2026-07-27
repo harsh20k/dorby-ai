@@ -1,0 +1,54 @@
+{
+  "id": 535,
+  "archetype": "Early Career, AI/Data Science Focus",
+  "given_name": "Olamide Nkosi",
+  "style_version": 33,
+  "archetypes_version": 90,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Olamide Nkosi is a recent Master's graduate in Data Science with a specialization in Natural Language Processing (NLP). She's particularly interested in applying AI to improve accessibility for people with disabilities. Her distinctive detail is a significant volunteer project during her Master's where she developed a prototype speech-to-text application specifically trained on diverse accents, recognizing a gap in existing market solutions. She's now actively seeking a role where she can combine her technical skills with her passion for social impact, ideally in a company focused on assistive technology or ethical AI development. She's eager to learn from experienced professionals and contribute to projects with a tangible positive impact. She leans towards smaller, agile teams where she can quickly take ownership and see the results of her work.",
+    "positioning": "A highly motivated and recently graduated Data Scientist with a Master\u2019s degree specializing in Natural Language Processing, I am passionate about leveraging the power of AI to solve real-world problems, particularly those focused on accessibility and inclusivity. My academic background, coupled with hands-on experience in developing and deploying machine learning models, has equipped me with a robust skillset in Python, TensorFlow, PyTorch, and cloud computing platforms like AWS. I'm particularly adept at working with textual data, building and fine-tuning NLP models for tasks such as speech recognition, sentiment analysis, and text summarization. \n\nDuring my Master\u2019s program, I led a volunteer project to create a speech-to-text application optimized for diverse accents, addressing a critical gap in existing commercial solutions. This experience not only honed my technical abilities but also reinforced my commitment to building ethical and accessible AI. I am confident in my ability to quickly learn and adapt to new technologies and challenges, and I thrive in collaborative environments where I can contribute to a shared vision. \n\nI\u2019m eager to join a team where I can apply my skills to impactful projects and contribute to the advancement of responsible AI. I offer a unique blend of technical expertise, a strong work ethic, and a genuine desire to make a positive difference through technology. I am particularly interested in roles that allow me to contribute to projects focused on assistive technologies or the development of ethical and inclusive AI solutions. I am keen to find a company that values innovation, collaboration, and social responsibility.",
+    "background": "- **Master of Science in Data Science, Specialization in Natural Language Processing** - University of California, Berkeley (August 2022 - May 2024) \u2013 GPA: 3.9/4.0. Relevant coursework included: Deep Learning, Machine Learning, Statistical Modeling, Data Mining, Natural Language Processing, Cloud Computing.\n- **Research Assistant** - Berkeley AI Research (BAR) Lab (January 2024 - May 2024) \u2013 Assisted in research on improving the robustness of NLP models to adversarial attacks. Contributed to a research paper submitted to NeurIPS 2024.\n- **Data Science Intern** - DataSpark Analytics (Summer 2023) \u2013 Developed and implemented a machine learning model to predict customer churn, resulting in a 15% improvement in retention rates.\n- **Volunteer Project Lead** - Accessible Speech Project (September 2023 - May 2024) \u2013 Led a team of volunteers to develop a speech-to-text application trained on diverse accents. Utilized data augmentation techniques and transfer learning to achieve high accuracy across various dialects.\n- **Bachelor of Science in Computer Science** - Stanford University (September 2018 - June 2022) \u2013 GPA: 3.8/4.0. Dean\u2019s List all semesters.\n- **Skills:** Python, TensorFlow, PyTorch, Scikit-learn, Pandas, NumPy, SQL, AWS (S3, EC2, Lambda), Git, Docker, NLP (BERT, GPT-3, Transformers), Data Visualization (Tableau, Matplotlib, Seaborn).\n- **Certifications:** AWS Certified Machine Learning \u2013 Specialty (Completed December 2023)",
+    "lookingFor": "I am actively seeking a full-time Data Scientist position where I can apply my skills in NLP and machine learning to solve challenging and impactful problems. I am particularly interested in roles that align with my passion for accessibility and ethical AI.\n\n- **Desired Job Titles:** Data Scientist, Machine Learning Engineer, NLP Engineer, AI Researcher.\n- **Industry Preferences:** Assistive Technology, Healthcare, Education, Ethical AI Development, Tech for Good.\n- **Company Size:** Start-up to mid-sized companies (50-500 employees) \u2013 I thrive in agile and collaborative environments.\n- **Location Preferences:** San Francisco Bay Area, Seattle, or remote opportunities.\n- I am open to exploring roles that involve developing and deploying machine learning models, conducting research, and contributing to open-source projects. \n- I am also eager to learn from experienced professionals and contribute to a team that values innovation and social responsibility. I would greatly appreciate introductions to individuals working in the fields of assistive technology or ethical AI. \n- Specifically, I'm interested in connecting with leaders at companies like Microsoft (AI for Accessibility), Google (PAX), and smaller startups focused on inclusive AI solutions.",
+    "notes": "Spoke with Sarah Chen from DataSpark Analytics last week \u2013 she suggested I connect with people at a startup called 'HearWell' focusing on AI-powered hearing aids. Will follow up. Also, need to refine my portfolio to showcase the Accessible Speech Project more prominently. The GitHub repo is live but needs better documentation. \n\nOlamide is very enthusiastic and quick to grasp new concepts. She\u2019s a strong communicator and clearly passionate about her work. She\u2019s a bit hesitant to self-promote, so encourage her to highlight her accomplishments more confidently. \n\nShe mentioned being interested in learning more about model interpretability and fairness \u2013 potential area for professional development. Remind her to tailor her resume to each specific job application, emphasizing the relevant skills and experience. \n\nImportant: She's really keen on avoiding roles that involve using AI for surveillance or discriminatory practices.",
+    "locationAvailability": "Currently located in Berkeley, California. I am open to relocation for the right opportunity and am comfortable with remote work arrangements.",
+    "introPreferences": "- I\u2019m looking to connect with Data Science leaders, Machine Learning Engineers, and NLP Researchers at companies focused on assistive technology, ethical AI, or tech for good.\n- Ideally, introductions should be to individuals who are actively involved in developing and deploying AI solutions that address social challenges.\n- I'm particularly interested in connecting with people who have experience in the field of accessibility and are passionate about building inclusive technologies.\n- Senior-level professionals who are willing to mentor and share their insights would be highly valued.\n- Bonus points if the connection has experience with speech recognition or natural language processing techniques for diverse datasets.",
+    "personalPreferences": "I prefer asynchronous communication initially (email or LinkedIn messaging) to allow me time to thoughtfully respond. I'm happy to schedule a quick call after an initial exchange. I appreciate concise and direct communication.",
+    "meetingAndSchedulingPreferences": "I am flexible with meeting times and can adapt to different time zones. Please feel free to suggest a few options that work for you."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 21.08358597755432,
+      "input_tokens": 826,
+      "output_tokens": 1526,
+      "problems": []
+    }
+  ],
+  "success": true
+}

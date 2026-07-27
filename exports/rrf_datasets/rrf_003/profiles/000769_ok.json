@@ -1,0 +1,54 @@
+{
+  "id": 769,
+  "archetype": "Fintech Operator Turned Founder",
+  "given_name": "Javier Pereira",
+  "style_version": 47,
+  "archetypes_version": 129,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Javier Pereira is a seasoned fintech operator who spent the first decade of his career at large institutions, then moved into a high-growth startup that was ultimately acquired. He now is the founder of 'NovaCredit Bridge', a company focused on providing cross-border credit scoring for immigrants, leveraging alternative data. The distinctive career detail is his fluency in multiple languages and deep understanding of international financial systems \u2013 stemming from a childhood spent moving between Brazil, Portugal, and the US. He's currently focused on seed funding and scaling his team, and is particularly interested in connecting with investors familiar with the 'new immigrant economy' and advisors with experience in regulatory compliance for alternative credit data. He\u2019s a direct communicator, values efficiency, and is wary of overly-hyped pitches.",
+    "positioning": "Javier Pereira is the Founder & CEO of NovaCredit Bridge, a fintech company revolutionizing credit access for the 25+ million immigrants in the US. Having spent years navigating complex financial systems both domestically and internationally, Javier identified a critical gap: the lack of reliable credit scores for newcomers. NovaCredit Bridge leverages alternative data and advanced machine learning to build accurate credit profiles, enabling fair access to financial products. He's currently leading a seed funding round and rapidly expanding the engineering and data science teams. Javier is seeking strategic investors and advisors who share his vision of financial inclusion and possess expertise in alternative credit scoring, regulatory landscapes, and scaling fintech businesses.",
+    "background": " * **2023 \u2013 Present: Founder & CEO, NovaCredit Bridge.** Led the company from concept to MVP, secured initial angel funding, and built a core team of 5. Developed proprietary algorithms for cross-border credit scoring, achieving 85% accuracy in predicting creditworthiness based on international data sources. Currently managing all aspects of the business, including product development, fundraising, and strategic partnerships. \n * **2018 \u2013 2022: Head of Growth, LendForward (Acquired by Affirm).** Spearheaded growth initiatives that increased user acquisition by 150% within two years. Managed a team of 12 marketing and sales professionals. Oversaw the successful integration of LendForward\u2019s technology into Affirm\u2019s platform. Led the launch of three new product features focused on underserved markets. \n * **2015 \u2013 2018: Senior Analyst, Capital One.** Conducted in-depth financial modeling and risk analysis for credit card portfolios. Developed and implemented strategies to mitigate credit risk, resulting in a 10% reduction in charge-off rates. Collaborated with engineering teams to automate reporting processes. \n * **2012 \u2013 2015: Financial Consultant, Deloitte.** Provided financial advisory services to clients in the banking and financial services industry. Assisted in due diligence processes for mergers and acquisitions. Prepared financial reports and presentations for senior management. \n * **Education: MBA, Stanford Graduate School of Business (2018).** Bachelor of Science in Finance, Georgetown University (2012). Fluent in English, Portuguese, and Spanish.",
+    "lookingFor": "* Seed-stage investors specializing in fintech and the 'new immigrant economy'. (Target check size: $2M - $5M)\n* Advisors with deep expertise in US regulatory compliance (specifically regarding alternative credit data and FCRA). \n* Introductions to heads of partnerships at large banks interested in exploring innovative credit scoring solutions.\n* Connections to experienced engineering leaders with a background in machine learning and data security.\n* Mentorship from founders who have successfully scaled fintech companies from seed to Series A.\n* Do not introduce me to VCs who primarily invest in Web3 or crypto.\n* Do not send unsolicited marketing materials; I prefer targeted introductions.\n* Open to discussing potential strategic partnerships with companies offering complementary services (e.g., identity verification, remittance services).",
+    "notes": "Javier is incredibly focused and efficient. He responds quickly to direct inquiries. [11/15/2023 - Call with Sarah - noted his frustration with 'fluffy' investor pitches]. He's very data-driven and appreciates concise communication. He\u2019s particularly proud of the NovaCredit Bridge\u2019s accuracy rate and the positive impact it's having on immigrant communities. [11/22/2023 - LinkedIn interaction - shared article on alternative credit scoring]. He mentioned a previous negative experience with an advisor who lacked practical experience \u2013 prioritize advisors with a proven track record. He's skeptical of hype and prefers substance over style. He\u2019s a strong advocate for financial inclusion and genuinely passionate about his mission.",
+    "locationAvailability": "Javier is based in San Francisco, California, but is open to travel for key investor meetings and industry events. He\u2019s also comfortable conducting meetings remotely via video conference.",
+    "introPreferences": "* **Hard Requirements:** Introductions *must* be to individuals with a demonstrable track record in fintech investing or relevant regulatory expertise.\n* **Soft Preferences:** Prefer introductions to individuals who are known for being direct, pragmatic, and data-driven. \n* **Intro Style:** Keep introductions concise and focused on NovaCredit Bridge\u2019s unique value proposition. Highlight the company\u2019s traction and the market opportunity. *Do not* send lengthy emails or overly-promotional materials. \n* **Example of a good intro:** 'Javier is building NovaCredit Bridge, a fascinating company leveraging alternative data to unlock credit access for immigrants. I thought you, given your experience with [Investor's area of expertise], would be a great person for him to connect with.'\n* **Avoid:** Introductions to individuals who are solely focused on venture philanthropy or impact investing without a strong financial return focus.",
+    "personalPreferences": "Prefers email for initial contact and is responsive on LinkedIn. Values direct and honest communication.",
+    "meetingAndSchedulingPreferences": "Flexible with meeting times and formats. Prefers video calls over phone calls. Uses Calendly for scheduling."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 17.1999409198761,
+      "input_tokens": 797,
+      "output_tokens": 1247,
+      "problems": []
+    }
+  ],
+  "success": true
+}

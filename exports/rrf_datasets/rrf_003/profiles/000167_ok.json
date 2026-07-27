@@ -1,0 +1,54 @@
+{
+  "id": 167,
+  "archetype": "Toronto-Based Tech Operator",
+  "given_name": "Beatriz Almeida",
+  "style_version": 11,
+  "archetypes_version": 28,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Beatriz Almeida is a seasoned product leader currently scaling a seed-stage AI-powered risk management platform for small and medium-sized businesses (SMBs) in the financial services sector. She's a second-time founder, having previously exited a successful edtech company, and is now focused on securing Series A funding and establishing strategic partnerships to accelerate growth. A distinctive detail: she spent a year embedded with a microfinance institution in rural Brazil early in her career, which deeply informs her commitment to making financial tools accessible and equitable. She's highly analytical, data-driven, and prioritizes building strong, collaborative teams. She's looking primarily for connections to VCs specializing in fintech and AI, potential enterprise clients, and advisors with experience scaling SaaS businesses.",
+    "positioning": "Beatriz Almeida is a results-oriented product and technology leader passionate about leveraging AI to democratize access to financial tools. As CEO & Co-founder of NovaRisk, she\u2019s driving the development and execution of a cutting-edge risk management platform designed to empower SMBs with actionable insights. Prior to NovaRisk, Beatriz co-founded LearnLeap, an edtech platform acquired by Pearson in 2021. Her experience spans the full product lifecycle \u2013 from ideation and user research to launch and iteration \u2013 with a consistent focus on delivering impactful solutions. She excels at translating complex technical concepts into clear business strategies and building high-performing teams. Beatriz is a strong advocate for ethical AI and believes in fostering a culture of innovation and continuous improvement. She's currently focused on securing Series A funding and forging strategic partnerships to expand NovaRisk\u2019s reach and impact within the North American market.",
+    "background": "- **NovaRisk (Toronto, ON) \u2013 CEO & Co-founder** (2023 \u2013 Present)\n  * Spearheading all aspects of product strategy, engineering, and go-to-market execution for an AI-powered risk management platform for SMBs.\n  * Secured seed funding of $2M from leading angel investors.\n  * Built and scaled a team of 8 engineers, data scientists, and product managers.\n  * Technologies: Python, TensorFlow, AWS, PostgreSQL, React.\n\n- **LearnLeap (Toronto, ON) \u2013 Co-founder & Head of Product** (2018 \u2013 2021)\n  * Led the product vision and development of a personalized learning platform used by over 50,000 students.\n  * Oversaw all stages of product development, from user research and prototyping to launch and iteration.\n  * Successfully negotiated acquisition by Pearson in 2021.\n  * Technologies: Ruby on Rails, React, PostgreSQL, AWS.\n\n- **Kiva (Remote \u2013 Brazil) \u2013 Field Associate** (2016 \u2013 2017)\n  * Embedded with a microfinance institution in rural Brazil, conducting field research and providing support to loan recipients.\n  * Gained firsthand experience in the challenges faced by SMBs in accessing financial services.\n  * Developed a deep understanding of the importance of financial inclusion and equitable access to capital.\n\n- **Education:**\n  * **University of Toronto, Canada** \u2013 Bachelor of Science in Computer Science (2014 \u2013 2018), Minor in Economics\n  * **Certifications:** Product Management Certification (Pragmatic Institute)",
+    "lookingFor": "I\u2019m actively seeking connections with individuals who can support NovaRisk\u2019s growth and impact. Specifically, I\u2019m looking to connect with:\n\n* **Series A VCs:** Focused on Fintech and AI with a track record of supporting early-stage startups.\n* **Potential Enterprise Clients:** Financial institutions (banks, credit unions, insurance companies) interested in integrating AI-powered risk management solutions.\n* **Experienced Advisors:** Individuals with a proven track record of scaling SaaS businesses and navigating the North American market.\n* **Talented Engineers & Data Scientists:** Passionate about building innovative AI solutions.\n\n**Do connect if:** you have experience in the Fintech or AI space, have a strong network within the venture capital community, or are genuinely interested in supporting the growth of a mission-driven startup.\n\n**Don\u2019t connect if:** you are primarily focused on selling me services (e.g., marketing, consulting) without a clear understanding of NovaRisk\u2019s needs, or if you are a recruiter without relevant roles to share. I'm also not looking for general networking \u2013 please be specific about how you can contribute.",
+    "notes": "Beatriz is a highly articulate and driven individual. She has a clear vision for NovaRisk and a strong understanding of the market. She\u2019s very focused on building a sustainable and ethical business. During a recent call, she mentioned she's particularly interested in VCs who understand the nuances of the SMB lending space. She's also open to introductions to potential strategic partners within the banking sector.",
+    "locationAvailability": "Based in Toronto, ON (EST). Open to travel within North America.",
+    "introPreferences": "When making introductions to Beatriz, please:\n\n* **Hard Requirement:** Clearly state the connection\u2019s relevance to NovaRisk \u2013 either as a potential investor, client, or advisor.\n* **Soft Preference:** Highlight any shared connections or common interests.\n* **Intro Style:** A brief, concise introduction is preferred. Focus on the value the connection can bring to NovaRisk, rather than a lengthy biography. \n* **Avoid:** Generic introductions or introductions to individuals who are unlikely to be a good fit. Please do *not* mention her previous exit upfront; she prefers to focus on the current venture. A warm, personalized message is always appreciated.",
+    "personalPreferences": "Prefers asynchronous communication (email/Slack) for initial contact. Highly responsive, but prioritizes focused work blocks.",
+    "meetingAndSchedulingPreferences": "* Calendar is generally open 2-3 weeks out.\n* Please include a brief agenda when requesting a meeting.\n* Prefers 30-minute introductory calls. \n* I\u2019m most responsive to meeting requests sent via email."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 23.528528928756714,
+      "input_tokens": 869,
+      "output_tokens": 1293,
+      "problems": []
+    }
+  ],
+  "success": true
+}

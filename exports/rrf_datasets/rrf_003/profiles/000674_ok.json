@@ -1,0 +1,54 @@
+{
+  "id": 674,
+  "archetype": "Product Leader, AI/Fintech Expertise",
+  "given_name": "Nikolai Tanaka",
+  "style_version": 41,
+  "archetypes_version": 112,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Nikolai Tanaka is a 38-year-old product leader currently bootstrapping a fintech startup called 'Aether Finance'. He previously spent 8 years at Citadel, where he led product for a high-frequency trading algorithm focused on real estate derivatives \u2013 a niche, but highly profitable area. This experience deeply informed his current venture. Aether Finance aims to democratize access to sophisticated investment strategies (similar to those employed at Citadel) for accredited investors through an AI-powered platform. He\u2019s a very data-driven individual, a bit reserved, and highly focused on quantifiable results. He's fundraising for a seed round and actively seeking advisors with experience scaling fintech platforms. He's comfortable with remote work but prefers initial meetings in-person if feasible, valuing direct communication and a clear understanding of mutual goals. He's not interested in purely 'idea-stage' conversations; he needs partners and investors who understand the complexities of building and scaling a regulated financial product.",
+    "positioning": "I'm the founder and CEO of Aether Finance, a fintech platform leveraging artificial intelligence to provide accredited investors with access to previously inaccessible, high-yield investment strategies. We\u2019re solving the problem of limited access to sophisticated financial instruments, traditionally reserved for institutional investors and ultra-high-net-worth individuals. Our core offering utilizes proprietary algorithms \u2013 refined through years of experience in quantitative finance \u2013 to identify and execute profitable trades in real estate derivatives and other asset classes. \n\nWe\u2019re initially targeting accredited investors with a minimum portfolio size of $500,000, offering a managed account solution with transparent fee structures and robust risk management protocols. Early traction has been strong, with over $2 million in assets under management within the first six months of beta testing and a waiting list of over 500 qualified investors. We\u2019re currently raising a $3 million seed round to expand our engineering team, enhance our platform\u2019s capabilities, and scale our marketing efforts. Our long-term vision is to become the leading AI-powered investment platform for accredited investors, bridging the gap between institutional-grade strategies and individual wealth creation.",
+    "background": "- **Founder & CEO, Aether Finance** (2023 \u2013 Present)\n    * Led all aspects of product vision, strategy, and execution for a new fintech platform leveraging AI for investment management.\n    * Secured initial seed funding and built a core team of engineers and financial analysts.\n    * Oversaw development and launch of beta platform, achieving $2M+ AUM in 6 months.\n    * Responsible for regulatory compliance and risk management.\n\n- **Product Manager, Citadel** (2015 \u2013 2023)\n    * Led product development for a high-frequency trading algorithm focused on real estate derivatives.\n    * Managed a team of engineers, quant researchers, and traders.\n    * Increased algorithm profitability by 18% through iterative improvements and data-driven optimization.\n    * Spearheaded the integration of new data sources and machine learning models.\n    * Collaborated with legal and compliance teams to ensure adherence to regulatory requirements.\n\n- **Skills:** Python, SQL, Machine Learning (Regression, Time Series Analysis), Financial Modeling, Product Management (Agile, Scrum), Fintech Regulation (SEC, FINRA), Data Analysis, A/B Testing, Risk Management, Real Estate Derivatives, High-Frequency Trading.\n\n- **Education:**\n    * **Massachusetts Institute of Technology (MIT)**, Cambridge, MA \u2013 Master of Science in Financial Engineering (2013 \u2013 2015)\n    * **University of California, Berkeley** \u2013 Bachelor of Science in Computer Science (2009 \u2013 2013)\n\n- **Certifications:**\n    * Chartered Financial Analyst (CFA) Level 1 (2016)\n\n- **Awards & Recognition:** Citadel Innovation Award (2020) \u2013 for contributions to algorithmic trading.",
+    "lookingFor": "I'm actively seeking connections that can accelerate Aether Finance's growth and market penetration. Specifically, I'm looking for:\n\n**Investors:**\n* **Seed-Stage VCs:** Firms with a demonstrated track record of investing in fintech and AI-driven companies, specifically those focused on wealth management or alternative investments. Deal sizes between $500k - $2M are of interest.\n* **Angel Investors:** Experienced fintech entrepreneurs or financial industry veterans with a strong network and a willingness to provide mentorship.\n* **Family Offices:** Seeking direct investment opportunities in innovative fintech platforms.\n\n**Advisors:**\n* **Fintech Scaling Experts:** Individuals with experience scaling early-stage fintech companies, particularly in navigating regulatory hurdles and building robust infrastructure.\n* **AI/ML Specialists:** Experts in applying machine learning to financial markets, with a focus on algorithmic trading and risk management.\n* **Real Estate Investment Professionals:** Individuals with deep knowledge of real estate derivatives and investment strategies.\n\n**Strategic Partners:**\n* **Custodial Services Providers:** Firms offering secure and compliant custody solutions for digital assets.\n* **Data Providers:** Companies offering high-quality financial data feeds and analytics.\n* **Compliance & Regulatory Consultants:** Experts in navigating the complex regulatory landscape of the fintech industry.\n\nI\u2019m *not* currently interested in conversations that are purely exploratory or focused on early-stage ideation. I\u2019m looking for individuals who can bring tangible value to Aether Finance \u2013 whether through capital, expertise, or strategic partnerships. Please come prepared to discuss specific contributions and potential synergies.",
+    "notes": "Profile sourced from LinkedIn and company website (Aether Finance). Nikolai is generally responsive to direct messages but prefers to conduct initial conversations via email. He\u2019s been actively engaging with content related to AI in finance and regulatory technology on LinkedIn. He recently attended the Fintech Connect conference in San Francisco. He mentioned in a brief email exchange that he\u2019s particularly interested in connecting with individuals who have experience building and scaling platforms with similar regulatory requirements (e.g., RIAs). Avoid overly promotional or sales-focused introductions. Focus on shared interests and potential for mutual benefit.",
+    "locationAvailability": "Currently based in New York City, but open to remote collaboration and travel. Willing to relocate for the right opportunity.",
+    "introPreferences": "When making an introduction, please adhere to the following:\n\n* **Do:** Clearly articulate the value proposition of the connection for *both* parties. Highlight any relevant experience or expertise that aligns with Aether Finance\u2019s needs.\n* **Do:** Keep introductions concise and focused. Nikolai prefers direct communication and dislikes lengthy email chains.\n* **Do:** Include a brief summary of the individual\u2019s background and accomplishments.\n* **Don't:** Introduce me to individuals who are solely focused on \u2018idea-stage\u2019 ventures or fundraising for unrelated projects.\n* **Don't:** Send unsolicited marketing materials or sales pitches.\n* **Preferred Communication:** Email is preferred for initial contact. LinkedIn InMail is acceptable, but response times may be slower.\n* **Prioritize:** Introductions to seed-stage VCs and experienced fintech advisors.",
+    "personalPreferences": "Prefers asynchronous communication when possible. Enjoys hiking in his free time.",
+    "meetingAndSchedulingPreferences": "I generally prefer virtual meetings initially, followed by in-person meetings if a strong connection is established. I\u2019m available for meetings during standard business hours (EST). Please send a calendar invite with a clear agenda."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 25.633180856704712,
+      "input_tokens": 786,
+      "output_tokens": 1579,
+      "problems": []
+    }
+  ],
+  "success": true
+}

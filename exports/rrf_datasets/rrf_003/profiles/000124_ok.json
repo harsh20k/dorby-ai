@@ -1,0 +1,54 @@
+{
+  "id": 124,
+  "archetype": "Quant Trader/Hedge Fund Founder",
+  "given_name": "Sanjay Martins",
+  "style_version": 8,
+  "archetypes_version": 21,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Sanjay Martins is a 38-year-old founder and Chief Investment Officer of 'Aetherium Capital', a relatively new (3 years old) quantitative hedge fund specializing in fixed income arbitrage utilizing advanced machine learning techniques. He previously spent 8 years at Citadel, where he was a key architect of their short-term interest rate prediction models, but left to pursue his vision of a more nimble, AI-driven fund. Aetherium is currently performing well, but Sanjay is actively seeking strategic partnerships to scale the fund's AUM and expand into new, related asset classes. He\u2019s deeply technical, a bit introverted, and values directness and demonstrable expertise in potential collaborators. He\u2019s particularly interested in individuals who can provide access to unique datasets or contribute to the development of their proprietary trading infrastructure. He\u2019s very focused on maintaining a competitive edge through cutting-edge technology and robust risk management.",
+    "positioning": "As Founder and Chief Investment Officer of Aetherium Capital, I lead a team dedicated to generating alpha through the application of advanced quantitative strategies in the fixed income markets. We differentiate ourselves by leveraging proprietary machine learning models \u2013 particularly deep reinforcement learning \u2013 to identify and exploit subtle arbitrage opportunities often overlooked by traditional market participants. Aetherium is not simply about automating existing strategies; we are actively *discovering* new ones, driven by data and a relentless pursuit of statistical edge. \n\nOur core competency lies in short-term interest rate prediction and relative value trading in government bonds, agency securities, and interest rate swaps. We\u2019ve built a robust, low-latency trading infrastructure capable of executing high-frequency trades with precision and efficiency.  We've achieved a Sharpe ratio of 1.8 over the past two years, demonstrating the efficacy of our approach. \n\nCurrently, my focus is on scaling Aetherium's assets under management while maintaining our commitment to rigorous risk management and technological innovation. This involves both attracting new investors and forging strategic partnerships that can enhance our data sourcing capabilities, expand our research bandwidth, and ultimately, unlock new avenues for alpha generation. I\u2019m particularly interested in exploring opportunities within the broader realm of structured credit and alternative data integration.  We believe the future of finance lies at the intersection of data science and market microstructure, and Aetherium is positioned to be a leader in this evolving landscape.",
+    "background": "- **Founder & CIO, Aetherium Capital** (2021 \u2013 Present)\n  * Spearheaded the launch and development of a quantitative hedge fund specializing in fixed income arbitrage.\n  * Led the design and implementation of proprietary machine learning models for short-term interest rate prediction, resulting in consistently positive risk-adjusted returns.\n  * Built and managed a high-performing team of quantitative researchers, data scientists, and software engineers.\n  * Responsible for all aspects of fund operations, including risk management, compliance, and investor relations.\n\n- **Associate, Citadel** (2013 \u2013 2021)\n  * Key contributor to the development of Citadel\u2019s short-term interest rate prediction models, improving accuracy by 15%.\n  * Led the implementation of new data pipelines and analytical tools for real-time market monitoring.\n  * Mentored junior quantitative researchers and engineers.\n  * Published internal research on advanced statistical modeling techniques.\n\n- **Education:**\n  * PhD, Financial Engineering, Carnegie Mellon University (2013)\n  * MS, Mathematics, Massachusetts Institute of Technology (2009)\n  * BS, Physics, California Institute of Technology (2007)\n\n- **Skills:** Quantitative Modeling, Machine Learning (Deep Learning, Reinforcement Learning), Python, C++, R, Time Series Analysis, Statistical Arbitrage, Fixed Income Markets, Risk Management, Algorithmic Trading, Data Engineering, Cloud Computing (AWS, Azure)",
+    "lookingFor": "I am actively seeking connections with individuals and organizations that can contribute to Aetherium Capital\u2019s growth and innovation. Specifically, I am interested in:\n\n* **Potential Investors:**  Family offices, institutional investors, and fund-of-funds with a demonstrated track record of supporting quantitative strategies and a long-term investment horizon.  Minimum investment consideration: $5 million.\n* **Data Providers:**  Companies specializing in alternative data sets (e.g., satellite imagery, credit card transactions, social media sentiment) that could enhance our predictive models.  Focus on granular, high-frequency data.\n* **Technology Partners:**  Firms with expertise in high-performance computing, low-latency trading infrastructure, and cloud-based data analytics.  Specifically exploring partnerships for co-location and specialized hardware solutions.\n* **Quantitative Researchers:**  Exceptional PhDs in mathematics, physics, statistics, or computer science with a strong background in machine learning and financial modeling.  Experience with fixed income markets is a plus.\n* **Strategic Advisors:**  Experienced hedge fund operators or industry veterans who can provide guidance on scaling operations, navigating regulatory challenges, and expanding into new markets.",
+    "notes": "Sanjay is very focused.  Don't waste his time with vague pitches.  He *loves* to talk tech \u2013 be prepared to get into the weeds.  He\u2019s somewhat reserved initially, so building rapport is key.  He's currently reviewing a potential partnership with QuantMetrics for data aggregation.  Mentioning you know John Davies at QuantMetrics could be helpful.  He\u2019s extremely protective of his IP and will likely require an NDA before discussing specific details of his models. Recent positive performance \u2013 Sharpe ratio holding steady.  Avoid overly salesy approaches; he responds best to genuine intellectual curiosity.",
+    "locationAvailability": "I am based in New York City, but I am open to remote meetings and travel as needed.  I frequently attend industry conferences and am available for in-person meetings in major financial centers.",
+    "introPreferences": "Please adhere to the following guidelines when making introductions:\n\n**Hard Requirements:**\n* **Relevance:** The connection *must* align with the criteria outlined in my \u2018Looking For\u2019 section.  No general networking requests.\n* **Credibility:**  The individual must have a verifiable track record of success and expertise in their respective field.\n* **Conciseness:**  Introductions should be brief and to-the-point, highlighting the key reasons why a connection would be mutually beneficial.\n\n**Soft Preferences:**\n* **Technical Depth:**  Prioritize introductions to individuals with a strong technical background and a demonstrable understanding of quantitative finance.\n* **Direct Communication:**  Avoid intermediaries whenever possible.  A direct introduction via email is preferred.\n* **Pre-read Material:**  If possible, please encourage the connection to review Aetherium Capital\u2019s website ([fictional website address]) before reaching out.\n\n**Do Not Do:**\n* **Cold Outreach:**  Do not forward my contact information to anyone without my explicit permission.\n* **Vague Pitches:**  Avoid introducing individuals with generic business proposals or investment opportunities.\n* **Unsolicited Advice:**  I am not seeking mentorship or unsolicited advice.",
+    "personalPreferences": "I prefer direct and efficient communication.  Email is my primary mode of contact.  I\u2019m a bit of a science fiction enthusiast in my spare time, and enjoy discussing emerging technologies. I\u2019m generally available for calls between 9am and 11am EST, or after 4pm EST. While I appreciate a professional demeanor, I also value authenticity and intellectual honesty. A quick, well-written email summarizing the key points is always appreciated.",
+    "meetingAndSchedulingPreferences": "Please use Calendly ([fictional Calendly link]) to schedule meetings. I generally prefer 30-minute introductory calls."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 35.030659198760986,
+      "input_tokens": 807,
+      "output_tokens": 1640,
+      "problems": []
+    }
+  ],
+  "success": true
+}

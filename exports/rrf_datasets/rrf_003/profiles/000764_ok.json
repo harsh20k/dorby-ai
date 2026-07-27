@@ -1,0 +1,54 @@
+{
+  "id": 764,
+  "archetype": "Full-Stack Technical Co-Founder/CTO",
+  "given_name": "Yara Dubois",
+  "style_version": 47,
+  "archetypes_version": 128,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Yara Dubois is a seasoned full-stack engineer who transitioned into a co-founding CTO role after a successful but creatively stifling stint at a large fintech company. She *specifically* enjoys the early-stage chaos of building from zero, and excels at rapidly prototyping and iterating. A key differentiator is her deep understanding of both front-end user experience *and* back-end infrastructure, allowing her to make holistic technical decisions. She's currently focused on building a seed-stage SaaS platform for sustainable agriculture, and is looking for connections to potential investors focused on climate tech, and experienced advisors who've navigated scaling a tech company with a strong ethical mission. She\u2019s pragmatic, values direct communication, and is wary of overly-hyped technologies or 'growth-at-all-costs' mentalities.",
+    "positioning": "Yara Dubois is a full-stack engineer and co-founder specializing in building scalable SaaS platforms from the ground up. With a strong background in both front-end development and back-end architecture, I excel at translating complex business requirements into elegant and efficient technical solutions. Currently, I'm leading the technical vision and execution for [AgriBloom], a seed-stage platform leveraging data analytics to optimize sustainable farming practices. I'm passionate about building impactful technology and am actively seeking connections with investors and advisors who share this commitment. My expertise lies in rapidly prototyping, building resilient infrastructure, and fostering a collaborative engineering culture.",
+    "background": "\u2022 **Co-founder & CTO, AgriBloom** (Jan 2023 \u2013 Present): Led all technical aspects of AgriBloom, from initial MVP development to securing seed funding. Architected the platform using React, Node.js, PostgreSQL, and AWS, achieving a 40% reduction in data processing costs through optimized query design. Managed a team of 3 engineers, focusing on agile methodologies and continuous integration/continuous deployment (CI/CD). Successfully launched version 1.0 of the platform, onboarding 50+ pilot farms in the first quarter.\n\u2022 **Senior Software Engineer, FinTech Solutions Inc.** (June 2018 \u2013 Dec 2022): Spearheaded the development of key features for a high-volume payment processing system, handling over $1 billion in daily transactions. Led a team of 4 engineers in migrating legacy code to a microservices architecture, improving system scalability by 25%. Implemented robust security measures to ensure PCI compliance and protect sensitive customer data. Consistently exceeded performance expectations, receiving \u2018Employee of the Quarter\u2019 award twice. Mentored junior engineers, fostering a collaborative and knowledge-sharing environment.\n\u2022 **Software Engineer, InnovateTech LLC** (Aug 2016 \u2013 May 2018): Developed and maintained web applications using Java, Spring, and AngularJS. Contributed to the design and implementation of RESTful APIs. Gained experience in the full software development lifecycle, from requirements gathering to deployment and testing. Actively participated in code reviews and contributed to improving code quality.\n\u2022 **B.S. Computer Science, University of California, Berkeley** (2012 \u2013 2016): Graduated *summa cum laude* with a focus on distributed systems and machine learning. Completed a senior thesis on the application of deep learning to fraud detection.",
+    "lookingFor": "\u2022 **Seed/Series A Investors:** Focused on Climate Tech, Agritech, or SaaS. Fund size $5M - $20M. Preference for investors with operational experience.\n\u2022 **Advisors:** Experienced CTOs or founders who have successfully scaled early-stage SaaS companies.\n\u2022 **Strategic Partnerships:** Companies with complementary technologies in the agricultural sector (e.g., precision farming equipment manufacturers, agricultural data providers).\n\u2022 **Mentors:** Individuals with expertise in building and leading high-performing engineering teams.\n\u2022 **Do not contact me with:** Crypto/NFT related opportunities.  I'm not interested in 'get rich quick' schemes.\n\u2022 **Do not introduce me to:** Recruiters \u2013 I am not looking for a new employment opportunity.",
+    "notes": "[10/26/2023] Had a great call with David Chen (Accel). He's warm, understands the AgriBloom vision, and has a strong network in the agtech space. Follow up next week with a detailed deck. [11/08/2023] Yara is *very* focused on the ethical implications of her work. Avoid language that sounds purely profit-driven. She responds well to data and pragmatic arguments. [12/01/2023] Mentioned being frustrated with overly-complex tech stacks. Prefers simplicity and maintainability.  She values engineers who can 'ship' quickly and iterate.  She's also a big fan of serverless architecture.",
+    "locationAvailability": "Based in San Francisco, CA, but open to remote collaboration. Willing to travel to key agricultural regions for customer meetings and industry events.",
+    "introPreferences": "\u2022 **Hard Requirement:** Introductions *must* be warm \u2013 Yara prefers to connect with people who have a pre-existing relationship with the introducer.\n\u2022 **Soft Preference:** Introductions to investors who have a demonstrated track record of supporting companies with a social impact mission.\n\u2022 **Preferred Intro Style:** A brief, personalized email highlighting the mutual benefits of a connection. Avoid lengthy, generic introductions.\n\u2022 **Do Not:** Blind copy me on introductions \u2013 always ask for my consent first.\n\u2022 **Ideal Intro Subject Line:** \u2018[Introducer Name] thought you'd be interested in AgriBloom\u2019\n\u2022 **Avoid:** Introducing me to people who are solely focused on valuation or short-term gains.",
+    "personalPreferences": "Prefers direct communication via email or Slack.  Occasionally checks LinkedIn messages.",
+    "meetingAndSchedulingPreferences": "Generally available for video calls during Pacific Standard Time (PST) business hours.  Uses Calendly for scheduling."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 17.30320906639099,
+      "input_tokens": 808,
+      "output_tokens": 1249,
+      "problems": []
+    }
+  ],
+  "success": true
+}

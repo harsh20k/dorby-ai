@@ -1,0 +1,54 @@
+{
+  "id": 476,
+  "archetype": "Growth/Revenue Leader (B2B Tech)",
+  "given_name": "Jamal Olsen",
+  "style_version": 29,
+  "archetypes_version": 80,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Jamal Olsen is a seasoned Revenue Operations leader currently focused on scaling a Series B SaaS company specializing in AI-powered contract lifecycle management (CLM) for enterprise clients. His distinctive career detail is a five-year stint early on as a complex sales engineer \u2013 he *understands* the sales process intimately, which informs his operational improvements. He\u2019s pragmatic, data-driven, and deeply believes in aligning revenue teams (Sales, Marketing, Customer Success) around a unified operating model. He's at a point in his career where he's looking to connect with potential advisory roles at earlier stage companies, and also to build a network of peers facing similar scaling challenges. He\u2019s very particular about introductions \u2013 he doesn\u2019t want to be pitched to, and prefers warm connections with clear context.",
+    "positioning": "I lead Revenue Operations at LexiCorp, an AI-powered contract lifecycle management platform transforming how Fortune 500 companies approach legal agreements. My focus is relentlessly on driving predictable revenue growth by building and optimizing the systems, processes, and data infrastructure that empower our Sales, Marketing, and Customer Success teams.  \n\nI bring over 15 years of experience to this role, with a unique background that started *in* the field \u2013 five years as a Sales Engineer, specifically. This experience instilled in me a deep understanding of the challenges faced by sales teams, and a commitment to building operational solutions that aren\u2019t just theoretically sound, but practically effective.  I\u2019ve successfully scaled RevOps functions at three previous high-growth SaaS companies, consistently exceeding revenue targets and improving operational efficiency. \n\nAt LexiCorp, I\u2019m currently leading a major initiative to integrate our CRM, marketing automation, and CLM systems to provide a 360-degree view of the customer journey. We're leveraging data analytics to identify key friction points in the sales cycle and implement targeted solutions to accelerate deal velocity.  My team is also responsible for developing and maintaining our sales forecasting models, ensuring accurate revenue projections and informed decision-making. \n\nI\u2019m passionate about building high-performing revenue teams and creating a data-driven culture. I thrive in fast-paced environments and enjoy tackling complex challenges.  I\u2019m always open to connecting with fellow RevOps leaders, founders building innovative B2B SaaS solutions, and individuals passionate about leveraging technology to transform the revenue engine.  Let's connect if you're looking to discuss strategies for scaling revenue, optimizing your RevOps function, or simply sharing best practices.",
+    "background": "- **LexiCorp** (Series B SaaS - Contract Lifecycle Management) \u2013 *VP, Revenue Operations* (2021 \u2013 Present)\n  - Led the implementation of a new CRM (Salesforce) and marketing automation platform (Marketo), resulting in a 20% increase in lead conversion rates.\n  - Developed and implemented a standardized sales process, reducing deal cycle time by 15%.\n  - Built a robust sales forecasting model, improving forecast accuracy by 25%.\n  - Spearheaded the integration of CLM data with CRM, providing a comprehensive view of contract performance.\n\n- **NovaTech Solutions** (Series C SaaS - Cybersecurity) \u2013 *Director, Revenue Operations* (2018 \u2013 2021)\n  - Scaled the RevOps function from a team of 2 to a team of 8, supporting a 3x increase in revenue.\n  - Implemented a new sales compensation plan, aligning incentives with company objectives.\n  - Developed and maintained key performance indicators (KPIs) for the revenue organization.\n\n- **InnoVision Labs** (Series A SaaS - Marketing Automation) \u2013 *Revenue Operations Manager* (2016 \u2013 2018)\n  - Built the initial RevOps infrastructure, including CRM, marketing automation, and reporting dashboards.\n  - Managed the sales pipeline and provided data-driven insights to the sales team.\n\n- **Apex Technologies** \u2013 *Sales Engineer* (2008 \u2013 2013)\n  - Provided technical support and product demonstrations to prospective customers.\n  - Collaborated with sales teams to develop and execute sales strategies.\n\n- **Education:** MBA, Stanford University Graduate School of Business (2015)\n- **Education:** BS, Electrical Engineering, Massachusetts Institute of Technology (2008)\n- **Skills:** Salesforce, Marketo, Clari, Gong, Tableau, SQL, Python, Data Analysis, Process Improvement, Sales Operations, Marketing Operations, Revenue Forecasting, Contract Management.",
+    "lookingFor": "I'm currently focused on expanding my network with individuals who can offer valuable insights and potential opportunities. Specifically, I\u2019m looking to connect with:\n\n* **Founders (Seed - Series A)**: Particularly those building B2B SaaS solutions in the legal tech, AI, or enterprise software space.  I'm open to informal advisory roles.\n* **RevOps Leaders (Director/VP level)**: At companies with $20M - $100M ARR, facing similar scaling challenges to LexiCorp.  I'm always eager to share best practices and learn from others.\n* **Investors (Series B/C)**: Focused on B2B SaaS \u2013 for potential knowledge sharing and market trends.\n* **Head of Sales Enablement**: Interested in discussing best practices.\n\n**Please do not send me:** Cold pitches for products or services.  I\u2019m not looking for vendors at this time.  Also, please no recruitment pitches.",
+    "notes": "* Recently presented at the RevOps Co-op conference on 'Building a Data-Driven Revenue Engine'.\n* Currently exploring potential advisory roles with early-stage startups.\n* Very interested in learning about innovative approaches to sales forecasting.\n* Avoid pitching me anything related to lead generation \u2013 we have a robust system in place.\n* Recently had a good conversation with Sarah Chen (RevOps Leader at XYZ Corp) - potential for a future collaboration.",
+    "locationAvailability": "I am currently based in San Francisco, California, and primarily work remotely. I\u2019m open to travel within the US for strategic meetings and industry events, particularly on the West Coast. I\u2019m generally available for virtual meetings across all time zones.",
+    "introPreferences": "I\u2019m very specific about how I like to be introduced.  Please adhere to the following guidelines:\n\n* **Hard Requirements:**\n    *  The introduction *must* come from a mutual connection. I strongly prefer warm intros.\n    *  The introduction *must* include context about *why* we should connect.  What shared interests or challenges do we have?\n    *  Do *not* lead with a sales pitch.  I\u2019m not interested in being sold to.\n\n* **Strongly Preferred:**\n    *  Briefly mention my background as a former Sales Engineer \u2013 it\u2019s a key part of my perspective.\n    *  Highlight the other person's relevant experience or expertise.\n    *  Suggest a specific topic for discussion (e.g., 'I thought you two might have a valuable conversation about scaling RevOps in a high-growth environment').\n\n* **Avoid:**\n    *  Generic introductions like 'I thought you two should connect'.\n    *  Long, rambling emails. Keep it concise and focused.\n    *  Introducing me to people who are clearly trying to sell me something. \n    *  Phrases like 'Jamal is a great guy' \u2013 focus on *why* we should connect professionally.\n\n**Example of a good introduction:** 'Jamal, I wanted to introduce you to [Name]. They're the VP of RevOps at [Company], a Series B company in the [Industry] space. They\u2019ve been tackling similar challenges to you around integrating their CRM with their marketing automation platform. Given your background as a former Sales Engineer, I thought you might both have a valuable conversation about best practices.'",
+    "personalPreferences": "I prefer to communicate via email initially. LinkedIn messaging is acceptable for quick follow-ups.",
+    "meetingAndSchedulingPreferences": "I generally block off Friday afternoons for focused work. Best times for meetings are Tuesday-Thursday mornings."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 32.67988300323486,
+      "input_tokens": 839,
+      "output_tokens": 1755,
+      "problems": []
+    }
+  ],
+  "success": true
+}

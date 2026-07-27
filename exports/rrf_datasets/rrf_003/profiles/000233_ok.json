@@ -1,0 +1,63 @@
+{
+  "id": 233,
+  "archetype": "Experienced Healthcare Operator/Turnaround CEO",
+  "given_name": "Elena Weber",
+  "style_version": 14,
+  "archetypes_version": 38,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Elena Weber is a seasoned healthcare executive with a strong operational background and a track record of successfully turning around underperforming healthcare businesses, particularly in the diagnostics and specialty pharma space. Her distinctive detail is a prior successful exit from a company she built from the ground up \u2013 a molecular diagnostics firm focused on personalized oncology. She's now focused on building *another* venture, this time in the digital health space, specifically around remote patient monitoring and chronic disease management. She's actively seeking seed funding and strategic partners who can accelerate her go-to-market strategy and bring relevant expertise in regulatory affairs, data security, and scaling digital health platforms. She's a pragmatic leader, focused on execution and demonstrable ROI. She\u2019s not interested in purely theoretical discussions or 'blue sky' ideas without a clear path to profitability.",
+    "positioning": "Elena Weber is the Founder & CEO of CuraLink, a digital health company focused on improving outcomes and reducing costs for patients with chronic conditions through remote patient monitoring. Prior to CuraLink, Elena successfully led the turnaround of BioSolve Diagnostics, significantly increasing revenue and profitability within two years. She brings over 15 years of experience in the healthcare industry, with a proven ability to identify market opportunities, build high-performing teams, and drive commercial growth. Currently, Elena is focused on securing seed funding and establishing strategic partnerships to accelerate CuraLink\u2019s market entry and scale its innovative platform. She is particularly keen to connect with investors and advisors with experience in digital health, remote monitoring, and value-based care.",
+    "background": "- **Founder & CEO, CuraLink** (2023 - Present): Leading all aspects of business development, fundraising, product strategy, and operations for a digital health startup focused on remote patient monitoring.\n- **Chief Executive Officer, BioSolve Diagnostics** (2018 - 2022): Led a successful turnaround of a struggling molecular diagnostics company, increasing revenue by 60% and profitability by 40% within two years.\n- **Founder & CEO, OncoPrecision Diagnostics** (2010 - 2018): Built and scaled a personalized oncology diagnostics company from inception to successful acquisition by a major pharmaceutical company.\n- **Director of Business Development, Genemark Pharmaceuticals** (2007 - 2010): Responsible for identifying and evaluating new business opportunities, including licensing agreements and strategic partnerships.\n- **MBA, Harvard Business School** (2005 - 2007)\n- **MD, Stanford University School of Medicine** (1999 - 2003)\n- **BS, Biology, Massachusetts Institute of Technology** (1995 - 1999)\n- **Skills:** Healthcare Management, Business Strategy, Turnaround Management, Fundraising, Venture Capital, Digital Health, Remote Patient Monitoring, Molecular Diagnostics, Personalized Medicine, Value-Based Care, Team Leadership, Product Development, Regulatory Affairs, Commercialization.\n- **Awards & Recognition:** 'Healthcare Innovator of the Year' - BioSolve Diagnostics (2021)",
+    "lookingFor": "- **Seed Funding:** Actively seeking Series A funding to scale CuraLink\u2019s platform and expand its market reach. Target investment range: $5M - $10M.\n- **Strategic Partnerships:** Interested in collaborations with established healthcare providers, payers, and technology companies to accelerate market adoption.\n- **Advisors:** Seeking experienced advisors with expertise in digital health regulatory compliance (HIPAA, FDA), data security, and scaling digital health platforms.\n- **Industry Contacts:** Connections within the remote patient monitoring, chronic disease management, and value-based care spaces are highly valued. Specifically, introductions to key decision-makers at major hospital systems and health plans.\n- **Potential Board Members:** Exploring potential board members with a strong track record of building and scaling successful healthcare companies.\n- I am *not* currently looking for purely advisory roles without potential for equity or direct impact.",
+    "notes": "Elena is very direct and values efficiency. She's a quick study and doesn't waste time on small talk. During our call, she emphasized the importance of demonstrable ROI and a clear path to commercialization. She's currently prioritizing meetings with potential investors and strategic partners. She mentioned a positive initial conversation with a fund specializing in digital health, but is still exploring options. Be prepared to discuss specific metrics and financial projections.",
+    "locationAvailability": "Elena is based in Boston, MA, and frequently travels to industry conferences and meetings on the East Coast.",
+    "introPreferences": "Hard Requirements: Any introduction *must* be to individuals with decision-making authority (VP level or higher) at organizations relevant to CuraLink\u2019s target market (healthcare providers, payers, technology companies). Exclude introductions to purely academic contacts or individuals without a clear commercial focus.\nSoft Preferences: Prioritize introductions to individuals with experience in remote patient monitoring, chronic disease management, or value-based care.  The introduction email should briefly highlight CuraLink\u2019s value proposition (improving outcomes and reducing costs through remote monitoring) and Elena\u2019s background as a successful healthcare executive.  Avoid overly lengthy introductions \u2013 keep it concise and focused on the potential for mutual benefit. Style should be professional and direct.",
+    "personalPreferences": "- Prefers initial contact via LinkedIn messaging or email. \n- Not active on Twitter.",
+    "meetingAndSchedulingPreferences": "Elena is generally available for meetings during standard business hours (Eastern Time). She prefers virtual meetings initially but is open to in-person meetings if travel is necessary. Please include a brief agenda with any meeting request."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 22.115678071975708,
+      "input_tokens": 756,
+      "output_tokens": 1251,
+      "problems": [
+        "background: possible truncation (ends with '...gma Black Belt</li>\n</ul>')"
+      ]
+    },
+    {
+      "attempt": 2,
+      "elapsed_s": 16.07385802268982,
+      "input_tokens": 756,
+      "output_tokens": 1172,
+      "problems": []
+    }
+  ],
+  "success": true
+}

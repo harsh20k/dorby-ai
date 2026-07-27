@@ -1,0 +1,63 @@
+{
+  "id": 139,
+  "archetype": "Serial Entrepreneur - SaaS/Security Focus",
+  "given_name": "Rafael Ishikawa",
+  "style_version": 9,
+  "archetypes_version": 24,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Rafael Ishikawa is a seasoned serial entrepreneur currently focused on building a next-generation cloud security platform. His distinctive career detail is a previous successful exit in the identity and access management (IAM) space, fueled by a novel application of behavioral biometrics. He's not looking for funding *right now* \u2013 he's self-funded for the initial phase \u2013 but is actively building a strong advisory board and seeking strategic partnerships to accelerate go-to-market. He\u2019s very focused on people who understand the nuances of selling to CISOs and DevOps teams. He\u2019s a pragmatic, data-driven leader who values speed of execution and despises \u2018vaporware\u2019.",
+    "positioning": "A highly experienced technology leader and serial entrepreneur, Rafael Ishikawa is currently the Founder & CEO of AegisNova, a cloud-native security platform designed to proactively mitigate threats through continuous behavioral analysis. Leveraging a deep understanding of the evolving threat landscape and a proven track record in identity and access management, I specialize in building high-performing teams and delivering innovative solutions that address critical security challenges. My focus is on simplifying complex security architectures while maximizing visibility and control for organizations operating in dynamic cloud environments. I excel at translating technical innovation into tangible business value, driving revenue growth, and establishing strong market leadership. I'm particularly passionate about the intersection of AI and security, and believe behavioral biometrics is key to a zero-trust future. I offer strategic guidance, technical expertise, and a pragmatic approach to solving real-world security problems. I am actively seeking advisors and partners who share this vision.",
+    "background": "Rafael Ishikawa\u2019s career has been defined by a consistent pattern of identifying emerging technology trends and translating them into successful, scalable businesses.\n\n* **2022 \u2013 Present: Founder & CEO, AegisNova:** Leading the development and execution of a novel cloud security platform utilizing behavioral biometrics and machine learning to detect and prevent unauthorized access and malicious activity. Currently in seed stage, focused on MVP development and early adopter acquisition.\n* **2016 \u2013 2022: Founder & CEO, Veridium Dynamics (Acquired by SecureAuth):** Spearheaded the development and commercialization of a behavioral biometric authentication platform for enterprise access management. Led the company through multiple rounds of funding, achieving significant revenue growth and ultimately securing a successful acquisition by SecureAuth in 2022. Key achievements include:\n    * Increased ARR by 350% in the final two years prior to acquisition.\n    * Secured patents for novel behavioral biometric algorithms.\n    * Built and scaled a high-performing engineering and sales team.\n* **2012 \u2013 2016: Principal Security Architect, CyberGuard Solutions:** Responsible for designing and implementing security solutions for large enterprise clients in the financial and healthcare sectors. Expertise in vulnerability assessment, penetration testing, and incident response. Technologies utilized included: SIEM (Splunk, QRadar), Firewalls (Palo Alto Networks, Cisco), and Intrusion Detection/Prevention Systems (Snort, Suricata).\n* **2008 \u2013 2012: Software Engineer, InnovateTech:** Developed and maintained software applications for various industries, gaining a strong foundation in software development principles and methodologies. Proficient in Java, Python, and C++.\n\nThroughout his career, Rafael has consistently demonstrated a passion for innovation, a commitment to excellence, and a proven ability to build and lead successful teams. He holds a Master of Science in Computer Science from Stanford University and a Bachelor of Science in Electrical Engineering from MIT.",
+    "lookingFor": "I am currently focused on building a strong network of advisors and strategic partners to accelerate the growth of AegisNova. Specifically, I\u2019m seeking connections with:\n\n* **Experienced CISOs:** Individuals with a deep understanding of the challenges facing organizations in protecting their cloud environments. I\u2019m interested in gathering feedback on our platform and identifying potential early adopters.\n* **Go-to-Market Experts (SaaS/Security):** Professionals with a proven track record of successfully launching and scaling SaaS security products. Expertise in channel development, sales enablement, and marketing is highly valued.\n* **DevOps/Cloud Infrastructure Specialists:** Individuals with hands-on experience building and managing cloud infrastructure. I\u2019m interested in understanding their security requirements and identifying potential integration opportunities.\n* **Angel Investors/Micro-VCs (Future Consideration):** While currently self-funded, I am open to connecting with investors who have a strong understanding of the cloud security market and a long-term investment horizon (Series A stage and beyond).\n\n**Do Not Surface:**\n* Recruiters (unless specifically related to advisory board positions)\n* Individuals selling generic cybersecurity solutions without a clear understanding of behavioral biometrics.\n* Individuals primarily focused on compliance (e.g., HIPAA, PCI DSS) \u2013 I\u2019m focused on proactive threat prevention, not reactive compliance.\n* Cold outreach sales pitches.\n\nI'm particularly interested in individuals who have experience with companies like Okta, CrowdStrike, Palo Alto Networks, and Zscaler. I prioritize quality over quantity and value genuine connections based on mutual interest.",
+    "notes": "* Rafael is extremely responsive on LinkedIn but prefers direct email for detailed discussions. \n* He recently attended the RSA Conference and is actively following up with several contacts made there. \n* He\u2019s mentioned a strong preference for advisors with *operational* experience \u2013 he's not looking for just 'names' on a board.\n* Initial conversation indicates a slight aversion to marketing jargon \u2013 prefers data and concrete examples.\n* Flagged for potential advisory board recruitment - internal project 'NovaConnect'.",
+    "locationAvailability": "Rafael Ishikawa is currently based in Palo Alto, California. He is open to remote meetings and occasional travel to key industry events and partner locations.",
+    "introPreferences": "When making introductions to Rafael Ishikawa, please keep the following in mind:\n\n* **Focus on Relevance:** Highlight the individual's specific experience and expertise related to cloud security, behavioral biometrics, or SaaS go-to-market strategies. Avoid generic introductions.\n* **Concise and Action-Oriented:** Keep introductions brief and to the point. Clearly articulate the value proposition for both Rafael and the person being introduced.\n* **Highlight Shared Interests:** Identify any common connections, interests, or experiences that might facilitate a meaningful conversation.\n* **Avoid 'Soft' Introductions:** Rafael prefers direct introductions with a clear purpose. Don\u2019t simply say \u201cI thought you two should connect.\u201d\n* **Preferred Format:** A short LinkedIn message with a brief summary of the connection's background and a suggested topic for discussion is ideal.\n* **Do not mention his previous exit unless it\u2019s directly relevant to the conversation. He prefers to focus on the present and future.",
+    "personalPreferences": "Prefers direct communication via email (rafael.ishikawa@aegisnova.com). Values concise, data-driven feedback. Open to quick virtual coffee chats.",
+    "meetingAndSchedulingPreferences": "Generally available for meetings after 2 PM PST. Prefers 30-minute meetings initially."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 25.766294956207275,
+      "input_tokens": 770,
+      "output_tokens": 1484,
+      "problems": [
+        "lookingFor: possible truncation (ends with '...ning, AWS, Cloud Security')"
+      ]
+    },
+    {
+      "attempt": 2,
+      "elapsed_s": 19.789225816726685,
+      "input_tokens": 770,
+      "output_tokens": 1490,
+      "problems": []
+    }
+  ],
+  "success": true
+}

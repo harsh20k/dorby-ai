@@ -1,0 +1,54 @@
+{
+  "id": 745,
+  "archetype": "Experienced Engineering Leader, Toronto-Based",
+  "given_name": "Aiko Chen",
+  "style_version": 45,
+  "archetypes_version": 125,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Aiko Chen is a seasoned Engineering Leader currently working at a rapidly growing fintech startup in Toronto called 'NovaPay'. She's a specialist in scaling engineering teams *within* established architectural frameworks \u2013 she doesn't love greenfield projects, preferring to optimize and expand existing systems. A distinctive career detail is that she spent 5 years early in her career at a large, traditional Canadian bank, which gives her a unique perspective on the challenges of modernizing legacy systems. She\u2019s now actively looking to expand her network within the Canadian tech ecosystem, specifically connecting with VPs of Engineering at Series B/C stage companies and individuals with expertise in distributed systems and fraud detection. She\u2019s subtly exploring potential opportunities for a more senior leadership role, but isn\u2019t actively job hunting \u2013 yet. Her priority is building a strong network of peers and learning from others' experiences.",
+    "positioning": "Aiko Chen is a results-oriented Engineering Leader with a decade of experience building and scaling high-performing engineering teams. Currently at NovaPay, a disruptive fintech company, I\u2019m focused on architecting and implementing scalable solutions for our rapidly expanding user base. My expertise lies in transforming complex technical challenges into actionable strategies, optimizing existing infrastructure, and fostering a collaborative engineering culture. I specialize in navigating the complexities of modernizing financial technology, leveraging a strong understanding of both legacy systems and cutting-edge technologies. I\u2019m passionate about developing engineers and building robust, secure, and reliable platforms. I excel at bridging the gap between business requirements and technical execution, ensuring alignment and delivering impactful results. I\u2019m particularly interested in connecting with companies tackling similar scaling challenges and exploring opportunities to collaborate on innovative solutions within the Canadian fintech landscape.",
+    "background": "- **NovaPay, Toronto, ON**\n  *VP of Engineering* (January 2022 \u2013 Present)\n    - Led the engineering team through a 3x growth in user base while maintaining 99.99% system uptime.\n    - Successfully implemented a new microservices architecture, improving system scalability and resilience.\n    - Mentored and developed a team of 30+ engineers, focusing on career growth and technical excellence.\n    - Championed the adoption of DevOps practices, resulting in a 20% reduction in deployment time.\n    - Key skills: Microservices, Kubernetes, AWS, Python, Java, Leadership, DevOps, Agile methodologies, System Architecture.\n\n- **FinTech Solutions Inc., Toronto, ON**\n  *Senior Engineering Manager* (June 2018 \u2013 December 2021)\n    - Managed a team of 15 engineers responsible for the development and maintenance of a core banking platform.\n    - Led the migration of key services to the cloud, resulting in significant cost savings.\n    - Introduced automated testing frameworks, increasing code quality and reducing bug counts.\n    - Collaborated with product management and design teams to deliver innovative features.\n    - Key skills: Cloud Computing (AWS, Azure), Agile, Java, Spring Boot, SQL, Team Management.\n\n- **Royal Bank of Canada, Toronto, ON**\n  *Software Engineer* (August 2013 \u2013 May 2018)\n    - Developed and maintained critical components of the bank\u2019s online banking platform.\n    - Contributed to the design and implementation of new features, focusing on security and scalability.\n    - Gained extensive experience working with legacy systems and modern technologies.\n    - Collaborated with cross-functional teams to deliver high-quality software.\n    - Key skills: Java, SQL, COBOL (exposure), Banking Systems, Software Development Lifecycle.\n\n- **University of Waterloo, Waterloo, ON**\n  *Bachelor of Computer Science* (September 2009 \u2013 June 2013)\n    - Minor in Mathematics\n    - Dean\u2019s List all semesters\n    - Capstone project focused on developing a distributed database system.\n\n- **Languages:** English (Native), Mandarin (Conversational)",
+    "lookingFor": "I'm actively looking to expand my network within the Canadian tech ecosystem. I\u2019m particularly interested in connecting with VPs of Engineering and Directors of Engineering at Series B and C stage companies experiencing rapid growth. I\u2019m keen to learn from others who have successfully navigated the challenges of scaling engineering organizations while maintaining high standards of quality and security. \n\nSpecifically, I'm looking for:\n\n* **VPs of Engineering:** At companies with 50-200 employees, focused on fintech, SaaS, or e-commerce. I\u2019m interested in understanding their approaches to team structure, talent acquisition, and technical roadmapping.\n* **Engineering Leaders:** With expertise in distributed systems, cloud architecture, and fraud detection. I\u2019m always eager to learn about new technologies and best practices.\n* **Individuals:** Who have experience modernizing legacy systems in highly regulated industries. I\u2019m particularly interested in hearing about successful strategies and lessons learned.\n* **Thought Leaders:** Sharing insights on engineering leadership, organizational scaling, and the future of fintech.\n\nI am *not* currently interested in:\n* Recruiters (unless they have a role that perfectly aligns with my long-term career goals \u2013 see positioning).\n* Sales pitches for engineering tools or services.\n* Opportunities outside of Canada.\n* Networking events focused solely on junior-level roles.",
+    "notes": "Aiko is a strong advocate for continuous learning and is currently exploring advanced courses in system design. She recently attended the AWS re:Invent conference and is keen to implement some of the new concepts she learned. \n\n* Remind her to follow up with John Davies (VP Engineering at StellarTech) regarding their conversation about microservices. \n* She's open to informational interviews but prefers a structured approach with a clear agenda. \n* Avoid introducing her to companies with a very flat engineering structure \u2013 she prefers a more defined hierarchy. \n* She's been casually mentioning a desire for more strategic influence in her next role, so keep an eye out for opportunities that align with that.",
+    "locationAvailability": "Based in Toronto, Ontario, and open to remote meetings. Limited travel availability due to family commitments.",
+    "introPreferences": "When making introductions, please focus on shared interests and potential for mutual learning. I value introductions that are concise and clearly articulate the potential benefit for both parties.\n\n* **Hard Requirements:** The introduction *must* include the recipient\u2019s current role and company. A LinkedIn profile link is highly preferred.\n* **Soft Preferences:** Highlight any relevant experience the recipient has in scaling engineering teams or working with fintech platforms. Mentioning shared connections or common interests is also appreciated.\n* **Introduction Message Guidelines:** Keep it brief and personalized. Avoid generic templates. Focus on *why* I should connect with this individual and what I might gain from the conversation. A simple 'Aiko is a VP of Engineering at NovaPay and is interested in learning about your experience with [specific technology/challenge]' is often sufficient.\n* **Avoid:** Introducing me to individuals who are actively recruiting or selling something. I\u2019m primarily interested in building relationships and exchanging knowledge.",
+    "personalPreferences": "I prefer initial contact via LinkedIn message. Email is acceptable for follow-up communication. Please avoid direct messaging on Twitter. I typically respond to messages within 24-48 hours.",
+    "meetingAndSchedulingPreferences": "I generally prefer meetings to be scheduled during regular business hours (9am-5pm EST). Please send a calendar invite with a brief agenda beforehand."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 21.412395000457764,
+      "input_tokens": 824,
+      "output_tokens": 1599,
+      "problems": []
+    }
+  ],
+  "success": true
+}

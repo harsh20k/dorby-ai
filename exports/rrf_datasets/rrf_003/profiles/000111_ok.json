@@ -1,0 +1,54 @@
+{
+  "id": 111,
+  "archetype": "Legal & Financial Services Nomad",
+  "given_name": "Amir Lindqvist",
+  "style_version": 7,
+  "archetypes_version": 18,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Amir Lindqvist is a former in-house counsel specializing in FinTech regulatory compliance, now operating as an independent consultant. He spent 8 years at a Swedish neobank, scaling their operations into several EU markets, and saw firsthand the challenges of navigating fragmented regulations. He\u2019s now leveraging that experience to help smaller FinTech startups, particularly those focused on decentralized finance (DeFi), establish compliant operations internationally. He\u2019s actively seeking connections with venture capitalists specializing in early-stage FinTech, and founders of promising DeFi projects needing regulatory guidance. He's a bit of a digital nomad, splitting time between Lisbon and Stockholm, and prioritizes efficient, direct communication.",
+    "positioning": "I\u2019m Amir Lindqvist, a regulatory compliance consultant focused on the FinTech sector, particularly decentralized finance (DeFi). Having spent eight years as in-house counsel at NovaPay, a leading Swedish neobank, I developed a deep understanding of the complexities surrounding cross-border financial regulations within the EU. At NovaPay, I was instrumental in navigating the licensing processes in Germany, France, and the Netherlands, managing relationships with regulatory bodies like the BaFin and Autorit\u00e9 des March\u00e9s Financiers. \n\nCurrently, I advise early-stage FinTech startups on establishing robust compliance frameworks, focusing on areas like KYC/AML, PSD2, and MiCA. I help them translate complex regulatory requirements into actionable strategies, enabling them to scale their businesses sustainably and internationally. The regulatory landscape for DeFi is rapidly evolving, and I\u2019m passionate about helping innovative projects navigate these challenges. I\u2019m particularly interested in exploring opportunities to advise on the practical implications of upcoming legislation. I\u2019m timely to connect with if you are involved in early stage FinTech investment or are building the next generation of DeFi protocols. Let\u2019s connect and discuss how I can help you navigate the regulatory maze.",
+    "background": "- **Independent Compliance Consultant** (2022 \u2013 Present)\n    * Providing regulatory compliance advisory services to FinTech startups, specializing in DeFi and payments.\n    * Developing and implementing KYC/AML programs, ensuring adherence to EU regulations (PSD2, AMLD5, MiCA).\n    * Conducting regulatory risk assessments and gap analyses.\n    * Advising on licensing requirements and applications across multiple EU jurisdictions.\n    * Successfully guided three early-stage DeFi protocols through initial regulatory assessments, mitigating potential compliance risks.\n\n- **NovaPay (Swedish Neobank)** (2014 \u2013 2022)\n    * **Senior Legal Counsel** (2018 \u2013 2022)\n        * Led the legal and compliance efforts for NovaPay\u2019s international expansion into Germany, France, and the Netherlands.\n        * Managed relationships with regulatory bodies, including BaFin, Autorit\u00e9 des March\u00e9s Financiers, and the Swedish Financial Supervisory Authority.\n        * Developed and implemented comprehensive KYC/AML policies and procedures, resulting in a 20% reduction in fraudulent transactions.\n        * Negotiated and drafted complex commercial agreements with payment processors, technology vendors, and strategic partners.\n    * **Legal Counsel** (2014 \u2013 2018)\n        * Provided legal support on a wide range of issues, including contract law, data privacy (GDPR), and intellectual property.\n        * Assisted with the preparation of legal documentation for funding rounds, including term sheets and shareholder agreements.\n        * Monitored and analyzed changes in financial regulations, advising internal stakeholders on potential impacts.\n\n- **Mannheimer Swartling Advokatbyr\u00e5 (Law Firm)** (2012 \u2013 2014)\n    * **Associate Attorney**\n        * Focused on financial regulatory law, assisting senior attorneys with due diligence reviews and legal research.\n        * Gained experience in advising clients on compliance with Swedish and EU financial regulations.",
+    "lookingFor": "I'm actively seeking to expand my network within the FinTech ecosystem. Specifically, I\u2019m looking to connect with:\n\n* **Venture Capitalists:** Focusing on Seed and Series A funding rounds in the FinTech space, particularly those with a dedicated DeFi thesis. I\u2019m seeking potential partnerships to provide due diligence support and regulatory risk assessments for their portfolio companies.\n* **Founders of Early-Stage DeFi Projects:** Building innovative protocols and applications. I\u2019m interested in offering my expertise in navigating the complex regulatory landscape and ensuring long-term compliance.\n* **Regulatory Experts:** Specializing in digital assets and blockchain technology. I\u2019m keen to exchange insights and collaborate on thought leadership initiatives.\n\nI'm open to discussing potential consulting engagements, providing introductions to my network, and sharing insights on the latest regulatory developments. I\u2019m particularly interested in projects addressing the regulatory challenges of cross-border DeFi transactions. I\u2019m looking for individuals who are proactive, forward-thinking, and committed to building a compliant and sustainable FinTech industry.",
+    "notes": "* Amir is very responsive on LinkedIn, but prefers initial contact via email. \n* He has a strong presence in the Lisbon FinTech community, attending regular meetups and conferences.\n* Publicly available information suggests he completed a LL.M. in International Financial Law at the University of Uppsala \u2013 verifying this during an intro is beneficial.\n* He is currently writing a whitepaper on the implications of MiCA for DeFi protocols.\n* Avoid introductions to purely traditional banking institutions \u2013 his focus is squarely on the FinTech space.",
+    "locationAvailability": "I am currently based between Lisbon, Portugal and Stockholm, Sweden. I\u2019m comfortable traveling within Europe for client engagements and industry events. I often have availability for virtual meetings regardless of location.",
+    "introPreferences": "Hard Requirements:\n* Introductions should be to individuals involved in early-stage FinTech investment or building DeFi protocols.\n* The contact should be open to discussing regulatory compliance challenges.\n* Please avoid introducing me to individuals solely focused on traditional banking.\n\nSoft Preferences:\n* Please mention my experience at NovaPay and my focus on cross-border regulatory compliance.\n* Emphasize my proactive approach to navigating the evolving DeFi regulatory landscape.\n* Keep introductions concise and focused on mutual value.",
+    "personalPreferences": "I prefer initial contact via email (amir.lindqvist@example.com) and appreciate concise, direct communication. I\u2019m always open to sharing insights and contributing to the FinTech community.",
+    "meetingAndSchedulingPreferences": "I generally prefer video calls over phone calls, but am flexible. Please provide a brief agenda when scheduling a meeting."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 19.88013529777527,
+      "input_tokens": 812,
+      "output_tokens": 1373,
+      "problems": []
+    }
+  ],
+  "success": true
+}

@@ -1,0 +1,54 @@
+{
+  "id": 862,
+  "archetype": "Healthcare AI Security Expert",
+  "given_name": "Olivia Haddad",
+  "style_version": 53,
+  "archetypes_version": 146,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Olivia Haddad is a rising star in the healthcare AI security space. She\u2019s a former penetration tester who transitioned into building robust security frameworks *for* AI models used in clinical settings. Her distinctive career detail is a patent pending on a novel method for adversarial training of medical imaging AI, making models more resilient to malicious inputs. Currently, she\u2019s focused on scaling her team at a Series B healthtech startup, \u2018Aether Diagnostics,\u2019 and establishing herself as a thought leader in the field. She's actively seeking connections with potential partners for pilot programs, investors interested in the future of AI-driven healthcare, and fellow security experts pushing the boundaries of model protection. She's very specific about the quality of connections she makes, prioritizing those with deep technical understanding and a shared commitment to patient safety.",
+    "positioning": "Olivia Haddad leads the AI Security team at Aether Diagnostics, a rapidly growing healthtech company focused on AI-powered diagnostic imaging. She is responsible for the design, implementation, and maintenance of security protocols safeguarding the company\u2019s proprietary AI models and sensitive patient data. Olivia\u2019s expertise lies in proactively identifying and mitigating vulnerabilities within machine learning pipelines, from data ingestion to model deployment. Her recent work includes pioneering a novel adversarial training technique for medical imaging AI, resulting in a significant improvement in model robustness. She\u2019s passionate about bridging the gap between cutting-edge security research and practical clinical application, and is eager to connect with individuals driving innovation in healthcare AI.",
+    "background": "- **Aether Diagnostics,** *Head of AI Security* (2022 \u2013 Present)\n  - Led a team of security engineers to develop and implement a comprehensive AI security framework for diagnostic imaging models.\n  - Spearheaded the development and patent application (US Provisional App No. 63/XXXXXXX) of a novel adversarial training method for medical image classification.\n  - Implemented robust data encryption and access control mechanisms compliant with HIPAA and GDPR regulations.\n  - Conducted regular security audits and penetration testing to identify and address vulnerabilities.\n- **CyberNexus,** *Senior Penetration Tester* (2018 \u2013 2022)\n  - Conducted penetration testing and vulnerability assessments for a diverse range of clients, including healthcare providers and pharmaceutical companies.\n  - Specialized in identifying and exploiting vulnerabilities in web applications, network infrastructure, and cloud environments.\n  - Developed and delivered security training programs for technical and non-technical audiences.\n  - Contributed to the development of custom penetration testing tools and methodologies.\n- **Massachusetts Institute of Technology (MIT),** *Master of Science in Computer Science* (2016 \u2013 2018)\n  - Focused on machine learning, cybersecurity, and data privacy.\n  - Thesis: *\u201cAdversarial Robustness in Deep Learning for Medical Image Analysis\u201d*\n- **Carnegie Mellon University (CMU),** *Bachelor of Science in Computer Science* (2012 \u2013 2016)\n  - Minor in Statistics.\n- **Skills:** Python, TensorFlow, PyTorch, Keras, Scikit-learn, AWS, Azure, GCP, HIPAA Compliance, GDPR Compliance, Penetration Testing, Vulnerability Assessment, Machine Learning Security, Adversarial Machine Learning, Cryptography, Network Security, Data Privacy.",
+    "lookingFor": "- **Potential Pilot Partners:** Healthcare institutions interested in evaluating and implementing Aether Diagnostics' AI-powered diagnostic solutions with enhanced security features.\n- **Series B/C Investors:** Venture capital firms specializing in healthcare AI and cybersecurity, seeking high-growth investment opportunities.\n- **AI Security Researchers:** Collaborators interested in joint research projects focused on advancing the state-of-the-art in AI security for healthcare.\n- **Advisors:** Seasoned professionals with experience in navigating the regulatory landscape of healthcare AI.\n- **Talent Acquisition:** Experienced AI security engineers, data scientists, and machine learning specialists interested in joining Aether Diagnostics.\n- **Thought Leadership Opportunities:** Invitations to speak at industry conferences and contribute to publications on healthcare AI security.",
+    "notes": "- Olivia is extremely focused on practical applications of security research, often prioritizing solutions that can be deployed quickly and effectively.\n- She\u2019s been actively following the recent NIST AI Risk Management Framework and is eager to discuss its implications for healthcare.\n- Currently prioritizing strengthening the security of their new cardiac imaging AI model.\n- She recently presented at the Healthcare Information and Management Systems Society (HIMSS) conference.",
+    "locationAvailability": "Olivia Haddad is currently based in Boston, Massachusetts. She is open to occasional travel for conferences and meetings, and is not considering relocation at this time.",
+    "introPreferences": "- **Hard Requirements:** Introductions should be to individuals with a proven track record in healthcare AI or cybersecurity, *and* who have direct decision-making authority.\n- **Soft Preferences:** Preference for introductions to individuals who are actively seeking to improve their AI security posture.\n- **Avoid:** Introductions to sales or marketing professionals without technical expertise.\n- **Introduction Style:** Brief, concise introductions highlighting the mutual benefits of connecting. Focus on specific areas of shared interest.\n- **Context is Key:** Please include a brief explanation of why you think Olivia and the connection would be a good fit.\n- **LinkedIn Messaging Preferred:** Please initiate the connection via LinkedIn messaging after the introduction.",
+    "personalPreferences": "Olivia prefers direct and efficient communication. She is most responsive to messages on LinkedIn and email.",
+    "meetingAndSchedulingPreferences": "- Please include a brief agenda when requesting a meeting.\n- Olivia typically schedules 30-minute introductory calls."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 20.54141092300415,
+      "input_tokens": 729,
+      "output_tokens": 1177,
+      "problems": []
+    }
+  ],
+  "success": true
+}

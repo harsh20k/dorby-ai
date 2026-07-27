@@ -1,0 +1,54 @@
+{
+  "id": 528,
+  "archetype": "Toronto Tech Founder, AI Focus",
+  "given_name": "Valeria Haruna",
+  "style_version": 32,
+  "archetypes_version": 89,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Valeria Haruna is a first-time founder, a recent graduate of the Vector Institute\u2019s AI Engineering program, and fiercely proud of her Ukrainian heritage. She\u2019s building \u2018Synapse Solutions,\u2019 a B2B SaaS platform leveraging generative AI to automate content localization for rapidly expanding tech companies. She noticed the pain point firsthand while working on international marketing campaigns at Shopify. She\u2019s incredibly technically capable but less experienced in the fundraising world and can sometimes be overly focused on technical details when pitching. She\u2019s aiming for a pre-seed round of $750k to scale her engineering team and expand beyond initial pilot customers. She\u2019s very active in the Toronto tech community and values authentic connections. A key differentiator for Synapse is its focus on *nuance* in translation \u2013 going beyond literal accuracy to preserve brand voice and cultural context.",
+    "positioning": "Synapse Solutions is revolutionizing content localization for the global tech market. We provide a generative AI-powered SaaS platform that automates the translation and adaptation of marketing, sales, and product content, enabling companies to rapidly scale into new international markets. Unlike traditional translation services or basic machine translation tools, Synapse leverages advanced Large Language Models fine-tuned on industry-specific terminology and cultural nuances to deliver highly accurate and brand-consistent localized content. We are initially targeting Series A/B stage tech companies with aggressive international expansion plans. Our pilot program with three key clients has demonstrated a 60% reduction in localization costs and a 40% faster time-to-market for localized campaigns. We are currently achieving $15k MRR and project $100k MRR within the next six months.  We are building the future of global communication, one localized message at a time.",
+    "background": "* **Vector Institute, Toronto, ON** \u2013 AI Engineering Graduate (2023). Focused on Natural Language Processing, Generative AI, and Machine Translation. Capstone project: Developed a novel algorithm for context-aware machine translation, achieving state-of-the-art results on benchmark datasets.\n* **Shopify, Toronto, ON** \u2013 Marketing Specialist, International Growth (2021-2023). Managed localization efforts for marketing campaigns across EMEA and APAC regions. Identified significant inefficiencies and quality control issues with existing translation vendors.\n* **University of Toronto, Toronto, ON** \u2013 Bachelor of Science, Computer Science (2017-2021). Minor in Linguistics. GPA: 3.9/4.0. Dean\u2019s List all semesters.\n* **Skills:** Python, TensorFlow, PyTorch, Transformer Models (BERT, GPT-3, etc.), Machine Translation, Natural Language Processing, Data Analysis, A/B Testing, Project Management, Agile Methodologies. Fluent in English and Ukrainian. Conversational in Spanish.\n* **Certifications:** AWS Certified Machine Learning \u2013 Specialty (2023)",
+    "lookingFor": "**Investor Introductions (Priority)**\n* Seed & Pre-Seed stage VCs focused on AI/ML and SaaS.\n* Angels with experience in the localization or MarTech space.\n* Investors who understand the nuances of generative AI and its potential for disruption.\n\n**Strategic Partnerships**\n* Companies with large international customer bases who could benefit from our platform.\n* Localization agencies interested in integrating our AI-powered tools into their workflows.\n\n**Technical Talent**\n* Experienced Machine Learning Engineers specializing in NLP and Generative AI (2+ years experience).\n* Full-Stack Engineers proficient in React, Node.js, and cloud technologies (AWS, GCP, or Azure).",
+    "notes": "Valeria is a highly intelligent and driven founder with a strong technical background. She's incredibly passionate about her vision for Synapse Solutions and is deeply committed to building a world-class product. However, she can get lost in the technical details during pitches and sometimes struggles to articulate the broader business opportunity in a concise and compelling way. Encourage her to focus on the *value proposition* for customers and the *market opportunity*. She\u2019s very receptive to feedback and eager to learn. She frequently mentions her Ukrainian heritage and the importance of accurate and culturally sensitive communication. Be mindful of this when discussing international markets. She\u2019s actively attending Toronto tech events and is keen to build long-term relationships. Avoid overly aggressive sales tactics; she responds best to authentic engagement.",
+    "locationAvailability": "Based in Toronto, Ontario. I am open to remote meetings and occasional travel within North America for key investor meetings or industry events.",
+    "introPreferences": "* **Hard Requirements:** Introductions to investors with a demonstrated track record of investing in early-stage AI/ML startups. Introductions to potential customers with annual revenues exceeding $50M and active international expansion plans.\n* **Soft Preferences:** Individuals with a strong network in the Toronto tech ecosystem. People who have experience with content localization or MarTech. Individuals who are known for providing constructive feedback and mentorship.\n* **Introduction Focus:** Emphasize Synapse\u2019s unique approach to nuanced localization, its strong initial traction with pilot customers, and Valeria\u2019s technical expertise.",
+    "personalPreferences": "I prefer initial contact via email (valeria.haruna@synapsesolutions.ai). WhatsApp is fine for quick follow-ups. Please include a brief context about how you know me or Synapse in your email.",
+    "meetingAndSchedulingPreferences": "I\u2019m generally available for meetings during business hours (EST). Please send a brief agenda in advance so I can prepare. I appreciate concise and focused meetings with clear action items. A quick follow-up email summarizing key takeaways is always appreciated."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 16.37267303466797,
+      "input_tokens": 784,
+      "output_tokens": 1182,
+      "problems": []
+    }
+  ],
+  "success": true
+}

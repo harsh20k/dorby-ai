@@ -1,0 +1,54 @@
+{
+  "id": 920,
+  "archetype": "Global Founder, Early Stage Tech",
+  "given_name": "Jamal Zhang",
+  "style_version": 56,
+  "archetypes_version": 155,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Jamal Zhang is a first-time founder, 32, currently building 'SynapseFlow,' a platform designed to streamline cross-border payments for freelancers and remote teams. He\u2019s a former software engineer at Stripe, where he specialized in international payment infrastructure. This experience is the core of his current venture. He\u2019s fiercely independent, highly technical, and driven by a desire to empower the growing global freelance economy. He's currently in seed fundraising and focused on building strategic partnerships to accelerate growth, particularly in Southeast Asia and Latin America. He's relatively new to the 'founder networking' scene and can be somewhat reserved initially, but is very open to genuine connection and collaborative problem-solving. A distinctive career detail is that he spent a year backpacking and freelancing *while* building the initial prototype of SynapseFlow \u2013 truly living the problem he\u2019s solving.",
+    "positioning": "As the Founder & CEO of SynapseFlow, I\u2019m focused on revolutionizing cross-border payments for the global freelance economy. We\u2019re building a platform that dramatically reduces friction and costs associated with international transactions, enabling freelancers and remote teams to receive payments quickly, securely, and with minimal fees. My background at Stripe provided invaluable insight into the complexities of international payment infrastructure, and I'm leveraging that knowledge to create a more accessible and efficient financial ecosystem.  Currently, we are focused on securing seed funding to scale our operations and expand our reach, particularly within emerging markets.  We are targeting a Series A in Q2 2025.  SynapseFlow isn\u2019t just about payments; it\u2019s about empowering a new generation of global workers and fostering economic opportunity worldwide. We are committed to building a scalable, compliant, and user-centric solution that addresses the evolving needs of the remote workforce.",
+    "background": "* **SynapseFlow, Founder & CEO** (Jan 2023 \u2013 Present)\n    * Led all aspects of company formation, product development, and early-stage fundraising.\n    * Developed and launched the MVP, acquiring 150+ beta users within the first three months.\n    * Secured initial angel investment of $250K.\n    * Built and manage a fully remote team of 5 engineers and 2 customer support specialists.\n    * Responsible for defining product roadmap, prioritizing features based on user feedback, and managing sprint cycles.\n    * Spearheaded market research and competitive analysis to identify key opportunities and differentiators.\n* **Stripe, Software Engineer \u2013 International Payments** (June 2018 \u2013 Dec 2022)\n    * Designed, developed, and maintained critical components of Stripe\u2019s international payment infrastructure.\n    * Focused on improving the reliability and scalability of payment processing systems across multiple geographies.\n    * Contributed to the implementation of new payment methods and regulatory compliance initiatives.\n    * Collaborated with cross-functional teams (product, legal, operations) to launch new features and services.\n    * Reduced payment processing latency by 15% through optimization of database queries and caching mechanisms.\n* **Education: Massachusetts Institute of Technology (MIT), Cambridge, MA** (Sept 2014 \u2013 June 2018)\n    * Bachelor of Science in Computer Science\n    * GPA: 3.9/4.0\n    * Relevant Coursework: Data Structures and Algorithms, Database Systems, Machine Learning, Distributed Systems\n* **Skills:** Python, JavaScript, React, Node.js, PostgreSQL, AWS, Fintech, Cross-Border Payments, Regulatory Compliance (KYC/AML), Agile Development, Product Management, Team Leadership, Fundraising.",
+    "lookingFor": "I'm actively seeking connections with individuals who can contribute to the growth of SynapseFlow. Specifically, I'm looking for:\n\n* **Seed-stage investors** with a focus on fintech and/or global SaaS companies. We're raising a $1.5M seed round to accelerate product development and expand our market reach.\n* **Experienced founders** who have successfully navigated the challenges of building and scaling early-stage startups, particularly in the payments space. I\u2019m eager to learn from their experiences and gain valuable insights.\n* **Operators** with expertise in growth marketing, sales, and customer success, especially those with experience in Southeast Asia and Latin America.  We're looking to build out our team strategically.\n* **Potential strategic partners** \u2013 companies that can help us expand our reach and integrate with existing workflows used by freelancers and remote teams (e.g., accounting software, project management tools).\n* **Mentors** who can provide guidance on fundraising, product strategy, and team building.\n\nI\u2019m particularly interested in connecting with individuals who are passionate about empowering the global freelance economy and believe in the power of technology to create a more inclusive financial system. I\u2019m open to virtual coffee chats, informational interviews, and potential collaborations.  I'm less interested in purely networking events - I prefer focused, value-added conversations.",
+    "notes": "* Jamal is a very technical founder - don't shy away from discussing the specifics of the platform. \n* He's slightly introverted, so be prepared to lead the conversation initially.\n* He\u2019s VERY focused on the Southeast Asia and Latin America markets.  Highlight any connections or experience you have in those regions.\n* Avoid pitching him services unless he specifically asks. He prefers to learn and build relationships first. \n* He\u2019s currently vetting several potential investors \u2013 be mindful of timing and avoid overlapping pitches.",
+    "locationAvailability": "Based in San Francisco, CA, but frequently travels. Available for remote meetings globally and open to travel within the US and internationally with reasonable notice.",
+    "introPreferences": "* **Hard Requirements:**\n    * Individuals with direct experience in fintech, specifically cross-border payments.\n    * Investors actively deploying capital in seed-stage startups.\n    * Operators with a proven track record of scaling early-stage companies.\n* **Soft Preferences:**\n    * Connections with individuals who have a strong understanding of the freelance economy.\n    * Introductions should be concise and highlight the potential synergies between SynapseFlow and the individual\u2019s expertise.\n    * Please provide context on *why* you think this connection would be valuable for Jamal. A simple \u2018you should talk\u2019 is not sufficient. \n    * Avoid introducing Jamal to individuals who are primarily looking for job opportunities.",
+    "personalPreferences": "Prefers email for initial contact.  WhatsApp is acceptable for quick follow-ups.  Please avoid LinkedIn InMail \u2013 it often gets lost. No aggressive sales pitches, please.",
+    "meetingAndSchedulingPreferences": "I typically prefer 30-minute introductory calls to assess mutual fit. I'm available for meetings between 9 AM and 5 PM PST.  I\u2019m flexible and happy to accommodate different time zones, but please provide at least 24 hours\u2019 notice.  I find video calls are more effective for building rapport, but I\u2019m also comfortable with phone calls. Please send a brief agenda beforehand to ensure we make the most of our time. I respond to calendar invites promptly."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 29.506282091140747,
+      "input_tokens": 839,
+      "output_tokens": 1506,
+      "problems": []
+    }
+  ],
+  "success": true
+}

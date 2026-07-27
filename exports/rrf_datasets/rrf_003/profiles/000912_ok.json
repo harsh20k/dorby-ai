@@ -1,0 +1,54 @@
+{
+  "id": 912,
+  "archetype": "Serial Founder, Now VC-Backed",
+  "given_name": "Hassan Mueller",
+  "style_version": 56,
+  "archetypes_version": 154,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Hassan Mueller is a serial founder currently operating as the CEO of 'Synapse Dynamics,' a pre-seed AI-powered logistics optimization platform. His distinctive career detail is selling his previous company, 'TerraForm Analytics' (a geospatial data analytics firm focused on precision agriculture), to Bayer for a substantial sum in 2021. This exit provided the capital for Synapse Dynamics and a strong network. He's now focused on securing a Series A round for Synapse Dynamics, leveraging his past success and looking for strategic investors and experienced operators to help scale. He's particularly interested in investors with a deep understanding of supply chain technology and a track record of supporting early-stage AI ventures. He's a bit of a 'hands-on' CEO and likes to deeply vet potential partners/investors himself.",
+    "positioning": "As CEO of Synapse Dynamics, I\u2019m driving the next generation of logistics efficiency through cutting-edge AI and machine learning. We\u2019re building a platform that dynamically optimizes transportation routes, reduces waste, and enhances supply chain resilience. Having successfully navigated the entrepreneurial landscape with a prior exit to Bayer, I\u2019m focused on scaling Synapse Dynamics into a market leader. My expertise lies in identifying emerging technological trends, building high-performing teams, and translating complex data insights into actionable business strategies. I\u2019m passionate about leveraging technology to solve real-world problems and creating sustainable value for our customers and investors. Currently, we are aggressively pursuing a Series A funding round and seeking strategic partnerships to accelerate our growth trajectory and expand our market reach. We\u2019re not just building software; we\u2019re building the future of logistics.",
+    "background": "- **CEO, Synapse Dynamics** (2023 \u2013 Present)\n  * Led the company from concept to a functional MVP, securing initial seed funding of $2.5M.\n  * Built and managed a team of 12 engineers, data scientists, and logistics specialists.\n  * Developed and implemented a go-to-market strategy targeting mid-sized logistics providers.\n  * Achieved a 30% reduction in transportation costs for pilot customers.\n\n- **Founder & CEO, TerraForm Analytics** (2018 \u2013 2021)\n  * Conceptualized and launched a geospatial data analytics platform for precision agriculture.\n  * Secured $8M in venture capital funding across Seed and Series A rounds.\n  * Grew the company to $15M in annual recurring revenue with a team of 45 employees.\n  * Successfully negotiated and closed an acquisition by Bayer for an undisclosed sum.\n\n- **Lead Data Scientist, AgriCorp** (2015 \u2013 2018)\n  * Developed machine learning models to optimize crop yields and predict disease outbreaks.\n  * Led a team of data scientists in the analysis of large-scale agricultural datasets.\n  * Presented research findings at industry conferences and published in peer-reviewed journals.\n\n- **Education:**\n  * **PhD, Computer Science (Machine Learning)** \u2013 Stanford University (2011 \u2013 2015)\n  * **MS, Data Science** \u2013 Massachusetts Institute of Technology (2009 \u2013 2011)\n  * **BS, Mathematics** \u2013 University of California, Berkeley (2005 \u2013 2009)\n\n- **Skills:** Machine Learning, Artificial Intelligence, Deep Learning, Data Analytics, Supply Chain Management, Logistics, Python, R, SQL, Cloud Computing (AWS, Azure, GCP), Geospatial Analysis, Venture Capital, Fundraising, Team Leadership, Strategic Planning.",
+    "lookingFor": "I'm actively seeking connections with investors specializing in early-stage AI and supply chain technologies, particularly those with a track record of supporting companies through Series A and beyond. I'm looking for partners who understand the complexities of the logistics industry and can provide strategic guidance as we scale. \n\nSpecifically, I'm interested in:\n\n* **Series A Investors:** Firms with check sizes between $8M - $15M and a focus on disruptive technologies.\n* **Supply Chain Operators:** Experienced executives with a deep understanding of logistics, transportation, and warehousing.\n* **AI/ML Technical Advisors:** Individuals with expertise in applying AI to solve real-world problems in the supply chain.\n* **Potential Strategic Partners:** Logistics companies interested in piloting and integrating our platform.\n\nI\u2019m also open to connecting with other founders who have successfully navigated the fundraising process and scaled their companies. I\u2019m happy to share my experiences and insights, and I\u2019m always looking for opportunities to learn from others. I prioritize investors who are willing to be actively involved and offer more than just capital \u2013 mentorship and strategic support are crucial.",
+    "notes": "* Hassan is very direct and values efficiency. He\u2019s been burned by time-wasters in the past.\n* He\u2019s particularly proud of the TerraForm Analytics exit and will likely mention it early in conversations.\n* He\u2019s open to informal calls before formal meetings to assess fit.\n* Avoid overly promotional pitches \u2013 he prefers data-driven discussions.\n* He\u2019s currently reviewing a lot of decks, so a concise and targeted introduction is essential.",
+    "locationAvailability": "Based in San Francisco, California, and available for remote meetings. Willing to travel to key investor locations (NYC, Boston, etc.) as needed.",
+    "introPreferences": "* **Hard Requirements:**\n  * Investor must have a demonstrable track record of investing in AI/ML companies.\n  * Introducer must have a pre-existing relationship with the investor.\n  * Investor\u2019s investment thesis must align with Synapse Dynamics\u2019 focus on logistics optimization.\n* **Soft Preferences:**\n  * Introducer should be able to speak to Hassan\u2019s leadership skills and the potential of Synapse Dynamics.\n  * Introduction email should be concise and highlight key achievements (TerraForm exit, seed funding).\n  * Avoid lengthy introductions \u2013 Hassan prefers to get straight to the point.",
+    "personalPreferences": "Prefer email for initial contact. Quick responses are appreciated. Happy to connect on LinkedIn. No cold calls, please.",
+    "meetingAndSchedulingPreferences": "I generally prefer 30-45 minute meetings. Mornings (9-11 AM PST) or early afternoons (1-3 PM PST) work best. I'm flexible and can accommodate different time zones, but please provide advance notice. Zoom is my preferred video conferencing platform. I like to have a clear agenda before the meeting to ensure we make the most of our time."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 18.982993125915527,
+      "input_tokens": 838,
+      "output_tokens": 1394,
+      "problems": []
+    }
+  ],
+  "success": true
+}

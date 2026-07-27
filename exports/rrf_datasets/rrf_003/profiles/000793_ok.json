@@ -1,0 +1,72 @@
+{
+  "id": 793,
+  "archetype": "AI/Web3 Founder, Technical Background",
+  "given_name": "Isabela Santos",
+  "style_version": 49,
+  "archetypes_version": 134,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Isabela Santos is a 34-year-old Brazilian-American founder currently building \u2018SynapseFlow\u2019, an AI-powered platform automating smart contract auditing and optimization for Web3 projects. Her distinctive career detail is a prior 5-year stint as a core engineer at a major DeFi protocol (Ocean Protocol) where she specialized in formal verification. This experience deeply informed her belief that current Web3 security practices are insufficient and scalable automation is the key. She is aggressively fundraising for a Series A and looking for strategic advisors and potential enterprise clients (large institutions exploring Web3 integration). She\u2019s very technically focused and prefers direct, no-nonsense communication. She\u2019s also deeply committed to increasing diversity in the Web3 space, particularly for Latin American founders.",
+    "positioning": "Isabela Santos is a technology leader and founder passionately dedicated to securing the future of Web3. As CEO of SynapseFlow, I\u2019m focused on solving the critical challenge of smart contract vulnerability through cutting-edge AI and formal verification techniques. My background as a core engineer at Ocean Protocol provided me with a unique understanding of the inherent risks within decentralized systems, prompting me to build a solution that addresses these vulnerabilities at scale. SynapseFlow isn\u2019t just about finding bugs; it\u2019s about proactively building trust and enabling wider adoption of blockchain technology. We\u2019re currently in a high-growth phase, seeking strategic partnerships and investment to accelerate development and expand our reach. I position myself as a thought leader in the intersection of AI and Web3 security, actively contributing to industry discussions and fostering a more secure and inclusive decentralized ecosystem.",
+    "background": "- **CEO & Founder, SynapseFlow** (2022 \u2013 Present)\n    * Led seed funding round of $2.5M, securing investment from prominent Web3 VCs (Multicoin Capital, Electric Capital).\n    * Developed and launched SynapseFlow's core AI-powered auditing engine, achieving 98% accuracy in identifying common smart contract vulnerabilities.\n    * Built a remote-first team of 12 engineers, researchers, and security experts.\n    * Currently focused on securing Series A funding and expanding enterprise client base.\n\n- **Core Engineer, Ocean Protocol** (2018 \u2013 2022)\n    * Key contributor to the development and implementation of Ocean Protocol\u2019s data tokenization and exchange framework.\n    * Specialized in formal verification of smart contracts, leveraging tools like Certora and Mythril.\n    * Led the effort to integrate rigorous security testing into the CI/CD pipeline, reducing critical vulnerabilities by 40%.\n    * Mentored junior engineers in secure coding practices and smart contract development.\n\n- **Software Engineer, IBM Research** (2016 \u2013 2018)\n    * Researched and developed novel algorithms for data privacy and security in cloud computing environments.\n    * Published research papers in peer-reviewed conferences on differential privacy and federated learning.\n\n- **Education:**\n    * **PhD, Computer Science** \u2013 Stanford University (2016). Dissertation: \u201cFormal Verification of Distributed Consensus Protocols.\u201d\n    * **MS, Computer Science** \u2013 Massachusetts Institute of Technology (MIT) (2014)\n    * **BS, Computer Engineering** \u2013 Universidade de S\u00e3o Paulo (USP), Brazil (2012)\n\n- **Skills:**\n    * **Languages:** Solidity, Python, JavaScript, Go, Rust\n    * **Web3 Technologies:** Ethereum, Layer-2 scaling solutions (Optimism, Arbitrum), DeFi protocols, DAOs\n    * **AI/ML:** Deep Learning, Natural Language Processing, Computer Vision, Formal Verification\n    * **Security:** Smart Contract Auditing, Penetration Testing, Threat Modeling, Cryptography\n    * **Tools:** Remix, Hardhat, Foundry, Certora, Mythril, GitHub, Docker, Kubernetes\n\n- **Awards & Recognition:**\n    * Forbes 30 Under 30 \u2013 Blockchain (2023)\n    * TechCrunch Disrupt Startup Battlefield Finalist (2022)\n    * Ocean Protocol Core Contributor of the Year (2021)",
+    "lookingFor": "- **Strategic Advisors:** Experienced Web3 investors, security experts, and former C-level executives with a proven track record of scaling blockchain companies.\n- **Enterprise Clients:** Large financial institutions, asset managers, and corporations exploring the integration of Web3 technologies who require robust security solutions.\n- **Partnerships:** Collaborations with leading blockchain infrastructure providers and security firms.\n- **Talent:** Highly skilled AI/ML engineers and smart contract auditors with a passion for Web3.\n- **Fellow Founders:** Individuals building innovative Web3 projects, particularly those focused on DeFi, NFTs, or DAOs. Open to mentorship opportunities (both giving and receiving).\n\n**Do Not Connect If:**\n- You are offering unsolicited marketing services (SEO, content creation, etc.).\n- You are involved in multi-level marketing schemes or pyramid schemes.\n- You are not genuinely interested in the intersection of AI and Web3 security.\n- You are primarily focused on hype and speculation rather than building sustainable solutions.\n- Your profile is incomplete or lacks professional details.",
+    "notes": "Isabela is incredibly focused and driven, with a strong technical background. She\u2019s very direct in her communication and values efficiency. She responds well to data-driven arguments and concrete proposals. She\u2019s currently prioritizing fundraising and building out her core team. She expressed concern about the lack of Latin American representation in the Web3 space and is actively seeking to support and mentor founders from the region. Recent discussions suggest she's particularly interested in partnerships that can help her expand SynapseFlow's reach into the institutional investor market. She occasionally checks LinkedIn late in the evening (Pacific Time) \u2013 likely working across time zones.",
+    "locationAvailability": "Based in San Francisco, California, USA (Pacific Time). Open to remote collaboration and occasional travel for key events and meetings.",
+    "introPreferences": "When making introductions to Isabela, please emphasize:\n\n*   **Technical Expertise:** Highlight your understanding of AI, Web3 security, and smart contract development.\n*   **Relevant Experience:** Focus on experience scaling blockchain companies, securing enterprise clients, or providing strategic advisory services.\n*   **Conciseness:** Isabela values direct communication; keep introductions brief and to the point.\n\n**Hard Requirements for Introductions:**\n*   The connection must be relevant to SynapseFlow\u2019s business objectives (fundraising, enterprise clients, partnerships, talent).\n*   The connection must have a professional LinkedIn profile with a clear background and experience.\n\n**Soft Preferences:**\n*   A shared connection or mutual interest in AI/Web3 is a plus.\n*   A brief summary of why the connection would be valuable to Isabela.",
+    "personalPreferences": "I prefer to connect initially on LinkedIn and then move to email for more detailed discussions. Quick, direct communication is appreciated. I respond best to concise messages with clear calls to action. Don't hesitate to send a follow-up if you don't hear back immediately \u2013 I'm often heads-down in coding!",
+    "meetingAndSchedulingPreferences": "I prefer to schedule meetings in advance via Calendly. I'm generally available for calls between 10:00 AM and 5:00 PM Pacific Time."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 25.391989707946777,
+      "input_tokens": 771,
+      "output_tokens": 1740,
+      "problems": [
+        "background: possible truncation (ends with '...em Solving, Communication')"
+      ]
+    },
+    {
+      "attempt": 2,
+      "elapsed_s": 27.748577117919922,
+      "input_tokens": 771,
+      "output_tokens": 1627,
+      "problems": [
+        "background: possible truncation (ends with '...eaking, Technical Writing')"
+      ]
+    },
+    {
+      "attempt": 3,
+      "elapsed_s": 28.876192092895508,
+      "input_tokens": 771,
+      "output_tokens": 1576,
+      "problems": []
+    }
+  ],
+  "success": true
+}

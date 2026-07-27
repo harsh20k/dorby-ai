@@ -1,0 +1,54 @@
+{
+  "id": 886,
+  "archetype": "Operator-Investor, Growth Focused",
+  "given_name": "Sanjay Moreau",
+  "style_version": 54,
+  "archetypes_version": 149,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Sanjay Moreau is a seasoned operations leader with a unique background \u2013 he spent 8 years as a combat engineer in the US Army before transitioning to the tech world. This experience instilled in him a relentless focus on execution, problem-solving under pressure, and building high-performing teams. He\u2019s now using that skillset to scale early-stage SaaS companies, specifically focusing on those with a B2B sales component. He's currently the COO of a seed-stage sales intelligence platform, 'LeadSpark,' and is actively seeking connections with Series A/B investors who understand the complexities of scaling a go-to-market strategy, particularly in the SaaS space. He's also open to advising other founders facing similar operational challenges. His Army background isn't something he *leads* with, but it\u2019s a foundational element of his approach and a source of resilience. He\u2019s direct, data-driven, and values transparency.",
+    "positioning": "As COO of LeadSpark, I\u2019m laser-focused on building the operational infrastructure to support rapid revenue growth. We\u2019re disrupting the sales intelligence market with a platform that delivers highly-qualified leads directly to sales teams, dramatically increasing conversion rates. My team and I are currently streamlining our onboarding process, optimizing our customer success function, and scaling our sales operations to meet increasing demand. Having successfully navigated complex operational challenges at previous startups, I bring a pragmatic and data-driven approach to scaling businesses. I\u2019m actively seeking connections with investors who have a track record of supporting high-growth SaaS companies, and with fellow operators who are tackling similar challenges. Now is the perfect time to connect as we prepare for our Series A raise and are actively refining our go-to-market strategy.",
+    "background": "- **LeadSpark, COO** (2022 \u2013 Present): Responsible for all operational aspects of the business, including sales operations, customer success, onboarding, and finance. Led a 3x increase in qualified leads generated per month, and a 40% reduction in customer churn.\n- **SalesForge, VP of Operations** (2020 \u2013 2022): Built and scaled the operations function from the ground up, supporting a 200% YoY revenue growth trajectory. Implemented a new CRM system (Salesforce) and automated key sales processes.\n- **FlowState Analytics, Head of Growth Operations** (2018 \u2013 2020): Focused on optimizing the customer acquisition funnel, leading to a 60% increase in marketing qualified leads.\n- **United States Army, Combat Engineer Officer** (2010 \u2013 2018): Led a platoon of 30 soldiers in challenging and dynamic environments. Responsible for planning and executing complex engineering missions. Awarded Bronze Star for valor.\n- **Education:** MBA, Harvard Business School (2018)\n- **Education:** BS, Civil Engineering, United States Military Academy at West Point (2010)\n- **Skills:** SaaS Operations, Go-to-Market Strategy, Sales Operations, Customer Success, Process Optimization, Data Analysis, CRM (Salesforce, HubSpot), Financial Modeling, Leadership, Team Building, Project Management.\n- **Certifications:** Six Sigma Black Belt\n- **Awards:** Bronze Star (US Army)\n- **Publications:** Contributor to 'SaaS Growth Hacks' blog \u2013 article on scaling customer success teams.\n- **Volunteer Experience:** Mentor at Techstars accelerator program.",
+    "lookingFor": "## Investors\n- Series A/B investors with a focus on B2B SaaS companies.\n- Investors who understand the complexities of scaling a go-to-market strategy.\n- Individuals with experience advising companies in the sales intelligence space.\n\n## Founders\n- Founders of early-stage SaaS companies (Seed - Series A) facing operational challenges.\n- Individuals open to sharing best practices and collaborating on solutions.\n\n## Advisors\n- Experienced operators with a background in scaling sales organizations.\n- Individuals with expertise in financial modeling and forecasting.",
+    "notes": "- Sanjay is incredibly direct and values transparency. He prefers to get straight to the point.\n- He's a strong believer in data-driven decision-making and will often back up his opinions with metrics.\n- He rarely talks about his military background unless asked directly, but it informs his disciplined and results-oriented approach.\n- He's highly responsive and committed to building long-term relationships.\n- He's currently prioritizing connections that can help LeadSpark scale efficiently.\n- Avoid pitching him products or services unless they are directly relevant to LeadSpark's needs.\n- He's a quick study and appreciates thoughtful, well-researched conversations.",
+    "locationAvailability": "Based in Boston, MA, but open to remote connections and travel as needed. I'm comfortable meeting virtually or in person.",
+    "introPreferences": "## Hard Requirements\n- Introductions to partners at leading VC firms (Accel, Sequoia, Andreessen Horowitz).\n- Connections should have a demonstrable track record of investing in B2B SaaS.\n- Introductions should be warm \u2013 the recipient should be aware of my work and LeadSpark\u2019s potential.\n\n## Soft Preferences\n- Individuals who are active in the SaaS community.\n- People who are willing to share their insights and experiences.\n- Introductions should be concise and clearly articulate the value proposition of connecting with me.",
+    "personalPreferences": "I prefer concise and direct communication. Email is my primary channel, but I'm also responsive on LinkedIn. I appreciate thoughtful questions and a willingness to challenge assumptions. I'm not a fan of overly promotional pitches.",
+    "meetingAndSchedulingPreferences": "I generally prefer 30-minute introductory calls to assess mutual fit. I'm flexible with scheduling but prefer to avoid early morning or late evening meetings."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 16.925984859466553,
+      "input_tokens": 765,
+      "output_tokens": 1234,
+      "problems": []
+    }
+  ],
+  "success": true
+}

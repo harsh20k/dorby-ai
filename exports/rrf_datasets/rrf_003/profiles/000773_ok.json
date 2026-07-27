@@ -1,0 +1,54 @@
+{
+  "id": 773,
+  "archetype": "Cross-Border Fintech Executive",
+  "given_name": "Astrid Dubois",
+  "style_version": 47,
+  "archetypes_version": 130,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Astrid Dubois is a seasoned fintech executive specializing in cross-border payments, particularly focusing on emerging markets in Southeast Asia. Her distinctive career detail is a successful pivot from traditional banking (HSBC) to a hyper-growth scale-up (PayForward) where she built their APAC expansion strategy from the ground up. She\u2019s now at NovaPay, a Series B company, and is aggressively scaling their remittance solutions. She's looking for strategic partners, investors familiar with the nuances of regional regulatory frameworks, and talent with deep expertise in blockchain-based payment rails. She's a direct communicator, highly analytical, and values efficiency. She\u2019s comfortable with remote work but prioritizes building strong relationships through initial in-person meetings.",
+    "positioning": "Astrid Dubois leads strategic partnerships and international expansion at NovaPay, a rapidly growing fintech company revolutionizing cross-border remittances. With over 15 years of experience in financial services, she\u2019s adept at navigating complex regulatory landscapes and forging mutually beneficial relationships with banks, payment processors, and technology providers. Currently, Astrid is focused on expanding NovaPay\u2019s presence in the Philippines, Indonesia, and Vietnam, leveraging blockchain technology to reduce costs and increase speed for migrant workers sending money home. She excels at identifying and capitalizing on market opportunities, building high-performing teams, and delivering measurable results. Astrid is actively seeking connections with investors specializing in emerging market fintech and partners who can accelerate NovaPay\u2019s growth in Southeast Asia.",
+    "background": "\u2022 **NovaPay (2022 \u2013 Present):** Head of Strategic Partnerships & International Expansion. Responsible for developing and executing NovaPay\u2019s expansion strategy across Southeast Asia. Led negotiations with key banking partners in the Philippines, resulting in a 30% reduction in transaction fees for NovaPay customers. Managed a team of 8 regional managers and analysts. Successfully launched NovaPay\u2019s remittance service in Indonesia, achieving 15,000 new users within the first quarter.\n\u2022 **PayForward (2018 \u2013 2022):** APAC Expansion Lead. Pioneered PayForward\u2019s entry into the APAC market, establishing offices in Singapore and Hong Kong. Developed and implemented a market-entry strategy that resulted in a 200% increase in revenue within the first two years. Built and managed a cross-functional team of 12, including sales, marketing, and operations personnel. Successfully navigated complex regulatory hurdles in multiple countries, securing necessary licenses and approvals.\n\u2022 **HSBC (2008 \u2013 2018):** Various Roles, culminating in Regional Manager, Global Payments. Progressively increased responsibilities within HSBC\u2019s Global Payments division. Managed a portfolio of over 100 corporate clients, providing customized payment solutions. Led a team of 5 transaction banking specialists. Consistently exceeded sales targets, achieving an average of 15% year-over-year growth. Implemented a new KYC (Know Your Customer) process that reduced compliance risk by 25%.\n\u2022 **Education:** MBA, INSEAD (2007-2008). BSc. Economics, London School of Economics (2004-2007).",
+    "lookingFor": "\u2022 Introductions to Series B/C investors actively deploying capital in Southeast Asian fintech.\n\u2022 Strategic partnerships with banks in the Philippines, Indonesia, and Vietnam \u2013 specifically those interested in integrating blockchain-based remittance solutions.\n\u2022 Connections to regulatory experts specializing in cross-border payments in Southeast Asia.\n\u2022 Talented software engineers with expertise in blockchain development and payment processing (specifically Solidity and Hyperledger Fabric).\n\u2022 Mentorship opportunities with experienced founders who have successfully scaled fintech companies in emerging markets.\n\u2022 Individuals with strong networks within the migrant worker communities in Southeast Asia.\n\u2022 Do not introduce me to companies offering purely crypto-speculative products.\n\u2022 Do not connect me with VC firms focused solely on US/European markets.",
+    "notes": "Astrid is very direct and values a no-nonsense approach. [Call 2024-01-15] \u2013 She was very receptive to the introduction to the regulatory expert in Jakarta, but stressed the importance of someone with *practical* experience, not just theoretical knowledge. She\u2019s extremely focused on execution and hates wasting time. [Slack exchange 2024-02-01] - Mentioned she\u2019s currently reading \u2018The Hard Thing About Hard Things\u2019 \u2013 suggests she appreciates pragmatic advice. She\u2019s a strong advocate for financial inclusion and is genuinely passionate about improving the lives of migrant workers. [Internal flag: Mention her passion for financial inclusion in any intro \u2013 builds rapport]. She responds best to concise emails with clear calls to action. Avoid lengthy introductions or overly promotional messaging.",
+    "locationAvailability": "Astrid is based in Singapore and frequently travels throughout Southeast Asia. She is open to remote meetings but prefers an initial in-person meeting to build rapport and establish trust, particularly for potential partnership discussions.",
+    "introPreferences": "\u2022 **Hard Requirement:** Introductions *must* be to individuals with a demonstrable track record in the fintech or financial services industry.\n\u2022 **Soft Preference:** Ideally, introductions should be to people who have direct experience in Southeast Asian markets.\n\u2022 **Intro Style:** Please provide a concise email introduction (no more than 5 sentences) highlighting the shared interests and potential synergies. Include a brief summary of the person you\u2019re introducing me to \u2013 their role, company, and relevant experience.\n\u2022 **Do NOT:** Make introductions via LinkedIn InMail \u2013 she prefers email.\n\u2022 **Do NOT:** Send generic introductions \u2013 personalize the message and explain why this connection would be valuable to me.\n\u2022 **Do:** Flag any potential conflicts of interest upfront.",
+    "personalPreferences": "Prefers to communicate via email initially, but is open to WhatsApp for quick follow-ups. Values direct and honest feedback.",
+    "meetingAndSchedulingPreferences": "Open to Zoom or Google Meet. Prefers meetings to be scheduled with a clear agenda. Generally available during Singapore business hours (GMT+8)."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 24.067974090576172,
+      "input_tokens": 796,
+      "output_tokens": 1268,
+      "problems": []
+    }
+  ],
+  "success": true
+}

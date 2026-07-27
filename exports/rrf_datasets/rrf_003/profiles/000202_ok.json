@@ -1,0 +1,54 @@
+{
+  "id": 202,
+  "archetype": "Product Leader, AI/Tech Transition",
+  "given_name": "Priya Petrov",
+  "style_version": 13,
+  "archetypes_version": 33,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Priya Petrov is a seasoned Product Leader with 12+ years of experience, primarily in e-commerce and retail tech. A distinctive element of her career is a 2-year stint leading product for a hyper-local delivery service, which gave her a deep understanding of logistics and operations \u2013 a skillset now highly valuable in the AI-driven supply chain space. She\u2019s currently a Group Product Manager at a mid-sized online furniture retailer, but is actively looking to transition into a more AI-focused role. She's particularly interested in applying product thinking to generative AI applications within retail, specifically around personalization, supply chain optimization, and customer experience. She's pragmatic, data-driven, and excited by the potential of AI, but wary of hype. She's looking for roles where she can build *real* value, not just chase the latest trend. She\u2019s based in Chicago and willing to consider remote or hybrid positions.",
+    "positioning": "A results-oriented Group Product Manager with a proven track record of building and launching successful products in the e-commerce and retail technology sectors. I specialize in leveraging data analytics and user research to identify market opportunities and translate them into innovative product solutions. Currently, I lead product strategy and execution for key areas within a leading online furniture retailer, focusing on enhancing the customer journey and driving revenue growth. My experience extends to leading cross-functional teams, defining product roadmaps, and managing the entire product lifecycle from ideation to launch and iteration. I\u2019m now focused on leveraging my expertise to navigate the transformative potential of AI, particularly generative AI, and am seeking opportunities to build impactful AI-powered solutions within a forward-thinking organization. I thrive in fast-paced environments and am passionate about solving complex problems with elegant, user-centric designs.",
+    "background": "- **Group Product Manager**, Havenly (Online Furniture Retailer), Chicago, IL (2020 \u2013 Present)\n  * Led product strategy and roadmap for the website and mobile app, resulting in a 20% increase in conversion rates and a 15% growth in average order value.\n  * Managed a team of 3 Product Managers and collaborated closely with engineering, design, and marketing teams.\n  * Implemented A/B testing frameworks and data-driven decision-making processes to optimize product performance.\n  * Spearheaded the launch of a new personalized product recommendation engine, leveraging machine learning algorithms.\n\n- **Head of Product**, SwiftDash (Hyper-Local Delivery Service), Chicago, IL (2018 \u2013 2020)\n  * Responsible for the entire product lifecycle, from concept to launch, for a rapidly growing on-demand delivery platform.\n  * Developed and executed a product strategy that focused on improving delivery efficiency and customer satisfaction.\n  * Managed a team of engineers and designers to build and scale the platform.\n  * Successfully integrated new features, such as real-time tracking and dynamic pricing, resulting in a 30% reduction in delivery times.\n\n- **Senior Product Manager**, Bloom & Thread (Online Fashion Retailer), New York, NY (2014 \u2013 2018)\n  * Managed the product roadmap for the mobile app, focusing on enhancing the user experience and driving engagement.\n  * Conducted user research and analyzed data to identify opportunities for product improvement.\n  * Collaborated with marketing and merchandising teams to launch new product campaigns.\n\n- **Education:**\n  * **MBA**, Northwestern University \u2013 Kellogg School of Management, Evanston, IL (2012 \u2013 2014)\n  * **BS, Computer Science**, University of Illinois at Urbana-Champaign, Urbana, IL (2008 \u2013 2012)\n\n- **Skills:** Product Strategy, Product Roadmap, Agile Methodologies, User Research, Data Analysis, A/B Testing, Machine Learning, Generative AI, SQL, Python (basic), Jira, Confluence, Figma.",
+    "lookingFor": "I\u2019m actively exploring opportunities to leverage my product leadership experience in the exciting field of Artificial Intelligence, specifically within the retail sector. I'm passionate about applying AI to solve real-world problems and believe my background in e-commerce and logistics provides a unique perspective. \n\nI\u2019m particularly interested in:\n\n* **Roles:** Head of Product, Group Product Manager, or similar leadership positions focused on AI-powered products.\n* **Companies:** Innovative companies building cutting-edge AI solutions for retail, supply chain, or customer experience.\n* **Connections:**  Individuals working in AI product management, machine learning engineering, or retail technology.\n* **Introductions:** I'd welcome introductions to leaders at companies like Amazon, Walmart, Instacart, and emerging AI startups.\n\nI'm open to both full-time roles and consulting opportunities. My priority is finding a challenging and impactful position where I can contribute to a team that is pushing the boundaries of what\u2019s possible with AI.",
+    "notes": "- Priya is very focused on *practical* AI applications \u2013 dislikes buzzwords.\n- Mentioned being impressed by Anthropic's approach to responsible AI.\n- Actively follows industry publications like The Batch and Import AI.\n- Expressed interest in companies with strong data science teams.\n- Follow-up: Share article on generative AI in supply chain optimization.\n- Potential advocate for AI ethics in retail.",
+    "locationAvailability": "I am currently based in Chicago, Illinois, and am open to remote work arrangements or relocation for the right opportunity. I am also willing to travel as needed.",
+    "introPreferences": "When making introductions, please emphasize my experience leading product teams and delivering data-driven results. \n\n* **Hard Requirements:** Introductions should be to individuals in product leadership or engineering roles at companies actively investing in AI.\n* **Soft Preferences:**  I appreciate introductions to people who are passionate about solving complex problems and have a strong technical background.\n* **Communication Style:** I prefer concise and informative introductions that highlight the individual's relevant experience and expertise.\n* **Avoid:** Introducing me to sales or marketing roles \u2013 I\u2019m focused on product development.",
+    "personalPreferences": "I'm a big fan of podcasts and enjoy hiking in my free time. I prefer initial communication via LinkedIn messaging before scheduling a call.",
+    "meetingAndSchedulingPreferences": "- Prefer 30-minute introductory calls.\n- Happy to meet virtually or in person (if location allows).\n- Quick decision-maker once I have the necessary information."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 22.62632393836975,
+      "input_tokens": 843,
+      "output_tokens": 1382,
+      "problems": []
+    }
+  ],
+  "success": true
+}

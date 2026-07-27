@@ -1,0 +1,54 @@
+{
+  "id": 220,
+  "archetype": "Deep Tech Investor & Advisor",
+  "given_name": "Fatima Dubois",
+  "style_version": 14,
+  "archetypes_version": 36,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Fatima Dubois is a seasoned deep tech investor, currently a Partner at NovaScale Ventures, a Series A/B focused fund. She has a particular passion for and expertise in applied physics and materials science \u2013 stemming from a PhD in the field. A distinctive career detail is that before entering venture capital, she spent *five* years as a research scientist at a national lab, giving her a deep understanding of the challenges and opportunities in translating research into viable products. She\u2019s currently focused on identifying companies building the next generation of sustainable materials and advanced manufacturing technologies, and is very active in the San Francisco Bay Area ecosystem. She\u2019s looking to connect with founders in those areas, as well as other investors who share her thesis, and is very particular about introductions \u2013 valuing quality over quantity. She\u2019s extremely busy, so prefers concise communication and direct asks.",
+    "positioning": "Fatima Dubois is a Partner at NovaScale Ventures, a venture capital firm investing in early-stage deep tech companies. She focuses primarily on materials science, advanced manufacturing, and sustainable technologies, leveraging her background in applied physics to identify disruptive innovations. Fatima actively seeks companies with strong IP and scalable business models poised to address critical global challenges. She\u2019s currently leading NovaScale\u2019s investment in several promising startups focused on carbon capture and novel battery technologies, and is always looking to expand her network with exceptional founders and fellow investors. Fatima is a frequent speaker at industry events and a thought leader on the future of materials innovation.",
+    "background": "- **NovaScale Ventures, Partner** (2018 \u2013 Present)\n  - Led and managed investments in 8 portfolio companies, resulting in 3 successful exits.\n  - Developed NovaScale\u2019s investment thesis around sustainable materials and advanced manufacturing.\n  - Mentored portfolio company CEOs on strategy, fundraising, and team building.\n- **Lawrence Livermore National Laboratory, Research Scientist** (2013 \u2013 2018)\n  - Conducted research in advanced materials for energy storage and national security applications.\n  - Published 12 peer-reviewed articles in leading scientific journals.\n  - Managed a team of 3 research assistants.\n- **Stanford University, PhD, Applied Physics** (2009 \u2013 2013)\n  - Dissertation: \u201cNovel Nanomaterials for High-Efficiency Solar Cells\u201d.\n  - Recipient of the National Science Foundation Graduate Research Fellowship.\n- **Massachusetts Institute of Technology, BS, Materials Science and Engineering** (2005 \u2013 2009)\n  - Graduated *Summa Cum Laude*.\n- **Skills:** Venture Capital, Due Diligence, Investment Strategy, Materials Science, Nanotechnology, Applied Physics, Technology Transfer, Market Analysis, Financial Modeling, Fundraising, Board Management, Scientific Research, Team Leadership.\n- **Awards & Recognition:** Forbes 30 Under 30 (Venture Capital, 2021), Business Insider Rising Stars in Tech (2020).",
+    "lookingFor": "I\u2019m actively seeking connections with founders building companies in the following areas:\n\n*   **Sustainable Materials:** Novel polymers, bio-based materials, circular economy solutions.\n*   **Advanced Manufacturing:** Additive manufacturing, robotics, automation, precision engineering.\n*   **Next-Gen Battery Technologies:** Solid-state batteries, lithium-sulfur batteries, alternative battery chemistries.\n\nI'm also interested in connecting with:\n\n*   **Other VCs & Angel Investors:** Particularly those with a focus on deep tech and sustainability.\n*   **Industry Experts:** Individuals with deep knowledge of materials science, manufacturing, or energy storage.\n*   **Potential Advisors:** Experienced entrepreneurs or scientists who can provide guidance to our portfolio companies.\n\nPlease prioritize introductions to *founders* who are actively raising Series A or B funding. I am *not* interested in receiving unsolicited pitches for pre-seed or seed-stage companies.",
+    "notes": "Fatima is a very direct communicator and highly selective with her time. She responded positively to a recent conversation about the challenges of scaling carbon capture technologies but emphasized the need for a clear path to profitability. She mentioned she's particularly keen on companies with strong IP protection. Avoid sending lengthy emails \u2013 she prefers concise summaries and direct asks. She\u2019s currently evaluating two potential investments in the advanced materials space and is under a tight deadline.",
+    "locationAvailability": "Fatima Dubois is based in San Francisco, California, and primarily focuses on investment opportunities within the Bay Area and North America.",
+    "introPreferences": "## Hard Requirements\n*   **Prioritize:** Introductions to founders actively raising Series A/B funding in sustainable materials, advanced manufacturing, or next-gen battery technologies.\n*   **Exclude:** Introductions to pre-seed or seed-stage companies, service providers, or individuals offering unrelated services.\n*   **Must Include:** A brief (2-3 sentence) summary of the company/individual's expertise and current funding stage.\n\n## Soft Preferences\n*   **Best Fit:** Introductions from mutual connections with a demonstrated understanding of deep tech investing.\n*   **Introduction Style:** Keep it concise and professional. A quick email introduction is preferred over a LinkedIn connection request.\n*   **Avoid:** Warm introductions from individuals who haven't thoroughly vetted the opportunity. I value quality over quantity.",
+    "personalPreferences": "I prefer email for initial contact. WhatsApp is acceptable for follow-up conversations with portfolio companies. Please avoid contacting me on LinkedIn for unsolicited pitches.",
+    "meetingAndSchedulingPreferences": "I am generally available for virtual meetings during weekday afternoons (Pacific Time). Please include a brief agenda with your meeting request. I'm currently prioritizing short, focused meetings \u2013 30 minutes is ideal."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 16.452574014663696,
+      "input_tokens": 750,
+      "output_tokens": 1217,
+      "problems": []
+    }
+  ],
+  "success": true
+}

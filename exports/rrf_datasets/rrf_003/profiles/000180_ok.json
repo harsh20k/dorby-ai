@@ -1,0 +1,54 @@
+{
+  "id": 180,
+  "archetype": "Sports/Entertainment Entrepreneur, Capital Seeker",
+  "given_name": "Lucas Rossi",
+  "style_version": 12,
+  "archetypes_version": 30,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Lucas Rossi is a 34-year-old entrepreneur focused on leveraging Web3 technology within the minor league baseball ecosystem. He founded \u2018DiamondChain,\u2019 a platform aiming to create tokenized fan experiences (NFTs, fractional ownership of teams/players, etc.) to boost revenue and engagement for smaller market teams. He previously worked in sports finance, giving him a strong understanding of team valuations and revenue models. He's currently seeking Series A funding to scale DiamondChain nationally and has a distinctive background \u2013 he pitched in independent league baseball for two seasons after college, giving him unique credibility with players and a deep understanding of the lower tiers of the sport. He's highly data-driven, but also values building personal relationships. He\u2019s very focused on the financial viability of his platform and is wary of \u2018hype\u2019 over substance.",
+    "positioning": "Lucas Rossi is the Founder and CEO of DiamondChain, a pioneering platform revolutionizing fan engagement and revenue generation in minor league baseball through the application of Web3 technologies. Recognizing the challenges faced by smaller market teams, Lucas conceived DiamondChain as a solution to unlock new revenue streams and foster deeper connections with fans. His leadership centers around building a sustainable ecosystem leveraging tokenization, NFTs, and fractional ownership models. Prior to founding DiamondChain, Lucas spent five years in sports finance at Sterling Group, where he specialized in team valuations and investment analysis. He honed his skills in financial modeling, due diligence, and strategic planning, providing a strong foundation for his entrepreneurial pursuits. Lucas's unique background, including a two-year stint as a professional baseball player, provides invaluable insights into the needs and challenges of athletes and teams at all levels. He is passionate about democratizing access to sports investment and creating innovative experiences for fans.",
+    "background": "- **DiamondChain, Founder & CEO** (2021 \u2013 Present)\n  - Led all aspects of company formation, product development, and fundraising.\n  - Secured seed funding of $750,000 from angel investors.\n  - Developed and launched a beta version of the DiamondChain platform with three minor league teams.\n  - Built a team of 10 engineers, designers, and marketing professionals.\n  - Technologies: Solidity, Ethereum, React, Node.js, AWS, PostgreSQL\n\n- **Sterling Group, Sports Finance Associate** (2016 \u2013 2021)\n  - Conducted financial analysis and due diligence on potential sports team investments.\n  - Developed complex financial models for team valuations and revenue projections.\n  - Prepared presentations and reports for clients, including team owners and investors.\n  - Assisted in the negotiation of investment agreements.\n  - Technologies: Excel (advanced modeling), Bloomberg Terminal, FactSet\n\n- **Gary SouthShore RailCats (American Association of Professional Baseball), Pitcher** (2014-2015)\n  - Competed as a professional baseball pitcher in an independent league.\n  - Gained firsthand experience with the challenges and opportunities in minor league baseball.\n\n- **Education:**\n  - **University of Pennsylvania, Wharton School of Business, MBA** (2014)\n  - Concentration: Finance\n  - **Dartmouth College, BA, Economics** (2012)\n  - Minor: Computer Science\n\n- **Certifications:**\n  - Chartered Financial Analyst (CFA) Level 1 (2017)\n\n- **Skills:** Financial Modeling, Valuation, Due Diligence, Web3, Blockchain Technology, NFT Development, Fundraising, Team Leadership, Strategic Planning, Public Speaking, Data Analysis, Sports Industry Knowledge, Pitching (baseball)",
+    "lookingFor": "I'm actively seeking Series A funding to scale DiamondChain nationally and expand our platform's capabilities. I\u2019m looking to connect with venture capitalists specializing in sports tech, Web3, and fintech. Strategic partners in the minor league baseball space \u2013 team owners, league officials, and marketing executives \u2013 are also highly valuable. I'm particularly interested in investors who understand the nuances of the sports industry and have a long-term vision for the integration of blockchain technology. \n\n**Do:**\n- VCs with a portfolio in sports tech or Web3.\n- Angel investors with experience in baseball.\n- Individuals who can provide introductions to minor league team owners.\n- Potential advisors with expertise in tokenomics and community building.\n\n**Don\u2019t:**\n- Individuals selling generic \u2018blockchain solutions\u2019 without a clear understanding of the sports industry.\n- Recruiters (unless specifically for executive-level positions).\n- Individuals seeking investment for unrelated projects.\n- General networking requests without a specific value proposition. I'm very focused on building relationships that can directly contribute to DiamondChain's growth.",
+    "notes": "Lucas is extremely passionate about his project and has a very clear vision for the future of DiamondChain. He's highly responsive and data-driven, but can be skeptical of overly optimistic projections. His background as a former player gives him a unique perspective and credibility. He mentioned he's particularly interested in investors who have a genuine passion for baseball, not just a financial interest. He\u2019s currently prioritizing meetings with funds that have demonstrated a commitment to long-term growth over short-term hype.",
+    "locationAvailability": "Based in Philadelphia, PA (Eastern Time). Willing to travel to key industry events and investor meetings.",
+    "introPreferences": "When making an introduction, please emphasize:\n- DiamondChain's focus on *financial sustainability* for minor league teams.\n- My background as both a finance professional *and* a former baseball player\u2014highlighting my unique understanding of the industry.\n- The platform\u2019s early traction with beta teams and the positive feedback received.\n\n**Hard Requirements:**\n- The introduction must be to someone with decision-making authority regarding investments or strategic partnerships.\n\n**Soft Preferences:**\n- Prior relationship with the introducer is a plus.\n- Individuals who have a demonstrated interest in sports or Web3.\n\n**Intro Style:** Brief and impactful. Focus on the value proposition for the recipient. Avoid lengthy explanations of blockchain technology\u2014assume a basic understanding.",
+    "personalPreferences": "Prefers direct communication. Responds quickly to email. Values concise and data-driven presentations. Not a fan of overly formal networking events.",
+    "meetingAndSchedulingPreferences": "- Please send a calendar invite with a clear agenda.\n- I prefer meetings to be no longer than 30 minutes initially.\n- I\u2019m available for video calls or in-person meetings in Philadelphia.\n- I\u2019m generally responsive within 24 hours to scheduling requests."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 26.92826795578003,
+      "input_tokens": 864,
+      "output_tokens": 1412,
+      "problems": []
+    }
+  ],
+  "success": true
+}

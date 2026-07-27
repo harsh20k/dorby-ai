@@ -1,0 +1,54 @@
+{
+  "id": 665,
+  "archetype": "Deep Tech Founder, Early Stage",
+  "given_name": "Hassan Wang",
+  "style_version": 41,
+  "archetypes_version": 111,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Hassan Wang is a 32-year-old founder, building a deep tech company called 'Synapse Dynamics' focused on novel neuromorphic computing hardware. He has a PhD in Electrical Engineering from MIT, specializing in analog circuit design. A distinctive detail is that before founding Synapse Dynamics, he spent a brief but impactful period (6 months) as a hardware engineer at a major AI lab (DeepMind), which solidified his belief in the limitations of current silicon architectures and inspired his current venture. He's currently pre-seed, aggressively fundraising and seeking early adopters in robotics and edge computing. He\u2019s highly technical and prefers direct, data-driven conversations. He's a first-time founder, so mentorship is also a high priority. He\u2019s based in Boston but open to remote collaboration.",
+    "positioning": "Hassan Wang is the founder and CEO of Synapse Dynamics, a deep tech startup revolutionizing edge computing with next-generation neuromorphic hardware. We are building energy-efficient AI accelerators inspired by the human brain, enabling real-time processing for robotics, autonomous vehicles, and IoT devices. My background in analog circuit design and systems architecture allows me to uniquely bridge the gap between theoretical research and practical implementation. I\u2019m passionate about solving the limitations of current AI hardware and unlocking the potential of truly intelligent machines. At Synapse Dynamics, we\u2019re not just building chips; we\u2019re building the future of intelligent systems.",
+    "background": "- **Founder & CEO, Synapse Dynamics** (Boston, MA) \u2013 Jan 2023 \u2013 Present\n  * Led all aspects of company formation, including business plan development, fundraising strategy, and technology roadmap.\n  * Secured initial angel investment of $250k.\n  * Developed and validated core neuromorphic chip architecture, demonstrating a 10x improvement in energy efficiency compared to conventional hardware in preliminary simulations.\n  * Built a small, highly skilled team of engineers and researchers.\n\n- **Hardware Engineer, DeepMind** (Mountain View, CA) \u2013 July 2022 \u2013 Dec 2022\n  * Contributed to the design and testing of custom ASICs for large-scale machine learning models.\n  * Gained valuable experience in the challenges of deploying AI at scale.\n  * Developed a strong understanding of industry best practices for hardware development.\n\n- **PhD Candidate, Electrical Engineering, MIT** (Cambridge, MA) \u2013 Sept 2018 \u2013 June 2022\n  * Dissertation: \u201cAnalog Computation for Energy-Efficient Deep Learning.\u201d\n  * Developed novel circuit topologies for implementing neural networks in analog hardware.\n  * Published multiple peer-reviewed papers in top conferences (ISCAS, VLSI Symposium).\n  * Awarded the MIT Presidential Fellowship.\n\n- **Research Intern, Intel Labs** (Hillsboro, OR) \u2013 Summer 2017\n  * Conducted research on emerging memory technologies for future computing systems.\n\n- **B.S., Electrical Engineering, Stanford University** (Stanford, CA) \u2013 Sept 2014 \u2013 June 2018\n  * Graduated with honors.",
+    "lookingFor": "I\u2019m actively seeking seed funding to accelerate the development and commercialization of our neuromorphic chip. We're aiming to raise $1.5M to finalize the prototype, secure initial customer engagements, and expand our team. I\u2019m particularly interested in connecting with venture capitalists specializing in deep tech, AI hardware, and robotics.\n\nBeyond funding, I'm also looking to build relationships with:\n\n* **Potential Early Adopters:** Companies in robotics, autonomous vehicles, edge computing, and IoT who are facing challenges with power consumption and latency.\n* **Industry Mentors:** Experienced founders and executives in the semiconductor and AI industries who can provide guidance and support.\n* **Strategic Partners:** Companies with complementary technologies or market access.\n\nI'm open to introductions to investors at firms like Amplify Partners, Playground Global, and Radical Ventures. I'm also keen to connect with engineers and researchers with expertise in neuromorphic computing, analog circuit design, and embedded systems.",
+    "notes": "Hassan is highly technical and responds best to data-driven discussions. He\u2019s a quick learner but can sometimes get lost in the details \u2013 gently steer conversations back to the big picture. He\u2019s a first-time founder, so be mindful of offering constructive feedback rather than direct criticism. He\u2019s very protective of his IP and will be hesitant to share overly sensitive information initially. He mentioned a frustration with investors who don't understand the nuances of analog computing. He recently attended the Neuromorphic Computing Workshop in Telluride and is eager to discuss the latest research trends. Update: He\u2019s been refining his pitch deck based on feedback from a recent investor meeting and is now focusing more on the market opportunity.",
+    "locationAvailability": "I am currently based in Boston, Massachusetts, and am open to remote meetings and collaborations. I am willing to travel for key investor meetings and industry events.",
+    "introPreferences": "When making introductions, please focus on:\n\n* **Hard Requirements:**\n    * Investors with a demonstrable track record of investing in deep tech hardware startups.\n    * Potential customers with a clear need for low-power, real-time processing capabilities.\n* **Soft Preferences:**\n    * Individuals with a strong technical background and a genuine interest in neuromorphic computing.\n    * People who are known for being supportive and collaborative.\n* **Introduction Framing:**\n    * Briefly highlight Synapse Dynamics' unique value proposition: energy-efficient AI acceleration for edge devices.\n    * Emphasize Hassan\u2019s technical expertise and his vision for the future of AI hardware.\n    * Frame the introduction as an opportunity for a mutually beneficial conversation \u2013 either a potential investment or a strategic partnership.\n\nAvoid introducing Hassan to individuals who are solely focused on software or high-level business strategy.",
+    "personalPreferences": "I prefer email for initial contact (hassan.wang@synapsedynamics.com). I'm generally responsive but can sometimes be slow to reply during periods of intense development. Short, concise messages are appreciated.",
+    "meetingAndSchedulingPreferences": "I generally prefer 30-minute introductory calls to assess mutual fit. I'm available for meetings most weekdays between 10:00 AM and 4:00 PM EST. Please send a brief agenda in advance so I can prepare accordingly. I'm happy to share a more detailed technical presentation during a follow-up meeting."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 26.262584686279297,
+      "input_tokens": 812,
+      "output_tokens": 1395,
+      "problems": []
+    }
+  ],
+  "success": true
+}

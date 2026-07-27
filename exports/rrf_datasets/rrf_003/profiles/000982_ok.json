@@ -1,0 +1,72 @@
+{
+  "id": 982,
+  "archetype": "Growth/Interim Exec, Broad Experience",
+  "given_name": "Olamide Zhang",
+  "style_version": 60,
+  "archetypes_version": 164,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Olamide Zhang is a seasoned operator with a unique background - a former astrophysicist who pivoted to business after realizing her analytical skills were highly transferable. She\u2019s spent the last decade in scaling startups, taking on interim COO and CEO roles, particularly in the fintech and healthtech spaces. She's currently leading a seed-stage company, 'Synapse Health,' focused on AI-powered personalized preventative care. She's excellent at rapid problem-solving and building high-performing teams, but lacks deep domain expertise in healthcare itself, which she's subtly trying to address through networking. She's looking for Series A investors, strategic partners with healthcare experience, and potentially a permanent CEO role at a larger, established healthtech company in the next 6-12 months. She's direct, data-driven, and values efficiency.",
+    "positioning": "I\u2019m currently CEO of Synapse Health, a seed-stage startup revolutionizing preventative care through AI-driven personalization. We leverage biometric data and machine learning to identify individual health risks *before* symptoms manifest, delivering tailored interventions via a mobile platform. Our core value proposition is shifting the healthcare paradigm from reactive treatment to proactive wellness. We recently completed a successful seed round of $3M led by Amplify Ventures and have achieved 300% user growth in the last quarter, demonstrating strong market demand for our solution. My focus right now is scaling our engineering and data science teams, securing key partnerships with large employer groups, and preparing for a Series A raise in Q1 2024. Prior to Synapse Health, I've held interim COO and CEO positions at several high-growth startups, specializing in operational efficiency and team building.",
+    "background": " * **CEO, Synapse Health** (Jan 2023 \u2013 Present)\n   * Led all aspects of the company, including strategy, fundraising, operations, and team development. \n   * Oversaw the development and launch of the Synapse Health mobile application.\n   * Secured $3M in seed funding from Amplify Ventures and angel investors.\n   * Achieved 300% user growth and a 4.8-star app store rating within the first six months.\n * **Interim COO, NovaPay** (Fintech) (June 2021 \u2013 Dec 2022)\n   * Stepped in to stabilize operations during a period of rapid growth and leadership transition.\n   * Implemented new processes that reduced customer support ticket resolution time by 25% and increased operational efficiency by 18%.\n   * Managed a team of 50+ employees across customer support, operations, and finance.\n * **Interim CEO, Stellar Diagnostics** (Healthtech) (Sept 2020 \u2013 May 2021)\n   * Assumed leadership during a critical phase of product development and market entry.\n   * Successfully launched the company\u2019s flagship diagnostic platform and secured initial customer contracts.\n   * Led fundraising efforts, securing a $1.5M bridge round.\n * **Data Scientist, Astra Analytics** (Consulting) (Jan 2018 \u2013 August 2020)\n   * Developed and implemented machine learning models for a variety of clients in the financial services and retail industries.\n   * Led data analysis projects that resulted in significant cost savings and revenue increases for clients.\n * **Postdoctoral Research Fellow, California Institute of Technology** (Astrophysics) (Sept 2014 \u2013 Dec 2017)\n   * Conducted research on the formation and evolution of galaxies.\n   * Published multiple peer-reviewed articles in leading scientific journals.\n * **PhD, Astrophysics, Stanford University** (2014)\n * **BS, Physics, Massachusetts Institute of Technology** (2010), *Magna Cum Laude*.\n * **Certifications:** Project Management Professional (PMP)",
+    "lookingFor": "I\u2019m actively seeking connections to support Synapse Health\u2019s growth and my own long-term career trajectory. Specifically:\n\n* **Series A Investors:**  Interested in connecting with VCs specializing in healthtech, particularly those with experience investing in AI-driven healthcare solutions.  Target fund size: $20M - $50M.  Stage:  Series A lead or co-lead.\n* **Strategic Partnerships:**  Looking for partnerships with established healthcare providers, insurance companies, and large employer groups interested in offering Synapse Health as a preventative care benefit to their employees.  Ideal partners demonstrate a commitment to innovation and a data-driven approach to healthcare.\n* **Healthcare Domain Experts:**  Seeking advisors and mentors with deep expertise in the healthcare industry, specifically in preventative care, regulatory compliance (HIPAA), and health insurance.  I\u2019m eager to learn from seasoned professionals who can provide guidance on navigating the complexities of the healthcare landscape.\n* **Senior Engineering Talent:** We\u2019re rapidly expanding our engineering team and are actively recruiting experienced software engineers specializing in machine learning, data science, and mobile app development.  Specifically, looking for individuals with experience in Python, TensorFlow, and iOS/Android development.\n* **Potential Board Members:**  Exploring connections with individuals who have a proven track record of scaling successful healthtech companies and can provide strategic guidance to Synapse Health.\n\nI'm also open to exploring permanent executive leadership opportunities at established healthtech companies, ideally CEO or COO roles. I\u2019m particularly interested in companies that are focused on innovation and have a strong commitment to improving patient outcomes.",
+    "notes": "* Olamide is exceptionally articulate and data-driven. She clearly understands the business side of Synapse Health, but occasionally reveals a slight lack of deep healthcare knowledge. \n* During our call (10/26), she expressed a strong desire to learn from healthcare veterans.\n* She\u2019s very focused on quantifiable results and ROI.  Avoid overly speculative pitches.\n* She responded positively to introductions to investors focused on AI and preventative care.\n* Initial outreach via LinkedIn yielded a prompt and enthusiastic response.\n* Previous introductions to potential advisors yielded one positive meeting, scheduled for next week.\n* Data quality is high; LinkedIn profile aligns with information provided.\n* Caution: She's extremely busy and prioritizes efficiency.  Keep communications concise.",
+    "locationAvailability": "Currently based in San Francisco, CA, and willing to travel nationally for strategic meetings and investor pitches.",
+    "introPreferences": "When making introductions, please adhere to the following:\n\n* **Hard Requirements:**\n    * Ensure the individual understands Synapse Health\u2019s core value proposition \u2013 AI-powered preventative care.\n    * Confirm the potential connection has a genuine interest in healthtech or AI.\n    * Verify the investor has a history of investing in seed/Series A rounds within the $3M - $10M range.\n* **Soft Preferences:**\n    * Introductions to individuals with experience scaling healthtech companies are highly valued.\n    * Prioritize connections who are known for being responsive and direct communicators.\n    * A warm introduction with a personalized note highlighting shared interests is preferred.\n* **Do\u2019s:**\n    * Briefly explain my background and highlight my experience in scaling startups.\n    * Emphasize Synapse Health\u2019s strong traction and market potential.\n    * Clearly articulate the specific ask (e.g., investment, partnership, mentorship).\n* **Don\u2019ts:**\n    * Don't overwhelm the recipient with excessive detail about the underlying technology.\n    * Don\u2019t introduce me to individuals who are not relevant to Synapse Health\u2019s current needs.\n    * Don't make introductions without prior confirmation that the recipient is open to connecting.",
+    "personalPreferences": "I prefer email for initial communication and am generally available for calls after 2 PM PST. I respond quickly and value concise, action-oriented communication.",
+    "meetingAndSchedulingPreferences": "I generally require 24 hours' notice for scheduling meetings and prefer video calls over in-person meetings unless travel is essential."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 31.537925958633423,
+      "input_tokens": 807,
+      "output_tokens": 1645,
+      "problems": [
+        "background: possible truncation (ends with '...gma Green Belt</li>\n</ul>')"
+      ]
+    },
+    {
+      "attempt": 2,
+      "elapsed_s": 26.315845727920532,
+      "input_tokens": 807,
+      "output_tokens": 1745,
+      "problems": [
+        "background: possible truncation (ends with '...Belt</li>\n    </ul>\n</ul>')"
+      ]
+    },
+    {
+      "attempt": 3,
+      "elapsed_s": 23.447794198989868,
+      "input_tokens": 807,
+      "output_tokens": 1709,
+      "problems": []
+    }
+  ],
+  "success": true
+}

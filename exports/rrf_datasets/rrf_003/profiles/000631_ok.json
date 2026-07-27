@@ -1,0 +1,54 @@
+{
+  "id": 631,
+  "archetype": "Strategic Advisor, India/APAC Focus",
+  "given_name": "Anh Haddad",
+  "style_version": 39,
+  "archetypes_version": 105,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Anh Haddad is a seasoned strategic advisor specializing in market entry and growth for Western tech companies looking to expand into India and Southeast Asia. She spent 15 years *within* large multinational corporations (mostly Google and Amazon) building out their India operations, specifically in product localization and partnership development. She left Amazon as a Director to found a small, ultimately unsuccessful, edtech startup targeting the Indian market \u2013 a humbling experience that fueled her current advisory work. She\u2019s now focused on helping others avoid the pitfalls she encountered, and is particularly drawn to advising early-stage startups with strong tech but limited regional expertise. She\u2019s actively seeking connections to seed and Series A investors focused on the region, and founders building innovative solutions for Indian consumers. She\u2019s very direct and values efficiency in communication.",
+    "positioning": "Anh Haddad is a strategic advisor dedicated to bridging the gap between Western innovation and the dynamic markets of India and Southeast Asia. With a proven track record of scaling technology businesses within complex regional landscapes, Anh specializes in guiding startups and established companies through successful market entry and sustainable growth. Her expertise encompasses product localization, strategic partnerships, and navigating the unique challenges of the Indian and APAC ecosystems. Anh leverages deep on-the-ground experience and a data-driven approach to deliver actionable insights and accelerate business outcomes for her clients. She is passionate about fostering innovation and empowering entrepreneurs to thrive in these rapidly evolving markets.",
+    "background": "- **Director, Amazon India (2017-2022):** Led the localization and partnerships strategy for Amazon's Prime Video service in India, increasing subscriber base by 150% within three years. Managed a team of 30+ cross-functional specialists. Responsible for negotiating content licensing agreements with major Indian studios and production houses.\n- **Head of Product Localization, Google India (2012-2017):** Spearheaded the localization efforts for Google Maps and Google Assistant for the Indian market, including language support, cultural adaptation, and feature prioritization based on user research.\n- **Senior Product Manager, Google (2008-2012):** Worked on core Google Search features, based in Mountain View, CA. Gained foundational experience in product development and data analysis.\n- **Founder & CEO, LearnLeap (2022-2023):** Founded an edtech startup focused on personalized learning for K-12 students in India. Despite initial traction, the company failed to secure follow-on funding due to market saturation and competitive pressures.\n- **Education:** MBA, Harvard Business School (2008). B.S., Computer Science, Stanford University (2006).\n- **Skills:** Market Entry Strategy, Product Localization, Strategic Partnerships, Business Development, P&L Management, Team Leadership, Data Analysis, Agile Methodologies, Hindi (conversational), Market Research, Competitive Analysis, Investor Pitching.",
+    "lookingFor": "- **Seed/Series A Investors:** Seeking introductions to investors actively deploying capital in Indian and Southeast Asian tech startups, particularly those focused on fintech, edtech, and consumer internet.\n- **Founders (India/APAC):** Connecting with early-stage founders (pre-seed to Series A) building innovative solutions for the Indian market. Especially interested in companies addressing the needs of the middle class.\n- **Mentors/Advisors (India Focused):** Looking to connect with experienced advisors who have successfully scaled businesses in India.\n- **Do Not Contact:** Private Equity firms focused on late-stage buyouts. I\u2019m not involved in that space.\n- **Strategic Partnership Opportunities:** Exploring potential collaborations with organizations that can provide access to key stakeholders in the Indian ecosystem.\n- **Intro requests should clearly state the investor/founder's area of focus and current portfolio.**",
+    "notes": "Anh is highly sought after for her practical, no-nonsense advice. She\u2019s very direct and doesn't shy away from providing critical feedback.  Her own startup experience makes her particularly empathetic to the challenges faced by founders. Recent conversations indicate a growing interest in the creator economy in India. Data quality on her LinkedIn profile regarding her startup is limited \u2013 she rarely discusses it proactively.",
+    "locationAvailability": "Bangalore, India",
+    "introPreferences": "- **Investor Profile:** Focus on early-stage (Seed/Series A) investments in India and Southeast Asia. Portfolio should demonstrate a track record of successful regional investments.\n- **Founder Profile:** Building a tech-driven solution for the Indian market, preferably with a focus on addressing the needs of the middle class. Must have a strong technical co-founder.\n- **Introduction Style:** Brief, concise introductions highlighting the key value proposition of both parties. Avoid lengthy emails or overly promotional language.\n- **Hard Requirement:** Both parties must be actively seeking a connection \u2013 no cold introductions, please.\n- **Soft Preference:** Individuals with strong networks within the Indian startup ecosystem.",
+    "personalPreferences": "Prefers asynchronous communication (email or messaging) over phone calls unless absolutely necessary. Values directness and transparency in all interactions.",
+    "meetingAndSchedulingPreferences": "Generally available for virtual meetings. Prefers to keep meetings focused and action-oriented, with a clear agenda. Prompt follow-up is appreciated."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 19.0899498462677,
+      "input_tokens": 821,
+      "output_tokens": 1102,
+      "problems": []
+    }
+  ],
+  "success": true
+}

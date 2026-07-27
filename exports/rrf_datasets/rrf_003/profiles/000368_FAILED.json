@@ -1,0 +1,74 @@
+{
+  "id": 368,
+  "archetype": "Bootstrapped AI/Agentic Solo Founder",
+  "given_name": "Sana Jansen",
+  "style_version": 23,
+  "archetypes_version": 63,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Sana Jansen is a solo founder in her early 30s, building 'CognitoFlow,' an AI-powered workflow automation tool targeted at solopreneurs and small creative agencies. She previously spent 7 years at a large enterprise software company (Salesforce) as a solutions architect, but became deeply frustrated with the slow pace of innovation and the disconnect between what the company *said* it was building and what users actually needed. A distinctive detail is she self-funded CognitoFlow through savings and freelance consulting, intentionally avoiding VC funding to maintain complete control over product direction. She's hyper-focused on building a genuinely useful product *before* scaling, prioritizing user feedback and organic growth. She\u2019s excellent technically but less experienced in marketing and sales, and is actively seeking connections to fill those gaps. Her personality is pragmatic, analytical, and a bit introverted, but she's passionate about empowering other creators.",
+    "positioning": "I'm Sana Jansen, the founder and sole developer of CognitoFlow, an AI-powered workflow automation platform designed to help solopreneurs and small teams reclaim their time. After years spent architecting complex solutions at Salesforce, I realized the biggest challenges weren\u2019t technical \u2013 they were about understanding and solving *real* user problems. I left to build something truly user-centric, and CognitoFlow is the result. \n\nCognitoFlow isn\u2019t about replacing people with AI; it\u2019s about augmenting their capabilities, automating repetitive tasks, and freeing them up to focus on the work they love. We're currently in a private beta with a rapidly growing waiting list, and I'm laser-focused on iterating based on user feedback and building a robust, scalable foundation. \n\nMy background is deeply rooted in software architecture and integration, but I'm equally passionate about the intersection of AI and creative workflows. I\u2019m always eager to connect with individuals who share this passion and are building innovative solutions that empower individuals and small businesses. I\u2019m particularly interested in conversations around product-led growth, no-code/low-code tools, and the ethical implications of AI.",
+    "background": "* **Founder & CEO, CognitoFlow (Jan 2023 \u2013 Present)**\n    * Spearheaded the conceptualization, development, and launch of CognitoFlow, an AI-powered workflow automation platform. \n    * Personally responsible for all aspects of the business, including software development (Python, JavaScript, React), infrastructure management (AWS), user interface/user experience (UI/UX) design, and early customer support. \n    * Achieved over 500 sign-ups for the private beta within the first 3 months, with a 40% conversion rate from waitlist to active users. \n    * Implemented a robust feedback loop with beta users, driving iterative product improvements and feature prioritization.\n* **Solutions Architect, Salesforce (June 2016 \u2013 Dec 2022)**\n    * Led the design and implementation of complex Salesforce solutions for enterprise clients across various industries (Financial Services, Healthcare, Retail). \n    * Managed a portfolio of projects totaling over $2M in annual recurring revenue. \n    * Collaborated with cross-functional teams (Sales, Consulting, Engineering) to deliver successful projects on time and within budget.\n    * Developed and delivered technical training to clients and internal teams on Salesforce best practices. \n    * Awarded 'Architect of the Year' in 2020 for outstanding technical leadership and client satisfaction.\n* **Software Engineering Intern, Google (Summer 2015)**\n    * Contributed to the development of a new feature for Google Maps, focusing on real-time traffic data analysis.\n    * Gained experience with large-scale data processing and distributed systems.\n\n**Education**\n* **Master of Science in Computer Science, Stanford University (Sept 2014 \u2013 June 2016)**\n    * GPA: 3.9/4.0\n    * Relevant Coursework: Artificial Intelligence, Machine Learning, Database Systems, Algorithms\n* **Bachelor of Science in Computer Engineering, University of California, Berkeley (Sept 2010 \u2013 June 2014)**\n    * GPA: 3.8/4.0\n    * Dean\u2019s List all semesters\n\n**Skills**\n* **Programming Languages:** Python (Expert), JavaScript (Proficient), Java (Intermediate), SQL (Proficient)\n* **Frameworks/Libraries:** React, Node.js, TensorFlow, PyTorch\n* **Cloud Platforms:** AWS (Expert), Google Cloud Platform (Intermediate)\n* **Databases:** PostgreSQL, MongoDB\n* **Tools:** Git, Docker, Kubernetes, Jira, Confluence",
+    "lookingFor": "I\u2019m currently focused on building a strong community around CognitoFlow and scaling the platform sustainably. I'm intentionally bootstrapping and want to avoid diluting equity with early-stage VC funding, so I'm looking for connections who can offer expertise and support *without* requiring investment.\n\nSpecifically, I'm seeking:\n* **Marketing & Growth Experts:** Individuals with a proven track record of driving organic growth for SaaS products, particularly within the solopreneur and small business space. I\u2019m interested in learning about effective content marketing strategies, SEO tactics, and community building techniques.\n* **No-Code/Low-Code Tool Builders:** I'm fascinated by the potential of no-code/low-code platforms to empower creators. I'd love to connect with founders or developers building complementary tools.\n* **Experienced SaaS Founders (Bootstrapped Preferred):** I\u2019m eager to learn from others who have successfully navigated the challenges of building and scaling a SaaS business without relying on venture capital. \n* **Potential Beta Users:** While the waitlist is strong, I\u2019m always open to connecting with potential beta users who fit our target demographic (solopreneurs, creative agencies). \n\nI'm *not* actively seeking funding at this time. I'm also not interested in unsolicited sales pitches. My priority is to build valuable relationships with individuals who are genuinely passionate about helping others and are aligned with my vision for CognitoFlow.",
+    "notes": "Spoke with Liam O\u2019Connell (UX Designer) on 10/26. Great conversation about user onboarding flows. He suggested A/B testing different approaches. Follow up with him next week to see if he\u2019s open to a short consulting engagement. \n\nHad a brief chat with Anya Sharma (Growth Hacker) \u2013 she seemed very focused on paid acquisition, which isn't my priority right now. Less of a fit. \n\nRemember to ask Sarah Chen (former Salesforce colleague) about potential integration partners for CognitoFlow. She's now at a marketing automation platform. \n\nCurrently testing a new landing page design based on user feedback. Initial results are promising \u2013 conversion rate increased by 15%.",
+    "locationAvailability": "Based in San Francisco, CA, but fully open to remote connections.",
+    "introPreferences": "I\u2019m very selective about introductions. Please read my profile carefully before connecting me with anyone. \n\n**Hard Requirements:**\n* **Relevance:** The individual must be working on something directly relevant to my current needs (see 'Looking For' section).\n* **Expertise:** They should have demonstrable expertise in their field.\n* **Genuine Interest:** They should be genuinely interested in helping others and contributing to the community.\n\n**Soft Preferences:**\n* **Bootstrapped Founders:** I\u2019m particularly interested in connecting with other bootstrapped founders.\n* **Technical Background:** A technical background is a plus, as it will facilitate more in-depth conversations.\n* **Solopreneur/Small Business Focus:** Experience working with solopreneurs and small businesses is highly valued.\n\nPlease avoid introducing me to:\n* **Venture Capitalists:** I\u2019m not seeking funding at this time.\n* **Sales Representatives:** I\u2019m not interested in unsolicited sales pitches.",
+    "personalPreferences": "I prefer concise and direct communication. I'm not a fan of lengthy email threads. Short, focused messages are much appreciated. I'm an early riser and typically respond to messages before 9 AM PST.",
+    "meetingAndSchedulingPreferences": "I prefer short (30-minute) introductory calls via Google Meet. Please include a brief agenda in your meeting request. I'm generally available during weekdays, but please check my calendar for specific availability. I always send a brief follow-up email after a meeting summarizing key takeaways and action items."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 24.162604808807373,
+      "input_tokens": 778,
+      "output_tokens": 1768,
+      "problems": [
+        "background: possible truncation (ends with '...thodologies, Jira, Trello')"
+      ]
+    },
+    {
+      "attempt": 2,
+      "elapsed_s": 37.27246689796448,
+      "input_tokens": 778,
+      "output_tokens": 2168,
+      "problems": [
+        "background: possible truncation (ends with '...Tools:** Git, Jira, Slack')"
+      ]
+    },
+    {
+      "attempt": 3,
+      "elapsed_s": 25.085514068603516,
+      "input_tokens": 778,
+      "output_tokens": 1830,
+      "problems": [
+        "background: possible truncation (ends with '...ernetes, Jira, Confluence')"
+      ]
+    }
+  ],
+  "success": false
+}

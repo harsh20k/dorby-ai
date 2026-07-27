@@ -1,0 +1,54 @@
+{
+  "id": 867,
+  "archetype": "Tech Consultant & AI Builder, London",
+  "given_name": "Rosa Garcia",
+  "style_version": 53,
+  "archetypes_version": 146,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Rosa Garcia is a dynamic tech consultant and founder of 'AlgoBloom', a boutique consultancy specializing in AI implementation for SMEs. She\u2019s a former data scientist at a large fintech firm, but left to pursue her vision of making AI accessible to smaller businesses. Alongside running AlgoBloom, she's quietly building 'Predicta', a no-code AI forecasting tool aimed at helping retail businesses optimize inventory and pricing. She\u2019s highly skilled in Python, machine learning, and cloud technologies, and is actively seeking strategic partnerships and seed funding for Predicta. She\u2019s based in London and focused on expanding her presence within the UK and EU markets. A key detail is her deliberate focus on *practical* AI solutions \u2013 she\u2019s less interested in theoretical advancements and more in tangible business impact.",
+    "positioning": "Rosa Garcia is a technology consultant and entrepreneur dedicated to bridging the gap between cutting-edge AI and practical business solutions. As the founder of AlgoBloom, she empowers small and medium-sized enterprises to leverage the power of artificial intelligence to drive growth and efficiency. Currently, Rosa is also developing Predicta, a no-code AI platform designed to revolutionize forecasting for the retail sector. With a strong background in data science and a passion for innovation, Rosa excels at translating complex technical concepts into actionable strategies. She\u2019s actively seeking connections with investors, industry leaders, and potential partners who share her vision for democratizing AI.",
+    "background": "- **Founder & CEO, AlgoBloom** (London, UK) \u2013 2022 \u2013 Present\n  * Led the establishment and growth of a tech consultancy specializing in AI implementation for SMEs, focusing on machine learning model deployment, data pipeline creation, and custom AI solutions.\n  * Key technologies: Python, TensorFlow, PyTorch, AWS (SageMaker, EC2, S3), Docker, Kubernetes.\n  * Achieved 30% YoY revenue growth in 2023 through successful client engagements in retail, logistics, and healthcare.\n- **Data Scientist, FinTech Solutions Ltd.** (London, UK) \u2013 2019 \u2013 2022\n  * Developed and deployed machine learning models for fraud detection, credit risk assessment, and algorithmic trading.\n  * Utilized advanced statistical modeling techniques and data mining algorithms to improve model accuracy and performance.\n  * Technologies: Python, SQL, R, Scikit-learn, Pandas, NumPy, cloud platforms (Azure).\n- **Education:** MSc in Data Science, Imperial College London \u2013 2017 \u2013 2019\n  * Dissertation: 'Improving Predictive Accuracy in High-Frequency Trading using Deep Reinforcement Learning'.\n- **Education:** BSc in Computer Science, University of Oxford \u2013 2014 \u2013 2017\n  * Focused on Artificial Intelligence and Machine Learning.\n- **Skills:** Machine Learning, Deep Learning, Python, SQL, Data Visualization (Tableau, Power BI), Cloud Computing (AWS, Azure), Statistical Modeling, Data Mining, Project Management, Business Development, No-Code AI Platforms.",
+    "lookingFor": "- **Seed Funding:** Seeking early-stage investment for Predicta to accelerate product development and market launch.\n- **Strategic Partnerships:** Interested in collaborating with retail technology providers and distributors to integrate Predicta into existing ecosystems.\n- **AI/ML Engineers:** Looking to connect with talented engineers to contribute to the development of Predicta's core algorithms.\n- **Retail Industry Advisors:** Seeking mentorship and guidance from experienced professionals in the retail sector to refine product strategy and market positioning.\n- **Potential Beta Testers:** Identifying retail businesses willing to participate in beta testing of Predicta.\n- **UK & EU-based Investors:** Specifically targeting investors with a focus on AI and SaaS in the European market.",
+    "notes": "- Rosa is highly focused on building *practical* AI solutions rather than purely theoretical research.\n- She's currently prioritizing the development of Predicta and is actively seeking feedback on its core features.\n- Recently attended the AI Summit London and is following up on several promising leads.\n- She's very responsive and values direct communication.",
+    "locationAvailability": "Rosa Garcia is currently based in London, UK and is open to travel within Europe. She is not currently considering relocation.",
+    "introPreferences": "- **Hard Requirements:** Introductions should be to individuals with demonstrable experience in venture capital, retail technology, or AI/ML engineering.\n- **Soft Preferences:** Prefer introductions to be warm and personalized, highlighting the specific value proposition of either AlgoBloom or Predicta.\n- **Avoid:** Cold introductions or introductions to individuals solely focused on academic research.\n- **Ideal Connection Profile:** Senior leaders or decision-makers with budget authority and a clear need for AI solutions.\n- **Introduction Style:** A concise email outlining the mutual benefits of a connection, with a clear call to action.",
+    "personalPreferences": "- Prefers initial contact via LinkedIn messaging or email.\n- Values concise and data-driven communication.\n- Is a keen advocate for responsible AI development.",
+    "meetingAndSchedulingPreferences": "- Please share a brief agenda before scheduling a meeting.\n- Rosa is generally available for virtual meetings during UK business hours."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 19.1461820602417,
+      "input_tokens": 736,
+      "output_tokens": 1089,
+      "problems": []
+    }
+  ],
+  "success": true
+}

@@ -1,0 +1,54 @@
+{
+  "id": 657,
+  "archetype": "Serial Fintech/Venture Builder, Operator",
+  "given_name": "Kai Castillo",
+  "style_version": 40,
+  "archetypes_version": 110,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Kai Castillo is a serial fintech operator, specifically focused on embedded finance. They've successfully launched and scaled two fintech companies \u2013 one in BNPL and one in cross-border payments \u2013 and are now building a new venture focused on providing the infrastructure for businesses to easily integrate financial products (lending, insurance, investing) directly into their customer experiences. They\u2019re incredibly hands-on, preferring to roll up their sleeves and solve problems directly, and are currently fundraising a Seed round. A distinctive detail is that they initially started as a software engineer before transitioning into a business/product role, giving them a strong technical foundation. They are highly pragmatic, data-driven, and prioritize speed of execution. They are looking to connect with early-stage investors specializing in fintech, potential strategic partners, and talented engineers/product managers.",
+    "positioning": "Kai Castillo is a seasoned fintech executive and venture builder specializing in embedded finance. Currently, Kai is the Founder & CEO of NovaFin, a platform enabling businesses to seamlessly integrate financial services into their existing customer journeys. Prior to NovaFin, Kai led product and growth at StellarPay, a rapidly scaling BNPL provider, and spearheaded engineering efforts at TransGlobal, a cross-border payments solution. Kai\u2019s expertise lies in identifying market opportunities at the intersection of technology and finance, rapidly prototyping solutions, and building high-performing teams. They are passionate about democratizing access to financial tools and empowering businesses to create innovative customer experiences.  Kai is a pragmatic leader known for a data-driven approach and an unwavering commitment to execution.",
+    "background": "- **NovaFin (Founder & CEO, 2023 - Present):** Leading all aspects of the company, from strategy and fundraising to product development and team building. Currently in Seed fundraising mode, focused on building out the core platform and securing early adopters.\n- **StellarPay (Head of Product & Growth, 2020 - 2023):**  Scaled user base from 50k to 500k+ users, achieving 300% YoY revenue growth.  Led the launch of StellarPay\u2019s mobile app, resulting in a 40% increase in user engagement.  Managed a team of 15 product managers, designers, and data analysts.\n- **TransGlobal (Lead Software Engineer, 2017 - 2020):**  Architected and implemented key components of the company\u2019s payment processing infrastructure.  Reduced transaction latency by 25% through code optimization and infrastructure improvements.  Mentored junior engineers and contributed to the development of best practices.\n- **Education:** Bachelor of Science in Computer Science, Massachusetts Institute of Technology (MIT), 2017.  Dean\u2019s List all semesters.\n- **Skills:**  Product Management, Growth Hacking, Software Engineering (Python, Java, JavaScript), Data Analysis (SQL, Python), Fintech Regulations (KYC/AML), Team Leadership, Agile Development, Fundraising, Embedded Finance, BNPL, Payments.",
+    "lookingFor": "I'm actively seeking connections with investors who have a strong track record of supporting early-stage fintech companies, particularly those focused on embedded finance and infrastructure plays. I\u2019m looking for partners who understand the complexities of the space and can offer more than just capital \u2013 strategic guidance and access to their network are highly valued.  Specifically, I'm interested in Seed and Series A investors. \n\nI'm also keen to connect with potential strategic partners \u2013 established businesses in industries like e-commerce, retail, and SaaS \u2013 who could benefit from integrating financial services into their platforms. I'm open to exploring partnerships that involve co-development, distribution agreements, or potential acquisitions. \n\nFinally, I\u2019m building a world-class team at NovaFin and am always on the lookout for talented engineers and product managers with a passion for fintech. Ideal candidates will have a strong technical background, a data-driven mindset, and a demonstrated ability to thrive in a fast-paced startup environment.  I'm particularly interested in individuals with experience building scalable APIs and microservices.",
+    "notes": "Kai is highly responsive and prefers direct communication. They are currently very focused on fundraising and are prioritizing meetings with potential investors. They\u2019ve been actively participating in industry events (Finovate, Money20/20) and have a growing network within the fintech community.  Data from previous outreach indicates they respond best to concise, personalized messages that demonstrate a clear understanding of NovaFin\u2019s value proposition. \n\nThey have a slight aversion to overly formal introductions and prefer a more casual, conversational approach. They are very direct and will quickly assess whether a connection is a good fit.  \n\nRecent update: NovaFin is nearing completion of its MVP and is preparing for a pilot program with several key partners. Kai is actively seeking feedback on the platform and is open to sharing early demos with interested investors.  Be aware that Kai is very protective of their time and prefers to focus on high-potential opportunities.",
+    "locationAvailability": "Kai is based in San Francisco, California, and is open to remote meetings. While they occasionally travel for industry events and investor meetings, they primarily operate remotely.",
+    "introPreferences": "When making introductions to Kai, please keep the following in mind:\n\n* **Hard Requirements:**\n    * Investors must have a demonstrable track record of investing in fintech companies.\n    * Strategic partners must have a significant customer base and a clear need for embedded finance solutions.\n    * Potential hires must possess a strong technical background and relevant experience.\n* **Soft Preferences:**\n    * Investors with experience in embedded finance or API-first platforms are highly preferred.\n    * Strategic partners in the e-commerce, retail, or SaaS industries are of particular interest.\n    * Candidates with experience working in a fast-paced startup environment are ideal.\n* **Introduction Messaging:**\n    * Briefly highlight the connection's relevant experience and expertise.\n    * Clearly articulate the potential value proposition for Kai and NovaFin.\n    * Keep the introduction concise and to the point \u2013 Kai is a busy executive and appreciates brevity.\n    * Avoid generic introductions \u2013 personalization is key.",
+    "personalPreferences": "I prefer to communicate via email initially. Quick questions can be sent via LinkedIn message, but I primarily respond to email. I generally check email a few times a day and am responsive to requests.",
+    "meetingAndSchedulingPreferences": "I prefer meetings to be focused and efficient, ideally no longer than 30-45 minutes. Please send a brief agenda in advance so I can prepare. I\u2019m generally available for meetings during Pacific Standard Time business hours. I utilize Calendly for scheduling: [link to Calendly - placeholder]."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 29.47958469390869,
+      "input_tokens": 815,
+      "output_tokens": 1417,
+      "problems": []
+    }
+  ],
+  "success": true
+}

@@ -1,0 +1,54 @@
+{
+  "id": 729,
+  "archetype": "Fintech/Payments Veteran, Now Builder",
+  "given_name": "Hana Mahmoud",
+  "style_version": 44,
+  "archetypes_version": 122,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Hana Mahmoud is a seasoned fintech professional with a deep background in payments infrastructure, specifically focusing on the complexities of stablecoins and cross-border payments. She spent a decade at Ripple, rising to a leadership role in product management focused on On-Demand Liquidity (ODL). She left Ripple to co-found 'NovaPay', a company building a Layer-2 solution for faster, cheaper stablecoin settlements, tackling the fragmentation and inefficiency she witnessed firsthand. NovaPay is currently in seed stage, having just closed a small round and is actively seeking strategic partners and early adopters. Hana is incredibly pragmatic and data-driven, focusing on solving real-world problems with elegant technical solutions. She\u2019s a strong communicator, able to articulate complex technical concepts to both technical and non-technical audiences. She\u2019s very focused on building a strong network of builders and investors who understand the nuances of the stablecoin/payments space.",
+    "positioning": "Hana Mahmoud is a fintech leader and co-founder of NovaPay, a Layer-2 scaling solution for stablecoin settlements. Having spent a decade at Ripple, where she spearheaded product strategy for On-Demand Liquidity (ODL), Hana intimately understands the challenges of cross-border payments and the need for faster, more efficient infrastructure. NovaPay is addressing the fragmentation of the stablecoin landscape by providing a unified settlement layer, reducing costs and increasing liquidity for businesses and developers. We\u2019ve recently closed our seed round and are actively seeking partners to pilot our platform and contribute to the future of decentralized finance. Connecting with Hana now offers the opportunity to engage with a rapidly growing project poised to disrupt the payments ecosystem and gain early access to innovative solutions in the stablecoin space.",
+    "background": "- **Co-founder & CEO, NovaPay** (2023 \u2013 Present)\n  - Leading all aspects of product development, fundraising, and strategic partnerships for a Layer-2 solution designed to streamline stablecoin settlements.\n  - Successfully secured seed funding from leading web3 investors.\n  - Currently focused on building out the core engineering team and onboarding pilot partners.\n\n- **Senior Product Manager, Ripple** (2013 \u2013 2023)\n  - Drove product strategy and execution for On-Demand Liquidity (ODL), Ripple\u2019s real-time gross settlement system, resulting in a 300% increase in ODL volume within two years.\n  - Led cross-functional teams of engineers, designers, and marketers to launch new features and improve the user experience.\n  - Conducted extensive market research and competitive analysis to identify opportunities for growth and innovation.\n  - Managed a product roadmap with a multi-million dollar budget, consistently delivering projects on time and within budget.\n  - Key contributor to Ripple\u2019s regulatory strategy related to stablecoins and cross-border payments.\n\n- **Product Manager, Xoom (a PayPal company)** (2011 \u2013 2013)\n  - Managed the product lifecycle for key features within Xoom's international money transfer platform.\n  - Collaborated with engineering and operations teams to improve the reliability and scalability of the platform.\n  - Analyzed user data and conducted A/B testing to optimize conversion rates and user engagement.\n\n- **Education:**\n  - **MBA, Stanford Graduate School of Business** (2009 \u2013 2011)\n  - **BS, Computer Science, Massachusetts Institute of Technology (MIT)** (2005 \u2013 2009)\n\n- **Certifications:**\n  - Certified Scrum Product Owner (CSPO)",
+    "lookingFor": "- Strategic partnerships with stablecoin issuers and exchanges.\n- Introductions to early adopters interested in piloting NovaPay\u2019s platform.\n- Investors specializing in Layer-2 scaling solutions and DeFi infrastructure.\n- Mentorship from experienced founders in the web3 space.\n- Connections to legal counsel specializing in stablecoin regulation.\n- Individuals with deep expertise in zero-knowledge proofs and cryptographic protocols.\n- Open to advising opportunities for promising fintech startups.\n- Not currently looking for full-time job opportunities.",
+    "notes": "Hana is exceptionally sharp and articulate. She's very focused on the technical details and is a strong advocate for a pragmatic approach to building in the web3 space. Our initial call covered her frustration with the current fragmented stablecoin settlement landscape and her vision for NovaPay as a unifying solution. She\u2019s very data-driven and wants to see clear metrics before committing to any partnerships. She mentioned being particularly interested in connecting with individuals who have experience building and scaling Layer-2 solutions. She is responsive but prefers focused conversations with clear agendas. She values directness and doesn't shy away from challenging assumptions.",
+    "locationAvailability": "Based in San Francisco, CA, with frequent travel to industry conferences and potential investor meetings in New York and Miami.",
+    "introPreferences": "- Warm email introductions are preferred, with a brief summary of the connection's relevant experience and why they might be a good fit for NovaPay.\n- Please highlight any experience the connection has with stablecoins, Layer-2 scaling, or cross-border payments.\n- Avoid introducing Hana to individuals who are solely focused on highly speculative or unregulated crypto assets.\n- Please include a LinkedIn profile link in the introduction.\n- A short sentence explaining *why* you thought of Hana for this connection is very helpful.",
+    "personalPreferences": "Prefers to follow up via email initially, and is open to short, focused calls.",
+    "meetingAndSchedulingPreferences": "Generally available for 30-minute Zoom calls. Please provide a calendar link when requesting a meeting."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 24.97208285331726,
+      "input_tokens": 751,
+      "output_tokens": 1191,
+      "problems": []
+    }
+  ],
+  "success": true
+}

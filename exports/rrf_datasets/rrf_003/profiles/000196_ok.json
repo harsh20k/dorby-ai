@@ -1,0 +1,54 @@
+{
+  "id": 196,
+  "archetype": "Healthcare Innovator - Global Focus",
+  "given_name": "Mei Rossi",
+  "style_version": 13,
+  "archetypes_version": 33,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Mei Rossi is a 38-year-old founder and CEO of 'Synapse Health,' a company building a secure, interoperable data platform for healthcare systems, initially focused on bridging the gap between electronic health records (EHRs) in the US and fragmented data sources in Southeast Asian markets. Her distinctive career detail is a previous 8-year stint as a field epidemiologist with the CDC, deployed to several countries in Asia during disease outbreaks. This experience gave her firsthand insight into the challenges of data sharing and the critical need for real-time health information in resource-constrained settings. She's currently seeking Series A funding and strategic partnerships to expand Synapse Health\u2019s platform and scale operations across Indonesia, Vietnam, and the Philippines. She\u2019s deeply committed to ethical data use and patient privacy, positioning Synapse Health as a trusted partner for both healthcare providers and patients. She's very direct and values efficiency, but also understands the importance of building strong relationships, especially in the culturally diverse markets she operates in.",
+    "positioning": "Synapse Health is revolutionizing healthcare data interoperability, connecting disparate systems to deliver actionable insights and improve patient outcomes. As CEO and Founder, I lead a team dedicated to building a secure, scalable platform that addresses the critical need for seamless data exchange between healthcare providers, researchers, and patients. We\u2019re initially focused on the US and rapidly expanding into Southeast Asia, where fragmented data infrastructure poses significant challenges to effective public health management and quality of care. We\u2019ve achieved significant traction with pilot programs in three major US hospital systems and secured early partnerships with leading healthcare providers in Indonesia. Our platform leverages advanced blockchain and FHIR standards to ensure data security, privacy, and compliance. We are now seeking strategic investors and partners to accelerate our growth and expand our reach, ultimately aiming to create a global network of interconnected healthcare data. I\u2019m particularly keen to connect with individuals who share our vision of a more equitable and data-driven healthcare future \u2013 those who understand the power of interoperability to transform lives.",
+    "background": "- **CEO & Founder, Synapse Health** (2021 \u2013 Present)\n    * Led all aspects of company formation, fundraising, product development, and market entry.\n    * Secured seed funding of $2.5M and established strategic partnerships with key healthcare stakeholders.\n    * Developed and launched Synapse Health\u2019s core data interoperability platform, achieving successful pilot implementations in US hospitals.\n    * Built and managed a team of 25+ engineers, data scientists, and healthcare professionals.\n- **Field Epidemiologist, Centers for Disease Control and Prevention (CDC)** (2013 \u2013 2021)\n    * Deployed to multiple international locations (Indonesia, Vietnam, Philippines) to investigate and respond to infectious disease outbreaks.\n    * Led data collection, analysis, and reporting efforts, providing critical insights to public health officials.\n    * Developed and implemented disease surveillance systems, improving early detection and response capabilities.\n    * Published research findings in peer-reviewed journals and presented at international conferences.\n- **Data Analyst, Johns Hopkins Bloomberg School of Public Health** (2011 \u2013 2013)\n    * Supported research projects focused on global health and disease epidemiology.\n    * Conducted statistical analysis of large datasets, identifying trends and patterns.\n    * Developed data visualization tools to communicate research findings effectively.\n- **Education:**\n    * PhD, Epidemiology, Johns Hopkins Bloomberg School of Public Health (2011)\n    * BA, Biology, Stanford University (2007)\n- **Skills:** Data Interoperability, Healthcare IT, FHIR, Blockchain, Public Health, Epidemiology, Data Analysis, Statistical Modeling, Project Management, Leadership, Strategic Planning, Southeast Asian Healthcare Systems.",
+    "lookingFor": "I\u2019m actively seeking connections to support Synapse Health\u2019s growth and expansion. Specifically, I am looking for:\n\n* **Series A Investors:** Funds with experience investing in healthcare IT and a focus on global markets, particularly Southeast Asia. Ideally, investors with a portfolio of interoperability or health tech companies.\n* **Strategic Partners:** Healthcare systems, EHR vendors, and pharmaceutical companies interested in leveraging our platform to improve data exchange and patient care.\n* **Founders & CEOs:** Individuals with experience scaling healthcare technology companies, particularly in emerging markets. I\u2019m eager to learn from others\u2019 successes and challenges.\n* **Introductions:** Warm introductions to key decision-makers at potential investor firms and partner organizations. I\u2019m particularly interested in connecting with individuals at Andreessen Horowitz, General Catalyst, and Insight Partners.\n* **Advisors:** Individuals with expertise in regulatory compliance (HIPAA, GDPR), blockchain technology, and international healthcare market entry.",
+    "notes": "Mei is incredibly driven and articulate. She clearly understands the technical and market challenges of healthcare interoperability. Her CDC background lends significant credibility, demonstrating a deep understanding of real-world healthcare needs. She\u2019s very focused on the Southeast Asian market, which is a smart strategic move given the existing gaps in infrastructure. During our initial call, she emphasized the importance of ethical data handling and patient privacy, which is a strong differentiator. She's currently in active fundraising mode and appears to be highly selective about potential investors \u2013 she\u2019s not simply looking for capital, but for strategic alignment. She mentioned a slight delay in securing a key partnership in Vietnam, but remains optimistic about progress in the coming months.",
+    "locationAvailability": "I am currently based in San Francisco, California, but frequently travel to Southeast Asia. I am open to relocating to a strategic hub if necessary for business development.",
+    "introPreferences": "* **Hard Requirements:** Introductions should be to individuals with decision-making authority regarding investment or strategic partnerships.\n* **Soft Preferences:** Introductions to individuals with a pre-existing interest in healthcare interoperability or a demonstrated commitment to digital health innovation.\n* **Intro Style:** Please frame the introduction by highlighting Synapse Health\u2019s unique value proposition \u2013 our focus on both US and emerging markets, our commitment to data security, and our proven track record of successful pilot implementations. Briefly mention my background with the CDC to establish credibility.\n* **Avoid:** Introductions to individuals solely focused on early-stage seed funding \u2013 we are currently focused on Series A.",
+    "personalPreferences": "I prefer to connect via LinkedIn initially, followed by email. I respond best to concise and direct communication.",
+    "meetingAndSchedulingPreferences": "* I prefer video calls (Zoom or Google Meet) for initial meetings.\n* Please send a brief agenda in advance to ensure we make the most of our time.\n* I am generally available for meetings during Pacific Standard Time (PST) business hours."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 25.984466075897217,
+      "input_tokens": 790,
+      "output_tokens": 1407,
+      "problems": []
+    }
+  ],
+  "success": true
+}

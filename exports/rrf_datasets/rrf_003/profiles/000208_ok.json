@@ -1,0 +1,54 @@
+{
+  "id": 208,
+  "archetype": "Fintech Founder/Operator - US Focused",
+  "given_name": "Chidi Chen",
+  "style_version": 13,
+  "archetypes_version": 35,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Chidi Chen is a 38-year-old founder and CEO of 'NovaPay', a Series A fintech startup focused on AI-powered fraud detection for small and medium-sized e-commerce businesses. He previously spent 8 years at Stripe, starting as an engineer and eventually leading a team focused on risk management and payment optimization. A key, distinctive detail is that he *built* the initial fraud detection model at Stripe that is still in use today (though heavily iterated upon). He\u2019s now looking to leverage that expertise to disrupt the SMB fraud prevention space, which he sees as underserved and reliant on outdated solutions. He's actively fundraising for a Series B and seeking strategic partnerships with larger payment processors and potential acquirers. He's very data-driven, technically proficient, and values direct communication. He's based in San Francisco but open to remote collaboration.",
+    "positioning": "As CEO and Founder of NovaPay, I\u2019m building the next generation of fraud prevention for e-commerce. We leverage cutting-edge AI and machine learning to deliver real-time, accurate fraud detection specifically tailored for the needs of small and medium-sized businesses. Having spent eight years at Stripe, where I spearheaded the development of their initial fraud detection system, I\u2019ve seen firsthand the challenges businesses face in protecting themselves from increasingly sophisticated threats. NovaPay isn\u2019t just about stopping fraud; it\u2019s about enabling growth by minimizing false positives and maximizing legitimate revenue. We\u2019re focused on providing a scalable, affordable, and highly effective solution that empowers SMBs to compete in today\u2019s digital landscape. Currently, we are focused on scaling our platform and expanding our customer base, and are actively seeking strategic partnerships to accelerate our impact. I am passionate about building a world where every business, regardless of size, can thrive without the constant worry of fraudulent activity.",
+    "background": "- **NovaPay, San Francisco, CA**\n  *CEO & Founder* (January 2022 \u2013 Present)\n    - Led all aspects of company formation, fundraising (Seed & Series A - $18M raised), product development, and go-to-market strategy.\n    - Built and scaled a team of 25+ engineers, data scientists, and sales professionals.\n    - Oversaw the development and launch of NovaPay\u2019s AI-powered fraud detection platform, resulting in a 40% reduction in fraudulent transactions for early adopter clients.\n    - Secured key partnerships with leading e-commerce platforms and payment gateways.\n\n- **Stripe, San Francisco, CA**\n  *Lead Engineer, Risk & Optimization* (June 2014 \u2013 December 2021)\n    - Led a team of 6 engineers responsible for developing and maintaining Stripe\u2019s core fraud detection infrastructure.\n    - Architected and implemented the initial machine learning model for fraud detection, which continues to be a foundational component of Stripe\u2019s risk management system.\n    - Reduced fraud losses by 15% through the optimization of existing fraud prevention rules and the introduction of new machine learning algorithms.\n    - Mentored junior engineers and fostered a culture of innovation and collaboration.\n\n- **Education:**\n  *Stanford University, Stanford, CA* \u2013 Master of Science in Computer Science (2012 \u2013 2014)\n  *Massachusetts Institute of Technology (MIT), Cambridge, MA* \u2013 Bachelor of Science in Electrical Engineering and Computer Science (2008 \u2013 2012)\n\n- **Skills:** Python, Machine Learning (TensorFlow, PyTorch), Data Analysis (SQL, Pandas), Cloud Computing (AWS, GCP), Fraud Detection, Risk Management, Payment Processing, Leadership, Strategic Planning, Go-to-Market Strategy.",
+    "lookingFor": "I\u2019m actively seeking connections with individuals who can support NovaPay\u2019s growth and expansion. Specifically, I\u2019m looking for:\n\n* **Potential Investors (Series B):**  Venture capitalists with experience in fintech, specifically those focused on AI and cybersecurity.  We're looking for partners who understand our vision and can provide strategic guidance.\n* **Strategic Partners:**  Leaders at established payment processors (e.g., Adyen, Worldpay) interested in integrating NovaPay\u2019s fraud detection capabilities into their platforms.  We\u2019re open to exploring co-selling opportunities and joint product development.\n* **Acquisition Opportunities:**  Discussions with larger fintech companies exploring acquisitions to expand their fraud prevention offerings.  I\u2019m open to exploring exit strategies that align with NovaPay\u2019s long-term vision.\n* **Talent:** Experienced machine learning engineers and data scientists with a passion for solving complex problems.  We\u2019re building a world-class team and are always looking for top talent.\n\nI prioritize introductions to decision-makers and avoid warm introductions to junior-level recruiters.  I'm happy to offer advice or mentorship to other early-stage fintech founders.",
+    "notes": "- Chidi is currently focused on closing Series B funding.  Lead: Alex Thompson at Insight Partners is showing strong interest.\n- Mentioned Stripe acquisition as a potential long-term goal, but not actively pursuing at this time.\n- Very responsive and values direct communication - avoid lengthy email chains.\n- Strong technical background; prefers discussing technical details directly.\n- Has a network of contacts at Stripe - potentially useful for strategic partnerships.\n- Open to advisory roles, but currently prioritizing full-time dedication to NovaPay.",
+    "locationAvailability": "I am based in San Francisco, California, but am comfortable with remote meetings and occasional travel to key industry events and potential investor locations throughout the US.",
+    "introPreferences": "When making introductions, please:\n\n* **Hard Requirement:** Ensure the contact is a decision-maker or has significant influence within their organization.\n* **Soft Preference:** Briefly explain NovaPay\u2019s value proposition and how it aligns with the contact\u2019s interests.\n* **Avoid:** Introducing me to recruiters or individuals solely focused on sales.\n* **Preferred Communication:** Direct email introduction is preferred.  A short, concise message highlighting the potential synergy is ideal.\n* **Context:** Please mention my previous experience at Stripe \u2013 it often opens doors and establishes credibility.",
+    "personalPreferences": "I enjoy staying up-to-date on the latest advancements in AI and machine learning. Outside of work, I'm a keen cyclist and enjoy exploring the Bay Area trails. I prefer concise and direct communication.",
+    "meetingAndSchedulingPreferences": "- Prefer 30-minute introductory calls.\n- Quick follow-up after initial meeting is appreciated.\n- Data-driven presentations are highly valued."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 23.6960551738739,
+      "input_tokens": 846,
+      "output_tokens": 1404,
+      "problems": []
+    }
+  ],
+  "success": true
+}

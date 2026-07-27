@@ -1,0 +1,54 @@
+{
+  "id": 553,
+  "archetype": "Healthcare AI/Digital Health Builder",
+  "given_name": "Lucas Bianchi",
+  "style_version": 34,
+  "archetypes_version": 93,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Lucas Bianchi is a 38-year-old founder and CEO of 'SynapseRX', a startup developing AI-powered diagnostic tools for early detection of sepsis in hospital settings. He has a strong clinical background (trained as a physician, but moved into tech) and a previous exit from a telehealth company. His distinctive career detail is a brief stint as a data scientist at a hedge fund *before* pivoting to healthcare \u2013 giving him a unique perspective on modeling and prediction. He's currently raising a Series B round to scale SynapseRX\u2019s deployment and expand its diagnostic capabilities to other critical care areas. He's looking for investors with healthcare-specific experience and advisors with deep regulatory knowledge. He prioritizes efficiency and data-driven decision-making.",
+    "positioning": "Lucas Bianchi is a physician-turned-entrepreneur focused on leveraging artificial intelligence to improve patient outcomes. As CEO of SynapseRX, he leads a team building cutting-edge diagnostic tools for early sepsis detection, aiming to dramatically reduce mortality rates in hospital ICUs. His background combines clinical expertise with a strong understanding of machine learning and data science, allowing him to bridge the gap between technology and healthcare delivery. Lucas is passionate about building scalable, impactful solutions within highly regulated environments and is currently focused on securing Series B funding to accelerate SynapseRX\u2019s growth and impact.",
+    "background": "- **CEO & Founder, SynapseRX** (2021 \u2013 Present)\n - Led seed and Series A funding rounds, securing $18M in investment.\n - Oversaw product development, regulatory approval (FDA 510(k) clearance achieved in Q4 2023), and initial hospital deployments.\n - Built and scaled a team of 25 engineers, data scientists, and clinicians.\n- **Data Scientist, Quantify Capital** (2019 \u2013 2021)\n - Developed and implemented predictive models for financial markets using time series analysis and machine learning.\n - Contributed to the firm\u2019s alpha generation strategies, resulting in a 15% increase in portfolio performance.\n- **Head of Product, TeleHealth Solutions** (2016 \u2013 2019)\n - Led product strategy and execution for a rapidly growing telehealth platform.\n - Oversaw the launch of several new features, increasing user engagement by 40%.\n - Managed a team of product managers and designers.\n- **Clinical Fellow, Internal Medicine, Massachusetts General Hospital** (2014 \u2013 2016)\n - Provided direct patient care in a busy ICU setting.\n - Conducted research on sepsis pathogenesis and treatment.\n- **MD, Harvard Medical School** (2010 \u2013 2014)\n- **BS, Biology, Stanford University** (2006 \u2013 2010)",
+    "lookingFor": "- **Series B Investors:** Seeking $20M - $30M from VCs specializing in digital health and AI, with a track record of successful healthcare investments.\n- **Strategic Advisors:** Experienced professionals with expertise in FDA regulatory pathways, reimbursement strategies, and hospital system integration.\n- **Key Opinion Leaders (KOLs):**  ICU physicians and hospital administrators willing to champion SynapseRX\u2019s technology.\n- **Potential Partnerships:**  Collaborations with leading EHR vendors to integrate SynapseRX\u2019s diagnostic tools into existing workflows.\n- **Talent:** Experienced machine learning engineers with a background in time-series data and medical imaging.\n- **Connections to hospital network decision-makers:** Specifically, Chief Medical Information Officers (CMIOs) and heads of ICU departments.",
+    "notes": "- Lucas is highly responsive and values data-driven conversations. \n- He\u2019s a member of the Digital Health Founders group on this platform.\n- Recently engaged with a post about AI ethics in healthcare \u2013 likely a key concern for him.\n- Prioritized introductions should focus on investors who understand the complexities of FDA approval and reimbursement in the sepsis space.\n- He's mentioned being open to informal coffee chats with other founders facing similar scaling challenges.",
+    "locationAvailability": "Based in Boston, MA, and willing to travel to meet with potential investors and partners.",
+    "introPreferences": "- **Ideal Introductions:**  VC partners at firms like General Catalyst, Andreessen Horowitz (Bio + Health), or Oak HC/FT.  Individuals with direct experience investing in AI-driven diagnostic companies.\n- **Good Introductions:**  Seasoned healthcare consultants with a focus on digital health strategy and implementation.\n- **Avoid:** Introductions to seed-stage investors or individuals focused on unrelated industries (e.g., fintech, consumer apps).\n- **Introduction Style:** A concise email highlighting the potential ROI of SynapseRX\u2019s technology and Lucas\u2019s unique background is preferred. \n- **Hard No:** Anyone selling competitive sepsis detection solutions.\n- **Soft No:**  Individuals who are primarily interested in 'exploratory' conversations with no clear commitment to investment or partnership.\n- **Preferred Titles:** Partner, Principal, MD at VC firms; VP of Strategy at large hospital systems; CMIO.",
+    "personalPreferences": "I prefer email for initial contact and am generally available for calls during business hours.  I appreciate concise communication and a focus on actionable insights.",
+    "meetingAndSchedulingPreferences": "I\u2019m flexible with meeting formats \u2013 happy to do video calls or, if geographically feasible, in-person meetings. Please use Calendly for scheduling."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 26.51761221885681,
+      "input_tokens": 768,
+      "output_tokens": 1155,
+      "problems": []
+    }
+  ],
+  "success": true
+}

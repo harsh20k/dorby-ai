@@ -1,0 +1,54 @@
+{
+  "id": 564,
+  "archetype": "Full-Stack Tech Leader, Canada-Based",
+  "given_name": "Amara Nakamura",
+  "style_version": 35,
+  "archetypes_version": 94,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Amara Nakamura is a seasoned full-stack engineer who transitioned into a technical leadership role after successfully architecting and scaling a complex e-commerce platform at a mid-sized Canadian retailer. Her distinctive career detail is a deep expertise in both front-end frameworks *and* backend infrastructure, combined with a strong understanding of cloud architecture (AWS specifically). She\u2019s currently the CTO and co-founder of 'SynergyFlow,' a seed-stage startup building a collaborative workflow management tool for remote engineering teams, aiming to address inefficiencies she experienced firsthand. She's actively seeking Series A funding and strategic partnerships to accelerate product development and expand market reach within Canada and potentially the US. Amara is highly pragmatic, values direct communication, and prioritizes technical depth in potential collaborators and investors.",
+    "positioning": "Amara Nakamura is a full-stack engineering leader and CTO of SynergyFlow, a collaborative workflow solution for distributed engineering teams. With over a decade of experience building and scaling robust web applications, I specialize in architecting solutions that balance user experience with technical efficiency. I\u2019m passionate about fostering high-performing engineering cultures and leveraging cloud technologies to drive innovation. Currently, I\u2019m focused on leading SynergyFlow\u2019s product development and securing strategic partnerships to expand our impact on the future of remote work. My core strength lies in bridging the gap between technical vision and practical implementation.",
+    "background": "- **CTO & Co-founder, SynergyFlow** (2023 - Present): Leading all technical aspects of product development, architecture, and infrastructure. Secured seed funding of $750k CAD.\n- **Senior Software Architect, NovaRetail** (2019 - 2023): Architected and scaled the e-commerce platform, resulting in a 30% increase in transaction processing capacity.\n- **Lead Front-End Developer, PixelPeak Studios** (2017 - 2019): Spearheaded the development of responsive web applications using React, Redux, and Node.js.\n- **Full-Stack Engineer, DataStream Analytics** (2015 - 2017): Developed and maintained data visualization tools using Python, Django, and PostgreSQL.\n- **B.Sc. Computer Science, University of British Columbia** (2011 - 2015)\n- Proficient in: AWS (EC2, S3, Lambda, DynamoDB), React, Node.js, Python, Docker, Kubernetes, PostgreSQL, Terraform.\n- Experience with Agile/Scrum methodologies.\n- Contributor to open-source projects related to workflow automation.",
+    "lookingFor": "- **Series A Investors:** Seeking investment partners with experience in B2B SaaS, developer tools, and a commitment to the Canadian tech ecosystem. Target investment range: $3M - $5M CAD.\n- **Strategic Partnerships:** Exploring collaborations with companies offering complementary technologies in project management, DevOps, or remote work solutions.\n- **Experienced Engineering Advisors:** Mentorship and guidance on scaling engineering teams and navigating complex architectural challenges.\n- **Talented Full-Stack Engineers:** Seeking experienced developers with a passion for building scalable and user-friendly applications (mid-senior level).\n- **Canadian Tech Community Leaders:**  Networking with individuals driving innovation and growth in the Canadian tech landscape.",
+    "notes": "- Active in the Toronto tech scene, frequently attends industry meetups and conferences.\n- Recently engaged in a conversation with [User ID: 45892] regarding potential integration opportunities.\n- Prioritizes technical due diligence and values transparent communication.\n- Flag: Extremely busy, prefers concise and impactful interactions.  Mention SynergyFlow's focus on remote engineering pain points.",
+    "locationAvailability": "Based in Toronto, Ontario, Canada. Open to virtual meetings and limited travel within North America.",
+    "introPreferences": "- **Ideal Introductions:** Venture Capital partners specializing in seed/Series A funding for B2B SaaS companies.\n- **Acceptable Introductions:** CTOs or VP Engineering at companies with 50+ engineers who have experience with remote team management.\n- **Hard No:** Recruiters (unless specifically targeting senior engineering roles), marketing agencies, or individuals offering unrelated services.\n- **Introduction Style:** Keep it concise and highlight SynergyFlow's technical innovation and market opportunity.  Focus on my experience scaling NovaRetail.\n- **Don't introduce me to:** Individuals who lack a technical background or understanding of software architecture.\n- **Preferred Connection Level:** Partner level or C-suite executives.\n- **Avoid:** Warm introductions from people I haven't interacted with directly.",
+    "personalPreferences": "I prefer email for initial contact and appreciate direct, solution-oriented communication.  I'm not a big fan of lengthy back-and-forth; let's get straight to the point.",
+    "meetingAndSchedulingPreferences": "I typically schedule meetings via Calendly.  Please send a meeting request with a brief agenda."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 19.5557758808136,
+      "input_tokens": 765,
+      "output_tokens": 1039,
+      "problems": []
+    }
+  ],
+  "success": true
+}

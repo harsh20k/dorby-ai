@@ -1,0 +1,54 @@
+{
+  "id": 115,
+  "archetype": "Academic/Research-Driven Founder",
+  "given_name": "Liang Olsen",
+  "style_version": 7,
+  "archetypes_version": 19,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Liang Olsen is a recent PhD graduate in computational materials science who founded 'NovaForge Materials,' a startup developing novel alloys using AI-driven materials discovery. Her distinctive career detail is a brief but impactful internship at a major aerospace company (Lockheed Martin) where she saw firsthand the limitations of current materials in extreme environments, sparking her entrepreneurial drive. She\u2019s currently focused on securing Series A funding and building partnerships with manufacturers. She's deeply technical but understands the need for business acumen, and is actively seeking advisors and investors who can bridge that gap. She\u2019s based in Pittsburgh, leveraging the city\u2019s growing tech and materials science ecosystem, and is highly focused on applications in aerospace and defense.",
+    "positioning": "I'm Liang Olsen, Founder & CEO of NovaForge Materials, an AI-powered materials discovery company revolutionizing alloy development. We\u2019re addressing the critical need for high-performance materials in demanding applications \u2013 think hypersonic flight, advanced energy storage, and extreme environment robotics. NovaForge leverages proprietary machine learning algorithms to predict material properties with unprecedented accuracy, significantly accelerating the design and testing process. We\u2019ve already demonstrated success with a novel nickel-based superalloy exhibiting 20% higher tensile strength at 800\u00b0C than conventional alternatives. \n\nCurrently, we are scaling our computational infrastructure and validating our alloys through rigorous physical testing in collaboration with leading research institutions. We're actively seeking strategic partnerships with manufacturers in the aerospace, defense, and energy sectors. I\u2019m especially interested in connecting with individuals who have experience in materials commercialization, supply chain optimization, and scaling deep-tech startups. The materials science landscape is rapidly evolving, and NovaForge is at the forefront of this transformation \u2013 I\u2019m eager to discuss how we can collaborate to build the materials of tomorrow.",
+    "background": "* **NovaForge Materials, Pittsburgh, PA** (2023 \u2013 Present)\n    * **Founder & CEO:** Led all aspects of company formation, including business plan development, fundraising (seed round completed Q1 2024), team building, and technology development. Oversaw the development and validation of the company\u2019s core AI-driven materials discovery platform.\n    * **Key Accomplishments:** Secured $1.5M in seed funding; filed two provisional patent applications; established research collaborations with Carnegie Mellon University and the University of Pittsburgh; led a team of three engineers and two data scientists.\n\n* **Lockheed Martin, Littleton, CO** (Summer 2022 \u2013 Intern)\n    * **Materials Science Intern \u2013 Skunk Works:** Conducted research on high-temperature alloy degradation mechanisms in hypersonic vehicle components. Contributed to the development of a novel coating for thermal protection systems. \n    * **Key Accomplishments:** Presented research findings to senior engineering team, resulting in a revised materials selection strategy for a critical project; identified a potential cost-saving opportunity through the optimization of existing alloy processing techniques.\n\n* **University of Pittsburgh, Pittsburgh, PA** (2018 \u2013 2023)\n    * **Doctor of Philosophy (PhD), Materials Science & Engineering:** Dissertation: \u201cAI-Assisted Discovery of Novel High-Entropy Alloys for Extreme Environments.\u201d\n    * **Research Focus:** Computational materials science, machine learning, high-entropy alloys, materials characterization.\n    * **Key Accomplishments:** Published 7 peer-reviewed journal articles (including *Acta Materialia* and *Computational Materials Science*); presented research at 5 international conferences; awarded the University of Pittsburgh Graduate Student Research Award (2022).\n\n* **Carnegie Mellon University, Pittsburgh, PA** (2014 \u2013 2018)\n    * **Bachelor of Science (BS), Materials Science & Engineering:** Minor in Computer Science. \n    * **Relevant Coursework:** Thermodynamics, kinetics, materials characterization, programming (Python, MATLAB), data science.",
+    "lookingFor": "I'm actively seeking connections with individuals who can accelerate NovaForge Materials\u2019 growth. Specifically, I\u2019m looking for:\n\n* **Series A Investors:** Venture capital firms with a focus on deep tech, materials science, or aerospace/defense.  We're seeking $5-7M to scale our computational infrastructure and expand our team.\n* **Strategic Advisors:** Experienced entrepreneurs or industry veterans with a proven track record in materials commercialization, manufacturing, and supply chain management.\n* **Potential Manufacturing Partners:** Companies with expertise in alloy processing and fabrication, particularly those serving the aerospace, defense, or energy sectors.\n* **Materials Scientists/Engineers:** Individuals with expertise in alloy development, materials characterization, and mechanical testing.  We\u2019re open to discussing potential collaborations and future employment opportunities.\n\nI'm particularly interested in connecting with individuals who understand the challenges of translating cutting-edge research into commercially viable products.  Introductions to relevant contacts within my target sectors are highly valued. I'm also keen to learn from others who have successfully navigated the complexities of scaling a deep-tech startup.",
+    "notes": "* Liang is highly responsive and actively engages with relevant content on this platform.\n* She occasionally mentions attending materials science conferences (TMS, MRS) \u2013 a good venue for introductions.\n* There's a slight discrepancy between her LinkedIn profile (which lists a previous internship at Arconic) and conversations where she only mentions Lockheed Martin.  Confirm Lockheed Martin experience.\n* She\u2019s very passionate about her work and happy to discuss the technical details of NovaForge\u2019s technology \u2013 be prepared for a deep dive!",
+    "locationAvailability": "I\u2019m based in Pittsburgh, Pennsylvania, and frequently travel to conferences and potential partner sites. I'm available for meetings in the Pittsburgh area or virtually.",
+    "introPreferences": "* **Hard Requirements:**\n    * Introductions *must* include a brief explanation of NovaForge Materials and our value proposition.\n    * Contact must have a demonstrated interest in materials science, aerospace/defense, or venture capital.\n    * No introductions to sales/marketing professionals \u2013 I\u2019m currently focused on technical and strategic partnerships.\n* **Soft Preferences:**\n    * Emphasize my PhD from the University of Pittsburgh and my internship experience at Lockheed Martin.\n    * Highlight NovaForge\u2019s AI-driven approach to materials discovery.\n    * Keep the introduction concise and focused \u2013 I prefer a brief email introduction followed by a direct connection request.",
+    "personalPreferences": "I prefer to connect on LinkedIn and am happy to follow up via email. I appreciate constructive feedback and am always open to learning from others.",
+    "meetingAndSchedulingPreferences": "I generally prefer video calls over phone calls, as it allows for better engagement. I'm typically available for meetings during business hours (EST)."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 27.157021045684814,
+      "input_tokens": 814,
+      "output_tokens": 1420,
+      "problems": []
+    }
+  ],
+  "success": true
+}

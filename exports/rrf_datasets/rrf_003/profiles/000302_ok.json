@@ -1,0 +1,54 @@
+{
+  "id": 302,
+  "archetype": "Global Builder, Student/Founder Network",
+  "given_name": "Sanjay Jansen",
+  "style_version": 19,
+  "archetypes_version": 50,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Sanjay Jansen is a 32-year-old serial entrepreneur currently focused on scaling 'NovaEd,' an edtech platform connecting university students with early-stage startups for remote internships and project-based learning. His distinctive career detail is having *built* two previous companies while *still a student* \u2013 one a campus food delivery service and another a social media analytics tool for student organizations. He's now leveraging that experience to solve the 'talent gap' for startups and the 'experience gap' for students. NovaEd is seed-funded, and Sanjay is actively seeking Series A funding and strategic partnerships with universities globally. He\u2019s very focused on building a strong network of advisors and potential investors who understand the unique needs of both the startup and education sectors. He\u2019s quite data-driven, speaks quickly, and values direct communication. He\u2019s based in London but travels frequently to the US and Asia.",
+    "positioning": "I'm Sanjay Jansen, founder and CEO of NovaEd, a platform revolutionizing the way students gain real-world experience and startups access top talent. We\u2019re tackling the critical disconnect between academic learning and the demands of the modern workplace. NovaEd connects ambitious university students with innovative early-stage companies for remote internships and project-based learning opportunities. We've seen incredible results \u2013 startups report a 30% faster onboarding time for interns and a significant increase in project output, while students gain invaluable skills and a competitive edge.  We're currently scaling rapidly, expanding our university partnerships across Europe and Asia, and building out our technology to enhance matching and project management.  NovaEd is poised to become the leading global platform for student-startup collaboration, and we\u2019re actively seeking partners to join us on this mission.",
+    "background": "\u2014 **NovaEd, London, UK** (2021 \u2013 Present)\n   * Founder & CEO. Led all aspects of company strategy, fundraising, product development, and operations. Successfully secured seed funding of $750k.\n   * Increased platform user base by 450% in the last 18 months.\n   * Established partnerships with 20+ universities across the UK and Europe.\n   * Developed and implemented a proprietary matching algorithm improving intern-project fit by 20%.\n\n\u2014 **Analytica Student Solutions, Cambridge, UK** (2018 \u2013 2021)\n   * Founder & CEO. Developed and marketed a social media analytics platform specifically for student organizations.  Bootstrapped to profitability within 6 months.\n   * Managed a team of 5 student developers and marketers.\n   * Achieved 100+ paying university society clients.\n   * Sold the company to a larger student services provider in 2021.\n\n\u2014 **Campus Eats, Oxford, UK** (2016 \u2013 2018)\n   * Founder & CEO. Created and operated a food delivery service catering to university students.  Managed logistics, marketing, and customer service.\n   * Generated over \u00a350,000 in revenue during peak semesters.\n\n\u2014 **Education:**\n   * **University of Oxford, UK** (2016 \u2013 2019) \u2013 BA, Philosophy, Politics & Economics (PPE) \u2013 First Class Honours\n   * **Certifications:**\n      * Google Analytics Certification\n      * Project Management Professional (PMP) \u2013 in progress\n\n\u2014 **Skills:** Startup Strategy, Fundraising, Product Management, Team Leadership, Business Development, Data Analysis, Market Research, Public Speaking, Agile Methodologies, Python (basic), SQL (intermediate).",
+    "lookingFor": "## Connections\n* **Investors:** Series A investors with experience in edtech and/or marketplace businesses. Specifically looking for funds with a focus on impact investing and a global reach. Target check size: $3M - $5M.\n* **University Partnerships:** Heads of Career Services or Innovation/Entrepreneurship departments at leading universities globally (US, Canada, Asia-Pacific). Interested in exploring potential partnerships to integrate NovaEd into their curriculum and career development programs.\n* **Mentors/Advisors:** Experienced entrepreneurs and industry leaders with a track record of scaling early-stage companies.\n\n## Assistance\n* **Introductions:** Warm introductions to potential investors and university partners.\n* **Expertise:** Advice on scaling a two-sided marketplace and navigating the complexities of international expansion.\n* **Talent:** Recommendations for experienced marketing and engineering professionals to join our growing team.",
+    "notes": "* Sanjay is very responsive and direct in his communication. He appreciates concise and data-driven pitches.\n* He's currently prioritizing expansion into the US market and is actively seeking introductions to relevant contacts in Silicon Valley.\n* Recent conversation (Oct 26th) - expressed frustration with slow response times from some potential investors. Follow up with a personalized email referencing his specific challenges.\n* He's a big fan of 'lean startup' methodologies and is always looking for ways to optimize our processes.",
+    "locationAvailability": "Based in London, UK, with frequent travel to the US and Asia.",
+    "introPreferences": "## Hard Requirements\n* **Investor Focus:**  Must have a demonstrable track record of investing in early-stage edtech or marketplace companies.\n* **University Contacts:** Introductions should be to decision-makers with the authority to approve new partnerships.\n* **Relevance:**  Introductions should be highly targeted and based on a clear understanding of NovaEd\u2019s value proposition.\n\n## Soft Preferences\n* **Personal Connection:**  Individuals who are passionate about education and/or supporting student entrepreneurship are highly valued.\n* **Concise Communication:**  Keep introductions brief and to the point, highlighting key achievements and potential synergies.\n* **Avoid:**  Introductions to individuals who are not actively involved in investment decisions or partnership development.",
+    "personalPreferences": "I prefer to connect via LinkedIn or email initially. I respond best to direct, concise communication \u2013 please skip the small talk and get straight to the point.",
+    "meetingAndSchedulingPreferences": "Please send calendar invites with a clear agenda and allow for a 30-minute minimum meeting duration."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 21.986925840377808,
+      "input_tokens": 740,
+      "output_tokens": 1321,
+      "problems": []
+    }
+  ],
+  "success": true
+}

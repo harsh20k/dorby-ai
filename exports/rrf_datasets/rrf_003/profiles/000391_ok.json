@@ -1,0 +1,54 @@
+{
+  "id": 391,
+  "archetype": "Early-Stage Wellness & AI Explorer",
+  "given_name": "Kai Ibrahim",
+  "style_version": 24,
+  "archetypes_version": 65,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Kai Ibrahim is a 38-year-old founder currently bootstrapping a wellness-focused AI platform called 'AuraSync'. Before this, he had a fairly traditional path in data science at large healthcare organizations, but a personal health crisis (detailed in 'background') sparked a pivot. He's *extremely* focused on ethical AI and building a genuinely supportive community, not just another 'wellness app'. He\u2019s looking for seed funding, strategic advisors with experience in both AI and behavioral psychology, and potential partnerships with smaller, complementary wellness businesses. He\u2019s a bit wary of overly aggressive investors and prioritizes authentic connections. He\u2019s very detail-oriented and values direct communication. His distinctive career detail is a 6-month sabbatical spent studying mindfulness and meditation techniques, directly influencing AuraSync's core philosophy.",
+    "positioning": "Kai Ibrahim is the Founder and CEO of AuraSync, an emerging platform leveraging the power of artificial intelligence to personalize and enhance holistic wellness experiences. Driven by a deep commitment to ethical AI and community building, Kai is focused on creating a truly supportive ecosystem for individuals seeking to optimize their physical, mental, and emotional wellbeing.  Prior to founding AuraSync, Kai spent over a decade applying data science to complex healthcare challenges, developing a strong foundation in machine learning, data analysis, and predictive modeling. \n\nKai\u2019s expertise lies in bridging the gap between cutting-edge technology and the nuanced needs of the human experience. He\u2019s passionate about creating AI solutions that are not only effective but also compassionate, empowering users to take proactive control of their health journey.  AuraSync is currently in its early stages, focused on building a core user base and refining its AI-powered personalization engine, with plans for a seed funding round in Q1 2024.  Kai is actively seeking strategic partnerships and advisory support to accelerate growth and maximize impact.",
+    "background": "- **AuraSync, Founder & CEO (2023 - Present)**\n  * Spearheading all aspects of company development, from initial concept and product roadmap to funding strategy and team building.\n  * Developing and implementing AI algorithms for personalized wellness recommendations, leveraging user data and behavioral insights.\n  * Building and nurturing a community of early adopters through online forums, workshops, and personalized support.\n  * Securing initial seed funding through angel investors and grant applications (ongoing).\n\n- **HealthTech Solutions, Senior Data Scientist (2018 - 2023)**\n  * Led the development and deployment of machine learning models to predict patient risk scores for chronic diseases, improving preventative care outcomes by 15%.\n  * Managed a team of data scientists, providing mentorship and guidance on statistical modeling, data visualization, and machine learning techniques.\n  * Collaborated with clinical teams to translate data insights into actionable strategies for improving patient care.\n  * Presented research findings at industry conferences and published articles in peer-reviewed journals.\n\n- **Global Healthcare Analytics, Data Scientist (2015 - 2018)**\n  * Developed and maintained data pipelines for collecting, cleaning, and analyzing large datasets of patient information.\n  * Conducted statistical analysis to identify trends and patterns in healthcare data, supporting decision-making for hospital administrators.\n  * Built interactive dashboards and reports to visualize key performance indicators (KPIs) and track progress towards organizational goals.\n  * Proficient in Python, R, SQL, and various machine learning libraries (scikit-learn, TensorFlow, PyTorch).\n\n- **University of California, Berkeley - Data Science Bootcamp (2015)**\n  * Intensive program covering statistical modeling, machine learning, data visualization, and data engineering.\n  * Capstone project focused on predicting hospital readmission rates using patient demographic and clinical data.\n\n- **Sabbatical - Mindfulness & Meditation Study (2014 - 2015)**\n  * Six-month immersive program studying mindfulness-based stress reduction (MBSR) and various meditation techniques in Thailand and India.\n  * Focused on understanding the neuroscience of mindfulness and its impact on mental and emotional wellbeing. This experience fundamentally shifted Kai\u2019s perspective on holistic health.\n\n- **Stanford University, M.S. Statistics (2012 - 2014)**\n  * Coursework focused on statistical inference, regression analysis, experimental design, and time series analysis.\n  * Thesis: \u201cBayesian Modeling of Healthcare Costs.\u201d\n\n- **Massachusetts Institute of Technology, B.S. Mathematics (2008 - 2012)**\n  * Minor in Computer Science.  Dean\u2019s List all semesters. Active member of the MIT Data Science Club.",
+    "lookingFor": "Kai is currently focused on securing seed funding for AuraSync and expanding his network of strategic advisors. He's particularly interested in connecting with individuals who have a deep understanding of both the AI landscape *and* the nuances of behavioral psychology \u2013 those who can speak to the ethical implications of applying AI to wellness. He\u2019s not simply looking for capital, but for partners who share his vision of creating a genuinely supportive and impactful platform.\n\nSpecifically, Kai is seeking:\n  * **Seed Investors:**  Individuals or firms with a track record of investing in early-stage wellness and AI companies.  He prioritizes investors who demonstrate a commitment to ethical AI and long-term value creation over short-term profits.\n  * **Advisors:** Experienced mentors with expertise in behavioral science, AI ethics, and community building.  Ideally, advisors would have experience scaling similar platforms.\n  * **Strategic Partnerships:**  Collaborations with complementary wellness businesses (e.g., mindfulness studios, nutrition coaches, fitness apps) to expand AuraSync\u2019s reach and offer integrated services.\n  * **Potential Beta Testers:** Individuals actively engaged in personal wellness practices who are open to providing feedback on AuraSync\u2019s platform.\n\nHe is *not* interested in predatory investors or partnerships that compromise AuraSync\u2019s core values of ethical AI and user privacy. He is looking for genuine collaboration and a shared commitment to improving wellbeing.",
+    "notes": "Kai is incredibly passionate about AuraSync and the potential of AI to transform the wellness landscape. He recently presented a preliminary version of the platform at the 'Future of Wellness' conference in San Francisco, receiving positive feedback on the AI-powered personalization features. He\u2019s currently refining the platform based on that feedback and preparing a detailed pitch deck for potential investors. \n\nHe\u2019s slightly sensitive about discussing the personal health crisis that motivated him to start AuraSync \u2013 it was a challenging time, and he prefers to focus on the positive aspects of the journey.  When making introductions, frame AuraSync as a solution for proactive wellness, rather than a response to illness. He mentioned he's had a frustrating experience with one investor who seemed overly focused on monetization and disregarded the ethical considerations. Avoid mentioning that investor.",
+    "locationAvailability": "Kai is based in San Francisco, California, and is open to remote meetings and occasional travel for key opportunities.",
+    "introPreferences": "When making introductions to potential investors, please emphasize AuraSync\u2019s unique value proposition: its ethical AI framework and commitment to building a supportive community.  A warm introduction with a brief overview of the connection\u2019s relevant experience is preferred. \n\n**Hard Requirements:**\n  * The contact must have a demonstrable interest in wellness or AI.\n  * The contact should have a track record of supporting early-stage ventures.\n\n**Soft Preferences:**\n  *  Experience with behavioral psychology is a significant plus.\n  *  A network within the wellness industry is highly valued.\n  *  Avoid introducing Kai to individuals known for aggressive investment tactics or a purely profit-driven mindset.\n\n**Introduction Style:**\n  *  Keep the initial introduction brief and focused on the shared interests. \n  *  Highlight Kai\u2019s expertise in data science and his passion for ethical AI.\n  *  Avoid lengthy emails or unsolicited materials.",
+    "personalPreferences": "Kai prefers to communicate via email initially, followed by a brief phone call or video conference if there's a strong connection. He\u2019s responsive and appreciates direct, concise communication. He\u2019s not a fan of overly formal language or lengthy email chains.  He actively uses Slack for internal team communication and is open to using it for external collaboration if appropriate.",
+    "meetingAndSchedulingPreferences": "- Prefers meetings to be scheduled with a clear agenda.\n-  Values punctuality and preparation.\n-  Open to 30-minute introductory calls.\n-  Generally unavailable on Friday afternoons."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 25.704416036605835,
+      "input_tokens": 741,
+      "output_tokens": 1826,
+      "problems": []
+    }
+  ],
+  "success": true
+}

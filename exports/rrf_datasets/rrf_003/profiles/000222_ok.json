@@ -1,0 +1,54 @@
+{
+  "id": 222,
+  "archetype": "Experienced Tech Executive/Investor",
+  "given_name": "Ingrid Wang",
+  "style_version": 14,
+  "archetypes_version": 37,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Ingrid Wang is a seasoned tech executive who transitioned into venture capital after successfully leading a cybersecurity company through acquisition. She's currently a Partner at 'Nova Growth Ventures,' focusing on Series B/C investments in enterprise SaaS and AI-driven security solutions. A distinctive element of her career is her deep technical background \u2013 she started as a software engineer \u2013 which gives her a unique edge in evaluating technical due diligence. She\u2019s actively looking to connect with founders building innovative solutions in her focus areas, as well as other investors for potential syndication opportunities. She\u2019s also keen to mentor early-stage female founders. Her current priority is building out Nova Growth\u2019s portfolio in the AI security space, and she\u2019s particularly interested in companies demonstrating strong revenue traction and defensible IP.",
+    "positioning": "Ingrid Wang is a Partner at Nova Growth Ventures, where she leads investments in high-growth enterprise SaaS and cybersecurity companies. Leveraging over fifteen years of experience building and scaling technology businesses, Ingrid focuses on Series B and C funding rounds, bringing both a strategic and technical perspective to investment decisions. Prior to Nova Growth, Ingrid served as CEO of ShieldTech, a cybersecurity firm acquired by Palo Alto Networks in 2022. She is passionate about identifying and supporting exceptional founders who are tackling complex challenges with innovative solutions, and actively seeks opportunities to collaborate with fellow investors and industry leaders.",
+    "background": "- **Nova Growth Ventures, Partner** (2023 \u2013 Present): Leading Series B/C investments in enterprise SaaS and AI-driven security. Portfolio includes: SecureMind, DataGuard AI, and FlowState Analytics.\n- **ShieldTech, CEO** (2018 \u2013 2022): Led ShieldTech through a successful acquisition by Palo Alto Networks. Increased revenue by 400% and expanded the team from 20 to 150 employees.\n- **ShieldTech, VP of Engineering** (2016 \u2013 2018): Oversaw all engineering functions, including software development, QA, and DevOps.\n- **Cyberdyne Systems, Senior Software Engineer** (2010 \u2013 2016): Developed and maintained critical security infrastructure for large-scale enterprise clients.\n- **Education: Massachusetts Institute of Technology (MIT)** - Master of Science, Computer Science (2008 \u2013 2010)\n- **Education: Stanford University** - Bachelor of Science, Electrical Engineering (2004 \u2013 2008)\n- **Skills:** Venture Capital, Investment Strategy, M&A, SaaS, Cybersecurity, AI/ML, Due Diligence, Technical Leadership, Software Development, Team Building, Strategic Planning, Financial Modeling, Go-to-Market Strategy.\n- **Awards & Recognition:** '40 Under 40' \u2013 Tech Business Magazine (2021), 'Most Innovative CEO' \u2013 Cybersecurity Excellence Awards (2020).",
+    "lookingFor": "I'm actively seeking connections with:\n\n* **Founders:** Leading Series B/C stage enterprise SaaS and AI-driven security companies with demonstrated revenue and a clear path to profitability.  I\u2019m particularly interested in companies addressing the evolving threat landscape with novel approaches.\n* **VC/PE Investors:**  Looking to syndicate on promising deals in the enterprise software and cybersecurity space.  Strong preference for investors with a dedicated security or SaaS focus.\n* **Industry Experts:**  Individuals with deep expertise in AI/ML, cloud security, and zero-trust architectures.  I value insights that can inform our investment thesis and support our portfolio companies.\n* **Early-Stage Female Founders:**  I\u2019m dedicated to mentoring and supporting women in tech. I'm open to informal conversations and providing guidance based on my experience.\n\nI\u2019m currently prioritizing companies with defensible IP and a strong focus on customer success.  I'm also keen to explore opportunities in the application of AI to enhance cybersecurity measures.",
+    "notes": "Spoke with Ingrid on 10/26. She emphasized her technical background and how it informs her investment decisions.  She\u2019s *very* focused on companies that aren't just 'shiny objects' but have real, demonstrable value.  Mentioned a potential conflict of interest with a company in the identity management space \u2013 avoid introducing anyone in that vertical.  She's attending the RSA Conference in May and is looking for introductions to key players there.",
+    "locationAvailability": "Ingrid is based in Menlo Park, California, and frequently travels to meet with portfolio companies and attend industry events.",
+    "introPreferences": "Hard Requirements:\n* Prioritize introductions to founders of Series B/C stage companies.\n* Exclude introductions to companies raising seed or Series A rounds \u2013 I\u2019m not currently involved in those stages.\n* Must have a clear, concise summary of the company and the founder\u2019s background.\n\nSoft Preferences:\n* Warm introductions are *highly* preferred. A mutual connection significantly increases the likelihood of a meeting.\n* Focus on companies with a strong technical team and a compelling market opportunity.\n* Introduction style should be direct and professional, highlighting the key value proposition of the company.  Avoid overly promotional language.",
+    "personalPreferences": "I prefer initial contact via LinkedIn messaging or email. I respond most quickly to concise and well-written communications. Please refrain from contacting me via unsolicited phone calls.",
+    "meetingAndSchedulingPreferences": "I\u2019m generally available for virtual meetings during the week. Please use Calendly (link in profile) to schedule a time that works for both of us. I'm open to in-person meetings, but travel will need to be coordinated in advance."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 23.034461975097656,
+      "input_tokens": 752,
+      "output_tokens": 1196,
+      "problems": []
+    }
+  ],
+  "success": true
+}

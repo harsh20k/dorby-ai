@@ -1,0 +1,54 @@
+{
+  "id": 919,
+  "archetype": "Canadian AI Infrastructure Founder",
+  "given_name": "Sana Ishikawa",
+  "style_version": 56,
+  "archetypes_version": 154,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Sana Ishikawa is a 38-year-old founder and CEO of \u2018NorthStar AI\u2019, a Canadian company building scalable, sovereign AI infrastructure solutions for enterprise clients. Her background is in high-frequency trading systems, where she developed a deep understanding of low-latency computation and efficient resource allocation. This experience informs NorthStar\u2019s core offering: a platform designed to provide predictable performance and cost control for AI workloads, addressing concerns around cloud vendor lock-in and data sovereignty \u2013 a growing concern for Canadian businesses. A distinctive detail: she spent two years embedded with a Canadian government agency focused on national security applications of AI, giving her unique insights into regulatory requirements and security protocols. She\u2019s currently raising a Series B round and actively seeking strategic partnerships with US-based companies needing a Canadian data residency solution. She's pragmatic, data-driven, and highly focused on building a sustainable, ethically-aligned AI infrastructure business. She\u2019s not interested in \u2018hype\u2019 \u2013 only demonstrable value and clear ROI for her clients.",
+    "positioning": "As CEO of NorthStar AI, I lead a team dedicated to building the next generation of sovereign AI infrastructure. We empower enterprises to harness the power of artificial intelligence without compromising control, security, or cost efficiency. Our platform delivers predictable performance, optimized resource utilization, and robust data governance, addressing the critical need for responsible AI deployment. We specialize in providing a Canadian-based alternative to traditional cloud solutions, enabling businesses to meet evolving data residency requirements and maintain complete ownership of their AI models and data. My focus is on driving innovation in scalable AI infrastructure, fostering strategic partnerships, and building a world-class team that\u2019s committed to delivering tangible value to our clients. We are at the forefront of ensuring Canada remains competitive in the global AI landscape, fostering innovation while prioritizing ethical considerations and data sovereignty.",
+    "background": "* **NorthStar AI, CEO & Founder** (2021 \u2013 Present)\n    * Led seed and Series A funding rounds, securing $15M in investment.\n    * Built and scaled a team of 25+ engineers, researchers, and business development professionals.\n    * Developed and launched NorthStar\u2019s core AI infrastructure platform, achieving a 30% MoM growth in active users.\n    * Secured key enterprise clients in the financial services, healthcare, and government sectors.\n    * Spearheaded strategic partnerships with leading Canadian universities and research institutions.\n* **Government of Canada - AI Security Division, Embedded Systems Architect** (2019 \u2013 2021)\n    * Advised on the development and deployment of AI-powered security solutions.\n    * Conducted research on adversarial machine learning and developed mitigation strategies.\n    * Collaborated with cross-functional teams to define security requirements and compliance standards.\n    * Developed expertise in Canadian data sovereignty regulations (PIPEDA, CASL).\n* **Quantex Technologies, Lead Quantitative Developer** (2015 \u2013 2019)\n    * Designed, developed, and maintained high-frequency trading systems using C++ and Python.\n    * Optimized trading algorithms for performance and scalability, resulting in a 15% increase in trading revenue.\n    * Led a team of junior developers in the implementation of new trading strategies.\n    * Managed infrastructure for low-latency data feeds and order execution.\n* **Education: University of Toronto, PhD in Computer Science** (2011 \u2013 2015)\n    * Dissertation focused on distributed systems for machine learning.\n    * Published multiple peer-reviewed papers in leading AI conferences.\n* **Education: University of Waterloo, BASc in Computer Engineering** (2007 \u2013 2011)\n* **Skills:** Python, C++, Kubernetes, Docker, TensorFlow, PyTorch, Cloud Computing (AWS, Azure, GCP), Data Sovereignty, AI Ethics, Machine Learning, Deep Learning, Distributed Systems, Low-Latency Computing, Financial Modeling.",
+    "lookingFor": "I\u2019m actively seeking connections with individuals and organizations who can contribute to NorthStar AI\u2019s growth and impact. Specifically, I\u2019m interested in:\n\n* **Series B Investors:** Venture capital firms with a focus on infrastructure, AI, and deep tech, particularly those with experience in Canadian companies.\n* **Strategic Partners:** US-based technology companies seeking a Canadian data residency solution or looking to expand their presence in the Canadian market. We are especially interested in partnerships around edge computing and specialized hardware.\n* **Enterprise Clients:** CIOs, CTOs, and Heads of AI in large organizations across North America who are grappling with the challenges of data sovereignty, cost optimization, and responsible AI deployment.\n* **AI Infrastructure Engineers:** Highly skilled engineers with expertise in Kubernetes, distributed systems, and AI model deployment. We\u2019re building a world-class team and always looking for top talent.\n* **Government Relations Professionals:** Individuals with experience navigating Canadian regulatory landscape related to AI and data privacy.\n\nI'm open to advisory roles and mentorship opportunities, and I'm particularly keen to connect with founders who have successfully scaled infrastructure companies. I\u2019m *not* currently seeking general networking connections or sales pitches for unrelated products.",
+    "notes": "* Sana is incredibly focused on building a *sustainable* AI business, not just a trendy one. \n* She's very knowledgeable about Canadian data privacy laws. Don't underestimate this. \n* She's recently spoken at a few industry events \u2013 check her LinkedIn for recent presentations. \n* She's cautious about sharing details regarding current funding rounds until a term sheet is signed. \n* She values direct communication and appreciates concise, data-driven proposals.",
+    "locationAvailability": "Based in Toronto, Canada, with frequent travel throughout North America. Open to remote meetings and virtual collaboration.",
+    "introPreferences": "* **Hard Requirements:**\n    * Introductions must be to individuals at the VP level or higher within target organizations (Series B investors, enterprise clients).\n    * Introductions should be to individuals *directly* involved in decision-making related to AI infrastructure or data sovereignty.\n* **Soft Preferences:**\n    * Prioritize introductions to individuals who have a demonstrated interest in Canadian technology.\n    * Frame the introduction around NorthStar AI\u2019s unique value proposition: predictable performance, cost control, and data sovereignty.\n    * Avoid lengthy introductions \u2013 keep it concise and focused on the potential mutual benefit.",
+    "personalPreferences": "Email is preferred. Please avoid direct messaging on social media. Brief follow-ups are appreciated, but please respect my time.",
+    "meetingAndSchedulingPreferences": "I typically prefer 30-minute meetings to start. I'm available for meetings between 9:00 AM and 5:00 PM EST. I\u2019m happy to join video calls or speak by phone. Please send a calendar invite with a clear agenda beforehand. I'm generally booked 2-3 weeks out, so please plan accordingly. I\u2019m flexible, but last-minute requests are difficult to accommodate."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 20.823081016540527,
+      "input_tokens": 844,
+      "output_tokens": 1484,
+      "problems": []
+    }
+  ],
+  "success": true
+}

@@ -1,0 +1,54 @@
+{
+  "id": 292,
+  "archetype": "Strategic Advisor, India Startup Ecosystem",
+  "given_name": "Rafael Wang",
+  "style_version": 18,
+  "archetypes_version": 48,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Rafael Wang is a former VP in Corporate & Investment Banking at a major international bank (Deutsche Bank), specializing in tech and healthcare. He spent 12 years in that role, based primarily in London and then Mumbai, before leaving to become a strategic advisor to early-stage Indian startups. He *specifically* focuses on helping startups prepare for and execute Series A/B fundraising rounds. He\u2019s not an angel investor himself \u2013 he prefers to connect founders with the right VCs and family offices. A key differentiator is his understanding of both the financial rigor expected by international investors *and* the nuances of the Indian market. He\u2019s very network-focused and believes strongly in warm introductions. He\u2019s highly responsive, but dislikes overly salesy pitches. He\u2019s particularly interested in Fintech, Healthtech, and AI startups with demonstrable traction. He recently moved back to Bangalore full-time after a year of splitting time between London and India.",
+    "positioning": "I empower ambitious Indian startups to unlock their full potential by bridging the gap between innovative ideas and strategic capital. Having spent over a decade in the high-stakes world of Corporate & Investment Banking at Deutsche Bank, I bring a unique perspective to the early-stage ecosystem. I specialize in guiding founders through the complexities of Series A and B fundraising, equipping them with the financial acumen and investor-ready narratives necessary to secure significant investment. My deep understanding of both international financial standards and the dynamic Indian market allows me to connect startups with the *right* investors \u2013 those who not only provide capital but also strategic partnership. I don't just make introductions; I facilitate long-term relationships built on trust and mutual growth. I'm focused on identifying and accelerating the next wave of disruptive Indian businesses.",
+    "background": "Rafael Wang\n\n**Professional Experience**\n\n*   **Strategic Advisor, Independent** (2023 \u2013 Present)\n    *   Advise early-stage Indian startups (Fintech, Healthtech, AI) on fundraising strategy, financial modeling, and pitch deck development.\n    *   Successfully connected founders with leading VC firms and family offices, resulting in over $15M in committed funding for portfolio companies.\n    *   Developed and delivered workshops on fundraising best practices for startup accelerators and incubators.\n*   **Vice President, Corporate & Investment Banking, Deutsche Bank** (2011 \u2013 2023)\n    *   Led deal execution for a diverse portfolio of clients in the Technology and Healthcare sectors, including M&A advisory, debt financing, and equity capital markets transactions.\n    *   Managed a team of analysts and associates, providing mentorship and guidance on financial modeling, valuation, and due diligence.\n    *   Consistently exceeded revenue targets, achieving a top 10% ranking within the global Technology, Media & Telecom (TMT) team.\n    *   Based in London (2011-2018) and Mumbai (2018-2023), developing a strong understanding of both international and Indian financial markets.\n*   **Financial Analyst, Goldman Sachs** (2009 \u2013 2011)\n    *   Supported senior bankers in the execution of M&A transactions and capital raising activities.\n    *   Developed financial models, performed valuation analysis, and prepared presentation materials for client meetings.\n\n**Education**\n\n*   **MBA, Harvard Business School** (2007 \u2013 2009)\n    *   Concentration: Finance\n    *   Dean\u2019s List\n*   **BSc, Economics, London School of Economics** (2004 \u2013 2007)\n    *   First Class Honours\n\n**Skills & Certifications**\n\n*   Financial Modeling (Expert)\n*   Valuation (Expert)\n*   M&A Advisory\n*   Debt & Equity Financing\n*   Pitch Deck Development\n*   Investor Relations\n*   Excel, PowerPoint, Bloomberg Terminal\n*   CFA Level 1 (Completed)",
+    "lookingFor": "## Connections & Support\n\n*   **VC & Angel Investors:** Introductions to Series A/B focused investors actively deploying capital in India (Fintech, Healthtech, AI preferred). Specifically seeking GPs at firms with AUM >$200M.\n*   **Founders:** Connections with ambitious, early-stage founders (Seed - Series A) in India who are actively fundraising or planning to raise in the next 6-12 months.\n*   **Experienced Advisors/Mentors:** Individuals with deep expertise in scaling Indian startups, particularly in areas such as product development, marketing, and operations.\n*   **Potential Hires (for portfolio companies):**  Strong financial analysts with experience in financial modeling and fundraising support.  Looking for individuals with 2-4 years of experience.\n\n## Assistance Requested\n\n*   Warm introductions to relevant investors and advisors.\n*   Feedback on pitch decks and fundraising strategies.\n*   Information on emerging trends in the Indian startup ecosystem.",
+    "notes": "* Rafael is incredibly responsive and values prompt communication.\n*   He prefers introductions to be concise and focused on the specific value proposition of the founder/company.\n*   Avoid overly aggressive sales pitches or unsolicited advice.\n*   He recently mentioned being interested in startups leveraging GenAI in the Healthcare space.\n*   He\u2019s actively involved with several startup accelerators in Bangalore and is a frequent speaker at industry events.\n*   Last conversation (Oct 26th) - He's looking for a strong Head of Finance for one of his portfolio companies - a Healthtech startup.",
+    "locationAvailability": "Based in Bangalore, India, with frequent travel within India and occasional international trips.",
+    "introPreferences": "## Hard Requirements\n\n*   **Investor Focus:**  Introductions to investors actively writing Series A/B checks in India.  No seed-stage investors, please.\n*   **Sector Alignment:** Investors with a demonstrated interest in Fintech, Healthtech, or AI.\n*   **Relationship Strength:**  Introductions should come from a mutual connection with a pre-existing relationship with Rafael.\n\n## Soft Preferences\n\n*   **Introduction Style:**  Keep the introduction brief and to the point, highlighting the key strengths of the founder/company.\n*   **Context:** Briefly mention how the connection was made (e.g., 'Met Rafael at the TiEcon event').\n*   **Avoid:**  Overly promotional language or unsolicited investment opportunities.",
+    "personalPreferences": "I'm most responsive on LinkedIn and email. Please avoid sending me lengthy documents initially \u2013 a concise summary and a link to a pitch deck are ideal.",
+    "meetingAndSchedulingPreferences": "Please send calendar invites with at least 24 hours\u2019 notice. I generally prefer 30-minute meetings."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 19.58139991760254,
+      "input_tokens": 737,
+      "output_tokens": 1467,
+      "problems": []
+    }
+  ],
+  "success": true
+}

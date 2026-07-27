@@ -1,0 +1,54 @@
+{
+  "id": 625,
+  "archetype": "Fintech Founder, New York/Global",
+  "given_name": "Hassan Ishikawa",
+  "style_version": 38,
+  "archetypes_version": 105,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Hassan Ishikawa is a 38-year-old founder and CEO of 'CertusFlow', a fintech startup building a compliance automation platform for Registered Investment Advisors (RIAs). He transitioned from a successful career as a securities litigation attorney at a white-shoe law firm, recognizing a massive pain point in the industry: the overwhelming and costly burden of compliance. CertusFlow aims to streamline the compliance process using AI and blockchain technology, reducing costs and improving accuracy for RIAs. He's currently in a seed fundraising round, targeting Series A investors with a focus on fintech and regulatory technology. He\u2019s very focused on ethical AI and building trust within the financial system. A key detail is he deliberately built CertusFlow *after* a particularly frustrating case involving a smaller RIA unfairly penalized due to compliance oversight \u2013 he genuinely wants to level the playing field.",
+    "positioning": "Hassan Ishikawa is the Founder and CEO of CertusFlow, a next-generation compliance automation platform for Registered Investment Advisors. Leveraging a background in complex securities litigation, Hassan identified a critical need for innovative solutions that alleviate the burden of regulatory compliance within the financial services industry. CertusFlow empowers RIAs to navigate the evolving landscape of financial regulations with greater efficiency and accuracy, ultimately fostering investor trust and market integrity. Through a combination of cutting-edge AI and blockchain technology, Hassan and his team are redefining compliance as a strategic advantage, not a costly obligation. He is currently leading a seed funding round to scale CertusFlow\u2019s platform and expand its market reach.",
+    "background": "* **CertusFlow, Founder & CEO (2022 \u2013 Present):** Leading all aspects of company strategy, product development, fundraising, and team building. Successfully launched a beta version of the CertusFlow platform, securing early adopter clients representing over $500M in AUM. Currently managing a seed funding round with a target of $3M.\n* **Sullivan & Cromwell LLP, Associate Attorney (2015 \u2013 2022):** Specialized in securities litigation and regulatory defense. Represented major financial institutions in high-stakes disputes, including SEC enforcement actions and shareholder class actions. Consistently exceeded billable hour targets and received positive performance reviews.\n* **Pro Bono Work \u2013 Legal Aid Society (2016-2022):** Dedicated 50+ hours annually providing legal assistance to underserved communities, focusing on consumer protection and financial fraud cases. This experience solidified his commitment to ethical financial practices.\n* **Harvard Law School, Juris Doctor (JD) (2012 \u2013 2015):** Graduated *cum laude*. Served as editor of the Harvard Law Review and participated in the Negotiation Competition.\n* **University of Pennsylvania, B.S. Economics (2008 \u2013 2012):** Graduated *magna cum laude*, Phi Beta Kappa. Focused on behavioral economics and financial modeling. \n* **Skills:** Fintech, Regulatory Compliance (SEC, FINRA), AI/ML (basic understanding \u2013 relies heavily on CTO), Blockchain Technology, Securities Litigation, Contract Negotiation, Legal Research, Data Analysis, Fundraising, Team Leadership, Public Speaking.",
+    "lookingFor": "* **Seed Stage Investors:** Specifically seeking investors with a demonstrated track record in fintech, regulatory technology, and AI. Target check size: $500k - $1M.\n* **Series A Investors (Future):** Building relationships now for a potential Series A round in 12-18 months.\n* **RIAs (Potential Clients/Advisors):** Connecting with forward-thinking RIAs interested in piloting and providing feedback on the CertusFlow platform.\n* **Compliance Experts:** Seeking advisors with deep expertise in RIA compliance to provide guidance on product development and regulatory strategy.\n* **Mentors (Experienced Founders):** Seeking guidance from successful fintech founders who have navigated similar fundraising and scaling challenges.\n* **Do Not:** Contact with individuals offering 'get rich quick' schemes or dubious investment opportunities. \n* **Do Not:** General networking requests without a specific purpose or connection to the fintech/compliance space.",
+    "notes": "Hassan is highly articulate and well-prepared, but can sometimes be overly focused on the legal intricacies of compliance, potentially losing non-legal audiences. He is extremely passionate about his mission and genuinely believes CertusFlow can make a positive impact on the financial industry. Recent LinkedIn activity shows significant engagement with posts related to AI ethics and regulatory innovation. He's actively attending fintech conferences in NYC. Data quality is good; profile consistently updated. He\u2019s been increasingly receptive to intros to investors focused on 'responsible AI' lately.",
+    "locationAvailability": "New York, NY, USA",
+    "introPreferences": "* **Ideal Intro Target:** Partners or Principals at VC firms specializing in fintech and regulatory tech. Individuals with a history of investing in early-stage companies.\n* **Introduction Style:** A concise and impactful introduction highlighting CertusFlow's value proposition and Hassan's relevant experience. Focus on the problem we solve and the potential market opportunity.\n* **Hard Requirement:** The investor *must* have a demonstrated interest in fintech and/or regulatory technology.\n* **Soft Preference:** Experience with blockchain technology is a plus, but not essential.\n* **Do Not:** Introduce to investors who primarily focus on consumer-facing fintech apps (e.g., payment apps, crypto exchanges).\n* **Do Not:** Warm introductions to junior associates or analysts \u2013 target decision-makers directly.",
+    "personalPreferences": "Prefers asynchronous communication initially (email or LinkedIn messaging) before scheduling calls. Appreciates concise and well-structured communication.",
+    "meetingAndSchedulingPreferences": "Generally available for meetings during standard business hours (EST). Prefers a quick introductory call (15-20 minutes) before committing to a longer meeting. Follow-up within 24-48 hours is appreciated."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 23.836120128631592,
+      "input_tokens": 820,
+      "output_tokens": 1233,
+      "problems": []
+    }
+  ],
+  "success": true
+}

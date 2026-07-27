@@ -1,0 +1,54 @@
+{
+  "id": 649,
+  "archetype": "AI/Deep Tech Founder - Early Stage",
+  "given_name": "Amir Castillo",
+  "style_version": 40,
+  "archetypes_version": 108,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Amir Castillo is a 32-year-old founder with a strong technical background in computer vision and a recent pivot from a research scientist role at a major robotics firm. He\u2019s building \u2018Synapse Insights\u2019, an AI platform that translates complex sensor data (initially LiDAR and thermal imaging) into actionable insights for infrastructure inspection \u2013 think bridges, power lines, and pipelines. He\u2019s deeply technical, often getting lost in the weeds of model architecture, but understands he *needs* to build a team to scale. He's currently pre-seed, bootstrapping with some savings, and actively seeking a technical co-founder (specifically someone strong in backend engineering and cloud deployment) and seed funding. He's relatively new to the fundraising game and a bit hesitant to over-promise, preferring to let the technology speak for itself. A distinctive detail is that he spent a year as a field engineer *on* power lines after his undergrad, which is where the initial problem inspiration came from. He\u2019s based in Denver, Colorado, drawn by the outdoor lifestyle and growing tech scene.",
+    "positioning": "Amir Castillo is the founder and CEO of Synapse Insights, an AI-powered platform revolutionizing infrastructure inspection. We transform raw sensor data \u2013 LiDAR, thermal imaging, and more \u2013 into clear, actionable insights, enabling proactive maintenance and preventing costly failures. My background blends cutting-edge research in computer vision with practical field experience, allowing me to identify and solve real-world problems with innovative AI solutions. Synapse Insights isn\u2019t just about detecting defects; it's about predicting them, optimizing maintenance schedules, and ultimately extending the lifespan of critical infrastructure. We are focused on delivering a significant ROI for our clients through increased efficiency, reduced downtime, and improved safety.",
+    "background": "- **Synapse Insights, Founder & CEO** (October 2023 \u2013 Present)\n    - Led all aspects of company formation, including business plan development, technology roadmap, and initial prototype development.\n    - Secured initial pilot projects with two regional utility companies.\n    - Developed core computer vision algorithms for defect detection in LiDAR and thermal imagery.\n    - Built and maintain the initial cloud infrastructure using AWS.\n\n- **Boston Dynamics, Research Scientist \u2013 Computer Vision** (June 2020 \u2013 September 2023)\n    - Conducted research in 3D scene understanding, object recognition, and visual localization for robotic applications.\n    - Published three peer-reviewed papers at leading computer vision conferences (CVPR, ICCV, ECCV).\n    - Developed and implemented novel algorithms for robust visual perception in challenging environments.\n    - Mentored junior researchers and interns.\n\n- **Black & Veatch, Field Engineer** (August 2018 \u2013 May 2020)\n    - Performed hands-on inspection and maintenance of high-voltage power lines and substations.\n    - Gained firsthand experience with the challenges and limitations of traditional infrastructure inspection methods \u2013 this is where the idea for Synapse Insights originated.\n    - Managed small-scale repair projects and coordinated with engineering teams.\n\n- **University of Colorado Boulder, Ph.D. in Computer Science** (2014 - 2020) - Dissertation: 'Robust 3D Reconstruction from Sparse Sensor Data'\n    - GPA: 3.9/4.0\n    - Relevant Coursework: Computer Vision, Machine Learning, Robotics, Data Structures & Algorithms\n\n- **Skills:** Python, TensorFlow, PyTorch, LiDAR processing, Thermal Image Analysis, AWS (EC2, S3, Lambda), Computer Vision, Deep Learning, Object Detection, Semantic Segmentation, Data Visualization, Project Management, Technical Communication.",
+    "lookingFor": "I'm currently seeking a strong technical co-founder with expertise in backend engineering, cloud deployment (specifically scaling Python applications on AWS), and ideally, experience with DevOps practices. Someone who can build robust, scalable infrastructure and translate our AI models into a production-ready platform. Equity is open for discussion. \n\nI'm also actively fundraising \u2013 a seed round to accelerate product development and expand our pilot program. I'm particularly interested in connecting with angel investors and seed-stage VCs who focus on AI, deep tech, and infrastructure technology. I\u2019m not looking for \u2018spray and pray\u2019 investors; I want partners who understand the technical complexities and long-term potential of our vision.\n\nSpecifically, I\u2019d appreciate introductions to:\n\n* **Backend Engineers:** Proven experience with Python, AWS, and scalable system design.\n* **Seed-Stage Investors:** Focus on AI/Deep Tech, infrastructure, or industrial automation.\n* **Industry Experts:** Individuals with deep knowledge of infrastructure inspection and maintenance.",
+    "notes": "Amir is highly technical and can get very detailed when discussing the underlying algorithms. He\u2019s a bit reserved initially but warms up quickly when talking about the problem he\u2019s solving. He\u2019s genuinely passionate about the potential of AI to improve infrastructure safety and efficiency. He seems somewhat hesitant to make bold claims about market size or revenue projections, preferring to focus on the technical validation of the technology. He\u2019s very responsive to direct questions and appreciates clear, concise communication. \n\nHe mentioned he\u2019s spending most of his time coding and iterating on the prototype. He\u2019s actively participating in the Techstars Denver accelerator program. He\u2019s also a bit overwhelmed with the fundraising process and could benefit from introductions to experienced mentors. \n\nData quality caveat: The pilot projects are still in early stages, so concrete ROI data is limited. He\u2019s currently refining his pitch deck and preparing for investor meetings.",
+    "locationAvailability": "I am based in Denver, Colorado, and am open to remote meetings. I am willing to travel for key investor meetings or potential co-founder interviews, but prefer to minimize travel at this stage.",
+    "introPreferences": "When making introductions, please emphasize my technical background and the practical origins of Synapse Insights \u2013 the year I spent as a field engineer is crucial context. \n\n**Hard Requirements for Co-founder Introductions:**\n* Strong Python and AWS experience.\n* Demonstrated ability to build and scale production-ready systems.\n* Alignment with the long-term vision of Synapse Insights.\n\n**Soft Preferences for Co-founder Introductions:**\n* Experience with DevOps and CI/CD pipelines.\n* Familiarity with the infrastructure inspection industry.\n* A collaborative and proactive mindset.\n\n**For Investor Introductions:** Please highlight the novel approach to infrastructure inspection and the potential for significant ROI. Avoid overly hyped language; I prefer a factual and data-driven discussion. A brief note about the Techstars program participation would be helpful. Please also mention my technical depth.",
+    "personalPreferences": "I prefer email for initial contact (amir.castillo@synapseinsights.ai). I\u2019m fairly responsive, but I may be slow to reply if I\u2019m deep in coding. Short, concise messages are appreciated.",
+    "meetingAndSchedulingPreferences": "I\u2019m generally available for meetings between 9am and 5pm MST. I prefer 30-minute meetings initially to assess fit. Please send a brief agenda beforehand so I can prepare. I always follow up with a summary of key takeaways and action items."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 26.76331329345703,
+      "input_tokens": 821,
+      "output_tokens": 1544,
+      "problems": []
+    }
+  ],
+  "success": true
+}

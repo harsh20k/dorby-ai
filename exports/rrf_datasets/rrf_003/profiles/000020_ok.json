@@ -1,0 +1,63 @@
+{
+  "id": 20,
+  "archetype": "Technical Recruiting Boutique Founder",
+  "given_name": "Nadia Chen",
+  "style_version": 2,
+  "archetypes_version": 4,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Nadia Chen is a seasoned technical recruiter who recently left a comfortable, high-paying role at a large agency to launch 'Synapse Search,' a boutique firm specializing in finding niche engineering talent (specifically, early-stage AI/ML and distributed systems engineers) for pre-seed to Series A startups. Her distinctive career detail is a brief but impactful stint *as* a software engineer early in her career, giving her deep credibility with the candidates she recruits. She\u2019s highly driven and a bit of a perfectionist, meticulously building her firm\u2019s brand and network. She's currently focused on securing 2-3 anchor clients to validate her business model and needs introductions to VCs and startup founders. She\u2019s very active on LinkedIn, aiming to be *the* go-to resource for this specific talent segment. She prioritizes quality over quantity in her network and is slightly wary of overly aggressive networking approaches. She's open to mentorship but prefers to give it rather than receive it at this stage.",
+    "positioning": "I\u2019m building Synapse Search, a boutique recruitment firm dedicated to connecting exceptional engineering talent with ambitious early-stage startups. Having spent years navigating the complex tech landscape \u2013 including time *as* a software engineer \u2013 I understand the nuances of finding the right fit, beyond just keywords on a resume.  I specialize in sourcing hard-to-find engineers in AI/ML, distributed systems, and full-stack roles, helping startups accelerate their growth with top-tier technical teams.  My focus is on pre-seed to Series A companies, and I prioritize building long-term partnerships based on trust and delivering exceptional results. I'm currently seeking introductions to venture capitalists and founders actively scaling their engineering teams. Connecting with me now means gaining access to a pipeline of highly-qualified, pre-vetted engineers and a strategic partner committed to your company\u2019s success.",
+    "background": "- **Founder & CEO, Synapse Search** (2024 \u2013 Present)\n    - Launched a boutique technical recruitment firm specializing in early-stage startup engineering talent.\n    - Developed and implemented a proprietary sourcing strategy resulting in a 90% candidate response rate.\n    - Built a network of over 200 pre-vetted engineers with expertise in AI/ML, distributed systems, and full-stack development.\n    - Secured initial contracts with two pre-seed startups within the first three months of operation.\n\n- **Senior Technical Recruiter, Apex Recruiting Group** (2018 \u2013 2024)\n    - Consistently exceeded quarterly revenue targets by an average of 25%.\n    - Managed full-cycle recruitment for a portfolio of high-growth tech companies, including clients like 'InnovateTech' and 'FutureSolutions'.\n    - Specialized in sourcing and placing software engineers, data scientists, and DevOps engineers.\n    - Led the implementation of a new applicant tracking system (ATS) improving recruiter efficiency by 15%.\n\n- **Software Engineer, BetaCorp** (2016 \u2013 2018)\n    - Developed and maintained key features for a mobile application used by over 1 million users.\n    - Collaborated with cross-functional teams to design, implement, and test new software solutions.\n    - Gained valuable experience in the software development lifecycle, providing a unique perspective in recruitment.\n\n- **Education:**\n    - **Master of Science, Computer Science**, Stanford University (2014 \u2013 2016)\n    - **Bachelor of Science, Electrical Engineering**, Massachusetts Institute of Technology (2010 \u2013 2014)\n\n- **Skills:** Technical Recruiting, Full-Cycle Recruitment, Sourcing, Talent Acquisition, ATS (Greenhouse, Lever), LinkedIn Recruiter, Boolean Search, AI/ML, Distributed Systems, Software Engineering, Startup Ecosystem.",
+    "lookingFor": "## Networking Opportunities\n* **Introductions to Venture Capitalists:** Seeking introductions to partners at seed and Series A funds investing in AI/ML and infrastructure startups.  Specifically interested in firms known for their engineering-focused due diligence.\n* **Startup Founder Connections:**  Looking to connect with founders/CTOs at pre-seed to Series A startups actively building out their engineering teams (particularly in AI/ML and distributed systems).\n* **Referrals for Senior Engineering Roles:**  Seeking referrals for experienced engineers (5+ years) with specialized skills in AI/ML, distributed systems, and full-stack development.\n* **Strategic Partnerships:**  Exploring potential partnerships with complementary service providers (e.g., legal firms specializing in startup equity, HR consulting firms).",
+    "notes": "Nadia is incredibly focused on building a *premium* brand for Synapse Search. She's very selective about who she connects with and prioritizes quality over quantity. She recently mentioned feeling overwhelmed with the administrative aspects of running a business and might be open to discussing tools or services that could streamline those processes. She\u2019s a bit hesitant to ask for help directly, so framing suggestions as \u2018best practices\u2019 or \u2018resources\u2019 is likely to be more effective. Her background as an engineer is a key differentiator, so highlighting this in introductions is beneficial. She briefly expressed interest in exploring executive coaching in the past, but it's unclear if that's still a priority. She's consistently active on LinkedIn, posting insightful articles about the engineering talent market.",
+    "locationAvailability": "Based in San Francisco, CA, but open to connecting with individuals and companies globally.",
+    "introPreferences": "* **Hard Requirement:** Introductions must be to individuals actively involved in funding or building engineering teams at early-stage startups.\n* **Soft Preference:**  Introductions to VCs with a demonstrated track record of investing in AI/ML companies are highly valued.\n* **Avoid:** Introductions to sales or marketing professionals, or individuals who are not directly involved in technical hiring decisions.\n* **Best Approach:** A brief, personalized message highlighting the relevance of Synapse Search to the recipient's work is appreciated.  Avoid overly promotional language.",
+    "personalPreferences": "Nadia prefers initial contact via LinkedIn messaging. She\u2019s responsive but not always immediate, as she\u2019s often deeply focused on her work. She likes concise, data-driven communication and appreciates thoughtful insights. She\u2019s not a fan of long email threads and prefers to keep conversations focused and efficient.  She's generally open to connecting on other platforms (e.g., WhatsApp) after establishing a rapport on LinkedIn.",
+    "meetingAndSchedulingPreferences": "Prefers brief, focused introductory calls (15-20 minutes) to assess mutual fit before scheduling longer meetings."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 24.526740074157715,
+      "input_tokens": 765,
+      "output_tokens": 1542,
+      "problems": [
+        "background: possible truncation (ends with '...Blockchain, Cybersecurity')"
+      ]
+    },
+    {
+      "attempt": 2,
+      "elapsed_s": 23.030290842056274,
+      "input_tokens": 765,
+      "output_tokens": 1403,
+      "problems": []
+    }
+  ],
+  "success": true
+}

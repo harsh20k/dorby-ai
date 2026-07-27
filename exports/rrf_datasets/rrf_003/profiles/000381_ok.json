@@ -1,0 +1,54 @@
+{
+  "id": 381,
+  "archetype": "Canadian Tech, Global Ambition",
+  "given_name": "Kenji Weber",
+  "style_version": 23,
+  "archetypes_version": 63,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Kenji Weber is a 38-year-old, Vancouver-based machine learning engineer specializing in computer vision for autonomous systems. He spent several years at a robotics startup that ultimately failed, but he was the sole engineer to successfully port their core object recognition algorithms to a new hardware platform *after* the funding dried up \u2013 a testament to his practical problem-solving and independent drive. This experience instilled in him a strong desire to work for established companies with stable funding, but he retains the entrepreneurial spirit and a fascination with cutting-edge technology. He's currently at a mid-sized Canadian defense contractor, but actively seeking a role in the US (specifically the Bay Area or Boston) with a company developing autonomous vehicles or advanced robotics. He\u2019s particularly interested in roles with a strong research component, allowing him to push the boundaries of computer vision. He\u2019s cautious about smaller startups given his past experience, and prioritizes companies with a clear path to profitability.",
+    "positioning": "I am a highly motivated and results-oriented Machine Learning Engineer with a proven track record of developing and deploying computer vision solutions for complex applications. Currently, I lead the development of perception systems at NovaTech Defense, where I\u2019m responsible for enhancing the accuracy and robustness of our object detection algorithms used in unmanned aerial vehicles. Previously, I was a key contributor at Stellar Robotics, where I successfully transitioned our core computer vision pipeline to a new hardware architecture under challenging circumstances, ensuring the continuation of critical R&D efforts. I possess a deep understanding of deep learning frameworks, sensor fusion, and real-time embedded systems. I\u2019m actively seeking a challenging and impactful role in the US, contributing to the advancement of autonomous systems and computer vision technology.",
+    "background": "\u2022 **NovaTech Defense, Vancouver, BC** (2019 \u2013 Present)\n  \u2022 Senior Machine Learning Engineer\n  \u2022 Led the development and implementation of computer vision algorithms for UAVs, improving object detection accuracy by 15%.\n  \u2022 Mentored junior engineers in best practices for model training, validation, and deployment.\n  \u2022 Managed the integration of new sensor data streams into the perception pipeline.\n\u2022 **Stellar Robotics, Vancouver, BC** (2016 \u2013 2019)\n  \u2022 Machine Learning Engineer\n  \u2022 Sole engineer responsible for porting the company\u2019s core object recognition algorithms to a new hardware platform following a funding shortfall.\n  \u2022 Developed and maintained a real-time object tracking system using Kalman filtering and deep learning.\n  \u2022 Contributed to the design and implementation of a sensor fusion framework.\n\u2022 **University of British Columbia, Vancouver, BC** (2012 \u2013 2016)\n  \u2022 Master of Science in Electrical and Computer Engineering \u2013 Specialization: Robotics\n  \u2022 Bachelor of Science in Engineering Physics\n  \u2022 Relevant Coursework: Computer Vision, Machine Learning, Robotics, Signal Processing, Artificial Intelligence.\n\u2022 **Skills:** Python, TensorFlow, PyTorch, OpenCV, CUDA, C++, ROS, Kalman Filtering, Sensor Fusion, Deep Learning, Object Detection, Image Segmentation, Embedded Systems, Git, Linux.",
+    "lookingFor": "\u2022 Machine Learning Engineer roles focused on computer vision for autonomous vehicles or robotics.\n\u2022 Opportunities in the San Francisco Bay Area or Boston.\n\u2022 Companies with a strong emphasis on research and development.\n\u2022 Roles requiring experience with deep learning frameworks (TensorFlow, PyTorch).\n\u2022 Teams working on cutting-edge technologies and challenging problems.\n\u2022 Companies with demonstrated financial stability and a clear path to profitability.",
+    "notes": "Kenji is a highly capable engineer but is understandably cautious about joining early-stage startups due to his experience at Stellar Robotics. He prioritizes companies with a strong financial foundation and a clear vision. He\u2019s particularly interested in opportunities where he can leverage his expertise in computer vision to solve real-world problems. Note: He is actively applying for US work visas and will require sponsorship. He's a strong advocate for open-source technologies and actively contributes to several computer vision projects on GitHub. Caution: Avoid pitching him opportunities that are purely theoretical or lack a clear path to practical application.",
+    "locationAvailability": "I am currently based in Vancouver, Canada, but am actively seeking opportunities in the United States, specifically the Bay Area or Boston. I am open to fully remote positions, hybrid work arrangements, or relocation. I am willing to travel as needed for interviews and onboarding.",
+    "introPreferences": "\u2022 **Hard Requirements:** Introductions to hiring managers or key decision-makers at companies developing autonomous vehicles or advanced robotics in the US.\n\u2022 **Soft Preferences:** Individuals with experience in computer vision, machine learning, or robotics.\n\u2022 **Avoid:** Introductions to recruiters specializing in non-technical roles or companies outside of the autonomous systems/robotics space. Please frame the introduction highlighting my experience with successful algorithm porting and my contributions to NovaTech's UAV perception systems. A brief mention of my US work visa requirements is also appreciated.",
+    "personalPreferences": "I generally respond quickest to messages on LinkedIn. Feel free to connect and send a direct message if you think there might be a good fit. I'm happy to jump on a quick call to discuss opportunities further.",
+    "meetingAndSchedulingPreferences": "I am flexible with scheduling and can accommodate various time zones. I prefer using Google Calendar for scheduling meetings."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 15.253905057907104,
+      "input_tokens": 801,
+      "output_tokens": 1132,
+      "problems": []
+    }
+  ],
+  "success": true
+}

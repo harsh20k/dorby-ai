@@ -1,0 +1,54 @@
+{
+  "id": 822,
+  "archetype": "Quant-Turned-Fintech AI Founder",
+  "given_name": "Alejandro Martins",
+  "style_version": 50,
+  "archetypes_version": 138,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Alejandro Martins is a former mathematical physicist who transitioned into quantitative finance and now runs a small, seed-funded fintech startup called 'Synapse Trading'. Synapse uses reinforcement learning to develop automated trading strategies for niche cryptocurrency markets. He\u2019s highly technical, a bit introverted, and focused on building a robust, research-driven product. A distinctive career detail is that he briefly worked at a high-frequency trading firm *after* getting his PhD but left because he disliked the short-term, profit-driven culture and wanted to apply his skills to more long-term, innovative problems. He is now looking to connect with potential investors who understand AI/ML, experienced engineers to help scale his team, and other founders in the crypto/fintech space. He\u2019s not a big self-promoter and prefers direct, technical discussions over networking events.",
+    "positioning": "Alejandro Martins is the Founder & CEO of Synapse Trading, a fintech startup leveraging advanced reinforcement learning techniques to generate alpha in digital asset markets. He bridges the gap between cutting-edge AI research and practical trading applications, building intelligent agents capable of navigating complex and volatile environments. Alejandro\u2019s background in theoretical physics provides a unique perspective on modeling market dynamics and developing robust, adaptable trading algorithms. He\u2019s focused on building a sustainable, research-first company that redefines automated trading through the power of artificial intelligence. He is passionate about applying rigorous mathematical frameworks to solve real-world financial challenges.",
+    "background": "- **Founder & CEO, Synapse Trading** (2022 \u2013 Present)\n  - Led seed funding round of $750K, building a team of 4 engineers and researchers.\n  - Developed and deployed reinforcement learning algorithms that consistently outperform benchmark strategies in backtesting for select cryptocurrency pairs.\n  - Architected the trading infrastructure, utilizing cloud-based services (AWS) for scalability and reliability.\n\n- **Quantitative Researcher, NovaTech Capital** (2021 \u2013 2022)\n  - Designed and implemented statistical models for predicting price movements in FX markets.\n  - Collaborated with traders to optimize existing strategies and develop new trading signals.\n  - Contributed to the development of a low-latency trading system using Python and C++.\n\n- **Postdoctoral Research Fellow, Institute for Advanced Study** (2019 \u2013 2021)\n  - Conducted research in theoretical physics, specializing in quantum field theory and statistical mechanics.\n  - Published several peer-reviewed articles in leading scientific journals.\n  - Presented research findings at international conferences.\n\n- **Doctor of Philosophy (PhD), Physics, Massachusetts Institute of Technology (MIT)** (2015 \u2013 2019)\n  - Dissertation: 'Emergent Phenomena in Strongly Correlated Systems'.\n  - Awarded the prestigious MIT Presidential Fellowship.\n\n- **Bachelor of Science (BS), Physics, California Institute of Technology (Caltech)** (2011 \u2013 2015)\n  - Graduated Summa Cum Laude.",
+    "lookingFor": "- Investors with experience in AI/ML and fintech, particularly those interested in early-stage crypto ventures.\n- Senior Machine Learning Engineers specializing in reinforcement learning and time series analysis. Experience with PyTorch is a plus.\n- Founders of other crypto/fintech startups for knowledge sharing and potential collaboration.\n- Mentors with experience scaling early-stage tech companies.\n- Individuals with expertise in regulatory compliance within the cryptocurrency space.\n- Connections to potential partners for data access and market intelligence.\n- Advice on navigating the complexities of building a fintech company in a rapidly evolving regulatory environment.",
+    "notes": "Alejandro is brilliant but can be quite reserved. He prefers to dive straight into technical details and isn't a fan of small talk. He\u2019s genuinely passionate about the potential of AI in finance but wary of hype. He's recently been focusing on improving the robustness of Synapse Trading's algorithms to handle unexpected market events. He's open to informational interviews but will likely steer the conversation towards technical aspects. Avoid pitching him investment opportunities unless you have a solid understanding of the underlying technology. He\u2019s a bit of a perfectionist and is always striving to improve his models. Last spoke with him on 10/26 about potential data partnerships \u2013 he seemed cautiously optimistic.",
+    "locationAvailability": "Based in San Francisco, CA, but open to remote meetings and occasional travel for key opportunities.",
+    "introPreferences": "- Please only introduce Alejandro to individuals with a strong technical background or demonstrable experience in the AI/fintech space.\n- Avoid introductions to sales or marketing professionals unless they have a clearly defined technical value proposition.\n- When making an introduction, briefly highlight the common interests or potential areas of collaboration.\n- Don't oversell Alejandro or Synapse Trading \u2013 he prefers a straightforward and honest approach.\n- A short, concise email with a clear subject line is preferred over lengthy introductions.\n- He's much more receptive to introductions from people he *doesn't* already have a connection with on LinkedIn.",
+    "personalPreferences": "Prefers email communication \u2013 alex@synapsetrading.com. Responds best to concise, data-driven messages.",
+    "meetingAndSchedulingPreferences": "Generally prefers virtual meetings (Zoom/Google Meet) over in-person meetings. He's most available in the afternoons (PST) due to a focused morning research routine."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 15.504446029663086,
+      "input_tokens": 762,
+      "output_tokens": 1161,
+      "problems": []
+    }
+  ],
+  "success": true
+}

@@ -1,0 +1,63 @@
+{
+  "id": 988,
+  "archetype": "Canadian Tech Entrepreneur & Operator",
+  "given_name": "Diego Reyes",
+  "style_version": 61,
+  "archetypes_version": 166,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Diego Reyes is a 38-year-old Canadian tech entrepreneur currently focused on scaling 'Synapse Analytics,' a B2B SaaS platform providing predictive maintenance solutions for industrial equipment. He previously spent a decade as a process engineer at a major oil & gas company, which is where he identified the core problem Synapse solves \u2013 costly, unplanned downtime. He's a first-time founder, and while technically strong, he's actively looking for operational expertise and seed-stage investment to accelerate growth. He's pragmatic, data-driven, and prioritizing building a robust, sustainable business over hyper-growth. He's based in Calgary, Alberta and is very focused on the Canadian tech ecosystem. A key element of his backstory is a significant, early partnership with a university research lab, which gives him a strong IP foundation but also a reliance on academic collaboration he\u2019s now looking to augment with in-house expertise.",
+    "positioning": "I'm the Founder & CEO of Synapse Analytics, a Calgary-based SaaS company revolutionizing industrial maintenance. We provide predictive analytics software that uses machine learning to identify potential equipment failures *before* they happen, minimizing downtime and maximizing operational efficiency for our clients in the energy, manufacturing, and transportation sectors. Synapse leverages real-time sensor data combined with historical maintenance records to deliver actionable insights. We recently completed a successful pilot program with a major pipeline operator, demonstrating a 15% reduction in unplanned outages and a projected $2M annual cost savings. Currently, we're focused on expanding our sales team and refining our platform based on user feedback from the pilot. Our long-term vision is to become the leading provider of predictive maintenance solutions across Canada, empowering businesses to operate more reliably and sustainably. We differentiate ourselves through a focus on explainable AI \u2013 our platform doesn't just *predict* failures, it explains *why*, giving engineers the confidence to make informed decisions.",
+    "background": "* **Synapse Analytics, Founder & CEO** (2021 \u2013 Present)\n    * Led all aspects of company formation, including fundraising, product development, and market entry.\n    * Secured seed funding of $750K from angel investors and a government grant.\n    * Built and launched the Synapse Analytics platform, achieving initial traction with pilot customers.\n    * Developed and implemented a go-to-market strategy focused on the Canadian energy sector.\n* **Enbridge, Process Engineer** (2011 \u2013 2021)\n    * Managed and optimized critical process systems across various pipeline facilities.\n    * Led cross-functional teams to implement improvements in equipment reliability and safety.\n    * Spearheaded the implementation of a new data analytics system for predictive maintenance, identifying key opportunities for cost savings and efficiency gains \u2013 *this experience directly inspired the creation of Synapse Analytics*.\n    * Responsible for troubleshooting complex equipment failures and developing preventative maintenance strategies.\n* **University of Calgary, MASc, Chemical Engineering** (2009 \u2013 2011)\n    * Thesis focused on the application of machine learning to optimize chemical process control.\n    * GPA: 3.9/4.0\n    * Received the Dean\u2019s Award for Academic Excellence.\n* **University of Alberta, BASc, Chemical Engineering** (2005 \u2013 2009)\n    * Graduated with Honors.\n    * Active member of the Engineering Students\u2019 Society.\n* **Certifications:**\n    * Six Sigma Green Belt (2015)\n    * Project Management Professional (PMP) \u2013 In Progress (Expected Completion: Q4 2024)",
+    "lookingFor": "I'm actively seeking connections and resources to accelerate the growth of Synapse Analytics. My priorities are as follows:\n\n* **Seed-Stage Investors:** Specifically, funds with a focus on B2B SaaS, industrial IoT, or AI/ML, and a demonstrated track record of supporting Canadian companies. I'm looking for investment rounds in the $1.5M - $3M range.\n* **Operational Expertise:** Experienced operators with a background in scaling SaaS businesses, particularly in sales, marketing, and customer success. I'm open to advisors, mentors, or potential executive hires.\n* **Strategic Partnerships:** Companies with complementary technologies or market access in the industrial sector. We're particularly interested in partnerships with companies offering sensor technology, data integration services, or consulting expertise.\n* **Talent Acquisition:** Skilled machine learning engineers with experience in time-series analysis and predictive modeling. A strong background in industrial applications is a significant plus. I'm also looking for a VP of Sales with a proven track record in the Canadian market.\n\nI'm open to informational interviews with individuals who have experience in similar ventures or can offer valuable insights into the Canadian tech landscape. I\u2019m *not* currently seeking legal or accounting services, but I am interested in connecting with individuals who can provide guidance on government funding opportunities.",
+    "notes": "* Diego is very articulate and clearly passionate about his product. During our initial call (2024-07-26), he demonstrated a strong technical understanding of the problem space.\n* He's a first-time founder and is eager to learn from experienced operators.\n* He mentioned a reliance on a university research partnership for ongoing IP development, which could be a potential bottleneck.\n* He's very focused on the Canadian market and seems hesitant about expanding internationally in the near term.\n* Follow-up: Send him the contact info for Sarah Chen (VP of Sales at a similar SaaS company).\n* Data quality: LinkedIn profile is relatively new, but consistent with information provided during the call.\n* Previous interactions: None recorded.",
+    "locationAvailability": "Currently based in Calgary, Alberta, Canada. Willing to travel within Canada for key meetings and conferences, but not actively seeking relocation at this time.",
+    "introPreferences": "When making introductions to Diego, please adhere to the following:\n\n* **Hard Requirements:**\n    * Any investor introduction *must* be a seed-stage fund with a demonstrated interest in Canadian SaaS companies.\n    * Any operational expert introduction *must* have direct experience scaling a B2B SaaS business beyond $1M ARR.\n* **Soft Preferences:**\n    * Individuals with a background in the energy or manufacturing sectors are highly preferred.\n    * Introductions should be concise and focus on how the connection can directly benefit Synapse Analytics.\n* **Introduction Style:**\n    * *Do:* Briefly highlight the connection's relevant experience and how it aligns with Diego's current needs.\n    * *Don't:* Send lengthy emails or generic introductions. Diego is very busy and prefers direct, to-the-point communication.\n    * *Do:* Frame the introduction as a mutually beneficial opportunity for both parties.\n    * *Don't:* Oversell the connection or make unrealistic promises. Authenticity is highly valued.",
+    "personalPreferences": "I prefer email communication and am generally responsive within 24 hours. I'm an early riser and typically schedule calls before 10:00 AM MST.",
+    "meetingAndSchedulingPreferences": ""
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 23.34202289581299,
+      "input_tokens": 807,
+      "output_tokens": 1399,
+      "problems": [
+        "background: possible truncation (ends with '...hine Learning \u2013 Specialty')"
+      ]
+    },
+    {
+      "attempt": 2,
+      "elapsed_s": 20.101797103881836,
+      "input_tokens": 807,
+      "output_tokens": 1516,
+      "problems": []
+    }
+  ],
+  "success": true
+}

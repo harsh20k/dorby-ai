@@ -1,0 +1,54 @@
+{
+  "id": 412,
+  "archetype": "Fintech/Lending Operator (Founder/Leader)",
+  "given_name": "Diego Lopes",
+  "style_version": 25,
+  "archetypes_version": 69,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Diego Lopes is a 38-year-old founder and CEO of 'Veridia AI', a Series A fintech company focused on AI-powered fraud detection specifically for small and medium-sized lenders. He previously spent 8 years at a large traditional bank, but left frustrated by the slow pace of innovation and the limitations of legacy systems. A key detail: during his time at the bank, he *single-handedly* built a proof-of-concept fraud detection model using Python and open-source datasets, which caught the eye of a VP and led to a small internal pilot program. This experience fueled his desire to build Veridia. Currently, Diego is focused on scaling Veridia\u2019s sales team, securing strategic partnerships with POS system providers, and exploring international expansion. He's highly data-driven, a bit of a coding enthusiast still, and prioritizes building a strong, diverse team. He's looking for Series B funding and key talent in machine learning and sales.",
+    "positioning": "Veridia AI is revolutionizing fraud prevention for small and medium-sized lenders, a market underserved by existing solutions. We leverage cutting-edge AI and machine learning to deliver real-time fraud detection with unprecedented accuracy, reducing losses and improving approval rates.  Unlike traditional rule-based systems, our adaptive algorithms learn from every transaction, constantly improving performance and staying ahead of evolving fraud tactics. We\u2019re currently scaling rapidly, having just closed our Series A round, and are focused on expanding our reach through strategic partnerships and direct sales efforts.  Veridia isn\u2019t just about preventing fraud; it\u2019s about empowering lenders to confidently extend credit and fuel economic growth.",
+    "background": "* **Veridia AI, CEO & Founder** (January 2021 \u2013 Present)\n    * Led all aspects of company strategy, fundraising, product development, and operations.\n    * Secured $8M in Series A funding from leading fintech venture capital firms.\n    * Built and scaled a team of 30+ engineers, data scientists, and sales professionals.\n    * Oversaw the development and launch of Veridia\u2019s flagship fraud detection platform, resulting in a 40% reduction in fraud losses for early adopter clients.\n    * Established key partnerships with several regional credit unions and online lenders.\n* **First National Bank, Senior Fraud Analyst / Model Developer** (June 2013 \u2013 December 2020)\n    * Developed and maintained fraud detection models using SAS and SQL, reducing annual fraud losses by 15%.\n    * Led the implementation of a new real-time fraud monitoring system, improving detection rates by 20%.\n    * **Notably, independently built a prototype fraud detection model using Python and open-source datasets that demonstrated a 25% improvement in accuracy compared to existing systems, leading to a small-scale internal pilot.**\n    * Mentored junior analysts and provided training on fraud detection techniques.\n* **University of California, Berkeley, Master of Science in Data Science** (August 2011 \u2013 May 2013)\n    * Focused on machine learning, statistical modeling, and data visualization.\n    * Completed a thesis on the application of deep learning to fraud detection.\n* **Stanford University, Bachelor of Science in Computer Science** (September 2007 \u2013 June 2011)\n    * Dean\u2019s List all semesters.\n    * Member of the Stanford AI Lab.",
+    "lookingFor": "We are currently focused on several key priorities:\n* **Series B Funding:** Seeking $20M - $30M to accelerate product development, expand our sales and marketing efforts, and explore international expansion.  We\u2019re targeting VCs with a strong track record in fintech and AI.\n* **Strategic Partnerships:**  Actively seeking partnerships with Point-of-Sale (POS) system providers and payment processors to integrate Veridia\u2019s fraud detection capabilities directly into their platforms.  Ideal partners will have a strong presence in the SMB lending space.\n* **Head of Sales:**  Looking for an experienced and highly motivated Head of Sales to build and lead our sales team.  Must have a proven track record of success in selling SaaS solutions to financial institutions.  Experience with quota-carrying sales teams is essential.\n* **Senior Machine Learning Engineers:**  Hiring talented Machine Learning Engineers with expertise in fraud detection, anomaly detection, and deep learning.  Experience with Python, TensorFlow, and cloud computing platforms (AWS, Azure, GCP) is highly desirable.  Remote candidates considered.",
+    "notes": "Diego had a productive call with Sarah Chen at Insight Partners last week. She expressed strong interest but wants to see more traction with larger lenders.  Action item: Follow up with Sarah with updated client acquisition metrics. \n\nWe've noticed a slight discrepancy in the reported fraud loss reduction rates from our initial clients. Need to investigate further to ensure data accuracy. \n\nDiego is particularly keen on connecting with individuals who have experience scaling SaaS businesses in the financial services sector.  He values authenticity and a willingness to roll up sleeves. \n\nReminder:  He\u2019s actively tracking competitor activity \u2013 specifically, the new fraud detection product launched by DataShield.  Need to analyze their offering and assess potential competitive threats.",
+    "locationAvailability": "San Francisco, CA (HQ) and remotely.",
+    "introPreferences": "I'm always open to connecting with individuals who can help Veridia achieve its mission.  Here's what's most helpful:\n* **Hard Requirements:**  Introductions should be to individuals at Series B Venture Capital firms focused on Fintech/AI, or to C-level executives at POS system providers (Square, Shopify, Lightspeed, etc.).\n* **Soft Preferences:**  Connections to thought leaders in the fraud prevention space, particularly those with expertise in AI/ML.  I also appreciate introductions to experienced sales leaders with a track record in SaaS.\n* **Avoid:**  Please do not introduce me to recruiters unless I specifically request it.  Also, avoid introductions to individuals at DataShield \u2013 we are carefully monitoring their activity but are not currently interested in collaboration.\n* **Framing:** Please highlight Veridia\u2019s unique AI-driven approach and our focus on the underserved SMB lending market.",
+    "personalPreferences": "I prefer quick, direct communication. Email is fine for initial contact, but I'm also responsive on LinkedIn.  Please be mindful of time zones when scheduling meetings.",
+    "meetingAndSchedulingPreferences": "I generally prefer 30-minute meetings to start.  I'm usually available after 10 AM PST. Please send a brief agenda beforehand."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 18.584810972213745,
+      "input_tokens": 774,
+      "output_tokens": 1400,
+      "problems": []
+    }
+  ],
+  "success": true
+}

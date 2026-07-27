@@ -1,0 +1,54 @@
+{
+  "id": 883,
+  "archetype": "Experienced Hospitality Operator/Founder",
+  "given_name": "Sana Eriksson",
+  "style_version": 54,
+  "archetypes_version": 149,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Sana Eriksson is a seasoned hospitality professional who spent 15 years climbing the ranks at major hotel chains before taking a leap to found 'Nordic Nests,' a boutique glamping company focused on sustainable and immersive experiences in Scandinavian landscapes. A key detail is that she *specifically* pivoted to glamping after leading a successful sustainability initiative at a large hotel group, realizing the demand for eco-conscious travel. She's now seeking seed funding to expand Nordic Nests nationally and internationally, and is particularly interested in investors who understand the luxury eco-tourism market. She's a direct communicator, values efficiency, and is deeply passionate about responsible tourism. She's currently focused on scaling operations and building strategic partnerships.",
+    "positioning": "Sana Eriksson is the Founder & CEO of Nordic Nests, a rapidly growing glamping company redefining luxury outdoor experiences in Scandinavia. Having spent fifteen years honing her expertise in hospitality operations and guest experience management with leading brands like Marriott and Hyatt, Sana identified a significant gap in the market for high-end, sustainable travel options. Nordic Nests delivers uniquely curated stays in architecturally stunning glamping domes, prioritizing minimal environmental impact and immersive cultural experiences.  Sana is currently seeking strategic partners and seed funding to fuel national and international expansion, capitalizing on the burgeoning eco-tourism sector. Connecting with Sana now offers an opportunity to be part of a disruptive force in the hospitality industry.",
+    "background": "- **Founder & CEO, Nordic Nests** (2021 \u2013 Present): Spearheaded the launch and growth of a boutique glamping company, overseeing all aspects of operations, marketing, and finance. Achieved 300% revenue growth in the first two years through strategic location selection and targeted marketing campaigns.\n- **Director of Sustainability, Grand Majestic Hotel Group** (2018 \u2013 2021): Led the development and implementation of a company-wide sustainability program, resulting in a 20% reduction in carbon footprint and significant cost savings.\n- **Regional Operations Manager, Hyatt Regency** (2015 \u2013 2018): Managed the day-to-day operations of multiple hotel properties, ensuring adherence to brand standards and maximizing guest satisfaction. Increased guest loyalty scores by 15%.\n- **Front Office Manager, Marriott Hotels** (2012 \u2013 2015): Supervised front office staff, managed guest relations, and resolved customer complaints, consistently exceeding service quality benchmarks.\n- **Bachelor of Science in Hospitality Management**, University of Nevada, Las Vegas (2008 \u2013 2012)\n- **Certified Sustainability Professional (CSP)** \u2013 International Society of Sustainability Professionals (2019)\n- **Proficient in:** Hotel Operations, Revenue Management, Sustainability Practices, Guest Experience Design, Team Leadership, Financial Management, Marketing Strategy, Scandinavian Culture and Tourism.\n- **Languages:** English (Native), Swedish (Fluent), Norwegian (Conversational)",
+    "lookingFor": "## Investors\n- Seed funding for national and international expansion of Nordic Nests.\n- Investors with experience in the hospitality, tourism, or sustainable investment sectors.\n- Investment amounts ranging from $500K to $2M.\n\n## Strategic Partners\n- Partnerships with eco-conscious brands and tourism operators.\n- Collaboration opportunities for marketing and distribution.\n- Suppliers of sustainable building materials and environmentally friendly amenities.\n\n## Mentors & Advisors\n- Experienced entrepreneurs in the glamping or boutique hospitality space.\n- Advisors with expertise in scaling sustainable businesses.",
+    "notes": "- Sana is extremely responsive and values direct communication. Avoid lengthy, overly formal introductions.\n- She is passionate about sustainability and will quickly assess a potential partner's commitment to responsible tourism.\n- Prioritizes data-driven decision making and clear ROI projections.\n- She's currently exploring expansion into the US market (specifically the Pacific Northwest).\n- She's a strong networker but prefers quality over quantity in her connections.\n- Has a slight aversion to 'fluff' and prefers concise, impactful messaging.",
+    "locationAvailability": "Based in Stockholm, Sweden, but open to remote meetings and travel for strategic opportunities.",
+    "introPreferences": "## Hard Requirements\n- Individuals with a proven track record in hospitality investment or eco-tourism.\n- Contacts within relevant venture capital firms or angel investor networks.\n- Professionals with direct experience in scaling similar businesses.\n\n## Soft Preferences\n- Introductions should highlight shared values around sustainability and responsible tourism.\n- Referrals from existing contacts within the Nordic business community are highly valued.\n- Avoid introductions to individuals solely focused on traditional hotel development.",
+    "personalPreferences": "Sana prefers concise and direct communication. She\u2019s most responsive to messages that are well-researched and demonstrate a clear understanding of Nordic Nests\u2019 mission and value proposition. She values authenticity and transparency in all interactions.",
+    "meetingAndSchedulingPreferences": "Sana is generally available for virtual meetings during European business hours. She prefers to schedule calls in advance with a clear agenda."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 18.51524591445923,
+      "input_tokens": 770,
+      "output_tokens": 1062,
+      "problems": []
+    }
+  ],
+  "success": true
+}

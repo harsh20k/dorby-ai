@@ -1,0 +1,54 @@
+{
+  "id": 930,
+  "archetype": "Serial Entrepreneur, Operational Expertise",
+  "given_name": "Omar Fernandez",
+  "style_version": 57,
+  "archetypes_version": 156,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Omar Fernandez is a serial entrepreneur currently focused on scaling 'TerraForm Analytics,' a company providing predictive analytics for vertical farming operations. His distinctive career detail is a prior, highly successful exit in the logistics tech space \u2013 he built and sold 'RouteWise' to a larger fleet management company. This experience fuels his current focus: applying sophisticated data science to optimize complex, resource-intensive systems. He\u2019s not a \u2018coder\u2019 founder; he\u2019s the operator who understands how to build a team, secure funding, and *execute* a vision. He\u2019s looking for strategic partners who can accelerate TerraForm\u2019s growth, particularly those with deep connections in the AgTech investment space. He\u2019s generally approachable but values directness and dislikes wasting time. He\u2019s based in Denver, but frequently travels to California for industry events.",
+    "positioning": "I'm the founder and CEO of TerraForm Analytics, a predictive analytics platform built specifically for the rapidly expanding vertical farming industry. We help growers maximize yield, minimize resource waste, and optimize operational efficiency using advanced machine learning models. Vertical farming is poised for exponential growth, but profitability remains a significant challenge. TerraForm solves this by providing actionable insights \u2013 predicting crop performance, optimizing nutrient delivery, and proactively identifying potential equipment failures. \n\nWe\u2019ve recently completed a successful seed round led by AgFunder, and are currently focused on expanding our pilot program with several leading vertical farms across the US. Key achievements to date include:\n\n*   **15% average yield increase** observed in pilot programs.\n*   **10% reduction in water and nutrient consumption**.\n*   **Development of a proprietary anomaly detection algorithm** for early identification of plant health issues.\n\nOur team comprises experienced data scientists, agricultural engineers, and software developers. We are actively building out our sales and customer success teams to support our growing customer base. We're not just selling software; we're offering a pathway to sustainable and profitable vertical farming.",
+    "background": "*   **CEO & Founder, TerraForm Analytics** (2022 \u2013 Present)\n    *   Secured $3M seed funding from AgFunder and several angel investors.\n    *   Developed and launched the core TerraForm Analytics platform.\n    *   Built a team of 12 data scientists, engineers, and agricultural specialists.\n    *   Established pilot programs with 5 leading vertical farming companies.\n*   **Founder & CEO, RouteWise** (2016 \u2013 2020)\n    *   Developed a SaaS platform for route optimization and fleet management.\n    *   Grew revenue to $10M ARR within 3 years.\n    *   Led the successful acquisition of RouteWise by FleetSolutions Inc. for $45M.\n    *   Managed a team of 40+ employees across engineering, sales, and marketing.\n*   **Principal Consultant, Accenture** (2012 \u2013 2016)\n    *   Led consulting engagements for Fortune 500 clients in the logistics and supply chain industries.\n    *   Developed and implemented solutions for improving operational efficiency and reducing costs.\n    *   Managed project budgets exceeding $1M.\n*   **Education:**\n    *   **MBA, Harvard Business School** (2010 \u2013 2012)\n    *   **BS, Industrial Engineering, Stanford University** (2006 \u2013 2010), *Phi Beta Kappa*\n*   **Skills:** Predictive Analytics, Machine Learning, Data Science, SaaS, Operations Management, Strategic Planning, Fundraising, Team Leadership, Vertical Farming, Supply Chain Optimization, Logistics.\n*   **Awards & Recognition:**\n    *   *Forbes* 30 Under 30 (2018 \u2013 RouteWise)\n    *   *Inc.* 5000 Fastest-Growing Companies (2019 \u2013 RouteWise)\n*   **Side Projects:** Angel investor in early-stage AgTech startups.",
+    "lookingFor": "I\u2019m actively seeking strategic partnerships and connections within the AgTech ecosystem. Specifically, I'm looking to connect with:\n\n*   **Series A/B investors** specializing in AgTech and ClimateTech. We're preparing for a Series A raise in Q1 2024 and are seeking investors who can provide not only capital but also strategic guidance.\n*   **Vertical farming operators** interested in piloting or implementing TerraForm Analytics. We\u2019re particularly interested in facilities with a focus on leafy greens, berries, and herbs.\n*   **Industry experts** with deep knowledge of vertical farming operations, plant science, and data analytics. Mentorship and advisory roles are highly valued.\n*   **Potential Head of Sales:** Looking for an experienced sales leader with a proven track record of selling SaaS solutions to enterprise customers, ideally within the agriculture or technology sectors. \n\nI\u2019m open to introductions to individuals at companies like Bowery Farming, Plenty, AppHarvest (though I\u2019m more interested in smaller, rapidly growing players), and leading venture capital firms like SOSV, Fall Line Capital, and S2G Ventures. I'm also interested in connecting with researchers at universities with strong agricultural engineering programs. I'm *not* currently seeking introductions to generalist investors \u2013 our focus is very specific. I\u2019m happy to offer advisory support to promising early-stage AgTech companies in return for introductions or insights.",
+    "notes": "Omar is a very direct communicator and highly focused on execution. He's been through the startup grind before and knows what it takes to build a successful company. He\u2019s currently prioritizing scaling TerraForm and isn\u2019t interested in exploratory conversations. \n\n*   He recently presented at the Indoor Ag-Con conference \u2013 a good conversation starter.\n*   He\u2019s very proud of the team he\u2019s built at TerraForm.\n*   He\u2019s sensitive about comparisons to other AgTech companies \u2013 focus on TerraForm\u2019s unique predictive analytics approach.\n*   He prefers to receive concise, well-structured introductions with a clear value proposition. Avoid lengthy emails or overly promotional pitches.",
+    "locationAvailability": "I\u2019m based in Denver, Colorado, but travel frequently to California, particularly to the Bay Area and Southern California, for industry events and meetings. I'm comfortable with remote meetings and can accommodate various time zones.",
+    "introPreferences": "When making introductions to Omar, please adhere to the following guidelines:\n\n*   **Hard Requirements:** The connection must be directly relevant to TerraForm Analytics' current needs (see 'Looking For' section). Avoid introducing him to individuals outside of the AgTech space.\n*   **Soft Preferences:** Prioritize introductions to decision-makers \u2013 CEOs, VPs of Operations, or Heads of Innovation.\n*   **Intro Style:** Keep the introduction concise and focused on the *value* the connection can bring to TerraForm. Highlight the individual\u2019s relevant experience and expertise. Include a specific ask \u2013 e.g., \u201cI thought you two should connect to discuss potential pilot programs.\u201d\n*   **Avoid:** Introducing him to individuals who are simply looking for investment or advice. He\u2019s very selective about who he spends his time with. Don't mention RouteWise unless *he* brings it up. He prefers to focus on the present and future. A brief LinkedIn summary of the connection is appreciated.",
+    "personalPreferences": "I prefer initial contact via LinkedIn or email. I respond best to direct and concise communication. I\u2019m not a fan of phone calls unless scheduled in advance.",
+    "meetingAndSchedulingPreferences": "I typically schedule meetings 30 minutes apart to allow for buffer time. I prefer video calls over phone calls. Please send a calendar invite with a clear agenda. I\u2019m generally available during standard business hours (MST), but can adjust for important meetings. Please allow at least 24 hours\u2019 notice for scheduling."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 41.64800000190735,
+      "input_tokens": 871,
+      "output_tokens": 1676,
+      "problems": []
+    }
+  ],
+  "success": true
+}

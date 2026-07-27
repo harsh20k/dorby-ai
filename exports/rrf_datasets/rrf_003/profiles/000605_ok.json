@@ -1,0 +1,54 @@
+{
+  "id": 605,
+  "archetype": "German Cybersecurity - Hands-On Technical",
+  "given_name": "Grace Chen",
+  "style_version": 37,
+  "archetypes_version": 101,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Grace Chen is a highly motivated and recently graduated cybersecurity master's student from a US university. She deliberately focused her studies and thesis on practical, hands-on skills \u2013 penetration testing, incident response, and vulnerability management \u2013 rather than purely theoretical aspects. She\u2019s now actively seeking a technical role in Germany (or wider Europe) because she\u2019s fascinated by the European approach to data privacy and security, and believes it\u2019s a leading edge in the field. She\u2019s *not* looking for management or policy roles; she wants to be writing code, analyzing logs, and actively defending systems. A distinctive detail is that she completed a significant, pro-bono security audit for a small, local non-profit organization during her studies, giving her practical experience beyond academic projects. She\u2019s aware that navigating the German job market as a non-EU citizen will require networking and targeted outreach.",
+    "positioning": "I am the founder of 'RedShift Security Consulting,' a nascent cybersecurity firm focused on providing proactive threat detection and incident response solutions to small and medium-sized businesses (SMBs). Recognizing a critical gap in the market \u2013 the vast majority of SMBs lack the in-house expertise and resources to effectively defend against increasingly sophisticated cyberattacks \u2013 RedShift offers affordable, tailored security assessments, vulnerability scanning, and 24/7 monitoring services. Our core value proposition is delivering enterprise-grade security without the enterprise-level price tag. We leverage a combination of open-source intelligence, automated threat detection platforms, and expert analysis to identify and mitigate potential threats before they impact our clients.  Currently, we're focused on building traction within the local ecosystem through targeted outreach and strategic partnerships. Our key differentiator is a commitment to hands-on, practical security \u2013 we don\u2019t just provide reports; we help our clients *implement* solutions. We\u2019ve recently completed our MVP and secured initial funding from angel investors, and are now scaling our operations and expanding our service offerings. My long-term vision is to build RedShift into a leading cybersecurity platform for SMBs, empowering them to thrive in an increasingly digital world.  I'm passionate about bridging the security gap and helping businesses protect their valuable assets.",
+    "background": "- **Founder & CEO, RedShift Security Consulting** (Present)\n   - Spearheading all aspects of business development, service delivery, and client management.\n   - Developing and implementing security protocols and incident response plans.\n   - Leading a small team of freelance security analysts.\n- **Security Consultant (Pro Bono)**, *Local Community Center, Anytown, USA* (2022-2023)\n   - Conducted comprehensive security audit of the organization\u2019s IT infrastructure.\n   - Identified and remediated critical vulnerabilities, including outdated software and weak passwords.\n   - Developed and delivered security awareness training to staff and volunteers.\n- **Graduate Research Assistant**, *University of California, Berkeley* (2021-2023)\n   - Assisted Professor Anya Sharma with research on advanced persistent threats (APTs).\n   - Developed and tested intrusion detection systems using machine learning algorithms.\n   - Published research findings in peer-reviewed cybersecurity journals.\n- **Master of Science in Cybersecurity**, *University of California, Berkeley* (2021-2023)\n   - GPA: 3.9/4.0\n   - Thesis: 'Automated Vulnerability Prioritization using Machine Learning'\n- **Bachelor of Science in Computer Science**, *Massachusetts Institute of Technology* (2017-2021)\n   - GPA: 3.8/4.0\n   - Relevant Coursework: Network Security, Cryptography, Operating Systems, Data Structures and Algorithms\n- **Skills:** Penetration Testing (Kali Linux, Metasploit), Vulnerability Assessment (Nessus, OpenVAS), Incident Response, SIEM (Splunk, ELK Stack), Intrusion Detection/Prevention Systems, Network Security, Python, Java, C++, Linux Administration, German (conversational)",
+    "lookingFor": "- Introductions to cybersecurity hiring managers at German companies (specifically those with a strong technical focus).\n- Connections with experienced cybersecurity professionals working in Germany who can provide insights into the local job market.\n- Introductions to venture capitalists or angel investors interested in supporting early-stage cybersecurity startups.\n- Mentorship from established cybersecurity leaders in Europe.\n- Advice on navigating the German visa and work permit process for non-EU citizens.",
+    "notes": "Grace is exceptionally driven and technically proficient, evident in her proactive pro-bono work and strong academic record.  She's laser-focused on hands-on security roles and explicitly *not* interested in management or policy.  She understands the challenges of entering the German job market and is actively seeking guidance. Her German language skills, while conversational, will likely require further development.  When making introductions, emphasize her practical skills and eagerness to contribute to a technically challenging environment.  She's very responsive and appreciates direct, concise communication.  Follow-up is key; she's actively applying for roles and will be evaluating multiple opportunities.",
+    "locationAvailability": "Currently based in Boston, Massachusetts, USA. I am willing to relocate to Germany or elsewhere in Europe and am open to remote work opportunities during the initial transition period.",
+    "introPreferences": "- **Hard Requirement:** Any introduction *must* be to a role with a significant technical component \u2013 penetration testing, incident response, vulnerability management, security engineering.  No policy, compliance, or management positions.\n- **Strong Preference:** Companies with a strong focus on proactive security and a culture of continuous learning.\n- **Soft Preference:**  Experience with European data privacy regulations (GDPR).\n- **Framing:** When introducing Grace, please highlight her practical experience, her master's degree from UC Berkeley, and her proactive approach to cybersecurity.  Emphasize her eagerness to learn and contribute to a dynamic team.  Mention her German language skills (conversational) and her willingness to relocate.\n- **Avoid:** Introducing her to roles that are primarily focused on sales, marketing, or project management.",
+    "personalPreferences": "I prefer to communicate initially via email and am comfortable with video calls.  I'm generally available during US Eastern Time business hours.",
+    "meetingAndSchedulingPreferences": "I am typically available for meetings after 2 PM EST. Please send a brief agenda in advance to allow me to prepare. I respond promptly to emails and appreciate clear and concise communication. Follow-up after introductions is greatly appreciated."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 21.87958288192749,
+      "input_tokens": 844,
+      "output_tokens": 1375,
+      "problems": []
+    }
+  ],
+  "success": true
+}

@@ -1,0 +1,54 @@
+{
+  "id": 152,
+  "archetype": "Early-Stage Deep Tech Investor",
+  "given_name": "Kavya Kimura",
+  "style_version": 10,
+  "archetypes_version": 25,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Kavya Kimura is a recently transitioned operator-turned-angel investor focused on pre-seed/seed stage deep tech. She previously led hardware engineering at a robotics startup that was acquired, giving her a strong understanding of the challenges faced by early-stage technical founders. She's now leveraging her network and experience to identify and fund companies working on breakthroughs in areas like AI-driven materials science, advanced manufacturing, and sustainable energy. She\u2019s actively building a syndicate and is particularly interested in founders who are *capital efficient* and demonstrate a clear path to defensibility. Kavya is very direct and values transparency, so her profile will reflect that. She\u2019s a strong believer in \u2018founder-first\u2019 investment and prioritizes building long-term relationships.",
+    "positioning": "A seasoned engineering leader and now early-stage investor, I'm passionate about backing ambitious founders tackling the world\u2019s most challenging problems with groundbreaking deep tech. Having scaled hardware from prototype to production, I understand the unique hurdles facing technical teams and the critical importance of capital efficiency. I focus on pre-seed and seed investments in AI-driven materials science, advanced manufacturing, and sustainable energy \u2013 areas where I believe significant disruption is imminent. I\u2019m not just providing capital; I'm offering a hands-on partnership, leveraging my operational expertise and extensive network to accelerate growth and de-risk execution. My investment thesis centers around identifying \u2018unfair advantages\u2019 \u2013 technologies that are demonstrably defensible and teams that can achieve significant milestones with limited resources. I believe in backing bold visionaries who are building the future, one innovative solution at a time. I'm actively building a syndicate and seeking like-minded investors to join me in supporting the next generation of deep tech leaders.",
+    "background": "* **Kimura Robotics, San Francisco, CA (2018 \u2013 2023):**\n    * **Head of Hardware Engineering:** Led a team of 15 engineers responsible for the design, development, and manufacturing of advanced robotic systems. Increased engineering output by 40% through implementation of agile methodologies and streamlined development processes.\n    * **Key Achievement:** Successfully brought the company's flagship product, an autonomous warehouse robot, from concept to full-scale production, resulting in $12M in annual recurring revenue.\n    * **Acquisition:** Kimura Robotics was acquired by Atlas Dynamics in Q4 2023.\n* **NovaTech Solutions, Boston, MA (2016 \u2013 2018):**\n    * **Senior Mechanical Engineer:** Designed and tested critical components for high-performance aerospace systems. Contributed to the development of a novel propulsion system that improved fuel efficiency by 15%.\n    * **Patent Holder:** Co-inventor on a patent for a lightweight composite material used in aerospace applications.\n* **Massachusetts Institute of Technology (MIT), Cambridge, MA (2012 \u2013 2016):**\n    * **PhD, Mechanical Engineering:** Dissertation focused on the development of bio-inspired robotic grippers with enhanced dexterity and precision. Published 5 peer-reviewed papers in leading robotics journals.\n    * **Relevant Coursework:** Robotics, Control Systems, Materials Science, Machine Learning, Entrepreneurship.\n* **University of California, Berkeley, CA (2008 \u2013 2012):**\n    * **BS, Mechanical Engineering:** Graduated *Summa Cum Laude*. President of the Robotics Club. Awarded the Engineering Excellence Award.",
+    "lookingFor": "## Investment Opportunities\n\nI'm actively seeking pre-seed and seed stage investment opportunities in the following areas:\n\n* **AI-Driven Materials Science:** Companies developing novel materials with enhanced properties using artificial intelligence.\n* **Advanced Manufacturing:** Technologies that revolutionize manufacturing processes, including robotics, automation, and 3D printing.\n* **Sustainable Energy:** Innovative solutions for renewable energy generation, storage, and distribution.\n\n**Ideal Founder Profile:**\n\n* **Technical Depth:** Strong engineering or scientific background with a deep understanding of their technology.\n* **Capital Efficiency:** Demonstrated ability to achieve significant milestones with limited funding.\n* **Defensibility:** Clear intellectual property or a unique competitive advantage.\n* **Operator Mindset:** A pragmatic approach to problem-solving and a focus on execution.\n\n## Network Connections\n\nI'm looking to connect with:\n\n* **Other Angel Investors:** Individuals interested in co-investing in deep tech startups.\n* **Venture Capitalists:** Partners at firms specializing in early-stage technology investments.\n* **Industry Experts:** Individuals with deep expertise in my areas of interest who can provide mentorship and guidance to portfolio companies.\n* **Talented Engineers & Scientists:** Potential advisors or early hires for portfolio companies.",
+    "notes": "Kavya is very direct and values straightforward communication. She's recently started building her angel syndicate and is actively soliciting deals. She\u2019s highly responsive to founders who demonstrate a clear understanding of their market and a realistic plan for scaling. She tends to ask very technical questions during initial calls, so founders should be prepared to discuss the details of their technology. Avoid introductions to companies with purely software-focused solutions; her focus is firmly on 'hard tech'. She's been particularly active on Twitter discussing recent advancements in materials science.",
+    "locationAvailability": "Based in San Francisco, CA, but open to remote meetings and occasional travel to evaluate investment opportunities.",
+    "introPreferences": "* **Hard Requirements:** Introductions *must* be to pre-seed or seed stage deep tech companies (AI-driven materials science, advanced manufacturing, or sustainable energy) with strong technical founders. No software-only plays.\n* **Soft Preferences:** I prioritize introductions to companies with demonstrable traction (even early traction is helpful) and a clear path to defensibility. I'm also interested in meeting founders who have previously built and scaled successful hardware products.\n* **Avoid:** Please do not introduce me to companies seeking Series A funding or beyond. Also, avoid introductions to individuals offering consulting services or investment banking opportunities. I'm not interested in receiving unsolicited business plans or pitch decks; introductions should be warm and pre-vetted.\n* **Context is Key:** When making an introduction, please provide a brief summary of the company\u2019s technology, their current traction, and why you think they would be a good fit for my investment thesis.",
+    "personalPreferences": "Prefers direct communication \u2013 email or a quick call is best. I'm responsive, but don't expect immediate replies on weekends.",
+    "meetingAndSchedulingPreferences": ""
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 19.14573097229004,
+      "input_tokens": 816,
+      "output_tokens": 1391,
+      "problems": []
+    }
+  ],
+  "success": true
+}

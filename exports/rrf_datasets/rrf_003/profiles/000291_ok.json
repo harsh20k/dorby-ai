@@ -1,0 +1,54 @@
+{
+  "id": 291,
+  "archetype": "Canadian Deep Tech/Medtech Founder",
+  "given_name": "Mateus Bianchi",
+  "style_version": 18,
+  "archetypes_version": 48,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Mateus Bianchi is a 38-year-old, first-time founder based in Montreal, Canada. He\u2019s the CEO of \u2018NeuralSight\u2019, a pre-seed medtech company developing a non-invasive diagnostic tool for early Alzheimer's detection using advanced neuroimaging and AI. His background is in biomedical engineering, but he did a short, but impactful, post-doc at MIT focusing on machine learning applications in healthcare. This MIT experience is a key differentiator he likes to highlight. NeuralSight is currently raising a $2M pre-seed round. He\u2019s highly focused on finding investors with a deep understanding of both the medical *and* AI spaces \u2013 not just one or the other. He's a bit wary of 'fast money' and prioritizes investors who can offer strategic guidance. He's a direct communicator and values efficiency, but also appreciates genuine connection. He\u2019s relatively new to the fundraising game and can sometimes get lost in the technical details when pitching, so needs introductions to people who can help him refine his messaging. He\u2019s very passionate about his work and genuinely believes it can make a significant impact on people\u2019s lives.",
+    "positioning": "NeuralSight is revolutionizing early Alzheimer's detection. We're developing a non-invasive, AI-powered diagnostic platform that leverages novel neuroimaging techniques to identify biomarkers of the disease *years* before traditional symptoms manifest. This allows for earlier intervention and potentially slows disease progression, dramatically improving patient outcomes. Currently, diagnosis relies on expensive and often late-stage assessments. Our technology aims to provide an accessible, affordable, and highly accurate solution for proactive healthcare. We've recently completed successful preliminary clinical trials demonstrating a 92% accuracy rate in identifying early-stage biomarkers. We are now seeking strategic investors to accelerate clinical validation, secure regulatory approvals, and scale our platform for widespread adoption. We're not just building a company; we're building a future where Alzheimer's is no longer a devastating, late-stage diagnosis.",
+    "background": "Mateus Bianchi is a highly accomplished biomedical engineer and entrepreneur with a proven track record of innovation in neurotechnology and artificial intelligence.\n\n* **CEO & Founder, NeuralSight (2023 \u2013 Present):** Leading all aspects of company strategy, fundraising, product development, and clinical operations. Successfully secured initial angel investment and completed preliminary clinical trials.\n* **Postdoctoral Research Fellow, Massachusetts Institute of Technology (MIT), Computer Science and Artificial Intelligence Laboratory (CSAIL) (2021 \u2013 2023):** Focused on the application of deep learning algorithms to medical image analysis, specifically in the context of neurodegenerative diseases. Published research in *IEEE Transactions on Medical Imaging* and presented findings at the International Conference on Machine Learning (ICML).\n* **Biomedical Engineer, Canadian Space Agency (2017 \u2013 2021):** Led the development and testing of advanced sensor technologies for astronaut health monitoring during long-duration space missions. Managed a team of engineers and collaborated with international research partners. Contributed to the design and implementation of a novel physiological monitoring system currently deployed on the International Space Station.\n* **M.Sc., Biomedical Engineering, McGill University (2015 \u2013 2017):** Thesis focused on the development of a novel brain-computer interface for stroke rehabilitation. Graduated with distinction.\n* **B.Eng., Electrical Engineering, Concordia University (2011 \u2013 2015):** Minor in Computer Science. Awarded the Dean\u2019s List for academic excellence in all semesters.\n\n**Skills:** Neuroimaging (fMRI, EEG), Machine Learning (Deep Learning, Computer Vision), Signal Processing, Biomedical Instrumentation, Clinical Trial Management, Regulatory Affairs (FDA, Health Canada), Project Management, Team Leadership, Scientific Writing, Public Speaking.\n\n**Certifications:** Project Management Professional (PMP), Certified Biomedical Engineer (CBEng).",
+    "lookingFor": "## Investment & Fundraising\n* **Pre-Seed Investors:** Seeking $2M to fund clinical validation, regulatory submissions, and team expansion. Target investors with experience in both medtech *and* AI/ML.\n* **Investor Profile:** Seed-stage venture capital firms, angel investors, and family offices with a focus on deep tech and healthcare. Preference for investors who can provide strategic guidance and industry connections.\n* **Investment Range:** $250k - $500k per investor.\n\n## Strategic Partnerships\n* **Clinical Trial Partners:** Hospitals and research institutions with expertise in Alzheimer's disease and neuroimaging.\n* **Regulatory Consultants:** Experienced professionals to navigate the FDA and Health Canada approval processes.\n* **Manufacturing Partners:** Companies specializing in the production of medical devices.\n\n## Advisory & Mentorship\n* **Experienced Medtech Founders:** Seeking advice on scaling a medical device company and navigating the regulatory landscape.\n* **AI/ML Experts:** Guidance on optimizing our AI algorithms and developing new applications for our technology.",
+    "notes": "* Mateus is very technical and can sometimes get lost in the details during pitches. Introductions to individuals who can help him refine his messaging are highly valuable.\n* He\u2019s highly responsive via email but prefers initial contact through LinkedIn.\n* He recently attended the BioMedTech Canada conference and is actively networking with potential investors.\n* He\u2019s particularly interested in learning from founders who have successfully raised capital in the current market.\n* He\u2019s a strong advocate for patient-centric healthcare and is passionate about the potential of NeuralSight to improve lives.",
+    "locationAvailability": "Based in Montreal, Canada, and open to remote meetings. Willing to travel to key conferences and investor meetings in North America.",
+    "introPreferences": "## Hard Requirements\n* **Investor Focus:** Must have a demonstrable track record of investing in both medical technology *and* artificial intelligence/machine learning companies.\n* **Strategic Value:** Investors should be able to offer more than just capital \u2013 industry connections, mentorship, and strategic guidance are highly valued.\n* **Long-Term Vision:** Looking for investors who share our long-term vision for revolutionizing Alzheimer\u2019s diagnosis.\n\n## Soft Preferences\n* **Experience with Deep Tech:** Preference for investors who understand the complexities of developing and commercializing deep tech solutions.\n* **Canadian Presence:** While not essential, investors with a presence or network in Canada are a plus.\n* **Direct Communication:** Mateus appreciates clear and concise communication.",
+    "personalPreferences": "I prefer initial contact via LinkedIn message. Please keep emails concise and to the point\u2014I\u2019m very busy! I\u2019m always happy to discuss the science behind NeuralSight, but please be prepared for a somewhat detailed explanation.",
+    "meetingAndSchedulingPreferences": "Please send calendar invites with a clear agenda and allow for at least 30 minutes. I'm generally available during standard business hours (EST)."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 28.05576515197754,
+      "input_tokens": 740,
+      "output_tokens": 1450,
+      "problems": []
+    }
+  ],
+  "success": true
+}

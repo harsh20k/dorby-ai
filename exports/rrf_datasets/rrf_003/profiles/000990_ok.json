@@ -1,0 +1,54 @@
+{
+  "id": 990,
+  "archetype": "AI-Focused Product & Thought Leader",
+  "given_name": "Javier Kowalski",
+  "style_version": 61,
+  "archetypes_version": 165,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Javier Kowalski is a serial entrepreneur currently focused on building 'SynapseFlow,' an AI-powered workflow automation platform for creative agencies. He has a strong technical background, initially as a machine learning engineer, but pivoted to product leadership after realizing the gap between research and practical application. A distinctive detail is that he spent two years as a 'Chief of Staff' to the CTO of a major ad tech firm *before* starting his own ventures, giving him a unique understanding of the operational challenges within large organizations. This informs his product development \u2013 SynapseFlow isn't just about AI; it's about *seamless* implementation for non-technical users. He's actively seeking seed funding and strategic partnerships with agencies willing to be early adopters. He's a thoughtful, articulate speaker and enjoys sharing his learnings on LinkedIn and at industry events. He\u2019s very focused on measurable ROI for his customers and is a bit wary of \u2018AI hype\u2019.",
+    "positioning": "Javier Kowalski is the Founder & CEO of SynapseFlow, a platform revolutionizing workflow automation for creative agencies using cutting-edge AI. We\u2019re tackling the significant pain point of fragmented processes and manual tasks that stifle creativity and impact profitability. SynapseFlow intelligently orchestrates tasks across design, content creation, and project management tools, significantly reducing turnaround times and improving resource allocation. We\u2019ve achieved impressive early traction with a cohort of beta users, demonstrating a 30% average increase in project completion speed and a 15% reduction in administrative overhead. Currently, we're focused on refining our core algorithms and expanding our integration library to support the most popular creative suites. We are building a future where creatives can focus on *creating*, and SynapseFlow handles the rest. We are actively seeking seed funding to scale our operations and accelerate market penetration.",
+    "background": "- **Founder & CEO, SynapseFlow** (2023 \u2013 Present)\n  - Led all aspects of company formation, product development, and go-to-market strategy.\n  - Secured initial seed funding commitments totaling $250k.\n  - Developed and launched a beta version of the SynapseFlow platform, onboarding 10 agencies for testing and feedback.\n  - Technologies utilized: Python (Flask, TensorFlow), JavaScript (React), AWS (EC2, S3, Lambda), PostgreSQL.\n\n- **Chief of Staff to the CTO, AdNexus** (2021 \u2013 2023)\n  - Served as a strategic advisor to the CTO, managing cross-functional initiatives and driving operational efficiency.\n  - Led the implementation of a new data governance framework, resulting in a 20% improvement in data quality and accessibility.\n  - Managed a budget of $500k for R&D projects, prioritizing initiatives aligned with the company\u2019s strategic roadmap.\n  - Facilitated communication between engineering, product, and marketing teams, ensuring alignment on key priorities.\n  - Deeply involved in the evaluation of potential AI/ML acquisitions.\n\n- **Machine Learning Engineer, DataWise Solutions** (2019 \u2013 2021)\n  - Developed and deployed machine learning models for fraud detection and risk assessment in the financial services industry.\n  - Utilized Python (Scikit-learn, PyTorch) and cloud computing platforms (Azure) to build scalable and robust solutions.\n  - Contributed to the development of a novel anomaly detection algorithm that reduced false positives by 10%.\n  - Collaborated with data scientists and engineers to design and implement data pipelines.\n\n- **Research Assistant, Stanford AI Lab** (2017 \u2013 2019)\n  - Conducted research in the field of natural language processing, focusing on sentiment analysis and topic modeling.\n  - Published research papers in peer-reviewed conferences and journals.\n  - Assisted in the development of novel algorithms for text classification and information retrieval.\n\n- **Education:**\n  - **Stanford University**, Ph.D. in Computer Science (Artificial Intelligence), 2019\n  - **Massachusetts Institute of Technology (MIT)**, B.S. in Computer Science, 2017 (Summa Cum Laude)",
+    "lookingFor": "- Introductions to Venture Capital firms specializing in SaaS and AI.\n- Strategic partnerships with creative agencies (particularly those with 50+ employees) interested in piloting SynapseFlow.\n- Connections to thought leaders in the AI and marketing technology space for potential speaking engagements and collaborations.\n- Experienced advisors with a background in scaling early-stage startups.\n- Potential clients actively seeking to optimize their creative workflows and improve project delivery times.\n- Introductions to heads of innovation at large advertising holding companies.",
+    "notes": "- Javier is extremely articulate and passionate about his work. He\u2019s a strong communicator and easily explains complex technical concepts in a digestible manner.\n- He's very data-driven and focused on demonstrating tangible ROI for his customers.\n- During our last call (10/26), he expressed frustration with the amount of 'AI washing' he's seeing in the market.\n- He's particularly interested in agencies that are already using tools like Asana, Monday.com, or Adobe Creative Cloud. \n- Follow up: Send him the article on workflow automation trends in the ad tech industry.\n- Potential risk: He can get very detailed about the technical aspects of SynapseFlow \u2013 needs to be reminded to keep it high-level for investor pitches.",
+    "locationAvailability": "Based in San Francisco, California, and generally available for virtual meetings. Open to travel for key partnerships or investment opportunities.",
+    "introPreferences": "- Ideal introductions are to Partners or Principals at VC firms focused on seed-stage investments.\n- For agency introductions, prioritize those with a dedicated innovation team or a history of adopting new technologies.\n- Please provide context about the person you\u2019re introducing me to \u2013 their role, their interests, and why they might be a good fit for SynapseFlow.\n- I *require* that any agency introductions have decision-making authority regarding technology adoption.\n- Bonus points for introductions to individuals who have experience with workflow automation tools.",
+    "personalPreferences": "- I prefer receiving information via concise email summaries rather than lengthy documents.\n- I'm most responsive on LinkedIn and Slack.",
+    "meetingAndSchedulingPreferences": "- I typically schedule 30-minute introductory calls to assess potential synergies.\n- Please include a brief agenda in the meeting invite.\n- I prefer Zoom meetings with video enabled. \n- I\u2019m generally unavailable on Friday afternoons."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 26.727504014968872,
+      "input_tokens": 750,
+      "output_tokens": 1396,
+      "problems": []
+    }
+  ],
+  "success": true
+}

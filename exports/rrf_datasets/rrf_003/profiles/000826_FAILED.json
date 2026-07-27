@@ -1,0 +1,76 @@
+{
+  "id": 826,
+  "archetype": "European Fintech & AI Builder",
+  "given_name": "Leilani Wang",
+  "style_version": 51,
+  "archetypes_version": 140,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Leilani Wang is a seasoned product leader with a background in both traditional finance and cutting-edge AI. She spent a significant portion of her career at a large German bank, but took a calculated risk to move to a fast-growing, but ultimately failed, AI-powered lending startup. This experience was pivotal \u2013 she learned deeply about the challenges of deploying AI in heavily regulated financial environments *and* the pitfalls of scaling too quickly. Now, she's focused on building a more sustainable and impactful AI solution specifically targeted at the underserved mid-market segment in Europe, believing this is where the biggest opportunities lie. She\u2019s very pragmatic and focused on ROI, valuing tangible results over hype. She\u2019s also very aware of the need for explainable AI and robust security in finance.",
+    "positioning": "Leilani Wang is a product leader driving innovation in AI-powered financial solutions for Europe\u2019s mid-market. I specialize in bridging the gap between cutting-edge AI technology and the complex regulatory landscape of financial services. I help businesses leverage AI to optimize lending, improve risk management, and enhance customer experiences, all while ensuring compliance and long-term sustainability. My experience building and scaling products within established financial institutions, coupled with my understanding of the startup ecosystem, enables me to deliver practical, impactful solutions that drive real business value.",
+    "background": "\u2022 **Founder & CEO, NovaCredit AI** (Berlin, Germany) \u2013 2023 \u2013 Present\n\t\u2013 Leading the development of an AI-powered credit risk assessment platform tailored for SMEs across Europe.\n\t\u2013 Secured seed funding of \u20ac1.5M based on a demonstrated MVP and strong market validation.\n\t\u2013 Currently focused on building strategic partnerships with regional banks and alternative lenders.\n\n\u2022 **Head of Product, AI Lending** (Deutsche Bank, Frankfurt, Germany) \u2013 2019 \u2013 2022\n\t\u2013 Spearheaded the development and launch of an AI-driven loan origination system, resulting in a 15% reduction in processing time and a 10% improvement in approval rates.\n\t\u2013 Managed a cross-functional team of data scientists, engineers, and compliance experts.\n\t\u2013 Championed the adoption of explainable AI (XAI) techniques to ensure transparency and regulatory compliance.\n\n\u2022 **Senior Product Manager, Digital Banking** (Deutsche Bank, Frankfurt, Germany) \u2013 2016 \u2013 2019\n\t\u2013 Led the product roadmap for the bank\u2019s mobile banking app, focusing on user experience and feature enhancements.\n\t\u2013 Conducted extensive market research and user testing to identify key customer needs and pain points.\n\t\u2013 Collaborated with marketing and sales teams to drive adoption of digital banking services.\n\n\u2022 **M.Sc. in Financial Engineering** (Technical University of Munich, Germany) \u2013 2014 \u2013 2016\n\t\u2013 Focused on algorithmic trading and risk management.\n\t\u2013 Thesis: \u201cThe Application of Machine Learning to Credit Default Prediction.\u201d\n\n\u2022 **B.Sc. in Mathematics** (University of Heidelberg, Germany) \u2013 2011 \u2013 2014",
+    "lookingFor": "\u2022 Connections with VCs specializing in European Fintech, particularly those with an interest in AI.\n\u2022 Partnerships with regional banks in Germany, France, and Benelux countries looking to integrate AI into their lending processes.\n\u2022 Experts in regulatory compliance (specifically GDPR and financial regulations) related to AI.\n\u2022 Individuals with experience scaling AI-powered SaaS products in the B2B space.\n\u2022 Mentors who have successfully navigated the challenges of building and exiting a Fintech startup.\n\u2022 Discussions around best practices for implementing XAI in financial services.",
+    "notes": "Leilani is very direct and values efficiency. She's seen too many hyped AI solutions fall flat. Focus on demonstrating concrete results and ROI when connecting. She\u2019s particularly interested in practical applications of AI, not theoretical discussions. \n\n*   She\u2019s currently reading \u2018The Alignment Problem\u2019 by Brian Christian \u2013 a good conversation starter.\n*   She recently presented at a Fintech conference in Paris on the topic of \u2018Responsible AI in Lending\u2019 - happy to share her slides.\n*   She\u2019s a bit skeptical of \u2018growth at all costs\u2019 strategies; she prioritizes sustainable growth and profitability.",
+    "locationAvailability": "Based in Berlin, Germany. Open to travel throughout Europe and available for remote meetings.",
+    "introPreferences": "\u2022 Please avoid introductions to individuals who are primarily focused on Web3 or cryptocurrency \u2013 it\u2019s not my area of expertise.\n\u2022 When making an introduction, clearly state how the connection aligns with my current focus on AI-powered lending for mid-market businesses.\n\u2022 Highlight any experience the connection has with European financial regulations.\n\u2022 I appreciate concise introductions that get straight to the point.\n\u2022 Don\u2019t over-promise or embellish \u2013 I prefer honest and transparent communication.",
+    "personalPreferences": "Prefers asynchronous communication whenever possible \u2013 email or LinkedIn messaging.",
+    "meetingAndSchedulingPreferences": "\u2022 I generally prefer 30-minute introductory calls.\n\u2022 I'm most available for meetings in the mornings (CET)."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 17.300478219985962,
+      "input_tokens": 760,
+      "output_tokens": 1054,
+      "problems": [
+        "background: possible truncation (ends with '...puter Science \u2013 2010-2014')"
+      ]
+    },
+    {
+      "attempt": 2,
+      "elapsed_s": 19.188122749328613,
+      "input_tokens": 760,
+      "output_tokens": 1091,
+      "problems": [
+        "background: possible truncation (ends with '... \u2013 2012 \u2013 2015</li>\n</ul>')",
+        "lookingFor: possible truncation (ends with '..., GDPR, etc.).</li>\n</ul>')",
+        "introPreferences: possible truncation (ends with '...y appreciated.</li>\n</ul>')"
+      ]
+    },
+    {
+      "attempt": 3,
+      "elapsed_s": 20.866806030273438,
+      "input_tokens": 760,
+      "output_tokens": 1114,
+      "problems": [
+        "background: possible truncation (ends with '...g, Germany) \u2013 2011 \u2013 2014')"
+      ]
+    }
+  ],
+  "success": false
+}

@@ -1,0 +1,54 @@
+{
+  "id": 778,
+  "archetype": "Fintech Infrastructure, Global Operator",
+  "given_name": "Takumi Dubois",
+  "style_version": 47,
+  "archetypes_version": 130,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Takumi Dubois is a seasoned fintech infrastructure engineer with a unique background \u2013 he spent 5 years building high-frequency trading systems *in* Japan, then pivoted to focus on the regulatory compliance challenges of expanding those systems globally. He's now looking for a Series A/B stage fintech company needing a CTO or Head of Engineering to scale their payments infrastructure internationally, specifically with experience navigating complex Asian markets. He's pragmatic, data-driven, and prioritizes building resilient, compliant systems over flashy innovation. He's slightly wary of 'disruptive' buzzwords and prefers a collaborative, engineering-first culture. He's currently consulting, giving him flexibility, but wants to re-commit to a full-time role. A distinctive detail is his fluency in Japanese and deep understanding of Japanese financial regulations.",
+    "positioning": "Takumi Dubois is a highly experienced engineering leader specializing in the design, development, and global scaling of financial infrastructure. With a proven track record in high-frequency trading systems and regulatory compliance, I help fintech companies navigate the complexities of international expansion, particularly within the Asian market. I excel at building robust, scalable, and compliant payment and trading solutions that minimize risk and maximize efficiency. Currently consulting, I'm actively seeking a leadership role where I can leverage my expertise to drive significant growth and innovation. I'm particularly interested in connecting with founders and investors at Series A/B stage companies focused on payments or trading infrastructure.",
+    "background": "\u2022 **Independent Consultant, Global Fintech Solutions (2022 \u2013 Present):** Providing technical due diligence, architecture review, and regulatory compliance consulting to fintech firms expanding into Asia. Successfully guided two clients through Japanese FSA licensing requirements. \n\u2022 **Lead Software Engineer, Sakura Trading Systems (Tokyo, Japan) (2017 \u2013 2022):** Led a team of 8 engineers in the development and maintenance of a high-frequency trading platform for Japanese equity markets. Reduced latency by 15% through optimization of core trading algorithms and network infrastructure. Implemented a new risk management system, decreasing potential losses by 22%. Responsible for the full software development lifecycle, from requirements gathering to deployment and monitoring. \n\u2022 **Software Engineer, NovaTech Payments (London, UK) (2015 \u2013 2017):** Developed and maintained core components of a cross-border payment processing platform. Contributed to the integration of new payment methods, increasing platform coverage by 30%. Gained experience with PCI DSS compliance and security best practices. \n\u2022 **BSc in Computer Science, Imperial College London (2012 \u2013 2015):** Focused on distributed systems and algorithms. Graduated with First Class Honours. Awarded the Dean's List for academic excellence all four years.",
+    "lookingFor": "\u2022 Introductions to Series A/B stage fintech companies (payments, trading infrastructure, crypto) actively hiring a CTO or Head of Engineering.\n\u2022 Connections with VCs specializing in fintech, particularly those with a portfolio focus on international expansion.\n\u2022 Opportunities to advise on technical due diligence for potential investments in Asian fintech companies.\n\u2022 Partnerships with regulatory technology (RegTech) firms offering solutions for Japanese and broader Asian financial compliance.\n\u2022 Individuals with experience scaling engineering teams in fast-growing fintech environments.\n\u2022 *Do not* introduce me to companies focused solely on consumer-facing applications (e.g., neobanks, budgeting apps).\n\u2022 *Do not* pitch me 'blockchain solutions' without a clear and demonstrable use case beyond hype.\n\u2022 *Do not* connect me with roles requiring extensive travel to the US \u2013 I prefer opportunities based in Europe or Asia.",
+    "notes": "\u2022 Takumi is very deliberate and analytical. He won\u2019t jump into a conversation without a clear understanding of the value proposition. [2023-10-26 \u2013 Initial outreach response was slow but thoughtful].\n\u2022 He values technical depth and is skeptical of marketing fluff. Focus on quantifiable results and demonstrable expertise when making introductions.\n\u2022 He\u2019s particularly interested in companies that prioritize security and compliance. [Call with Sarah J \u2013 emphasized the importance of PCI DSS and ISO 27001].\n\u2022 He's open to remote work but prefers a company with a strong engineering culture and a collaborative team environment.\n\u2022 Mentioning his fluency in Japanese and experience with the FSA is a strong positive.\n\u2022 He's currently exploring a few consulting gigs, so timing is relatively flexible but a full-time commitment is his ultimate goal.",
+    "locationAvailability": "Based in London, UK, but willing to travel throughout Europe and Asia. Open to fully remote opportunities with a preference for companies operating within GMT+1 to GMT+9 time zones.",
+    "introPreferences": "\u2022 **Hard Requirement:** The company *must* be actively building and scaling financial infrastructure \u2013 not just using existing APIs.\n\u2022 **Soft Preference:** Experience with high-frequency trading systems or regulatory compliance (particularly in Asia) is highly desirable.\n\u2022 **Ideal Intro:** A warm introduction from a mutual connection who can vouch for my technical expertise and experience.\n\u2022 **Intro Style:** Please provide a concise overview of the company, the role, and *why* you think I would be a good fit. Avoid overly promotional language.\n\u2022 **Do NOT:** Blind copy me on emails. Always ask for my permission before sharing my contact information.\n\u2022 **Do NOT:** Introduce me to junior-level roles or companies that are pre-seed stage.\n\u2022 **Preferred Subject Line:** '[Mutual Connection] - Introduction: Takumi Dubois - Fintech Engineering Leader'",
+    "personalPreferences": "Prefers initial contact via LinkedIn messaging. I respond promptly to well-crafted, concise messages.",
+    "meetingAndSchedulingPreferences": "I'm flexible with meeting formats (video call, phone call) and scheduling tools (Calendly, Zoom). Generally available for meetings during standard business hours (GMT+1)."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 17.301030158996582,
+      "input_tokens": 806,
+      "output_tokens": 1244,
+      "problems": []
+    }
+  ],
+  "success": true
+}

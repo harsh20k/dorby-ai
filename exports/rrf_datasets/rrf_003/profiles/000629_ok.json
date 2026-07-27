@@ -1,0 +1,54 @@
+{
+  "id": 629,
+  "archetype": "Full-Stack Engineer, Startup Focused",
+  "given_name": "Hana Haruna",
+  "style_version": 38,
+  "archetypes_version": 105,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Hana Haruna is a highly capable full-stack engineer currently at a seed-stage EdTech startup called 'LearnLeap'. She's a fast learner, originally pivoting *into* tech from a background in linguistics (which she leverages in UX/UI thinking). Her distinctive career detail is that she spent a year as a solo developer building a complex internal tool for a non-profit before joining LearnLeap \u2013 a project that rapidly accelerated her skills. She's now looking for mentorship from more experienced engineers at Series A/B stage companies, and is subtly exploring opportunities to level up to a more challenging technical environment, but isn\u2019t actively job-seeking *yet*. She\u2019s particularly interested in companies tackling complex problems with a strong emphasis on developer experience. She prioritizes a collaborative and supportive engineering culture.",
+    "positioning": "Hana Haruna is a full-stack engineer passionate about building scalable and user-centric web applications. Currently contributing to LearnLeap, a rapidly growing EdTech startup, Hana focuses on developing and maintaining the core platform features. She leverages a background in computational linguistics to bring a unique perspective to UX/UI design and problem-solving. Hana is driven by a desire to create impactful solutions and is consistently seeking opportunities to expand her technical expertise and contribute to innovative projects. She excels in collaborative environments and is adept at quickly adapting to new technologies and challenges.",
+    "background": "* **LearnLeap (Seed Stage EdTech Startup)** \u2013 Full-Stack Engineer (Jan 2023 \u2013 Present)\n    * Spearheaded the development of key features for LearnLeap\u2019s core learning platform, utilizing React, Node.js, and PostgreSQL.\n    * Implemented robust API integrations with third-party educational resources, improving platform functionality and user experience.\n    * Contributed to the development and maintenance of automated testing suites, ensuring code quality and application stability.\n    * Actively involved in code reviews, providing constructive feedback and promoting best practices within the engineering team.\n    * Collaborated closely with product managers and designers to translate user stories into functional and aesthetically pleasing features.\n* **CodeForGood (Non-Profit)** \u2013 Solo Developer / Volunteer (June 2022 \u2013 Dec 2022)\n    * Designed and developed a complete internal data management system using Python (Flask), MongoDB, and a React frontend.\n    * Managed the entire software development lifecycle, from requirements gathering to deployment and maintenance.\n    * This project significantly improved the organization\u2019s data analysis capabilities, resulting in more effective program delivery.\n* **University of California, Berkeley** \u2013 BA, Linguistics (2018 \u2013 2022)\n    * Minor in Computer Science. Focus on computational linguistics and natural language processing.\n    * Relevant coursework: Data Structures and Algorithms, Database Systems, Web Development, Software Engineering.\n    * GPA: 3.8/4.0\n* **Skills:** JavaScript (React, Node.js), Python (Flask), PostgreSQL, MongoDB, HTML, CSS, Git, Docker, AWS (Basic), REST APIs, Agile methodologies.",
+    "lookingFor": "* **Mentorship:** Seeking experienced engineers (Series A/B stage or beyond) willing to provide guidance on scaling applications and architectural best practices.\n* **Engineering Culture Insights:** Interested in learning about the engineering cultures at fast-growing startups \u2013 particularly those emphasizing developer experience.\n* **Peer Connections:** Connecting with other full-stack engineers passionate about building impactful products.\n* **Tech Talks/Webinars:** Information about relevant tech talks or webinars on topics like distributed systems, microservices, or advanced frontend techniques.\n* **Do Not:** Recruiters \u2013 Hana is not actively looking for a new role at this time.\n* **Ideal Mentor Profile:** 5+ years of experience in backend engineering, experience with high-traffic applications, and a demonstrated commitment to mentorship.",
+    "notes": "Hana is a high-potential engineer with a strong work ethic and a demonstrated ability to learn quickly. Her solo project experience is particularly impressive, indicating a high degree of initiative and self-direction. She recently expressed interest in learning more about serverless architectures. Data suggests she\u2019s actively engaging with content related to distributed systems on LinkedIn Learning. She's been relatively quiet on the platform recently, likely focused on a critical feature rollout at LearnLeap.",
+    "locationAvailability": "San Francisco, CA",
+    "introPreferences": "* **Ideal Connection:** Senior engineers (Staff+, Principal) at Series A/B stage startups focused on developer tools, EdTech, or FinTech.\n* **Introduction Angle:** Frame the introduction around a shared interest in building scalable and user-friendly applications.\n* **Hard Requirement:** Must be willing to dedicate at least 30 minutes to a virtual coffee chat.\n* **Soft Preference:** Experience with React and Node.js is a plus.\n* **Do Not:** Introduce to HR or recruiters. Focus on peer-to-peer connections.",
+    "personalPreferences": "Hana prefers asynchronous communication when possible \u2013 she finds it easier to focus when not constantly interrupted by meetings. She values clear and concise communication.",
+    "meetingAndSchedulingPreferences": "Hana is generally flexible with meeting times, but prefers to schedule calls in advance. She\u2019s responsive to follow-up messages and appreciates a quick agenda beforehand."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 17.118580102920532,
+      "input_tokens": 818,
+      "output_tokens": 1116,
+      "problems": []
+    }
+  ],
+  "success": true
+}

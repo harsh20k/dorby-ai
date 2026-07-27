@@ -1,0 +1,72 @@
+{
+  "id": 237,
+  "archetype": "Student Founder - Campus Community Focus",
+  "given_name": "Theo Haruna",
+  "style_version": 15,
+  "archetypes_version": 39,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Theo Haruna is a 22-year-old recent graduate from Stanford University, currently running 'CampusConnect,' a platform designed to streamline student organization management and event discovery. He's a first-time founder, deeply passionate about building tools that enhance campus life. A distinctive detail is his background in behavioral psychology \u2013 he intentionally integrates nudges and gamification into CampusConnect to boost student engagement. He's actively fundraising a seed round and seeking advice from experienced founders, particularly those who've successfully scaled community-driven platforms. He's very focused on building a strong network within the university startup ecosystem and beyond, hoping to find both investors and potential advisors. He's very energetic and approachable, but also meticulous and data-driven in his approach.",
+    "positioning": "Theo Haruna is the Founder & CEO of CampusConnect, a platform revolutionizing how students connect with organizations and events on campus. Recent graduate of Stanford University, he's leveraging insights from behavioral psychology to build a highly engaging platform focused on increasing student involvement. Currently leading a seed funding round, Theo is actively seeking mentorship and connections with experienced founders in the startup space, particularly those with expertise in scaling community-focused products. He\u2019s passionate about fostering vibrant campus communities and believes technology can be a powerful catalyst for positive change. He\u2019s also a firm believer in data-driven decision-making and iterative product development.",
+    "background": "- **Founder & CEO, CampusConnect** (January 2023 \u2013 Present)\n  - Led all aspects of product development, fundraising, and team building for a student-focused platform.\n  - Secured initial funding of $50,000 through university pitch competitions and angel investors.\n  - Grew user base to 1,500+ students across three university campuses.\n  - Implemented behavioral psychology principles to increase event attendance by 30%.\n- **Research Assistant, Stanford Behavioral Design Lab** (September 2021 \u2013 December 2022)\n  - Conducted research on the application of behavioral economics to improve user engagement.\n  - Assisted in the design and implementation of A/B tests to optimize product features.\n  - Co-authored a research paper on the effectiveness of gamification in online learning.\n- **President, Stanford Entrepreneurship Club** (September 2022 \u2013 June 2023)\n  - Organized workshops, speaker events, and networking opportunities for aspiring entrepreneurs.\n  - Increased club membership by 40%.\n- **Education, Stanford University** (September 2019 \u2013 June 2023)\n  - B.S. in Psychology with a concentration in Behavioral Science\n  - GPA: 3.9/4.0\n  - Relevant Coursework: Behavioral Economics, User Interface Design, Data Analysis, Marketing\n- **Skills:** Product Management, User Research, A/B Testing, Data Analysis (SQL, Python), Fundraising, Public Speaking, Team Leadership, Behavioral Psychology, Gamification, UI/UX Principles.",
+    "lookingFor": "I'm actively seeking connections with:\n- **Seed-stage investors** specializing in edtech or community-focused platforms.\n- **Founders** who have successfully scaled similar businesses (e.g., university-specific apps, event platforms, social networks).\n- **Mentors** with experience in product-led growth and fundraising.\n- **Angel investors** interested in supporting early-stage startups with a social impact.\n\nI'm also keen to connect with:\n- Individuals working in **student affairs or university administration** to explore potential partnerships.\n- **Designers and developers** with a passion for building user-friendly and engaging products.\n\nI\u2019m open to introductory calls to discuss CampusConnect and learn from your experience. I\u2019m particularly interested in getting feedback on our fundraising strategy and product roadmap.",
+    "notes": "Theo is extremely proactive and quick to respond. He did a great call with Sarah Chen last week regarding fundraising best practices. He\u2019s very aware of the competitive landscape and is actively iterating on his pitch deck. He mentioned struggling with balancing development and fundraising \u2013 a common pain point for first-time founders. Keep an eye on his progress; he\u2019s a driven and intelligent young entrepreneur with a strong vision.",
+    "locationAvailability": "Based in the San Francisco Bay Area, but frequently travels to university campuses for user research and outreach.",
+    "introPreferences": "Hard Requirements:\n- Please *always* mention my background at Stanford and the focus of CampusConnect on streamlining student life.\n- Prioritize introductions to investors actively deploying capital in the pre-seed/seed stage.\n\nSoft Preferences:\n- Introductions to founders with experience scaling platforms *within* the university ecosystem are highly valued.\n- A brief note highlighting why you think the connection would be mutually beneficial is appreciated.\n- Please avoid introductions to individuals solely focused on enterprise software \u2013 CampusConnect is strictly focused on the student market.\n- Introduction style: brief, direct, and focused on the value proposition for both parties. A short paragraph is ideal.",
+    "personalPreferences": "I\u2019m most responsive on email and LinkedIn. Please avoid contacting me via phone unless pre-arranged. I\u2019m generally available for quick chats throughout the day.",
+    "meetingAndSchedulingPreferences": "I\u2019m flexible with meeting times and happy to accommodate different schedules. I prefer virtual meetings (Zoom or Google Meet) for initial conversations, but am open to in-person meetings if geographically feasible."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 19.8626971244812,
+      "input_tokens": 754,
+      "output_tokens": 1163,
+      "problems": [
+        "background: possible truncation (ends with '...visualization.</li>\n</ul>')"
+      ]
+    },
+    {
+      "attempt": 2,
+      "elapsed_s": 16.27995800971985,
+      "input_tokens": 754,
+      "output_tokens": 1170,
+      "problems": [
+        "background: possible truncation (ends with '... organization.</li>\n</ul>')"
+      ]
+    },
+    {
+      "attempt": 3,
+      "elapsed_s": 19.76155185699463,
+      "input_tokens": 754,
+      "output_tokens": 1170,
+      "problems": []
+    }
+  ],
+  "success": true
+}

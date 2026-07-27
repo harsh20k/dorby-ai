@@ -1,0 +1,54 @@
+{
+  "id": 809,
+  "archetype": "Fintech Operator Turned Founder",
+  "given_name": "Mei Mensah",
+  "style_version": 50,
+  "archetypes_version": 136,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Mei Mensah is a first-time founder, having spent the last 8 years in operational roles at rapidly scaling fintechs. Her distinctive detail is a deep expertise in fraud prevention and risk modeling, honed during a period at a Series B payments processor where she built their entire fraud detection system from the ground up. She\u2019s now launched 'SecureFlow', a fintech focused on providing embedded fraud prevention tools specifically for *other* fintech startups \u2013 understanding their unique needs and the challenges of building robust systems early on. She\u2019s seeking seed funding, strategic partnerships with early-stage VCs, and connections to other founders facing similar challenges. Mei is highly analytical, pragmatic, and focused on measurable results. She's not interested in 'fluff' or theoretical discussions; she wants to talk solutions and impact. She\u2019s based in Miami, intentionally, to be closer to the growing Latin American fintech ecosystem.",
+    "positioning": "As Founder and CEO of SecureFlow, I'm dedicated to empowering the next generation of fintech innovators with best-in-class fraud prevention and risk management solutions. Having spent years embedded within the operational heart of high-growth payment companies, I\u2019ve witnessed firsthand the crippling effects of inadequate fraud defenses \u2013 not just financially, but on growth velocity and customer trust. SecureFlow isn\u2019t just another fraud tool; it's a comprehensive, API-first platform designed specifically for the unique challenges faced by early-stage fintechs. We address the gap in the market for affordable, scalable, and easily integrated fraud solutions. We specialize in behavioral biometrics, machine learning-driven anomaly detection, and real-time risk scoring. Our target clients are Seed to Series A fintechs operating in payments, lending, and crypto, and we offer a flexible pricing model tailored to their stage of growth. We\u2019re focused on delivering measurable ROI through reduced fraud losses, increased approval rates, and enhanced customer experience.",
+    "background": "- **SecureFlow, Founder & CEO** (2023 \u2013 Present)\n\t* Led all aspects of company formation, including product development, fundraising, and team building.\n\t* Developed and launched SecureFlow\u2019s MVP, securing initial pilot customers within 3 months.\n\t* Currently leading a seed funding round, targeting $2M to scale the engineering and sales teams.\n\t* Technologies: Python, AWS (EC2, S3, Lambda), PostgreSQL, REST APIs, Machine Learning (Scikit-learn, TensorFlow).\n\n- **NovaPay, Head of Fraud Operations** (2020 \u2013 2023)\n\t* Built and managed a team of 10 fraud analysts, engineers, and data scientists.\n\t* Designed, implemented, and maintained NovaPay's entire fraud detection system, resulting in a 60% reduction in fraudulent transactions within the first year.\n\t* Led the implementation of new fraud prevention technologies, including behavioral biometrics and device fingerprinting.\n\t* Collaborated with engineering and product teams to integrate fraud prevention measures into all core products.\n\t* Company Size: 150 employees, Series B funded.\n\t* Technologies: SQL, Tableau, AWS, Kinesis, Fraud scoring platforms (e.g., Sift, Riskified).\n\n- **FinTech Solutions, Risk Analyst** (2018 \u2013 2020)\n\t* Conducted risk assessments and developed risk mitigation strategies for various fintech products.\n\t* Monitored transaction data for suspicious activity and investigated potential fraud cases.\n\t* Prepared reports on fraud trends and risk exposures for senior management.\n\t* Technologies: Excel, SQL, SAS.\n\n- **Education: Massachusetts Institute of Technology (MIT)**, Master of Science in Financial Engineering (2016 \u2013 2018)\n- **Education: Stanford University**, Bachelor of Science in Mathematics (2012 \u2013 2016)",
+    "lookingFor": "I am actively seeking connections with individuals and organizations that can support SecureFlow\u2019s growth and mission. My priorities are:\n\n* **Seed-Stage Venture Capitalists:**  Specifically partners focused on fintech, with a demonstrated track record of investing in early-stage companies. I'm looking for investors who understand the complexities of fraud prevention and are willing to provide strategic guidance.\n* **Early-Stage Fintech Founders:** I'm eager to connect with founders facing similar challenges in building robust and scalable fraud defenses.  Sharing experiences and best practices is invaluable.\n* **Strategic Partners:** Companies offering complementary technologies or services to the fintech ecosystem, such as KYC/AML providers, payment processors, or data analytics firms.\n* **Experienced Fintech Advisors:**  Individuals with deep expertise in fraud prevention, risk management, or regulatory compliance who can provide mentorship and guidance.\n\nI\u2019m particularly interested in connecting with individuals in the following industries: Payments, Lending, Cryptocurrency, and RegTech.  I am open to informational interviews, potential collaborations, and introductions to relevant contacts. I'm *not* currently seeking sales leads or general networking opportunities; my focus is on strategic partnerships and funding.",
+    "notes": "* Strong technical background and clear understanding of fraud prevention challenges.\n* Very data-driven and focused on quantifiable results.\n* Recent conversation with [Name Redacted] at [VC Firm Redacted] \u2013 positive initial impression, but needs a warmer intro from a common connection.\n* Attends the Miami Fintech Forum regularly.\n* Potential synergy with [Company Name Redacted] \u2013 explore partnership opportunities.\n* Verify funding status \u2013 LinkedIn profile may be slightly outdated.\n* Prioritize introductions to VCs with a portfolio focus on embedded fintech solutions.",
+    "locationAvailability": "I am based in Miami, Florida, and am open to remote meetings. I am also available for travel within the United States and Latin America as needed.",
+    "introPreferences": "* Ideal connection: Partner at a Seed/Series A fintech VC firm.\n* Please highlight my experience building fraud systems at NovaPay and the unique value proposition of SecureFlow.\n* Avoid overly generic introductions; focus on the specific problem SecureFlow solves.\n* Preferred communication method: Email initially, followed by a brief call.\n* Key messaging points: SecureFlow is the affordable, scalable, and easy-to-integrate fraud prevention solution for early-stage fintechs. I built and scaled fraud operations at NovaPay and understand the pain points firsthand.\n* Do not introduce if the contact is solely focused on later-stage funding rounds.",
+    "personalPreferences": "I prefer to communicate via email for initial contact, and I'm always happy to connect on LinkedIn. Please feel free to share relevant articles or resources.",
+    "meetingAndSchedulingPreferences": "I'm generally available for 30-minute introductory calls. I operate in Eastern Time (ET)."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 26.470818996429443,
+      "input_tokens": 780,
+      "output_tokens": 1452,
+      "problems": []
+    }
+  ],
+  "success": true
+}

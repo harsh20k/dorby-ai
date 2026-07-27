@@ -1,0 +1,54 @@
+{
+  "id": 5,
+  "archetype": "Recruiting & M&A - CPA Sector",
+  "given_name": "Liang Ishikawa",
+  "style_version": 1,
+  "archetypes_version": 1,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Liang Ishikawa is a highly specialized M&A consultant focusing *exclusively* on the CPA and accounting firm space. He spent the first 10 years of his career *within* a large regional CPA firm, working his way up to a partner role before transitioning to advisory. This gives him incredibly deep domain expertise and a strong network on both sides of potential deals. He's currently at a boutique firm, but is actively exploring options to either join a larger, more established M&A advisory group *or* potentially start his own firm. He\u2019s driven by the opportunity to shape the future of the accounting profession through strategic consolidation and is looking for connections that can help him achieve that. He's fairly direct and values efficiency, but is genuinely interested in building long-term relationships within his niche. He\u2019s recently been frustrated by a lack of truly specialized M&A support for smaller CPA firms, a gap he believes he can fill.",
+    "positioning": "Liang Ishikawa is a seasoned M&A advisor dedicated to the unique dynamics of the CPA and accounting firm market. Having spent a decade building a successful career *within* public accounting, culminating in a partnership at Miller & Zois, I bring a level of practical understanding rarely found in traditional M&A consulting. I specialize in facilitating strategic mergers, acquisitions, and succession planning for firms ranging from regional players to specialized boutiques. Currently, I lead deal origination and execution at Stonebridge Advisors, focusing on maximizing value for clients navigating a rapidly evolving regulatory landscape. I'm actively seeking connections with firm leaders contemplating strategic transitions, PE firms exploring investment opportunities in the accounting sector, and fellow M&A professionals with complementary expertise. My deep industry knowledge and proven track record make me a valuable partner for anyone looking to capitalize on the increasing consolidation within the CPA world.",
+    "background": "- **Stonebridge Advisors**, *Managing Director*, 2021 \u2013 Present\n  -- Spearheaded deal origination, due diligence, and execution for CPA and accounting firm M&A transactions.\n  -- Closed 7 transactions totaling over $50 million in aggregate value.\n  -- Developed a proprietary database of potential acquisition targets within the accounting sector.\n  -- Mentored junior analysts in financial modeling and valuation techniques.\n\n- **Miller & Zois**, *Partner*, 2011 \u2013 2021\n  -- Led a team of 15 accountants specializing in tax and audit services for middle-market businesses.\n  -- Increased revenue within the team by 30% over five years through client acquisition and service expansion.\n  -- Oversaw the implementation of new technologies to improve efficiency and accuracy of accounting processes.\n  -- Played a key role in the firm's strategic planning and business development initiatives.\n\n- **Miller & Zois**, *Senior Manager*, 2008 \u2013 2011\n  -- Managed client engagements, ensuring high-quality service delivery and client satisfaction.\n  -- Trained and supervised staff accountants, providing guidance and mentorship.\n  -- Developed and maintained strong relationships with key clients.\n\n- **Education:**\n  -- **University of California, Berkeley**, *Master of Science in Accounting*, 2008\n  -- **Stanford University**, *Bachelor of Science in Economics*, 2006\n\n- **Certifications:**\n  -- Certified Public Accountant (CPA)\n\n- **Professional Affiliations:**\n  -- American Institute of Certified Public Accountants (AICPA)\n  -- California Society of Certified Public Accountants (CalCPA)",
+    "lookingFor": "## Seeking Strategic Connections:\n\n- **Potential Buyers:** PE firms actively seeking investment opportunities in the CPA and accounting sector.  Specifically interested in firms with a focus on consolidation.\n- **Sell-Side Representation:**  CPA firm managing partners exploring a potential exit strategy (merger, acquisition, succession planning).\n- **Industry Experts:**  M&A professionals with deep expertise in valuing and transacting with accounting firms.\n- **Valuation Specialists:** Individuals with proven expertise in performing detailed valuations of CPA practices.\n- **Referrals:** Introductions to firm leaders who may be considering strategic options.  Revenue range of target firms: $5M - $50M.",
+    "notes": "Liang is very focused on deal size. He's less interested in highly fragmented, smaller CPA firms unless they represent a platform for future acquisitions. He's been burned in the past by deals that fell apart due to unrealistic seller expectations \u2013 emphasize realistic valuations when making introductions. He recently expressed frustration with the lack of specialized M&A advisors in the space, believing many generalists don't understand the nuances of accounting firm valuations and operations. He has a strong, but relatively contained network within the California CPA community, and is actively trying to expand nationally. He's a direct communicator and appreciates efficiency. Avoid lengthy, rambling introductions.",
+    "locationAvailability": "Based in San Francisco, CA, but open to connecting with professionals nationwide, particularly those on the East Coast.",
+    "introPreferences": "- **Hard Requirement:** Must be involved in decision-making at a CPA firm or PE firm.\n- **Soft Preference:**  Experience with previous M&A transactions.\n- **Ideal Title:** Managing Partner, CFO, Principal, Director of M&A.\n- **Industry Focus:** Strictly CPA and accounting firms.\n- **Introduction Script Suggestion:** 'Liang Ishikawa is a leading M&A advisor specializing in the CPA sector.  I thought you two might benefit from connecting given [Person B's] work at [Company B] and Liang\u2019s expertise in [specific area of expertise].'",
+    "personalPreferences": "Liang prefers concise, direct communication. He responds quickly to email but is also available on LinkedIn. He\u2019s not a big fan of overly formal networking events and prefers one-on-one conversations. He values authenticity and appreciates when people are upfront about their intentions.",
+    "meetingAndSchedulingPreferences": "Prefers brief introductory calls (15-20 minutes) to assess mutual fit before scheduling longer meetings."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 21.948491096496582,
+      "input_tokens": 774,
+      "output_tokens": 1289,
+      "problems": []
+    }
+  ],
+  "success": true
+}

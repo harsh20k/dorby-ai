@@ -1,0 +1,54 @@
+{
+  "id": 563,
+  "archetype": "Corporate Banking to Startup Advisor",
+  "given_name": "Tariq Andersson",
+  "style_version": 34,
+  "archetypes_version": 94,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Tariq Andersson is a former VP at Deutsche Bank, specializing in project finance for infrastructure projects in emerging markets, specifically India. He spent 15 years climbing the ranks, but became increasingly frustrated with the bureaucratic pace and lack of direct impact. Three years ago, he left to become an independent advisor, focusing on helping Indian startups \u2013 particularly those in the climate tech and fintech spaces \u2013 secure seed and Series A funding. He's not looking for a return to traditional banking; he wants to leverage his financial modeling and due diligence skills to accelerate innovation and growth in the Indian startup ecosystem. He\u2019s particularly keen on connecting with US-based VCs actively investing in India and founders who have a strong technical background but need help with the financial aspects of scaling. He's very focused on impact investing and sustainable businesses.",
+    "positioning": "Tariq Andersson is a financial advisor specializing in supporting early-stage startups, particularly within the Indian climate tech and fintech sectors. Leveraging 15 years of experience in corporate banking, including a tenure as VP at Deutsche Bank, I provide strategic guidance on fundraising, financial modeling, and market entry. My focus is on bridging the gap between innovative Indian founders and global investors. I am currently advising a portfolio of five promising startups, helping them navigate the complexities of seed and Series A rounds and build sustainable financial foundations. I aim to empower the next generation of Indian entrepreneurs driving positive change.",
+    "background": "- VP, Project Finance, Deutsche Bank, Mumbai (2013 \u2013 2021): Led deal structuring and due diligence for infrastructure projects across India, totaling $2.5B in investment.\n- Associate, Investment Banking, Deutsche Bank, London (2010 \u2013 2013): Supported M&A transactions and capital raising activities in the energy sector.\n- Financial Analyst, Citibank, New York (2008 \u2013 2010): Conducted financial analysis and reporting for a portfolio of corporate clients.\n- MBA, Columbia Business School, New York (2006 \u2013 2008)\n- BSc, Economics, London School of Economics (2003 \u2013 2006)\n- Key Skills: Financial Modeling (DCF, LBO), Due Diligence, Venture Capital, Project Finance, Emerging Markets, Indian Market Expertise, Financial Reporting, Valuation.\n- Led the financial close of the Mundra Port expansion project ($800M).\n- Developed a proprietary financial model for assessing renewable energy project viability.\n- Mentored junior analysts within Deutsche Bank\u2019s investment banking division.\n- Fluent in English, Hindi, and German.\n- Completed a short-term assignment with the World Bank's IFC division in Delhi (2018).\n- Regularly contributes to industry publications on fintech trends in India.",
+    "lookingFor": "- **US-based VCs actively investing in Indian startups (Seed/Series A):** Particularly interested in climate tech, fintech, and sustainable agriculture.\n- **Founders of Indian startups seeking fundraising guidance:** Specifically, those with strong technical backgrounds needing financial expertise.\n- **Angel investors with a focus on impact investing in India.**\n- **Mentors with experience scaling startups in emerging markets.**\n- **Strategic partners for portfolio companies:** Legal firms specializing in Indian startup law, marketing agencies with a presence in India.\n- **Connections to Indian government initiatives supporting startups.**\n- **Individuals knowledgeable about carbon credit markets in India.**",
+    "notes": "- Tariq is highly responsive and appreciates concise communication. \n- He\u2019s a strong advocate for the Indian startup ecosystem and is always willing to share his insights.\n- He recently engaged in a discussion about the challenges of cross-border fundraising in the 'India Tech' community.\n- Prioritized connection requests from founders with demonstrated traction. \n- Flagged as interested in joining the 'Climate Tech Investors' group.",
+    "locationAvailability": "Based in Mumbai, India. Willing to travel to the US and Europe for key investor meetings.",
+    "introPreferences": "- **Do:** Introduce me to VCs with a demonstrated track record of investing in Indian startups, especially in climate tech or fintech.\n- **Do:** Introduce me to founders who have a strong technical product but are seeking guidance on financial strategy and fundraising.\n- **Do:** Introduce me to individuals with experience in carbon credit markets or renewable energy project finance in India.\n- **Don't:** Introduce me to recruiters or individuals offering roles in traditional banking.\n- **Don't:** Introduce me to founders who are pre-seed and haven\u2019t validated their product.\n- **Soft Ask:** A brief note highlighting the potential synergy between Tariq and the connection is appreciated.\n- **Preferred Introduction Style:** Warm introductions with a clear explanation of why the connection would be mutually beneficial.\n- **Ideal Connection Profile:** Partner-level at a Series A/B VC firm, or Founder with >$500k in revenue.",
+    "personalPreferences": "I prefer email for initial contact and am generally available for calls during Indian Standard Time business hours. I'm a big believer in building long-term relationships.",
+    "meetingAndSchedulingPreferences": "I'm flexible with meeting formats (video call, phone call) and prefer to schedule meetings at least 24 hours in advance."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 21.278958082199097,
+      "input_tokens": 764,
+      "output_tokens": 1117,
+      "problems": []
+    }
+  ],
+  "success": true
+}

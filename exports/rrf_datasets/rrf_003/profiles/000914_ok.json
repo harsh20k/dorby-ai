@@ -1,0 +1,54 @@
+{
+  "id": 914,
+  "archetype": "Technical Leader, Scaling Engineering",
+  "given_name": "Javier Mensah",
+  "style_version": 56,
+  "archetypes_version": 154,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Javier Mensah is a seasoned Engineering Director currently leading the platform engineering team at a rapidly growing, Series C-funded fintech startup called 'NovaPay'. He\u2019s spent his career building and scaling engineering organizations, starting as a full-stack developer and gradually moving into leadership. A distinctive detail is his strong focus on developer experience (DevEx) \u2013 he firmly believes a happy, productive engineering team is the key to rapid innovation. He\u2019s now focused on establishing NovaPay as a leader in embedded finance, and he needs to build out his team with engineers skilled in distributed systems, security, and observability. He's actively looking to connect with other engineering leaders at similar-stage companies to share best practices, and with potential investors who understand the importance of a strong engineering foundation. He's also open to mentoring promising engineering talent.",
+    "positioning": "As Engineering Director at NovaPay, I lead a talented team of platform engineers responsible for building the core infrastructure powering our embedded finance solutions. My focus is on creating a scalable, reliable, and secure platform that enables rapid product iteration and supports our ambitious growth trajectory. I specialize in fostering a high-performance engineering culture predicated on developer experience and operational excellence. I\u2019m passionate about leveraging cutting-edge technologies \u2013 including Kubernetes, Kafka, and observability stacks \u2013 to deliver exceptional value to our customers. Currently, I\u2019m driving initiatives to enhance our platform\u2019s resilience, improve developer velocity, and prepare for international expansion. I\u2019m a firm believer in data-driven decision-making and continuous improvement, constantly seeking ways to optimize our engineering processes and maximize impact.",
+    "background": "* **NovaPay (2021 \u2013 Present): Engineering Director**\n    * Led the platform engineering team through a period of hypergrowth, scaling the team from 8 to 35 engineers.\n    * Architected and implemented a new microservices-based platform using Kubernetes and Kafka, resulting in a 40% reduction in deployment time and a 25% improvement in system reliability.\n    * Championed the adoption of observability tools (Prometheus, Grafana, Jaeger) leading to proactive identification and resolution of performance bottlenecks.\n    * Implemented robust security practices and compliance measures, ensuring the platform meets industry standards (SOC2, PCI DSS).\n    * Managed a budget of $3M, optimizing resource allocation and maximizing ROI.\n* **Acme Corp (2018 \u2013 2021): Senior Engineering Manager**\n    * Managed a team of 12 full-stack engineers responsible for developing and maintaining a high-traffic e-commerce platform.\n    * Led the migration of the platform to a cloud-native architecture, resulting in significant cost savings and improved scalability.\n    * Introduced Agile methodologies and DevOps practices, increasing team velocity and reducing time to market.\n    * Mentored junior engineers, fostering their professional development and growth.\n* **Beta Solutions (2016 \u2013 2018): Software Engineer**\n    * Developed and maintained key features for a SaaS-based marketing automation platform using Java, Spring, and React.\n    * Contributed to the design and implementation of RESTful APIs.\n    * Collaborated with product managers and designers to deliver high-quality user experiences.\n* **Education: Massachusetts Institute of Technology (MIT) - Master of Science in Computer Science (2016)**\n* **Education: Stanford University - Bachelor of Science in Computer Science (2014)**\n* **Skills:** Java, Python, Kubernetes, Docker, Kafka, AWS, GCP, Azure, Terraform, Prometheus, Grafana, Jaeger, CI/CD, Agile, DevOps, Microservices, RESTful APIs, System Design, Leadership, Mentoring, Budget Management, Security, Observability.",
+    "lookingFor": "I'm actively expanding my network with individuals who share a passion for building and scaling high-performing engineering organizations. Specifically, I'm interested in connecting with:\n\n* **Engineering Leaders (Directors & VPs):** At Series B/C fintech companies or those building developer platforms. I\u2019m keen to exchange insights on best practices for scaling teams, managing technical debt, and fostering engineering culture.\n* **Experienced Engineers:** With deep expertise in distributed systems, security, observability, and cloud-native architectures. I'm currently hiring for several key roles at NovaPay.\n* **Investors:** Focused on fintech and/or developer tools. I'm always open to discussing NovaPay's vision and the importance of a strong engineering foundation.\n* **DevEx Advocates & Consultants:** Individuals with proven track records of improving developer productivity and satisfaction.\n\nI\u2019m particularly interested in learning about innovative approaches to:\n\n* **Automated Security Testing:** Exploring new tools and techniques to proactively identify and mitigate security vulnerabilities.\n* **Developer Portal Implementation:** Best practices for building intuitive and effective developer portals.\n* **Internal Developer Platforms (IDPs):** How to leverage IDPs to streamline development workflows and improve developer experience.\n\nI\u2019m open to informal conversations, mentorship opportunities, and potential collaborations.",
+    "notes": "* Javier is very passionate about DevEx and will happily spend time discussing it. \n* He\u2019s a strong advocate for open-source technologies. \n* He's currently reading 'The Phoenix Project' for the third time. \n* Avoid pitching him products that aren't genuinely focused on improving developer workflows. \n* He's a little skeptical of overly-hyped technologies.",
+    "locationAvailability": "Based in San Francisco, CA, and available for remote meetings. Open to limited travel for key engagements.",
+    "introPreferences": "* **Hard Requirements:**\n    * The connection must be an engineering leader (Director level or above) or a relevant investor.\n    * The connection should have a demonstrated interest in fintech or developer tools.\n* **Soft Preferences:**\n    * Prior experience scaling engineering teams at high-growth startups is a plus.\n    * A shared interest in open-source technologies would be beneficial.\n* **Introduction Framing:** Please highlight my work at NovaPay and my focus on DevEx. Briefly mention the types of connections I'm seeking (see 'Looking For' section). Avoid overly promotional language; focus on mutual learning and potential collaboration.",
+    "personalPreferences": "Prefers email for initial contact. Responsive on LinkedIn. Avoid cold calls.",
+    "meetingAndSchedulingPreferences": "I generally prefer 30-minute introductory calls. I\u2019m available for meetings most afternoons (PST). Please send a calendar invite with a brief agenda. I\u2019m flexible but appreciate advance notice for rescheduling. Video calls are preferred, but phone calls are acceptable if necessary."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 27.54097890853882,
+      "input_tokens": 840,
+      "output_tokens": 1419,
+      "problems": []
+    }
+  ],
+  "success": true
+}

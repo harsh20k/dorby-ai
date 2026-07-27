@@ -1,0 +1,54 @@
+{
+  "id": 230,
+  "archetype": "International Founder - Emerging Markets",
+  "given_name": "Viktor Almeida",
+  "style_version": 14,
+  "archetypes_version": 38,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Viktor Almeida is a Brazilian-South African founder currently scaling a fintech platform focused on providing micro-loans to smallholder farmers in Sub-Saharan Africa. He built the initial tech stack while working as a software engineer at a major bank in Johannesburg, identifying a massive underserved market. He\u2019s now raised a seed round and is focused on expanding into new markets within the region and securing Series A funding. He\u2019s particularly interested in connecting with investors and advisors who have experience in African fintech, impact investing, and scaling tech businesses. He\u2019s very comfortable with remote work but occasionally travels to key markets. A distinctive detail is his fluency in Portuguese, English, and Afrikaans \u2013 crucial for navigating the diverse linguistic landscape of his target markets.",
+    "positioning": "Viktor Almeida is the Founder & CEO of AgriLend, a fintech platform democratizing access to finance for smallholder farmers in Africa. We leverage mobile technology and alternative credit scoring to provide micro-loans, enabling farmers to increase yields and improve their livelihoods. Having recently closed a seed funding round, AgriLend is focused on aggressive expansion across Sub-Saharan Africa, with initial focus on Zambia and Mozambique. I am passionate about bridging the financial inclusion gap and building a sustainable, impactful business that empowers communities. I\u2019m actively seeking connections with investors, advisors, and potential partners who share this vision.",
+    "background": "- **Founder & CEO, AgriLend** (2022 \u2013 Present)\n  * Led seed funding round of $750k from angel investors and impact funds.\n  * Developed and launched MVP of AgriLend\u2019s mobile lending platform.\n  * Built and managed a team of 15+ engineers, data scientists, and field operations staff.\n  * Established strategic partnerships with agricultural cooperatives and NGOs.\n- **Software Engineer, First National Bank (FNB)** (2018 \u2013 2022)\n  * Developed and maintained core banking systems using Java and Spring.\n  * Led the development of a mobile payment solution that increased user adoption by 20%.\n  * Gained extensive experience in agile development methodologies and DevOps practices.\n- **Education:**\n  * Master of Science in Computer Science, University of Cape Town (2016 \u2013 2018)\n  * Bachelor of Science in Computer Engineering, Universidade Federal de Minas Gerais, Brazil (2012 \u2013 2016)\n- **Skills:** Java, Python, Spring Framework, Agile Development, Fintech, Mobile Payments, Data Analysis, Machine Learning, Risk Management, Portuguese (Native), English (Fluent), Afrikaans (Fluent).",
+    "lookingFor": "- **Investors:** Seeking Series A funding ($3-5M) from VCs specializing in African fintech and impact investing.\n- **Advisors:** Experienced mentors in scaling tech companies, particularly in emerging markets.\n- **Strategic Partners:** Agricultural organizations, NGOs, and government agencies operating in Sub-Saharan Africa.\n- **Connections to:** Individuals with established networks within the Zambian and Mozambican agricultural sectors.\n- I'm particularly interested in learning from founders who have successfully navigated similar challenges in the region. I'd appreciate introductions to individuals with experience in building and scaling mobile-first financial products for underserved populations. I\u2019m also open to exploring potential partnerships with organizations that can provide access to data and market insights.",
+    "notes": "Spoke with Viktor last week \u2013 very articulate and passionate about his mission. He\u2019s extremely data-driven and has a clear understanding of the challenges and opportunities in the African fintech space. He mentioned a potential partnership with a large agricultural conglomerate in Zambia, needs help connecting with relevant contacts. He's attending the Africa Fintech Summit in Nairobi next month.",
+    "locationAvailability": "Based in Johannesburg, South Africa, with frequent travel to key markets in Sub-Saharan Africa.",
+    "introPreferences": "Hard Requirements: Please prioritize introductions to investors actively deploying capital in African fintech, specifically Series A rounds. Exclude introductions to individuals solely focused on developed markets. Soft Preferences: Introductions to individuals with experience in agricultural finance or impact investing are highly valued. Please include a brief summary of the contact\u2019s relevant experience and their connection to the African market in the introduction email. Keep the introduction concise and focused on AgriLend\u2019s mission and funding needs. Viktor prefers a warm, but professional introduction style.",
+    "personalPreferences": "- Prefers initial contact via LinkedIn message or email.\n- Responsive on WhatsApp for quick follow-ups.",
+    "meetingAndSchedulingPreferences": "Viktor is generally available for virtual meetings during South African business hours (GMT+2). He is flexible and can adjust to accommodate different time zones, but please provide ample notice. He prefers video calls over phone calls."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 17.99000072479248,
+      "input_tokens": 753,
+      "output_tokens": 1001,
+      "problems": []
+    }
+  ],
+  "success": true
+}

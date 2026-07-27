@@ -1,0 +1,54 @@
+{
+  "id": 275,
+  "archetype": "Operator-Turned-AI Builder",
+  "given_name": "Noor Mensah",
+  "style_version": 17,
+  "archetypes_version": 45,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Noor Mensah is a former supply chain optimization specialist who spent years wrestling with the limitations of traditional forecasting and inventory management. She was consistently frustrated by the 'art' of predicting demand, and the significant waste that resulted. This led her to pursue a Master\u2019s in Machine Learning, and she now works at 'FlowState AI', a startup building AI-powered supply chain solutions for mid-sized manufacturers. Her focus is on building and deploying demand forecasting models, and she\u2019s particularly interested in connecting with other operational leaders who are exploring the potential of AI to streamline their processes. She's also keen on finding potential investors who understand the ROI of AI in manufacturing. A defining detail is that she *implemented* a successful (though non-AI) lean manufacturing system at a previous employer, giving her deep credibility with operations teams who are skeptical of 'black box' AI solutions. She's pragmatic and results-oriented, always framing AI in terms of tangible business benefits.",
+    "positioning": "Noor Mensah is a Machine Learning Engineer at FlowState AI, dedicated to revolutionizing supply chain management through the power of artificial intelligence. I specialize in developing and deploying predictive models that optimize inventory levels, reduce waste, and improve overall operational efficiency for mid-sized manufacturing companies. Having spent years on the front lines of supply chain operations, I understand the pain points and challenges businesses face in accurately forecasting demand. \n\nAt FlowState AI, I lead the development of our core demand forecasting engine, leveraging time series analysis, machine learning algorithms, and real-time data integration. My approach is deeply rooted in a practical understanding of manufacturing processes, ensuring our solutions are not only technologically advanced but also seamlessly integrated into existing workflows. I\u2019m passionate about bridging the gap between data science and operational excellence. \n\nI believe AI is not just about automation, but about empowering businesses to make smarter, data-driven decisions. My work at FlowState AI aims to unlock new economic possibilities for our clients by turning complex supply chain data into actionable insights. I\u2019m actively seeking opportunities to collaborate with industry leaders and explore innovative applications of AI in the manufacturing sector. \n\nMy background in lean manufacturing principles further informs my work, allowing me to advocate for solutions that are both technically sound and operationally feasible. I\u2019m driven by a commitment to delivering measurable results and building long-term partnerships with our clients.",
+    "background": "- **Machine Learning Engineer, FlowState AI** (January 2023 \u2013 Present)\n  * Led the development and deployment of a novel demand forecasting model, resulting in a 15% reduction in inventory holding costs for a key client in the automotive parts industry.\n  * Responsible for data pipeline design and implementation, ensuring data quality and scalability for machine learning models.\n  * Collaborated with cross-functional teams (engineering, sales, and marketing) to define product requirements and deliver impactful solutions.\n  * Experimented with various machine learning algorithms, including time series analysis (ARIMA, Prophet), regression models, and neural networks.\n  * Mentored junior engineers in machine learning best practices and model development techniques.\n\n- **Supply Chain Optimization Specialist, Apex Manufacturing** (June 2018 \u2013 December 2022)\n  * Managed inventory levels for a portfolio of over 500 SKUs, optimizing stock levels to meet demand while minimizing holding costs.\n  * Implemented a successful lean manufacturing system, reducing lead times by 20% and improving overall production efficiency.\n  * Developed and maintained key performance indicators (KPIs) to track supply chain performance and identify areas for improvement.\n  * Collaborated with suppliers to negotiate favorable pricing and ensure timely delivery of materials.\n  * Utilized data analysis tools (Excel, SQL) to identify trends and patterns in supply chain data.\n\n- **Logistics Analyst, Global Distribution Network** (August 2016 \u2013 May 2018)\n  * Analyzed transportation costs and identified opportunities to optimize shipping routes and reduce expenses.\n  * Monitored shipment tracking data and resolved any issues related to delivery delays or damage.\n  * Prepared reports on logistics performance and presented findings to management.\n  * Assisted with the implementation of a new warehouse management system (WMS).\n\n- **Education:**\n  * **Master of Science in Machine Learning**, University of California, Berkeley (2021 \u2013 2023)\n  * **Bachelor of Science in Industrial Engineering**, Georgia Institute of Technology (2012 \u2013 2016)",
+    "lookingFor": "I am actively seeking connections with leaders in the manufacturing industry who are exploring the potential of AI to improve their supply chain operations. I'm particularly interested in speaking with VPs of Operations, Supply Chain Directors, and Chief Technology Officers at mid-sized manufacturing companies ($50M - $500M annual revenue).\n\nI am also looking to connect with investors who are focused on AI-driven solutions for the manufacturing sector. I'm seeking seed or Series A funding to accelerate the growth of FlowState AI and expand our product offerings. I\u2019m open to introductory calls with venture capitalists and angel investors who have a demonstrated track record of investing in successful AI startups.\n\nSpecifically, I'm looking for:\n* Introductions to operational leaders at companies in the automotive, aerospace, and medical device industries.\n* Connections to individuals with expertise in edge computing and real-time data analytics.\n* Opportunities to participate in industry events and conferences focused on AI and manufacturing.\n\nI am *not* currently interested in:\n* Recruiters offering roles outside of machine learning engineering or data science.\n* Individuals seeking consulting services. We are currently focused on direct client engagements.\n* Companies with less than $10M in annual revenue.",
+    "notes": "Profile appears well-constructed and consistent with the 'Operator-Turned-AI Builder' persona. The background details, particularly the lean manufacturing experience at Apex Manufacturing, add significant credibility. The 'lookingFor' section is highly targeted and specific, indicating a clear understanding of her objectives. Initial contact via LinkedIn messaging resulted in a prompt and thoughtful response, confirming her interest in connecting with individuals in the described target roles. No discrepancies identified.",
+    "locationAvailability": "Based in San Francisco, California (PST). Willing to travel within the US and internationally for client meetings and industry events.",
+    "introPreferences": "When making introductions, please adhere to the following guidelines:\n* **Hard Requirements:**\n  * Ensure the connection is a decision-maker or key influencer within a mid-sized manufacturing company (revenue $50M - $500M).\n  * Verify the individual is actively exploring AI solutions for supply chain optimization.\n  * Provide context regarding FlowState AI\u2019s focus on demand forecasting and inventory management.\n* **Soft Preferences:**\n  * Prioritize introductions to individuals in the automotive, aerospace, or medical device industries.\n  * Highlight my background in lean manufacturing and operational excellence.\n  * Avoid introducing me to individuals solely focused on IT infrastructure or general software solutions.\n  * A brief summary of the connection\u2019s current challenges and priorities would be greatly appreciated.",
+    "personalPreferences": "I prefer initial contact via LinkedIn messaging. I'm also comfortable with email. Please keep introductions concise and focused on the potential for mutual benefit.",
+    "meetingAndSchedulingPreferences": "I typically prefer 30-minute introductory calls to assess potential synergies. Please share a brief agenda in advance. I'm available for meetings most weekdays between 9 AM and 5 PM PST. A short debrief after any introductory meetings would be helpful to align on next steps."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 22.581299781799316,
+      "input_tokens": 797,
+      "output_tokens": 1621,
+      "problems": []
+    }
+  ],
+  "success": true
+}

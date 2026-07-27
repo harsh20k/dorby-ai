@@ -1,0 +1,75 @@
+{
+  "id": 264,
+  "archetype": "DFW Sports/Venture Connector",
+  "given_name": "Ingrid Andersson",
+  "style_version": 16,
+  "archetypes_version": 43,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Ingrid Andersson is a first-time founder in her early 30s, building \u2018StatScout,\u2019 a B2B SaaS platform providing advanced, real-time analytics to collegiate athletic programs focused on player development. She previously spent 8 years in data science roles at ESPN, culminating in leading a small team focused on next-gen stats for college football recruiting. This experience identified a gap in the market: universities lacked affordable, actionable data insights beyond basic box scores. StatScout's MVP is gaining traction with smaller programs, and Ingrid is now aggressively pursuing Seed funding to scale sales/marketing and expand data coverage to more sports. She's very focused on the DFW area as a key market for both customers (multiple large university programs) and investors (strong VC presence in Dallas). She's direct, data-driven, and values efficiency. A quirky detail: she was a nationally-ranked competitive swimmer in high school and brings that performance-oriented mindset to everything she does.",
+    "positioning": "StatScout is revolutionizing collegiate athlete development through accessible, actionable data analytics. Universities are drowning in data, but lack the resources to translate it into meaningful insights. We solve this problem by providing a cloud-based platform that delivers real-time performance metrics, predictive analytics, and personalized player reports \u2013 all at a fraction of the cost of traditional solutions. Our MVP focuses on football, with early traction demonstrating a 30% increase in player performance metrics within the first semester of use at pilot schools. We\u2019re targeting athletic departments with budgets under $5M, representing a significant wedge into a $2B+ market. Our key differentiator is our proprietary algorithm, developed by former ESPN data scientists, which identifies hidden performance indicators often missed by conventional scouting methods. We\u2019re currently closing a $500k pre-seed round and preparing for a seed raise in Q1 2024 to accelerate sales, expand sport coverage, and enhance our platform's AI capabilities. We are building the future of collegiate athletics, one data point at a time.",
+    "background": "* **StatScout, Founder & CEO** (Jan 2023 \u2013 Present)\n    * Led all aspects of founding, from initial concept validation to MVP development and early customer acquisition.\n    * Secured $250k in angel funding, utilizing a convertible note structure.\n    * Built and managed a remote team of 3 data scientists and 2 software engineers.\n    * Achieved 5 paying pilot program customers within the first 6 months.\n    * Responsible for P&L, go-to-market strategy, and investor relations.\n* **ESPN, Senior Data Scientist** (Aug 2015 \u2013 Dec 2022)\n    * Led a team of 4 data scientists responsible for developing next-generation statistics for college football recruiting.\n    * Developed and implemented machine learning models to predict player performance based on high school data.\n    * Presented data-driven insights to on-air talent and contributed to broadcast narratives.\n    * Collaborated with engineering teams to integrate new metrics into ESPN\u2019s digital platforms.\n    * Consistently exceeded performance goals, contributing to a 15% increase in user engagement with recruiting content.\n* **ESPN, Data Scientist** (Jun 2015 \u2013 Aug 2015)\n    * Conducted statistical analysis of sports data to identify trends and patterns.\n    * Developed data visualizations to communicate insights to stakeholders.\n    * Supported the development of ESPN\u2019s fantasy sports products.\n* **University of Texas at Austin, Ph.D., Statistics** (Sep 2010 \u2013 May 2015)\n    * Dissertation: \u201cBayesian Hierarchical Modeling for Sports Performance Prediction.\u201d\n    * GPA: 3.9/4.0\n    * Relevant coursework: Statistical Modeling, Machine Learning, Data Mining, Probability Theory.\n* **University of Texas at Austin, B.S., Mathematics** (Sep 2006 \u2013 May 2010)\n    * Minor: Computer Science\n    * Graduated *Summa Cum Laude*.\n    * Nationally Ranked Competitive Swimmer (High School)",
+    "lookingFor": "I'm actively seeking connections within the DFW venture capital ecosystem as we prepare for our Seed round. Ideal investors are those with experience in SaaS, sports tech, or B2B data analytics, and are comfortable with early-stage investments. We're targeting a $3M Seed to fuel growth. Beyond capital, I'm looking to connect with: \n\n* **Operators:** Experienced SaaS founders who have successfully scaled companies from MVP to Series A.\n* **Potential Customers:** Athletic Directors and coaching staff at DFW-area universities. Pilot program references are invaluable.\n* **Strategic Partners:** Companies with complementary technologies in athlete performance tracking or sports data visualization.\n* **Angel Investors:** Individuals with a passion for sports and a proven track record of supporting innovative startups.\n\nI'm particularly interested in investors who can offer not just funding, but also strategic guidance and access to their network. I\u2019m not a fan of long, drawn-out processes \u2013 I value direct communication and a data-driven approach to decision-making.",
+    "notes": "Ingrid is highly responsive and extremely focused. She\u2019s very comfortable discussing technical details and metrics. Be prepared to answer questions about your investment thesis. She\u2019s fiercely independent and values direct feedback. \n\n* **Data Quality:** Ensure any introductions include specific details about the investor's portfolio or relevant experience. Vague introductions will likely be ignored.\n* **Recent Conversation:** Last spoke on 11/15 regarding potential synergies with a sports performance wearable company. She's open to exploring partnerships, but remains laser-focused on fundraising.\n* **Communication Style:** Prefers concise, data-driven communication. Avoid overly promotional language.",
+    "locationAvailability": "I am currently based in Dallas, Texas, and am readily available for meetings and events throughout the DFW area. I'm open to virtual meetings, and limited travel for key investor meetings is possible.",
+    "introPreferences": "* **Hard Requirements:** Investors with a track record of investing in B2B SaaS companies with ARR under $1M.\n* **Soft Preferences:** Experience in the sports tech space is a significant plus, but not mandatory.  Strong preference for investors who actively support their portfolio companies.\n* **Intro Style:** Please keep introductions brief and focused on the potential synergies between StatScout and the investor. Highlight our traction with pilot programs and our strong team.\n* **Avoid:** Introductions to generalists or investors who primarily focus on consumer-facing applications.\n* **Ideal Connection:** Partner at a DFW-based VC firm focused on early-stage SaaS.  Please include a brief summary of their recent investments and their investment criteria.",
+    "personalPreferences": "I prefer to connect via email initially, and I\u2019m happy to jump on a quick call if there's a good fit. I typically respond to emails within 24-48 hours. I'm not a big fan of LinkedIn messaging \u2013 email is much more efficient for me. I'm always open to a quick coffee chat if you're in the DFW area.",
+    "meetingAndSchedulingPreferences": "I use Calendly to manage my schedule: [https://calendly.com/ingridandersson/statscout-intro]"
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 20.169790029525757,
+      "input_tokens": 804,
+      "output_tokens": 1514,
+      "problems": [
+        "background: possible truncation (ends with '...ecialty (2021)</li>\n</ul>')",
+        "meetingAndSchedulingPreferences: possible truncation (ends with '...ndersson/statscout-intro]')"
+      ]
+    },
+    {
+      "attempt": 2,
+      "elapsed_s": 21.5033278465271,
+      "input_tokens": 804,
+      "output_tokens": 1552,
+      "problems": [
+        "meetingAndSchedulingPreferences: possible truncation (ends with '...ndersson-athletehq/30min]')"
+      ]
+    },
+    {
+      "attempt": 3,
+      "elapsed_s": 22.93653392791748,
+      "input_tokens": 804,
+      "output_tokens": 1586,
+      "problems": [
+        "meetingAndSchedulingPreferences: possible truncation (ends with '...ndersson/statscout-intro]')"
+      ]
+    }
+  ],
+  "success": false
+}

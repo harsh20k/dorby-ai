@@ -1,0 +1,54 @@
+{
+  "id": 280,
+  "archetype": "AI-First Founder, North American Focus",
+  "given_name": "Olivia Vargas",
+  "style_version": 17,
+  "archetypes_version": 46,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Olivia Vargas is a 38-year-old founder and CEO of 'Synapse Insights', a seed-stage startup building a generative AI platform for optimizing clinical trial design. She has a PhD in Computational Biology and a strong background in bioinformatics. A distinctive career detail is that she spent 5 years *inside* a major pharmaceutical company (GenCorp) leading their early AI adoption efforts *before* striking out on her own. This gives her a unique understanding of the pain points within the industry. She's currently focused on raising a Series A round and building strategic partnerships with CROs (Contract Research Organizations) and pharmaceutical companies. She\u2019s aggressively focused on the US market initially, with plans for Canadian expansion in 18-24 months. She's a pragmatic, data-driven leader, valuing efficiency and demonstrable ROI. She\u2019s not interested in purely theoretical AI; it *must* solve a tangible business problem. She's fairly direct and values people who get straight to the point.",
+    "positioning": "Olivia Vargas is the Founder and CEO of Synapse Insights, an AI-powered platform revolutionizing clinical trial design. Leveraging cutting-edge generative AI, Synapse Insights drastically reduces trial timelines and costs by optimizing patient selection, protocol development, and data analysis. Prior to founding Synapse Insights, Olivia led the AI strategy implementation at GenCorp Pharmaceuticals, where she championed the integration of machine learning into drug discovery processes, resulting in a 15% reduction in early-stage trial failures.  She\u2019s passionate about bridging the gap between academic AI research and real-world pharmaceutical challenges. Currently, Olivia is focused on securing Series A funding to scale Synapse Insights\u2019 platform and expand its reach to more pharmaceutical partners. Her vision is to democratize access to AI-driven clinical trial optimization, accelerating the delivery of life-saving drugs to patients.",
+    "background": "- **Founder & CEO, Synapse Insights** (January 2023 \u2013 Present)\n  * Led all aspects of founding and building a seed-stage startup focused on generative AI for clinical trial optimization.\n  * Secured $2M in seed funding from leading venture capital firms specializing in healthcare AI.\n  * Developed and launched a minimum viable product (MVP) demonstrating a 20% improvement in protocol efficiency compared to traditional methods.\n  * Built a core team of 8 engineers and data scientists specializing in machine learning and bioinformatics.\n  * Established key partnerships with two leading Contract Research Organizations (CROs) for pilot program implementation.\n\n- **Director, AI Strategy & Implementation, GenCorp Pharmaceuticals** (June 2018 \u2013 December 2022)\n  * Led the development and execution of GenCorp\u2019s AI strategy across drug discovery, clinical trials, and manufacturing.\n  * Managed a team of data scientists and engineers responsible for building and deploying machine learning models.\n  * Oversaw the integration of AI tools into existing workflows, resulting in a 15% reduction in early-stage trial failures and a 10% increase in research productivity.\n  * Championed the adoption of cloud-based AI platforms, improving scalability and reducing infrastructure costs.\n  * Presented research findings at industry conferences and published articles in peer-reviewed journals.\n\n- **Postdoctoral Researcher, Stanford University, Department of Computational Biology** (September 2016 \u2013 May 2018)\n  * Conducted research on the application of machine learning to genomic data analysis.\n  * Developed novel algorithms for predicting drug response based on patient genomic profiles.\n  * Published multiple first-author papers in high-impact scientific journals.\n  * Secured grant funding to support research projects.\n\n- **PhD, Computational Biology, Stanford University** (September 2012 \u2013 August 2016)\n  * Dissertation: \u2018Predictive Modeling of Drug-Target Interactions using Network-Based Approaches.\u2019\n  * GPA: 3.9/4.0\n  * Recipient of the Stanford Graduate Fellowship.\n\n- **Research Assistant, MIT, Department of Biology** (June 2010 \u2013 August 2012)\n  * Assisted with research on the genetic basis of complex diseases.\n  * Performed data analysis and experimental design.\n",
+    "lookingFor": "I\u2019m currently focused on connecting with Series A investors with a strong track record in healthcare AI. I'm particularly interested in firms that understand the complexities of the pharmaceutical industry and can provide strategic guidance alongside capital. I'm also actively seeking introductions to key decision-makers at large pharmaceutical companies and leading CROs \u2013 specifically VPs of Clinical Development or Heads of Innovation. \n\nSpecifically, I\u2019m looking for:\n* **Investors:** Series A, Healthcare AI focus, $5M - $15M check size.\n* **Strategic Partners:** CROs actively seeking to integrate AI into their services. Pharmaceutical companies piloting AI solutions in clinical trials.\n* **Advisors:** Experienced entrepreneurs who have successfully scaled AI-driven healthcare startups.\n\nI am *not* interested in:\n* Cold outreach from sales representatives offering generic AI solutions.\n* Introductions to individuals below the Director level.\n* Connections from individuals outside of North America (US & Canada).\n*  Discussions about purely theoretical AI research without a clear path to commercialization.",
+    "notes": "Profile created based on LinkedIn research of similar founders and publicly available information about the AI in healthcare space. Olivia Vargas appears highly targeted and focused. Recent activity suggests she's actively engaging with content related to clinical trial optimization and AI investment. Her background at GenCorp is a key differentiator and should be highlighted in any outreach. No discrepancies noted. Key takeaway: prioritize demonstrating a clear understanding of the pharmaceutical industry's needs when connecting.",
+    "locationAvailability": "Based in Boston, Massachusetts (Eastern Time Zone). Open to travel within the US and Canada.",
+    "introPreferences": "When making an introduction, please:\n* **Hard Requirements:**\n  * The connection *must* be relevant to Synapse Insights\u2019 business (investing, pharmaceutical partnerships, or AI expertise).\n  *  Prior context about the connection\u2019s experience with AI in drug development is essential.\n  * Ensure the individual is at the VP level or higher.\n* **Soft Preferences:**\n  * Briefly mention Synapse Insights\u2019 focus on *generative* AI for clinical trial optimization \u2013 this is a key differentiator.\n  * Highlight my prior experience at GenCorp to establish credibility.\n  * Avoid framing the introduction as a \u2018sales pitch\u2019 \u2013 I prefer a conversational approach to explore potential synergies.",
+    "personalPreferences": "I prefer initial communication via email. I\u2019m generally responsive but can be heads-down working on product development. Please keep emails concise and to the point.",
+    "meetingAndSchedulingPreferences": "I prefer meetings to be focused and agenda-driven. Please send a brief agenda in advance so I can prepare. I appreciate a quick debrief after the meeting summarizing key takeaways and action items."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 24.950393199920654,
+      "input_tokens": 801,
+      "output_tokens": 1485,
+      "problems": []
+    }
+  ],
+  "success": true
+}

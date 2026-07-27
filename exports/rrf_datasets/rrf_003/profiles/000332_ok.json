@@ -1,0 +1,54 @@
+{
+  "id": 332,
+  "archetype": "Fintech/Payments Veteran, Builder",
+  "given_name": "Tariq Patel",
+  "style_version": 20,
+  "archetypes_version": 55,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Tariq Patel is a seasoned fintech executive currently focused on building 'NovaPay,' a B2B payments platform streamlining cross-border transactions for SMEs. He's spent the last 15 years in payments, initially as a software engineer at a large bank, then transitioning into product management and eventually leadership roles. A key differentiator in his career was leading the international expansion of a mid-sized payment processor, where he identified and navigated the complexities of regulatory compliance and localized payment methods in emerging markets. Now, with NovaPay, he's aiming to solve the pain points *he* experienced during that expansion \u2013 the exorbitant fees, slow settlement times, and lack of transparency in international B2B payments. He\u2019s currently raising a Series B round and actively seeking strategic partnerships with companies offering complementary services like supply chain finance and trade credit insurance. He\u2019s a pragmatic builder, focused on demonstrable value and sustainable growth, not hype. He's quite selective about who he connects with, prioritizing deep industry knowledge and a shared commitment to solving real-world problems.",
+    "positioning": "As CEO of NovaPay, I'm leading a mission to fundamentally reshape the landscape of cross-border B2B payments. We're building a platform that empowers small and medium-sized enterprises (SMEs) to transact globally with the same speed, transparency, and cost-efficiency they experience domestically. The traditional correspondent banking system is demonstrably failing SMEs, saddling them with hidden fees, lengthy settlement times, and a lack of visibility into transaction status. NovaPay addresses these challenges through a combination of innovative technology \u2013 leveraging distributed ledger technology for enhanced security and reconciliation \u2013 and strategic partnerships with local payment providers in key emerging markets. \n\nWe\u2019ve recently completed a successful seed round and are experiencing strong traction with early adopters in the e-commerce and manufacturing sectors. Our initial focus is on facilitating payments between North America, Europe, and Southeast Asia, with plans to expand into Latin America and Africa in the next 18-24 months.  We've achieved a 30% MoM growth in transaction volume over the last quarter, driven by a strong value proposition centered around reduced fees (average savings of 70% compared to traditional methods) and faster settlement times (typically within 24-48 hours).  Our current priority is securing a Series B investment to accelerate product development, expand our geographic reach, and scale our sales and marketing efforts. We're not just building a payment platform; we're building a global network that unlocks opportunities for SMEs to thrive in the international marketplace.",
+    "background": "My career has been deeply rooted in the evolution of financial technology, with a consistent focus on building and scaling payment solutions. \n\n*   **NovaPay (2022 \u2013 Present):** CEO. Founded NovaPay to address the critical need for efficient and transparent cross-border B2B payments. Responsible for overall strategy, fundraising, team building, and execution.\n*   **GlobalPay Solutions (2018 \u2013 2022):** VP, International Expansion. Led the company\u2019s expansion into Southeast Asia and Latin America, overseeing market entry strategy, regulatory compliance, and partnership development.  Successfully launched operations in 5 new countries, increasing international revenue by 150%.\n*   **First National Bank (2013 \u2013 2018):** Director, Product Management (Payments). Managed the product roadmap for the bank\u2019s commercial payments suite, including ACH, wire transfers, and card processing. Led the development and launch of a new real-time payments platform, resulting in a 20% increase in transaction volume.\n*   **First National Bank (2010 \u2013 2013):** Software Engineer. Developed and maintained core banking systems, gaining a foundational understanding of payment processing infrastructure.\n\n**Education:**\n*   **Massachusetts Institute of Technology (MIT):** Master of Science in Computer Science\n*   **University of California, Berkeley:** Bachelor of Science in Electrical Engineering and Computer Sciences\n\n**Skills:** Payments, Fintech, Cross-Border Payments, Product Management, International Expansion, Regulatory Compliance, Distributed Ledger Technology (DLT), Blockchain, Agile Methodologies, Team Leadership, Fundraising, Strategic Planning.\n\n**Certifications:** Certified Payments Professional (CPP)",
+    "lookingFor": "I am actively seeking connections to support NovaPay\u2019s growth and expansion. Specifically:\n\n*   **Series B Investors:**  Venture capital firms with a demonstrated track record of investing in fintech companies, particularly those focused on B2B payments.  We're targeting investors with check sizes between $15M - $25M.\n*   **Strategic Partners:**  Companies offering complementary services to SMEs, such as:\n    *   Supply Chain Finance providers\n    *   Trade Credit Insurance companies\n    *   Logistics and Freight Forwarding platforms\n*   **Industry Experts:**  Individuals with deep expertise in cross-border payments, regulatory compliance in emerging markets, and DLT applications in finance.\n*   **Potential Customers:**  SMEs actively engaged in international trade, particularly those experiencing pain points with existing payment solutions.  We're focused on the e-commerce, manufacturing, and software sectors.",
+    "notes": "*   Previously spoke with Sarah Chen (Accel) - lukewarm interest, concerned about competitive landscape. \n*   Avoid introductions to seed-stage investors - we've moved beyond that.\n*   Prioritize introductions to partners with existing relationships in Southeast Asia.\n*   Validate any potential investor's understanding of the B2B payments space \u2013 many claim expertise but lack practical experience.\n*   I'm very direct and appreciate concise communication.  Avoid lengthy introductory emails.\n*   I\u2019m happy to provide a detailed pitch deck and financial projections upon request, but prefer an initial conversation to assess mutual fit.",
+    "locationAvailability": "I am currently based in San Francisco, California. I will be traveling to London and Amsterdam the week of November 13th for industry conferences and meetings.",
+    "introPreferences": "When making introductions, please adhere to the following:\n\n1.  **Investor Profile:**  Focus on Series B investors specializing in fintech with a minimum AUM of $500M.  Preference for firms with a strong international presence.\n2.  **Partner Stage:**  Target established companies with a proven track record and a significant customer base.\n3.  **Warm Introductions Only:**  Cold emails are immediately disregarded.  A personal connection and a clear understanding of NovaPay\u2019s value proposition are essential.\n4.  **Brief Context:**  Include a concise summary of why you believe the connection would be mutually beneficial.  Highlight the specific areas of synergy between NovaPay and the potential partner/investor.\n5.  **Avoid:**  Introductions to generalist investors or companies offering solutions that compete directly with NovaPay.",
+    "personalPreferences": "I prefer to connect via LinkedIn initially.  I\u2019m responsive to email, but often prefer a quick phone call to discuss opportunities in more detail.  Please keep follow-up concise and value-driven.",
+    "meetingAndSchedulingPreferences": "I am generally flexible with scheduling, but prefer meetings to be scheduled with at least 24 hours\u2019 notice."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 28.37106704711914,
+      "input_tokens": 793,
+      "output_tokens": 1551,
+      "problems": []
+    }
+  ],
+  "success": true
+}

@@ -1,0 +1,63 @@
+{
+  "id": 894,
+  "archetype": "Real Estate & Tech Hybrid Founder",
+  "given_name": "Naledi Jansen",
+  "style_version": 55,
+  "archetypes_version": 151,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Naledi Jansen is a 34-year-old founder bridging the gap between traditional real estate development and proptech. She founded 'TerraNova Living,' a company focused on building sustainable, tech-integrated micro-communities \u2013 essentially, optimized co-living spaces geared towards digital nomads and remote workers. Her distinctive career detail is a prior life as a data scientist specializing in urban planning, which informs her data-driven approach to site selection and community design. She's currently raising a Series A round to scale TerraNova Living nationally and is actively seeking strategic partnerships with construction tech companies and hospitality brands. She's highly analytical, focused on ROI, and believes in the power of community building to drive sustainable growth. She's also deeply committed to ESG principles.",
+    "positioning": "Naledi Jansen is the Founder & CEO of TerraNova Living, a next-generation real estate development company focused on creating vibrant, tech-enabled micro-communities. Leveraging a unique background in data science and urban planning, Naledi identifies and develops properties optimized for modern lifestyles \u2013 specifically catering to the growing demand for flexible, sustainable living solutions. TerraNova Living isn't just building buildings; we're cultivating communities driven by shared experiences and smart technology. We\u2019re currently expanding nationally and are seeking partners who share our vision for the future of housing. Connecting now offers the opportunity to be part of a rapidly growing company poised to disrupt the real estate landscape.",
+    "background": "- **Founder & CEO, TerraNova Living** (2021 \u2013 Present): Led all aspects of company formation, fundraising (Seed round completed 2022), property acquisition, development, and operations. Oversaw the successful launch of two pilot micro-community locations in Austin, TX and Denver, CO. Achieved 95% occupancy rates within 6 months of launch. \n- **Data Scientist, CityZenith Urban Analytics** (2018 \u2013 2021): Developed predictive models for urban growth and infrastructure planning. Specialized in geospatial analysis, leveraging data to optimize land use and resource allocation. Led a project resulting in a 15% improvement in public transportation efficiency for the city of Portland, OR.\n- **Urban Planning Consultant, HDR** (2016 \u2013 2018): Assisted in the development of comprehensive urban plans, focusing on sustainability and community engagement. Conducted site feasibility studies and prepared environmental impact assessments.\n- **Education:** Master of Science in Data Science, University of California, Berkeley (2018); Bachelor of Science in Urban Studies, Stanford University (2016)\n- **Skills:** Python, R, SQL, GIS Software (ArcGIS, QGIS), Data Visualization (Tableau, Power BI), Real Estate Development, Project Management, Financial Modeling, Urban Planning, Community Building, ESG Principles.\n- **Certifications:** LEED Green Associate, Certified Data Science Professional (CDSP)",
+    "lookingFor": "## Investors\n- Series A investors with a focus on proptech, real estate, and sustainable development.\n- Investment amounts ranging from $5M - $10M.\n- Investors with a long-term vision and a commitment to ESG principles.\n\n## Strategic Partners\n- Construction tech companies specializing in modular construction, smart home integration, and sustainable building materials.\n- Hospitality brands interested in co-branding opportunities and operational partnerships.\n- Landowners with suitable properties for micro-community development (urban infill sites preferred).\n\n## Mentors & Advisors\n- Experienced real estate developers with a track record of successful scaling.\n- Experts in community management and resident experience.",
+    "notes": "- Naledi is highly data-driven and expects concrete metrics in all discussions.\n- She's a strong advocate for sustainable development and will prioritize partners who share her values.\n- She responds best to concise, well-researched communications.\n- Previous conversations indicated a slight aversion to overly aggressive sales tactics.\n- She is very focused on ROI and long-term value creation.\n- She\u2019s actively tracking competitor activity in the co-living and micro-unit space.",
+    "locationAvailability": "Based in Austin, Texas, but open to remote meetings and travel for strategic opportunities. Willing to consider projects nationally.",
+    "introPreferences": "## Hard Requirements\n- Introductions to Series A investors actively deploying capital in the proptech space.\n- Connections to CEOs or VPs of construction tech companies focused on modular building.\n- Individuals with a demonstrated track record of successful real estate development scaling.\n\n## Soft Preferences\n- Introductions from mutual connections with a strong understanding of the real estate or technology industries.\n- Advisors with experience in community building and resident experience.\n- Avoid introductions to individuals solely offering marketing or PR services.",
+    "personalPreferences": "Naledi prefers direct communication and appreciates a clear, concise approach. She is most responsive to emails and LinkedIn messages. She's a firm believer in building genuine relationships before discussing business.",
+    "meetingAndSchedulingPreferences": "Prefers 30-minute introductory calls to assess potential synergies. Generally available for meetings during Eastern Time business hours."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 17.597177028656006,
+      "input_tokens": 765,
+      "output_tokens": 1191,
+      "problems": [
+        "background: possible truncation (ends with '...s:** LEED Green Associate')"
+      ]
+    },
+    {
+      "attempt": 2,
+      "elapsed_s": 15.4600248336792,
+      "input_tokens": 765,
+      "output_tokens": 1085,
+      "problems": []
+    }
+  ],
+  "success": true
+}

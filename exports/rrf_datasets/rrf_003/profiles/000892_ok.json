@@ -1,0 +1,54 @@
+{
+  "id": 892,
+  "archetype": "Global Operator, Multi-Stage Experience",
+  "given_name": "Priya Fernandez",
+  "style_version": 54,
+  "archetypes_version": 150,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Priya Fernandez is a seasoned financial operations leader with a strong background in scaling tech companies internationally, particularly in the FinTech space. Her distinctive career detail is a successful turnaround of a struggling European expansion for a US-based payments company. She\u2019s currently focused on advising early-stage FinTechs on global expansion and building robust compliance frameworks. She\u2019s looking for connections with seed/Series A founders needing operational expertise, and potential board positions at companies with high growth potential. She's very direct and values efficiency; she dislikes overly formal networking and prefers getting straight to the point about mutual value.",
+    "positioning": "Priya Fernandez is a globally-minded finance executive specializing in scaling FinTech operations. Having successfully navigated complex international regulatory landscapes and built high-performing teams across multiple continents, she now dedicates her expertise to guiding early-stage companies through the challenges of global expansion. Priya\u2019s proven track record includes a pivotal role in restructuring and revitalizing a failing European launch for a leading US payments provider, demonstrating her ability to deliver results under pressure. She is currently available for advisory roles and board positions where her strategic insight and operational prowess can accelerate growth and mitigate risk. Connecting with Priya now unlocks access to invaluable experience at a critical inflection point for the FinTech industry.",
+    "background": "- **Chief Operating Officer, NovaPay (2020 \u2013 2023):** Led all operational aspects of a rapidly growing cross-border payments platform, overseeing finance, legal, compliance, and customer support. Scaled operations from 5 to 25 countries, managing a team of 150+ professionals.\n- **VP, International Finance, SecureTransact (2017 \u2013 2020):** Spearheaded the turnaround of the company\u2019s struggling European expansion, implementing new financial controls, restructuring the team, and achieving profitability within 18 months.\n- **Director of Finance, GlobalTech Solutions (2013 \u2013 2017):** Managed financial planning and analysis for a SaaS company expanding into the APAC region. Developed and implemented budgeting processes, forecasting models, and key performance indicators.\n- **Senior Financial Analyst, Zenith Capital (2010 \u2013 2013):** Conducted due diligence on potential investments in technology companies. Prepared financial models and valuation analyses.\n- **Education:** MBA, Harvard Business School (2010); BSc, Finance, University of Pennsylvania (2008)\n- **Certifications:** Certified Public Accountant (CPA); Certified Management Accountant (CMA)\n- **Skills:** Financial Modeling, International Finance, Regulatory Compliance (KYC/AML), Team Leadership, Strategic Planning, Budgeting & Forecasting, Cross-Border Payments, Risk Management, M&A Due Diligence, SaaS Metrics\n- **Languages:** English (Native), Spanish (Fluent), French (Conversational)",
+    "lookingFor": "## Investment Opportunities\n- Seed and Series A stage FinTech companies focused on cross-border payments, digital wallets, or embedded finance.\n- Companies with a clear global expansion strategy and a strong technology foundation.\n\n## Advisory Roles\n- Opportunities to serve as a strategic advisor to early-stage FinTechs, providing guidance on financial operations, regulatory compliance, and international growth.\n\n## Board Positions\n- Board seats at companies with high growth potential and a need for experienced financial leadership.\n\n## Strategic Partnerships\n- Connections with legal firms specializing in FinTech regulations in key international markets (Europe, Asia, Latin America).",
+    "notes": "- Priya is very direct and prefers concise communication. Avoid lengthy introductions or overly promotional pitches.\n- She is highly analytical and values data-driven decision-making.\n- Previously expressed frustration with networking events that lack a clear purpose.\n- She prioritizes companies with strong ethical standards and a commitment to regulatory compliance.\n- Highly responsive to direct messages outlining specific opportunities or requests for advice.\n- She\u2019s particularly interested in companies disrupting traditional banking models.\n- Has a strong network within the European FinTech ecosystem.",
+    "locationAvailability": "Based in London, UK, but open to remote collaboration and travel as needed.",
+    "introPreferences": "## Hard Requirements\n- Introductions to founders/CEOs of Seed/Series A FinTech companies actively expanding internationally.\n- Connections with investors specializing in FinTech with a demonstrated track record of supporting global growth.\n\n## Soft Preferences\n- Individuals with a strong understanding of regulatory compliance in the FinTech space.\n- Introductions should be concise and clearly articulate the mutual value proposition.\n- Avoid introductions to individuals solely focused on sales or marketing; Priya prioritizes operational and financial expertise.",
+    "personalPreferences": "Priya prefers direct communication and appreciates efficiency. She responds best to concise messages that clearly state the purpose of the connection. LinkedIn is her preferred platform for professional networking.",
+    "meetingAndSchedulingPreferences": "Prefers virtual meetings initially, followed by in-person meetings if a strong connection is established. Generally available for meetings during UK business hours."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 17.51851773262024,
+      "input_tokens": 766,
+      "output_tokens": 1062,
+      "problems": []
+    }
+  ],
+  "success": true
+}

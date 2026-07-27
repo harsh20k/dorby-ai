@@ -1,0 +1,54 @@
+{
+  "id": 868,
+  "archetype": "Healthcare AI Founder, Storyteller",
+  "given_name": "Layla Yamamoto",
+  "style_version": 53,
+  "archetypes_version": 147,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Layla Yamamoto is the founder and CEO of \u2018Synapse Insights\u2019, a pre-seed healthcare AI startup focused on predictive analytics for early sepsis detection in hospital ICUs. She previously worked as a data scientist at a major pharmaceutical company, but became frustrated with the slow pace of innovation and the lack of direct patient impact. Her distinctive career detail is a background in narrative medicine \u2013 she completed a fellowship focused on the intersection of storytelling and clinical practice \u2013 which heavily influences her approach to communicating the complex technical aspects of her AI solution. She's currently fundraising, seeking strategic advisors, and focused on pilot program partnerships with leading hospital systems. She understands that technical brilliance alone isn't enough; she needs to convince stakeholders that her AI isn\u2019t just *accurate*, but *trustworthy* and genuinely improves patient outcomes. She\u2019s particularly passionate about addressing healthcare disparities and ensuring equitable access to cutting-edge technology.",
+    "positioning": "Layla Yamamoto is a healthcare AI founder leveraging the power of predictive analytics to revolutionize sepsis management in critical care. As CEO of Synapse Insights, she leads a team dedicated to developing and deploying AI solutions that empower clinicians to intervene earlier, improve patient outcomes, and reduce healthcare costs. With a unique background blending data science and narrative medicine, Layla excels at translating complex technical concepts into compelling stories that build trust and drive adoption. She\u2019s currently focused on securing seed funding to scale pilot programs and expand the platform\u2019s capabilities, and is actively seeking partnerships with hospitals committed to innovation and patient-centered care. Layla believes AI has the potential to transform healthcare, but only if deployed responsibly and with a deep understanding of the human element.",
+    "background": "- **Founder & CEO, Synapse Insights** (Jan 2023 \u2013 Present)\n\t- Led all aspects of startup development, including product vision, fundraising, team building, and strategic partnerships.\n\t- Developed a proprietary AI algorithm for early sepsis detection utilizing time-series data from ICU monitors and electronic health records.\n\t- Secured initial pre-seed funding of $250K from angel investors.\n\t- Technologies: Python, TensorFlow, PyTorch, AWS, SQL, EHR integration APIs (HL7, FHIR).\n\n- **Data Scientist, NovaPharm Pharmaceuticals** (June 2019 \u2013 Dec 2022)\n\t- Developed and implemented machine learning models for drug target identification and clinical trial optimization.\n\t- Led data analysis for Phase II clinical trials, resulting in a 15% improvement in patient recruitment efficiency.\n\t- Collaborated with cross-functional teams to translate data insights into actionable business strategies.\n\t- Technologies: R, Python, Scikit-learn, Statistical Modeling, Data Visualization (Tableau, Power BI).\n\n- **Fellow, Institute for Narrative Medicine** (Sept 2018 \u2013 May 2019)\n\t- Completed a year-long fellowship focused on the intersection of storytelling, patient experience, and clinical practice.\n\t- Developed and delivered workshops on narrative communication for medical professionals.\n\t- Published research on the impact of patient narratives on physician empathy and decision-making.\n\n- **Education:**\n\t- **PhD, Biomedical Engineering, Stanford University** (2015 \u2013 2019)\n\t- **BS, Biology, Massachusetts Institute of Technology (MIT)** (2011 \u2013 2015)\n\n- **Skills:** Machine Learning, Deep Learning, Predictive Analytics, Data Mining, Statistical Modeling, Data Visualization, Narrative Communication, Healthcare Informatics, Sepsis Management, Clinical Workflow Optimization, Fundraising, Leadership, Team Management.",
+    "lookingFor": "- **Strategic Advisors:** Seeking experienced healthcare entrepreneurs and AI experts to provide guidance on scaling Synapse Insights and navigating the regulatory landscape.\n- **Potential Hospital Partners:** Actively seeking hospitals interested in piloting the sepsis detection AI platform and collaborating on research studies.\n- **Seed Investors:** Targeting venture capital firms specializing in healthcare AI with a focus on early-stage investments ($1M - $3M).\n- **AI/ML Engineers:** Looking to expand the engineering team with talented individuals proficient in TensorFlow, PyTorch, and cloud computing.\n- **Healthcare Thought Leaders:** Interested in connecting with individuals who are passionate about improving patient care through innovative technology.\n- **Networking:** Open to connecting with other founders in the healthcare space to share insights and best practices.\n- **Mentorship:** Seeking mentorship from experienced CEOs who have successfully scaled healthcare startups.",
+    "notes": "- Layla is a compelling speaker and is actively seeking opportunities to present at industry conferences and events.\n- Her narrative medicine background is a significant differentiator; she\u2019s excellent at explaining complex AI concepts in a relatable way.\n- Currently prioritizing partnerships with hospitals that demonstrate a commitment to diversity, equity, and inclusion.\n- Recently completed a successful pilot program at a small community hospital with promising results.\n- Very focused on responsible AI development and ethical considerations in healthcare.",
+    "locationAvailability": "Layla Yamamoto is currently based in San Francisco, CA. She is open to travel for meetings and conferences, and is considering relocating to Boston or New York City in the future to be closer to potential investors and partners.",
+    "introPreferences": "- **Hard Requirements:** Introductions should be to individuals with decision-making authority (e.g., hospital administrators, VCs, heads of innovation).\n- **Hard Requirements:** Introductions should be personalized and highlight the relevance of Synapse Insights to the recipient\u2019s specific interests.\n- **Soft Preferences:** Prefer warm introductions with a brief context provided by the connector.\n- **Soft Preferences:** Avoid introductions to individuals solely focused on sales or marketing roles (looking for strategic partners/investors).\n- **Soft Preferences:**  Introductions to people who have experience with sepsis management or predictive analytics in healthcare are highly valued.\n- **Avoid:** Cold emails or LinkedIn connection requests without a personalized message.",
+    "personalPreferences": "Layla prefers direct and concise communication. She is most responsive to messages sent via LinkedIn or email. She values authenticity and transparency in all interactions.",
+    "meetingAndSchedulingPreferences": "- Prefers short, focused meetings (30-45 minutes).\n- Always appreciates a brief agenda sent in advance.\n- Happy to do virtual meetings or travel for in-person discussions."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 24.111873149871826,
+      "input_tokens": 735,
+      "output_tokens": 1338,
+      "problems": []
+    }
+  ],
+  "success": true
+}

@@ -1,0 +1,54 @@
+{
+  "id": 946,
+  "archetype": "AI-Driven SMB Platform Founders",
+  "given_name": "Aiko Nkosi",
+  "style_version": 58,
+  "archetypes_version": 159,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Aiko Nkosi is a repeat founder currently building 'FlowState,' a financial forecasting and cash flow management platform specifically for e-commerce SMBs. Her distinctive career detail is a prior successful exit in the logistics space \u2013 she built a route optimization SaaS that was acquired by a larger player. This gives her operational understanding of SMB pain points *and* experience navigating acquisitions. She's currently focused on seed fundraising, expanding her core team with strong AI/ML engineers, and establishing key partnerships with e-commerce platforms (Shopify, WooCommerce, etc.). She's highly data-driven, a strong communicator, and very focused on demonstrable ROI for her customers. She's ambitious, but grounded in practical experience. She\u2019s looking for investors who understand the nuances of the SMB market and can provide strategic guidance, as well as engineering talent specializing in time-series forecasting and anomaly detection.",
+    "positioning": "I'm Aiko Nkosi, founder and CEO of FlowState, an AI-powered financial forecasting platform built to empower e-commerce businesses. We\u2019re addressing a critical gap in the market: accurate, accessible cash flow visibility for SMBs drowning in spreadsheets and lagging indicators. Having previously built and exited a successful logistics SaaS company, I\u2019ve seen firsthand the operational challenges that keep small business owners up at night. \n\nFlowState isn\u2019t just another budgeting tool; it leverages machine learning to predict future revenue, identify potential cash flow bottlenecks *before* they happen, and provide actionable insights to optimize working capital. We\u2019re seeing incredible early traction, with beta users reporting a 15-20% improvement in cash flow forecasting accuracy and a significant reduction in manual financial analysis time. \n\nI'm passionate about democratizing access to sophisticated financial tools and believe that AI can be a game-changer for the SMB landscape. I\u2019m actively seeking strategic investors and talented engineers to help us scale FlowState and become the go-to financial partner for e-commerce entrepreneurs. I'm particularly interested in connecting with individuals who have a deep understanding of the SaaS space, SMB financing, and the evolving world of AI-driven financial technology. Let\u2019s connect and explore how we can build the future of SMB finance together.",
+    "background": "- **FlowState, CEO & Founder** (2023 - Present)\n   * Spearheaded the vision, strategy, and execution of FlowState, an AI-powered financial forecasting platform for e-commerce SMBs.\n   * Led seed fundraising efforts, currently in progress with a target of $3M.\n   * Built and managed a remote team of 5, including a lead data scientist and a full-stack engineer.\n   * Developed and launched a beta program with 20+ e-commerce businesses, achieving a 4.8/5 average user satisfaction rating.\n   * Defined core product features based on extensive customer discovery and market research.\n\n- **RouteWise, CEO & Founder** (2018 - 2022) *Acquired by LogiCorp*\n   * Founded RouteWise, a SaaS platform utilizing route optimization algorithms to improve delivery efficiency for last-mile logistics companies.\n   * Grew revenue from $0 to $2.5M ARR within 3 years, achieving profitability within 18 months.\n   * Secured $1.2M in seed funding from leading venture capital firms.\n   * Led a team of 15 engineers, sales representatives, and customer support specialists.\n   * Successfully negotiated and closed the acquisition of RouteWise by LogiCorp for an undisclosed amount.\n\n- **Data Analyst, Amazon** (2016 - 2018)\n   * Analyzed large datasets to identify trends and opportunities for improving operational efficiency within Amazon\u2019s fulfillment network.\n   * Developed and implemented data-driven solutions that resulted in a 5% reduction in shipping costs.\n   * Collaborated with cross-functional teams to define key performance indicators (KPIs) and track progress against goals.\n   * Proficient in SQL, Python, and data visualization tools such as Tableau.\n\n- **Education:**\n   * **Stanford University**, MBA (2014 - 2016)\n   * **Massachusetts Institute of Technology (MIT)**, BS in Computer Science (2010 - 2014) \u2013 *Magna Cum Laude*.\n\n- **Skills:** SaaS, Financial Modeling, Machine Learning, Data Analysis, Route Optimization, Fundraising, Team Leadership, Go-to-Market Strategy, E-commerce, Python, SQL, Tableau, AWS.",
+    "lookingFor": "- **Seed Investors:** Seeking investors with a strong track record of supporting early-stage SaaS companies, particularly in the SMB fintech space. Target investment: $3M.\n- **AI/ML Engineers:** Specifically, engineers with experience in time-series forecasting, anomaly detection, and model deployment.\n- **Introductions to E-commerce Platform Executives:**  Seeking introductions to key decision-makers at Shopify, WooCommerce, BigCommerce, and similar platforms for potential integration partnerships.\n- **Mentorship:**  Open to connecting with experienced founders who have successfully scaled SMB SaaS businesses.\n- **Strategic Advisors:**  Looking for advisors with expertise in financial forecasting, cash flow management, and the e-commerce landscape.",
+    "notes": "Aiko is highly focused on quantifiable results and demonstrable ROI. She's a very direct communicator and values transparency. She\u2019s still actively refining her pitch deck and fundraising strategy, so constructive feedback is welcome.  She\u2019s particularly sensitive to introductions that are purely speculative or lack a clear value proposition. She's had a lot of inbound from generalist investors, so introductions to *specialists* in SMB fintech will be most impactful.  She's very busy, so concise and targeted introductions are preferred. She recently presented at a small fintech conference and received positive feedback on her product demo.",
+    "locationAvailability": "Aiko is based in San Francisco, California, but is fully open to remote collaboration and travel. While she prefers a hybrid work model for her team, she recognizes the benefits of remote work and is comfortable with fully distributed teams.",
+    "introPreferences": "- **Hard Requirements:**\n  * **Focus on SMB Fintech:** Introductions should be to individuals with a clear understanding of the challenges and opportunities within the SMB financial technology market.\n  * **Investment Capacity:** For investor introductions, a minimum of $500K investment capacity is preferred.\n  * **Relevant Expertise:** For potential advisors or mentors, prior experience scaling a similar SaaS business is essential.\n\n- **Soft Preferences:**\n  * **Concise Introductions:** Keep introductions brief and focused on the mutual value proposition. A short email summarizing the connection is ideal.\n  * **Highlight RouteWise Exit:** Emphasize Aiko\u2019s prior successful exit with RouteWise to establish credibility and demonstrate her track record.\n  * **Avoid \u2018Warm\u2019 Introductions Without Context:**  A warm introduction is appreciated, but only if the introducer has taken the time to understand FlowState and the specific needs of Aiko.\n  * **Don't Oversell:** Aiko prefers a straightforward and honest approach. Avoid hyperbole or exaggerated claims.",
+    "personalPreferences": "Aiko is a quick and efficient communicator and appreciates directness. She enjoys discussing data-driven insights and is always eager to learn from others. She's a keen cyclist and enjoys spending her free time exploring the California coastline.",
+    "meetingAndSchedulingPreferences": "Aiko is generally available for meetings on Tuesdays, Wednesdays, and Thursdays. She prefers a 30-minute initial call to assess mutual fit. Please provide at least 24 hours\u2019 notice when requesting a meeting, and be mindful of the Pacific Time Zone (PST)."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 24.90086817741394,
+      "input_tokens": 736,
+      "output_tokens": 1648,
+      "problems": []
+    }
+  ],
+  "success": true
+}

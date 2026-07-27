@@ -1,0 +1,63 @@
+{
+  "id": 185,
+  "archetype": "AI/Agentic Workflow Builder & Consultant",
+  "given_name": "Olivia Kaur",
+  "style_version": 12,
+  "archetypes_version": 31,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Olivia Kaur is a 32-year-old specialist in building and deploying autonomous AI agents for enterprise workflows. Her distinctive career detail is a brief but impactful stint at a DARPA-funded research lab focused on swarm intelligence, giving her a unique perspective on emergent behavior in complex systems. She\u2019s now the founder of \u2018SynapseFlow\u2019, a company building a no-code platform to allow business analysts and domain experts to create and manage agentic workflows without needing extensive coding knowledge. She\u2019s currently seeking seed funding and strategic partnerships with companies possessing large, complex data sets and a clear need for automation. She\u2019s *very* technically proficient but focused on making AI accessible, hence the no-code platform. She's slightly wary of 'AI hype' and prioritizes demonstrable ROI for her clients. She's located in Boston, but willing to travel to key tech hubs.",
+    "positioning": "I'm Olivia Kaur, Founder and CEO of SynapseFlow. We\u2019re building the future of work, one autonomous agent at a time. SynapseFlow is a no-code platform that empowers businesses to design, deploy, and manage sophisticated agentic workflows \u2013 essentially, giving your data the ability to *do* things, automatically. We\u2019ve identified a significant gap in the market: most AI/ML initiatives struggle to move beyond proof-of-concept due to the complexity of implementation and the shortage of skilled engineers. SynapseFlow solves this by abstracting away the technical complexities, allowing domain experts to leverage the power of AI without writing a single line of code. We\u2019re currently in the late seed stage, having demonstrated strong initial traction with pilot programs in the financial services and supply chain industries. Our platform has already automated key processes, resulting in measurable efficiency gains for our early adopters. We're particularly strong in building agents that can handle unstructured data \u2013 a common pain point for many organizations. I\u2019m passionate about democratizing access to AI and believe SynapseFlow is uniquely positioned to become the leading platform for agentic workflow automation. I'm actively seeking connections with investors who understand the potential of this space and strategic partners who can help us scale and expand our reach.",
+    "background": "- **Founder & CEO, SynapseFlow** (2023 \u2013 Present)\n    * Led all aspects of company creation, from initial concept and fundraising to product development and go-to-market strategy.\n    * Developed and launched SynapseFlow\u2019s no-code agentic workflow platform.\n    * Secured pilot programs with Fortune 500 companies in key target industries.\n    * Built and managed a small, high-performing team of engineers and product designers.\n- **Research Scientist, Stellar Dynamics Lab (DARPA-funded)** (2020 \u2013 2022)\n    * Conducted research on swarm intelligence and emergent behavior in complex systems.\n    * Developed novel algorithms for distributed decision-making and coordination.\n    * Published research findings in peer-reviewed journals and presented at international conferences.\n- **Data Scientist, Quantify Capital** (2018 \u2013 2020)\n    * Developed and deployed machine learning models for algorithmic trading.\n    * Analyzed large datasets to identify trading opportunities and optimize portfolio performance.\n    * Collaborated with engineers to integrate models into production systems.\n- **Education:**\n    * PhD, Computer Science, Massachusetts Institute of Technology (MIT) (2018)\n    * BS, Mathematics, Stanford University (2014)\n- **Skills:** Python, TensorFlow, PyTorch, LangChain, Agentic Workflow Design, Machine Learning, Deep Learning, Natural Language Processing (NLP), Data Analysis, Statistical Modeling, Swarm Intelligence, No-Code Platform Development.",
+    "lookingFor": "I\u2019m currently focused on securing seed funding to accelerate SynapseFlow\u2019s growth and expand our platform capabilities. I\u2019m looking to connect with:\n\n* **Seed-stage investors** with a focus on AI, automation, and SaaS.\n* **Founders and executives** at companies with large, complex data sets and a clear need for intelligent automation (particularly in financial services, supply chain, and healthcare).\n* **Potential strategic partners** who can provide access to new markets or complementary technologies.\n* **Experienced advisors** with expertise in scaling early-stage startups.\n\nI\u2019m particularly interested in introductions to investors who have a strong understanding of the agentic AI landscape and a proven track record of supporting successful AI companies. Geographic preference: US-based investors, but open to international opportunities.\n\nI'm also keen to discuss potential integration partnerships with companies offering complementary data analytics or workflow management solutions.",
+    "notes": "Olivia is incredibly sharp and articulate; she clearly understands the technical details of her platform but is equally adept at explaining its value proposition to a non-technical audience. She\u2019s very pragmatic and focused on delivering tangible results. She expressed some skepticism towards the current AI hype cycle and emphasized the importance of demonstrating ROI. She mentioned that she's been approached by several larger companies interested in acquiring SynapseFlow, but she's determined to remain independent and build a lasting company. Initial conversations suggest a strong work ethic and a commitment to building a high-quality product. She recently presented at the AI Summit in Boston, generating significant interest in SynapseFlow. She's actively monitoring competitor activity, particularly in the no-code AI space.",
+    "locationAvailability": "I am currently based in Boston, Massachusetts, and am open to travel to other major tech hubs as needed. I am not currently considering relocation.",
+    "introPreferences": "- **Hard Requirements:** Introductions should be to individuals with decision-making authority (e.g., partners at VC firms, C-level executives).\n- **Soft Preferences:** I appreciate concise and well-crafted introductions that highlight the specific relevance of SynapseFlow to the recipient's interests.\n- **Intro Style:** Please briefly explain my background and the problem SynapseFlow solves, then clearly state what I'm hoping to achieve with the introduction (e.g., 'Olivia is seeking feedback on her seed round deck' or 'Olivia would like to explore potential partnership opportunities').\n- **Avoid:** Introductions to junior-level employees or individuals who are unlikely to be interested in AI/automation solutions.",
+    "personalPreferences": "I prefer to communicate via email initially, followed by a brief phone call if there's a good fit. I\u2019m generally responsive, but please allow up to 24 hours for a reply.",
+    "meetingAndSchedulingPreferences": "- I prefer short, focused meetings (30-45 minutes) with a clear agenda.\n- I\u2019m comfortable with video conferencing (Zoom, Google Meet) or phone calls.\n- Please send a brief overview of the meeting topic and any relevant materials in advance."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 20.57090187072754,
+      "input_tokens": 800,
+      "output_tokens": 1276,
+      "problems": [
+        "background: possible truncation (ends with '...ogies, Project Management')"
+      ]
+    },
+    {
+      "attempt": 2,
+      "elapsed_s": 21.841928005218506,
+      "input_tokens": 800,
+      "output_tokens": 1428,
+      "problems": []
+    }
+  ],
+  "success": true
+}

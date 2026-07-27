@@ -1,0 +1,54 @@
+{
+  "id": 874,
+  "archetype": "Growth/Revenue Leader (SaaS/Tech)",
+  "given_name": "Omar Reyes",
+  "style_version": 53,
+  "archetypes_version": 148,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Omar Reyes is a recently transitioned VP of Sales, having successfully scaled a Series B SaaS company focused on marketing automation. He\u2019s now exploring advisory roles and angel investing, leveraging his deep understanding of the sales lifecycle and customer acquisition in the SaaS space. A distinctive career detail is that he's a passionate advocate for data-driven sales methodologies and has a side project developing a predictive lead scoring model. He\u2019s looking to connect with founders of early-stage SaaS companies, particularly those addressing pain points in B2B marketing and sales, and is open to both advisory positions and making small angel investments. He\u2019s very particular about the quality of connections and prioritizes those with demonstrable traction and a strong understanding of their target market.",
+    "positioning": "Omar Reyes is a results-oriented sales leader with a proven track record of building and scaling high-performing revenue teams within the SaaS industry. Having recently led sales at \u2018MarketSpark,\u2019 a marketing automation platform through a period of 300% revenue growth, I am now focused on leveraging my expertise to support and invest in the next generation of B2B technology companies. My core strengths lie in developing and implementing data-driven sales strategies, optimizing sales processes, and fostering strong customer relationships. I\u2019m particularly passionate about helping startups refine their go-to-market strategy and achieve sustainable, scalable growth. I am actively seeking opportunities to contribute as an advisor or angel investor to innovative companies poised for disruption.",
+    "background": "- **Vice President of Sales, MarketSpark (2019 - 2023):** Led a team of 40+ sales representatives, responsible for all revenue generation activities. Oversaw the development and execution of sales strategies, resulting in 300% revenue growth and expansion into new market segments. Implemented a new CRM system (Salesforce) and sales enablement platform (Outreach) to improve sales efficiency and effectiveness.\n- **Director of Sales, CloudSolutions Inc. (2016 - 2019):** Managed a team of 20 account executives focused on enterprise sales. Consistently exceeded sales quotas and achieved top performer status. Developed and delivered sales training programs to improve team performance.\n- **Account Executive, TechForward (2014 - 2016):** Responsible for generating new business and managing a portfolio of key accounts. Achieved 150% of quota in both years.\n- **Education:** MBA, Stanford University Graduate School of Business (2012 - 2014)\n- **Education:** B.S. in Business Administration, University of California, Berkeley (2008 - 2012)\n- **Skills:** Sales Management, SaaS Sales, B2B Sales, Strategic Planning, Revenue Operations, Salesforce, Outreach, HubSpot, Data Analysis, Predictive Modeling (Python, R), Lead Scoring, Customer Relationship Management, Negotiation, Public Speaking.\n- **Certifications:** Salesforce Certified Sales Cloud Consultant\n- **Projects:** Developing a proprietary predictive lead scoring model utilizing machine learning algorithms (personal project).\n- **Awards:** MarketSpark President\u2019s Club Award (2020, 2021, 2022)",
+    "lookingFor": "- **Advisory Roles:** Seeking board or advisory positions with early-stage SaaS companies (Series A/Seed) focused on B2B marketing and sales technologies.\n- **Angel Investment Opportunities:** Interested in making small angel investments ($25k - $100k) in promising startups with demonstrated traction and a clear path to profitability.\n- **Networking with Founders:** Connecting with founders who are building innovative solutions in the marketing and sales tech space.\n- **Industry Insights:** Seeking to learn from other experienced sales and marketing leaders about emerging trends and best practices.\n- **Potential Partnerships:** Exploring potential strategic partnerships between my portfolio companies and relevant organizations.\n- **Mentorship Opportunities:** Open to mentoring aspiring sales professionals.",
+    "notes": "- Omar is highly analytical and relies heavily on data to inform his decisions.\n- He's currently deep-diving into the AI-powered sales tools market.\n- Recent conversation with a VC firm highlighted his interest in companies solving the 'cold outreach' problem.\n- He\u2019s actively building out his angel investment portfolio and is prioritizing companies with strong female founders.\n- He\u2019s a big believer in the importance of sales enablement and is always looking for new tools and techniques to improve team performance.",
+    "locationAvailability": "Omar Reyes is currently based in San Francisco, California, and is open to occasional travel for advisory engagements or investment due diligence. He is not actively seeking relocation at this time.",
+    "introPreferences": "- **Hard Requirements:** Introductions should be to founders or key decision-makers at Series A/Seed stage SaaS companies with demonstrable revenue.\n- **Hard Requirements:**  Companies *must* be focused on B2B marketing or sales technology.\n- **Soft Preferences:**  Prioritize introductions to companies with a strong, data-driven culture.\n- **Soft Preferences:**  Introductions to companies with female or minority founders are highly encouraged.\n- **Avoid:**  Introductions to companies without a clear understanding of their target market.\n- **Avoid:**  Cold introductions \u2013 a warm connection or shared context is essential.\n- **Introduction Style:**  A concise and personalized introduction highlighting the potential synergy between Omar and the company is preferred.",
+    "personalPreferences": "- Prefers to connect via LinkedIn initially.\n- Responds best to concise and data-driven communication.\n- Values authenticity and transparency in all interactions.",
+    "meetingAndSchedulingPreferences": "- Please include a brief overview of the company and the specific reason for the connection request.\n- Happy to schedule a quick 15-20 minute introductory call."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 21.09352707862854,
+      "input_tokens": 736,
+      "output_tokens": 1212,
+      "problems": []
+    }
+  ],
+  "success": true
+}

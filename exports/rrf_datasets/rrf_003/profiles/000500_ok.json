@@ -1,0 +1,54 @@
+{
+  "id": 500,
+  "archetype": "Deep Tech/Robotics Investor",
+  "given_name": "Wei Mueller",
+  "style_version": 31,
+  "archetypes_version": 84,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Wei Mueller is a seasoned robotics engineer transitioning into a business development and strategy role within a rapidly scaling autonomous vehicle startup, 'NovaDrive'. Her distinctive career detail is a PhD focused on bio-inspired locomotion \u2013 specifically, how gecko adhesion can be applied to robotic climbing. This gives her a unique perspective on materials science and unconventional robotics solutions. She's now focused on forging partnerships with Tier 1 automotive suppliers and navigating the complex regulatory landscape for autonomous systems. She's looking to connect with investors who understand the long-term potential of robotics and are comfortable with the inherent technical risk, as well as potential strategic partners in the automotive and logistics industries. She's a data-driven, pragmatic engineer who's learning to 'speak the language' of business, and sometimes needs help translating complex technical details for non-technical audiences.",
+    "positioning": "Driven by a passion for translating cutting-edge robotics research into real-world applications, I\u2019m currently leading business development and strategic partnerships at NovaDrive, a company revolutionizing last-mile delivery with fully autonomous vehicles. My background is deeply rooted in the technical \u2013 a PhD in robotics focused on bio-inspired adhesion \u2013 but I\u2019m increasingly focused on building bridges between engineering innovation and commercial viability. I specialize in identifying and securing strategic partnerships, navigating complex regulatory hurdles, and communicating the value proposition of advanced robotics solutions to diverse stakeholders.\n\nAt NovaDrive, I\u2019m responsible for establishing key relationships with Tier 1 automotive suppliers, exploring joint development opportunities, and securing pilot programs with leading logistics providers. I\u2019m particularly interested in the intersection of robotics, materials science, and AI, and I believe that the future of autonomous systems lies in embracing unconventional approaches to locomotion and perception. I\u2019m eager to connect with investors, industry leaders, and fellow innovators who share this vision.\n\nI'm currently focused on scaling our pilot programs and building out a robust supply chain for our next-generation vehicle platform. I'm always open to discussing potential collaborations, sharing insights into the autonomous vehicle market, and exploring opportunities to accelerate the adoption of robotics technology.",
+    "background": "* **NovaDrive**, *Head of Business Development & Strategy* (2022 \u2013 Present)\n    * Spearheaded the development of strategic partnerships with three Tier 1 automotive suppliers, resulting in a 20% reduction in component costs.\n    * Led negotiations for pilot programs with two major logistics companies, securing commitments for 50 autonomous delivery vehicles.\n    * Developed and presented a comprehensive market entry strategy for NovaDrive\u2019s autonomous delivery solution, focusing on regulatory compliance and competitive landscape analysis.\n    * Managed a cross-functional team of engineers, legal counsel, and marketing professionals.\n* **Massachusetts Institute of Technology (MIT)**, *Postdoctoral Research Fellow* (2020 \u2013 2022)\n    * Conducted research on advanced materials for robotic adhesion, resulting in two peer-reviewed publications in leading robotics journals.\n    * Developed and tested novel adhesion mechanisms inspired by gecko feet, achieving a 50% increase in climbing force compared to existing technologies.\n    * Secured a $100,000 grant from the National Science Foundation to support research on bio-inspired robotics.\n* **Carnegie Mellon University**, *PhD, Robotics* (2016 \u2013 2020)\n    * Dissertation: \u201cBio-Inspired Adhesion for Robotic Climbing: Design, Modeling, and Control.\u201d\n    * GPA: 3.9/4.0\n    * Relevant Coursework: Robotics, Control Systems, Machine Learning, Materials Science, Optimization.\n* **University of California, Berkeley**, *BS, Mechanical Engineering* (2012 \u2013 2016)\n    * Graduated *Summa Cum Laude*.\n    * Relevant Coursework: Dynamics, Kinematics, Fluid Mechanics, Heat Transfer, CAD/CAM.\n* **Skills:** Robotics, Autonomous Vehicles, Business Development, Strategic Partnerships, Materials Science, Gecko Adhesion, Python, MATLAB, ROS, Machine Learning, Regulatory Compliance, Technical Communication, Grant Writing.",
+    "lookingFor": "I'm actively seeking connections with:\n\n* **Venture Capitalists:** Specifically, investors with a proven track record of investing in deep tech and robotics startups. I'm keen to discuss NovaDrive\u2019s Series B funding round and explore potential investment opportunities.\n* **Tier 1 Automotive Suppliers:**  I\u2019m looking to build stronger relationships with key suppliers to optimize our supply chain and explore joint development opportunities for next-generation autonomous vehicle components.\n* **Logistics and Delivery Companies:**  I\u2019m interested in identifying potential customers for our autonomous delivery solution and securing long-term contracts for pilot programs and commercial deployments.\n* **Robotics and AI Experts:** I welcome conversations with individuals who are pushing the boundaries of robotics and AI, particularly in the areas of perception, navigation, and control.\n\nIntroduce me to individuals who understand the complexities of the autonomous vehicle market and are passionate about the potential of robotics to transform the future of transportation and logistics. I\u2019m particularly interested in connecting with experts in regulatory affairs, materials science, and supply chain management.",
+    "notes": "Wei is incredibly bright and technically proficient, but still developing her 'pitch' for a broader audience. She can get lost in the technical details, so help her frame her explanations for non-engineers. She's very responsive and appreciates direct, concise communication. She recently completed a workshop on 'Executive Presence' and is actively working on improving her presentation skills.\n\nShe\u2019s particularly excited about the potential for gecko-inspired adhesion in extreme environments (space, underwater robotics) but is currently focused on the automotive application. *Do not* bring up the space applications unless she does. She\u2019s also a bit sensitive about the 'hype' around AI, preferring to focus on the practical applications of robotics. She had a frustrating conversation last week with an investor who kept pushing for a 'full AI stack' solution, which isn't NovaDrive's current focus. She\u2019s open to informational interviews but prioritizes connections that could lead to concrete partnerships or investment opportunities.",
+    "locationAvailability": "Wei is based in the Boston, MA area and is available for remote meetings. She is willing to travel to key industry events and potential partner locations.",
+    "introPreferences": "* **Hard Requirement:** Any introduction *must* mention her PhD work on bio-inspired adhesion \u2013 it\u2019s a core part of her unique value proposition.\n* **Soft Preference:** Introduce her as a 'business-minded engineer' rather than just an engineer. She\u2019s actively working to position herself as a bridge between technology and commerce.\n* **Do Not:** Overemphasize the 'research' aspect of her background. She wants to be seen as a strategic leader, not just a scientist.\n* **Information to Include:** Briefly highlight NovaDrive\u2019s traction (pilot programs, partnerships) and her specific role in securing those wins.\n* **Preferred Connection Type:** Warm introductions are highly preferred. Cold emails are unlikely to receive a response.\n* **Subject Line:** Please use a clear and concise subject line that includes both her name and NovaDrive.",
+    "personalPreferences": "Wei prefers email for initial contact and is generally responsive within 24 hours. She appreciates concise and well-structured communication.",
+    "meetingAndSchedulingPreferences": "Wei is in the Eastern Time Zone (ET). She\u2019s available for meetings most afternoons and prefers to use Google Meet or Zoom. Please send a calendar invite with a few proposed times."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 29.747540950775146,
+      "input_tokens": 823,
+      "output_tokens": 1597,
+      "problems": []
+    }
+  ],
+  "success": true
+}

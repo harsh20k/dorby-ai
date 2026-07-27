@@ -1,0 +1,54 @@
+{
+  "id": 678,
+  "archetype": "Spanish/European Founder, Seeking US Capital",
+  "given_name": "Lucas Mueller",
+  "style_version": 41,
+  "archetypes_version": 113,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Lucas Mueller is a 34-year-old Spanish founder and CEO of 'AuraView,' a computer vision startup focused on predictive maintenance for industrial wind turbines. He previously worked as a research engineer at a Fraunhofer Institute in Germany, specializing in sensor fusion and machine learning. This background gives him deep technical credibility. AuraView is gaining traction in the Spanish and Portuguese markets but needs US capital to scale internationally, particularly into the US and Canada. He's looking for Series A investors with experience in industrial IoT and a willingness to provide mentorship. He\u2019s open to relocating to the US, ideally the Boston area or Silicon Valley, if it helps accelerate growth. He's extremely data-driven and values direct communication. He\u2019s somewhat wary of \u2018spray and pray\u2019 investor approaches and prefers a focused, relationship-building strategy.",
+    "positioning": "I'm Lucas Mueller, CEO and founder of AuraView. We\u2019re revolutionizing wind turbine maintenance using cutting-edge computer vision and AI. Wind energy is critical for a sustainable future, but turbine downtime due to unexpected failures is a significant cost driver. AuraView solves this by providing real-time, predictive diagnostics \u2013 identifying potential issues *before* they cause outages. \n\nOur core technology analyzes visual data from drones inspecting turbine blades, combined with sensor data, to detect micro-cracks, erosion, and other anomalies invisible to the naked eye. This allows operators to schedule maintenance proactively, minimizing downtime and maximizing energy production. We are currently serving a growing base of wind farm operators across Spain and Portugal, demonstrating a 30% reduction in unscheduled maintenance costs for our clients. \n\nWe\u2019re now seeking $5 million in Series A funding to expand our sales and marketing efforts into North America and further develop our AI algorithms. We believe AuraView has the potential to become the industry standard for predictive wind turbine maintenance, and we\u2019re looking for partners who share our vision.",
+    "background": "* **CEO & Founder, AuraView** (Madrid, Spain) \u2013 2021 \u2013 Present\n    * Led all aspects of company development, from initial concept and fundraising to product launch and customer acquisition.\n    * Secured seed funding of \u20ac750k from angel investors and regional venture funds.\n    * Built and managed a team of 15 engineers, data scientists, and business development professionals.\n    * Oversaw the development and deployment of AuraView\u2019s core platform, achieving key performance indicators (KPIs) of 92% accuracy in anomaly detection.\n* **Research Engineer, Fraunhofer Institute for Production Technology and Automation IPA** (Stuttgart, Germany) \u2013 2018 \u2013 2021\n    * Conducted research in the field of sensor fusion and machine learning for industrial applications.\n    * Developed algorithms for real-time data analysis and predictive maintenance.\n    * Published research papers in peer-reviewed journals and presented findings at international conferences.\n    * Led a team of 3 researchers on a project focused on automated quality control in automotive manufacturing.\n* **Education:**\n    * **PhD, Computer Science** \u2013 Technical University of Munich (TUM), Germany \u2013 2018\n        * Dissertation: \u201cAdvanced Algorithms for Anomaly Detection in Industrial Sensor Data.\u201d\n    * **MSc, Electrical Engineering** \u2013 Universidad Polit\u00e9cnica de Madrid, Spain \u2013 2015\n    * **BSc, Electrical Engineering** \u2013 Universidad Polit\u00e9cnica de Madrid, Spain \u2013 2013\n* **Skills:** Computer Vision, Machine Learning, Deep Learning, Python, TensorFlow, PyTorch, Sensor Fusion, Data Analysis, Predictive Maintenance, Industrial IoT, Project Management, Team Leadership, German (Fluent), English (Native), Spanish (Native).",
+    "lookingFor": "I\u2019m actively seeking strategic investors and advisors to accelerate AuraView\u2019s growth and expansion into the North American market. Specifically, I'm looking for:\n\n* **Series A Investors:** We are raising $5 million to scale our operations, expand our sales team, and enhance our AI capabilities. Ideal investors will have a proven track record of investing in industrial IoT, AI, and renewable energy companies. We are particularly interested in firms with experience in the wind energy sector.\n* **Mentors with US Market Experience:** Guidance on navigating the US regulatory landscape, building a strong US-based team, and establishing strategic partnerships is invaluable. \n* **Potential Strategic Partners:** We are open to exploring partnerships with established players in the wind energy industry, such as turbine manufacturers, service providers, and energy companies. Collaborations focused on technology integration and joint market development are of particular interest.\n\n**Investor Profile:**\n    * **Investment Stage:** Series A, with potential for follow-on funding.\n    * **Investment Size:** $1M - $5M.\n    * **Industry Focus:** Industrial IoT, AI, Renewable Energy, Sustainability.\n    * **Geographic Focus:** US-based venture capital firms.\n\nI\u2019m also interested in connecting with individuals who can provide insights into the US wind energy market, including industry analysts, consultants, and potential customers.  I\u2019m open to relocating to the US, preferably Boston or the Bay Area, to facilitate these connections and build our presence.",
+    "notes": "Profile information sourced from Lucas Mueller\u2019s LinkedIn and company website. Confirmed his role as CEO/Founder of AuraView via company press releases.  He responded positively to an initial LinkedIn message expressing interest in his company.  He emphasized the importance of data-driven investment decisions and a long-term partnership approach. He has expressed a slight preference for introductions through mutual connections with a technical background. Avoid broad, unsolicited pitches \u2013 focus on demonstrating understanding of AuraView\u2019s technology and market opportunity.",
+    "locationAvailability": "Currently based in Madrid, Spain, but open to relocation to the US, specifically Boston or Silicon Valley, to support company expansion.",
+    "introPreferences": "When making introductions, please adhere to the following:\n\n* **Prioritize:** Introductions to Series A investors specializing in industrial IoT or renewable energy.\n* **Briefing:** Please send a brief introductory note highlighting the investor's relevant experience *before* making the connection.  I appreciate concise emails.\n* **Avoid:** Introductions to generalist investors or those with a demonstrated lack of interest in B2B technology.\n* **Focus:** Emphasize AuraView\u2019s technical differentiation and proven traction in the Spanish and Portuguese markets.\n* **Communication:** I prefer email as my primary mode of communication.  LinkedIn messaging is acceptable for initial contact.",
+    "personalPreferences": "Prefers morning meetings (CET).  Enjoys discussing the future of sustainable energy.",
+    "meetingAndSchedulingPreferences": "I am available for video calls and am flexible with scheduling, generally preferring 30-60 minute meetings. Please propose a few specific times, taking into account the time difference between Spain and the US."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 25.218284845352173,
+      "input_tokens": 785,
+      "output_tokens": 1472,
+      "problems": []
+    }
+  ],
+  "success": true
+}

@@ -1,0 +1,72 @@
+{
+  "id": 266,
+  "archetype": "Serial Founder, Multi-Vertical Explorer",
+  "given_name": "Takumi Wang",
+  "style_version": 16,
+  "archetypes_version": 44,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Takumi Wang is a serial founder who's had success in both hardware and SaaS, but *always* with a focus on enabling creator economies. His early career was in robotics, building tools for industrial designers, but he quickly pivoted to the software side seeing the bigger opportunity. He's currently building 'Muse', a platform that simplifies royalty splits and rights management for independent musicians and visual artists, but is simultaneously angel investing and advising a few other early-stage startups. He's relentlessly pragmatic, data-driven, and values efficiency. He's known for being direct, bordering on blunt, but always well-intentioned. He's currently focused on scaling Muse to $1M ARR and raising a seed round, while scouting for interesting pre-seed opportunities in the AI-powered creator tools space. A distinctive detail: he spent a year as a touring sound engineer *before* starting his first company, giving him deep empathy for the pain points of creators.",
+    "positioning": "I'm building Muse (museplatform.com), a royalty and rights management platform designed to empower independent creators. The problem is simple: managing splits, tracking usage, and ensuring fair payment in the creator economy is a fragmented, opaque mess. Existing solutions are either overly complex enterprise software or manual spreadsheets. Muse provides a streamlined, transparent, and automated solution. We\u2019re building the \u2018stripe for creators\u2019, focusing initially on musicians and visual artists. \n\nWe've achieved 200+ paying creators in the last 6 months, representing $50k+ MRR in royalties processed. Our wedge is a simple, intuitive split sheet functionality that solves an immediate pain point, and we\u2019re expanding into more comprehensive rights management features. Our ICP is the independent musician or visual artist generating $10k - $100k in annual revenue, actively collaborating with other creatives, and frustrated with existing royalty tracking methods. We\u2019re currently focused on building out our API integrations and expanding our marketing reach through targeted creator communities.",
+    "background": "* **Founder & CEO, Muse (2022 - Present):** Leading all aspects of product development, fundraising, and go-to-market strategy. Currently focused on scaling revenue, building out the team, and preparing for a seed round. Implemented a data-driven approach to feature prioritization, resulting in a 30% increase in user engagement.\n* **Angel Investor (2021 - Present):** Actively investing in and advising pre-seed and seed-stage startups, with a focus on creator economy and AI-driven tools. Portfolio includes 5 companies across music tech, visual art, and content creation.\n* **Co-founder & CTO, FormForge Robotics (2018 - 2021):** Led the technical development of a robotic arm designed for rapid prototyping in industrial design. Secured $1.5M in seed funding. Managed a team of 5 engineers. Drove the development of the core software stack and hardware integration. Oversaw the entire product lifecycle from MVP to production.\n* **Software Engineer, Filament Systems (2016 - 2018):** Developed and maintained firmware for advanced 3D printing systems. Contributed to the development of a proprietary slicing algorithm, resulting in a 15% improvement in print speed. Worked closely with hardware engineers to optimize system performance.\n* **Touring Sound Engineer (Freelance) (2015 - 2016):** Managed sound for live music performances. Gained firsthand experience with the challenges faced by musicians and independent artists. Developed strong problem-solving skills and an understanding of the creator workflow.\n* **BS, Robotics Engineering, Carnegie Mellon University (2012 - 2016):** Focused on mechatronics, control systems, and machine learning. Completed a senior design project involving the development of an autonomous navigation system for a mobile robot. Relevant coursework included linear algebra, calculus, and data structures. GPA: 3.8/4.0. Relevant certifications: Project Management Professional (PMP).",
+    "lookingFor": "I'm actively seeking connections with individuals who can help accelerate Muse's growth and expand my network within the creator economy. Specifically, I'm looking for:\n\n* **Investors:** Seed-stage VCs focused on fintech, creator economy, and SaaS.  I\u2019m particularly interested in firms with a strong track record of supporting early-stage companies and providing hands-on support.\n* **Operators:** Experienced leaders in growth marketing, product management, and engineering\u2014specifically those with experience scaling SaaS platforms.\n* **Founders:**  Other founders building innovative tools for creators, particularly in the AI space. I\u2019m always open to sharing learnings and exploring potential partnerships.\n* **Potential API partners:** Companies offering complementary tools or services that can integrate with Muse.\n\nI'm open to advisory roles in promising pre-seed startups.  I'm *not* currently looking for full-time employment opportunities but am always interested in exploring strategic alliances.",
+    "notes": "Takumi is laser-focused on Muse right now, but his angel investing is also a priority. He responds quickly to direct, concise messages. Avoid overly flowery language or lengthy pitches. He prioritizes data and demonstrable traction. \n\n* **Data Quality Warning:**  Muse's MRR is calculated based on royalties processed, *not* direct subscription revenue.  Clarify this if discussing metrics.\n* **Recent Conversation (10/26):** Discussed potential integration with a royalty collection society. Follow-up needed to connect him with our integrations lead.\n* **Intro Style:**  Keep it brief and highlight the mutual benefit.  'Takumi is building Muse to solve X for creators.  Thought you might find it interesting given your work in Y.'",
+    "locationAvailability": "I'm currently based in San Francisco, California, but I'm comfortable with remote communication and occasional travel for key meetings and conferences.",
+    "introPreferences": "* **Hard Requirements:** Investor must have a demonstrable track record of investing in creator economy or fintech startups. Operator must have experience scaling a SaaS business to $1M+ ARR. \n* **Soft Preferences:**  Connections with individuals who have a strong technical background and a deep understanding of the creator landscape. \n* **Intro Style:**  Direct and to-the-point. Avoid lengthy introductions or unnecessary fluff. Focus on the value proposition for both parties.  I prefer introductions via email with a clear subject line.  \n* **Avoid:**  Warm intros to 'generalist' investors or individuals without relevant experience.",
+    "personalPreferences": "I prefer to communicate via email or LinkedIn. I'm generally responsive, but I prioritize focused work blocks, so don't be surprised if there's a slight delay in my replies. I appreciate concise and well-structured communication. I typically don't check Slack/WhatsApp for business.",
+    "meetingAndSchedulingPreferences": "I use Calendly for scheduling: [https://calendly.com/takumiwang/30min]. Please book a slot directly rather than emailing me with availability."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 25.700824737548828,
+      "input_tokens": 802,
+      "output_tokens": 1480,
+      "problems": [
+        "meetingAndSchedulingPreferences: possible truncation (ends with '...m/takumiwang/15min-intro]')"
+      ]
+    },
+    {
+      "attempt": 2,
+      "elapsed_s": 31.641125917434692,
+      "input_tokens": 802,
+      "output_tokens": 1553,
+      "problems": [
+        "meetingAndSchedulingPreferences: possible truncation (ends with '...dly.com/takumiwang/30min]')"
+      ]
+    },
+    {
+      "attempt": 3,
+      "elapsed_s": 20.762553930282593,
+      "input_tokens": 802,
+      "output_tokens": 1514,
+      "problems": []
+    }
+  ],
+  "success": true
+}

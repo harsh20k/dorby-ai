@@ -1,0 +1,63 @@
+{
+  "id": 939,
+  "archetype": "Corporate to Startup Transition",
+  "given_name": "Leilani Mahmoud",
+  "style_version": 57,
+  "archetypes_version": 158,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Leilani Mahmoud is a former financial consultant at McKinsey, specializing in risk management for large banks. She spent 8 years there, becoming increasingly frustrated with the slow pace of change and lack of tangible impact. She\u2019s now the founder of \u2018Aura Compliance,\u2019 a RegTech startup focused on automating AML (Anti-Money Laundering) and KYC (Know Your Customer) processes for smaller fintech companies. Aura Compliance differentiates itself through its AI-powered anomaly detection and streamlined onboarding experience. She\u2019s highly data-driven, a bit impatient, and still operates with a very corporate mindset \u2013 she values efficiency, clear communication, and demonstrable ROI. She's currently raising a Seed round and is focused on scaling her engineering team. A key detail is that her initial seed funding came from a small, family office that is now pushing her to expand rapidly, sometimes faster than she's comfortable with, creating a slight tension she doesn\u2019t openly discuss.",
+    "positioning": "I founded Aura Compliance to revolutionize how fintechs approach regulatory compliance. The current landscape is dominated by expensive, complex solutions designed for traditional institutions. This leaves emerging fintechs vulnerable to fines and reputational damage, and stifles innovation. Aura Compliance delivers a fully automated, AI-powered AML/KYC platform specifically tailored for the needs of fast-growing, resource-constrained companies.\n\nOur core offering streamlines customer onboarding, transaction monitoring, and reporting, reducing compliance costs by up to 70%. We\u2019re currently focused on the Series A funding round, and have secured commitments for 60% of the target. Early traction has been strong, with 15 paying customers including BloomPay (a rapidly growing neobank) and NovaInvest (a micro-investing platform).  We've demonstrated a 30% month-over-month revenue growth over the last quarter.\n\nThe Aura Compliance team is comprised of experienced engineers, data scientists, and former compliance professionals. We\u2019re passionate about building a future where compliance empowers innovation, rather than hindering it.  We are uniquely positioned to capitalize on the burgeoning RegTech market, and are actively seeking strategic partnerships to expand our reach.",
+    "background": "- **Founder & CEO, Aura Compliance** (Jan 2022 \u2013 Present)\n    * Led all aspects of company formation, fundraising, product development, and go-to-market strategy.\n    * Secured seed funding of $750K from a family office specializing in fintech investments.\n    * Built and scaled a team of 8 engineers, data scientists, and compliance experts.\n    * Launched Aura Compliance platform, acquiring 15 paying customers within the first 18 months.\n    * Spearheaded development of proprietary AI algorithms for anomaly detection and risk scoring.\n\n- **Management Consultant, McKinsey & Company** (June 2014 \u2013 Dec 2021)\n    * Advised leading financial institutions on risk management, regulatory compliance, and operational efficiency.\n    * Led cross-functional teams to deliver complex projects with multi-million dollar impact.\n    * Developed and implemented AML/KYC frameworks for Tier 1 banks, ensuring compliance with global regulations.\n    * Recognized as a rising star within the firm, consistently exceeding performance expectations.\n    * Published internal research on the future of RegTech and its implications for the financial industry.\n\n- **Summer Analyst, Goldman Sachs** (June 2013 \u2013 August 2013)\n    * Supported the investment banking division in M&A transactions and capital markets activities.\n\n- **Education:**\n    * **Harvard Business School, MBA** (2012-2014), Dean's List\n    * **Massachusetts Institute of Technology (MIT), B.S. in Financial Engineering** (2008-2012), *Summa Cum Laude* \u2013  Recipient of the Charles Stark Draper Prize for outstanding undergraduate research.\n\n- **Skills:** AML/KYC, Regulatory Compliance, Risk Management, AI/Machine Learning, Fintech, Data Analysis, Project Management, Strategy Consulting, Financial Modeling.",
+    "lookingFor": "I\u2019m currently focused on building out the Aura Compliance team and securing our Series A funding. I\u2019m seeking connections with individuals who can provide strategic guidance and support in these areas.\n\nSpecifically, I'm looking for:\n\n* **Experienced Engineering Leaders:**  A VP of Engineering with a proven track record of scaling engineering teams in a fast-paced startup environment. Experience with cloud infrastructure (AWS, Azure, GCP) and data science pipelines is essential.\n* **Seed/Series A Investors:** Introductions to venture capital firms specializing in RegTech and fintech.  I'm particularly interested in firms with a strong understanding of the compliance landscape and a willingness to invest in long-term growth.\n* **Strategic Advisors:**  Individuals with deep expertise in the RegTech industry, particularly those with experience navigating regulatory challenges and building successful compliance solutions.  I\u2019m open to exploring advisory roles.\n* **Potential Partnerships:**  Connections to companies offering complementary technologies or services in the fintech ecosystem.  We are interested in exploring integration opportunities to enhance our platform.\n\nI'm also open to connecting with other founders building innovative solutions in the RegTech space. I value peer-to-peer learning and collaboration.  I am *not* currently looking for sales representatives or marketing consultants.",
+    "notes": "* Leilani is very direct and data-driven. She responds well to concise, well-articulated pitches. \n* She's currently navigating some pressure from her initial investor to accelerate growth, but is cautious about compromising on quality.  Don't push a 'growth at all costs' narrative.\n* She's a bit guarded about discussing her fundraising progress \u2013 best to ask general questions about company goals rather than specific numbers.\n* She recently attended the Fintech Connect conference in New York and is actively following up on leads from there. \n* Prefers to keep initial conversations focused on problem-solution fit, rather than lengthy introductions.  Keep it brief and impactful.",
+    "locationAvailability": "I am based in Boston, Massachusetts, but am comfortable with remote meetings and occasional travel to key industry events. I prioritize efficient use of time and prefer virtual meetings whenever possible.",
+    "introPreferences": "When making introductions to Leilani, please adhere to the following guidelines:\n\n* **Hard Requirements:** The person you introduce *must* have a demonstrable track record of success in their field. Vague promises or aspirational pitches will be dismissed.\n* **Soft Preferences:** I value individuals with a strong analytical mindset, a pragmatic approach to problem-solving, and a willingness to challenge conventional wisdom.\n* **Intro Style:** Keep the introduction concise and focused on the value proposition for Aura Compliance.  Highlight any relevant experience or expertise that aligns with our current needs (see \u2018Looking For\u2019 section).\n* **Avoid:**  Introducing individuals who are primarily focused on self-promotion or lack a clear understanding of the RegTech landscape.  Also, avoid lengthy introductions that bury the key information. \n* **Best Approach:** A short email with a clear subject line outlining the connection and a brief summary of the individual's relevant experience is preferred.",
+    "personalPreferences": "I prefer email for initial contact and am responsive during business hours.  I'm not a big fan of cold calls.",
+    "meetingAndSchedulingPreferences": "I generally prefer 30-minute meetings to maximize efficiency. Please send a calendar invite with a clear agenda. I'm typically available during weekday afternoons (EST).  I can be flexible, but please provide ample notice."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 23.866559982299805,
+      "input_tokens": 874,
+      "output_tokens": 1538,
+      "problems": [
+        "background: possible truncation (ends with '...Diligence, Python, R, SQL')"
+      ]
+    },
+    {
+      "attempt": 2,
+      "elapsed_s": 22.515477895736694,
+      "input_tokens": 874,
+      "output_tokens": 1604,
+      "problems": []
+    }
+  ],
+  "success": true
+}

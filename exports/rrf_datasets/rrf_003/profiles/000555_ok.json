@@ -1,0 +1,63 @@
+{
+  "id": 555,
+  "archetype": "Hospitality/SaaS Hybrid Founder",
+  "given_name": "Emeka Patel",
+  "style_version": 34,
+  "archetypes_version": 93,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Emeka Patel is a first-time founder in his early 30s. He spent nearly a decade working his way up in luxury hotel operations, specifically focusing on guest experience and revenue management. He became deeply frustrated with the fragmented and outdated software solutions hotels relied on, leading him to found 'Hostly,' a SaaS platform designed to streamline guest communication and personalize offers based on real-time data. He's seeking seed funding and strategic partnerships with hotels willing to be early adopters. A key, distinctive detail: he *personally* spent six months undercover as a hotel concierge, working shifts to deeply understand the pain points Hostly aims to solve \u2013 he frequently references this experience. He\u2019s very data-driven and slightly skeptical of \u2018fluff\u2019 in pitches.",
+    "positioning": "Emeka Patel is the Founder & CEO of Hostly, a SaaS platform revolutionizing guest engagement for the hospitality industry. Leveraging a decade of experience in luxury hotel operations, I identified a critical gap in the market: the need for a unified, data-driven approach to guest communication and personalization. Hostly empowers hotels to anticipate guest needs, proactively resolve issues, and maximize revenue through targeted offers. Currently focused on scaling our pilot program and securing seed funding, I'm passionate about building solutions that genuinely improve both the guest and hotelier experience.",
+    "background": "* **Founder & CEO, Hostly** (2023 - Present) \u2013 Leading all aspects of product development, fundraising, and go-to-market strategy.\n* **Revenue Manager, The Grand Astoria Hotel** (2020 \u2013 2023) \u2013 Managed pricing strategies, forecasting, and revenue optimization, increasing RevPAR by 15% YoY.\n* **Front Office Manager, The Grand Astoria Hotel** (2018 \u2013 2020) \u2013 Oversaw daily front office operations, guest service standards, and team management.\n* **Guest Experience Specialist, The Luxe Collection Hotels** (2016 \u2013 2018) \u2013 Developed and implemented guest loyalty programs, focusing on personalization and data analysis.\n* **Concierge (Undercover), The Luxe Collection Hotels** (2016 - 6 month rotation) - Immersed in frontline operations to identify guest pain points and opportunities for service improvement.\n* **Bachelor of Science in Hospitality Management, Cornell University** (2012 \u2013 2016) \u2013 Dean\u2019s List, President of the Hospitality Club.\n* **Certified Revenue Management Professional (CRMP)** - 2021\n* **Proficient in:** SQL, Tableau, Python (basic), Hotelogix, Opera PMS, Duetto.",
+    "lookingFor": "* **Seed Stage Investors:** Seeking $1.5M to scale our engineering team, expand our sales and marketing efforts, and onboard key hotel partners.\n* **Strategic Hotel Partnerships:**  Looking to collaborate with forward-thinking hotels (50+ rooms) interested in becoming early adopters of Hostly and providing valuable feedback.\n* **Hospitality Tech Advisors:** Mentorship from experienced SaaS founders and industry veterans to navigate the challenges of scaling a hospitality-focused platform.\n* **Potential Integrations:** Exploring partnerships with leading Property Management Systems (PMS) and Channel Managers.\n* **Ideal Investor Profile:**  VC firms specializing in SaaS and/or hospitality tech, with a track record of supporting early-stage companies. Bonus points for portfolio companies in adjacent spaces.\n* **Hard Requirement:** Investors who understand the nuances of the hospitality industry \u2013 not just tech.\n* **Soft Requirement:**  A collaborative approach to investment; we\u2019re looking for partners, not just capital.",
+    "notes": "* Emeka is very responsive and highly engaged. He frequently shares data-driven insights in his posts.\n* He\u2019s a member of the 'Hospitality Tech Innovators' group and actively participates in discussions.\n* Recently commented on a post about the challenges of implementing AI in hotels \u2013 a topic he\u2019s clearly passionate about.\n* Mentioned his undercover concierge experience in a recent conversation, highlighting its impact on Hostly\u2019s design.\n* Flag: He\u2019s skeptical of overly optimistic projections and values transparency.",
+    "locationAvailability": "Based in New York City, open to travel throughout North America and Europe.",
+    "introPreferences": "* **Want:** Introductions to Seed-stage VCs focused on SaaS or Hospitality Tech (Partner level or above).\n* **Want:**  Hotel General Managers or Directors of Revenue Management at hotels with 50+ rooms.\n* **Want:** Experienced SaaS founders who\u2019ve scaled a B2B platform in a complex industry.\n* **Don\u2019t Want:** Recruiters (unless for very senior engineering roles).\n* **Don\u2019t Want:** Individuals selling unrelated software solutions.\n* **Introduction Style:**  Keep it concise and focus on the value Hostly brings to hotels \u2013 data-driven personalization and revenue growth.  Mention his background in hotel operations.\n* **Hard No:** Anyone pitching a competing product. \n* **Soft Preference:**  Introductions from mutual connections are always appreciated.",
+    "personalPreferences": "I prefer email for initial contact and am generally available for calls during EST business hours. I\u2019m a big believer in clear and concise communication \u2013 let\u2019s cut to the chase!",
+    "meetingAndSchedulingPreferences": "Happy to schedule a quick 15-minute introductory call to discuss potential synergies."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 18.94008493423462,
+      "input_tokens": 759,
+      "output_tokens": 1133,
+      "problems": [
+        "background: possible truncation (ends with '...Cornell University \u2013 2010')"
+      ]
+    },
+    {
+      "attempt": 2,
+      "elapsed_s": 22.661142110824585,
+      "input_tokens": 759,
+      "output_tokens": 1143,
+      "problems": []
+    }
+  ],
+  "success": true
+}

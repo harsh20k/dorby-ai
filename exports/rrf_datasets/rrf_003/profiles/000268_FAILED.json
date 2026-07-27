@@ -1,0 +1,75 @@
+{
+  "id": 268,
+  "archetype": "Healthcare/Pharma Sales to Founder",
+  "given_name": "Zainab Wang",
+  "style_version": 17,
+  "archetypes_version": 44,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Zainab Wang is a highly successful former pharmaceutical sales executive who spent 12 years progressively increasing responsibility at Pfizer, culminating in a Regional Sales Director role. She excelled at building relationships with key opinion leaders (KOLs) and driving adoption of complex therapies. However, she became frustrated with the slow pace of innovation and bureaucratic hurdles within a large pharma company.  She\u2019s now founded \u2018NeuroBloom\u2019, a digital therapeutics company focused on personalized neurological rehabilitation using VR/AR. Zainab is *very* focused on rapid iteration, data-driven results, and securing seed funding. She\u2019s actively leveraging her existing healthcare network but needs connections to venture capitalists specializing in digital health and experienced operators in the VR/AR space. She is a direct communicator, values efficiency, and is comfortable challenging conventional wisdom. A distinctive career detail is her side hustle during her Pfizer years: she completed a coding bootcamp and built a basic (but functional) patient adherence app, demonstrating her technical aptitude and entrepreneurial spirit.",
+    "positioning": "NeuroBloom is revolutionizing neurological rehabilitation through personalized, immersive digital therapeutics. We address the significant unmet need for accessible and engaging post-stroke and traumatic brain injury (TBI) recovery solutions. Current rehab options are often limited by access, cost, and adherence. NeuroBloom delivers clinically-validated exercises via VR/AR, adapting in real-time to patient performance and providing data-driven insights to therapists. Our MVP, focused on upper limb recovery post-stroke, demonstrated a 30% improvement in patient engagement and a 15% increase in functional gains in a pilot study with 50 patients. We are currently targeting the $30B neurological rehabilitation market, initially focusing on outpatient clinics and eventually expanding to in-home use. Our wedge is a subscription-based model delivering a comprehensive rehabilitation program and therapist dashboard for remote monitoring and data analysis. We\u2019re seeking $1.5M in seed funding to scale our development team, expand our clinical trials, and accelerate market penetration. Ideal customer profile: Outpatient rehabilitation centers specializing in neuro-rehabilitation, with 5-20 therapists and a patient volume of at least 100 per month.",
+    "background": "* **Pfizer (2012 \u2013 2024): Regional Sales Director (2021 \u2013 2024)**\n    * Led a team of 15 Territory Managers responsible for achieving sales targets for a portfolio of cardiovascular and oncology drugs across a 5-state region.\n    * Consistently exceeded sales quotas, achieving 115% of target in 2023 and driving a 20% YoY revenue growth within the region.\n    * Implemented a new territory planning and targeting strategy resulting in a 10% increase in physician engagement.\n    * Managed a $5M P&L with full responsibility for budget allocation, expense management, and forecasting.\n    * Spearheaded key opinion leader (KOL) engagement initiatives, fostering strong relationships with leading neurologists and cardiologists.\n* **Pfizer (2018 \u2013 2021): Senior Hospital Account Specialist**\n    * Managed a portfolio of key hospital accounts, driving formulary access and adoption of Pfizer\u2019s pharmaceutical products.\n    * Developed and executed account-specific business plans aligned with hospital strategic objectives.\n    * Consistently ranked among the top 10% of Hospital Account Specialists nationally.\n    * Collaborated with cross-functional teams including marketing, medical affairs, and market access.\n* **Pfizer (2012 \u2013 2018): Pharmaceutical Sales Representative**\n    * Achieved consistent sales growth, exceeding quota in each year of employment.\n    * Built and maintained strong relationships with physicians, nurses, and other healthcare professionals.\n    * Demonstrated strong product knowledge and effective communication skills.\n    * Successfully launched several new pharmaceutical products within the territory.\n* **Education: University of Pennsylvania (2008 \u2013 2012): B.S. in Biology** \u2013 Dean\u2019s List, Phi Beta Kappa\n* **Certifications: Certified Sales Professional (CSP)** \u2013 2016\n* **Coding Bootcamp: General Assembly (2020)** \u2013 Full Stack Web Development (completed part-time while at Pfizer)",
+    "lookingFor": "I\u2019m actively seeking connections within the digital health and venture capital ecosystems. Specifically, I\u2019m looking to connect with:\n\n* **Seed-stage investors** specializing in digital therapeutics, VR/AR, and healthcare technology. I'm particularly interested in firms with a track record of supporting female founders.\n* **Experienced operators** with a background in scaling digital health companies, particularly those with expertise in VR/AR development, FDA regulatory pathways, and commercialization.\n* **Founders** of successful digital health startups who are willing to share their experiences and offer guidance.\n* **Neurologists and rehabilitation specialists** interested in piloting and providing feedback on NeuroBloom\u2019s platform. \n\nI\u2019m open to advisory roles and strategic partnerships. I\u2019m also keen to learn about potential grant opportunities and funding sources.  I'm particularly interested in individuals who understand the complexities of navigating the healthcare landscape and are passionate about improving patient outcomes.",
+    "notes": "Zainab is a high-energy, incredibly driven founder. She\u2019s very comfortable with data and metrics \u2013 expects to be challenged on KPIs. She is *explicitly* looking for investors who can add strategic value, not just capital. She\u2019s a fast mover and prefers direct, concise communication. \n\n* **Data Quality Warning:** Background details on the patient adherence app are limited. Focus on Pfizer experience for initial vetting.\n* **Recent Conversation (2024-10-26):** Discussed potential partnership with a VR hardware company \u2013 positive initial feedback.\n* **Intro Guidance:** When introducing to investors, emphasize the strong clinical validation and the potential for rapid scaling. Frame as a compelling opportunity to disrupt a large and underserved market.",
+    "locationAvailability": "I am currently based in Philadelphia, PA, but am open to remote meetings and travel as needed. I anticipate frequent travel to industry conferences and potential clinical trial sites.",
+    "introPreferences": "* **Hard Requirements:** Investors with a demonstrated interest in digital health and a portfolio that includes successful healthcare startups. Operators with 5+ years of experience scaling a digital health company.\n* **Soft Preferences:** Connections with individuals who have a strong understanding of neurological rehabilitation and the challenges faced by patients and therapists.\n* **Intro Style:** Please highlight my background in pharmaceutical sales and my ability to build strong relationships with healthcare professionals. Emphasize the clinical validation of NeuroBloom's platform and the potential for significant ROI. A warm intro is *strongly* preferred; cold emails are unlikely to receive a response.  Please pre-vet the connection to ensure alignment with our current funding stage and strategic priorities.",
+    "personalPreferences": "I primarily communicate via email and LinkedIn. I'm responsive, but I prioritize focused work time, so please allow 24-48 hours for a reply. I always appreciate a concise and well-structured message. I\u2019m happy to schedule a quick follow-up call if there is a strong mutual fit.",
+    "meetingAndSchedulingPreferences": "Please use this link to schedule a meeting: [https://calendly.com/zainabwang/neurobloom-intro]"
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 30.716482877731323,
+      "input_tokens": 802,
+      "output_tokens": 1534,
+      "problems": [
+        "background: possible truncation (ends with '...al (CSP), 2019</li>\n</ul>')",
+        "meetingAndSchedulingPreferences: possible truncation (ends with '...dly.com/zainabwang/30min]')"
+      ]
+    },
+    {
+      "attempt": 2,
+      "elapsed_s": 23.96159267425537,
+      "input_tokens": 802,
+      "output_tokens": 1460,
+      "problems": [
+        "meetingAndSchedulingPreferences: possible truncation (ends with '...endly Link - placeholder]')"
+      ]
+    },
+    {
+      "attempt": 3,
+      "elapsed_s": 21.809036016464233,
+      "input_tokens": 802,
+      "output_tokens": 1570,
+      "problems": [
+        "meetingAndSchedulingPreferences: possible truncation (ends with '...nabwang/neurobloom-intro]')"
+      ]
+    }
+  ],
+  "success": false
+}

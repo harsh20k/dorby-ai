@@ -1,0 +1,54 @@
+{
+  "id": 3,
+  "archetype": "Mobility & AI Transformation Advisor",
+  "given_name": "Layla Kaur",
+  "style_version": 1,
+  "archetypes_version": 1,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Layla Kaur is a former Head of Innovation at a major automotive logistics company, specifically focused on optimizing fleet management through AI. She successfully piloted and scaled a predictive maintenance program that significantly reduced downtime and costs, but left to become an independent advisor because she felt constrained by the internal bureaucracy. She's now focused on helping *other* operators \u2013 trucking companies, rail operators, port authorities \u2013 understand how to practically apply AI, not just talk about it. She's very pragmatic and wants to see ROI. She's currently building a small network of AI solution providers she trusts and is actively looking for new clients who are ready to move beyond proof-of-concept and into full-scale implementation. She\u2019s particularly interested in companies dealing with \u2018last mile\u2019 delivery challenges.",
+    "positioning": "Layla Kaur is a Mobility & AI Transformation Advisor focused on delivering tangible ROI for operators in the automotive and logistics sectors. Having led the successful implementation of AI-driven predictive maintenance programs at a Fortune 500 logistics firm, I now partner with companies to navigate the complexities of AI adoption, moving beyond pilot projects to scalable, commercial solutions. My expertise lies in identifying high-impact applications of AI \u2013 specifically in fleet optimization, route planning, and supply chain visibility \u2013 and building the internal capabilities to sustain long-term growth. I'm currently seeking connections with forward-thinking leaders who are actively seeking to leverage AI to unlock operational efficiencies and gain a competitive edge. Let's discuss how to transform your data into a powerful engine for innovation.",
+    "background": "\u2022 **Independent AI Transformation Advisor** (2023 \u2013 Present)\n \u2013 Providing strategic guidance to automotive and logistics companies on AI adoption, focusing on practical implementation and ROI.\n \u2013 Developing and delivering customized workshops on AI applications in mobility.\n \u2013 Building a curated network of AI solution providers specializing in logistics and fleet management.\n\n\u2022 **Head of Innovation, TransGlobal Logistics** (2019 \u2013 2023)\n \u2013 Led the development and implementation of an AI-powered predictive maintenance program for a fleet of 5,000+ vehicles, resulting in a 15% reduction in downtime and a 10% decrease in maintenance costs.\n \u2013 Managed a cross-functional team of data scientists, engineers, and operations specialists.\n \u2013 Secured $2M in funding for AI innovation initiatives.\n \u2013 Spearheaded the exploration of AI applications in route optimization and supply chain visibility.\n\n\u2022 **Senior Data Scientist, AutoCorp** (2016 \u2013 2019)\n \u2013 Developed and deployed machine learning models for vehicle diagnostics and performance prediction.\n \u2013 Collaborated with engineering teams to integrate AI algorithms into vehicle control systems.\n \u2013 Published research papers on AI applications in the automotive industry.\n\n\u2022 **Education:**\n \u2013 PhD, Computer Science (Machine Learning), Stanford University (2016)\n \u2013 MS, Statistics, University of California, Berkeley (2012)\n \u2013 BS, Mathematics, Massachusetts Institute of Technology (2010)\n\n\u2022 **Skills:** Artificial Intelligence, Machine Learning, Deep Learning, Predictive Analytics, Data Mining, Python, R, SQL, Cloud Computing (AWS, Azure), Logistics, Supply Chain Management, Fleet Management, Automotive Engineering.",
+    "lookingFor": "## Strategic Partnerships\n\u2022 Introductions to C-level executives at trucking companies (>$50M annual revenue) actively exploring AI solutions for fleet optimization.\n\u2022 Connections with AI solution providers specializing in last-mile delivery, route optimization, and predictive maintenance.\n\u2022 Opportunities to collaborate on pilot projects demonstrating the ROI of AI in logistics.\n\n## Talent Acquisition\n\u2022 Experienced Machine Learning Engineers with a background in time-series analysis and anomaly detection.\n\u2022 Data Scientists with expertise in logistics and supply chain optimization.\n\u2022 Consultants with experience in change management and AI implementation.",
+    "notes": "Layla is *very* focused on practical applications and gets frustrated with \u2018AI hype.\u2019 She\u2019s had several conversations recently about the challenges of data integration and the need for robust data governance. She's a quick study and can assess a solution's viability rapidly. She mentioned in our last check-in that she's prioritizing clients who are willing to commit to a long-term partnership. She previously expressed interest in the autonomous vehicle space, but her focus has narrowed to more immediately achievable applications of AI. Be mindful not to pitch her anything too futuristic; she prefers concrete solutions with a clear path to ROI. She's also a strong advocate for ethical AI practices.",
+    "locationAvailability": "Based in San Francisco, CA, but open to connecting with individuals and organizations globally.",
+    "introPreferences": "\u2022 **Hard Requirement:** Contact must be a decision-maker (VP level or above) at an automotive or logistics company.\n\u2022 **Soft Preference:** Experience with implementing AI solutions in a similar industry.\n\u2022 **Avoid:** Introductions to purely academic researchers or individuals selling theoretical AI concepts.\n\u2022 **Introduction Script Suggestion:** 'Layla Kaur is a leading AI transformation advisor helping logistics companies unlock significant value through AI. I thought you two would have a valuable conversation given [Company]'s focus on [relevant initiative].'",
+    "personalPreferences": "Layla prefers initial communication via LinkedIn messaging, followed by a brief introductory call. She\u2019s a direct communicator and appreciates concise, well-structured information. She dislikes overly formal communication and prefers a collaborative, problem-solving approach. She's responsive but can be busy, so don\u2019t be discouraged if she doesn\u2019t reply immediately.",
+    "meetingAndSchedulingPreferences": "Prefers 30-minute introductory calls to assess potential synergies."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 19.256004810333252,
+      "input_tokens": 770,
+      "output_tokens": 1190,
+      "problems": []
+    }
+  ],
+  "success": true
+}

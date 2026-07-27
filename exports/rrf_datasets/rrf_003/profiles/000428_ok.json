@@ -1,0 +1,54 @@
+{
+  "id": 428,
+  "archetype": "Financial Crime/Risk Management Consultant",
+  "given_name": "Kenji Patel",
+  "style_version": 26,
+  "archetypes_version": 72,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Kenji Patel is a seasoned Financial Crime Risk Management Consultant, currently operating as an independent consultant after a long career within large financial institutions. His distinctive career detail is a deep specialization in transaction monitoring system implementations, specifically within the anti-money laundering (AML) space. He's moved to independent consulting to leverage that specialized knowledge, offering bespoke implementation and optimization services to mid-sized banks and fintechs who can\u2019t afford the big consulting firms. He's focused on building a client base through referrals and networking, positioning himself as a pragmatic, technically-focused expert. He\u2019s actively seeking connections with decision-makers at these target organizations, and also with other consultants who might have complementary expertise (e.g., sanctions screening, fraud prevention). He's a bit of a 'roll up his sleeves' type \u2013 prefers getting into the details of systems and data rather than purely strategic advisory work. He's highly methodical and values direct communication.",
+    "positioning": "Kenji Patel is a Financial Crime Risk Management Consultant specializing in the design, implementation, and optimization of transaction monitoring systems. After 15 years within major financial institutions, I now offer independent consulting services to mid-sized banks and FinTech companies. My core focus is helping organizations build robust and effective AML programs, ensuring compliance with evolving regulatory requirements while minimizing false positives and maximizing detection rates.\n\nI bring a unique blend of technical expertise and practical experience. I've led multiple transaction monitoring system implementations from requirements gathering through to go-live, working directly with data scientists, IT teams, and compliance officers. I'm adept at translating complex regulatory guidance into actionable system configurations and tuning strategies.\n\nCurrently, I\u2019m focused on assisting clients with the implementation of new risk-based approaches to transaction monitoring, leveraging data analytics and machine learning to enhance their AML capabilities. I\u2019m also providing expert guidance on preparing for and responding to regulatory examinations. A recent project involved a comprehensive review and overhaul of a client\u2019s transaction monitoring rule set, resulting in a 40% reduction in false positives and a demonstrable improvement in suspicious activity reporting.\n\nI believe a successful AML program isn't just about checking boxes; it\u2019s about building a resilient and adaptable system that effectively mitigates risk and protects the integrity of the financial system. I\u2019m passionate about helping organizations achieve that goal.",
+    "background": "- **Independent Consultant, Financial Crime Risk Management** (2022 \u2013 Present)\n  * Providing specialized consulting services to mid-sized banks and FinTech companies on AML compliance, transaction monitoring, and risk assessment.\n  * Leading projects focused on system implementation, optimization, and regulatory remediation.\n  * Developing and delivering training programs on AML best practices.\n\n- **Senior Manager, AML Transaction Monitoring, Capital One** (2017 \u2013 2022)\n  * Led a team responsible for the design, implementation, and maintenance of transaction monitoring systems for retail banking and credit card portfolios.\n  * Managed the development and tuning of transaction monitoring rules, ensuring compliance with BSA/AML regulations.\n  * Oversaw the investigation and reporting of suspicious activity.\n  * Key achievement: Successfully implemented a new transaction monitoring system, resulting in a significant reduction in false positives and improved detection rates.\n\n- **AML Analyst, HSBC** (2013 \u2013 2017)\n  * Conducted investigations of suspicious activity, preparing and submitting Suspicious Activity Reports (SARs).\n  * Performed KYC/CDD reviews, identifying and mitigating AML risks.\n  * Assisted in the development and implementation of AML policies and procedures.\n\n- **Compliance Associate, JP Morgan Chase** (2010 \u2013 2013)\n  * Supported the implementation of AML compliance programs across various business lines.\n  * Monitored transactions for suspicious activity, escalating potential issues to senior management.\n\n- **Education:**\n  * **Master of Science in Financial Engineering**, Columbia University (2010)\n  * **Bachelor of Science in Economics**, University of California, Berkeley (2008)\n\n- **Certifications:**\n  * Certified Anti-Money Laundering Specialist (CAMS)\n\n- **Languages:**\n  * English (Native)\n  * Gujarati (Conversational)\n  * Spanish (Basic)",
+    "lookingFor": "I am actively seeking connections with individuals and organizations in the following areas:\n\n* **Mid-sized Banks (assets $1B - $20B):** Specifically, Heads of Compliance, AML Officers, and individuals involved in the selection and implementation of transaction monitoring systems. I'm interested in understanding their current challenges and exploring opportunities to provide tailored consulting services.\n* **FinTech Companies (Series A - Series C funding):** I'm particularly interested in FinTechs operating in the payments, lending, or cryptocurrency space. I can help them build AML programs from the ground up, ensuring compliance with regulatory requirements.\n* **Consulting Firms (Boutique AML/FinTech Specialists):** I'm open to exploring potential collaborations with other consulting firms that offer complementary expertise (e.g., sanctions screening, fraud prevention). Joint ventures or sub-contracting opportunities are of interest.\n* **Transaction Monitoring System Vendors:** I\u2019m keen to stay abreast of the latest advancements in transaction monitoring technology. I am interested in connecting with representatives from vendors offering innovative solutions.\n\nI am *not* currently looking for full-time employment opportunities. My focus is on building a sustainable independent consulting practice. I\u2019m also not interested in roles that are purely focused on regulatory reporting or general compliance training. My strength lies in the *technical* aspects of AML \u2013 specifically, transaction monitoring system implementation and optimization. \n\nI am available for brief introductory calls to discuss potential collaborations or consulting engagements. Please be prepared to clearly articulate your organization's challenges and objectives.",
+    "notes": "* Kenji is highly responsive and prefers direct communication. Avoid lengthy email chains. A concise LinkedIn message outlining the specific reason for connecting is appreciated.\n* He\u2019s a bit of a system geek \u2013 loves diving into the technical details. Don\u2019t shy away from discussing specific technologies or data challenges.\n* He mentioned he's currently reading a paper on the application of graph databases to AML. A relevant article or resource might be a good conversation starter.\n* He expressed frustration with overly complex and bureaucratic AML programs. He values pragmatism and efficiency.\n* Previous conversation (2023-10-26) \u2013 he mentioned being interested in a connection to someone at \u2018NovaPay\u2019 \u2013 a Series B FinTech focusing on cross-border payments. Still outstanding.\n* He\u2019s recently updated his LinkedIn profile to highlight his expertise in data analytics and machine learning within AML.",
+    "locationAvailability": "Based in New York City, but available for remote work and travel within the United States. Open to international travel for specific projects.",
+    "introPreferences": "* **Target Roles:** Heads of AML, Chief Compliance Officers, VP of Financial Crime, Transaction Monitoring System Owners, Heads of Data Science (focused on AML).\n* **Introduction Style:** Direct and concise. Briefly explain the connection and why a conversation would be mutually beneficial. Avoid overly promotional language.\n* **Information to Include:**\n  * My specialization in transaction monitoring system implementation and optimization.\n  * My experience working with mid-sized banks and FinTech companies.\n  * The potential value I can bring to their organization (e.g., reducing false positives, improving detection rates, ensuring regulatory compliance).\n* **Information to Avoid:**\n  * General compliance training services \u2013 I don\u2019t offer those.\n  * Full-time employment opportunities \u2013 I\u2019m not looking for a job.\n  * Vague or generic introductions \u2013 I prefer targeted connections.\n* **Preferred Method:** Warm introductions via LinkedIn message or email. A brief introductory email with a LinkedIn profile link is ideal.\n* **Follow-up:** Please don\u2019t follow up excessively if I don\u2019t respond immediately. I prioritize responding to targeted and relevant requests.",
+    "personalPreferences": "Prefers direct messaging on LinkedIn or email. Not active on Twitter.",
+    "meetingAndSchedulingPreferences": "* Available for video calls (Zoom, Google Meet) and phone calls.\n* Eastern Time Zone (EST) preferred.\n* Generally available during standard business hours (9:00 AM - 5:00 PM EST).\n* Please allow at least 24 hours\u2019 notice for scheduling meetings. \n* I prefer 30-minute introductory calls."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 27.59596276283264,
+      "input_tokens": 756,
+      "output_tokens": 1823,
+      "problems": []
+    }
+  ],
+  "success": true
+}
