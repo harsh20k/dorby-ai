@@ -221,6 +221,24 @@ shown only the candidate's profile gets 0.634 AUC, not 99.2% accuracy — and
 (Qwen3-8B: 0.6595), i.e. it is reading matching-relevant content, not
 prompt residue. Lexical circularity is also much reduced, 0.868 → 0.701.
 
+**A second, independent method confirms it.** `scripts/check_synth_cheatability.py`
+— the same TF-IDF-bag-of-words-+-logistic-regression script that first
+caught the `batch_500_001` leak — was re-run directly against `rrf_002`'s
+staged pairs (`--batch-dir artifacts/pairing_rrf/rrf_002`):
+
+| Population | Candidate-text-alone AUC | What it means |
+|---|---|---|
+| Real data | 0.532 | ~chance, as expected |
+| `batch_500_001` (the one that leaked) | 0.9916 | a bag-of-words classifier can nearly perfectly guess the label from generator-prompt artifacts alone |
+| **`rrf_002` (this batch)** | **0.649** | some signal, but nowhere close to a leak |
+
+**Result: `rrf_002` does not have that failure.** A different classifier
+(TF-IDF n-grams + logistic regression, not an embedding model) and a
+different population slice than the 0.634 probe above land at a consistent
+answer: candidate text alone carries some legitimate signal, not a
+near-perfect shortcut. Two independently-built checks agreeing is stronger
+evidence than either alone.
+
 **The real weakness is per-node base rate.** Seeker identity alone — a
 leave-one-out positive rate, no text whatsoever — predicts the label at 0.687,
 *higher* than any content feature. The cause is visible in the data: **12 of 40
