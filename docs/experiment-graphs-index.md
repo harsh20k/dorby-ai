@@ -33,6 +33,7 @@ wants the full story.
 | LLM judge vs. embedding baselines | [published](https://claude.ai/code/artifact/12f8f93b-8fc4-41e5-bc13-b05ce8ab45fa) | 2026-07-25 | Not traceable to a local `docs/html/` file from this session |
 | Which fields carry a person's identity? | [published](https://claude.ai/code/artifact/c3daa30f-4b68-4312-ba4b-8e69e4c77550) | 2026-07-26 | Published version of `holdout-field-isolation-embedding-space-3d.html` above (field isolation experiment) |
 | Synthetic Pair Pipeline — Proposed Flow | [published](https://claude.ai/code/artifact/5455a3ec-2c0f-4926-8e08-bc705868a6cf) | 2026-07-26 | Not traceable to a local `docs/html/` file from this session |
+| [`knowledge-graph-experiment.html`](file:///Users/harsh/Artifacts/dorby-ai/docs/html/knowledge-graph-experiment.html) | local (`docs/html/`) + [published](https://claude.ai/code/artifact/af0a622e-ba61-488f-b999-cf555f61d2ac) | 2026-07-27 | One real user's profile + one accepted/one declined real intro, each decomposed into a knowledge graph by `google/gemini-3.1-flash-lite` and merged on shared concept labels, plus a type-taxonomy layer — see `docs/knowledge-graph-experiment.md` |
 
 Local file links above are absolute `file://` paths pinned to this repo's
 checkout location on this machine (`/Users/harsh/Artifacts/dorby-ai/docs/html/`)

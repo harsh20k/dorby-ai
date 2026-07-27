@@ -1,0 +1,778 @@
+<title>Knowledge-Graph Decomposition: One Accepted, One Declined</title>
+<style>
+  :root {
+    --bg: #0c1211;
+    --surface: #121a18;
+    --surface-2: #182220;
+    --border: #253330;
+    --border-soft: #1c2624;
+    --text: #e9efec;
+    --text-dim: #9db0a9;
+    --text-faint: #5f7570;
+
+    --self: #d9974a;
+    --accepted: #62b98d;
+    --declined: #c4695a;
+    --bridge: #e3c968;
+
+    --t-company: #7fa2c9;
+    --t-industry: #ad86d1;
+    --t-subcategory: #8fc0cf;
+    --t-need: #d9a63f;
+    --t-location: #5f9e82;
+    --t-trait: #c98a68;
+    --t-affiliation: #9098c4;
+
+    color-scheme: dark light;
+  }
+  :root[data-theme="light"] {
+    --bg: #f3f1ea;
+    --surface: #ffffff;
+    --surface-2: #ece8dd;
+    --border: #d8d2c2;
+    --border-soft: #e3ddcc;
+    --text: #1c211d;
+    --text-dim: #565f56;
+    --text-faint: #8b9188;
+  }
+  @media (prefers-color-scheme: light) {
+    :root:not([data-theme="dark"]) {
+      --bg: #f3f1ea;
+      --surface: #ffffff;
+      --surface-2: #ece8dd;
+      --border: #d8d2c2;
+      --border-soft: #e3ddcc;
+      --text: #1c211d;
+      --text-dim: #565f56;
+      --text-faint: #8b9188;
+    }
+  }
+
+  * { box-sizing: border-box; }
+  html, body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, "Segoe UI", Helvetica Neue, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+  body {
+    padding: 3rem 1.5rem 5rem;
+  }
+  .page {
+    max-width: 1080px;
+    margin: 0 auto;
+  }
+
+  .mono {
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  }
+
+  header.hero {
+    margin-bottom: 2.75rem;
+  }
+  .eyebrow {
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    font-size: 0.72rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--text-faint);
+    margin: 0 0 0.9rem;
+  }
+  h1 {
+    font-family: Palatino, "Palatino Linotype", "Iowan Old Style", Georgia, ui-serif, serif;
+    font-weight: 500;
+    font-size: clamp(1.85rem, 1.4rem + 1.8vw, 2.7rem);
+    line-height: 1.12;
+    letter-spacing: -0.01em;
+    margin: 0 0 1rem;
+    text-wrap: balance;
+    max-width: 22ch;
+  }
+  .dek {
+    font-size: 1.02rem;
+    line-height: 1.65;
+    color: var(--text-dim);
+    max-width: 62ch;
+    margin: 0;
+  }
+  .dek strong { color: var(--text); font-weight: 600; }
+
+  section.panel {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  /* legend */
+  .legend {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem 1.5rem;
+    padding: 1rem 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+  .legend-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .legend-title {
+    font-size: 0.68rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--text-faint);
+    margin-bottom: 0.15rem;
+  }
+  .legend-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem 1rem;
+  }
+  .legend-item {
+    display: flex;
+    align-items: center;
+    gap: 0.45rem;
+    font-size: 0.82rem;
+    color: var(--text-dim);
+  }
+  .swatch {
+    width: 10px; height: 10px;
+    border-radius: 50%;
+    flex: none;
+    box-shadow: 0 0 0 1px rgba(0,0,0,0.15) inset;
+  }
+  .swatch.ring {
+    width: 12px; height: 12px;
+    background: transparent;
+    border: 2px solid var(--bridge);
+  }
+  .swatch.meta {
+    width: 12px; height: 12px;
+    background: transparent;
+    border: 1.5px dashed var(--text-faint);
+  }
+
+  /* graph canvas panel */
+  .graph-panel {
+    padding: 0;
+    overflow: hidden;
+    position: relative;
+  }
+  .graph-panel-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 1rem 1.3rem 0.8rem;
+    border-bottom: 1px solid var(--border-soft);
+  }
+  .graph-panel-head h2 {
+    font-family: Palatino, "Palatino Linotype", "Iowan Old Style", Georgia, ui-serif, serif;
+    font-weight: 500;
+    font-size: 1.05rem;
+    margin: 0;
+  }
+  .graph-panel-head .hint {
+    font-size: 0.76rem;
+    color: var(--text-faint);
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  }
+  #graphCanvas {
+    display: block;
+    width: 100%;
+    height: 560px;
+    cursor: grab;
+    touch-action: none;
+  }
+  #graphCanvas.dragging { cursor: grabbing; }
+
+  .tooltip {
+    position: absolute;
+    pointer-events: none;
+    background: var(--surface-2);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 0.5rem 0.7rem;
+    font-size: 0.78rem;
+    line-height: 1.5;
+    max-width: 240px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.35);
+    opacity: 0;
+    transition: opacity 0.1s ease;
+    z-index: 10;
+  }
+  .tooltip.visible { opacity: 1; }
+  .tooltip .tt-label {
+    font-weight: 600;
+    color: var(--text);
+    display: block;
+    margin-bottom: 0.15rem;
+  }
+  .tooltip .tt-meta {
+    color: var(--text-faint);
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    font-size: 0.7rem;
+  }
+
+  /* findings */
+  .findings-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+  }
+  @media (max-width: 720px) {
+    .findings-grid { grid-template-columns: 1fr; }
+  }
+  .finding h3 {
+    font-family: Palatino, "Palatino Linotype", "Iowan Old Style", Georgia, ui-serif, serif;
+    font-weight: 500;
+    font-size: 1.05rem;
+    margin: 0 0 0.6rem;
+  }
+  .finding p {
+    font-size: 0.9rem;
+    line-height: 1.65;
+    color: var(--text-dim);
+    margin: 0 0 0.6rem;
+  }
+  .bridge-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    font-size: 0.78rem;
+    background: var(--surface-2);
+    border: 1px solid var(--border);
+    border-radius: 5px;
+    padding: 0.15rem 0.55rem;
+  }
+  .bridge-tag .dot { width: 7px; height: 7px; border-radius: 50%; background: var(--bridge); }
+
+  table.hop-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.82rem;
+    margin-top: 0.4rem;
+  }
+  table.hop-table th {
+    text-align: left;
+    font-size: 0.68rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--text-faint);
+    font-weight: 500;
+    padding: 0.35rem 0.5rem 0.35rem 0;
+    border-bottom: 1px solid var(--border-soft);
+  }
+  table.hop-table td {
+    padding: 0.45rem 0.5rem 0.45rem 0;
+    border-bottom: 1px solid var(--border-soft);
+    color: var(--text-dim);
+    font-variant-numeric: tabular-nums;
+  }
+  table.hop-table td.path { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: 0.76rem; }
+  table.hop-table tr:last-child td { border-bottom: none; }
+
+  footer.method {
+    margin-top: 1.5rem;
+    font-size: 0.8rem;
+    line-height: 1.7;
+    color: var(--text-faint);
+    border-top: 1px solid var(--border-soft);
+    padding-top: 1.25rem;
+  }
+  footer.method code {
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    background: var(--surface-2);
+    padding: 0.08rem 0.35rem;
+    border-radius: 4px;
+    font-size: 0.78rem;
+  }
+</style>
+
+<div class="page">
+
+  <header class="hero">
+    <p class="eyebrow">Dorby AI · profile → knowledge-graph experiment</p>
+    <h1>One profile, two intros — decomposed, not just embedded</h1>
+    <p class="dek">
+      Adrian's profile and his two real Boardy intros — one he <strong style="color:var(--accepted)">accepted</strong>,
+      one he <strong style="color:var(--declined)">declined</strong> — were each sent to
+      <strong>Gemini 3.1 Flash Lite</strong> with one instruction: pull out a small knowledge graph
+      (person → works_in → industry → has_subcategory → …), the way relationship-recommendation
+      research represents a profile as entities and typed edges instead of a single vector.
+      The three graphs below are merged into one: people never link to each other directly —
+      only through concept nodes they each happen to touch. A second, dashed layer of
+      <strong>type nodes</strong> — Industry, Location, Need, and so on — sits above that: each one
+      is not from any single profile, it's the taxonomic parent of every concept node sharing that
+      type, the "Industry has_subcategory Subcategory" shape carried one level higher.
+    </p>
+  </header>
+
+  <div class="legend panel">
+    <div class="legend-group">
+      <div class="legend-title">Person role</div>
+      <div class="legend-row">
+        <span class="legend-item"><span class="swatch" style="background:var(--self)"></span>Adrian (seeker)</span>
+        <span class="legend-item"><span class="swatch" style="background:var(--accepted)"></span>Danny — accepted</span>
+        <span class="legend-item"><span class="swatch" style="background:var(--declined)"></span>Kunle — declined</span>
+      </div>
+    </div>
+    <div class="legend-group">
+      <div class="legend-title">Concept node type</div>
+      <div class="legend-row">
+        <span class="legend-item"><span class="swatch" style="background:var(--t-company)"></span>company</span>
+        <span class="legend-item"><span class="swatch" style="background:var(--t-industry)"></span>industry</span>
+        <span class="legend-item"><span class="swatch" style="background:var(--t-subcategory)"></span>subcategory</span>
+        <span class="legend-item"><span class="swatch" style="background:var(--t-need)"></span>need</span>
+        <span class="legend-item"><span class="swatch" style="background:var(--t-location)"></span>location</span>
+        <span class="legend-item"><span class="swatch" style="background:var(--t-trait)"></span>trait</span>
+        <span class="legend-item"><span class="swatch" style="background:var(--t-affiliation)"></span>affiliation</span>
+      </div>
+    </div>
+    <div class="legend-group">
+      <div class="legend-title">Structure</div>
+      <div class="legend-row">
+        <span class="legend-item"><span class="swatch ring"></span>shared / bridge node</span>
+        <span class="legend-item"><span class="swatch meta"></span>type node (taxonomy, not from any profile)</span>
+      </div>
+    </div>
+  </div>
+
+  <section class="panel graph-panel">
+    <div class="graph-panel-head">
+      <h2>Merged graph</h2>
+      <span class="hint">drag nodes · hover for relations</span>
+    </div>
+    <canvas id="graphCanvas"></canvas>
+    <div class="tooltip mono" id="tooltip"></div>
+  </section>
+
+  <section class="panel">
+    <div class="findings-grid">
+      <div class="finding">
+        <h3>“Proptech” is the only node touching all three people</h3>
+        <p>
+          Everyone in this trio ends up at a <span class="bridge-tag"><span class="dot"></span>Proptech</span>
+          node — but by very different routes, and it doesn't predict the outcome. Adrian reaches it
+          in two hops through his own company; Danny and Kunle both reach it in three, through
+          <span class="bridge-tag"><span class="dot"></span>Real&nbsp;Estate</span> — a second bridge
+          node that connects the accepted and declined candidate to each other, without ever
+          connecting either of them straight to Adrian.
+        </p>
+        <table class="hop-table">
+          <thead><tr><th>Person</th><th>Path to Proptech</th></tr></thead>
+          <tbody id="hopTable"></tbody>
+        </table>
+      </div>
+      <div class="finding">
+        <h3>Shared topic, opposite outcome</h3>
+        <p>
+          This is a single illustrative pair, not a claim about the dataset — but it's a clean
+          picture of this project's actual finding: both intros are anchored in the same industry
+          concept, so topical relevance alone doesn't separate the accepted intro from the declined
+          one. What differs is downstream of it — Danny's needs (<em>Capital, Peer&nbsp;Network,
+          Mentoring</em>) sit closer to Adrian's own asks (<em>Seed&nbsp;Funding,
+          Operator&nbsp;Peers</em>) than Kunle's do (<em>Deal&nbsp;Flow, Partnerships</em>) — visible
+          here only as separate, unconnected need nodes off each root.
+        </p>
+        <p style="margin-bottom:0;">
+          Node type was assigned per-graph by the model independently — Proptech surfaced as an
+          <code class="mono" style="font-size:0.76em;">industry</code> for Adrian and Kunle but a
+          <code class="mono" style="font-size:0.76em;">subcategory</code> for Danny. Merged here by
+          label text only, which is itself worth noting as a limitation.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <footer class="method">
+    Extraction: one <code>google/gemini-3.1-flash-lite</code> call per profile via OpenRouter
+    (temperature 0.2, ≤14 nodes / ≤16 edges each), prompted directly in the style of entity+typed-edge
+    social-graph decomposition. Source pairs: the real accepted pair
+    (<code>cm5x8qsuy…</code> → <code>cmoini4d9…</code>) and real declined pair
+    (<code>cmoini4d9…</code> → <code>cmdghuwkl…</code>) from this repo's seed dataset. Graphs merged
+    by case-insensitive label match, not embedding similarity — a cheap, illustrative decomposition
+    from a single LLM call each, not a validated ontology or a claim generalized beyond this one trio.
+  </footer>
+
+</div>
+
+<script>
+const DATA = {"roles": {"user": {"role": "self", "person_label": "Adrian", "contact_id": "cmoini4d90eyhlq02tdewefdp"}, "good": {"role": "accepted", "person_label": "Danny", "contact_id": "cm5x8qsuy03wyv80ldcpw85ah"}, "bad": {"role": "declined", "person_label": "Kunle", "contact_id": "cmdghuwkl0jenqr01uyjiktsk"}}, "nodes": [{"key": "m1", "label": "Adrian", "type": "person", "is_root": true, "graphs": ["user"], "role": "self", "contact_id": "cmoini4d90eyhlq02tdewefdp", "shared": false}, {"key": "m2", "label": "Ledgre", "norm_label": "ledgre", "type": "company", "is_root": false, "graphs": ["user"], "shared": false}, {"key": "m3", "label": "Fintech", "norm_label": "fintech", "type": "industry", "is_root": false, "graphs": ["user"], "shared": false}, {"key": "m4", "label": "Proptech", "norm_label": "proptech", "type": "industry", "is_root": false, "graphs": ["user", "good", "bad"], "shared": true}, {"key": "m5", "label": "Embedded Finance", "norm_label": "embedded finance", "type": "subcategory", "is_root": false, "graphs": ["user"], "shared": false}, {"key": "m6", "label": "Accounting Software", "norm_label": "accounting software", "type": "subcategory", "is_root": false, "graphs": ["user"], "shared": false}, {"key": "m7", "label": "Seed Funding", "norm_label": "seed funding", "type": "need", "is_root": false, "graphs": ["user"], "shared": false}, {"key": "m8", "label": "Operator Peers", "norm_label": "operator peers", "type": "need", "is_root": false, "graphs": ["user"], "shared": false}, {"key": "m9", "label": "Denver", "norm_label": "denver", "type": "location", "is_root": false, "graphs": ["user"], "shared": false}, {"key": "m10", "label": "Spain", "norm_label": "spain", "type": "location", "is_root": false, "graphs": ["user"], "shared": false}, {"key": "m11", "label": "Product Leader", "norm_label": "product leader", "type": "trait", "is_root": false, "graphs": ["user"], "shared": false}, {"key": "m12", "label": "JFS Venture Studios", "norm_label": "jfs venture studios", "type": "affiliation", "is_root": false, "graphs": ["user"], "shared": false}, {"key": "m13", "label": "Danny", "type": "person", "is_root": true, "graphs": ["good"], "role": "accepted", "contact_id": "cm5x8qsuy03wyv80ldcpw85ah", "shared": false}, {"key": "m14", "label": "Sell2Rent", "norm_label": "sell2rent", "type": "company", "is_root": false, "graphs": ["good"], "shared": false}, {"key": "m15", "label": "Real Estate", "norm_label": "real estate", "type": "industry", "is_root": false, "graphs": ["good", "bad"], "shared": true}, {"key": "m16", "label": "Miami, Florida", "norm_label": "miami, florida", "type": "location", "is_root": false, "graphs": ["good"], "shared": false}, {"key": "m17", "label": "Capital", "norm_label": "capital", "type": "need", "is_root": false, "graphs": ["good"], "shared": false}, {"key": "m18", "label": "Peer Network", "norm_label": "peer network", "type": "need", "is_root": false, "graphs": ["good"], "shared": false}, {"key": "m19", "label": "Mentoring", "norm_label": "mentoring", "type": "need", "is_root": false, "graphs": ["good"], "shared": false}, {"key": "m20", "label": "Wharton MBA", "norm_label": "wharton mba", "type": "affiliation", "is_root": false, "graphs": ["good"], "shared": false}, {"key": "m21", "label": "Serial Founder", "norm_label": "serial founder", "type": "trait", "is_root": false, "graphs": ["good"], "shared": false}, {"key": "m22", "label": "PIA Residential", "norm_label": "pia residential", "type": "company", "is_root": false, "graphs": ["good"], "shared": false}, {"key": "m23", "label": "Latin America", "norm_label": "latin america", "type": "location", "is_root": false, "graphs": ["good"], "shared": false}, {"key": "m24", "label": "Kunle", "type": "person", "is_root": true, "graphs": ["bad"], "role": "declined", "contact_id": "cmdghuwkl0jenqr01uyjiktsk", "shared": false}, {"key": "m25", "label": "Africa Proptech Foundry", "norm_label": "africa proptech foundry", "type": "company", "is_root": false, "graphs": ["bad"], "shared": false}, {"key": "m26", "label": "12pearls", "norm_label": "12pearls", "type": "company", "is_root": false, "graphs": ["bad"], "shared": false}, {"key": "m27", "label": "Infrastructure", "norm_label": "infrastructure", "type": "industry", "is_root": false, "graphs": ["bad"], "shared": false}, {"key": "m28", "label": "Deal Flow", "norm_label": "deal flow", "type": "need", "is_root": false, "graphs": ["bad"], "shared": false}, {"key": "m29", "label": "Partnerships", "norm_label": "partnerships", "type": "need", "is_root": false, "graphs": ["bad"], "shared": false}, {"key": "m30", "label": "Nigeria", "norm_label": "nigeria", "type": "location", "is_root": false, "graphs": ["bad"], "shared": false}, {"key": "m31", "label": "UK", "norm_label": "uk", "type": "location", "is_root": false, "graphs": ["bad"], "shared": false}, {"key": "m32", "label": "Deal Maker", "norm_label": "deal maker", "type": "trait", "is_root": false, "graphs": ["bad"], "shared": false}, {"key": "m33", "label": "Accord Party", "norm_label": "accord party", "type": "affiliation", "is_root": false, "graphs": ["bad"], "shared": false}, {"key": "m34", "label": "Osun Startup Hub", "norm_label": "osun startup hub", "type": "affiliation", "is_root": false, "graphs": ["bad"], "shared": false}, {"key": "m35", "label": "Company", "type": "company", "is_root": false, "is_meta": true, "graphs": [], "shared": false}, {"key": "m36", "label": "Industry", "type": "industry", "is_root": false, "is_meta": true, "graphs": [], "shared": false}, {"key": "m37", "label": "Subcategory", "type": "subcategory", "is_root": false, "is_meta": true, "graphs": [], "shared": false}, {"key": "m38", "label": "Need", "type": "need", "is_root": false, "is_meta": true, "graphs": [], "shared": false}, {"key": "m39", "label": "Location", "type": "location", "is_root": false, "is_meta": true, "graphs": [], "shared": false}, {"key": "m40", "label": "Trait", "type": "trait", "is_root": false, "is_meta": true, "graphs": [], "shared": false}, {"key": "m41", "label": "Affiliation", "type": "affiliation", "is_root": false, "is_meta": true, "graphs": [], "shared": false}], "edges": [{"source": "m1", "target": "m2", "relation": "works_in", "graphs": ["user"]}, {"source": "m1", "target": "m12", "relation": "founded", "graphs": ["user"]}, {"source": "m2", "target": "m3", "relation": "works_in", "graphs": ["user"]}, {"source": "m2", "target": "m4", "relation": "works_in", "graphs": ["user"]}, {"source": "m3", "target": "m5", "relation": "has_subcategory", "graphs": ["user"]}, {"source": "m4", "target": "m6", "relation": "has_subcategory", "graphs": ["user"]}, {"source": "m1", "target": "m7", "relation": "seeks", "graphs": ["user"]}, {"source": "m1", "target": "m8", "relation": "seeks", "graphs": ["user"]}, {"source": "m1", "target": "m9", "relation": "located_in", "graphs": ["user"]}, {"source": "m1", "target": "m10", "relation": "located_in", "graphs": ["user"]}, {"source": "m1", "target": "m11", "relation": "has_trait", "graphs": ["user"]}, {"source": "m13", "target": "m14", "relation": "works_in", "graphs": ["good"]}, {"source": "m13", "target": "m22", "relation": "works_in", "graphs": ["good"]}, {"source": "m14", "target": "m15", "relation": "belongs_to", "graphs": ["good"]}, {"source": "m15", "target": "m4", "relation": "has_subcategory", "graphs": ["good", "bad"]}, {"source": "m13", "target": "m16", "relation": "located_in", "graphs": ["good"]}, {"source": "m13", "target": "m23", "relation": "located_in", "graphs": ["good"]}, {"source": "m13", "target": "m17", "relation": "seeks", "graphs": ["good"]}, {"source": "m13", "target": "m18", "relation": "seeks", "graphs": ["good"]}, {"source": "m13", "target": "m19", "relation": "seeks", "graphs": ["good"]}, {"source": "m13", "target": "m20", "relation": "affiliated_with", "graphs": ["good"]}, {"source": "m13", "target": "m21", "relation": "has_trait", "graphs": ["good"]}, {"source": "m24", "target": "m25", "relation": "works_in", "graphs": ["bad"]}, {"source": "m24", "target": "m26", "relation": "works_in", "graphs": ["bad"]}, {"source": "m25", "target": "m15", "relation": "works_in", "graphs": ["bad"]}, {"source": "m24", "target": "m27", "relation": "works_in", "graphs": ["bad"]}, {"source": "m24", "target": "m28", "relation": "seeks", "graphs": ["bad"]}, {"source": "m24", "target": "m29", "relation": "seeks", "graphs": ["bad"]}, {"source": "m24", "target": "m30", "relation": "located_in", "graphs": ["bad"]}, {"source": "m24", "target": "m31", "relation": "located_in", "graphs": ["bad"]}, {"source": "m24", "target": "m32", "relation": "has_trait", "graphs": ["bad"]}, {"source": "m24", "target": "m33", "relation": "affiliated_with", "graphs": ["bad"]}, {"source": "m24", "target": "m34", "relation": "affiliated_with", "graphs": ["bad"]}, {"source": "m35", "target": "m2", "relation": "type_of", "graphs": [], "is_meta": true}, {"source": "m35", "target": "m14", "relation": "type_of", "graphs": [], "is_meta": true}, {"source": "m35", "target": "m22", "relation": "type_of", "graphs": [], "is_meta": true}, {"source": "m35", "target": "m25", "relation": "type_of", "graphs": [], "is_meta": true}, {"source": "m35", "target": "m26", "relation": "type_of", "graphs": [], "is_meta": true}, {"source": "m36", "target": "m3", "relation": "type_of", "graphs": [], "is_meta": true}, {"source": "m36", "target": "m4", "relation": "type_of", "graphs": [], "is_meta": true}, {"source": "m36", "target": "m15", "relation": "type_of", "graphs": [], "is_meta": true}, {"source": "m36", "target": "m27", "relation": "type_of", "graphs": [], "is_meta": true}, {"source": "m37", "target": "m5", "relation": "type_of", "graphs": [], "is_meta": true}, {"source": "m37", "target": "m6", "relation": "type_of", "graphs": [], "is_meta": true}, {"source": "m38", "target": "m7", "relation": "type_of", "graphs": [], "is_meta": true}, {"source": "m38", "target": "m8", "relation": "type_of", "graphs": [], "is_meta": true}, {"source": "m38", "target": "m17", "relation": "type_of", "graphs": [], "is_meta": true}, {"source": "m38", "target": "m18", "relation": "type_of", "graphs": [], "is_meta": true}, {"source": "m38", "target": "m19", "relation": "type_of", "graphs": [], "is_meta": true}, {"source": "m38", "target": "m28", "relation": "type_of", "graphs": [], "is_meta": true}, {"source": "m38", "target": "m29", "relation": "type_of", "graphs": [], "is_meta": true}, {"source": "m39", "target": "m9", "relation": "type_of", "graphs": [], "is_meta": true}, {"source": "m39", "target": "m10", "relation": "type_of", "graphs": [], "is_meta": true}, {"source": "m39", "target": "m16", "relation": "type_of", "graphs": [], "is_meta": true}, {"source": "m39", "target": "m23", "relation": "type_of", "graphs": [], "is_meta": true}, {"source": "m39", "target": "m30", "relation": "type_of", "graphs": [], "is_meta": true}, {"source": "m39", "target": "m31", "relation": "type_of", "graphs": [], "is_meta": true}, {"source": "m40", "target": "m11", "relation": "type_of", "graphs": [], "is_meta": true}, {"source": "m40", "target": "m21", "relation": "type_of", "graphs": [], "is_meta": true}, {"source": "m40", "target": "m32", "relation": "type_of", "graphs": [], "is_meta": true}, {"source": "m41", "target": "m12", "relation": "type_of", "graphs": [], "is_meta": true}, {"source": "m41", "target": "m20", "relation": "type_of", "graphs": [], "is_meta": true}, {"source": "m41", "target": "m33", "relation": "type_of", "graphs": [], "is_meta": true}, {"source": "m41", "target": "m34", "relation": "type_of", "graphs": [], "is_meta": true}]};
+
+const roleColor = { self: 'var(--self)', accepted: 'var(--accepted)', declined: 'var(--declined)' };
+const typeColorVar = {
+  company: '--t-company', industry: '--t-industry', subcategory: '--t-subcategory',
+  need: '--t-need', location: '--t-location', trait: '--t-trait', affiliation: '--t-affiliation',
+  person: null,
+};
+
+function cssVar(name) {
+  return getComputedStyle(document.documentElement).getPropertyValue(name).trim();
+}
+
+function resolveColor(node) {
+  if (node.is_root) {
+    return cssVar('--' + node.role);
+  }
+  const v = typeColorVar[node.type];
+  return v ? cssVar(v) : cssVar('--text-dim');
+}
+
+// ---- hop table (computed via BFS from each root to the Proptech node) ----
+(function buildHopTable() {
+  const proptech = DATA.nodes.find(n => !n.is_root && n.norm_label === 'proptech');
+  const adj = {};
+  DATA.edges.forEach(e => {
+    (adj[e.source] = adj[e.source] || []).push(e.target);
+    (adj[e.target] = adj[e.target] || []).push(e.source);
+  });
+  const byKey = {};
+  DATA.nodes.forEach(n => byKey[n.key] = n);
+
+  const roots = DATA.nodes.filter(n => n.is_root);
+  const rows = roots.map(root => {
+    const prev = {};
+    const visited = new Set([root.key]);
+    const queue = [root.key];
+    while (queue.length) {
+      const cur = queue.shift();
+      if (cur === proptech.key) break;
+      for (const nxt of (adj[cur] || [])) {
+        if (!visited.has(nxt)) {
+          visited.add(nxt);
+          prev[nxt] = cur;
+          queue.push(nxt);
+        }
+      }
+    }
+    let path = [proptech.key];
+    let cur = proptech.key;
+    while (cur !== root.key && prev[cur] !== undefined) {
+      cur = prev[cur];
+      path.unshift(cur);
+    }
+    const labels = path.map(k => byKey[k].label);
+    return { role: root.role, name: root.label, hops: labels.length - 1, path: labels.join(' → ') };
+  });
+
+  const tbody = document.getElementById('hopTable');
+  rows.forEach(r => {
+    const tr = document.createElement('tr');
+    const colorVar = '--' + r.role;
+    tr.innerHTML = `<td style="color:var(${colorVar});font-weight:600;">${r.name}</td><td class="path">${r.path} <span style="color:var(--text-faint)">(${r.hops} hop${r.hops===1?'':'s'})</span></td>`;
+    tbody.appendChild(tr);
+  });
+})();
+
+// ---- force-directed layout ----
+const canvas = document.getElementById('graphCanvas');
+const ctx = canvas.getContext('2d');
+const tooltip = document.getElementById('tooltip');
+const panel = canvas.closest('.graph-panel');
+
+let W = 0, H = 0, DPR = Math.min(window.devicePixelRatio || 1, 2);
+
+const nodes = DATA.nodes.map(n => ({ ...n, x: 0, y: 0, vx: 0, vy: 0 }));
+const nodeByKey = {};
+nodes.forEach(n => nodeByKey[n.key] = n);
+const edges = DATA.edges.map(e => ({ ...e }));
+
+function resize() {
+  const rect = canvas.getBoundingClientRect();
+  W = rect.width; H = rect.height;
+  canvas.width = W * DPR;
+  canvas.height = H * DPR;
+  ctx.setTransform(DPR, 0, 0, DPR, 0, 0);
+}
+
+function seedPositions() {
+  const anchors = {
+    self: { x: W * 0.25, y: H * 0.28 },
+    accepted: { x: W * 0.72, y: H * 0.24 },
+    declined: { x: W * 0.68, y: H * 0.78 },
+  };
+  const metaNodes = nodes.filter(n => n.is_meta);
+  metaNodes.forEach((n, i) => {
+    // ring of type nodes around the outside, out of the way of the three
+    // person clusters, so they read as a structural layer rather than
+    // competing for the same space as profile-derived concepts
+    const angle = (i / metaNodes.length) * Math.PI * 2;
+    const cx = W / 2, cy = H / 2;
+    const rad = Math.min(W, H) * 0.46;
+    n.x = cx + Math.cos(angle) * rad;
+    n.y = cy + Math.sin(angle) * rad;
+    n.vx = 0; n.vy = 0;
+  });
+
+  nodes.forEach(n => {
+    if (n.is_meta) return;
+    if (n.is_root) {
+      const a = anchors[n.role];
+      n.x = a.x; n.y = a.y;
+    } else {
+      // seed concept nodes near the centroid of the graphs that reference them
+      const refRoles = [...new Set(n.graphs)].map(g => ({ user: 'self', good: 'accepted', bad: 'declined' }[g]));
+      let ax = 0, ay = 0;
+      refRoles.forEach(r => { ax += anchors[r].x; ay += anchors[r].y; });
+      ax /= refRoles.length; ay /= refRoles.length;
+      const jitter = 90;
+      n.x = ax + (Math.random() - 0.5) * jitter;
+      n.y = ay + (Math.random() - 0.5) * jitter;
+    }
+    n.vx = 0; n.vy = 0;
+  });
+}
+
+function simulate(iterations, fixedKey) {
+  const REPULSION = 2600;
+  const SPRING = 0.02;
+  const SPRING_LEN = 95;
+  const BRIDGE_SPRING_LEN = 130;
+  const META_SPRING = 0.006;
+  const META_SPRING_LEN = 175;
+  const CENTER_PULL = 0.0015;
+  const DAMPING = 0.82;
+
+  for (let it = 0; it < iterations; it++) {
+    // repulsion
+    for (let i = 0; i < nodes.length; i++) {
+      for (let j = i + 1; j < nodes.length; j++) {
+        const a = nodes[i], b = nodes[j];
+        let dx = a.x - b.x, dy = a.y - b.y;
+        let distSq = dx * dx + dy * dy;
+        if (distSq < 1) distSq = 1;
+        const dist = Math.sqrt(distSq);
+        const force = REPULSION / distSq;
+        const fx = (dx / dist) * force, fy = (dy / dist) * force;
+        a.vx += fx; a.vy += fy;
+        b.vx -= fx; b.vy -= fy;
+      }
+    }
+    // springs
+    edges.forEach(e => {
+      const a = nodeByKey[e.source], b = nodeByKey[e.target];
+      const isMetaEdge = e.is_meta;
+      const len = isMetaEdge ? META_SPRING_LEN : (b.shared ? BRIDGE_SPRING_LEN : SPRING_LEN);
+      const k = isMetaEdge ? META_SPRING : SPRING;
+      let dx = b.x - a.x, dy = b.y - a.y;
+      let dist = Math.sqrt(dx * dx + dy * dy) || 1;
+      const diff = dist - len;
+      const fx = (dx / dist) * diff * k, fy = (dy / dist) * diff * k;
+      a.vx += fx; a.vy += fy;
+      b.vx -= fx; b.vy -= fy;
+    });
+    // weak center pull
+    nodes.forEach(n => {
+      n.vx += (W / 2 - n.x) * CENTER_PULL;
+      n.vy += (H / 2 - n.y) * CENTER_PULL;
+    });
+    // integrate
+    nodes.forEach(n => {
+      if (n.key === fixedKey) { n.vx = 0; n.vy = 0; return; }
+      n.vx *= DAMPING; n.vy *= DAMPING;
+      n.x += n.vx; n.y += n.vy;
+      const pad = 26;
+      n.x = Math.max(pad, Math.min(W - pad, n.x));
+      n.y = Math.max(pad, Math.min(H - pad, n.y));
+    });
+  }
+}
+
+function radius(n) {
+  if (n.is_meta) return 12;
+  return n.is_root ? 15 : (n.shared ? 9 : 6.5);
+}
+
+let hoverNode = null;
+let dragNode = null;
+
+function connectedSet(n) {
+  const s = new Set([n.key]);
+  edges.forEach(e => {
+    if (e.source === n.key) s.add(e.target);
+    if (e.target === n.key) s.add(e.source);
+  });
+  return s;
+}
+
+function draw() {
+  ctx.clearRect(0, 0, W, H);
+  const dim = hoverNode ? connectedSet(hoverNode) : null;
+
+  // edges
+  edges.forEach(e => {
+    const a = nodeByKey[e.source], b = nodeByKey[e.target];
+    const active = !dim || (dim.has(a.key) && dim.has(b.key));
+    ctx.beginPath();
+    ctx.moveTo(a.x, a.y);
+    ctx.lineTo(b.x, b.y);
+    const isBridgeEdge = e.graphs && e.graphs.length > 1;
+    if (e.is_meta) {
+      ctx.setLineDash([2, 4]);
+      ctx.strokeStyle = withAlpha(cssVar('--text-faint'), active ? 0.4 : 0.06);
+      ctx.lineWidth = 0.9;
+    } else {
+      ctx.setLineDash([]);
+      ctx.strokeStyle = isBridgeEdge ? withAlpha(cssVar('--bridge'), active ? 0.75 : 0.12)
+                                      : withAlpha(cssVar('--text-faint'), active ? 0.55 : 0.08);
+      ctx.lineWidth = isBridgeEdge ? 1.6 : 1;
+    }
+    ctx.stroke();
+    ctx.setLineDash([]);
+  });
+
+  // nodes
+  nodes.forEach(n => {
+    const active = !dim || dim.has(n.key);
+    const r = radius(n);
+    ctx.globalAlpha = active ? 1 : 0.18;
+
+    if (n.shared) {
+      ctx.beginPath();
+      ctx.arc(n.x, n.y, r + 4, 0, Math.PI * 2);
+      ctx.strokeStyle = cssVar('--bridge');
+      ctx.lineWidth = 1.6;
+      ctx.stroke();
+    }
+
+    if (n.is_meta) {
+      ctx.beginPath();
+      ctx.arc(n.x, n.y, r, 0, Math.PI * 2);
+      ctx.setLineDash([3, 3]);
+      ctx.strokeStyle = resolveColor(n);
+      ctx.lineWidth = 1.6;
+      ctx.stroke();
+      ctx.setLineDash([]);
+    } else {
+      ctx.beginPath();
+      ctx.arc(n.x, n.y, r, 0, Math.PI * 2);
+      ctx.fillStyle = resolveColor(n);
+      ctx.fill();
+      if (n.is_root) {
+        ctx.lineWidth = 2;
+        ctx.strokeStyle = cssVar('--bg');
+        ctx.stroke();
+      }
+    }
+
+    // label
+    ctx.globalAlpha = active ? 1 : 0.22;
+    ctx.font = n.is_root ? '600 12.5px ui-monospace, SFMono-Regular, Menlo, Consolas, monospace'
+                          : n.is_meta ? 'italic 600 10.5px ui-monospace, SFMono-Regular, Menlo, Consolas, monospace'
+                          : '400 10.5px ui-monospace, SFMono-Regular, Menlo, Consolas, monospace';
+    ctx.fillStyle = n.is_root ? cssVar('--text') : (n.is_meta ? resolveColor(n) : cssVar('--text-dim'));
+    ctx.textBaseline = 'middle';
+    const label = n.label.length > 22 ? n.label.slice(0, 21) + '…' : n.label;
+    ctx.fillText(label, n.x + r + 6, n.y);
+    ctx.globalAlpha = 1;
+  });
+
+  // relation labels: only for edges touching the hovered node, to keep the
+  // resting graph (64 edges) legible — full context appears on demand
+  if (hoverNode) {
+    ctx.font = '400 9.5px ui-monospace, SFMono-Regular, Menlo, Consolas, monospace';
+    ctx.textBaseline = 'middle';
+    ctx.textAlign = 'center';
+    edges.forEach(e => {
+      if (e.source !== hoverNode.key && e.target !== hoverNode.key) return;
+      const a = nodeByKey[e.source], b = nodeByKey[e.target];
+      const mx = (a.x + b.x) / 2, my = (a.y + b.y) / 2;
+      const text = e.relation.replace(/_/g, ' ');
+      const w = ctx.measureText(text).width;
+      ctx.fillStyle = withAlpha(cssVar('--bg'), 0.88);
+      ctx.fillRect(mx - w / 2 - 4, my - 7, w + 8, 14);
+      ctx.fillStyle = e.is_meta ? cssVar('--text-faint') : cssVar('--bridge');
+      ctx.fillText(text, mx, my);
+    });
+    ctx.textAlign = 'left';
+  }
+}
+
+function withAlpha(color, alpha) {
+  // color is like "#rrggbb" or already computed rgb - normalize via canvas
+  const tmp = document.createElement('canvas').getContext('2d');
+  tmp.fillStyle = color;
+  const hex = tmp.fillStyle; // normalized #rrggbb
+  const r = parseInt(hex.slice(1, 3), 16), g = parseInt(hex.slice(3, 5), 16), b = parseInt(hex.slice(5, 7), 16);
+  return `rgba(${r},${g},${b},${alpha})`;
+}
+
+function nodeAt(px, py) {
+  for (let i = nodes.length - 1; i >= 0; i--) {
+    const n = nodes[i];
+    const r = radius(n) + 3;
+    const dx = px - n.x, dy = py - n.y;
+    if (dx * dx + dy * dy <= r * r) return n;
+  }
+  return null;
+}
+
+function toLocal(evt) {
+  const rect = canvas.getBoundingClientRect();
+  const clientX = evt.touches ? evt.touches[0].clientX : evt.clientX;
+  const clientY = evt.touches ? evt.touches[0].clientY : evt.clientY;
+  return { x: clientX - rect.left, y: clientY - rect.top };
+}
+
+canvas.addEventListener('mousemove', evt => {
+  const { x, y } = toLocal(evt);
+  if (dragNode) {
+    dragNode.x = Math.max(20, Math.min(W - 20, x));
+    dragNode.y = Math.max(20, Math.min(H - 20, y));
+    simulate(1, dragNode.key);
+    draw();
+    return;
+  }
+  const n = nodeAt(x, y);
+  hoverNode = n;
+  canvas.style.cursor = n ? 'pointer' : 'grab';
+  if (n) {
+    const rect = panel.getBoundingClientRect();
+    tooltip.style.left = (n.x + 16) + 'px';
+    tooltip.style.top = (n.y - 8 + (canvas.getBoundingClientRect().top - rect.top)) + 'px';
+    const roleLine = n.is_root ? `<span class="tt-meta">person · ${n.role}</span>` :
+      n.is_meta ? `<span class="tt-meta">type node · ${connectedSet(n).size - 1} instances</span>` :
+      `<span class="tt-meta">${n.type}${n.shared ? ' · shared by ' + n.graphs.length : ''}</span>`;
+    tooltip.innerHTML = `<span class="tt-label">${n.label}</span>${roleLine}`;
+    tooltip.classList.add('visible');
+  } else {
+    tooltip.classList.remove('visible');
+  }
+  draw();
+});
+
+canvas.addEventListener('mousedown', evt => {
+  const { x, y } = toLocal(evt);
+  const n = nodeAt(x, y);
+  if (n) { dragNode = n; canvas.classList.add('dragging'); }
+});
+window.addEventListener('mouseup', () => {
+  if (dragNode) { simulate(30, null); draw(); }
+  dragNode = null;
+  canvas.classList.remove('dragging');
+});
+canvas.addEventListener('mouseleave', () => {
+  hoverNode = null;
+  tooltip.classList.remove('visible');
+  draw();
+});
+
+function init() {
+  resize();
+  seedPositions();
+  simulate(420, null);
+  draw();
+}
+
+window.addEventListener('resize', () => {
+  resize();
+  simulate(60, null);
+  draw();
+});
+
+init();
+</script>
