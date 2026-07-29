@@ -1,0 +1,716 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MoE Re-ranker on lookingFor — Design Review</title>
+<style>
+  :root {
+    color-scheme: light;
+    --plane:          #f9f9f7;
+    --surface-1:      #fcfcfb;
+    --text-primary:   #0b0b0b;
+    --text-secondary: #52514e;
+    --muted:          #898781;
+    --grid:           #e1e0d9;
+    --baseline:       #c3c2b7;
+    --border:         rgba(11,11,11,0.10);
+    --series-1:       #2a78d6;
+    --series-2:       #eb6834;
+    --good:           #0ca30c;
+    --good-text:      #006300;
+    --warning:        #fab219;
+    --critical:       #d03b3b;
+    --wash:           rgba(42,120,214,0.07);
+    --wash-crit:      rgba(208,59,59,0.08);
+    --wash-good:      rgba(12,163,12,0.08);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:where(:not([data-theme="light"])) {
+      color-scheme: dark;
+      --plane:          #0d0d0d;
+      --surface-1:      #1a1a19;
+      --text-primary:   #ffffff;
+      --text-secondary: #c3c2b7;
+      --muted:          #898781;
+      --grid:           #2c2c2a;
+      --baseline:       #383835;
+      --border:         rgba(255,255,255,0.10);
+      --series-1:       #3987e5;
+      --series-2:       #d95926;
+      --good:           #0ca30c;
+      --good-text:      #0ca30c;
+      --critical:       #d03b3b;
+      --wash:           rgba(57,135,229,0.12);
+      --wash-crit:      rgba(208,59,59,0.14);
+      --wash-good:      rgba(12,163,12,0.12);
+    }
+  }
+  :root[data-theme="dark"] {
+    color-scheme: dark;
+    --plane:          #0d0d0d;
+    --surface-1:      #1a1a19;
+    --text-primary:   #ffffff;
+    --text-secondary: #c3c2b7;
+    --muted:          #898781;
+    --grid:           #2c2c2a;
+    --baseline:       #383835;
+    --border:         rgba(255,255,255,0.10);
+    --series-1:       #3987e5;
+    --series-2:       #d95926;
+    --good:           #0ca30c;
+    --good-text:      #0ca30c;
+    --critical:       #d03b3b;
+    --wash:           rgba(57,135,229,0.12);
+    --wash-crit:      rgba(208,59,59,0.14);
+    --wash-good:      rgba(12,163,12,0.12);
+  }
+
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--plane);
+    color: var(--text-primary);
+    font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+    line-height: 1.6;
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 940px; margin: 0 auto; padding: 40px 20px 80px; }
+
+  header.page { margin-bottom: 36px; }
+  .kicker {
+    font-size: 12px; letter-spacing: .09em; text-transform: uppercase;
+    color: var(--muted); font-weight: 600; margin-bottom: 10px;
+  }
+  h1 { font-size: clamp(28px, 4.4vw, 40px); line-height: 1.15; margin: 0 0 14px; letter-spacing: -0.02em; }
+  .standfirst { font-size: 18px; color: var(--text-secondary); margin: 0; max-width: 68ch; }
+
+  h2 {
+    font-size: 22px; margin: 48px 0 6px; letter-spacing: -0.01em;
+    padding-bottom: 10px; border-bottom: 1px solid var(--grid);
+  }
+  h2 .n {
+    display: inline-block; font-size: 12px; font-weight: 700; color: var(--muted);
+    vertical-align: middle; margin-right: 10px; letter-spacing: .08em;
+  }
+  h3 { font-size: 16px; margin: 26px 0 8px; }
+  p { margin: 12px 0; color: var(--text-secondary); max-width: 72ch; }
+  p strong, li strong { color: var(--text-primary); }
+  a { color: var(--series-1); }
+  code {
+    font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+    font-size: .88em; background: var(--wash); color: var(--text-primary);
+    padding: 1px 5px; border-radius: 4px;
+  }
+
+  /* ---------- verdict ---------- */
+  .verdict {
+    background: var(--surface-1); border: 1px solid var(--border);
+    border-radius: 14px; padding: 24px 26px; margin: 28px 0 8px;
+  }
+  .verdict-row { display: flex; gap: 14px; align-items: flex-start; margin-bottom: 16px; }
+  .verdict-row:last-child { margin-bottom: 0; }
+  .vicon { font-size: 20px; line-height: 1.3; flex-shrink: 0; width: 24px; }
+  .vtext { margin: 0; color: var(--text-secondary); }
+  .vtext b { color: var(--text-primary); }
+
+  /* ---------- cards ---------- */
+  .cards { display: grid; gap: 14px; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); margin: 20px 0; }
+  .card {
+    background: var(--surface-1); border: 1px solid var(--border);
+    border-radius: 12px; padding: 18px 18px 16px;
+  }
+  .card.ok    { border-left: 3px solid var(--good); }
+  .card.bad   { border-left: 3px solid var(--critical); }
+  .card h4 { margin: 0 0 8px; font-size: 15px; }
+  .card p { margin: 0; font-size: 14.5px; }
+
+  /* ---------- stat tiles ---------- */
+  .tiles { display: grid; gap: 14px; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); margin: 22px 0; }
+  .tile {
+    background: var(--surface-1); border: 1px solid var(--border);
+    border-radius: 12px; padding: 18px;
+  }
+  .tile .val { font-size: 34px; font-weight: 650; letter-spacing: -0.02em; line-height: 1.05; }
+  .tile .val.crit { color: var(--critical); }
+  .tile .lab { font-size: 13.5px; color: var(--text-secondary); margin-top: 6px; }
+  .tile .sub { font-size: 12.5px; color: var(--muted); margin-top: 4px; }
+
+  /* ---------- figures / charts ---------- */
+  figure {
+    margin: 26px 0; background: var(--surface-1); border: 1px solid var(--border);
+    border-radius: 14px; padding: 22px 24px 18px;
+  }
+  figcaption { font-size: 13.5px; color: var(--muted); margin-top: 16px; padding-top: 14px; border-top: 1px solid var(--grid); }
+  .fig-title { font-size: 16px; font-weight: 600; margin: 0 0 4px; }
+  .fig-sub { font-size: 13.5px; color: var(--text-secondary); margin: 0 0 20px; }
+
+  .bars { display: flex; flex-direction: column; gap: 2px; }
+  .bar-row {
+    display: grid; grid-template-columns: minmax(120px, 205px) 1fr auto;
+    gap: 12px; align-items: center; padding: 3px 0; cursor: default;
+  }
+  .bar-row:hover .track { background: var(--wash); }
+  .bar-lab { font-size: 13.5px; color: var(--text-secondary); text-align: right; }
+  .bar-row.hl .bar-lab { color: var(--text-primary); font-weight: 600; }
+  .track { position: relative; height: 22px; border-radius: 4px; transition: background .12s; }
+  .fill {
+    height: 12px; margin-top: 5px; border-radius: 0 4px 4px 0;
+    background: var(--series-1); min-width: 2px;
+  }
+  .fill.crit { background: var(--critical); }
+  .fill.good { background: var(--good); }
+  .fill.mut  { background: var(--baseline); }
+  .bar-val { font-size: 13.5px; font-variant-numeric: tabular-nums; color: var(--text-primary); min-width: 46px; }
+  .bar-row .tag {
+    font-size: 11px; font-weight: 650; letter-spacing: .04em; text-transform: uppercase;
+    color: var(--critical); margin-left: 8px; white-space: nowrap;
+  }
+  .chance-note { font-size: 12.5px; color: var(--muted); margin-top: 14px; }
+
+  /* grouped bars */
+  .grp { display: flex; flex-direction: column; gap: 18px; }
+  .grp-block .grp-lab { font-size: 13.5px; color: var(--text-secondary); margin-bottom: 6px; }
+  .grp-pair { display: flex; flex-direction: column; gap: 2px; }
+  .grp-bar { display: grid; grid-template-columns: 1fr auto; gap: 10px; align-items: center; }
+  .grp-track { height: 16px; position: relative; }
+  .grp-fill { height: 14px; border-radius: 0 4px 4px 0; }
+  .s1 { background: var(--series-1); }
+  .s2 { background: var(--series-2); }
+  .grp-val { font-size: 13px; font-variant-numeric: tabular-nums; min-width: 92px; color: var(--text-secondary); }
+  .grp-val b { color: var(--text-primary); }
+
+  .legend { display: flex; gap: 18px; flex-wrap: wrap; margin-bottom: 18px; font-size: 13.5px; color: var(--text-secondary); }
+  .legend span { display: flex; align-items: center; gap: 7px; }
+  .swatch { width: 12px; height: 12px; border-radius: 3px; flex-shrink: 0; }
+
+  /* histogram */
+  .hist { display: flex; align-items: flex-end; gap: 2px; height: 150px; margin-bottom: 8px; }
+  .hbar { flex: 1; display: flex; flex-direction: column; justify-content: flex-end; align-items: center; height: 100%; }
+  .hbar .hf { width: 100%; background: var(--series-1); border-radius: 4px 4px 0 0; min-height: 2px; }
+  .hbar.tail .hf { background: var(--critical); }
+  .hbar .hn { font-size: 12px; color: var(--text-secondary); font-variant-numeric: tabular-nums; margin-bottom: 4px; }
+  .hax { display: flex; gap: 2px; border-top: 1px solid var(--baseline); padding-top: 6px; }
+  .hax div { flex: 1; text-align: center; font-size: 11.5px; color: var(--muted); }
+
+  /* ---------- problems ---------- */
+  .prob {
+    background: var(--surface-1); border: 1px solid var(--border);
+    border-left: 3px solid var(--critical); border-radius: 12px;
+    padding: 20px 22px; margin: 16px 0;
+  }
+  .prob.warn { border-left-color: var(--warning); }
+  .prob-head { display: flex; align-items: baseline; gap: 12px; flex-wrap: wrap; margin-bottom: 2px; }
+  .prob-num {
+    font-size: 11.5px; font-weight: 700; letter-spacing: .07em; color: var(--muted);
+    text-transform: uppercase; white-space: nowrap;
+  }
+  .prob h4 { margin: 0; font-size: 17px; letter-spacing: -0.01em; }
+  .sev {
+    font-size: 11px; font-weight: 700; letter-spacing: .05em; text-transform: uppercase;
+    padding: 2px 8px; border-radius: 20px; white-space: nowrap;
+  }
+  .sev.fatal { background: var(--wash-crit); color: var(--critical); }
+  .sev.high  { background: var(--wash-crit); color: var(--critical); }
+  .sev.med   { background: var(--wash); color: var(--series-1); }
+  .evidence {
+    margin-top: 14px; padding: 12px 14px; background: var(--plane);
+    border-radius: 8px; border: 1px solid var(--grid);
+    font-size: 13.5px; color: var(--text-secondary);
+  }
+  .evidence b { color: var(--text-primary); }
+  .evidence .elab { font-size: 11px; font-weight: 700; letter-spacing: .07em; text-transform: uppercase; color: var(--muted); display: block; margin-bottom: 4px; }
+  .fix { margin-top: 12px; font-size: 14px; color: var(--text-secondary); }
+  .fix b { color: var(--good-text); }
+
+  /* ---------- steps ---------- */
+  .steps { display: flex; flex-direction: column; gap: 12px; margin: 22px 0; counter-reset: s -1; }
+  .step {
+    background: var(--surface-1); border: 1px solid var(--border); border-radius: 12px;
+    padding: 18px 20px; display: grid; grid-template-columns: auto 1fr; gap: 16px; align-items: start;
+  }
+  .step .badge {
+    width: 34px; height: 34px; border-radius: 9px; background: var(--wash);
+    color: var(--series-1); font-weight: 700; font-size: 15px;
+    display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+  }
+  .step h4 { margin: 0 0 4px; font-size: 15.5px; }
+  .step p { margin: 0; font-size: 14.5px; }
+  .cost {
+    display: inline-block; font-size: 12px; font-weight: 650; color: var(--good-text);
+    background: var(--wash-good); padding: 1px 8px; border-radius: 20px; margin-left: 8px;
+    vertical-align: 2px; letter-spacing: .02em;
+  }
+  .cost.stop { color: var(--critical); background: var(--wash-crit); }
+
+  /* ---------- diagram fix ---------- */
+  .diagram-fix { display: grid; gap: 14px; grid-template-columns: 1fr 1fr; margin: 22px 0; }
+  @media (max-width: 640px) { .diagram-fix { grid-template-columns: 1fr; } }
+  .dcol { background: var(--surface-1); border: 1px solid var(--border); border-radius: 12px; padding: 18px; }
+  .dcol.before { border-top: 3px solid var(--critical); }
+  .dcol.after  { border-top: 3px solid var(--good); }
+  .dcol .dh { font-size: 12px; font-weight: 700; letter-spacing: .07em; text-transform: uppercase; margin-bottom: 12px; }
+  .dcol.before .dh { color: var(--critical); }
+  .dcol.after  .dh { color: var(--good-text); }
+  .dcol ul { margin: 0; padding-left: 18px; }
+  .dcol li { font-size: 14px; color: var(--text-secondary); margin-bottom: 9px; }
+  .dcol li b { color: var(--text-primary); }
+
+  ul.plain { margin: 12px 0; padding-left: 20px; }
+  ul.plain li { color: var(--text-secondary); margin-bottom: 9px; max-width: 72ch; }
+
+  details.tbl { margin-top: 14px; font-size: 13.5px; }
+  details.tbl summary { cursor: pointer; color: var(--series-1); font-size: 13.5px; }
+  .scroll { overflow-x: auto; margin-top: 12px; }
+  table { border-collapse: collapse; width: 100%; font-size: 13.5px; min-width: 380px; }
+  th, td { text-align: left; padding: 7px 12px 7px 0; border-bottom: 1px solid var(--grid); }
+  th { color: var(--muted); font-weight: 600; font-size: 12px; text-transform: uppercase; letter-spacing: .05em; }
+  td { color: var(--text-secondary); font-variant-numeric: tabular-nums; }
+  td:first-child { color: var(--text-primary); }
+
+  footer.page { margin-top: 56px; padding-top: 20px; border-top: 1px solid var(--grid); font-size: 13px; color: var(--muted); }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="page">
+  <div class="kicker">Design review · dorby-ai · 2026-07-29</div>
+  <h1>A heavy MoE re-ranker over the <code>lookingFor</code> field</h1>
+  <p class="standfirst">The two-stage shape is right, and splitting the seeker's asks is the
+  best-proven trick in this project. But the five experts as drawn have nothing to learn from,
+  and the repo already ran the weighted-average version of this idea and lost.</p>
+</header>
+
+<div class="verdict">
+  <div class="verdict-row">
+    <div class="vicon" aria-hidden="true">✅</div>
+    <p class="vtext"><b>Keep:</b> retrieve-then-rerank, and exploding the seeker's
+    <code>lookingFor</code> into sections. Both are backed by real numbers here.</p>
+  </div>
+  <div class="verdict-row">
+    <div class="vicon" aria-hidden="true">🔴</div>
+    <p class="vtext"><b>Change:</b> the five named experts have <b>zero labels</b> in the real data,
+    and "weighted combine" is the wrong way to add up expert opinions — real declines look like a
+    <b>veto</b>, not an average.</p>
+  </div>
+  <div class="verdict-row">
+    <div class="vicon" aria-hidden="true">🟡</div>
+    <p class="vtext"><b>Do first:</b> two cheap tests (one free, one ~$0.05) that tell you whether
+    the whole premise holds — before writing any model code.</p>
+  </div>
+</div>
+
+<!-- ============================================================ -->
+<h2><span class="n">01</span>What's genuinely right about it</h2>
+
+<div class="cards">
+  <div class="card ok">
+    <h4>Rerank a shortlist, don't rescore the pool</h4>
+    <p>This is the only way to spend real compute without putting a heavy model on the
+    fast lookup path. Correct answer to the 100&nbsp;ms budget.</p>
+  </div>
+  <div class="card ok">
+    <h4>Splitting the <i>seeker's</i> asks works</h4>
+    <p>Already measured: it lifted pair AUC 0.579 → 0.596 and top-1 hits 27.6% → 37.9%.
+    Splitting the <i>candidate</i> side lost on every metric. Your diagram splits the
+    right side.</p>
+  </div>
+  <div class="card ok">
+    <h4>You already have the right retriever</h4>
+    <p>The bigbatch triplet run trades accuracy for recall (AUC 0.610 → 0.576). That's a
+    weak final scorer and a <i>good</i> candidate generator. Stop reading its AUC drop as
+    a failure.</p>
+  </div>
+</div>
+
+<p><strong>In plain words:</strong> a seeker usually has several unrelated things going on at
+once — fundraising, hiring, finding customers. Squashing all of that into one embedding
+blurs them together. Any one intro is only ever about <i>one</i> of those threads, so letting
+that thread drive the score instead of the blur is a genuine win. That part of your idea is
+not speculation; it's the thing that already worked.</p>
+
+<!-- ============================================================ -->
+<h2><span class="n">02</span>The one chart that should worry you most</h2>
+
+<figure>
+  <p class="fig-title">Every model in this project sits in a narrow band — and a cheating shortcut beats all of them</p>
+  <p class="fig-sub">Pair ROC-AUC on the real 69-pair holdout. Bar length = <b>lift above a coin
+  flip</b>, so the bars are anchored at 0.50 (zero lift), not at zero.</p>
+
+  <div class="bars" role="img" aria-label="Bar chart of pair ROC-AUC. Chance 0.500. Models range 0.578 to 0.660. Seeker identity alone, a shortcut with no text, reaches 0.687, higher than every model.">
+    <div class="bar-row">
+      <div class="bar-lab">Coin flip</div>
+      <div class="track"><div class="fill mut" style="width:0%"></div></div>
+      <div class="bar-val">0.500</div>
+    </div>
+    <div class="bar-row">
+      <div class="bar-lab">twotower run_001</div>
+      <div class="track"><div class="fill" style="width:37.1%"></div></div>
+      <div class="bar-val">0.578</div>
+    </div>
+    <div class="bar-row">
+      <div class="bar-lab">Frozen voyage-4-nano</div>
+      <div class="track"><div class="fill" style="width:37.6%"></div></div>
+      <div class="bar-val">0.579</div>
+    </div>
+    <div class="bar-row">
+      <div class="bar-lab">TF-IDF (no training at all)</div>
+      <div class="track"><div class="fill" style="width:43.8%"></div></div>
+      <div class="bar-val">0.592</div>
+    </div>
+    <div class="bar-row">
+      <div class="bar-lab">Seeker-sectioned nano</div>
+      <div class="track"><div class="fill" style="width:45.7%"></div></div>
+      <div class="bar-val">0.596</div>
+    </div>
+    <div class="bar-row">
+      <div class="bar-lab">voyage-4-large <i>(production)</i></div>
+      <div class="track"><div class="fill" style="width:51.9%"></div></div>
+      <div class="bar-val">0.609</div>
+    </div>
+    <div class="bar-row">
+      <div class="bar-lab">LLM judge (naive)</div>
+      <div class="track"><div class="fill" style="width:67.1%"></div></div>
+      <div class="bar-val">0.641</div>
+    </div>
+    <div class="bar-row hl">
+      <div class="bar-lab">Hybrid + seeker-sectioning</div>
+      <div class="track"><div class="fill" style="width:70.5%"></div></div>
+      <div class="bar-val">0.648</div>
+    </div>
+    <div class="bar-row hl">
+      <div class="bar-lab">Qwen3-Embedding-8B</div>
+      <div class="track"><div class="fill" style="width:76.2%"></div></div>
+      <div class="bar-val">0.660</div>
+    </div>
+    <div class="bar-row hl">
+      <div class="bar-lab">⚠ Seeker ID alone, no text</div>
+      <div class="track"><div class="fill crit" style="width:89.0%"></div></div>
+      <div class="bar-val">0.687</div>
+    </div>
+  </div>
+  <p class="chance-note">⚠ = not a model. Guessing from <i>which seeker it is</i> and nothing else.
+  Full width = 0.71. Anchored at 0.50.</p>
+
+  <figcaption>The whole field spans 0.578–0.660. On the synthetic <code>rrf_002</code> batch,
+  "who is the seeker" alone predicted the label at 0.687 — because 12 of 40 seekers rejected
+  <i>every</i> candidate. Any model handed the seeker's identity can learn that instead of
+  learning matching.</figcaption>
+</figure>
+
+<p><strong>Why this matters for your design:</strong> your gate reads the seeker's
+<code>lookingFor</code> and nothing else. That is exactly the input needed to learn "this
+seeker says no to everything" — a shortcut that scores <i>higher</i> than every real model in
+the project. A gate will find it before it finds anything about side, stage, or role.</p>
+
+<!-- ============================================================ -->
+<h2><span class="n">03</span>Problems, worst first</h2>
+
+<div class="prob">
+  <div class="prob-head">
+    <span class="prob-num">Problem 1</span>
+    <span class="sev fatal">Fatal as drawn</span>
+  </div>
+  <h4>The five experts have nothing to learn from</h4>
+  <p>Each expert is named after a failure mode — wrong side, wrong stage, wrong role, geo
+  mismatch, prefs conflict. Those names come from the <i>synthetic negative generator's recipe</i>:
+  a list of ways to deliberately build a bad pair. They are not something anyone observed
+  in the real data.</p>
+  <div class="evidence">
+    <span class="elab">Checked in the data</span>
+    <b>0 of 100</b> real negatives carry a <code>failure_mode</code>. So do <b>339 of 340</b>
+    negatives in <code>dataset_negative.json</code> — the labels only survive in the staging
+    envelope (<code>artifacts/synth/*/staged/</code>, ~55 per mode), and <code>promote.py</code>
+    drops them.
+  </div>
+  <p>Real negatives are intros production <i>recommended</i> and humans <i>declined</i>, with no
+  reason recorded. So you'd train the experts on hand-built mismatches, then apply them to a
+  population that may not break down that way at all. Nobody has checked whether real declines
+  even have five buckets.</p>
+  <div class="fix"><b>Fix:</b> test the taxonomy before building anything on it (Step 1).</div>
+</div>
+
+<div class="prob">
+  <div class="prob-head">
+    <span class="prob-num">Problem 2</span>
+    <span class="sev high">Already tried, already lost</span>
+  </div>
+  <h4>"Weighted combine" is the part that failed last time</h4>
+  <p>The <code>structured_cot</code> judge scores six weighted aspects with evidence and adds
+  them up in code. That <i>is</i> your architecture, with an LLM as every expert and the gate
+  weights set by hand. It lost on every single metric.</p>
+
+  <figure style="margin:16px 0 4px; padding:18px 18px 14px;">
+    <div class="legend">
+      <span><span class="swatch" style="background:var(--series-1)"></span> naive (one holistic call)</span>
+      <span><span class="swatch" style="background:var(--series-2)"></span> structured_cot (6 weighted experts)</span>
+    </div>
+    <div class="grp" role="img" aria-label="Grouped bars: naive beats structured_cot on pair AUC 0.6409 vs 0.6336, decision accuracy 0.6087 vs 0.5507, and hard-negative AUC 0.6543 vs 0.6267.">
+      <div class="grp-block">
+        <div class="grp-lab">Pair ROC-AUC</div>
+        <div class="grp-pair">
+          <div class="grp-bar"><div class="grp-track"><div class="grp-fill s1" style="width:82.9%"></div></div><div class="grp-val"><b>0.6409</b></div></div>
+          <div class="grp-bar"><div class="grp-track"><div class="grp-fill s2" style="width:78.6%"></div></div><div class="grp-val">0.6336</div></div>
+        </div>
+      </div>
+      <div class="grp-block">
+        <div class="grp-lab">Decision accuracy</div>
+        <div class="grp-pair">
+          <div class="grp-bar"><div class="grp-track"><div class="grp-fill s1" style="width:63.9%"></div></div><div class="grp-val"><b>0.6087</b></div></div>
+          <div class="grp-bar"><div class="grp-track"><div class="grp-fill s2" style="width:29.8%"></div></div><div class="grp-val">0.5507</div></div>
+        </div>
+      </div>
+      <div class="grp-block">
+        <div class="grp-lab">Hard-negative AUC</div>
+        <div class="grp-pair">
+          <div class="grp-bar"><div class="grp-track"><div class="grp-fill s1" style="width:90.8%"></div></div><div class="grp-val"><b>0.6543</b></div></div>
+          <div class="grp-bar"><div class="grp-track"><div class="grp-fill s2" style="width:74.5%"></div></div><div class="grp-val">0.6267</div></div>
+        </div>
+      </div>
+      <div class="grp-block">
+        <div class="grp-lab">Says "yes"</div>
+        <div class="grp-pair">
+          <div class="grp-bar"><div class="grp-track"><div class="grp-fill s1" style="width:55.1%"></div></div><div class="grp-val">55.1%</div></div>
+          <div class="grp-bar"><div class="grp-track"><div class="grp-fill s2" style="width:75.4%"></div></div><div class="grp-val">75.4% <span style="color:var(--critical)">↑</span></div></div>
+        </div>
+      </div>
+    </div>
+    <figcaption>Same model, same profiles, run back-to-back. First three rows show lift above chance (anchored at 0.50, full width 0.67); yes-rate is a plain 0–100% scale.
+    <code>docs/llm-judge-experiment.md:149</code></figcaption>
+  </figure>
+
+  <p style="margin-top:18px;"><strong>Why it failed, and why it transfers:</strong> averaging
+  several independent sub-scores pulls everything toward the middle. A pair with one fatal flaw
+  and five perfectly fine aspects still lands near 0.5, so it gets called a match. You can see
+  it in the yes-rate jumping from 55% to 75% — it got <i>less</i> decisive, not more.</p>
+  <p><strong>Real declines are almost certainly veto-shaped.</strong> One dealbreaker kills an
+  intro; five nice-to-haves don't rescue it. A weighted sum cannot express that.</p>
+  <div class="fix"><b>Fix — my single biggest change to your diagram:</b> the combine step should
+  be <b>soft-min or noisy-OR</b> (worst expert dominates), not a weighted average.</div>
+</div>
+
+<div class="prob">
+  <div class="prob-head">
+    <span class="prob-num">Problem 3</span>
+    <span class="sev high">High</span>
+  </div>
+  <h4>The gate will learn the seeker's mood, not the matching axes</h4>
+  <p>See the chart above: seeker identity alone scores 0.687, higher than every real model.
+  Your gate is fed the seeker and only the seeker, so that shortcut is the easiest thing in
+  its reach.</p>
+  <div class="evidence">
+    <span class="elab">Budget reality</span>
+    <b>131 real training pairs.</b> One bit of supervision each (accepted / declined) — versus
+    a gate plus five fresh expert heads. Gate collapse (all weight to one expert) is the
+    <i>default</i> outcome here, not a risk to monitor.
+  </div>
+  <div class="fix"><b>Fix:</b> gate on the <b>section × candidate interaction</b>, never the
+  seeker alone; and train <b>within a seeker</b> (249 triplets exist), which cancels the
+  per-seeker base rate by construction.</div>
+</div>
+
+<div class="prob">
+  <div class="prob-head">
+    <span class="prob-num">Problem 4</span>
+    <span class="sev high">High</span>
+  </div>
+  <h4>The sections you get aren't the experts you want</h4>
+  <p>Exploding <code>lookingFor</code> gives you <b>topics</b>. Your experts are <b>failure
+  axes</b>. Those are two different ways to cut the problem, and the gate would have to
+  translate between them with no supervision on 131 pairs.</p>
+  <div class="evidence">
+    <span class="elab">Actual section headers in the real pairs</span>
+    fundraising (67) · hiring (31) · customers (24) · partnerships (20) · founders (18) ·
+    build clients (15) · geography (11) · accelerators (10)<br>
+    <span style="color:var(--muted)">Not: wrong_side · wrong_stage · wrong_role · geo_mismatch · prefs_conflict</span>
+  </div>
+
+  <figure style="margin:18px 0 4px; padding:18px 18px 14px;">
+    <p class="fig-title" style="font-size:14.5px;">Sections per seeker: a fat middle and an absurd tail</p>
+    <p class="fig-sub" style="margin-bottom:14px;">Count of the 200 real pairs, by how many <code>lookingFor</code> sections the seeker has.</p>
+    <div class="hist" role="img" aria-label="Histogram of sections per seeker: 1-2 sections 28 pairs, 3-4 sections 56, 5-6 sections 32, 7-10 sections 17, 11-20 sections 37, 21-50 sections 22, over 50 sections 7 (up to 126 sections).">
+      <div class="hbar"><div class="hn">28</div><div class="hf" style="height:50%"></div></div>
+      <div class="hbar"><div class="hn">56</div><div class="hf" style="height:100%"></div></div>
+      <div class="hbar"><div class="hn">32</div><div class="hf" style="height:57%"></div></div>
+      <div class="hbar"><div class="hn">17</div><div class="hf" style="height:30%"></div></div>
+      <div class="hbar"><div class="hn">37</div><div class="hf" style="height:66%"></div></div>
+      <div class="hbar tail"><div class="hn">22</div><div class="hf" style="height:39%"></div></div>
+      <div class="hbar tail"><div class="hn">7</div><div class="hf" style="height:13%"></div></div>
+    </div>
+    <div class="hax">
+      <div>1–2</div><div>3–4</div><div>5–6</div><div>7–10</div><div>11–20</div><div>21–50</div><div>50+</div>
+    </div>
+    <figcaption>Range is <b>1 to 126</b> sections. Four seekers have 126. No fixed-slot design
+    survives that — you need pooling over a variable count, and the red buckets are worth
+    eyeballing for parsing bugs before they eat your compute.</figcaption>
+  </figure>
+</div>
+
+<div class="prob warn">
+  <div class="prob-head">
+    <span class="prob-num">Problem 5</span>
+    <span class="sev med">Unmeasured</span>
+  </div>
+  <h4>"Heavy" needs an actual number, and none exists</h4>
+  <p>Cost is <b>candidates × sections</b> forward passes. At 50 candidates and a typical 4
+  sections, that's ~200 passes on the live path. The project rules out scoring each pair with
+  a cross-encoder online — and <b>there is still no latency benchmark anywhere in this repo</b>.
+  This is the one thing you cannot reason your way to.</p>
+  <div class="fix"><b>Fix that keeps your shape:</b> experts consume <b>precomputed candidate
+  vectors</b>, so the candidate side stays offline and the live cost is a few section encodes
+  plus cheap little MLP heads. That's a late-interaction re-ranker, not a cross-encoder — and
+  it fits the budget.</div>
+</div>
+
+<div class="prob warn">
+  <div class="prob-head">
+    <span class="prob-num">Problem 6</span>
+    <span class="sev med">Measurement</span>
+  </div>
+  <h4>You can't detect a win this small on 69 pairs</h4>
+  <p>The holdout is 69 pairs, 29 of them positive, and every model ever tested lands between
+  0.578 and 0.660. A five-expert MoE has enough knobs that the most likely outcome is picking a
+  winner out of noise.</p>
+  <div class="fix"><b>Fix:</b> write down the win threshold <i>before</i> running, use a
+  within-seeker metric on train-dev while iterating, and keep the real holdout a one-shot
+  final check.</div>
+</div>
+
+<!-- ============================================================ -->
+<h2><span class="n">04</span>The same idea, redrawn</h2>
+
+<div class="diagram-fix">
+  <div class="dcol before">
+    <div class="dh">Your diagram</div>
+    <ul>
+      <li>Gate reads <b>seeker's lookingFor only</b></li>
+      <li>Five experts named after <b>synthetic failure modes</b></li>
+      <li><b>Weighted combine</b> → match score</li>
+      <li>Trained pairwise on accept/decline</li>
+      <li>Heavy scoring of each (seeker, candidate) pair online</li>
+    </ul>
+  </div>
+  <div class="dcol after">
+    <div class="dh">What survives the evidence</div>
+    <ul>
+      <li>Gate reads the <b>section × candidate interaction</b> — never the seeker alone</li>
+      <li>Experts kept only if each <b>beats chance standalone</b> (Step 2)</li>
+      <li><b>Soft-min / noisy-OR</b> → one bad axis vetoes the match</li>
+      <li>Trained <b>listwise within a seeker</b> (249 triplets)</li>
+      <li>Candidate vectors <b>precomputed offline</b>; live cost = section encodes + MLP heads</li>
+    </ul>
+  </div>
+</div>
+
+<!-- ============================================================ -->
+<h2><span class="n">05</span>How I'd sequence it</h2>
+
+<p>Both of the first two steps are cheap and either one can kill the idea. Do them before
+writing model code.</p>
+
+<div class="steps">
+  <div class="step">
+    <div class="badge">0</div>
+    <div>
+      <h4>Change the way you add up the sections <span class="cost">free · today</span></h4>
+      <p>The per-section similarities are already computed and cached. Add <b>min</b> and
+      <b>noisy-OR</b> next to the existing max (0.596) and softmax (0.598). If veto-shaped
+      adding-up beats max, your premise gains real support with zero new model. <b>If min does
+      nothing, the veto story is wrong and I'd drop the MoE.</b></p>
+    </div>
+  </div>
+  <div class="step">
+    <div class="badge">1</div>
+    <div>
+      <h4>Ask what real declines actually look like <span class="cost">~$0.05 · highest value</span></h4>
+      <p>Have the naive judge — the best hard-negative scorer in the project, and the only model
+      where hard negatives score <i>better</i> than easy ones — write a <b>free-text reason</b>
+      for each of the 100 real declines, then cluster them. Do they fall into five buckets? Are
+      they <i>these</i> five? If most come back "nothing's wrong, just not compelling," there are
+      no axes to model and Steps 2–3 are moot.</p>
+    </div>
+  </div>
+  <div class="step">
+    <div class="badge">2</div>
+    <div>
+      <h4>Prove each expert alone before wiring a gate <span class="cost">cheap</span></h4>
+      <p>Geo is nearly a rule off <code>locationAvailability</code>; stage and role come off
+      <code>positioning</code>. Score each axis on its own against the real holdout. <b>An expert
+      that can't beat a coin flip alone will not be rescued by a gate.</b></p>
+    </div>
+  </div>
+  <div class="step">
+    <div class="badge">3</div>
+    <div>
+      <h4>Only now, build it <span class="cost stop">gated on 0–2 passing</span></h4>
+      <p>Interaction-gating, soft-min combine, listwise within-seeker training, precomputed
+      candidate vectors, and one single shot at the real holdout.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ============================================================ -->
+<h2><span class="n">06</span>What I'd bet on instead</h2>
+
+<p><strong>Distill the LLM judge into the re-ranker.</strong> You already have a teacher at
+0.641 AUC with the best hard-negative performance in the project — and hard negatives are the
+only population that exists in production. You can generate its labels at scale, which is
+exactly what you <i>can't</i> do for the five failure axes. A small late-interaction student
+trained to copy the judge's score gets you the same goal using labels you can actually make.
+The expert decomposition can go <i>inside</i> that student later if you still want it.</p>
+
+<div class="verdict" style="border-left:3px solid var(--warning);">
+  <div class="verdict-row">
+    <div class="vicon" aria-hidden="true">⚖️</div>
+    <p class="vtext"><b>One honest point for the MoE:</b> <code>structured_cot</code> bought
+    <b>explainability</b> but not accuracy. If what you actually need to ship is "here's <i>why</i>
+    we recommend this intro," the MoE may be worth building even at flat accuracy. Just be clear
+    with yourself which of the two you're buying — the evidence says you probably can't have both.</p>
+  </div>
+</div>
+
+<details class="tbl">
+  <summary>Table view — all figures used on this page</summary>
+  <div class="scroll">
+    <table>
+      <thead><tr><th>Figure</th><th>Value</th><th>Source</th></tr></thead>
+      <tbody>
+        <tr><td>Real negatives with a <code>failure_mode</code></td><td>0 / 100</td><td>data/dataset_negative.json</td></tr>
+        <tr><td>All negatives with a <code>failure_mode</code></td><td>1 / 340</td><td>data/dataset_negative.json</td></tr>
+        <tr><td>Staged synth pairs per failure mode</td><td>~52–55 each</td><td>artifacts/synth/*/staged/</td></tr>
+        <tr><td>Real train pairs</td><td>131</td><td>seed_split.json</td></tr>
+        <tr><td>Real holdout pairs (29 pos / 40 neg)</td><td>69</td><td>seed_split.json</td></tr>
+        <tr><td>Sections per seeker (range)</td><td>1 – 126</td><td>computed, 200 real pairs</td></tr>
+        <tr><td>Baseline nano — pair AUC</td><td>0.579</td><td>lookingfor-sectioning-findings.md</td></tr>
+        <tr><td>Seeker-sectioned (max) — pair AUC</td><td>0.596</td><td>lookingfor-sectioning-findings.md</td></tr>
+        <tr><td>Seeker-sectioned (softmax) — pair AUC</td><td>0.598</td><td>lookingfor-sectioning-findings.md</td></tr>
+        <tr><td>Hybrid + seeker-sectioning — pair AUC</td><td>0.6483</td><td>lookingfor-sectioning-findings.md</td></tr>
+        <tr><td>Candidate-sectioned — pair AUC</td><td>0.568</td><td>lookingfor-sectioning-findings.md</td></tr>
+        <tr><td>Top-1: baseline → sectioned</td><td>27.6% → 37.9%</td><td>lookingfor-sectioning-findings.md</td></tr>
+        <tr><td>voyage-4-large (production) — pair AUC</td><td>0.6086</td><td>baseline-results-holdout.md</td></tr>
+        <tr><td>Qwen3-Embedding-8B — pair AUC</td><td>0.6595</td><td>hf-embedding-baseline-findings.md</td></tr>
+        <tr><td>LLM judge naive — pair AUC</td><td>0.6409</td><td>llm-judge-experiment.md</td></tr>
+        <tr><td>LLM judge structured_cot — pair AUC</td><td>0.6336</td><td>llm-judge-experiment.md</td></tr>
+        <tr><td>naive vs cot — decision accuracy</td><td>0.6087 vs 0.5507</td><td>llm-judge-experiment.md</td></tr>
+        <tr><td>naive vs cot — hard-neg AUC</td><td>0.6543 vs 0.6267</td><td>llm-judge-experiment.md</td></tr>
+        <tr><td>naive vs cot — yes-rate</td><td>55.1% vs 75.4%</td><td>llm-judge-experiment.md</td></tr>
+        <tr><td>Seeker identity alone — AUC</td><td>0.687</td><td>rrf-pairing-pipeline.md (rrf_002)</td></tr>
+        <tr><td>Seekers rejecting every candidate</td><td>12 / 40</td><td>rrf-pairing-pipeline.md</td></tr>
+        <tr><td>Available within-seeker triplets</td><td>249</td><td>rrf-pairing-pipeline.md</td></tr>
+        <tr><td>Triplet run: AUC traded for recall</td><td>0.610 → 0.576</td><td>twotower-rrf-triplet-bigbatch-experiment.md</td></tr>
+      </tbody>
+    </table>
+  </div>
+</details>
+
+<footer class="page">
+  Design review of a proposed mixture-of-experts re-ranker over the <code>lookingFor</code> field.
+  All figures from this repo's existing experiment docs and a direct check of
+  <code>data/dataset_*.json</code>. No new experiments were run to produce this page.
+</footer>
+
+</div>
+</body>
+</html>
