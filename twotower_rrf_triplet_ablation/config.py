@@ -31,6 +31,11 @@ MODEL_PRESETS: dict[str, dict[str, Any]] = {
         "eval_batch_size": 6,
         "gradient_accumulation_steps": 6,
         "learning_rate": 2e-4,
+        # 5 epochs + eval-per-epoch means the default limit of 3 prunes the
+        # epoch-1/2 checkpoints before select_best_checkpoint runs. Both prior
+        # experiments silently shipped a final-epoch model for exactly this
+        # reason; keeping all 5 lets selection actually pick what it chose.
+        "save_total_limit": 5,
         "query_prompt": "Represent the query for retrieving supporting documents: ",
         "document_prompt": "Represent the document for retrieval: ",
     },

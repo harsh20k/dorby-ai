@@ -1,0 +1,146 @@
+<title>Arm C — baseline corner</title>
+<style>
+:root{--bg:#eef1ee;--surface:#fff;--surface-2:#e4e8e3;--ink:#1c211f;--ink-soft:#4b544f;
+--muted:#7c8781;--line:#d3d9d1;--copper:#b5622a;--teal:#1f7a72;--slate:#4a5578;--code-bg:#e6e9e2;
+--shadow:0 1px 2px rgba(20,25,20,.06),0 8px 24px rgba(20,25,20,.05);}
+@media (prefers-color-scheme:dark){:root{--bg:#12151a;--surface:#191d23;--surface-2:#20252c;
+--ink:#e7ebe6;--ink-soft:#aab4ac;--muted:#6d7871;--line:#2a3038;--copper:#e0925a;--teal:#5bc2b6;
+--slate:#9aa6d6;--code-bg:#1c2229;--shadow:0 1px 2px rgba(0,0,0,.3),0 12px 32px rgba(0,0,0,.35);}}
+:root[data-theme="dark"]{--bg:#12151a;--surface:#191d23;--surface-2:#20252c;--ink:#e7ebe6;
+--ink-soft:#aab4ac;--muted:#6d7871;--line:#2a3038;--copper:#e0925a;--teal:#5bc2b6;--slate:#9aa6d6;
+--code-bg:#1c2229;--shadow:0 1px 2px rgba(0,0,0,.3),0 12px 32px rgba(0,0,0,.35);}
+:root[data-theme="light"]{--bg:#eef1ee;--surface:#fff;--surface-2:#e4e8e3;--ink:#1c211f;
+--ink-soft:#4b544f;--muted:#7c8781;--line:#d3d9d1;--copper:#b5622a;--teal:#1f7a72;--slate:#4a5578;
+--code-bg:#e6e9e2;--shadow:0 1px 2px rgba(20,25,20,.06),0 8px 24px rgba(20,25,20,.05);}
+*{box-sizing:border-box}html,body{margin:0;padding:0}
+body{background:var(--bg);color:var(--ink);font-family:"IBM Plex Sans","Segoe UI",-apple-system,system-ui,sans-serif;
+font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}
+.wrap{max-width:860px;margin:0 auto;padding:0 24px 72px}
+h1,h2{font-family:Charter,"Iowan Old Style",Georgia,serif;font-weight:600;text-wrap:balance}
+code,.mono{font-family:"IBM Plex Mono","SF Mono",Menlo,monospace;font-variant-numeric:tabular-nums}
+header.hero{padding:56px 24px 32px;max-width:860px;margin:0 auto;border-bottom:1px solid var(--line)}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;font-family:"IBM Plex Mono",monospace;
+font-size:12px;letter-spacing:.09em;text-transform:uppercase;color:var(--muted);margin-bottom:14px}
+.eyebrow .dot{width:6px;height:6px;border-radius:50%}
+h1.title{font-size:clamp(26px,3.6vw,36px);line-height:1.15;margin:0 0 10px}
+.lede{font-size:17px;color:var(--ink-soft);max-width:620px;margin:0}
+.cfg{display:flex;gap:8px;flex-wrap:wrap;margin-top:18px}
+.chip{font-family:"IBM Plex Mono",monospace;font-size:12px;padding:4px 10px;border-radius:20px;
+background:var(--surface-2);border:1px solid var(--line);color:var(--ink-soft)}
+section{padding:38px 0;border-bottom:1px solid var(--line)}section:last-of-type{border-bottom:none}
+h2{font-size:21px;margin:0 0 14px}p{margin:0 0 14px;max-width:68ch}p:last-child{margin-bottom:0}
+.table-wrap{overflow-x:auto;margin:16px 0;border:1px solid var(--line);border-radius:10px;
+background:var(--surface);box-shadow:var(--shadow)}
+table{border-collapse:collapse;width:100%;min-width:560px;font-size:14px}
+th,td{text-align:right;padding:10px 14px;border-bottom:1px solid var(--line)}
+th:first-child,td:first-child{text-align:left}
+thead th{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.04em;text-transform:uppercase;
+color:var(--muted);font-weight:500;background:var(--surface-2)}
+tbody tr:last-child td{border-bottom:none}td.mono{font-family:"IBM Plex Mono",monospace}
+tr.mean td{font-weight:600;background:color-mix(in srgb,var(--teal) 7%,transparent)}
+canvas{display:block;width:100%;height:200px}
+.chart-card{background:var(--surface);border:1px solid var(--line);border-radius:10px;
+padding:16px 18px 8px;box-shadow:var(--shadow);margin:16px 0}
+.legend{display:flex;gap:14px;margin-top:6px;font-size:12px;color:var(--ink-soft);flex-wrap:wrap}
+.legend span{display:inline-flex;align-items:center;gap:6px}
+.legend i{width:10px;height:10px;border-radius:2px;display:inline-block}
+.callout{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:16px 18px;
+margin:16px 0;box-shadow:var(--shadow)}
+.callout.win{border-left:3px solid var(--teal)}.callout.loss{border-left:3px solid var(--copper)}
+.callout.neutral{border-left:3px solid var(--slate)}
+.callout .label{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.06em;
+text-transform:uppercase;color:var(--muted);margin-bottom:6px}
+.links{display:flex;gap:18px;flex-wrap:wrap;margin-top:14px;font-size:13.5px}
+.links a{color:var(--teal);text-decoration:none;border-bottom:1px solid transparent}
+.links a:hover{border-color:var(--teal)}
+footer{padding:28px 0 0;color:var(--muted);font-size:13px}
+footer code{background:var(--code-bg);padding:.1em .4em;border-radius:4px}
+:focus-visible{outline:2px solid var(--teal);outline-offset:2px}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+<header class="hero">
+  <div class="eyebrow"><span class="dot" style="background:var(--slate)"></span> Dorby AI · two-tower ablation · 1 of 3 arms</div>
+  <h1 class="title">Arm C — baseline corner</h1>
+  <p class="lede">Neither lever pulled. The reference point both other arms are measured against.</p>
+  <div class="cfg">
+    <span class="chip">micro-batch 2</span>
+    <span class="chip">accum 6</span>
+    <span class="chip">effective batch 12</span>
+    <span class="chip">1 negative/row</span>
+    <span class="chip">245 steps</span>
+    <span class="chip">2 replicates</span>
+  </div>
+  <div class="links">
+    <a href="https://claude.ai/code/artifact/4ab4000d-f7a6-4477-8a2e-3b578da25cdc">→ Combined verdict: which lever won</a>
+    <a href="https://claude.ai/code/artifact/6d2ea3d7-0f90-42b6-ac2e-ac807dcaedb1">← Previous: bigbatch run</a>
+    <a href="https://claude.ai/code/artifact/3511253c-fb74-429e-820c-d30dbd8c4816">← Original triplet fine-tune</a>
+  </div>
+</header>
+<div class="wrap">
+  <section>
+    <h2>Result on the real 69-pair holdout</h2>
+    <p>Run twice with identical settings, so the gap between the two rows is this
+    experiment's noise floor rather than an effect.</p>
+    <div class="table-wrap"><table>
+      <thead><tr><th></th><th>Pair AUC</th><th>Hard-neg</th><th>MRR</th><th>Recall@1</th><th>Recall@10</th></tr></thead>
+      <tbody><tr><td>run 1</td><td class="mono">0.6078</td><td class="mono">0.6190</td><td class="mono">0.4826</td><td class="mono">0.3103</td><td class="mono">0.8621</td></tr><tr><td>run 2 (replicate)</td><td class="mono">0.5914</td><td class="mono">0.5897</td><td class="mono">0.4978</td><td class="mono">0.3448</td><td class="mono">0.8276</td></tr><tr class="mean"><td>mean</td><td class="mono">0.5996</td><td class="mono">0.6043</td><td class="mono">0.4902</td><td class="mono">0.3276</td><td class="mono">0.8448</td></tr><tr><td style="color:var(--muted)">Voyage-4-large (frozen prod)</td><td class="mono" style="color:var(--muted)">0.6086</td><td class="mono" style="color:var(--muted)">0.6020</td><td class="mono" style="color:var(--muted)">0.5287</td><td class="mono" style="color:var(--muted)">0.3448</td><td class="mono" style="color:var(--muted)">0.8621</td></tr></tbody>
+    </table></div>
+    <p style="font-size:13.5px;color:var(--muted)">Recall@1 changes in steps of 1/29 = 0.0345 — there are only
+    29 positive queries, so one query flipping is the smallest movement possible.</p>
+  </section>
+  <section>
+    <h2>Training</h2>
+    <div class="chart-card">
+      <canvas id="ch"></canvas>
+      <div class="legend"><span><i style="background:var(--copper)"></i>training loss</span>
+      <span><i style="background:var(--teal)"></i>dev beat-all accuracy</span></div>
+    </div>
+    <p style="font-size:13.5px;color:var(--muted)">Loss values are not comparable across arms — each arm averages over a
+    different number of candidates per step, so each sits on its own scale. Only the within-arm trend means anything.</p>
+  </section>
+  <section>
+    <h2>The reference point</h2>
+    <div class="callout neutral">
+      <div class="label">Read against Arm C, the baseline corner</div>
+      <p>Neither lever pulled: micro-batch 2, one negative per row. Every effect reported in this ablation is measured as a change away from this corner. Its own numbers are close to the original triplet fine-tune, which is the expected sanity check.</p>
+    </div>
+  </section>
+  <footer>Boardy AI contact-intro recommender · run ids <code>abl_c_baseline</code> / <code>abl_c_baseline_v2</code> ·
+  full writeup in <code>docs/twotower-rrf-triplet-ablation-experiment.md</code></footer>
+</div>
+<script>
+
+function drawChart(id, series, evalPts){
+  var c=document.getElementById(id), dpr=window.devicePixelRatio||1;
+  var W=c.clientWidth||560,H=200; c.width=W*dpr; c.height=H*dpr;
+  var x=c.getContext('2d'); x.scale(dpr,dpr);
+  var st=getComputedStyle(document.documentElement);
+  var line=st.getPropertyValue('--line').trim(), muted=st.getPropertyValue('--muted').trim();
+  var copper=st.getPropertyValue('--copper').trim(), teal=st.getPropertyValue('--teal').trim();
+  var pL=36,pR=12,pT=10,pB=22,w=W-pL-pR,h=H-pT-pB;
+  var xs=series.map(function(p){return p.epoch}),ys=series.map(function(p){return p.loss});
+  var xMax=Math.max.apply(null,xs),xMin=Math.min.apply(null,xs);
+  var yMax=Math.max.apply(null,ys)*1.08;
+  function X(v){return pL+(v-xMin)/(xMax-xMin)*w} function Y(v){return pT+h-(v/yMax)*h}
+  x.clearRect(0,0,W,H); x.strokeStyle=line; x.lineWidth=1;
+  x.font='11px "IBM Plex Mono",monospace'; x.fillStyle=muted;
+  for(var i=0;i<=4;i++){var v=yMax*i/4,y=Y(v);x.beginPath();x.moveTo(pL,y);x.lineTo(pL+w,y);x.stroke();
+    x.fillText(v.toFixed(2),2,y+3);}
+  for(var e=0;e<=Math.ceil(xMax);e++){x.fillText('e'+e,X(e)-6,H-6);}
+  x.beginPath(); series.forEach(function(p,i){var a=X(p.epoch),b=Y(p.loss); i?x.lineTo(a,b):x.moveTo(a,b);});
+  x.strokeStyle=copper;x.lineWidth=2;x.lineJoin='round';x.stroke();
+  var g=x.createLinearGradient(0,pT,0,pT+h); g.addColorStop(0,copper+'33'); g.addColorStop(1,copper+'00');
+  x.lineTo(X(series[series.length-1].epoch),pT+h); x.lineTo(X(series[0].epoch),pT+h); x.closePath();
+  x.fillStyle=g; x.fill();
+  if(evalPts&&evalPts.length){
+    function Y2(v){return pT+h-v*h}
+    x.beginPath(); evalPts.forEach(function(p,i){var a=X(p.epoch),b=Y2(p.acc); i?x.lineTo(a,b):x.moveTo(a,b);});
+    x.strokeStyle=teal;x.lineWidth=2;x.setLineDash([4,3]);x.stroke();x.setLineDash([]);
+    evalPts.forEach(function(p){x.beginPath();x.arc(X(p.epoch),Y2(p.acc),3,0,Math.PI*2);x.fillStyle=teal;x.fill();});
+  }
+}
+
+var S=[{"epoch": 0.2054794520547945, "loss": 0.7508}, {"epoch": 0.410958904109589, "loss": 0.8422}, {"epoch": 0.6164383561643836, "loss": 0.7506}, {"epoch": 0.821917808219178, "loss": 0.6852}, {"epoch": 1.0205479452054795, "loss": 0.659}, {"epoch": 1.226027397260274, "loss": 0.595}, {"epoch": 1.4315068493150684, "loss": 0.6568}, {"epoch": 1.6369863013698631, "loss": 0.5405}, {"epoch": 1.8424657534246576, "loss": 0.5794}, {"epoch": 2.041095890410959, "loss": 0.6511}, {"epoch": 2.2465753424657535, "loss": 0.4239}, {"epoch": 2.452054794520548, "loss": 0.4427}, {"epoch": 2.6575342465753424, "loss": 0.4733}, {"epoch": 2.863013698630137, "loss": 0.4519}, {"epoch": 3.0616438356164384, "loss": 0.4973}, {"epoch": 3.267123287671233, "loss": 0.4351}, {"epoch": 3.4726027397260273, "loss": 0.3631}, {"epoch": 3.678082191780822, "loss": 0.3093}, {"epoch": 3.883561643835616, "loss": 0.3525}, {"epoch": 4.082191780821918, "loss": 0.3567}, {"epoch": 4.287671232876712, "loss": 0.343}, {"epoch": 4.493150684931507, "loss": 0.2958}, {"epoch": 4.698630136986301, "loss": 0.2929}, {"epoch": 4.904109589041096, "loss": 0.3594}], E=[{"epoch": 1.0, "acc": 0.55}, {"epoch": 2.0, "acc": 0.5666666666666667}, {"epoch": 3.0, "acc": 0.5666666666666667}, {"epoch": 4.0, "acc": 0.5666666666666667}, {"epoch": 5.0, "acc": 0.5833333333333334}];
+function r(){drawChart('ch',S,E);} r();
+window.addEventListener('resize',function(){clearTimeout(window.__t);window.__t=setTimeout(r,150);});
+</script>
