@@ -19,6 +19,7 @@ Usage:
 from __future__ import annotations
 
 import argparse
+import dataclasses
 import json
 from pathlib import Path
 from typing import Any
@@ -184,8 +185,14 @@ def run_training(
         f"last_loss={train_loss_points[-1]['loss'] if train_loss_points else None}"
     )
 
+    # MultiNegTripletDevEvaluator writes "train_dev_beat_all_accuracy", not
+    # TrainConfig's default primary_metric ("pair_auc") — select_best_checkpoint
+    # keys off cfg.primary_metric, so this override is required or it silently
+    # finds no matching metric and falls back to the final epoch (the same
+    # failure mode documented in docs/possible-bugs.md #2).
+    dev_cfg = dataclasses.replace(cfg, primary_metric="beat_all_accuracy")
     model, best_info = select_best_checkpoint(
-        model, checkpoints_dir=output_dir / "checkpoints", cfg=cfg, device=device
+        model, checkpoints_dir=output_dir / "checkpoints", cfg=dev_cfg, device=device
     )
     print(f"selected checkpoint: {best_info}")
 
