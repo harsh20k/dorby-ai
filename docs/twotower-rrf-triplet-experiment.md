@@ -116,14 +116,145 @@ modal volume get dorby-twotower-rrf-triplet-checkpoints <run-id> ./artifacts/two
 
 ## Status
 
-Plumbing validated: local `--dry-run` (MPS) and a remote Modal `--dry-run`
-both complete cleanly for `voyage-4-nano`; a short real (1-epoch) Modal run
-is validating the full train → checkpoint-select → holdout-eval path before
-committing to full 5-epoch runs on both backbones. **No comparison numbers
-yet** — this section will be updated with `voyage-4-nano` and
-`Qwen3-Embedding-8B` triplet-arm results on the real holdout once full runs
-complete, compared against Arm A (0.579 pair AUC / 0.500 hard-neg AUC) and
-Voyage-4-large (0.609 / 0.602).
+### `voyage-4-nano`, full 5 epochs — real 69-pair holdout result
+
+**Beats every twotower arm to date, and edges out frozen Voyage-4-large
+(Boardy's own production model) on both classification metrics:**
+
+| Metric | This run (rrf_triplet_voyage_nano_001) | Arm A (real-only) | `run_001` | Voyage-4-large (frozen prod) |
+|---|---|---|---|---|
+| Pair AUC | **0.6103** | 0.579 | 0.578 | 0.609 |
+| Hard-negative AUC | **0.6138** | 0.500 (chance) | 0.4845 (below chance) | 0.602 |
+| Retrieval MRR | 0.4633 | 0.388 | 0.283 | 0.529 |
+
+Best checkpoint was epoch 4 (dev triplet-accuracy 0.660), selected
+automatically by the reused `select_best_checkpoint` safety net. Full
+metrics: `artifacts/twotower_rrf_triplet/rrf_triplet_voyage_nano_001/metrics_holdout.json`.
+
+This is the first twotower fine-tune of any kind in this project to beat
+Voyage-4-large on pair AUC. Retrieval MRR still trails (0.463 vs 0.529) —
+the win is on classification, not precise top-of-list ranking.
+
+### `Qwen/Qwen3-Embedding-8B`, full 5 epochs — real 69-pair holdout result
+
+**New best pair AUC in the entire project — beats every twotower arm, both
+frozen Voyage models, and the frozen Qwen3-Embedding-8B baseline itself:**
+
+| Metric | This run (rrf_triplet_qwen3_8b_h100_002) | `voyage-4-nano` (this experiment) | Arm A | Voyage-4-large (frozen prod) | Frozen Qwen3-Embedding-8B baseline |
+|---|---|---|---|---|---|
+| Pair AUC | **0.6672** | 0.6103 | 0.579 | 0.609 | 0.6595 |
+| Hard-negative AUC | **0.6172** | 0.6138 | 0.500 | 0.602 | — |
+| Retrieval MRR | 0.4390 | 0.4633 | 0.388 | 0.529 | — |
+
+Ran on H100 after the A100-40GB attempts were killed for unrelated
+infrastructure reasons (see "Operational lessons"). Training took ~24
+minutes end to end (600 steps, ~1463s per `train_runtime`).
+
+**Important caveat — the reported result is from the final epoch, not the
+best one, because `save_total_limit=3` pruned the actual best checkpoint
+before selection could use it.** Per-epoch dev triplet-accuracy from
+`loss_history.json`:
+
+| Epoch | Dev triplet-accuracy |
+|---|---|
+| 1 | 0.680 |
+| **2** | **0.711 (peak)** |
+| 3 | 0.608 (drop) |
+| 4 | 0.619 |
+| 5 (final, used for holdout) | 0.649 |
+
+Only checkpoints 360/480/600 (epochs 3-5) survived `save_total_limit=3` by
+the time `select_best_checkpoint` ran — epoch 2's checkpoint (the actual
+best on dev) had already been deleted, so selection fell back to
+`final_in_memory` (epoch 5). **The reported 0.6672 pair AUC may
+understate what this recipe can do** — a rerun with `save_total_limit=5`
+(keep every epoch) could plausibly do even better if the epoch-2 checkpoint
+generalizes similarly well to the real holdout. This is the same failure
+mode `docs/twotower-run-001-findings.md`'s distillation side-experiment hit.
+
+Full loss curve, dev-accuracy-per-epoch, and raw training logs saved at
+`artifacts/twotower_rrf_triplet/rrf_triplet_qwen3_8b_h100_002/` (`loss_history.json`,
+`training_log_part1_pre_interrupt.txt`, `training_log_part2_resumed.txt` — see
+below for why there are two parts). `voyage-4-nano`'s loss curve (reconstructed
+post-hoc from Modal's server-side log retention, since that run predates
+`loss_history.json` being written) is at
+`artifacts/twotower_rrf_triplet/rrf_triplet_voyage_nano_001/loss_history.json`
++ `training_log.txt`.
+
+## Operational lessons from launching these runs
+
+- **fp32 load of an 8B model OOMs even batch_size=1 on a 40GB A100** (39.4GB
+  used, tried to allocate 96MiB more) — fixed via bf16 loading
+  (`twotower_rrf_triplet/model.py::build_model_with_dtype`), matching the
+  already-proven `baselines/hf_embedding` path for the same model family.
+  `select_best_checkpoint`'s reload step needed the same fix (it would have
+  re-OOM'd at the very end of a multi-hour run, reloading the checkpoint in
+  fp32 again) — `twotower_rrf_triplet/checkpoint.py::select_best_checkpoint_with_dtype`.
+- **`modal run` without `--detach` ties the remote job to the local CLI
+  process.** Two full runs launched via plain `modal run` both died with
+  `RemoteError: Function call was cancelled by user or a failure` when their
+  local foreground process was interrupted — `voyage_nano_001` had actually
+  finished training and picked its best checkpoint before dying only during
+  the final holdout-eval step (recovered for free: the adapter was already
+  saved, so holdout eval was just re-run locally against it, no retraining
+  needed); `qwen3_8b_002` died too early to produce anything. Always launch
+  multi-hour Modal training with `--detach`.
+- **Training loss wasn't being persisted** — `train.py` now writes
+  `loss_history.json` (per-step training loss + dev-eval points, extracted
+  from `trainer.state.log_history`) alongside the existing metrics files.
+  `voyage_nano_001` predates this; its loss curve was instead reconstructed
+  post-hoc from Modal's server-side log retention (`modal app logs --tail
+  5000`) — the locally-captured log only kept the last ~200 lines since it
+  was originally piped through `tail`.
+- **A genuinely unexplained mid-run cancellation hit `qwen3_8b_h100_002` at
+  step 472/600 (79%, epoch 3.92)** — Modal's own log showed `Received a
+  cancellation signal while processing input` followed by a forced kill 30s
+  later, with no action taken from this session at the time. Recovered with
+  zero data loss: `save_strategy="epoch"` had already checkpointed epoch 3
+  (`checkpoint-360`) to the volume, so relaunching with
+  `--resume-from-checkpoint .../checkpoint-360` picked up exactly where it
+  left off — confirmed via the resumed run's log showing progress jump
+  straight to step 361. HF's checkpoint mechanism also transparently merged
+  the pre- and post-interruption `log_history` into one continuous curve
+  (visible in the final `loss_history.json` — no gap or duplication at step
+  360), so the saved loss data is a complete, accurate record despite the
+  interruption. Root cause of the cancellation itself was never identified.
+- **Switching from A100-40GB to H100 mid-flight (user request, for speed)
+  cost one wasted attempt** — `qwen3_8b_h100_001` was killed on the
+  (wrong) assumption that "pending, no logs" meant it was stuck; it was
+  actually running fine. The real lesson: `modal run --detach` exits its
+  local watcher process almost immediately after confirming detachment, so
+  a background-bash log tail captures nothing after that point — that
+  looked identical to a hang. The correct way to check a detached job's
+  real status is `modal app logs <app-id>` (fetches recent entries without
+  needing `-f`), confirmed working from `qwen3_8b_h100_002` onward.
+
+## Suggestions for improving on this further
+
+- **Increase effective batch size for `MultipleNegativesRankingLoss`.**
+  This loss uses every other example's positive in the batch as a free
+  extra in-batch negative, so a larger batch is a harder, more informative
+  contrastive task, not just faster training. Current effective batch
+  (`train_batch_size × gradient_accumulation_steps`) is only 8 for both
+  presets — `voyage-4-nano` (347M params) has large headroom on an A100 to
+  go much higher (e.g. 32-64) with no accumulation needed.
+- **More epochs, gated on `loss_history.json`'s dev-accuracy trend, not a
+  blind increase** — 5 epochs was inherited from Arm A's pairwise-loss
+  recipe; worth checking whether triplet-accuracy is still climbing at
+  epoch 5 before extending.
+- **Tune `MultipleNegativesRankingLoss`'s `scale` (temperature)** — default
+  20.0, untouched so far; controls how sharply positives are pushed apart
+  from in-batch negatives.
+- **Cap triplets per query_key** — current cartesian-product extraction
+  lets query_keys with several judged pos/neg dominate gradient updates;
+  capping negatives sampled per positive would balance this.
+- **LoRA rank** — currently 8/16 for both models, inherited from Arm A;
+  raise cautiously given `run_001`'s history of the adapter overfitting to
+  judge/generation artifacts rather than real signal.
+- **Step-based eval/checkpointing** instead of epoch-based, for finer
+  checkpoint-selection resolution (Arm A's distillation side-experiment lost
+  its best checkpoint to `save_total_limit` pruning before selection saw it
+  — same risk here with only 5 epoch-level checkpoints).
 
 ## What not to conclude from this experiment
 
