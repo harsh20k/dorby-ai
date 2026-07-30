@@ -68,6 +68,7 @@ def train_remote(
     truncate_dim: int = 1024,
     run_holdout: bool = False,
     real_only: bool = False,
+    include_synth: bool = False,
     dry_run: bool = False,
     resume_from_checkpoint: str | None = None,
     model_revision: str | None = None,
@@ -94,7 +95,9 @@ def train_remote(
         seed=seed,
         truncate_dim=truncate_dim,
         run_holdout=run_holdout,
-        include_synth=not real_only,
+        # Quarantined by default (see data/archive/batch_500_001_quarantined/
+        # README.md); --include-synth is required to reproduce run_001.
+        include_synth=include_synth and not real_only,
         model_revision=model_revision,
     )
     result = run_training(
@@ -130,6 +133,7 @@ def main(
     truncate_dim: int = 1024,
     run_holdout: bool = False,
     real_only: bool = False,
+    include_synth: bool = False,
     dry_run: bool = False,
     resume_from_checkpoint: str = "",
     model_revision: str = "",
@@ -153,6 +157,7 @@ def main(
         truncate_dim=truncate_dim,
         run_holdout=run_holdout,
         real_only=real_only,
+        include_synth=include_synth,
         dry_run=dry_run,
         resume_from_checkpoint=resume_from_checkpoint or None,
         model_revision=model_revision or None,

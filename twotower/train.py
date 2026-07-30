@@ -522,7 +522,17 @@ def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
         "--real-only",
         action="store_true",
         help="Exclude promoted synthetic pairs from the train pool (control arm — "
-        "see docs/twotower-run-001-findings.md).",
+        "see docs/twotower-run-001-findings.md). This is now the default; the flag "
+        "is kept so `arm_a_real_only`'s original command line still reproduces.",
+    )
+    p.add_argument(
+        "--include-synth",
+        action="store_true",
+        help="Opt back into the 460 quarantined batch_500_001 synthetic pairs. "
+        "They are known-harmful (candidate-only classifier 99.2%% accurate on "
+        "them; run_001 scored 0.4845 hard-neg AUC, below chance) — see "
+        "data/archive/batch_500_001_quarantined/README.md. Needed only to "
+        "reproduce run_001.",
     )
     p.add_argument("--dry-run", action="store_true")
     p.add_argument("--resume-from-checkpoint", type=str, default=None)
@@ -547,7 +557,9 @@ def config_from_args(args: argparse.Namespace) -> TrainConfig:
         split_path=args.split_path,
         output_dir=args.output_dir,
         run_holdout=args.run_holdout,
-        include_synth=not args.real_only,
+        # Quarantined by default: synth pairs enter only on an explicit opt-in,
+        # and --real-only still wins if both are passed.
+        include_synth=args.include_synth and not args.real_only,
     )
 
 

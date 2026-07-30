@@ -434,6 +434,31 @@ consciously, not as the default path for future batches, and re-check
 `docs/possible-bugs.md` for confirmed data-quality issues before trusting
 a judge-only-promoted batch at face value.
 
+**Those 460 pairs are now quarantined (2026-07-30). Do not train on them.**
+They are known-harmful, not merely unhelpful: a classifier shown *only* the
+candidate's profile text predicts their label with 99.2% accuracy
+(`docs/possible-bugs.md` #4 — the generator leaked the label into the text),
+and `twotower` `run_001` trained on them scored 0.4845 hard-negative AUC,
+*below chance*, while `arm_a_real_only` beat it on a fifth of the data.
+
+They are **not deleted** — removing them from `data/dataset_*.json` would
+retroactively change what `run_001` trained on and make its published numbers
+unreproducible, exactly what the isolation rule above exists to prevent.
+Quarantine is enforced at the **loader**:
+`twotower/data.py::build_split_bundle(include_synth=...)` now defaults to
+`False`, as do `TrainConfig` and both training CLIs (`--include-synth` is a
+new explicit opt-in; `--real-only` still works and still wins). An archived
+copy with SHA-256 provenance lives in
+`data/archive/batch_500_001_quarantined/` (see its `README.md`), pinned
+against drift by `tests/test_quarantine_batch_500_001.py`.
+
+Note the count trap this exposed: `data/dataset_*.json` holds **660 pairs /
+1,217 contact ids**, but only **200 pairs / 297 contacts are real** (129
+seekers, 178 candidates). Any "contacts in the dataset" figure that isn't
+filtered on the `cmsynth*` prefix is counting quarantined synthetic data —
+`docs/moe-rrf003-synthetic-training-findings.md` carried exactly that error
+until it was corrected.
+
 ### Standalone profile generation (local Ollama + AWS Bedrock)
 
 A separate, newer generation path from the pairs pipeline above — generates

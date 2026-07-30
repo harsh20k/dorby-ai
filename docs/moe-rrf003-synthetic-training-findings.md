@@ -25,8 +25,17 @@ tighter — while leaving the one-shot holdout untouched. Arms that train on rea
 pairs can't use that trick and fall back to seeker-disjoint 5-fold CV over the same
 131.
 
-Populations are asserted disjoint: 923 synthetic contact ids, 1,217 real, **zero
-overlap** (every synthetic id is `cmsynth*`-prefixed).
+Populations are asserted disjoint: 923 `rrf_003` contact ids against **297 real
+contact ids** (129 seekers, 178 candidates, across the 200 real pairs), **zero
+overlap** — every synthetic id is `cmsynth*`-prefixed.
+
+> **Correction (2026-07-30).** This line previously read "1,217 real". That figure
+> counted contact ids across all 660 rows of `data/dataset_*.json`, which includes
+> the 460 promoted `batch_500_001` pairs — those are synthetic, not real, and are
+> now quarantined (`data/archive/batch_500_001_quarantined/README.md`). The real
+> population is 297 contacts. The disjointness conclusion is unaffected, since it
+> rests on the `cmsynth*` prefix, and no experiment result changes: `moe_rrf` loads
+> via `include_synth=False` and never saw those pairs.
 
 Features are **12 text-only scalars** — the embedding channel had to be dropped,
 because `rrf_003`'s cached vectors are Qwen3-Embedding-8B while the real-pair
