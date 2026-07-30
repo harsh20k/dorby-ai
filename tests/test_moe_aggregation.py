@@ -1,4 +1,4 @@
-"""Tests for section-score aggregation modes.
+"""Tests for the MoE experiment's section-score aggregation modes.
 
 The load-bearing test here is `test_record_score_is_batch_independent`. It pins
 the invariant that a real bug violated: `noisy_or` originally rescaled scores by
@@ -15,8 +15,12 @@ import numpy as np
 import pytest
 
 from baselines.voyage_nano_sectioned.aggregate import (
+    aggregate_sections as shared_aggregate_sections,
+)
+from moe_reranker.aggregation import (
     AGG_FAMILY,
     AGG_MODES,
+    SHARED_MODES,
     aggregate_sections,
 )
 
@@ -171,3 +175,26 @@ def test_unknown_mode_raises() -> None:
 def test_every_mode_has_a_family() -> None:
     assert set(AGG_FAMILY) == set(AGG_MODES)
     assert set(AGG_FAMILY.values()) == {"relevance", "veto", "average"}
+
+
+def test_matches_shared_baseline_on_shared_modes() -> None:
+    """The reimplemented relevance modes must stay identical to the shared ones.
+
+    `moe_reranker/aggregation.py` deliberately duplicates max/topk_mean/softmax so
+    this experiment never edits `baselines/voyage_nano_sectioned/aggregate.py`.
+    Duplication is only safe if it is pinned — if the shared implementation
+    changes, this test is the thing that notices.
+    """
+    rng = np.random.default_rng(11)
+    group_sizes = [2, 5, 1, 7]
+    matrix = _matrix(rng, sum(group_sizes), 4)
+    offsets = np.cumsum([0] + group_sizes).tolist()
+
+    for mode in SHARED_MODES:
+        np.testing.assert_allclose(
+            aggregate_sections(matrix, offsets, mode=mode),
+            shared_aggregate_sections(matrix, offsets, mode=mode),
+            rtol=1e-6,
+            atol=1e-7,
+            err_msg=f"{mode} diverged from the shared baseline implementation",
+        )

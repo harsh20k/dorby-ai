@@ -13,6 +13,10 @@ aggregation beats relevance-shaped here, the dealbreaker theory has support and
 a soft-min combine is worth building. If it does not, the combine rule should
 stay relevance-shaped.
 
+Isolation: this reads shared baseline helpers but modifies none of them. The
+aggregation shapes live in ``moe_reranker/aggregation.py`` and the scoring loop
+in ``moe_reranker/section_scoring.py``, both owned by this experiment.
+
 Free to run: every mode is scored from the *same* cached embedding pass, so
 nothing re-encodes. Point ``--artifacts-dir`` at a directory that already holds
 the cached section/corpus embeddings and pass the ``--max-length`` they were
@@ -30,8 +34,8 @@ import json
 from pathlib import Path
 from typing import Any
 
-from baselines.voyage_nano_sectioned.aggregate import AGG_FAMILY
-from baselines.voyage_nano_sectioned.eval_seeker import run_eval_multi_agg
+from moe_reranker.aggregation import AGG_FAMILY
+from moe_reranker.section_scoring import score_all_aggregations
 
 # Temperature sweeps are cheap (pure re-aggregation of a cached matrix), so both
 # soft modes get a small sweep rather than a single guessed value. T=0.05 is the
@@ -109,7 +113,7 @@ def main() -> int:
     )
     args = p.parse_args()
 
-    results = run_eval_multi_agg(
+    results = score_all_aggregations(
         data_dir=args.data_dir,
         model_name=args.model,
         batch_size=args.batch_size,

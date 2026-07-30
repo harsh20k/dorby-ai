@@ -86,6 +86,48 @@ ROC-AUC 0.6595 vs 0.6086), the first model of any kind in this project to
 do so. Full results and two real model-loading compatibility issues found
 and fixed along the way in `docs/hf-embedding-baseline-findings.md`.
 
+## Experiment isolation — the rule that overrides convenience
+
+**When trying a new idea, do not edit the previous experiment's code files. Copy
+what you need into a new isolated package and edit the copy.**
+
+Every experiment in this repo must stay a reproducible, isolated run. Editing a
+shared file retroactively changes what the *earlier* experiment did — its numbers
+in `docs/` can no longer be reproduced from the current tree, and that result
+silently becomes unverifiable. This repo's value is largely its accumulated,
+comparable measurements; that only holds if each one can still be re-run.
+Duplication is cheap, a broken audit trail is not.
+
+- **New idea → new top-level package**, not a new flag or mode bolted onto an
+  existing one. Own `config.py`, own entry point, own `artifacts/<experiment>/`
+  output dir. Precedents: `twotower_rrf_triplet_bigbatch/`,
+  `twotower_rrf_triplet_ablation/`, `moe_reranker/`.
+- **Copy, then edit** — even when the change is purely additive and
+  backward-compatible. An additive edit still alters the file the earlier
+  experiment ran against. (This was learned the hard way: the MoE experiment
+  first added aggregation modes directly to
+  `baselines/voyage_nano_sectioned/aggregate.py`, then had to be unwound.)
+- **Importing shared code read-only is fine and encouraged.** Isolation means
+  "don't modify", not "don't reuse" — `baselines/metrics.py` should still be the
+  single source of truth for how "good" is measured, called unchanged. Prefer
+  public API over private `_underscore` helpers.
+- **Pin every deliberate duplicate with a test** asserting the copy still agrees
+  numerically with the original, so the two cannot drift unnoticed. Example:
+  `tests/test_moe_aggregation.py::test_matches_shared_baseline_on_shared_modes`.
+- **Input data: copy it, never read live, never write back.** Freeze a copy into
+  the experiment's own namespace with provenance — source path, content hash, and
+  a `--verify` mode proving the source hasn't shifted since import. Pattern:
+  `moe_reranker/import_rrf.py`. This matters most for `artifacts/pairing_rrf/` and
+  `artifacts/synth/`, which are still being iterated on.
+- **Log it**: a row in `docs/experiment-graphs-index.md` plus its own
+  `docs/<experiment>-experiment.md` with results tables and repro commands.
+- **If shared files were already edited**, restore them byte-identical to their
+  pre-experiment state and verify with
+  `git diff <pre-experiment-commit> -- <paths>` (expect empty output).
+
+Orthogonal to git workflow: working directly on `main` is fine for small changes;
+editing another experiment's code is not, regardless of branch.
+
 ## Setup
 
 ```bash

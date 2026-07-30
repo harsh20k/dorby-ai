@@ -27,11 +27,7 @@ from baselines.metrics import (
     slice_metrics,
 )
 from baselines.voyage_nano.encode import VoyageNanoEncoder, pick_device
-from baselines.voyage_nano_sectioned.aggregate import (
-    AGG_FAMILY,
-    AGG_MODES,
-    aggregate_sections,
-)
+from baselines.voyage_nano_sectioned.aggregate import aggregate_sections
 from baselines.voyage_nano_sectioned.text import seeker_to_sectioned_texts
 
 
@@ -351,7 +347,7 @@ def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
     p.add_argument(
         "--agg",
         type=str,
-        choices=list(AGG_MODES),
+        choices=["max", "topk_mean", "softmax"],
         default="max",
         help="Section-score aggregation mode (default 'max', backward compatible)",
     )

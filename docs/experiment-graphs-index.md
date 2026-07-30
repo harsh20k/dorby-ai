@@ -37,6 +37,7 @@ wants the full story.
 | [`twotower-rrf-triplet-findings.html`](file:///Users/harsh/Artifacts/dorby-ai/docs/html/twotower-rrf-triplet-findings.html)                           | local (`docs/html/`) + [published](https://claude.ai/code/artifact/3511253c-fb74-429e-820c-d30dbd8c4816) | 2026-07-29                           | `voyage-4-nano` + `Qwen3-Embedding-8B` LoRA fine-tunes on `rrf_003` triplets (`MultipleNegativesRankingLoss`): training-loss curves for both runs, real-69-pair-holdout results table vs. Voyage-4-large/Arm A, and a plain-language explanation of why pair AUC rose while retrieval recall@1 fell — see `docs/twotower-rrf-triplet-experiment.md`                                                                                                                                                                                                                        |
 | [`twotower-rrf-triplet-bigbatch-comparison.html`](file:///Users/harsh/Artifacts/dorby-ai/docs/html/twotower-rrf-triplet-bigbatch-comparison.html)     | local (`docs/html/`) + [published](https://claude.ai/code/artifact/6d2ea3d7-0f90-42b6-ac2e-ac807dcaedb1) | 2026-07-29                           | Follow-up: isolated `voyage-4-nano` re-run (`twotower_rrf_triplet_bigbatch/`, own package) with real batch size 2→6 (GPU-probed ceiling was 8) and 2 negatives per anchor instead of 1 — closed recall@1 to exactly match frozen Voyage-4-large (0.345) at the cost of pair AUC dropping below it; four-way comparison table + next-steps vs. the original triplet runs — see `docs/twotower-rrf-triplet-bigbatch-experiment.md`                                                                                                                                           |
 | [`twotower-ablation-verdict.html`](file:///Users/harsh/Artifacts/dorby-ai/docs/html/twotower-ablation-verdict.html)                                   | local (`docs/html/`) + [published](https://claude.ai/code/artifact/4ab4000d-f7a6-4477-8a2e-3b578da25cdc) | 2026-07-29                           | **Combined verdict** of the 2×2 ablation splitting the bigbatch run's two levers apart (`twotower_rrf_triplet_ablation/`, effective batch pinned to 12 in every arm, each arm run twice for a measured noise floor): **micro-batch size is what moved retrieval** (+0.05 MRR, +0.06 recall@1) while **the second negative hurt** (−0.03 pair AUC) because 27.5% of k=2 negative slots are duplicates. Also documents a corrected single-run claim and a dev-set-too-small-to-select finding — see `docs/twotower-rrf-triplet-ablation-experiment.md`                       |
+| [`moe-reranker-review.html`](file:///Users/harsh/Artifacts/dorby-ai/docs/html/moe-reranker-review.html)                                             | local (`docs/html/`)                                                                                     | 2026-07-29                           | Design review + results for the **multi-gate mixture-of-experts re-ranker** over `lookingFor` (`moe_reranker/`, own isolated package). Settles the combine-rule question (veto-shaped aggregation lost monotonically to a temperature-sharpened gate) and reports the built MMoE's seeker-disjoint CV: 0.5536 vs 0.5282 for no model at all, fold std 0.067 — **not testable at 111 real training pairs**. Documents two self-inflicted measurement bugs (a label-leaking normalizer reporting a fake 0.8500 AUC; a saturated routing-MI diagnostic) — see `docs/moe-reranker-experiment.md` |
 | [`twotower-abl-a-batch-only.html`](file:///Users/harsh/Artifacts/dorby-ai/docs/html/twotower-abl-a-batch-only.html)                                   | local (`docs/html/`) + [published](https://claude.ai/code/artifact/9dcd8dc1-97ba-4183-b77b-717380d1966b) | 2026-07-29                           | Ablation Arm A — micro-batch 6, k=1. The winning cell (pair AUC 0.6047 / MRR 0.5423 / recall@1 0.3966, mean of 2 replicates); loss curve + dev-accuracy overlay, holdout table vs. frozen Voyage-4-large                                                                                                                                                                                                                                                                                                                                                                   |
 | [`twotower-abl-b-negs-only.html`](file:///Users/harsh/Artifacts/dorby-ai/docs/html/twotower-abl-b-negs-only.html)                                     | local (`docs/html/`) + [published](https://claude.ai/code/artifact/187a3df4-362b-4373-98fe-0b34f00bbb61) | 2026-07-29                           | Ablation Arm B — micro-batch 2, k=2. The worst cell (pair AUC 0.5595 / recall@1 0.2931); its dev metric falls after epoch 3 while training loss keeps dropping, the clearest sign of the duplicate-negative problem                                                                                                                                                                                                                                                                                                                                                        |
 | [`twotower-abl-c-baseline.html`](file:///Users/harsh/Artifacts/dorby-ai/docs/html/twotower-abl-c-baseline.html)                                       | local (`docs/html/`) + [published](https://claude.ai/code/artifact/d2407099-83f8-4e65-a5a3-f8125ae57381) | 2026-07-29                           | Ablation Arm C — micro-batch 2, k=1. The baseline corner every effect in the ablation is measured against (pair AUC 0.5996 / MRR 0.4902 / recall@1 0.3276)                                                                                                                                                                                                                                                                                                                                                                                                                 |
@@ -353,6 +354,69 @@ retrieval MRR (0.359 vs. Arm A's 0.388). One caveat: checkpoint selection
 fell back to the final epoch rather than a validated best (the best
 train-dev checkpoint had been pruned by `save_total_limit`), so treat this
 as a promising lead rather than a confirmed win.
+
+## MoE re-ranker over `lookingFor` (`moe-reranker-review.html`, 2026-07-29)
+
+**Isolated package: `moe_reranker/`.** Nothing in `baselines/` or `twotower/` was
+modified. The three relevance-shaped aggregation modes are *reimplemented* in
+`moe_reranker/aggregation.py` rather than imported, specifically so the veto-shaped
+modes could be added without touching
+`baselines/voyage_nano_sectioned/aggregate.py`, which the lookingFor-sectioning
+experiment owns; `tests/test_moe_aggregation.py::test_matches_shared_baseline_on_shared_modes`
+pins the duplicate against the original so it cannot drift. Shared baseline
+helpers are imported read-only via `moe_reranker/section_scoring.py`.
+
+Two experiments, both on the matched 69-pair real holdout:
+
+1. **Which shape should expert opinions combine in?** Eleven aggregations over one
+   cached embedding pass (`scripts/compare_section_aggregation.py`). Ordered
+   most-veto to most-relevance, pair AUC climbs monotonically at every step —
+   `min` 0.5836 → `softmin(τ=.20)` 0.5931 → `mean` 0.5940 → `softmax(τ=.05)`
+   **0.5983** — and hard-negative AUC follows the identical ladder. No individual
+   gap is significant (paired bootstrap softmax−min = +0.0146, 95% CI
+   [−0.021, +0.051]); the ordered ladder across six configurations and two metrics
+   is what carries it. **Verdict: temperature-sharpened relevance gate, not a
+   soft-min veto.** Note τ=0.05 beats τ→0, so sharper is not automatically better.
+
+2. **Does an MMoE earn its parameters here?** Built to the MMoE slides: 3 experts,
+   shared bottom over 14 engineered features, two gates (real accept/decline +
+   LLM-judge auxiliary), τ tunable, per-example sharpening *and* batch-average
+   balancing entropy terms, expert dropout, three diagnostics. Seeker-disjoint
+   5-fold CV over the 111 real train pairs (`scripts/moe_cv_compare.py`):
+
+   | model | mean AUC | fold std |
+   |---|---|---|
+   | nano cosine, no model | 0.5282 | 0.138 |
+   | logistic regression | 0.5251 | 0.144 |
+   | MoE, single task | 0.5434 | 0.065 |
+   | MMoE, multi-task | **0.5536** | 0.067 |
+
+   Everything sits within one fold-to-fold standard deviation of everything else.
+   Train AUC reaches 0.861 while train-dev AUC falls to 0.345. **The MMoE is not
+   testable at this data size — the bottleneck is data, not architecture.** Two
+   things did survive: multi-task beat single-task in 3 of 5 folds, and both MoE
+   variants were half as volatile across folds (regularization buys stability, not
+   accuracy). **The real 69-pair holdout was deliberately not spent** — CV says
+   nothing is separable, so the one-shot check would burn the project's one clean
+   measurement to confirm a null.
+
+**Two measurement bugs found, both self-inflicted, both now pinned by tests.**
+A first `noisy_or` rescaled by the min/max of the matrix it was passed — and since
+positives and negatives are aggregated in *separate* calls, that made the transform
+label-dependent and reported pair AUC **0.8500** against a ~0.60 field. Fixed with
+a data-independent `p = (1+cos)/2` map. Separately, the routing-vs-seeker-identity
+diagnostic first reported normalized MI 0.815, which reads alarming but is near the
+floor: *random* routing scores 0.706 on this data (111 rows over 75 seekers), so the
+real excess is +0.109. It now reports a permutation null, excess, and p-value.
+
+**Data.** `moe_reranker/import_rrf.py` freezes a read-only copy of a `pairing_rrf`
+batch into `artifacts/moe_reranker/data/<batch_id>/` with a SHA-256 of the source
+and a `--verify` mode. `rrf_003` is imported: **2,619 judge-labeled pairs, 337 of
+418 seekers carrying both classes → 2,773 within-seeker triplets** (the real pairs
+have 19, from 6 seekers). Those labels are one LLM judge's opinion, not human
+outcomes, so they are auxiliary-task and ranking-structure material only — never
+promoted into `data/dataset_*.json`.
+
 
 ## Published Artifacts (claude.ai, this account)
 
