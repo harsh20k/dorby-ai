@@ -145,6 +145,10 @@
   figcaption { font-size: 13.5px; color: var(--muted); margin-top: 16px; padding-top: 14px; border-top: 1px solid var(--grid); }
   .fig-title { font-size: 16px; font-weight: 600; margin: 0 0 4px; }
   .fig-sub { font-size: 13.5px; color: var(--text-secondary); margin: 0 0 20px; }
+  .fig-img {
+    display: block; width: 100%; height: auto; border-radius: 8px;
+    border: 1px solid var(--grid); background: #fff;
+  }
 
   .bars { display: flex; flex-direction: column; gap: 2px; }
   .bar-row {
@@ -684,6 +688,17 @@ the project. A gate will find it before it finds anything about side, stage, or 
 <!-- ============================================================ -->
 <h2 id="mmoe"><span class="n">05</span>What the MMoE slides actually add</h2>
 
+<figure>
+  <p class="fig-title">Implemented architecture — <code>moe_reranker/model.py</code></p>
+  <p class="fig-sub">14 shared features → 3 tiny experts → one temperature-sharpened gate per
+  task (τ=0.05) → mix → accept (main) + judge (aux) heads. Sharpen and balance losses pull
+  the gate in opposite directions on purpose.</p>
+  <img class="fig-img" src="assets/moe-reranker-architecture.png"
+       alt="MMoE re-ranker architecture: 14 features grouped as User/Item/Statistic/Context feed three shared experts and two per-task gates; gates mix experts via softmax(a/τ); accept and judge heads; task BCE plus sharpen and balance losses.">
+  <figcaption>Single architecture description for both <code>moe_reranker/</code> (n_tasks=2)
+  and <code>moe_rrf/</code> (imports this model unchanged with n_tasks=1).</figcaption>
+</figure>
+
 <h3>The big one: "multi-gate" means multi-<i>task</i></h3>
 
 <p>The multi-gate in MMoE is <b>one gate per prediction target</b>, not one gate per expert.
@@ -715,15 +730,28 @@ instead of competing with it — judge-score becomes an auxiliary head, not a ri
 
 <div class="scroll">
 <table>
-  <thead><tr><th>Slide's block</th><th>Yours</th></tr></thead>
+  <thead><tr><th>Slide's block</th><th>Yours (what ships)</th></tr></thead>
   <tbody>
-    <tr><td>User feature</td><td>seeker's <code>lookingFor</code> section embedding + profile embedding</td></tr>
-    <tr><td>Item feature</td><td>candidate profile embedding — <b>precomputed offline</b>, which is what keeps this inside the latency budget</td></tr>
-    <tr><td>Statistic feature</td><td>cosine, TF-IDF overlap, BM25 score, RRF rank from stage 1</td></tr>
-    <tr><td>Context feature</td><td>geo distance, stage gap, role compatibility — the cheap engineered versions of the original five axes</td></tr>
+    <tr><td>User feature</td><td><code>seeker_len</code>, <code>n_sections</code> — profile stats from seeker text (+ <code>searchQuery</code>)</td></tr>
+    <tr><td>Item feature</td><td><code>cand_len</code>, <code>len_ratio</code> — candidate profile stats</td></tr>
+    <tr><td>Statistic feature</td><td><code>nano_cos</code> / <code>nano_rank_pct</code>, <code>tfidf_cos</code> / <code>tfidf_rank_pct</code>, <code>token_jaccard</code>, <code>cos_minus_tfidf</code> — stage-1 retrieval signal</td></tr>
+    <tr><td>Context feature</td><td><code>geo_overlap</code>, <code>stage_gap</code>, <code>role_overlap</code>, <code>role_complementary</code> — cheap proxies for the five failure axes</td></tr>
   </tbody>
 </table>
 </div>
+
+<figure>
+  <p class="fig-title">How the feature vector is built — one pair → <code>x ∈ R<sup>14</sup></code></p>
+  <p class="fig-sub">Raw signals from profiles + cached nano embeddings + train-only TF-IDF;
+  assembled as 14 scalars, then z-scored with μ/σ fit on train only. That standardized
+  vector is the shared input to every expert and every gate.</p>
+  <img class="fig-img" src="assets/moe-feature-pipeline.png"
+       alt="Feature pipeline: seeker profile plus searchQuery, candidate profile, and cached voyage-nano plus TF-IDF signals are packed to text and extracted into User, Item, Statistic, and Context features; assembled into a 14-d raw vector; standardized on train; fed to MMoE.">
+  <figcaption>Built in <code>moe_reranker/data.py::build_features</code> +
+  <code>features.py::FeatureBuilder</code>. Optional PCA embedding dims
+  (<code>emb_pca_dims</code>) are off by default — 1024-d raw embeddings would drown 111
+  training pairs.</figcaption>
+</figure>
 
 <p>Note where the five axes went: not five expert heads needing labels, but a handful of
 <b>input features</b> needing none. Sizing, from the data budget: <b>3 experts, not 5</b>, each
