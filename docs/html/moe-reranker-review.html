@@ -257,6 +257,29 @@
   .dcol li { font-size: 14px; color: var(--text-secondary); margin-bottom: 9px; }
   .dcol li b { color: var(--text-primary); }
 
+  /* ---------- update banner ---------- */
+  .update {
+    background: var(--surface-1); border: 1px solid var(--border);
+    border-left: 3px solid var(--series-1); border-radius: 12px;
+    padding: 20px 22px; margin: 24px 0 0;
+  }
+  .update-head {
+    font-size: 12px; font-weight: 700; letter-spacing: .07em; text-transform: uppercase;
+    color: var(--series-1); margin-bottom: 12px;
+  }
+  .update ul { margin: 0; padding-left: 20px; }
+  .update li { font-size: 14.5px; color: var(--text-secondary); margin-bottom: 9px; }
+  .update li:last-child { margin-bottom: 0; }
+
+  .sev.resolved { background: var(--wash-good); color: var(--good-text); }
+  .prob.resolved { border-left-color: var(--good); }
+  .prob.resolved h4 { text-decoration: none; }
+  .withdrawn {
+    font-size: 13.5px; color: var(--good-text); font-weight: 600;
+    margin: 0 0 10px;
+  }
+  .struck { opacity: .62; }
+
   ul.plain { margin: 12px 0; padding-left: 20px; }
   ul.plain li { color: var(--text-secondary); margin-bottom: 9px; max-width: 72ch; }
 
@@ -276,12 +299,32 @@
 <div class="wrap">
 
 <header class="page">
-  <div class="kicker">Design review · dorby-ai · 2026-07-29</div>
+  <div class="kicker">Design review · dorby-ai · updated 2026-07-29</div>
   <h1>A heavy MoE re-ranker over the <code>lookingFor</code> field</h1>
   <p class="standfirst">The two-stage shape is right, and splitting the seeker's asks is the
-  best-proven trick in this project. But the five experts as drawn have nothing to learn from,
-  and the repo already ran the weighted-average version of this idea and lost.</p>
+  best-proven trick in this project. Making the experts' objectives <b>learned</b> rather than
+  hand-named removes the fatal objection below — and a free experiment run since then settles
+  how the experts' opinions should be combined.</p>
 </header>
+
+<div class="update">
+  <div class="update-head">What changed since the first draft</div>
+  <ul>
+    <li><b>Problem 1 is resolved.</b> If each expert's objective is a learned parameter, the
+      missing <code>failure_mode</code> labels stop mattering. That objection is withdrawn —
+      see <a href="#resolved">Problem 1</a>.</li>
+    <li><b>My proposed fix in Problem 2 is retired.</b> I argued for a veto-shaped
+      (soft-min) combine. It has now been tested on the real holdout and it <b>lost</b>. Use
+      the temperature-sharpened gate instead — see <a href="#step0">the Step 0 result</a>.</li>
+    <li><b>A bug was found and fixed while running that test</b>, which briefly reported a
+      fake 0.8500 AUC. Worth reading as a cautionary tale — same section.</li>
+    <li><b>MMoE turns out to fit unusually well</b>, for a reason that isn't about experts at
+      all: the "multi-gate" part is <b>multi-task</b>, and this project has one scarce main
+      task plus abundant auxiliary ones. See <a href="#mmoe">§05</a>.</li>
+    <li><b>Problems 3–6 stand unchanged</b> — data budget, gate shortcuts, section counts,
+      latency, and measurement noise are unaffected by any of the above.</li>
+  </ul>
+</div>
 
 <div class="verdict">
   <div class="verdict-row">
@@ -408,12 +451,25 @@ the project. A gate will find it before it finds anything about side, stage, or 
 <!-- ============================================================ -->
 <h2><span class="n">03</span>Problems, worst first</h2>
 
-<div class="prob">
+<div class="prob resolved" id="resolved">
   <div class="prob-head">
     <span class="prob-num">Problem 1</span>
-    <span class="sev fatal">Fatal as drawn</span>
+    <span class="sev resolved">✓ Withdrawn — learnable experts fix this</span>
   </div>
   <h4>The five experts have nothing to learn from</h4>
+  <p class="withdrawn">Resolved. If what each expert specializes in is a <b>learned parameter</b>
+  rather than a name you assign up front, no per-axis labels are needed — the experts train on
+  the final accept/decline signal alone. That is also how MoE is done in practice; expert roles
+  are never hand-assigned, specialization is emergent. The original objection, kept below for
+  the record, attacked a design that needed supervision this one doesn't.</p>
+  <p><b>What replaces it, smaller:</b> you give up the consolation prize. Explainability was the
+  MoE's fallback justification if accuracy came out flat, and unnamed experts don't explain
+  themselves. You can recover it after the fact — inspect which pairs route to expert 2 and name
+  it yourself — but nothing guarantees the split lands on anything a human would call a reason.
+  It might split on "long profiles vs short profiles." The replacement question is
+  <b>"did specialization actually happen?"</b>, which is what the diagnostics in §05 are for.</p>
+  <div class="struck">
+  <p style="margin-top:16px;"><i>Original objection, for the record:</i></p>
   <p>Each expert is named after a failure mode — wrong side, wrong stage, wrong role, geo
   mismatch, prefs conflict. Those names come from the <i>synthetic negative generator's recipe</i>:
   a list of ways to deliberately build a bad pair. They are not something anyone observed
@@ -430,6 +486,13 @@ the project. A gate will find it before it finds anything about side, stage, or 
   population that may not break down that way at all. Nobody has checked whether real declines
   even have five buckets.</p>
   <div class="fix"><b>Fix:</b> test the taxonomy before building anything on it (Step 1).</div>
+  </div>
+  <div class="evidence" style="margin-top:16px;">
+    <span class="elab">Still useful from the dead objection</span>
+    The five axes don't need to be expert <i>heads</i> — they work fine as <b>input features</b>
+    (geo distance, stage gap, role compatibility), which need no labels at all. See the feature
+    table in §05. That's a strictly better place to put them.
+  </div>
 </div>
 
 <div class="prob">
@@ -485,10 +548,20 @@ the project. A gate will find it before it finds anything about side, stage, or 
   several independent sub-scores pulls everything toward the middle. A pair with one fatal flaw
   and five perfectly fine aspects still lands near 0.5, so it gets called a match. You can see
   it in the yes-rate jumping from 55% to 75% — it got <i>less</i> decisive, not more.</p>
-  <p><strong>Real declines are almost certainly veto-shaped.</strong> One dealbreaker kills an
-  intro; five nice-to-haves don't rescue it. A weighted sum cannot express that.</p>
-  <div class="fix"><b>Fix — my single biggest change to your diagram:</b> the combine step should
-  be <b>soft-min or noisy-OR</b> (worst expert dominates), not a weighted average.</div>
+  <p class="struck"><strong>Real declines are almost certainly veto-shaped.</strong> One
+  dealbreaker kills an intro; five nice-to-haves don't rescue it. A weighted sum cannot express
+  that.</p>
+  <div class="evidence" style="border-left:3px solid var(--good);">
+    <span class="elab">Tested since — and I was wrong</span>
+    That veto hypothesis has now been run on the real holdout. <b>It lost.</b> Every veto-shaped
+    aggregation scored below every relevance-shaped one, and the more veto-like the rule, the
+    worse it got. <b>The fix is not soft-min</b> — it's the temperature-sharpened gate, which is
+    exactly what the professor's slides propose. Full result and error bars in
+    <a href="#step0">§06</a>.
+  </div>
+  <div class="fix"><b>Fix, corrected:</b> the diagnosis stands — plain averaging <i>does</i>
+  regress toward the boundary. The cure is a <b>sharpened gate</b> (low τ), so one expert's
+  opinion dominates rather than being averaged away. Not a worst-expert veto.</div>
 </div>
 
 <div class="prob">
@@ -596,63 +669,302 @@ the project. A gate will find it before it finds anything about side, stage, or 
     <div class="dh">What survives the evidence</div>
     <ul>
       <li>Gate reads the <b>section × candidate interaction</b> — never the seeker alone</li>
-      <li>Experts kept only if each <b>beats chance standalone</b> (Step 2)</li>
-      <li><b>Soft-min / noisy-OR</b> → one bad axis vetoes the match</li>
+      <li>Expert objectives are <b>learned</b>, not named — so no <code>failure_mode</code> labels needed</li>
+      <li><b>Temperature-sharpened softmax gate</b>, τ tunable — <i>tested; beats soft-min and beats hard argmax</i></li>
+      <li>Five axes demoted from expert heads to <b>input features</b></li>
+      <li><b>Two gates</b>: accept/decline (scarce) + judge-score (unlimited) — multi-task is the point</li>
       <li>Trained <b>listwise within a seeker</b> (249 triplets)</li>
       <li>Candidate vectors <b>precomputed offline</b>; live cost = section encodes + MLP heads</li>
+      <li><b>Three diagnostics logged from epoch one</b>, including routing-vs-seeker MI</li>
     </ul>
   </div>
 </div>
 
 <!-- ============================================================ -->
-<h2><span class="n">05</span>How I'd sequence it</h2>
+<h2 id="mmoe"><span class="n">05</span>What the MMoE slides actually add</h2>
 
-<p>Both of the first two steps are cheap and either one can kill the idea. Do them before
-writing model code.</p>
+<h3>The big one: "multi-gate" means multi-<i>task</i></h3>
+
+<p>The multi-gate in MMoE is <b>one gate per prediction target</b>, not one gate per expert.
+That's the whole reason the architecture exists — related tasks share experts while each task
+learns its own mixing weights, instead of being forced through one shared bottom.</p>
+
+<p>So the question that decides whether MMoE fits isn't about experts. It's <b>what are your
+tasks?</b> With a single task, MMoE collapses into ordinary MoE and the architecture buys you
+nothing. But the task set here is unusually favourable:</p>
+
+<div class="scroll">
+<table>
+  <thead><tr><th>Task</th><th>Label source</th><th>How much data</th></tr></thead>
+  <tbody>
+    <tr><td><b>Accept / decline</b> (the real objective)</td><td>real human outcome</td><td><b>131 train pairs</b> — painfully scarce</td></tr>
+    <tr><td>Would this be a good intro?</td><td>LLM judge (0.641 AUC)</td><td><b>unlimited</b> — ~$0.03 / 200 pairs</td></tr>
+    <tr><td>Topical relevance</td><td>RRF rank / TF-IDF cosine</td><td>unlimited, free</td></tr>
+  </tbody>
+</table>
+</div>
+
+<p><strong>A scarce main task plus abundant related auxiliary tasks is exactly the regime where
+MMoE earns its keep.</strong> Shared experts learn structure from the plentiful judge labels;
+the accept/decline gate then spends its 131 examples fitting <i>mixing weights</i> rather than an
+entire model. This also merges the "distill the judge" recommendation <i>into</i> the MoE plan
+instead of competing with it — judge-score becomes an auxiliary head, not a rival architecture.</p>
+
+<h3>The bottom network, mapped onto this data</h3>
+
+<div class="scroll">
+<table>
+  <thead><tr><th>Slide's block</th><th>Yours</th></tr></thead>
+  <tbody>
+    <tr><td>User feature</td><td>seeker's <code>lookingFor</code> section embedding + profile embedding</td></tr>
+    <tr><td>Item feature</td><td>candidate profile embedding — <b>precomputed offline</b>, which is what keeps this inside the latency budget</td></tr>
+    <tr><td>Statistic feature</td><td>cosine, TF-IDF overlap, BM25 score, RRF rank from stage 1</td></tr>
+    <tr><td>Context feature</td><td>geo distance, stage gap, role compatibility — the cheap engineered versions of the original five axes</td></tr>
+  </tbody>
+</table>
+</div>
+
+<p>Note where the five axes went: not five expert heads needing labels, but a handful of
+<b>input features</b> needing none. Sizing, from the data budget: <b>3 experts, not 5</b>, each
+tiny (linear or one small hidden layer). 131 real pairs will not support five deep experts
+whatever the gate does.</p>
+
+<h3>Adopt both diagnostics — and add a third</h3>
+
+<p>This is the most immediately useful slide. It's the difference between "we built an MoE" and
+"the MoE did something."</p>
+
+<div class="cards">
+  <div class="card ok">
+    <h4>1 · Average expert usage <code>ḡ<sub>m</sub></code></h4>
+    <p>Barplot it. If one expert takes nearly all the weight, that's <b>collapse</b> — you have
+    one model wearing a costume.</p>
+  </div>
+  <div class="card ok">
+    <h4>2 · Per-example gate entropy <code>H(g(x))</code></h4>
+    <p>Catches the opposite failure: a gate that hedges evenly on every pair is just averaging,
+    which is the shape that already lost.</p>
+  </div>
+  <div class="card bad">
+    <h4>3 · Routing vs seeker identity <span style="color:var(--critical)">(add this)</span></h4>
+    <p>Mutual information between the chosen expert and <i>which seeker</i> the pair belongs to.
+    If routing is predictable from the seeker alone, the gate learned the 0.687 shortcut, not
+    matching.</p>
+  </div>
+</div>
+
+<p>The third one isn't in the slides because the professor's setting (click-rate, many users)
+doesn't have this problem. With 40 seekers and 12 of them rejecting everything, you do. It's the
+diagnostic most likely to save you from a fake win.</p>
+
+<h3>One gap in the slides worth closing</h3>
+
+<p><strong>Sharpening alone will collapse your gate.</strong> The sharp loss
+<code>L<sub>sharp</sub> = (1/N)·H(g(x))</code> pushes every example toward one-hot — but nothing
+stops <i>every</i> example picking the <i>same</i> expert, which is precisely what Diagnostic 1
+detects. You need both terms, and they pull against each other:</p>
+
+<ul class="plain">
+  <li>Minimise entropy <b>per example</b> → each pair commits to an expert</li>
+  <li>Maximise entropy of the <b>batch-average</b> gate → experts stay balanced across the dataset</li>
+</ul>
+
+<p>The slides give you the first plus the detector for the second. Add the second penalty
+explicitly.</p>
+
+<p><strong>Skip top-K.</strong> The slide already flags it isn't differentiable (fixable with
+Gumbel-softmax, or noisy top-k plus a load-balancing loss), but with 3 experts top-K buys
+nothing — it's a compute optimisation for the dozens-of-experts regime. Temperature does the
+same job, differentiably.</p>
+
+<p><strong>Keep expert dropout.</strong> Randomly dropping experts during training is nearly free
+regularisation and a direct defence against one expert dominating. In a 131-example regime that's
+worth more than it is at Google scale.</p>
+
+<!-- ============================================================ -->
+<h2 id="step0"><span class="n">06</span>Step 0, run: how should expert opinions combine?</h2>
+
+<p>This was the free experiment — the cached section-score matrix re-aggregated eleven ways, no
+GPU, no API spend. The question: when a seeker has several separate asks, is a candidate good
+because it <b>fits one ask well</b> (relevance-shaped: max / softmax) or bad because it
+<b>fails one ask badly</b> (veto-shaped: min / softmin / noisy-OR)?</p>
+
+<p>It matters because it picks the MoE's combine rule before any model exists. And usefully, the
+softmax mode <i>is</i> the professor's Idea 1 — <code>g(x) = exp(a/τ) / Σexp(a/τ)</code> — already
+implemented, with the gate placed over sections rather than experts.</p>
+
+<figure>
+  <p class="fig-title">The more veto-like the rule, the worse it does — on both metrics, every step</p>
+  <p class="fig-sub">Real 69-pair holdout (29 pos / 40 neg), voyage-4-nano, one shared embedding
+  pass. Ordered most-veto → most-relevance. Bar length = lift above chance.</p>
+
+  <div class="legend">
+    <span><span class="swatch" style="background:var(--series-1)"></span> Pair ROC-AUC</span>
+    <span><span class="swatch" style="background:var(--series-2)"></span> Hard-negative AUC</span>
+  </div>
+  <div class="grp" role="img" aria-label="Ordered from most veto-like to most relevance-like, pair AUC rises 0.5836, 0.5871, 0.5871, 0.5931, 0.5940, 0.5940, 0.5983 and hard-negative AUC rises 0.5724, 0.5759, 0.5828, 0.5914, 0.5931, 0.5931, 0.6052.">
+    <div class="grp-block">
+      <div class="grp-lab"><b>min</b> — hard veto, worst section wins</div>
+      <div class="grp-pair">
+        <div class="grp-bar"><div class="grp-track"><div class="grp-fill s1" style="width:69.7%"></div></div><div class="grp-val"><b>0.5836</b></div></div>
+        <div class="grp-bar"><div class="grp-track"><div class="grp-fill s2" style="width:60.3%"></div></div><div class="grp-val">0.5724</div></div>
+      </div>
+    </div>
+    <div class="grp-block">
+      <div class="grp-lab">softmin (τ=0.01)</div>
+      <div class="grp-pair">
+        <div class="grp-bar"><div class="grp-track"><div class="grp-fill s1" style="width:72.6%"></div></div><div class="grp-val">0.5871</div></div>
+        <div class="grp-bar"><div class="grp-track"><div class="grp-fill s2" style="width:63.2%"></div></div><div class="grp-val">0.5759</div></div>
+      </div>
+    </div>
+    <div class="grp-block">
+      <div class="grp-lab">softmin (τ=0.05)</div>
+      <div class="grp-pair">
+        <div class="grp-bar"><div class="grp-track"><div class="grp-fill s1" style="width:72.6%"></div></div><div class="grp-val">0.5871</div></div>
+        <div class="grp-bar"><div class="grp-track"><div class="grp-fill s2" style="width:69.0%"></div></div><div class="grp-val">0.5828</div></div>
+      </div>
+    </div>
+    <div class="grp-block">
+      <div class="grp-lab">softmin (τ=0.20)</div>
+      <div class="grp-pair">
+        <div class="grp-bar"><div class="grp-track"><div class="grp-fill s1" style="width:77.6%"></div></div><div class="grp-val">0.5931</div></div>
+        <div class="grp-bar"><div class="grp-track"><div class="grp-fill s2" style="width:76.2%"></div></div><div class="grp-val">0.5914</div></div>
+      </div>
+    </div>
+    <div class="grp-block">
+      <div class="grp-lab">mean / noisy-OR — plain average <i>(the</i> structured_cot <i>shape)</i></div>
+      <div class="grp-pair">
+        <div class="grp-bar"><div class="grp-track"><div class="grp-fill s1" style="width:78.3%"></div></div><div class="grp-val">0.5940</div></div>
+        <div class="grp-bar"><div class="grp-track"><div class="grp-fill s2" style="width:77.6%"></div></div><div class="grp-val">0.5931</div></div>
+      </div>
+    </div>
+    <div class="grp-block">
+      <div class="grp-lab"><b>softmax (τ=0.05)</b> — sharpened relevance gate <i>(best)</i></div>
+      <div class="grp-pair">
+        <div class="grp-bar"><div class="grp-track"><div class="grp-fill s1" style="width:81.9%"></div></div><div class="grp-val"><b>0.5983</b></div></div>
+        <div class="grp-bar"><div class="grp-track"><div class="grp-fill s2" style="width:87.7%"></div></div><div class="grp-val"><b>0.6052</b></div></div>
+      </div>
+    </div>
+  </div>
+  <figcaption>Full width = 0.62. <code>max</code> takes the best hard-negative AUC overall
+  (0.6155). Reproduce with
+  <code>PYTHONPATH=. .venv/bin/python scripts/compare_section_aggregation.py --holdout-only</code>;
+  raw output in <code>artifacts/section_aggregation_comparison.json</code>.</figcaption>
+</figure>
+
+<p><strong>Read it honestly: the direction is consistent, the magnitude is not significant.</strong>
+A paired bootstrap (20,000 resamples) puts softmax(τ=0.05) ahead of <code>min</code> by
+<b>+0.0146, 95% CI [−0.021, +0.051]</b> — P(relevance better) ≈ 0.79. Every interval straddles
+zero. What carries weight is not any single row but the <b>monotone ladder</b>: six ordered
+configurations, and both metrics climb at every step in the same direction.</p>
+
+<div class="tiles">
+  <div class="tile">
+    <div class="val">0.79</div>
+    <div class="lab">P(relevance beats veto)</div>
+    <div class="sub">suggestive, not significant</div>
+  </div>
+  <div class="tile">
+    <div class="val crit">±0.070</div>
+    <div class="lab">SE of any single AUC here</div>
+    <div class="sub">5× the whole spread of results</div>
+  </div>
+  <div class="tile">
+    <div class="val">6 / 6</div>
+    <div class="lab">ladder steps in the same direction</div>
+    <div class="sub">on two independent metrics</div>
+  </div>
+</div>
+
+<p><strong>Decision:</strong> build the combine as a <b>temperature-sharpened relevance gate</b>
+with τ tunable. Drop soft-min. Note that τ=0.05 beats τ→0 (hard argmax, 0.596) — so
+<b>slightly soft beats fully polarized</b>, and "sharper is better" should not be assumed.</p>
+
+<p>One clean side-result: <code>noisy_or</code> landed on <i>exactly</i> <code>mean</code>'s
+numbers to four decimals. That's expected, not broken — over the narrow cosine band this data
+occupies, <code>log p</code> is nearly linear, so the geometric mean induces the same ranking as
+the arithmetic one. The probabilistic veto has no teeth here because cosine 0.26 maps to p=0.63,
+which is nowhere near "dealbreaker." Hard <code>min</code> is the honest test of the veto theory,
+and it came last.</p>
+
+<div class="prob warn">
+  <div class="prob-head">
+    <span class="prob-num">Bug found while running this</span>
+    <span class="sev med">Fixed · worth reading</span>
+  </div>
+  <h4>A fake 0.8500 AUC, from four lines of normalization</h4>
+  <p>The first <code>noisy_or</code> implementation mapped cosines to probabilities by rescaling
+  against the min/max of the score matrix it was handed. But
+  <code>_score_with_agg</code> aggregates the <b>positive and negative matrices in separate
+  calls</b> — so positives were rescaled by the positive range (0.333–0.767) and negatives by the
+  negative range (0.265–0.908). An identical cosine became a <i>higher</i> probability on the
+  positive side.</p>
+  <div class="evidence">
+    <span class="elab">What it reported</span>
+    Pair AUC <b>0.8500</b> against a field where nothing exceeds 0.66 — and AP 0.8598.
+    <b>The implausibility was the tell</b>, not the code. A result that good in this project is a
+    bug notification.
+  </div>
+  <div class="fix"><b>Fixed</b> by using a data-independent map, <code>p = (1+cos)/2</code>, so no
+  statistic is estimated from the scores at all. Every other mode was immune because they compute
+  strictly within one record's own sections; <code>noisy_or</code> was the first to reach outside
+  its group. <b>Pinned</b> by <code>tests/test_section_aggregation.py</code> — a record's score
+  must not change based on which other records share its batch, checked for all 7 modes (20 tests,
+  all passing; verified the test fails against the old code).</div>
+</div>
+
+<!-- ============================================================ -->
+<h2><span class="n">07</span>How I'd sequence it</h2>
+
+<p>Step 0 is done. Step 1 has been <b>downgraded from a gate to optional</b>: it existed to
+validate the five named axes, and with learned experts there are no named axes to validate. Still
+worth $0.05 for feature engineering, but it can no longer kill the project.</p>
 
 <div class="steps">
   <div class="step">
-    <div class="badge">0</div>
+    <div class="badge" style="background:var(--wash-good); color:var(--good-text)">✓</div>
     <div>
-      <h4>Change the way you add up the sections <span class="cost">free · today</span></h4>
-      <p>The per-section similarities are already computed and cached. Add <b>min</b> and
-      <b>noisy-OR</b> next to the existing max (0.596) and softmax (0.598). If veto-shaped
-      adding-up beats max, your premise gains real support with zero new model. <b>If min does
-      nothing, the veto story is wrong and I'd drop the MoE.</b></p>
+      <h4>Step 0 — how should expert opinions combine? <span class="cost">done · free</span></h4>
+      <p><b>Answered: relevance-shaped, with a tunable τ.</b> Veto-shaped combining lost at every
+      level, monotonically. Soft-min is off the table; the sharpened gate is in. Full result and
+      error bars in <a href="#step0">§06</a>.</p>
     </div>
   </div>
   <div class="step">
     <div class="badge">1</div>
     <div>
-      <h4>Ask what real declines actually look like <span class="cost">~$0.05 · highest value</span></h4>
-      <p>Have the naive judge — the best hard-negative scorer in the project, and the only model
-      where hard negatives score <i>better</i> than easy ones — write a <b>free-text reason</b>
-      for each of the 100 real declines, then cluster them. Do they fall into five buckets? Are
-      they <i>these</i> five? If most come back "nothing's wrong, just not compelling," there are
-      no axes to model and Steps 2–3 are moot.</p>
+      <h4>Ask what real declines look like <span class="cost">~$0.05 · now optional</span></h4>
+      <p>Have the naive judge write a <b>free-text reason</b> for each of the 100 real declines,
+      then cluster them. <b>No longer a gate</b> — with learned experts there are no named axes to
+      validate. Its remaining value is feature engineering: it tells you which context features
+      are worth building for the bottom network.</p>
     </div>
   </div>
   <div class="step">
     <div class="badge">2</div>
     <div>
-      <h4>Prove each expert alone before wiring a gate <span class="cost">cheap</span></h4>
-      <p>Geo is nearly a rule off <code>locationAvailability</code>; stage and role come off
-      <code>positioning</code>. Score each axis on its own against the real holdout. <b>An expert
-      that can't beat a coin flip alone will not be rescued by a gate.</b></p>
+      <h4>Build the smallest honest version <span class="cost">the real work</span></h4>
+      <p><b>3 tiny experts</b> over the shared bottom feature table in §05. <b>Two gates</b> —
+      accept/decline (main) and judge-score (auxiliary, unlimited labels). <b>τ tunable.</b>
+      <b>Both entropy terms</b>: per-example sharpening plus batch-average balancing. <b>All three
+      diagnostics logged from the first epoch</b>, not bolted on after. Train <b>within-seeker</b>
+      on the 249 triplets so the per-seeker base rate cancels by construction.</p>
     </div>
   </div>
   <div class="step">
     <div class="badge">3</div>
     <div>
-      <h4>Only now, build it <span class="cost stop">gated on 0–2 passing</span></h4>
-      <p>Interaction-gating, soft-min combine, listwise within-seeker training, precomputed
-      candidate vectors, and one single shot at the real holdout.</p>
+      <h4>Read the diagnostics before the score <span class="cost stop">discipline</span></h4>
+      <p>If expert usage is collapsed or routing tracks seeker identity, the accuracy number
+      means nothing regardless of what it says. <b>Write the win threshold down before running</b>,
+      keep the real 69-pair holdout for a single final shot, and remember the SE on any AUC here
+      is ±0.070.</p>
     </div>
   </div>
 </div>
 
 <!-- ============================================================ -->
-<h2><span class="n">06</span>What I'd bet on instead</h2>
+<h2><span class="n">08</span>What I'd bet on instead</h2>
 
 <p><strong>Distill the LLM judge into the re-ranker.</strong> You already have a teacher at
 0.641 AUC with the best hard-negative performance in the project — and hard negatives are the
@@ -660,6 +972,8 @@ only population that exists in production. You can generate its labels at scale,
 exactly what you <i>can't</i> do for the five failure axes. A small late-interaction student
 trained to copy the judge's score gets you the same goal using labels you can actually make.
 The expert decomposition can go <i>inside</i> that student later if you still want it.</p>
+
+<p><strong>Update:</strong> this is no longer an <i>alternative</i> — MMoE absorbs it. Judge-score becomes the auxiliary gate in the multi-task setup (§05), which is precisely the arrangement that lets the scarce 131-pair accept/decline task borrow structure from unlimited judge labels. Better than either idea alone.</p>
 
 <div class="verdict" style="border-left:3px solid var(--warning);">
   <div class="verdict-row">
@@ -700,6 +1014,16 @@ The expert decomposition can go <i>inside</i> that student later if you still wa
         <tr><td>Seekers rejecting every candidate</td><td>12 / 40</td><td>rrf-pairing-pipeline.md</td></tr>
         <tr><td>Available within-seeker triplets</td><td>249</td><td>rrf-pairing-pipeline.md</td></tr>
         <tr><td>Triplet run: AUC traded for recall</td><td>0.610 → 0.576</td><td>twotower-rrf-triplet-bigbatch-experiment.md</td></tr>
+        <tr><td colspan="3" style="padding-top:14px;color:var(--muted);font-size:12px;text-transform:uppercase;letter-spacing:.05em;">Step 0, run 2026-07-29 — section_aggregation_comparison.json</td></tr>
+        <tr><td>softmax(T=0.05) — pair AUC / hard-neg</td><td>0.5983 / 0.6052</td><td>this run (best combine)</td></tr>
+        <tr><td>max — pair AUC / hard-neg</td><td>0.5957 / 0.6155</td><td>this run (best hard-neg)</td></tr>
+        <tr><td>mean &amp; noisy_or — pair AUC / hard-neg</td><td>0.5940 / 0.5931</td><td>this run (identical)</td></tr>
+        <tr><td>softmin(T=0.20) — pair AUC / hard-neg</td><td>0.5931 / 0.5914</td><td>this run</td></tr>
+        <tr><td>softmin(T=0.05) — pair AUC / hard-neg</td><td>0.5871 / 0.5828</td><td>this run</td></tr>
+        <tr><td>min (hard veto) — pair AUC / hard-neg</td><td>0.5836 / 0.5724</td><td>this run (worst)</td></tr>
+        <tr><td>softmax − min, paired bootstrap</td><td>+0.0146 [−0.021, +0.051]</td><td>20,000 resamples</td></tr>
+        <tr><td>SE of any single AUC (Hanley–McNeil)</td><td>±0.070</td><td>29 pos / 40 neg</td></tr>
+        <tr><td>Section count alone as a predictor</td><td>0.5435</td><td>ruled out as the 0.85 cause</td></tr>
       </tbody>
     </table>
   </div>
