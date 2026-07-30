@@ -81,7 +81,7 @@ footer code{background:var(--code-bg);padding:.1em .4em;border-radius:4px}
 <header class="hero">
   <div class="eyebrow"><span class="dot"></span> Dorby AI · two-tower ablation · combined verdict</div>
   <h1 class="title">Bigger batches helped. The extra negative hurt.</h1>
-  <p class="lede">The previous run moved two levers at once and couldn't say which one mattered. Running the missing corners of a 2×2 grid — twice each, so there's a real noise floor to measure against — gives a clear answer, and reverses one of the assumptions behind the original experiment.</p>
+  <p class="lede">The previous run moved two levers at once and couldn't say which one mattered. Running the missing corners of a 2×2 grid — repeated where possible, so there's a measured noise floor rather than an assumed one — gives a clear answer, and reverses one of the assumptions behind the original experiment.</p>
   <div class="links">
     <a href="https://claude.ai/code/artifact/9dcd8dc1-97ba-4183-b77b-717380d1966b">Arm A — batch only</a>
     <a href="https://claude.ai/code/artifact/187a3df4-362b-4373-98fe-0b34f00bbb61">Arm B — negatives only</a>
@@ -90,6 +90,20 @@ footer code{background:var(--code-bg);padding:.1em .4em;border-radius:4px}
     <a href="https://claude.ai/code/artifact/3511253c-fb74-429e-820c-d30dbd8c4816">← original fine-tune</a>
   </div>
 </header>
+<div class="wrap" style="padding-bottom:0">
+  <div class="callout copper" style="margin-top:28px">
+    <div class="label">Correction — Arm A is one run, not an average</div>
+    <p>Arm A's two recorded runs are not repeats of each other: one shipped its final epoch because
+    a checkpoint-pruning bug deleted the earlier ones, the other correctly selected epoch 4. Arm A's
+    figures here are the correctly-selected run alone; an earlier version averaged the two, which
+    flattered it. Arms B and C were genuine repeats and are unchanged, so the noise floor still
+    stands — it just no longer includes Arm A.</p>
+    <p style="margin-top:10px">A later evaluation on all 200 real pairs also found that Arm A's
+    advantage over frozen nano is <b>zero</b> on pair AUC and recall@1 outside this 69-pair sample.
+    <a href="https://claude.ai/code/artifact/d807fdd2-afe5-40ad-bafa-04423b9ccf87">See the 200-pair evaluation</a>
+    and the <a href="https://claude.ai/code/artifact/f9283fec-b9dd-46f1-846f-9280523feb18">Qwen3-8B follow-up</a>.</p>
+  </div>
+</div>
 
 <div class="wrap">
 
@@ -119,9 +133,9 @@ footer code{background:var(--code-bg);padding:.1em .4em;border-radius:4px}
       <div class="gh rot">micro-batch 6</div>
       <div class="cell best">
         <div class="nm">Arm A — batch only</div>
-        <div class="met"><span>pair AUC</span><span>0.6047</span></div>
-        <div class="met"><span>MRR</span><span>0.5423</span></div>
-        <div class="met"><span>recall@1</span><span>0.3966</span></div>
+        <div class="met"><span>pair AUC</span><span>0.5983</span></div>
+        <div class="met"><span>MRR</span><span>0.5326</span></div>
+        <div class="met"><span>recall@1</span><span>0.3793</span></div>
         <span class="tag best">best cell</span>
       </div>
       <div class="cell">
@@ -131,7 +145,7 @@ footer code{background:var(--code-bg);padding:.1em .4em;border-radius:4px}
         <div class="met"><span>recall@1</span><span>0.3448</span></div>
       </div>
     </div>
-    <p style="font-size:13.5px;color:var(--muted)">Reading down a column isolates micro-batch. Reading across a row isolates k. Arms A/B/C are the mean of two runs; the bigbatch cell is a single earlier run.</p>
+    <p style="font-size:13.5px;color:var(--muted)">Reading down a column isolates micro-batch. Reading across a row isolates k. Arms B and C are the mean of two genuine repeat runs. Arm A is a single run — its two recorded runs shipped different epochs, so they are not repeats (see the correction at the top). The bigbatch cell is a single earlier run.</p>
   </section>
 
   <section>
@@ -143,7 +157,7 @@ footer code{background:var(--code-bg);padding:.1em .4em;border-radius:4px}
         <tr class="hi"><td>micro-batch 2 → 6</td><td>k=2</td><td class="mono pos">+0.016</td><td class="mono pos">+0.033</td><td class="mono pos">+0.052</td></tr>
         <tr><td>k 1 → 2</td><td>micro-batch 2</td><td class="mono neg">−0.040</td><td class="mono neg">−0.009</td><td class="mono neg">−0.035</td></tr>
         <tr><td>k 1 → 2</td><td>micro-batch 6</td><td class="mono neg">−0.029</td><td class="mono neg">−0.029</td><td class="mono neg">−0.052</td></tr>
-        <tr><td style="color:var(--muted)">noise floor (same config, rerun)</td><td style="color:var(--muted)">—</td><td class="mono" style="color:var(--muted)">±0.016</td><td class="mono" style="color:var(--muted)">±0.030</td><td class="mono" style="color:var(--muted)">±0.035</td></tr>
+        <tr><td style="color:var(--muted)">noise floor (arms B &amp; C, same config rerun)</td><td style="color:var(--muted)">—</td><td class="mono" style="color:var(--muted)">±0.016</td><td class="mono" style="color:var(--muted)">±0.030</td><td class="mono" style="color:var(--muted)">±0.035</td></tr>
       </tbody>
     </table></div>
     <div class="callout teal">
@@ -161,22 +175,22 @@ footer code{background:var(--code-bg);padding:.1em .4em;border-radius:4px}
     <div class="table-wrap"><table>
       <thead><tr><th>Model</th><th>Pair AUC</th><th>Hard-neg</th><th>MRR</th><th>Recall@1</th><th>Recall@10</th></tr></thead>
       <tbody>
-        <tr class="hi"><td>Arm A — micro 6, k=1</td><td class="mono">0.6047</td><td class="mono">0.6103</td><td class="mono">0.5423</td><td class="mono">0.3966</td><td class="mono">0.8621</td></tr>
+        <tr class="hi"><td>Arm A — micro 6, k=1</td><td class="mono">0.5983</td><td class="mono">0.6034</td><td class="mono">0.5326</td><td class="mono">0.3793</td><td class="mono">0.8621</td></tr>
         <tr><td>Voyage-4-large <span style="color:var(--muted)">(frozen production)</span></td><td class="mono">0.6086</td><td class="mono">0.6020</td><td class="mono">0.5287</td><td class="mono">0.3448</td><td class="mono">0.8621</td></tr>
         <tr><td>bigbatch run <span style="color:var(--muted)">(previous best guess)</span></td><td class="mono">0.5759</td><td class="mono">0.5879</td><td class="mono">0.5138</td><td class="mono">0.3448</td><td class="mono">0.7931</td></tr>
-        <tr><td>original triplet fine-tune</td><td class="mono">0.6103</td><td class="mono">0.6138</td><td class="mono">0.4633</td><td class="mono">0.2759</td><td class="mono">0.7586</td></tr>
+        <tr><td>original triplet fine-tune</td><td class="mono">0.6034</td><td class="mono">0.6138</td><td class="mono">0.4633</td><td class="mono">0.2759</td><td class="mono">0.7586</td></tr>
       </tbody>
     </table></div>
     <div class="callout slate">
       <div class="label">A correction worth stating plainly</div>
-      <p>Arm A's <i>first</i> run scored recall@1 0.4138, which looked like a clean sweep over the production model on every metric. The replicate came in at 0.3793. Averaged, Arm A is <b>level with Voyage-4-large on pair AUC and MRR</b> (both gaps sit inside the noise floor) with a <b>modest recall@1 edge of about 1.5 queries</b>. It is the best configuration this project has trained, and it beats the previous bigbatch attempt outright — but "beats production on everything" was the single-run reading, and it did not survive being run again. That is precisely why the second replicate was worth the ten minutes.</p>
+      <p>Arm A's <i>first</i> run scored recall@1 0.4138, which looked like a clean sweep over the production model. That run turned out to have shipped its final epoch through a checkpoint bug; the correctly selected model scores 0.3793. On that basis Arm A is <b>slightly behind Voyage-4-large on pair AUC</b> (0.5983 vs 0.6086), <b>ahead on MRR</b> (0.5326 vs 0.5287, inside noise) and <b>ahead on recall@1 by one query</b>. It is still the best configuration this project has trained on this holdout — but "beats production on everything" was an artefact of a buggy run, and a later evaluation on all 200 real pairs found its advantage over <i>frozen</i> nano is zero on pair AUC and recall@1.</p>
     </div>
   </section>
 
   <section>
     <div class="section-head"><span class="section-num">04</span><h2>A side finding: the dev set can't pick winners</h2></div>
     <p>Arms A and C initially shipped their final epoch by accident — a checkpoint-retention setting had deleted the earlier epochs before best-epoch selection ran. Fixing it produced a surprise: the <b>correctly selected model scored worse</b> on the real holdout than the accidental one (Arm A: 0.5983 vs 0.6112 pair AUC).</p>
-    <p>The 60-row dev set only spans 0.50–0.58 across all five epochs — a narrower range than its own run-to-run wobble. It cannot reliably rank checkpoints, so "best epoch" is close to a coin flip right now. Both numbers are reported and averaged above rather than keeping the flattering one.</p>
+    <p>The 60-row dev set only spans 0.50–0.58 across all five epochs — a narrower range than its own run-to-run wobble. It cannot reliably rank checkpoints, so "best epoch" is close to a coin flip right now. Both numbers are reported above, and the correctly-selected one is used — not the flattering one, and not an average of the two, since they are different models.</p>
   </section>
 
   <section>

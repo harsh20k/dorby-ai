@@ -1,0 +1,455 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Boardy AI — The Story So Far</title>
+<style>
+  :root {
+    --bg: #ffffff;
+    --ink: #1d1d1f;
+    --muted: #86868b;
+    --line: #e3e3e6;
+    --accent: #0071e3;
+    --rail: #d2d2d7;
+    --sidebar-w: 300px;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #000000;
+      --ink: #f5f5f7;
+      --muted: #86868b;
+      --line: #1f1f22;
+      --accent: #2997ff;
+      --rail: #2a2a2e;
+    }
+  }
+
+  * { box-sizing: border-box; }
+  html, body { height: 100%; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    overflow: hidden;
+  }
+
+  /* ---------- progress ---------- */
+  #progress {
+    position: fixed; top: 0; left: 0; height: 2px; width: 0%;
+    background: var(--accent); z-index: 50; transition: width .25s ease-out;
+  }
+
+  /* ---------- left timeline ---------- */
+  aside {
+    position: fixed; top: 0; left: 0; bottom: 0; width: var(--sidebar-w);
+    padding: 48px 0 48px 44px;
+    border-right: 1px solid var(--line);
+    overflow-y: auto; z-index: 40;
+    scrollbar-width: none;
+  }
+  aside::-webkit-scrollbar { display: none; }
+  .brand {
+    font-size: 13px; font-weight: 600; letter-spacing: -.01em;
+    margin-bottom: 4px;
+  }
+  .brand-sub {
+    font-size: 12px; color: var(--muted); margin-bottom: 34px; letter-spacing: .01em;
+  }
+  nav { position: relative; padding-left: 20px; }
+  nav::before {
+    content: ""; position: absolute; left: 3px; top: 8px; bottom: 8px;
+    width: 1px; background: var(--rail);
+  }
+  .nav-item {
+    display: block; position: relative; width: 100%; text-align: left;
+    background: none; border: 0; padding: 9px 12px 9px 0; cursor: pointer;
+    font-family: inherit; font-size: 13px; line-height: 1.3;
+    color: var(--muted); transition: color .2s ease;
+  }
+  .nav-item::before {
+    content: ""; position: absolute; left: -21px; top: 14px;
+    width: 7px; height: 7px; border-radius: 50%;
+    background: var(--rail); transition: all .25s ease;
+  }
+  .nav-item:hover { color: var(--ink); }
+  .nav-item.active { color: var(--ink); font-weight: 600; }
+  .nav-item.active::before {
+    background: var(--accent); transform: scale(1.35);
+    box-shadow: 0 0 0 4px color-mix(in srgb, var(--accent) 15%, transparent);
+  }
+  .nav-date {
+    display: block; font-size: 11px; font-weight: 400;
+    color: var(--muted); letter-spacing: .02em; margin-bottom: 1px;
+  }
+
+  /* ---------- deck ---------- */
+  .deck {
+    margin-left: var(--sidebar-w);
+    height: 100vh; overflow-y: scroll;
+    scroll-snap-type: y mandatory; scroll-behavior: smooth;
+    scrollbar-width: none;
+  }
+  .deck::-webkit-scrollbar { display: none; }
+
+  .slide {
+    min-height: 100vh; scroll-snap-align: start; scroll-snap-stop: always;
+    display: flex; flex-direction: column; justify-content: center;
+    padding: 96px clamp(40px, 7vw, 120px);
+  }
+  .inner { max-width: 900px; }
+
+  .eyebrow {
+    font-size: 13px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase;
+    color: var(--muted); margin-bottom: 24px;
+  }
+  .eyebrow .num { color: var(--accent); }
+
+  h1 {
+    font-size: clamp(40px, 6.4vw, 92px); font-weight: 700;
+    letter-spacing: -.035em; line-height: 1.02; margin: 0;
+    text-wrap: balance;
+  }
+  h2 {
+    font-size: clamp(34px, 4.6vw, 64px); font-weight: 700;
+    letter-spacing: -.032em; line-height: 1.05; margin: 0;
+    text-wrap: balance;
+  }
+  .lede {
+    font-size: clamp(19px, 1.9vw, 27px); font-weight: 400; line-height: 1.45;
+    color: var(--muted); margin: 28px 0 0; max-width: 30ch;
+    letter-spacing: -.01em;
+  }
+  .decision {
+    margin-top: 44px; padding-top: 22px; border-top: 1px solid var(--line);
+    max-width: 34ch;
+  }
+  .decision-label {
+    font-size: 11px; font-weight: 600; letter-spacing: .1em; text-transform: uppercase;
+    color: var(--accent); display: block; margin-bottom: 8px;
+  }
+  .decision-text {
+    font-size: clamp(19px, 1.85vw, 26px); font-weight: 600;
+    letter-spacing: -.02em; line-height: 1.3; margin: 0;
+  }
+
+  /* opening + closing slides */
+  .slide--title h1 { font-size: clamp(46px, 7.4vw, 110px); }
+  .slide--title .lede { max-width: 26ch; margin-top: 32px; }
+  .dateline {
+    margin-top: 56px; font-size: 14px; color: var(--muted); letter-spacing: .01em;
+  }
+  .finals { margin-top: 40px; display: grid; gap: 26px; max-width: 40ch; }
+  .final-item { padding-left: 20px; border-left: 2px solid var(--accent); }
+  .final-item.dim { border-left-color: var(--rail); }
+  .final-head {
+    font-size: clamp(20px, 2vw, 28px); font-weight: 600; letter-spacing: -.02em; line-height: 1.25;
+  }
+  .final-sub { font-size: 16px; color: var(--muted); margin-top: 6px; line-height: 1.45; }
+
+  /* entrance animation */
+  .anim { opacity: 0; transform: translateY(18px); transition: opacity .7s ease, transform .7s cubic-bezier(.2,.7,.3,1); }
+  .slide.in .anim { opacity: 1; transform: none; }
+  .slide.in .anim:nth-child(2) { transition-delay: .06s; }
+  .slide.in .anim:nth-child(3) { transition-delay: .12s; }
+  .slide.in .anim:nth-child(4) { transition-delay: .18s; }
+
+  /* scroll hint */
+  .hint {
+    position: fixed; bottom: 30px; right: 40px; z-index: 45;
+    font-size: 12px; color: var(--muted); letter-spacing: .02em;
+    display: flex; align-items: center; gap: 8px;
+    transition: opacity .4s ease;
+  }
+  .hint.hidden { opacity: 0; }
+  .key {
+    display: inline-flex; align-items: center; justify-content: center;
+    width: 20px; height: 20px; border: 1px solid var(--line); border-radius: 5px;
+    font-size: 11px;
+  }
+
+  @media (max-width: 880px) {
+    :root { --sidebar-w: 0px; }
+    aside { display: none; }
+    .deck { margin-left: 0; }
+    .slide { padding: 84px 28px; }
+    .hint { display: none; }
+  }
+</style>
+</head>
+<body>
+
+<div id="progress"></div>
+
+<aside>
+  <div class="brand">Boardy AI · Intro Matching</div>
+  <div class="brand-sub">How the project unfolded</div>
+  <nav id="nav"></nav>
+</aside>
+
+<main class="deck" id="deck">
+
+  <section class="slide slide--title" data-nav="Start" data-date="">
+    <div class="inner">
+      <div class="eyebrow anim">Recommender Systems · Boardy AI</div>
+      <h1 class="anim">Can we tell which introductions people will&nbsp;actually accept?</h1>
+      <p class="lede anim">Two weeks of work, in the order it happened.</p>
+      <div class="dateline anim">July 16 — July 30, 2026</div>
+    </div>
+  </section>
+
+  <section class="slide" data-nav="The 200 introductions" data-date="Jul 16">
+    <div class="inner">
+      <div class="eyebrow anim"><span class="num">01</span> &nbsp;·&nbsp; July 16</div>
+      <h2 class="anim">We started with two hundred real introductions.</h2>
+      <p class="lede anim">A hundred people said yes. A hundred said no. Every single one had already been recommended by Boardy's live system.</p>
+      <div class="decision anim">
+        <span class="decision-label">The decision</span>
+        <p class="decision-text">Learn from what the humans did, not from what the system suggested.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="slide" data-nav="Measuring the starting point" data-date="Jul 17">
+    <div class="inner">
+      <div class="eyebrow anim"><span class="num">02</span> &nbsp;·&nbsp; July 17</div>
+      <h2 class="anim">First we measured what existing models could already do.</h2>
+      <p class="lede anim">General-purpose language models were barely better than guessing. Boardy's own family of models did meaningfully better.</p>
+      <div class="decision anim">
+        <span class="decision-label">The decision</span>
+        <p class="decision-text">Nothing gets called an improvement until it beats these numbers.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="slide" data-nav="Making our own data" data-date="Jul 18">
+    <div class="inner">
+      <div class="eyebrow anim"><span class="num">03</span> &nbsp;·&nbsp; July 18</div>
+      <h2 class="anim">Two hundred examples is not much to learn from.</h2>
+      <p class="lede anim">So we built a pipeline that writes realistic new people and new introductions, and left five hundred of them generating overnight.</p>
+      <div class="decision anim">
+        <span class="decision-label">The decision</span>
+        <p class="decision-text">We cannot buy more real outcomes, so we will manufacture practice ones.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="slide" data-nav="The model that lied" data-date="Jul 19">
+    <div class="inner">
+      <div class="eyebrow anim"><span class="num">04</span> &nbsp;·&nbsp; July 19</div>
+      <h2 class="anim">The first trained model looked brilliant. It wasn't.</h2>
+      <p class="lede anim">Near-perfect on the data we invented. Worse than a coin flip on the real cases that actually matter.</p>
+      <div class="decision anim">
+        <span class="decision-label">The decision</span>
+        <p class="decision-text">Stop everything and find out what it really learned.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="slide" data-nav="It read our handwriting" data-date="Jul 19">
+    <div class="inner">
+      <div class="eyebrow anim"><span class="num">05</span> &nbsp;·&nbsp; July 19, later</div>
+      <h2 class="anim">It had learned our writing style, not human behaviour.</h2>
+      <p class="lede anim">Our generator described good matches and bad matches differently. The model simply spotted the difference in the prose.</p>
+      <div class="decision anim">
+        <span class="decision-label">The decision</span>
+        <p class="decision-text">Throw the batch away. A model trained only on real pairs beat it using a fifth of the data.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="slide" data-nav="A safer way to generate" data-date="Jul 20">
+    <div class="inner">
+      <div class="eyebrow anim"><span class="num">06</span> &nbsp;·&nbsp; July 20</div>
+      <h2 class="anim">The flaw was that the writer knew the answer in advance.</h2>
+      <p class="lede anim">So we split the job in two: invent the people first, decide whether they are a good match afterwards.</p>
+      <div class="decision anim">
+        <span class="decision-label">The decision</span>
+        <p class="decision-text">Never let the answer touch the text.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="slide" data-nav="Looking for a network" data-date="Jul 21">
+    <div class="inner">
+      <div class="eyebrow anim"><span class="num">07</span> &nbsp;·&nbsp; July 21</div>
+      <h2 class="anim">We asked whether these people form a network we could learn from.</h2>
+      <p class="lede anim">They mostly don't. Almost everybody appears exactly once, so there is very little structure to exploit.</p>
+      <div class="decision anim">
+        <span class="decision-label">The decision</span>
+        <p class="decision-text">Park the graph-based ideas until there is an actual graph.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="slide" data-nav="A note from the professor" data-date="Jul 22">
+    <div class="inner">
+      <div class="eyebrow anim"><span class="num">08</span> &nbsp;·&nbsp; July 22</div>
+      <h2 class="anim">A knowledge-graph approach would need a different kind of data.</h2>
+      <p class="lede anim">Not more examples — thousands of carefully edited variations of the same people, to show the model what changes an outcome.</p>
+      <div class="decision anim">
+        <span class="decision-label">The decision</span>
+        <p class="decision-text">Understood as a research direction, not a next step.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="slide" data-nav="People ask for many things" data-date="Jul 23">
+    <div class="inner">
+      <div class="eyebrow anim"><span class="num">09</span> &nbsp;·&nbsp; July 23</div>
+      <h2 class="anim">One person asks for funding, hiring and advice in the same breath.</h2>
+      <p class="lede anim">Blending all of it into a single summary quietly loses all three requests at once.</p>
+      <div class="decision anim">
+        <span class="decision-label">The decision</span>
+        <p class="decision-text">Read each request separately, then match each one on its own.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="slide" data-nav="What we are really predicting" data-date="Jul 24">
+    <div class="inner">
+      <div class="eyebrow anim"><span class="num">10</span> &nbsp;·&nbsp; July 24</div>
+      <h2 class="anim">We finally wrote down the real question.</h2>
+      <p class="lede anim">Not "are these two relevant to each other" — the live system already decided that. It is whether two plausible strangers will genuinely connect.</p>
+      <div class="decision anim">
+        <span class="decision-label">The turning point</span>
+        <p class="decision-text">And a free, open model beat Boardy's production model at answering it.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="slide" data-nav="Rebuilding data generation" data-date="Jul 25">
+    <div class="inner">
+      <div class="eyebrow anim"><span class="num">11</span> &nbsp;·&nbsp; July 25</div>
+      <h2 class="anim">We rebuilt data generation so nothing marks its own homework.</h2>
+      <p class="lede anim">One system shortlists candidates. A completely different one decides yes or no. They never share a model or a method.</p>
+      <div class="decision anim">
+        <span class="decision-label">The decision</span>
+        <p class="decision-text">Keep the finder and the judge strictly apart.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="slide" data-nav="Scaling it up" data-date="Jul 26">
+    <div class="inner">
+      <div class="eyebrow anim"><span class="num">12</span> &nbsp;·&nbsp; July 26</div>
+      <h2 class="anim">A thousand invented people. Twenty-six hundred judgements.</h2>
+      <p class="lede anim">About six dollars of compute — and kept in its own folder, never mixed into the real data.</p>
+      <div class="decision anim">
+        <span class="decision-label">The decision</span>
+        <p class="decision-text">Scale the practice data, but keep it quarantined from the truth.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="slide" data-nav="Telling the story" data-date="Jul 27">
+    <div class="inner">
+      <div class="eyebrow anim"><span class="num">13</span> &nbsp;·&nbsp; July 27</div>
+      <h2 class="anim">We turned the work into a proposal rather than a report.</h2>
+      <p class="lede anim">Less about everything we tried, more about what should be built next and why.</p>
+      <div class="decision anim">
+        <span class="decision-label">The decision</span>
+        <p class="decision-text">Lead with the recommendation, keep the experiments as evidence.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="slide" data-nav="The recipe that worked" data-date="Jul 28">
+    <div class="inner">
+      <div class="eyebrow anim"><span class="num">14</span> &nbsp;·&nbsp; July 28</div>
+      <h2 class="anim">Teach by comparison, and show more comparisons at once.</h2>
+      <p class="lede anim">One person, one good match, one bad match, many at a time. That finally beat the production model. The mixture-of-experts idea did not — it learned our judge's opinions instead of real human choices.</p>
+      <div class="decision anim">
+        <span class="decision-label">The decision</span>
+        <p class="decision-text">Train on comparisons, not on isolated pairs.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="slide" data-nav="Checking the wins were real" data-date="Jul 29">
+    <div class="inner">
+      <div class="eyebrow anim"><span class="num">15</span> &nbsp;·&nbsp; July 29</div>
+      <h2 class="anim">Then we checked whether the wins were real.</h2>
+      <p class="lede anim">Scored against all two hundred pairs instead of the small set held back, some gains shrank into noise. What held up was performance on the hard cases.</p>
+      <div class="decision anim">
+        <span class="decision-label">The decision</span>
+        <p class="decision-text">From now on, only the hard cases count — they are the ones production gets wrong.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="slide slide--title" data-nav="Where it stands" data-date="Today">
+    <div class="inner">
+      <div class="eyebrow anim">Where it stands</div>
+      <h2 class="anim">Two things proven. One still open.</h2>
+      <div class="finals anim">
+        <div class="final-item">
+          <div class="final-head">A free, open model beats the production one.</div>
+          <div class="final-sub">On the question that matters: will these two people actually connect.</div>
+        </div>
+        <div class="final-item">
+          <div class="final-head">Teaching by comparison works.</div>
+          <div class="final-sub">And it runs fast enough to serve, which the accurate-but-slow options do not.</div>
+        </div>
+        <div class="final-item dim">
+          <div class="final-head">Invented data still doesn't teach real outcomes.</div>
+          <div class="final-sub">It teaches whichever model wrote the labels. That is the thread left to pull.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<div class="hint" id="hint"><span class="key">↑</span><span class="key">↓</span> to move</div>
+
+<script>
+  var deck = document.getElementById('deck');
+  var slides = Array.prototype.slice.call(deck.querySelectorAll('.slide'));
+  var nav = document.getElementById('nav');
+  var progress = document.getElementById('progress');
+  var hint = document.getElementById('hint');
+
+  slides.forEach(function (slide, i) {
+    var btn = document.createElement('button');
+    btn.className = 'nav-item';
+    var date = slide.dataset.date;
+    btn.innerHTML = (date ? '<span class="nav-date">' + date + '</span>' : '') + slide.dataset.nav;
+    btn.addEventListener('click', function () { goTo(i); });
+    nav.appendChild(btn);
+  });
+  var navItems = Array.prototype.slice.call(nav.children);
+
+  var current = 0;
+  function goTo(i) {
+    current = Math.max(0, Math.min(slides.length - 1, i));
+    slides[current].scrollIntoView({ behavior: 'smooth' });
+  }
+
+  var observer = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (!entry.isIntersecting) return;
+      entry.target.classList.add('in');
+      var i = slides.indexOf(entry.target);
+      current = i;
+      navItems.forEach(function (n, j) { n.classList.toggle('active', j === i); });
+      navItems[i].scrollIntoView({ block: 'nearest' });
+      progress.style.width = ((i / (slides.length - 1)) * 100) + '%';
+      hint.classList.toggle('hidden', i > 0);
+    });
+  }, { threshold: 0.55 });
+  slides.forEach(function (s) { observer.observe(s); });
+
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'ArrowDown' || e.key === 'ArrowRight' || e.key === 'PageDown' || e.key === ' ') {
+      e.preventDefault(); goTo(current + 1);
+    } else if (e.key === 'ArrowUp' || e.key === 'ArrowLeft' || e.key === 'PageUp') {
+      e.preventDefault(); goTo(current - 1);
+    } else if (e.key === 'Home') { e.preventDefault(); goTo(0); }
+    else if (e.key === 'End') { e.preventDefault(); goTo(slides.length - 1); }
+  });
+</script>
+</body>
+</html>

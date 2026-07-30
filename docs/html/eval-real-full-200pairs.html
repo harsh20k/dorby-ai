@@ -93,8 +93,9 @@ footer code{background:var(--code-bg);padding:.1em .4em;border-radius:4px}
   </section>
   <section>
     <h2>The gain by metric, on each population</h2>
-    <p>Bars are Arm A minus frozen nano. The pale band behind each bar is that measurement's noise —
-    the gap between Arm A's two identical replicates. A bar inside its band means nothing happened.</p>
+    <p>Bars are Arm A minus frozen nano. The pale band behind each bar is the measurement's noise,
+    taken from the two arms of the ablation that <i>were</i> genuine repeat runs. A bar inside its
+    band means nothing happened.</p>
     <div class="chart-card">
       <canvas id="ch"></canvas>
       <div class="legend">
@@ -109,28 +110,28 @@ footer code{background:var(--code-bg);padding:.1em .4em;border-radius:4px}
     <h2>All 200 real pairs</h2>
     <p class="meta"><span class="chip">n = 200</span><span class="chip">100 pos / 100 neg</span>
     <span class="chip">corpus 178 candidates</span><span class="note">the full real dataset</span></p>
-    <div class="table-wrap"><table><thead><tr><th>Metric</th><th>Frozen nano</th><th>Arm A (mean)</th><th>Δ</th><th>noise</th></tr></thead><tbody><tr><td>Pair AUC</td><td class="mono">0.5593</td><td class="mono">0.5664</td><td class="mono d-noise">+0.0071</td><td class="mono muted">±0.0140</td></tr><tr><td>Hard-neg AUC</td><td class="mono">0.5046</td><td class="mono">0.5638</td><td class="mono d-win">+0.0592</td><td class="mono muted">±0.0160</td></tr><tr><td>MRR</td><td class="mono">0.3171</td><td class="mono">0.3391</td><td class="mono d-win">+0.0220</td><td class="mono muted">±0.0099</td></tr><tr><td>Recall@1</td><td class="mono">0.1800</td><td class="mono">0.1850</td><td class="mono d-noise">+0.0050</td><td class="mono muted">±0.0100</td></tr><tr><td>Recall@10</td><td class="mono">0.5900</td><td class="mono">0.6350</td><td class="mono d-win">+0.0450</td><td class="mono muted">±0.0100</td></tr></tbody></table></div>
+    <div class="table-wrap"><table><thead><tr><th>Metric</th><th>Frozen nano</th><th>Arm A (v2)</th><th>Δ</th><th>noise</th></tr></thead><tbody><tr><td>Pair AUC</td><td class="mono">0.5593</td><td class="mono">0.5594</td><td class="mono d-noise">+0.0001</td><td class="mono muted">±0.0164</td></tr><tr><td>Hard-neg AUC</td><td class="mono">0.5046</td><td class="mono">0.5558</td><td class="mono d-win">+0.0512</td><td class="mono muted">±0.0164</td></tr><tr><td>MRR</td><td class="mono">0.3171</td><td class="mono">0.3341</td><td class="mono d-win">+0.0170</td><td class="mono muted">±0.0164</td></tr><tr><td>Recall@1</td><td class="mono">0.1800</td><td class="mono">0.1800</td><td class="mono d-noise">+0.0000</td><td class="mono muted">±0.0345</td></tr><tr><td>Recall@10</td><td class="mono">0.5900</td><td class="mono">0.6400</td><td class="mono d-win">+0.0500</td><td class="mono muted">±0.0345</td></tr></tbody></table></div>
   </section>
   <section>
     <h2>131 train-split pairs</h2>
     <p class="meta"><span class="chip">n = 131</span><span class="chip">71 pos / 60 neg</span>
     <span class="chip">corpus 120 candidates</span><span class="note">also never seen by Arm A</span></p>
-    <div class="table-wrap"><table><thead><tr><th>Metric</th><th>Frozen nano</th><th>Arm A (mean)</th><th>Δ</th><th>noise</th></tr></thead><tbody><tr><td>Pair AUC</td><td class="mono">0.5507</td><td class="mono">0.5475</td><td class="mono d-noise">-0.0032</td><td class="mono muted">±0.0167</td></tr><tr><td>Hard-neg AUC</td><td class="mono">0.4690</td><td class="mono">0.5411</td><td class="mono d-win">+0.0721</td><td class="mono muted">±0.0192</td></tr><tr><td>MRR</td><td class="mono">0.3548</td><td class="mono">0.3863</td><td class="mono d-win">+0.0315</td><td class="mono muted">±0.0181</td></tr><tr><td>Recall@1</td><td class="mono">0.2113</td><td class="mono">0.2324</td><td class="mono d-noise">+0.0211</td><td class="mono muted">±0.0423</td></tr><tr><td>Recall@10</td><td class="mono">0.6479</td><td class="mono">0.7254</td><td class="mono d-win">+0.0775</td><td class="mono muted">±0.0423</td></tr></tbody></table></div>
+    <div class="table-wrap"><table><thead><tr><th>Metric</th><th>Frozen nano</th><th>Arm A (v2)</th><th>Δ</th><th>noise</th></tr></thead><tbody><tr><td>Pair AUC</td><td class="mono">0.5507</td><td class="mono">0.5392</td><td class="mono d-noise">-0.0115</td><td class="mono muted">±0.0164</td></tr><tr><td>Hard-neg AUC</td><td class="mono">0.4690</td><td class="mono">0.5315</td><td class="mono d-win">+0.0624</td><td class="mono muted">±0.0164</td></tr><tr><td>MRR</td><td class="mono">0.3548</td><td class="mono">0.3773</td><td class="mono d-win">+0.0225</td><td class="mono muted">±0.0164</td></tr><tr><td>Recall@1</td><td class="mono">0.2113</td><td class="mono">0.2113</td><td class="mono d-noise">+0.0000</td><td class="mono muted">±0.0345</td></tr><tr><td>Recall@10</td><td class="mono">0.6479</td><td class="mono">0.7042</td><td class="mono d-win">+0.0563</td><td class="mono muted">±0.0345</td></tr></tbody></table></div>
   </section>
   <section>
     <h2>69-pair holdout</h2>
     <p class="meta"><span class="chip">n = 69</span><span class="chip">29 pos / 40 neg</span>
     <span class="chip">corpus 65 candidates</span><span class="note">the population every prior number used</span></p>
-    <div class="table-wrap"><table><thead><tr><th>Metric</th><th>Frozen nano</th><th>Arm A (mean)</th><th>Δ</th><th>noise</th></tr></thead><tbody><tr><td>Pair AUC</td><td class="mono">0.5793</td><td class="mono">0.6056</td><td class="mono d-win">+0.0263</td><td class="mono muted">±0.0147</td></tr><tr><td>Hard-neg AUC</td><td class="mono">0.5707</td><td class="mono">0.6103</td><td class="mono d-win">+0.0397</td><td class="mono muted">±0.0138</td></tr><tr><td>MRR</td><td class="mono">0.4610</td><td class="mono">0.5422</td><td class="mono d-win">+0.0811</td><td class="mono muted">±0.0192</td></tr><tr><td>Recall@1</td><td class="mono">0.2759</td><td class="mono">0.3966</td><td class="mono d-win">+0.1207</td><td class="mono muted">±0.0345</td></tr><tr><td>Recall@10</td><td class="mono">0.7586</td><td class="mono">0.8621</td><td class="mono d-win">+0.1034</td><td class="mono muted">±0.0000</td></tr></tbody></table></div>
+    <div class="table-wrap"><table><thead><tr><th>Metric</th><th>Frozen nano</th><th>Arm A (v2)</th><th>Δ</th><th>noise</th></tr></thead><tbody><tr><td>Pair AUC</td><td class="mono">0.5793</td><td class="mono">0.5983</td><td class="mono d-win">+0.0190</td><td class="mono muted">±0.0164</td></tr><tr><td>Hard-neg AUC</td><td class="mono">0.5707</td><td class="mono">0.6034</td><td class="mono d-win">+0.0328</td><td class="mono muted">±0.0164</td></tr><tr><td>MRR</td><td class="mono">0.4610</td><td class="mono">0.5326</td><td class="mono d-win">+0.0716</td><td class="mono muted">±0.0164</td></tr><tr><td>Recall@1</td><td class="mono">0.2759</td><td class="mono">0.3793</td><td class="mono d-win">+0.1034</td><td class="mono muted">±0.0345</td></tr><tr><td>Recall@10</td><td class="mono">0.7586</td><td class="mono">0.8621</td><td class="mono d-win">+0.1034</td><td class="mono muted">±0.0345</td></tr></tbody></table></div>
   </section>
   <section>
     <h2>What this changes</h2>
     <div class="callout loss">
       <div class="label">The headline result does not generalise</div>
-      <p>On the 131 real pairs outside the holdout, pair AUC is <b>−0.003</b> and recall@1 sits inside
-      noise. Pooled over all 200, pair AUC is +0.007 against a ±0.014 noise floor. The
-      "+0.026 pair AUC, +3.5 queries at rank 1" reported from the holdout is a property of
-      <i>that 69-pair sample</i>, not of the model.</p>
+      <p>On the 131 real pairs outside the holdout, pair AUC is <b>−0.012</b> and recall@1 is
+      <b>exactly zero</b>. Pooled over all 200, pair AUC is <b>+0.0001</b> and recall@1 is
+      <b>+0.0000</b> — not "small", not "inside noise", but zero to four decimal places. The gain
+      reported from the holdout is a property of <i>that 69-pair sample</i>, not of the model.</p>
     </div>
     <div class="callout neutral">
       <div class="label">And the holdout is an easier population</div>
@@ -157,8 +158,10 @@ footer code{background:var(--code-bg);padding:.1em .4em;border-radius:4px}
       against its own candidate pool — 178, 120 and 65 — and a bigger pool is strictly harder. A lower
       MRR on the 200-pair table means the pool grew, not that the model got worse. Pair AUC has no
       pool dependence and is comparable throughout.</li>
-      <li><b>The noise estimate is two runs, not a confidence interval.</b> It bounds run-to-run
-      variation, not sampling error on the pairs themselves.</li>
+      <li><b>Arm A has no repeat run.</b> Its two recorded runs shipped different checkpoints — one
+      epoch 5 via a checkpoint-selection bug, one epoch 4 correctly — so they are two different
+      models, not a repeat measurement. The figures here use the correctly-selected one, and the
+      noise band is borrowed from the two arms of the ablation that were genuine repeats.</li>
     </ul>
   </section>
   <footer>Boardy AI contact-intro recommender · <code>eval_real_full/</code>, run id <code>real200_001</code> ·
@@ -166,7 +169,7 @@ footer code{background:var(--code-bg);padding:.1em .4em;border-radius:4px}
   full writeup in <code>docs/eval-real-full-experiment.md</code></footer>
 </div>
 <script>
-var DATA = {"all": [{"label": "Pair AUC", "delta": 0.007100000000000106, "noise": 0.013999999999999901}, {"label": "Hard-neg AUC", "delta": 0.05920000000000003, "noise": 0.016000000000000014}, {"label": "MRR", "delta": 0.021955390614169457, "noise": 0.009866856562973647}, {"label": "Recall@1", "delta": 0.0050000000000000044, "noise": 0.010000000000000009}, {"label": "Recall@10", "delta": 0.04500000000000004, "noise": 0.010000000000000009}], "train": [{"label": "Pair AUC", "delta": -0.0031690140845069825, "noise": 0.016666666666666607}, {"label": "Hard-neg AUC", "delta": 0.07206572769953051, "noise": 0.019248826291079824}, {"label": "MRR", "delta": 0.031531018941241384, "noise": 0.018118516119551065}, {"label": "Recall@1", "delta": 0.02112676056338028, "noise": 0.04225352112676056}, {"label": "Recall@10", "delta": 0.07746478873239426, "noise": 0.04225352112676062}], "holdout": [{"label": "Pair AUC", "delta": 0.026293103448275845, "noise": 0.014655172413793327}, {"label": "Hard-neg AUC", "delta": 0.03965517241379313, "noise": 0.01379310344827589}, {"label": "MRR", "delta": 0.08114238683217545, "noise": 0.019182023360789335}, {"label": "Recall@1", "delta": 0.12068965517241381, "noise": 0.03448275862068967}, {"label": "Recall@10", "delta": 0.10344827586206895, "noise": 0.0}]};
+var DATA = {"all": [{"label": "Pair AUC", "delta": 0.00010000000000010001, "noise": 0.0164}, {"label": "Hard-neg AUC", "delta": 0.05120000000000002, "noise": 0.0164}, {"label": "MRR", "delta": 0.01702196233268266, "noise": 0.0164}, {"label": "Recall@1", "delta": 0.0, "noise": 0.0345}, {"label": "Recall@10", "delta": 0.050000000000000044, "noise": 0.0345}], "train": [{"label": "Pair AUC", "delta": -0.011502347417840286, "noise": 0.0164}, {"label": "Hard-neg AUC", "delta": 0.06244131455399066, "noise": 0.0164}, {"label": "MRR", "delta": 0.022471760881465852, "noise": 0.0164}, {"label": "Recall@1", "delta": 0.0, "noise": 0.0345}, {"label": "Recall@10", "delta": 0.05633802816901401, "noise": 0.0345}], "holdout": [{"label": "Pair AUC", "delta": 0.01896551724137918, "noise": 0.0164}, {"label": "Hard-neg AUC", "delta": 0.03275862068965518, "noise": 0.0164}, {"label": "MRR", "delta": 0.07155137515178078, "noise": 0.0164}, {"label": "Recall@1", "delta": 0.10344827586206895, "noise": 0.0345}, {"label": "Recall@10", "delta": 0.10344827586206895, "noise": 0.0345}]};
 function draw(){
   var c=document.getElementById('ch'), dpr=window.devicePixelRatio||1;
   var W=c.clientWidth||640,H=260; c.width=W*dpr; c.height=H*dpr;

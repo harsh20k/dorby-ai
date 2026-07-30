@@ -27,14 +27,16 @@ optimizer steps** on the identical 643 `(anchor, positive)` pairs, `lr=2e-4`,
 | **micro-batch 2** (accum 6) | **Arm C** baseline | **Arm B** negatives only |
 | **micro-batch 6** (accum 2) | **Arm A** batch only | bigbatch_001 *(prior run)* |
 
-Arms A/B/C were each run twice (`_v2` suffix = replicate). The bigbatch corner
-is a single prior run, which is why it carries no error estimate here.
+Arms A/B/C were each run twice (`_v2` suffix). **Only B and C are genuine
+replicate pairs** — see "Arm A has no replicate" below. Arm A's row is its `_v2`
+run alone (the correctly-selected checkpoint); the bigbatch corner is a single
+prior run. Neither carries an error estimate.
 
 ## Results — real 69-pair holdout, mean of 2 replicates
 
 | Arm | config | pair AUC | hard-neg AUC | MRR | recall@1 | recall@10 |
 |---|---|---|---|---|---|---|
-| **A** | micro 6, k=1 | **0.6047** | **0.6103** | **0.5423** | **0.3966** | **0.8621** |
+| **A** | micro 6, k=1 | **0.5983** | **0.6034** | **0.5326** | **0.3793** | **0.8621** |
 | C | micro 2, k=1 | 0.5996 | 0.6043 | 0.4902 | 0.3276 | 0.8448 |
 | bigbatch | micro 6, k=2 *(1 run)* | 0.5759 | 0.5879 | 0.5138 | 0.3448 | 0.7931 |
 | B | micro 2, k=2 | 0.5595 | 0.5629 | 0.4813 | 0.2931 | 0.7931 |
@@ -45,11 +47,11 @@ Reference: frozen Voyage-4-large = 0.6086 / 0.6020 / 0.5287 / 0.3448 / 0.8621.
 
 Same config, same seed, two runs (GPU nondeterminism only):
 
-| arm | Δ pair AUC | Δ MRR | Δ recall@1 |
-|---|---|---|---|
-| A | 0.0129 | 0.0194 | 0.0345 |
-| B | 0.0017 | 0.0297 | 0.0345 |
-| C | 0.0164 | 0.0153 | 0.0345 |
+| arm | Δ pair AUC | Δ MRR | Δ recall@1 | valid? |
+|---|---|---|---|---|
+| A | ~~0.0129~~ | ~~0.0194~~ | ~~0.0345~~ | **no — see below** |
+| B | 0.0017 | 0.0297 | 0.0345 | yes (both epoch 3) |
+| C | 0.0164 | 0.0153 | 0.0345 | yes (both epoch 5) |
 
 **recall@1 moves in steps of 1/29 = 0.0345** — there are only 29 positive
 queries, so a single query flipping is the smallest possible change, and all
@@ -66,6 +68,36 @@ three arms happened to move by exactly that. Treat any recall@1 gap under
 **k 1 → 2** (holding micro-batch):
 - at micro 2: pair AUC **−0.040**, MRR **−0.009**, recall@1 **−0.035**
 - at micro 6: pair AUC **−0.029**, MRR **−0.029**, recall@1 **−0.052**
+
+
+### Arm A has no replicate — correction
+
+`abl_a_batch_only` and `abl_a_batch_only_v2` are **not two runs of the same
+configuration**, despite sharing seed 42 and every hyperparameter:
+
+| run | `save_total_limit` | checkpoint shipped | how |
+|---|---|---|---|
+| `abl_a_batch_only` | 3 | **epoch 5** | `final_in_memory`, `reason: checkpoint_dir_not_found` |
+| `abl_a_batch_only_v2` | 5 | **epoch 4** (step 196) | `source: checkpoint` |
+
+The `save_total_limit=3` bug pruned epochs 1–2 before selection ran, so v1 fell
+back to the final epoch. For arms B and C this changed nothing — B selected
+epoch 3 in both runs, and C's fallback landed on epoch 5, which is also what C's
+correct selection chose — so those two pairs *are* valid replicates. **Arm A is
+the one case where the bug changed which model shipped.**
+
+Consequences, both now applied above:
+
+1. **Arm A's row is `_v2` alone**, not a mean. Averaging an epoch-5 model with an
+   epoch-4 model produces a number no artifact corresponds to. Reporting the mean
+   also *flattered* the fine-tune: on all 200 real pairs it showed +0.0071 pair
+   AUC / +0.0050 recall@1 over frozen nano, where the correct model shows
+   **+0.0001 / +0.0000** — exactly nothing (see
+   `docs/eval-real-full-experiment.md`).
+2. **Arm A's 0.0129 was never a noise measurement**, it was epoch 4 vs epoch 5.
+   The measured noise floor rests on arms B (0.0017) and C (0.0164) only. The
+   ±0.013–0.016 band used throughout this doc comes from Arm C and still stands;
+   Arm A simply has no error estimate of its own.
 
 ## Verdict
 
@@ -90,22 +122,26 @@ does double that negative's weight in the loss, effectively over-training on it.
 the other with similar magnitude, so they add rather than interact.
 
 **4. Best configuration is Arm A** (micro-batch 6, one negative per row):
-pair AUC 0.605, MRR 0.542, recall@1 0.397 — better than the bigbatch run on
-every single metric, and reached with *less* data manipulation.
+pair AUC 0.598, MRR 0.533, recall@1 0.379 — better than the bigbatch run on
+every metric except recall@1 (where it ties at 11 of 29 queries), and reached
+with *less* data manipulation.
 
 ### Arm A vs. frozen Voyage-4-large — stated carefully
 
-Arm A is **level with** Boardy's production model on pair AUC (0.6047 vs
-0.6086 — inside the noise band) and on MRR (0.5423 vs 0.5287 — a +0.014 edge,
-also inside the noise band), and **ahead on recall@1** (0.3966 vs 0.3448, ≈1.5
-queries), tying on recall@10 (0.8621).
+Arm A is **slightly behind** Boardy's production model on pair AUC (0.5983 vs
+0.6086 — a gap of roughly six times the noise band's lower end, though within
+Arm C's 0.0164), **marginally ahead on MRR** (0.5326 vs 0.5287, inside noise),
+and **ahead on recall@1 by one query** (0.3793 vs 0.3448), tying on recall@10.
 
-An earlier read of this experiment, taken from Arm A's first replicate alone
-(recall@1 0.4138), suggested Arm A beat Voyage-4-large on every metric. **The
-replicate does not support that claim** — the honest statement is that Arm A
-*matches* Voyage-4-large overall with a modest, single-metric recall@1 edge that
-sits right at the resolution limit of a 29-query holdout. This is exactly why
-the second replicate was run.
+An earlier read of this experiment, taken from `abl_a_batch_only` alone
+(recall@1 0.4138), suggested Arm A beat Voyage-4-large on every metric. That run
+turned out to have shipped its **final epoch** through the `save_total_limit`
+bug rather than the dev-selected one, so it is not the model this recipe
+produces. A subsequent averaging of the two runs was also wrong, for the reason
+given above. **The honest statement is that Arm A trades roughly evenly with
+Voyage-4-large on this 69-pair holdout** — and that on all 200 real pairs its
+advantage over *frozen nano* is zero on pair AUC and recall@1
+(`docs/eval-real-full-experiment.md`).
 
 ## An instructive accident: dev-set selection picked a worse model
 

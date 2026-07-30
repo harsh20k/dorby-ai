@@ -46,47 +46,52 @@ lands digit-for-digit.
 
 ## Results
 
-Arm A column is the mean of its two replicates; "noise" is the absolute
-difference between them, the only error estimate available.
+**Arm A column is `abl_a_batch_only_v2` alone, not a mean.** Its two runs are not
+replicates — v1 shipped an epoch-5 model via the `save_total_limit=3` checkpoint
+bug while v2 correctly selected epoch 4, so averaging them mixes two different
+models (see `docs/twotower-rrf-triplet-ablation-experiment.md`, "Arm A has no
+replicate"). The "noise" column is therefore borrowed from arms B and C, the two
+genuine replicate pairs in that experiment (pair AUC 0.0017 and 0.0164); Arm A
+has no error estimate of its own.
 
 ### All 200 real pairs (corpus 178 candidates)
 
 | metric | frozen | Arm A | Δ | noise | verdict |
 |---|---|---|---|---|---|
-| pair AUC | 0.5593 | 0.5664 | +0.0071 | 0.0140 | **inside noise** |
-| hard-neg AUC | 0.5046 | 0.5638 | **+0.0592** | 0.0160 | real |
-| MRR | 0.3171 | 0.3391 | +0.0220 | 0.0099 | real, small |
-| recall@1 | 0.1800 | 0.1850 | +0.0050 | 0.0100 | **inside noise** |
-| recall@10 | 0.5900 | 0.6350 | +0.0450 | 0.0100 | real |
+| pair AUC | 0.5593 | 0.5594 | **+0.0001** | 0.0164 | **exactly nothing** |
+| hard-neg AUC | 0.5046 | 0.5558 | **+0.0512** | 0.0164 | real |
+| MRR | 0.3171 | 0.3341 | +0.0170 | 0.0164 | marginal |
+| recall@1 | 0.1800 | 0.1800 | **+0.0000** | 0.0345 | **exactly nothing** |
+| recall@10 | 0.5900 | 0.6400 | +0.0500 | 0.0345 | real |
 
 ### The 131 train-split real pairs (corpus 120) — also unseen by Arm A
 
 | metric | frozen | Arm A | Δ | noise | verdict |
 |---|---|---|---|---|---|
-| pair AUC | 0.5507 | 0.5475 | **−0.0032** | 0.0167 | nothing |
-| hard-neg AUC | 0.4690 | 0.5411 | **+0.0721** | 0.0192 | real |
-| MRR | 0.3548 | 0.3863 | +0.0315 | 0.0181 | marginal |
-| recall@1 | 0.2113 | 0.2324 | +0.0211 | 0.0423 | inside noise |
-| recall@10 | 0.6479 | 0.7254 | +0.0775 | 0.0423 | real |
+| pair AUC | 0.5507 | 0.5392 | **−0.0115** | 0.0164 | nothing (slightly negative) |
+| hard-neg AUC | 0.4690 | 0.5315 | **+0.0625** | 0.0164 | real |
+| MRR | 0.3548 | 0.3773 | +0.0225 | 0.0164 | marginal |
+| recall@1 | 0.2113 | 0.2113 | **+0.0000** | 0.0345 | exactly nothing |
+| recall@10 | 0.6479 | 0.7042 | +0.0563 | 0.0345 | real |
 
 ### The 69-pair holdout (corpus 65) — for reference
 
 | metric | frozen | Arm A | Δ | noise |
 |---|---|---|---|---|
-| pair AUC | 0.5793 | 0.6056 | +0.0263 | 0.0147 |
-| hard-neg AUC | 0.5707 | 0.6103 | +0.0397 | 0.0138 |
-| MRR | 0.4610 | 0.5422 | +0.0811 | 0.0192 |
-| recall@1 | 0.2759 | 0.3966 | +0.1207 | 0.0345 |
-| recall@10 | 0.7586 | 0.8621 | +0.1034 | 0.0000 |
+| pair AUC | 0.5793 | 0.5983 | +0.0190 | 0.0164 |
+| hard-neg AUC | 0.5707 | 0.6034 | +0.0328 | 0.0164 |
+| MRR | 0.4610 | 0.5326 | +0.0716 | 0.0164 |
+| recall@1 | 0.2759 | 0.3793 | +0.1034 | 0.0345 |
+| recall@10 | 0.7586 | 0.8621 | +0.1034 | 0.0345 |
 
 ## Verdict
 
 **1. The holdout-69 gains do not generalise.** On the other 131 real pairs —
-equally out-of-sample for Arm A — pair AUC is **−0.003** and recall@1 sits
-inside noise. Pooled over all 200, pair AUC is +0.007 against a ±0.014 noise
-floor and recall@1 is +0.005 against ±0.010. The "+0.026 pair AUC / +3.5 queries
-at rank 1" in `docs/twotower-rrf-triplet-ablation-experiment.md` is a property of
-that particular 69-pair sample, not of the model.
+equally out-of-sample for Arm A — pair AUC is **−0.012** and recall@1 is
+**exactly 0.0000**. Pooled over all 200, pair AUC is **+0.0001** and recall@1 is
+**+0.0000** — not "small", not "inside noise", but zero to four decimal places.
+The holdout's "+0.019 pair AUC / +3 queries at rank 1" is a property of that
+particular 69-pair sample, not of the model.
 
 **2. The 69-pair holdout is an easier population.** Frozen nano scores 0.5793
 there versus 0.5507 on train and 0.5593 pooled — before any fine-tuning is
@@ -127,15 +132,16 @@ calls).
 |---|---|---|---|---|---|
 | qwen micro-6 | **0.5947** | 0.5608 | 0.3031 | 0.1400 | 0.6600 |
 | voyage-4-large | 0.5726 | 0.5422 | 0.3102 | 0.1300 | **0.7000** |
-| nano Arm A (mean) | 0.5664 | **0.5638** | **0.3391** | **0.1850** | 0.6350 |
+| nano Arm A (v2) | 0.5594 | **0.5558** | 0.3341 | **0.1800** | 0.6400 |
 | qwen micro-1 | 0.5604 | 0.4828 | 0.2734 | 0.1400 | 0.5600 |
 | nano frozen | 0.5593 | 0.5046 | 0.3171 | 0.1800 | 0.5900 |
 | qwen frozen 4096 | 0.5420 | 0.4572 | 0.2031 | 0.0400 | 0.5800 |
 
 **voyage-4-nano beats voyage-4-large at top-1 retrieval on real data**, on all
-three populations: all-200 +0.055 (18.0 vs 13.0 of 100 queries), train-131
-+0.056, holdout +0.052 for Arm A. The credit is nano's, not the fine-tune's —
-frozen nano is already +0.050 ahead, and Arm A adds only +0.005 over it.
+three populations: all-200 +0.050 (18.0 vs 13.0 of 100 queries), train-131
++0.056, holdout +0.034 for Arm A. The credit is **entirely** nano's, not the
+fine-tune's — frozen nano scores 0.1800 on all 200 and Arm A v2 scores 0.1800,
+an identical value.
 
 ## Caveats
 
@@ -145,7 +151,7 @@ frozen nano is already +0.050 ahead, and Arm A adds only +0.005 over it.
   MRR on `all` means the pool grew, not that the model degraded. Pair AUC has no
   corpus dependence and is comparable. Each subset's `n_candidates` is recorded
   in the output.
-- The noise estimate is two replicates of one arm, not a proper interval.
+- The noise figures are borrowed from arms B and C of the ablation (the only genuine replicate pairs); they bound run-to-run variation, not sampling error, and Arm A has no replicate of its own.
 - Frozen nano's row here is not identical in provenance to the published
   `baselines/` table (different encode path), though on the shared holdout
   population the two agree to four decimals.

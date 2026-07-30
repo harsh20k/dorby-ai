@@ -115,7 +115,7 @@ pair AUC, so training at effective batch 12 helps regardless of micro-batch.
 |---|---|---|---|---|---|
 | **qwen micro-6** | **0.5947** | 0.5608 | 0.3031 | 0.1400 | 0.6600 |
 | voyage-4-large (prod) | 0.5726 | 0.5422 | 0.3102 | 0.1300 | **0.7000** |
-| nano Arm A (mean) | 0.5664 | **0.5638** | **0.3391** | **0.1850** | 0.6350 |
+| nano Arm A (v2) | 0.5594 | 0.5558 | **0.3341** | **0.1800** | 0.6400 |
 | qwen micro-1 | 0.5604 | 0.4828 | 0.2734 | 0.1400 | 0.5600 |
 | nano frozen | 0.5593 | 0.5046 | 0.3171 | 0.1800 | 0.5900 |
 | qwen frozen 4096 | 0.5420 | 0.4572 | 0.2031 | 0.0400 | 0.5800 |
@@ -138,8 +138,9 @@ Micro-6 ≥ micro-1 in 14 of 15 metric×subset cells.
 **2. Unlike nano, fine-tuning Qwen produces gains that generalise.** Against its
 own frozen 4096-dim baseline on all 200 pairs: pair AUC +0.053, hard-neg +0.104,
 MRR +0.100, R@1 +0.100, R@10 +0.080 — every one far above the ±0.014 noise floor.
-The nano equivalent was +0.007 / +0.059 / +0.022 / +0.005. Fine-tuning an 8B
-backbone on this synthetic data works; fine-tuning nano essentially did not.
+The nano equivalent was **+0.0001 / +0.051 / +0.017 / +0.0000**. Fine-tuning an
+8B backbone on this synthetic data works; fine-tuning nano moved pair AUC and
+recall@1 by exactly nothing.
 
 **3. The 69-pair holdout flatters Qwen ~4× more than it flatters nano.**
 Holdout-minus-train pair AUC gap:
@@ -147,7 +148,7 @@ Holdout-minus-train pair AUC gap:
 | model | holdout | train | gap |
 |---|---|---|---|
 | nano frozen | 0.5793 | 0.5507 | +0.029 |
-| nano Arm A | 0.6056 | 0.5476 | +0.058 |
+| nano Arm A (v2) | 0.5983 | 0.5392 | +0.059 |
 | qwen frozen 4096 | 0.6345 | 0.5134 | +0.121 |
 | qwen micro-1 | 0.6828 | 0.5056 | +0.177 |
 | qwen micro-6 | 0.6810 | 0.5484 | +0.133 |
@@ -158,14 +159,13 @@ frozen Qwen at full 4096 dims scores 0.5420 — *below* frozen nano's 0.5593 and
 Voyage-large's 0.5726.
 
 **4. Best model depends on the metric, and no model wins outright.** qwen micro-6
-leads pair AUC; nano Arm A leads MRR, recall@1 and ties hard-neg AUC at 1/23 the
-size; Voyage-large leads recall@10. Under the <100 ms budget the nano family is
+leads pair AUC; nano Arm A leads recall@1 and MRR at 1/23 the size; Voyage-large leads recall@10. Under the <100 ms budget the nano family is
 the only one of the three that is clearly deployable.
 
 **5. voyage-4-nano beats voyage-4-large at top-1 retrieval on real data** —
-0.1800 (frozen) and 0.1850 (Arm A) vs 0.1300, holding on all three populations.
-Note the credit belongs to nano, not the fine-tune: Arm A's margin over its own
-base is +0.005.
+0.1800 vs 0.1300 on all 200, holding on all three populations. The credit belongs
+entirely to nano, not the fine-tune: frozen nano and Arm A v2 both score exactly
+0.1800.
 
 ## The truncation asymmetry (found late, stated plainly)
 

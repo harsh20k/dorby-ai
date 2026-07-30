@@ -84,11 +84,15 @@ figcaption b{color:var(--ink)}
 <div class="wrap">
   <section>
     <h2>Result on the real 69-pair holdout</h2>
-    <p>Run twice with identical settings, so the gap between the two rows is this
-    experiment's noise floor rather than an effect.</p>
+    <p><b>Correction:</b> these two runs are not repeats of each other. Run 1 shipped its
+    <i>final</i> epoch because a checkpoint-pruning bug deleted the earlier ones before selection
+    could run; run 2, with that bug fixed, correctly selected epoch 4. They are two different
+    models, so the highlighted <b>run 2 is the Arm A result</b> — an earlier version of this page
+    averaged them, which flattered the fine-tune. The gap between the rows is <i>not</i> a noise
+    floor; the noise figures quoted elsewhere come from arms B and C, which were genuine repeats.</p>
     <div class="table-wrap"><table>
       <thead><tr><th></th><th>Pair AUC</th><th>Hard-neg</th><th>MRR</th><th>Recall@1</th><th>Recall@10</th></tr></thead>
-      <tbody><tr><td>run 1</td><td class="mono">0.6112</td><td class="mono">0.6172</td><td class="mono">0.5520</td><td class="mono">0.4138</td><td class="mono">0.8621</td></tr><tr><td>run 2 (replicate)</td><td class="mono">0.5983</td><td class="mono">0.6034</td><td class="mono">0.5326</td><td class="mono">0.3793</td><td class="mono">0.8621</td></tr><tr class="mean"><td>mean</td><td class="mono">0.6047</td><td class="mono">0.6103</td><td class="mono">0.5423</td><td class="mono">0.3966</td><td class="mono">0.8621</td></tr><tr><td style="color:var(--muted)">Voyage-4-large (frozen prod)</td><td class="mono" style="color:var(--muted)">0.6086</td><td class="mono" style="color:var(--muted)">0.6020</td><td class="mono" style="color:var(--muted)">0.5287</td><td class="mono" style="color:var(--muted)">0.3448</td><td class="mono" style="color:var(--muted)">0.8621</td></tr></tbody>
+      <tbody><tr><td>run 1 — epoch 5 <b>(bug)</b></td><td class="mono">0.6112</td><td class="mono">0.6172</td><td class="mono">0.5520</td><td class="mono">0.4138</td><td class="mono">0.8621</td></tr><tr class="mean"><td>run 2 — epoch 4 <b>(correct)</b></td><td class="mono">0.5983</td><td class="mono">0.6034</td><td class="mono">0.5326</td><td class="mono">0.3793</td><td class="mono">0.8621</td></tr><tr><td style="color:var(--muted)">Voyage-4-large (frozen prod)</td><td class="mono" style="color:var(--muted)">0.6086</td><td class="mono" style="color:var(--muted)">0.6020</td><td class="mono" style="color:var(--muted)">0.5287</td><td class="mono" style="color:var(--muted)">0.3448</td><td class="mono" style="color:var(--muted)">0.8621</td></tr></tbody>
     </table></div>
     <p style="font-size:13.5px;color:var(--muted)">Recall@1 changes in steps of 1/29 = 0.0345 — there are only
     29 positive queries, so one query flipping is the smallest movement possible.</p>
@@ -128,7 +132,11 @@ figcaption b{color:var(--ink)}
     <h2>This is the lever that works</h2>
     <div class="callout win">
       <div class="label">Read against Arm C, the baseline corner</div>
-      <p>Against the baseline corner (Arm C), raising micro-batch from 2 to 6 with no other change gained <b>+0.052 MRR</b> and <b>+0.069 recall@1</b> — both above the measured noise floor. This arm is the best configuration tested, beating the earlier bigbatch run on every metric while using simpler data (one negative per row, no duplicates).</p>
+      <p>Against the baseline corner (Arm C), raising micro-batch from 2 to 6 with no other change gained <b>+0.042 MRR</b> and <b>+0.052 recall@1</b> — both above the measured noise floor. This arm is the best configuration tested, beating the earlier bigbatch run on every metric except recall@1 (a tie), while using simpler data (one negative per row, no duplicates).</p>
+      <p style="margin-top:12px"><b>But note what a larger sample showed later:</b> on all 200 real
+      pairs this model's advantage over frozen nano is <b>+0.0001 pair AUC and +0.0000 recall@1</b>
+      — zero. Only hard-negative AUC (+0.051) and recall@10 (+0.050) survive.
+      <a href="https://claude.ai/code/artifact/d807fdd2-afe5-40ad-bafa-04423b9ccf87">See the 200-pair evaluation.</a></p>
     </div>
   </section>
   <footer>Boardy AI contact-intro recommender · run ids <code>abl_a_batch_only</code> / <code>abl_a_batch_only_v2</code> ·
