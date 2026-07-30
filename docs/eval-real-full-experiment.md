@@ -112,6 +112,31 @@ classification or top-1 retrieval on real data. It reliably improves
 hard-negative discrimination and top-10 recall. Narrower than the holdout
 suggested, but far better evidenced.
 
+
+## Follow-up: every model on all 200 pairs
+
+Later runs extended this evaluation to Voyage-4-large and the Qwen3-8B family
+(see `docs/twotower-qwen-bigbatch-experiment.md`). Voyage-4-large goes through
+`eval_real_full/voyage_large_eval.py`, a shim exposing `encode_query` /
+`encode_document` over `baselines.voyage_large.encode` so it uses the identical
+`evaluate_pairs` path; its holdout row reproduces the published baseline exactly
+(0.6086 / 0.5287 / 0.3448) and the whole run was free (1,163 cache hits, 0 API
+calls).
+
+| model (all 200, corpus 178) | pair AUC | hard-neg | MRR | R@1 | R@10 |
+|---|---|---|---|---|---|
+| qwen micro-6 | **0.5947** | 0.5608 | 0.3031 | 0.1400 | 0.6600 |
+| voyage-4-large | 0.5726 | 0.5422 | 0.3102 | 0.1300 | **0.7000** |
+| nano Arm A (mean) | 0.5664 | **0.5638** | **0.3391** | **0.1850** | 0.6350 |
+| qwen micro-1 | 0.5604 | 0.4828 | 0.2734 | 0.1400 | 0.5600 |
+| nano frozen | 0.5593 | 0.5046 | 0.3171 | 0.1800 | 0.5900 |
+| qwen frozen 4096 | 0.5420 | 0.4572 | 0.2031 | 0.0400 | 0.5800 |
+
+**voyage-4-nano beats voyage-4-large at top-1 retrieval on real data**, on all
+three populations: all-200 +0.055 (18.0 vs 13.0 of 100 queries), train-131
++0.056, holdout +0.052 for Arm A. The credit is nano's, not the fine-tune's —
+frozen nano is already +0.050 ahead, and Arm A adds only +0.005 over it.
+
 ## Caveats
 
 - **Retrieval metrics are not comparable across subsets.** `evaluate_pairs`

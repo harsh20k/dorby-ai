@@ -1,0 +1,242 @@
+<title>Qwen3-8B at a real micro-batch, and what 200 pairs reveal</title>
+<style>
+:root{--bg:#eef1ee;--surface:#fff;--surface-2:#e4e8e3;--ink:#1c211f;--ink-soft:#4b544f;
+--muted:#7c8781;--line:#d3d9d1;--copper:#b5622a;--teal:#1f7a72;--slate:#4a5578;--code-bg:#e6e9e2;
+--shadow:0 1px 2px rgba(20,25,20,.06),0 8px 24px rgba(20,25,20,.05);}
+@media (prefers-color-scheme:dark){:root{--bg:#12151a;--surface:#191d23;--surface-2:#20252c;
+--ink:#e7ebe6;--ink-soft:#aab4ac;--muted:#6d7871;--line:#2a3038;--copper:#e0925a;--teal:#5bc2b6;
+--slate:#9aa6d6;--code-bg:#1c2229;--shadow:0 1px 2px rgba(0,0,0,.3),0 12px 32px rgba(0,0,0,.35);}}
+:root[data-theme="dark"]{--bg:#12151a;--surface:#191d23;--surface-2:#20252c;--ink:#e7ebe6;
+--ink-soft:#aab4ac;--muted:#6d7871;--line:#2a3038;--copper:#e0925a;--teal:#5bc2b6;--slate:#9aa6d6;
+--code-bg:#1c2229;--shadow:0 1px 2px rgba(0,0,0,.3),0 12px 32px rgba(0,0,0,.35);}
+:root[data-theme="light"]{--bg:#eef1ee;--surface:#fff;--surface-2:#e4e8e3;--ink:#1c211f;
+--ink-soft:#4b544f;--muted:#7c8781;--line:#d3d9d1;--copper:#b5622a;--teal:#1f7a72;--slate:#4a5578;
+--code-bg:#e6e9e2;--shadow:0 1px 2px rgba(20,25,20,.06),0 8px 24px rgba(20,25,20,.05);}
+*{box-sizing:border-box}html,body{margin:0;padding:0}
+body{background:var(--bg);color:var(--ink);font-family:"IBM Plex Sans","Segoe UI",-apple-system,system-ui,sans-serif;
+font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}
+.wrap{max-width:900px;margin:0 auto;padding:0 24px 72px}
+h1,h2{font-family:Charter,"Iowan Old Style",Georgia,serif;font-weight:600;text-wrap:balance}
+code,.mono{font-family:"IBM Plex Mono","SF Mono",Menlo,monospace;font-variant-numeric:tabular-nums}
+header.hero{padding:56px 24px 32px;max-width:900px;margin:0 auto;border-bottom:1px solid var(--line)}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;font-family:"IBM Plex Mono",monospace;
+font-size:12px;letter-spacing:.09em;text-transform:uppercase;color:var(--muted);margin-bottom:14px}
+.eyebrow .dot{width:6px;height:6px;border-radius:50%}
+h1.title{font-size:clamp(26px,3.6vw,36px);line-height:1.15;margin:0 0 10px}
+.lede{font-size:17px;color:var(--ink-soft);max-width:660px;margin:0}
+.chip{font-family:"IBM Plex Mono",monospace;font-size:12px;padding:4px 10px;border-radius:20px;
+background:var(--surface-2);border:1px solid var(--line);color:var(--ink-soft)}
+.cfg{display:flex;gap:8px;flex-wrap:wrap;margin-top:18px}
+section{padding:38px 0;border-bottom:1px solid var(--line)}section:last-of-type{border-bottom:none}
+h2{font-size:21px;margin:0 0 14px}p{margin:0 0 14px;max-width:70ch}p:last-child{margin-bottom:0}
+.table-wrap{overflow-x:auto;margin:16px 0;border:1px solid var(--line);border-radius:10px;
+background:var(--surface);box-shadow:var(--shadow)}
+table{border-collapse:collapse;width:100%;min-width:560px;font-size:14px}
+th,td{text-align:right;padding:10px 14px;border-bottom:1px solid var(--line)}
+th:first-child,td:first-child{text-align:left}
+thead th{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.04em;text-transform:uppercase;
+color:var(--muted);font-weight:500;background:var(--surface-2)}
+tbody tr:last-child td{border-bottom:none}
+td.best{color:var(--teal);font-weight:600}
+.d-loss{color:var(--copper);font-weight:600}.d-noise{color:var(--muted)}
+canvas{display:block;width:100%;height:280px}
+.chart-card{background:var(--surface);border:1px solid var(--line);border-radius:10px;
+padding:16px 18px 10px;box-shadow:var(--shadow);margin:16px 0}
+.legend{display:flex;gap:14px;margin-top:8px;font-size:12px;color:var(--ink-soft);flex-wrap:wrap}
+.legend span{display:inline-flex;align-items:center;gap:6px}
+.legend i{width:10px;height:10px;border-radius:2px;display:inline-block}
+.callout{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:16px 18px;
+margin:16px 0;box-shadow:var(--shadow)}
+.callout.win{border-left:3px solid var(--teal)}.callout.loss{border-left:3px solid var(--copper)}
+.callout.neutral{border-left:3px solid var(--slate)}
+.callout .label{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.06em;
+text-transform:uppercase;color:var(--muted);margin-bottom:6px}
+.links{display:flex;gap:18px;flex-wrap:wrap;margin-top:14px;font-size:13.5px}
+.links a{color:var(--teal);text-decoration:none;border-bottom:1px solid transparent}
+.links a:hover{border-color:var(--teal)}
+ul{max-width:70ch}li{margin-bottom:8px}
+footer{padding:28px 0 0;color:var(--muted);font-size:13px}
+footer code{background:var(--code-bg);padding:.1em .4em;border-radius:4px}
+:focus-visible{outline:2px solid var(--teal);outline-offset:2px}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+<header class="hero">
+  <div class="eyebrow"><span class="dot" style="background:var(--slate)"></span> Dorby AI · Qwen3-8B micro-batch experiment</div>
+  <h1 class="title">Qwen3-8B at a real micro-batch — and what 200 pairs reveal</h1>
+  <p class="lede">The batch-size finding replicates on a model 22× larger. But measuring seven
+  models on the full real dataset overturns the project's headline result.</p>
+  <div class="cfg">
+    <span class="chip">effective batch 12</span><span class="chip">245 steps</span>
+    <span class="chip">bf16 + grad checkpointing</span><span class="chip">200 real pairs</span>
+  </div>
+  <div class="links">
+    <a href="https://claude.ai/code/artifact/d807fdd2-afe5-40ad-bafa-04423b9ccf87">← The 200-pair evaluation</a>
+    <a href="https://claude.ai/code/artifact/4ab4000d-f7a6-4477-8a2e-3b578da25cdc">← nano ablation verdict</a>
+  </div>
+</header>
+<div class="wrap">
+  <section>
+    <h2>Micro-batch 1 was never a measured limit</h2>
+    <p>The previous Qwen fine-tune ran at micro-batch 1, citing an out-of-memory error. That error
+    was from loading the model in <b>fp32 on a 40 GB card</b> — and the same config already fixed it
+    twice over, with half-precision weights and gradient checkpointing. Nobody re-measured afterwards.</p>
+    <div class="table-wrap"><table>
+      <thead><tr><th>Micro-batch</th><th>Peak memory</th><th>of 79.18 GB</th></tr></thead>
+      <tbody>
+      <tr><td>1</td><td class="mono">15.71 GB</td><td class="mono">20%</td></tr>
+      <tr><td>2</td><td class="mono">17.26 GB</td><td class="mono">22%</td></tr>
+      <tr><td>4</td><td class="mono">20.45 GB</td><td class="mono">26%</td></tr>
+      <tr><td>6</td><td class="mono">23.72 GB</td><td class="mono">30%</td></tr>
+      <tr><td>8</td><td class="mono">27.46 GB</td><td class="mono">35%</td></tr>
+      </tbody></table></div>
+    <p>Nothing ran out of memory. Micro-batch 1 was using a fifth of the card — roughly 63 GB sat
+    idle for the entire original run.</p>
+  </section>
+  <section>
+    <h2>The finding replicates on a 22× larger model</h2>
+    <p>Two arms, identical data, identical number of weight updates, identical learning rate. The
+    only difference is how many examples the model compares against at once.</p>
+    <div class="table-wrap"><table>
+      <thead><tr><th></th><th>Pair AUC</th><th>Hard-neg</th><th>MRR</th><th>Recall@1</th><th>Recall@10</th></tr></thead>
+      <tbody>
+      <tr><td>micro-batch 1</td><td class="mono">0.6853</td><td class="mono">0.6224</td><td class="mono">0.4985</td><td class="mono">0.3448</td><td class="mono">0.8621</td></tr>
+      <tr><td>micro-batch 6</td><td class="mono">0.6776</td><td class="mono best">0.6379</td><td class="mono best">0.5852</td><td class="mono best">0.4483</td><td class="mono best">0.8966</td></tr>
+      <tr><td>Δ</td><td class="mono d-noise">−0.0078</td><td class="mono">+0.0155</td><td class="mono best">+0.0867</td><td class="mono best">+0.1034</td><td class="mono">+0.0345</td></tr>
+      </tbody></table></div>
+    <p>Same signature as the small model: retrieval improves substantially, pair classification
+    doesn't move. On nano the equivalent was +0.052 MRR and +0.069 recall@1. Getting the same
+    result on a backbone 22× larger makes this a genuine replication, not a repeat.</p>
+  </section>
+  <section>
+    <h2>Every model, measured on all 200 real pairs</h2>
+    <p>Green marks the best value in each column. This is the full real dataset — 100 accepted and
+    100 declined intros — not the 69-pair sample every previous number in this project used.</p>
+    <div class="table-wrap"><table><thead><tr><th>Model</th><th>Pair AUC</th><th>Hard-neg</th><th>MRR</th><th>Recall@1</th><th>Recall@10</th></tr></thead><tbody><tr><td>Qwen3-8B micro-batch 6</td><td class="mono best">0.5947</td><td class="mono">0.5608</td><td class="mono">0.3031</td><td class="mono">0.1400</td><td class="mono">0.6600</td></tr><tr><td>Voyage-4-large (production)</td><td class="mono">0.5726</td><td class="mono">0.5422</td><td class="mono">0.3102</td><td class="mono">0.1300</td><td class="mono best">0.7000</td></tr><tr><td>nano Arm A (fine-tuned)</td><td class="mono">0.5664</td><td class="mono best">0.5638</td><td class="mono best">0.3391</td><td class="mono best">0.1850</td><td class="mono">0.6350</td></tr><tr><td>Qwen3-8B micro-batch 1</td><td class="mono">0.5604</td><td class="mono">0.4828</td><td class="mono">0.2734</td><td class="mono">0.1400</td><td class="mono">0.5600</td></tr><tr><td>nano frozen</td><td class="mono">0.5593</td><td class="mono">0.5046</td><td class="mono">0.3171</td><td class="mono">0.1800</td><td class="mono">0.5900</td></tr><tr><td>Qwen3-8B frozen (4096d)</td><td class="mono">0.5420</td><td class="mono">0.4572</td><td class="mono">0.2031</td><td class="mono">0.0400</td><td class="mono">0.5800</td></tr><tr><td>Qwen3-8B frozen (1024d)</td><td class="mono">0.5278</td><td class="mono">0.4496</td><td class="mono">0.1951</td><td class="mono">0.0400</td><td class="mono">0.5300</td></tr></tbody></table></div>
+    <div class="chart-card"><canvas id="ch"></canvas>
+      <div class="legend"><span><i style="background:var(--teal)"></i>Qwen family</span>
+      <span><i style="background:var(--copper)"></i>nano family</span>
+      <span><i style="background:var(--slate)"></i>Voyage-4-large</span></div>
+    </div>
+    <p><b>No model wins outright.</b> Fine-tuned Qwen leads pair classification; nano leads
+    ranking; Voyage-4-large leads shortlist recall. Which matters depends on whether anything
+    re-ranks the results afterwards.</p>
+  </section>
+  <section>
+    <h2>The result that overturns a headline</h2>
+    <p>The same model scores very differently on the 69-pair holdout than on the other 131 real
+    pairs. That gap is not uniform across models — it is roughly four times larger for Qwen.</p>
+    <div class="table-wrap"><table><thead><tr><th>Model</th><th>Holdout&nbsp;69</th><th>Train&nbsp;131</th><th>Gap</th></tr></thead><tbody><tr><td>nano frozen</td><td class="mono">0.5793</td><td class="mono">0.5507</td><td class="mono d-noise">+0.0286</td></tr><tr><td>nano Arm A (fine-tuned)</td><td class="mono">0.6056</td><td class="mono">0.5475</td><td class="mono d-noise">+0.0581</td></tr><tr><td>Qwen3-8B frozen (4096d)</td><td class="mono">0.6345</td><td class="mono">0.5134</td><td class="mono d-loss">+0.1211</td></tr><tr><td>Qwen3-8B micro-batch 1</td><td class="mono">0.6828</td><td class="mono">0.5056</td><td class="mono d-loss">+0.1771</td></tr><tr><td>Qwen3-8B micro-batch 6</td><td class="mono">0.6810</td><td class="mono">0.5484</td><td class="mono d-loss">+0.1327</td></tr></tbody></table></div>
+    <div class="callout loss">
+      <div class="label">What this means for the project's leaderboard</div>
+      <p>Qwen3-8B's headline result — "beats Voyage-4-large, 0.6595 vs 0.6086" — rests entirely on
+      the population where this bias is largest. On all 200 real pairs, <b>frozen Qwen at full width
+      scores 0.5420, below both frozen nano (0.5593) and Voyage-4-large (0.5726)</b>. The ranking
+      reverses.</p>
+    </div>
+    <div class="callout win">
+      <div class="label">What survives, and gets stronger</div>
+      <p>Fine-tuning Qwen produces gains that <i>do</i> generalise: against its own frozen baseline
+      on all 200 pairs, pair AUC +0.053, hard-negative AUC +0.104, MRR +0.100, recall@1 +0.100.
+      Every one is far above the noise floor. The equivalent nano fine-tune moved +0.007 / +0.059 /
+      +0.022 / +0.005 — essentially nothing. <b>Fine-tuning the big model works; fine-tuning the
+      small one didn't.</b></p>
+    </div>
+  </section>
+  <section>
+    <h2>Top-1 retrieval on all 200 pairs</h2>
+    <p>100 positive queries, so each 0.01 is one query landing its match in first place out of 178
+    candidates.</p>
+    <div class="table-wrap"><table><thead><tr><th>Model</th><th>Recall@1</th><th>of 100 queries</th></tr></thead><tbody><tr><td>nano Arm A (fine-tuned)</td><td class="mono">0.1850</td><td class="mono">18.5</td></tr><tr><td>nano frozen</td><td class="mono">0.1800</td><td class="mono">18.0</td></tr><tr><td>Qwen3-8B micro-batch 6</td><td class="mono">0.1400</td><td class="mono">14.0</td></tr><tr><td>Qwen3-8B micro-batch 1</td><td class="mono">0.1400</td><td class="mono">14.0</td></tr><tr><td>Voyage-4-large (production)</td><td class="mono">0.1300</td><td class="mono">13.0</td></tr><tr><td>Qwen3-8B frozen (4096d)</td><td class="mono">0.0400</td><td class="mono">4.0</td></tr><tr><td>Qwen3-8B frozen (1024d)</td><td class="mono">0.0400</td><td class="mono">4.0</td></tr></tbody></table></div>
+    <div class="callout neutral">
+      <div class="label">Read this one carefully</div>
+      <p>voyage-4-nano beats Voyage-4-large at top-1 retrieval by 5.5 queries out of 100, and the
+      gap holds on all three populations. But <b>the credit belongs to nano, not to fine-tuning</b> —
+      frozen nano scores 0.1800 and the fine-tuned version 0.1850, a difference of half a query.
+      Meanwhile frozen Qwen puts the right person first in only 4 of 100 queries, despite having
+      the strongest pair-scoring ability of any model here. It is good at judging a pair it is
+      handed, and bad at finding one in a pool.</p>
+    </div>
+  </section>
+  <section>
+    <h2>An asymmetry found late</h2>
+    <p>The setting that shortens embedding vectors to 1024 numbers was inherited from the small
+    model's config, where it does nothing — nano's vectors are natively 1024 long. Applied to Qwen,
+    whose vectors are 4096 long, it throws away three quarters of each one.</p>
+    <div class="table-wrap"><table>
+      <thead><tr><th>Model</th><th>Native width</th><th>Used</th><th>Effect</th></tr></thead>
+      <tbody>
+      <tr><td>voyage-4-nano</td><td class="mono">1024</td><td class="mono">1024</td><td>no truncation</td></tr>
+      <tr><td>Qwen3-Embedding-8B</td><td class="mono">4096</td><td class="mono">1024</td><td class="d-loss">cut to a quarter</td></tr>
+      <tr><td>voyage-4-large</td><td class="mono">2048</td><td class="mono">1024</td><td>requested at half width</td></tr>
+      </tbody></table></div>
+    <p>A control run at Qwen's full 4096 width bounds the damage at +0.014 pair AUC on the 200-pair
+    set — real, but far too small to change any conclusion above. It does mean every Qwen number
+    here is measured with one hand tied, and that <b>the fine-tuned arms have never been tested at
+    full width at all</b>. That is the clearest next experiment.</p>
+  </section>
+  <section>
+    <h2>Limits worth keeping attached</h2>
+    <ul>
+      <li><b>One run per arm.</b> There is no replicate-based noise floor for this experiment; the
+      nano ablation's ±0.013–0.016 is the closest reference and doesn't strictly transfer.</li>
+      <li><b>Training labels are a language model's opinion</b> on synthetic profiles, not real
+      accept/decline outcomes. Only the evaluation is real.</li>
+      <li><b>Retrieval numbers can't be compared between populations</b> — each ranks against a
+      different-sized pool (178, 120, 65). A bigger pool is strictly harder.</li>
+      <li>Frozen Qwen at full width scores 0.6345 on the holdout against a published 0.6595, most
+      likely a precision difference. Small, unexplained, and a reason not to mix these numbers with
+      the older baseline table.</li>
+    </ul>
+  </section>
+  <footer>Boardy AI contact-intro recommender · <code>twotower_qwen_bigbatch/</code>,
+  runs <code>qwen_micro1_r1</code> / <code>qwen_micro6_r1</code> · evaluation via
+  <code>eval_real_full/</code> · full writeup in
+  <code>docs/twotower-qwen-bigbatch-experiment.md</code></footer>
+</div>
+<script>
+var D={"qwen_micro6": {"auc": 0.5947000000000001, "hard": 0.5608, "mrr": 0.3030844863328289, "r1": 0.14, "r10": 0.66}, "voyage_large": {"auc": 0.5726000000000001, "hard": 0.5421999999999999, "mrr": 0.3102233167451074, "r1": 0.13, "r10": 0.7}, "nano_arm_a": {"auc": 0.5664, "hard": 0.5638000000000001, "mrr": 0.3390771143274236, "r1": 0.185, "r10": 0.635}, "qwen_micro1": {"auc": 0.5604, "hard": 0.48279999999999995, "mrr": 0.27343673775279953, "r1": 0.14, "r10": 0.56}, "nano_frozen": {"auc": 0.5592999999999999, "hard": 0.5046, "mrr": 0.31712172371325414, "r1": 0.18, "r10": 0.59}, "qwen_frozen_4096": {"auc": 0.542, "hard": 0.4572, "mrr": 0.20307203466308177, "r1": 0.04, "r10": 0.58}, "qwen_frozen_1024": {"auc": 0.5278, "hard": 0.4496, "mrr": 0.19513879173168672, "r1": 0.04, "r10": 0.53}}, N={"qwen_micro6": "Qwen3-8B micro-batch 6", "voyage_large": "Voyage-4-large (production)", "nano_arm_a": "nano Arm A (fine-tuned)", "qwen_micro1": "Qwen3-8B micro-batch 1", "nano_frozen": "nano frozen", "qwen_frozen_4096": "Qwen3-8B frozen (4096d)", "qwen_frozen_1024": "Qwen3-8B frozen (1024d)"};
+function draw(){
+  var c=document.getElementById('ch'),dpr=window.devicePixelRatio||1;
+  var W=c.clientWidth||700,H=280;c.width=W*dpr;c.height=H*dpr;
+  var x=c.getContext('2d');x.scale(dpr,dpr);
+  var st=getComputedStyle(document.documentElement);
+  var line=st.getPropertyValue('--line').trim(),muted=st.getPropertyValue('--muted').trim();
+  var teal=st.getPropertyValue('--teal').trim(),copper=st.getPropertyValue('--copper').trim();
+  var slate=st.getPropertyValue('--slate').trim(),ink=st.getPropertyValue('--ink-soft').trim();
+  var models=Object.keys(D), mets=['auc','hard','mrr','r1','r10'];
+  var labels={auc:'Pair AUC',hard:'Hard-neg',mrr:'MRR',r1:'R@1',r10:'R@10'};
+  var pL=44,pR=8,pT=12,pB=52,w=W-pL-pR,h=H-pT-pB;
+  var maxV=0.75;
+  function Y(v){return pT+h-(v/maxV)*h}
+  x.clearRect(0,0,W,H);
+  x.strokeStyle=line;x.lineWidth=1;x.font='10px "IBM Plex Mono",monospace';x.textAlign='right';
+  for(var i=0;i<=5;i++){var v=maxV*i/5,y=Y(v);x.beginPath();x.moveTo(pL,y);x.lineTo(pL+w,y);x.stroke();
+    x.fillStyle=muted;x.fillText(v.toFixed(2),pL-6,y+3);}
+  var gW=w/mets.length,bW=gW/(models.length+1.2);
+  function col(m){return m.indexOf('qwen')===0?teal:(m.indexOf('nano')===0?copper:slate);}
+  mets.forEach(function(k,mi){
+    models.forEach(function(m,si){
+      var v=D[m][k];
+      var bx=pL+gW*mi+(gW-bW*models.length)/2+bW*si;
+      x.fillStyle=col(m);
+      x.globalAlpha = (m.indexOf('frozen')>-1)?0.42:1;
+      x.fillRect(bx,Y(v),bW-1.5,pT+h-Y(v));
+      x.globalAlpha=1;
+    });
+    x.fillStyle=ink;x.font='11px "IBM Plex Sans",sans-serif';x.textAlign='center';
+    x.fillText(labels[k],pL+gW*mi+gW/2,H-32);
+  });
+  x.textAlign='left';x.font='9px "IBM Plex Mono",monospace';
+  var lx=pL,ly=H-14;
+  models.forEach(function(m){
+    var t=N[m].replace(' (production)','').replace(' (fine-tuned)','*');
+    x.fillStyle=col(m);x.globalAlpha=(m.indexOf('frozen')>-1)?0.42:1;
+    x.fillRect(lx,ly-7,7,7);x.globalAlpha=1;
+    x.fillStyle=muted;x.fillText(t,lx+10,ly);
+    lx+=x.measureText(t).width+24;
+    if(lx>W-120){lx=pL;ly+=12;}
+  });
+}
+draw();
+window.addEventListener('resize',function(){clearTimeout(window.__t);window.__t=setTimeout(draw,150);});
+</script>

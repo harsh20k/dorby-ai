@@ -92,6 +92,18 @@ CONFIGS: dict[str, dict] = {
         "dtype": "bfloat16",
         "size": "large",
     },
+    # Frozen control at Qwen's native 4096 dims. The fine-tunes trained with
+    # truncate_dim=1024 and must be scored there, but that truncation is itself
+    # a handicap the frozen model never had in its published 0.6595 baseline
+    # (which used truncate_dim=None). Without this arm it is impossible to tell
+    # whether frozen Qwen's weak all-200 showing is the model or the truncation.
+    "qwen_frozen_4096": {
+        "adapter": None,
+        "model": "Qwen/Qwen3-Embedding-8B",
+        "dtype": "bfloat16",
+        "size": "large",
+        "truncate_dim": None,
+    },
     "qwen_micro1": {
         "adapter": "/root/qwen_runs/qwen_micro1_r1/adapter",
         "model": "Qwen/Qwen3-Embedding-8B",
@@ -125,6 +137,9 @@ def _run_one(run_id: str, config: str, batch_size: int) -> dict:
         batch_size=batch_size,
         device="cuda",
         torch_dtype=spec["dtype"],
+        # Default 1024 matches what the fine-tunes trained with; a config may
+        # override it (e.g. the native-dimension frozen control).
+        truncate_dim=spec.get("truncate_dim", 1024),
     )
     write_metrics(metrics, Path("/results") / run_id / config)
     results.commit()
