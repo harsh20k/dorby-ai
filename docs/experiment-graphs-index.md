@@ -38,6 +38,7 @@ wants the full story.
 | [`twotower-rrf-triplet-bigbatch-comparison.html`](file:///Users/harsh/Artifacts/dorby-ai/docs/html/twotower-rrf-triplet-bigbatch-comparison.html)     | local (`docs/html/`) + [published](https://claude.ai/code/artifact/6d2ea3d7-0f90-42b6-ac2e-ac807dcaedb1) | 2026-07-29                           | Follow-up: isolated `voyage-4-nano` re-run (`twotower_rrf_triplet_bigbatch/`, own package) with real batch size 2→6 (GPU-probed ceiling was 8) and 2 negatives per anchor instead of 1 — closed recall@1 to exactly match frozen Voyage-4-large (0.345) at the cost of pair AUC dropping below it; four-way comparison table + next-steps vs. the original triplet runs — see `docs/twotower-rrf-triplet-bigbatch-experiment.md`                                                                                                                                           |
 | [`twotower-ablation-verdict.html`](file:///Users/harsh/Artifacts/dorby-ai/docs/html/twotower-ablation-verdict.html)                                   | local (`docs/html/`) + [published](https://claude.ai/code/artifact/4ab4000d-f7a6-4477-8a2e-3b578da25cdc) | 2026-07-29                           | **Combined verdict** of the 2×2 ablation splitting the bigbatch run's two levers apart (`twotower_rrf_triplet_ablation/`, effective batch pinned to 12 in every arm, each arm run twice for a measured noise floor): **micro-batch size is what moved retrieval** (+0.05 MRR, +0.06 recall@1) while **the second negative hurt** (−0.03 pair AUC) because 27.5% of k=2 negative slots are duplicates. Also documents a corrected single-run claim and a dev-set-too-small-to-select finding — see `docs/twotower-rrf-triplet-ablation-experiment.md`                       |
 | [`moe-reranker-review.html`](file:///Users/harsh/Artifacts/dorby-ai/docs/html/moe-reranker-review.html)                                             | local (`docs/html/`)                                                                                     | 2026-07-29                           | Design review + results for the **multi-gate mixture-of-experts re-ranker** over `lookingFor` (`moe_reranker/`, own isolated package). Settles the combine-rule question (veto-shaped aggregation lost monotonically to a temperature-sharpened gate) and reports the built MMoE's seeker-disjoint CV: 0.5536 vs 0.5282 for no model at all, fold std 0.067 — **not testable at 111 real training pairs**. Documents two self-inflicted measurement bugs (a label-leaking normalizer reporting a fake 0.8500 AUC; a saturated routing-MI diagnostic) — see `docs/moe-reranker-experiment.md` |
+| [`moe-rrf003-synthetic-training.html`](file:///Users/harsh/Artifacts/dorby-ai/docs/html/moe-rrf003-synthetic-training.html)                                 | local (`docs/html/`) + [published](https://claude.ai/code/artifact/9f8af37b-d294-43db-bf14-229df33a48d2) | 2026-07-29                           | **Answer to the previous experiment's open question: training on synthetic data does not help.** The MoE trained on `rrf_003`'s 2,619 judge-labeled pairs (`moe_rrf/`, own isolated package) scored *below* the no-model TF-IDF floor on 131 real pairs, and two arms landed below chance. Locates the failure precisely: synthetic **vocabulary** transfers (0.5631 vs 0.5660 real-fitted) but synthetic **labels** don't, and the judge teacher's own 0.5797 on real pairs is a ceiling below what plain logistic regression already reaches. Within-seeker training was the one win (+0.131). Two more measurement bugs caught — a broken TF-IDF reimplementation and a stale-cache collision that silently merged two arms — see `docs/moe-rrf003-synthetic-training-findings.md` |
 | [`twotower-abl-a-batch-only.html`](file:///Users/harsh/Artifacts/dorby-ai/docs/html/twotower-abl-a-batch-only.html)                                   | local (`docs/html/`) + [published](https://claude.ai/code/artifact/9dcd8dc1-97ba-4183-b77b-717380d1966b) | 2026-07-29                           | Ablation Arm A — micro-batch 6, k=1. The winning cell (pair AUC 0.6047 / MRR 0.5423 / recall@1 0.3966, mean of 2 replicates); loss curve + dev-accuracy overlay, holdout table vs. frozen Voyage-4-large                                                                                                                                                                                                                                                                                                                                                                   |
 | [`twotower-abl-b-negs-only.html`](file:///Users/harsh/Artifacts/dorby-ai/docs/html/twotower-abl-b-negs-only.html)                                     | local (`docs/html/`) + [published](https://claude.ai/code/artifact/187a3df4-362b-4373-98fe-0b34f00bbb61) | 2026-07-29                           | Ablation Arm B — micro-batch 2, k=2. The worst cell (pair AUC 0.5595 / recall@1 0.2931); its dev metric falls after epoch 3 while training loss keeps dropping, the clearest sign of the duplicate-negative problem                                                                                                                                                                                                                                                                                                                                                        |
 | [`twotower-abl-c-baseline.html`](file:///Users/harsh/Artifacts/dorby-ai/docs/html/twotower-abl-c-baseline.html)                                       | local (`docs/html/`) + [published](https://claude.ai/code/artifact/d2407099-83f8-4e65-a5a3-f8125ae57381) | 2026-07-29                           | Ablation Arm C — micro-batch 2, k=1. The baseline corner every effect in the ablation is measured against (pair AUC 0.5996 / MRR 0.4902 / recall@1 0.3276)                                                                                                                                                                                                                                                                                                                                                                                                                 |
@@ -416,6 +417,71 @@ and a `--verify` mode. `rrf_003` is imported: **2,619 judge-labeled pairs, 337 o
 have 19, from 6 seekers). Those labels are one LLM judge's opinion, not human
 outcomes, so they are auxiliary-task and ranking-structure material only — never
 promoted into `data/dataset_*.json`.
+
+
+## Training the MoE on rrf_003's synthetic pairs (`moe-rrf003-synthetic-training.html`, 2026-07-29)
+
+**Isolated package: `moe_rrf/`.** Nothing in `moe_reranker/` or `baselines/` was
+modified — `moe_reranker.model` and `moe_reranker.diagnostics` are imported
+unchanged, and only the feature layer (which genuinely differs) was copied.
+
+This closes the question the MoE review left open. That experiment concluded the
+MMoE was untestable on 111 real pairs and that the bottleneck was "data, not
+architecture." `rrf_003` supplies 24× the pairs and 146× the within-seeker
+triplets. **The conclusion turned out to be wrong, and the corrected version is
+more useful: the bottleneck is label validity, not data volume.**
+
+Evaluation design worth reusing: **when training uses only synthetic pairs, every
+real pair outside the frozen holdout becomes a legitimate test set** — 131 pairs
+instead of 69, SE ±0.0505 instead of ±0.0709 (29% tighter), and the one-shot
+holdout stays unspent. Populations asserted disjoint (923 vs 1,217 contact ids,
+zero overlap).
+
+| arm | real AUC | fold std | n_train |
+|---|---|---|---|
+| TF-IDF alone, real vocabulary (**the floor**) | 0.5660 | — | 0 |
+| TF-IDF alone, synthetic vocabulary | 0.5631 | — | 0 |
+| **logistic regression, real pairs (best)** | **0.6398** | 0.177 | 105 |
+| MoE, real pairs | 0.3934 | 0.158 | 105 |
+| logistic regression, synthetic | 0.4270 | — | 2,619 |
+| MoE, synthetic — pairwise | 0.4066 | — | 2,619 |
+| MoE, synthetic — within-seeker triplets | 0.5380 | — | 2,773 |
+| synth pretrain → real fine-tune | 0.4730 | 0.145 | 105 |
+
+Findings:
+
+- **Nothing trained on synthetic data beats the no-model floor**, and two arms are
+  *below chance* — the synthetic feature→label relationship is anti-correlated with
+  real outcomes, so training on it inverts the decision.
+- **The failure is in the labels, not the text.** A vocabulary learned entirely
+  from synthetic profiles scores real pairs within 0.003 of a real-fitted one. The
+  words transfer; the labels don't. This rules out lexical distribution shift.
+- **It is a transfer failure, not a training failure.** Synthetic-internal AUC is
+  0.6086–0.6637, so fitting works fine.
+- **The distillation ceiling is the reframe.** The judge teacher scores **0.5797**
+  on the same 131 real pairs, so even a perfect imitator lands below
+  `logistic_real`'s 0.6398 — and the students come in *below their own teacher*,
+  because they learn the judge's decision function as expressed on synthetic
+  profiles, which is not the function it applies to real ones. More labels at this
+  teacher quality is not the lever.
+- **Within-seeker training was the one prediction that held**: +0.131 over pairwise
+  (0.4066 → 0.5380), the largest single effect measured, enabled by the 2,773
+  triplets. Keep it; it only rescues to ~chance here, but the mechanism is real.
+- **Plain logistic regression on ~105 real pairs is still the best model** — the
+  third independent time the MoE machinery has failed to pay for itself.
+
+Two more measurement bugs found, both caught by an implausible number rather than a
+failing test. A **hand-rolled TF-IDF** (unigrams + sublinear vs the repo encoder's
+bigrams) scored 0.4366 where the repo encoder scored 0.5660, correlation 0.52 — the
+strongest single feature was simply wrong; fixed by reusing
+`baselines.tfidf.encode.TfidfEncoder` unchanged and verified against the documented
+holdout figure. And a **stale-cache collision**: `TfidfEncoder.encode()` keys its
+cache on the texts but **not the fitted vocabulary**, so encoding the same real rows
+under a real-fitted and a synth-fitted vectorizer collided and returned identical
+vectors — the tell was two arms reporting byte-identical 0.5660. Worth knowing for
+any experiment that re-encodes identical text under a new fit.
+
+The real 69-pair holdout was **not spent** — nothing came close to earning it.
 
 
 ## Published Artifacts (claude.ai, this account)
