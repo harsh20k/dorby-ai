@@ -24,6 +24,8 @@ app = modal.App(APP_NAME)
 # Inference only — no optimizer state, no activations retained. L4 is plenty for
 # voyage-4-nano at 4096 tokens and far cheaper than the A100 training needed.
 GPU = "L4"
+# 8B in bf16 is ~16GB resident before activations; L4's 24GB is too tight.
+GPU_LARGE = "A100-80GB"
 
 image = (
     modal.Image.debian_slim(python_version="3.11")
@@ -55,40 +57,74 @@ image = (
     .add_local_dir(
         "artifacts/twotower_rrf_triplet_ablation", remote_path="/root/ablation_runs"
     )
+    .add_local_dir(
+        "artifacts/twotower_qwen_bigbatch", remote_path="/root/qwen_runs"
+    )
 )
 
 results = modal.Volume.from_name(RESULTS_VOLUME, create_if_missing=True)
 hf_cache = modal.Volume.from_name(HF_CACHE_VOLUME, create_if_missing=True)
 
-# label -> adapter directory under /root/ablation_runs (None = frozen base model)
-CONFIGS: dict[str, str | None] = {
-    "frozen": None,
-    "arm_a_v1": "abl_a_batch_only/adapter",
-    "arm_a_v2": "abl_a_batch_only_v2/adapter",
+# label -> what to evaluate. `adapter` is None for a frozen base model.
+# `dtype` None keeps the shared fp32 load path that every prior published number
+# used; bfloat16 is only for backbones too large to load fp32, and is never
+# mixed inside one model-family comparison.
+CONFIGS: dict[str, dict] = {
+    # voyage-4-nano family — small, fp32, L4 is plenty
+    "frozen": {"adapter": None, "model": "voyageai/voyage-4-nano", "dtype": None, "size": "small"},
+    "arm_a_v1": {
+        "adapter": "/root/ablation_runs/abl_a_batch_only/adapter",
+        "model": "voyageai/voyage-4-nano",
+        "dtype": None,
+        "size": "small",
+    },
+    "arm_a_v2": {
+        "adapter": "/root/ablation_runs/abl_a_batch_only_v2/adapter",
+        "model": "voyageai/voyage-4-nano",
+        "dtype": None,
+        "size": "small",
+    },
+    # Qwen3-Embedding-8B family — bf16 throughout, including the frozen control,
+    # so the fine-tune is never compared against a different-precision baseline.
+    "qwen_frozen": {
+        "adapter": None,
+        "model": "Qwen/Qwen3-Embedding-8B",
+        "dtype": "bfloat16",
+        "size": "large",
+    },
+    "qwen_micro1": {
+        "adapter": "/root/qwen_runs/qwen_micro1_r1/adapter",
+        "model": "Qwen/Qwen3-Embedding-8B",
+        "dtype": "bfloat16",
+        "size": "large",
+    },
+    "qwen_micro6": {
+        "adapter": "/root/qwen_runs/qwen_micro6_r1/adapter",
+        "model": "Qwen/Qwen3-Embedding-8B",
+        "dtype": "bfloat16",
+        "size": "large",
+    },
 }
 
 
-@app.function(
-    image=image,
-    gpu=GPU,
-    timeout=90 * 60,
-    volumes={"/results": results, "/cache/huggingface": hf_cache},
-)
-def eval_remote(run_id: str, config: str, batch_size: int = 8) -> dict:
+def _run_one(run_id: str, config: str, batch_size: int) -> dict:
+    """Shared body — identical for both GPU classes, so only the GPU differs."""
     from pathlib import Path
 
     from eval_real_full.eval import run_eval, write_metrics
 
-    rel = CONFIGS[config]
-    adapter_dir = Path("/root/ablation_runs") / rel if rel else None
+    spec = CONFIGS[config]
+    adapter_dir = Path(spec["adapter"]) if spec["adapter"] else None
 
     metrics = run_eval(
         data_dir=Path("/root/data"),
         split_path=Path("/root/data/synthetic/seed_split.json"),
+        model_name=spec["model"],
         adapter_dir=adapter_dir,
         label=config,
         batch_size=batch_size,
         device="cuda",
+        torch_dtype=spec["dtype"],
     )
     write_metrics(metrics, Path("/results") / run_id / config)
     results.commit()
@@ -109,6 +145,27 @@ def eval_remote(run_id: str, config: str, batch_size: int = 8) -> dict:
     }
 
 
+@app.function(
+    image=image,
+    gpu=GPU,
+    timeout=90 * 60,
+    volumes={"/results": results, "/cache/huggingface": hf_cache},
+)
+def eval_remote(run_id: str, config: str, batch_size: int = 8) -> dict:
+    return _run_one(run_id, config, batch_size)
+
+
+@app.function(
+    image=image,
+    gpu=GPU_LARGE,
+    timeout=180 * 60,
+    volumes={"/results": results, "/cache/huggingface": hf_cache},
+)
+def eval_remote_large(run_id: str, config: str, batch_size: int = 4) -> dict:
+    """Same body, bigger card — an 8B backbone in bf16 needs ~16GB resident."""
+    return _run_one(run_id, config, batch_size)
+
+
 @app.local_entrypoint()
 def main(run_id: str = "real200_001", configs: str = "", batch_size: int = 8) -> None:
     """Run each config in parallel; ``--configs`` is a comma-separated subset."""
@@ -118,7 +175,14 @@ def main(run_id: str = "real200_001", configs: str = "", batch_size: int = 8) ->
         raise SystemExit(f"unknown configs {unknown}; choices: {list(CONFIGS)}")
 
     print(f"run_id={run_id} configs={wanted}")
-    handles = [eval_remote.spawn(run_id, c, batch_size) for c in wanted]
+    handles = [
+        (
+            eval_remote_large.spawn(run_id, c, max(1, batch_size // 2))
+            if CONFIGS[c]["size"] == "large"
+            else eval_remote.spawn(run_id, c, batch_size)
+        )
+        for c in wanted
+    ]
     for h in handles:
         res = h.get()
         print(f"\n=== {res['config']} ===")
