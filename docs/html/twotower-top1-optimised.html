@@ -1,0 +1,183 @@
+<title>Chasing recall@1: one change failed, one won quietly</title>
+<style>
+:root{--bg:#eef1ee;--surface:#fff;--surface-2:#e4e8e3;--ink:#1c211f;--ink-soft:#4b544f;
+--muted:#7c8781;--line:#d3d9d1;--copper:#b5622a;--teal:#1f7a72;--slate:#4a5578;--code-bg:#e6e9e2;
+--shadow:0 1px 2px rgba(20,25,20,.06),0 8px 24px rgba(20,25,20,.05);}
+@media (prefers-color-scheme:dark){:root{--bg:#12151a;--surface:#191d23;--surface-2:#20252c;
+--ink:#e7ebe6;--ink-soft:#aab4ac;--muted:#6d7871;--line:#2a3038;--copper:#e0925a;--teal:#5bc2b6;
+--slate:#9aa6d6;--code-bg:#1c2229;--shadow:0 1px 2px rgba(0,0,0,.3),0 12px 32px rgba(0,0,0,.35);}}
+:root[data-theme="dark"]{--bg:#12151a;--surface:#191d23;--surface-2:#20252c;--ink:#e7ebe6;
+--ink-soft:#aab4ac;--muted:#6d7871;--line:#2a3038;--copper:#e0925a;--teal:#5bc2b6;--slate:#9aa6d6;
+--code-bg:#1c2229;--shadow:0 1px 2px rgba(0,0,0,.3),0 12px 32px rgba(0,0,0,.35);}
+:root[data-theme="light"]{--bg:#eef1ee;--surface:#fff;--surface-2:#e4e8e3;--ink:#1c211f;
+--ink-soft:#4b544f;--muted:#7c8781;--line:#d3d9d1;--copper:#b5622a;--teal:#1f7a72;--slate:#4a5578;
+--code-bg:#e6e9e2;--shadow:0 1px 2px rgba(20,25,20,.06),0 8px 24px rgba(20,25,20,.05);}
+*{box-sizing:border-box}html,body{margin:0;padding:0}
+body{background:var(--bg);color:var(--ink);font-family:"IBM Plex Sans","Segoe UI",-apple-system,system-ui,sans-serif;
+font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}
+.wrap{max-width:880px;margin:0 auto;padding:0 24px 72px}
+h1,h2{font-family:Charter,"Iowan Old Style",Georgia,serif;font-weight:600;text-wrap:balance}
+code,.mono{font-family:"IBM Plex Mono","SF Mono",Menlo,monospace;font-variant-numeric:tabular-nums}
+header.hero{padding:56px 24px 32px;max-width:880px;margin:0 auto;border-bottom:1px solid var(--line)}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;font-family:"IBM Plex Mono",monospace;
+font-size:12px;letter-spacing:.09em;text-transform:uppercase;color:var(--muted);margin-bottom:14px}
+.eyebrow .dot{width:6px;height:6px;border-radius:50%}
+h1.title{font-size:clamp(26px,3.6vw,36px);line-height:1.15;margin:0 0 10px}
+.lede{font-size:17px;color:var(--ink-soft);max-width:650px;margin:0}
+.chip{font-family:"IBM Plex Mono",monospace;font-size:12px;padding:4px 10px;border-radius:20px;
+background:var(--surface-2);border:1px solid var(--line);color:var(--ink-soft)}
+.cfg{display:flex;gap:8px;flex-wrap:wrap;margin-top:18px}
+section{padding:38px 0;border-bottom:1px solid var(--line)}section:last-of-type{border-bottom:none}
+h2{font-size:21px;margin:0 0 14px}p{margin:0 0 14px;max-width:70ch}p:last-child{margin-bottom:0}
+.table-wrap{overflow-x:auto;margin:16px 0;border:1px solid var(--line);border-radius:10px;
+background:var(--surface);box-shadow:var(--shadow)}
+table{border-collapse:collapse;width:100%;min-width:560px;font-size:14px}
+th,td{text-align:right;padding:10px 14px;border-bottom:1px solid var(--line)}
+th:first-child,td:first-child{text-align:left}
+thead th{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.04em;text-transform:uppercase;
+color:var(--muted);font-weight:500;background:var(--surface-2)}
+tbody tr:last-child td{border-bottom:none}
+td.best{color:var(--teal);font-weight:600}
+tr.hi td{background:color-mix(in srgb,var(--teal) 8%,transparent)}
+tr.lo td{background:color-mix(in srgb,var(--copper) 7%,transparent)}
+.pos{color:var(--teal);font-weight:600}.neg{color:var(--copper);font-weight:600}.zero{color:var(--muted)}
+.callout{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:16px 18px;
+margin:16px 0;box-shadow:var(--shadow)}
+.callout.win{border-left:3px solid var(--teal)}.callout.loss{border-left:3px solid var(--copper)}
+.callout.neutral{border-left:3px solid var(--slate)}
+.callout .label{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.06em;
+text-transform:uppercase;color:var(--muted);margin-bottom:6px}
+.links{display:flex;gap:18px;flex-wrap:wrap;margin-top:14px;font-size:13.5px}
+.links a{color:var(--teal);text-decoration:none;border-bottom:1px solid transparent}
+.links a:hover{border-color:var(--teal)}
+ul{max-width:70ch}li{margin-bottom:8px}
+.ladder{display:grid;gap:10px;margin:18px 0}
+.rung{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:12px 16px;
+box-shadow:var(--shadow);display:flex;gap:16px;align-items:baseline;flex-wrap:wrap}
+.rung .n{font-family:"IBM Plex Mono",monospace;font-size:12px;color:var(--muted);min-width:150px}
+.rung .d{font-size:14px;color:var(--ink-soft)}
+footer{padding:28px 0 0;color:var(--muted);font-size:13px}
+footer code{background:var(--code-bg);padding:.1em .4em;border-radius:4px}
+:focus-visible{outline:2px solid var(--teal);outline-offset:2px}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+<header class="hero">
+  <div class="eyebrow"><span class="dot" style="background:var(--teal)"></span> Dorby AI · recall@1 experiment</div>
+  <h1 class="title">Chasing recall@1: one change failed, one won quietly</h1>
+  <p class="lede">Sharpening the loss to focus on the top competitor backfired on every metric.
+  Fixing which checkpoint we ship produced the best model in the project — and the small
+  holdout hid it completely.</p>
+  <div class="cfg">
+    <span class="chip">effective batch 12</span><span class="chip">245 steps</span>
+    <span class="chip">same rows as Arm A</span><span class="chip">200 real pairs</span>
+  </div>
+  <div class="links">
+    <a href="https://claude.ai/code/artifact/f9283fec-b9dd-46f1-846f-9280523feb18">← Where the 5 ideas came from</a>
+    <a href="https://claude.ai/code/artifact/d807fdd2-afe5-40ad-bafa-04423b9ccf87">← The 200-pair evaluation</a>
+    <a href="https://claude.ai/code/artifact/9dcd8dc1-97ba-4183-b77b-717380d1966b">← Arm A</a>
+  </div>
+</header>
+<div class="wrap">
+  <section>
+    <h2>The problem</h2>
+    <p>Getting the right person into the shortlist works. Getting them to <i>first place</i> never has.
+    Across the whole project, the best top-1 result belonged to a model that was never trained at all —
+    frozen voyage-4-nano, 18 correct out of 100. Fine-tuning it moved that number by exactly zero,
+    while clearly improving everything else: the right person went from an average position of 18th
+    to 12th.</p>
+    <p>So the model learned to pull the target up the list, but not to close the last step. This
+    experiment changed two things to attack that step directly, accepting up front that other
+    metrics might suffer.</p>
+    <div class="ladder">
+      <div class="rung"><span class="n">Arm A <i>(previous best)</i></span>
+        <span class="d">standard loss · ship the checkpoint that wins a 2-candidate test</span></div>
+      <div class="rung"><span class="n">Selection fix</span>
+        <span class="d">standard loss · <b>ship the checkpoint that ranks best against a real pool</b></span></div>
+      <div class="rung"><span class="n">Sharpened loss</span>
+        <span class="d"><b>concentrate learning on the single hardest competitor</b> · same selection fix</span></div>
+    </div>
+    <p style="font-size:13.5px;color:var(--muted)">Everything else identical — same training data,
+    same batch size, same number of weight updates, same learning rate. Each rung adds one change.</p>
+  </section>
+  <section>
+    <h2>All 200 real pairs</h2>
+    <p>100 accepted introductions, 100 declined, ranked against 178 candidates. Green marks the best
+    value in each column.</p>
+    <div class="table-wrap"><table><thead><tr><th>Model</th><th>Pair AUC</th><th>Hard-neg</th><th>MRR</th><th>Recall@1</th><th>Recall@10</th></tr></thead><tbody><tr class="hi"><td>Selection fix only</td><td class="mono">0.5683</td><td class="mono">0.5484</td><td class="mono best">0.3550</td><td class="mono best">0.1900</td><td class="mono">0.6900</td></tr><tr><td>Arm A (previous best)</td><td class="mono">0.5594</td><td class="mono">0.5558</td><td class="mono">0.3341</td><td class="mono">0.1800</td><td class="mono">0.6400</td></tr><tr><td>nano frozen (untrained)</td><td class="mono">0.5593</td><td class="mono">0.5046</td><td class="mono">0.3171</td><td class="mono">0.1800</td><td class="mono">0.5900</td></tr><tr><td>Voyage-4-large</td><td class="mono">0.5726</td><td class="mono">0.5422</td><td class="mono">0.3102</td><td class="mono">0.1300</td><td class="mono best">0.7000</td></tr><tr><td>Qwen3-8B micro-6</td><td class="mono best">0.5947</td><td class="mono best">0.5608</td><td class="mono">0.3031</td><td class="mono">0.1400</td><td class="mono">0.6600</td></tr><tr class="lo"><td>Sharpened loss</td><td class="mono">0.5429</td><td class="mono">0.4578</td><td class="mono">0.3010</td><td class="mono">0.1400</td><td class="mono">0.6400</td></tr></tbody></table></div>
+    <div class="callout win">
+      <div class="label">The quiet win</div>
+      <p>Simply changing <b>which trained checkpoint we ship</b> — with no change to how the model
+      learns — produced the <b>best MRR of any model in this project</b>, ahead of the production
+      model and of a model 23× larger. It is also the first fine-tuned model to beat the untrained
+      baseline at top-1: 19 correct out of 100 versus 18.</p>
+      <p style="margin-top:10px">That last gap is <b>one query</b>, which is exactly the smallest
+      change measurable here, so it is not a significant result on its own. What makes it worth
+      something is that the improvement in overall ranking quality is consistent in direction across
+      all three separate groups of pairs.</p>
+    </div>
+    <div class="callout loss">
+      <div class="label">The failure</div>
+      <p>Sharpening the loss lost on <i>every</i> metric, including the one it was designed to
+      improve. Top-1 fell from 18 to 14 of 100 — below the untrained model — and its ability to
+      tell apart genuinely difficult pairs dropped to <b>worse than a coin flip</b>.</p>
+      <p style="margin-top:10px">The likely reason is a bad interaction: concentrating learning on
+      the single hardest example only helps if that example is <i>correctly labelled</i>. Our
+      training labels come from a language model that is right about 59% of the time on exactly
+      those hard cases. Sharpening worked as designed — it sharpened onto the noise.</p>
+    </div>
+  </section>
+  <section>
+    <h2>What changed, measured against the previous best</h2>
+    <div class="table-wrap"><table><thead><tr><th>vs. Arm A</th><th>Pair AUC</th><th>Hard-neg</th><th>MRR</th><th>Recall@1</th><th>Recall@10</th></tr></thead><tbody><tr><td>All 200 pairs</td><td class="mono pos">+0.0089</td><td class="mono neg">-0.0074</td><td class="mono pos">+0.0208</td><td class="mono pos">+0.0100</td><td class="mono pos">+0.0500</td></tr><tr><td>Train 131</td><td class="mono pos">+0.0082</td><td class="mono neg">-0.0362</td><td class="mono pos">+0.0281</td><td class="mono pos">+0.0141</td><td class="mono pos">+0.0282</td></tr><tr><td>Holdout 69</td><td class="mono neg">-0.0009</td><td class="mono pos">+0.0086</td><td class="mono pos">+0.0110</td><td class="mono zero">+0.0000</td><td class="mono zero">+0.0000</td></tr><tr class="lo"><td>Sharpened loss, all 200</td><td class="mono neg">-0.0165</td><td class="mono neg">-0.0980</td><td class="mono neg">-0.0332</td><td class="mono neg">-0.0400</td><td class="mono zero">+0.0000</td></tr></tbody></table></div>
+    <p>The selection fix improves overall ranking quality on all three groups, with the same sign
+    each time. The sharpened loss is negative almost everywhere.</p>
+  </section>
+  <section>
+    <h2>The small test set hid the win — for the third time</h2>
+    <p>On the 69-pair holdout that every earlier number in this project used, the selection fix looks
+    like <i>nothing happened</i>: identical top-1, a rounding-error change elsewhere. Only on the
+    full 200 pairs does it show up as the best model measured.</p>
+    <div class="table-wrap"><table><thead><tr><th>Model</th><th>Pair AUC</th><th>Hard-neg</th><th>MRR</th><th>Recall@1</th><th>Recall@10</th></tr></thead><tbody><tr class="hi"><td>Selection fix only</td><td class="mono">0.5974</td><td class="mono best">0.6121</td><td class="mono best">0.5436</td><td class="mono best">0.3793</td><td class="mono best">0.8621</td></tr><tr><td>Arm A (previous best)</td><td class="mono">0.5983</td><td class="mono">0.6034</td><td class="mono">0.5326</td><td class="mono best">0.3793</td><td class="mono best">0.8621</td></tr><tr><td>nano frozen (untrained)</td><td class="mono">0.5793</td><td class="mono">0.5707</td><td class="mono">0.4610</td><td class="mono">0.2759</td><td class="mono">0.7586</td></tr><tr><td>Voyage-4-large</td><td class="mono best">0.6086</td><td class="mono">0.6017</td><td class="mono">0.5287</td><td class="mono">0.3448</td><td class="mono best">0.8621</td></tr><tr class="lo"><td>Sharpened loss</td><td class="mono">0.5629</td><td class="mono">0.5241</td><td class="mono">0.4735</td><td class="mono">0.2759</td><td class="mono">0.7241</td></tr></tbody></table></div>
+    <div class="callout neutral">
+      <div class="label">Stated plainly</div>
+      <p>I first wrote this arm off as a non-result based on the small test set alone. That was
+      wrong, and it is the third time that same test set has produced a misleading conclusion in
+      this project. The working rule now: <b>no result counts until it has been measured on all 200
+      pairs.</b></p>
+    </div>
+  </section>
+  <section>
+    <h2>A side benefit that matters more than the numbers</h2>
+    <p>Until now, the signal used to pick which trained checkpoint to keep measured a completely
+    different task from the one we actually care about — it asked "does the right answer beat these
+    one or two wrong answers?" rather than "does it come first out of many?".</p>
+    <p>That mattered: in both earlier experiments this signal preferred the <i>worse</i> model, and
+    was wrong both times. With the fix, it correctly ranked the two arms here — it preferred the
+    control (0.3333) over the sharpened arm (0.3000), and
+    the real results agreed. <b>For the first time this project has a development signal that points
+    the right way</b>, which is a precondition for tuning anything else.</p>
+    <p style="font-size:13.5px;color:var(--muted)">One limit: the development pool is 86 candidates,
+    so its recall@10 already saturates at a perfect score and carries no information. Only its
+    top-1 and overall-ranking numbers are usable at this size.</p>
+  </section>
+  <section>
+    <h2>What this leaves</h2>
+    <ul>
+      <li><b>Mine the competitors that actually beat us.</b> Untouched, and this result strengthens
+      the case: the problem is not that the model ignores hard competitors, it is that the hard
+      competitors it trains against were chosen once, by a different model, from a synthetic pool.</li>
+      <li><b>Show the model far more competitors per step.</b> This experiment suggests why
+      concentration cannot substitute for volume — focusing harder on few noisy examples amplifies
+      the noise.</li>
+      <li><b>Improve the training labels.</b> 59% accuracy on hard cases is a hard ceiling on
+      anything trying to learn fine distinctions at the very top of a ranking.</li>
+    </ul>
+    <p style="font-size:13.5px;color:var(--muted)">One run per arm, so there is no repeat-run error
+    estimate here. Top-1 on 100 queries moves in steps of one query, so the +1 result sits exactly
+    at the resolution limit; the sharpened arm's −4 does not. Training labels are a language model's
+    opinion on synthetic profiles — only the evaluation uses real outcomes.</p>
+  </section>
+  <footer>Boardy AI contact-intro recommender · <code>twotower_top1_optimised/</code>,
+  runs <code>top1_ctrl_001</code> / <code>top1_001</code> · evaluated via <code>eval_real_full/</code> ·
+  full writeup in <code>docs/twotower-top1-optimised-experiment.md</code></footer>
+</div>

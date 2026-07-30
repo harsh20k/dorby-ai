@@ -60,6 +60,9 @@ image = (
     .add_local_dir(
         "artifacts/twotower_qwen_bigbatch", remote_path="/root/qwen_runs"
     )
+    .add_local_dir(
+        "artifacts/twotower_top1_optimised", remote_path="/root/top1_runs"
+    )
 )
 
 results = modal.Volume.from_name(RESULTS_VOLUME, create_if_missing=True)
@@ -115,6 +118,19 @@ CONFIGS: dict[str, dict] = {
         "model": "Qwen/Qwen3-Embedding-8B",
         "dtype": "bfloat16",
         "size": "large",
+    },
+    # recall@1-targeted arm and its control (see twotower_top1_optimised/)
+    "top1_ctrl": {
+        "adapter": "/root/top1_runs/top1_ctrl_001/adapter",
+        "model": "voyageai/voyage-4-nano",
+        "dtype": None,
+        "size": "small",
+    },
+    "top1_sharp": {
+        "adapter": "/root/top1_runs/top1_001/adapter",
+        "model": "voyageai/voyage-4-nano",
+        "dtype": None,
+        "size": "small",
     },
 }
 
