@@ -35,48 +35,18 @@ pool is strictly harder. ``n_candidates`` is recorded for that reason.
 
 from __future__ import annotations
 
+import json
 from pathlib import Path
 from typing import Any, Literal, Sequence
 
-import numpy as np
-
 from baselines.bert_frozen.text import candidate_to_text, seeker_to_text
-from baselines.hf_embedding.encode import cosine_scores
 from baselines.metrics import pair_metrics, retrieval_metrics, slice_metrics
 
 from eval_real_full.data import Subset, load_real_pairs
-from eval_real_full.eval import write_metrics
-
-__all__ = [
-    "build_candidate_corpus",
-    "library_versions",
-    "run_baseline_eval",
-    "split_by_label",
-    "write_metrics",
-]
 
 Kind = Literal["tfidf", "bert", "hf"]
 
-
-def library_versions(modules: Sequence[str]) -> dict[str, str | None]:
-    """Version provenance for libraries that can move a metric (e.g. sklearn's
-    TF-IDF vocabulary — see ``eval_real_full/modal_baseline_eval.py``'s
-    scikit-learn pin). ``None`` for a module not installed in the current
-    environment, which is expected for some (e.g. no ``torch`` on a CPU-only run).
-    """
-    import importlib
-
-    out: dict[str, str | None] = {}
-    for mod in modules:
-        try:
-            out[mod] = importlib.import_module(mod).__version__
-        except Exception:
-            out[mod] = None
-    return out
-
-
 DEFAULT_SUBSETS: tuple[Subset, ...] = ("all", "train", "holdout")
-_SOURCE_BY_SUBSET = {"train": "real_train", "holdout": "real_holdout"}
 
 
 def split_by_label(pairs) -> tuple[list[dict], list[dict]]:
@@ -190,80 +160,36 @@ def _build_encoder(
     raise ValueError(f"unknown kind {kind!r}")
 
 
-def _score(
+def run_baseline_eval(
     *,
-    label: str,
-    subset: str,
-    positives: list[dict[str, Any]],
-    negatives: list[dict[str, Any]],
-    pos_seeker_emb: np.ndarray,
-    neg_seeker_emb: np.ndarray,
-    pos_cand_emb: np.ndarray,
-    neg_cand_emb: np.ndarray,
-    corpus_ids: list[str],
-    corpus_emb: np.ndarray,
-    neg_seeker_texts: list[str],
-    neg_cand_texts: list[str],
-    combined_hash: str,
-) -> dict[str, Any]:
-    """Shared scoring tail: cosine + the four metric calls, identical for every kind."""
-    # Every encoder here returns L2-normalized rows, so the shared dot-product
-    # cosine applies — same as each baseline's own eval.py.
-    pos_scores = cosine_scores(pos_seeker_emb, pos_cand_emb)
-    neg_scores = cosine_scores(neg_seeker_emb, neg_cand_emb)
-    pair = pair_metrics(pos_scores, neg_scores)
-
-    pos_target_ids = [r["matchContactId"] for r in positives]
-    retrieval = retrieval_metrics(
-        query_embs=pos_seeker_emb,
-        target_ids=pos_target_ids,
-        candidate_ids=corpus_ids,
-        candidate_embs=corpus_emb,
-    )
-    slices = slice_metrics(
-        positives=positives,
-        negatives=negatives,
-        pos_scores=pos_scores,
-        neg_scores=neg_scores,
-        neg_seeker_texts=neg_seeker_texts,
-        neg_cand_texts=neg_cand_texts,
-        query_embs=pos_seeker_emb,
-        target_ids=pos_target_ids,
-        candidate_ids=corpus_ids,
-        candidate_embs=corpus_emb,
-    )
-    print(
-        f"    pair AUC {pair['roc_auc']:.4f} | "
-        f"MRR {retrieval['mrr']:.4f} | R@1 {retrieval['recall@1']:.4f}"
-    )
-    return {
-        "subset": subset,
-        "n_candidates": len(corpus_ids),
-        "real_data_hash": combined_hash,
-        "pair": pair,
-        "retrieval": retrieval,
-        "slices": slices,
-    }
-
-
-def _run_tfidf_subsets(
-    *,
-    label: str,
+    kind: Kind,
     data_dir: Path,
     split_path: Path,
-    subsets: Sequence[Subset],
-    batch_size: int,
-    cache_dir: Path,
-    max_features: int,
-    ngram_range: tuple[int, int],
-) -> dict[Subset, dict[str, Any]]:
-    """TF-IDF's vocabulary/IDF is corpus-dependent, so unlike every other kind it
-    must be refit on each subset's own corpus — there is no shared encoding to
-    reuse across subsets here. One full load + fit + encode per subset, exactly
-    as ``baselines/tfidf/eval.py --holdout-only`` does, which is what
-    ``tests/test_eval_real_full_baselines.py`` reproduces digit-for-digit.
-    """
-    out: dict[Subset, dict[str, Any]] = {}
+    label: str,
+    model_name: str | None = None,
+    subsets: Sequence[Subset] = DEFAULT_SUBSETS,
+    batch_size: int = 8,
+    max_length: int = 8192,
+    truncate_dim: int | None = None,
+    dtype: str = "auto",
+    device: str = "cpu",
+    cache_dir: Path = Path("/tmp/eval_real_full_cache"),
+    max_features: int = 20000,
+    ngram_range: tuple[int, int] = (1, 2),
+) -> dict[str, Any]:
+    """Evaluate one frozen baseline over each requested subset of the real pairs."""
+    out: dict[str, Any] = {
+        "label": label,
+        "kind": kind,
+        "model_name": model_name,
+        "device": device,
+        "batch_size": batch_size,
+        "max_length": max_length,
+        "truncate_dim": truncate_dim,
+        "dtype": dtype,
+        "subsets": {},
+    }
+
     for subset in subsets:
         ps = load_real_pairs(data_dir, split_path, subset=subset, verify=True)
         positives, negatives = split_by_label(ps.pairs)
@@ -284,197 +210,76 @@ def _run_tfidf_subsets(
         corpus_ids, corpus_texts = build_candidate_corpus(positives, negatives)
         print(f"candidate corpus size: {len(corpus_ids)}")
 
+        # Rebuilt per subset: TF-IDF must refit, and a neural encoder's cache
+        # directory is keyed by content anyway, so reloading costs only the
+        # model load — which the HF cache volume makes cheap.
         encoder = _build_encoder(
-            "tfidf",
-            model_name=None,
-            device="cpu",
-            max_length=0,
-            truncate_dim=None,
-            dtype="auto",
+            kind,
+            model_name=model_name,
+            device=device,
+            max_length=max_length,
+            truncate_dim=truncate_dim,
+            dtype=dtype,
             cache_dir=cache_dir,
             max_features=max_features,
             ngram_range=ngram_range,
             fit_texts=pos_seeker_texts + neg_seeker_texts + corpus_texts,
         )
-        adapter = _EncoderAdapter("tfidf", encoder, batch_size)
+        adapter = _EncoderAdapter(kind, encoder, batch_size)
 
-        out[subset] = _score(
-            label=label,
-            subset=subset,
+        pos_seeker_emb = adapter.encode(pos_seeker_texts, "query")
+        neg_seeker_emb = adapter.encode(neg_seeker_texts, "query")
+        pos_cand_emb = adapter.encode(pos_cand_texts, "document")
+        neg_cand_emb = adapter.encode(neg_cand_texts, "document")
+        corpus_emb = adapter.encode(corpus_texts, "document")
+
+        # Every encoder here returns L2-normalized rows, so the shared
+        # dot-product cosine applies — same as each baseline's own eval.py.
+        from baselines.hf_embedding.encode import cosine_scores
+
+        pos_scores = cosine_scores(pos_seeker_emb, pos_cand_emb)
+        neg_scores = cosine_scores(neg_seeker_emb, neg_cand_emb)
+        pair = pair_metrics(pos_scores, neg_scores)
+
+        pos_target_ids = [r["matchContactId"] for r in positives]
+        retrieval = retrieval_metrics(
+            query_embs=pos_seeker_emb,
+            target_ids=pos_target_ids,
+            candidate_ids=corpus_ids,
+            candidate_embs=corpus_emb,
+        )
+        slices = slice_metrics(
             positives=positives,
             negatives=negatives,
-            pos_seeker_emb=adapter.encode(pos_seeker_texts, "query"),
-            neg_seeker_emb=adapter.encode(neg_seeker_texts, "query"),
-            pos_cand_emb=adapter.encode(pos_cand_texts, "document"),
-            neg_cand_emb=adapter.encode(neg_cand_texts, "document"),
-            corpus_ids=corpus_ids,
-            corpus_emb=adapter.encode(corpus_texts, "document"),
+            pos_scores=pos_scores,
+            neg_scores=neg_scores,
             neg_seeker_texts=neg_seeker_texts,
             neg_cand_texts=neg_cand_texts,
-            combined_hash=ps.combined_hash,
+            query_embs=pos_seeker_emb,
+            target_ids=pos_target_ids,
+            candidate_ids=corpus_ids,
+            candidate_embs=corpus_emb,
         )
-    return out
 
-
-def _run_neural_subsets(
-    *,
-    kind: Kind,
-    label: str,
-    data_dir: Path,
-    split_path: Path,
-    subsets: Sequence[Subset],
-    model_name: str | None,
-    batch_size: int,
-    max_length: int,
-    truncate_dim: int | None,
-    dtype: str,
-    device: str,
-    cache_dir: Path,
-) -> dict[Subset, dict[str, Any]]:
-    """Frozen bert/hf encoders: no fitting step, so seeker text depends only on
-    its pair — every subset is a row mask over ``all``, never a different
-    encode. One model load, one encode pass over the full 200 real pairs,
-    reused for every requested subset.
-    """
-    ps_all = load_real_pairs(data_dir, split_path, subset="all", verify=True)
-    ordered = list(ps_all.pairs)  # load_real_pairs already sorts by pair_id
-    pos_ordered = [p for p in ordered if p.label == "pos"]
-    neg_ordered = [p for p in ordered if p.label == "neg"]
-
-    pos_seeker_texts_all = [
-        seeker_to_text(p.pair["userContactFile"], p.pair["searchQuery"]) for p in pos_ordered
-    ]
-    neg_seeker_texts_all = [
-        seeker_to_text(p.pair["userContactFile"], p.pair["searchQuery"]) for p in neg_ordered
-    ]
-    pos_cand_texts_all = [candidate_to_text(p.pair["matchContactFile"]) for p in pos_ordered]
-    neg_cand_texts_all = [candidate_to_text(p.pair["matchContactFile"]) for p in neg_ordered]
-
-    encoder = _build_encoder(
-        kind,
-        model_name=model_name,
-        device=device,
-        max_length=max_length,
-        truncate_dim=truncate_dim,
-        dtype=dtype,
-        cache_dir=cache_dir,
-        max_features=0,
-        ngram_range=(1, 1),
-        fit_texts=(),  # unused by bert/hf — frozen encoders, no fitting step
-    )
-    adapter = _EncoderAdapter(kind, encoder, batch_size)
-
-    pos_seeker_emb_all = adapter.encode(pos_seeker_texts_all, "query")
-    neg_seeker_emb_all = adapter.encode(neg_seeker_texts_all, "query")
-
-    # Candidate texts, deduped by exact string across both pos and neg. Every
-    # text any subset's build_candidate_corpus could ever first-see is in this
-    # union (subsets are pair-id subsets of "all"), so lookup by string can
-    # never miss regardless of which occurrence a given subset picks as first.
-    doc_texts: list[str] = []
-    seen: set[str] = set()
-    for t in pos_cand_texts_all + neg_cand_texts_all:
-        if t not in seen:
-            seen.add(t)
-            doc_texts.append(t)
-    doc_matrix = adapter.encode(doc_texts, "document")
-    doc_by_text = {t: doc_matrix[i] for i, t in enumerate(doc_texts)}
-
-    out: dict[Subset, dict[str, Any]] = {}
-    for subset in subsets:
-        if subset == "all":
-            pos_sel = list(enumerate(pos_ordered))
-            neg_sel = list(enumerate(neg_ordered))
-        else:
-            wanted_source = _SOURCE_BY_SUBSET[subset]
-            pos_sel = [(i, p) for i, p in enumerate(pos_ordered) if p.source == wanted_source]
-            neg_sel = [(i, p) for i, p in enumerate(neg_ordered) if p.source == wanted_source]
-        pos_rows = [i for i, _ in pos_sel]
-        neg_rows = [i for i, _ in neg_sel]
-        positives = [p.pair for _, p in pos_sel]
-        negatives = [p.pair for _, p in neg_sel]
+        metrics = {
+            "subset": subset,
+            "n_candidates": len(corpus_ids),
+            "real_data_hash": ps.combined_hash,
+            "pair": pair,
+            "retrieval": retrieval,
+            "slices": slices,
+        }
+        out["subsets"][subset] = metrics
         print(
-            f"\n=== {label} | subset={subset} | n={len(positives) + len(negatives)} "
-            f"(pos={len(positives)}, neg={len(negatives)}) ==="
-        )
-
-        corpus_ids, corpus_texts = build_candidate_corpus(positives, negatives)
-        print(f"candidate corpus size: {len(corpus_ids)}")
-
-        neg_seeker_texts = [neg_seeker_texts_all[i] for i in neg_rows]
-        neg_cand_texts = [neg_cand_texts_all[i] for i in neg_rows]
-
-        out[subset] = _score(
-            label=label,
-            subset=subset,
-            positives=positives,
-            negatives=negatives,
-            pos_seeker_emb=pos_seeker_emb_all[pos_rows],
-            neg_seeker_emb=neg_seeker_emb_all[neg_rows],
-            pos_cand_emb=np.stack([doc_by_text[pos_cand_texts_all[i]] for i in pos_rows]),
-            neg_cand_emb=np.stack([doc_by_text[neg_cand_texts_all[i]] for i in neg_rows]),
-            corpus_ids=corpus_ids,
-            corpus_emb=np.stack([doc_by_text[t] for t in corpus_texts]),
-            neg_seeker_texts=neg_seeker_texts,
-            neg_cand_texts=neg_cand_texts,
-            combined_hash=ps_all.combined_hash,
+            f"    pair AUC {pair['roc_auc']:.4f} | "
+            f"MRR {retrieval['mrr']:.4f} | R@1 {retrieval['recall@1']:.4f}"
         )
     return out
 
 
-def run_baseline_eval(
-    *,
-    kind: Kind,
-    data_dir: Path,
-    split_path: Path,
-    label: str,
-    model_name: str | None = None,
-    subsets: Sequence[Subset] = DEFAULT_SUBSETS,
-    batch_size: int = 8,
-    max_length: int = 8192,
-    truncate_dim: int | None = None,
-    dtype: str = "auto",
-    device: str = "cpu",
-    cache_dir: Path = Path("/tmp/eval_real_full_cache"),
-    max_features: int = 20000,
-    ngram_range: tuple[int, int] = (1, 2),
-) -> dict[str, Any]:
-    """Evaluate one frozen baseline over each requested subset of the real pairs."""
-    if kind == "tfidf":
-        subset_metrics = _run_tfidf_subsets(
-            label=label,
-            data_dir=data_dir,
-            split_path=split_path,
-            subsets=subsets,
-            batch_size=batch_size,
-            cache_dir=cache_dir,
-            max_features=max_features,
-            ngram_range=ngram_range,
-        )
-    else:
-        subset_metrics = _run_neural_subsets(
-            kind=kind,
-            label=label,
-            data_dir=data_dir,
-            split_path=split_path,
-            subsets=subsets,
-            model_name=model_name,
-            batch_size=batch_size,
-            max_length=max_length,
-            truncate_dim=truncate_dim,
-            dtype=dtype,
-            device=device,
-            cache_dir=cache_dir,
-        )
-
-    return {
-        "label": label,
-        "kind": kind,
-        "model_name": model_name,
-        "device": device,
-        "batch_size": batch_size,
-        "max_length": max_length,
-        "truncate_dim": truncate_dim,
-        "dtype": dtype,
-        "subsets": subset_metrics,
-    }
+def write_metrics(metrics: dict[str, Any], out_dir: Path) -> Path:
+    out_dir.mkdir(parents=True, exist_ok=True)
+    path = out_dir / "metrics.json"
+    path.write_text(json.dumps(metrics, indent=2) + "\n")
+    print(f"\nwrote {path}")
+    return path

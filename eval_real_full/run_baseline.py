@@ -26,7 +26,7 @@ import argparse
 import sys
 from pathlib import Path
 
-from eval_real_full.baseline_eval import library_versions, run_baseline_eval, write_metrics
+from eval_real_full.baseline_eval import run_baseline_eval, write_metrics
 
 CONFIGS: dict[str, dict] = {
     "tfidf": {"kind": "tfidf", "model": None, "device": "cpu"},
@@ -59,11 +59,22 @@ def main(argv: list[str] | None = None) -> int:
         device=spec["device"],
         cache_dir=Path("/tmp") / f"eval_real_full_local_{args.config}",
     )
-    versions = library_versions(("sklearn", "numpy", "scipy", "torch"))
-    versions["python"] = sys.version.split()[0]
-    metrics["library_versions"] = versions
+    metrics["library_versions"] = _library_versions()
     write_metrics(metrics, args.out_dir / args.config)
     return 0
+
+
+def _library_versions() -> dict:
+    import importlib
+
+    out = {}
+    for mod in ("sklearn", "numpy", "scipy", "torch"):
+        try:
+            out[mod] = importlib.import_module(mod).__version__
+        except Exception:
+            out[mod] = None
+    out["python"] = sys.version.split()[0]
+    return out
 
 
 if __name__ == "__main__":

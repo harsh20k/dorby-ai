@@ -41,14 +41,6 @@ _ENV = {
     "TOKENIZERS_PARALLELISM": "false",
 }
 
-# Pinned, not floated: TfidfVectorizer's fitted vocabulary is not stable across
-# scikit-learn versions. On an unpinned image TF-IDF scored holdout AUC 0.5828
-# where the published baseline (and this repo's venv, sklearn 1.9.0) give
-# 0.5922 — same code, same data. Every other model here uses sklearn only for
-# metric computation, which is stable, so the pin costs nothing and makes the
-# lexical baseline reproducible. Every image below needs it.
-_SKLEARN_PIN = ("scikit-learn==1.9.0",)
-
 
 def _with_sources(img: modal.Image) -> modal.Image:
     """Mount code + data. The frozen manifest is JSON, so add_local_python_source
@@ -69,7 +61,13 @@ image = _with_sources(
         "transformers>=4.51,<5",
         "sentence-transformers>=3.4.1,<6",
         "accelerate>=0.30",
-        *_SKLEARN_PIN,
+        # Pinned, not floated: TfidfVectorizer's fitted vocabulary is not stable
+        # across scikit-learn versions. On an unpinned image TF-IDF scored
+        # holdout AUC 0.5828 where the published baseline (and this repo's venv,
+        # sklearn 1.9.0) give 0.5922 — same code, same data. Every other model
+        # here uses sklearn only for metric computation, which is stable, so the
+        # pin costs nothing and makes the lexical baseline reproducible.
+        "scikit-learn==1.9.0",
         "numpy>=1.26.0",
         "tqdm>=4.66.0",
         "datasets>=2.19",
@@ -83,7 +81,13 @@ legacy_transformers_image = _with_sources(
         "transformers==4.44.2",
         "sentence-transformers==3.0.1",
         "accelerate>=0.30",
-        *_SKLEARN_PIN,
+        # Pinned, not floated: TfidfVectorizer's fitted vocabulary is not stable
+        # across scikit-learn versions. On an unpinned image TF-IDF scored
+        # holdout AUC 0.5828 where the published baseline (and this repo's venv,
+        # sklearn 1.9.0) give 0.5922 — same code, same data. Every other model
+        # here uses sklearn only for metric computation, which is stable, so the
+        # pin costs nothing and makes the lexical baseline reproducible.
+        "scikit-learn==1.9.0",
         "numpy>=1.26.0",
         "tqdm>=4.66.0",
         "datasets>=2.19",
@@ -97,7 +101,13 @@ flagembedding_image = _with_sources(
         "transformers>=4.51,<5",
         "FlagEmbedding",
         "accelerate>=0.30",
-        *_SKLEARN_PIN,
+        # Pinned, not floated: TfidfVectorizer's fitted vocabulary is not stable
+        # across scikit-learn versions. On an unpinned image TF-IDF scored
+        # holdout AUC 0.5828 where the published baseline (and this repo's venv,
+        # sklearn 1.9.0) give 0.5922 — same code, same data. Every other model
+        # here uses sklearn only for metric computation, which is stable, so the
+        # pin costs nothing and makes the lexical baseline reproducible.
+        "scikit-learn==1.9.0",
         "numpy>=1.26.0",
         "tqdm>=4.66.0",
     )
@@ -159,10 +169,23 @@ CONFIGS: dict[str, dict] = {
 }
 
 
+def _library_versions() -> dict:
+    """Version provenance for the libraries that can move a metric."""
+    import importlib
+
+    out = {}
+    for mod in ("sklearn", "numpy", "torch", "transformers", "sentence_transformers"):
+        try:
+            out[mod] = importlib.import_module(mod).__version__
+        except Exception:  # not installed in this image — legitimate for some
+            out[mod] = None
+    return out
+
+
 def _run_one(run_id: str, config: str, subsets: str, commit_hf_cache: bool = True) -> dict:
     from pathlib import Path
 
-    from eval_real_full.baseline_eval import library_versions, run_baseline_eval, write_metrics
+    from eval_real_full.baseline_eval import run_baseline_eval, write_metrics
 
     spec = CONFIGS[config]
     metrics = run_baseline_eval(
@@ -183,9 +206,7 @@ def _run_one(run_id: str, config: str, subsets: str, commit_hf_cache: bool = Tru
     )
     # Recorded because TF-IDF's numbers proved version-dependent (see the
     # scikit-learn pin above) — without this the discrepancy is invisible.
-    metrics["library_versions"] = library_versions(
-        ("sklearn", "numpy", "torch", "transformers", "sentence_transformers")
-    )
+    metrics["library_versions"] = _library_versions()
     write_metrics(metrics, Path("/results") / run_id / config)
     results.commit()
     # The CPU function has no HF cache mounted (TF-IDF downloads nothing), and

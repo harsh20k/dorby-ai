@@ -68,6 +68,19 @@ def query_only(user_contact_file: Mapping[str, Any], search_query: str) -> str:
     return block or profile_to_text(user_contact_file)
 
 
+def query_first(user_contact_file: Mapping[str, Any], search_query: str) -> str:
+    """Same tokens as the baseline, query moved to the front.
+
+    Isolates *position* from *quantity*: identical content to
+    ``concat_baseline``, so any difference is attention/position, not weight.
+    """
+    body = profile_to_text(user_contact_file)
+    block = query_block(search_query)
+    if not block:
+        return body
+    return f"{block}{_SEP}{body}" if body else block
+
+
 def query_repeated_front(
     user_contact_file: Mapping[str, Any],
     search_query: str,
@@ -76,9 +89,8 @@ def query_repeated_front(
     """Query repeated ``repeats`` times at the front, then the profile.
 
     Crude but direct: it raises the query's share of the token budget without
-    changing the model. ``repeats`` is a clean one-dimensional knob — 1 is
-    exactly the query moved to the front with nothing added, which is what
-    ``query_first`` uses it for.
+    changing the model. At repeats=1 this is exactly ``query_first``, which is
+    what makes the repeat count a clean one-dimensional knob.
     """
     if repeats < 1:
         raise ValueError(f"repeats must be >= 1, got {repeats}")
@@ -88,12 +100,3 @@ def query_repeated_front(
         return body
     head = _SEP.join([block] * repeats)
     return f"{head}{_SEP}{body}" if body else head
-
-
-def query_first(user_contact_file: Mapping[str, Any], search_query: str) -> str:
-    """Same tokens as the baseline, query moved to the front (``repeats=1``).
-
-    Isolates *position* from *quantity*: identical content to
-    ``concat_baseline``, so any difference is attention/position, not weight.
-    """
-    return query_repeated_front(user_contact_file, search_query, repeats=1)
