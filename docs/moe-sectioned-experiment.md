@@ -100,12 +100,17 @@ verdict's noise.
 **5. Qwen3-Embedding-8B section embeddings are worse than TF-IDF here, and the
 asymmetric-prompt fix did not change that.** 0.5433 with the correct
 `prompt_name="query"` on the ask side, 0.5378 without — both far below TF-IDF's
-0.6467, both losing to logistic regression in 4 of 5 seeds. This is genuinely
-surprising: the same model beats Voyage-4-large at the pair level (0.6595 vs
-0.6086). The working hypothesis is that a section is a short, jargon-dense
-shopping list, which is exactly the regime where lexical overlap is strong and
-dense semantics add little — consistent with the hybrid baseline fitting alpha
-around 0.95 onto the lexical channel. It has not been tested further.
+0.6467, both losing to logistic regression in 4 of 5 seeds.
+
+When this was first written it read as surprising, because Qwen3-8B was believed
+to beat Voyage-4-large at pair level (0.6595 vs 0.6086). **That claim was
+retracted on 2026-07-31** (`docs/all-200-baseline-sweep.md`): re-scored on all 200
+real pairs through the same code path, Qwen loses to Voyage-4-large on every
+metric — pair AUC 0.5529 vs 0.5726, with a below-chance hard-negative AUC of
+0.4680. So this result is not an anomaly; it is **independent corroboration from a
+different task shape**. Two unrelated measurements now agree that Qwen3-8B does
+not beat production on this data. Whatever else is true, dense Qwen3 embeddings
+are not the lever here.
 
 **6. Routing is decisive and not a seeker shortcut.** Gate entropy fell to 16-41%
 of the uniform ceiling, expert usage stayed spread (22-28%), and routing-vs-seeker
@@ -161,8 +166,21 @@ field.
 
 Next steps, in order of value:
 
-1. **Spend the holdout.** The bar was cleared under replication, which is the
-   condition the plan set. This is the one experiment that has earned it.
+1. **Do *not* rush to spend the holdout — the ground shifted underneath it.**
+   `docs/all-200-baseline-sweep.md` (2026-07-31) shows the 69-pair holdout has a
+   Spearman of **−0.029** against the all-200 ranking among the top 6 models, i.e.
+   no information at all where it matters; it only ranks broken models reliably.
+   A single 69-pair number would therefore add little to the 5-seed
+   cross-validated estimate already in hand, and could easily contradict it by
+   chance.
+
+   This leaves a genuine evaluation gap. The all-200 population is the right one
+   for *frozen* baselines, but this model **trains on 131 of those 200**, so it
+   cannot be scored there without leakage. The honest options are: report the
+   cross-validated number and say so plainly (what this doc does); or build a
+   larger held-out real population, which does not currently exist. Spending the
+   69 buys a number that is one-shot, noisy, and now known to be uninformative
+   among good models.
 2. **Ablate the interaction block.** If TF-IDF sections win on lexical overlap,
    the 32-dim interaction may be doing nothing and the 3 similarity scalars may be
    the whole story. Free to test.

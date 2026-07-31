@@ -1,5 +1,5 @@
 <meta charset="utf-8">
-<title>Sectioned MoE — the plan</title>
+<title>Sectioned MoE — the PROPOSAL (superseded by results)</title>
 <style>
   :root {
     --ink:        #14171c;
@@ -334,6 +334,18 @@
   ol.steps .st { font-weight: 650; font-size: 14.5px; display: block; margin-bottom: 3px; }
   ol.steps .sd { font-size: 14px; color: var(--ink-2); }
 
+  .superseded {
+    border: 1px solid var(--warn);
+    background: var(--warn-dim);
+    border-radius: 6px;
+    padding: 16px 18px;
+    margin-bottom: 26px;
+    font-size: 14.5px;
+    line-height: 1.55;
+    max-width: 64ch;
+  }
+  .superseded strong { color: var(--warn); }
+
   footer {
     border-top: 1px solid var(--line);
     padding-top: 22px;
@@ -351,13 +363,24 @@
 <div class="wrap">
 
 <header class="top">
-  <div class="eyebrow">dorby-ai · experiment plan · 2026-07-30</div>
+  <div class="eyebrow">dorby-ai · PROPOSAL, written before the experiment · 2026-07-30</div>
+  <div class="superseded">
+    <strong>This is the proposal, not the experiment.</strong> It was written
+    before anything was built, and it is kept unedited as a record of what was
+    predicted. The experiment has since run, and two of the central predictions
+    below turned out to be wrong — the learned attention argued for in §05 does
+    not beat the frozen pooling it was meant to generalise, and the
+    Qwen3 embeddings recommended in §07 scored <em>worse</em> than plain TF-IDF.
+    For what actually happened, see
+    <a href="moe-sectioned-findings.html">the findings page</a> and
+    <code>docs/moe-sectioned-experiment.md</code>.
+  </div>
   <h1>Explode the ask, then route on it</h1>
   <p class="standfirst">
     Our proposal said the mixture of experts should read the <em>lookingFor</em> section
-    by section. What we actually built collapses all of it into a single integer.
-    This is the plan to close that gap — and an honest account of what it can and
-    cannot buy us.
+    by section. What we had built collapsed all of it into a single integer.
+    This was the plan to close that gap — and an honest account, written in
+    advance, of what it could and could not buy us.
   </p>
 </header>
 
@@ -944,7 +967,9 @@
 </section>
 
 <footer>
-  Plan only — nothing built yet. Related:
+  <strong>Superseded.</strong> This is the pre-experiment proposal;
+  <a href="moe-sectioned-findings.html">the findings page</a> reports what the
+  runs actually produced. Related:
   <code>docs/moe-reranker-experiment.md</code> ·
   <code>docs/moe-rrf003-synthetic-training-findings.md</code> ·
   <code>docs/html/moe-reranker-review.html</code>.
