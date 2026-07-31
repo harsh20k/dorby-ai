@@ -2,8 +2,10 @@
 
 **Live URL:** http://dorby-project-story-411960113601.s3-website-us-east-1.amazonaws.com/
 
-Plain-language, chronological walkthrough of the project (July 16–30, 2026), built as a
-keynote-style slideshow. Source file: [`docs/html/project-story.html`](html/project-story.html).
+Plain-language, chronological walkthrough of the project (July 16–31, 2026), built as a
+keynote-style slideshow with light/dark mode (respects `prefers-color-scheme`, persists in
+`localStorage`). Content refreshed 2026-07-31 (Qwen retraction, all-200 canonical, experiment
+deep links). Source file: [`docs/html/project-story.html`](html/project-story.html).
 
 ## Hosting details
 
@@ -16,7 +18,7 @@ keynote-style slideshow. Source file: [`docs/html/project-story.html`](html/proj
 | Object | `index.html` (single self-contained file, no assets) |
 | Cache | `no-cache, max-age=60` so redeploys show up immediately |
 
-Cost is effectively zero — one 19 KB object plus request charges.
+Cost is effectively zero — one HTML object plus request charges.
 
 Note this is an unencrypted `http://` S3 website endpoint (the website-hosting endpoint does
 not support HTTPS). Put CloudFront in front of it if an `https://` link is ever needed.

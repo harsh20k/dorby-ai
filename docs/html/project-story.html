@@ -5,24 +5,36 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Boardy AI — The Story So Far</title>
 <style>
-  :root {
-    --bg: #ffffff;
+  :root, [data-theme="light"] {
+    --bg: #f5f5f7;
+    --surface: #ffffff;
     --ink: #1d1d1f;
-    --muted: #86868b;
-    --line: #e3e3e6;
+    --muted: #6e6e73;
+    --line: #d2d2d7;
     --accent: #0071e3;
+    --accent-soft: rgba(0, 113, 227, 0.12);
     --rail: #d2d2d7;
-    --sidebar-w: 300px;
+    --link-bg: rgba(0, 113, 227, 0.08);
+    --link-border: rgba(0, 113, 227, 0.18);
+    --toggle-bg: rgba(0, 0, 0, 0.06);
+    --toggle-hover: rgba(0, 0, 0, 0.1);
+    --nav-w: 220px;
+    color-scheme: light;
   }
-  @media (prefers-color-scheme: dark) {
-    :root {
-      --bg: #000000;
-      --ink: #f5f5f7;
-      --muted: #86868b;
-      --line: #1f1f22;
-      --accent: #2997ff;
-      --rail: #2a2a2e;
-    }
+  [data-theme="dark"] {
+    --bg: #000000;
+    --surface: #0d0d0f;
+    --ink: #f5f5f7;
+    --muted: #86868b;
+    --line: #2a2a2e;
+    --accent: #2997ff;
+    --accent-soft: rgba(41, 151, 255, 0.16);
+    --rail: #3a3a3e;
+    --link-bg: rgba(41, 151, 255, 0.12);
+    --link-border: rgba(41, 151, 255, 0.28);
+    --toggle-bg: rgba(255, 255, 255, 0.08);
+    --toggle-hover: rgba(255, 255, 255, 0.14);
+    color-scheme: dark;
   }
 
   * { box-sizing: border-box; }
@@ -31,63 +43,97 @@
     margin: 0;
     background: var(--bg);
     color: var(--ink);
-    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", Helvetica, Arial, sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Segoe UI", Helvetica, Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
     overflow: hidden;
+    transition: background .25s ease, color .25s ease;
   }
 
-  /* ---------- progress ---------- */
   #progress {
     position: fixed; top: 0; left: 0; height: 2px; width: 0%;
     background: var(--accent); z-index: 50; transition: width .25s ease-out;
   }
 
-  /* ---------- left timeline ---------- */
+  /* theme toggle */
+  .theme-toggle {
+    position: fixed; top: 22px; left: 28px; z-index: 60;
+    width: 36px; height: 36px; border: 0; border-radius: 50%;
+    background: var(--toggle-bg); color: var(--ink);
+    display: inline-flex; align-items: center; justify-content: center;
+    cursor: pointer; transition: background .2s ease, transform .15s ease;
+    backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
+  }
+  .theme-toggle:hover { background: var(--toggle-hover); }
+  .theme-toggle:active { transform: scale(0.94); }
+  .theme-toggle svg { width: 18px; height: 18px; display: block; }
+  .theme-toggle .icon-sun { display: none; }
+  .theme-toggle .icon-moon { display: block; }
+  [data-theme="dark"] .theme-toggle .icon-sun { display: block; }
+  [data-theme="dark"] .theme-toggle .icon-moon { display: none; }
+
   aside {
-    position: fixed; top: 0; left: 0; bottom: 0; width: var(--sidebar-w);
-    padding: 48px 0 48px 44px;
-    border-right: 1px solid var(--line);
+    position: fixed; top: 0; right: 0; bottom: 0;
+    width: var(--nav-w);
+    padding: 72px 40px 48px 0;
+    display: flex; flex-direction: column; align-items: flex-end;
+    justify-content: center;
+    background: transparent;
+    border: 0;
     overflow-y: auto; z-index: 40;
     scrollbar-width: none;
+    pointer-events: none;
   }
   aside::-webkit-scrollbar { display: none; }
-  .brand {
-    font-size: 13px; font-weight: 600; letter-spacing: -.01em;
-    margin-bottom: 4px;
-  }
-  .brand-sub {
-    font-size: 12px; color: var(--muted); margin-bottom: 34px; letter-spacing: .01em;
-  }
-  nav { position: relative; padding-left: 20px; }
-  nav::before {
-    content: ""; position: absolute; left: 3px; top: 8px; bottom: 8px;
-    width: 1px; background: var(--rail);
+  .brand, .brand-sub { display: none; }
+  nav {
+    display: flex; flex-direction: column; align-items: flex-end;
+    gap: 2px;
+    pointer-events: auto;
   }
   .nav-item {
-    display: block; position: relative; width: 100%; text-align: left;
-    background: none; border: 0; padding: 9px 12px 9px 0; cursor: pointer;
-    font-family: inherit; font-size: 13px; line-height: 1.3;
-    color: var(--muted); transition: color .2s ease;
+    display: inline-block; position: relative;
+    background: none; border: 0; padding: 7px 0 6px;
+    margin: 0; cursor: pointer;
+    font-family: inherit; font-size: 13px; font-weight: 400;
+    line-height: 1.25; letter-spacing: -.01em;
+    color: var(--muted); text-align: right;
+    transition: color .22s cubic-bezier(.25, .1, .25, 1),
+                opacity .22s cubic-bezier(.25, .1, .25, 1),
+                transform .22s cubic-bezier(.25, .1, .25, 1);
   }
-  .nav-item::before {
-    content: ""; position: absolute; left: -21px; top: 14px;
-    width: 7px; height: 7px; border-radius: 50%;
-    background: var(--rail); transition: all .25s ease;
+  .nav-item::after {
+    content: "";
+    position: absolute; left: 0; right: 0; bottom: 3px;
+    height: 1px;
+    background: currentColor;
+    transform: scaleX(0);
+    transform-origin: right center;
+    transition: transform .28s cubic-bezier(.25, .1, .25, 1),
+                opacity .22s ease;
+    opacity: 0;
   }
-  .nav-item:hover { color: var(--ink); }
-  .nav-item.active { color: var(--ink); font-weight: 600; }
-  .nav-item.active::before {
-    background: var(--accent); transform: scale(1.35);
-    box-shadow: 0 0 0 4px color-mix(in srgb, var(--accent) 15%, transparent);
+  .nav-item:hover {
+    color: var(--ink);
+    transform: translateX(-2px);
+  }
+  .nav-item:hover::after {
+    transform: scaleX(1);
+    opacity: .45;
+  }
+  .nav-item:active { transform: translateX(-1px) scale(0.98); }
+  .nav-item.active {
+    color: var(--ink);
+    font-weight: 500;
+  }
+  .nav-item.active::after {
+    transform: scaleX(1);
+    opacity: 1;
   }
   .nav-date {
-    display: block; font-size: 11px; font-weight: 400;
-    color: var(--muted); letter-spacing: .02em; margin-bottom: 1px;
+    display: none;
   }
 
-  /* ---------- deck ---------- */
   .deck {
-    margin-left: var(--sidebar-w);
     height: 100vh; overflow-y: scroll;
     scroll-snap-type: y mandatory; scroll-behavior: smooth;
     scrollbar-width: none;
@@ -98,6 +144,7 @@
     min-height: 100vh; scroll-snap-align: start; scroll-snap-stop: always;
     display: flex; flex-direction: column; justify-content: center;
     padding: 96px clamp(40px, 7vw, 120px);
+    padding-right: calc(var(--nav-w) + 24px);
   }
   .inner { max-width: 900px; }
 
@@ -119,12 +166,12 @@
   }
   .lede {
     font-size: clamp(19px, 1.9vw, 27px); font-weight: 400; line-height: 1.45;
-    color: var(--muted); margin: 28px 0 0; max-width: 30ch;
+    color: var(--muted); margin: 28px 0 0; max-width: 34ch;
     letter-spacing: -.01em;
   }
   .decision {
     margin-top: 44px; padding-top: 22px; border-top: 1px solid var(--line);
-    max-width: 34ch;
+    max-width: 36ch;
   }
   .decision-label {
     font-size: 11px; font-weight: 600; letter-spacing: .1em; text-transform: uppercase;
@@ -135,13 +182,29 @@
     letter-spacing: -.02em; line-height: 1.3; margin: 0;
   }
 
-  /* opening + closing slides */
+  .dig {
+    margin-top: 28px; display: flex; flex-wrap: wrap; gap: 10px;
+  }
+  .dig a {
+    display: inline-flex; align-items: center; gap: 6px;
+    padding: 8px 14px; border-radius: 980px;
+    background: var(--link-bg); border: 1px solid var(--link-border);
+    color: var(--accent); text-decoration: none;
+    font-size: 13px; font-weight: 500; letter-spacing: -.01em;
+    transition: background .2s ease, transform .15s ease;
+  }
+  .dig a:hover { background: var(--accent-soft); }
+  .dig a:active { transform: scale(0.98); }
+  .dig a::after {
+    content: "↗"; font-size: 11px; opacity: .7;
+  }
+
   .slide--title h1 { font-size: clamp(46px, 7.4vw, 110px); }
-  .slide--title .lede { max-width: 26ch; margin-top: 32px; }
+  .slide--title .lede { max-width: 28ch; margin-top: 32px; }
   .dateline {
     margin-top: 56px; font-size: 14px; color: var(--muted); letter-spacing: .01em;
   }
-  .finals { margin-top: 40px; display: grid; gap: 26px; max-width: 40ch; }
+  .finals { margin-top: 40px; display: grid; gap: 26px; max-width: 42ch; }
   .final-item { padding-left: 20px; border-left: 2px solid var(--accent); }
   .final-item.dim { border-left-color: var(--rail); }
   .final-head {
@@ -149,21 +212,20 @@
   }
   .final-sub { font-size: 16px; color: var(--muted); margin-top: 6px; line-height: 1.45; }
 
-  /* entrance animation */
   .anim { opacity: 0; transform: translateY(18px); transition: opacity .7s ease, transform .7s cubic-bezier(.2,.7,.3,1); }
   .slide.in .anim { opacity: 1; transform: none; }
   .slide.in .anim:nth-child(2) { transition-delay: .06s; }
   .slide.in .anim:nth-child(3) { transition-delay: .12s; }
   .slide.in .anim:nth-child(4) { transition-delay: .18s; }
+  .slide.in .anim:nth-child(5) { transition-delay: .24s; }
 
-  /* scroll hint */
   .hint {
-    position: fixed; bottom: 30px; right: 40px; z-index: 45;
+    position: fixed; bottom: 30px; left: 40px; z-index: 45;
     font-size: 12px; color: var(--muted); letter-spacing: .02em;
     display: flex; align-items: center; gap: 8px;
     transition: opacity .4s ease;
   }
-  .hint.hidden { opacity: 0; }
+  .hint.hidden { opacity: 0; pointer-events: none; }
   .key {
     display: inline-flex; align-items: center; justify-content: center;
     width: 20px; height: 20px; border: 1px solid var(--line); border-radius: 5px;
@@ -171,17 +233,43 @@
   }
 
   @media (max-width: 880px) {
-    :root { --sidebar-w: 0px; }
+    :root, [data-theme="light"], [data-theme="dark"] { --nav-w: 0px; }
     aside { display: none; }
-    .deck { margin-left: 0; }
     .slide { padding: 84px 28px; }
     .hint { display: none; }
+    .theme-toggle { top: 14px; left: 14px; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .anim { opacity: 1; transform: none; transition: none; }
+    * { scroll-behavior: auto !important; }
   }
 </style>
+<script>
+  (function () {
+    var key = 'dorby-story-theme';
+    var saved = null;
+    try { saved = localStorage.getItem(key); } catch (e) {}
+    var theme = (saved === 'light' || saved === 'dark')
+      ? saved
+      : (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+    document.documentElement.setAttribute('data-theme', theme);
+  })();
+</script>
 </head>
 <body>
 
 <div id="progress"></div>
+
+<button class="theme-toggle" id="themeToggle" type="button" aria-label="Toggle light and dark mode" title="Toggle appearance">
+  <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+    <path d="M21 14.5A8.5 8.5 0 0 1 9.5 3a7 7 0 1 0 11.5 11.5z"/>
+  </svg>
+  <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+    <circle cx="12" cy="12" r="4.2"/>
+    <path d="M12 2.5v2.2M12 19.3v2.2M2.5 12h2.2M19.3 12h2.2M5.1 5.1l1.6 1.6M17.3 17.3l1.6 1.6M18.9 5.1l-1.6 1.6M6.7 17.3l-1.6 1.6"/>
+  </svg>
+</button>
 
 <aside>
   <div class="brand">Boardy AI · Intro Matching</div>
@@ -195,208 +283,234 @@
     <div class="inner">
       <div class="eyebrow anim">Recommender Systems · Boardy AI</div>
       <h1 class="anim">Can we tell which introductions people will&nbsp;actually accept?</h1>
-      <p class="lede anim">Two weeks of work, in the order it happened.</p>
-      <div class="dateline anim">July 16 — July 30, 2026</div>
+      <p class="lede anim">The findings that mattered, in the order they changed what we believed.</p>
+      <div class="dateline anim">July 16 — July 31, 2026</div>
     </div>
   </section>
 
-  <section class="slide" data-nav="The 200 introductions" data-date="Jul 16">
+  <section class="slide" data-nav="The real question" data-date="Jul 16">
     <div class="inner">
-      <div class="eyebrow anim"><span class="num">01</span> &nbsp;·&nbsp; July 16</div>
-      <h2 class="anim">We started with two hundred real introductions.</h2>
-      <p class="lede anim">A hundred people said yes. A hundred said no. Every single one had already been recommended by Boardy's live system.</p>
+      <div class="eyebrow anim"><span class="num">01</span> &nbsp;·&nbsp; Framing</div>
+      <h2 class="anim">Every pair was already recommended. The label is what humans did next.</h2>
+      <p class="lede anim">A hundred accepted. A hundred declined. The negatives are production’s own false positives — plausible intros people still walked away from. And whatever we build must answer in under 100&nbsp;ms.</p>
       <div class="decision anim">
-        <span class="decision-label">The decision</span>
-        <p class="decision-text">Learn from what the humans did, not from what the system suggested.</p>
+        <span class="decision-label">The task</span>
+        <p class="decision-text">Not topical relevance. Residual fit: will these two actually connect.</p>
       </div>
     </div>
   </section>
 
-  <section class="slide" data-nav="Measuring the starting point" data-date="Jul 17">
+  <section class="slide" data-nav="Keywords hit a wall" data-date="Jul 17">
     <div class="inner">
-      <div class="eyebrow anim"><span class="num">02</span> &nbsp;·&nbsp; July 17</div>
-      <h2 class="anim">First we measured what existing models could already do.</h2>
-      <p class="lede anim">General-purpose language models were barely better than guessing. Boardy's own family of models did meaningfully better.</p>
+      <div class="eyebrow anim"><span class="num">02</span> &nbsp;·&nbsp; Lexical floor</div>
+      <h2 class="anim">Plain keyword overlap already gets you about halfway — then stalls.</h2>
+      <p class="lede anim">Query↔match lexical overlap looks almost the same for accepts and declines. TF-IDF cosine lands near ~0.59 and plateaus, because both classes already cleared production’s relevance bar.</p>
       <div class="decision anim">
-        <span class="decision-label">The decision</span>
-        <p class="decision-text">Nothing gets called an improvement until it beats these numbers.</p>
+        <span class="decision-label">What that means</span>
+        <p class="decision-text">If a model only measures topic overlap, it is solving yesterday’s problem.</p>
+      </div>
+      <div class="dig anim">
+        <a href="https://claude.ai/code/artifact/95beeed4-9a3d-4a79-906d-cf2d24d0457f" target="_blank" rel="noopener">Holdout baselines</a>
+        <a href="./baseline-results-holdout-browser.html" target="_blank" rel="noopener">Local table</a>
       </div>
     </div>
   </section>
 
-  <section class="slide" data-nav="Making our own data" data-date="Jul 18">
+  <section class="slide" data-nav="Frozen baselines" data-date="Jul 17">
     <div class="inner">
-      <div class="eyebrow anim"><span class="num">03</span> &nbsp;·&nbsp; July 18</div>
-      <h2 class="anim">Two hundred examples is not much to learn from.</h2>
-      <p class="lede anim">So we built a pipeline that writes realistic new people and new introductions, and left five hundred of them generating overnight.</p>
+      <div class="eyebrow anim"><span class="num">03</span> &nbsp;·&nbsp; Baselines</div>
+      <h2 class="anim">First we measured what already existed.</h2>
+      <p class="lede anim">Frozen BERT was near chance. Voyage-4-nano did better. Voyage-4-large — Boardy’s production embedder — set the bar. Nothing gets called a win until it beats these, under the latency budget.</p>
       <div class="decision anim">
         <span class="decision-label">The decision</span>
-        <p class="decision-text">We cannot buy more real outcomes, so we will manufacture practice ones.</p>
+        <p class="decision-text">Accuracy alone is not enough. Serving must stay under 100&nbsp;ms.</p>
+      </div>
+      <div class="dig anim">
+        <a href="https://claude.ai/code/artifact/95beeed4-9a3d-4a79-906d-cf2d24d0457f" target="_blank" rel="noopener">Matched holdout browser</a>
+        <a href="./holdout-embedding-space-3d.html" target="_blank" rel="noopener">Embedding space</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="slide" data-nav="The search query" data-date="Jul 18">
+    <div class="inner">
+      <div class="eyebrow anim"><span class="num">04</span> &nbsp;·&nbsp; Query ablation</div>
+      <h2 class="anim">Remove the search query and Voyage gets worse.</h2>
+      <p class="lede anim">BERT barely noticed — it wasn’t using the ask anyway. Both Voyage models dropped on retrieval. The query is a small fraction of the seeker text, but it carries the ask that the biography dilutes.</p>
+      <div class="decision anim">
+        <span class="decision-label">Later confirmation</span>
+        <p class="decision-text">Encoding query and profile separately, then blending them, lifted recall without any training.</p>
+      </div>
+      <div class="dig anim">
+        <a href="https://claude.ai/code/artifact/298450c8-6d05-4ad3-8339-1741e63325f5" target="_blank" rel="noopener">Query-weighted encoding</a>
+        <a href="./query-weighted-encoding.html" target="_blank" rel="noopener">Local writeup</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="slide" data-nav="Making practice data" data-date="Jul 18">
+    <div class="inner">
+      <div class="eyebrow anim"><span class="num">05</span> &nbsp;·&nbsp; Synthetic generation</div>
+      <h2 class="anim">Two hundred real outcomes is not much to learn from.</h2>
+      <p class="lede anim">So we built a pipeline that invents people and labeled intros overnight — hundreds of practice pairs, reviewed lightly, then promoted for training.</p>
+      <div class="decision anim">
+        <span class="decision-label">The bet</span>
+        <p class="decision-text">If we cannot buy more human outcomes, manufacture practice ones.</p>
       </div>
     </div>
   </section>
 
   <section class="slide" data-nav="The model that lied" data-date="Jul 19">
     <div class="inner">
-      <div class="eyebrow anim"><span class="num">04</span> &nbsp;·&nbsp; July 19</div>
-      <h2 class="anim">The first trained model looked brilliant. It wasn't.</h2>
-      <p class="lede anim">Near-perfect on the data we invented. Worse than a coin flip on the real cases that actually matter.</p>
+      <div class="eyebrow anim"><span class="num">06</span> &nbsp;·&nbsp; LoRA run_001</div>
+      <h2 class="anim">The first fine-tune looked brilliant. It wasn’t.</h2>
+      <p class="lede anim">Train-dev pair AUC near 0.99. On the real holdout: ~0.58 overall, and hard-negative AUC below chance. Worse than a coin flip on the cases production actually gets wrong.</p>
       <div class="decision anim">
         <span class="decision-label">The decision</span>
-        <p class="decision-text">Stop everything and find out what it really learned.</p>
+        <p class="decision-text">Stop shipping numbers. Find what it really learned.</p>
       </div>
     </div>
   </section>
 
-  <section class="slide" data-nav="It read our handwriting" data-date="Jul 19">
+  <section class="slide" data-nav="Label leakage" data-date="Jul 19">
     <div class="inner">
-      <div class="eyebrow anim"><span class="num">05</span> &nbsp;·&nbsp; July 19, later</div>
-      <h2 class="anim">It had learned our writing style, not human behaviour.</h2>
-      <p class="lede anim">Our generator described good matches and bad matches differently. The model simply spotted the difference in the prose.</p>
+      <div class="eyebrow anim"><span class="num">07</span> &nbsp;·&nbsp; Root cause</div>
+      <h2 class="anim">It read our handwriting, not human behaviour.</h2>
+      <p class="lede anim">A classifier shown only the candidate’s profile guessed the synthetic label at 99.2% accuracy — and chance on real data. Arm&nbsp;A, trained on real pairs only, beat the synth-trained run with a fifth of the data.</p>
       <div class="decision anim">
         <span class="decision-label">The decision</span>
-        <p class="decision-text">Throw the batch away. A model trained only on real pairs beat it using a fifth of the data.</p>
+        <p class="decision-text">Quarantine the batch. Never let the answer touch the text again.</p>
       </div>
     </div>
   </section>
 
-  <section class="slide" data-nav="A safer way to generate" data-date="Jul 20">
+  <section class="slide" data-nav="Profile first" data-date="Jul 20">
     <div class="inner">
-      <div class="eyebrow anim"><span class="num">06</span> &nbsp;·&nbsp; July 20</div>
-      <h2 class="anim">The flaw was that the writer knew the answer in advance.</h2>
-      <p class="lede anim">So we split the job in two: invent the people first, decide whether they are a good match afterwards.</p>
+      <div class="eyebrow anim"><span class="num">08</span> &nbsp;·&nbsp; Safer generation</div>
+      <h2 class="anim">Invent the people first. Decide the match later.</h2>
+      <p class="lede anim">Unlabeled profiles from Ollama and Bedrock — no pos/neg attached at write time. Pairing and judging became a separate step, so the generator could not smuggle the answer into the prose.</p>
       <div class="decision anim">
-        <span class="decision-label">The decision</span>
-        <p class="decision-text">Never let the answer touch the text.</p>
+        <span class="decision-label">The invariant</span>
+        <p class="decision-text">Never let the label author the biography.</p>
+      </div>
+      <div class="dig anim">
+        <a href="https://claude.ai/code/artifact/642d0a82-7784-4843-b0ad-5686cf7db24c" target="_blank" rel="noopener">Pairs comparison graph</a>
+        <a href="./pairs-comparison-graph-named.html" target="_blank" rel="noopener">Local graph</a>
       </div>
     </div>
   </section>
 
-  <section class="slide" data-nav="Looking for a network" data-date="Jul 21">
+  <section class="slide" data-nav="An LLM as judge" data-date="Jul 25">
     <div class="inner">
-      <div class="eyebrow anim"><span class="num">07</span> &nbsp;·&nbsp; July 21</div>
-      <h2 class="anim">We asked whether these people form a network we could learn from.</h2>
-      <p class="lede anim">They mostly don't. Almost everybody appears exactly once, so there is very little structure to exploit.</p>
+      <div class="eyebrow anim"><span class="num">09</span> &nbsp;·&nbsp; LLM judge</div>
+      <h2 class="anim">Ask a model directly — and never give it the search query.</h2>
+      <p class="lede anim">Gemini flash-lite beat Voyage-large on accept/decline, and uniquely did better on hard negatives than easy ones. That inversion is the tell: it is not scoring keyword overlap. Too slow to serve. Valuable as a labeler and distillation target.</p>
       <div class="decision anim">
-        <span class="decision-label">The decision</span>
-        <p class="decision-text">Park the graph-based ideas until there is an actual graph.</p>
+        <span class="decision-label">Constraint</span>
+        <p class="decision-text">Per-candidate LLM calls are out under 100&nbsp;ms. Keep the signal; move it into a bi-encoder.</p>
+      </div>
+      <div class="dig anim">
+        <a href="https://claude.ai/code/artifact/12f8f93b-8fc4-41e5-bc13-b05ce8ab45fa" target="_blank" rel="noopener">Judge vs baselines</a>
+        <a href="./llm-judge-comparison.html" target="_blank" rel="noopener">Local comparison</a>
+        <a href="https://claude.ai/code/artifact/1e089702-6f90-4676-98e4-6c7e69813119" target="_blank" rel="noopener">Prompt evolution (lost)</a>
       </div>
     </div>
   </section>
 
-  <section class="slide" data-nav="A note from the professor" data-date="Jul 22">
+  <section class="slide" data-nav="Open-weight sweep" data-date="Jul 24">
     <div class="inner">
-      <div class="eyebrow anim"><span class="num">08</span> &nbsp;·&nbsp; July 22</div>
-      <h2 class="anim">A knowledge-graph approach would need a different kind of data.</h2>
-      <p class="lede anim">Not more examples — thousands of carefully edited variations of the same people, to show the model what changes an outcome.</p>
+      <div class="eyebrow anim"><span class="num">10</span> &nbsp;·&nbsp; Embeddings</div>
+      <h2 class="anim">A free model seemed to beat production. Then we checked on all&nbsp;200.</h2>
+      <p class="lede anim">On the 69-pair holdout, Qwen3-Embedding-8B looked like a breakthrough. On the full 200 real pairs the claim reversed — Voyage still wins overall. The holdout ranks broken models well and strong ones almost at random.</p>
       <div class="decision anim">
-        <span class="decision-label">The decision</span>
-        <p class="decision-text">Understood as a research direction, not a next step.</p>
+        <span class="decision-label">Retracted · Jul 31</span>
+        <p class="decision-text">All-200 is the canonical leaderboard. No open-weight model beats Voyage overall; BGE-en-ICL is closest on retrieval.</p>
+      </div>
+      <div class="dig anim">
+        <a href="https://claude.ai/code/artifact/6e59f7a8-ef20-4c6e-839a-9922db7f6be7" target="_blank" rel="noopener">All-200 baseline sweep</a>
+        <a href="./all-200-baseline-sweep.html" target="_blank" rel="noopener">Local writeup</a>
+        <a href="https://claude.ai/code/artifact/d807fdd2-afe5-40ad-bafa-04423b9ccf87" target="_blank" rel="noopener">200-pair eval</a>
       </div>
     </div>
   </section>
 
-  <section class="slide" data-nav="People ask for many things" data-date="Jul 23">
+  <section class="slide" data-nav="RRF + judge labeling" data-date="Jul 26">
     <div class="inner">
-      <div class="eyebrow anim"><span class="num">09</span> &nbsp;·&nbsp; July 23</div>
-      <h2 class="anim">One person asks for funding, hiring and advice in the same breath.</h2>
-      <p class="lede anim">Blending all of it into a single summary quietly loses all three requests at once.</p>
+      <div class="eyebrow anim"><span class="num">11</span> &nbsp;·&nbsp; RRF pairing</div>
+      <h2 class="anim">Find with one family. Judge with another.</h2>
+      <p class="lede anim">Dense + BM25 fused with RRF, then an LLM judge — so retrieval never grades its own ranking. Leakage probes dropped from catastrophic to merely cautious. The live weakness: some seekers are always rejected, so seeker identity alone predicts labels.</p>
       <div class="decision anim">
-        <span class="decision-label">The decision</span>
-        <p class="decision-text">Read each request separately, then match each one on its own.</p>
+        <span class="decision-label">How to train</span>
+        <p class="decision-text">Within a seeker — comparisons that cancel base rate — not a plain pairwise classifier.</p>
+      </div>
+      <div class="dig anim">
+        <a href="https://claude.ai/code/artifact/3511253c-fb74-429e-820c-d30dbd8c4816" target="_blank" rel="noopener">Triplet fine-tune</a>
+        <a href="https://claude.ai/code/artifact/6d2ea3d7-0f90-42b6-ac2e-ac807dcaedb1" target="_blank" rel="noopener">Big-batch follow-up</a>
+        <a href="https://claude.ai/code/artifact/4ab4000d-f7a6-4477-8a2e-3b578da25cdc" target="_blank" rel="noopener">Ablation verdict</a>
       </div>
     </div>
   </section>
 
-  <section class="slide" data-nav="What we are really predicting" data-date="Jul 24">
+  <section class="slide" data-nav="Teach by comparison" data-date="Jul 28">
     <div class="inner">
-      <div class="eyebrow anim"><span class="num">10</span> &nbsp;·&nbsp; July 24</div>
-      <h2 class="anim">We finally wrote down the real question.</h2>
-      <p class="lede anim">Not "are these two relevant to each other" — the live system already decided that. It is whether two plausible strangers will genuinely connect.</p>
+      <div class="eyebrow anim"><span class="num">12</span> &nbsp;·&nbsp; Training recipe</div>
+      <h2 class="anim">One person, one good match, one bad match — many at once.</h2>
+      <p class="lede anim">Triplet / contrastive training with a real corpus for checkpoint selection produced the best MRR in the project. Sharpening the loss to chase recall@1 backfired. Micro-batch size moved retrieval; an extra negative often hurt.</p>
       <div class="decision anim">
-        <span class="decision-label">The turning point</span>
-        <p class="decision-text">And a free, open model beat Boardy's production model at answering it.</p>
+        <span class="decision-label">What held</span>
+        <p class="decision-text">Comparison learning under the latency budget beats isolated pair labels.</p>
+      </div>
+      <div class="dig anim">
+        <a href="https://claude.ai/code/artifact/6caec2cf-5434-462e-a29a-a55dd13018f1" target="_blank" rel="noopener">Top-1 optimised</a>
+        <a href="https://claude.ai/code/artifact/f9283fec-b9dd-46f1-846f-9280523feb18" target="_blank" rel="noopener">Qwen big-batch</a>
+        <a href="./twotower-top1-optimised.html" target="_blank" rel="noopener">Local writeup</a>
       </div>
     </div>
   </section>
 
-  <section class="slide" data-nav="Rebuilding data generation" data-date="Jul 25">
+  <section class="slide" data-nav="Synthetic labels still fail" data-date="Jul 29">
     <div class="inner">
-      <div class="eyebrow anim"><span class="num">11</span> &nbsp;·&nbsp; July 25</div>
-      <h2 class="anim">We rebuilt data generation so nothing marks its own homework.</h2>
-      <p class="lede anim">One system shortlists candidates. A completely different one decides yes or no. They never share a model or a method.</p>
+      <div class="eyebrow anim"><span class="num">13</span> &nbsp;·&nbsp; Honest status</div>
+      <h2 class="anim">Safer generation fixed the handwriting leak. It did not fix the transfer gap.</h2>
+      <p class="lede anim">Models trained on judge-labeled synthetic pairs still struggle to move real holdout numbers. Synthetic vocabulary can transfer; synthetic labels often teach the teacher. Scoring each lookingFor ask separately helped — the clever mixer less so.</p>
       <div class="decision anim">
-        <span class="decision-label">The decision</span>
-        <p class="decision-text">Keep the finder and the judge strictly apart.</p>
+        <span class="decision-label">Still open</span>
+        <p class="decision-text">Arm&nbsp;C-scale usable synth, distillation of the judge, and a real latency benchmark.</p>
       </div>
-    </div>
-  </section>
-
-  <section class="slide" data-nav="Scaling it up" data-date="Jul 26">
-    <div class="inner">
-      <div class="eyebrow anim"><span class="num">12</span> &nbsp;·&nbsp; July 26</div>
-      <h2 class="anim">A thousand invented people. Twenty-six hundred judgements.</h2>
-      <p class="lede anim">About six dollars of compute — and kept in its own folder, never mixed into the real data.</p>
-      <div class="decision anim">
-        <span class="decision-label">The decision</span>
-        <p class="decision-text">Scale the practice data, but keep it quarantined from the truth.</p>
-      </div>
-    </div>
-  </section>
-
-  <section class="slide" data-nav="Telling the story" data-date="Jul 27">
-    <div class="inner">
-      <div class="eyebrow anim"><span class="num">13</span> &nbsp;·&nbsp; July 27</div>
-      <h2 class="anim">We turned the work into a proposal rather than a report.</h2>
-      <p class="lede anim">Less about everything we tried, more about what should be built next and why.</p>
-      <div class="decision anim">
-        <span class="decision-label">The decision</span>
-        <p class="decision-text">Lead with the recommendation, keep the experiments as evidence.</p>
-      </div>
-    </div>
-  </section>
-
-  <section class="slide" data-nav="The recipe that worked" data-date="Jul 28">
-    <div class="inner">
-      <div class="eyebrow anim"><span class="num">14</span> &nbsp;·&nbsp; July 28</div>
-      <h2 class="anim">Teach by comparison, and show more comparisons at once.</h2>
-      <p class="lede anim">One person, one good match, one bad match, many at a time. That finally beat the production model. The mixture-of-experts idea did not — it learned our judge's opinions instead of real human choices.</p>
-      <div class="decision anim">
-        <span class="decision-label">The decision</span>
-        <p class="decision-text">Train on comparisons, not on isolated pairs.</p>
-      </div>
-    </div>
-  </section>
-
-  <section class="slide" data-nav="Checking the wins were real" data-date="Jul 29">
-    <div class="inner">
-      <div class="eyebrow anim"><span class="num">15</span> &nbsp;·&nbsp; July 29</div>
-      <h2 class="anim">Then we checked whether the wins were real.</h2>
-      <p class="lede anim">Scored against all two hundred pairs instead of the small set held back, some gains shrank into noise. What held up was performance on the hard cases.</p>
-      <div class="decision anim">
-        <span class="decision-label">The decision</span>
-        <p class="decision-text">From now on, only the hard cases count — they are the ones production gets wrong.</p>
+      <div class="dig anim">
+        <a href="https://claude.ai/code/artifact/9f8af37b-d294-43db-bf14-229df33a48d2" target="_blank" rel="noopener">MoE on synth labels</a>
+        <a href="https://claude.ai/code/artifact/c0db4c11-4998-4a11-ba67-b31039618a97" target="_blank" rel="noopener">Sectioned MoE</a>
+        <a href="https://claude.ai/code/artifact/3ec8c0da-9ba1-4de9-b52d-b057507b6163" target="_blank" rel="noopener">lookingFor sectioning</a>
       </div>
     </div>
   </section>
 
   <section class="slide slide--title" data-nav="Where it stands" data-date="Today">
     <div class="inner">
-      <div class="eyebrow anim">Where it stands</div>
-      <h2 class="anim">Two things proven. One still open.</h2>
+      <div class="eyebrow anim">Where it stands · July 31</div>
+      <h2 class="anim">What we can say out loud.</h2>
       <div class="finals anim">
         <div class="final-item">
-          <div class="final-head">A free, open model beats the production one.</div>
-          <div class="final-sub">On the question that matters: will these two people actually connect.</div>
+          <div class="final-head">The task is residual accept/decline among production’s own recommendations.</div>
+          <div class="final-sub">Hard negatives are the whole population. Keywords alone will never finish the job.</div>
         </div>
         <div class="final-item">
-          <div class="final-head">Teaching by comparison works.</div>
-          <div class="final-sub">And it runs fast enough to serve, which the accurate-but-slow options do not.</div>
+          <div class="final-head">Voyage-4-large still leads overall on all 200. The Qwen holdout win is retracted.</div>
+          <div class="final-sub">Fine-tunes can lead retrieval (MRR). The LLM judge leads hard-neg discrimination — offline only.</div>
+        </div>
+        <div class="final-item">
+          <div class="final-head">Two-tower + comparison training fits the &lt;100&nbsp;ms budget.</div>
+          <div class="final-sub">Adapters merge free. Per-candidate LLMs and cross-encoders do not.</div>
         </div>
         <div class="final-item dim">
-          <div class="final-head">Invented data still doesn't teach real outcomes.</div>
-          <div class="final-sub">It teaches whichever model wrote the labels. That is the thread left to pull.</div>
+          <div class="final-head">Usable synthetic data is still the open thread.</div>
+          <div class="final-sub">Leakage is fixed by construction. Teaching real outcomes from judge labels is not.</div>
         </div>
+      </div>
+      <div class="dig anim">
+        <a href="https://claude.ai/code/artifact/6e59f7a8-ef20-4c6e-839a-9922db7f6be7" target="_blank" rel="noopener">Canonical all-200 sweep</a>
+        <a href="https://claude.ai/code/artifact/5aed8e2e-a4e4-4c2d-adbc-500c307f855a" target="_blank" rel="noopener">Framing proposal</a>
+        <a href="https://claude.ai/code/artifact/af0a622e-ba61-488f-b999-cf555f61d2ac" target="_blank" rel="noopener">Knowledge graph probe</a>
       </div>
     </div>
   </section>
@@ -411,6 +525,8 @@
   var nav = document.getElementById('nav');
   var progress = document.getElementById('progress');
   var hint = document.getElementById('hint');
+  var themeToggle = document.getElementById('themeToggle');
+  var themeKey = 'dorby-story-theme';
 
   slides.forEach(function (slide, i) {
     var btn = document.createElement('button');
@@ -443,6 +559,10 @@
   slides.forEach(function (s) { observer.observe(s); });
 
   document.addEventListener('keydown', function (e) {
+    var tag = (e.target && e.target.tagName) || '';
+    if (tag === 'INPUT' || tag === 'TEXTAREA' || tag === 'BUTTON' && e.key === ' ') {
+      if (tag === 'BUTTON' && e.key === ' ' && e.target === themeToggle) return;
+    }
     if (e.key === 'ArrowDown' || e.key === 'ArrowRight' || e.key === 'PageDown' || e.key === ' ') {
       e.preventDefault(); goTo(current + 1);
     } else if (e.key === 'ArrowUp' || e.key === 'ArrowLeft' || e.key === 'PageUp') {
@@ -450,6 +570,29 @@
     } else if (e.key === 'Home') { e.preventDefault(); goTo(0); }
     else if (e.key === 'End') { e.preventDefault(); goTo(slides.length - 1); }
   });
+
+  function setTheme(theme) {
+    document.documentElement.setAttribute('data-theme', theme);
+    try { localStorage.setItem(themeKey, theme); } catch (e) {}
+    themeToggle.setAttribute('aria-label', theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode');
+  }
+
+  themeToggle.addEventListener('click', function (e) {
+    e.stopPropagation();
+    var next = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+    setTheme(next);
+  });
+
+  // Follow OS only when the user has not chosen explicitly
+  try {
+    if (!localStorage.getItem(themeKey)) {
+      window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function (e) {
+        if (!localStorage.getItem(themeKey)) setTheme(e.matches ? 'dark' : 'light');
+      });
+    }
+  } catch (e) {}
+
+  setTheme(document.documentElement.getAttribute('data-theme') || 'light');
 </script>
 </body>
 </html>
