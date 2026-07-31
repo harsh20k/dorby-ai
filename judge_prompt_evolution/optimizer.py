@@ -72,12 +72,47 @@ def _call_optimizer(
     return _parse_json_lenient(content)
 
 META_PROMPT_PATH = Path(__file__).resolve().parent / "prompts" / "meta_optimizer.md"
+SUMMARIZER_PROMPT_PATH = Path(__file__).resolve().parent / "prompts" / "summarizer.md"
 
 REQUIRED_JUDGE_CONTRACT_MARKERS = ("reasoning", "match", "confidence")
 
 
 def load_meta_system_prompt() -> str:
     return META_PROMPT_PATH.read_text(encoding="utf-8").strip()
+
+
+def load_summarizer_system_prompt() -> str:
+    return SUMMARIZER_PROMPT_PATH.read_text(encoding="utf-8").strip()
+
+
+def _call_with_retries(
+    *, system: str, user: str, cfg: RunConfig, label: str, run_tags: list[str], run_metadata_extra: dict[str, Any],
+) -> dict[str, Any]:
+    last_error: Exception | None = None
+    for attempt in range(3):
+        try:
+            return _call_optimizer(
+                system=system,
+                user=user,
+                model=cfg.optimizer_model,
+                temperature=cfg.optimizer_temperature,
+                max_tokens=cfg.optimizer_max_tokens,
+                api_key=os.getenv("OPENROUTER_API_KEY", ""),
+                base_url=DEFAULT_OPENROUTER_BASE_URL,
+                run_metadata={
+                    "experiment": "judge_prompt_evolution",
+                    "run_id": cfg.run_id,
+                    "attempt": attempt,
+                    **run_metadata_extra,
+                },
+                run_tags=run_tags,
+            )
+        except Exception as exc:  # noqa: BLE001 — retry any parse/API hiccup
+            last_error = exc
+            print(f"  {label} attempt {attempt + 1}/3 failed "
+                  f"({type(exc).__name__}: {exc}) — retrying")
+            time.sleep(2.0 * (attempt + 1))
+    raise RuntimeError(f"{label} failed 3x") from last_error
 
 
 def build_user_prompt(current_prompt: str, examples: list[Example]) -> str:
@@ -116,38 +151,11 @@ def run_one_iteration(
     system = load_meta_system_prompt()
     user = build_user_prompt(current_prompt, examples)
 
-    # The revised prompt grows every round (naturally — it's accreting
-    # rubric detail), so a truncated completion near the token cap is a real
-    # failure mode late in a long run, not a rare fluke. Retry with the same
-    # inputs rather than losing the whole loop to one bad JSON parse.
-    last_error: Exception | None = None
-    response: dict[str, Any] | None = None
-    for attempt in range(3):
-        try:
-            response = _call_optimizer(
-                system=system,
-                user=user,
-                model=cfg.optimizer_model,
-                temperature=cfg.optimizer_temperature,
-                max_tokens=cfg.optimizer_max_tokens,
-                api_key=os.getenv("OPENROUTER_API_KEY", ""),
-                base_url=DEFAULT_OPENROUTER_BASE_URL,
-                run_metadata={
-                    "experiment": "judge_prompt_evolution",
-                    "run_id": cfg.run_id,
-                    "iteration": iteration,
-                    "attempt": attempt,
-                },
-                run_tags=["judge-prompt-evolution", cfg.run_id, f"iter-{iteration:02d}"],
-            )
-            break
-        except Exception as exc:  # noqa: BLE001 — retry any parse/API hiccup
-            last_error = exc
-            print(f"  iter {iteration:02d} attempt {attempt + 1}/3 failed "
-                  f"({type(exc).__name__}: {exc}) — retrying")
-            time.sleep(2.0 * (attempt + 1))
-    if response is None:
-        raise RuntimeError(f"optimizer call failed 3x at iteration {iteration}") from last_error
+    response = _call_with_retries(
+        system=system, user=user, cfg=cfg, label=f"iter {iteration:02d}",
+        run_tags=["judge-prompt-evolution", cfg.run_id, f"iter-{iteration:02d}"],
+        run_metadata_extra={"iteration": iteration, "step": "optimize"},
+    )
 
     updated_prompt = str(response.get("updated_prompt") or "").strip()
     rationale = str(response.get("rationale") or "").strip()
@@ -157,10 +165,51 @@ def run_one_iteration(
     problems = validate_contract(updated_prompt)
     return {
         "iteration": iteration,
+        "kind": "optimize",
         "prompt_before": current_prompt,
         "prompt_after": updated_prompt,
         "rationale": rationale,
         "contract_problems": problems,
         "examples": [ex.to_dict() for ex in examples],
+        "optimizer_model": cfg.optimizer_model,
+    }
+
+
+def run_summarization_step(*, cfg: RunConfig, current_prompt: str, after_iteration: int) -> dict[str, Any]:
+    """A separate, concise distillation call — not the meta-optimizer prompt.
+
+    Distinguished from a normal round in three ways: no example batch (this
+    is a pure rewrite of the current prompt, not a response to new data), a
+    different system prompt whose entire job is merge/cut, and its own
+    ``kind`` tag in the saved record so the browser/log can tell the two
+    apart.
+    """
+    system = load_summarizer_system_prompt()
+    user = (
+        "=== CURRENT JUDGE SYSTEM PROMPT ===\n"
+        f"{current_prompt}\n\n"
+        "Distill this per the instructions above. Respond with the JSON object "
+        "described above and nothing else."
+    )
+    response = _call_with_retries(
+        system=system, user=user, cfg=cfg, label=f"summarize@{after_iteration:02d}",
+        run_tags=["judge-prompt-evolution", cfg.run_id, f"summarize-after-{after_iteration:02d}"],
+        run_metadata_extra={"after_iteration": after_iteration, "step": "summarize"},
+    )
+
+    updated_prompt = str(response.get("updated_prompt") or "").strip()
+    rationale = str(response.get("rationale") or "").strip()
+    if not updated_prompt:
+        raise ValueError(f"summarizer returned no 'updated_prompt' after iteration {after_iteration}: {response!r}")
+
+    problems = validate_contract(updated_prompt)
+    return {
+        "iteration": after_iteration,
+        "kind": "summarize",
+        "prompt_before": current_prompt,
+        "prompt_after": updated_prompt,
+        "rationale": rationale,
+        "contract_problems": problems,
+        "examples": [],
         "optimizer_model": cfg.optimizer_model,
     }

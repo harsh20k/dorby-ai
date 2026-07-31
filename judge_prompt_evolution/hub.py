@@ -112,17 +112,21 @@ def push_seed_prompt(
 
 
 def push_iteration_prompt(
-    *, text: str, run_id: str, iteration: int, hub_owner: str | None, repo: str
+    *, text: str, run_id: str, iteration: int, hub_owner: str | None, repo: str, kind: str = "optimize"
 ) -> str | None:
     # A LangSmith tag can only ever point at one commit, so reusing the bare
     # run_id (or a bare "iter-NN") as a tag across 20 commits 409s from the
     # second push onward. Each iteration gets one tag unique to itself; the
     # commit history (traversable via the Hub UI) is what carries the
     # run/iteration provenance, backed up by the description string too.
+    # A "summarize" step shares its iteration number with the preceding
+    # "optimize" step, so it needs a distinct suffix to avoid the same
+    # tag-collision problem.
+    suffix = "s" if kind == "summarize" else ""
     return push_prompt(
         text=text,
         repo=repo,
         hub_owner=hub_owner,
-        description=f"judge_prompt_evolution run={run_id} iteration={iteration}",
-        commit_tags=[f"{run_id}--iter-{iteration:02d}"],
+        description=f"judge_prompt_evolution run={run_id} iteration={iteration} kind={kind}",
+        commit_tags=[f"{run_id}--iter-{iteration:02d}{suffix}"],
     )

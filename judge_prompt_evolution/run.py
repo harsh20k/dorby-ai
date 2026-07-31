@@ -24,7 +24,7 @@ from judge_prompt_evolution.hub import (
     push_meta_prompt,
     push_seed_prompt,
 )
-from judge_prompt_evolution.optimizer import run_one_iteration
+from judge_prompt_evolution.optimizer import run_one_iteration, run_summarization_step
 from judge_prompt_evolution.sampling import ExampleBank
 from judge_prompt_evolution.seed_prompt import SEED_JUDGE_PROMPT
 
@@ -53,6 +53,26 @@ def resolve_seed_prompt(cfg: RunConfig) -> tuple[str, str]:
     raise ValueError(f"unknown seed_source {cfg.seed_source!r}")
 
 
+def _run_and_save_summary(
+    *, cfg: RunConfig, current_prompt: str, after_iteration: int,
+    iterations_dir: Path, history: list[dict[str, Any]],
+) -> str:
+    t0 = time.time()
+    srecord = run_summarization_step(cfg=cfg, current_prompt=current_prompt, after_iteration=after_iteration)
+    dt = time.time() - t0
+    delta = len(srecord["prompt_after"]) - len(current_prompt)
+    print(f"  summarize@{after_iteration:02d}  ({dt:.1f}s)  "
+          f"{len(current_prompt)} -> {len(srecord['prompt_after'])} chars ({delta:+d})")
+    _write_json(iterations_dir / f"{after_iteration:02d}s.json", srecord)
+    if cfg.push_to_hub:
+        push_iteration_prompt(
+            text=srecord["prompt_after"], run_id=cfg.run_id,
+            iteration=after_iteration, hub_owner=cfg.hub_owner, repo=cfg.hub_repo, kind="summarize",
+        )
+    history.append(srecord)
+    return srecord["prompt_after"]
+
+
 def run(cfg: RunConfig, *, resume: bool = False) -> dict[str, Any]:
     run_dir = cfg.run_dir
     iterations_dir = run_dir / "iterations"
@@ -65,6 +85,7 @@ def run(cfg: RunConfig, *, resume: bool = False) -> dict[str, Any]:
           f"{cfg.n_easy_negative_examples} easy-neg)")
     print(f"optimizer   {cfg.optimizer_model}")
     print(f"split       {cfg.split} (holdout never touched)")
+    print(f"summarize   every {cfg.summarize_every} iterations" if cfg.summarize_every else "summarize   off")
 
     seed_prompt, seed_description = resolve_seed_prompt(cfg)
     print(f"seed source {cfg.seed_source}")
@@ -75,19 +96,43 @@ def run(cfg: RunConfig, *, resume: bool = False) -> dict[str, Any]:
     start_iteration = 1
 
     if resume:
-        done = sorted(
-            int(p.stem) for p in iterations_dir.glob("*.json") if p.stem.isdigit()
-        )
-        for n in done:
-            record = json.loads((iterations_dir / f"{n:02d}.json").read_text(encoding="utf-8"))
+        # Chronological order: for a given index, the "optimize" record
+        # (bare "{i:02d}.json") always precedes its "summarize" record
+        # ("{i:02d}s.json", only present when summarize_every divides i).
+        found: list[tuple[int, int, Path]] = []
+        for p in iterations_dir.glob("*.json"):
+            if p.stem.isdigit():
+                found.append((int(p.stem), 0, p))
+            elif p.stem.endswith("s") and p.stem[:-1].isdigit():
+                found.append((int(p.stem[:-1]), 1, p))
+        found.sort()
+
+        last_optimize_idx = 0
+        for idx, kind, p in found:
+            record = json.loads(p.read_text(encoding="utf-8"))
             history.append(record)
             current_prompt = record["prompt_after"]
-            # keep the sampler's draw sequence advancing past already-used
-            # examples, so a resumed run doesn't repeat iteration 1..N's batches
-            bank.draw_batch(cfg)
-        if done:
-            start_iteration = max(done) + 1
-            print(f"resuming    {len(done)} iteration(s) already on disk, starting at {start_iteration}")
+            if kind == 0:
+                # only "optimize" steps consumed a sample batch
+                bank.draw_batch(cfg)
+                last_optimize_idx = idx
+
+        if found:
+            start_iteration = last_optimize_idx + 1
+            print(f"resuming    {len(found)} record(s) on disk, "
+                  f"last optimize iteration {last_optimize_idx}, starting at {start_iteration}")
+            # a crash between an optimize step and its due summarize step
+            # would otherwise silently skip that summarize call
+            due_summary_missing = (
+                cfg.summarize_every
+                and last_optimize_idx % cfg.summarize_every == 0
+                and not (iterations_dir / f"{last_optimize_idx:02d}s.json").exists()
+            )
+            if due_summary_missing:
+                current_prompt = _run_and_save_summary(
+                    cfg=cfg, current_prompt=current_prompt, after_iteration=last_optimize_idx,
+                    iterations_dir=iterations_dir, history=history,
+                )
 
     if cfg.push_to_hub and not resume:
         push_meta_prompt(hub_owner=cfg.hub_owner, repo=cfg.hub_repo)
@@ -139,11 +184,18 @@ def run(cfg: RunConfig, *, resume: bool = False) -> dict[str, Any]:
         history.append(record)
         current_prompt = record["prompt_after"]
 
+        if cfg.summarize_every and i % cfg.summarize_every == 0:
+            current_prompt = _run_and_save_summary(
+                cfg=cfg, current_prompt=current_prompt, after_iteration=i,
+                iterations_dir=iterations_dir, history=history,
+            )
+
     summary = {
         "run_id": cfg.run_id,
         "n_iterations": cfg.n_iterations,
         "optimizer_model": cfg.optimizer_model,
         "seed_source": cfg.seed_source,
+        "summarize_every": cfg.summarize_every,
         "seed_prompt": seed_prompt,
         "final_prompt": current_prompt,
         "seed_prompt_auc_reference": {
@@ -177,6 +229,8 @@ def main(argv: list[str] | None = None) -> int:
     p.add_argument("--optimizer-model", default=None)
     p.add_argument("--seed", type=int, default=42)
     p.add_argument("--seed-source", choices=["naive", "structured_cot"], default=None)
+    p.add_argument("--summarize-every", type=int, default=None,
+                    help="insert a distillation-only step every N optimize iterations (0/unset = off)")
     p.add_argument("--no-hub", action="store_true", help="skip LangSmith Hub pushes (local only)")
     p.add_argument("--resume", action="store_true",
                     help="continue an existing --run-id from its last saved iteration")
@@ -189,6 +243,8 @@ def main(argv: list[str] | None = None) -> int:
         kwargs["optimizer_model"] = args.optimizer_model
     if args.seed_source:
         kwargs["seed_source"] = args.seed_source
+    if args.summarize_every is not None:
+        kwargs["summarize_every"] = args.summarize_every
     if args.no_hub:
         kwargs["push_to_hub"] = False
 
