@@ -23,6 +23,7 @@ from judge_prompt_evolution.hub import (
     push_iteration_prompt,
     push_meta_prompt,
     push_seed_prompt,
+    push_summarizer_prompt,
 )
 from judge_prompt_evolution.optimizer import run_one_iteration, run_summarization_step
 from judge_prompt_evolution.sampling import ExampleBank
@@ -136,6 +137,8 @@ def run(cfg: RunConfig, *, resume: bool = False) -> dict[str, Any]:
 
     if cfg.push_to_hub and not resume:
         push_meta_prompt(hub_owner=cfg.hub_owner, repo=cfg.hub_repo)
+        if cfg.summarize_every:
+            push_summarizer_prompt(hub_owner=cfg.hub_owner, repo=cfg.hub_repo)
         push_seed_prompt(
             hub_owner=cfg.hub_owner, repo=cfg.hub_repo,
             text=seed_prompt, description=seed_description, run_id=cfg.run_id,

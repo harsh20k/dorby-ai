@@ -1,20 +1,26 @@
 """LangSmith Prompt Hub I/O for this experiment.
 
-Every prompt this experiment produces or uses is kept **both** locally and
-in the Hub:
+Every prompt this experiment produces or uses is pushed to, and — for the two
+*fixed instruction* prompts — loaded back from, the Hub:
 
-- The fixed meta-optimizer instructions: local source of truth is
-  ``prompts/meta_optimizer.md``; ``push_meta_prompt`` pushes it as a single
-  named prompt (``<hub_repo>-meta``).
-- Each iteration's *evolved judge prompt*: saved locally by ``run.py``
-  (always, regardless of Hub availability) and pushed here as one commit per
-  iteration under ``<hub_repo>``, tagged ``<run_id>`` and ``iter-NN`` — so the
-  whole 20-round evolution is a browsable commit history in LangSmith, not
-  just files on disk.
+- The meta-optimizer instructions: local source of truth is
+  ``prompts/meta_optimizer.md``; ``push_meta_prompt`` pushes it as
+  ``<hub_repo>-meta``. Loaded at call time via ``pull_prompt`` in
+  ``optimizer.py``, local file as fallback only if the Hub is unreachable.
+- The summarizer instructions: local source of truth is
+  ``prompts/summarizer.md``; ``push_summarizer_prompt`` pushes it as
+  ``<hub_repo>-summarizer``. Same pull-first loading.
+- The seed judge prompt (naive or structured_cot) and every iteration's
+  *evolved* judge prompt: saved locally by ``run.py`` (always, regardless of
+  Hub availability) and pushed here as one commit per iteration under
+  ``<hub_repo>``, tagged ``<run_id>`` and ``iter-NN`` — so the whole 20-round
+  evolution is a browsable commit history in LangSmith, not just files on
+  disk. These are per-run artifacts, not reloaded at call time (the run that
+  produced them already has them in memory).
 
-Hub pushes are best-effort: a missing/invalid API key logs a warning and the
-run continues on local files alone, since the experiment's value (the local
-evolution trail) must not depend on Hub availability.
+Hub I/O is best-effort throughout: a missing/invalid API key or a failed pull
+logs a warning and falls back to the local file, since the experiment's
+value (the local evolution trail) must not depend on Hub availability.
 """
 
 from __future__ import annotations
@@ -67,6 +73,40 @@ def push_prompt(
         return None
 
 
+def _extract_system_text(prompt: Any) -> str:
+    messages = getattr(prompt, "messages", None)
+    if messages:
+        for msg in messages:
+            inner = getattr(msg, "prompt", None)
+            template = getattr(inner, "template", None) if inner is not None else None
+            if template is None:
+                template = getattr(msg, "template", None)
+            if template:
+                return str(template).replace("{{", "{").replace("}}", "}")
+    template = getattr(prompt, "template", None)
+    if isinstance(template, str) and template.strip():
+        return template
+    raise ValueError(f"Unsupported prompt object {type(prompt)!r}; expected a ChatPromptTemplate")
+
+
+def pull_prompt(*, repo: str, hub_owner: str | None, tag: str | None = None) -> str | None:
+    """Pull the latest (or ``tag``-pinned) commit of a named prompt.
+    Returns None on any failure — best-effort, never raises."""
+    if not _api_key():
+        return None
+    try:
+        from langsmith import Client
+
+        identifier = _identifier(hub_owner, repo)
+        if tag:
+            identifier = f"{identifier}:{tag}"
+        prompt = Client().pull_prompt(identifier)
+        return _extract_system_text(prompt)
+    except Exception as exc:  # noqa: BLE001 — best-effort, fall back to local
+        print(f"[hub] pull of {repo!r} failed ({type(exc).__name__}: {exc}) — using local file")
+        return None
+
+
 def push_meta_prompt(*, hub_owner: str | None, repo: str) -> str | None:
     from judge_prompt_evolution.config import REPO_ROOT
 
@@ -81,6 +121,22 @@ def push_meta_prompt(*, hub_owner: str | None, repo: str) -> str | None:
         "(v2: dropped hard/easy-negative framing, pushed the optimizer toward generalized rubric "
         "revision instead of incremental example-specific rules)",
         commit_tags=["v2"],
+    )
+
+
+def push_summarizer_prompt(*, hub_owner: str | None, repo: str) -> str | None:
+    from judge_prompt_evolution.config import REPO_ROOT
+
+    text = (REPO_ROOT / "judge_prompt_evolution" / "prompts" / "summarizer.md").read_text(
+        encoding="utf-8"
+    )
+    return push_prompt(
+        text=text,
+        repo=f"{repo}-summarizer",
+        hub_owner=hub_owner,
+        description="judge_prompt_evolution: distillation-only instructions used every N rounds "
+        "(evo_004) to merge/cut the accumulated rubric — separate from the meta-optimizer prompt, "
+        "no example batch, just compression",
     )
 
 

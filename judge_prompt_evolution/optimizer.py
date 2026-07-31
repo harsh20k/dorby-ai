@@ -77,11 +77,25 @@ SUMMARIZER_PROMPT_PATH = Path(__file__).resolve().parent / "prompts" / "summariz
 REQUIRED_JUDGE_CONTRACT_MARKERS = ("reasoning", "match", "confidence")
 
 
-def load_meta_system_prompt() -> str:
+def load_meta_system_prompt(cfg: RunConfig | None = None) -> str:
+    """Pull from LangSmith Hub first (source of truth for what a run actually
+    used), fall back to the local file only if the Hub is unreachable."""
+    if cfg is not None and cfg.push_to_hub:
+        from judge_prompt_evolution.hub import pull_prompt
+
+        text = pull_prompt(repo=f"{cfg.hub_repo}-meta", hub_owner=cfg.hub_owner, tag="v2")
+        if text:
+            return text.strip()
     return META_PROMPT_PATH.read_text(encoding="utf-8").strip()
 
 
-def load_summarizer_system_prompt() -> str:
+def load_summarizer_system_prompt(cfg: RunConfig | None = None) -> str:
+    if cfg is not None and cfg.push_to_hub:
+        from judge_prompt_evolution.hub import pull_prompt
+
+        text = pull_prompt(repo=f"{cfg.hub_repo}-summarizer", hub_owner=cfg.hub_owner)
+        if text:
+            return text.strip()
     return SUMMARIZER_PROMPT_PATH.read_text(encoding="utf-8").strip()
 
 
@@ -148,7 +162,7 @@ def run_one_iteration(
     examples: list[Example],
     iteration: int,
 ) -> dict[str, Any]:
-    system = load_meta_system_prompt()
+    system = load_meta_system_prompt(cfg)
     user = build_user_prompt(current_prompt, examples)
 
     response = _call_with_retries(
@@ -184,7 +198,7 @@ def run_summarization_step(*, cfg: RunConfig, current_prompt: str, after_iterati
     ``kind`` tag in the saved record so the browser/log can tell the two
     apart.
     """
-    system = load_summarizer_system_prompt()
+    system = load_summarizer_system_prompt(cfg)
     user = (
         "=== CURRENT JUDGE SYSTEM PROMPT ===\n"
         f"{current_prompt}\n\n"
