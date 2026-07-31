@@ -185,7 +185,9 @@ python -m eval_real_full.run_baseline --config tfidf
 python -m eval_real_full.export   # -> docs/baseline-results-real200.{md,json}
 ```
 
-Total Modal cost for the sweep: **under $0.70**, dominated by six 7-8B models.
+Total Modal cost for the sweep: **$1.38** across 11 app runs, dominated by six
+7-8B models plus three re-runs (E5-Mistral and NV-Embed-v2 at the corrected
+8192 context, NV-Embed again on A100-80GB after an OOM).
 
 ## What this leaves
 
