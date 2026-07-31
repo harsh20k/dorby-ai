@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-07-25T15:43:39Z",
-  "protocol_note": "frozen 69-pair real holdout (data/synthetic/seed_split.json eval_pair_ids) only \u2014 same population for every row, unlike baseline-results-all.md's full-dataset numbers. See docs/possible-bugs.md #3 and docs/twotower-run-001-results.md.",
+  "generated_at": "2026-07-31T01:54:01Z",
+  "protocol_note": "frozen 69-pair real holdout (data/synthetic/seed_split.json eval_pair_ids) only \u2014 same population for every row, unlike baseline-results-all.md's full-dataset numbers. See docs/possible-bugs.md #3 and docs/twotower-run-001-results.md. WARNING: this population (29 positive queries, 65-candidate corpus) ranks weak models reliably but carries NO ranking information among strong ones \u2014 Spearman vs. the all-200 ranking is +0.976 across the bottom 8 models and -0.029 across the top 6. Do not choose between competitive models on this table; use docs/baseline-results-real200.md. See docs/all-200-baseline-sweep.md.",
   "baselines": {
     "tfidf": {
       "model_name": "tfidf(max_features=20000,ngram_range=(1, 2))",

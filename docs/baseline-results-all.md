@@ -1,6 +1,6 @@
 # Baseline results (all metrics)
 
-Generated: `2026-07-25T15:43:39Z`
+Generated: `2026-07-31T01:54:01Z`
 
 Protocol: same pair/retrieval/slices for all; (no query) = profile-only seeker text (no searchQuery). Sources: `artifacts/{bert_frozen,bert_frozen_no_query,voyage_nano,voyage_nano_no_query,voyage_large,voyage_large_no_query}/metrics.json`.
 

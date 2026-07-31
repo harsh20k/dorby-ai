@@ -80,11 +80,23 @@ now has two working generators — local Ollama and AWS Bedrock — see
 profiles into a new pos/neg dataset is designed but not yet built.
 **Separately: a new generalizable open-weight embedding baseline**
 (`baselines/hf_embedding/`, see "Open-weight HF embedding baselines" below)
-found that **Qwen3-Embedding-8B (Apache 2.0, free) beats Voyage-4-large —
-Boardy's own production model — on the core accept/decline task** (pair
-ROC-AUC 0.6595 vs 0.6086), the first model of any kind in this project to
-do so. Full results and two real model-loading compatibility issues found
-and fixed along the way in `docs/hf-embedding-baseline-findings.md`.
+found on the 69-pair holdout that Qwen3-Embedding-8B beat Voyage-4-large
+(0.6595 vs 0.6086 pair AUC). **That claim was retracted on 2026-07-31** — see
+`docs/all-200-baseline-sweep.md`. Re-scored on all 200 real pairs through the
+same code path, Qwen loses to Voyage-4-large on every metric (pair AUC 0.5529
+vs 0.5726, MRR 0.2045 vs 0.3102, R@1 0.0500 vs 0.1300) with a below-chance
+hard-negative AUC of 0.4680. **No open-weight model beats production overall**;
+BGE-en-ICL is the closest, beating it on retrieval (MRR 0.3190, R@1 0.1700) but
+not on AUC. The two model-loading compatibility fixes in
+`docs/hf-embedding-baseline-findings.md` remain valid.
+
+**Read `docs/baseline-results-real200.md`, not
+`docs/baseline-results-holdout.md`, when comparing models.** The 69-pair
+holdout ranks weak models reliably but carries no information among strong
+ones: Spearman against the all-200 ranking is +0.976 across the bottom 8
+models and **−0.029 across the top 6** — and every decision in this project
+has been made among that top group. The all-200 population (100 positive
+queries, 178-candidate corpus) is built by `eval_real_full/`.
 
 ## Experiment isolation — the rule that overrides convenience
 

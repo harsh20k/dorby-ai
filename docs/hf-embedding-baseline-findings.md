@@ -1,5 +1,20 @@
 # Open-weight HF embedding baselines: findings
 
+> **⚠️ CORRECTED 2026-07-31 — the headline below does not survive a larger
+> sample.** Every number on this page is computed on the 69-pair holdout (29
+> positive queries). Re-scored on all 200 real pairs, **Qwen3-Embedding-8B does
+> not beat Voyage-4-large**: pair AUC 0.5529 vs 0.5726, MRR 0.2045 vs 0.3102,
+> R@1 0.0500 vs 0.1300, and a hard-negative AUC of 0.4680 that is below chance.
+> The re-run used this same `baselines/hf_embedding` code path and reproduces
+> this page's holdout numbers (0.6543 vs 0.6595, bf16 noise), so the difference
+> is the population, not the protocol.
+>
+> The holdout is now known to carry **no ranking information among the top
+> models** — Spearman −0.029 across the top 6, against +0.976 across the bottom
+> 8. See [`all-200-baseline-sweep.md`](all-200-baseline-sweep.md) and
+> [`baseline-results-real200.md`](baseline-results-real200.md). The material
+> below is left unedited as the record of what the 69-pair evidence showed.
+
 Plain-language summary of running free/open-source embedding models
 against the frozen 69-pair real holdout, via a new generalizable Modal
 harness. For full metric tables see
