@@ -1,0 +1,954 @@
+<meta charset="utf-8">
+<title>Sectioned MoE — the plan</title>
+<style>
+  :root {
+    --ink:        #14171c;
+    --ink-2:      #3d4550;
+    --ink-3:      #6d7683;
+    --paper:      #f7f8fa;
+    --surface:    #ffffff;
+    --line:       #dde1e7;
+    --line-soft:  #eaedf1;
+    --accent:     #2f5fd0;
+    --accent-dim: #e8eefc;
+    --good:       #0e7c66;
+    --good-dim:   #e3f3ef;
+    --warn:       #a8501c;
+    --warn-dim:   #fbeee5;
+    --dead:       #8b8f97;
+    --dead-dim:   #eff0f2;
+
+    --serif: ui-serif, "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+    --sans:  ui-sans-serif, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+    --mono:  ui-monospace, "SF Mono", "JetBrains Mono", Menlo, Consolas, monospace;
+
+    --measure: 68ch;
+    --wide: 1080px;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --ink:        #e8eaee;
+      --ink-2:      #b3bac4;
+      --ink-3:      #858d99;
+      --paper:      #101318;
+      --surface:    #171b21;
+      --line:       #2b313a;
+      --line-soft:  #21262d;
+      --accent:     #7ea3f0;
+      --accent-dim: #1a2437;
+      --good:       #4fb99e;
+      --good-dim:   #122a25;
+      --warn:       #d98a55;
+      --warn-dim:   #2a1d13;
+      --dead:       #767d88;
+      --dead-dim:   #1c1f25;
+    }
+  }
+  :root[data-theme="dark"] {
+    --ink:#e8eaee; --ink-2:#b3bac4; --ink-3:#858d99;
+    --paper:#101318; --surface:#171b21; --line:#2b313a; --line-soft:#21262d;
+    --accent:#7ea3f0; --accent-dim:#1a2437;
+    --good:#4fb99e; --good-dim:#122a25;
+    --warn:#d98a55; --warn-dim:#2a1d13;
+    --dead:#767d88; --dead-dim:#1c1f25;
+  }
+  :root[data-theme="light"] {
+    --ink:#14171c; --ink-2:#3d4550; --ink-3:#6d7683;
+    --paper:#f7f8fa; --surface:#ffffff; --line:#dde1e7; --line-soft:#eaedf1;
+    --accent:#2f5fd0; --accent-dim:#e8eefc;
+    --good:#0e7c66; --good-dim:#e3f3ef;
+    --warn:#a8501c; --warn-dim:#fbeee5;
+    --dead:#8b8f97; --dead-dim:#eff0f2;
+  }
+
+  body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: var(--sans);
+    font-size: 16.5px;
+    line-height: 1.62;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .wrap { max-width: var(--wide); margin: 0 auto; padding: 0 24px 120px; }
+  .col  { max-width: var(--measure); }
+
+  /* ---------- masthead ---------- */
+  header.top {
+    padding: 72px 0 40px;
+    border-bottom: 1px solid var(--line);
+    margin-bottom: 48px;
+  }
+  .eyebrow {
+    font-family: var(--mono);
+    font-size: 11.5px;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+    color: var(--ink-3);
+    margin-bottom: 20px;
+  }
+  h1 {
+    font-family: var(--serif);
+    font-size: clamp(34px, 5.2vw, 56px);
+    line-height: 1.08;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    text-wrap: balance;
+    margin-bottom: 22px;
+  }
+  .standfirst {
+    font-family: var(--serif);
+    font-size: clamp(18px, 2.2vw, 22px);
+    line-height: 1.5;
+    color: var(--ink-2);
+    max-width: 58ch;
+  }
+  .standfirst em { color: var(--ink); font-style: italic; }
+
+  /* ---------- section rhythm ---------- */
+  section { margin-bottom: 64px; }
+  h2 {
+    font-family: var(--serif);
+    font-size: clamp(24px, 3vw, 31px);
+    font-weight: 600;
+    letter-spacing: -0.015em;
+    line-height: 1.2;
+    margin-bottom: 8px;
+    text-wrap: balance;
+  }
+  h2 .num {
+    font-family: var(--mono);
+    font-size: 12px;
+    letter-spacing: .1em;
+    color: var(--accent);
+    display: block;
+    margin-bottom: 10px;
+    font-weight: 500;
+  }
+  h3 {
+    font-size: 15px;
+    font-weight: 650;
+    letter-spacing: .01em;
+    margin: 32px 0 10px;
+  }
+  p { margin-bottom: 15px; max-width: var(--measure); }
+  .sub { color: var(--ink-3); font-size: 15px; margin-bottom: 26px; max-width: var(--measure); }
+  strong { font-weight: 650; }
+  code {
+    font-family: var(--mono);
+    font-size: .88em;
+    background: var(--line-soft);
+    padding: 1.5px 5px;
+    border-radius: 3px;
+  }
+  a { color: var(--accent); }
+
+  /* ---------- stat row ---------- */
+  .stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+    gap: 2px;
+    background: var(--line);
+    border: 1px solid var(--line);
+    border-radius: 6px;
+    overflow: hidden;
+    margin: 28px 0;
+  }
+  .stat { background: var(--surface); padding: 20px 22px; }
+  .stat .n {
+    font-family: var(--mono);
+    font-size: 27px;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    font-variant-numeric: tabular-nums;
+    display: block;
+    margin-bottom: 4px;
+  }
+  .stat .k { font-size: 12.5px; color: var(--ink-3); line-height: 1.4; }
+
+  /* ---------- flow diagram ---------- */
+  figure { margin: 30px 0 34px; }
+  figcaption {
+    font-size: 13px;
+    color: var(--ink-3);
+    margin-top: 14px;
+    max-width: 62ch;
+    line-height: 1.55;
+  }
+  .flow {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    padding: 26px 22px;
+    overflow-x: auto;
+  }
+  .lane {
+    display: flex;
+    align-items: stretch;
+    gap: 0;
+    min-width: 620px;
+  }
+  .node {
+    flex: 1 1 0;
+    border: 1px solid var(--line);
+    border-radius: 6px;
+    padding: 13px 14px;
+    background: var(--paper);
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+  .node .t {
+    font-size: 12.5px;
+    font-weight: 650;
+    letter-spacing: .01em;
+  }
+  .node .d {
+    font-size: 11.5px;
+    color: var(--ink-3);
+    line-height: 1.45;
+  }
+  .node .dim {
+    font-family: var(--mono);
+    font-size: 11px;
+    color: var(--accent);
+    font-variant-numeric: tabular-nums;
+  }
+  .node.hi { border-color: var(--accent); background: var(--accent-dim); }
+  .node.ok { border-color: var(--good); background: var(--good-dim); }
+  .node.bad { border-color: var(--warn); background: var(--warn-dim); }
+  .node.off { border-style: dashed; background: var(--dead-dim); color: var(--dead); }
+  .node.off .t, .node.off .d { color: var(--dead); }
+
+  .arrow {
+    flex: 0 0 34px;
+    display: grid;
+    place-items: center;
+    color: var(--ink-3);
+    font-size: 15px;
+  }
+  .arrow.thin { flex-basis: 22px; }
+
+  /* stacked (vertical) flow */
+  .stack { display: flex; flex-direction: column; gap: 0; min-width: 0; }
+  .stack .row { display: flex; gap: 10px; }
+  .stack .row > .node { flex: 1 1 0; }
+  .vgap {
+    height: 26px;
+    display: grid;
+    place-items: center;
+    color: var(--ink-3);
+    font-size: 14px;
+  }
+  .layer-label {
+    font-family: var(--mono);
+    font-size: 10.5px;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    color: var(--ink-3);
+    margin-bottom: 8px;
+  }
+
+  /* ---------- tables ---------- */
+  .tw { overflow-x: auto; margin: 24px 0; }
+  table {
+    border-collapse: collapse;
+    width: 100%;
+    min-width: 480px;
+    font-size: 14.5px;
+  }
+  th, td {
+    text-align: left;
+    padding: 11px 14px;
+    border-bottom: 1px solid var(--line-soft);
+    vertical-align: top;
+  }
+  th {
+    font-size: 11.5px;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    color: var(--ink-3);
+    font-weight: 600;
+    border-bottom: 1px solid var(--line);
+  }
+  td.n { font-family: var(--mono); font-variant-numeric: tabular-nums; white-space: nowrap; }
+  tr.total td { border-top: 1px solid var(--line); border-bottom: none; font-weight: 650; }
+  tr.total td.n { color: var(--accent); }
+
+  .pill {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 650;
+    letter-spacing: .04em;
+    padding: 2.5px 8px;
+    border-radius: 99px;
+    white-space: nowrap;
+  }
+  .pill.go   { background: var(--good-dim); color: var(--good); }
+  .pill.ctrl { background: var(--accent-dim); color: var(--accent); }
+  .pill.no   { background: var(--dead-dim); color: var(--dead); }
+  .pill.risk { background: var(--warn-dim); color: var(--warn); }
+
+  /* ---------- callout ---------- */
+  .note {
+    border-left: 2px solid var(--accent);
+    padding: 2px 0 2px 18px;
+    margin: 26px 0;
+    max-width: var(--measure);
+  }
+  .note.risk { border-left-color: var(--warn); }
+  .note .lbl {
+    font-family: var(--mono);
+    font-size: 10.5px;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    color: var(--accent);
+    display: block;
+    margin-bottom: 6px;
+  }
+  .note.risk .lbl { color: var(--warn); }
+  .note p:last-child { margin-bottom: 0; }
+
+  ul { margin: 0 0 16px 0; padding-left: 20px; max-width: var(--measure); }
+  li { margin-bottom: 7px; }
+
+  /* ---------- steps ---------- */
+  ol.steps { list-style: none; padding: 0; counter-reset: s; max-width: var(--measure); }
+  ol.steps li {
+    counter-increment: s;
+    display: grid;
+    grid-template-columns: 30px 1fr;
+    gap: 14px;
+    padding: 14px 0;
+    border-bottom: 1px solid var(--line-soft);
+    margin: 0;
+  }
+  ol.steps li::before {
+    content: counter(s);
+    font-family: var(--mono);
+    font-size: 12px;
+    color: var(--accent);
+    padding-top: 3px;
+  }
+  ol.steps .st { font-weight: 650; font-size: 14.5px; display: block; margin-bottom: 3px; }
+  ol.steps .sd { font-size: 14px; color: var(--ink-2); }
+
+  footer {
+    border-top: 1px solid var(--line);
+    padding-top: 22px;
+    font-size: 13px;
+    color: var(--ink-3);
+    max-width: var(--measure);
+  }
+  footer code { background: none; padding: 0; }
+
+  @media (max-width: 620px) {
+    .stack .row { flex-direction: column; }
+  }
+</style>
+
+<div class="wrap">
+
+<header class="top">
+  <div class="eyebrow">dorby-ai · experiment plan · 2026-07-30</div>
+  <h1>Explode the ask, then route on it</h1>
+  <p class="standfirst">
+    Our proposal said the mixture of experts should read the <em>lookingFor</em> section
+    by section. What we actually built collapses all of it into a single integer.
+    This is the plan to close that gap — and an honest account of what it can and
+    cannot buy us.
+  </p>
+</header>
+
+<!-- ==================================================== 01 -->
+<section>
+  <h2><span class="num">01 — the gap</span>What we proposed vs. what runs today</h2>
+  <p class="sub">
+    Two pipelines were built. They were never connected to each other.
+  </p>
+
+  <p>
+    The section machinery exists and works: it embeds each of a seeker's asks,
+    scores candidates against them, and combines the results. We used it to
+    settle which combine rule is best. But its output is a <strong>report</strong>,
+    not a feature. It never reaches the model.
+  </p>
+
+  <p>
+    Meanwhile the mixture of experts reads a hand-built table of 12 numbers.
+    Exactly one of them knows sections exist — <code>n_sections</code>, which
+    counts them. Two profiles of roughly 7,000 characters each, and every ask the
+    person wrote out, arrive at the model as the number 13.
+  </p>
+
+  <figure>
+    <div class="flow">
+      <div class="layer-label">Today — the funnel</div>
+      <div class="lane">
+        <div class="node">
+          <span class="t">Seeker profile</span>
+          <span class="d">positioning, background, lookingFor, preferences</span>
+          <span class="dim">~6,800 chars</span>
+        </div>
+        <div class="arrow">→</div>
+        <div class="node bad">
+          <span class="t">Hand-built features</span>
+          <span class="d">similarity, lengths, geo, stage, roles</span>
+          <span class="dim">12 numbers</span>
+        </div>
+        <div class="arrow">→</div>
+        <div class="node">
+          <span class="t">MMoE</span>
+          <span class="d">3 experts × 1 layer, 2 gates</span>
+          <span class="dim">12 → 4</span>
+        </div>
+        <div class="arrow">→</div>
+        <div class="node">
+          <span class="t">Score</span>
+          <span class="d">accept / decline</span>
+          <span class="dim">1 number</span>
+        </div>
+      </div>
+      <div class="vgap">↓ meanwhile, disconnected ↓</div>
+      <div class="lane">
+        <div class="node off">
+          <span class="t">Section scoring</span>
+          <span class="d">embeds each ask, scores candidates, aggregates</span>
+        </div>
+        <div class="arrow">→</div>
+        <div class="node off">
+          <span class="t">metrics.json</span>
+          <span class="d">a report we read — never an input</span>
+        </div>
+        <div class="arrow">→</div>
+        <div class="node off" style="flex:2 1 0">
+          <span class="t">dead end</span>
+          <span class="d">the per-section vectors are computed, then discarded</span>
+        </div>
+      </div>
+    </div>
+    <figcaption>
+      Nobody decided to drop the sections. Each step was locally sensible; the sum
+      quietly lost the idea.
+    </figcaption>
+  </figure>
+
+  <div class="note">
+    <span class="lbl">Why this matters</span>
+    <p>
+      Whatever the model can possibly learn is bounded by what survives that funnel.
+      When plain logistic regression matches the mixture of experts — as it has three
+      times now — that is evidence the architecture is unnecessary <em>and</em>
+      evidence the bottleneck might be upstream of it.
+    </p>
+  </div>
+</section>
+
+<!-- ==================================================== 02 -->
+<section>
+  <h2><span class="num">02 — the ground truth</span>Three numbers that shaped the design</h2>
+  <p class="sub">Measured on the 200 real pairs before writing any of this.</p>
+
+  <div class="stats">
+    <div class="stat">
+      <span class="n">2,302</span>
+      <span class="k">(pair, section) rows from 200 pairs — a 12× multiplier on training rows</span>
+    </div>
+    <div class="stat">
+      <span class="n">5</span>
+      <span class="k">median sections per seeker, with a tail out to 116 — so we cap at 8</span>
+    </div>
+    <div class="stat">
+      <span class="n">994</span>
+      <span class="k">distinct section headings; the top 8 cover just 8.5% of them</span>
+    </div>
+  </div>
+
+  <p>
+    That last number kills the obvious version of this idea. You cannot write
+    <em>"one expert for hiring, one for fundraising, one for customers"</em> —
+    people phrase their asks 994 different ways and no small set of buckets covers
+    them. Section headings must be <strong>embedded and routed on</strong>, never
+    enumerated. The specialisation has to be discovered, not assigned.
+  </p>
+
+  <p>
+    There is also a subtlety worth naming: we get <strong>one outcome per pair,
+    but many sections per pair</strong>. We know the intro was accepted; we do not
+    know which ask it satisfied. In the literature this is
+    <em>multiple-instance learning</em> — the bag has a label, the instances do not.
+    The pooling step is where that gets resolved, which is why it carries so much
+    weight below.
+  </p>
+</section>
+
+<!-- ==================================================== 03 -->
+<section>
+  <h2><span class="num">03 — the architecture</span>One row per ask, not one row per pair</h2>
+  <p class="sub">
+    The unit of prediction changes. That single move is what makes everything else possible.
+  </p>
+
+  <figure>
+    <div class="flow">
+      <div class="stack" style="min-width:620px">
+
+        <div class="layer-label">Input — one row per (pair, section)</div>
+        <div class="row">
+          <div class="node hi">
+            <span class="t">Similarity</span>
+            <span class="d">this ask ↔ this candidate: cosine, rank percentile, cosine minus keyword</span>
+            <span class="dim">3</span>
+          </div>
+          <div class="node hi">
+            <span class="t">Interaction</span>
+            <span class="d">elementwise product of ask &amp; candidate embeddings, projected down</span>
+            <span class="dim">32</span>
+          </div>
+          <div class="node hi">
+            <span class="t">Pair scalars</span>
+            <span class="d">the existing 12 features, repeated on every row of the pair</span>
+            <span class="dim">12</span>
+          </div>
+        </div>
+
+        <div class="vgap">↓ &nbsp; 47 numbers &nbsp; ↓</div>
+
+        <div class="layer-label">Experts — all see the same row, nothing pre-assigned</div>
+        <div class="row">
+          <div class="node"><span class="t">Expert 1</span><span class="dim">47→24→16</span></div>
+          <div class="node"><span class="t">Expert 2</span><span class="dim">47→24→16</span></div>
+          <div class="node"><span class="t">Expert 3</span><span class="dim">47→24→16</span></div>
+          <div class="node"><span class="t">Expert 4</span><span class="dim">47→24→16</span></div>
+        </div>
+
+        <div class="vgap">↓ &nbsp; weighted by the gate &nbsp; ↓</div>
+
+        <div class="layer-label">Gate — sees the ask only</div>
+        <div class="row">
+          <div class="node ok" style="flex:2 1 0">
+            <span class="t">Router</span>
+            <span class="d">input is the section embedding alone (16 dims), so routing is forced to be <em>by kind of ask</em> — which the diagnostics can then check directly instead of guessing</span>
+            <span class="dim">softmax(a / τ), τ = 0.05</span>
+          </div>
+          <div class="node" style="flex:1 1 0">
+            <span class="t">Head</span>
+            <span class="d">does this candidate satisfy <em>this</em> ask?</span>
+            <span class="dim">16 → 1</span>
+          </div>
+        </div>
+
+        <div class="vgap">↓ &nbsp; one verdict per ask &nbsp; ↓</div>
+
+        <div class="layer-label">Pooling — asks back into a pair</div>
+        <div class="row">
+          <div class="node ok" style="flex:2 1 0">
+            <span class="t">Attention over sections</span>
+            <span class="d">a learned query decides which ask decided the pair; weights are readable, the same way gate weights are</span>
+            <span class="dim">~50 params</span>
+          </div>
+          <div class="node" style="flex:1 1 0">
+            <span class="t">Pair score</span>
+            <span class="d">accept / decline</span>
+            <span class="dim">1</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <figcaption>
+      Blue blocks are new. Green blocks are the two places where the model is asked
+      to make a choice we can afterwards inspect and argue with.
+    </figcaption>
+  </figure>
+
+  <h3>The input, precisely</h3>
+  <div class="tw">
+    <table>
+      <thead>
+        <tr><th>Block</th><th>Dims</th><th>What it is</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Section ↔ candidate similarity</td><td class="n">3</td><td>cosine, rank percentile, cosine − keyword overlap</td></tr>
+        <tr><td>Interaction</td><td class="n">32</td><td>elementwise product of the two embeddings, learned projection</td></tr>
+        <tr><td>Pair-level scalars</td><td class="n">12</td><td>the current feature table, repeated per section</td></tr>
+        <tr class="total"><td>Into each expert</td><td class="n">47</td><td></td></tr>
+        <tr><td>Gate input <em>(separate path)</em></td><td class="n">16</td><td>projected section embedding, and nothing else</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3>Each expert, and why it grows</h3>
+  <p>
+    Today an "expert" is a single <code>Linear(12→4)</code> followed by a ReLU. That
+    is not a network — it is a weighted sum with a kink. Four of them mixed together
+    can barely express more than one logistic regression, which is a plain reason
+    the mixture never beat one.
+  </p>
+  <p>
+    The proposal is <strong>4 experts, 2 layers each</strong>:
+    <code>47 → 24 → ReLU → 24 → 16 → ReLU</code>. About 1,700 parameters per expert,
+    ~7,000 in total. That is affordable now for a reason that did not hold before —
+    we are fitting 2,302 rows, not 111, and can pre-train on roughly 30,000
+    synthetic section rows first.
+  </p>
+</section>
+
+<!-- ==================================================== 04 -->
+<section>
+  <h2><span class="num">04 — a worked example</span>One real pair, all the way through</h2>
+  <p class="sub">
+    The first accepted pair in our dataset. Every number below is computed from the
+    real data, not invented.
+  </p>
+
+  <div class="tw">
+    <table>
+      <tbody>
+        <tr>
+          <td style="width:88px"><strong>Seeker</strong></td>
+          <td><strong>Alan</strong> — founder and CEO of AVX Returns, reverse logistics for Amazon and ecommerce brands. Manasquan, New Jersey.</td>
+        </tr>
+        <tr>
+          <td><strong>Candidate</strong></td>
+          <td><strong>Garrett</strong> — 20-year operator, fractional COO and general manager, Chicago. Looking for a full-time VP/GM or COO role at a Series A+ company.</td>
+        </tr>
+        <tr>
+          <td><strong>Outcome</strong></td>
+          <td><span class="pill go">Accepted</span> &nbsp;these two actually connected</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3>Today: one row, twelve numbers</h3>
+  <p>
+    Alan's <code>lookingFor</code> contains <strong>four distinct asks</strong>. Today
+    they reach the model as a single feature, <code>n_sections</code>, whose value for
+    this pair is <strong>13</strong> — because it counts blank-line-separated blocks
+    rather than actual asks. The one section-aware feature we have does not even count
+    sections correctly. Everything else Alan wrote is gone.
+  </p>
+
+  <div class="tw">
+    <table>
+      <thead><tr><th>Feature</th><th>Raw</th><th>Standardised</th></tr></thead>
+      <tbody>
+        <tr><td>tfidf_cos</td><td class="n">0.1561</td><td class="n">−0.732</td></tr>
+        <tr><td>tfidf_rank_pct</td><td class="n">0.9750</td><td class="n">1.073</td></tr>
+        <tr><td>token_jaccard</td><td class="n">0.1578</td><td class="n">−0.097</td></tr>
+        <tr><td>query_cand_jaccard</td><td class="n">0.0153</td><td class="n">−0.771</td></tr>
+        <tr><td>geo_overlap</td><td class="n">0.0227</td><td class="n">−0.606</td></tr>
+        <tr><td>role_overlap</td><td class="n">1.0000</td><td class="n">1.138</td></tr>
+        <tr><td><em>n_sections</em></td><td class="n">13.0</td><td class="n">0.526</td></tr>
+        <tr><td colspan="3" style="color:var(--ink-3);font-size:13.5px">…and five more length and stage features</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3>Proposed: four rows, one per ask</h3>
+  <p>
+    The same pair becomes four training rows. Each asks a narrower and more answerable
+    question — <em>does Garrett satisfy <strong>this</strong> request?</em> — instead of
+    the vague "are these two a match."
+  </p>
+
+  <div class="tw">
+    <table>
+      <thead>
+        <tr><th>Alan's ask</th><th>What he wrote</th><th>Similarity</th><th>Rank</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Customers</strong></td>
+          <td style="font-size:13.5px;color:var(--ink-2)">mid-market North American consumer brands feeling real returns pain, open to moving fast</td>
+          <td class="n">0.1033</td><td class="n">77th</td>
+        </tr>
+        <tr style="background:var(--good-dim)">
+          <td><strong>Brand Operators</strong></td>
+          <td style="font-size:13.5px;color:var(--ink-2)">brand-side operators — COOs, VPs of operations, logistics, fulfillment, warehouse leaders</td>
+          <td class="n">0.1113</td><td class="n"><strong>92nd</strong></td>
+        </tr>
+        <tr>
+          <td><strong>Narvar Contacts</strong></td>
+          <td style="font-size:13.5px;color:var(--ink-2)">current or former Narvar operators who understand returns infrastructure</td>
+          <td class="n">0.0688</td><td class="n">77th</td>
+        </tr>
+        <tr>
+          <td><strong>Narvar Partnerships</strong></td>
+          <td style="font-size:13.5px;color:var(--ink-2)">US SaaS companies similar to Narvar, for partnership conversations</td>
+          <td class="n">0.0580</td><td class="n">70th</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="note">
+    <span class="lbl">This is the whole argument, in one row</span>
+    <p>
+      Garrett scores <strong>92nd percentile on "Brand Operators"</strong> and only
+      70th on "Narvar Partnerships." That is correct and obvious to a human — he is
+      an operations executive, not a SaaS company. The pair was accepted
+      <em>because of one specific ask</em>, and the other three are noise dragging the
+      average down. Today's model averages all of that away before it ever sees it.
+    </p>
+  </div>
+
+  <h3>What one of those four rows contains</h3>
+  <p>
+    Taking the "Brand Operators" row — 47 numbers, in three blocks:
+  </p>
+
+  <figure>
+    <div class="flow">
+      <div class="stack" style="min-width:560px">
+        <div class="row">
+          <div class="node hi">
+            <span class="t">Similarity · 3</span>
+            <span class="d">how well Garrett matches <em>this specific ask</em></span>
+            <span class="dim">[0.1113, 0.920, −0.044]</span>
+          </div>
+          <div class="node hi">
+            <span class="t">Interaction · 32</span>
+            <span class="d">where the ask and the candidate overlap in meaning, compressed</span>
+            <span class="dim">[0.31, −0.08, 0.44, …]</span>
+          </div>
+          <div class="node hi">
+            <span class="t">Pair scalars · 12</span>
+            <span class="d">the same 12 as today, repeated on all four rows</span>
+            <span class="dim">[−0.732, 1.073, …]</span>
+          </div>
+        </div>
+        <div class="vgap">↓</div>
+        <div class="row">
+          <div class="node ok" style="flex:2 1 0">
+            <span class="t">Gate sees only the ask</span>
+            <span class="d">"Brand Operators — COOs, VPs of ops, logistics" → routes to whichever expert has become good at hiring-shaped asks</span>
+          </div>
+          <div class="node" style="flex:1 1 0">
+            <span class="t">Verdict for this ask</span>
+            <span class="dim">0.71</span>
+          </div>
+        </div>
+        <div class="vgap">↓ &nbsp;four verdicts: 0.42, 0.71, 0.38, 0.29&nbsp; ↓</div>
+        <div class="row">
+          <div class="node ok" style="flex:2 1 0">
+            <span class="t">Attention picks the ask that decided it</span>
+            <span class="d">weights ≈ 0.11 / <strong>0.68</strong> / 0.13 / 0.08 — mostly "Brand Operators"</span>
+          </div>
+          <div class="node" style="flex:1 1 0">
+            <span class="t">Pair score</span>
+            <span class="dim">0.64 → accept</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <figcaption>
+      Similarity and rank are real, computed on the 200 real pairs. The verdicts and
+      attention weights are illustrative — that is what training would produce, not
+      something we have measured.
+    </figcaption>
+  </figure>
+
+  <p>
+    Note what falls out for free: the system can now say <em>"we introduced Garrett
+    because you asked for brand-side operations leaders."</em> Nothing we have built so
+    far can produce that sentence.
+  </p>
+</section>
+
+<!-- ==================================================== 05 -->
+<section>
+  <h2><span class="num">05 — attention</span>Why it belongs here, and only here</h2>
+  <p class="sub">
+    The strongest version of the idea is also the one we already have evidence for.
+  </p>
+
+  <p>
+    We tested five ways of combining section scores into a pair score. The winner
+    was a temperature-sharpened softmax — a rule that mostly listens to the
+    best-matching ask, but not <em>only</em> to it. Interestingly, pushing it all the
+    way to "just take the maximum" was worse. Some blending helps.
+  </p>
+
+  <p>
+    Here is the observation that makes attention the obvious next step:
+    <strong>that softmax is attention with the weights frozen.</strong> Same shape,
+    same maths — we simply picked the weights by hand instead of learning them.
+    Learned attention is the natural generalisation of the thing we already measured
+    as best, and it costs about fifty parameters and one head.
+  </p>
+
+  <figure>
+    <div class="flow">
+      <div class="lane">
+        <div class="node">
+          <span class="t">5 asks</span>
+          <span class="d">"Fundraising", "Hiring", "Pilot customers"…</span>
+        </div>
+        <div class="arrow thin">→</div>
+        <div class="node">
+          <span class="t">5 verdicts</span>
+          <span class="d">does this candidate satisfy each one?</span>
+        </div>
+        <div class="arrow thin">→</div>
+        <div class="node ok">
+          <span class="t">Attention</span>
+          <span class="d">learns which ask should decide <em>this</em> pair</span>
+        </div>
+        <div class="arrow thin">→</div>
+        <div class="node">
+          <span class="t">One score</span>
+          <span class="d">plus a readable reason</span>
+        </div>
+      </div>
+    </div>
+    <figcaption>
+      The by-product matters as much as the accuracy: the attention weights tell us
+      <em>which ask carried the decision</em>, which is the first thing in this project
+      that would be directly explainable to a person receiving an intro.
+    </figcaption>
+  </figure>
+</section>
+
+<!-- ==================================================== 06 -->
+<section>
+  <h2><span class="num">06 — alternatives</span>What else we could do instead</h2>
+  <p class="sub">Ranked by what the evidence and the latency budget actually allow.</p>
+
+  <div class="tw">
+    <table>
+      <thead>
+        <tr><th>Option</th><th>Call</th><th>Reasoning</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Per-section experts + learned attention pooling</strong></td>
+          <td><span class="pill go">Recommended</span></td>
+          <td>Generalises the pooling rule we already measured as best, gets 12× more training rows, and makes routing mean something we can check.</td>
+        </tr>
+        <tr>
+          <td>Keep the fixed softmax pooling</td>
+          <td><span class="pill ctrl">Control arm</span></td>
+          <td>Run it beside the above. If attention does not beat it, we learn that pooling was never the bottleneck — a cheap and genuinely useful negative result.</td>
+        </tr>
+        <tr>
+          <td>Self-attention <em>between</em> a seeker's own asks</td>
+          <td><span class="pill no">Not yet</span></td>
+          <td>Lets asks modulate each other ("they want a hire <em>and</em> funding"). Plausible, but we have no evidence such interaction exists, and it costs parameters we cannot spare.</td>
+        </tr>
+        <tr>
+          <td>Cross-attention over raw text</td>
+          <td><span class="pill no">No</span></td>
+          <td>That is a cross-encoder. It reads both profiles together at query time, which is dead on arrival under a 100 ms budget, and needs orders of magnitude more labels than 200 pairs.</td>
+        </tr>
+        <tr>
+          <td>Set Transformer / DeepSets</td>
+          <td><span class="pill no">Overkill</span></td>
+          <td>Heavy machinery for permutation-invariant sets. At a median of five sections, single-head attention already covers it.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="note risk">
+    <span class="lbl">The risk worth stating up front</span>
+    <p>
+      Attention pooling and the expert gate are both mechanisms for
+      <em>"decide what matters for this input."</em> They may quietly do the same job
+      twice. The ablation that settles it is cheap: mixture-of-experts + attention,
+      against a plain single network + attention. If those two land in the same place,
+      the mixture was never the useful part — which is, honestly, what the last three
+      experiments have each been hinting.
+    </p>
+  </div>
+</section>
+
+<!-- ==================================================== 07 -->
+<section>
+  <h2><span class="num">07 — order of work</span>How we would build it</h2>
+  <p class="sub">
+    New isolated package <code>moe_sectioned/</code> — own config, own artifacts
+    directory, nothing in the earlier experiments touched.
+  </p>
+
+  <ol class="steps">
+    <li>
+      <div>
+        <span class="st">Put both populations in one embedding space</span>
+        <span class="sd">Encode ~300 real profiles with Qwen3-Embedding-8B, which the synthetic batch already uses. Today the two sides use different models, which is exactly why the embedding channel had to be thrown away last time.</span>
+      </div>
+    </li>
+    <li>
+      <div>
+        <span class="st">Explode into section rows</span>
+        <span class="sd">Split each seeker's asks, cap at 8, embed each one. 2,302 real rows, ~30,000 synthetic.</span>
+      </div>
+    </li>
+    <li>
+      <div>
+        <span class="st">Pre-train on synthetic, within-seeker</span>
+        <span class="sd">Ranking one candidate above another <em>for the same seeker</em> was worth +0.131 last time — the single largest effect we have measured. Keep it.</span>
+      </div>
+    </li>
+    <li>
+      <div>
+        <span class="st">Fine-tune on real pairs, cross-validated by seeker</span>
+        <span class="sd">Never let one person appear in both training and validation.</span>
+      </div>
+    </li>
+    <li>
+      <div>
+        <span class="st">Read the diagnostics before the score</span>
+        <span class="sd">Expert usage, routing decisiveness, and whether routing is secretly tracking <em>who is asking</em> rather than <em>what they asked</em>. That last one has caught us before.</span>
+      </div>
+    </li>
+    <li>
+      <div>
+        <span class="st">One shot at the 69-pair holdout — and only if earned</span>
+        <span class="sd">The bar to clear first is 0.6398, plain logistic regression. Nothing has beaten it yet. If the cross-validated result does not clear it, we do not spend the holdout.</span>
+      </div>
+    </li>
+  </ol>
+
+  <p style="margin-top:26px">
+    Latency is unaffected, which is worth saying plainly: the asks belong to the
+    seeker, candidates stay embedded offline in batch, and query time is about five
+    short encodes plus a vector lookup. Nothing here moves us toward the
+    per-candidate model calls that the budget rules out.
+  </p>
+</section>
+
+<!-- ==================================================== 08 -->
+<section>
+  <h2><span class="num">08 — what would make this fail</span>Stated before we run it</h2>
+
+  <ul>
+    <li><strong>The asks may not be the signal.</strong> Production already filtered these pairs for topical relevance. Every pair here passed that bar, so the residual question — will these two actually connect — may live in tone, timing, or effort, none of which sections capture.</li>
+    <li><strong>The label is per-pair, the rows are per-section.</strong> If pooling cannot resolve which ask mattered, the extra rows are 12× more noise rather than 12× more signal.</li>
+    <li><strong>Synthetic pre-training has failed once already.</strong> Every model trained on the synthetic batch scored below the no-model floor. The teacher labelling that data is only right about 58% of the time on real pairs, and better features do not raise a ceiling set by label quality.</li>
+    <li><strong>Four experts on 2,302 rows is still small data.</strong> Fold-to-fold variation in past runs was ±0.15 AUC. Any improvement smaller than that is not a result, it is weather.</li>
+  </ul>
+
+  <div class="note">
+    <span class="lbl">The bar</span>
+    <p>
+      Logistic regression on roughly 105 real pairs scores <strong>0.6398</strong>.
+      Keyword cosine with no training at all scores <strong>0.5660</strong>. Both are
+      still unbeaten by anything we have built. This plan is worth running because it
+      tests a specific idea we have never actually tested — not because the
+      architecture has earned confidence.
+    </p>
+  </div>
+</section>
+
+<footer>
+  Plan only — nothing built yet. Related:
+  <code>docs/moe-reranker-experiment.md</code> ·
+  <code>docs/moe-rrf003-synthetic-training-findings.md</code> ·
+  <code>docs/html/moe-reranker-review.html</code>.
+  Architecture the plan modifies: <code>moe_reranker/model.py</code>.
+</footer>
+
+</div>
