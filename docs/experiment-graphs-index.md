@@ -51,6 +51,7 @@ wants the full story.
 | [`Dorby AI — Framing & Experiment Proposal`](https://claude.ai/code/artifact/5aed8e2e-a4e4-4c2d-adbc-500c307f855a) | published artifact only (no local file) | 2026-07-27 | Framing deck for the project's objective and proposed experiment slate. Published before the two-tower ablation series; predates the 200-pair evaluation, so any accuracy figures in it are 69-pair-holdout numbers. |
 | [`project-story.html`](http://dorby-project-story-411960113601.s3-website-us-east-1.amazonaws.com/) | local (`docs/html/`) + S3 static site | 2026-07-30 | Plain-language chronological walkthrough of the whole project (2026-07-16 → 07-30) as a scroll-driven slideshow. Not a Claude artifact — hosted on S3, URL recorded in `docs/project-story-url.md`. |
 | [`twotower-top1-optimised.html`](https://claude.ai/code/artifact/6caec2cf-5434-462e-a29a-a55dd13018f1) | published artifact + local (`docs/html/`) | 2026-07-30 | Two changes targeting recall@1 at fixed Arm A settings. **Sharpening the loss** (MNRL scale 20→50 + `hardness_mode='hard_negatives'`) **backfired on every metric** — all-200 R@1 0.1800→0.1400, below the untrained baseline, hard-neg AUC 0.4578 (worse than chance). **Fixing checkpoint selection** to rank against a real dev corpus (`CorpusRecallDevEvaluator`, `primary_metric='recall@1'`) produced the **best MRR of any model in the project (0.3550 on all 200)** and the first fine-tune to beat frozen nano at R@1 (19 vs 18 of 100) — invisible on the 69-pair holdout. Writeup: `docs/twotower-top1-optimised-experiment.md` |
+| [Judge Prompt Evolution — evo_001 / evo_002](https://claude.ai/code/artifact/1e089702-6f90-4676-98e4-6c7e69813119) | published artifact only (no local file) | 2026-07-31 | **Two rounds of automatic LLM-judge prompt optimization, both lose to the naive prompt — but fixing the first run's meta-prompt closes about half the gap.** `judge_prompt_evolution/` (own isolated package): an optimizer LLM revises the judge's system prompt each round against a fresh batch of real labeled example pairs, train-split only, no accuracy feedback inside the loop. **evo_001** (Sonnet 4.5 rounds 1-9, Deepseek-v4-pro rounds 10-20) grew 1,011→24,905 chars via 32 hand-accreted, example-specific rules before Deepseek's first round cut it 74% unprompted, ending at 18,463 chars — scored pair AUC **0.5734** vs. naive's 0.6177 (F1 0.5584 vs 0.6326). Inspecting the failure led to a rewritten meta-prompt (v2: drop the hard/easy-negative framing, instruct "revise the rubric, not append, generalize don't copy specifics"), pushed to LangSmith Hub tag `v2`. **evo_002** (Deepseek-v4-pro only, all 20 rounds) grew smoothly and monotonically to 13,142 chars with no spike-and-rewrite, and scored pair AUC **0.5918** — better, still a loss. Confirming `structured_cot` on all 200 real pairs (previously holdout-only) puts it closest of any attempt at 0.6100. **Four attempts, four losses**, closest is structured_cot not either evolution run — next step is seeding the loop from structured_cot instead of naive. Also found and fixed a genuine `json.loads` strict-mode bug (Deepseek emitting raw newlines inside JSON string values, deterministic across runs). Writeup: `docs/judge-prompt-evolution-experiment.md` |
 
 Local file links above are absolute `file://` paths pinned to this repo's
 checkout location on this machine (`/Users/harsh/Artifacts/dorby-ai/docs/html/`)
@@ -569,6 +570,64 @@ Landed one commit later (`81b4821`) and it revises two things here:
    position is to report the cross-validated number and label it as such.
 
 Total Modal spend across three A100 runs: ~$0.55 of a $3 budget.
+
+## Judge prompt evolution: two automatic-optimization runs, both lose, structured_cot closest (2026-07-31)
+
+**Isolated package: `judge_prompt_evolution/`.** No files under
+`baselines/llm_judge/` or `data/` were edited — the seed judge prompt is
+duplicated (not imported) into `judge_prompt_evolution/seed_prompt.py`, and
+the AUC check is a new file (`eval_evolved.py`) that imports the original
+experiment's call/scoring machinery read-only.
+
+`docs/llm-judge-experiment.md`'s naive judge prompt (pair AUC 0.6177 on all
+200 real pairs) had already beaten two hand-designed alternatives
+(`calibrated`, `structured_cot`, both holdout-only at the time). This
+experiment asked whether a fully automatic prompt-optimization loop — no
+human writing the prompt at all — could do what manual engineering couldn't.
+20 rounds, each showing an optimizer LLM the current prompt plus a fresh
+batch of real labeled examples (train split only, sampled without
+replacement) and asking for a revision. Deliberately no accuracy feedback
+inside the loop — the AUC check ran once, after all 20 rounds, as an
+explicitly separate confirmed step.
+
+**Run 1 (`evo_001`) lost on every metric** — pair AUC 0.5734 vs. 0.6177,
+F1 0.5584 vs. 0.6326. Prompt length went 1,011 → 24,905 chars under Sonnet
+4.5 (rounds 1-9, purely additive — 32 numbered rules, several citing exact
+dollar figures and sector names lifted from single training examples rather
+than generalized) → Deepseek-v4-pro's first round (10→11) cut that 74% to
+6,420 chars unprompted ("condensed the 32 specific rules into broader,
+principle-based categories to improve generalization" — its own stated
+rationale) → grew back to 18,463 by round 20.
+
+**The meta-prompt was rewritten based on that failure** (dropped the
+hard/easy-negative framing entirely, replaced "incremental sharpening" with
+an explicit instruction to revise the rubric and generalize rather than
+append and copy specifics) and pushed to LangSmith Hub as `v2`. **Run 2
+(`evo_002`)**, same process, Deepseek-v4-pro only this time, grew smoothly
+and monotonically to 13,142 chars with no spike-and-rewrite — and scored pair
+AUC **0.5918**, F1 0.6167. Better, roughly half the gap closed, but still a
+loss.
+
+**Confirming `structured_cot` on all 200 real pairs** (it only had a holdout
+number before) puts it at **0.6100** — closer to naive than either evolution
+run by a wide margin. Four attempts (`calibrated`, `structured_cot`,
+`evo_001`, `evo_002`), four losses, and fixing the obvious overfitting
+mechanism helped substantially without flipping the result — evidence that
+whatever the naive prompt does right isn't reducible to "avoid overfit
+rules." Also found and fixed a genuine bug along the way: `json.loads` in
+strict mode rejects a literal unescaped newline inside a JSON string value,
+which Deepseek was emitting deterministically on its longest response each
+run (same error, same location, twice, in two separate runs) — fixed with a
+local lenient parser rather than touching the shared `synth_pipeline/llm.py`.
+
+Two bugs surfaced running the loop, both from the prompt naturally growing
+each round: an `optimizer.py` call site that never threaded through
+`OPENROUTER_API_KEY` (crashed immediately), and a fixed `max_tokens=3000`
+that was fine at round 1 but truncated round 7's longer completion mid-JSON
+and crashed the run. Both fixed (explicit key/base_url, `max_tokens=8000` +
+3-attempt retry); `run.py --resume` added so the two mid-run crashes didn't
+cost the already-completed iterations. See `docs/judge-prompt-evolution-experiment.md`
+for the full writeup, every iteration's prompt text, and repro commands.
 
 ## Published Artifacts (claude.ai, this account)
 

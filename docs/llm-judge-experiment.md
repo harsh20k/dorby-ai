@@ -214,6 +214,13 @@ useful as a debugging/audit tool on individual pairs even though the
 aggregate score isn't an improvement — see `docs/html/llm-judge-comparison.html`
 for both alongside every embedding baseline.
 
+**Confirmed on all 200 real pairs (2026-07-31, `--split all`), for direct
+comparability with other "beat naive" attempts** (`docs/judge-prompt-evolution-experiment.md`):
+pair AUC **0.6100** (vs. naive's 0.6177 on the same population — a −0.0077
+gap, closely matching the holdout's −0.0073), decision accuracy 0.5700, F1
+0.6560, hard-neg AUC 0.6225, easy-neg AUC 0.6394. This is the closest any
+prompt variant has come to beating naive, holdout or otherwise.
+
 ## What this does not show
 
 - **This cannot ship on the serving path.** A per-candidate LLM call is
