@@ -34,6 +34,25 @@ def _write_json(path: Path, data: Any) -> None:
     path.write_text(json.dumps(data, indent=2), encoding="utf-8")
 
 
+def resolve_seed_prompt(cfg: RunConfig) -> tuple[str, str]:
+    """Return (prompt_text, description) for the configured seed source."""
+    if cfg.seed_source == "naive":
+        return (
+            SEED_JUDGE_PROMPT,
+            "seed: unmodified naive judge prompt (scored 0.6177 pair AUC on all-200 real pairs)",
+        )
+    if cfg.seed_source == "structured_cot":
+        from baselines.llm_judge.prompt import SYSTEM_PROMPTS
+
+        return (
+            SYSTEM_PROMPTS["structured_cot"],
+            "seed: unmodified structured_cot judge prompt (scored 0.6100 pair AUC on all-200 "
+            "real pairs — the closest of any prior attempt to beating naive's 0.6177), "
+            "imported read-only from baselines.llm_judge.prompt",
+        )
+    raise ValueError(f"unknown seed_source {cfg.seed_source!r}")
+
+
 def run(cfg: RunConfig, *, resume: bool = False) -> dict[str, Any]:
     run_dir = cfg.run_dir
     iterations_dir = run_dir / "iterations"
@@ -47,8 +66,11 @@ def run(cfg: RunConfig, *, resume: bool = False) -> dict[str, Any]:
     print(f"optimizer   {cfg.optimizer_model}")
     print(f"split       {cfg.split} (holdout never touched)")
 
+    seed_prompt, seed_description = resolve_seed_prompt(cfg)
+    print(f"seed source {cfg.seed_source}")
+
     bank = ExampleBank(cfg)
-    current_prompt = SEED_JUDGE_PROMPT
+    current_prompt = seed_prompt
     history: list[dict[str, Any]] = []
     start_iteration = 1
 
@@ -69,7 +91,10 @@ def run(cfg: RunConfig, *, resume: bool = False) -> dict[str, Any]:
 
     if cfg.push_to_hub and not resume:
         push_meta_prompt(hub_owner=cfg.hub_owner, repo=cfg.hub_repo)
-        push_seed_prompt(hub_owner=cfg.hub_owner, repo=cfg.hub_repo)
+        push_seed_prompt(
+            hub_owner=cfg.hub_owner, repo=cfg.hub_repo,
+            text=seed_prompt, description=seed_description, run_id=cfg.run_id,
+        )
 
     if not resume:
         _write_json(
@@ -77,8 +102,8 @@ def run(cfg: RunConfig, *, resume: bool = False) -> dict[str, Any]:
             {
                 "iteration": 0,
                 "prompt_before": None,
-                "prompt_after": SEED_JUDGE_PROMPT,
-                "rationale": "seed: unmodified naive judge prompt (scored 0.6177 pair AUC on all-200 real pairs)",
+                "prompt_after": seed_prompt,
+                "rationale": seed_description,
                 "contract_problems": [],
                 "examples": [],
                 "optimizer_model": None,
@@ -118,13 +143,13 @@ def run(cfg: RunConfig, *, resume: bool = False) -> dict[str, Any]:
         "run_id": cfg.run_id,
         "n_iterations": cfg.n_iterations,
         "optimizer_model": cfg.optimizer_model,
-        "seed_prompt": SEED_JUDGE_PROMPT,
+        "seed_source": cfg.seed_source,
+        "seed_prompt": seed_prompt,
         "final_prompt": current_prompt,
         "seed_prompt_auc_reference": {
-            "note": "AUC of the *seed* prompt (unmodified naive judge), measured previously — "
-                    "not re-measured by this run",
-            "all_200_pair_auc": 0.6177,
-            "holdout_69_pair_auc": 0.6358,
+            "note": "AUC of the *seed* prompt, measured previously — not re-measured by this run",
+            "all_200_pair_auc": 0.6177 if cfg.seed_source == "naive" else 0.6100,
+            "holdout_69_pair_auc": 0.6358 if cfg.seed_source == "naive" else 0.6336,
             "source": "docs/llm-judge-experiment.md",
         },
         "contract_warnings": [
@@ -151,6 +176,7 @@ def main(argv: list[str] | None = None) -> int:
     p.add_argument("--n-iterations", type=int, default=20)
     p.add_argument("--optimizer-model", default=None)
     p.add_argument("--seed", type=int, default=42)
+    p.add_argument("--seed-source", choices=["naive", "structured_cot"], default=None)
     p.add_argument("--no-hub", action="store_true", help="skip LangSmith Hub pushes (local only)")
     p.add_argument("--resume", action="store_true",
                     help="continue an existing --run-id from its last saved iteration")
@@ -161,6 +187,8 @@ def main(argv: list[str] | None = None) -> int:
         kwargs["run_id"] = args.run_id
     if args.optimizer_model:
         kwargs["optimizer_model"] = args.optimizer_model
+    if args.seed_source:
+        kwargs["seed_source"] = args.seed_source
     if args.no_hub:
         kwargs["push_to_hub"] = False
 

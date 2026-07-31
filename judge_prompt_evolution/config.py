@@ -39,6 +39,13 @@ class RunConfig:
     split: str = DEFAULT_SPLIT
     seed: int = 42
 
+    # "naive" = judge_prompt_evolution.seed_prompt.SEED_JUDGE_PROMPT (the
+    # 0.6177-AUC prompt this experiment set out to beat). "structured_cot" =
+    # baselines.llm_judge.prompt.SYSTEM_PROMPTS["structured_cot"] (imported
+    # read-only, not duplicated — we're not forking that prompt's own
+    # definition, just using its current text as a different starting point).
+    seed_source: str = "naive"
+
     artifacts_dir: Path = DEFAULT_ARTIFACTS_DIR
 
     push_to_hub: bool = True

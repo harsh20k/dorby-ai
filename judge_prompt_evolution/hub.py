@@ -84,15 +84,30 @@ def push_meta_prompt(*, hub_owner: str | None, repo: str) -> str | None:
     )
 
 
-def push_seed_prompt(*, hub_owner: str | None, repo: str) -> str | None:
-    from judge_prompt_evolution.seed_prompt import SEED_JUDGE_PROMPT
+def push_seed_prompt(
+    *, hub_owner: str | None, repo: str,
+    text: str | None = None, description: str | None = None, run_id: str | None = None,
+) -> str | None:
+    """Push iteration 0. Defaults to the naive prompt for backward compat;
+    pass ``text``/``description`` explicitly for a different seed source
+    (e.g. structured_cot)."""
+    if text is None:
+        from judge_prompt_evolution.seed_prompt import SEED_JUDGE_PROMPT
 
+        text = SEED_JUDGE_PROMPT
+        description = description or (
+            "judge_prompt_evolution: iteration 0 (unmodified naive judge prompt, "
+            "AUC 0.6177 on all-200 real pairs)"
+        )
+    tags = ["iter-00", "seed"]
+    if run_id:
+        tags.append(f"{run_id}--seed")
     return push_prompt(
-        text=SEED_JUDGE_PROMPT,
+        text=text,
         repo=repo,
         hub_owner=hub_owner,
-        description="judge_prompt_evolution: iteration 0 (unmodified naive judge prompt, AUC 0.6177 on all-200 real pairs)",
-        commit_tags=["iter-00", "seed"],
+        description=description or "judge_prompt_evolution: iteration 0",
+        commit_tags=tags,
     )
 
 
