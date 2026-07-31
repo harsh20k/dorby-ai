@@ -1,10 +1,13 @@
 # Sectioned MoE — per-ask experts with learned attention pooling
 
-**Status: built and run locally on the free encoder. The recommendation lost to
-its own control arm.** The frozen-softmax pooling that the earlier aggregation
-sweep already picked beats the learned attention it was supposed to generalise,
-and a single expert matches four. Nothing beat plain logistic regression. The
-frozen 69-pair holdout was **not spent**.
+**Status: built, run on both encoders, replicated across 5 seeds. The sectioned
+model beats the standing bar — but not for the reason the plan predicted.**
+`moe_attention` averages 0.6467 AUC against logistic regression's 0.5758 and wins
+5 of 5 seeds. However `moe_mean` (0.6404) matches it, so the gain comes from
+**scoring each ask separately**, not from the learned attention that motivated the
+design. Qwen3-Embedding-8B section embeddings scored *worse* than TF-IDF. The
+frozen 69-pair holdout was **not spent** — it is the next decision, not a
+foregone one.
 
 Isolated package: `moe_sectioned/`. Nothing in `moe_reranker/`, `moe_rrf/`,
 `baselines/` or `twotower/` was modified — `moe_rrf.features` and
@@ -44,89 +47,126 @@ Two deliberate departures from `moe_reranker.model.MMoE`:
    out-express one logistic regression, which is a plain reason the mixture never
    beat one. Affordable now at 708 rows rather than 111 pairs.
 
-## Results — seeker-disjoint 5-fold CV on 131 real pairs, TF-IDF encoder
+## Results — 5 seeds x seeker-disjoint 5-fold CV, 131 real pairs
 
-| arm | AUC (pooled OOF) | mean-of-folds | fold std | what it isolates |
+Every number is pooled out-of-fold AUC, averaged over 5 seeds. The seed changes
+the fold assignment *and* the model init, and every arm sees the same folds
+within a seed, so "wins" counts seeds where the arm beat logistic regression
+head-to-head.
+
+| arm | mean AUC | sd | vs logistic | wins |
 |---|---|---|---|---|
-| `logistic_pair` | 0.5484 | **0.6363** | 0.160 | the standing bar |
-| `moe_attention` | 0.5516 | 0.5865 | 0.167 | **the recommendation** |
-| **`moe_softmax`** | **0.5913** | 0.6151 | 0.131 | frozen pooling — the control |
-| `mlp_attention` | 0.5796 | 0.5844 | 0.153 | 1 expert: is the mixture doing anything? |
-| `moe_mean` | 0.5218 | 0.5510 | 0.169 | the null: does selectivity matter at all? |
+| `logistic_pair` | 0.5758 | 0.024 | — | — |
+| **`moe_attention`** (TF-IDF) | **0.6467** | 0.029 | **+0.0709** | **5/5** |
+| `moe_mean` (TF-IDF) | 0.6404 | 0.019 | +0.0646 | 5/5 |
+| `moe_softmax` (TF-IDF) | 0.5568 | 0.056 | −0.0190 | 2/5 |
+| `mlp_attention` (TF-IDF) | 0.5446 | 0.048 | −0.0312 | 2/5 |
+| `moe_attention` (Qwen3, correct prompts) | 0.5433 | 0.050 | −0.0324 | 1/5 |
+| `moe_attention` (Qwen3, no prompts) | 0.5378 | 0.028 | −0.0380 | 1/5 |
 
-**Two AUC columns, because this repo has used both conventions and they
-disagree.** `AUC (pooled OOF)` concatenates every out-of-fold prediction and
-scores once. `mean-of-folds` averages the per-fold AUCs, which is what
-`moe_rrf/experiment.py` reports — and it reproduces that experiment's published
-logistic figure (0.6363 here vs 0.6398 there), confirming the two are measuring
-the same thing under different estimators. At ~26 pairs per fold, mean-of-folds
-is the noisier and more optimistic of the two; **the pooled column is the one to
-trust**, and this discrepancy is worth knowing before comparing any number in
-this repo against any other.
+**Single-seed runs were meaningless and are kept only as a record of that.**
+`sec_001` through `sec_004` produced four different arm rankings in four runs.
+That is what overfitting plus a 131-pair sample looks like from the outside, and
+no conclusion should be drawn from any single-seed row.
 
 ## Findings
 
-**1. The recommendation lost to its own control.** `moe_softmax` (0.5913) beats
-`moe_attention` (0.5516). The argument for learned attention was that the winning
-frozen-softmax pooling *is* attention with fixed weights, so learning those
-weights should generalise it. It doesn't. Learning ~16 extra parameters on 131
-labels costs more than the flexibility buys.
+**1. The sectioned model beats the standing bar, consistently.** `moe_attention`
+on TF-IDF sections averages 0.6467 against logistic regression's 0.5758 and wins
+in **5 of 5 seeds**, mean margin +0.071. This is the first architecture in this
+project to beat plain logistic regression on real pairs under a repeated-seed
+comparison. It is still a small-sample result and the holdout is unspent, but the
+consistency is what distinguishes it from the earlier single-run noise.
 
-**2. The mixture is not carrying its weight — again.** `mlp_attention`, with a
-single expert, scores 0.5796 against `moe_attention`'s 0.5516. One expert beats
-four under identical pooling. This is the redundancy risk stated in the plan
-before running, and it is now the **fourth** independent time in this project
-that the MoE machinery has failed to pay for itself.
+**2. Exploding the ask is what helps — not the pooling rule.** `moe_mean`
+(0.6404) is statistically indistinguishable from `moe_attention` (0.6467), and
+both crush the pair-level baseline. So the gain comes from **scoring each ask
+separately**, not from cleverly deciding which ask matters. The learned attention
+that motivated the whole design contributes roughly nothing over a plain average.
 
-**3. Selective pooling does beat averaging.** `moe_mean` (0.5218) is worst by a
-clear margin. So the *sectioned* framing is not worthless — treating asks
-separately and then weighting them is better than treating the whole field as one
-blob. It is the *learned* weighting and the *mixture* that add nothing.
+**3. The mixture *does* matter here, reversing the earlier reading.**
+`mlp_attention` — one expert, identical pooling — scores 0.5446 against
+`moe_attention`'s 0.6467. Four experts beat one by 0.102. This contradicts the
+first (unreplicated) run and every earlier MoE experiment in this project. The
+plausible reason is that per-ask rows finally give the experts something to
+specialise *on*: an ask is a coherent unit, a whole profile is not.
 
-**4. Nothing beat the bar.** On mean-of-folds, logistic regression's 0.6363 leads
-every arm. On pooled OOF, `moe_softmax`'s 0.5913 leads logistic's 0.5484 — but
-see the caveat below before reading anything into that.
+**4. Frozen-softmax pooling collapsed once the sample was replicated.**
+`moe_softmax` averages 0.5568 with the highest variance of any arm (sd 0.056). Its
+apparent single-run win at 0.5913 did not survive four more seeds. At tau=0.05 it
+is nearly a hard max, so it bets the pair on one ask's verdict and inherits that
+verdict's noise.
 
-**5. Routing is decisive and mostly not a seeker shortcut.** Gate entropy fell to
-0.574 of a 1.386 ceiling (41%), so the gate is genuinely routing rather than
-averaging, and expert usage stayed spread (9.3%–34.8%) rather than collapsing.
-Routing-vs-seeker mutual information was 0.254 against a permutation null of
-0.167 — an excess of **+0.087**, below the 0.15 warning threshold and lower than
-the pair-level model's +0.109. Constraining the gate to see only the ask did
-reduce the seeker shortcut, as designed. That mechanism works; it just isn't
-worth anything on the metric.
+**5. Qwen3-Embedding-8B section embeddings are worse than TF-IDF here, and the
+asymmetric-prompt fix did not change that.** 0.5433 with the correct
+`prompt_name="query"` on the ask side, 0.5378 without — both far below TF-IDF's
+0.6467, both losing to logistic regression in 4 of 5 seeds. This is genuinely
+surprising: the same model beats Voyage-4-large at the pair level (0.6595 vs
+0.6086). The working hypothesis is that a section is a short, jargon-dense
+shopping list, which is exactly the regime where lexical overlap is strong and
+dense semantics add little — consistent with the hybrid baseline fitting alpha
+around 0.95 onto the lexical channel. It has not been tested further.
+
+**6. Routing is decisive and not a seeker shortcut.** Gate entropy fell to 16-41%
+of the uniform ceiling, expert usage stayed spread (22-28%), and routing-vs-seeker
+mutual information sat at +0.087 to +0.140 excess over a permutation null, under
+the 0.15 warning line and below the pair-level model's +0.109 at its worst.
+Constraining the gate to see only the ask worked as designed.
 
 ## Honest caveats
 
-- **Every difference here is inside the noise.** Fold-to-fold standard deviations
-  are 0.131–0.169 on 5 folds over 131 pairs. `moe_softmax` leading
-  `moe_attention` by 0.040 is not a result that would survive a different seed.
-  What the table supports is "no arm clearly separated from the others," not a
-  ranking.
-- **The two AUC estimators disagree about which arm wins**, which is itself
-  evidence the sample is too small to rank arms.
-- **This ran on TF-IDF, not Qwen3.** The plan's step 1 — encode both populations
-  with Qwen3-Embedding-8B, the only model measured to beat Voyage-4-large here —
-  is a paid Modal run and has **not** been done. The lexical encoder is a floor,
-  not the test. Section embeddings from a real semantic model could change the
-  interaction block substantially; they could also change nothing.
+- **131 pairs.** A +0.071 mean margin with a between-seed sd of ~0.03 is
+  consistent and reproducible, but it is 131 examples. Fold-to-fold sd within a
+  seed is 0.10–0.18. The 5/5 seed sweep is what makes this reportable at all;
+  it is not a substitute for more data.
+- **Seeds share one dataset.** Re-seeding changes the fold split and the init, not
+  the sample. It bounds optimisation noise, not sampling error, so the true
+  interval around 0.6467 is wider than 0.029 suggests.
 - **The TF-IDF vocabulary is fit on the whole pool**, not per fold. That is a mild
-  optimism shared identically by all five arms, so it cannot explain a difference
-  between them, but it inflates every absolute number a little.
+  optimism shared identically by every arm, so it cannot explain the gap between
+  arms, but it inflates all absolute numbers somewhat. The Qwen3 arm has no such
+  issue — and scores worse.
+- **`emb_pca_dims=48` was chosen by reasoning, not swept.** It was set to bring the
+  projection layers from ~960k parameters down to ~2.3k. No other value was tried,
+  so it is a fix for a clear defect rather than a tuned hyperparameter.
+- **Two paid-run bugs were found by inspection, not by the pipeline.** fp32 loading
+  (OOM) and the missing asymmetric prompt were both caught by comparing against
+  `baselines/hf_embedding/`, which already handled them. Copying that working
+  loader instead of writing a new one would have avoided both.
 - **Synthetic pretraining was not attempted.** The plan calls for it; the previous
-  experiment showed every synth-trained arm landing below the no-model floor, so
-  it is deliberately deferred rather than repeated on faith.
+  experiment showed every synth-trained arm landing below the no-model floor, so it
+  is deliberately deferred rather than repeated on faith.
+- **The holdout is unspent.** These are cross-validated numbers on the train pool.
+  The 69-pair holdout is one shot and has not been used.
 
 ## What this means
 
-The sectioned framing is worth keeping — `moe_mean` losing to everything says
-per-ask reasoning beats whole-field reasoning. The **mixture of experts** and the
-**learned pooling** are the parts that keep failing to earn their place.
+**The sectioning was the idea worth having.** Splitting a seeker's `lookingFor`
+into individual asks and scoring each one separately is worth about +0.07 AUC over
+the pair-level baseline, consistently across seeds. That is the first thing in
+this project to clear plain logistic regression under replication.
 
-The cheapest informative next step is not more architecture. It is the Qwen3
-encode, because it is the one component of the original proposal never actually
-tested, and because it changes what the model can see rather than how it reasons
-about what it sees.
+**The attention was not.** Mean pooling matches learned attention. The
+interpretability by-product — "we introduced Garrett because you asked for
+brand-side operations leaders" — survives regardless, since per-ask verdicts exist
+either way, so attention is still worth keeping for that reason alone. Just not
+for accuracy.
+
+**The mixture earned its place for the first time**, and plausibly because an ask
+is a coherent thing to specialise on where a whole profile is not.
+
+**Qwen3 sections did not help**, which is the clearest thing the $0.55 of GPU
+bought. Worth knowing before anyone spends more on dense embeddings for this
+field.
+
+Next steps, in order of value:
+
+1. **Spend the holdout.** The bar was cleared under replication, which is the
+   condition the plan set. This is the one experiment that has earned it.
+2. **Ablate the interaction block.** If TF-IDF sections win on lexical overlap,
+   the 32-dim interaction may be doing nothing and the 3 similarity scalars may be
+   the whole story. Free to test.
+3. **Sweep `emb_pca_dims`.** Currently one untested value.
 
 ## Reproduce
 

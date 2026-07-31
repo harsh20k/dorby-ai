@@ -38,7 +38,7 @@ from moe_reranker import diagnostics as diag
 from . import data as D
 from .config import ENCODER_QWEN3, ENCODER_TFIDF, SectionedConfig
 from .encode import Qwen3Backend, TfidfBackend
-from .features import RowStandardizer, build_section_features
+from .features import EmbeddingReducer, RowStandardizer, build_section_features
 from .sections import section_stats
 from .train import fit, predict
 
@@ -156,19 +156,32 @@ def run(cfg: SectionedConfig, *, verbose: bool = True) -> dict[str, Any]:
             sim_tr = std.transform(feats.sim[tr_rows], feats.pair_scalars[tr_rows])
             sim_va = std.transform(feats.sim[va_rows], feats.pair_scalars[va_rows])
 
+            # Reduce the embedding blocks before any learned layer, on this
+            # fold's training rows only. Without it the two Linear projections
+            # hold 200k-960k parameters against ~570 training rows.
+            if cfg.emb_pca_dims > 0:
+                red = EmbeddingReducer(cfg.emb_pca_dims).fit(
+                    feats.section_emb[tr_rows], feats.interaction[tr_rows]
+                )
+                int_tr, int_va = (red.transform(feats.interaction[r]) for r in (tr_rows, va_rows))
+                emb_tr, emb_va = (red.transform(feats.section_emb[r]) for r in (tr_rows, va_rows))
+            else:
+                int_tr, int_va = feats.interaction[tr_rows], feats.interaction[va_rows]
+                emb_tr, emb_va = feats.section_emb[tr_rows], feats.section_emb[va_rows]
+
             res = fit(
                 arm_cfg,
                 sim=sim_tr,
-                interaction=feats.interaction[tr_rows],
-                section_emb=feats.section_emb[tr_rows],
+                interaction=int_tr,
+                section_emb=emb_tr,
                 groups=D.regroup(groups, tr),
                 pair_labels=y_pair[tr],
             )
             s, g, _ = predict(
                 res.model,
                 sim=sim_va,
-                interaction=feats.interaction[va_rows],
-                section_emb=feats.section_emb[va_rows],
+                interaction=int_va,
+                section_emb=emb_va,
                 groups=D.regroup(groups, va),
             )
             scores[va] = s

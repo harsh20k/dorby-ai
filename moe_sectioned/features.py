@@ -139,8 +139,8 @@ def build_section_features(
     if not rows:
         raise ValueError("no sections produced from any pair")
 
-    S = encoder.encode(sec_texts)
-    C = encoder.encode(cand_texts)
+    S = encoder.encode(sec_texts, role="query")
+    C = encoder.encode(cand_texts, role="document")
 
     # Rows are L2-normalized, so the row-wise dot product is already a cosine.
     cos = (S * C).sum(axis=1)
@@ -149,7 +149,7 @@ def build_section_features(
     # population for this same ask. Stands in for the stage-1 retrieval rank,
     # which is what a re-ranker would actually receive at serving time.
     uniq_cand, inv = np.unique(np.array(cand_texts), return_inverse=True)
-    Cu = encoder.encode(list(uniq_cand))
+    Cu = encoder.encode(list(uniq_cand), role="document")
     all_scores = S @ Cu.T  # (N_rows, N_unique_candidates)
     rank_pct = (all_scores < cos[:, None]).mean(axis=1)
 
@@ -168,6 +168,52 @@ def build_section_features(
         pair_labels=np.array([labels[i] for i in keep], dtype=np.float32),
         pair_seekers=[seeker_ids[i] for i in keep],
     )
+
+
+@dataclass
+class EmbeddingReducer:
+    """PCA on the embedding blocks, fitted on training rows only.
+
+    **Why this is mandatory rather than optional.** The interaction and gate
+    blocks feed learned ``Linear`` layers whose parameter count is the embedding
+    width times the output width. At full width those two layers hold ~960k
+    parameters for TF-IDF (20,000-d) or ~197k for Qwen3 (4,096-d), against 708
+    training rows — so the projections *are* the model, and they will fit noise.
+    Runs ``sec_001`` and ``sec_002`` were done without this and their arm
+    rankings reversed completely between the two encoders, which is the
+    signature of exactly that.
+
+    One basis is fitted on the concatenation of the section and interaction
+    blocks so both land in the same reduced space, and it is fitted on training
+    rows only — a basis fitted on the evaluation rows would leak their structure
+    into training.
+    """
+
+    n_components: int = 48
+    mean: np.ndarray | None = None
+    basis: np.ndarray | None = None
+
+    def fit(self, section_emb: np.ndarray, interaction: np.ndarray) -> "EmbeddingReducer":
+        x = np.concatenate([section_emb, interaction], axis=0).astype(np.float64)
+        self.mean = x.mean(axis=0)
+        centered = x - self.mean
+        # Economy SVD: n_rows is far smaller than n_features here, so this is
+        # cheap even at 20,000 dims.
+        k = min(self.n_components, min(centered.shape) - 1)
+        _, _, vt = np.linalg.svd(centered, full_matrices=False)
+        self.basis = vt[:k].T.astype(np.float32)
+        return self
+
+    def transform(self, x: np.ndarray) -> np.ndarray:
+        if self.mean is None or self.basis is None:
+            raise RuntimeError("call fit() before transform()")
+        return ((x - self.mean) @ self.basis).astype(np.float32)
+
+    @property
+    def out_dims(self) -> int:
+        if self.basis is None:
+            raise RuntimeError("call fit() before out_dims")
+        return int(self.basis.shape[1])
 
 
 @dataclass

@@ -42,8 +42,16 @@ from .config import ENCODER_QWEN3, ENCODER_TFIDF
 class Encoder(Protocol):
     name: str
 
-    def encode(self, texts: Sequence[str]) -> np.ndarray:
-        """(N, D) L2-normalized rows, so a dot product is a cosine."""
+    def encode(self, texts: Sequence[str], role: str = "document") -> np.ndarray:
+        """(N, D) L2-normalized rows, so a dot product is a cosine.
+
+        ``role`` is "query" for a seeker's ask and "document" for a candidate
+        profile. It exists because Qwen3-Embedding is asymmetric — the query side
+        takes an instruction prefix and the document side must not — and getting
+        it wrong is not a small effect: encoding both sides as documents scored
+        0.5378 mean AUC across five seeds where the corrected cache scores
+        higher. TF-IDF is symmetric and ignores the argument.
+        """
 
 
 def _l2(x: np.ndarray) -> np.ndarray:
@@ -73,7 +81,8 @@ class TfidfBackend:
         self._vectorizer = enc.vectorizer
         return self
 
-    def encode(self, texts: Sequence[str]) -> np.ndarray:
+    def encode(self, texts: Sequence[str], role: str = "document") -> np.ndarray:
+        del role  # TF-IDF is symmetric; both sides use the same vocabulary.
         if self._vectorizer is None:
             raise RuntimeError("call fit() before encode()")
         return _l2(self._vectorizer.transform(list(texts)).toarray().astype(np.float32))
@@ -108,12 +117,12 @@ class Qwen3Backend:
         self._table = json.loads(idx.read_text())["hash_to_row"]
         self._matrix = np.load(vecs)
 
-    def encode(self, texts: Sequence[str]) -> np.ndarray:
+    def encode(self, texts: Sequence[str], role: str = "document") -> np.ndarray:
         self._load()
         assert self._table is not None and self._matrix is not None
         rows, missing = [], 0
         for t in texts:
-            h = text_hash(t)
+            h = text_hash(t, role)
             r = self._table.get(h)
             if r is None:
                 missing += 1
@@ -122,7 +131,8 @@ class Qwen3Backend:
                 rows.append(r)
         if missing:
             raise KeyError(
-                f"{missing}/{len(texts)} texts have no cached Qwen3 vector. The "
+                f"{missing}/{len(texts)} texts have no cached Qwen3 vector for role "
+                f"{role!r}. The "
                 "embedding cache is keyed on exact text, so this means the section "
                 "splitter or text packing changed since the encode run — re-encode "
                 "rather than proceeding with partial vectors."
@@ -130,8 +140,9 @@ class Qwen3Backend:
         return _l2(self._matrix[np.array(rows)].astype(np.float32))
 
 
-def text_hash(text: str) -> str:
-    return hashlib.sha256(text.encode("utf-8")).hexdigest()
+def text_hash(text: str, role: str = "document") -> str:
+    """Role-qualified, because the same string is a different vector per role."""
+    return hashlib.sha256(f"{role}\x00{text}".encode("utf-8")).hexdigest()
 
 
 def assert_same_space(*encoders: Encoder) -> None:

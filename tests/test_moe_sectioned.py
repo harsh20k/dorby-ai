@@ -286,3 +286,74 @@ def test_end_to_end_produces_one_score_per_pair():
     assert len(weights) == feats.n_pairs
     assert np.isfinite(scores).all()
     assert ((scores >= 0) & (scores <= 1)).all()
+
+
+# --------------------------------------------------- asymmetric encoding
+def test_text_hash_is_role_qualified():
+    """Qwen3 is asymmetric: the same string is a different vector per role.
+
+    Before roles existed, sections and candidates were both encoded as documents
+    and collided on one hash. Keying without the role would silently serve a
+    document vector where a query vector was asked for.
+    """
+    assert text_hash("same text", "query") != text_hash("same text", "document")
+
+
+def test_tfidf_ignores_role_because_it_is_symmetric():
+    e = TfidfBackend().fit(["alpha beta", "beta gamma"])
+    assert np.allclose(
+        e.encode(["alpha beta"], role="query"),
+        e.encode(["alpha beta"], role="document"),
+    )
+
+
+def test_qwen3_backend_refuses_partial_cache():
+    """A missing vector must raise, never silently return a wrong row."""
+    import json
+
+    import pytest as _pytest
+
+    from moe_sectioned.encode import Qwen3Backend
+
+    tmp = Path(__file__).resolve().parent / "_tmp_emb"
+    tmp.mkdir(exist_ok=True)
+    try:
+        np.save(tmp / "vectors.npy", np.eye(2, dtype=np.float32))
+        (tmp / "index.json").write_text(
+            json.dumps({"hash_to_row": {text_hash("known", "query"): 0}})
+        )
+        b = Qwen3Backend(embedding_dir=tmp)
+        assert b.encode(["known"], role="query").shape == (1, 2)
+        with _pytest.raises(KeyError, match="no cached Qwen3 vector"):
+            b.encode(["unknown"], role="query")
+    finally:
+        for f in tmp.glob("*"):
+            f.unlink()
+        tmp.rmdir()
+
+
+# ------------------------------------------------- embedding reduction
+def test_reducer_cuts_parameters_by_orders_of_magnitude():
+    """The fix for runs sec_001/sec_002, which were ~960k params on 708 rows."""
+    from moe_sectioned.features import EmbeddingReducer
+
+    rng = np.random.default_rng(0)
+    sec = rng.normal(size=(60, 500)).astype(np.float32)
+    inter = rng.normal(size=(60, 500)).astype(np.float32)
+    r = EmbeddingReducer(n_components=16).fit(sec, inter)
+    assert r.out_dims == 16
+    assert r.transform(sec).shape == (60, 16)
+
+
+def test_reducer_basis_comes_from_training_rows_only():
+    """A basis fitted on evaluation rows would leak their structure."""
+    from moe_sectioned.features import EmbeddingReducer
+
+    rng = np.random.default_rng(1)
+    train = rng.normal(size=(40, 30)).astype(np.float32)
+    held = rng.normal(size=(40, 30)).astype(np.float32) + 50.0
+
+    r = EmbeddingReducer(n_components=8).fit(train, train)
+    before = r.basis.copy()
+    r.transform(held)
+    assert np.array_equal(r.basis, before), "transform must not refit"

@@ -38,8 +38,20 @@ class SectionedConfig:
     encoder: str = ENCODER_TFIDF
     #: Where ``modal_encode.py`` writes / where the qwen3 encoder reads.
     embedding_dir: Path = Path("artifacts/moe_sectioned/embeddings")
-    #: Interaction block width. The elementwise product of two embeddings is
-    #: projected to this many dims by a learned layer.
+    #: Reduce embeddings to this many dims **before** any learned layer, by PCA
+    #: fitted on training rows only. 0 disables it.
+    #:
+    #: This is not a nicety. Without it the learned projections *are* the model:
+    #: a 20,000-d TF-IDF vector gives interaction_proj 20000x32 = 640k parameters
+    #: and gate_proj 20000x16 = 320k, i.e. ~960k parameters fit on 708 rows;
+    #: Qwen3's 4,096 dims still give ~197k. Runs sec_001 (tfidf) and sec_002
+    #: (qwen3) were both done at emb_pca_dims=0 and their arm rankings reversed
+    #: completely between the two encoders — which is what pure overfitting looks
+    #: like from the outside. At 48 dims the same projections cost ~2.3k
+    #: parameters total, which 708 rows can actually support.
+    emb_pca_dims: int = 48
+    #: Interaction block width. The elementwise product of two (reduced)
+    #: embeddings is projected to this many dims by a learned layer.
     interaction_dims: int = 32
     #: Gate input width — the section embedding projected down, nothing else.
     gate_dims: int = 16
