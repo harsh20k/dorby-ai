@@ -492,6 +492,83 @@ any experiment that re-encodes identical text under a new fit.
 The real 69-pair holdout was **not spent** — nothing came close to earning it.
 
 
+## Per-ask MoE: sectioned re-ranker (`moe-sectioned-findings.html`, 2026-07-31)
+
+Package: `moe_sectioned/`. Full tables: `docs/moe-sectioned-experiment.md`.
+Two pages, deliberately kept separate:
+
+- [`moe-sectioned-plan.html`](file:///Users/harsh/Artifacts/dorby-ai/docs/html/moe-sectioned-plan.html)
+  — the **pre-experiment proposal**, written and published before anything was
+  built, kept **unedited** and banner-marked as superseded. It predicted five
+  things and got three wrong; it is retained so the predictions stay auditable
+  beside the outcomes rather than being quietly revised into agreement.
+- [`moe-sectioned-findings.html`](file:///Users/harsh/Artifacts/dorby-ai/docs/html/moe-sectioned-findings.html)
+  — what actually happened.
+  [Published artifact](https://claude.ai/code/artifact/c0db4c11-4998-4a11-ba67-b31039618a97).
+
+### What it closed
+
+The original MoE proposal was to explode a seeker's `lookingFor` field and reason
+about each ask separately. What had been built collapsed all of it into the single
+integer `n_sections` — which does not even count asks correctly, it counts
+blank-line-separated blocks (13 where the first real seeker wrote 4) — while the
+section-scoring machinery in `moe_reranker/section_scoring.py` ran as a
+disconnected parallel path whose output was a report, never a feature. This moves
+the unit of prediction from a pair to a **(pair, section) row**: 131 training
+pairs become 708 rows, median 5 asks per seeker.
+
+### Results (5 seeds x seeker-disjoint 5-fold CV, pooled out-of-fold AUC)
+
+| arm | mean | sd | vs logistic | wins |
+|---|---|---|---|---|
+| `logistic_pair` | 0.5758 | 0.024 | — | — |
+| **`moe_attention`** (TF-IDF) | **0.6467** | 0.029 | **+0.0709** | **5/5** |
+| `moe_mean` (TF-IDF) | 0.6404 | 0.019 | +0.0646 | 5/5 |
+| `moe_softmax` (TF-IDF) | 0.5568 | 0.056 | −0.0190 | 2/5 |
+| `mlp_attention` (TF-IDF) | 0.5446 | 0.048 | −0.0312 | 2/5 |
+| `moe_attention` (Qwen3) | 0.5433 | 0.050 | −0.0324 | 1/5 |
+
+**First architecture in this project to beat plain logistic regression under
+replication** — but a plain average of the asks matches learned attention, so the
+gain is the *sectioning*, not the pooling that motivated the whole design. Four
+experts beat one, the first time the mixture has earned its place here.
+
+### Why single-seed numbers from this experiment are worthless
+
+Runs `sec_001`–`sec_004` produced **four different arm rankings in four runs**.
+Root cause: the two "reduction" projections held ~960k parameters (TF-IDF,
+20,000-d) or ~197k (Qwen3, 4,096-d) against 708 rows, so the projections *were*
+the model. Fixed by `EmbeddingReducer`, a train-rows-only PCA to 48 dims, cutting
+them to ~2.3k parameters. Anything quoted from a single seed of this package
+predates or ignores that fix.
+
+### Two more paid-run defects, both caught by comparison rather than by failure
+
+- The Modal encode OOMed on an A100-40GB by loading 8B params in **fp32** (36.68
+  GiB allocated, 942 MiB free). `baselines/hf_embedding/encode.py` already used
+  bfloat16 and capped `max_seq_length`; this script was written fresh instead of
+  copied.
+- **Qwen3-Embedding is asymmetric** (`query_prompt_name="query"` in the model
+  registry) and the first encode applied no prompt to either side. Cache keys are
+  now role-qualified so a query and a document vector cannot collide. Fixing it
+  did **not** rescue the score.
+
+### Relationship to the all-200 sweep
+
+Landed one commit later (`81b4821`) and it revises two things here:
+
+1. The Qwen3 loss stopped being anomalous. The belief it contradicted — Qwen3-8B
+   beats Voyage-4-large, 0.6595 vs 0.6086 — was **retracted**; on all 200 pairs
+   Qwen loses on every metric. Two unrelated measurements now agree that dense
+   Qwen3 embeddings are not the lever on this data.
+2. **"Spend the holdout" was withdrawn as the next step.** The 69-pair holdout has
+   Spearman −0.029 against the all-200 ranking among the top 6 models. This leaves
+   a genuine evaluation gap: all-200 is the right population, but this model trains
+   on 131 of those 200, so it cannot be scored there without leakage. The honest
+   position is to report the cross-validated number and label it as such.
+
+Total Modal spend across three A100 runs: ~$0.55 of a $3 budget.
+
 ## Published Artifacts (claude.ai, this account)
 
 See the unified table at the top of this doc for all 9 currently-published
