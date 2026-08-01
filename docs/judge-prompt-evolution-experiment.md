@@ -1,10 +1,11 @@
 # Judge prompt evolution — can automatic prompt optimization beat the naive judge?
 
 Generated: 2026-07-31. Code: `judge_prompt_evolution/` (isolated package, no files
-under `baselines/llm_judge/` or `data/` were edited). Four runs so far, each
-isolating one variable — meta-prompt version, seed prompt, and a periodic
-summarization step. Published trace (all four runs, selectable):
-[Judge Prompt Evolution — evo_001 → evo_004](https://claude.ai/code/artifact/1e089702-6f90-4676-98e4-6c7e69813119).
+under `baselines/llm_judge/` or `data/` were edited). Five runs so far, each
+isolating one variable — meta-prompt version, seed prompt, a periodic
+summarization step, and (evo_005) the example-sampling population itself.
+Published trace (all five runs, selectable):
+[Judge Prompt Evolution — evo_001 → evo_005](https://claude.ai/code/artifact/1e089702-6f90-4676-98e4-6c7e69813119).
 
 ## What this tests
 
@@ -23,22 +24,26 @@ hard-declined, 1 easy-declined — hardness = token-Jaccard overlap between the
 two profiles, median split), and asked to propose a revised prompt. The
 revised prompt becomes the input to the next round, with a *different* sample
 of examples. Batches are drawn without replacement from the **train split
-only** (`data/synthetic/seed_split.json`) — the 69-pair holdout was never
-shown to the optimizer, and no AUC/accuracy check ran at any point during the
-20 rounds, by deliberate design (per instruction: inspect the evolved prompt
-qualitatively first, run the accuracy check only afterward, as an explicitly
-separate, confirmed step).
+only** (`data/synthetic/seed_split.json`) in `evo_001`-`evo_004` — the 69-pair
+holdout was never shown to the optimizer in those four runs, so a later
+all-200 AUC check still has a genuinely clean 69-pair component. No
+AUC/accuracy check ran at any point during any run's 20 rounds, by deliberate
+design (per instruction: inspect the evolved prompt qualitatively first, run
+the accuracy check only afterward, as an explicitly separate, confirmed
+step). `evo_005` deliberately breaks the train/holdout split — see "Run 5"
+below.
 
 `evo_001` ran 20 rounds split across two optimizer models mid-run: **Sonnet
 4.5** (rounds 1-9) then **Deepseek-v4-pro** (rounds 10-20), switched
-deliberately per standing cost guidance. `evo_002`, `evo_003`, and `evo_004`
-all use Deepseek-v4-pro throughout, 20 rounds each. Every iteration across
-all four runs, plus the meta-optimizer instructions (v1 and v2) and the
-summarizer prompt, are versioned on LangSmith Hub (`judge-prompt-evolution` /
-`judge-prompt-evolution-meta` repos) in addition to the local JSON trace
-under `artifacts/judge_prompt_evolution/evo_00{1,2,3,4}/`.
+deliberately per standing cost guidance. `evo_002` through `evo_005` all use
+Deepseek-v4-pro throughout, 20 rounds each. Every iteration across all five
+runs, plus the meta-optimizer instructions (v1 and v2) and the summarizer
+prompt, are versioned on LangSmith Hub (`judge-prompt-evolution` /
+`judge-prompt-evolution-meta` / `judge-prompt-evolution-summarizer` repos) in
+addition to the local JSON trace under
+`artifacts/judge_prompt_evolution/evo_00{1,2,3,4,5}/`.
 
-## Headline result: five attempts to beat the naive judge prompt, five losses
+## Headline result: five clean attempts to beat the naive judge prompt, five losses
 
 Final prompt from each run scored against **all 200 real pairs**, same judge
 model (`gemini-3.1-flash-lite`) and calling conventions as the reference run
@@ -53,10 +58,13 @@ model (`gemini-3.1-flash-lite`) and calling conventions as the reference run
 | calibrated (hand-designed, holdout only) | 0.5901 | — | — | −0.0276 (holdout) |
 | evo_001 (v1 meta, naive seed) | 0.5734 | 0.5650 | 0.5584 | −0.0443 |
 | evo_004 (v2 meta, naive seed, +summarize/5) | 0.5700 | 0.5200 | 0.6571 | −0.0477 |
+| **evo_005 (v2 meta, all-200-sampled) — NOT COMPARABLE** | 0.6016 | 0.5900 | 0.6720 | contaminated |
 
-Every evolved prompt still clearly above chance, every one strictly worse
-than whatever it started from. Full metrics:
-`artifacts/judge_prompt_evolution/evo_00{1,2,3,4}/eval/metrics_all.json`.
+Every clean evolved prompt (`evo_001`-`evo_004`) still lands above chance,
+every one strictly worse than whatever it started from. `evo_005` is listed
+separately and excluded from the ranking — see "Run 5" for why its
+higher-looking number doesn't mean what it appears to. Full metrics:
+`artifacts/judge_prompt_evolution/evo_00{1,2,3,4,5}/eval/metrics_all.json`.
 
 ## Run 1 (`evo_001`): what actually happened across the 20 rounds
 
@@ -216,13 +224,51 @@ periodic compression did not help — it cut real discriminating detail along
 with the redundancy it was meant to remove, landing below both
 non-summarized v2 runs (0.5918 each).
 
-**Five attempts, five losses**, and the ranking so far: naive (0.6177) >
-structured_cot (0.6100) > evo_002 ≈ evo_003 (0.5918) > evo_001 (0.5734) >
+**Four clean attempts, four losses**, and the ranking so far: naive (0.6177)
+> structured_cot (0.6100) > evo_002 ≈ evo_003 (0.5918) > evo_001 (0.5734) >
 evo_004 (0.5700). Neither of the two specific fixes tried — generalizing
 away from example-specific rules (`evo_002`/`evo_003`) or forcing periodic
 consolidation (`evo_004`) — closed the gap to naive; the second one, in
 fact, opened it slightly wider than the original overfitting fix already
 had.
+
+## Run 5 (`evo_005`): what happens if the optimizer sees all 200 pairs — and why that number can't be trusted
+
+A natural question after four runs sampling only from the 131-pair train
+split: does showing the optimizer a richer, more diverse example pool (all
+200 real pairs, including the 69 normally held out) produce a better prompt?
+Same v2 process as `evo_004` (naive seed, Deepseek-v4-pro, distill every 5
+rounds) — the only change is `--split all` in `sampling.py`'s `ExampleBank`,
+which now draws from 100 positives / 50 hard-negatives / 50 easy-negatives
+instead of train's 71/30/30.
+
+**This is a deliberate methodological trade, not a free upgrade, and it was
+flagged before running:** once the optimizer can see holdout pairs as
+labeled examples, there is no population left that the resulting prompt
+hasn't already touched. Any AUC computed afterward — on all 200, on the
+holdout alone, on anything — is scored partly or wholly on pairs the prompt
+was built from. `run.py` now prints a loud warning and records
+`leakage_warning` in `summary.json` whenever `split != "train"`, and
+`eval_evolved.py` surfaces that warning at the top of its report so this
+can't be silently misread as a real result later.
+
+**The run itself was clean mechanically** — no contract warnings, all 4
+summarize checkpoints (5, 10, 15, 20) worked correctly on the first attempt
+this time (unlike `evo_004`'s round-20 failure). Prompt length: 1,011 → 5,170
+(round 5, pre-summarize) → 1,505 (post-summarize) → ... → 3,629 (round 20,
+pre-summarize) → **2,307 chars final**.
+
+**Scored pair AUC 0.6016** — nominally the best of any evolution run, beating
+even `evo_002`/`evo_003`'s 0.5918. This is exactly the expected artifact of
+data leakage, not evidence the technique is better: the optimizer had
+directly seen roughly a quarter of the 200-pair evaluation population (each
+of its 20+ rounds sampled 4 examples from the full 200-pair pool) with their
+ground-truth labels attached, before being scored against that same pool.
+**This number is excluded from the ranking above and should not be compared
+to `evo_001`-`evo_004`.** It answers a different, narrower question — "can a
+prompt fit these specific 200 labeled pairs better if it's allowed to see
+all of them" — which was never in doubt and says nothing about
+generalization to a new pair the judge hasn't seen.
 
 ## Six bugs/failure modes found running this (worth knowing before reusing `judge_prompt_evolution/`)
 
@@ -331,9 +377,13 @@ python scripts/run_judge_prompt_evolution.py --run-id evo_003 --seed-source stru
 # evo_004 (v2 meta-prompt, naive seed, forced distillation every 5 rounds)
 python scripts/run_judge_prompt_evolution.py --run-id evo_004 --seed-source naive --optimizer-model deepseek/deepseek-v4-pro --summarize-every 5
 
+# evo_005 (EXPLORATORY, NOT COMPARABLE — same as evo_004 but examples sampled
+# from all 200 real pairs, including holdout; contaminates any later AUC check)
+python scripts/run_judge_prompt_evolution.py --run-id evo_005 --seed-source naive --optimizer-model deepseek/deepseek-v4-pro --summarize-every 5 --split all
+
 # the AUC check against all 200 real pairs (isolated eval script, reads
 # baselines/llm_judge/ read-only, writes to artifacts/judge_prompt_evolution/evo_00N/eval/)
-python -m judge_prompt_evolution.eval_evolved --run-id evo_001   # ...evo_002, evo_003, evo_004
+python -m judge_prompt_evolution.eval_evolved --run-id evo_001   # ...evo_002 through evo_005
 
 # structured_cot confirmed on all 200 real pairs (existing baselines/llm_judge
 # code, unmodified — was previously only measured on the 69-pair holdout)
@@ -341,10 +391,10 @@ python -m baselines.llm_judge.eval --data-dir data --variant structured_cot --sp
 ```
 
 Every iteration's exact prompt text, rationale, and which examples produced
-it is in `artifacts/judge_prompt_evolution/evo_00{1,2,3,4}/iterations/*.json`
-(evo_004 additionally has `NNs.json` files for its summarize steps) and
-mirrored as LangSmith Hub commits. The published browser
-(`artifacts/judge_prompt_evolution/evo_001/browser.html`) shows all four runs
+it is in `artifacts/judge_prompt_evolution/evo_00{1,2,3,4,5}/iterations/*.json`
+(`evo_004`/`evo_005` additionally have `NNs.json` files for their summarize
+steps) and mirrored as LangSmith Hub commits. The published browser
+(`artifacts/judge_prompt_evolution/evo_001/browser.html`) shows all five runs
 via a toggle, including full seed-vs-final prompt text, the meta-prompt v1→v2
 diff, and the summarizer prompt.
 
@@ -353,13 +403,15 @@ diff, and the summarizer prompt.
 **Naive stays the judge.** `docs/llm-judge-experiment.md`'s naive prompt
 (pair AUC 0.6177 on all 200 real pairs) is still the best judge prompt found
 anywhere in this project, having now beaten two hand-designed variants and
-three independent automatic-optimization variants (five attempts total).
-`structured_cot` (0.6100) remains the closest challenger by a wide margin
-over any evolution run. Two specific fixes were tried against the
+four independent automatic-optimization variants (six attempts total, one of
+which — `evo_005` — isn't a fair comparison and is excluded from ranking).
+`structured_cot` (0.6100) remains the closest *clean* challenger by a wide
+margin over any evolution run. Three specific changes were tried against the
 overfitting diagnosed in `evo_001` — generalizing the meta-prompt away from
-example-specific rules, and forcing periodic consolidation — and neither
-closed the gap; the loop appears to have a ~0.57-0.59 attractor regardless of
-seed, structure, or these particular process changes. Do not promote any
-evolved prompt to a labeling path (`synth_pipeline/pairing_rrf/` etc. should
-keep using the naive framing already in place) until one actually beats
-0.6177.
+example-specific rules, forcing periodic consolidation, and (as a
+methodological check, not a real fix) widening the example pool to all 200
+pairs — and none closed the gap on a fair comparison; the clean loop appears
+to have a ~0.57-0.59 attractor regardless of seed, structure, or these
+particular process changes. Do not promote any evolved prompt to a labeling
+path (`synth_pipeline/pairing_rrf/` etc. should keep using the naive framing
+already in place) until one actually beats 0.6177 on a clean population.
