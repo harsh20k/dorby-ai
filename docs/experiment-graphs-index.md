@@ -51,7 +51,7 @@ wants the full story.
 | [`Dorby AI — Framing & Experiment Proposal`](https://claude.ai/code/artifact/5aed8e2e-a4e4-4c2d-adbc-500c307f855a) | published artifact only (no local file) | 2026-07-27 | Framing deck for the project's objective and proposed experiment slate. Published before the two-tower ablation series; predates the 200-pair evaluation, so any accuracy figures in it are 69-pair-holdout numbers. |
 | [`project-story.html`](http://dorby-project-story-411960113601.s3-website-us-east-1.amazonaws.com/) | local (`docs/html/`) + S3 static site | 2026-07-30 | Plain-language chronological walkthrough of the whole project (2026-07-16 → 07-30) as a scroll-driven slideshow. Not a Claude artifact — hosted on S3, URL recorded in `docs/project-story-url.md`. |
 | [`twotower-top1-optimised.html`](https://claude.ai/code/artifact/6caec2cf-5434-462e-a29a-a55dd13018f1) | published artifact + local (`docs/html/`) | 2026-07-30 | Two changes targeting recall@1 at fixed Arm A settings. **Sharpening the loss** (MNRL scale 20→50 + `hardness_mode='hard_negatives'`) **backfired on every metric** — all-200 R@1 0.1800→0.1400, below the untrained baseline, hard-neg AUC 0.4578 (worse than chance). **Fixing checkpoint selection** to rank against a real dev corpus (`CorpusRecallDevEvaluator`, `primary_metric='recall@1'`) produced the **best MRR of any model in the project (0.3550 on all 200)** and the first fine-tune to beat frozen nano at R@1 (19 vs 18 of 100) — invisible on the 69-pair holdout. Writeup: `docs/twotower-top1-optimised-experiment.md` |
-| [Judge Prompt Evolution — evo_001 → evo_005](https://claude.ai/code/artifact/1e089702-6f90-4676-98e4-6c7e69813119) | published artifact only (no local file) | 2026-07-31 | **Five variants of automatic LLM-judge prompt optimization — four clean losses against the naive prompt, plus one deliberately-contaminated control confirming why the split discipline matters.** `judge_prompt_evolution/` (own isolated package): an optimizer LLM revises the judge's system prompt each round against a fresh batch of real labeled example pairs, no accuracy feedback inside the loop. **evo_001** (Sonnet 4.5 → Deepseek-v4-pro, train-split examples) grew 1,011→24,905 chars via 32 hand-accreted, example-specific rules — pair AUC **0.5734** vs. naive's 0.6177. A rewritten meta-prompt (v2: drop hard/easy-negative framing, "revise the rubric, generalize don't copy specifics") produced **evo_002** (naive seed): smooth growth to 13,142 chars, pair AUC **0.5918**. **evo_003** (same v2 process, seeded from `structured_cot` instead — confirmed on all 200 real pairs at 0.6100) converged to the **identical 0.5918 AUC as evo_002** despite a different starting point — evidence the ~0.59 result is an attractor of the loop itself, not the seed. **evo_004** (v2 process + forced distillation every 5 rounds) worked correctly 3 of 4 times but the most-compressed pass **dropped the required JSON output contract twice in a row** before a third retry kept it — scored pair AUC **0.5700**, worst of the clean runs. **evo_005** (same as evo_004 but examples sampled from all 200 real pairs instead of train-only, deliberately breaking the holdout split) scored the highest nominal AUC of any run, **0.6016** — but this is the expected artifact of the optimizer having seen labeled examples from the same population it's later scored on, not a real result; excluded from ranking, flagged everywhere (`run.py` prints and records a leakage warning, `eval_evolved.py` surfaces it). Clean ranking: naive (0.6177) > structured_cot (0.6100) > evo_002 ≈ evo_003 (0.5918) > evo_001 (0.5734) > evo_004 (0.5700). Also found/fixed a `json.loads` strict-mode bug (Deepseek emitting raw newlines in JSON strings, deterministic across runs), documented a repeatable summarizer failure mode (aggressive compression treats format instructions as cuttable), and pushed every fixed prompt (meta-optimizer, summarizer) to LangSmith Hub with pull-first loading at call time. Writeup: `docs/judge-prompt-evolution-experiment.md` |
+| [Judge Prompt Evolution — evo_001 → evo_006](https://claude.ai/code/artifact/1e089702-6f90-4676-98e4-6c7e69813119) | published artifact only (no local file) | 2026-07-31 | **Six variants of automatic LLM-judge prompt optimization — the sixth closes almost the entire gap to naive.** `judge_prompt_evolution/` (own isolated package): an optimizer LLM revises the judge's system prompt each round against a fresh batch of real labeled example pairs, no accuracy feedback inside the loop. **evo_001** (Sonnet → Deepseek, train-split examples) grew 1,011→24,905 chars via 32 hand-accreted, example-specific rules — pair AUC **0.5734** vs. naive's 0.6177. A rewritten meta-prompt (v2: "revise the rubric, generalize don't copy specifics") produced **evo_002** (naive seed, 0.5918) and **evo_003** (seeded from `structured_cot` instead, converged to the **identical 0.5918**, evidence the result is a process attractor, not a seed property). **evo_004** (v2 + forced *aggressive* distillation every 5 rounds) dropped the JSON contract twice at its most-compressed pass and scored **0.5700**, worst of the clean runs. **evo_005** (same as evo_004 but examples sampled from all 200 real pairs, deliberately breaking the holdout split) scored the highest nominal AUC of any run, 0.6016 — a leakage artifact, excluded from ranking (flagged via a `run.py`-recorded `leakage_warning`, surfaced by `eval_evolved.py`); a sub-experiment scoring its **unsummarized** round-20 prompt needed a Bedrock/MiniMax detour (fixing a real content-block-ordering bug in reasoning-model responses) before landing on a clean Gemini-API number, 0.5790 — below its own summarized final, meaning that summarize step helped even in a contaminated run. **evo_006** tested whether the fix was the *idea* of periodic summarization or its *aggressive wording*: same setup as evo_004 but with a gentler summarizer explicitly told brevity isn't the goal, confirmed via LangSmith push before running — cut only 2-35% per pass (vs. evo_004's 55-74%), never dropped the contract, and scored **pair AUC 0.6105 — the closest any evolution run has gotten, beating even hand-designed `structured_cot` (0.6100)**. Clean ranking: naive (0.6177) > evo_006 (0.6105) > structured_cot (0.6100) > evo_002 ≈ evo_003 (0.5918) > evo_001 (0.5734) > evo_004 (0.5700). Also added a direct-Gemini-API eval backend (OpenRouter credits ran out mid-project) and pushed every fixed prompt (meta-optimizer, both summarizer variants) to LangSmith Hub with pull-first loading at call time. Writeup: `docs/judge-prompt-evolution-experiment.md` |
 
 Local file links above are absolute `file://` paths pinned to this repo's
 checkout location on this machine (`/Users/harsh/Artifacts/dorby-ai/docs/html/`)
@@ -571,7 +571,7 @@ Landed one commit later (`81b4821`) and it revises two things here:
 
 Total Modal spend across three A100 runs: ~$0.55 of a $3 budget.
 
-## Judge prompt evolution: five automatic-optimization variants, one deliberately contaminated (2026-07-31)
+## Judge prompt evolution: six automatic-optimization variants — the sixth nearly closes the gap (2026-07-31)
 
 **Isolated package: `judge_prompt_evolution/`.** No files under
 `baselines/llm_judge/` or `data/` were edited — the seed judge prompt is
@@ -644,12 +644,47 @@ holdout is no longer held out. Flagged as exploratory and non-comparable
 whenever `split != "train"`, surfaced again by `eval_evolved.py`). The run
 itself was the cleanest mechanically of any so far — all 4 summarize
 checkpoints worked on the first try, ending at 2,307 chars — and scored the
-**highest nominal pair AUC of any evolution run, 0.6016**. That's not a real
-result: the optimizer had already seen labeled examples from roughly a
-quarter of the exact population it was later scored against. It's excluded
-from the ranking above and exists as a documented control confirming *why*
-`evo_001`-`evo_004`'s train/holdout discipline matters, not as a genuine
-sixth contender.
+**highest nominal pair AUC of any evolution run at the time, 0.6016**.
+That's not a real result: the optimizer had already seen labeled examples
+from roughly a quarter of the exact population it was later scored against.
+Excluded from the ranking, exists as a documented control confirming *why*
+the train/holdout discipline matters. A follow-up sub-experiment scored
+`evo_005`'s **unsummarized** round-20 prompt (3,629 chars) on its own: first
+attempt used AWS Bedrock (`minimax.minimax-m2.5`, since OpenRouter credits
+had run out) and found a real bug — Bedrock's Converse API puts reasoning
+models' actual answer in `content[1]`, not `content[0]`, which
+`bedrock_backend.py::call_bedrock_verdict` doesn't handle (`KeyError`,
+worked around locally, not fixed in the shared file) — and scored a
+near-chance 0.5095, uninterpretable on its own since it used a different
+judge model than everything else here. Rerun via a new **direct Gemini API**
+backend (`GEMINI_API_KEY`, bypassing OpenRouter, same `gemini-3.1-flash-lite`
+as every other number in this doc) scored **0.5790** — below `evo_005`'s own
+summarized final (0.6016), meaning that particular summarize step helped
+even inside a contaminated run, unlike `evo_004`'s experience with the same
+wording. That observation motivated Run 6.
+
+**Run 6 (`evo_006`) tested whether the aggressive summarizer's *wording*,
+not the *idea* of periodic summarization, was what hurt `evo_004`.** Drafted
+a second summarizer prompt collaboratively — same clarify/generalize goal,
+but every phrase pushing toward brevity removed and replaced with explicit
+permission to stay long ("a result close to its starting size is fine")
+— confirmed with the user and pushed to LangSmith Hub
+(`judge-prompt-evolution-summarizer-gentle`) before running. Otherwise
+identical to `evo_004`: naive seed, v2 meta-prompt, Deepseek, distill every
+5 rounds, train-split examples (clean). The gentle summarizer cut visibly
+less at every checkpoint (2-35% vs. `evo_004`'s 55-74%) and never dropped
+the JSON contract, including at round 20 where the aggressive version had
+failed twice. **Scored pair AUC 0.6105 — the closest any evolution run has
+come, beating even hand-designed `structured_cot` (0.6100)**, closing the
+gap to naive from `evo_004`'s −0.0477 to just −0.0072.
+
+**Clean ranking across six attempts:** naive (0.6177) > **evo_006 (0.6105)**
+> structured_cot (0.6100) > evo_002 ≈ evo_003 (0.5918) > evo_001 (0.5734) >
+evo_004 (0.5700). The mechanism of the fix mattered as much as its
+existence: generalizing away from example-specific rules alone recovered
+about half the original overfitting gap; adding *aggressive* periodic
+consolidation on top made it worse; adding *gentle* periodic consolidation
+instead recovered nearly all the rest.
 
 Bugs found along the way: a `json.loads` strict-mode failure (Deepseek
 emitting raw newlines inside JSON string values, deterministic — same error,
@@ -658,11 +693,12 @@ rather than touching shared `synth_pipeline/llm.py`; an `optimizer.py` call
 site that never threaded through `OPENROUTER_API_KEY`; a fixed
 `max_tokens=3000` too small once the prompt grew; LangSmith commit tags
 colliding across iterations sharing an index (optimize + its summarize
-step); and the summarizer contract-dropping failure mode above. `run.py
+step); the summarizer contract-dropping failure mode (aggressive variant
+only); and the Bedrock reasoning-model content-block bug above. `run.py
 --resume` (extended to understand interleaved summarize steps) meant none of
 these crashes cost already-completed rounds. Every fixed prompt (meta v1/v2,
-summarizer) is now pushed to and pull-loaded from LangSmith Hub at call
-time, not just read from the local file. See
+both summarizer variants) is now pushed to and pull-loaded from LangSmith
+Hub at call time, not just read from the local file. See
 `docs/judge-prompt-evolution-experiment.md`
 for the full writeup, every iteration's prompt text, and repro commands.
 

@@ -1,22 +1,17 @@
 You will be shown a judge prompt that has grown over several rounds of
 editing. Revise it so its ideas are stated more clearly, as general
 principles rather than a list of narrow special cases — but do not aim for
-brevity as a goal in itself. Length is not the problem being solved here;
-clarity and generalization are.
+brevity as a goal in itself. We are trying to generalize into the principles
+that help the LLM judge to better identify how human understanding works in
+professional networking.
 
 Where two or more rules are really the same idea applied to different
 situations, merge them into one clearly-stated principle — but keep whatever
 detail is needed for that principle to actually be usable, rather than
 collapsing it into a single vague sentence. If a rule captures a real,
 specific distinction that a shorter phrasing would lose, keep it close to
-its current length. Only cut wording that is purely repetitive — the same
-point stated twice in different words — never a distinct case or condition,
-even a narrow one.
-
-When in doubt, prefer keeping a rule at its current length and clarity over
-shortening it. A good outcome here may end up close to the same size as what
-you started with; that is fine. The goal is a clearer rubric, not a shorter
-one.
+its current length. Our objective is to distill the main ideas and
+principles that help us to come up with a clearer rubric.
 
 Hard constraints — the revised prompt MUST still:
 - Output a single JSON object with exactly these keys: `reasoning` (2-4

@@ -72,7 +72,10 @@ def _call_optimizer(
     return _parse_json_lenient(content)
 
 META_PROMPT_PATH = Path(__file__).resolve().parent / "prompts" / "meta_optimizer.md"
-SUMMARIZER_PROMPT_PATH = Path(__file__).resolve().parent / "prompts" / "summarizer.md"
+SUMMARIZER_PROMPT_PATHS = {
+    "aggressive": Path(__file__).resolve().parent / "prompts" / "summarizer.md",
+    "gentle": Path(__file__).resolve().parent / "prompts" / "summarizer_gentle.md",
+}
 
 REQUIRED_JUDGE_CONTRACT_MARKERS = ("reasoning", "match", "confidence")
 
@@ -90,13 +93,16 @@ def load_meta_system_prompt(cfg: RunConfig | None = None) -> str:
 
 
 def load_summarizer_system_prompt(cfg: RunConfig | None = None) -> str:
+    variant = cfg.summarizer_variant if cfg is not None else "aggressive"
+    local_path = SUMMARIZER_PROMPT_PATHS[variant]
     if cfg is not None and cfg.push_to_hub:
         from judge_prompt_evolution.hub import pull_prompt
 
-        text = pull_prompt(repo=f"{cfg.hub_repo}-summarizer", hub_owner=cfg.hub_owner)
+        suffix = "-summarizer" if variant == "aggressive" else f"-summarizer-{variant}"
+        text = pull_prompt(repo=f"{cfg.hub_repo}{suffix}", hub_owner=cfg.hub_owner)
         if text:
             return text.strip()
-    return SUMMARIZER_PROMPT_PATH.read_text(encoding="utf-8").strip()
+    return local_path.read_text(encoding="utf-8").strip()
 
 
 def _call_with_retries(

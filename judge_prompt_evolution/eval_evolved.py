@@ -19,6 +19,8 @@ import argparse
 import json
 import os
 import sys
+import urllib.error
+import urllib.request
 from pathlib import Path
 from typing import Any
 
@@ -41,6 +43,46 @@ from baselines.llm_judge.real_pairs import load_real_pairs, pair_id
 from baselines.metrics import neg_hardness_slice_metrics, pair_metrics
 
 DEFAULT_MAX_TOKENS = 600
+DEFAULT_GEMINI_BASE_URL = "https://generativelanguage.googleapis.com/v1beta"
+
+
+def _make_gemini_call_fn(*, api_key: str, model: str, temperature: float, max_tokens: int,
+                          base_url: str = DEFAULT_GEMINI_BASE_URL):
+    """Direct Google Gemini API call (not via OpenRouter) — raw REST via
+    urllib, no new SDK dependency, matching this repo's existing lightweight
+    HTTP-call pattern (baselines/llm_judge/judge.py's OpenRouter path).
+    Isolated here since no other module in this repo talks to Gemini
+    directly; everything else routes it through OpenRouter."""
+    from synth_pipeline.llm import parse_json_object
+
+    def call(system: str, user: str) -> dict[str, Any]:
+        url = f"{base_url}/models/{model}:generateContent?key={api_key}"
+        body = json.dumps({
+            "contents": [{"role": "user", "parts": [{"text": user}]}],
+            "systemInstruction": {"parts": [{"text": system}]},
+            "generationConfig": {
+                "temperature": temperature,
+                "maxOutputTokens": max_tokens,
+                "responseMimeType": "application/json",
+            },
+        }).encode("utf-8")
+        req = urllib.request.Request(
+            url, data=body, headers={"Content-Type": "application/json"}
+        )
+        try:
+            with urllib.request.urlopen(req, timeout=120) as resp:
+                payload = json.load(resp)
+        except urllib.error.HTTPError as exc:
+            detail = exc.read().decode("utf-8", "replace")[:500]
+            raise RuntimeError(f"Gemini API HTTP {exc.code}: {detail}") from exc
+        candidates = payload.get("candidates") or []
+        if not candidates:
+            raise ValueError(f"no candidates in Gemini response: {payload!r}")
+        parts = candidates[0].get("content", {}).get("parts") or []
+        text = "".join(p.get("text", "") for p in parts)
+        return parse_json_object(text)
+
+    return call
 
 
 def _make_bedrock_reasoning_safe_call_fn(*, client, model_id: str, temperature: float, max_tokens: int):
@@ -316,14 +358,16 @@ def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
     )
     p.add_argument(
         "--backend",
-        choices=["openrouter", "bedrock"],
+        choices=["openrouter", "bedrock", "gemini"],
         default="openrouter",
         help="'openrouter' uses OPENROUTER_API_KEY; 'bedrock' uses --aws-profile/--aws-region "
-        "credentials via boto3's Converse API.",
+        "credentials via boto3's Converse API; 'gemini' calls the Google Gemini API directly "
+        "using GEMINI_API_KEY (bypasses OpenRouter entirely).",
     )
     p.add_argument("--model", default=None,
-                    help=f"OpenRouter model id (default {DEFAULT_MODEL}) or Bedrock model id "
-                    "(e.g. minimax.minimax-m2.5), depending on --backend.")
+                    help=f"OpenRouter model id (default {DEFAULT_MODEL}), Bedrock model id "
+                    "(e.g. minimax.minimax-m2.5), or Gemini model id (e.g. gemini-3.1-flash-lite), "
+                    "depending on --backend.")
     p.add_argument("--base-url", default=DEFAULT_BASE_URL, help="OpenRouter only")
     p.add_argument("--aws-profile", default="tf_provisioner", help="Bedrock only")
     p.add_argument("--aws-region", default="us-east-1", help="Bedrock only")
@@ -380,7 +424,7 @@ def main(argv: list[str] | None = None) -> int:
                 base_url=args.base_url,
                 max_tokens=max_tokens,
             )
-    else:
+    elif args.backend == "bedrock":
         if not args.model:
             print("error: --model is required with --backend bedrock", file=sys.stderr)
             return 2
@@ -400,6 +444,21 @@ def main(argv: list[str] | None = None) -> int:
 
         def make_call_fn(system: str, user: str):
             return lambda: bedrock_call(system, user)
+    else:  # gemini
+        model = args.model or "gemini-3.1-flash-lite"
+        max_tokens = args.max_tokens or DEFAULT_MAX_TOKENS
+        api_key = os.getenv("GEMINI_API_KEY") or ""
+        if not api_key:
+            print("error: no GEMINI_API_KEY in the environment. Pass --env-file /path/to/.env.",
+                  file=sys.stderr)
+            return 2
+
+        gemini_call = _make_gemini_call_fn(
+            api_key=api_key, model=model, temperature=args.temperature, max_tokens=max_tokens,
+        )
+
+        def make_call_fn(system: str, user: str):
+            return lambda: gemini_call(system, user)
 
     artifacts_dir = args.artifacts_dir or (
         Path("artifacts/judge_prompt_evolution") / args.run_id / "eval"

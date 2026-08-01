@@ -124,19 +124,28 @@ def push_meta_prompt(*, hub_owner: str | None, repo: str) -> str | None:
     )
 
 
-def push_summarizer_prompt(*, hub_owner: str | None, repo: str) -> str | None:
+_SUMMARIZER_FILES = {"aggressive": "summarizer.md", "gentle": "summarizer_gentle.md"}
+_SUMMARIZER_DESCRIPTIONS = {
+    "aggressive": "judge_prompt_evolution: distillation instructions used every N rounds (evo_004) "
+    "to merge/cut the accumulated rubric, explicitly pushing toward shortness — separate from the "
+    "meta-optimizer prompt, no example batch, just compression",
+    "gentle": "judge_prompt_evolution: distillation instructions (evo_006+) — same clarify/generalize "
+    "goal as the aggressive variant, but explicitly told length is not the objective, only merge "
+    "genuinely repetitive wording; a result close to its starting size is fine",
+}
+
+
+def push_summarizer_prompt(*, hub_owner: str | None, repo: str, variant: str = "aggressive") -> str | None:
     from judge_prompt_evolution.config import REPO_ROOT
 
-    text = (REPO_ROOT / "judge_prompt_evolution" / "prompts" / "summarizer.md").read_text(
-        encoding="utf-8"
-    )
+    filename = _SUMMARIZER_FILES[variant]
+    text = (REPO_ROOT / "judge_prompt_evolution" / "prompts" / filename).read_text(encoding="utf-8")
+    suffix = "-summarizer" if variant == "aggressive" else f"-summarizer-{variant}"
     return push_prompt(
         text=text,
-        repo=f"{repo}-summarizer",
+        repo=f"{repo}{suffix}",
         hub_owner=hub_owner,
-        description="judge_prompt_evolution: distillation-only instructions used every N rounds "
-        "(evo_004) to merge/cut the accumulated rubric — separate from the meta-optimizer prompt, "
-        "no example batch, just compression",
+        description=_SUMMARIZER_DESCRIPTIONS[variant],
     )
 
 

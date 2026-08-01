@@ -1,11 +1,11 @@
 # Judge prompt evolution — can automatic prompt optimization beat the naive judge?
 
 Generated: 2026-07-31. Code: `judge_prompt_evolution/` (isolated package, no files
-under `baselines/llm_judge/` or `data/` were edited). Five runs so far, each
+under `baselines/llm_judge/` or `data/` were edited). Six runs so far, each
 isolating one variable — meta-prompt version, seed prompt, a periodic
-summarization step, and (evo_005) the example-sampling population itself.
-Published trace (all five runs, selectable):
-[Judge Prompt Evolution — evo_001 → evo_005](https://claude.ai/code/artifact/1e089702-6f90-4676-98e4-6c7e69813119).
+summarization step and its wording, and (evo_005) the example-sampling
+population itself. Published trace (all six runs, selectable):
+[Judge Prompt Evolution — evo_001 → evo_006](https://claude.ai/code/artifact/1e089702-6f90-4676-98e4-6c7e69813119).
 
 ## What this tests
 
@@ -35,34 +35,45 @@ below.
 
 `evo_001` ran 20 rounds split across two optimizer models mid-run: **Sonnet
 4.5** (rounds 1-9) then **Deepseek-v4-pro** (rounds 10-20), switched
-deliberately per standing cost guidance. `evo_002` through `evo_005` all use
-Deepseek-v4-pro throughout, 20 rounds each. Every iteration across all five
-runs, plus the meta-optimizer instructions (v1 and v2) and the summarizer
-prompt, are versioned on LangSmith Hub (`judge-prompt-evolution` /
-`judge-prompt-evolution-meta` / `judge-prompt-evolution-summarizer` repos) in
-addition to the local JSON trace under
-`artifacts/judge_prompt_evolution/evo_00{1,2,3,4,5}/`.
+deliberately per standing cost guidance. `evo_002` through `evo_006` all use
+Deepseek-v4-pro throughout, 20 rounds each. Every iteration across all six
+runs, plus the meta-optimizer instructions (v1 and v2) and both summarizer
+prompts (aggressive and gentle), are versioned on LangSmith Hub
+(`judge-prompt-evolution` / `judge-prompt-evolution-meta` /
+`judge-prompt-evolution-summarizer` / `judge-prompt-evolution-summarizer-gentle`
+repos) in addition to the local JSON trace under
+`artifacts/judge_prompt_evolution/evo_00{1,2,3,4,5,6}/`.
 
-## Headline result: five clean attempts to beat the naive judge prompt, five losses
+## Headline result: evo_006 (gentle summarizer) is the closest any automatic run has come
 
 Final prompt from each run scored against **all 200 real pairs**, same judge
 model (`gemini-3.1-flash-lite`) and calling conventions as the reference run
-(temperature 0, no `searchQuery`, complete profiles):
+(temperature 0, no `searchQuery`, complete profiles). Note: from `evo_005`
+onward, OpenRouter credits ran out mid-project — `evo_006`'s AUC check and
+`evo_005`'s clean re-check both went through the **direct Gemini API**
+(`GEMINI_API_KEY`, bypassing OpenRouter) with the identical model, so the
+numbers are still apples-to-apples with everything scored on OpenRouter
+earlier:
 
 | Attempt | Pair ROC-AUC | Decision acc. | F1 | Δ vs. naive |
 |---|---|---|---|---|
 | **Seed (naive)** | **0.6177** | 0.6050 | 0.6326 | — |
+| **evo_006 (v2 meta, naive seed, +gentle-summarize/5)** | **0.6105** | 0.5750 | 0.6256 | **−0.0072** |
 | structured_cot (hand-designed) | 0.6100 | 0.5700 | 0.6560 | −0.0077 |
 | evo_002 (v2 meta, naive seed) | 0.5918 | 0.5650 | 0.6167 | −0.0259 |
 | evo_003 (v2 meta, structured_cot seed) | 0.5918 | 0.5600 | 0.6071 | −0.0259 |
 | calibrated (hand-designed, holdout only) | 0.5901 | — | — | −0.0276 (holdout) |
 | evo_001 (v1 meta, naive seed) | 0.5734 | 0.5650 | 0.5584 | −0.0443 |
-| evo_004 (v2 meta, naive seed, +summarize/5) | 0.5700 | 0.5200 | 0.6571 | −0.0477 |
+| evo_004 (v2 meta, naive seed, +aggressive-summarize/5) | 0.5700 | 0.5200 | 0.6571 | −0.0477 |
 | **evo_005 (v2 meta, all-200-sampled) — NOT COMPARABLE** | 0.6016 | 0.5900 | 0.6720 | contaminated |
 
-Every clean evolved prompt (`evo_001`-`evo_004`) still lands above chance,
-every one strictly worse than whatever it started from. `evo_005` is listed
-separately and excluded from the ranking — see "Run 5" for why its
+`evo_006` is now the closest clean attempt of any kind — closer even than
+the hand-designed `structured_cot` — and dramatically better than `evo_004`,
+which used the same process but the aggressive summarizer. See "Run 6"
+below. Every clean evolved prompt (`evo_001`-`evo_004`, `evo_006`) still
+lands above chance; `evo_006` is the only one that comes within 0.01 AUC of
+naive. `evo_005` is listed separately and excluded from the ranking — see
+"Run 5" for why its
 higher-looking number doesn't mean what it appears to. Full metrics:
 `artifacts/judge_prompt_evolution/evo_00{1,2,3,4,5}/eval/metrics_all.json`.
 
@@ -258,19 +269,94 @@ this time (unlike `evo_004`'s round-20 failure). Prompt length: 1,011 → 5,170
 (round 5, pre-summarize) → 1,505 (post-summarize) → ... → 3,629 (round 20,
 pre-summarize) → **2,307 chars final**.
 
-**Scored pair AUC 0.6016** — nominally the best of any evolution run, beating
-even `evo_002`/`evo_003`'s 0.5918. This is exactly the expected artifact of
-data leakage, not evidence the technique is better: the optimizer had
-directly seen roughly a quarter of the 200-pair evaluation population (each
-of its 20+ rounds sampled 4 examples from the full 200-pair pool) with their
-ground-truth labels attached, before being scored against that same pool.
-**This number is excluded from the ranking above and should not be compared
-to `evo_001`-`evo_004`.** It answers a different, narrower question — "can a
-prompt fit these specific 200 labeled pairs better if it's allowed to see
-all of them" — which was never in doubt and says nothing about
-generalization to a new pair the judge hasn't seen.
+**Scored pair AUC 0.6016** — nominally the best of any evolution run at the
+time, beating even `evo_002`/`evo_003`'s 0.5918. This is exactly the expected
+artifact of data leakage, not evidence the technique is better: the
+optimizer had directly seen roughly a quarter of the 200-pair evaluation
+population (each of its 20+ rounds sampled 4 examples from the full 200-pair
+pool) with their ground-truth labels attached, before being scored against
+that same pool. **This number is excluded from the ranking above and should
+not be compared to `evo_001`-`evo_004`, `evo_006`.** It answers a different,
+narrower question — "can a prompt fit these specific 200 labeled pairs
+better if it's allowed to see all of them" — which was never in doubt and
+says nothing about generalization to a new pair the judge hasn't seen.
 
-## Six bugs/failure modes found running this (worth knowing before reusing `judge_prompt_evolution/`)
+### Sub-experiment: scoring evo_005's *unsummarized* round-20 prompt
+
+Separately, out of methodological curiosity: how does the round-20
+**pre-summarize** prompt (3,629 chars, LangSmith commit `evo_005--iter-20`)
+score on its own, versus the post-summarize final (2,307 chars, 0.6016
+above)? Both numbers are still leakage-contaminated by the same `evo_005`
+sampling issue, so neither is comparable to the clean runs — this only
+answers "did that specific summarize step help or hurt *within* this run."
+
+This needed a model swap partway through: OpenRouter credits ran out, so the
+first attempt used **AWS Bedrock, `minimax.minimax-m2.5`** (available via the
+same `tf_provisioner` account already used for profile generation). That run
+hit a real bug: MiniMax is a reasoning model, and Bedrock's Converse API
+returns content as `[{"reasoningContent": ...}, {"text": ...}]` — a second
+block, not first — while `baselines/llm_judge/bedrock_backend.py`'s
+`call_bedrock_verdict` unconditionally reads `content[0]["text"]`, which
+`KeyError`s on this shape. Fixed locally in
+`eval_evolved.py::_make_bedrock_reasoning_safe_call_fn` (search for the first
+block containing a `text` key, rather than assuming position 0) — not in the
+shared `bedrock_backend.py`, per the isolation rule. Scored **pair AUC
+0.5095**, near chance.
+
+That number turned out to be uninterpretable on its own: it used a
+completely different judge model than every other number in this
+experiment, so a near-chance score could mean "MiniMax is a weak judge for
+this task" or "the unsummarized prompt is genuinely hard to follow" — no way
+to tell which without a MiniMax baseline on the naive prompt too. Re-ran the
+same prompt through the **direct Gemini API** instead (`GEMINI_API_KEY`,
+model `gemini-3.1-flash-lite` — the same model as every other number in this
+doc, just called directly rather than via OpenRouter; a new
+`eval_evolved.py::_make_gemini_call_fn`, raw REST via `urllib`, no new SDK
+dependency). **Scored pair AUC 0.5790** — below the final summarized
+version's 0.6016, meaning the round-20 summarize step *helped* even within
+this contaminated run, unlike `evo_004`'s experience with the same
+(aggressive) summarizer wording. This is the observation that prompted
+"Run 6" below.
+
+## Run 6 (`evo_006`): a gentler summarizer — and the best clean result so far
+
+`evo_004`'s aggressive summarizer (`prompts/summarizer.md`) explicitly
+pushed toward shortness — *"prefer one well-chosen sentence of judgment over
+three sentences of examples"* — and that wording is the plausible cause of
+both its weak final AUC (0.5700, worst of the v2-process runs) and its
+round-20 failure to preserve the JSON contract twice in a row. `evo_005`'s
+sub-experiment above then showed the same aggressive summarizer *helping*
+within a different (contaminated) run, muddying whether the wording itself
+was really the problem.
+
+Drafted a second summarizer variant, collaboratively, with explicit sign-off
+before running: `prompts/summarizer_gentle.md`, pushed to LangSmith Hub as
+`judge-prompt-evolution-summarizer-gentle`. Same goal (clearer, more general
+principles) but every phrase pushing toward brevity was removed and replaced
+with permission to stay long: *"do not aim for brevity as a goal in
+itself... a result close to its starting size is fine... only cut wording
+that is purely repetitive."* Otherwise identical setup to `evo_004` — naive
+seed, v2 meta-prompt, Deepseek-v4-pro, distill every 5 rounds, train-split
+examples only (clean, unlike `evo_005`).
+
+**The gentle summarizer visibly cut less.** Compare its four passes to
+`evo_004`'s: round 5 cut 4,236→2,760 (35%) vs. `evo_004`'s round-5-equivalent
+cutting over 50%; round 10 barely touched anything, 5,121→5,026 (2%); round
+15 cut 7,963→6,166 (23%); round 20 cut 9,110→6,338 (30%) — **and kept the
+JSON contract on the first attempt**, unlike the aggressive summarizer's two
+failures at a comparable compression ratio.
+
+**Result: pair AUC 0.6105** — the best clean (non-`evo_005`) evolution run
+by a clear margin, edging out even the hand-designed `structured_cot`
+(0.6100) and closing the gap to naive to just −0.0072, versus `evo_004`'s
+−0.0477 using the same process with only the summarizer wording changed.
+This is the strongest evidence yet in this whole experiment that the
+mechanism matters, not just the existence of a fix: `evo_002`/`evo_003`'s
+generalization instruction alone recovered about half the original
+overfitting gap; adding *disciplined* (not aggressive) periodic
+consolidation on top of that recovered almost all of the rest.
+
+## Seven bugs/failure modes found running this (worth knowing before reusing `judge_prompt_evolution/`)
 
 1. **`optimizer.py` initially never passed an API key to `complete_json`** —
    the very first launch failed immediately with a `RuntimeError: Missing API
@@ -324,16 +410,27 @@ generalization to a new pair the judge hasn't seen.
    (2,071 chars) kept the contract. See "Run 4" above — `validate_contract`
    catches this (it's why the problem was visible at all) but nothing
    currently retries automatically on a contract violation; each occurrence
-   here was caught and re-run by hand.
+   here was caught and re-run by hand. The gentle summarizer (`evo_006`)
+   never hit this, at any compression ratio, including round 20.
+7. **Bedrock's Converse API doesn't always put the text block at
+   `content[0]`** — reasoning models (confirmed on `minimax.minimax-m2.5`)
+   return `content = [{"reasoningContent": {...}}, {"text": "..."}]`, the
+   actual answer in the *second* block. `baselines/llm_judge/bedrock_backend.py
+   ::call_bedrock_verdict` indexes `content[0]["text"]` unconditionally and
+   `KeyError`s on this shape. Not fixed in that shared file (isolation rule)
+   — worked around locally in `eval_evolved.py
+   ::_make_bedrock_reasoning_safe_call_fn`, which searches for the first
+   content block containing a `text` key instead of assuming position 0.
 
 All crashes happened mid-run with already-completed iterations safely on
 disk; `run.py --resume` was added to continue from the last saved iteration
-instead of re-paying for earlier rounds — used across all four runs
-(`evo_001` at rounds 7 and 10, the latter also the point the optimizer model
-was switched from Sonnet to Deepseek per standing cost guidance; `evo_002`
-at round 11, then again at round 20 after the strict-JSON fix; `evo_004` at
+instead of re-paying for earlier rounds — used across every run (`evo_001`
+at rounds 7 and 10, the latter also the point the optimizer model was
+switched from Sonnet to Deepseek per standing cost guidance; `evo_002` at
+round 11, then again at round 20 after the strict-JSON fix; `evo_004` at
 round 20 for the empty-response retry, then twice more to re-run just the
-round-20 summarize step until it kept the contract).
+round-20 summarize step until it kept the contract; `evo_006` at round 18
+for an empty-response retry, same shape as bug #5).
 
 ## What this does not show
 
@@ -381,9 +478,23 @@ python scripts/run_judge_prompt_evolution.py --run-id evo_004 --seed-source naiv
 # from all 200 real pairs, including holdout; contaminates any later AUC check)
 python scripts/run_judge_prompt_evolution.py --run-id evo_005 --seed-source naive --optimizer-model deepseek/deepseek-v4-pro --summarize-every 5 --split all
 
+# evo_006 (v2 meta-prompt, naive seed, GENTLE distillation every 5 rounds —
+# the best clean result so far)
+python scripts/run_judge_prompt_evolution.py --run-id evo_006 --seed-source naive --optimizer-model deepseek/deepseek-v4-pro --summarize-every 5 --summarizer-variant gentle
+
 # the AUC check against all 200 real pairs (isolated eval script, reads
-# baselines/llm_judge/ read-only, writes to artifacts/judge_prompt_evolution/evo_00N/eval/)
-python -m judge_prompt_evolution.eval_evolved --run-id evo_001   # ...evo_002 through evo_005
+# baselines/llm_judge/ read-only, writes to artifacts/judge_prompt_evolution/evo_00N/eval/).
+# --backend gemini calls the Google Gemini API directly (GEMINI_API_KEY),
+# used once OpenRouter credits ran out; --backend bedrock needs --model plus
+# --aws-profile/--aws-region (default tf_provisioner/us-east-1).
+python -m judge_prompt_evolution.eval_evolved --run-id evo_001   # ...evo_002 through evo_006
+python -m judge_prompt_evolution.eval_evolved --run-id evo_006 --backend gemini --model gemini-3.1-flash-lite
+
+# score one specific iteration file instead of a run's final_prompt (used to
+# check evo_005's pre-summarize round-20 prompt against its post-summarize final)
+python -m judge_prompt_evolution.eval_evolved --run-id evo_005 \
+  --iteration-path artifacts/judge_prompt_evolution/evo_005/iterations/20.json \
+  --backend gemini --model gemini-3.1-flash-lite
 
 # structured_cot confirmed on all 200 real pairs (existing baselines/llm_judge
 # code, unmodified — was previously only measured on the 69-pair holdout)
@@ -391,27 +502,30 @@ python -m baselines.llm_judge.eval --data-dir data --variant structured_cot --sp
 ```
 
 Every iteration's exact prompt text, rationale, and which examples produced
-it is in `artifacts/judge_prompt_evolution/evo_00{1,2,3,4,5}/iterations/*.json`
-(`evo_004`/`evo_005` additionally have `NNs.json` files for their summarize
-steps) and mirrored as LangSmith Hub commits. The published browser
-(`artifacts/judge_prompt_evolution/evo_001/browser.html`) shows all five runs
-via a toggle, including full seed-vs-final prompt text, the meta-prompt v1→v2
-diff, and the summarizer prompt.
+it is in `artifacts/judge_prompt_evolution/evo_00{1,2,3,4,5,6}/iterations/*.json`
+(`evo_004`/`evo_005`/`evo_006` additionally have `NNs.json` files for their
+summarize steps) and mirrored as LangSmith Hub commits. The published
+browser (`artifacts/judge_prompt_evolution/evo_001/browser.html`) shows all
+six runs via a toggle, including full seed-vs-final prompt text, the
+meta-prompt v1→v2 diff, and both summarizer prompts.
 
 ## Bottom line
 
-**Naive stays the judge.** `docs/llm-judge-experiment.md`'s naive prompt
-(pair AUC 0.6177 on all 200 real pairs) is still the best judge prompt found
-anywhere in this project, having now beaten two hand-designed variants and
-four independent automatic-optimization variants (six attempts total, one of
-which — `evo_005` — isn't a fair comparison and is excluded from ranking).
-`structured_cot` (0.6100) remains the closest *clean* challenger by a wide
-margin over any evolution run. Three specific changes were tried against the
-overfitting diagnosed in `evo_001` — generalizing the meta-prompt away from
-example-specific rules, forcing periodic consolidation, and (as a
-methodological check, not a real fix) widening the example pool to all 200
-pairs — and none closed the gap on a fair comparison; the clean loop appears
-to have a ~0.57-0.59 attractor regardless of seed, structure, or these
-particular process changes. Do not promote any evolved prompt to a labeling
-path (`synth_pipeline/pairing_rrf/` etc. should keep using the naive framing
-already in place) until one actually beats 0.6177 on a clean population.
+**Naive still wins, but the margin is thin now.** `docs/llm-judge-experiment.md`'s
+naive prompt (pair AUC 0.6177 on all 200 real pairs) remains the best judge
+prompt found anywhere in this project, having beaten two hand-designed
+variants and five independent automatic-optimization variants (seven
+attempts total, one of which — `evo_005` — isn't a fair comparison and is
+excluded from ranking). But `evo_006` (gentle periodic distillation) closed
+the gap to just **−0.0072 AUC**, edging out even the hand-designed
+`structured_cot` (−0.0077) as the closest clean challenger. Of the three
+process changes tried against the overfitting diagnosed in `evo_001`:
+generalizing the meta-prompt away from example-specific rules recovered
+about half the gap (`evo_002`/`evo_003`); forcing *aggressive* periodic
+consolidation on top of that made it worse (`evo_004`); forcing *gentle*
+periodic consolidation — same idea, wording changed to explicitly not chase
+brevity — recovered nearly all of the rest (`evo_006`). The mechanism, not
+just the presence, of a fix is what mattered. Do not promote any evolved
+prompt to a labeling path (`synth_pipeline/pairing_rrf/` etc. should keep
+using the naive framing already in place) until one actually beats 0.6177 on
+a clean population — `evo_006` is close but hasn't yet.

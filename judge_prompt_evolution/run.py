@@ -91,7 +91,8 @@ def run(cfg: RunConfig, *, resume: bool = False) -> dict[str, Any]:
         print(f"split       {cfg.split}  *** LEAKAGE WARNING: any AUC check after this run is "
               f"contaminated — the optimizer can see holdout pairs as examples, so no population "
               f"is left unseen. Exploratory only, not comparable to a train-sampled run. ***")
-    print(f"summarize   every {cfg.summarize_every} iterations" if cfg.summarize_every else "summarize   off")
+    print(f"summarize   every {cfg.summarize_every} iterations ({cfg.summarizer_variant})"
+          if cfg.summarize_every else "summarize   off")
 
     seed_prompt, seed_description = resolve_seed_prompt(cfg)
     print(f"seed source {cfg.seed_source}")
@@ -143,7 +144,7 @@ def run(cfg: RunConfig, *, resume: bool = False) -> dict[str, Any]:
     if cfg.push_to_hub and not resume:
         push_meta_prompt(hub_owner=cfg.hub_owner, repo=cfg.hub_repo)
         if cfg.summarize_every:
-            push_summarizer_prompt(hub_owner=cfg.hub_owner, repo=cfg.hub_repo)
+            push_summarizer_prompt(hub_owner=cfg.hub_owner, repo=cfg.hub_repo, variant=cfg.summarizer_variant)
         push_seed_prompt(
             hub_owner=cfg.hub_owner, repo=cfg.hub_repo,
             text=seed_prompt, description=seed_description, run_id=cfg.run_id,
@@ -253,6 +254,9 @@ def main(argv: list[str] | None = None) -> int:
                     "comparison to a train-sampled run.")
     p.add_argument("--summarize-every", type=int, default=None,
                     help="insert a distillation-only step every N optimize iterations (0/unset = off)")
+    p.add_argument("--summarizer-variant", choices=["aggressive", "gentle"], default=None,
+                    help="'aggressive' (default) pushes toward shortness; 'gentle' explicitly says "
+                    "length is not the objective, only merge genuinely repetitive wording")
     p.add_argument("--no-hub", action="store_true", help="skip LangSmith Hub pushes (local only)")
     p.add_argument("--resume", action="store_true",
                     help="continue an existing --run-id from its last saved iteration")
@@ -269,6 +273,8 @@ def main(argv: list[str] | None = None) -> int:
         kwargs["split"] = args.split
     if args.summarize_every is not None:
         kwargs["summarize_every"] = args.summarize_every
+    if args.summarizer_variant:
+        kwargs["summarizer_variant"] = args.summarizer_variant
     if args.no_hub:
         kwargs["push_to_hub"] = False
 

@@ -35,12 +35,16 @@ class RunConfig:
     optimizer_temperature: float = 0.4
     optimizer_max_tokens: int = 8000
 
-    # Every N optimize-iterations, insert an extra distillation call (a
-    # different, concise prompt asking only to merge/cut redundancy — see
-    # prompts/summarizer.md) rather than relying on the meta-prompt's
-    # "revise, don't append" instruction alone to keep the prompt compact.
-    # 0 disables this (evo_001/evo_002 behavior).
+    # Every N optimize-iterations, insert an extra distillation call rather
+    # than relying on the meta-prompt's "revise, don't append" instruction
+    # alone. 0 disables this (evo_001/evo_002 behavior).
     summarize_every: int = 0
+    # "aggressive" = prompts/summarizer.md (evo_004/evo_005 — explicitly
+    # pushes toward shortness, which cost it the JSON contract twice at high
+    # compression ratios). "gentle" = prompts/summarizer_gentle.md — same
+    # goal (clearer, more general principles) but explicitly told length is
+    # not the objective; may end up close to its starting size.
+    summarizer_variant: str = "aggressive"
 
     data_dir: Path = DEFAULT_DATA_DIR
     split: str = DEFAULT_SPLIT
