@@ -42,6 +42,70 @@ from baselines.metrics import neg_hardness_slice_metrics, pair_metrics
 
 DEFAULT_MAX_TOKENS = 600
 
+
+def _make_bedrock_reasoning_safe_call_fn(*, client, model_id: str, temperature: float, max_tokens: int):
+    """Like ``baselines.llm_judge.judge.make_bedrock_call_fn``, but doesn't
+    assume ``content[0]`` is the text block. Reasoning models (MiniMax M2.5
+    confirmed) return ``content = [{"reasoningContent": ...}, {"text": ...}]``
+    — ``bedrock_backend.call_bedrock_verdict`` indexes ``content[0]["text"]``
+    directly and KeyErrors on this shape. Fixed locally (not in the shared
+    ``baselines/llm_judge/bedrock_backend.py``) per the isolation rule: this
+    duplicates just the response-parsing step, reusing everything else
+    (client construction, the Converse call itself, structured-output
+    fallback) from the original module."""
+    from baselines.llm_judge.bedrock_backend import _structured_output_unsupported, VERDICT_SCHEMA
+    from synth_pipeline.llm import parse_json_object
+
+    def _first_text_block(content: list[dict]) -> str:
+        for block in content:
+            if "text" in block:
+                return block["text"]
+        raise ValueError(f"no text block in Bedrock response content: {content!r}")
+
+    def call(system: str, user: str) -> dict[str, Any]:
+        messages = [{"role": "user", "content": [{"text": user}]}]
+        inference_config = {"maxTokens": max_tokens, "temperature": temperature}
+        try:
+            resp = client.converse(
+                modelId=model_id,
+                messages=messages,
+                system=[{"text": system}],
+                inferenceConfig=inference_config,
+                outputConfig={
+                    "textFormat": {
+                        "type": "json_schema",
+                        "structure": {
+                            "jsonSchema": {
+                                "schema": json.dumps(VERDICT_SCHEMA),
+                                "name": "verdict",
+                                "description": "Match verdict with confidence and reasoning.",
+                            }
+                        },
+                    }
+                },
+            )
+            text = _first_text_block(resp["output"]["message"]["content"])
+            return json.loads(text)
+        except Exception as exc:  # noqa: BLE001
+            if not _structured_output_unsupported(exc):
+                raise
+
+        plain_system = (
+            system
+            + '\n\nRespond with only a single JSON object matching this shape, '
+            'no other text: {"reasoning": string, "match": "yes"|"no", "confidence": integer 0-100}'
+        )
+        resp = client.converse(
+            modelId=model_id,
+            messages=messages,
+            system=[{"text": plain_system}],
+            inferenceConfig=inference_config,
+        )
+        text = _first_text_block(resp["output"]["message"]["content"])
+        return parse_json_object(text)
+
+    return call
+
 # The naive-variant seed reference this evolved prompt started from, same
 # model (google/gemini-3.1-flash-lite), same all-200-pair split — see
 # docs/llm-judge-experiment.md.
@@ -58,6 +122,21 @@ def load_evolved_prompt(summary_path: Path) -> tuple[str, dict[str, Any]]:
     if not isinstance(prompt, str) or not prompt.strip():
         raise ValueError(f"final_prompt missing/empty in {summary_path}")
     return prompt, summary
+
+
+def load_prompt_from_iteration(iteration_path: Path) -> tuple[str, dict[str, Any]]:
+    """Load ``prompt_after`` from a specific iteration file (e.g. a
+    pre-summarize round) instead of a run's final summary.json."""
+    record = json.loads(iteration_path.read_text())
+    prompt = record["prompt_after"]
+    if not isinstance(prompt, str) or not prompt.strip():
+        raise ValueError(f"prompt_after missing/empty in {iteration_path}")
+    fake_summary = {
+        "optimizer_model": record.get("optimizer_model"),
+        "leakage_warning": None,
+        "source_iteration_file": str(iteration_path),
+    }
+    return prompt, fake_summary
 
 
 def build_requests(
@@ -228,10 +307,31 @@ def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
         default=None,
         help="Explicit path to summary.json; default artifacts/judge_prompt_evolution/<run-id>/summary.json",
     )
-    p.add_argument("--model", default=DEFAULT_MODEL, help=f"OpenRouter model id (default {DEFAULT_MODEL})")
-    p.add_argument("--base-url", default=DEFAULT_BASE_URL)
+    p.add_argument(
+        "--iteration-path",
+        type=Path,
+        default=None,
+        help="Score a specific iteration file's prompt_after instead of the run's final_prompt "
+        "(e.g. a pre-summarize round). Overrides --summary-path.",
+    )
+    p.add_argument(
+        "--backend",
+        choices=["openrouter", "bedrock"],
+        default="openrouter",
+        help="'openrouter' uses OPENROUTER_API_KEY; 'bedrock' uses --aws-profile/--aws-region "
+        "credentials via boto3's Converse API.",
+    )
+    p.add_argument("--model", default=None,
+                    help=f"OpenRouter model id (default {DEFAULT_MODEL}) or Bedrock model id "
+                    "(e.g. minimax.minimax-m2.5), depending on --backend.")
+    p.add_argument("--base-url", default=DEFAULT_BASE_URL, help="OpenRouter only")
+    p.add_argument("--aws-profile", default="tf_provisioner", help="Bedrock only")
+    p.add_argument("--aws-region", default="us-east-1", help="Bedrock only")
     p.add_argument("--temperature", type=float, default=0.0)
-    p.add_argument("--max-tokens", type=int, default=DEFAULT_MAX_TOKENS)
+    p.add_argument("--max-tokens", type=int, default=None,
+                    help=f"Output token cap. Default {DEFAULT_MAX_TOKENS} for openrouter; "
+                    "3000 for bedrock (MiniMax M2.5 and similar reasoning models can exhaust a "
+                    "small budget before emitting the final JSON).")
     p.add_argument("--workers", type=int, default=8)
     p.add_argument("--max-attempts", type=int, default=4)
     p.add_argument("--max-failures", type=int, default=5)
@@ -244,44 +344,74 @@ def main(argv: list[str] | None = None) -> int:
     args = parse_args(argv)
     load_env_file(args.env_file)
 
-    summary_path = args.summary_path or (
-        Path("artifacts/judge_prompt_evolution") / args.run_id / "summary.json"
-    )
-    system_prompt, summary = load_evolved_prompt(summary_path)
-    print(f"loaded evolved prompt from {summary_path} ({len(system_prompt)} chars)")
+    if args.iteration_path:
+        system_prompt, summary = load_prompt_from_iteration(args.iteration_path)
+        prompt_source_desc = str(args.iteration_path)
+    else:
+        summary_path = args.summary_path or (
+            Path("artifacts/judge_prompt_evolution") / args.run_id / "summary.json"
+        )
+        system_prompt, summary = load_evolved_prompt(summary_path)
+        prompt_source_desc = str(summary_path)
+    print(f"loaded evolved prompt from {prompt_source_desc} ({len(system_prompt)} chars)")
     print(f"optimizer model(s): {summary.get('optimizer_model')}")
     if summary.get("leakage_warning"):
         print(f"\n*** {summary['leakage_warning']} ***\n")
 
-    api_key = os.getenv("OPENROUTER_API_KEY") or os.getenv("OPENAI_API_KEY") or ""
-    if not api_key:
-        print(
-            "error: no OPENROUTER_API_KEY (or OPENAI_API_KEY) in the environment. "
-            "Pass --env-file /path/to/.env.",
-            file=sys.stderr,
-        )
-        return 2
+    if args.backend == "openrouter":
+        model = args.model or DEFAULT_MODEL
+        max_tokens = args.max_tokens or DEFAULT_MAX_TOKENS
+        api_key = os.getenv("OPENROUTER_API_KEY") or os.getenv("OPENAI_API_KEY") or ""
+        if not api_key:
+            print(
+                "error: no OPENROUTER_API_KEY (or OPENAI_API_KEY) in the environment. "
+                "Pass --env-file /path/to/.env.",
+                file=sys.stderr,
+            )
+            return 2
 
-    def make_call_fn(system: str, user: str):
-        return make_openrouter_call_fn(
-            system=system,
-            user=user,
-            model=args.model,
-            temperature=args.temperature,
-            api_key=api_key,
-            base_url=args.base_url,
-            max_tokens=args.max_tokens,
+        def make_call_fn(system: str, user: str):
+            return make_openrouter_call_fn(
+                system=system,
+                user=user,
+                model=model,
+                temperature=args.temperature,
+                api_key=api_key,
+                base_url=args.base_url,
+                max_tokens=max_tokens,
+            )
+    else:
+        if not args.model:
+            print("error: --model is required with --backend bedrock", file=sys.stderr)
+            return 2
+        model = args.model
+        max_tokens = args.max_tokens or 3000
+        from baselines.llm_judge.bedrock_backend import make_client
+
+        try:
+            client = make_client(profile=args.aws_profile, region=args.aws_region)
+        except Exception as exc:  # noqa: BLE001
+            print(f"error: could not create a Bedrock client: {exc}", file=sys.stderr)
+            return 2
+
+        bedrock_call = _make_bedrock_reasoning_safe_call_fn(
+            client=client, model_id=model, temperature=args.temperature, max_tokens=max_tokens,
         )
+
+        def make_call_fn(system: str, user: str):
+            return lambda: bedrock_call(system, user)
 
     artifacts_dir = args.artifacts_dir or (
         Path("artifacts/judge_prompt_evolution") / args.run_id / "eval"
+        / (f"{args.backend}_{model.replace('/', '_').replace('.', '_')}"
+           + ("_iter" + args.iteration_path.stem if args.iteration_path else ""))
     )
     artifacts_dir.mkdir(parents=True, exist_ok=True)
 
     metrics = run_eval(
         data_dir=args.data_dir,
         system_prompt=system_prompt,
-        model=args.model,
+        model=model,
         temperature=args.temperature,
         workers=args.workers,
         max_attempts=args.max_attempts,
@@ -289,8 +419,10 @@ def main(argv: list[str] | None = None) -> int:
         artifacts_dir=artifacts_dir,
         make_call_fn=make_call_fn,
     )
+    metrics["backend"] = args.backend
     metrics["seed_reference"] = SEED_REFERENCE
     metrics["evolution_run_id"] = args.run_id
+    metrics["prompt_source"] = prompt_source_desc
     print_report(metrics)
 
     out_path = artifacts_dir / "metrics_all.json"
