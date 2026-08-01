@@ -250,6 +250,8 @@ def main(argv: list[str] | None = None) -> int:
     system_prompt, summary = load_evolved_prompt(summary_path)
     print(f"loaded evolved prompt from {summary_path} ({len(system_prompt)} chars)")
     print(f"optimizer model(s): {summary.get('optimizer_model')}")
+    if summary.get("leakage_warning"):
+        print(f"\n*** {summary['leakage_warning']} ***\n")
 
     api_key = os.getenv("OPENROUTER_API_KEY") or os.getenv("OPENAI_API_KEY") or ""
     if not api_key:

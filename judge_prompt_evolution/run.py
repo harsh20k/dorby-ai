@@ -85,7 +85,12 @@ def run(cfg: RunConfig, *, resume: bool = False) -> dict[str, Any]:
           f"({cfg.n_positive_examples} pos / {cfg.n_hard_negative_examples} hard-neg / "
           f"{cfg.n_easy_negative_examples} easy-neg)")
     print(f"optimizer   {cfg.optimizer_model}")
-    print(f"split       {cfg.split} (holdout never touched)")
+    if cfg.split == "train":
+        print(f"split       {cfg.split} (holdout never touched)")
+    else:
+        print(f"split       {cfg.split}  *** LEAKAGE WARNING: any AUC check after this run is "
+              f"contaminated — the optimizer can see holdout pairs as examples, so no population "
+              f"is left unseen. Exploratory only, not comparable to a train-sampled run. ***")
     print(f"summarize   every {cfg.summarize_every} iterations" if cfg.summarize_every else "summarize   off")
 
     seed_prompt, seed_description = resolve_seed_prompt(cfg)
@@ -198,6 +203,13 @@ def run(cfg: RunConfig, *, resume: bool = False) -> dict[str, Any]:
         "n_iterations": cfg.n_iterations,
         "optimizer_model": cfg.optimizer_model,
         "seed_source": cfg.seed_source,
+        "example_split": cfg.split,
+        "leakage_warning": None if cfg.split == "train" else (
+            "Examples were sampled from split="
+            + repr(cfg.split)
+            + ", which includes the 69-pair holdout. Any AUC check on any population is "
+            "contaminated by this run's own examples — not a generalization test, exploratory only."
+        ),
         "summarize_every": cfg.summarize_every,
         "seed_prompt": seed_prompt,
         "final_prompt": current_prompt,
@@ -232,6 +244,13 @@ def main(argv: list[str] | None = None) -> int:
     p.add_argument("--optimizer-model", default=None)
     p.add_argument("--seed", type=int, default=42)
     p.add_argument("--seed-source", choices=["naive", "structured_cot"], default=None)
+    p.add_argument("--split", choices=["train", "all", "holdout"], default=None,
+                    help="which real pairs the optimizer samples examples from. 'train' (default) "
+                    "keeps the 69-pair holdout unseen, so a later all-200 AUC check has a clean "
+                    "generalization component. 'all' shows every real pair as a possible example, "
+                    "including holdout — any subsequent AUC check on any population is then "
+                    "contaminated by design; use only for exploratory runs, never for a fair "
+                    "comparison to a train-sampled run.")
     p.add_argument("--summarize-every", type=int, default=None,
                     help="insert a distillation-only step every N optimize iterations (0/unset = off)")
     p.add_argument("--no-hub", action="store_true", help="skip LangSmith Hub pushes (local only)")
@@ -246,6 +265,8 @@ def main(argv: list[str] | None = None) -> int:
         kwargs["optimizer_model"] = args.optimizer_model
     if args.seed_source:
         kwargs["seed_source"] = args.seed_source
+    if args.split:
+        kwargs["split"] = args.split
     if args.summarize_every is not None:
         kwargs["summarize_every"] = args.summarize_every
     if args.no_hub:
