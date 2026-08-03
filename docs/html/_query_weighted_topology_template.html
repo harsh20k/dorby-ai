@@ -102,6 +102,29 @@
   .seg button.active { background: var(--accent); color: #0b0e14; font-weight: 600; }
   .seg button:hover:not(.active) { background: var(--border); color: var(--text); }
 
+  #search-input {
+    width: 100%; background: var(--bg); border: 1px solid var(--border);
+    border-radius: 7px; color: var(--text); font-size: 12px; padding: 7px 9px;
+    font-family: inherit; outline: none;
+  }
+  #search-input:focus { border-color: var(--accent); }
+  #search-input::placeholder { color: var(--text-faint); }
+
+  .slider-row {
+    display: flex; align-items: center; gap: 8px;
+  }
+  .slider-row input[type=range] {
+    flex: 1; accent-color: var(--accent); height: 4px;
+  }
+  .slider-row .slider-val {
+    font-size: 11px; color: var(--text); min-width: 46px; text-align: right;
+  }
+  .toggle-row {
+    display: flex; align-items: center; justify-content: space-between;
+    font-size: 11.5px; color: var(--text-dim); cursor: pointer; user-select: none;
+  }
+  .toggle-row input[type=checkbox] { accent-color: var(--accent); width: 15px; height: 15px; cursor: pointer; }
+
   #legend {
     bottom: 16px; left: 16px; width: 220px;
   }
@@ -146,10 +169,60 @@
   #tooltip .t-id { color: var(--text-faint); font-size: 10px; margin-bottom: 4px; }
   #tooltip .t-body { color: var(--text-dim); }
 
+  #detail {
+    position: fixed; top: 0; right: 0; bottom: 0; width: 380px;
+    background: var(--panel-solid); border-left: 1px solid var(--border);
+    z-index: 40; padding: 20px 20px 24px; overflow-y: auto;
+    transform: translateX(100%); transition: transform 0.22s ease;
+  }
+  #detail.open { transform: translateX(0); }
+  #detail-close {
+    position: absolute; top: 16px; right: 16px; width: 26px; height: 26px;
+    border-radius: 50%; border: 1px solid var(--border); background: transparent;
+    color: var(--text-dim); font-size: 14px; cursor: pointer; line-height: 1;
+  }
+  #detail-close:hover { background: var(--border); color: var(--text); }
+  #detail .d-head { display: flex; align-items: center; gap: 8px; margin: 4px 32px 2px 0; }
+  #detail .d-dot { width: 11px; height: 11px; border-radius: 50%; flex-shrink: 0; }
+  #detail .d-type {
+    font-size: 11px; text-transform: uppercase; letter-spacing: 0.06em; font-weight: 700;
+  }
+  #detail .d-id { font-size: 10.5px; color: var(--text-faint); margin-bottom: 16px; word-break: break-all; }
+  #detail .d-section-label {
+    font-size: 10px; text-transform: uppercase; letter-spacing: 0.06em; font-weight: 700;
+    color: var(--text-faint); margin: 18px 0 8px;
+  }
+  #detail .d-text {
+    font-size: 12px; line-height: 1.65; color: var(--text-dim);
+    white-space: pre-wrap; word-break: break-word;
+  }
+  #detail .d-query-box {
+    font-size: 12px; line-height: 1.6; color: var(--text);
+    background: color-mix(in srgb, var(--query) 12%, transparent);
+    border: 1px solid color-mix(in srgb, var(--query) 35%, transparent);
+    border-radius: 8px; padding: 8px 10px;
+  }
+  .conn-row {
+    display: flex; align-items: flex-start; gap: 8px; padding: 9px 8px;
+    border-radius: 7px; cursor: pointer; margin-bottom: 4px;
+  }
+  .conn-row:hover { background: var(--border); }
+  .conn-row .c-dot { width: 8px; height: 8px; border-radius: 2px; margin-top: 4px; flex-shrink: 0; }
+  .conn-row .c-main { flex: 1; min-width: 0; }
+  .conn-row .c-label {
+    font-size: 9.5px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em;
+    padding: 1px 6px; border-radius: 4px; display: inline-block; margin-bottom: 3px;
+  }
+  .conn-row .c-label.pos { background: color-mix(in srgb, var(--pos) 20%, transparent); color: var(--pos); }
+  .conn-row .c-label.neg { background: color-mix(in srgb, var(--neg) 20%, transparent); color: var(--neg); }
+  .conn-row .c-excerpt { font-size: 11px; color: var(--text-dim); line-height: 1.4; }
+  .conn-row .c-query { font-size: 10.5px; color: var(--text-faint); margin-top: 3px; font-style: italic; }
+
   @media (max-width: 720px) {
     #controls { width: 180px; }
     #legend, #stats { width: 170px; }
     #header { max-width: 240px; }
+    #detail { width: 100%; }
   }
 </style>
 
@@ -192,6 +265,23 @@
       <button data-val="neg">Declined</button>
     </div>
   </div>
+  <div class="ctrl-group">
+    <div class="ctrl-label">Search profiles</div>
+    <input id="search-input" class="mono" type="text" placeholder="e.g. fundraise, NYC…" autocomplete="off">
+  </div>
+  <div class="ctrl-group">
+    <div class="ctrl-label">Seekers shown (random sample)</div>
+    <div class="slider-row">
+      <input id="sample-slider" type="range" min="1" step="1">
+      <span class="slider-val mono" id="sample-val">—</span>
+    </div>
+  </div>
+  <div class="ctrl-group">
+    <label class="toggle-row">
+      Hide all edges
+      <input type="checkbox" id="hide-edges-toggle">
+    </label>
+  </div>
 </div>
 
 <div id="legend" class="panel">
@@ -213,6 +303,11 @@
 
 <div id="tooltip"></div>
 
+<div id="detail">
+  <button id="detail-close" aria-label="Close">✕</button>
+  <div id="detail-body"></div>
+</div>
+
 <script>
 const DATA = __GRAPH_DATA__;
 
@@ -230,43 +325,96 @@ window.addEventListener('resize', resize);
 resize();
 
 // ---- state ----
-let state = { model: 'frozen', mode: 'direct', labelFilter: 'both', proj: 'pca' };
+let state = {
+  model: 'frozen', mode: 'direct', labelFilter: 'both', proj: 'pca',
+  search: '', sampleN: DATA.seeker_ids.length, hideEdges: false,
+};
 let yaw = 0.5, pitch = -0.3, zoom = 1.0;
 let autoRotate = true;
+
+// ---- one-time lookups (id -> array index, id -> text, id -> connections) ----
+const seekerIdx = {}; DATA.seeker_ids.forEach((id, i) => seekerIdx[id] = i);
+const candIdx = {}; DATA.candidate_ids.forEach((id, i) => candIdx[id] = i);
+
+// stable shuffle of seeker ids, computed once — the sample slider always
+// takes a prefix of this list, so the same N seekers stay selected across
+// every model/mode/projection toggle within this page load.
+const shuffledSeekerIds = (() => {
+  const arr = DATA.seeker_ids.slice();
+  for (let i = arr.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [arr[i], arr[j]] = [arr[j], arr[i]];
+  }
+  return arr;
+})();
+
+// pair records per seeker / per candidate, for the click-detail sidebar
+const pairsBySeeker = {}, pairsByCandidate = {};
+DATA.pair_ids.forEach((pid, i) => {
+  const rec = {
+    pairId: pid, label: DATA.labels[i],
+    seekerId: DATA.seeker_id_by_pair[i], candidateId: DATA.candidate_id_by_pair[i],
+    queryText: DATA.query_text_full[i],
+  };
+  (pairsBySeeker[rec.seekerId] ||= []).push(rec);
+  (pairsByCandidate[rec.candidateId] ||= []).push(rec);
+});
 
 // ---- build node/edge lists for current state ----
 function buildScene() {
   const mFull = DATA.models[state.model];
   const m = mFull[state.proj]; // { seeker_xyz, query_xyz, cand_xyz }
   const seekerXYZ = m.seeker_xyz, queryXYZ = m.query_xyz, candXYZ = m.cand_xyz;
-  const seekerIdx = {}; DATA.seeker_ids.forEach((id, i) => seekerIdx[id] = i);
-  const candIdx = {}; DATA.candidate_ids.forEach((id, i) => candIdx[id] = i);
 
-  const nodes = [];
-  const seekerNodeIdx = {}; // seeker_id -> node array index
-  const candNodeIdx = {};
+  const sampleSet = new Set(shuffledSeekerIds.slice(0, state.sampleN));
+  const q = state.search.trim().toLowerCase();
 
-  DATA.seeker_ids.forEach((id, i) => {
-    seekerNodeIdx[id] = nodes.length;
-    nodes.push({
-      x: seekerXYZ[i][0], y: seekerXYZ[i][1], z: seekerXYZ[i][2],
-      type: 'seeker', id, text: DATA.seeker_text[i],
-    });
-  });
-  DATA.candidate_ids.forEach((id, i) => {
-    candNodeIdx[id] = nodes.length;
-    nodes.push({
-      x: candXYZ[i][0], y: candXYZ[i][1], z: candXYZ[i][2],
-      type: 'candidate', id, text: DATA.candidate_text[i],
-    });
-  });
-
-  const edges = [];
+  // filter at the pair level first, then only instantiate nodes that survive
+  const activePairs = [];
   DATA.pair_ids.forEach((pid, i) => {
     const label = DATA.labels[i];
     if (state.labelFilter !== 'both' && state.labelFilter !== label) return;
     const sId = DATA.seeker_id_by_pair[i], cId = DATA.candidate_id_by_pair[i];
-    const sNode = seekerNodeIdx[sId], cNode = candNodeIdx[cId];
+    if (!sampleSet.has(sId)) return;
+    if (q) {
+      const hit = DATA.seeker_text_full[seekerIdx[sId]].toLowerCase().includes(q)
+        || DATA.candidate_text_full[candIdx[cId]].toLowerCase().includes(q)
+        || DATA.query_text_full[i].toLowerCase().includes(q);
+      if (!hit) return;
+    }
+    activePairs.push(i);
+  });
+
+  const nodes = [];
+  const seekerNodeIdx = {}, candNodeIdx = {};
+
+  function ensureSeeker(sId) {
+    if (sId in seekerNodeIdx) return seekerNodeIdx[sId];
+    const i = seekerIdx[sId];
+    seekerNodeIdx[sId] = nodes.length;
+    nodes.push({
+      x: seekerXYZ[i][0], y: seekerXYZ[i][1], z: seekerXYZ[i][2],
+      type: 'seeker', id: sId, text: DATA.seeker_text[i],
+    });
+    return seekerNodeIdx[sId];
+  }
+  function ensureCand(cId) {
+    if (cId in candNodeIdx) return candNodeIdx[cId];
+    const i = candIdx[cId];
+    candNodeIdx[cId] = nodes.length;
+    nodes.push({
+      x: candXYZ[i][0], y: candXYZ[i][1], z: candXYZ[i][2],
+      type: 'candidate', id: cId, text: DATA.candidate_text[i],
+    });
+    return candNodeIdx[cId];
+  }
+
+  const edges = [];
+  activePairs.forEach(i => {
+    const label = DATA.labels[i];
+    const pid = DATA.pair_ids[i];
+    const sNode = ensureSeeker(DATA.seeker_id_by_pair[i]);
+    const cNode = ensureCand(DATA.candidate_id_by_pair[i]);
     if (state.mode === 'direct') {
       edges.push({ a: sNode, b: cNode, label });
     } else {
@@ -348,21 +496,23 @@ function draw() {
   }
 
   // edges — depth-sorted by average, drawn far to near
-  const edgeList = scene.edges.map((e, i) => {
-    const pa = proj[e.a], pb = proj[e.b];
-    return { e, i, pa, pb, avgDepth: (pa.depth + pb.depth) / 2 };
-  }).sort((a, b) => b.avgDepth - a.avgDepth);
+  if (!state.hideEdges) {
+    const edgeList = scene.edges.map((e, i) => {
+      const pa = proj[e.a], pb = proj[e.b];
+      return { e, i, pa, pb, avgDepth: (pa.depth + pb.depth) / 2 };
+    }).sort((a, b) => b.avgDepth - a.avgDepth);
 
-  for (const { e, i, pa, pb, avgDepth } of edgeList) {
-    const hovered = hoverEdgeSet.has(i);
-    const baseAlpha = Math.max(0.06, Math.min(0.5, 1.4 / avgDepth - 0.15));
-    const alpha = hoverIdx >= 0 ? (hovered ? Math.min(1, baseAlpha + 0.55) : baseAlpha * 0.25) : baseAlpha;
-    ctx.strokeStyle = hexToRgba(edgeColor(e.label), alpha);
-    ctx.lineWidth = hovered ? 1.8 : 1;
-    ctx.beginPath();
-    ctx.moveTo(pa.sx, pa.sy);
-    ctx.lineTo(pb.sx, pb.sy);
-    ctx.stroke();
+    for (const { e, i, pa, pb, avgDepth } of edgeList) {
+      const hovered = hoverEdgeSet.has(i);
+      const baseAlpha = Math.max(0.06, Math.min(0.5, 1.4 / avgDepth - 0.15));
+      const alpha = hoverIdx >= 0 ? (hovered ? Math.min(1, baseAlpha + 0.55) : baseAlpha * 0.25) : baseAlpha;
+      ctx.strokeStyle = hexToRgba(edgeColor(e.label), alpha);
+      ctx.lineWidth = hovered ? 1.8 : 1;
+      ctx.beginPath();
+      ctx.moveTo(pa.sx, pa.sy);
+      ctx.lineTo(pb.sx, pb.sy);
+      ctx.stroke();
+    }
   }
 
   // nodes — depth-sorted far to near
@@ -419,10 +569,11 @@ function hexToRgba(hex, a) {
 }
 
 // ---- interaction ----
-let dragging = false, lastX = 0, lastY = 0;
+const CLICK_THRESHOLD = 4;
+let dragging = false, lastX = 0, lastY = 0, movedDist = 0, pointerDown = false;
 canvas.addEventListener('pointerdown', e => {
-  dragging = true; autoRotate = false; lastX = e.clientX; lastY = e.clientY;
-  canvas.classList.add('dragging');
+  pointerDown = true; movedDist = 0; autoRotate = false;
+  lastX = e.clientX; lastY = e.clientY;
   canvas.setPointerCapture(e.pointerId);
 });
 const tooltip = document.getElementById('tooltip');
@@ -447,12 +598,18 @@ function findHoverNode(clientX, clientY) {
 }
 
 canvas.addEventListener('pointermove', e => {
-  if (dragging) {
-    yaw += (e.clientX - lastX) * 0.006;
-    pitch += (e.clientY - lastY) * 0.006;
-    pitch = Math.max(-1.4, Math.min(1.4, pitch));
+  if (pointerDown) {
+    const dx = e.clientX - lastX, dy = e.clientY - lastY;
+    movedDist += Math.hypot(dx, dy);
+    if (movedDist > CLICK_THRESHOLD) {
+      dragging = true;
+      canvas.classList.add('dragging');
+      yaw += dx * 0.006;
+      pitch += dy * 0.006;
+      pitch = Math.max(-1.4, Math.min(1.4, pitch));
+      hideTooltip();
+    }
     lastX = e.clientX; lastY = e.clientY;
-    hideTooltip();
     return;
   }
   const idx = findHoverNode(e.clientX, e.clientY);
@@ -475,11 +632,84 @@ canvas.addEventListener('pointermove', e => {
   tooltip.style.top = Math.max(margin, top) + 'px';
 });
 canvas.addEventListener('pointerleave', hideTooltip);
-window.addEventListener('pointerup', () => { dragging = false; canvas.classList.remove('dragging'); });
+window.addEventListener('pointerup', e => {
+  if (pointerDown && movedDist <= CLICK_THRESHOLD) {
+    const idx = findHoverNode(e.clientX, e.clientY);
+    if (idx !== -1) selectNode(scene.nodes[idx]);
+  }
+  pointerDown = false; dragging = false; canvas.classList.remove('dragging');
+});
 canvas.addEventListener('wheel', e => {
   e.preventDefault();
   zoom = Math.max(0.4, Math.min(3.5, zoom * (1 - e.deltaY * 0.001)));
 }, { passive: false });
+
+// ---- click-to-select detail sidebar ----
+const detailPanel = document.getElementById('detail');
+const detailBody = document.getElementById('detail-body');
+document.getElementById('detail-close').addEventListener('click', () => detailPanel.classList.remove('open'));
+
+function escapeHtml(s) {
+  return (s || '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+}
+
+function connRow(rec, otherType, otherId, otherText) {
+  const color = colorFor(otherType);
+  const excerpt = escapeHtml((otherText || '').slice(0, 140)) + (otherText && otherText.length > 140 ? '…' : '');
+  const queryLine = rec.queryText
+    ? `<div class="c-query">"${escapeHtml(rec.queryText.replace(/^Search query:\s*/i, '').slice(0, 90))}"</div>`
+    : '';
+  return `<div class="conn-row" data-jump-type="${otherType}" data-jump-id="${escapeHtml(otherId)}">
+    <span class="c-dot" style="background:${color}"></span>
+    <div class="c-main">
+      <span class="c-label ${rec.label}">${rec.label === 'pos' ? 'Accepted' : 'Declined'}</span>
+      <div class="c-excerpt">${excerpt}</div>
+      ${queryLine}
+    </div>
+  </div>`;
+}
+
+function renderDetail(node) {
+  const color = colorFor(node.type);
+  let html = `<div class="d-head"><span class="d-dot" style="background:${color}"></span>` +
+    `<span class="d-type" style="color:${color}">${TYPE_LABEL[node.type]}</span></div>` +
+    `<div class="d-id mono">${escapeHtml(node.id)}</div>`;
+
+  if (node.type === 'query') {
+    const i = DATA.pair_ids.indexOf(node.id);
+    const sId = DATA.seeker_id_by_pair[i], cId = DATA.candidate_id_by_pair[i], label = DATA.labels[i];
+    html += `<div class="d-section-label">Full query</div><div class="d-query-box">${escapeHtml(DATA.query_text_full[i])}</div>`;
+    html += `<div class="d-section-label">Connects</div>`;
+    html += connRow({ label, queryText: '' }, 'seeker', sId, DATA.seeker_text_full[seekerIdx[sId]]);
+    html += connRow({ label, queryText: '' }, 'candidate', cId, DATA.candidate_text_full[candIdx[cId]]);
+  } else {
+    const fullText = node.type === 'seeker' ? DATA.seeker_text_full[seekerIdx[node.id]] : DATA.candidate_text_full[candIdx[node.id]];
+    html += `<div class="d-section-label">Full profile</div><div class="d-text">${escapeHtml(fullText)}</div>`;
+
+    const conns = node.type === 'seeker' ? (pairsBySeeker[node.id] || []) : (pairsByCandidate[node.id] || []);
+    const otherType = node.type === 'seeker' ? 'candidate' : 'seeker';
+    html += `<div class="d-section-label">${otherType === 'candidate' ? 'Connected candidates' : 'Connected seekers'} (${conns.length})</div>`;
+    conns.forEach(rec => {
+      const otherId = node.type === 'seeker' ? rec.candidateId : rec.seekerId;
+      const otherText = otherType === 'candidate' ? DATA.candidate_text_full[candIdx[otherId]] : DATA.seeker_text_full[seekerIdx[otherId]];
+      html += connRow(rec, otherType, otherId, otherText);
+    });
+  }
+  detailBody.innerHTML = html;
+
+  detailBody.querySelectorAll('.conn-row').forEach(row => {
+    row.addEventListener('click', () => {
+      const type = row.dataset.jumpType, id = row.dataset.jumpId;
+      const idx = scene.nodes.findIndex(n => n.type === type && n.id === id);
+      if (idx !== -1) selectNode(scene.nodes[idx]);
+    });
+  });
+}
+
+function selectNode(node) {
+  renderDetail(node);
+  detailPanel.classList.add('open');
+}
 
 function wireSeg(id, key) {
   const el = document.getElementById(id);
@@ -498,6 +728,35 @@ wireSeg('seg-model', 'model');
 wireSeg('seg-mode', 'mode');
 wireSeg('seg-labels', 'labelFilter');
 wireSeg('seg-proj', 'proj');
+
+// search box
+const searchInput = document.getElementById('search-input');
+searchInput.addEventListener('input', () => {
+  state.search = searchInput.value;
+  hideTooltip();
+  scene = buildScene();
+  updateStats();
+});
+
+// sample slider — prefix of the one shuffle computed at load, so the same
+// N seekers stay selected across model/mode/projection toggles
+const sampleSlider = document.getElementById('sample-slider');
+const sampleVal = document.getElementById('sample-val');
+sampleSlider.max = String(DATA.seeker_ids.length);
+sampleSlider.value = String(DATA.seeker_ids.length);
+sampleVal.textContent = `${DATA.seeker_ids.length} / ${DATA.seeker_ids.length}`;
+sampleSlider.addEventListener('input', () => {
+  state.sampleN = parseInt(sampleSlider.value, 10);
+  sampleVal.textContent = `${state.sampleN} / ${DATA.seeker_ids.length}`;
+  hideTooltip();
+  scene = buildScene();
+  updateStats();
+});
+
+// hide-edges toggle
+document.getElementById('hide-edges-toggle').addEventListener('change', e => {
+  state.hideEdges = e.target.checked;
+});
 
 draw();
 </script>
