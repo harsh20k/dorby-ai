@@ -9,12 +9,12 @@
     --text: #e6e9f0;
     --text-dim: #8b93a7;
     --text-faint: #545c72;
-    --seeker: #7c9cff;
-    --query: #f5c451;
-    --candidate: #5fd4c0;
-    --pos: #4ade80;
-    --neg: #f87171;
-    --accent: #7c9cff;
+    --seeker: #6d7fff;
+    --query: #ffb020;
+    --candidate: #22d3ee;
+    --pos: #34d399;
+    --neg: #fb7185;
+    --accent: #6d7fff;
     --radius: 10px;
   }
   :root[data-theme="light"] {
@@ -25,11 +25,11 @@
     --text: #1a1d29;
     --text-dim: #565e75;
     --text-faint: #9199ad;
-    --seeker: #3355dd;
-    --query: #b8860b;
-    --candidate: #0d8f7a;
-    --pos: #1a9850;
-    --neg: #d1373f;
+    --seeker: #3b4fdb;
+    --query: #b8790a;
+    --candidate: #0891a8;
+    --pos: #158a5f;
+    --neg: #c22850;
   }
   @media (prefers-color-scheme: light) {
     :root:not([data-theme="dark"]) {
@@ -40,11 +40,11 @@
       --text: #1a1d29;
       --text-dim: #565e75;
       --text-faint: #9199ad;
-      --seeker: #3355dd;
-      --query: #b8860b;
-      --candidate: #0d8f7a;
-      --pos: #1a9850;
-      --neg: #d1373f;
+      --seeker: #3b4fdb;
+      --query: #b8790a;
+      --candidate: #0891a8;
+      --pos: #158a5f;
+      --neg: #c22850;
     }
   }
   * { box-sizing: border-box; }
@@ -54,8 +54,14 @@
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, Helvetica, Arial, sans-serif;
   }
   .mono { font-family: "SF Mono", ui-monospace, "Cascadia Code", Menlo, Consolas, monospace; }
-  #stage { position: fixed; inset: 0; touch-action: none; cursor: grab; }
+  #stage {
+    position: fixed; inset: 0; touch-action: none; cursor: grab;
+    background:
+      radial-gradient(ellipse 80% 60% at 50% 42%, color-mix(in srgb, var(--seeker) 7%, transparent), transparent 70%),
+      var(--bg);
+  }
   #stage.dragging { cursor: grabbing; }
+  #stage.hoverable { cursor: pointer; }
 
   .panel {
     position: fixed;
@@ -125,10 +131,20 @@
   #tooltip {
     position: fixed; pointer-events: none; z-index: 20;
     background: var(--panel-solid); border: 1px solid var(--border);
-    border-radius: 7px; padding: 6px 9px; font-size: 11px;
-    display: none; max-width: 220px; line-height: 1.4;
+    border-radius: 8px; padding: 9px 11px; font-size: 11.5px;
+    display: none; max-width: 260px; line-height: 1.45;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.35);
   }
-  #tooltip .t-id { color: var(--text-dim); font-size: 10px; }
+  #tooltip .t-head {
+    display: flex; align-items: center; gap: 6px; margin-bottom: 5px;
+  }
+  #tooltip .t-dot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }
+  #tooltip .t-type {
+    font-size: 10px; text-transform: uppercase; letter-spacing: 0.05em;
+    font-weight: 700; color: var(--text);
+  }
+  #tooltip .t-id { color: var(--text-faint); font-size: 10px; margin-bottom: 4px; }
+  #tooltip .t-body { color: var(--text-dim); }
 
   @media (max-width: 720px) {
     #controls { width: 180px; }
@@ -232,11 +248,17 @@ function buildScene() {
 
   DATA.seeker_ids.forEach((id, i) => {
     seekerNodeIdx[id] = nodes.length;
-    nodes.push({ x: seekerXYZ[i][0], y: seekerXYZ[i][1], z: seekerXYZ[i][2], type: 'seeker', id });
+    nodes.push({
+      x: seekerXYZ[i][0], y: seekerXYZ[i][1], z: seekerXYZ[i][2],
+      type: 'seeker', id, text: DATA.seeker_text[i],
+    });
   });
   DATA.candidate_ids.forEach((id, i) => {
     candNodeIdx[id] = nodes.length;
-    nodes.push({ x: candXYZ[i][0], y: candXYZ[i][1], z: candXYZ[i][2], type: 'candidate', id });
+    nodes.push({
+      x: candXYZ[i][0], y: candXYZ[i][1], z: candXYZ[i][2],
+      type: 'candidate', id, text: DATA.candidate_text[i],
+    });
   });
 
   const edges = [];
@@ -249,7 +271,10 @@ function buildScene() {
       edges.push({ a: sNode, b: cNode, label });
     } else {
       const qNodeIdx = nodes.length;
-      nodes.push({ x: queryXYZ[i][0], y: queryXYZ[i][1], z: queryXYZ[i][2], type: 'query', id: pid });
+      nodes.push({
+        x: queryXYZ[i][0], y: queryXYZ[i][1], z: queryXYZ[i][2],
+        type: 'query', id: pid, text: DATA.query_text[i],
+      });
       edges.push({ a: sNode, b: qNodeIdx, label });
       edges.push({ a: qNodeIdx, b: cNode, label });
     }
@@ -303,20 +328,37 @@ function edgeColor(label) {
   return label === 'pos' ? cs.getPropertyValue('--pos').trim() : cs.getPropertyValue('--neg').trim();
 }
 
+let lastProj = [];       // screen-space cache for hit-testing
+let hoverIdx = -1;        // index into scene.nodes, or -1
+
+function nodeRadius(n, scaleF) {
+  const baseR = n.type === 'query' ? 2.8 : n.type === 'seeker' ? 3.6 : 3.2;
+  return Math.max(0.6, baseR * scaleF);
+}
+
 function draw() {
   ctx.clearRect(0, 0, W, H);
   const proj = scene.nodes.map(project);
+  lastProj = proj;
+
+  // connected-edge set for the hovered node, for a highlight pass
+  const hoverEdgeSet = new Set();
+  if (hoverIdx >= 0) {
+    scene.edges.forEach((e, i) => { if (e.a === hoverIdx || e.b === hoverIdx) hoverEdgeSet.add(i); });
+  }
 
   // edges — depth-sorted by average, drawn far to near
-  const edgeList = scene.edges.map(e => {
+  const edgeList = scene.edges.map((e, i) => {
     const pa = proj[e.a], pb = proj[e.b];
-    return { e, pa, pb, avgDepth: (pa.depth + pb.depth) / 2 };
+    return { e, i, pa, pb, avgDepth: (pa.depth + pb.depth) / 2 };
   }).sort((a, b) => b.avgDepth - a.avgDepth);
 
-  for (const { e, pa, pb, avgDepth } of edgeList) {
-    const alpha = Math.max(0.06, Math.min(0.5, 1.4 / avgDepth - 0.15));
+  for (const { e, i, pa, pb, avgDepth } of edgeList) {
+    const hovered = hoverEdgeSet.has(i);
+    const baseAlpha = Math.max(0.06, Math.min(0.5, 1.4 / avgDepth - 0.15));
+    const alpha = hoverIdx >= 0 ? (hovered ? Math.min(1, baseAlpha + 0.55) : baseAlpha * 0.25) : baseAlpha;
     ctx.strokeStyle = hexToRgba(edgeColor(e.label), alpha);
-    ctx.lineWidth = 1;
+    ctx.lineWidth = hovered ? 1.8 : 1;
     ctx.beginPath();
     ctx.moveTo(pa.sx, pa.sy);
     ctx.lineTo(pb.sx, pb.sy);
@@ -324,24 +366,45 @@ function draw() {
   }
 
   // nodes — depth-sorted far to near
-  const nodeList = scene.nodes.map((n, i) => ({ n, p: proj[i] })).sort((a, b) => b.p.depth - a.p.depth);
-  for (const { n, p } of nodeList) {
-    const baseR = n.type === 'query' ? 2.6 : n.type === 'seeker' ? 3.4 : 3.0;
-    const r = Math.max(0.6, baseR * p.scaleF);
-    const alpha = Math.max(0.35, Math.min(1, 1.6 / p.depth - 0.2));
-    ctx.fillStyle = hexToRgba(colorFor(n.type), alpha);
+  const nodeList = scene.nodes.map((n, i) => ({ n, p: proj[i], i })).sort((a, b) => b.p.depth - a.p.depth);
+  for (const { n, p, i } of nodeList) {
+    const r = nodeRadius(n, p.scaleF);
+    const isHovered = i === hoverIdx;
+    const connected = hoverIdx >= 0 && scene.edges.some(e => (e.a === hoverIdx && e.b === i) || (e.b === hoverIdx && e.a === i));
+    const fade = hoverIdx >= 0 && !isHovered && !connected;
+    const alpha = Math.max(0.35, Math.min(1, 1.6 / p.depth - 0.2)) * (fade ? 0.3 : 1);
+    const color = colorFor(n.type);
+
+    ctx.save();
+    if (isHovered) {
+      ctx.shadowColor = color;
+      ctx.shadowBlur = 16;
+    } else {
+      ctx.shadowColor = color;
+      ctx.shadowBlur = 4;
+    }
+    ctx.fillStyle = hexToRgba(color, alpha);
     ctx.beginPath();
     if (n.type === 'candidate') {
       ctx.fillRect(p.sx - r, p.sy - r, r * 2, r * 2);
     } else if (n.type === 'query') {
-      ctx.save();
       ctx.translate(p.sx, p.sy);
       ctx.rotate(Math.PI / 4);
       ctx.fillRect(-r * 0.85, -r * 0.85, r * 1.7, r * 1.7);
-      ctx.restore();
     } else {
       ctx.arc(p.sx, p.sy, r, 0, Math.PI * 2);
       ctx.fill();
+    }
+    ctx.restore();
+
+    if (isHovered) {
+      ctx.save();
+      ctx.strokeStyle = hexToRgba(color, 0.95);
+      ctx.lineWidth = 1.5;
+      ctx.beginPath();
+      ctx.arc(p.sx, p.sy, r + 5, 0, Math.PI * 2);
+      ctx.stroke();
+      ctx.restore();
     }
   }
 
@@ -362,13 +425,56 @@ canvas.addEventListener('pointerdown', e => {
   canvas.classList.add('dragging');
   canvas.setPointerCapture(e.pointerId);
 });
+const tooltip = document.getElementById('tooltip');
+const TYPE_LABEL = { seeker: 'Seeker profile', query: 'Search query', candidate: 'Candidate profile' };
+
+function hideTooltip() {
+  if (hoverIdx !== -1) { hoverIdx = -1; canvas.classList.remove('hoverable'); }
+  tooltip.style.display = 'none';
+}
+
+function findHoverNode(clientX, clientY) {
+  const HIT_RADIUS = 14;
+  let best = -1, bestDist = HIT_RADIUS;
+  for (let i = 0; i < lastProj.length; i++) {
+    const p = lastProj[i];
+    const r = nodeRadius(scene.nodes[i], p.scaleF);
+    const dx = p.sx - clientX, dy = p.sy - clientY;
+    const dist = Math.sqrt(dx * dx + dy * dy) - r;
+    if (dist < bestDist) { bestDist = dist; best = i; }
+  }
+  return best;
+}
+
 canvas.addEventListener('pointermove', e => {
-  if (!dragging) return;
-  yaw += (e.clientX - lastX) * 0.006;
-  pitch += (e.clientY - lastY) * 0.006;
-  pitch = Math.max(-1.4, Math.min(1.4, pitch));
-  lastX = e.clientX; lastY = e.clientY;
+  if (dragging) {
+    yaw += (e.clientX - lastX) * 0.006;
+    pitch += (e.clientY - lastY) * 0.006;
+    pitch = Math.max(-1.4, Math.min(1.4, pitch));
+    lastX = e.clientX; lastY = e.clientY;
+    hideTooltip();
+    return;
+  }
+  const idx = findHoverNode(e.clientX, e.clientY);
+  if (idx === -1) { hideTooltip(); return; }
+  hoverIdx = idx;
+  canvas.classList.add('hoverable');
+  const n = scene.nodes[idx];
+  const color = colorFor(n.type);
+  tooltip.innerHTML =
+    `<div class="t-head"><span class="t-dot" style="background:${color}"></span>` +
+    `<span class="t-type" style="color:${color}">${TYPE_LABEL[n.type]}</span></div>` +
+    `<div class="t-id mono">${n.id}</div>` +
+    `<div class="t-body">${n.text || ''}</div>`;
+  tooltip.style.display = 'block';
+  const margin = 16;
+  let left = e.clientX + 16, top = e.clientY + 16;
+  if (left + 260 > W) left = e.clientX - 276;
+  if (top + 140 > H) top = e.clientY - 140;
+  tooltip.style.left = Math.max(margin, left) + 'px';
+  tooltip.style.top = Math.max(margin, top) + 'px';
 });
+canvas.addEventListener('pointerleave', hideTooltip);
 window.addEventListener('pointerup', () => { dragging = false; canvas.classList.remove('dragging'); });
 canvas.addEventListener('wheel', e => {
   e.preventDefault();
@@ -382,6 +488,7 @@ function wireSeg(id, key) {
       el.querySelectorAll('button').forEach(b => b.classList.remove('active'));
       btn.classList.add('active');
       state[key] = btn.dataset.val;
+      hideTooltip();
       scene = buildScene();
       updateStats();
     });
