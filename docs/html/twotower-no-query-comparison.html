@@ -1,0 +1,300 @@
+<title>Training Without the Query — Two-Tower Comparison</title>
+<meta name="description" content="Does retraining top1_ctrl with the search query removed entirely replicate the eval-time query-weighting win? All-200 real-pair comparison.">
+<style>
+  .viz-root {
+    color-scheme: light;
+    --surface-1:      #fcfcfb;
+    --surface-page:   #f9f9f7;
+    --text-primary:   #0b0b0b;
+    --text-secondary: #52514e;
+    --text-muted:     #898781;
+    --gridline:       #e1e0d9;
+    --baseline:       #c3c2b7;
+    --border:         rgba(11,11,11,0.10);
+    --series-1: #2a78d6;  /* top1_ctrl, trained with query (concat) */
+    --series-2: #eb6834;  /* + eval-time query_only swap */
+    --series-3: #1baf7a;  /* + eval-time alpha_0.6 blend */
+    --series-4: #eda100;  /* no_query_001, trained without query */
+    --good: #006300;
+    --critical: #d03b3b;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:where(:not([data-theme="light"])) .viz-root {
+      color-scheme: dark;
+      --surface-1:      #1a1a19;
+      --surface-page:   #0d0d0d;
+      --text-primary:   #ffffff;
+      --text-secondary: #c3c2b7;
+      --text-muted:     #898781;
+      --gridline:       #2c2c2a;
+      --baseline:       #383835;
+      --border:         rgba(255,255,255,0.10);
+      --series-1: #3987e5;
+      --series-2: #d95926;
+      --series-3: #199e70;
+      --series-4: #c98500;
+      --good: #0ca30c;
+      --critical: #e66767;
+    }
+  }
+  :root[data-theme="dark"] .viz-root {
+    color-scheme: dark;
+    --surface-1:      #1a1a19;
+    --surface-page:   #0d0d0d;
+    --text-primary:   #ffffff;
+    --text-secondary: #c3c2b7;
+    --text-muted:     #898781;
+    --gridline:       #2c2c2a;
+    --baseline:       #383835;
+    --border:         rgba(255,255,255,0.10);
+    --series-1: #3987e5;
+    --series-2: #d95926;
+    --series-3: #199e70;
+    --series-4: #c98500;
+    --good: #0ca30c;
+    --critical: #e66767;
+  }
+
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body {
+    background: var(--surface-page);
+    font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+    color: var(--text-primary);
+  }
+  .page {
+    max-width: 980px; margin: 0 auto; padding: 40px 24px 80px;
+  }
+  header { margin-bottom: 32px; }
+  h1 { font-size: 22px; font-weight: 700; letter-spacing: -0.01em; margin: 0 0 10px; text-wrap: balance; }
+  .lede { font-size: 14.5px; line-height: 1.6; color: var(--text-secondary); max-width: 720px; margin: 0; }
+  .lede b { color: var(--text-primary); }
+
+  .card {
+    background: var(--surface-1); border: 1px solid var(--border);
+    border-radius: 12px; padding: 24px 24px 20px; margin-bottom: 24px;
+  }
+  .card h2 { font-size: 13px; text-transform: uppercase; letter-spacing: 0.05em; color: var(--text-muted); margin: 0 0 4px; font-weight: 700; }
+  .card .card-note { font-size: 12.5px; color: var(--text-secondary); margin: 0 0 20px; line-height: 1.5; }
+
+  /* legend */
+  .legend { display: flex; flex-wrap: wrap; gap: 16px; margin-bottom: 18px; }
+  .legend-item { display: flex; align-items: center; gap: 7px; font-size: 12.5px; color: var(--text-secondary); }
+  .legend-swatch { width: 11px; height: 11px; border-radius: 3px; flex-shrink: 0; }
+
+  /* chart */
+  .chart-wrap { overflow-x: auto; }
+  svg { display: block; font-family: inherit; }
+  .axis-label { font-size: 11px; fill: var(--text-muted); }
+  .group-label { font-size: 12px; fill: var(--text-secondary); font-weight: 600; }
+  .gridline { stroke: var(--gridline); stroke-width: 1; }
+  .baseline { stroke: var(--baseline); stroke-width: 1; }
+  .bar { rx: 3; cursor: pointer; }
+  .bar-label { font-size: 10px; fill: var(--text-secondary); font-variant-numeric: tabular-nums; text-anchor: middle; }
+
+  .tooltip {
+    position: fixed; pointer-events: none; z-index: 30;
+    background: var(--surface-1); border: 1px solid var(--border);
+    border-radius: 8px; padding: 8px 11px; font-size: 12px; line-height: 1.5;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.25); display: none; max-width: 240px;
+  }
+  .tooltip b { color: var(--text-primary); }
+
+  table.data-table {
+    width: 100%; border-collapse: collapse; font-size: 12.5px; margin-top: 8px;
+  }
+  table.data-table th, table.data-table td {
+    text-align: right; padding: 7px 10px; font-variant-numeric: tabular-nums;
+    border-bottom: 1px solid var(--gridline);
+  }
+  table.data-table th:first-child, table.data-table td:first-child { text-align: left; font-variant-numeric: normal; }
+  table.data-table th { color: var(--text-muted); font-weight: 600; font-size: 11px; text-transform: uppercase; letter-spacing: 0.04em; }
+  table.data-table td.best { color: var(--good); font-weight: 700; }
+  table.data-table tr:last-child td { border-bottom: none; }
+
+  .reversal-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 4px; }
+  .reversal-box { border: 1px solid var(--border); border-radius: 9px; padding: 14px 16px; }
+  .reversal-box .rb-label { font-size: 11px; text-transform: uppercase; letter-spacing: 0.05em; color: var(--text-muted); font-weight: 700; margin-bottom: 8px; }
+  .reversal-box .rb-row { display: flex; justify-content: space-between; font-size: 13px; padding: 3px 0; }
+  .reversal-box .rb-row .v { font-variant-numeric: tabular-nums; font-weight: 700; }
+  .reversal-box.holdout .v { color: var(--critical); }
+  .reversal-box.all200 .v { color: var(--text-primary); }
+
+  footer { font-size: 12px; color: var(--text-muted); text-align: center; margin-top: 8px; }
+  footer a { color: var(--text-secondary); }
+
+  @media (max-width: 640px) {
+    .reversal-grid { grid-template-columns: 1fr; }
+  }
+</style>
+
+<div class="viz-root">
+<div class="page">
+  <header>
+    <h1>Training Without the Query — Does It Replicate the Eval-Time Win?</h1>
+    <p class="lede">
+      <b>twotower_query_weighted/</b> found that swapping the fine-tuned model's
+      seeker text to <b>query-only</b> at eval time — with zero retraining —
+      roughly doubles recall@1. This experiment retrains <b>top1_ctrl</b>'s exact
+      recipe with the search query removed from training entirely, to see if
+      that eval-time trick is really just the model catching up to a signal it
+      already had. <b>It isn't</b> — the retrained model lands almost exactly at
+      the untrained baseline, the weakest of the four rows below.
+    </p>
+  </header>
+
+  <div class="card">
+    <h2>All 200 real pairs</h2>
+    <p class="card-note">Four seeker representations on the fine-tuned voyage-4-nano family, scored on the same population, same metrics.</p>
+    <div class="legend" id="legend"></div>
+    <div class="chart-wrap"><svg id="chart" width="900" height="360"></svg></div>
+  </div>
+
+  <div class="card">
+    <h2>Exact numbers</h2>
+    <table class="data-table" id="data-table"></table>
+  </div>
+
+  <div class="card">
+    <h2>The holdout misled again</h2>
+    <p class="card-note"><code>no_query_001</code>'s 69-pair holdout score looked like the best fine-tune in the project. Scored on all 200, it reverses — the fourth+ time this project's holdout has flattered a result that didn't hold up.</p>
+    <div class="reversal-grid">
+      <div class="reversal-box holdout">
+        <div class="rb-label">69-pair holdout</div>
+        <div class="rb-row"><span>Recall@1</span><span class="v">0.4138</span></div>
+        <div class="rb-row"><span>MRR</span><span class="v">0.5574</span></div>
+      </div>
+      <div class="reversal-box all200">
+        <div class="rb-label">All 200 real pairs</div>
+        <div class="rb-row"><span>Recall@1</span><span class="v">0.1800</span></div>
+        <div class="rb-row"><span>MRR</span><span class="v">0.3371</span></div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    Writeup: <code>docs/twotower-no-query-experiment.md</code> · Code: <code>twotower_no_query/</code>
+  </footer>
+</div>
+</div>
+
+<div class="tooltip" id="tooltip"></div>
+
+<script>
+const rootStyle = getComputedStyle(document.querySelector('.viz-root'));
+function cssVar(name) { return rootStyle.getPropertyValue(name).trim(); }
+
+const SERIES = [
+  { key: 'concat',     label: 'top1_ctrl — trained WITH query (concat)',        color: cssVar('--series-1') },
+  { key: 'query_only',  label: '+ eval-time query-only swap (no retrain)',       color: cssVar('--series-2') },
+  { key: 'alpha06',     label: '+ eval-time alpha_0.6 blend (no retrain)',       color: cssVar('--series-3') },
+  { key: 'no_query',    label: 'no_query_001 — trained WITHOUT query at all',    color: cssVar('--series-4') },
+];
+
+const METRICS = [
+  { key: 'auc',   label: 'Pair AUC' },
+  { key: 'mrr',   label: 'MRR' },
+  { key: 'r1',    label: 'Recall@1' },
+  { key: 'r10',   label: 'Recall@10' },
+];
+
+const DATA = {
+  concat:     { auc: 0.5683, mrr: 0.3550, r1: 0.19, r10: 0.69 },
+  query_only: { auc: 0.5945, mrr: 0.5076, r1: 0.32, r10: 0.90 },
+  alpha06:    { auc: 0.6129, mrr: 0.4818, r1: 0.29, r10: 0.87 },
+  no_query:   { auc: 0.5718, mrr: 0.3371, r1: 0.18, r10: 0.67 },
+};
+
+// ---- legend ----
+const legendEl = document.getElementById('legend');
+SERIES.forEach(s => {
+  const item = document.createElement('div');
+  item.className = 'legend-item';
+  item.innerHTML = `<span class="legend-swatch" style="background:${s.color}"></span>${s.label}`;
+  legendEl.appendChild(item);
+});
+
+// ---- data table (with relief for the light-mode contrast WARN on slots 3/4) ----
+const table = document.getElementById('data-table');
+let thead = '<thead><tr><th>Model</th>' + METRICS.map(m => `<th>${m.label}</th>`).join('') + '</tr></thead>';
+let tbody = '<tbody>';
+METRICS.forEach(m => {}); // no-op, metrics used per-row below
+SERIES.forEach(s => {
+  const row = DATA[s.key];
+  tbody += `<tr><td>${s.label}</td>` + METRICS.map(m => {
+    const val = row[m.key];
+    const best = Math.max(...SERIES.map(s2 => DATA[s2.key][m.key])) === val;
+    return `<td class="${best ? 'best' : ''}">${val.toFixed(4)}</td>`;
+  }).join('') + '</tr>';
+});
+tbody += '</tbody>';
+table.innerHTML = thead + tbody;
+
+// ---- grouped bar chart ----
+const svg = document.getElementById('chart');
+const W = 900, H = 360;
+const marginL = 40, marginR = 20, marginT = 16, marginB = 44;
+const plotW = W - marginL - marginR, plotH = H - marginT - marginB;
+const groupGap = 28, barGap = 3;
+const groupW = plotW / METRICS.length;
+const barW = (groupW - groupGap) / SERIES.length;
+
+const yMax = 1.0;
+function yFor(v) { return marginT + plotH * (1 - v / yMax); }
+
+const ns = 'http://www.w3.org/2000/svg';
+function el(tag, attrs) {
+  const e = document.createElementNS(ns, tag);
+  for (const k in attrs) e.setAttribute(k, attrs[k]);
+  return e;
+}
+
+svg.setAttribute('viewBox', `0 0 ${W} ${H}`);
+
+// gridlines + y-axis labels (0, 0.25, 0.5, 0.75, 1.0)
+[0, 0.25, 0.5, 0.75, 1.0].forEach(v => {
+  const y = yFor(v);
+  svg.appendChild(el('line', { class: 'gridline', x1: marginL, x2: W - marginR, y1: y, y2: y }));
+  const t = el('text', { class: 'axis-label', x: marginL - 8, y: y + 4, 'text-anchor': 'end' });
+  t.textContent = v.toFixed(2);
+  svg.appendChild(t);
+});
+// baseline
+svg.appendChild(el('line', { class: 'baseline', x1: marginL, x2: W - marginR, y1: yFor(0), y2: yFor(0) }));
+
+const tooltip = document.getElementById('tooltip');
+
+METRICS.forEach((m, gi) => {
+  const groupX = marginL + gi * groupW + groupGap / 2;
+  SERIES.forEach((s, si) => {
+    const val = DATA[s.key][m.key];
+    const x = groupX + si * barW;
+    const y = yFor(val);
+    const h = yFor(0) - y;
+    const rect = el('rect', {
+      class: 'bar', x: x + barGap / 2, y, width: barW - barGap, height: Math.max(h, 1),
+      fill: s.color, rx: 3,
+    });
+    rect.addEventListener('mousemove', e => {
+      tooltip.style.display = 'block';
+      tooltip.innerHTML = `<b>${s.label}</b><br>${m.label}: <b>${val.toFixed(4)}</b>`;
+      tooltip.style.left = (e.clientX + 14) + 'px';
+      tooltip.style.top = (e.clientY + 14) + 'px';
+    });
+    rect.addEventListener('mouseleave', () => { tooltip.style.display = 'none'; });
+    svg.appendChild(rect);
+
+    // direct label above bar (relief for the light-mode contrast WARN)
+    const lbl = el('text', { class: 'bar-label', x: x + barW / 2, y: y - 6 });
+    lbl.textContent = val.toFixed(2);
+    svg.appendChild(lbl);
+  });
+
+  // group label
+  const gl = el('text', {
+    class: 'group-label', x: groupX + (barW * SERIES.length) / 2, y: H - marginB + 24, 'text-anchor': 'middle',
+  });
+  gl.textContent = m.label;
+  svg.appendChild(gl);
+});
+</script>
