@@ -84,6 +84,16 @@ models (`explained_variance` in `graph_data.json`) — positions show coarse
 clustering, not precise distances. It is a qualitative complement to the
 metrics table above, not a substitute for it.
 
+A second **Projection** toggle (PCA vs. raw dims 1–3) makes that concrete:
+taking the model's first three raw output dimensions as-is — no PCA — keeps
+under 1% of variance (`raw_dim0_variance`), roughly 50x less than PCA's 3
+components. Neural embedding dimensions aren't ordered by importance the way
+PCA components are; even for Matryoshka-trained models like voyage-4-nano,
+where truncating to a smaller *prefix* (e.g. 1024 of the full dimension) stays
+usable, that ordering holds only at the coarse checkpoints the model was
+trained at, not down to individual dimensions 1–3. The toggle exists to make
+that visually obvious rather than just asserted.
+
 ## Reproduce
 
 ```bash
