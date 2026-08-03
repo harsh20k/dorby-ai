@@ -34,6 +34,11 @@ class RunConfig:
     optimizer_model: str = DEFAULT_OPTIMIZER_MODEL
     optimizer_temperature: float = 0.4
     optimizer_max_tokens: int = 8000
+    # "openrouter" (default) or "gemini" (direct Google API via GEMINI_API_KEY,
+    # bypassing OpenRouter entirely — added when OpenRouter credits ran out
+    # mid-evo_007 and to keep the optimizer model consistent with the
+    # gemini-3.1-flash-lite AUC-check reference model).
+    optimizer_backend: str = "openrouter"
 
     # Every N optimize-iterations, insert an extra distillation call rather
     # than relying on the meta-prompt's "revise, don't append" instruction

@@ -243,6 +243,8 @@ def main(argv: list[str] | None = None) -> int:
     p.add_argument("--run-id", default=None)
     p.add_argument("--n-iterations", type=int, default=20)
     p.add_argument("--optimizer-model", default=None)
+    p.add_argument("--optimizer-backend", choices=["openrouter", "gemini"], default=None,
+                    help="'openrouter' (default) or 'gemini' (direct GEMINI_API_KEY, bypasses OpenRouter)")
     p.add_argument("--seed", type=int, default=42)
     p.add_argument("--seed-source", choices=["naive", "structured_cot"], default=None)
     p.add_argument("--split", choices=["train", "all", "holdout"], default=None,
@@ -257,6 +259,9 @@ def main(argv: list[str] | None = None) -> int:
     p.add_argument("--summarizer-variant", choices=["aggressive", "gentle"], default=None,
                     help="'aggressive' (default) pushes toward shortness; 'gentle' explicitly says "
                     "length is not the objective, only merge genuinely repetitive wording")
+    p.add_argument("--n-positive-examples", type=int, default=None)
+    p.add_argument("--n-hard-negative-examples", type=int, default=None)
+    p.add_argument("--n-easy-negative-examples", type=int, default=None)
     p.add_argument("--no-hub", action="store_true", help="skip LangSmith Hub pushes (local only)")
     p.add_argument("--resume", action="store_true",
                     help="continue an existing --run-id from its last saved iteration")
@@ -267,6 +272,8 @@ def main(argv: list[str] | None = None) -> int:
         kwargs["run_id"] = args.run_id
     if args.optimizer_model:
         kwargs["optimizer_model"] = args.optimizer_model
+    if args.optimizer_backend:
+        kwargs["optimizer_backend"] = args.optimizer_backend
     if args.seed_source:
         kwargs["seed_source"] = args.seed_source
     if args.split:
@@ -277,6 +284,12 @@ def main(argv: list[str] | None = None) -> int:
         kwargs["summarizer_variant"] = args.summarizer_variant
     if args.no_hub:
         kwargs["push_to_hub"] = False
+    if args.n_positive_examples is not None:
+        kwargs["n_positive_examples"] = args.n_positive_examples
+    if args.n_hard_negative_examples is not None:
+        kwargs["n_hard_negative_examples"] = args.n_hard_negative_examples
+    if args.n_easy_negative_examples is not None:
+        kwargs["n_easy_negative_examples"] = args.n_easy_negative_examples
 
     cfg = RunConfig(**kwargs)
     run(cfg, resume=args.resume)

@@ -71,6 +71,46 @@ def _call_optimizer(
     content = msg.content if isinstance(msg.content, str) else str(msg.content)
     return _parse_json_lenient(content)
 
+
+DEFAULT_GEMINI_BASE_URL = "https://generativelanguage.googleapis.com/v1beta"
+
+
+def _call_optimizer_gemini(
+    *, system: str, user: str, model: str, temperature: float, max_tokens: int, api_key: str,
+) -> dict[str, Any]:
+    """Direct Google Gemini API call (raw REST via urllib, no new SDK
+    dependency), mirroring ``eval_evolved.py::_make_gemini_call_fn`` — added
+    so the optimizer model can be gemini-3.1-flash-lite directly, both to
+    dodge OpenRouter's per-call credit-reservation issue (docs/possible-bugs.md
+    context: it reserves against max_tokens, not actual usage) and to keep the
+    optimizer and the AUC-check reference model consistent."""
+    import urllib.error
+    import urllib.request
+
+    url = f"{DEFAULT_GEMINI_BASE_URL}/models/{model}:generateContent?key={api_key}"
+    body = json.dumps({
+        "contents": [{"role": "user", "parts": [{"text": user}]}],
+        "systemInstruction": {"parts": [{"text": system}]},
+        "generationConfig": {
+            "temperature": temperature,
+            "maxOutputTokens": max_tokens,
+            "responseMimeType": "application/json",
+        },
+    }).encode("utf-8")
+    req = urllib.request.Request(url, data=body, headers={"Content-Type": "application/json"})
+    try:
+        with urllib.request.urlopen(req, timeout=180) as resp:
+            payload = json.load(resp)
+    except urllib.error.HTTPError as exc:
+        detail = exc.read().decode("utf-8", "replace")[:500]
+        raise RuntimeError(f"Gemini API HTTP {exc.code}: {detail}") from exc
+    candidates = payload.get("candidates") or []
+    if not candidates:
+        raise ValueError(f"no candidates in Gemini response: {payload!r}")
+    parts = candidates[0].get("content", {}).get("parts") or []
+    text = "".join(p.get("text", "") for p in parts)
+    return _parse_json_lenient(text)
+
 META_PROMPT_PATH = Path(__file__).resolve().parent / "prompts" / "meta_optimizer.md"
 SUMMARIZER_PROMPT_PATHS = {
     "aggressive": Path(__file__).resolve().parent / "prompts" / "summarizer.md",
@@ -111,6 +151,15 @@ def _call_with_retries(
     last_error: Exception | None = None
     for attempt in range(3):
         try:
+            if cfg.optimizer_backend == "gemini":
+                return _call_optimizer_gemini(
+                    system=system,
+                    user=user,
+                    model=cfg.optimizer_model,
+                    temperature=cfg.optimizer_temperature,
+                    max_tokens=cfg.optimizer_max_tokens,
+                    api_key=os.getenv("GEMINI_API_KEY", ""),
+                )
             return _call_optimizer(
                 system=system,
                 user=user,
