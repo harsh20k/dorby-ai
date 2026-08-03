@@ -174,7 +174,7 @@ def run(cfg: RunConfig, *, resume: bool = False) -> dict[str, Any]:
 
         if record["contract_problems"]:
             print(f"  iter {i:02d}/{cfg.n_iterations}  ({dt:.1f}s)  "
-                  f"CONTRACT WARNING: {record['contract_problems']}")
+                  f"CONTRACT AUTO-REPAIRED: {record['contract_problems']}")
         else:
             print(f"  iter {i:02d}/{cfg.n_iterations}  ({dt:.1f}s)  ok — "
                   f"{len(record['prompt_after'])} chars")

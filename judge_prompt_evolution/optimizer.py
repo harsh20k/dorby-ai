@@ -210,6 +210,20 @@ def validate_contract(prompt_text: str) -> list[str]:
     return problems
 
 
+def repair_contract(prompt_text: str, problems: list[str]) -> str:
+    """Deterministically restore the required output contract if a round
+    dropped it, instead of just flagging it (evo_007 found the optimizer
+    model itself, not only an aggressive summarizer, can silently delete this
+    paragraph — see docs/judge-prompt-evolution-experiment.md bug #6/#8).
+    Appends the canonical RESPONSE_CONTRACT block verbatim; the rubric text
+    itself is never touched. A no-op if ``problems`` is empty."""
+    if not problems:
+        return prompt_text
+    from judge_prompt_evolution.seed_prompt import RESPONSE_CONTRACT
+
+    return f"{prompt_text.rstrip()}\n\n{RESPONSE_CONTRACT}"
+
+
 def run_one_iteration(
     *,
     cfg: RunConfig,
@@ -232,13 +246,16 @@ def run_one_iteration(
         raise ValueError(f"optimizer returned no 'updated_prompt' at iteration {iteration}: {response!r}")
 
     problems = validate_contract(updated_prompt)
+    repaired_prompt = repair_contract(updated_prompt, problems)
     return {
         "iteration": iteration,
         "kind": "optimize",
         "prompt_before": current_prompt,
-        "prompt_after": updated_prompt,
+        "prompt_after": repaired_prompt,
+        "prompt_after_raw": updated_prompt if problems else None,
         "rationale": rationale,
         "contract_problems": problems,
+        "contract_repaired": bool(problems),
         "examples": [ex.to_dict() for ex in examples],
         "optimizer_model": cfg.optimizer_model,
     }
@@ -272,13 +289,16 @@ def run_summarization_step(*, cfg: RunConfig, current_prompt: str, after_iterati
         raise ValueError(f"summarizer returned no 'updated_prompt' after iteration {after_iteration}: {response!r}")
 
     problems = validate_contract(updated_prompt)
+    repaired_prompt = repair_contract(updated_prompt, problems)
     return {
         "iteration": after_iteration,
         "kind": "summarize",
         "prompt_before": current_prompt,
-        "prompt_after": updated_prompt,
+        "prompt_after": repaired_prompt,
+        "prompt_after_raw": updated_prompt if problems else None,
         "rationale": rationale,
         "contract_problems": problems,
+        "contract_repaired": bool(problems),
         "examples": [],
         "optimizer_model": cfg.optimizer_model,
     }

@@ -2,11 +2,12 @@
 
 Generated: 2026-07-31, updated 2026-08-03. Code: `judge_prompt_evolution/`
 (isolated package, no files under `baselines/llm_judge/` or `data/` were
-edited). Seven runs so far, each isolating one variable — meta-prompt
+edited). Eight runs so far, each isolating one variable — meta-prompt
 version, seed prompt, a periodic summarization step and its wording,
-(evo_005/evo_007) the example-sampling population, and (evo_007) example
-count and optimizer model/backend. Published trace (all seven runs,
-selectable): [Judge Prompt Evolution — evo_001 → evo_007](https://claude.ai/code/artifact/1e089702-6f90-4676-98e4-6c7e69813119).
+(evo_005/evo_007/evo_008) the example-sampling population, (evo_007) example
+count and optimizer model/backend, and (evo_008) the optimizer backend used
+from round 1 plus a code-level fix for the contract-dropping bug evo_007
+found. Published trace (all eight runs, selectable): [Judge Prompt Evolution — evo_001 → evo_008](https://claude.ai/code/artifact/1e089702-6f90-4676-98e4-6c7e69813119).
 
 ## What this tests
 
@@ -67,7 +68,8 @@ earlier:
 | evo_001 (v1 meta, naive seed) | 0.5734 | 0.5650 | 0.5584 | −0.0443 |
 | evo_004 (v2 meta, naive seed, +aggressive-summarize/5) | 0.5700 | 0.5200 | 0.6571 | −0.0477 |
 | **evo_005 (v2 meta, all-200-sampled) — NOT COMPARABLE** | 0.6016 | 0.5900 | 0.6720 | contaminated |
-| **evo_007 (v2 meta, all-200-sampled, 6 ex/round, gemini optimizer) — NOT COMPARABLE** | 0.5739 | 0.5550 | 0.4671 | contaminated |
+| **evo_007 (v2 meta, all-200-sampled, 6 ex/round, gemini optimizer mid-run) — NOT COMPARABLE** | 0.5739 | 0.5550 | 0.4671 | contaminated |
+| **evo_008 (v2 meta, all-200-sampled, 6 ex/round, gemini optimizer from round 1, contract auto-repair) — NOT COMPARABLE** | 0.6037 | 0.5750 | 0.5550 | contaminated |
 
 `evo_006` is now the closest clean attempt of any kind — closer even than
 the hand-designed `structured_cot` — and dramatically better than `evo_004`,
@@ -426,6 +428,55 @@ Gemini being a structurally different (weaker as an optimizer, even if
 strong as a judge) model for this specific task, is not disentangled by
 this one run — each would need its own isolated follow-up to separate.
 
+## Run 8 (`evo_008`): Gemini as optimizer from round 1, with a code-level fix for the contract-dropping bug
+
+`evo_007` found two entangled things: switching the optimizer to
+`gemini-3.1-flash-lite` (forced mid-run by an OpenRouter credit exhaustion)
+introduced a new contract-dropping failure mode, and a larger/all-200
+example set scored worse than the equivalent Deepseek-optimized run. `evo_008`
+isolates the optimizer-model question cleanly: `gemini-3.1-flash-lite` from
+**round 1**, not resumed partway, otherwise identical recipe to `evo_007` —
+naive seed, v2 meta-prompt, 6 examples/round (2 accepted / 2 hard-declined /
+2 easy-declined — a more balanced split than `evo_007`'s 3/2/1), all-200
+sampling (contaminated, same accepted tradeoff), gentle summarizer every 5
+rounds.
+
+**Fixed the contract-dropping bug at the code level instead of relying on
+prompt wording.** Added `optimizer.py::repair_contract()`: whenever
+`validate_contract()` flags a missing `reasoning`/`match`/`confidence` key or
+no JSON mention, the canonical `RESPONSE_CONTRACT` block (same text as every
+other run's contract paragraph) is appended back automatically, every round,
+before the record is saved — not just once by hand at the very end the way
+`evo_007`'s final prompt was patched. Both `run_one_iteration` and
+`run_summarization_step` now call this; the record also keeps
+`prompt_after_raw` (the model's real output) and `contract_repaired: true`
+whenever a repair fired, so nothing is silently lost.
+
+**The fix worked**: only **1 of 20** rounds needed a repair (round 15),
+compared to `evo_007`'s 13 of 20 — consistent with round 15 being mid-run
+where the rubric had grown complex enough for the model to drop the
+paragraph again, but this time it self-healed immediately instead of
+compounding round over round the way `evo_007`'s did. No manual intervention
+was needed at any point in this run.
+
+**Result: pair AUC 0.6037** on all 200 real pairs (`gemini-3.1-flash-lite`
+judge) — `Δ −0.0141` vs. naive, and a large improvement over `evo_007`'s
+0.5739 using nearly the same recipe (contaminated, same non-comparable
+caveat as `evo_005`/`evo_007`). The final prompt (1,766 chars) reads as a
+coherent 4-principle rubric — strict constraint alignment, reciprocal
+utility, high-signal actionability, strategic/commercial synergy — noticeably
+tighter and less rigid in tone than `evo_007`'s "any violating profile is an
+automatic no" framing. Together, `evo_007` and `evo_008` narrow down what
+was actually costing accuracy: it wasn't Gemini as an optimizer model per se
+(0.6037 here is respectable, well above chance, and close to several clean
+Deepseek-optimized runs), and it wasn't the larger 6-example batch or
+all-200 sampling alone either — the mid-run resume in `evo_007`, and/or the
+compounding, unrepaired contract damage that followed it, looks like the
+larger factor in that run's weak score. Still not a generalization claim
+(contaminated), but this is the closest a Gemini-optimized run has come, and
+the contract-repair fix is now standing infrastructure for any future run
+regardless of optimizer backend.
+
 ## Eight bugs/failure modes found running this (worth knowing before reusing `judge_prompt_evolution/`)
 
 1. **`optimizer.py` initially never passed an API key to `complete_json`** —
@@ -481,7 +532,11 @@ this one run — each would need its own isolated follow-up to separate.
    catches this (it's why the problem was visible at all) but nothing
    currently retries automatically on a contract violation; each occurrence
    here was caught and re-run by hand. The gentle summarizer (`evo_006`)
-   never hit this, at any compression ratio, including round 20.
+   never hit this, at any compression ratio, including round 20. **Fixed at
+   the code level in `evo_008`**: `optimizer.py::repair_contract()` now
+   appends the canonical `RESPONSE_CONTRACT` block back automatically
+   whenever `validate_contract` flags a problem, every round, no manual
+   re-running required — see "Run 8" below.
 7. **Bedrock's Converse API doesn't always put the text block at
    `content[0]`** — reasoning models (confirmed on `minimax.minimax-m2.5`)
    return `content = [{"reasoningContent": {...}}, {"text": "..."}]`, the
@@ -573,13 +628,18 @@ python scripts/run_judge_prompt_evolution.py --run-id evo_006 --seed-source naiv
 python scripts/run_judge_prompt_evolution.py --run-id evo_007 --seed-source naive --optimizer-model deepseek/deepseek-v4-pro --summarize-every 5 --summarizer-variant gentle --split all --n-positive-examples 3 --n-hard-negative-examples 2 --n-easy-negative-examples 1
 python scripts/run_judge_prompt_evolution.py --run-id evo_007 --resume --optimizer-backend gemini --optimizer-model gemini-3.1-flash-lite --seed-source naive --summarize-every 5 --summarizer-variant gentle --split all --n-positive-examples 3 --n-hard-negative-examples 2 --n-easy-negative-examples 1
 
+# evo_008 (EXPLORATORY, NOT COMPARABLE — gemini-3.1-flash-lite optimizer from
+# round 1, 6 examples/round 2/2/2, all-200 sampling, gentle distillation
+# every 5 rounds, contract auto-repair on)
+python scripts/run_judge_prompt_evolution.py --run-id evo_008 --seed-source naive --optimizer-backend gemini --optimizer-model gemini-3.1-flash-lite --summarize-every 5 --summarizer-variant gentle --split all --n-positive-examples 2 --n-hard-negative-examples 2 --n-easy-negative-examples 2
+
 # the AUC check against all 200 real pairs (isolated eval script, reads
 # baselines/llm_judge/ read-only, writes to artifacts/judge_prompt_evolution/evo_00N/eval/).
 # --backend gemini calls the Google Gemini API directly (GEMINI_API_KEY),
 # used once OpenRouter credits ran out; --backend bedrock needs --model plus
 # --aws-profile/--aws-region (default tf_provisioner/us-east-1).
-python -m judge_prompt_evolution.eval_evolved --run-id evo_001   # ...evo_002 through evo_007
-python -m judge_prompt_evolution.eval_evolved --run-id evo_007 --backend gemini --model gemini-3.1-flash-lite
+python -m judge_prompt_evolution.eval_evolved --run-id evo_001   # ...evo_002 through evo_008
+python -m judge_prompt_evolution.eval_evolved --run-id evo_008 --backend gemini --model gemini-3.1-flash-lite
 
 # score one specific iteration file instead of a run's final_prompt (used to
 # check evo_005's pre-summarize round-20 prompt against its post-summarize final)
@@ -593,22 +653,26 @@ python -m baselines.llm_judge.eval --data-dir data --variant structured_cot --sp
 ```
 
 Every iteration's exact prompt text, rationale, and which examples produced
-it is in `artifacts/judge_prompt_evolution/evo_00{1,2,3,4,5,6,7}/iterations/*.json`
-(`evo_004`/`evo_005`/`evo_006`/`evo_007` additionally have `NNs.json` files for
-their summarize steps) and mirrored as LangSmith Hub commits (`evo_007`'s
-hand-patched final prompt is a separate commit, tag `evo_007--final-patched`).
-The published browser (`artifacts/judge_prompt_evolution/evo_001/browser.html`)
-shows all seven runs via a toggle, including full seed-vs-final prompt text,
-the meta-prompt v1→v2 diff, and both summarizer prompts.
+it is in `artifacts/judge_prompt_evolution/evo_00{1,2,3,4,5,6,7,8}/iterations/*.json`
+(`evo_004`/`evo_005`/`evo_006`/`evo_007`/`evo_008` additionally have `NNs.json`
+files for their summarize steps) and mirrored as LangSmith Hub commits
+(`evo_007`'s hand-patched final prompt is a separate commit, tag
+`evo_007--final-patched`; `evo_008`'s repairs happened automatically per-round
+and are recorded inline via `contract_repaired`/`prompt_after_raw` in its
+iteration files, no separate Hub commit needed). The published browser
+(`artifacts/judge_prompt_evolution/evo_001/browser.html`) shows all eight runs
+via a toggle, including full seed-vs-final prompt text, the meta-prompt v1→v2
+diff, and both summarizer prompts.
 
 ## Bottom line
 
 **Naive still wins, but the margin is thin now.** `docs/llm-judge-experiment.md`'s
 naive prompt (pair AUC 0.6177 on all 200 real pairs) remains the best judge
 prompt found anywhere in this project, having beaten two hand-designed
-variants and six independent automatic-optimization variants (eight attempts
-total, two of which — `evo_005`, `evo_007` — aren't fair comparisons and are
-excluded from ranking). But `evo_006` (gentle periodic distillation) closed
+variants and seven independent automatic-optimization variants (nine attempts
+total, three of which — `evo_005`, `evo_007`, `evo_008` — aren't fair
+comparisons and are excluded from ranking). But `evo_006` (gentle periodic
+distillation) closed
 the gap to just **−0.0072 AUC**, edging out even the hand-designed
 `structured_cot` (−0.0077) as the closest clean challenger. Of the three
 process changes tried against the overfitting diagnosed in `evo_001`:
@@ -620,12 +684,21 @@ brevity — recovered nearly all of the rest (`evo_006`). `evo_007` then
 piled two more changes onto `evo_006`'s recipe — more examples per round (6
 vs. 4) and all-200 sampling — and scored *worse* than every clean run except
 `evo_004` (0.5739), while also being the only run where the optimizer model
-itself (not a summarizer) dropped the JSON contract. Read together, `evo_006`
-and `evo_007` say the same thing from two directions: the *process* (gentle,
-disciplined revision) is what closes the gap, not *more inputs* to that
-process — bigger batches and a wider sampling pool bought nothing and cost a
-new failure mode. The mechanism, not just the presence or scale, of a fix is
-what mattered. Do not promote any evolved prompt to a labeling path
+itself (not a summarizer) dropped the JSON contract. `evo_008` then isolated
+the optimizer-model question from `evo_007`'s mid-run resume: Gemini as
+optimizer *from round 1*, plus a code-level `repair_contract()` fix so any
+future dropped contract self-heals every round instead of compounding —
+scored **0.6037**, a large recovery over `evo_007`'s 0.5739 on nearly the
+same recipe, and only 1 of 20 rounds needed a repair at all (vs. 13 of 20).
+Read together, `evo_006` through `evo_008` triangulate the same conclusion
+from three directions: the *process* (gentle, disciplined revision, with a
+reliable output contract) is what closes the gap, not *more inputs* to that
+process or a specific optimizer model — bigger batches and a wider sampling
+pool bought nothing on their own (`evo_007` vs. `evo_008` shows most of
+`evo_007`'s damage was the unrepaired contract compounding mid-run, not
+Gemini itself, which does reasonably well as an optimizer once that's
+fixed). The mechanism, not just the presence or scale, of a fix is what
+mattered. Do not promote any evolved prompt to a labeling path
 (`synth_pipeline/pairing_rrf/` etc. should keep using the naive framing
 already in place) until one actually beats 0.6177 on a clean population —
 `evo_006` is close but hasn't yet.
