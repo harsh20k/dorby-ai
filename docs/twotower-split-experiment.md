@@ -27,6 +27,18 @@ one explicit hard negative, cross-entropy over cosine similarity scaled by
 (`baselines.metrics.retrieval_metrics`, reused unchanged) that saves whichever
 epoch's adapter pair scores best on dev recall@1.
 
+**Caveat added 2026-08-04** (`docs/possible-bugs.md` #6, found while building
+the follow-up `twotower_field_gate/` experiment): this custom loop's raw
+`model(features)["sentence_embedding"]` call returns nano's native
+2048-dim embedding, not the 1024-dim truncated one every other number in
+this project uses (`truncate_dim` is only applied inside
+`SentenceTransformer.encode()`'s own post-processing, invisible to a raw
+forward pass). So this run trained on the untruncated 2048-dim space and was
+only truncated to 1024 at eval time — not retroactively fixed or rerun,
+recorded here as a methodological gap rather than left unstated. The
+negative finding below may or may not hold at the correct dimensionality;
+`twotower_field_gate/` was built with the fix applied from the start.
+
 Verified before any GPU spend: a local dry-run confirmed both towers get
 non-zero, independent LoRA gradients on the same smoke batch (query-tower
 grad sum 120.9, doc-tower grad sum 170.1 — both nonzero, proving the loss
