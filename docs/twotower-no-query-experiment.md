@@ -139,6 +139,49 @@ project's whole `twotower/` family uses) remains a plausible way to test
 whether training can improve on the eval-time trick, but this experiment
 shows plain query-inclusion-or-not in training is not the lever.
 
+## Extension: the same sweep on frozen voyage-4-large
+
+`twotower_query_weighted/` and `query_weighted/` only ever ran the
+concat/profile-only/query-only/alpha-blend sweep on voyage-4-nano. New
+isolated package `voyage_large_query_weighted/` runs the identical sweep on
+**voyage-4-large** — Boardy's actual production model — via a ~10-line
+role-name adapter (`VoyageLargeEncoder` uses `input_type=`, `run_all_arms`
+calls `role=`) so `query_weighted.eval.run_all_arms` runs completely
+unmodified. All 200 real pairs, no fine-tuning either side:
+
+| Model | Representation | Pair AUC | Hard-neg AUC | MRR | Recall@1 | Recall@10 |
+|---|---|---|---|---|---|---|
+| nano | no query (profile only) | 0.5424 | 0.4862 | 0.2357 | 0.09 | 0.50 |
+| nano | concatenated (published baseline) | 0.5593 | 0.5046 | 0.3171 | 0.18 | 0.59 |
+| nano | alpha_0.6 blend | 0.5872 | 0.5818 | 0.4649 | 0.25 | 0.89 |
+| nano | query only | 0.5530 | 0.5914 | 0.5019 | 0.30 | 0.91 |
+| large | no query (profile only) | 0.5252 | 0.4804 | 0.2508 | 0.12 | 0.55 |
+| large | concatenated (published baseline) | 0.5726 | 0.5422 | 0.3102 | 0.13 | 0.70 |
+| large | alpha_0.6 blend | 0.5702 | 0.5904 | 0.5223 | 0.32 | 0.90 |
+| **large** | **query only** | 0.5452 | **0.6140** | **0.5897** | **0.42** | **0.93** |
+
+**voyage-4-large's query-only arm is the best result of any model, frozen or
+fine-tuned, measured anywhere in this project's all-200 comparison** — recall@1
+0.42 and MRR 0.5897, both clear of every two-tower fine-tune above and of
+nano's own query-only arm. The pattern from `query_weighted/` replicates on
+the production model too: profile text is the weakest representation for
+both encoders, and the query alone, unweighted by any profile text, is the
+strongest — on nano *and* on large, whether fine-tuned or not.
+
+Cost note: `run_all_arms` (imported unchanged) always computes every
+`TEXT_ARMS` entry, including three arms this comparison didn't need
+(`query_first`, `query_x3_front`, `query_x5_front`, `query_x10_front`) —
+there is no public parameter to restrict it without editing `query_weighted/`,
+which is published-results code. Total spend: ~1.92M tokens across the full
+sweep (well under $1 at typical Voyage per-token pricing, exact rate not
+documented in this repo), most of it on arms not reported above.
+
+```bash
+export VOYAGE_API_KEY=pa-...
+python -m voyage_large_query_weighted.run
+# writes artifacts/voyage_large_query_weighted/run_001/metrics.json
+```
+
 ## Reproduce
 
 ```bash

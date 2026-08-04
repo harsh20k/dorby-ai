@@ -90,6 +90,21 @@
 
   /* chart */
   .chart-wrap { overflow-x: auto; }
+  .small-multiples { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 18px; }
+  .sm-panel { min-width: 0; }
+  .sm-title {
+    font-size: 12.5px; font-weight: 700; color: var(--text-primary);
+    margin-bottom: 8px; display: flex; align-items: center; gap: 8px;
+  }
+  .sm-tag {
+    font-size: 10px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.04em;
+    color: var(--text-muted); background: var(--gridline); padding: 2px 7px; border-radius: 5px;
+  }
+  #sm-table { margin-top: 4px; }
+  #sm-table th, #sm-table td { white-space: nowrap; }
+  @media (max-width: 720px) {
+    .small-multiples { grid-template-columns: 1fr; }
+  }
   svg { display: block; font-family: inherit; }
   .axis-label { font-size: 11px; fill: var(--text-muted); }
   .group-label { font-size: 12px; fill: var(--text-secondary); font-weight: 600; }
@@ -184,6 +199,23 @@
   </div>
 
   <div class="card">
+    <h2>Frozen models: nano vs large, full query-weighting sweep</h2>
+    <p class="card-note">No fine-tuning anywhere on this card — same 4 seeker representations run on both frozen encoders. <b>voyage-4-large's query-only arm is the best result of any model in this entire comparison</b> (recall@1 0.42, MRR 0.5897), beating every fine-tune above.</p>
+    <div class="legend" id="arm-legend"></div>
+    <div class="small-multiples">
+      <div class="sm-panel">
+        <div class="sm-title">voyage-4-nano</div>
+        <div class="chart-wrap"><svg id="chart-nano" width="480" height="320"></svg></div>
+      </div>
+      <div class="sm-panel">
+        <div class="sm-title">voyage-4-large <span class="sm-tag">production model</span></div>
+        <div class="chart-wrap"><svg id="chart-large" width="480" height="320"></svg></div>
+      </div>
+    </div>
+    <div class="chart-wrap"><table class="data-table" id="sm-table"></table></div>
+  </div>
+
+  <div class="card">
     <h2>The holdout misled again</h2>
     <p class="card-note">Independent of the bug above: on the 69-pair holdout alone (still using the mismatched eval at the time), <code>no_query_001</code> looked like the best fine-tune in the project. Scored on all 200, that reverses — the fourth+ time this project's holdout has flattered a result that didn't hold up.</p>
     <div class="reversal-grid">
@@ -262,71 +294,116 @@ SERIES.forEach(s => {
 tbody += '</tbody>';
 table.innerHTML = thead + tbody;
 
-// ---- grouped bar chart ----
-const svg = document.getElementById('chart');
-const W = 1000, H = 360;
-const marginL = 40, marginR = 20, marginT = 16, marginB = 44;
-const plotW = W - marginL - marginR, plotH = H - marginT - marginB;
-const groupGap = 28, barGap = 3;
-const groupW = plotW / METRICS.length;
-const barW = (groupW - groupGap) / SERIES.length;
-
-const yMax = 1.0;
-function yFor(v) { return marginT + plotH * (1 - v / yMax); }
-
+// ---- grouped bar chart (reusable) ----
 const ns = 'http://www.w3.org/2000/svg';
 function el(tag, attrs) {
   const e = document.createElementNS(ns, tag);
   for (const k in attrs) e.setAttribute(k, attrs[k]);
   return e;
 }
-
-svg.setAttribute('viewBox', `0 0 ${W} ${H}`);
-
-// gridlines + y-axis labels (0, 0.25, 0.5, 0.75, 1.0)
-[0, 0.25, 0.5, 0.75, 1.0].forEach(v => {
-  const y = yFor(v);
-  svg.appendChild(el('line', { class: 'gridline', x1: marginL, x2: W - marginR, y1: y, y2: y }));
-  const t = el('text', { class: 'axis-label', x: marginL - 8, y: y + 4, 'text-anchor': 'end' });
-  t.textContent = v.toFixed(2);
-  svg.appendChild(t);
-});
-// baseline
-svg.appendChild(el('line', { class: 'baseline', x1: marginL, x2: W - marginR, y1: yFor(0), y2: yFor(0) }));
-
 const tooltip = document.getElementById('tooltip');
 
-METRICS.forEach((m, gi) => {
-  const groupX = marginL + gi * groupW + groupGap / 2;
-  SERIES.forEach((s, si) => {
-    const val = DATA[s.key][m.key];
-    const x = groupX + si * barW;
-    const y = yFor(val);
-    const h = yFor(0) - y;
-    const rect = el('rect', {
-      class: 'bar', x: x + barGap / 2, y, width: barW - barGap, height: Math.max(h, 1),
-      fill: s.color, rx: 3,
-    });
-    rect.addEventListener('mousemove', e => {
-      tooltip.style.display = 'block';
-      tooltip.innerHTML = `<b>${s.label}</b><br>${m.label}: <b>${val.toFixed(4)}</b>`;
-      tooltip.style.left = (e.clientX + 14) + 'px';
-      tooltip.style.top = (e.clientY + 14) + 'px';
-    });
-    rect.addEventListener('mouseleave', () => { tooltip.style.display = 'none'; });
-    svg.appendChild(rect);
+function drawGroupedBars(svgId, seriesList, dataObj, metricsList, opts) {
+  const svg = document.getElementById(svgId);
+  const W = (opts && opts.width) || 1000, H = (opts && opts.height) || 360;
+  const marginL = 40, marginR = 20, marginT = 16, marginB = 44;
+  const plotW = W - marginL - marginR, plotH = H - marginT - marginB;
+  const groupGap = 22, barGap = 3;
+  const groupW = plotW / metricsList.length;
+  const barW = (groupW - groupGap) / seriesList.length;
+  const yMax = 1.0;
+  function yFor(v) { return marginT + plotH * (1 - v / yMax); }
 
-    // direct label above bar (relief for the light-mode contrast WARN)
-    const lbl = el('text', { class: 'bar-label', x: x + barW / 2, y: y - 6 });
-    lbl.textContent = val.toFixed(2);
-    svg.appendChild(lbl);
-  });
+  svg.setAttribute('viewBox', `0 0 ${W} ${H}`);
+  svg.innerHTML = '';
 
-  // group label
-  const gl = el('text', {
-    class: 'group-label', x: groupX + (barW * SERIES.length) / 2, y: H - marginB + 24, 'text-anchor': 'middle',
+  [0, 0.25, 0.5, 0.75, 1.0].forEach(v => {
+    const y = yFor(v);
+    svg.appendChild(el('line', { class: 'gridline', x1: marginL, x2: W - marginR, y1: y, y2: y }));
+    const t = el('text', { class: 'axis-label', x: marginL - 8, y: y + 4, 'text-anchor': 'end' });
+    t.textContent = v.toFixed(2);
+    svg.appendChild(t);
   });
-  gl.textContent = m.label;
-  svg.appendChild(gl);
+  svg.appendChild(el('line', { class: 'baseline', x1: marginL, x2: W - marginR, y1: yFor(0), y2: yFor(0) }));
+
+  metricsList.forEach((m, gi) => {
+    const groupX = marginL + gi * groupW + groupGap / 2;
+    seriesList.forEach((s, si) => {
+      const val = dataObj[s.key][m.key];
+      const x = groupX + si * barW;
+      const y = yFor(val);
+      const h = yFor(0) - y;
+      const rect = el('rect', {
+        class: 'bar', x: x + barGap / 2, y, width: barW - barGap, height: Math.max(h, 1),
+        fill: s.color, rx: 3,
+      });
+      rect.addEventListener('mousemove', e => {
+        tooltip.style.display = 'block';
+        tooltip.innerHTML = `<b>${s.label}</b><br>${m.label}: <b>${val.toFixed(4)}</b>`;
+        tooltip.style.left = (e.clientX + 14) + 'px';
+        tooltip.style.top = (e.clientY + 14) + 'px';
+      });
+      rect.addEventListener('mouseleave', () => { tooltip.style.display = 'none'; });
+      svg.appendChild(rect);
+
+      const lbl = el('text', { class: 'bar-label', x: x + barW / 2, y: y - 6 });
+      lbl.textContent = val.toFixed(2);
+      svg.appendChild(lbl);
+    });
+
+    const gl = el('text', {
+      class: 'group-label', x: groupX + (barW * seriesList.length) / 2, y: H - marginB + 24, 'text-anchor': 'middle',
+    });
+    gl.textContent = m.label;
+    svg.appendChild(gl);
+  });
+}
+
+drawGroupedBars('chart', SERIES, DATA, METRICS, { width: 1000, height: 360 });
+
+// ---- frozen models: nano vs large, full query-weighting sweep ----
+const ARM_SERIES = [
+  { key: 'no_query',    label: 'No query (profile only)', color: cssVar('--series-1') },
+  { key: 'concat',       label: 'Concatenated (published baseline)', color: cssVar('--series-2') },
+  { key: 'alpha06',      label: 'Alpha 0.6 blend', color: cssVar('--series-3') },
+  { key: 'query_only',   label: 'Query only', color: cssVar('--series-4') },
+];
+
+const NANO_DATA = {
+  no_query:   { auc: 0.5424, mrr: 0.2357, r1: 0.09, r10: 0.50 },
+  concat:     { auc: 0.5593, mrr: 0.3171, r1: 0.18, r10: 0.59 },
+  alpha06:    { auc: 0.5872, mrr: 0.4649, r1: 0.25, r10: 0.89 },
+  query_only: { auc: 0.5530, mrr: 0.5019, r1: 0.30, r10: 0.91 },
+};
+const LARGE_DATA = {
+  no_query:   { auc: 0.5252, mrr: 0.2508, r1: 0.12, r10: 0.55 },
+  concat:     { auc: 0.5726, mrr: 0.3102, r1: 0.13, r10: 0.70 },
+  alpha06:    { auc: 0.5702, mrr: 0.5223, r1: 0.32, r10: 0.90 },
+  query_only: { auc: 0.5452, mrr: 0.5897, r1: 0.42, r10: 0.93 },
+};
+
+const armLegendEl = document.getElementById('arm-legend');
+ARM_SERIES.forEach(s => {
+  const item = document.createElement('div');
+  item.className = 'legend-item';
+  item.innerHTML = `<span class="legend-swatch" style="background:${s.color}"></span>${s.label}`;
+  armLegendEl.appendChild(item);
 });
+
+drawGroupedBars('chart-nano', ARM_SERIES, NANO_DATA, METRICS, { width: 480, height: 320 });
+drawGroupedBars('chart-large', ARM_SERIES, LARGE_DATA, METRICS, { width: 480, height: 320 });
+
+// small-multiples table
+const smTable = document.getElementById('sm-table');
+let smThead = '<thead><tr><th>Representation</th><th colspan="4">nano</th><th colspan="4">large</th></tr>' +
+  '<tr><th></th>' + METRICS.map(m => `<th>${m.label}</th>`).join('') + METRICS.map(m => `<th>${m.label}</th>`).join('') + '</tr></thead>';
+let smTbody = '<tbody>';
+ARM_SERIES.forEach(s => {
+  smTbody += `<tr><td>${s.label}</td>` +
+    METRICS.map(m => `<td>${NANO_DATA[s.key][m.key].toFixed(4)}</td>`).join('') +
+    METRICS.map(m => `<td>${LARGE_DATA[s.key][m.key].toFixed(4)}</td>`).join('') +
+    '</tr>';
+});
+smTbody += '</tbody>';
+smTable.innerHTML = smThead + smTbody;
 </script>
