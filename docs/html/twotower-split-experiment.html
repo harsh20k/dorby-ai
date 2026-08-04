@@ -110,18 +110,27 @@
   .reversal-box.holdout .v { color: var(--critical); }
   .reversal-box.all200 .v { color: var(--text-primary); }
 
-  .epoch-row { display: flex; gap: 6px; align-items: flex-end; height: 90px; margin-top: 10px; }
-  .epoch-bar { flex: 1; display: flex; flex-direction: column; align-items: center; gap: 6px; }
-  .epoch-bar .bar-fill { width: 100%; border-radius: 3px 3px 0 0; background: var(--series-3); }
-  .epoch-bar.best .bar-fill { background: var(--good); }
-  .epoch-bar .lbl { font-size: 10.5px; color: var(--text-secondary); font-variant-numeric: tabular-nums; }
-  .epoch-bar .ep { font-size: 10px; color: var(--text-muted); }
+  .small-multiples { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+  .sm-panel { min-width: 0; }
+  .sm-title {
+    font-size: 12.5px; font-weight: 700; color: var(--text-primary);
+    margin-bottom: 8px; display: flex; align-items: center; gap: 8px;
+  }
+  .sm-tag {
+    font-size: 10px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.04em;
+    color: var(--text-muted); background: var(--gridline); padding: 2px 7px; border-radius: 5px;
+  }
+  .line-path { fill: none; stroke-width: 2; }
+  .line-dot { stroke: var(--surface-1); stroke-width: 1.5; }
+  .line-dot.best { stroke: var(--good); stroke-width: 2.5; }
+  .line-label { font-size: 10px; fill: var(--text-secondary); font-variant-numeric: tabular-nums; text-anchor: middle; }
 
   footer { font-size: 12px; color: var(--text-muted); text-align: center; margin-top: 8px; }
   footer code { color: var(--text-secondary); }
 
   @media (max-width: 640px) {
     .reversal-grid { grid-template-columns: 1fr; }
+    .small-multiples { grid-template-columns: 1fr; }
   }
 </style>
 
@@ -155,8 +164,17 @@
 
   <div class="card">
     <h2>Training overfit faster than any single-model run</h2>
-    <p class="card-note">Dev recall@1 per epoch. It peaked at epoch 1 and got worse every epoch after, even as training loss kept falling — the checkpoint-selection mechanism caught this and kept epoch 1's adapters.</p>
-    <div class="epoch-row" id="epoch-row"></div>
+    <p class="card-note">Loss kept falling every epoch — the model kept getting better at the training objective — but dev recall@1 peaked at epoch 1 and got worse every epoch after. The checkpoint-selection mechanism caught the divergence and kept epoch 1's adapters rather than the final ones.</p>
+    <div class="small-multiples">
+      <div class="sm-panel">
+        <div class="sm-title">Training loss <span class="sm-tag">lower is better</span></div>
+        <div class="chart-wrap"><svg id="chart-loss" width="360" height="220"></svg></div>
+      </div>
+      <div class="sm-panel">
+        <div class="sm-title">Dev recall@1 <span class="sm-tag">higher is better</span></div>
+        <div class="chart-wrap"><svg id="chart-devr1" width="360" height="220"></svg></div>
+      </div>
+    </div>
   </div>
 
   <div class="card">
@@ -284,23 +302,64 @@ METRICS.forEach((m, gi) => {
   svg.appendChild(gl);
 });
 
-// epoch bars: dev recall@1 per epoch
+// per-epoch training loss and dev recall@1 — two separate charts, not one
+// dual-axis chart (loss and recall@1 are different scales/meanings).
 const EPOCHS = [
-  { epoch: 1, r1: 0.2833, best: true },
-  { epoch: 2, r1: 0.2500 },
-  { epoch: 3, r1: 0.2000 },
-  { epoch: 4, r1: 0.1333 },
-  { epoch: 5, r1: 0.2000 },
+  { epoch: 1, loss: 0.9883, r1: 0.2833, best: true },
+  { epoch: 2, loss: 0.7090, r1: 0.2500 },
+  { epoch: 3, loss: 0.5429, r1: 0.2000 },
+  { epoch: 4, loss: 0.3838, r1: 0.1333 },
+  { epoch: 5, loss: 0.3284, r1: 0.2000 },
 ];
-const epochRow = document.getElementById('epoch-row');
-const maxR1 = Math.max(...EPOCHS.map(e => e.r1));
-EPOCHS.forEach(e => {
-  const div = document.createElement('div');
-  div.className = 'epoch-bar' + (e.best ? ' best' : '');
-  const heightPct = Math.max(4, (e.r1 / maxR1) * 100);
-  div.innerHTML = `<span class="lbl">${e.r1.toFixed(2)}</span>` +
-    `<div class="bar-fill" style="height:${heightPct}%"></div>` +
-    `<span class="ep">epoch ${e.epoch}${e.best ? ' (best)' : ''}</span>`;
-  epochRow.appendChild(div);
-});
+
+function drawLineChart(svgId, key, color, opts) {
+  const svg = document.getElementById(svgId);
+  const W = 360, H = 220;
+  const marginL = 34, marginR = 14, marginT = 16, marginB = 30;
+  const plotW = W - marginL - marginR, plotH = H - marginT - marginB;
+  const values = EPOCHS.map(e => e[key]);
+  const vMax = (opts && opts.max) || Math.max(...values) * 1.15;
+  const vMin = 0;
+  function xFor(i) { return marginL + (i / (EPOCHS.length - 1)) * plotW; }
+  function yFor(v) { return marginT + plotH * (1 - (v - vMin) / (vMax - vMin)); }
+
+  svg.setAttribute('viewBox', `0 0 ${W} ${H}`);
+  svg.innerHTML = '';
+
+  [0, 0.5, 1].forEach(f => {
+    const v = vMin + f * (vMax - vMin);
+    const y = yFor(v);
+    svg.appendChild(el('line', { class: 'gridline', x1: marginL, x2: W - marginR, y1: y, y2: y }));
+    const t = el('text', { class: 'axis-label', x: marginL - 6, y: y + 4, 'text-anchor': 'end' });
+    t.textContent = v.toFixed(2);
+    svg.appendChild(t);
+  });
+
+  const points = EPOCHS.map((e, i) => [xFor(i), yFor(e[key])]);
+  const d = points.map((p, i) => (i === 0 ? 'M' : 'L') + p[0].toFixed(1) + ',' + p[1].toFixed(1)).join(' ');
+  svg.appendChild(el('path', { class: 'line-path', d, stroke: color }));
+
+  EPOCHS.forEach((e, i) => {
+    const [x, y] = points[i];
+    const isBest = key === 'r1' && e.best;
+    const dot = el('circle', {
+      class: 'line-dot' + (isBest ? ' best' : ''), cx: x, cy: y, r: isBest ? 5 : 3.5, fill: color,
+    });
+    dot.addEventListener('mousemove', ev => {
+      tooltip.style.display = 'block';
+      tooltip.innerHTML = `<b>Epoch ${e.epoch}</b>${isBest ? ' (checkpoint kept)' : ''}<br>${key === 'loss' ? 'Loss' : 'Dev recall@1'}: <b>${e[key].toFixed(4)}</b>`;
+      tooltip.style.left = (ev.clientX + 14) + 'px';
+      tooltip.style.top = (ev.clientY + 14) + 'px';
+    });
+    dot.addEventListener('mouseleave', () => { tooltip.style.display = 'none'; });
+    svg.appendChild(dot);
+
+    const lbl = el('text', { class: 'line-label', x, y: H - marginB + 18 });
+    lbl.textContent = `E${e.epoch}`;
+    svg.appendChild(lbl);
+  });
+}
+
+drawLineChart('chart-loss', 'loss', cssVar('--series-3'));
+drawLineChart('chart-devr1', 'r1', cssVar('--series-3'), { max: 0.35 });
 </script>
