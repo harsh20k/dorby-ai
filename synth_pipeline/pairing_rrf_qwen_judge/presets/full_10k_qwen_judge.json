@@ -45,8 +45,8 @@
 
   "judge": {
     "enabled": true,
-    "concurrency": 8,
-    "_note": "qwen.qwen3-32b-v1:0 via AWS Bedrock (tf_provisioner), see judge.py in this package."
+    "concurrency": 24,
+    "_note": "qwen.qwen3-32b-v1:0 via AWS Bedrock (tf_provisioner), see judge.py in this package. Bumped from 8->24 after the first ~400 judged pairs showed steady throughput (~66/min) with zero throttling errors -- concurrency=8 was leaving an estimated 6.3h ETA on the table."
   },
 
   "export": {

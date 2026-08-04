@@ -27,6 +27,7 @@ build/
 
 # Data / model artifacts
 data/
+exports/
 artifacts/
 *.ckpt
 *.pt
