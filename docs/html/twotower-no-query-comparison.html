@@ -1,7 +1,7 @@
 <title>Training Without the Query — Two-Tower Comparison</title>
 <meta name="description" content="Does retraining top1_ctrl with the search query removed entirely replicate the eval-time query-weighting win? All-200 real-pair comparison.">
 <style>
-  .viz-root {
+  :root {
     color-scheme: light;
     --surface-1:      #fcfcfb;
     --surface-page:   #f9f9f7;
@@ -16,11 +16,12 @@
     --series-3: #1baf7a;  /* + eval-time alpha_0.6 blend */
     --series-4: #eda100;  /* top1_ctrl + eval-time profile_only swap */
     --series-5: #e87ba4;  /* no_query_001, matched eval */
+    --series-6: #4a3aa7;  /* frozen voyage-4-nano, profile_only */
     --good: #006300;
     --critical: #d03b3b;
   }
   @media (prefers-color-scheme: dark) {
-    :root:where(:not([data-theme="light"])) .viz-root {
+    :root:where(:not([data-theme="light"])) {
       color-scheme: dark;
       --surface-1:      #1a1a19;
       --surface-page:   #0d0d0d;
@@ -35,11 +36,12 @@
       --series-3: #199e70;
       --series-4: #c98500;
       --series-5: #d55181;
+      --series-6: #9085e9;
       --good: #0ca30c;
       --critical: #e66767;
     }
   }
-  :root[data-theme="dark"] .viz-root {
+  :root[data-theme="dark"] {
     color-scheme: dark;
     --surface-1:      #1a1a19;
     --surface-page:   #0d0d0d;
@@ -54,6 +56,7 @@
     --series-3: #199e70;
     --series-4: #c98500;
     --series-5: #d55181;
+    --series-6: #9085e9;
     --good: #0ca30c;
     --critical: #e66767;
   }
@@ -144,8 +147,10 @@
       already had. <b>It isn't, but not for the reason first thought</b> — a bug
       meant the first eval fed the retrained model text it never trained on
       (caught before publishing, see below). Corrected: training with or
-      without the query barely changes profile-only performance at all. What
-      actually moves the numbers is what's fed in at eval time, not training.
+      without the query barely changes profile-only performance at all — both
+      land close together, well above the frozen, never-fine-tuned model on
+      the same profile-only text. What actually moves the numbers is what's
+      fed in at eval time, not what the model saw in training.
     </p>
   </header>
 
@@ -168,7 +173,7 @@
 
   <div class="card">
     <h2>All 200 real pairs</h2>
-    <p class="card-note">Five seeker representations on the fine-tuned voyage-4-nano family, scored on the same population, same metrics. The last two — <code>top1_ctrl</code> with the query swapped out at eval time, and <code>no_query_001</code> trained without it — land almost on top of each other.</p>
+    <p class="card-note">Six rows on the same population, same metrics. The middle two — <code>top1_ctrl</code> with the query swapped out at eval time, and <code>no_query_001</code> trained without it — land almost on top of each other; both sit well above the frozen, never-fine-tuned model scored on the same profile-only text.</p>
     <div class="legend" id="legend"></div>
     <div class="chart-wrap"><svg id="chart" width="1000" height="360"></svg></div>
   </div>
@@ -208,11 +213,12 @@ const rootStyle = getComputedStyle(document.querySelector('.viz-root'));
 function cssVar(name) { return rootStyle.getPropertyValue(name).trim(); }
 
 const SERIES = [
-  { key: 'concat',     label: 'top1_ctrl — trained WITH query (concat)',           color: cssVar('--series-1') },
-  { key: 'query_only',  label: '+ eval-time query-only swap (no retrain)',          color: cssVar('--series-2') },
-  { key: 'alpha06',     label: '+ eval-time alpha_0.6 blend (no retrain)',          color: cssVar('--series-3') },
-  { key: 'profile_only', label: '+ eval-time profile-only swap (no retrain)',       color: cssVar('--series-4') },
-  { key: 'no_query',    label: 'no_query_001 — trained WITHOUT query, matched eval', color: cssVar('--series-5') },
+  { key: 'concat',       label: 'top1_ctrl — trained WITH query (concat)',            color: cssVar('--series-1') },
+  { key: 'query_only',   label: '+ eval-time query-only swap (no retrain)',           color: cssVar('--series-2') },
+  { key: 'alpha06',      label: '+ eval-time alpha_0.6 blend (no retrain)',           color: cssVar('--series-3') },
+  { key: 'profile_only', label: 'top1_ctrl + eval-time profile-only swap (no retrain)', color: cssVar('--series-4') },
+  { key: 'no_query',     label: 'no_query_001 — trained WITHOUT query, matched eval',  color: cssVar('--series-5') },
+  { key: 'frozen',       label: 'Frozen voyage-4-nano (no fine-tune) — profile only',  color: cssVar('--series-6') },
 ];
 
 const METRICS = [
@@ -228,6 +234,7 @@ const DATA = {
   alpha06:      { auc: 0.6129, mrr: 0.4818, r1: 0.29, r10: 0.87 },
   profile_only: { auc: 0.5489, mrr: 0.2800, r1: 0.13, r10: 0.59 },
   no_query:     { auc: 0.5574, mrr: 0.2827, r1: 0.13, r10: 0.62 },
+  frozen:       { auc: 0.5424, mrr: 0.2357, r1: 0.09, r10: 0.50 },
 };
 
 // ---- legend ----

@@ -87,15 +87,25 @@ results below use the corrected, matched-distribution number.
 | `top1_ctrl` + eval-time **alpha_0.6** blend (no retrain) | **0.6129** | 0.6196 | 0.4818 | 0.29 | 0.87 |
 | `top1_ctrl` + eval-time **profile_only** swap (no retrain) | 0.5489 | 0.5272 | 0.2800 | 0.13 | 0.59 |
 | **`no_query_001`, trained without query, scored matched** | 0.5574 | 0.5374 | 0.2827 | 0.13 | 0.62 |
+| Frozen voyage-4-nano, **no fine-tuning at all**, profile only | 0.5424 | 0.4862 | 0.2357 | 0.09 | 0.50 |
 
 **The real finding: whether the query is present during training makes almost
-no difference to how the model performs on profile-only input.**
-`top1_ctrl` (trained with the query, then evaluated on profile-only text at
-eval time) and `no_query_001` (trained *without* the query, evaluated on the
-same profile-only text) land within noise of each other on every metric —
-identical recall@1 (0.13), nearly identical MRR (0.2800 vs 0.2827) and AUC
-(0.5489 vs 0.5574). Seeing the query during training does not measurably
-change the model's profile-only representation quality one way or the other.
+no difference to how the model performs on profile-only input, but fine-tuning
+itself does.** `top1_ctrl` (trained with the query, then evaluated on
+profile-only text at eval time) and `no_query_001` (trained *without* the
+query, evaluated on the same profile-only text) land within noise of each
+other on every metric — identical recall@1 (0.13), nearly identical MRR
+(0.2800 vs 0.2827) and AUC (0.5489 vs 0.5574). Seeing the query during
+training does not measurably change the model's profile-only representation
+quality one way or the other.
+
+Both fine-tunes, though, clear the **frozen, never-trained** model by a real
+margin on the identical profile-only text (recall@1 0.09, MRR 0.2357 — the
+weakest row in the table, scored via the same `query_weighted` `profile_only`
+path as the frozen-model experiment, `artifacts/query_weighted/qw_001`). So
+fine-tuning genuinely improves the model's profile encoding (+44% relative
+recall@1, frozen → either fine-tune) — it just doesn't matter *which* text
+the fine-tune trained on to get that improvement.
 
 What *does* move the numbers, dramatically, is what the model is asked to
 encode **at eval time** — `top1_ctrl` scored 0.13 R@1 on profile-only text and
