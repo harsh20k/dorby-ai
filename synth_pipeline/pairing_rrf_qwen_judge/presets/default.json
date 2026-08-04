@@ -1,0 +1,76 @@
+{
+  "_readme": [
+    "Preset for one end-to-end synthetic dataset run. Copy this file, change what",
+    "you want, and pass it to scripts/generate_rrf_dataset.py --preset <file>.",
+    "The exact preset used is copied into the run's output directory, so any batch",
+    "can be traced back to the settings that produced it — and reproduced.",
+    "",
+    "Stages run in order and each can be skipped independently, so a re-run can",
+    "reuse expensive artifacts: point profile_run at an existing directory and set",
+    "generate_profiles.enabled=false to re-pair a pool you already paid to make."
+  ],
+
+  "batch_id": null,
+  "_batch_id": "null = auto-generated from the timestamp",
+
+  "generate_profiles": {
+    "enabled": true,
+    "count": 100,
+    "model_id": "google.gemma-3-27b-it",
+    "concurrency": 4,
+    "region": "us-east-1",
+    "_note": "Prompts come from LangSmith Hub. Pin PROFILE_GEN_PROMPT_GENERATE to a v3+ tag: the LANGSMITH_PROMPT_TAG=v1 fallback resolves to the pre-fix prompt that still expects {ref_example_1} and fails on every profile."
+  },
+
+  "profile_run": null,
+  "_profile_run": "null = use the run just generated; set a path to reuse an existing pool",
+
+  "pairing": {
+    "enabled": true,
+
+    "seeker_frac": 0.43,
+    "_seeker_frac": "share of the pool acting as seekers; disjoint from candidates. 0.43 matches the real data, where only 3.4% of contacts are ever both.",
+
+    "recall_k": 10,
+    "_recall_k": "per channel, before fusion",
+
+    "top_k": 5,
+    "_top_k": "shortlist depth sent to the judge. Fixing this keeps the label's meaning stable — 'best of 5' is a weaker claim than 'best of 10' — so change it deliberately, not to save money.",
+
+    "dense_weight": 2.0,
+    "lexical_weight": 1.0,
+    "rrf_k": 60,
+    "_weights": "2:1 tracks the measured retrieval gap on the real holdout (dense MRR 0.4610 vs lexical 0.2939). Do not tune these on a synthetic batch — it has no ground truth, so you would only be fitting the judge's opinions.",
+
+    "max_pairs_per_seeker": null,
+    "_max_pairs_per_seeker": "null = uncapped. Set to ~1 to hold graph density near real data's 0.673 edges/node, at the cost of discarding judged pairs.",
+
+    "min_dense_similarity": null,
+    "_min_dense_similarity": "absolute cosine floor, off by default. A meaningful value must be calibrated against real pairs; taking one from this batch's own distribution repeats the --label-mode absolute mistake.",
+
+    "seed": 42
+  },
+
+  "embedding": {
+    "model": "Qwen/Qwen3-Embedding-8B",
+    "backend": "modal",
+    "_backend": "modal | local. Any 7-8B model needs modal — it will not fit on local MPS, and an A10G OOMs.",
+    "batch_size": 2,
+    "max_length": 4096,
+    "use_chroma": true
+  },
+
+  "judge": {
+    "enabled": true,
+    "concurrency": 4,
+    "_note": "Model, framing and prompt are fixed in judge.py and the hub prompt: google/gemini-3.1-flash-lite, naive framing, one call per pair, no deadband. All three are measured choices — see docs/llm-judge-experiment.md before changing any of them."
+  },
+
+  "export": {
+    "enabled": true,
+    "dest": "exports/rrf_datasets",
+    "_dest": "a git-TRACKED path. artifacts/ is gitignored, which is how the previous profile batch was lost.",
+    "include_embeddings": false,
+    "_include_embeddings": "vectors are large; the manifest and labels always go, embeddings only on request."
+  }
+}
