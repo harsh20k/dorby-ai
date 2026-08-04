@@ -133,11 +133,16 @@ at query time: query-only or query-weighted text carries a cleaner, less
 diluted signal than the profile does (see
 `docs/query-weighted-encoding-experiment.md`'s Jaccard-overlap finding), and
 that appears to hold regardless of whether the query was concatenated into
-training data or withheld entirely. Training a genuinely separated
-query/profile two-tower encoder (rather than one shared string, as this
-project's whole `twotower/` family uses) remains a plausible way to test
-whether training can improve on the eval-time trick, but this experiment
-shows plain query-inclusion-or-not in training is not the lever.
+training data or withheld entirely.
+
+**Confirmed on the query side too:** `docs/twotower-query-only-experiment.md`
+trained a companion adapter (`query_only_001`) on query-only seeker text and
+scored it matched-distribution — it lands within noise of `top1_ctrl`'s
+eval-time query-only swap (R@1 0.29 vs 0.32), the same non-result as the
+profile side. Training a genuinely separated query/profile two-tower encoder
+(rather than one shared string, as this project's whole `twotower/` family
+uses) remains architecturally possible, but plain query-inclusion-or-not in
+training is not the lever, on either side of the seeker text.
 
 ## Extension: the same sweep on frozen voyage-4-large
 
