@@ -50,6 +50,20 @@ Ranked by MRR.
 | NV-Embed-v2 (open, non-commercial, approx.) | open-weight | 0.5034 | 0.3759 | 0.6000 | 0.1092 | 0.0345 | 0.2414 |
 | zembed-1-embedding (open) | open-weight | 0.5086 | 0.4776 | 0.5276 | 0.0641 | 0.0000 | 0.1379 |
 
+## LLM judges (classification only, no retrieval metrics)
+
+Not merged into the tables above — an LLM judge has no shared vector space to
+rank a candidate corpus with, so it has no MRR/R@1/R@10, only pair AUC. See
+`docs/llm-judge-experiment.md` and `docs/qwen35-judge-experiment.md` for full
+writeups.
+
+| model | pair AUC | hard-neg AUC | easy-neg AUC | gets query? |
+|---|---|---|---|---|
+| gemini-3.1-flash-lite (naive) | 0.6177 | — | — | no |
+| Qwen3.5-4B (naive + query, self-hosted, not fine-tuned) | 0.5888 | 0.6271 | 0.5624 | yes |
+
 ---
 
 Generated 2026-07-31T01:52:35.174284+00:00 by `python -m eval_real_full.export`.
+LLM-judge rows above added 2026-08-04 by hand from
+`docs/llm-judge-experiment.md` and `docs/qwen35-judge-experiment.md`.
