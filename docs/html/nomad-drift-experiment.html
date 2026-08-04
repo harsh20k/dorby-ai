@@ -1,0 +1,703 @@
+<title>Dialing In Alpha — nomad_drift</title>
+<style>
+  :root {
+    --bg: #eef0f3;
+    --surface: #ffffff;
+    --surface-2: #e4e8ed;
+    --ink: #1b2027;
+    --ink-muted: #5b6472;
+    --ink-faint: #8a93a1;
+    --line: #d3d9e0;
+    --profile: #2b6ca3;
+    --profile-soft: #2b6ca31a;
+    --query: #c23d78;
+    --query-soft: #c23d781a;
+    --amber: #a8641c;
+    --amber-fill: #d98c2b;
+    --amber-soft: #d98c2b22;
+    --good: #2f7d5a;
+    --font-serif: ui-serif, Georgia, "Iowan Old Style", "Palatino Linotype", Palatino, serif;
+    --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    --font-mono: ui-monospace, "SF Mono", "Cascadia Code", "Roboto Mono", Menlo, Consolas, monospace;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #14181f;
+      --surface: #1b212b;
+      --surface-2: #232a35;
+      --ink: #eef1f5;
+      --ink-muted: #93a0b3;
+      --ink-faint: #5f6a7a;
+      --line: #2c3542;
+      --profile: #5a9bd6;
+      --profile-soft: #5a9bd626;
+      --query: #e0679f;
+      --query-soft: #e0679f26;
+      --amber: #e0a355;
+      --amber-fill: #e0a355;
+      --amber-soft: #e0a35528;
+      --good: #57b78a;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #14181f; --surface: #1b212b; --surface-2: #232a35;
+    --ink: #eef1f5; --ink-muted: #93a0b3; --ink-faint: #5f6a7a; --line: #2c3542;
+    --profile: #5a9bd6; --profile-soft: #5a9bd626;
+    --query: #e0679f; --query-soft: #e0679f26;
+    --amber: #e0a355; --amber-fill: #e0a355; --amber-soft: #e0a35528;
+    --good: #57b78a;
+  }
+  :root[data-theme="light"] {
+    --bg: #eef0f3; --surface: #ffffff; --surface-2: #e4e8ed;
+    --ink: #1b2027; --ink-muted: #5b6472; --ink-faint: #8a93a1; --line: #d3d9e0;
+    --profile: #2b6ca3; --profile-soft: #2b6ca31a;
+    --query: #c23d78; --query-soft: #c23d781a;
+    --amber: #a8641c; --amber-fill: #d98c2b; --amber-soft: #d98c2b22;
+    --good: #2f7d5a;
+  }
+
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: var(--font-sans);
+    font-size: 16px;
+    line-height: 1.6;
+  }
+  .page {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 56px 24px 96px;
+  }
+  h1, h2, h3 { font-family: var(--font-serif); text-wrap: balance; font-weight: 600; }
+  h1 { font-size: 2.15rem; line-height: 1.18; margin: 0 0 10px; letter-spacing: -0.01em; }
+  h2 {
+    font-size: 1.3rem;
+    margin: 3.2em 0 0.9em;
+    padding-top: 0.9em;
+    border-top: 1px solid var(--line);
+    color: var(--ink);
+  }
+  h2 .kicker {
+    display: block;
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--ink-faint);
+    margin-bottom: 0.5em;
+  }
+  h3 { font-size: 1.02rem; margin: 1.6em 0 0.6em; font-weight: 600; }
+  p { margin: 0 0 1.05em; color: var(--ink); }
+  p.dek {
+    font-family: var(--font-serif);
+    font-size: 1.14rem;
+    color: var(--ink-muted);
+    margin: 0 0 2.2em;
+    max-width: 62ch;
+  }
+  a { color: var(--profile); }
+  .muted { color: var(--ink-muted); }
+  .mono { font-family: var(--font-mono); font-variant-numeric: tabular-nums; }
+  strong { font-weight: 650; }
+  code {
+    font-family: var(--font-mono);
+    font-size: 0.88em;
+    background: var(--surface-2);
+    padding: 0.1em 0.4em;
+    border-radius: 4px;
+  }
+  pre {
+    font-family: var(--font-mono);
+    font-size: 0.82rem;
+    background: var(--surface-2);
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    padding: 14px 16px;
+    overflow-x: auto;
+    line-height: 1.55;
+  }
+
+  /* ---- header / hero ---- */
+  .eyebrow {
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--ink-faint);
+    margin-bottom: 0.9em;
+  }
+  .hero {
+    display: flex;
+    gap: 32px;
+    align-items: center;
+    margin: 1.6em 0 2.4em;
+    padding: 20px 22px;
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 14px;
+  }
+  .hero-gauge { flex: 0 0 auto; }
+  .hero-stat { flex: 1 1 auto; }
+  .hero-stat .big {
+    font-family: var(--font-mono);
+    font-size: 1.9rem;
+    font-weight: 600;
+    color: var(--amber);
+    letter-spacing: -0.01em;
+  }
+  .hero-stat .cap { font-size: 0.92rem; color: var(--ink-muted); margin-top: 0.35em; }
+
+  /* ---- callouts ---- */
+  .callout {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-left: 3px solid var(--amber-fill);
+    border-radius: 8px;
+    padding: 14px 18px;
+    margin: 1.4em 0;
+    font-size: 0.96rem;
+  }
+  .callout.finding { border-left-color: var(--good); }
+
+  /* ---- chart shells ---- */
+  .chart-card {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 18px 20px 12px;
+    margin: 1.3em 0 1.8em;
+  }
+  .chart-title { font-size: 0.88rem; font-weight: 600; margin-bottom: 2px; }
+  .chart-sub { font-size: 0.8rem; color: var(--ink-muted); margin-bottom: 10px; }
+  .chart-wrap { overflow-x: auto; }
+  svg.chart { display: block; }
+  .axis-label { font-family: var(--font-mono); font-size: 10px; fill: var(--ink-faint); }
+  .gridline { stroke: var(--line); stroke-width: 1; }
+  .legend { display: flex; gap: 18px; flex-wrap: wrap; margin-top: 10px; font-size: 0.8rem; }
+  .legend-item { display: flex; align-items: center; gap: 6px; color: var(--ink-muted); }
+  .swatch { width: 14px; height: 3px; border-radius: 2px; display: inline-block; }
+  .swatch.dash {
+    background: repeating-linear-gradient(90deg, currentColor 0 5px, transparent 5px 8px);
+  }
+  .dot-tip {
+    position: absolute;
+    pointer-events: none;
+    background: var(--ink);
+    color: var(--bg);
+    font-family: var(--font-mono);
+    font-size: 11px;
+    padding: 5px 8px;
+    border-radius: 6px;
+    white-space: nowrap;
+    opacity: 0;
+    transition: opacity 0.1s;
+    transform: translate(-50%, -130%);
+    z-index: 5;
+  }
+  .chart-pos { position: relative; }
+
+  /* ---- table ---- */
+  table.results {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.87rem;
+  }
+  table.results th, table.results td {
+    padding: 9px 10px;
+    text-align: right;
+    border-bottom: 1px solid var(--line);
+    font-variant-numeric: tabular-nums;
+    font-family: var(--font-mono);
+  }
+  table.results th:first-child, table.results td:first-child {
+    text-align: left;
+    font-family: var(--font-sans);
+  }
+  table.results thead th {
+    font-family: var(--font-sans);
+    font-weight: 600;
+    font-size: 0.78rem;
+    color: var(--ink-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    border-bottom: 1px solid var(--ink-faint);
+  }
+  table.results tr.hi td { background: var(--amber-soft); font-weight: 650; }
+  table.results tr.hi td:first-child { color: var(--amber); }
+  .table-wrap { overflow-x: auto; margin: 1.3em 0; }
+
+  /* ---- worked example ---- */
+  .example-card {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 18px 20px;
+    margin: 1.3em 0 1.8em;
+  }
+  .example-query {
+    font-family: var(--font-serif);
+    font-style: italic;
+    color: var(--ink);
+    padding: 10px 14px;
+    background: var(--surface-2);
+    border-radius: 8px;
+    margin: 10px 0 18px;
+    font-size: 0.98rem;
+  }
+  .panels { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+  @media (max-width: 620px) { .panels { grid-template-columns: 1fr; } }
+  .panel-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 8px;
+  }
+  .panel-head .label { font-weight: 650; font-size: 0.88rem; }
+  .panel-head .rank {
+    font-family: var(--font-mono);
+    font-size: 0.78rem;
+    padding: 2px 8px;
+    border-radius: 20px;
+    background: var(--surface-2);
+    color: var(--ink-muted);
+  }
+  .panel.before .panel-head .rank { color: var(--query); background: var(--query-soft); }
+  .panel.after .panel-head .rank { color: var(--good); background: var(--amber-soft); }
+  ol.ranked { list-style: none; margin: 0; padding: 0; counter-reset: rank; }
+  ol.ranked li {
+    counter-increment: rank;
+    display: flex;
+    gap: 10px;
+    align-items: baseline;
+    padding: 7px 0;
+    border-bottom: 1px solid var(--line);
+    font-size: 0.86rem;
+  }
+  ol.ranked li:last-child { border-bottom: none; }
+  ol.ranked li::before {
+    content: counter(rank);
+    font-family: var(--font-mono);
+    color: var(--ink-faint);
+    width: 1.1em;
+    flex: 0 0 auto;
+    text-align: right;
+  }
+  ol.ranked li .who { flex: 1 1 auto; }
+  ol.ranked li .who b { font-weight: 650; }
+  ol.ranked li .who .role { color: var(--ink-muted); display: block; font-size: 0.8em; margin-top: 1px; }
+  ol.ranked li .score { font-family: var(--font-mono); color: var(--ink-faint); font-size: 0.78rem; }
+  ol.ranked li.target { background: var(--amber-soft); border-radius: 6px; padding: 7px 8px; margin: 0 -8px; }
+  ol.ranked li.target .who b { color: var(--amber); }
+  ol.ranked li.self .who .role::after { content: " · self-echo"; color: var(--query); }
+
+  footer {
+    margin-top: 4em;
+    padding-top: 1.4em;
+    border-top: 1px solid var(--line);
+    font-size: 0.83rem;
+    color: var(--ink-faint);
+  }
+</style>
+
+<div class="page">
+
+  <div class="eyebrow">nomad_drift — isolated experiment</div>
+  <h1>Dialing in the query/profile blend on 1,000 synthetic profiles</h1>
+  <p class="dek">A prior experiment eyeballed the best mix of "who you are" vs. "what you're
+    asking for" from a 9-point grid checked on the same 200 real pairs it reported. This one
+    fits that mix on a population 13&times; larger and entirely separate — then checks whether
+    the answer holds up on the real pairs it never saw.</p>
+
+  <div class="hero">
+    <div class="hero-gauge" id="gauge-mount"></div>
+    <div class="hero-stat">
+      <div class="big">&alpha; = 1.0</div>
+      <div class="cap">Calibrated on 2,619 judge-labeled synthetic pairs (923 profiles). The
+        query alone &mdash; no profile blended in at all &mdash; wins on pair&nbsp;AUC, and it
+        is not a close call: the curve rises without turning back, all the way to the edge of
+        the grid.</div>
+    </div>
+  </div>
+
+  <h2><span class="kicker">Background</span>The knob this is calibrating</h2>
+  <p>Every model in this project encodes a seeker as one string: their profile, with
+    <code>Search query: &hellip;</code> appended. <code>query_weighted/</code> found that
+    splitting the two into separate vectors and blending them &mdash;
+    <code>normalize(&alpha;&middot;query&nbsp;+&nbsp;(1&minus;&alpha;)&middot;profile)</code>
+    &mdash; nearly doubled recall@1 on frozen Voyage-4-nano, with &alpha;=0.6&ndash;0.7 reading
+    best off a 9-point sweep. That grid was scored on the same 200 real pairs the finding is
+    reported on, so 0.6 vs. 0.7 isn&rsquo;t distinguishable from noise, and &alpha; was never
+    fit on anything the report population hadn&rsquo;t already seen.</p>
+  <p><code>nomad_drift/</code> fixes that by fitting &alpha; on <code>rrf_003</code> &mdash;
+    the pairing pipeline&rsquo;s 1,000-profile synthetic batch, 2,619 pairs judged by an LLM
+    &mdash; a population that shares no profiles with the 200 real pairs. Whatever &alpha; wins
+    there is then run, unmodified, through <code>query_weighted.eval.run_all_arms</code>: the
+    exact function that produced the published table, so the numbers below sit in that same
+    table rather than a re-implementation of it.</p>
+
+  <h2><span class="kicker">Phase 1 &middot; synthetic calibration</span>The sweep never turns back</h2>
+  <p>Two metrics, both scored without a shared retrieval corpus (so neither can inherit the
+    circularity the original experiment flagged in its own recall numbers): <strong>pair
+    AUC</strong> across all 2,619 pairs, and <strong>shortlist top-1 accuracy</strong> &mdash;
+    within each query&rsquo;s judged shortlist of ~5 retrieved candidates, does the
+    highest-scoring one carry the positive label? Only counted for the 385 shortlists that
+    contain both a positive and a negative.</p>
+
+  <div class="chart-card">
+    <div class="chart-title">rrf_003 calibration sweep &mdash; 2,619 pairs, 418 seekers, 505 candidates</div>
+    <div class="chart-sub">alpha = 0 is pure profile, alpha = 1 is pure query</div>
+    <div class="chart-pos"><div class="chart-wrap" id="chart1"></div><div class="dot-tip" id="tip1"></div></div>
+    <div class="legend">
+      <span class="legend-item"><span class="swatch" style="background:var(--amber-fill)"></span>pair AUC</span>
+      <span class="legend-item"><span class="swatch dash" style="color:var(--ink-faint)"></span>shortlist top-1 accuracy</span>
+    </div>
+  </div>
+
+  <p>Pair AUC climbs from 0.5471 at pure-profile to <strong>0.6241 at pure-query</strong> with
+    no interior peak &mdash; every step toward the query helps, right to the edge of what the
+    grid can test. Shortlist accuracy is noisier (each point averages 385 five-candidate
+    rankings, a much smaller effective sample) but points the same direction, topping out near
+    &alpha;=0.7&ndash;1.0. Pair AUC is the tie-break authority: it&rsquo;s the corpus-free
+    metric, matching how <code>query_weighted</code>&rsquo;s own doc treats hard-negative AUC
+    as the "clean" signal over pooled retrieval numbers.</p>
+
+  <h2><span class="kicker">Phase 2 &middot; confirmed on all 200 real pairs</span>One number, two different answers</h2>
+  <p>Folding &alpha;=1.0 into <code>query_weighted.eval.run_all_arms</code>&rsquo;s own alpha
+    grid and re-running it on all 200 real pairs is where this gets interesting: the calibrated
+    alpha does <em>not</em> win on the same metric it was calibrated on.</p>
+
+  <div class="chart-card">
+    <div class="chart-title">All 200 real pairs &mdash; pair AUC vs. hard-negative AUC across the full alpha range</div>
+    <div class="chart-sub">alpha = 0 is <code>profile_only</code>; alpha = 1 is <code>query_only</code></div>
+    <div class="chart-pos"><div class="chart-wrap" id="chart2"></div><div class="dot-tip" id="tip2"></div></div>
+    <div class="legend">
+      <span class="legend-item"><span class="swatch" style="background:var(--profile)"></span>pair AUC (all negatives)</span>
+      <span class="legend-item"><span class="swatch" style="background:var(--query)"></span>hard-negative AUC</span>
+      <span class="legend-item"><span class="swatch dash" style="color:var(--ink-faint)"></span>concat_baseline (current production text)</span>
+    </div>
+  </div>
+
+  <div class="callout finding">
+    <strong>The two AUCs disagree about where the optimum is, and that disagreement is the
+    finding.</strong> Overall pair AUC on real-200 peaks in the <em>interior</em>, at
+    &alpha;=0.6 (0.5872), then falls back to 0.5530 at pure query &mdash; a little profile
+    similarity still helps separate the <em>easy</em> negatives that make up most of the pool.
+    Hard-negative AUC keeps climbing the whole way, peaking exactly where the synthetic
+    calibration landed: &alpha;=1.0, at <strong>0.5914</strong> &mdash; matching
+    <code>query_weighted</code>&rsquo;s own published finding that this is the best
+    hard-negative AUC of any model measured on all 200 real pairs in this project. rrf_003
+    calibration reproduces that answer from a completely different, much larger population,
+    without ever seeing a real pair.</div>
+
+  <div class="table-wrap">
+    <table class="results">
+      <thead>
+        <tr><th>arm</th><th>pair AUC</th><th>hard-neg AUC</th><th>MRR</th><th>R@1</th><th>R@10</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>profile_only</td><td>0.5424</td><td>0.4862</td><td>0.2357</td><td>0.0900</td><td>0.5000</td></tr>
+        <tr><td>concat_baseline <span class="muted">(production)</span></td><td>0.5593</td><td>0.5046</td><td>0.3171</td><td>0.1800</td><td>0.5900</td></tr>
+        <tr><td>alpha_0.6 <span class="muted">(eyeballed peak)</span></td><td><strong>0.5872</strong></td><td>0.5818</td><td>0.4649</td><td>0.2500</td><td>0.8900</td></tr>
+        <tr class="hi"><td>alpha_1.0 = query_only <span class="muted">(calibrated)</span></td><td>0.5530</td><td><strong>0.5914</strong></td><td><strong>0.5019</strong></td><td><strong>0.3000</strong></td><td><strong>0.9100</strong></td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="muted" style="font-size:0.86rem">Bold marks the best value in each column among these
+    four rows. The calibrated arm loses on overall pair AUC and wins everything else, including
+    retrieval it was never calibrated on at all.</p>
+
+  <h2><span class="kicker">One real query, traced through both encodings</span>What "profile drowns query" looks like</h2>
+  <p>The most dramatic rank improvement among all 100 real positive queries: a seeker asking
+    for a specific kind of operator, where <code>concat_baseline</code> buries the actual
+    accepted match at <strong>rank 108 of 178</strong> and the calibrated encoding pulls it to
+    <strong>rank 3</strong>.</p>
+
+  <div class="example-card">
+    <div class="panel-head" style="margin-bottom:2px">
+      <span class="label">Seeker: Rudraksh &middot; CTO/co-founder, VantEdge&nbsp;Labs (AI agent platform for manufacturing &amp; supply-chain ops)</span>
+    </div>
+    <div class="example-query">&ldquo;US Midwest manufacturing supply chain procurement operations
+      executive or consultant with buyer network in industrial or heavy manufacturing, open to
+      AI technology partnerships&rdquo;</div>
+
+    <div class="panels">
+      <div class="panel before">
+        <div class="panel-head">
+          <span class="label">concat_baseline (production text)</span>
+          <span class="rank">target at #108</span>
+        </div>
+        <ol class="ranked">
+          <li class="self"><div class="who"><b>Rudraksh</b><span class="role">VantEdge Labs</span></div><div class="score">0.9548</div></li>
+          <li><div class="who"><b>Liam</b><span class="role">Veridian Labs &mdash; orchestration infra</span></div><div class="score">0.7599</div></li>
+          <li><div class="who"><b>Mukund</b><span class="role">SimpleGrid &mdash; manufacturing ERP</span></div><div class="score">0.7554</div></li>
+          <li><div class="who"><b>Mohil</b><span class="role">AI/PE operations</span></div><div class="score">0.7416</div></li>
+          <li><div class="who"><b>Maruthi</b><span class="role">Nevara &mdash; AI deal execution</span></div><div class="score">0.7364</div></li>
+        </ol>
+      </div>
+      <div class="panel after">
+        <div class="panel-head">
+          <span class="label">alpha = 1.0 (calibrated)</span>
+          <span class="rank">target at #3</span>
+        </div>
+        <ol class="ranked">
+          <li><div class="who"><b>Mukund</b><span class="role">SimpleGrid &mdash; manufacturing ERP</span></div><div class="score">0.5437</div></li>
+          <li><div class="who"><b>Chris</b><span class="role">FlexScaleX &mdash; AI training/implementation</span></div><div class="score">0.5293</div></li>
+          <li class="target"><div class="who"><b>Branden</b><span class="role">Branden Wright &amp; Co. &mdash; industrial/manufacturing buyer intros</span></div><div class="score">0.5272</div></li>
+          <li class="self"><div class="who"><b>Rudraksh</b><span class="role">VantEdge Labs</span></div><div class="score">0.5252</div></li>
+          <li><div class="who"><b>Garrett</b><span class="role">fractional COO/GM &mdash; robotics</span></div><div class="score">0.5215</div></li>
+        </ol>
+      </div>
+    </div>
+  </div>
+
+  <p>The concat_baseline&rsquo;s top result isn&rsquo;t even a candidate &mdash; it&rsquo;s
+    <strong>Rudraksh himself</strong>, encoded on the candidate side elsewhere in the corpus
+    (0.9548 cosine to his own seeker vector). Because the profile is ~98% of that string, the
+    "best match" it finds is someone who writes like him &mdash; another AI-ops founder. Under
+    the calibrated encoding, that self-echo drops to #4 and the search finally answers the
+    actual question: who has a buyer network in industrial manufacturing. Branden &mdash; the
+    person actually introduced &mdash; is #3.</p>
+
+  <h2><span class="kicker">Reading this honestly</span>Caveats</h2>
+  <p>&bull; <strong>rrf_003&rsquo;s labels are an LLM judge&rsquo;s opinion</strong>
+    (<code>google/gemini-3.1-flash-lite</code>, naive framing), not real accept/decline
+    outcomes &mdash; good enough to fit one scalar hyperparameter on 13&times; more pairs than
+    200 affords, but the number that counts is still the real-200 report above, which is why
+    this package always runs it.<br>
+    &bull; <strong>&alpha;=1.0 is the edge of the grid</strong>, not a true interior optimum
+    &mdash; the sweep never turned back, so a value "past" pure query isn&rsquo;t a
+    meaningful thing to want, but it also means the exact peak was never bracketed.<br>
+    &bull; <strong>Shortlist top-1 accuracy is not recall@1</strong> &mdash; it&rsquo;s a
+    within-shortlist ranking check over ~5 retrieved candidates, not a full-corpus retrieval
+    metric like the real-200 numbers above. Don&rsquo;t read the two as comparable.<br>
+    &bull; One run, no replicate, no error bar on either population.<br>
+    &bull; <strong>Retrieval on real-200 carries the same partial circularity</strong> the
+    original <code>query_weighted</code> doc flagged: production selected these candidates
+    using this same search query. Pair AUC and hard-negative AUC don&rsquo;t share that
+    problem &mdash; which is exactly why hard-negative AUC matching between the two
+    populations is the load-bearing result here, not the recall@1 jump.</p>
+
+  <h2><span class="kicker">Reproduce</span>Commands</h2>
+  <pre>modal run nomad_drift/modal_run.py --run-id nd_001
+modal volume get dorby-nomad-drift-results nd_001/metrics.json ./artifacts/nomad_drift/nd_001/metrics.json
+modal volume get dorby-nomad-drift-results nd_001/calibration.json ./artifacts/nomad_drift/nd_001/calibration.json
+modal volume get dorby-nomad-drift-results nd_001/worked_example.json ./artifacts/nomad_drift/nd_001/worked_example.json
+
+python -m pytest tests/test_nomad_drift.py -q   # CPU-only checks, no GPU needed</pre>
+
+  <footer>
+    <code>nomad_drift/</code> &mdash; isolated package, own Modal app
+    (<code>dorby-nomad-drift</code>), own artifacts dir
+    (<code>artifacts/nomad_drift/</code>). Imports <code>query_weighted.text</code>,
+    <code>query_weighted.eval.combine</code> / <code>run_all_arms</code>,
+    <code>baselines.metrics</code>, and <code>eval_real_full.baseline_eval</code> unmodified.
+    See <code>docs/nomad-drift-experiment.md</code> and
+    <code>docs/query-weighted-encoding-experiment.md</code> for the full writeups.
+  </footer>
+</div>
+
+<script>
+(function () {
+  const calibration = [
+    {a:0.0, auc:0.5471, sl:0.5688}, {a:0.1, auc:0.5567, sl:0.5714}, {a:0.2, auc:0.5664, sl:0.5688},
+    {a:0.3, auc:0.5764, sl:0.5766}, {a:0.4, auc:0.5860, sl:0.5896}, {a:0.5, auc:0.5953, sl:0.5870},
+    {a:0.6, auc:0.6038, sl:0.5922}, {a:0.7, auc:0.6110, sl:0.6026}, {a:0.8, auc:0.6166, sl:0.5870},
+    {a:0.9, auc:0.6209, sl:0.5792}, {a:1.0, auc:0.6241, sl:0.5844}
+  ];
+  const real200 = [
+    {a:0.0, auc:0.5424, hard:0.4862}, {a:0.1, auc:0.5578, hard:0.5032}, {a:0.2, auc:0.5699, hard:0.5204},
+    {a:0.3, auc:0.5785, hard:0.5404}, {a:0.4, auc:0.5834, hard:0.5534}, {a:0.5, auc:0.5866, hard:0.5694},
+    {a:0.6, auc:0.5872, hard:0.5818}, {a:0.7, auc:0.5799, hard:0.5856}, {a:0.8, auc:0.5695, hard:0.5900},
+    {a:0.9, auc:0.5619, hard:0.5896}, {a:1.0, auc:0.5530, hard:0.5914}
+  ];
+  const CONCAT_AUC = 0.5593;
+
+  const css = getComputedStyle(document.documentElement);
+  const tok = (name) => css.getPropertyValue(name).trim();
+
+  function makeLineChart(mount, tipEl, series, opts) {
+    const W = Math.min(720, mount.clientWidth || 720), H = opts.height || 220;
+    const M = {l: 40, r: 16, t: 14, b: 26};
+    const iw = W - M.l - M.r, ih = H - M.t - M.b;
+    const xMin = 0, xMax = 1;
+    const yMin = opts.yMin, yMax = opts.yMax;
+    const x = (v) => M.l + ((v - xMin) / (xMax - xMin)) * iw;
+    const y = (v) => M.t + ih - ((v - yMin) / (yMax - yMin)) * ih;
+
+    const svgns = "http://www.w3.org/2000/svg";
+    const svg = document.createElementNS(svgns, "svg");
+    svg.setAttribute("class", "chart");
+    svg.setAttribute("width", W);
+    svg.setAttribute("height", H);
+    svg.setAttribute("viewBox", `0 0 ${W} ${H}`);
+
+    // gridlines (y)
+    const ticks = opts.yTicks;
+    ticks.forEach((t) => {
+      const gy = y(t);
+      const gl = document.createElementNS(svgns, "line");
+      gl.setAttribute("x1", M.l); gl.setAttribute("x2", W - M.r);
+      gl.setAttribute("y1", gy); gl.setAttribute("y2", gy);
+      gl.setAttribute("class", "gridline");
+      svg.appendChild(gl);
+      const lab = document.createElementNS(svgns, "text");
+      lab.setAttribute("x", M.l - 6); lab.setAttribute("y", gy + 3);
+      lab.setAttribute("text-anchor", "end");
+      lab.setAttribute("class", "axis-label");
+      lab.textContent = t.toFixed(2);
+      svg.appendChild(lab);
+    });
+    // x axis labels
+    [0, 0.2, 0.4, 0.6, 0.8, 1.0].forEach((t) => {
+      const lab = document.createElementNS(svgns, "text");
+      lab.setAttribute("x", x(t)); lab.setAttribute("y", H - 6);
+      lab.setAttribute("text-anchor", "middle");
+      lab.setAttribute("class", "axis-label");
+      lab.textContent = t.toFixed(1);
+      svg.appendChild(lab);
+    });
+
+    // reference line
+    if (opts.refLine !== undefined) {
+      const ry = y(opts.refLine);
+      const rl = document.createElementNS(svgns, "line");
+      rl.setAttribute("x1", M.l); rl.setAttribute("x2", W - M.r);
+      rl.setAttribute("y1", ry); rl.setAttribute("y2", ry);
+      rl.setAttribute("stroke", tok("--ink-faint"));
+      rl.setAttribute("stroke-width", "1.5");
+      rl.setAttribute("stroke-dasharray", "4 3");
+      svg.appendChild(rl);
+    }
+
+    series.forEach((s) => {
+      const pts = s.data.map((d) => [x(d.a), y(d.v)]);
+      const path = document.createElementNS(svgns, "path");
+      path.setAttribute("d", pts.map((p, i) => (i === 0 ? "M" : "L") + p[0].toFixed(2) + " " + p[1].toFixed(2)).join(" "));
+      path.setAttribute("fill", "none");
+      path.setAttribute("stroke", s.color);
+      path.setAttribute("stroke-width", s.width || 2.4);
+      if (s.dash) path.setAttribute("stroke-dasharray", "5 4");
+      path.setAttribute("stroke-linecap", "round");
+      path.setAttribute("stroke-linejoin", "round");
+      svg.appendChild(path);
+
+      pts.forEach((p, i) => {
+        const c = document.createElementNS(svgns, "circle");
+        c.setAttribute("cx", p[0]); c.setAttribute("cy", p[1]);
+        const isWinner = opts.winnerA !== undefined && Math.abs(s.data[i].a - opts.winnerA) < 1e-6;
+        c.setAttribute("r", isWinner ? 5 : 3);
+        c.setAttribute("fill", isWinner ? tok("--amber-fill") : s.color);
+        c.setAttribute("stroke", tok("--surface"));
+        c.setAttribute("stroke-width", isWinner ? 2 : 1);
+        c.style.cursor = "pointer";
+        c.addEventListener("mousemove", (ev) => {
+          tipEl.style.opacity = 1;
+          tipEl.style.left = p[0] + "px";
+          tipEl.style.top = p[1] + "px";
+          tipEl.textContent = `α=${s.data[i].a.toFixed(1)}  ${s.label}=${s.data[i].v.toFixed(4)}`;
+        });
+        c.addEventListener("mouseleave", () => { tipEl.style.opacity = 0; });
+        svg.appendChild(c);
+      });
+    });
+
+    mount.appendChild(svg);
+  }
+
+  makeLineChart(
+    document.getElementById("chart1"),
+    document.getElementById("tip1"),
+    [
+      {data: calibration.map(d => ({a: d.a, v: d.auc})), color: tok("--amber-fill"), label: "pairAUC", width: 2.8},
+      {data: calibration.map(d => ({a: d.a, v: d.sl})), color: tok("--ink-faint"), label: "shortlist_top1", dash: true, width: 2}
+    ],
+    {yMin: 0.53, yMax: 0.635, yTicks: [0.55, 0.58, 0.61, 0.63], winnerA: 1.0, height: 220}
+  );
+
+  makeLineChart(
+    document.getElementById("chart2"),
+    document.getElementById("tip2"),
+    [
+      {data: real200.map(d => ({a: d.a, v: d.auc})), color: tok("--profile"), label: "pairAUC", width: 2.6},
+      {data: real200.map(d => ({a: d.a, v: d.hard})), color: tok("--query"), label: "hardnegAUC", width: 2.6}
+    ],
+    {yMin: 0.46, yMax: 0.61, yTicks: [0.48, 0.52, 0.56, 0.60], refLine: CONCAT_AUC, winnerA: 1.0, height: 220}
+  );
+
+  // gauge
+  (function () {
+    const mount = document.getElementById("gauge-mount");
+    const svgns = "http://www.w3.org/2000/svg";
+    const W = 120, H = 84, cx = 60, cy = 72, r = 54;
+    const svg = document.createElementNS(svgns, "svg");
+    svg.setAttribute("width", W); svg.setAttribute("height", H);
+    svg.setAttribute("viewBox", `0 0 ${W} ${H}`);
+
+    function arcPath(r0) {
+      const x0 = cx - r0, y0 = cy, x1 = cx + r0, y1 = cy;
+      return `M ${x0} ${y0} A ${r0} ${r0} 0 0 1 ${x1} ${y1}`;
+    }
+    const track = document.createElementNS(svgns, "path");
+    track.setAttribute("d", arcPath(r));
+    track.setAttribute("fill", "none");
+    track.setAttribute("stroke", tok("--surface-2"));
+    track.setAttribute("stroke-width", 10);
+    track.setAttribute("stroke-linecap", "round");
+    svg.appendChild(track);
+
+    // half toward query (right half) tinted
+    const half = document.createElementNS(svgns, "path");
+    half.setAttribute("d", `M ${cx} ${cy - r} A ${r} ${r} 0 0 1 ${cx + r} ${cy}`);
+    half.setAttribute("fill", "none");
+    half.setAttribute("stroke", tok("--query"));
+    half.setAttribute("stroke-opacity", "0.35");
+    half.setAttribute("stroke-width", 10);
+    half.setAttribute("stroke-linecap", "round");
+    svg.appendChild(half);
+
+    const halfL = document.createElementNS(svgns, "path");
+    halfL.setAttribute("d", `M ${cx - r} ${cy} A ${r} ${r} 0 0 1 ${cx} ${cy - r}`);
+    halfL.setAttribute("fill", "none");
+    halfL.setAttribute("stroke", tok("--profile"));
+    halfL.setAttribute("stroke-opacity", "0.35");
+    halfL.setAttribute("stroke-width", 10);
+    halfL.setAttribute("stroke-linecap", "round");
+    svg.appendChild(halfL);
+
+    // needle at alpha = 1.0 -> full right (0 deg from horizontal)
+    const alpha = 1.0;
+    const angle = Math.PI - alpha * Math.PI; // alpha=0 -> PI (left), alpha=1 -> 0 (right)
+    const nx = cx + (r - 8) * Math.cos(angle);
+    const ny = cy - (r - 8) * Math.sin(angle);
+    const needle = document.createElementNS(svgns, "line");
+    needle.setAttribute("x1", cx); needle.setAttribute("y1", cy);
+    needle.setAttribute("x2", nx); needle.setAttribute("y2", ny);
+    needle.setAttribute("stroke", tok("--amber-fill"));
+    needle.setAttribute("stroke-width", 3);
+    needle.setAttribute("stroke-linecap", "round");
+    svg.appendChild(needle);
+
+    const hub = document.createElementNS(svgns, "circle");
+    hub.setAttribute("cx", cx); hub.setAttribute("cy", cy); hub.setAttribute("r", 4);
+    hub.setAttribute("fill", tok("--amber-fill"));
+    svg.appendChild(hub);
+
+    [["profile", cx - r, cy, tok("--profile"), "end"], ["query", cx + r, cy, tok("--query"), "start"]]
+      .forEach(([txt, tx, ty, color, anchor]) => {
+        const t = document.createElementNS(svgns, "text");
+        t.setAttribute("x", tx + (anchor === "end" ? -2 : 2));
+        t.setAttribute("y", ty + 14);
+        t.setAttribute("text-anchor", anchor);
+        t.setAttribute("class", "axis-label");
+        t.setAttribute("fill", color);
+        t.textContent = txt;
+        svg.appendChild(t);
+      });
+
+    mount.appendChild(svg);
+  })();
+})();
+</script>
