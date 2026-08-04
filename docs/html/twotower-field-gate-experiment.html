@@ -1,0 +1,384 @@
+<title>Field-Gate Two-Tower — Learned Combination of Query, lookingFor, positioning</title>
+<meta name="description" content="A learned per-seeker gate over decomposed profile pieces underperforms plain query-only — worst of four approaches on every retrieval metric, all 200 real pairs.">
+<style>
+  :root {
+    color-scheme: light;
+    --surface-1:      #fcfcfb;
+    --surface-page:   #f9f9f7;
+    --text-primary:   #0b0b0b;
+    --text-secondary: #52514e;
+    --text-muted:     #898781;
+    --gridline:       #e1e0d9;
+    --baseline:       #c3c2b7;
+    --border:         rgba(11,11,11,0.10);
+    --series-1: #2a78d6;  /* top1_ctrl + eval-time query-only swap */
+    --series-2: #eb6834;  /* query_only_001, single model trained on query only */
+    --series-3: #1baf7a;  /* split_001, two separate towers */
+    --series-4: #eda100;  /* field_gate_001, learned gate over 3 pieces */
+    --good: #006300;
+    --critical: #d03b3b;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:where(:not([data-theme="light"])) {
+      color-scheme: dark;
+      --surface-1:      #1a1a19;
+      --surface-page:   #0d0d0d;
+      --text-primary:   #ffffff;
+      --text-secondary: #c3c2b7;
+      --text-muted:     #898781;
+      --gridline:       #2c2c2a;
+      --baseline:       #383835;
+      --border:         rgba(255,255,255,0.10);
+      --series-1: #3987e5;
+      --series-2: #d95926;
+      --series-3: #199e70;
+      --series-4: #c98500;
+      --good: #0ca30c;
+      --critical: #e66767;
+    }
+  }
+  :root[data-theme="dark"] {
+    color-scheme: dark;
+    --surface-1:      #1a1a19;
+    --surface-page:   #0d0d0d;
+    --text-primary:   #ffffff;
+    --text-secondary: #c3c2b7;
+    --text-muted:     #898781;
+    --gridline:       #2c2c2a;
+    --baseline:       #383835;
+    --border:         rgba(255,255,255,0.10);
+    --series-1: #3987e5;
+    --series-2: #d95926;
+    --series-3: #199e70;
+    --series-4: #c98500;
+    --good: #0ca30c;
+    --critical: #e66767;
+  }
+
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body {
+    background: var(--surface-page);
+    font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+    color: var(--text-primary);
+  }
+  .page { max-width: 900px; margin: 0 auto; padding: 40px 24px 80px; }
+  header { margin-bottom: 32px; }
+  h1 { font-size: 22px; font-weight: 700; letter-spacing: -0.01em; margin: 0 0 10px; text-wrap: balance; }
+  .lede { font-size: 14.5px; line-height: 1.6; color: var(--text-secondary); max-width: 700px; margin: 0; }
+  .lede b { color: var(--text-primary); }
+
+  .card {
+    background: var(--surface-1); border: 1px solid var(--border);
+    border-radius: 12px; padding: 24px 24px 20px; margin-bottom: 24px;
+  }
+  .card h2 { font-size: 13px; text-transform: uppercase; letter-spacing: 0.05em; color: var(--text-muted); margin: 0 0 4px; font-weight: 700; }
+  .card .card-note { font-size: 12.5px; color: var(--text-secondary); margin: 0 0 20px; line-height: 1.5; }
+
+  .legend { display: flex; flex-wrap: wrap; gap: 16px; margin-bottom: 18px; }
+  .legend-item { display: flex; align-items: center; gap: 7px; font-size: 12.5px; color: var(--text-secondary); }
+  .legend-swatch { width: 11px; height: 11px; border-radius: 3px; flex-shrink: 0; }
+
+  .chart-wrap { overflow-x: auto; }
+  svg { display: block; font-family: inherit; }
+  .axis-label { font-size: 11px; fill: var(--text-muted); }
+  .group-label { font-size: 12px; fill: var(--text-secondary); font-weight: 600; }
+  .gridline { stroke: var(--gridline); stroke-width: 1; }
+  .baseline { stroke: var(--baseline); stroke-width: 1; }
+  .bar-label { font-size: 10px; fill: var(--text-secondary); font-variant-numeric: tabular-nums; text-anchor: middle; }
+
+  .tooltip {
+    position: fixed; pointer-events: none; z-index: 30;
+    background: var(--surface-1); border: 1px solid var(--border);
+    border-radius: 8px; padding: 8px 11px; font-size: 12px; line-height: 1.5;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.25); display: none; max-width: 240px;
+  }
+  .tooltip b { color: var(--text-primary); }
+
+  table.data-table { width: 100%; border-collapse: collapse; font-size: 12.5px; margin-top: 8px; }
+  table.data-table th, table.data-table td {
+    text-align: right; padding: 7px 10px; font-variant-numeric: tabular-nums;
+    border-bottom: 1px solid var(--gridline);
+  }
+  table.data-table th:first-child, table.data-table td:first-child { text-align: left; font-variant-numeric: normal; }
+  table.data-table th { color: var(--text-muted); font-weight: 600; font-size: 11px; text-transform: uppercase; letter-spacing: 0.04em; }
+  table.data-table td.worst { color: var(--critical); font-weight: 700; }
+  table.data-table tr:last-child td { border-bottom: none; }
+
+  .reversal-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 4px; }
+  .reversal-box { border: 1px solid var(--border); border-radius: 9px; padding: 14px 16px; }
+  .reversal-box .rb-label { font-size: 11px; text-transform: uppercase; letter-spacing: 0.05em; color: var(--text-muted); font-weight: 700; margin-bottom: 8px; }
+  .reversal-box .rb-row { display: flex; justify-content: space-between; font-size: 13px; padding: 3px 0; }
+  .reversal-box .rb-row .v { font-variant-numeric: tabular-nums; font-weight: 700; }
+  .reversal-box.holdout .v { color: var(--critical); }
+  .reversal-box.all200 .v { color: var(--text-primary); }
+
+  .small-multiples { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+  .sm-panel { min-width: 0; }
+  .sm-title {
+    font-size: 12.5px; font-weight: 700; color: var(--text-primary);
+    margin-bottom: 8px; display: flex; align-items: center; gap: 8px;
+  }
+  .sm-tag {
+    font-size: 10px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.04em;
+    color: var(--text-muted); background: var(--gridline); padding: 2px 7px; border-radius: 5px;
+  }
+  .line-path { fill: none; stroke-width: 2; }
+  .line-dot { stroke: var(--surface-1); stroke-width: 1.5; }
+  .line-dot.best { stroke: var(--good); stroke-width: 2.5; }
+  .line-label { font-size: 10px; fill: var(--text-secondary); font-variant-numeric: tabular-nums; text-anchor: middle; }
+
+  .gate-note {
+    font-size: 12.5px; color: var(--text-secondary); line-height: 1.6;
+    background: var(--surface-page); border: 1px dashed var(--border);
+    border-radius: 9px; padding: 12px 14px; margin-top: 4px;
+  }
+  .gate-note code { color: var(--text-primary); }
+
+  footer { font-size: 12px; color: var(--text-muted); text-align: center; margin-top: 8px; }
+  footer code { color: var(--text-secondary); }
+
+  @media (max-width: 640px) {
+    .reversal-grid { grid-template-columns: 1fr; }
+    .small-multiples { grid-template-columns: 1fr; }
+  }
+</style>
+
+<div class="page">
+  <header>
+    <h1>Does a Learned Gate Over Profile Pieces Beat Plain Query-Only?</h1>
+    <p class="lede">
+      <code>query_weighted/</code> found a fixed blend (query + profile,
+      weighted) beats plain concatenation. This experiment tried a smarter
+      version: one shared tower, seeker side split into <b>three pieces</b> —
+      the search query, <code>lookingFor</code>, <code>positioning</code> —
+      each encoded separately and combined by a small <b>learned</b> gate
+      instead of one fixed weight. <b>It's the worst of four approaches on
+      every retrieval metric</b> (MRR, recall@1, recall@10) — decomposing the
+      profile and learning to combine it did not recover what a single
+      coherent query-only string already gets for free.
+    </p>
+  </header>
+
+  <div class="card">
+    <h2>All 200 real pairs</h2>
+    <p class="card-note">Same population, same metrics as every other row in this project. The field-gate model beats the split-towers approach on classification (AUC, hard-neg AUC) but trails everything — including split towers — on retrieval.</p>
+    <div class="legend" id="legend"></div>
+    <div class="chart-wrap"><svg id="chart" width="800" height="340"></svg></div>
+  </div>
+
+  <div class="card">
+    <h2>Exact numbers</h2>
+    <table class="data-table" id="data-table"></table>
+  </div>
+
+  <div class="card">
+    <h2>How the gate combines pieces</h2>
+    <p class="card-note">A small trainable layer (9,219 parameters) looks at the three piece embeddings together and outputs one softmax weight per piece — a learned, per-seeker version of the fixed alpha blend used elsewhere in this project.</p>
+    <div class="gate-note">
+      query embedding, lookingFor embedding, positioning embedding
+      &#8594; <code>Linear(3&times;1024 &#8594; 3)</code> &#8594; softmax &#8594; weighted sum &#8594; one seeker vector
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>Same overfit-at-epoch-1 pattern as every custom-loop run</h2>
+    <p class="card-note">Loss fell every epoch, but dev recall@1 peaked at epoch 1 (the highest epoch-1 peak of any two-tower run in this project) and never recovered. Checkpoint selection kept epoch 1.</p>
+    <div class="small-multiples">
+      <div class="sm-panel">
+        <div class="sm-title">Training loss <span class="sm-tag">lower is better</span></div>
+        <div class="chart-wrap"><svg id="chart-loss" width="360" height="220"></svg></div>
+      </div>
+      <div class="sm-panel">
+        <div class="sm-title">Dev recall@1 <span class="sm-tag">higher is better</span></div>
+        <div class="chart-wrap"><svg id="chart-devr1" width="360" height="220"></svg></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>The holdout misled again</h2>
+    <p class="card-note">Same pattern as every prior two-tower experiment: the 69-pair holdout made this the best-looking two-tower result in the project. All 200 reverses it to the worst.</p>
+    <div class="reversal-grid">
+      <div class="reversal-box holdout">
+        <div class="rb-label">69-pair holdout</div>
+        <div class="rb-row"><span>Recall@1</span><span class="v">0.5172</span></div>
+        <div class="rb-row"><span>MRR</span><span class="v">0.6485</span></div>
+      </div>
+      <div class="reversal-box all200">
+        <div class="rb-label">All 200 real pairs</div>
+        <div class="rb-row"><span>Recall@1</span><span class="v">0.2300</span></div>
+        <div class="rb-row"><span>MRR</span><span class="v">0.4204</span></div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    Writeup: <code>docs/twotower-field-gate-experiment.md</code> · Code: <code>twotower_field_gate/</code>
+  </footer>
+</div>
+
+<div class="tooltip" id="tooltip"></div>
+
+<script>
+const rootStyle = getComputedStyle(document.documentElement);
+function cssVar(name) { return rootStyle.getPropertyValue(name).trim(); }
+
+const SERIES = [
+  { key: 'swap',       label: 'top1_ctrl + eval-time query-only swap (one model, no retrain)', color: cssVar('--series-1') },
+  { key: 'single',     label: 'query_only_001 (one model, trained on query only)',              color: cssVar('--series-2') },
+  { key: 'split',      label: 'split_001 (two separate towers, trained jointly)',                color: cssVar('--series-3') },
+  { key: 'field_gate', label: 'field_gate_001 (learned gate over 3 pieces)',                     color: cssVar('--series-4') },
+];
+
+const METRICS = [
+  { key: 'auc',  label: 'Pair AUC' },
+  { key: 'hard', label: 'Hard-neg AUC' },
+  { key: 'mrr',  label: 'MRR' },
+  { key: 'r1',   label: 'Recall@1' },
+  { key: 'r10',  label: 'Recall@10' },
+];
+
+const DATA = {
+  swap:       { auc: 0.5945, hard: 0.6456, mrr: 0.5076, r1: 0.32, r10: 0.90 },
+  single:     { auc: 0.5952, hard: 0.6492, mrr: 0.4985, r1: 0.29, r10: 0.91 },
+  split:      { auc: 0.5677, hard: 0.4832, mrr: 0.4844, r1: 0.28, r10: 0.88 },
+  field_gate: { auc: 0.5919, hard: 0.5520, mrr: 0.4204, r1: 0.23, r10: 0.78 },
+};
+
+const legendEl = document.getElementById('legend');
+SERIES.forEach(s => {
+  const item = document.createElement('div');
+  item.className = 'legend-item';
+  item.innerHTML = `<span class="legend-swatch" style="background:${s.color}"></span>${s.label}`;
+  legendEl.appendChild(item);
+});
+
+const table = document.getElementById('data-table');
+let thead = '<thead><tr><th>Approach</th>' + METRICS.map(m => `<th>${m.label}</th>`).join('') + '</tr></thead>';
+let tbody = '<tbody>';
+SERIES.forEach(s => {
+  const row = DATA[s.key];
+  tbody += `<tr><td>${s.label}</td>` + METRICS.map(m => {
+    const val = row[m.key];
+    const worst = Math.min(...SERIES.map(s2 => DATA[s2.key][m.key])) === val;
+    return `<td class="${worst ? 'worst' : ''}">${val.toFixed(4)}</td>`;
+  }).join('') + '</tr>';
+});
+tbody += '</tbody>';
+table.innerHTML = thead + tbody;
+
+const ns = 'http://www.w3.org/2000/svg';
+function el(tag, attrs) {
+  const e = document.createElementNS(ns, tag);
+  for (const k in attrs) e.setAttribute(k, attrs[k]);
+  return e;
+}
+const tooltip = document.getElementById('tooltip');
+const svg = document.getElementById('chart');
+const W = 800, H = 340;
+const marginL = 40, marginR = 20, marginT = 16, marginB = 44;
+const plotW = W - marginL - marginR, plotH = H - marginT - marginB;
+const groupGap = 18, barGap = 3;
+const groupW = plotW / METRICS.length;
+const barW = (groupW - groupGap) / SERIES.length;
+const yMax = 1.0;
+function yFor(v) { return marginT + plotH * (1 - v / yMax); }
+
+svg.setAttribute('viewBox', `0 0 ${W} ${H}`);
+[0, 0.25, 0.5, 0.75, 1.0].forEach(v => {
+  const y = yFor(v);
+  svg.appendChild(el('line', { class: 'gridline', x1: marginL, x2: W - marginR, y1: y, y2: y }));
+  const t = el('text', { class: 'axis-label', x: marginL - 8, y: y + 4, 'text-anchor': 'end' });
+  t.textContent = v.toFixed(2);
+  svg.appendChild(t);
+});
+svg.appendChild(el('line', { class: 'baseline', x1: marginL, x2: W - marginR, y1: yFor(0), y2: yFor(0) }));
+
+METRICS.forEach((m, gi) => {
+  const groupX = marginL + gi * groupW + groupGap / 2;
+  SERIES.forEach((s, si) => {
+    const val = DATA[s.key][m.key];
+    const x = groupX + si * barW;
+    const y = yFor(val);
+    const h = yFor(0) - y;
+    const rect = el('rect', {
+      class: 'bar', x: x + barGap / 2, y, width: barW - barGap, height: Math.max(h, 1),
+      fill: s.color, rx: 3,
+    });
+    rect.addEventListener('mousemove', e => {
+      tooltip.style.display = 'block';
+      tooltip.innerHTML = `<b>${s.label}</b><br>${m.label}: <b>${val.toFixed(4)}</b>`;
+      tooltip.style.left = (e.clientX + 14) + 'px';
+      tooltip.style.top = (e.clientY + 14) + 'px';
+    });
+    rect.addEventListener('mouseleave', () => { tooltip.style.display = 'none'; });
+    svg.appendChild(rect);
+    const lbl = el('text', { class: 'bar-label', x: x + barW / 2, y: y - 6 });
+    lbl.textContent = val.toFixed(2);
+    svg.appendChild(lbl);
+  });
+  const gl = el('text', { class: 'group-label', x: groupX + (barW * SERIES.length) / 2, y: H - marginB + 24, 'text-anchor': 'middle' });
+  gl.textContent = m.label;
+  svg.appendChild(gl);
+});
+
+const EPOCHS = [
+  { epoch: 1, loss: 0.9517, r1: 0.3333, best: true },
+  { epoch: 2, loss: 0.7210, r1: 0.2833 },
+  { epoch: 3, loss: 0.5365, r1: 0.3000 },
+  { epoch: 4, loss: 0.4108, r1: 0.2000 },
+  { epoch: 5, loss: 0.3501, r1: 0.2333 },
+];
+
+function drawLineChart(svgId, key, color, opts) {
+  const svg = document.getElementById(svgId);
+  const W = 360, H = 220;
+  const marginL = 34, marginR = 14, marginT = 16, marginB = 30;
+  const plotW = W - marginL - marginR, plotH = H - marginT - marginB;
+  const values = EPOCHS.map(e => e[key]);
+  const vMax = (opts && opts.max) || Math.max(...values) * 1.15;
+  const vMin = 0;
+  function xFor(i) { return marginL + (i / (EPOCHS.length - 1)) * plotW; }
+  function yFor(v) { return marginT + plotH * (1 - (v - vMin) / (vMax - vMin)); }
+
+  svg.setAttribute('viewBox', `0 0 ${W} ${H}`);
+  svg.innerHTML = '';
+
+  [0, 0.5, 1].forEach(f => {
+    const v = vMin + f * (vMax - vMin);
+    const y = yFor(v);
+    svg.appendChild(el('line', { class: 'gridline', x1: marginL, x2: W - marginR, y1: y, y2: y }));
+    const t = el('text', { class: 'axis-label', x: marginL - 6, y: y + 4, 'text-anchor': 'end' });
+    t.textContent = v.toFixed(2);
+    svg.appendChild(t);
+  });
+
+  const points = EPOCHS.map((e, i) => [xFor(i), yFor(e[key])]);
+  const d = points.map((p, i) => (i === 0 ? 'M' : 'L') + p[0].toFixed(1) + ',' + p[1].toFixed(1)).join(' ');
+  svg.appendChild(el('path', { class: 'line-path', d, stroke: color }));
+
+  EPOCHS.forEach((e, i) => {
+    const [x, y] = points[i];
+    const isBest = key === 'r1' && e.best;
+    const dot = el('circle', {
+      class: 'line-dot' + (isBest ? ' best' : ''), cx: x, cy: y, r: isBest ? 5 : 3.5, fill: color,
+    });
+    dot.addEventListener('mousemove', ev => {
+      tooltip.style.display = 'block';
+      tooltip.innerHTML = `<b>Epoch ${e.epoch}</b>${isBest ? ' (checkpoint kept)' : ''}<br>${key === 'loss' ? 'Loss' : 'Dev recall@1'}: <b>${e[key].toFixed(4)}</b>`;
+      tooltip.style.left = (ev.clientX + 14) + 'px';
+      tooltip.style.top = (ev.clientY + 14) + 'px';
+    });
+    dot.addEventListener('mouseleave', () => { tooltip.style.display = 'none'; });
+    svg.appendChild(dot);
+
+    const lbl = el('text', { class: 'line-label', x, y: H - marginB + 18 });
+    lbl.textContent = `E${e.epoch}`;
+    svg.appendChild(lbl);
+  });
+}
+
+drawLineChart('chart-loss', 'loss', cssVar('--series-4'));
+drawLineChart('chart-devr1', 'r1', cssVar('--series-4'), { max: 0.4 });
+</script>

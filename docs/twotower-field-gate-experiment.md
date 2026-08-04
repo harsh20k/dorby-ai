@@ -121,3 +121,5 @@ the query-weighting trick on a normally-trained shared model — especially
 voyage-4-large's query-only arm (recall@1 0.42,
 `docs/query-weighted-encoding-experiment.md`) — remains the strongest,
 cheapest lever found in this project.
+
+Published artifact: https://claude.ai/code/artifact/b4183e40-2971-4fa6-b4e9-e415ed2143d7
