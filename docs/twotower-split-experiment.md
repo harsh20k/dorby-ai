@@ -103,3 +103,5 @@ project stands: the query-weighting trick on a normally-trained shared model
 (`docs/query-weighted-encoding-experiment.md`, voyage-4-large's 0.42 R@1
 extension) remains the best lever found, cheaper and stronger than every
 training-architecture variant tried against it.
+
+Published artifact: https://claude.ai/code/artifact/18e56189-7715-4303-b42b-1cc98abdbdc2
