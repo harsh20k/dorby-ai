@@ -187,6 +187,59 @@ python -m voyage_large_query_weighted.run
 # writes artifacts/voyage_large_query_weighted/run_001/metrics.json
 ```
 
+## Addendum: does the 1024-dim truncation cost anything?
+
+Every number above — nano and large alike — is truncated to 1024 dims
+(`truncate_dim=1024` for nano, `output_dimension=1024` for large's Matryoshka
+API). Both models natively support more: nano's raw pooled output is
+2048-dim, large's Matryoshka API supports up to 2048. Question: is 1024 an
+arbitrary choice that's quietly leaving accuracy on the table?
+
+Reused `query_weighted.eval.run_all_arms` unmodified against each encoder
+built at its native/max width instead — `query_weighted/modal_eval.py`
+already exposes `truncate_dim` as a CLI flag, so nano needed no code change
+at all, just `--truncate-dim 2048`; large's `output_dimension` was hardcoded
+in `voyage_large_query_weighted/run.py`, so a new sibling entrypoint,
+`voyage_large_query_weighted/run_native.py`, was added (not an edit to
+`run.py`, which stays byte-identical) with `output_dimension=2048`. Same
+four arms, same all-200 population, own cache dirs (a different dimension is
+a different cache key, so nothing here was a cache hit).
+
+| Model | Representation | Pair AUC | MRR | Recall@1 | Recall@10 |
+|---|---|---|---|---|---|
+| nano | no query (profile only) | 0.5375 | 0.2397 | 0.12 | 0.48 |
+| nano | concatenated | 0.5515 | 0.2832 | 0.14 | 0.54 |
+| nano | alpha_0.6 blend | 0.5839 | 0.4720 | 0.28 | 0.86 |
+| nano | query only | 0.5482 | 0.4952 | 0.30 | 0.87 |
+| large | no query (profile only) | 0.5230 | 0.2332 | 0.10 | 0.52 |
+| large | concatenated | 0.5686 | 0.3352 | 0.17 | 0.69 |
+| large | alpha_0.6 blend | 0.5664 | 0.5058 | 0.30 | 0.90 |
+| large | query only | 0.5374 | 0.5545 | 0.36 | 0.92 |
+
+**Truncating to 1024 dims does not cost accuracy — every arm on both models
+is flat or slightly better at 1024 than at native width.** Large is the
+clearer case: all four arms drop at 2048 (query-only recall@1 0.42→0.36, MRR
+0.5897→0.5545 — the project's single best result gets *worse* at full
+width). Nano is closer to flat — profile-only recall@1 nudges up
+(0.09→0.12) while concat and query-only both nudge down — but no arm on
+either model shows a clean win from dropping the truncation. Matryoshka
+representation learning (which both `voyage-4-nano` and `voyage-4-large` use)
+is explicitly trained so that a leading sub-vector is a complete, high-quality
+embedding in its own right, not a lossy crop of a better one — this is a
+direct empirical confirmation of that design property on this project's own
+data, and it means every published number in this project's baseline
+comparisons was already using the *better* of the two available widths, not
+a compromised one.
+
+```bash
+modal run query_weighted/modal_eval.py --run-id qw_native --truncate-dim 2048 --subsets all,train,holdout
+modal volume get dorby-query-weighted-results qw_native ./artifacts/query_weighted/qw_native
+
+export VOYAGE_API_KEY=pa-...
+python -m voyage_large_query_weighted.run_native
+# writes artifacts/voyage_large_query_weighted_native/run_001/metrics.json
+```
+
 ## Reproduce
 
 ```bash

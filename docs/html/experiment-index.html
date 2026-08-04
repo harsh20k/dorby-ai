@@ -1,0 +1,535 @@
+<title>Dorby AI — Experiment Index</title>
+<style>
+  :root {
+    --ground: #f5f3ee;
+    --ground-raised: #ebe8e0;
+    --ink: #1b1c19;
+    --ink-soft: #52544d;
+    --ink-faint: #8a8c82;
+    --line: rgba(27,28,25,0.12);
+    --line-strong: rgba(27,28,25,0.22);
+    --copper: #a85a2e;
+    --copper-soft: rgba(168,90,46,0.14);
+    --teal: #2f6f68;
+    --teal-soft: rgba(47,111,104,0.14);
+    --amber: #a8791f;
+    --amber-soft: rgba(168,121,31,0.16);
+    --shadow: 0 1px 2px rgba(27,28,25,0.06);
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --ground: #0c0d0b;
+      --ground-raised: #15160f;
+      --ink: #ece9df;
+      --ink-soft: #a9a99a;
+      --ink-faint: #6c6d61;
+      --line: rgba(236,233,223,0.10);
+      --line-strong: rgba(236,233,223,0.20);
+      --copper: #e0925a;
+      --copper-soft: rgba(224,146,90,0.14);
+      --teal: #6cbdb2;
+      --teal-soft: rgba(108,189,178,0.14);
+      --amber: #d8ac52;
+      --amber-soft: rgba(216,172,82,0.16);
+      --shadow: 0 1px 2px rgba(0,0,0,0.4);
+    }
+  }
+  :root[data-theme="dark"] {
+    --ground: #0c0d0b;
+    --ground-raised: #15160f;
+    --ink: #ece9df;
+    --ink-soft: #a9a99a;
+    --ink-faint: #6c6d61;
+    --line: rgba(236,233,223,0.10);
+    --line-strong: rgba(236,233,223,0.20);
+    --copper: #e0925a;
+    --copper-soft: rgba(224,146,90,0.14);
+    --teal: #6cbdb2;
+    --teal-soft: rgba(108,189,178,0.14);
+    --amber: #d8ac52;
+    --amber-soft: rgba(216,172,82,0.16);
+    --shadow: 0 1px 2px rgba(0,0,0,0.4);
+  }
+  :root[data-theme="light"] {
+    --ground: #f5f3ee;
+    --ground-raised: #ebe8e0;
+    --ink: #1b1c19;
+    --ink-soft: #52544d;
+    --ink-faint: #8a8c82;
+    --line: rgba(27,28,25,0.12);
+    --line-strong: rgba(27,28,25,0.22);
+    --copper: #a85a2e;
+    --copper-soft: rgba(168,90,46,0.14);
+    --teal: #2f6f68;
+    --teal-soft: rgba(47,111,104,0.14);
+    --amber: #a8791f;
+    --amber-soft: rgba(168,121,31,0.16);
+    --shadow: 0 1px 2px rgba(27,28,25,0.06);
+  }
+
+  * { box-sizing: border-box; }
+  html, body {
+    margin: 0;
+    background: var(--ground);
+    color: var(--ink);
+    font-family: -apple-system, "SF Pro Display", "Inter", ui-sans-serif, system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+  body { padding: 0 0 6rem; }
+
+  .mono {
+    font-family: ui-monospace, "SF Mono", "Menlo", "Cascadia Code", monospace;
+    font-variant-numeric: tabular-nums;
+  }
+
+  /* ---------- header ---------- */
+  header {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background: color-mix(in srgb, var(--ground) 88%, transparent);
+    backdrop-filter: blur(14px) saturate(1.1);
+    -webkit-backdrop-filter: blur(14px) saturate(1.1);
+    border-bottom: 1px solid var(--line);
+  }
+  .header-inner {
+    max-width: 920px;
+    margin: 0 auto;
+    padding: 1.1rem 1.5rem;
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+  .brand {
+    display: flex;
+    align-items: baseline;
+    gap: 0.6rem;
+  }
+  .brand-mark {
+    font-size: 0.72rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--copper);
+    font-weight: 600;
+  }
+  .brand-title {
+    font-size: 1.02rem;
+    font-weight: 650;
+    letter-spacing: -0.01em;
+  }
+  .header-stats {
+    display: flex;
+    gap: 1.1rem;
+    font-size: 0.78rem;
+    color: var(--ink-faint);
+  }
+  .header-stats b { color: var(--ink-soft); font-weight: 600; }
+
+  /* ---------- hero ---------- */
+  .hero {
+    max-width: 920px;
+    margin: 0 auto;
+    padding: 3rem 1.5rem 2rem;
+  }
+  .hero h1 {
+    font-size: clamp(1.7rem, 4vw, 2.35rem);
+    line-height: 1.12;
+    margin: 0 0 0.7rem;
+    font-weight: 680;
+    letter-spacing: -0.02em;
+    text-wrap: balance;
+    max-width: 30ch;
+  }
+  .hero p {
+    font-size: 0.98rem;
+    color: var(--ink-soft);
+    max-width: 62ch;
+    line-height: 1.55;
+    margin: 0 0 1.4rem;
+  }
+  .legend {
+    display: flex;
+    gap: 0.6rem;
+    flex-wrap: wrap;
+  }
+  .pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.28rem 0.62rem;
+    border-radius: 100px;
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    white-space: nowrap;
+  }
+  .pill-dot { width: 6px; height: 6px; border-radius: 50%; flex: none; }
+  .pill.published { background: var(--copper-soft); color: var(--copper); }
+  .pill.published .pill-dot { background: var(--copper); }
+  .pill.local { background: var(--teal-soft); color: var(--teal); }
+  .pill.local .pill-dot { background: var(--teal); }
+  .pill.both { background: var(--amber-soft); color: var(--amber); }
+  .pill.both .pill-dot { background: var(--amber); }
+
+  /* ---------- filter bar ---------- */
+  .filters {
+    max-width: 920px;
+    margin: 0 auto;
+    padding: 0 1.5rem 1.6rem;
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+  }
+  .filter-btn {
+    appearance: none;
+    border: 1px solid var(--line-strong);
+    background: transparent;
+    color: var(--ink-soft);
+    padding: 0.4rem 0.85rem;
+    border-radius: 100px;
+    font-size: 0.76rem;
+    font-weight: 550;
+    cursor: pointer;
+    transition: background 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+    font-family: inherit;
+  }
+  .filter-btn:hover { border-color: var(--ink-faint); }
+  .filter-btn:focus-visible { outline: 2px solid var(--copper); outline-offset: 2px; }
+  .filter-btn.active {
+    background: var(--ink);
+    color: var(--ground);
+    border-color: var(--ink);
+  }
+
+  /* ---------- timeline ---------- */
+  main {
+    max-width: 920px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+  }
+  .day {
+    display: grid;
+    grid-template-columns: 108px 1fr;
+    gap: 1.4rem;
+    padding: 2.1rem 0 0.4rem;
+  }
+  .day-date {
+    position: sticky;
+    top: 4.2rem;
+    align-self: start;
+    font-size: 0.76rem;
+    color: var(--ink-faint);
+    padding-top: 0.15rem;
+  }
+  .day-date .y { display: block; color: var(--ink-faint); }
+  .day-date .md { display: block; font-size: 1.02rem; color: var(--ink); font-weight: 650; letter-spacing: -0.01em; margin-top: 0.1rem; }
+
+  .day-items {
+    border-top: 1px solid var(--line);
+    padding-top: 0.2rem;
+  }
+
+  .item {
+    padding: 1rem 0;
+    border-bottom: 1px solid var(--line);
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 0.8rem 1rem;
+    align-items: start;
+  }
+  .item:last-child { border-bottom: none; }
+
+  .item-main { min-width: 0; }
+  .item-title-row {
+    display: flex;
+    align-items: center;
+    gap: 0.55rem;
+    flex-wrap: wrap;
+    margin-bottom: 0.28rem;
+  }
+  .item-title {
+    font-size: 0.98rem;
+    font-weight: 620;
+    letter-spacing: -0.005em;
+  }
+  .item-desc {
+    font-size: 0.87rem;
+    color: var(--ink-soft);
+    line-height: 1.5;
+    max-width: 58ch;
+  }
+  .badge {
+    font-size: 0.62rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    padding: 0.13rem 0.4rem;
+    border-radius: 4px;
+    flex: none;
+  }
+  .badge.published { background: var(--copper-soft); color: var(--copper); }
+  .badge.local { background: var(--teal-soft); color: var(--teal); }
+  .badge.both { background: var(--amber-soft); color: var(--amber); }
+  .badge.note { background: transparent; color: var(--ink-faint); border: 1px dashed var(--line-strong); }
+
+  .item-links {
+    display: flex;
+    gap: 0.45rem;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    align-self: start;
+  }
+  .link-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.32rem;
+    font-size: 0.74rem;
+    font-weight: 600;
+    padding: 0.36rem 0.7rem;
+    border-radius: 7px;
+    border: 1px solid var(--line-strong);
+    color: var(--ink);
+    text-decoration: none;
+    white-space: nowrap;
+    transition: background 0.15s ease, border-color 0.15s ease, transform 0.1s ease;
+  }
+  .link-btn:hover { background: var(--ground-raised); border-color: var(--ink-faint); }
+  .link-btn:active { transform: translateY(1px); }
+  .link-btn:focus-visible { outline: 2px solid var(--copper); outline-offset: 2px; }
+  .link-btn svg { width: 11px; height: 11px; flex: none; }
+  .link-btn.pub { border-color: color-mix(in srgb, var(--copper) 45%, var(--line-strong)); }
+  .link-btn.loc { border-color: color-mix(in srgb, var(--teal) 45%, var(--line-strong)); }
+
+  .item.hidden { display: none; }
+  .day.hidden { display: none; }
+
+  /* ---------- footer ---------- */
+  footer {
+    max-width: 920px;
+    margin: 2.5rem auto 0;
+    padding: 1.6rem 1.5rem 0;
+    border-top: 1px solid var(--line);
+    font-size: 0.78rem;
+    color: var(--ink-faint);
+    line-height: 1.6;
+  }
+  footer code {
+    font-family: ui-monospace, "SF Mono", Menlo, monospace;
+    background: var(--ground-raised);
+    padding: 0.1rem 0.35rem;
+    border-radius: 4px;
+    font-size: 0.85em;
+  }
+
+  @media (max-width: 640px) {
+    .day { grid-template-columns: 1fr; gap: 0.3rem; }
+    .day-date { position: static; display: flex; align-items: baseline; gap: 0.4rem; }
+    .day-date .y { display: inline; }
+    .day-date .md { display: inline; margin-top: 0; }
+    .item { grid-template-columns: 1fr; }
+    .item-links { justify-content: flex-start; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    * { transition: none !important; }
+  }
+</style>
+
+<header>
+  <div class="header-inner">
+    <div class="brand">
+      <span class="brand-mark">Dorby AI</span>
+      <span class="brand-title">Experiment Index</span>
+    </div>
+    <div class="header-stats">
+      <span><b id="stat-total">—</b> items</span>
+      <span><b>2026-07-20</b> → <b>2026-08-04</b></span>
+    </div>
+  </div>
+</header>
+
+<div class="hero">
+  <h1>Every visualization this project has produced.</h1>
+  <p>
+    Published Claude artifacts and local self-contained HTML files, in one
+    chronological list — most recent first. Local files open directly from
+    this machine's checkout at <code class="mono" style="font-size:0.85em">/Users/harsh/Artifacts/dorby-ai/docs/html/</code>;
+    published links work from any device but stay private unless shared.
+  </p>
+  <div class="legend">
+    <span class="pill published"><span class="pill-dot"></span>Published only</span>
+    <span class="pill local"><span class="pill-dot"></span>Local only</span>
+    <span class="pill both"><span class="pill-dot"></span>Both</span>
+  </div>
+</div>
+
+<div class="filters" id="filters">
+  <button class="filter-btn active" data-filter="all">All</button>
+  <button class="filter-btn" data-filter="published">Published</button>
+  <button class="filter-btn" data-filter="local">Local</button>
+  <button class="filter-btn" data-filter="both">Both</button>
+</div>
+
+<main id="main"></main>
+
+<footer>
+  Built from <code>docs/experiment-graphs-index.md</code> and the live
+  <code>Artifact</code> listing (29 published pages, checked 2026-08-04).
+  Local <code>file://</code> links are pinned to this checkout's path and
+  won't resolve on another machine — use <code>open docs/html/&lt;file&gt;.html</code> there instead.
+</footer>
+
+<script>
+const REPO = "/Users/harsh/Artifacts/dorby-ai/docs/html/";
+
+// { date: "YYYY-MM-DD", title, desc, type: 'published'|'local'|'both'|'note', pub: url|null, loc: filename|null }
+const DATA = [
+  { date:"2026-08-04", title:"Field-Gate Two-Tower", desc:"A learned gate combining query + lookingFor + positioning is the worst of four approaches on every retrieval metric.", type:"both", pub:"https://claude.ai/code/artifact/b4183e40-2971-4fa6-b4e9-e415ed2143d7", loc:"twotower-field-gate-experiment.html" },
+  { date:"2026-08-04", title:"Split Two-Tower", desc:"Two separate LoRA adapters (query + candidate towers) underperform one shared model on every retrieval metric; hard-negative AUC drops below chance.", type:"both", pub:"https://claude.ai/code/artifact/18e56189-7715-4303-b42b-1cc98abdbdc2", loc:"twotower-split-experiment.html" },
+  { date:"2026-08-04", title:"Does Training Text Matter?", desc:"Training on profile-only or query-only text lands within noise of just swapping text at eval time; voyage-4-large's query-only arm hits the project's best recall@1 (0.42).", type:"both", pub:"https://claude.ai/code/artifact/8d467198-ce99-4dc1-9008-a0f4910ecf8c", loc:"twotower-no-query-comparison.html" },
+
+  { date:"2026-08-03", title:"Query-Weighted Topology — Frozen vs Fine-Tuned", desc:"3D embedding graph of 200 real pairs, frozen vs fine-tuned encoders, direct vs query-mediated edges, click any node for its full profile.", type:"both", pub:"https://claude.ai/code/artifact/a7787d14-b5c0-415a-bce6-8f629d63e865", loc:"query-weighted-topology.html" },
+  { date:"2026-08-03", title:"Judge Prompt Evolution — evo_001 → evo_009", desc:"Nine automatic LLM-judge prompt optimizations; evo_006 nearly closes the gap to naive, none beat it.", type:"published", pub:"https://claude.ai/code/artifact/1e089702-6f90-4676-98e4-6c7e69813119" },
+
+  { date:"2026-07-31", title:"The profile is drowning the ask", desc:"Query-only weighted encoding lifts recall@1 from 18% to 30% with zero training.", type:"both", pub:"https://claude.ai/code/artifact/298450c8-6d05-4ad3-8339-1741e63325f5", loc:"query-weighted-encoding.html" },
+  { date:"2026-07-31", title:"Where the 69-pair holdout stops working", desc:"14 models re-scored on all 200 pairs; retracts the Qwen3-beats-Voyage claim.", type:"both", pub:"https://claude.ai/code/artifact/6e59f7a8-ef20-4c6e-839a-9922db7f6be7", loc:"all-200-baseline-sweep.html" },
+  { date:"2026-07-31", title:"Sectioned MoE — findings", desc:"Per-ask mixture-of-experts beats logistic regression, first replicated win.", type:"both", pub:"https://claude.ai/code/artifact/c0db4c11-4998-4a11-ba67-b31039618a97", loc:"moe-sectioned-findings.html" },
+  { date:"2026-07-31", title:"Per-ask MoE — pre-experiment plan", desc:"Proposal for sectioned MoE, kept unedited as an audit trail against outcomes.", type:"local", loc:"moe-sectioned-plan.html" },
+
+  { date:"2026-07-30", title:"Chasing recall@1", desc:"Loss sharpening backfired; fixing checkpoint selection won the best MRR yet.", type:"both", pub:"https://claude.ai/code/artifact/6caec2cf-5434-462e-a29a-a55dd13018f1", loc:"twotower-top1-optimised.html" },
+  { date:"2026-07-30", title:"Does the fine-tune hold up on all 200 real pairs?", desc:"Holdout gains don't generalize, but hard-negative AUC improves everywhere.", type:"both", pub:"https://claude.ai/code/artifact/d807fdd2-afe5-40ad-bafa-04423b9ccf87", loc:"eval-real-full-200pairs.html" },
+  { date:"2026-07-30", title:"Qwen3-8B at a real micro-batch", desc:"Micro-batch effect replicates at 22x scale; holdout flattered Qwen ~4x.", type:"both", pub:"https://claude.ai/code/artifact/f9283fec-b9dd-46f1-846f-9280523feb18", loc:"twotower-qwen-bigbatch.html" },
+  { date:"2026-07-30", title:"Which Lever Actually Worked?", desc:"2×2 ablation isolates micro-batch size from duplicate-negative harm.", type:"both", pub:"https://claude.ai/code/artifact/4ab4000d-f7a6-4477-8a2e-3b578da25cdc", loc:"twotower-ablation-verdict.html" },
+  { date:"2026-07-30", title:"Arm A — bigger batch only", desc:"Winning ablation cell: micro-batch 6, single negative per anchor.", type:"both", pub:"https://claude.ai/code/artifact/9dcd8dc1-97ba-4183-b77b-717380d1966b", loc:"twotower-abl-a-batch-only.html" },
+  { date:"2026-07-30", title:"Training the MoE on 2,619 synthetic pairs", desc:"Synthetic labels don't transfer; plain logistic regression still wins.", type:"both", pub:"https://claude.ai/code/artifact/9f8af37b-d294-43db-bf14-229df33a48d2", loc:"moe-rrf003-synthetic-training.html" },
+  { date:"2026-07-30", title:"Project story", desc:"Scroll-driven chronological walkthrough of the whole project, hosted on S3.", type:"local", loc:"project-story.html", note:"S3-hosted, not a Claude artifact" },
+
+  { date:"2026-07-29", title:"Bigger Batch, More Negatives", desc:"Closes recall@1 to match Voyage-large, at the cost of pair AUC.", type:"both", pub:"https://claude.ai/code/artifact/6d2ea3d7-0f90-42b6-ac2e-ac807dcaedb1", loc:"twotower-rrf-triplet-bigbatch-comparison.html" },
+  { date:"2026-07-29", title:"Arm C — baseline corner", desc:"Reference ablation cell every other arm's effect is measured against.", type:"both", pub:"https://claude.ai/code/artifact/d2407099-83f8-4e65-a5a3-f8125ae57381", loc:"twotower-abl-c-baseline.html" },
+  { date:"2026-07-29", title:"Arm B — more negatives only", desc:"Worst ablation cell; duplicate negatives collapse dev accuracy after epoch 3.", type:"both", pub:"https://claude.ai/code/artifact/187a3df4-362b-4373-98fe-0b34f00bbb61", loc:"twotower-abl-b-negs-only.html" },
+  { date:"2026-07-29", title:"Two-Tower Triplet Fine-Tune — Findings", desc:"Triplet loss raises pair AUC while retrieval recall@1 falls.", type:"both", pub:"https://claude.ai/code/artifact/3511253c-fb74-429e-820c-d30dbd8c4816", loc:"twotower-rrf-triplet-findings.html" },
+  { date:"2026-07-29", title:"MoE re-ranker over lookingFor — review", desc:"MMoE untestable at 111 pairs; temperature-sharpened gate beats veto shapes.", type:"local", loc:"moe-reranker-review.html" },
+
+  { date:"2026-07-27", title:"Knowledge-Graph Decomposition", desc:"One accepted, one declined real intro decomposed into merged concept graphs.", type:"both", pub:"https://claude.ai/code/artifact/af0a622e-ba61-488f-b999-cf555f61d2ac", loc:"knowledge-graph-experiment.html" },
+  { date:"2026-07-27", title:"Dorby AI — Framing & Experiment Proposal", desc:"Objective framing deck for the project; predates the 200-pair evaluation.", type:"published", pub:"https://claude.ai/code/artifact/5aed8e2e-a4e4-4c2d-adbc-500c307f855a" },
+
+  { date:"2026-07-26", title:"Which fields carry a person's identity?", desc:"Isolated fields spread 2.3x from the profile; scheduling fields carry no identity.", type:"both", pub:"https://claude.ai/code/artifact/c3daa30f-4b68-4312-ba4b-8e69e4c77550", loc:"holdout-field-isolation-embedding-space-3d.html" },
+  { date:"2026-07-26", title:"Synthetic Pair Pipeline — Proposed Flow", desc:"Diagram of the generate → filter → judge → stage synthetic pipeline.", type:"published", pub:"https://claude.ai/code/artifact/5455a3ec-2c0f-4926-8e08-bc705868a6cf" },
+  { date:"2026-07-26", title:"LLM judge: does forcing multi-aspect CoT help?", desc:"Structured six-aspect scoring loses to naive yes/no on every metric.", type:"local", loc:"llm-judge-comparison.html" },
+  { date:"2026-07-26", title:"Distillation: judge soft labels vs. hard 0/1", desc:"No HTML — soft-label distillation beat every two-tower run on pair AUC.", type:"note" },
+
+  { date:"2026-07-25", title:"LLM judge vs. embedding baselines", desc:"Naive judge beats Voyage-large on hard negatives, never sees the query.", type:"published", pub:"https://claude.ai/code/artifact/12f8f93b-8fc4-41e5-bc13-b05ce8ab45fa" },
+  { date:"2026-07-25", title:"Query-Time Nudge vs. Joint Encoding", desc:"Comparison of query-conditioning strategies against joint profile encoding.", type:"published", pub:"https://claude.ai/code/artifact/d491b7db-0db8-458a-8148-78001c084e30" },
+  { date:"2026-07-25", title:"Holdout contacts in voyage-4-nano space", desc:"3D PCA map of 69 holdout contacts, whole-profile vs. sectioned embeddings.", type:"both", pub:"https://claude.ai/code/artifact/5bf01ecd-0731-4f7e-93f3-ee74f8688e21", loc:"holdout-embedding-space-3d.html" },
+
+  { date:"2026-07-24", title:"Does splitting lookingFor into sections help matching?", desc:"4 sectioning experiments — candidate-side loses, seeker-side wins.", type:"both", pub:"https://claude.ai/code/artifact/3ec8c0da-9ba1-4de9-b52d-b057507b6163", loc:"lookingfor-sectioning-findings.md" },
+  { date:"2026-07-24", title:"Pairs graph — Boardy AI", desc:"Dual-pane real-vs-synthetic pairing graph, published via a share fragment.", type:"published", pub:"https://claude.ai/code/artifact/642d0a82-7784-4843-b0ad-5686cf7db24c" },
+  { date:"2026-07-24", title:"Real pairs graph — Boardy AI", desc:"Early real-only single-pane build, predates the batch comparison series.", type:"published", pub:"https://claude.ai/code/artifact/ac74ea3a-912d-407a-a040-74d8c62d1edd" },
+  { date:"2026-07-24", title:"Dual-pane graph — Hub routing smoke test", desc:"3-profile check that LangSmith Hub prompt routing is behavior-neutral.", type:"local", loc:"pairs-comparison-graph-hub-test.html" },
+  { date:"2026-07-24", title:"Dual-pane graph — reference examples dropped", desc:"5-profile batch after removing redundant generation reference examples.", type:"local", loc:"pairs-comparison-graph-no-refex.html" },
+  { date:"2026-07-24", title:"Dual-pane graph — disjoint split", desc:"Same 5 profiles re-paired with a disjoint seeker/candidate split + cap.", type:"local", loc:"pairs-comparison-graph-disjoint.html" },
+  { date:"2026-07-24", title:"Dual-pane graph — name collision fixed", desc:"10-profile batch, first with the name/company collision fix, 10/10 unique.", type:"local", loc:"pairs-comparison-graph-named.html" },
+  { date:"2026-07-24", title:"Real-pairs force graph — TF-IDF cluster", desc:"Force-directed real-pairs graph with a TF-IDF similarity spring added.", type:"local", loc:"real-pairs-tfidf-cluster.html" },
+  { date:"2026-07-24", title:"Real-pairs force graph — Voyage lookingFor cluster", desc:"Same graph with a voyage-4-large lookingFor similarity force instead.", type:"local", loc:"real-pairs-voyage-lookingfor-cluster.html" },
+  { date:"2026-07-24", title:"Real-pairs PCA scatter — TF-IDF", desc:"Static PCA/SVD scatter, no physics — TF-IDF explains 1.67% of variance.", type:"local", loc:"real-pairs-tfidf-pca.html" },
+  { date:"2026-07-24", title:"Real-pairs PCA scatter — Voyage lookingFor", desc:"Static PCA scatter, voyage-4-large lookingFor — 12.9% variance explained.", type:"local", loc:"real-pairs-voyage-lookingfor-pca.html" },
+  { date:"2026-07-24", title:"Real-pairs 3D PCA scatter", desc:"Hand-rolled canvas projector, 3 PCA components, 17.3% cumulative variance.", type:"local", loc:"real-pairs-voyage-lookingfor-3d-pca.html" },
+  { date:"2026-07-24", title:"Real-pairs 3D manifold — PCA / t-SNE / UMAP", desc:"Three layouts of the same embeddings behind one instant selector.", type:"local", loc:"real-pairs-voyage-lookingfor-3d-manifold.html" },
+
+  { date:"2026-07-23", title:"Dual-pane graph — first build", desc:"First dual-pane build; established the topology-mismatch finding.", type:"local", loc:"pairs-comparison-graph.html" },
+
+  { date:"2026-07-20", title:"Holdout comparison browser — Dorby AI", desc:"Browser for the matched-holdout baseline comparison table.", type:"both", pub:"https://claude.ai/code/artifact/95beeed4-9a3d-4a79-906d-cf2d24d0457f", loc:"baseline-results-holdout-browser.html" },
+];
+
+const iconExternal = `<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M6 3H3v10h10v-3M9 3h4v4M13 3 7 9"/></svg>`;
+const iconFolder = `<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M2 4.5a1 1 0 0 1 1-1h3l1.4 1.6H13a1 1 0 0 1 1 1V12a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V4.5Z"/></svg>`;
+
+function badgeLabel(type){
+  if(type==="published") return "Published";
+  if(type==="local") return "Local";
+  if(type==="both") return "Local + Published";
+  return "Note";
+}
+
+function monthDay(iso){
+  const d = new Date(iso+"T00:00:00");
+  return d.toLocaleDateString("en-US",{month:"short",day:"numeric"});
+}
+function yearOf(iso){ return iso.slice(0,4); }
+
+const grouped = [];
+let cur = null;
+for(const d of DATA){
+  if(!cur || cur.date !== d.date){ cur = {date:d.date, items:[]}; grouped.push(cur); }
+  cur.items.push(d);
+}
+
+const main = document.getElementById("main");
+document.getElementById("stat-total").textContent = DATA.length;
+
+for(const g of grouped){
+  const day = document.createElement("section");
+  day.className = "day";
+  day.dataset.types = [...new Set(g.items.map(i=>i.type))].join(" ");
+
+  const dateCol = document.createElement("div");
+  dateCol.className = "day-date mono";
+  dateCol.innerHTML = `<span class="y">${yearOf(g.date)}</span><span class="md">${monthDay(g.date)}</span>`;
+
+  const itemsCol = document.createElement("div");
+  itemsCol.className = "day-items";
+
+  for(const it of g.items){
+    const row = document.createElement("div");
+    row.className = "item";
+    row.dataset.type = it.type;
+
+    const main2 = document.createElement("div");
+    main2.className = "item-main";
+    main2.innerHTML = `
+      <div class="item-title-row">
+        <span class="item-title">${it.title}</span>
+        <span class="badge ${it.type}">${badgeLabel(it.type)}</span>
+      </div>
+      <div class="item-desc">${it.desc}${it.note ? ` <span class="mono" style="color:var(--ink-faint)">— ${it.note}</span>` : ""}</div>
+    `;
+
+    const links = document.createElement("div");
+    links.className = "item-links";
+    if(it.pub){
+      links.innerHTML += `<a class="link-btn pub" href="${it.pub}" target="_blank" rel="noopener">${iconExternal}Published</a>`;
+    }
+    if(it.loc){
+      links.innerHTML += `<a class="link-btn loc" href="file://${REPO}${it.loc}" target="_blank" rel="noopener">${iconFolder}${it.loc}</a>`;
+    }
+
+    row.appendChild(main2);
+    row.appendChild(links);
+    itemsCol.appendChild(row);
+  }
+
+  day.appendChild(dateCol);
+  day.appendChild(itemsCol);
+  main.appendChild(day);
+}
+
+document.getElementById("filters").addEventListener("click", (e)=>{
+  const btn = e.target.closest(".filter-btn");
+  if(!btn) return;
+  document.querySelectorAll(".filter-btn").forEach(b=>b.classList.remove("active"));
+  btn.classList.add("active");
+  const f = btn.dataset.filter;
+  document.querySelectorAll(".day").forEach(day=>{
+    let anyVisible = false;
+    day.querySelectorAll(".item").forEach(item=>{
+      const show = f==="all" || item.dataset.type===f || (f==="both" && item.dataset.type==="both");
+      item.classList.toggle("hidden", !show);
+      if(show) anyVisible = true;
+    });
+    day.classList.toggle("hidden", !anyVisible);
+  });
+});
+</script>
