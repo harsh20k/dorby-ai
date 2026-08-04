@@ -377,7 +377,7 @@
 
 <footer>
   Built from <code>docs/experiment-graphs-index.md</code> and the live
-  <code>Artifact</code> listing (29 published pages, checked 2026-08-04).
+  <code>Artifact</code> listing (30 published pages, checked 2026-08-04).
   Local <code>file://</code> links are pinned to this checkout's path and
   won't resolve on another machine — use <code>open docs/html/&lt;file&gt;.html</code> there instead.
 </footer>
@@ -385,8 +385,10 @@
 <script>
 const REPO = "/Users/harsh/Artifacts/dorby-ai/docs/html/";
 
-// { date: "YYYY-MM-DD", title, desc, type: 'published'|'local'|'both'|'note', pub: url|null, loc: filename|null }
+// { date: "YYYY-MM-DD", title, desc, type: 'published'|'local'|'both'|'note', pub: url|null, loc: filename|null, locFull: absolute file:// url|null }
 const DATA = [
+  { date:"2026-08-04", title:"KL-Regularized Two-Tower", desc:"A leash to the frozen base model stabilizes training but is a small net negative vs. top1_ctrl on all 200 pairs — the collapse it targets wasn't present in this recipe.", type:"both", pub:"https://claude.ai/code/artifact/62bb2021-7d76-41c3-b05e-3d257df0a236", loc:"twotower-kl-reg-experiment.html" },
+  { date:"2026-08-04", title:"RRF Pairing — Qwen3-32B Judge (25k pairs)", desc:"First batch anywhere in this project judged with Qwen3-32B on Bedrock instead of gemini-3.1-flash-lite; largest synthetic batch yet — 9,659 profiles, 25,445 judged pairs (14,749 pos / 10,696 neg), $46 all-in. Same base-rate leak as rrf_002, more pronounced at scale: seeker-identity alone predicts the label at 0.739 AUC.", type:"local", locFull:"file:///Users/harsh/Artifacts/dorby-ai/artifacts/pairing_rrf_qwen_judge/rrf_qwen_full_001/_browser.html" },
   { date:"2026-08-04", title:"Field-Gate Two-Tower", desc:"A learned gate combining query + lookingFor + positioning is the worst of four approaches on every retrieval metric.", type:"both", pub:"https://claude.ai/code/artifact/b4183e40-2971-4fa6-b4e9-e415ed2143d7", loc:"twotower-field-gate-experiment.html" },
   { date:"2026-08-04", title:"Split Two-Tower", desc:"Two separate LoRA adapters (query + candidate towers) underperform one shared model on every retrieval metric; hard-negative AUC drops below chance.", type:"both", pub:"https://claude.ai/code/artifact/18e56189-7715-4303-b42b-1cc98abdbdc2", loc:"twotower-split-experiment.html" },
   { date:"2026-08-04", title:"Does Training Text Matter?", desc:"Training on profile-only or query-only text lands within noise of just swapping text at eval time; voyage-4-large's query-only arm hits the project's best recall@1 (0.42).", type:"both", pub:"https://claude.ai/code/artifact/8d467198-ce99-4dc1-9008-a0f4910ecf8c", loc:"twotower-no-query-comparison.html" },
@@ -502,7 +504,9 @@ for(const g of grouped){
     if(it.pub){
       links.innerHTML += `<a class="link-btn pub" href="${it.pub}" target="_blank" rel="noopener">${iconExternal}Published</a>`;
     }
-    if(it.loc){
+    if(it.locFull){
+      links.innerHTML += `<a class="link-btn loc" href="${it.locFull}" target="_blank" rel="noopener">${iconFolder}open local file</a>`;
+    } else if(it.loc){
       links.innerHTML += `<a class="link-btn loc" href="file://${REPO}${it.loc}" target="_blank" rel="noopener">${iconFolder}${it.loc}</a>`;
     }
 
