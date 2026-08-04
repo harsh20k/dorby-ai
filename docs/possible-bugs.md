@@ -353,3 +353,61 @@ deliberate pause per user decision, not a technical blocker. Re-run
 `scripts/check_synth_cheatability.py` against the full-scale regenerated
 batch once available to confirm the drop holds at scale before promoting
 it.
+
+## 5. `twotower.eval.evaluate_pairs` always includes the search query, even for a model trained without it
+
+**Where:** `twotower/data.py::LabeledPair.seeker_text` (hardcoded to
+`seeker_to_text(profile, searchQuery)`), consumed unconditionally by
+`twotower/eval.py::evaluate_pairs`, and therefore by every caller of that
+function — `eval_real_full/eval.py::run_eval`,
+`twotower_top1_optimised/train.py`'s in-training holdout eval, etc.
+
+**Found in:** `twotower_no_query/` — the first all-200 eval of
+`no_query_001` (an adapter trained on `profile_to_text` seeker text, no
+query anywhere in training) went through `eval_real_full.eval.run_eval` like
+every other adapter in this project, which built seeker text via
+`LabeledPair.seeker_text` — profile *plus* query, unconditionally. User
+caught this by inspection ("i think that is also using search query") before
+the result was written up as final.
+
+**What's wrong:** for every other adapter in this project (`run_001`,
+`arm_a_real_only`, the RRF triplet series, `top1_ctrl`), `seeker_text`
+correctly matches training — they all trained on profile+query concatenated,
+so evaluating on the same text is right. `no_query_001` is the first adapter
+whose training text diverges from `seeker_text`, and nothing in
+`evaluate_pairs` or its callers parameterizes seeker-text construction, so it
+silently fed the model out-of-distribution input (query tokens never seen in
+training) rather than raising or requiring an explicit override.
+
+**Impact measured:** re-scored `no_query_001` on seeker text that matches
+its training (`profile_to_text`, via `twotower_query_weighted.eval`'s
+already-published `profile_only` path, read-only reuse) instead of
+`evaluate_pairs`'s query-included text. All-200 real pairs:
+
+| Eval text | Pair AUC | Hard-neg AUC | MRR | Recall@1 | Recall@10 |
+|---|---|---|---|---|---|
+| Mismatched (`evaluate_pairs`, profile+query — the bug) | 0.5718 | 0.5550 | 0.3371 | 0.18 | 0.67 |
+| Matched (profile only, correct) | 0.5574 | 0.5374 | 0.2827 | 0.13 | 0.62 |
+
+The mismatched number is *higher* on every metric than the matched one — the
+model does slightly better on text it never trained on than on its own
+training distribution, most likely because the extra (unfamiliar) query
+tokens still add some lexical signal even unattended-to. Either way, the
+original write-up's headline number (R@1 0.18, "matches the untrained
+baseline") was not measuring what it claimed to measure. See
+`docs/twotower-no-query-experiment.md` for the corrected comparison and full
+discussion.
+
+**Suggested next step:** `twotower.eval.evaluate_pairs`/`LabeledPair` have no
+way to express "score this pair's seeker side without the query" — any future
+adapter trained on non-standard seeker text needs its own eval path (as
+`twotower_no_query/modal_eval_matched.py` now does by reusing
+`twotower_query_weighted.eval`) rather than the shared `evaluate_pairs`,
+until/unless a `seeker_text_variant` parameter is added there. Not fixing the
+shared function itself — every other published number in this project depends
+on its current unconditional query-inclusion being correct.
+
+**Status:** confirmed and worked around 2026-08-03 via a matched-distribution
+eval in `twotower_no_query/`; the shared `evaluate_pairs` function is
+unchanged (fixing it would need to become opt-in, not default, to avoid
+retroactively changing every prior published number).

@@ -14,7 +14,8 @@
     --series-1: #2a78d6;  /* top1_ctrl, trained with query (concat) */
     --series-2: #eb6834;  /* + eval-time query_only swap */
     --series-3: #1baf7a;  /* + eval-time alpha_0.6 blend */
-    --series-4: #eda100;  /* no_query_001, trained without query */
+    --series-4: #eda100;  /* top1_ctrl + eval-time profile_only swap */
+    --series-5: #e87ba4;  /* no_query_001, matched eval */
     --good: #006300;
     --critical: #d03b3b;
   }
@@ -33,6 +34,7 @@
       --series-2: #d95926;
       --series-3: #199e70;
       --series-4: #c98500;
+      --series-5: #d55181;
       --good: #0ca30c;
       --critical: #e66767;
     }
@@ -51,6 +53,7 @@
     --series-2: #d95926;
     --series-3: #199e70;
     --series-4: #c98500;
+    --series-5: #d55181;
     --good: #0ca30c;
     --critical: #e66767;
   }
@@ -137,17 +140,37 @@
       seeker text to <b>query-only</b> at eval time — with zero retraining —
       roughly doubles recall@1. This experiment retrains <b>top1_ctrl</b>'s exact
       recipe with the search query removed from training entirely, to see if
-      that eval-time trick is really just the model catching up to a signal it
-      already had. <b>It isn't</b> — the retrained model lands almost exactly at
-      the untrained baseline, the weakest of the four rows below.
+      that eval-time trick is really the model catching up to a signal it
+      already had. <b>It isn't, but not for the reason first thought</b> — a bug
+      meant the first eval fed the retrained model text it never trained on
+      (caught before publishing, see below). Corrected: training with or
+      without the query barely changes profile-only performance at all. What
+      actually moves the numbers is what's fed in at eval time, not training.
     </p>
   </header>
 
   <div class="card">
+    <h2>Bug: the first eval didn't match training</h2>
+    <p class="card-note"><code>eval_real_full.eval.run_eval</code> always builds seeker text as profile+query — correct for every other adapter in this project, wrong for <code>no_query_001</code>, which trained on profile-only text. Caught before this was published. Full writeup: <code>docs/possible-bugs.md</code> #5.</p>
+    <div class="reversal-grid">
+      <div class="reversal-box holdout">
+        <div class="rb-label">Mismatched eval (the bug)</div>
+        <div class="rb-row"><span>Recall@1</span><span class="v">0.1800</span></div>
+        <div class="rb-row"><span>MRR</span><span class="v">0.3371</span></div>
+      </div>
+      <div class="reversal-box all200">
+        <div class="rb-label">Matched eval (correct)</div>
+        <div class="rb-row"><span>Recall@1</span><span class="v">0.1300</span></div>
+        <div class="rb-row"><span>MRR</span><span class="v">0.2827</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
     <h2>All 200 real pairs</h2>
-    <p class="card-note">Four seeker representations on the fine-tuned voyage-4-nano family, scored on the same population, same metrics.</p>
+    <p class="card-note">Five seeker representations on the fine-tuned voyage-4-nano family, scored on the same population, same metrics. The last two — <code>top1_ctrl</code> with the query swapped out at eval time, and <code>no_query_001</code> trained without it — land almost on top of each other.</p>
     <div class="legend" id="legend"></div>
-    <div class="chart-wrap"><svg id="chart" width="900" height="360"></svg></div>
+    <div class="chart-wrap"><svg id="chart" width="1000" height="360"></svg></div>
   </div>
 
   <div class="card">
@@ -157,7 +180,7 @@
 
   <div class="card">
     <h2>The holdout misled again</h2>
-    <p class="card-note"><code>no_query_001</code>'s 69-pair holdout score looked like the best fine-tune in the project. Scored on all 200, it reverses — the fourth+ time this project's holdout has flattered a result that didn't hold up.</p>
+    <p class="card-note">Independent of the bug above: on the 69-pair holdout alone (still using the mismatched eval at the time), <code>no_query_001</code> looked like the best fine-tune in the project. Scored on all 200, that reverses — the fourth+ time this project's holdout has flattered a result that didn't hold up.</p>
     <div class="reversal-grid">
       <div class="reversal-box holdout">
         <div class="rb-label">69-pair holdout</div>
@@ -165,9 +188,9 @@
         <div class="rb-row"><span>MRR</span><span class="v">0.5574</span></div>
       </div>
       <div class="reversal-box all200">
-        <div class="rb-label">All 200 real pairs</div>
-        <div class="rb-row"><span>Recall@1</span><span class="v">0.1800</span></div>
-        <div class="rb-row"><span>MRR</span><span class="v">0.3371</span></div>
+        <div class="rb-label">All 200 real pairs (matched eval)</div>
+        <div class="rb-row"><span>Recall@1</span><span class="v">0.1300</span></div>
+        <div class="rb-row"><span>MRR</span><span class="v">0.2827</span></div>
       </div>
     </div>
   </div>
@@ -185,10 +208,11 @@ const rootStyle = getComputedStyle(document.querySelector('.viz-root'));
 function cssVar(name) { return rootStyle.getPropertyValue(name).trim(); }
 
 const SERIES = [
-  { key: 'concat',     label: 'top1_ctrl — trained WITH query (concat)',        color: cssVar('--series-1') },
-  { key: 'query_only',  label: '+ eval-time query-only swap (no retrain)',       color: cssVar('--series-2') },
-  { key: 'alpha06',     label: '+ eval-time alpha_0.6 blend (no retrain)',       color: cssVar('--series-3') },
-  { key: 'no_query',    label: 'no_query_001 — trained WITHOUT query at all',    color: cssVar('--series-4') },
+  { key: 'concat',     label: 'top1_ctrl — trained WITH query (concat)',           color: cssVar('--series-1') },
+  { key: 'query_only',  label: '+ eval-time query-only swap (no retrain)',          color: cssVar('--series-2') },
+  { key: 'alpha06',     label: '+ eval-time alpha_0.6 blend (no retrain)',          color: cssVar('--series-3') },
+  { key: 'profile_only', label: '+ eval-time profile-only swap (no retrain)',       color: cssVar('--series-4') },
+  { key: 'no_query',    label: 'no_query_001 — trained WITHOUT query, matched eval', color: cssVar('--series-5') },
 ];
 
 const METRICS = [
@@ -199,10 +223,11 @@ const METRICS = [
 ];
 
 const DATA = {
-  concat:     { auc: 0.5683, mrr: 0.3550, r1: 0.19, r10: 0.69 },
-  query_only: { auc: 0.5945, mrr: 0.5076, r1: 0.32, r10: 0.90 },
-  alpha06:    { auc: 0.6129, mrr: 0.4818, r1: 0.29, r10: 0.87 },
-  no_query:   { auc: 0.5718, mrr: 0.3371, r1: 0.18, r10: 0.67 },
+  concat:       { auc: 0.5683, mrr: 0.3550, r1: 0.19, r10: 0.69 },
+  query_only:   { auc: 0.5945, mrr: 0.5076, r1: 0.32, r10: 0.90 },
+  alpha06:      { auc: 0.6129, mrr: 0.4818, r1: 0.29, r10: 0.87 },
+  profile_only: { auc: 0.5489, mrr: 0.2800, r1: 0.13, r10: 0.59 },
+  no_query:     { auc: 0.5574, mrr: 0.2827, r1: 0.13, r10: 0.62 },
 };
 
 // ---- legend ----
@@ -232,7 +257,7 @@ table.innerHTML = thead + tbody;
 
 // ---- grouped bar chart ----
 const svg = document.getElementById('chart');
-const W = 900, H = 360;
+const W = 1000, H = 360;
 const marginL = 40, marginR = 20, marginT = 16, marginB = 44;
 const plotW = W - marginL - marginR, plotH = H - marginT - marginB;
 const groupGap = 28, barGap = 3;
