@@ -377,7 +377,7 @@
 
 <footer>
   Built from <code>docs/experiment-graphs-index.md</code> and the live
-  <code>Artifact</code> listing (31 published pages, checked 2026-08-06).
+  <code>Artifact</code> listing (32 published pages, checked 2026-08-06).
   Local <code>file://</code> links are pinned to this checkout's path and
   won't resolve on another machine — use <code>open docs/html/&lt;file&gt;.html</code> there instead.
 </footer>
@@ -387,6 +387,8 @@ const REPO = "/Users/harsh/Artifacts/dorby-ai/docs/html/";
 
 // { date: "YYYY-MM-DD", title, desc, type: 'published'|'local'|'both'|'note', pub: url|null, loc: filename|null, locFull: absolute file:// url|null }
 const DATA = [
+  { date:"2026-08-06", title:"Does matrix factorization help?", desc:"Factoring the text (LSA) robustly lifts hard-negative AUC on both TF-IDF and Voyage-4-large at every rank tested; factoring the scoring function (low-rank bilinear residual) fails three separate ways and doesn't clear its own permutation null at 131 training pairs.", type:"local", loc:"bilinear-mf-results.html" },
+  { date:"2026-08-06", title:"Scoring what the candidate wants too", desc:"A zero-training reciprocal term (the static slice of Ga Wu's Fast-Weight-Programmer proposal — no session history in this dataset, so no memory, just the cold-start reduction plus the reciprocal score) lifts pair AUC on every population: holdout 0.5853→0.6241, all-200 0.5638→0.5964, at or above every other model measured except two Qwen3 fine-tunes. A 5,000-sample bootstrap says the gain is directionally consistent but not statistically proven (95% CI crosses zero on both eval populations).", type:"both", pub:"https://claude.ai/code/artifact/e1b136f0-7782-4c2a-9adc-f28438bd996d", loc:"reciprocal-static-findings.html" },
   { date:"2026-08-06", title:"Field-Pair Two-Tower Fine-Tunes", desc:"Three field-pair combos (positioning+background, positioning+lookingFor, background+lookingFor), both seeker AND candidate trimmed, then actually fine-tuned. None beat top1_ctrl overall; background+lookingFor comes closest and all three win on hard-negative resistance, at the cost of general ranking. The ranking flips vs. the frozen seeker-only sweep that motivated it.", type:"both", pub:"https://claude.ai/code/artifact/e6fe7e21-ee5b-4538-86a6-51e80e07ec5f", loc:"twotower-field-pairs-experiment.html" },
 
   { date:"2026-08-04", title:"KL-Regularized Two-Tower", desc:"A leash to the frozen base model stabilizes training but is a small net negative vs. top1_ctrl on all 200 pairs — the collapse it targets wasn't present in this recipe.", type:"both", pub:"https://claude.ai/code/artifact/62bb2021-7d76-41c3-b05e-3d257df0a236", loc:"twotower-kl-reg-experiment.html" },
