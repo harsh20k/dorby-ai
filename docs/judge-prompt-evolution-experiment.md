@@ -10,6 +10,13 @@ used from round 1 plus a code-level fix for the contract-dropping bug evo_007
 found, and (evo_009) `structured_cot` as the seed with evo_008's exact recipe
 otherwise. Published trace (all nine runs, selectable): [Judge Prompt Evolution — evo_001 → evo_009](https://claude.ai/code/artifact/1e089702-6f90-4676-98e4-6c7e69813119).
 
+> **Run 10 lives in a separate doc.** `evo_focused_001` evolves the *focused*
+> judge prompt (searchQuery given, profile fields trimmed) from its own
+> isolated package `judge_prompt_evolution_focused/`, and is written up in
+> `docs/judge-prompt-evolution-focused-experiment.md`. Short version: it lost
+> to its own seed by −0.0589, the widest gap of the ten, and localized the
+> loss to the confidence channel rather than the yes/no decision.
+
 ## What this tests
 
 The LLM-judge experiment (`docs/llm-judge-experiment.md`) found that a plain,
