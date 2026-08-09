@@ -346,7 +346,7 @@
     </div>
     <div class="header-stats">
       <span><b id="stat-total">—</b> items</span>
-      <span><b>2026-07-20</b> → <b>2026-08-08</b></span>
+      <span><b>2026-07-20</b> → <b>2026-08-09</b></span>
     </div>
   </div>
 </header>
@@ -377,7 +377,7 @@
 
 <footer>
   Built from <code>docs/experiment-graphs-index.md</code> and the live
-  <code>Artifact</code> listing (32 published pages, checked 2026-08-08).
+  <code>Artifact</code> listing (33 published pages, checked 2026-08-09).
   Local <code>file://</code> links are pinned to this checkout's path and
   won't resolve on another machine — use <code>open docs/html/&lt;file&gt;.html</code> there instead.
 </footer>
@@ -387,6 +387,9 @@ const REPO = "/Users/harsh/Artifacts/dorby-ai/docs/html/";
 
 // { date: "YYYY-MM-DD", title, desc, type: 'published'|'local'|'both'|'note', pub: url|null, loc: filename|null, locFull: absolute file:// url|null }
 const DATA = [
+  { date:"2026-08-09", title:"Voyage-4-nano field/query sweep", desc:"105-combo grid search (every non-empty subset of positioning/background/lookingFor per side x query on/off, plus a query-only seeker x the 7 candidate subsets). Best combo (seeker=positioning, candidate=lookingFor, query=yes) reaches 0.6110 pair AUC, beating the full-profile baseline (0.5614) and the LLM-judge-borrowed field selection (0.5658) — but still well behind the LLM judge's own best (0.6451). A query-only seeker (zero profile fields) still beats the full-profile baseline (0.5861 vs 0.5614). Interactive: pick fields to see a combo's results, rank all combos by any metric, or explore a metric-selectable heatmap.", type:"both", pub:"https://claude.ai/code/artifact/1e698f4e-15a6-44b4-bd76-2381befb2f40", loc:"voyage-nano-field-sweep-heatmap.html" },
+
+  { date:"2026-08-08", title:"Judge Prompt Evolution — focused seed (run 10)", desc:"First evolution run seeded from the focused judge prompt (searchQuery + trimmed fields) rather than naive, with the optimizer shown the same trimmed fields the judge sees. Ten runs, ten losses — and this is the widest gap yet: 0.6474 → 0.5885 pair AUC on all 200 real pairs. The whole loss is one channel: yes/no accuracy is flat (0.5950 → 0.5900), but confidence stopped carrying information (worth +0.0524 on the seed, −0.0015 evolved) because the optimizer compressed the output contract and dropped the definition of what confidence means — while validate_contract still passed it.", type:"published", pub:"https://claude.ai/code/artifact/1e089702-6f90-4676-98e4-6c7e69813119" },
   { date:"2026-08-08", title:"LLM judge: candidate field permutations", desc:"Seeker fixed at positioning+lookingFor, candidate cycled through each two-field subset of positioning/background/lookingFor. No permutation beats the full three-field candidate (0.6451 pair AUC); dropping background hurts hard-negative AUC most (0.5792, falls below its own easy-neg AUC — the pattern every embedding baseline shows). 200-pair only, no holdout run.", type:"local", loc:"llm-judge-comparison.html" },
   { date:"2026-08-08", title:"LLM judge: which seeker field carries the focused prompt?", desc:"Isolating positioning vs lookingFor on the seeker side (candidate/query unchanged): lookingFor alone beats the two-field focused prompt on the holdout (pair AUC 0.6698, hard-neg AUC 0.7164 — the best hard-negative AUC found anywhere in this project); positioning alone is much weaker (0.5914), close to an embedding baseline's usual easy/hard pattern.", type:"local", loc:"llm-judge-comparison.html" },
 
