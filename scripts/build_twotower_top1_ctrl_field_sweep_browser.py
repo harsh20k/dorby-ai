@@ -1,16 +1,20 @@
 #!/usr/bin/env python3
-"""Build a self-contained HTML heatmap for the Voyage-4-nano field/query sweep.
+"""Build a self-contained HTML heatmap for the top1_ctrl field/query sweep.
 
-Reads artifacts/voyage_nano_field_sweep_modal/real_all/sweep_results.json
+Reads artifacts/twotower_top1_ctrl_field_sweep_modal/real_all/sweep_results.json
 (105 combos x full metric suite — 7 non-empty field subsets per side x 7 x 2
-query settings, plus a query-only seeker x the same 7 candidate subsets) and
-renders an 8x7 seeker x candidate heatmap (metric-selectable: any of the
-tracked pair/retrieval metrics can drive cell color) with a query-included/
-excluded toggle, cell hover detail, and a full 105-row data table — same
-visual language (tokens, table styling) as scripts/build_llm_judge_browser.py.
+query settings, plus a query-only seeker x the same 7 candidate subsets),
+scored against the fine-tuned ``top1_ctrl`` LoRA checkpoint instead of
+frozen Voyage-4-nano, and renders an 8x7 seeker x candidate heatmap
+(metric-selectable: any of the tracked pair/retrieval metrics can drive
+cell color) with a query-included/excluded toggle, cell hover detail, and
+a full 105-row data table — same visual language (tokens, table styling,
+interactive controls) as scripts/build_voyage_nano_field_sweep_browser.py,
+copied and repointed at the fine-tuned checkpoint's results rather than
+edited in place (isolation rule, CLAUDE.md).
 
 Usage:
-    python3 scripts/build_voyage_nano_field_sweep_browser.py
+    python3 scripts/build_twotower_top1_ctrl_field_sweep_browser.py
 """
 
 from __future__ import annotations
@@ -19,8 +23,10 @@ import json
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-RESULTS_PATH = ROOT / "artifacts" / "voyage_nano_field_sweep_modal" / "real_all" / "sweep_results.json"
-DEFAULT_OUT = ROOT / "docs" / "html" / "voyage-nano-field-sweep-heatmap.html"
+RESULTS_PATH = (
+    ROOT / "artifacts" / "twotower_top1_ctrl_field_sweep_modal" / "real_all" / "sweep_results.json"
+)
+DEFAULT_OUT = ROOT / "docs" / "html" / "twotower-top1-ctrl-field-sweep-heatmap.html"
 
 FIELDS = ("positioning", "background", "lookingFor")
 SHORT = {"positioning": "Pos", "background": "Back", "lookingFor": "Look"}
@@ -180,7 +186,7 @@ HTML_TEMPLATE = r"""<!DOCTYPE html>
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Voyage-4-nano field/query sweep — Dorby AI</title>
+<title>top1_ctrl field/query sweep — Dorby AI</title>
 <style>
   :root {
     color-scheme: light;
@@ -444,16 +450,20 @@ HTML_TEMPLATE = r"""<!DOCTYPE html>
   <div class="fields-tooltip" id="fields-tooltip" role="tooltip"></div>
   <div class="wrap">
     <header class="hero">
-      <h1 class="brand">Voyage-4-nano field/query sweep <span class="n-badge" id="combo-count-badge">— combos · n = 200 (all)</span></h1>
+      <h1 class="brand">top1_ctrl field/query sweep <span class="n-badge" id="combo-count-badge">— combos · n = 200 (all)</span></h1>
       <p class="lede">
         Which combination of seeker fields, candidate fields, and searchQuery
-        inclusion works best for <strong>Voyage-4-nano</strong> — an
-        embedding model, not the LLM judge? Every non-empty subset of
+        inclusion works best for <strong>top1_ctrl</strong> — this project's
+        best fine-tuned model (a LoRA adapter on Voyage-4-nano)? The exact
+        same 105-combo grid as the frozen-model sweep, re-run against the
+        fine-tuned checkpoint instead: every non-empty subset of
         <code>positioning</code> / <code>background</code> / <code>lookingFor</code>
         (7 per side) x with/without the search query, plus a "query-only"
         seeker (no profile fields at all) x the same 7 candidate subsets,
         each scored with the project's full metric suite on all 200 real
-        pairs. See <code>docs/voyage-nano-field-sweep-experiment.md</code>.
+        pairs. See <code>docs/twotower-top1-ctrl-field-sweep-experiment.md</code>
+        (and <code>docs/voyage-nano-field-sweep-experiment.md</code> for the
+        frozen-model comparison).
       </p>
       <p class="meta" id="meta-line"></p>
     </header>
@@ -569,7 +579,7 @@ HTML_TEMPLATE = r"""<!DOCTYPE html>
     const RAMP_DARK = __RAMP_DARK__;
 
     document.getElementById("meta-line").textContent =
-      `${DATA.num_combos} combinations x full metric suite (pair AUC, best-F1, accuracy@0.5, hard/easy-neg AUC, MRR, mean/median rank, Recall@1/5/10, NDCG@1/5/10) — Voyage-4-nano, all 200 real pairs.`;
+      `${DATA.num_combos} combinations x full metric suite (pair AUC, best-F1, accuracy@0.5, hard/easy-neg AUC, MRR, mean/median rank, Recall@1/5/10, NDCG@1/5/10) — top1_ctrl (fine-tuned), all 200 real pairs.`;
 
     function fmt(x, digits = 4) {
       return x === null || x === undefined || Number.isNaN(x) ? "—" : x.toFixed(digits);
@@ -990,23 +1000,24 @@ HTML_TEMPLATE = r"""<!DOCTYPE html>
     // ---- findings ----
     const findingsEl = document.getElementById("findings");
     const findings = [
-      `<b>The best combo overall — seeker=<code>positioning</code>, candidate=<code>lookingFor</code>, query included — reaches 0.6110 pair AUC</b>,
-       beating both the full-profile baseline (0.5614) and the earlier hand-picked field selection borrowed from the LLM judge's focused prompt
-       (0.5658, seeker=positioning+lookingFor / candidate=positioning+background+lookingFor). The best fields for an embedding model are not the
-       same fields that work best for an LLM judge.`,
-      `<b>Search query matters everywhere in the grid, not just for the winning combo</b> — mean pair AUC with the query included (0.5715) beats
-       without it (0.5375) across all 49 vs 49 combos, and every one of the 10 worst combos excludes the query.`,
-      `<b>More fields is not better, on either side.</b> Mean pair AUC falls as field-subset size grows: seeker 1-field 0.5580 &rarr; 2-field 0.5530
-       &rarr; 3-field (full) 0.5487; candidate similarly peaks at 2 fields, not 3. Cosine similarity over a longer, more diluted profile does worse
-       than over a short, targeted one.`,
-      `<b>Still short of the LLM judge everywhere</b> — even Voyage-nano's best combo (0.6110 pair AUC) trails the LLM judge's focused prompt
-       (0.6451 pair AUC, 0.6711 hard-neg AUC on the same population) by a wide margin, especially on hard negatives.`,
-      `<b>A query-only seeker (zero profile fields, just the searchQuery) still beats the full-profile baseline</b> — best of the 7 query-only
-       combos (candidate=<code>lookingFor</code>) reaches 0.5861 pair AUC, ahead of the full-profile baseline (0.5614) though below the best combo
-       that also keeps a seeker field (0.6110). The query alone carries real signal for Voyage-nano even with no profile text on the seeker side at all.`,
-      `<b>Caveat: 105-way search on one 200-pair population, no held-out check.</b> The gap between the best (0.6110) and 10th-best (0.5842) combo is
-       comparable to run-to-run noise seen elsewhere in this project — read this as "embeddings prefer fewer, targeted fields too," not as a
-       validated production config.`,
+      `<b>The best combo overall — seeker=<code>background</code>, candidate=<code>lookingFor</code>, query included — reaches 0.6395 pair AUC</b>,
+       beating the full-profile top1_ctrl baseline (0.5683, +0.0712) and every other embedding-family model measured in this project on the
+       all-200 population, including the frozen-Voyage-4-nano sweep's own best combo (0.6110, see
+       <a href="https://claude.ai/code/artifact/1e698f4e-15a6-44b4-bd76-2381befb2f40" target="_blank" rel="noopener">that sweep</a>). Field
+       selection helps the fine-tuned model even more than it helped the frozen one — fine-tuning did not make the model field-selection-proof.`,
+      `<b>This is within 0.006 of the LLM judge's own best</b> (0.6451 pair AUC, <code>docs/llm-judge-focused-prompt-experiment.md</code>) — by
+       far the closest any embedding-based model has come to LLM-judge performance in this project, at zero extra serving cost over frozen nano
+       (a merged LoRA adapter, per the project's &lt;100ms latency framing).`,
+      `<b>Search query matters everywhere in the grid</b> — mean pair AUC with the query included (0.5966, n=56) beats without it (0.5578, n=49).`,
+      `<b>More seeker fields is worse, monotonically, all the way down to zero.</b> Mean pair AUC by seeker field count: 0 fields (query-only)
+       0.5915 &rarr; 1 field 0.5813 &rarr; 2 fields 0.5766 &rarr; 3 fields (full) 0.5692 — a query-only seeker beats every seeker field-count
+       average except the single best combos. Candidate side is flatter (1-field 0.5785, 2-field 0.5791, 3-field 0.5763), with
+       <code>lookingFor</code> the only candidate field with a positive marginal effect (+0.0117).`,
+      `<b>A query-only seeker still beats the full-profile baseline</b> — best of the 7 query-only combos (candidate=<code>lookingFor</code>)
+       reaches 0.6220 pair AUC, using zero seeker profile fields — and even beats the frozen sweep's overall best combo (0.6110).`,
+      `<b>Caveat: 105-way search on one 200-pair population, no held-out check.</b> The gap between the best (0.6395) and 10th-best (0.6167) combo
+       is comparable to run-to-run noise seen elsewhere in this project — read this as "field selection helps the fine-tuned model too," not as a
+       validated production config without a holdout check.`,
     ];
     for (const f of findings) {
       const div = document.createElement("div");

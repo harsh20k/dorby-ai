@@ -1,16 +1,22 @@
 #!/usr/bin/env python3
-"""Build a self-contained HTML heatmap for the Voyage-4-nano field/query sweep.
+"""Build a self-contained HTML heatmap for the queryonly_back_look field/query sweep.
 
-Reads artifacts/voyage_nano_field_sweep_modal/real_all/sweep_results.json
+Reads artifacts/twotower_queryonly_back_look_field_sweep_modal/real_all/sweep_results.json
 (105 combos x full metric suite — 7 non-empty field subsets per side x 7 x 2
-query settings, plus a query-only seeker x the same 7 candidate subsets) and
-renders an 8x7 seeker x candidate heatmap (metric-selectable: any of the
-tracked pair/retrieval metrics can drive cell color) with a query-included/
-excluded toggle, cell hover detail, and a full 105-row data table — same
-visual language (tokens, table styling) as scripts/build_llm_judge_browser.py.
+query settings, plus a query-only seeker x the same 7 candidate subsets),
+scored against the fine-tuned ``queryonly_back_look_001`` LoRA checkpoint —
+as of this experiment, the new best two-tower fine-tune in the project on
+every tracked metric (docs/twotower-queryonly-back-look-experiment.md) —
+and renders an 8x7 seeker x candidate heatmap (metric-selectable: any of
+the tracked pair/retrieval metrics can drive cell color) with a
+query-included/excluded toggle, cell hover detail, and a full 105-row data
+table — same visual language (tokens, table styling, interactive controls)
+as scripts/build_twotower_top1_ctrl_field_sweep_browser.py, copied and
+repointed at the new checkpoint's results rather than edited in place
+(isolation rule, CLAUDE.md).
 
 Usage:
-    python3 scripts/build_voyage_nano_field_sweep_browser.py
+    python3 scripts/build_twotower_queryonly_back_look_field_sweep_browser.py
 """
 
 from __future__ import annotations
@@ -19,8 +25,14 @@ import json
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-RESULTS_PATH = ROOT / "artifacts" / "voyage_nano_field_sweep_modal" / "real_all" / "sweep_results.json"
-DEFAULT_OUT = ROOT / "docs" / "html" / "voyage-nano-field-sweep-heatmap.html"
+RESULTS_PATH = (
+    ROOT
+    / "artifacts"
+    / "twotower_queryonly_back_look_field_sweep_modal"
+    / "real_all"
+    / "sweep_results.json"
+)
+DEFAULT_OUT = ROOT / "docs" / "html" / "twotower-queryonly-back-look-field-sweep-heatmap.html"
 
 FIELDS = ("positioning", "background", "lookingFor")
 SHORT = {"positioning": "Pos", "background": "Back", "lookingFor": "Look"}
@@ -180,7 +192,7 @@ HTML_TEMPLATE = r"""<!DOCTYPE html>
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Voyage-4-nano field/query sweep — Dorby AI</title>
+<title>queryonly_back_look field/query sweep — Dorby AI</title>
 <style>
   :root {
     color-scheme: light;
@@ -444,16 +456,22 @@ HTML_TEMPLATE = r"""<!DOCTYPE html>
   <div class="fields-tooltip" id="fields-tooltip" role="tooltip"></div>
   <div class="wrap">
     <header class="hero">
-      <h1 class="brand">Voyage-4-nano field/query sweep <span class="n-badge" id="combo-count-badge">— combos · n = 200 (all)</span></h1>
+      <h1 class="brand">queryonly_back_look field/query sweep <span class="n-badge" id="combo-count-badge">— combos · n = 200 (all)</span></h1>
       <p class="lede">
         Which combination of seeker fields, candidate fields, and searchQuery
-        inclusion works best for <strong>Voyage-4-nano</strong> — an
-        embedding model, not the LLM judge? Every non-empty subset of
+        inclusion works best for <strong>queryonly_back_look_001</strong> —
+        the new best fine-tuned model in the project on every tracked metric
+        (a LoRA adapter on Voyage-4-nano, trained on the field-sweep's own
+        recall@1-best text representation found against <code>top1_ctrl</code>,
+        the previous best)? The exact same 105-combo grid re-run against this
+        checkpoint instead: every non-empty subset of
         <code>positioning</code> / <code>background</code> / <code>lookingFor</code>
         (7 per side) x with/without the search query, plus a "query-only"
         seeker (no profile fields at all) x the same 7 candidate subsets,
         each scored with the project's full metric suite on all 200 real
-        pairs. See <code>docs/voyage-nano-field-sweep-experiment.md</code>.
+        pairs. See <code>docs/twotower-queryonly-back-look-field-sweep-experiment.md</code>
+        (and <code>docs/twotower-top1-ctrl-field-sweep-experiment.md</code> for
+        the previous-best-checkpoint comparison).
       </p>
       <p class="meta" id="meta-line"></p>
     </header>
@@ -569,7 +587,7 @@ HTML_TEMPLATE = r"""<!DOCTYPE html>
     const RAMP_DARK = __RAMP_DARK__;
 
     document.getElementById("meta-line").textContent =
-      `${DATA.num_combos} combinations x full metric suite (pair AUC, best-F1, accuracy@0.5, hard/easy-neg AUC, MRR, mean/median rank, Recall@1/5/10, NDCG@1/5/10) — Voyage-4-nano, all 200 real pairs.`;
+      `${DATA.num_combos} combinations x full metric suite (pair AUC, best-F1, accuracy@0.5, hard/easy-neg AUC, MRR, mean/median rank, Recall@1/5/10, NDCG@1/5/10) — queryonly_back_look_001 (fine-tuned), all 200 real pairs.`;
 
     function fmt(x, digits = 4) {
       return x === null || x === undefined || Number.isNaN(x) ? "—" : x.toFixed(digits);
@@ -990,23 +1008,31 @@ HTML_TEMPLATE = r"""<!DOCTYPE html>
     // ---- findings ----
     const findingsEl = document.getElementById("findings");
     const findings = [
-      `<b>The best combo overall — seeker=<code>positioning</code>, candidate=<code>lookingFor</code>, query included — reaches 0.6110 pair AUC</b>,
-       beating both the full-profile baseline (0.5614) and the earlier hand-picked field selection borrowed from the LLM judge's focused prompt
-       (0.5658, seeker=positioning+lookingFor / candidate=positioning+background+lookingFor). The best fields for an embedding model are not the
-       same fields that work best for an LLM judge.`,
-      `<b>Search query matters everywhere in the grid, not just for the winning combo</b> — mean pair AUC with the query included (0.5715) beats
-       without it (0.5375) across all 49 vs 49 combos, and every one of the 10 worst combos excludes the query.`,
-      `<b>More fields is not better, on either side.</b> Mean pair AUC falls as field-subset size grows: seeker 1-field 0.5580 &rarr; 2-field 0.5530
-       &rarr; 3-field (full) 0.5487; candidate similarly peaks at 2 fields, not 3. Cosine similarity over a longer, more diluted profile does worse
-       than over a short, targeted one.`,
-      `<b>Still short of the LLM judge everywhere</b> — even Voyage-nano's best combo (0.6110 pair AUC) trails the LLM judge's focused prompt
-       (0.6451 pair AUC, 0.6711 hard-neg AUC on the same population) by a wide margin, especially on hard negatives.`,
-      `<b>A query-only seeker (zero profile fields, just the searchQuery) still beats the full-profile baseline</b> — best of the 7 query-only
-       combos (candidate=<code>lookingFor</code>) reaches 0.5861 pair AUC, ahead of the full-profile baseline (0.5614) though below the best combo
-       that also keeps a seeker field (0.6110). The query alone carries real signal for Voyage-nano even with no profile text on the seeker side at all.`,
-      `<b>Caveat: 105-way search on one 200-pair population, no held-out check.</b> The gap between the best (0.6110) and 10th-best (0.5842) combo is
-       comparable to run-to-run noise seen elsewhere in this project — read this as "embeddings prefer fewer, targeted fields too," not as a
-       validated production config.`,
+      `<b>queryonly_back_look_001 is the new best fine-tune in the project, but the grid's ceiling barely moved.</b> Its training combo
+       (seeker=none / candidate=<code>background</code>+<code>lookingFor</code>, query included) reaches 0.5983 pair AUC — a genuine +0.030
+       over <code>top1_ctrl</code>'s full-profile baseline (0.5683) and the new project-best two-tower fine-tune on every tracked metric
+       (<code>docs/twotower-queryonly-back-look-experiment.md</code>). But the grid's overall best combo here — seeker=<code>positioning</code>,
+       candidate=<code>lookingFor</code>, query included — reaches only 0.6349 pair AUC, slightly <i>below</i>
+       <a href="https://claude.ai/code/artifact/4ca20e7d-1bcd-4972-a4b5-9d2709f3d300" target="_blank" rel="noopener">top1_ctrl's own grid best</a>
+       (0.6395). Fine-tuning on one text representation raised the ceiling for that combo and its close neighbors, not for the whole 105-combo
+       landscape.`,
+      `<b>Query-only-seeker combos did get specifically better, matching what this checkpoint was trained toward.</b> The best query-only-seeker
+       row in this grid (0.6323, candidate=<code>lookingFor</code>) beats <code>top1_ctrl_field_sweep</code>'s equivalent best (0.6220) by
+       +0.010 — a real, if modest, generalization from the exact training combo to nearby ones with the same seeker shape.`,
+      `<b>The canonical hard-neg-AUC record (0.6564, from the training-combo eval) is not reproduced in this grid, and that's expected, not a
+       bug.</b> The canonical eval pins hard/easy classification to the full-profile+query baseline text for every row; this sweep — like every
+       field/query sweep in this project — classifies hard/easy using each combo's own trimmed text, so "hard negative" itself means something
+       different per cell. Read every hard/easy number in this heatmap as relative-within-the-grid only.`,
+      `<b>Search query still matters everywhere in the grid</b> — mean pair AUC with the query included (0.5983, n=56) beats without it
+       (0.5700, n=49), the same direction every model tested in this project shows.`,
+      `<b>Seeker field-count effect flattens instead of continuing to fall.</b> Mean pair AUC by seeker size: 0 fields (query-only) 0.6007
+       &rarr; 1 field 0.5836 &rarr; 2 fields 0.5843 &rarr; 3 fields (full) 0.5842. <code>top1_ctrl_field_sweep</code> showed a monotonic decline
+       all the way down (0.5915&rarr;0.5813&rarr;0.5766&rarr;0.5692); here the big drop is only from 0&rarr;1 field, then it plateaus — consistent
+       with a model nudged toward the zero-profile-seeker shape specifically, not simply "worse with more text" in general. Candidate side still
+       peaks at 2 fields, not 3 (1-field 0.5843, 2-field 0.5862, 3-field 0.5844), matching every other sweep in this project.`,
+      `<b>Caveat: 105-way search on one 200-pair population, no held-out check.</b> The gap between the best (0.6349) and 10th-best (0.6146) combo
+       is comparable to run-to-run noise seen elsewhere in this project — read this as "the training win is narrow, not a grid-wide lift," not as
+       a validated production config without a holdout check.`,
     ];
     for (const f of findings) {
       const div = document.createElement("div");

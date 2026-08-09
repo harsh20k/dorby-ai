@@ -150,6 +150,9 @@
   .chart-title { font-size: 0.95rem; font-weight: 700; margin: 0 0 0.15rem; }
   .chart-sub { font-size: 0.78rem; color: var(--muted); margin: 0 0 1rem; }
 
+  .heatmap-pair-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.4rem; margin-top: 0.6rem; }
+  @media (max-width: 900px) { .heatmap-pair-grid { grid-template-columns: 1fr; } }
+  .heatmap-pane-title { font-size: 0.8rem; font-weight: 700; margin: 0 0 0.5rem; color: var(--ink-2); }
   .heatmap-scroll { overflow-x: auto; }
   .heatmap-layout { display: grid; grid-template-columns: auto 1fr; gap: 0.5rem; align-items: start; min-width: 640px; }
   .axis-label-y {
@@ -178,6 +181,28 @@
   .heatmap-body { display: grid; grid-template-columns: repeat(7, 1fr); gap: 3px; }
 
   .legend-bar { display: flex; align-items: center; gap: 0.6rem; margin-top: 0.9rem; font-size: 0.74rem; color: var(--muted); }
+
+  .heatmap-grid-all { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.1rem; margin-top: 0.6rem; }
+  @media (max-width: 980px) { .heatmap-grid-all { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 620px) { .heatmap-grid-all { grid-template-columns: 1fr; } }
+  .mini-card { border: 1px solid var(--border); border-radius: 10px; padding: 0.8rem 0.8rem 0.7rem; background: var(--panel); }
+  .mini-title { font-size: 0.76rem; font-weight: 700; margin: 0 0 0.55rem; color: var(--ink); }
+  .mini-layout { display: grid; grid-template-columns: 3.2rem 1fr; gap: 0.25rem; align-items: stretch; }
+  .mini-col-labels { display: grid; gap: 2px; margin-left: 3.2rem; margin-bottom: 2px; }
+  .mini-col-label {
+    font-size: 0.52rem; font-weight: 700; color: var(--muted); text-align: center;
+    white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+  }
+  .mini-row-labels { display: grid; gap: 2px; }
+  .mini-row-label {
+    font-size: 0.54rem; font-weight: 700; color: var(--muted); display: flex;
+    align-items: center; justify-content: flex-end; padding-right: 0.2rem; white-space: nowrap;
+  }
+  .mini-body { display: grid; gap: 2px; }
+  .mini-cell { aspect-ratio: 1 / 1; min-width: 1.5rem; border-radius: 3px; cursor: default; }
+  .mini-cell:hover, .mini-cell:focus-visible { outline: 2px solid var(--ink); outline-offset: -1px; }
+  .mini-legend { display: flex; align-items: center; gap: 0.4rem; margin-top: 0.5rem; font-size: 0.62rem; color: var(--muted); }
+  .mini-legend-ramp { flex: 1; height: 0.4rem; border-radius: 3px; }
   .legend-ramp { flex: 1; max-width: 22rem; height: 0.7rem; border-radius: 4px; }
 
   .fields-tooltip {
@@ -293,24 +318,40 @@
       </div>
 
       <div class="chart-card">
-        <p class="chart-title" id="heatmap-title">Pair ROC-AUC heatmap — seeker fields (rows) x candidate fields (columns)</p>
-        <p class="chart-sub" id="heatmap-sub">Darker = higher pair AUC. Hover any cell for the full metric breakdown (hard/easy-neg AUC, best-F1, MRR, Recall@1/5/10, NDCG@1/5/10).</p>
+        <p class="chart-title" id="heatmap-title">Pair ROC-AUC heatmaps — seeker fields (rows) x candidate fields (columns)</p>
+        <p class="chart-sub" id="heatmap-sub">Darker = higher pair AUC. Hover any cell for the full metric breakdown (hard/easy-neg AUC, best-F1, MRR, Recall@1/5/10, NDCG@1/5/10). Query included and excluded shown side by side.</p>
         <div class="metric-select-row">
           <span class="field-group-label" style="text-transform:none; font-weight:600; font-size:0.85rem; color:var(--ink-2);">Color / value by</span>
           <select class="metric-select" id="heatmap-metric-select"></select>
         </div>
-        <div class="tabs" id="query-tabs">
-          <button class="tab-btn active" data-query="yes">Query included</button>
-          <button class="tab-btn" data-query="no">Query excluded</button>
-        </div>
-        <div class="heatmap-scroll">
-          <div class="heatmap-layout">
-            <div class="axis-label-y">Seeker fields</div>
-            <div>
-              <div class="heatmap-col-labels" id="col-labels" style="display:grid; grid-template-columns: repeat(7, 1fr); margin-left: 6.5rem;"></div>
-              <div style="display:grid; grid-template-columns: 6.5rem 1fr; gap: 0.3rem; align-items: stretch;" id="heatmap-rows-wrap">
-                <div></div>
-                <div class="heatmap-body" id="heatmap-body"></div>
+        <div class="heatmap-pair-grid">
+          <div class="heatmap-pane">
+            <p class="heatmap-pane-title">Query included</p>
+            <div class="heatmap-scroll">
+              <div class="heatmap-layout">
+                <div class="axis-label-y">Seeker fields</div>
+                <div>
+                  <div class="heatmap-col-labels" id="col-labels-yes" style="display:grid; grid-template-columns: repeat(7, 1fr); margin-left: 6.5rem;"></div>
+                  <div style="display:grid; grid-template-columns: 6.5rem 1fr; gap: 0.3rem; align-items: stretch;" id="heatmap-rows-wrap-yes">
+                    <div></div>
+                    <div class="heatmap-body" id="heatmap-body-yes"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="heatmap-pane">
+            <p class="heatmap-pane-title">Query excluded</p>
+            <div class="heatmap-scroll">
+              <div class="heatmap-layout">
+                <div class="axis-label-y">Seeker fields</div>
+                <div>
+                  <div class="heatmap-col-labels" id="col-labels-no" style="display:grid; grid-template-columns: repeat(7, 1fr); margin-left: 6.5rem;"></div>
+                  <div style="display:grid; grid-template-columns: 6.5rem 1fr; gap: 0.3rem; align-items: stretch;" id="heatmap-rows-wrap-no">
+                    <div></div>
+                    <div class="heatmap-body" id="heatmap-body-no"></div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -321,6 +362,16 @@
           <span id="legend-max">—</span>
           <span id="legend-metric-label" style="margin-left:0.4rem;">pair AUC</span>
         </div>
+      </div>
+
+      <div class="chart-card">
+        <p class="chart-title">All metrics at a glance</p>
+        <p class="chart-sub">Every tracked metric as its own heatmap, same seeker (rows) x candidate (columns) layout as above, each with its own color scale. Hover any cell for the full breakdown.</p>
+        <div class="tabs" id="query-tabs">
+          <button class="tab-btn active" data-query="yes">Query included</button>
+          <button class="tab-btn" data-query="no">Query excluded</button>
+        </div>
+        <div class="heatmap-grid-all" id="heatmap-grid-all"></div>
       </div>
 
       <p class="section-title">Findings</p>
@@ -450,25 +501,20 @@
     }
     function hideTooltip() { tooltipEl.classList.remove("is-visible"); }
 
-    // ---- heatmap ----
-    function renderHeatmap(queryKey, metricKey) {
-      currentMetric = metricKey;
+    // ---- heatmap (query included / excluded panes, side by side) ----
+    function renderHeatmapPane(queryKey, metricKey) {
+      const suffix = queryKey === "yes" ? "yes" : "no";
       const grid = DATA.grids[queryKey];
       const ramp = isDark() ? RAMP_DARK : RAMP_LIGHT;
       const range = DATA.metric_ranges[metricKey];
       const min = range.min, max = range.max;
-      const [, metricLabel, metricKind] = metricInfo(metricKey);
+      const [, , metricKind] = metricInfo(metricKey);
 
-      document.getElementById("heatmap-title").textContent =
-        `${metricLabel} heatmap — seeker fields (rows) x candidate fields (columns)`;
-      document.getElementById("heatmap-sub").textContent =
-        `Darker = higher ${metricLabel.toLowerCase()}. Hover any cell for the full metric breakdown. Gray cells are not applicable (query-only seeker with the query excluded).`;
-
-      const colLabels = document.getElementById("col-labels");
+      const colLabels = document.getElementById(`col-labels-${suffix}`);
       colLabels.style.gridTemplateColumns = `repeat(${DATA.candidate_axis_labels.length}, 1fr)`;
       colLabels.innerHTML = DATA.candidate_axis_labels.map((l) => `<div class="col-label">${l}</div>`).join("");
 
-      const rowsWrap = document.getElementById("heatmap-rows-wrap");
+      const rowsWrap = document.getElementById(`heatmap-rows-wrap-${suffix}`);
       rowsWrap.innerHTML = "";
       const rowLabelsCol = document.createElement("div");
       rowLabelsCol.style.display = "grid";
@@ -514,7 +560,92 @@
 
       rowsWrap.appendChild(rowLabelsCol);
       rowsWrap.appendChild(body);
+    }
+
+    function renderBothHeatmaps(metricKey) {
+      currentMetric = metricKey;
+      const [, metricLabel] = metricInfo(metricKey);
+      document.getElementById("heatmap-title").textContent =
+        `${metricLabel} heatmaps — seeker fields (rows) x candidate fields (columns)`;
+      document.getElementById("heatmap-sub").textContent =
+        `Darker = higher ${metricLabel.toLowerCase()}. Hover any cell for the full metric breakdown. Gray cells are not applicable (query-only seeker with the query excluded). Query included and excluded shown side by side.`;
+      renderHeatmapPane("yes", metricKey);
+      renderHeatmapPane("no", metricKey);
       buildLegend();
+    }
+
+    // ---- all-metrics mini-heatmap grid (3 per row) ----
+    function renderMiniHeatmap(card, queryKey, metricKey) {
+      const grid = DATA.grids[queryKey];
+      const ramp = isDark() ? RAMP_DARK : RAMP_LIGHT;
+      const range = DATA.metric_ranges[metricKey];
+      const min = range.min, max = range.max;
+      const [, metricLabel, metricKind] = metricInfo(metricKey);
+
+      card.innerHTML = `
+        <p class="mini-title">${metricLabel}</p>
+        <div class="mini-layout">
+          <div></div>
+          <div class="mini-col-labels" id="mini-col-labels"></div>
+          <div class="mini-row-labels" id="mini-row-labels"></div>
+          <div class="mini-body" id="mini-body"></div>
+        </div>
+        <div class="mini-legend">
+          <span>${fmt(min)}</span>
+          <div class="mini-legend-ramp" id="mini-legend-ramp"></div>
+          <span>${fmt(max)}</span>
+        </div>
+      `;
+
+      const colLabels = card.querySelector("#mini-col-labels");
+      colLabels.style.gridTemplateColumns = `repeat(${DATA.candidate_axis_labels.length}, 1fr)`;
+      colLabels.innerHTML = DATA.candidate_axis_labels
+        .map((l) => `<div class="mini-col-label" title="${l}">${l}</div>`)
+        .join("");
+
+      const rowLabels = card.querySelector("#mini-row-labels");
+      rowLabels.style.gridTemplateRows = `repeat(${DATA.seeker_axis_labels.length}, 1fr)`;
+      rowLabels.innerHTML = DATA.seeker_axis_labels
+        .map((l) => `<div class="mini-row-label" title="${l}">${l}</div>`)
+        .join("");
+
+      const body = card.querySelector("#mini-body");
+      body.style.gridTemplateColumns = `repeat(${DATA.candidate_axis_labels.length}, 1fr)`;
+      body.innerHTML = "";
+      grid.forEach((row) => {
+        row.forEach((cellData) => {
+          const cell = document.createElement("div");
+          cell.className = "mini-cell";
+          cell.tabIndex = 0;
+          const v = cellData[metricKey];
+          if (cellData.na || v === null || v === undefined) {
+            cell.style.background = "var(--grid)";
+          } else {
+            const t = (v - min) / (max - min || 1);
+            cell.style.background = lerpRamp(ramp, t);
+          }
+          cell.addEventListener("mouseenter", (evt) => showTooltip(cellData, evt));
+          cell.addEventListener("mousemove", positionTooltip);
+          cell.addEventListener("mouseleave", hideTooltip);
+          cell.addEventListener("focus", (evt) => showTooltip(cellData, evt));
+          cell.addEventListener("blur", hideTooltip);
+          body.appendChild(cell);
+        });
+      });
+
+      card.querySelector("#mini-legend-ramp").style.background =
+        `linear-gradient(to right, ${ramp.join(",")})`;
+    }
+
+    function renderAllMiniHeatmaps(queryKey) {
+      const container = document.getElementById("heatmap-grid-all");
+      container.innerHTML = "";
+      for (const [metricKey] of METRIC_OPTIONS) {
+        const card = document.createElement("div");
+        card.className = "mini-card";
+        container.appendChild(card);
+        renderMiniHeatmap(card, queryKey, metricKey);
+      }
     }
 
     // ---- explore-a-combination panel ----
@@ -665,17 +796,18 @@
       return document.querySelector("#query-tabs .tab-btn.active")?.dataset.query || "yes";
     }
 
-    renderHeatmap(currentQueryTab(), heatmapMetricSelectEl.value);
+    renderBothHeatmaps(heatmapMetricSelectEl.value);
+    renderAllMiniHeatmaps(currentQueryTab());
 
     document.getElementById("query-tabs").addEventListener("click", (e) => {
       const btn = e.target.closest(".tab-btn");
       if (!btn) return;
-      document.querySelectorAll(".tab-btn").forEach((b) => b.classList.remove("active"));
+      document.querySelectorAll("#query-tabs .tab-btn").forEach((b) => b.classList.remove("active"));
       btn.classList.add("active");
-      renderHeatmap(btn.dataset.query, heatmapMetricSelectEl.value);
+      renderAllMiniHeatmaps(btn.dataset.query);
     });
     heatmapMetricSelectEl.addEventListener("change", (e) => {
-      renderHeatmap(currentQueryTab(), e.target.value);
+      renderBothHeatmaps(e.target.value);
     });
 
     // ---- findings ----
