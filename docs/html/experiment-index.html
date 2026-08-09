@@ -346,7 +346,7 @@
     </div>
     <div class="header-stats">
       <span><b id="stat-total">—</b> items</span>
-      <span><b>2026-07-20</b> → <b>2026-08-06</b></span>
+      <span><b>2026-07-20</b> → <b>2026-08-08</b></span>
     </div>
   </div>
 </header>
@@ -377,7 +377,7 @@
 
 <footer>
   Built from <code>docs/experiment-graphs-index.md</code> and the live
-  <code>Artifact</code> listing (32 published pages, checked 2026-08-06).
+  <code>Artifact</code> listing (32 published pages, checked 2026-08-08).
   Local <code>file://</code> links are pinned to this checkout's path and
   won't resolve on another machine — use <code>open docs/html/&lt;file&gt;.html</code> there instead.
 </footer>
@@ -387,6 +387,10 @@ const REPO = "/Users/harsh/Artifacts/dorby-ai/docs/html/";
 
 // { date: "YYYY-MM-DD", title, desc, type: 'published'|'local'|'both'|'note', pub: url|null, loc: filename|null, locFull: absolute file:// url|null }
 const DATA = [
+  { date:"2026-08-08", title:"Judge Prompt Evolution — focused seed (run 10)", desc:"First evolution run seeded from the focused judge prompt (searchQuery + trimmed fields) rather than naive, with the optimizer shown the same trimmed fields the judge sees. Ten runs, ten losses — and this is the widest gap yet: 0.6474 → 0.5885 pair AUC on all 200 real pairs. The whole loss is one channel: yes/no accuracy is flat (0.5950 → 0.5900), but confidence stopped carrying information (worth +0.0524 on the seed, −0.0015 evolved) because the optimizer compressed the output contract and dropped the definition of what confidence means — while validate_contract still passed it.", type:"published", pub:"https://claude.ai/code/artifact/1e089702-6f90-4676-98e4-6c7e69813119" },
+  { date:"2026-08-08", title:"LLM judge: candidate field permutations", desc:"Seeker fixed at positioning+lookingFor, candidate cycled through each two-field subset of positioning/background/lookingFor. No permutation beats the full three-field candidate (0.6451 pair AUC); dropping background hurts hard-negative AUC most (0.5792, falls below its own easy-neg AUC — the pattern every embedding baseline shows). 200-pair only, no holdout run.", type:"local", loc:"llm-judge-comparison.html" },
+  { date:"2026-08-08", title:"LLM judge: which seeker field carries the focused prompt?", desc:"Isolating positioning vs lookingFor on the seeker side (candidate/query unchanged): lookingFor alone beats the two-field focused prompt on the holdout (pair AUC 0.6698, hard-neg AUC 0.7164 — the best hard-negative AUC found anywhere in this project); positioning alone is much weaker (0.5914), close to an embedding baseline's usual easy/hard pattern.", type:"local", loc:"llm-judge-comparison.html" },
+
   { date:"2026-08-06", title:"Does matrix factorization help?", desc:"Factoring the text (LSA) robustly lifts hard-negative AUC on both TF-IDF and Voyage-4-large at every rank tested; factoring the scoring function (low-rank bilinear residual) fails three separate ways and doesn't clear its own permutation null at 131 training pairs.", type:"local", loc:"bilinear-mf-results.html" },
   { date:"2026-08-06", title:"Scoring what the candidate wants too", desc:"A zero-training reciprocal term (the static slice of Ga Wu's Fast-Weight-Programmer proposal — no session history in this dataset, so no memory, just the cold-start reduction plus the reciprocal score) lifts pair AUC on every population: holdout 0.5853→0.6241, all-200 0.5638→0.5964, at or above every other model measured except two Qwen3 fine-tunes. A 5,000-sample bootstrap says the gain is directionally consistent but not statistically proven (95% CI crosses zero on both eval populations).", type:"both", pub:"https://claude.ai/code/artifact/e1b136f0-7782-4c2a-9adc-f28438bd996d", loc:"reciprocal-static-findings.html" },
   { date:"2026-08-06", title:"Field-Pair Two-Tower Fine-Tunes", desc:"Three field-pair combos (positioning+background, positioning+lookingFor, background+lookingFor), both seeker AND candidate trimmed, then actually fine-tuned. None beat top1_ctrl overall; background+lookingFor comes closest and all three win on hard-negative resistance, at the cost of general ranking. The ranking flips vs. the frozen seeker-only sweep that motivated it.", type:"both", pub:"https://claude.ai/code/artifact/e6fe7e21-ee5b-4538-86a6-51e80e07ec5f", loc:"twotower-field-pairs-experiment.html" },
