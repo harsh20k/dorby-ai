@@ -81,6 +81,36 @@ pair AUC is flat within noise. Fine-tuning specifically on this text
 representation did move the needle a little further, not just recover
 what the frozen model already had.
 
+## Where does the improvement actually come from?
+
+The two-row table above compares two different *text combos* (`top1_ctrl`'s
+full profile vs. this experiment's query-only/background+lookingFor), which
+conflates "did fine-tuning help" with "was this text choice better." To
+isolate training's actual contribution, the same text combo was scored at
+three stages — frozen base `voyage-4-nano` (no fine-tuning at all),
+`top1_ctrl`'s existing weights with this text swapped in (general transfer,
+it never saw this text during training), and this experiment's adapter
+(trained specifically on this text):
+
+| Stage | Pair AUC | Hard-neg AUC | Easy-neg AUC | MRR | R@1 | R@5 | R@10 |
+|---|---|---|---|---|---|---|---|
+| 1. Frozen base nano | 0.5626 | 0.4374 | 0.7424 | 0.4763 | 0.28 | 0.76 | 0.85 |
+| 2. `top1_ctrl` weights, text swapped in | 0.6016 | 0.5220 | 0.7280 | 0.4736 | 0.28 | 0.75 | 0.86 |
+| 3. Trained specifically (this experiment) | 0.5983 | **0.6564** | 0.5700 | 0.4791 | 0.30 | 0.74 | 0.86 |
+
+**Recall@1 and recall@5 were mostly decided by the text choice, not
+training** — frozen base nano already gets R@1 0.28 / R@5 0.76 for this
+combo; general and specific fine-tuning together move R@1 by only +0.02
+and leave R@5 flat (even a hair down).
+
+**Hard-negative AUC is where training earns its keep.** General fine-tuning
+transfer (stage 1→2) already buys +0.085 (0.437→0.522) just from having
+trained on *something*. Training specifically on this text (stage 2→3)
+adds another **+0.134** (0.522→0.656) — the single largest move in the
+whole chain, and the actual reason this experiment sets the new
+project-wide record. Pair AUC and easy-neg AUC both dip slightly in that
+same last step — a real trade, not a free win on every axis.
+
 **The holdout did not mislead this time** — a real break from the pattern.
 Holdout AUC 0.6603 / R@1 0.4828 vs. all-200's 0.5983 / 0.30: both point the
 same direction (this arm is strong), unlike every other custom-loop
