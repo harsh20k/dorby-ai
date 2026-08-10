@@ -325,12 +325,108 @@ footer {
 @media (prefers-reduced-motion: reduce) {
   * { transition: none !important; }
 }
+
+/* method steps */
+.steps {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+.step {
+  display: grid;
+  grid-template-columns: 28px 1fr;
+  gap: 14px;
+  padding: 14px 0;
+  border-bottom: 1px solid var(--rule);
+}
+.step:last-child { border-bottom: none; }
+.step-num {
+  font-family: 'IBM Plex Mono', ui-monospace, monospace;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--ink-muted);
+  padding-top: 1px;
+}
+.step-body { min-width: 0; }
+.step-title {
+  font-size: 14.5px;
+  font-weight: 600;
+  color: var(--ink);
+  margin-bottom: 4px;
+}
+.step-detail {
+  font-size: 14px;
+  color: var(--ink-secondary);
+  line-height: 1.55;
+}
+.step-formula {
+  display: inline-block;
+  font-family: 'IBM Plex Mono', ui-monospace, monospace;
+  font-size: 13px;
+  background: var(--paper);
+  border: 1px solid var(--tile-border);
+  border-radius: 3px;
+  padding: 3px 8px;
+  margin-top: 6px;
+}
 </style>
 
 <div class="page">
   <p class="kicker">Dorby AI &middot; Reciprocal matching &middot; Diagnostic sweep</p>
   <h1>What does &lambda; actually buy you?</h1>
   <p class="dek">Two earlier runs each fit a single &lambda; and got a different answer &mdash; <code>1.75</code> from the real train pairs, <code>0.05</code> from a synthetic judge. Instead of fitting a third time, this sweeps &lambda; from &minus;2 to +2 and plots pair AUC directly against the labels at every point.</p>
+
+  <section>
+    <h2>How this run is computed</h2>
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">01</div>
+        <div class="step-body">
+          <div class="step-title">Split each person into two texts</div>
+          <div class="step-detail">
+            <span class="mono">k</span> = &ldquo;what they want&rdquo; (<span class="mono">lookingFor</span>, + the search query if they're the seeker).
+            <span class="mono">v</span> = &ldquo;who they are&rdquo; &mdash; here, narrowed to just <span class="mono">positioning</span> + <span class="mono">background</span>, not every remaining field.
+          </div>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">02</div>
+        <div class="step-body">
+          <div class="step-title">Embed both with the same frozen model</div>
+          <div class="step-detail">voyage-4-nano, no fine-tuning.</div>
+          <div class="step-formula">k<sub>u</sub>, v<sub>u</sub>, k<sub>i</sub>, v<sub>i</sub></div>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">03</div>
+        <div class="step-body">
+          <div class="step-title">Two similarity scores (cosine)</div>
+          <div class="step-detail">
+            <div class="step-formula">s_fwd = cos(k<sub>u</sub>, v<sub>i</sub>) &nbsp;&mdash; do they match what you want?</div><br>
+            <div class="step-formula">s_rev = cos(k<sub>i</sub>, v<sub>u</sub>) &nbsp;&mdash; do you match what they want?</div>
+          </div>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">04</div>
+        <div class="step-body">
+          <div class="step-title">Combine &mdash; but don't fit &lambda;, sweep it</div>
+          <div class="step-detail">
+            The two earlier runs each picked one &lambda; by fitting it to a population and freezing it. This run skips that step: it evaluates
+            <span class="step-formula" style="margin-top:0">S = s_fwd + &lambda;&middot;s_rev</span>
+            at 81 values of &lambda; from &minus;2 to +2 (step 0.05) and plots pair AUC at every one &mdash; no single &ldquo;chosen&rdquo; &lambda;, no train/holdout split for this step.
+          </div>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">05</div>
+        <div class="step-body">
+          <div class="step-title">Evaluate</div>
+          <div class="step-detail">At each &lambda;, use <span class="mono">S</span> as the pair score &rarr; compute ROC-AUC against the real accept/decline labels, separately for the 69-pair holdout and all 200 real pairs.</div>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <section>
     <h2>Curve peak vs. forward-only (&lambda;=0)</h2>
