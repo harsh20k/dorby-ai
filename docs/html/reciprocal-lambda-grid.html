@@ -459,7 +459,7 @@ footer {
   </section>
 
   <section>
-    <h2>Three sweeps, three &lambda;s</h2>
+    <h2>Four sweeps, four &lambda;s</h2>
     <table class="compare">
       <thead>
         <tr>
@@ -484,9 +484,15 @@ footer {
         </tr>
         <tr class="this-run">
           <td>reciprocal_lambda_grid <span class="pill">this run</span></td>
-          <td>No fit &mdash; swept, curve read directly off the labels shown</td>
+          <td>No fit &mdash; swept, frozen voyage-4-nano</td>
           <td class="num">0.55</td>
           <td class="num">0.5663</td>
+        </tr>
+        <tr class="this-run">
+          <td>reciprocal_lambda_grid_top1ctrl <span class="pill">this run</span></td>
+          <td>No fit &mdash; swept, fine-tuned <span class="mono">top1_ctrl_001</span></td>
+          <td class="num">0.50</td>
+          <td class="num">0.5961</td>
         </tr>
       </tbody>
     </table>
@@ -494,23 +500,55 @@ footer {
 
   <section>
     <h2>Reading it straight</h2>
-    <div class="note"><strong>The sign agrees across all three.</strong> Positive &lambda; helps, negative &lambda; hurts sharply &mdash; every point below &lambda;=&minus;1 on both curves falls toward chance (~0.49). That direction hasn't flipped once.</div>
+    <div class="note"><strong>The sign agrees across all three frozen-model runs.</strong> Positive &lambda; helps, negative &lambda; hurts sharply &mdash; every point below &lambda;=&minus;1 on both curves falls toward chance (~0.49). That direction hasn't flipped once.</div>
     <div class="note"><strong>The rrf003 fit (0.05) undershot this curve's own peak</strong> on the identical narrowed field set &mdash; evidence that run's null result was a bad fit, not proof the reciprocal term carries nothing.</div>
     <div class="note"><strong>This sweep is not a validated number.</strong> Every point is read directly off the same labels being scored &mdash; train-accuracy-shaped, not test-accuracy-shaped. Field set (<span class="mono">positioning+background</span> here vs. the full set in the &lambda;=1.75 run) and fitting population are still tangled across all three runs; that's the open thread, not this curve.</div>
   </section>
 
+  <section>
+    <h2>Same sweep, fine-tuned model (top1_ctrl)</h2>
+    <p class="dek" style="margin-bottom:24px">Everything above uses frozen <span class="mono">voyage-4-nano</span>. Swapping in <span class="mono">top1_ctrl_001</span> &mdash; this project's best fine-tuned LoRA checkpoint &mdash; for all four embeddings, same narrowed <span class="mono">bg_text</span>, same no-fit sweep: forward-only alone is already far stronger, and the holdout curve's peak flips to the <em>negative</em> side of &lambda;.</p>
+
+    <div class="stats" style="margin-bottom:24px">
+      <div class="tile holdout">
+        <div class="tile-label">Holdout &middot; 69 pairs</div>
+        <div class="tile-value">&lambda;=&minus;0.25</div>
+        <div class="tile-sub">0.6655 &rarr; 0.6853 &nbsp;(forward-only already 0.6655)</div>
+      </div>
+      <div class="tile all200">
+        <div class="tile-label">All 200 pairs</div>
+        <div class="tile-value">+0.0071 AUC</div>
+        <div class="tile-sub">0.5890 &rarr; 0.5961 at &lambda;&nbsp;=&nbsp;0.50</div>
+      </div>
+    </div>
+
+    <div class="chart-card">
+      <div class="legend">
+        <span class="legend-item"><span class="legend-swatch holdout"></span>Holdout (69)</span>
+        <span class="legend-item"><span class="legend-swatch all200"></span>All 200</span>
+      </div>
+      <div class="chart-wrap" id="chartWrap2">
+        <svg class="chart" id="chart2" viewBox="0 0 800 380" preserveAspectRatio="xMidYMid meet"></svg>
+        <div class="tooltip" id="tooltip2"></div>
+      </div>
+    </div>
+
+    <div class="note" style="margin-top:20px"><strong>Caveat that matters more than the headline here: this text is out-of-distribution for the fine-tune.</strong> <span class="mono">top1_ctrl</span> was trained on full-profile seeker/candidate text, never on this narrower look/bg split. Every number in this section measures how a model fine-tuned on one text shape behaves when scored on a different one &mdash; not a clean test of whether fine-tuning helps the reciprocal mechanism itself.</div>
+    <div class="note"><strong>The holdout sign flip is the one genuinely new finding.</strong> Frozen holdout peaked at &lambda;=+0.25; fine-tuned holdout peaks at &lambda;=&minus;0.25 &mdash; the first case in this project where the "expected" positive-&lambda; direction actively hurts. All-200 kept the same positive sign as frozen, just a smaller gain, so the disagreement is holdout-specific.</div>
+  </section>
+
   <footer>
-    <span>baselines/reciprocal_lambda_grid &middot; voyage-4-nano &middot; Modal A10G &middot; run real200_001</span>
-    <span>docs/reciprocal-lambda-grid-experiment.md</span>
+    <span>baselines/reciprocal_lambda_grid + reciprocal_lambda_grid_top1ctrl &middot; voyage-4-nano (frozen + top1_ctrl_001 LoRA) &middot; Modal A10G/A100 &middot; run real200_001</span>
+    <span>docs/reciprocal-lambda-grid-experiment.md + docs/reciprocal-lambda-grid-top1ctrl-experiment.md</span>
   </footer>
 </div>
 
 <script>
 (function () {
-  var holdout = [[-2.0, 0.4871], [-1.95, 0.4905], [-1.9, 0.4897], [-1.85, 0.4914], [-1.8, 0.4931], [-1.75, 0.4931], [-1.7, 0.4957], [-1.65, 0.4974], [-1.6, 0.4983], [-1.55, 0.5009], [-1.5, 0.4983], [-1.45, 0.4983], [-1.4, 0.4974], [-1.35, 0.4983], [-1.3, 0.5], [-1.25, 0.506], [-1.2, 0.5095], [-1.15, 0.5138], [-1.1, 0.519], [-1.05, 0.519], [-1.0, 0.5224], [-0.95, 0.5336], [-0.9, 0.544], [-0.85, 0.5483], [-0.8, 0.5569], [-0.75, 0.5638], [-0.7, 0.5647], [-0.65, 0.5655], [-0.6, 0.5672], [-0.55, 0.5741], [-0.5, 0.5759], [-0.45, 0.5759], [-0.4, 0.5793], [-0.35, 0.5767], [-0.3, 0.5793], [-0.25, 0.5784], [-0.2, 0.5828], [-0.15, 0.5819], [-0.1, 0.5914], [-0.05, 0.5957], [0.0, 0.5966], [0.05, 0.594], [0.1, 0.6009], [0.15, 0.6026], [0.2, 0.6138], [0.25, 0.6181], [0.3, 0.6095], [0.35, 0.6086], [0.4, 0.6034], [0.45, 0.6026], [0.5, 0.6052], [0.55, 0.6034], [0.6, 0.6026], [0.65, 0.6017], [0.7, 0.6026], [0.75, 0.6017], [0.8, 0.6034], [0.85, 0.6026], [0.9, 0.6026], [0.95, 0.6069], [1.0, 0.6086], [1.05, 0.606], [1.1, 0.6026], [1.15, 0.6009], [1.2, 0.6034], [1.25, 0.6009], [1.3, 0.6017], [1.35, 0.5983], [1.4, 0.6], [1.45, 0.5974], [1.5, 0.5948], [1.55, 0.5948], [1.6, 0.5966], [1.65, 0.5931], [1.7, 0.5931], [1.75, 0.5931], [1.8, 0.5922], [1.85, 0.5897], [1.9, 0.5879], [1.95, 0.5879], [2.0, 0.5871]];
-  var all200 = [[-2.0, 0.4933], [-1.95, 0.4934], [-1.9, 0.4931], [-1.85, 0.4929], [-1.8, 0.4933], [-1.75, 0.4937], [-1.7, 0.4945], [-1.65, 0.4958], [-1.6, 0.4975], [-1.55, 0.4978], [-1.5, 0.4976], [-1.45, 0.4968], [-1.4, 0.4973], [-1.35, 0.4982], [-1.3, 0.4998], [-1.25, 0.501], [-1.2, 0.5024], [-1.15, 0.5036], [-1.1, 0.5056], [-1.05, 0.5073], [-1.0, 0.5091], [-0.95, 0.5121], [-0.9, 0.516], [-0.85, 0.5174], [-0.8, 0.5208], [-0.75, 0.5238], [-0.7, 0.5239], [-0.65, 0.5251], [-0.6, 0.5278], [-0.55, 0.5319], [-0.5, 0.5352], [-0.45, 0.5366], [-0.4, 0.54], [-0.35, 0.5411], [-0.3, 0.5456], [-0.25, 0.5468], [-0.2, 0.5498], [-0.15, 0.5525], [-0.1, 0.5542], [-0.05, 0.5558], [0.0, 0.5578], [0.05, 0.5573], [0.1, 0.5588], [0.15, 0.5589], [0.2, 0.5601], [0.25, 0.5618], [0.3, 0.5633], [0.35, 0.565], [0.4, 0.564], [0.45, 0.5634], [0.5, 0.5658], [0.55, 0.5663], [0.6, 0.5649], [0.65, 0.5626], [0.7, 0.5631], [0.75, 0.5615], [0.8, 0.5631], [0.85, 0.5626], [0.9, 0.5621], [0.95, 0.5597], [1.0, 0.5582], [1.05, 0.5585], [1.1, 0.557], [1.15, 0.5576], [1.2, 0.5568], [1.25, 0.5569], [1.3, 0.5571], [1.35, 0.5561], [1.4, 0.556], [1.45, 0.555], [1.5, 0.5533], [1.55, 0.553], [1.6, 0.5526], [1.65, 0.5513], [1.7, 0.5503], [1.75, 0.5504], [1.8, 0.5502], [1.85, 0.5496], [1.9, 0.5495], [1.95, 0.5491], [2.0, 0.5493]];
-
-  var svg = document.getElementById('chart');
+  function buildChart(cfg) {
+  var holdout = cfg.holdout;
+  var all200 = cfg.all200;
+  var svg = document.getElementById(cfg.svgId);
   var svgNS = 'http://www.w3.org/2000/svg';
   var W = 800, H = 380;
   var M = { top: 16, right: 20, bottom: 34, left: 46 };
@@ -518,7 +556,7 @@ footer {
   var plotH = H - M.top - M.bottom;
 
   var xMin = -2, xMax = 2;
-  var yMin = 0.46, yMax = 0.64;
+  var yMin = cfg.yMin, yMax = cfg.yMax;
 
   function xScale(lam) { return M.left + (lam - xMin) / (xMax - xMin) * plotW; }
   function yScale(auc) { return M.top + (1 - (auc - yMin) / (yMax - yMin)) * plotH; }
@@ -529,8 +567,7 @@ footer {
     return e;
   }
 
-  // gridlines (y)
-  var yTicks = [0.48, 0.52, 0.56, 0.60, 0.64];
+  var yTicks = cfg.yTicks;
   yTicks.forEach(function (t) {
     var y = yScale(t);
     svg.appendChild(el('line', { class: 'grid-line', x1: M.left, x2: W - M.right, y1: y, y2: y }));
@@ -539,7 +576,6 @@ footer {
     svg.appendChild(lbl);
   });
 
-  // x ticks
   var xTicks = [-2, -1.5, -1, -0.5, 0, 0.5, 1, 1.5, 2];
   xTicks.forEach(function (t) {
     var x = xScale(t);
@@ -548,10 +584,7 @@ footer {
     svg.appendChild(lbl);
   });
 
-  // zero line (forward-only)
   svg.appendChild(el('line', { class: 'zero-line', x1: xScale(0), x2: xScale(0), y1: M.top, y2: H - M.bottom }));
-
-  // axis lines
   svg.appendChild(el('line', { class: 'axis-line', x1: M.left, x2: W - M.right, y1: H - M.bottom, y2: H - M.bottom }));
   svg.appendChild(el('line', { class: 'axis-line', x1: M.left, x2: M.left, y1: M.top, y2: H - M.bottom }));
 
@@ -582,7 +615,6 @@ footer {
   markPeak(hPeak, 'holdout', -10);
   markPeak(aPeak, 'all200', 18);
 
-  // hover interaction
   var crosshair = el('line', { class: 'crosshair', y1: M.top, y2: H - M.bottom });
   svg.appendChild(crosshair);
   var hoverHoldout = el('circle', { class: 'hover-dot holdout', r: 4.5, fill: 'var(--series-holdout)' });
@@ -593,8 +625,8 @@ footer {
   var overlay = el('rect', { class: 'overlay-rect', x: M.left, y: M.top, width: plotW, height: plotH });
   svg.appendChild(overlay);
 
-  var tooltip = document.getElementById('tooltip');
-  var wrap = document.getElementById('chartWrap');
+  var tooltip = document.getElementById(cfg.tooltipId);
+  var wrap = document.getElementById(cfg.wrapId);
 
   function nearestIndex(lam) {
     var idx = Math.round((lam - xMin) / 0.05);
@@ -651,5 +683,20 @@ footer {
     ev.preventDefault();
   }, { passive: false });
   overlay.addEventListener('touchend', hide);
+  }
+
+  buildChart({
+    svgId: 'chart', tooltipId: 'tooltip', wrapId: 'chartWrap',
+    yMin: 0.46, yMax: 0.64, yTicks: [0.48, 0.52, 0.56, 0.60, 0.64],
+    holdout: [[-2.0, 0.4871], [-1.95, 0.4905], [-1.9, 0.4897], [-1.85, 0.4914], [-1.8, 0.4931], [-1.75, 0.4931], [-1.7, 0.4957], [-1.65, 0.4974], [-1.6, 0.4983], [-1.55, 0.5009], [-1.5, 0.4983], [-1.45, 0.4983], [-1.4, 0.4974], [-1.35, 0.4983], [-1.3, 0.5], [-1.25, 0.506], [-1.2, 0.5095], [-1.15, 0.5138], [-1.1, 0.519], [-1.05, 0.519], [-1.0, 0.5224], [-0.95, 0.5336], [-0.9, 0.544], [-0.85, 0.5483], [-0.8, 0.5569], [-0.75, 0.5638], [-0.7, 0.5647], [-0.65, 0.5655], [-0.6, 0.5672], [-0.55, 0.5741], [-0.5, 0.5759], [-0.45, 0.5759], [-0.4, 0.5793], [-0.35, 0.5767], [-0.3, 0.5793], [-0.25, 0.5784], [-0.2, 0.5828], [-0.15, 0.5819], [-0.1, 0.5914], [-0.05, 0.5957], [0.0, 0.5966], [0.05, 0.594], [0.1, 0.6009], [0.15, 0.6026], [0.2, 0.6138], [0.25, 0.6181], [0.3, 0.6095], [0.35, 0.6086], [0.4, 0.6034], [0.45, 0.6026], [0.5, 0.6052], [0.55, 0.6034], [0.6, 0.6026], [0.65, 0.6017], [0.7, 0.6026], [0.75, 0.6017], [0.8, 0.6034], [0.85, 0.6026], [0.9, 0.6026], [0.95, 0.6069], [1.0, 0.6086], [1.05, 0.606], [1.1, 0.6026], [1.15, 0.6009], [1.2, 0.6034], [1.25, 0.6009], [1.3, 0.6017], [1.35, 0.5983], [1.4, 0.6], [1.45, 0.5974], [1.5, 0.5948], [1.55, 0.5948], [1.6, 0.5966], [1.65, 0.5931], [1.7, 0.5931], [1.75, 0.5931], [1.8, 0.5922], [1.85, 0.5897], [1.9, 0.5879], [1.95, 0.5879], [2.0, 0.5871]],
+    all200: [[-2.0, 0.4933], [-1.95, 0.4934], [-1.9, 0.4931], [-1.85, 0.4929], [-1.8, 0.4933], [-1.75, 0.4937], [-1.7, 0.4945], [-1.65, 0.4958], [-1.6, 0.4975], [-1.55, 0.4978], [-1.5, 0.4976], [-1.45, 0.4968], [-1.4, 0.4973], [-1.35, 0.4982], [-1.3, 0.4998], [-1.25, 0.501], [-1.2, 0.5024], [-1.15, 0.5036], [-1.1, 0.5056], [-1.05, 0.5073], [-1.0, 0.5091], [-0.95, 0.5121], [-0.9, 0.516], [-0.85, 0.5174], [-0.8, 0.5208], [-0.75, 0.5238], [-0.7, 0.5239], [-0.65, 0.5251], [-0.6, 0.5278], [-0.55, 0.5319], [-0.5, 0.5352], [-0.45, 0.5366], [-0.4, 0.54], [-0.35, 0.5411], [-0.3, 0.5456], [-0.25, 0.5468], [-0.2, 0.5498], [-0.15, 0.5525], [-0.1, 0.5542], [-0.05, 0.5558], [0.0, 0.5578], [0.05, 0.5573], [0.1, 0.5588], [0.15, 0.5589], [0.2, 0.5601], [0.25, 0.5618], [0.3, 0.5633], [0.35, 0.565], [0.4, 0.564], [0.45, 0.5634], [0.5, 0.5658], [0.55, 0.5663], [0.6, 0.5649], [0.65, 0.5626], [0.7, 0.5631], [0.75, 0.5615], [0.8, 0.5631], [0.85, 0.5626], [0.9, 0.5621], [0.95, 0.5597], [1.0, 0.5582], [1.05, 0.5585], [1.1, 0.557], [1.15, 0.5576], [1.2, 0.5568], [1.25, 0.5569], [1.3, 0.5571], [1.35, 0.5561], [1.4, 0.556], [1.45, 0.555], [1.5, 0.5533], [1.55, 0.553], [1.6, 0.5526], [1.65, 0.5513], [1.7, 0.5503], [1.75, 0.5504], [1.8, 0.5502], [1.85, 0.5496], [1.9, 0.5495], [1.95, 0.5491], [2.0, 0.5493]]
+  });
+
+  buildChart({
+    svgId: 'chart2', tooltipId: 'tooltip2', wrapId: 'chartWrap2',
+    yMin: 0.44, yMax: 0.70, yTicks: [0.44, 0.50, 0.56, 0.62, 0.68],
+    holdout: [[-2.0, 0.5302], [-1.95, 0.5319], [-1.9, 0.5319], [-1.85, 0.5336], [-1.8, 0.5371], [-1.75, 0.5422], [-1.7, 0.5422], [-1.65, 0.544], [-1.6, 0.5517], [-1.55, 0.5509], [-1.5, 0.5534], [-1.45, 0.5612], [-1.4, 0.5595], [-1.35, 0.5629], [-1.3, 0.5672], [-1.25, 0.5741], [-1.2, 0.5767], [-1.15, 0.5793], [-1.1, 0.5845], [-1.05, 0.5888], [-1.0, 0.5948], [-0.95, 0.5991], [-0.9, 0.6043], [-0.85, 0.6103], [-0.8, 0.6207], [-0.75, 0.6267], [-0.7, 0.6345], [-0.65, 0.6414], [-0.6, 0.6534], [-0.55, 0.6621], [-0.5, 0.669], [-0.45, 0.6724], [-0.4, 0.6759], [-0.35, 0.6793], [-0.3, 0.6836], [-0.25, 0.6853], [-0.2, 0.6759], [-0.15, 0.6759], [-0.1, 0.6681], [-0.05, 0.6638], [0.0, 0.6655], [0.05, 0.6595], [0.1, 0.6586], [0.15, 0.6586], [0.2, 0.656], [0.25, 0.6586], [0.3, 0.6534], [0.35, 0.6509], [0.4, 0.6431], [0.45, 0.6405], [0.5, 0.6397], [0.55, 0.6371], [0.6, 0.6319], [0.65, 0.6284], [0.7, 0.625], [0.75, 0.6224], [0.8, 0.6198], [0.85, 0.6138], [0.9, 0.6138], [0.95, 0.6129], [1.0, 0.6095], [1.05, 0.606], [1.1, 0.6034], [1.15, 0.6026], [1.2, 0.6], [1.25, 0.5948], [1.3, 0.5948], [1.35, 0.5914], [1.4, 0.5914], [1.45, 0.5905], [1.5, 0.5862], [1.55, 0.5853], [1.6, 0.5836], [1.65, 0.5819], [1.7, 0.5802], [1.75, 0.5776], [1.8, 0.5776], [1.85, 0.5759], [1.9, 0.575], [1.95, 0.5741], [2.0, 0.5741]],
+    all200: [[-2.0, 0.4723], [-1.95, 0.4732], [-1.9, 0.4737], [-1.85, 0.4745], [-1.8, 0.4763], [-1.75, 0.4775], [-1.7, 0.4794], [-1.65, 0.481], [-1.6, 0.4834], [-1.55, 0.4851], [-1.5, 0.4874], [-1.45, 0.4901], [-1.4, 0.4912], [-1.35, 0.4924], [-1.3, 0.4945], [-1.25, 0.4974], [-1.2, 0.5], [-1.15, 0.5016], [-1.1, 0.505], [-1.05, 0.5084], [-1.0, 0.5102], [-0.95, 0.5128], [-0.9, 0.5181], [-0.85, 0.5233], [-0.8, 0.5292], [-0.75, 0.5353], [-0.7, 0.5394], [-0.65, 0.5423], [-0.6, 0.5484], [-0.55, 0.5551], [-0.5, 0.5612], [-0.45, 0.566], [-0.4, 0.5722], [-0.35, 0.5752], [-0.3, 0.5764], [-0.25, 0.58], [-0.2, 0.5805], [-0.15, 0.5822], [-0.1, 0.5839], [-0.05, 0.5865], [0.0, 0.589], [0.05, 0.5898], [0.1, 0.5913], [0.15, 0.5941], [0.2, 0.594], [0.25, 0.5951], [0.3, 0.5939], [0.35, 0.5949], [0.4, 0.5942], [0.45, 0.5952], [0.5, 0.5961], [0.55, 0.595], [0.6, 0.5958], [0.65, 0.5959], [0.7, 0.5961], [0.75, 0.5959], [0.8, 0.5959], [0.85, 0.5918], [0.9, 0.5916], [0.95, 0.5918], [1.0, 0.592], [1.05, 0.592], [1.1, 0.5916], [1.15, 0.5912], [1.2, 0.5915], [1.25, 0.5907], [1.3, 0.59], [1.35, 0.5898], [1.4, 0.5892], [1.45, 0.5892], [1.5, 0.5883], [1.55, 0.5881], [1.6, 0.5868], [1.65, 0.5859], [1.7, 0.5863], [1.75, 0.5859], [1.8, 0.5855], [1.85, 0.5858], [1.9, 0.5852], [1.95, 0.5843], [2.0, 0.5839]]
+  });
 })();
 </script>
