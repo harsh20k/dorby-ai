@@ -346,7 +346,7 @@
     </div>
     <div class="header-stats">
       <span><b id="stat-total">—</b> items</span>
-      <span><b>2026-07-20</b> → <b>2026-08-09</b></span>
+      <span><b>2026-07-20</b> → <b>2026-08-10</b></span>
     </div>
   </div>
 </header>
@@ -377,7 +377,7 @@
 
 <footer>
   Built from <code>docs/experiment-graphs-index.md</code> and the live
-  <code>Artifact</code> listing (36 published pages, checked 2026-08-09).
+  <code>Artifact</code> listing (37 published pages, checked 2026-08-10).
   Local <code>file://</code> links are pinned to this checkout's path and
   won't resolve on another machine — use <code>open docs/html/&lt;file&gt;.html</code> there instead.
 </footer>
@@ -387,6 +387,10 @@ const REPO = "/Users/harsh/Artifacts/dorby-ai/docs/html/";
 
 // { date: "YYYY-MM-DD", title, desc, type: 'published'|'local'|'both'|'note', pub: url|null, loc: filename|null, locFull: absolute file:// url|null }
 const DATA = [
+  { date:"2026-08-10", title:"Lambda sweep, no fitting: does the reciprocal term hold up?", desc:"Sweeping λ from -2 to +2 directly (no fit) shows two smooth, positive-peaked curves — holdout AUC 0.5966→0.6181 at λ=0.25, all-200 0.5578→0.5663 at λ=0.55 — showing the rrf003 run's null result was a bad fit, not proof the term is worthless.", type:"both", pub:"https://claude.ai/code/artifact/c522e5a2-a1fb-4a77-8f96-ed8e9c403431", loc:"reciprocal-lambda-grid.html" },
+  { date:"2026-08-10", title:"Reciprocal λ calibrated on synthetic judge labels — a null result", desc:"Fitting λ on 2,619 rrf003 judge-labeled pairs instead of real train lands near zero (0.05 vs. 1.75) and gives a small AUC loss on the real 200, not the original run's gain — but the fitting population and field set changed at once, confounding the result.", type:"local", locFull:"file:///Users/harsh/Artifacts/dorby-ai/docs/reciprocal-static-rrf003-experiment.md" },
+
+  { date:"2026-08-09", title:"queryonly_back_look field/query sweep", desc:"The 105-combo grid re-scored against the project's new best fine-tune, queryonly_back_look_001; grid best reaches 0.6349 pair AUC, just below top1_ctrl's own grid best (0.6395) — the training win was narrow, not grid-wide.", type:"both", pub:"https://claude.ai/code/artifact/b9baf2d7-e7de-4962-918b-a3fe48b7ccf2", loc:"twotower-queryonly-back-look-field-sweep-heatmap.html" },
   { date:"2026-08-09", title:"New best two-tower fine-tune: query-only + background/lookingFor", desc:"The recall@1-best combo from the top1_ctrl field/query sweep, actually trained — beats top1_ctrl on every metric and sets a new project-wide hard-negative AUC record (0.6564).", type:"both", pub:"https://claude.ai/code/artifact/47754226-aeaf-4306-902f-35a9ed6ee586", loc:"twotower-queryonly-back-look-experiment.html" },
   { date:"2026-08-09", title:"top1_ctrl field/query sweep", desc:"The 105-combo field/query grid re-scored against the fine-tuned top1_ctrl checkpoint; best combo reaches 0.6395 pair AUC, beating the full-profile baseline and nearly matching the LLM judge.", type:"both", pub:"https://claude.ai/code/artifact/4ca20e7d-1bcd-4972-a4b5-9d2709f3d300", loc:"twotower-top1-ctrl-field-sweep-heatmap.html" },
   { date:"2026-08-09", title:"Voyage-4-nano field/query sweep", desc:"105-combo field/query grid search on frozen Voyage-4-nano; best combo reaches 0.6110 pair AUC, beating the full-profile baseline but still behind the LLM judge.", type:"both", pub:"https://claude.ai/code/artifact/1e698f4e-15a6-44b4-bd76-2381befb2f40", loc:"voyage-nano-field-sweep-heatmap.html" },
