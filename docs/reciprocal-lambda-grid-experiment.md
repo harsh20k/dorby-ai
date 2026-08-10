@@ -1,6 +1,9 @@
 # Lambda sensitivity sweep (no fitting) — does a diagnostic curve back up the earlier claims?
 
-**Status: run complete (`voyage-4-nano`, Modal A10G, run `real200_001`).** No
+**Status: run complete (`voyage-4-nano`, Modal A10G, run `real200_001`).**
+Chart: [`docs/html/reciprocal-lambda-grid.html`](html/reciprocal-lambda-grid.html)
+([published](https://claude.ai/code/artifact/c522e5a2-a1fb-4a77-8f96-ed8e9c403431)).
+No
 fitting step this time — `lambda` is swept from -2 to +2 (step 0.05) and pair
 ROC-AUC of `s_fwd + lambda*s_recip` is reported directly against the real 200
 (and, separately, the 69-pair holdout) at every grid point. The curve is
