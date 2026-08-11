@@ -1,0 +1,352 @@
+<title>Qwen3-8B Sets New Project Records</title>
+<meta name="description" content="Fine-tuning Qwen3-Embedding-8B on the same batch as voyage_gemini_ctrl sets new project-wide records for pair AUC and hard-negative AUC, beating every embedding model and the LLM judge measured so far — without any field-selection trick.">
+<style>
+  :root {
+    color-scheme: light;
+    --surface-1:      #fcfcfb;
+    --surface-page:   #f9f9f7;
+    --text-primary:   #0b0b0b;
+    --text-secondary: #52514e;
+    --text-muted:     #898781;
+    --gridline:       #e1e0d9;
+    --baseline:       #c3c2b7;
+    --border:         rgba(11,11,11,0.10);
+    --series-1: #eda100;  /* voyage_gemini_ctrl_001 — nano on same batch */
+    --series-2: #7c3aed;  /* qwen_voyage_gemini — this experiment */
+    --series-3: #6b7280;  /* prior records / references */
+    --good: #006300;
+    --caution: #9a6b00;
+    --critical: #d03b3b;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:where(:not([data-theme="light"])) {
+      color-scheme: dark;
+      --surface-1:      #1a1a19;
+      --surface-page:   #0d0d0d;
+      --text-primary:   #ffffff;
+      --text-secondary: #c3c2b7;
+      --text-muted:     #898781;
+      --gridline:       #2c2c2a;
+      --baseline:       #383835;
+      --border:         rgba(255,255,255,0.10);
+      --series-1: #c98500;
+      --series-2: #a274f5;
+      --series-3: #8b93a1;
+      --good: #0ca30c;
+      --caution: #d4a017;
+      --critical: #e66767;
+    }
+  }
+  :root[data-theme="dark"] {
+    color-scheme: dark;
+    --surface-1:      #1a1a19;
+    --surface-page:   #0d0d0d;
+    --text-primary:   #ffffff;
+    --text-secondary: #c3c2b7;
+    --text-muted:     #898781;
+    --gridline:       #2c2c2a;
+    --baseline:       #383835;
+    --border:         rgba(255,255,255,0.10);
+    --series-1: #c98500;
+    --series-2: #a274f5;
+    --series-3: #8b93a1;
+    --good: #0ca30c;
+    --caution: #d4a017;
+    --critical: #e66767;
+  }
+
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body {
+    background: var(--surface-page);
+    font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+    color: var(--text-primary);
+  }
+  .page { max-width: 900px; margin: 0 auto; padding: 40px 24px 80px; }
+  header { margin-bottom: 32px; }
+  h1 { font-size: 22px; font-weight: 700; letter-spacing: -0.01em; margin: 0 0 10px; text-wrap: balance; }
+  .lede { font-size: 14.5px; line-height: 1.6; color: var(--text-secondary); max-width: 700px; margin: 0; }
+  .lede b { color: var(--text-primary); }
+
+  .badge-row { display: flex; gap: 8px; margin-top: 14px; flex-wrap: wrap; }
+  .badge {
+    display: inline-flex; align-items: center; gap: 6px; font-size: 11.5px; font-weight: 700;
+    padding: 5px 11px; border-radius: 100px; background: color-mix(in srgb, var(--good) 14%, transparent);
+    color: var(--good);
+  }
+  .badge.caution { background: color-mix(in srgb, var(--caution) 16%, transparent); color: var(--caution); }
+  .badge.neutral { background: color-mix(in srgb, var(--text-muted) 16%, transparent); color: var(--text-secondary); }
+
+  .stat-row { display: flex; gap: 14px; flex-wrap: wrap; margin: 22px 0 0; }
+  .stat {
+    flex: 1 1 150px; background: var(--surface-1); border: 1px solid var(--border);
+    border-radius: 12px; padding: 16px 18px;
+  }
+  .stat .stat-label { font-size: 11px; text-transform: uppercase; letter-spacing: 0.05em; color: var(--text-muted); font-weight: 700; margin-bottom: 6px; }
+  .stat .stat-value { font-size: 26px; font-weight: 700; font-variant-numeric: tabular-nums; color: var(--series-2); line-height: 1.1; }
+  .stat .stat-note { font-size: 11.5px; color: var(--text-secondary); margin-top: 5px; line-height: 1.4; }
+
+  .card {
+    background: var(--surface-1); border: 1px solid var(--border);
+    border-radius: 12px; padding: 24px 24px 20px; margin-top: 24px;
+  }
+  .card h2 { font-size: 13px; text-transform: uppercase; letter-spacing: 0.05em; color: var(--text-muted); margin: 0 0 4px; font-weight: 700; }
+  .card .card-note { font-size: 12.5px; color: var(--text-secondary); margin: 0 0 20px; line-height: 1.5; }
+
+  .legend { display: flex; flex-wrap: wrap; gap: 16px; margin-bottom: 18px; }
+  .legend-item { display: flex; align-items: center; gap: 7px; font-size: 12.5px; color: var(--text-secondary); }
+  .legend-swatch { width: 11px; height: 11px; border-radius: 3px; flex-shrink: 0; }
+
+  .chart-wrap { overflow-x: auto; }
+  svg { display: block; font-family: inherit; }
+  .axis-label { font-size: 11px; fill: var(--text-muted); }
+  .group-label { font-size: 12px; fill: var(--text-secondary); font-weight: 600; }
+  .gridline { stroke: var(--gridline); stroke-width: 1; }
+  .baseline { stroke: var(--baseline); stroke-width: 1; }
+  .bar-label { font-size: 10px; fill: var(--text-secondary); font-variant-numeric: tabular-nums; text-anchor: middle; }
+
+  .tooltip {
+    position: fixed; pointer-events: none; z-index: 30;
+    background: var(--surface-1); border: 1px solid var(--border);
+    border-radius: 8px; padding: 8px 11px; font-size: 12px; line-height: 1.5;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.25); display: none; max-width: 240px;
+  }
+  .tooltip b { color: var(--text-primary); }
+
+  table.data-table { width: 100%; border-collapse: collapse; font-size: 12.5px; margin-top: 8px; }
+  table.data-table th, table.data-table td {
+    text-align: right; padding: 7px 10px; font-variant-numeric: tabular-nums;
+    border-bottom: 1px solid var(--gridline);
+  }
+  table.data-table th:first-child, table.data-table td:first-child { text-align: left; font-variant-numeric: normal; }
+  table.data-table th { color: var(--text-muted); font-weight: 600; font-size: 11px; text-transform: uppercase; letter-spacing: 0.04em; }
+  table.data-table td.best { color: var(--good); font-weight: 700; }
+  table.data-table tr:last-child td { border-bottom: none; }
+
+  .honest-box {
+    border: 1px dashed var(--border); border-radius: 9px; padding: 14px 16px; margin-top: 4px;
+    font-size: 12.5px; line-height: 1.6; color: var(--text-secondary);
+  }
+  .honest-box b { color: var(--text-primary); }
+  .honest-box.caution { border-color: color-mix(in srgb, var(--caution) 45%, var(--border)); background: color-mix(in srgb, var(--caution) 6%, var(--surface-1)); }
+
+  footer { font-size: 12px; color: var(--text-muted); text-align: center; margin-top: 24px; }
+  footer code { color: var(--text-secondary); }
+</style>
+
+<div class="page">
+  <header>
+    <h1>Qwen3-Embedding-8B Sets New Project Records</h1>
+    <p class="lede">
+      <code>twotower_qwen_bigbatch</code> found that fine-tuning Qwen3-Embedding-8B, unlike
+      nano, produces gains that actually generalize to real pairs. This experiment points
+      that same recipe at <code>voyage_gemini_ctrl_001</code>'s newer, bigger, leakier batch —
+      and sets a new project-wide best on both pair AUC and hard-negative AUC, on plain
+      full-profile text, beating every embedding model <b>and</b> the LLM judge measured
+      in this project so far.
+    </p>
+    <div class="badge-row">
+      <span class="badge">New hard-neg AUC record</span>
+      <span class="badge">Ties best pair AUC in the project</span>
+      <span class="badge neutral">Nano still wins retrieval</span>
+      <span class="badge caution">Same leaky batch as voyage_gemini_ctrl</span>
+    </div>
+    <div class="stat-row">
+      <div class="stat">
+        <div class="stat-label">Pair AUC, all 200</div>
+        <div class="stat-value">0.6446</div>
+        <div class="stat-note">vs. LLM judge's own best, 0.6451 — a statistical tie</div>
+      </div>
+      <div class="stat">
+        <div class="stat-label">Hard-neg AUC, all 200</div>
+        <div class="stat-value">0.6862</div>
+        <div class="stat-note">Beats the prior record, 0.6732 — without any field-selection trick</div>
+      </div>
+    </div>
+  </header>
+
+  <div class="card">
+    <h2>All 200 real pairs — Qwen vs. nano, same batch</h2>
+    <p class="card-note">Identical training rows (<code>pairing_voyage_gemini/smoke_test_002</code>), identical text fields. Only the base embedding model differs.</p>
+    <div class="legend" id="legend"></div>
+    <div class="chart-wrap"><svg id="chart" width="760" height="340"></svg></div>
+    <table class="data-table" id="data-table" style="margin-top: 18px;"></table>
+    <div class="honest-box" style="margin-top: 14px;">
+      Same shape as every other Qwen-vs-nano comparison in this project: <b>Qwen leads
+      classification, nano leads retrieval.</b> MRR, recall@1, and recall@10 all favor nano
+      on this batch — the win here is specifically pairwise accept/decline judgment, not
+      ranking a shortlist.
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>Where this lands against every project record</h2>
+    <p class="card-note">Best pair AUC and hard-neg AUC of any model tested in this project, embedding-based or LLM-judge, before this run.</p>
+    <table class="data-table" id="data-table-records"></table>
+  </div>
+
+  <div class="card">
+    <h2>The holdout inflated retrieval far more than classification</h2>
+    <p class="card-note">Pair AUC held up reasonably well going from holdout to all 200; recall collapsed.</p>
+    <table class="data-table" id="data-table-holdout"></table>
+    <div class="honest-box caution" style="margin-top: 14px;">
+      This matches <code>twotower_qwen_bigbatch</code>'s own finding that Qwen's
+      holdout-vs-real gap runs roughly 4x wider than nano's — exactly why the strong
+      holdout numbers (0.74 AUC, 0.79 hard-neg) were never reported as the answer on their
+      own. Same leakage caveat as <code>voyage_gemini_ctrl_001</code> also applies here:
+      this batch is an unreviewed pilot, measurably leakier than prior sources on
+      pre-training checks — the record above deserves caution, not a victory lap.
+    </div>
+  </div>
+
+  <footer>
+    Writeup: <code>docs/twotower-qwen-voyage-gemini-experiment.md</code> · Code: <code>twotower_qwen_voyage_gemini/</code> · Same-batch baseline: <a href="https://claude.ai/code/artifact/11d21292-33d6-42b6-8d5d-f42b41b620e6" target="_blank" rel="noopener">voyage_gemini_ctrl experiment</a>
+  </footer>
+</div>
+
+<div class="tooltip" id="tooltip"></div>
+
+<script>
+const rootStyle = getComputedStyle(document.documentElement);
+function cssVar(name) { return rootStyle.getPropertyValue(name).trim(); }
+
+const METRICS = [
+  { key: 'auc',  label: 'Pair AUC' },
+  { key: 'hard', label: 'Hard-neg AUC' },
+  { key: 'mrr',  label: 'MRR' },
+  { key: 'r1',   label: 'Recall@1' },
+  { key: 'r10',  label: 'Recall@10' },
+];
+
+function buildTable(tableEl, series, data, metrics, opts) {
+  opts = opts || {};
+  let thead = '<thead><tr><th>Approach</th>' + metrics.map(m => `<th>${m.label}</th>`).join('') + '</tr></thead>';
+  let tbody = '<tbody>';
+  series.forEach(s => {
+    const row = data[s.key];
+    tbody += `<tr><td>${s.label}</td>` + metrics.map(m => {
+      const val = row[m.key];
+      if (val === undefined || val === null) return '<td>—</td>';
+      const vals = series.map(s2 => data[s2.key][m.key]).filter(v => v !== undefined && v !== null);
+      const best = opts.highlightBest && Math.max(...vals) === val;
+      return `<td class="${best ? 'best' : ''}">${val.toFixed(4)}</td>`;
+    }).join('') + '</tr>';
+  });
+  tbody += '</tbody>';
+  tableEl.innerHTML = thead + tbody;
+}
+
+const ns = 'http://www.w3.org/2000/svg';
+function el(tag, attrs) {
+  const e = document.createElementNS(ns, tag);
+  for (const k in attrs) e.setAttribute(k, attrs[k]);
+  return e;
+}
+const tooltip = document.getElementById('tooltip');
+
+function drawGroupedBars(svgEl, series, metrics, data) {
+  const W = 760, H = 340;
+  const marginL = 40, marginR = 20, marginT = 16, marginB = 44;
+  const plotW = W - marginL - marginR, plotH = H - marginT - marginB;
+  const groupGap = 20, barGap = 4;
+  const groupW = plotW / metrics.length;
+  const barW = (groupW - groupGap) / series.length;
+  const yMax = 1.0;
+  function yFor(v) { return marginT + plotH * (1 - v / yMax); }
+
+  svgEl.setAttribute('viewBox', `0 0 ${W} ${H}`);
+  [0, 0.25, 0.5, 0.75, 1.0].forEach(v => {
+    const y = yFor(v);
+    svgEl.appendChild(el('line', { class: 'gridline', x1: marginL, x2: W - marginR, y1: y, y2: y }));
+    const t = el('text', { class: 'axis-label', x: marginL - 8, y: y + 4, 'text-anchor': 'end' });
+    t.textContent = v.toFixed(2);
+    svgEl.appendChild(t);
+  });
+  svgEl.appendChild(el('line', { class: 'baseline', x1: marginL, x2: W - marginR, y1: yFor(0), y2: yFor(0) }));
+
+  metrics.forEach((m, gi) => {
+    const groupX = marginL + gi * groupW + groupGap / 2;
+    series.forEach((s, si) => {
+      const val = data[s.key][m.key];
+      if (val === undefined || val === null) return;
+      const x = groupX + si * barW;
+      const y = yFor(val);
+      const h = yFor(0) - y;
+      const rect = el('rect', {
+        class: 'bar', x: x + barGap / 2, y, width: barW - barGap, height: Math.max(h, 1),
+        fill: s.color, rx: 3,
+      });
+      rect.addEventListener('mousemove', e => {
+        tooltip.style.display = 'block';
+        tooltip.innerHTML = `<b>${s.label}</b><br>${m.label}: <b>${val.toFixed(4)}</b>`;
+        tooltip.style.left = (e.clientX + 14) + 'px';
+        tooltip.style.top = (e.clientY + 14) + 'px';
+      });
+      rect.addEventListener('mouseleave', () => { tooltip.style.display = 'none'; });
+      svgEl.appendChild(rect);
+      const lbl = el('text', { class: 'bar-label', x: x + barW / 2, y: y - 6 });
+      lbl.textContent = val.toFixed(2);
+      svgEl.appendChild(lbl);
+    });
+    const gl = el('text', { class: 'group-label', x: groupX + (barW * series.length) / 2, y: H - marginB + 24, 'text-anchor': 'middle' });
+    gl.textContent = m.label;
+    svgEl.appendChild(gl);
+  });
+}
+
+// --- Card 1: Qwen vs nano, same batch, all-200 ---
+const SERIES = [
+  { key: 'nano', label: 'voyage_gemini_ctrl_001 (nano)', color: cssVar('--series-1') },
+  { key: 'qwen', label: 'qwen_voyage_gemini (this experiment)', color: cssVar('--series-2') },
+];
+const DATA = {
+  nano: { auc: 0.6081, hard: 0.6264, mrr: 0.4506, r1: 0.26, r10: 0.81 },
+  qwen: { auc: 0.6446, hard: 0.6862, mrr: 0.4152, r1: 0.24, r10: 0.75 },
+};
+const legendEl = document.getElementById('legend');
+SERIES.forEach(s => {
+  const item = document.createElement('div');
+  item.className = 'legend-item';
+  item.innerHTML = `<span class="legend-swatch" style="background:${s.color}"></span>${s.label}`;
+  legendEl.appendChild(item);
+});
+buildTable(document.getElementById('data-table'), SERIES, DATA, METRICS, { highlightBest: true });
+drawGroupedBars(document.getElementById('chart'), SERIES, METRICS, DATA);
+
+// --- Card 2: records table ---
+const RECORD_METRICS = [
+  { key: 'auc',  label: 'Pair AUC' },
+  { key: 'hard', label: 'Hard-neg AUC' },
+];
+const RECORD_SERIES = [
+  { key: 'judge',  label: 'LLM judge, focused prompt (prior pair-AUC best)' },
+  { key: 'sweep',  label: 'Nano + field selection (prior hard-neg best)' },
+  { key: 'nano',   label: 'voyage_gemini_ctrl_001 (plain nano fine-tune)' },
+  { key: 'qwen',   label: 'qwen_voyage_gemini (this experiment)' },
+];
+const RECORD_DATA = {
+  judge: { auc: 0.6451, hard: null },
+  sweep: { auc: 0.6855, hard: 0.6732 },
+  nano:  { auc: 0.6081, hard: 0.6264 },
+  qwen:  { auc: 0.6446, hard: 0.6862 },
+};
+buildTable(document.getElementById('data-table-records'), RECORD_SERIES, RECORD_DATA, RECORD_METRICS, { highlightBest: true });
+
+// --- Card 3: holdout vs all-200 ---
+const HOLDOUT_METRICS = [
+  { key: 'auc',  label: 'Pair AUC' },
+  { key: 'hard', label: 'Hard-neg AUC' },
+  { key: 'mrr',  label: 'MRR' },
+  { key: 'r1',   label: 'Recall@1' },
+  { key: 'r10',  label: 'Recall@10' },
+];
+const HOLDOUT_SERIES = [
+  { key: 'holdout', label: 'Holdout (69 pairs)' },
+  { key: 'all',     label: 'All 200 real pairs' },
+];
+const HOLDOUT_DATA = {
+  holdout: { auc: 0.7422, hard: 0.7914, mrr: 0.6351, r1: 0.4483, r10: 0.8966 },
+  all:     { auc: 0.6446, hard: 0.6862, mrr: 0.4152, r1: 0.24,   r10: 0.75 },
+};
+buildTable(document.getElementById('data-table-holdout'), HOLDOUT_SERIES, HOLDOUT_DATA, HOLDOUT_METRICS);
+</script>

@@ -1,0 +1,359 @@
+<title>The KL Leash Loses Again</title>
+<meta name="description" content="Retested a KL-divergence regularizer against the frozen base model on a bigger, leakier batch — it lost on every metric, worse than it lost on the smaller batch it was first tried on.">
+<style>
+  :root {
+    color-scheme: light;
+    --surface-1:      #fcfcfb;
+    --surface-page:   #f9f9f7;
+    --text-primary:   #0b0b0b;
+    --text-secondary: #52514e;
+    --text-muted:     #898781;
+    --gridline:       #e1e0d9;
+    --baseline:       #c3c2b7;
+    --border:         rgba(11,11,11,0.10);
+    --series-1: #eda100;  /* voyage_gemini_ctrl_001 — no KL, the baseline */
+    --series-2: #b23b3b;  /* voyage_gemini_kl_001 — with KL, this experiment */
+    --series-3: #6b7280;  /* holdout reference */
+    --good: #006300;
+    --caution: #9a6b00;
+    --critical: #d03b3b;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:where(:not([data-theme="light"])) {
+      color-scheme: dark;
+      --surface-1:      #1a1a19;
+      --surface-page:   #0d0d0d;
+      --text-primary:   #ffffff;
+      --text-secondary: #c3c2b7;
+      --text-muted:     #898781;
+      --gridline:       #2c2c2a;
+      --baseline:       #383835;
+      --border:         rgba(255,255,255,0.10);
+      --series-1: #c98500;
+      --series-2: #d4685f;
+      --series-3: #8b93a1;
+      --good: #0ca30c;
+      --caution: #d4a017;
+      --critical: #e66767;
+    }
+  }
+  :root[data-theme="dark"] {
+    color-scheme: dark;
+    --surface-1:      #1a1a19;
+    --surface-page:   #0d0d0d;
+    --text-primary:   #ffffff;
+    --text-secondary: #c3c2b7;
+    --text-muted:     #898781;
+    --gridline:       #2c2c2a;
+    --baseline:       #383835;
+    --border:         rgba(255,255,255,0.10);
+    --series-1: #c98500;
+    --series-2: #d4685f;
+    --series-3: #8b93a1;
+    --good: #0ca30c;
+    --caution: #d4a017;
+    --critical: #e66767;
+  }
+
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body {
+    background: var(--surface-page);
+    font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+    color: var(--text-primary);
+  }
+  .page { max-width: 900px; margin: 0 auto; padding: 40px 24px 80px; }
+  header { margin-bottom: 32px; }
+  h1 { font-size: 22px; font-weight: 700; letter-spacing: -0.01em; margin: 0 0 10px; text-wrap: balance; }
+  .lede { font-size: 14.5px; line-height: 1.6; color: var(--text-secondary); max-width: 700px; margin: 0; }
+  .lede b { color: var(--text-primary); }
+
+  .badge-row { display: flex; gap: 8px; margin-top: 14px; flex-wrap: wrap; }
+  .badge {
+    display: inline-flex; align-items: center; gap: 6px; font-size: 11.5px; font-weight: 700;
+    padding: 5px 11px; border-radius: 100px; background: color-mix(in srgb, var(--critical) 14%, transparent);
+    color: var(--critical);
+  }
+  .badge.neutral { background: color-mix(in srgb, var(--text-muted) 16%, transparent); color: var(--text-secondary); }
+
+  .card {
+    background: var(--surface-1); border: 1px solid var(--border);
+    border-radius: 12px; padding: 24px 24px 20px; margin-bottom: 24px;
+  }
+  .card h2 { font-size: 13px; text-transform: uppercase; letter-spacing: 0.05em; color: var(--text-muted); margin: 0 0 4px; font-weight: 700; }
+  .card .card-note { font-size: 12.5px; color: var(--text-secondary); margin: 0 0 20px; line-height: 1.5; }
+
+  .legend { display: flex; flex-wrap: wrap; gap: 16px; margin-bottom: 18px; }
+  .legend-item { display: flex; align-items: center; gap: 7px; font-size: 12.5px; color: var(--text-secondary); }
+  .legend-swatch { width: 11px; height: 11px; border-radius: 3px; flex-shrink: 0; }
+
+  .chart-wrap { overflow-x: auto; }
+  svg { display: block; font-family: inherit; }
+  .axis-label { font-size: 11px; fill: var(--text-muted); }
+  .group-label { font-size: 12px; fill: var(--text-secondary); font-weight: 600; }
+  .gridline { stroke: var(--gridline); stroke-width: 1; }
+  .baseline { stroke: var(--baseline); stroke-width: 1; }
+  .bar-label { font-size: 10px; fill: var(--text-secondary); font-variant-numeric: tabular-nums; text-anchor: middle; }
+
+  .tooltip {
+    position: fixed; pointer-events: none; z-index: 30;
+    background: var(--surface-1); border: 1px solid var(--border);
+    border-radius: 8px; padding: 8px 11px; font-size: 12px; line-height: 1.5;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.25); display: none; max-width: 240px;
+  }
+  .tooltip b { color: var(--text-primary); }
+
+  table.data-table { width: 100%; border-collapse: collapse; font-size: 12.5px; margin-top: 8px; }
+  table.data-table th, table.data-table td {
+    text-align: right; padding: 7px 10px; font-variant-numeric: tabular-nums;
+    border-bottom: 1px solid var(--gridline);
+  }
+  table.data-table th:first-child, table.data-table td:first-child { text-align: left; font-variant-numeric: normal; }
+  table.data-table th { color: var(--text-muted); font-weight: 600; font-size: 11px; text-transform: uppercase; letter-spacing: 0.04em; }
+  table.data-table td.best { color: var(--good); font-weight: 700; }
+  table.data-table td.worst { color: var(--critical); font-weight: 700; }
+  table.data-table tr:last-child td { border-bottom: none; }
+
+  .honest-box {
+    border: 1px dashed var(--border); border-radius: 9px; padding: 14px 16px; margin-top: 4px;
+    font-size: 12.5px; line-height: 1.6; color: var(--text-secondary);
+  }
+  .honest-box b { color: var(--text-primary); }
+  .honest-box.caution { border-color: color-mix(in srgb, var(--caution) 45%, var(--border)); background: color-mix(in srgb, var(--caution) 6%, var(--surface-1)); }
+
+  footer { font-size: 12px; color: var(--text-muted); text-align: center; margin-top: 8px; }
+  footer code { color: var(--text-secondary); }
+</style>
+
+<div class="page">
+  <header>
+    <h1>Retesting a KL Leash on a Bigger Batch — It Loses Again</h1>
+    <p class="lede">
+      An earlier experiment added a KL-divergence penalty against the frozen base model
+      (<code>kl_reg_ctrl_001</code>) to stop early-epoch overfitting — and it made things
+      slightly worse. This retests the identical mechanism on <code>voyage_gemini_ctrl_001</code>'s
+      much bigger, leakier batch, to see if the earlier verdict was just a small-data fluke.
+      <b>It wasn't.</b> The leash loses on every metric again, by a wider margin this time,
+      and — unusually for this project — the 69-pair holdout agreed with the real verdict
+      instead of overstating it.
+    </p>
+    <div class="badge-row">
+      <span class="badge">Net negative on every metric</span>
+      <span class="badge neutral">Holdout and all-200 agreed this time</span>
+    </div>
+  </header>
+
+  <div class="card">
+    <h2>All 200 real pairs — same recipe, KL term on or off</h2>
+    <p class="card-note">Identical LoRA config, data, and text fields. The only variable is whether the KL-divergence penalty against the frozen base model is active during training.</p>
+    <div class="legend" id="legend"></div>
+    <div class="chart-wrap"><svg id="chart" width="760" height="340"></svg></div>
+    <table class="data-table" id="data-table" style="margin-top: 18px;"></table>
+  </div>
+
+  <div class="card">
+    <h2>Holdout and all-200 finally agree on direction</h2>
+    <p class="card-note">Every other custom-loop experiment in this project has seen the 69-pair holdout mislead. This time both populations point the same way — just at different magnitudes.</p>
+    <table class="data-table" id="data-table-holdout"></table>
+    <div class="honest-box" style="margin-top: 14px;">
+      The all-200 population shows a <b>larger</b> hard-negative AUC drop than the holdout
+      suggested (−0.1034 vs −0.0793) — the leash hurts the metric that matters most for this
+      project's real deployment population (production's own false positives) more than the
+      smaller sample implied.
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>The mechanism works — it just doesn't help this recipe</h2>
+    <p class="card-note">Dev recall@1 across training, both runs.</p>
+    <table class="data-table" id="data-table-epochs"></table>
+    <div class="honest-box caution" style="margin-top: 14px;">
+      The KL term was designed to stop a sharp early-peak-then-collapse pattern seen in
+      other architectures (<code>split_001</code>, <code>field_gate_001</code>).
+      <code>top1_ctrl</code>'s plain recipe — which both runs here inherit — never showed
+      a sharp collapse to begin with, only a mild dip. There wasn't much for the leash to
+      fix. Same leakage caveat as <code>voyage_gemini_ctrl_001</code> applies: this batch
+      is an unreviewed pilot, measurably leakier than prior sources on pre-training checks.
+    </div>
+  </div>
+
+  <footer>
+    Writeup: <code>docs/twotower-voyage-gemini-kl-experiment.md</code> · Code: <code>twotower_voyage_gemini_kl/</code> · Baseline: <a href="https://claude.ai/code/artifact/11d21292-33d6-42b6-8d5d-f42b41b620e6" target="_blank" rel="noopener">voyage_gemini_ctrl experiment</a>
+  </footer>
+</div>
+
+<div class="tooltip" id="tooltip"></div>
+
+<script>
+const rootStyle = getComputedStyle(document.documentElement);
+function cssVar(name) { return rootStyle.getPropertyValue(name).trim(); }
+
+const METRICS = [
+  { key: 'auc',  label: 'Pair AUC' },
+  { key: 'hard', label: 'Hard-neg AUC' },
+  { key: 'mrr',  label: 'MRR' },
+  { key: 'r1',   label: 'Recall@1' },
+  { key: 'r10',  label: 'Recall@10' },
+];
+
+function buildTable(tableEl, series, data, metrics, opts) {
+  opts = opts || {};
+  let thead = '<thead><tr><th>Approach</th>' + metrics.map(m => `<th>${m.label}</th>`).join('') + '</tr></thead>';
+  let tbody = '<tbody>';
+  series.forEach(s => {
+    const row = data[s.key];
+    tbody += `<tr><td>${s.label}</td>` + metrics.map(m => {
+      const val = row[m.key];
+      if (val === undefined || val === null) return '<td>—</td>';
+      const vals = series.map(s2 => data[s2.key][m.key]).filter(v => v !== undefined && v !== null);
+      let cls = '';
+      if (opts.highlightBest) {
+        if (Math.max(...vals) === val) cls = 'best';
+        else if (Math.min(...vals) === val) cls = 'worst';
+      }
+      return `<td class="${cls}">${val.toFixed(4)}</td>`;
+    }).join('') + '</tr>';
+  });
+  tbody += '</tbody>';
+  tableEl.innerHTML = thead + tbody;
+}
+
+const ns = 'http://www.w3.org/2000/svg';
+function el(tag, attrs) {
+  const e = document.createElementNS(ns, tag);
+  for (const k in attrs) e.setAttribute(k, attrs[k]);
+  return e;
+}
+const tooltip = document.getElementById('tooltip');
+
+function drawGroupedBars(svgEl, series, metrics, data) {
+  const W = 760, H = 340;
+  const marginL = 40, marginR = 20, marginT = 16, marginB = 44;
+  const plotW = W - marginL - marginR, plotH = H - marginT - marginB;
+  const groupGap = 20, barGap = 4;
+  const groupW = plotW / metrics.length;
+  const barW = (groupW - groupGap) / series.length;
+  const yMax = 1.0;
+  function yFor(v) { return marginT + plotH * (1 - v / yMax); }
+
+  svgEl.setAttribute('viewBox', `0 0 ${W} ${H}`);
+  [0, 0.25, 0.5, 0.75, 1.0].forEach(v => {
+    const y = yFor(v);
+    svgEl.appendChild(el('line', { class: 'gridline', x1: marginL, x2: W - marginR, y1: y, y2: y }));
+    const t = el('text', { class: 'axis-label', x: marginL - 8, y: y + 4, 'text-anchor': 'end' });
+    t.textContent = v.toFixed(2);
+    svgEl.appendChild(t);
+  });
+  svgEl.appendChild(el('line', { class: 'baseline', x1: marginL, x2: W - marginR, y1: yFor(0), y2: yFor(0) }));
+
+  metrics.forEach((m, gi) => {
+    const groupX = marginL + gi * groupW + groupGap / 2;
+    series.forEach((s, si) => {
+      const val = data[s.key][m.key];
+      if (val === undefined || val === null) return;
+      const x = groupX + si * barW;
+      const y = yFor(val);
+      const h = yFor(0) - y;
+      const rect = el('rect', {
+        class: 'bar', x: x + barGap / 2, y, width: barW - barGap, height: Math.max(h, 1),
+        fill: s.color, rx: 3,
+      });
+      rect.addEventListener('mousemove', e => {
+        tooltip.style.display = 'block';
+        tooltip.innerHTML = `<b>${s.label}</b><br>${m.label}: <b>${val.toFixed(4)}</b>`;
+        tooltip.style.left = (e.clientX + 14) + 'px';
+        tooltip.style.top = (e.clientY + 14) + 'px';
+      });
+      rect.addEventListener('mouseleave', () => { tooltip.style.display = 'none'; });
+      svgEl.appendChild(rect);
+      const lbl = el('text', { class: 'bar-label', x: x + barW / 2, y: y - 6 });
+      lbl.textContent = val.toFixed(2);
+      svgEl.appendChild(lbl);
+    });
+    const gl = el('text', { class: 'group-label', x: groupX + (barW * series.length) / 2, y: H - marginB + 24, 'text-anchor': 'middle' });
+    gl.textContent = m.label;
+    svgEl.appendChild(gl);
+  });
+}
+
+// --- Card 1: KL on vs off, all-200 ---
+const SERIES = [
+  { key: 'no_kl', label: 'voyage_gemini_ctrl_001 (no KL)', color: cssVar('--series-1') },
+  { key: 'kl',    label: 'voyage_gemini_kl_001 (KL, this experiment)', color: cssVar('--series-2') },
+];
+const DATA = {
+  no_kl: { auc: 0.6081, hard: 0.6264, mrr: 0.4506, r1: 0.26, r10: 0.81 },
+  kl:    { auc: 0.5479, hard: 0.5230, mrr: 0.3998, r1: 0.22, r10: 0.77 },
+};
+const legendEl = document.getElementById('legend');
+SERIES.forEach(s => {
+  const item = document.createElement('div');
+  item.className = 'legend-item';
+  item.innerHTML = `<span class="legend-swatch" style="background:${s.color}"></span>${s.label}`;
+  legendEl.appendChild(item);
+});
+buildTable(document.getElementById('data-table'), SERIES, DATA, METRICS, { highlightBest: true });
+drawGroupedBars(document.getElementById('chart'), SERIES, METRICS, DATA);
+
+// --- Card 2: holdout vs all-200, both showing the KL delta ---
+const HOLDOUT_METRICS = [
+  { key: 'auc',  label: 'Pair AUC Δ' },
+  { key: 'hard', label: 'Hard-neg AUC Δ' },
+  { key: 'mrr',  label: 'MRR Δ' },
+];
+const HOLDOUT_SERIES = [
+  { key: 'holdout', label: 'Holdout (69 pairs), no KL → KL' },
+  { key: 'all',     label: 'All 200, no KL → KL' },
+];
+const HOLDOUT_DATA = {
+  holdout: { auc: -0.0655, hard: -0.0793, mrr: -0.0723 },
+  all:     { auc: -0.0602, hard: -0.1034, mrr: -0.0508 },
+};
+function buildDeltaTable() {
+  const tableEl = document.getElementById('data-table-holdout');
+  let thead = '<thead><tr><th>Population</th>' + HOLDOUT_METRICS.map(m => `<th>${m.label}</th>`).join('') + '</tr></thead>';
+  let tbody = '<tbody>';
+  HOLDOUT_SERIES.forEach(s => {
+    const row = HOLDOUT_DATA[s.key];
+    tbody += `<tr><td>${s.label}</td>` + HOLDOUT_METRICS.map(m => {
+      const val = row[m.key];
+      return `<td class="worst">${val.toFixed(4)}</td>`;
+    }).join('') + '</tr>';
+  });
+  tbody += '</tbody>';
+  tableEl.innerHTML = thead + tbody;
+}
+buildDeltaTable();
+
+// --- Card 3: dev recall@1 across epochs, both runs ---
+const EPOCH_METRICS = [
+  { key: 'e1', label: 'Epoch 1' },
+  { key: 'e2', label: 'Epoch 2' },
+  { key: 'e3', label: 'Epoch 3' },
+  { key: 'e4', label: 'Epoch 4' },
+  { key: 'e5', label: 'Epoch 5' },
+];
+const EPOCH_SERIES = [
+  { key: 'kl', label: 'voyage_gemini_kl_001 — dev recall@1' },
+];
+const EPOCH_DATA = {
+  kl: { e1: 0.4128, e2: 0.4228, e3: 0.4329, e4: 0.4329, e5: 0.4161 },
+};
+function buildEpochTable() {
+  const tableEl = document.getElementById('data-table-epochs');
+  let thead = '<thead><tr><th>Run</th>' + EPOCH_METRICS.map(m => `<th>${m.label}</th>`).join('') + '</tr></thead>';
+  let tbody = '<tbody>';
+  EPOCH_SERIES.forEach(s => {
+    const row = EPOCH_DATA[s.key];
+    const vals = EPOCH_METRICS.map(m => row[m.key]);
+    const peak = Math.max(...vals);
+    tbody += `<tr><td>${s.label}</td>` + EPOCH_METRICS.map(m => {
+      const val = row[m.key];
+      return `<td class="${val === peak ? 'best' : ''}">${val.toFixed(4)}</td>`;
+    }).join('') + '</tr>';
+  });
+  tbody += '</tbody>';
+  tableEl.innerHTML = thead + tbody;
+}
+buildEpochTable();
+</script>

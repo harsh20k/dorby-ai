@@ -66,6 +66,12 @@ image = (
     .add_local_dir(
         "artifacts/twotower_voyage_gemini_ctrl", remote_path="/root/voyage_gemini_ctrl_runs"
     )
+    .add_local_dir(
+        "artifacts/twotower_voyage_gemini_kl", remote_path="/root/voyage_gemini_kl_runs"
+    )
+    .add_local_dir(
+        "artifacts/twotower_qwen_voyage_gemini", remote_path="/root/qwen_voyage_gemini_runs"
+    )
 )
 
 results = modal.Volume.from_name(RESULTS_VOLUME, create_if_missing=True)
@@ -122,6 +128,14 @@ CONFIGS: dict[str, dict] = {
         "dtype": "bfloat16",
         "size": "large",
     },
+    # Qwen micro-6 recipe retrained on the pairing_voyage_gemini batch instead
+    # of rrf_003 (see twotower_qwen_voyage_gemini/)
+    "qwen_voyage_gemini": {
+        "adapter": "/root/qwen_voyage_gemini_runs/qwen_voyage_gemini_001_b200_v2/adapter",
+        "model": "Qwen/Qwen3-Embedding-8B",
+        "dtype": "bfloat16",
+        "size": "large",
+    },
     # recall@1-targeted arm and its control (see twotower_top1_optimised/)
     "top1_ctrl": {
         "adapter": "/root/top1_runs/top1_ctrl_001/adapter",
@@ -139,6 +153,14 @@ CONFIGS: dict[str, dict] = {
     # instead of rrf_003 (see twotower_voyage_gemini_ctrl/)
     "voyage_gemini_ctrl": {
         "adapter": "/root/voyage_gemini_ctrl_runs/voyage_gemini_ctrl_001/adapter",
+        "model": "voyageai/voyage-4-nano",
+        "dtype": None,
+        "size": "small",
+    },
+    # voyage_gemini_ctrl_001's recipe/data + a KL leash to the frozen base model
+    # (see twotower_voyage_gemini_kl/)
+    "voyage_gemini_kl": {
+        "adapter": "/root/voyage_gemini_kl_runs/voyage_gemini_kl_001/adapter",
         "model": "voyageai/voyage-4-nano",
         "dtype": None,
         "size": "small",
