@@ -17,7 +17,7 @@ import json
 from pathlib import Path
 
 # Substrings of `run_meta.json:rows_path` that identify all-synthetic training.
-SYNTHETIC_ONLY_ROW_SOURCES = ("rrf_003_multineg", "rrf_003_triplets")
+SYNTHETIC_ONLY_ROW_SOURCES = ("rrf_003_multineg", "rrf_003_triplets", "voyage_gemini_smoke002_multineg")
 
 
 class RealPairLeakError(RuntimeError):

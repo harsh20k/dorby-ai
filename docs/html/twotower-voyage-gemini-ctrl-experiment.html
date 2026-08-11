@@ -1,0 +1,370 @@
+<title>top1_ctrl's Recipe on a Bigger, Leakier Batch</title>
+<meta name="description" content="Same LoRA recipe as top1_ctrl, retrained on a newer 19,695-pair synthetic batch that measured leakier beforehand — beats top1_ctrl on every metric but doesn't beat the project's current record.">
+<style>
+  :root {
+    color-scheme: light;
+    --surface-1:      #fcfcfb;
+    --surface-page:   #f9f9f7;
+    --text-primary:   #0b0b0b;
+    --text-secondary: #52514e;
+    --text-muted:     #898781;
+    --gridline:       #e1e0d9;
+    --baseline:       #c3c2b7;
+    --border:         rgba(11,11,11,0.10);
+    --series-1: #2a78d6;  /* top1_ctrl — same recipe, rrf_003 data */
+    --series-2: #6b7280;  /* holdout (69 pairs) — the misleading number */
+    --series-3: #1baf7a;  /* queryonly_back_look_001 — current project record */
+    --series-4: #eda100;  /* voyage_gemini_ctrl_001 — this experiment */
+    --good: #006300;
+    --caution: #9a6b00;
+    --critical: #d03b3b;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:where(:not([data-theme="light"])) {
+      color-scheme: dark;
+      --surface-1:      #1a1a19;
+      --surface-page:   #0d0d0d;
+      --text-primary:   #ffffff;
+      --text-secondary: #c3c2b7;
+      --text-muted:     #898781;
+      --gridline:       #2c2c2a;
+      --baseline:       #383835;
+      --border:         rgba(255,255,255,0.10);
+      --series-1: #3987e5;
+      --series-2: #8b93a1;
+      --series-3: #199e70;
+      --series-4: #c98500;
+      --good: #0ca30c;
+      --caution: #d4a017;
+      --critical: #e66767;
+    }
+  }
+  :root[data-theme="dark"] {
+    color-scheme: dark;
+    --surface-1:      #1a1a19;
+    --surface-page:   #0d0d0d;
+    --text-primary:   #ffffff;
+    --text-secondary: #c3c2b7;
+    --text-muted:     #898781;
+    --gridline:       #2c2c2a;
+    --baseline:       #383835;
+    --border:         rgba(255,255,255,0.10);
+    --series-1: #3987e5;
+    --series-2: #8b93a1;
+    --series-3: #199e70;
+    --series-4: #c98500;
+    --good: #0ca30c;
+    --caution: #d4a017;
+    --critical: #e66767;
+  }
+
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body {
+    background: var(--surface-page);
+    font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+    color: var(--text-primary);
+  }
+  .page { max-width: 900px; margin: 0 auto; padding: 40px 24px 80px; }
+  header { margin-bottom: 32px; }
+  h1 { font-size: 22px; font-weight: 700; letter-spacing: -0.01em; margin: 0 0 10px; text-wrap: balance; }
+  .lede { font-size: 14.5px; line-height: 1.6; color: var(--text-secondary); max-width: 700px; margin: 0; }
+  .lede b { color: var(--text-primary); }
+
+  .badge-row { display: flex; gap: 8px; margin-top: 14px; flex-wrap: wrap; }
+  .badge {
+    display: inline-flex; align-items: center; gap: 6px; font-size: 11.5px; font-weight: 700;
+    padding: 5px 11px; border-radius: 100px; background: color-mix(in srgb, var(--good) 14%, transparent);
+    color: var(--good);
+  }
+  .badge.caution { background: color-mix(in srgb, var(--caution) 16%, transparent); color: var(--caution); }
+
+  .card {
+    background: var(--surface-1); border: 1px solid var(--border);
+    border-radius: 12px; padding: 24px 24px 20px; margin-bottom: 24px;
+  }
+  .card h2 { font-size: 13px; text-transform: uppercase; letter-spacing: 0.05em; color: var(--text-muted); margin: 0 0 4px; font-weight: 700; }
+  .card .card-note { font-size: 12.5px; color: var(--text-secondary); margin: 0 0 20px; line-height: 1.5; }
+
+  .legend { display: flex; flex-wrap: wrap; gap: 16px; margin-bottom: 18px; }
+  .legend-item { display: flex; align-items: center; gap: 7px; font-size: 12.5px; color: var(--text-secondary); }
+  .legend-swatch { width: 11px; height: 11px; border-radius: 3px; flex-shrink: 0; }
+
+  .chart-wrap { overflow-x: auto; }
+  svg { display: block; font-family: inherit; }
+  .axis-label { font-size: 11px; fill: var(--text-muted); }
+  .group-label { font-size: 12px; fill: var(--text-secondary); font-weight: 600; }
+  .gridline { stroke: var(--gridline); stroke-width: 1; }
+  .baseline { stroke: var(--baseline); stroke-width: 1; }
+  .bar-label { font-size: 10px; fill: var(--text-secondary); font-variant-numeric: tabular-nums; text-anchor: middle; }
+
+  .tooltip {
+    position: fixed; pointer-events: none; z-index: 30;
+    background: var(--surface-1); border: 1px solid var(--border);
+    border-radius: 8px; padding: 8px 11px; font-size: 12px; line-height: 1.5;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.25); display: none; max-width: 240px;
+  }
+  .tooltip b { color: var(--text-primary); }
+
+  table.data-table { width: 100%; border-collapse: collapse; font-size: 12.5px; margin-top: 8px; }
+  table.data-table th, table.data-table td {
+    text-align: right; padding: 7px 10px; font-variant-numeric: tabular-nums;
+    border-bottom: 1px solid var(--gridline);
+  }
+  table.data-table th:first-child, table.data-table td:first-child { text-align: left; font-variant-numeric: normal; }
+  table.data-table th { color: var(--text-muted); font-weight: 600; font-size: 11px; text-transform: uppercase; letter-spacing: 0.04em; }
+  table.data-table td.best { color: var(--good); font-weight: 700; }
+  table.data-table tr:last-child td { border-bottom: none; }
+
+  .honest-box {
+    border: 1px dashed var(--border); border-radius: 9px; padding: 14px 16px; margin-top: 4px;
+    font-size: 12.5px; line-height: 1.6; color: var(--text-secondary);
+  }
+  .honest-box b { color: var(--text-primary); }
+  .honest-box.caution { border-color: color-mix(in srgb, var(--caution) 45%, var(--border)); background: color-mix(in srgb, var(--caution) 6%, var(--surface-1)); }
+
+  footer { font-size: 12px; color: var(--text-muted); text-align: center; margin-top: 8px; }
+  footer code { color: var(--text-secondary); }
+</style>
+
+<div class="page">
+  <header>
+    <h1>top1_ctrl's Recipe, Retrained on a Bigger, Leakier Batch</h1>
+    <p class="lede">
+      A newer synthetic pipeline (<code>pairing_voyage_gemini</code>) produced a 19,695-pair
+      pilot batch — measurably leakier than every prior source on basic checks run
+      <b>before</b> training. Pointing <code>top1_ctrl</code>'s exact recipe at it anyway
+      — same LoRA config, same loss, same full-profile text, only the rows differ —
+      <b>beats <code>top1_ctrl</code> on every metric</b>. It does not beat the project's
+      current record, which got there from a better text choice, not more data.
+    </p>
+    <div class="badge-row">
+      <span class="badge">Beats top1_ctrl on every metric</span>
+      <span class="badge caution">69-pair holdout overstated it again</span>
+      <span class="badge caution">Not a new project record</span>
+    </div>
+  </header>
+
+  <div class="card">
+    <h2>All 200 real pairs — same recipe, different data</h2>
+    <p class="card-note">Identical LoRA config, loss, and text fields as <code>top1_ctrl</code>. The only variable is which synthetic batch supplied the training rows.</p>
+    <div class="legend" id="legend"></div>
+    <div class="chart-wrap"><svg id="chart" width="760" height="340"></svg></div>
+    <table class="data-table" id="data-table" style="margin-top: 18px;"></table>
+  </div>
+
+  <div class="card">
+    <h2>The 69-pair holdout overstated this run again</h2>
+    <p class="card-note">Same pattern hit on every custom-loop experiment except <code>queryonly_back_look</code>: the small holdout looks dramatically better than all 200 real pairs.</p>
+    <table class="data-table" id="data-table-holdout"></table>
+    <div class="honest-box caution" style="margin-top: 14px;">
+      Holdout hard-neg AUC (<b>0.7431</b>) would have been a new project record on its own.
+      All-200 hard-neg AUC (<b>0.6264</b>) is a clear beat of <code>top1_ctrl</code> but well
+      short of that holdout number — the standing project rule (score on all 200 before
+      calling anything a result) is exactly why this gap didn't ship as a headline.
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>Not a new project record</h2>
+    <p class="card-note"><code>queryonly_back_look_001</code> — a different text choice found by a frozen-model field/query sweep, not more training data — still leads on every metric except pair AUC.</p>
+    <table class="data-table" id="data-table-record"></table>
+    <div class="honest-box">
+      This run's only edge is pair AUC (0.6081 vs 0.5983). On hard-neg AUC, MRR, R@1, and
+      R@10 — the metrics that matter most for retrieval — the current record holder wins,
+      using a cleaner training batch and a different text combination, not a bigger one.
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>Leakage found before training, not after</h2>
+    <p class="card-note">Basic checks run on the batch itself, before spending any GPU budget.</p>
+    <table class="data-table" id="data-table-leak"></table>
+    <div class="honest-box caution" style="margin-top: 14px;">
+      Candidate-only and seeker-identity leakage were both <b>higher</b> here than in
+      <code>rrf_002</code> — the batch <code>top1_ctrl</code> traces back to. This run's
+      pair AUC (0.6081) is the best of any fine-tune in the project. The training-row
+      format (candidates compared within one query, not against the global base rate)
+      plausibly absorbs some of that leakage, but this experiment does not prove how much
+      — the leakage measurement and the pair-AUC gain point the same direction, which is
+      reason for caution, not celebration. Labels are also an unreviewed pilot batch's
+      LLM-judge opinions, not real accept/decline outcomes.
+    </div>
+  </div>
+
+  <footer>
+    Writeup: <code>docs/twotower-voyage-gemini-ctrl-experiment.md</code> · Code: <code>twotower_voyage_gemini_ctrl/</code> · Prior best: <a href="https://claude.ai/code/artifact/47754226-aeaf-4306-902f-35a9ed6ee586" target="_blank" rel="noopener">queryonly_back_look experiment</a>
+  </footer>
+</div>
+
+<div class="tooltip" id="tooltip"></div>
+
+<script>
+const rootStyle = getComputedStyle(document.documentElement);
+function cssVar(name) { return rootStyle.getPropertyValue(name).trim(); }
+
+const METRICS = [
+  { key: 'auc',  label: 'Pair AUC' },
+  { key: 'hard', label: 'Hard-neg AUC' },
+  { key: 'easy', label: 'Easy-neg AUC' },
+  { key: 'mrr',  label: 'MRR' },
+  { key: 'r1',   label: 'Recall@1' },
+  { key: 'r10',  label: 'Recall@10' },
+];
+
+function buildTable(tableEl, series, data, metrics) {
+  let thead = '<thead><tr><th>Approach</th>' + metrics.map(m => `<th>${m.label}</th>`).join('') + '</tr></thead>';
+  let tbody = '<tbody>';
+  series.forEach(s => {
+    const row = data[s.key];
+    tbody += `<tr><td>${s.label}</td>` + metrics.map(m => {
+      const val = row[m.key];
+      if (val === undefined || val === null) return '<td>—</td>';
+      const vals = series.map(s2 => data[s2.key][m.key]).filter(v => v !== undefined && v !== null);
+      const best = Math.max(...vals) === val;
+      return `<td class="${best ? 'best' : ''}">${val.toFixed(4)}</td>`;
+    }).join('') + '</tr>';
+  });
+  tbody += '</tbody>';
+  tableEl.innerHTML = thead + tbody;
+}
+
+const ns = 'http://www.w3.org/2000/svg';
+function el(tag, attrs) {
+  const e = document.createElementNS(ns, tag);
+  for (const k in attrs) e.setAttribute(k, attrs[k]);
+  return e;
+}
+const tooltip = document.getElementById('tooltip');
+
+function drawGroupedBars(svgEl, series, metrics, data) {
+  const W = 760, H = 340;
+  const marginL = 40, marginR = 20, marginT = 16, marginB = 44;
+  const plotW = W - marginL - marginR, plotH = H - marginT - marginB;
+  const groupGap = 20, barGap = 4;
+  const groupW = plotW / metrics.length;
+  const barW = (groupW - groupGap) / series.length;
+  const yMax = 1.0;
+  function yFor(v) { return marginT + plotH * (1 - v / yMax); }
+
+  svgEl.setAttribute('viewBox', `0 0 ${W} ${H}`);
+  [0, 0.25, 0.5, 0.75, 1.0].forEach(v => {
+    const y = yFor(v);
+    svgEl.appendChild(el('line', { class: 'gridline', x1: marginL, x2: W - marginR, y1: y, y2: y }));
+    const t = el('text', { class: 'axis-label', x: marginL - 8, y: y + 4, 'text-anchor': 'end' });
+    t.textContent = v.toFixed(2);
+    svgEl.appendChild(t);
+  });
+  svgEl.appendChild(el('line', { class: 'baseline', x1: marginL, x2: W - marginR, y1: yFor(0), y2: yFor(0) }));
+
+  metrics.forEach((m, gi) => {
+    const groupX = marginL + gi * groupW + groupGap / 2;
+    series.forEach((s, si) => {
+      const val = data[s.key][m.key];
+      if (val === undefined || val === null) return;
+      const x = groupX + si * barW;
+      const y = yFor(val);
+      const h = yFor(0) - y;
+      const rect = el('rect', {
+        class: 'bar', x: x + barGap / 2, y, width: barW - barGap, height: Math.max(h, 1),
+        fill: s.color, rx: 3,
+      });
+      rect.addEventListener('mousemove', e => {
+        tooltip.style.display = 'block';
+        tooltip.innerHTML = `<b>${s.label}</b><br>${m.label}: <b>${val.toFixed(4)}</b>`;
+        tooltip.style.left = (e.clientX + 14) + 'px';
+        tooltip.style.top = (e.clientY + 14) + 'px';
+      });
+      rect.addEventListener('mouseleave', () => { tooltip.style.display = 'none'; });
+      svgEl.appendChild(rect);
+      const lbl = el('text', { class: 'bar-label', x: x + barW / 2, y: y - 6 });
+      lbl.textContent = val.toFixed(2);
+      svgEl.appendChild(lbl);
+    });
+    const gl = el('text', { class: 'group-label', x: groupX + (barW * series.length) / 2, y: H - marginB + 24, 'text-anchor': 'middle' });
+    gl.textContent = m.label;
+    svgEl.appendChild(gl);
+  });
+}
+
+// --- Card 1: same-recipe comparison ---
+const SERIES = [
+  { key: 'top1_ctrl', label: 'top1_ctrl (rrf_003 data)', color: cssVar('--series-1') },
+  { key: 'new',        label: 'voyage_gemini_ctrl_001 (this experiment)', color: cssVar('--series-4') },
+];
+const DATA = {
+  top1_ctrl: { auc: 0.5683, hard: 0.5484, easy: 0.6836, mrr: 0.3550, r1: 0.19, r10: 0.69 },
+  new:       { auc: 0.6081, hard: 0.6264, easy: 0.6544, mrr: 0.4506, r1: 0.26, r10: 0.81 },
+};
+const legendEl = document.getElementById('legend');
+SERIES.forEach(s => {
+  const item = document.createElement('div');
+  item.className = 'legend-item';
+  item.innerHTML = `<span class="legend-swatch" style="background:${s.color}"></span>${s.label}`;
+  legendEl.appendChild(item);
+});
+buildTable(document.getElementById('data-table'), SERIES, DATA, METRICS);
+drawGroupedBars(document.getElementById('chart'), SERIES, METRICS, DATA);
+
+// --- Card 2: holdout vs all-200 ---
+const HOLDOUT_METRICS = [
+  { key: 'auc',  label: 'Pair AUC' },
+  { key: 'hard', label: 'Hard-neg AUC' },
+  { key: 'mrr',  label: 'MRR' },
+  { key: 'r1',   label: 'Recall@1' },
+  { key: 'r10',  label: 'Recall@10' },
+];
+const HOLDOUT_SERIES = [
+  { key: 'holdout', label: 'Holdout (69 pairs)' },
+  { key: 'all',     label: 'All 200 real pairs' },
+];
+const HOLDOUT_DATA = {
+  holdout: { auc: 0.6802, hard: 0.7431, mrr: 0.6585, r1: 0.4828, r10: 0.9655 },
+  all:     { auc: 0.6081, hard: 0.6264, mrr: 0.4506, r1: 0.26,   r10: 0.81 },
+};
+buildTable(document.getElementById('data-table-holdout'), HOLDOUT_SERIES, HOLDOUT_DATA, HOLDOUT_METRICS);
+
+// --- Card 3: not a new record ---
+const RECORD_SERIES = [
+  { key: 'top1_ctrl', label: 'top1_ctrl', color: cssVar('--series-1') },
+  { key: 'record',    label: 'queryonly_back_look_001 (current record)', color: cssVar('--series-3') },
+  { key: 'new',       label: 'voyage_gemini_ctrl_001 (this experiment)', color: cssVar('--series-4') },
+];
+const RECORD_DATA = {
+  top1_ctrl: { auc: 0.5683, hard: 0.5484, mrr: 0.3550, r1: 0.19, r10: 0.69 },
+  record:    { auc: 0.5983, hard: 0.6564, mrr: 0.4791, r1: 0.30, r10: 0.86 },
+  new:       { auc: 0.6081, hard: 0.6264, mrr: 0.4506, r1: 0.26, r10: 0.81 },
+};
+buildTable(document.getElementById('data-table-record'), RECORD_SERIES, RECORD_DATA, HOLDOUT_METRICS);
+
+// --- Card 4: leakage checks ---
+const LEAK_SERIES = [
+  { key: 'rrf002', label: 'rrf_002 (top1_ctrl\'s source batch)' },
+  { key: 'vg',     label: 'pairing_voyage_gemini (this run\'s source)' },
+];
+const LEAK_METRICS = [
+  { key: 'cand',   label: 'Candidate-only AUC' },
+  { key: 'seeker', label: 'Seeker-identity AUC' },
+  { key: 'single', label: 'Seekers single-class' },
+  { key: 'lex',    label: 'Lexical circularity AUC' },
+];
+const LEAK_DATA = {
+  rrf002: { cand: 0.634, seeker: 0.687, single: 0.30, lex: 0.701 },
+  vg:     { cand: 0.758, seeker: 0.780, single: 0.435, lex: 0.481 },
+};
+function buildLeakTable() {
+  const tableEl = document.getElementById('data-table-leak');
+  let thead = '<thead><tr><th>Metric</th>' + LEAK_SERIES.map(s => `<th>${s.label}</th>`).join('') + '</tr></thead>';
+  let tbody = '<tbody>';
+  LEAK_METRICS.forEach(m => {
+    tbody += `<tr><td>${m.label}</td>` + LEAK_SERIES.map(s => {
+      const val = LEAK_DATA[s.key][m.key];
+      const fmt = m.key === 'single' ? (val * 100).toFixed(1) + '%' : val.toFixed(3);
+      return `<td>${fmt}</td>`;
+    }).join('') + '</tr>';
+  });
+  tbody += '</tbody>';
+  tableEl.innerHTML = thead + tbody;
+}
+buildLeakTable();
+</script>

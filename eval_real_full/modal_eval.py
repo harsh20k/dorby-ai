@@ -63,6 +63,9 @@ image = (
     .add_local_dir(
         "artifacts/twotower_top1_optimised", remote_path="/root/top1_runs"
     )
+    .add_local_dir(
+        "artifacts/twotower_voyage_gemini_ctrl", remote_path="/root/voyage_gemini_ctrl_runs"
+    )
 )
 
 results = modal.Volume.from_name(RESULTS_VOLUME, create_if_missing=True)
@@ -128,6 +131,14 @@ CONFIGS: dict[str, dict] = {
     },
     "top1_sharp": {
         "adapter": "/root/top1_runs/top1_001/adapter",
+        "model": "voyageai/voyage-4-nano",
+        "dtype": None,
+        "size": "small",
+    },
+    # top1_ctrl's exact recipe, retrained on the pairing_voyage_gemini batch
+    # instead of rrf_003 (see twotower_voyage_gemini_ctrl/)
+    "voyage_gemini_ctrl": {
+        "adapter": "/root/voyage_gemini_ctrl_runs/voyage_gemini_ctrl_001/adapter",
         "model": "voyageai/voyage-4-nano",
         "dtype": None,
         "size": "small",
