@@ -1,0 +1,63 @@
+{
+  "id": 113,
+  "archetype": "AI-Enabled Operations Leader",
+  "given_name": "Maria Chen",
+  "style_version": 8,
+  "archetypes_version": 19,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Maria Chen is a seasoned operations leader currently focused on scaling AI-driven process automation within mid-market manufacturing companies. Her distinctive career detail is a prior stint as a data scientist *within* an operations team, giving her a unique blend of technical understanding and practical application skills. She's currently a VP of Operations at a fast-growing industrial components manufacturer, but is quietly exploring opportunities to leverage her expertise as an independent consultant, specializing in AI implementation roadmaps and change management for operations. She's actively networking to build relationships with potential clients and partners in that space. She's pragmatic and results-oriented, valuing clear communication and demonstrable ROI.",
+    "positioning": "As VP of Operations at Stellar Dynamics, a leading manufacturer of precision industrial components, I lead a team responsible for optimizing end-to-end supply chain and production processes. We're aggressively adopting AI and machine learning to enhance efficiency, reduce waste, and improve predictive maintenance \u2013 a critical differentiator in today\u2019s competitive landscape. My focus is on translating complex AI capabilities into tangible operational improvements, driving measurable ROI, and fostering a data-driven culture. Having previously worked as a Data Scientist embedded within an operations team, I bring a unique perspective to bridging the gap between technology and execution. I'm particularly passionate about demystifying AI for operational teams and building internal competency. I'm currently exploring how to expand this impact beyond Stellar Dynamics, potentially through consulting engagements. I'm keen to connect with leaders driving similar transformations, AI solution providers specializing in industrial applications, and individuals passionate about the future of smart manufacturing. Now is a particularly opportune time to connect as we\u2019re finalizing our next phase of AI integration and I\u2019m actively benchmarking best practices.",
+    "background": "\u2022 **Stellar Dynamics, Chicago, IL**\n   *VP of Operations* (January 2021 \u2013 Present)\n     - Led a 75+ person operations team encompassing supply chain, production, quality control, and logistics.\n     - Spearheaded the implementation of an AI-powered predictive maintenance system, resulting in a 15% reduction in unplanned downtime and a 10% decrease in maintenance costs within the first year.\n     - Oversaw the automation of key supply chain processes using robotic process automation (RPA), improving order fulfillment accuracy by 12% and reducing processing time by 20%.\n     - Championed a company-wide data literacy program to enhance employee understanding of data analytics and AI.\n     - Managed a $30M annual operating budget.\n\n\u2022 **NovaTech Solutions, Boston, MA**\n   *Data Scientist, Operations Team* (June 2018 \u2013 December 2020)\n     - Developed and deployed machine learning models to optimize production scheduling, resulting in a 8% increase in throughput.\n     - Built a real-time quality control system using computer vision, reducing defect rates by 5%.\n     - Collaborated with operations managers to identify and prioritize data-driven improvement opportunities.\n     - Conducted A/B testing to evaluate the effectiveness of different operational strategies.\n     - Presented findings and recommendations to senior leadership.\n\n\u2022 **Global Manufacturing Corp, Detroit, MI**\n   *Operations Analyst* (August 2016 \u2013 May 2018)\n     - Analyzed operational data to identify areas for improvement.\n     - Developed and maintained key performance indicators (KPIs) dashboards.\n     - Supported the implementation of lean manufacturing principles.\n     - Assisted with the development of standard operating procedures (SOPs).\n     - Conducted time studies and process mapping exercises.\n\n\u2022 **University of Michigan, Ann Arbor, MI**\n   *Research Assistant, Industrial Engineering Department* (September 2014 \u2013 May 2016)\n     - Assisted with research projects focused on supply chain optimization and simulation modeling.\n     - Developed and maintained data analysis tools using Python and R.\n     - Presented research findings at academic conferences.",
+    "lookingFor": "I\u2019m currently expanding my network with individuals and organizations involved in the practical application of AI within manufacturing and industrial operations. I'm particularly interested in connecting with:\n\n* **Consulting firms** specializing in AI implementation for operations \u2013 I'm exploring potential partnerships and learning about best practices.\n* **Technology providers** offering AI-powered solutions for predictive maintenance, process optimization, and quality control.\n* **Operations leaders** at mid-market manufacturing companies who are actively pursuing AI initiatives \u2013 I\u2019m eager to share learnings and explore potential collaborations.\n* **Venture Capitalists** focused on industrial technology \u2013 I'm assessing the viability of building a boutique consulting practice.\n\nI\u2019m seeking introductions to decision-makers within these organizations. I\u2019m also open to informal conversations about the challenges and opportunities of AI adoption in operations. Ideally, I'm looking to connect with individuals who have a demonstrated track record of successfully implementing AI solutions and a pragmatic, results-oriented approach.",
+    "notes": "\u2022 Maria is subtly exploring a transition to independent consulting. Direct offers for full-time roles should be approached cautiously. \n\u2022 She\u2019s highly responsive on LinkedIn and prefers direct messages initially. \n\u2022 Her background as a data scientist *within* operations is a key differentiator \u2013 emphasize this when making introductions.\n\u2022 Recent activity shows she\u2019s been actively engaging with content related to digital twins and edge computing in manufacturing.",
+    "locationAvailability": "Based in Chicago, Illinois. I frequently travel to manufacturing facilities across the Midwest and am open to virtual meetings. I'm available for in-person meetings in Chicago and surrounding areas.",
+    "introPreferences": "\u2022 **Hard Requirements:**\n  - Introductions should be to individuals with decision-making authority regarding operations technology investments.\n  - The contact should be involved in the manufacturing or industrial sector.\n  - The introduction should clearly articulate my background in both data science and operations.\n\u2022 **Soft Preferences:**\n  - Please highlight my experience with predictive maintenance and RPA.\n  - Avoid introductions to purely academic contacts or those focused on theoretical AI research.\n  - Keep the initial introduction brief and focused on establishing a connection for a follow-up conversation.",
+    "personalPreferences": "I prefer to connect via LinkedIn messaging initially. Follow-up via email is also welcome.",
+    "meetingAndSchedulingPreferences": "I generally prefer video calls over phone calls, as it facilitates a more collaborative discussion. I'm flexible with scheduling and can typically accommodate meetings within a week\u2019s notice."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 31.038447856903076,
+      "input_tokens": 809,
+      "output_tokens": 1614,
+      "problems": [
+        "background: possible truncation (ends with '...rsity, West Lafayette, IN')"
+      ]
+    },
+    {
+      "attempt": 2,
+      "elapsed_s": 29.518296003341675,
+      "input_tokens": 809,
+      "output_tokens": 1379,
+      "problems": []
+    }
+  ],
+  "success": true
+}

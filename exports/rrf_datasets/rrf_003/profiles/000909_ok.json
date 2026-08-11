@@ -1,0 +1,54 @@
+{
+  "id": 909,
+  "archetype": "Fintech/Venture Cross-Over",
+  "given_name": "Olivia Torres",
+  "style_version": 55,
+  "archetypes_version": 153,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Olivia Torres is a serial fintech founder currently focused on 'NovaCredit Analytics,' a company using alternative data and AI to provide credit scoring for the underbanked in Latin America. Her distinctive career detail is a prior 5-year stint as a quantitative analyst at a major hedge fund *before* transitioning to entrepreneurship. This gives her a unique perspective \u2013 understanding both the financial modeling and the technical build required for success. She's currently raising a Seed round and actively seeking strategic advisors with experience scaling fintech in emerging markets. She\u2019s very data-driven, slightly impatient, and highly focused on measurable traction. She prioritizes efficiency and direct communication.",
+    "positioning": "I'm the founder and CEO of NovaCredit Analytics, a fintech company revolutionizing access to credit in Latin America. We\u2019re tackling the massive opportunity presented by the 300+ million unbanked and underbanked individuals who are systematically excluded from traditional financial systems. NovaCredit Analytics leverages alternative data sources \u2013 mobile phone usage, utility payments, social commerce activity \u2013 and advanced machine learning algorithms to build robust and predictive credit risk models. We\u2019ve recently completed a successful beta program in Colombia, demonstrating a 30% improvement in prediction accuracy compared to traditional credit scoring methods. This translates to reduced risk for lenders and increased access to capital for borrowers. We're focused on building a scalable SaaS platform, and are currently in the process of securing seed funding to expand our operations and enter new markets within the region. We believe democratizing access to financial services is not just a social imperative, but a significant untapped market opportunity.",
+    "background": "- **NovaCredit Analytics, Founder & CEO** (Jan 2022 \u2013 Present)\n  * Led all aspects of company formation, including product development, fundraising, and team building.\n  * Developed and validated proprietary credit scoring algorithms, achieving 30% improved accuracy in beta testing.\n  * Secured initial seed funding commitments totaling $250,000.\n  * Built and launched a Minimum Viable Product (MVP) in Colombia, onboarding 5 lending partners.\n\n- **Quant Analyst, Blackwood Capital Management** (June 2017 \u2013 Dec 2021)\n  * Developed and implemented quantitative models for algorithmic trading strategies across various asset classes (equities, fixed income, FX).\n  * Conducted in-depth statistical analysis of market data to identify trading opportunities and manage risk.\n  * Collaborated with portfolio managers and technologists to improve trading infrastructure and model performance.\n  * Proficient in Python, R, SQL, and various financial modeling techniques.\n\n- **Financial Analyst Intern, Goldman Sachs** (Summer 2016)\n  * Assisted with financial modeling, valuation analysis, and due diligence for M&A transactions.\n  * Prepared presentations and reports for senior management.\n  * Gained exposure to various investment banking products and services.\n\n- **Education:**\n  * **Massachusetts Institute of Technology (MIT)**, Cambridge, MA \u2013 Bachelor of Science in Mathematics with a minor in Economics (2017)\n    * GPA: 3.9/4.0\n    * Relevant Coursework: Probability & Statistics, Financial Modeling, Machine Learning, Econometrics.\n  * **Harvard Business School Online** \u2013 Fintech Essentials Certificate (2022)\n\n- **Certifications:**\n  * Chartered Financial Analyst (CFA) Level I (Passed 2017)\n  * Certified Analytics Professional (CAP) (2023)",
+    "lookingFor": "We are currently raising a $2M Seed round to accelerate our expansion into Mexico and Peru, and further refine our AI models.  We\u2019re particularly interested in investors with a proven track record of backing early-stage fintech companies in Latin America. We're seeking partners who can provide not only capital, but also strategic guidance and access to relevant industry networks. \n\nSpecifically, I\u2019m looking to connect with:\n* **Angel investors** with experience in alternative credit scoring or emerging markets.\n* **Venture Capital firms** specializing in Seed and Series A funding for fintech.\n* **Experienced fintech operators** who have successfully scaled companies in Latin America \u2013 particularly those with expertise in regulatory compliance and partnerships.\n* **Data scientists** specializing in machine learning and alternative data analysis.\n\nI\u2019m also open to exploring strategic partnerships with lending institutions, mobile network operators, and other companies that can provide access to valuable data sources.  Ideal partners will be forward-thinking, data-driven, and committed to financial inclusion. I\u2019m available for brief introductory calls to discuss potential synergies.",
+    "notes": "Olivia is exceptionally sharp and intensely focused on metrics. She\u2019s very direct and appreciates concise communication. During our initial call, she immediately dove into the specifics of her model's performance and fundraising targets. She\u2019s clearly comfortable with both the technical and financial aspects of her business. \n\n* **Key Takeaway:** She values demonstrable results and efficient use of capital.\n* **Potential Pitfall:** She can be somewhat impatient and may dismiss ideas that aren\u2019t backed by data.\n* **Follow-Up:** Send her a link to the recent report on fintech investment in Latin America from CB Insights. She mentioned being interested in that data. Don't waste her time with general networking requests; focus on specific value propositions.",
+    "locationAvailability": "I'm based in Miami, Florida, but frequently travel throughout Latin America, particularly Colombia and Mexico. I\u2019m open to relocating if the right opportunity arises.",
+    "introPreferences": "When making introductions, please prioritize quality over quantity. I\u2019m not interested in being connected to individuals who are simply \u2018nice to meet.\u2019 I need introductions to people who can genuinely add value to NovaCredit Analytics. \n\n* **Hard Requirements:**\n    * Must have demonstrable experience in fintech or venture capital.\n    * Must have a clear understanding of the Latin American market.\n    * Must be willing to dedicate time to a meaningful conversation.\n* **Preferred Introduction Style:** A warm introduction with a brief summary of why the connection would be mutually beneficial is ideal. Please avoid generic LinkedIn connection requests.  A personal anecdote or shared connection is highly valued.\n* **Do Not Introduce Me To:** Salespeople or individuals offering unsolicited services.",
+    "personalPreferences": "I prefer to communicate via email initially, and I'm responsive on WhatsApp for quick follow-ups. I respond best to direct and concise communication.",
+    "meetingAndSchedulingPreferences": "I'm generally available for meetings during standard business hours (EST). I prefer 30-minute introductory calls to assess fit before committing to longer meetings. Please send a brief agenda in advance so I can prepare. I'm comfortable with Zoom, Google Meet, or phone calls. I typically block off 15 minutes between meetings to allow for follow-up and note-taking."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 29.623559951782227,
+      "input_tokens": 802,
+      "output_tokens": 1465,
+      "problems": []
+    }
+  ],
+  "success": true
+}

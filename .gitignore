@@ -1,7 +1,7 @@
 # Notes (never sync)
 notes/
 
-
+.obsidian/
 .env
 
 
@@ -27,6 +27,7 @@ build/
 
 # Data / model artifacts
 data/
+exports/
 artifacts/
 *.ckpt
 *.pt

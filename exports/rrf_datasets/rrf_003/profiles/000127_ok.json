@@ -1,0 +1,54 @@
+{
+  "id": 127,
+  "archetype": "AI-Focused Product, Asynchronous Communication",
+  "given_name": "Felix Lopes",
+  "style_version": 8,
+  "archetypes_version": 21,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Felix Lopes is a seasoned product leader currently building 'SynapseFlow,' an AI-powered asynchronous communication platform aimed at knowledge workers. His distinctive career detail is a prior, successful exit from a real-time collaboration startup \u2013 he realized the *cost* of constant connectivity and is now passionately focused on enabling 'deep work' through optimized, asynchronous workflows. He's seeking strategic investors and potential integrations with existing productivity suites. He's a data-driven leader, somewhat introverted, and values direct, concise communication. He's based in Lisbon, Portugal, but open to remote collaboration. He's highly selective about who he connects with, prioritizing individuals who understand the nuances of asynchronous work and the challenges of information overload.",
+    "positioning": "As CEO and Founder of SynapseFlow, I\u2019m tackling a critical problem facing modern knowledge workers: communication overload and the erosion of focused work time. We\u2019ve built an AI-powered asynchronous communication platform designed to radically improve information flow and boost productivity. SynapseFlow isn\u2019t just another messaging app; it's a system for intentional communication. Our core technology leverages advanced natural language processing and machine learning to intelligently route information, summarize key insights, and prioritize tasks, ensuring that the right people receive the right information at the right time \u2013 without the constant interruptions of real-time channels. We\u2019re moving beyond the \u2018always-on\u2019 culture and empowering teams to reclaim their focus. We\u2019ve already achieved significant traction with early adopter customers, demonstrating a 30% increase in reported individual productivity and a 15% reduction in time spent in meetings.  My background in building and scaling collaborative tools, coupled with a deep understanding of behavioral psychology, informs our product development and ensures we\u2019re solving a genuine pain point.  We are currently focused on securing seed funding to accelerate product development, expand our engineering team, and scale our go-to-market strategy.  We\u2019re not just building a product; we\u2019re building a future where work is more intentional, more focused, and ultimately, more human.",
+    "background": "- **CEO & Founder, SynapseFlow** (2023 \u2013 Present)\n    * Led all aspects of product vision, strategy, and execution for an AI-powered asynchronous communication platform.\n    * Secured initial seed funding from angel investors.\n    * Built and managed a remote engineering team.\n    * Achieved 30% MoM growth in user engagement during beta phase.\n\n- **CTO, ConnectNow** (2018 \u2013 2022) \u2013 *Acquired by Zoom in 2022*\n    * Oversaw the technical strategy and development of a real-time collaboration platform.\n    * Led a team of 25+ engineers, designers, and product managers.\n    * Successfully scaled the platform to support millions of users.\n    * Instrumental in the company\u2019s acquisition by Zoom.\n\n- **Lead Software Engineer, Stellar Dynamics** (2015 \u2013 2018)\n    * Developed and maintained key features for a cloud-based data analytics platform.\n    * Mentored junior engineers and contributed to the company\u2019s engineering best practices.\n\n- **Education:**\n    * **Master of Science in Computer Science**, University of Lisbon, Portugal (2013 \u2013 2015)\n    * **Bachelor of Science in Computer Engineering**, Instituto Superior T\u00e9cnico, Portugal (2009 \u2013 2013)\n\n- **Skills:** Product Management, AI/ML, Natural Language Processing, Software Architecture, Cloud Computing (AWS, Azure), Agile Development, Team Leadership, Go, Python, JavaScript.",
+    "lookingFor": "I'm actively seeking connections with individuals and organizations who can contribute to the growth of SynapseFlow. Specifically, I'm interested in:\n\n* **Seed-Stage Investors:** Funds with a focus on AI, productivity tools, and the future of work.  We are raising $2M to accelerate development and expand our team.\n* **Strategic Partners:** Companies with complementary technologies or established distribution channels in the productivity space (e.g., project management tools, CRM platforms).\n* **AI/ML Experts:** Individuals with deep expertise in natural language processing, machine learning, and knowledge management.\n* **Advisors:** Experienced entrepreneurs who have successfully scaled SaaS businesses.\n* **Potential Integrations:**  Product leaders at companies like Notion, Slack, Asana, and Microsoft who are open to exploring integration opportunities.",
+    "notes": "Felix is *very* focused on asynchronous communication \u2013 he\u2019s almost allergic to unnecessary meetings. He\u2019s a bit reserved initially but incredibly passionate about his work once engaged. He's recently been speaking at a few remote work conferences (check his LinkedIn for recent talks). He's particularly interested in discussing the cognitive load associated with constant notifications.  Avoid pitching him anything real-time focused. He\u2019s been approached by several VCs already \u2013 politely declining those who don\u2019t \u2018get\u2019 the asynchronous angle. SynapseFlow is currently in closed beta, with a public launch planned for Q1 2024.  He\u2019s open to advisory roles for the right people. ",
+    "locationAvailability": "I'm based in Lisbon, Portugal, but operate fully remotely. I\u2019m comfortable with asynchronous communication and minimal travel, although I can travel to key events or meetings as needed.",
+    "introPreferences": "Please read these carefully before making an introduction:\n\n* **Hard Requirements:**\n    * **Relevance:** Introductions *must* be to individuals or organizations directly relevant to SynapseFlow\u2019s mission and target market (AI, productivity, asynchronous work).\n    * **Level:** I\u2019m primarily interested in connecting with decision-makers (e.g., Partners, VPs, Directors, Founders).\n    * **Pre-Research:** Please ensure the person you\u2019re introducing me to has a basic understanding of SynapseFlow (check our website: [fictional website address]).\n\n* **Soft Preferences:**\n    * **Concise Introductions:** Keep the introduction brief and focused \u2013 no longer than 5 sentences.\n    * **Highlight Mutual Value:** Emphasize how a connection with me could benefit the other party.\n    * **Avoid Generic Pitches:** Don\u2019t simply forward my profile with a generic \u201cYou should connect!\u201d message.\n    * **Asynchronous First:** Prefer introductions via LinkedIn message or email rather than phone calls.\n    * **No Sales Pitches:** Do *not* introduce me to sales representatives or anyone attempting to sell me a service I haven\u2019t requested.",
+    "personalPreferences": "I prefer direct and concise communication. I'm a bit of an introvert, so I appreciate thoughtful, well-structured messages. I'm passionate about technology, but also enjoy hiking and reading (mostly non-fiction).  I respond best to messages that get straight to the point and demonstrate a clear understanding of my work at SynapseFlow. I\u2019m a morning person and generally respond to messages fastest before noon CET.",
+    "meetingAndSchedulingPreferences": "I generally prefer asynchronous communication. If a meeting is necessary, please propose a few specific times using a scheduling link (Calendly: [fictional calendly link]). I\u2019m usually available between 9:00 AM and 12:00 PM CET."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 28.559345960617065,
+      "input_tokens": 800,
+      "output_tokens": 1574,
+      "problems": []
+    }
+  ],
+  "success": true
+}

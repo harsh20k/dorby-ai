@@ -1,0 +1,54 @@
+{
+  "id": 216,
+  "archetype": "Serial Founder, Tech-Focused, European Base",
+  "given_name": "Marcus Kowalski",
+  "style_version": 14,
+  "archetypes_version": 36,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Marcus Kowalski is a Polish-German serial entrepreneur currently focused on building a seed-stage AI-powered platform for optimizing supply chains in the European food industry. He's had two successful exits previously \u2013 a mobile payments company and a meal-kit delivery service \u2013 and is now leveraging his operational experience to address inefficiencies he saw firsthand in the food sector. He's actively fundraising and seeking strategic partnerships with larger food producers and logistics companies. He\u2019s comfortable with a fast-paced, direct communication style and prioritizes connections that can offer capital, industry expertise, or access to potential customers. He\u2019s a pragmatic, results-oriented founder who values efficiency and clear communication.",
+    "positioning": "Marcus Kowalski is the Founder & CEO of AgriAI, a seed-stage startup developing an AI-driven platform to revolutionize food supply chain management across Europe. Having previously founded and successfully exited both a mobile payments platform and a meal-kit delivery service, Marcus brings a unique blend of technical expertise and operational experience to the table. AgriAI is focused on reducing food waste, optimizing logistics, and improving transparency within the complex European food system. He\u2019s currently leading a seed round and actively seeking strategic partnerships with established players in the food and logistics industries to accelerate growth and market penetration. Marcus is seeking connections with investors and industry leaders who share his vision for a more sustainable and efficient food future.",
+    "background": "- **Founder & CEO, AgriAI** (Berlin, Germany) \u2013 Jan 2023 \u2013 Present: Leading all aspects of company strategy, product development, fundraising, and team building. Focused on developing and deploying AI algorithms for predictive analytics in food supply chains.\n- **Founder & CEO, MealHero** (Amsterdam, Netherlands) \u2013 Feb 2018 \u2013 Dec 2021: Built and scaled a successful meal-kit delivery service, achieving profitability within 18 months and ultimately acquired by HelloFresh.\n- **Founder & CEO, PaySimple** (Warsaw, Poland) \u2013 June 2014 \u2013 Jan 2018: Developed a mobile payment platform targeting small and medium-sized businesses, securing significant market share in Poland and achieving acquisition by a larger fintech company.\n- **Software Engineer, IBM** (Stuttgart, Germany) \u2013 Sept 2012 \u2013 May 2014: Worked on developing and implementing software solutions for enterprise clients.\n- **Education:** MSc in Computer Science, Technical University of Munich (Germany) \u2013 2010 \u2013 2012; BSc in Computer Science, Warsaw University of Technology (Poland) \u2013 2007 \u2013 2010\n- **Skills:** AI/ML, Supply Chain Management, Fintech, SaaS, Product Management, Fundraising, Team Leadership, Python, Java, Data Analysis, Business Development, Strategic Planning\n- **Languages:** Polish (Native), German (Fluent), English (Fluent)\n- **Awards & Recognition:** Named \u201cYoung Entrepreneur of the Year\u201d by Polish Business Review (2019) for MealHero.",
+    "lookingFor": "I'm currently focused on expanding AgriAI's network and securing strategic partnerships. Specifically, I\u2019m looking to connect with:\n- **Venture Capital firms** specializing in Seed and Series A funding for European startups, particularly those with a focus on AgTech, FoodTech, or AI.\n- **Executives at large food producers and retailers** (e.g., Nestle, Unilever, Aldi, Tesco) who are actively seeking to improve supply chain efficiency and reduce food waste.\n- **Logistics and supply chain technology companies** interested in exploring potential integrations or partnerships to enhance their offerings.\n- **Individuals with deep expertise in AI/ML applications within the food industry** \u2013 open to advisory roles or potential team members.\n\nI'm particularly interested in introductions to individuals who can provide valuable insights into the German and Polish food markets. I\u2019m also open to discussing potential pilot programs with companies looking to test AgriAI\u2019s platform.  I\u2019m *not* actively seeking mentorship at this stage, but value connections with experienced founders.",
+    "notes": "Marcus is very direct and pragmatic. He\u2019s a fast mover and expects quick responses. Mentioned he\u2019s particularly interested in investors who \u2018understand the nuances of the European food system.\u2019 He\u2019s been attending the FoodTech Berlin conference this month.  He\u2019s previously expressed frustration with overly cautious or bureaucratic partners.  Follow-up on potential connection with Hans Schmidt at Bayer.",
+    "locationAvailability": "Marcus is based in Berlin, Germany, but frequently travels throughout Europe, with a particular focus on Poland and the Netherlands.",
+    "introPreferences": "Hard Requirements: \n- Prioritize introductions to decision-makers (VP level or above) at target companies.\n- Ensure the person being introduced is aware of AgriAI\u2019s core value proposition: AI-powered supply chain optimization for the European food industry.\n\nSoft Preferences:\n- Briefly highlight any shared connections or mutual interests.\n- Keep introductions concise and focused on facilitating a follow-up conversation.\n- Avoid introductions to individuals solely offering generic consulting services. I'm looking for strategic partners and investors, not advisors.\n- Introduction style should be direct and professional \u2013 Marcus appreciates brevity and clarity.",
+    "personalPreferences": "I prefer to communicate via email initially, but am also available on LinkedIn.  Please avoid contacting me through social media platforms like Twitter or Facebook.",
+    "meetingAndSchedulingPreferences": "I'm generally available for meetings during European business hours. I prefer short, focused calls (30-45 minutes) to assess potential synergies. Please send a calendar invite with a clear agenda."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 18.204203128814697,
+      "input_tokens": 769,
+      "output_tokens": 1194,
+      "problems": []
+    }
+  ],
+  "success": true
+}

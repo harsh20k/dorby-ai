@@ -1,0 +1,54 @@
+{
+  "id": 487,
+  "archetype": "Strategic Founder, Domain Expert",
+  "given_name": "Theo Kimura",
+  "style_version": 30,
+  "archetypes_version": 82,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Theo Kimura is a former Naval Aviator with a deep background in flight simulation and human-machine interfaces. He spent 10 years flying and then transitioned into designing and testing advanced flight simulators for the Navy. He left the service to found 'KineticAI', a company building AI-powered training simulations *not* for aviation, but for complex surgical procedures. He believes the rigor of aviation simulation \u2013 safety, precision, real-time feedback \u2013 is directly applicable to reducing errors and improving outcomes in the operating room. He's currently raising a Series A and seeking connections to hospital systems and surgical device manufacturers. He\u2019s a direct communicator, values efficiency, and gets frustrated with vague pitches. He\u2019s very focused on the medical application and dislikes being pitched unrelated AI opportunities.",
+    "positioning": "Theo Kimura is the Founder & CEO of KineticAI, a company revolutionizing surgical training through AI-powered simulation. Having spent a decade as a Naval Aviator and subsequently designing cutting-edge flight simulators for the US Navy, Theo recognized a critical gap in the medical field: the lack of realistic, accessible, and data-driven surgical training. KineticAI bridges this gap, offering a platform that allows surgeons to hone their skills in a risk-free environment, analyze performance metrics, and ultimately deliver improved patient outcomes. \n\nTheo\u2019s unique background combines a deep understanding of human-machine interaction, the importance of procedural fidelity, and the critical need for continuous improvement. He\u2019s passionate about leveraging the power of AI to democratize access to high-quality surgical training and is actively seeking partnerships with leading hospitals and medical device companies to scale KineticAI\u2019s impact. He\u2019s a firm believer in the power of simulation to transform healthcare and is eager to connect with individuals who share this vision.\n\nCurrently, KineticAI is focused on expanding its simulation library to include a wider range of surgical specialties and integrating its platform with existing hospital workflows. Theo is particularly interested in exploring collaborations that leverage KineticAI\u2019s technology to improve surgical residency programs and facilitate the adoption of new surgical techniques.",
+    "background": "* **KineticAI, Founder & CEO** (2021 \u2013 Present)\n    * Led all aspects of company formation, fundraising (Seed round completed - $3.5M), product development, and go-to-market strategy.\n    * Developed and launched KineticAI\u2019s initial surgical simulation module for laparoscopic cholecystectomy, achieving a 95% user satisfaction rate in beta testing.\n    * Secured pilot programs with three major hospital systems.\n    * Built and managed a team of engineers, medical advisors, and business development professionals.\n* **US Navy, Flight Simulator Design & Testing Lead** (2017 \u2013 2021)\n    * Led a team of engineers in the design, development, and testing of advanced flight simulators for pilot training.\n    * Managed a $2M budget and oversaw the integration of new technologies into existing simulation platforms.\n    * Developed and implemented rigorous testing protocols to ensure the accuracy and reliability of simulation models.\n    * Presented research findings at industry conferences and published papers on human-machine interface design.\n* **US Navy, Naval Aviator** (2013 \u2013 2017)\n    * Qualified as a pilot in the F/A-18E/F Super Hornet, accumulating over 800 flight hours.\n    * Completed multiple deployments in support of naval operations.\n    * Consistently recognized for outstanding performance and leadership potential.\n* **Education:**\n    * **Stanford University, MS, Aeronautics & Astronautics** (2013)\n    * **United States Naval Academy, BS, Systems Engineering** (2011) \u2013 Graduated with Honors\n* **Skills:** AI/ML, Simulation Modeling, Surgical Training, Human-Machine Interface (HMI), Project Management, Leadership, Data Analysis, Python, C++, Unreal Engine, Naval Aviation, Systems Engineering.",
+    "lookingFor": "* **Strategic Investors:** Seeking Series A funding ($10-15M) to scale KineticAI\u2019s platform and expand its surgical simulation library. Specifically targeting VCs with a focus on healthcare technology and AI.\n* **Hospital System Partnerships:** Interested in connecting with Chief Medical Officers (CMOs), surgical department heads, and innovation leaders at leading hospital systems to explore pilot programs and long-term collaborations.\n* **Surgical Device Manufacturers:** Seeking partnerships with companies developing innovative surgical tools and technologies to integrate KineticAI\u2019s simulation platform into their training programs.\n* **Key Opinion Leaders (KOLs):** Looking to connect with influential surgeons and medical educators who can provide guidance on product development and market validation.\n* **Introductions to:**  Individuals at Ascension, HCA Healthcare, Mayo Clinic, Medtronic, Johnson & Johnson, Intuitive Surgical.\n* **Advisors:** Seeking experienced advisors in the medical device industry and healthcare venture capital.",
+    "notes": "Theo is incredibly direct and values efficiency. He's not interested in lengthy introductions or overly-hyped pitches. Focus on *specific* value propositions and quantifiable results. He's laser-focused on surgical applications \u2013 *do not* pitch him unrelated AI opportunities. He\u2019s particularly excited about the potential for simulation to address the skills gap in surgical training and improve patient safety. \n\nHe recently completed a successful pilot program at Stanford Hospital and is actively preparing for a Series A raise. He's currently prioritizing meetings with potential investors and strategic partners. He\u2019s been frustrated by a few introductions to general AI companies, so please be mindful of his focus. \n\nHe's a former military pilot, so he appreciates clear communication and a results-oriented approach. He's very responsive but prefers concise emails. He's asked me to flag any introductions that aren't directly relevant to his current priorities.",
+    "locationAvailability": "Theo is based in Palo Alto, California, but is open to remote meetings and travel to key locations for strategic discussions.",
+    "introPreferences": "* **Hard Requirements:**\n    * Introductions must be to individuals with decision-making authority or significant influence within target organizations (hospital systems, medical device manufacturers, VC firms).\n    * The introduction email must clearly articulate the value proposition of KineticAI and how it aligns with the recipient\u2019s interests.\n    * No cold introductions \u2013 establish a warm connection whenever possible.\n* **Soft Preferences:**\n    * Briefly mention Theo\u2019s background as a Naval Aviator and his experience in flight simulation to establish credibility.\n    * Highlight KineticAI\u2019s successful pilot program at Stanford Hospital.\n    * Keep the introduction email concise and focused \u2013 no more than 3-4 paragraphs.\n    * *Do not* emphasize the \u2018AI\u2019 aspect of the company; focus on the surgical training and patient outcomes.",
+    "personalPreferences": "Theo prefers direct communication and appreciates brevity. He responds best to concise emails with clear action items. He's generally available during standard business hours (PST).",
+    "meetingAndSchedulingPreferences": "Theo is available for meetings via Zoom or Google Meet. He's in the Pacific Standard Time zone. Please provide a brief agenda in advance of any scheduled meeting."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 26.00926899909973,
+      "input_tokens": 823,
+      "output_tokens": 1524,
+      "problems": []
+    }
+  ],
+  "success": true
+}

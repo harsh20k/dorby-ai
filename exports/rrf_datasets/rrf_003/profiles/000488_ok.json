@@ -1,0 +1,54 @@
+{
+  "id": 488,
+  "archetype": "Serial Founder, Deep Tech Operator",
+  "given_name": "Kavya Torres",
+  "style_version": 30,
+  "archetypes_version": 82,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Kavya Torres is a serial founder with a background in materials science and engineering. She's had two successful exits \u2013 one in advanced battery technology and another in micro-robotics. She *always* focuses on 'hard tech' \u2013 things you can physically build. Currently, she's building a company focused on bio-integrated sensors for continuous health monitoring, specifically targeting early disease detection. A defining characteristic is her intense focus on manufacturability and scaling from day one \u2013 she's seen too many brilliant ideas fail due to production hurdles. She's looking for investors with deep tech experience, manufacturing expertise, and a long-term vision, and also for key engineering hires, particularly those with experience in MEMS, biocompatible materials, and signal processing. She's direct, values efficiency, and isn't interested in 'vaporware' or overly hyped concepts. She\u2019s recently been frustrated by investor pitches that don\u2019t address supply chain risks.",
+    "positioning": "I\u2019m Kavya Torres, a seasoned entrepreneur and deep tech operator building the next generation of preventative healthcare through bio-integrated sensors. Having successfully navigated the challenges of bringing complex hardware products to market \u2013 and exited two companies in the process \u2013 I\u2019m deeply passionate about translating cutting-edge research into tangible, scalable solutions. My background in materials science and engineering informs a pragmatic approach to innovation, always prioritizing manufacturability and real-world impact.  \n\nCurrently, I\u2019m leading the team at \u2018Aura Diagnostics,\u2019 developing minimally invasive sensors that provide continuous, real-time health insights, enabling early detection of critical conditions. We\u2019re focused on a preventative care model, empowering individuals to proactively manage their health. I'm particularly focused on building a strong, interdisciplinary team and securing strategic partnerships to accelerate our path to market.  I'm actively seeking connections with individuals who share a commitment to impactful, science-driven innovation.  I'm available to discuss investment opportunities, potential collaborations, and the future of personalized medicine.",
+    "background": "* **Aura Diagnostics, CEO & Founder** (2022 \u2013 Present)\n    * Led seed funding round of $8M focused on prototype development and initial clinical trials.\n    * Built a core team of 15 engineers and scientists specializing in micro-fabrication, biocompatible materials, and data analytics.\n    * Developed a proprietary sensor platform demonstrating 92% accuracy in early biomarker detection (pre-publication data).\n    * Focused on DFM (Design for Manufacturability) and supply chain resilience from initial product design.\n* **Nova Robotics, CEO & Co-Founder** (2016 \u2013 2021) \u2013 *Acquired by Boston Dynamics*\n    * Developed and commercialized a line of micro-robots for industrial inspection and maintenance.\n    * Scaled manufacturing operations to meet increasing demand, achieving a 3x revenue growth in the final year.\n    * Secured Series A and Series B funding totaling $25M.\n* **Energetic Solutions, CTO & Co-Founder** (2012 \u2013 2016) \u2013 *Acquired by LG Chem*\n    * Led the development of a novel solid-state battery technology with increased energy density and improved safety.\n    * Oversaw the construction of a pilot production facility and secured key patents.\n    * Managed a research team of 10 scientists and engineers.\n* **Education:** PhD, Materials Science & Engineering, Stanford University (2012)\n* **Skills:** Micro-Electro-Mechanical Systems (MEMS), Biocompatible Materials, Sensor Design, Signal Processing, Battery Technology, Manufacturing Process Development, Supply Chain Management, Lean Startup Methodology, Venture Capital, Team Leadership, Python, MATLAB, Statistical Modeling.",
+    "lookingFor": "* **Strategic Investors:** Seeking Series A investors with a proven track record in deep tech, particularly those with expertise in medical devices, biosensors, or advanced manufacturing.  Must demonstrate a long-term investment horizon and a willingness to engage actively in the company\u2019s growth.\n* **Manufacturing Partners:**  Connections to contract manufacturers specializing in high-volume, precision manufacturing of micro-sensors and medical devices.  ISO 13485 certification is a must.\n* **MEMS Engineers:**  Highly skilled engineers with experience in the design, fabrication, and testing of MEMS devices.  Experience with silicon-on-insulator (SOI) technology is a plus.\n* **Biocompatibility Experts:**  Consultants or researchers with deep expertise in biocompatibility testing and regulatory approval processes for implantable medical devices (FDA, CE).\n* **Supply Chain Specialists:** Professionals with experience in sourcing critical components and mitigating supply chain risks in the medical device industry.  I\u2019m *especially* interested in those who can navigate geopolitical complexities.\n* **Introduce me to:** VPs of Engineering at leading medical device companies, partners at venture capital firms specializing in hard tech, and individuals with strong connections in the medical device manufacturing ecosystem.",
+    "notes": "Kavya is exceptionally direct and values concise communication. She\u2019s very focused on execution and doesn\u2019t have time for lengthy presentations or abstract concepts. She's currently frustrated with investors who seem more interested in hype than in the technical details of her company. She recently had a negative experience with an introduction that was clearly a 'warm lead' \u2013 the person had no understanding of biosensors.  \n\nShe's currently prioritizing building out her engineering team and securing a strategic manufacturing partner. She\u2019s open to advisory roles but isn\u2019t interested in board positions unless the investor brings significant operational expertise.  \n\nAvoid emphasizing the \u2018disruptive\u2019 or \u2018revolutionary\u2019 aspects of her technology \u2013 she prefers to focus on the practical benefits and scalability.  She\u2019s particularly sensitive to discussions about 'AI' unless it's directly related to signal processing and data analysis for her sensors.  She's been spending a lot of time lately researching alternative materials to silicon due to supply chain concerns.",
+    "locationAvailability": "Based in Boston, MA, but frequently travels to manufacturing partners in Asia. Open to remote collaboration and occasional travel.",
+    "introPreferences": "* **Hard Requirement:** Introductions must be to individuals with a demonstrable background in deep tech, medical devices, or advanced manufacturing. No introductions to generalist investors or marketing professionals.\n* **Include in Introduction:** A brief summary of the person\u2019s relevant experience and their specific area of expertise. Highlight any prior experience with biosensors, micro-fabrication, or supply chain management.\n* **Preferred Connection Type:** Warm introductions via email are preferred. LinkedIn requests without a personalized message will be ignored.\n* **Do Not:** Introduce Kavya to individuals who are solely interested in the \u2018potential\u2019 of the technology without understanding the technical challenges. Avoid introductions to individuals who are known for being overly optimistic or unrealistic.\n* **Ideal Introduction:**  \u201cI\u2019m connecting you with Kavya Torres, the CEO of Aura Diagnostics. She\u2019s building a fascinating bio-integrated sensor platform for early disease detection.  Given your experience leading manufacturing at [Company Name] and your expertise in MEMS, I thought you might find her work interesting.\u201d",
+    "personalPreferences": "Prefers direct, concise communication.  Email is the best way to reach her initially.  She is not a fan of overly casual communication styles.",
+    "meetingAndSchedulingPreferences": "Available for meetings during EST business hours. Prefers Zoom or Google Meet. Please include a brief agenda in the meeting invite."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 27.54239296913147,
+      "input_tokens": 824,
+      "output_tokens": 1590,
+      "problems": []
+    }
+  ],
+  "success": true
+}

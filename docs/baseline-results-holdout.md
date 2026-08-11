@@ -1,8 +1,8 @@
 # Baseline vs. twotower — matched real-holdout comparison
 
-Generated: `2026-07-25T15:43:39Z`
+Generated: `2026-07-31T01:54:01Z`
 
-Protocol: frozen 69-pair real holdout (data/synthetic/seed_split.json eval_pair_ids) only — same population for every row, unlike baseline-results-all.md's full-dataset numbers. See docs/possible-bugs.md #3 and docs/twotower-run-001-results.md.. Sources: `artifacts/{tfidf,bert_frozen,voyage_nano,voyage_large,hybrid_tfidf_voyage}_holdout/metrics.json` + `artifacts/twotower/<run_id>_holdout_eval/metrics_holdout.json`.
+Protocol: frozen 69-pair real holdout (data/synthetic/seed_split.json eval_pair_ids) only — same population for every row, unlike baseline-results-all.md's full-dataset numbers. See docs/possible-bugs.md #3 and docs/twotower-run-001-results.md. WARNING: this population (29 positive queries, 65-candidate corpus) ranks weak models reliably but carries NO ranking information among strong ones — Spearman vs. the all-200 ranking is +0.976 across the bottom 8 models and -0.029 across the top 6. Do not choose between competitive models on this table; use docs/baseline-results-real200.md. See docs/all-200-baseline-sweep.md.. Sources: `artifacts/{tfidf,bert_frozen,voyage_nano,voyage_large,hybrid_tfidf_voyage}_holdout/metrics.json` + `artifacts/twotower/<run_id>_holdout_eval/metrics_holdout.json`.
 
 Metric definitions: [baseline-metrics.md](baseline-metrics.md).
 

@@ -1,0 +1,54 @@
+{
+  "id": 393,
+  "archetype": "Fintech/AI Founder, Recent YC",
+  "given_name": "Valeria Okafor",
+  "style_version": 24,
+  "archetypes_version": 65,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Valeria Okafor is a 32-year-old Nigerian-American founder, recently graduated from Y Combinator (Winter 2024) with 'Numerai Finance,' a platform leveraging AI to provide personalized credit scoring and access to financial products for the underbanked in emerging markets. Her background is somewhat unusual \u2013 a PhD in astrophysics followed by a pivot into fintech. This gives her a unique perspective on data analysis and model building. She's intensely focused on scaling Numerai Finance, securing Series A funding, and building out a strong engineering team. She's very data-driven, values efficiency, and isn't afraid to challenge conventional wisdom. She's looking for advisors with experience in scaling fintech platforms, investors specializing in AI-driven financial inclusion, and talented engineers, particularly those with experience in model deployment and security. She's direct and prefers efficient communication. Her astrophysics background means she's comfortable with complex problems but can sometimes be overly technical in her explanations.",
+    "positioning": "Valeria Okafor is the Founder and CEO of Numerai Finance, a Y Combinator-backed fintech startup revolutionizing credit access for underserved populations. Leveraging cutting-edge AI and machine learning techniques, Numerai Finance provides a more accurate and inclusive credit scoring system, unlocking financial opportunities for millions. Prior to founding Numerai Finance, Valeria honed her analytical skills through rigorous research in astrophysics, developing a unique ability to extract meaningful insights from complex datasets. She's a passionate advocate for financial inclusion and believes that access to capital is a fundamental right. Valeria is actively seeking strategic partnerships and investment to accelerate Numerai Finance\u2019s growth and expand its impact globally. She\u2019s a thought leader in the intersection of AI and fintech, frequently speaking on the potential of responsible AI in financial services.",
+    "background": "- **Numerai Finance, Founder & CEO** (Jan 2023 \u2013 Present)\n  * Led the company through Y Combinator\u2019s Winter 2024 program, securing $500k in seed funding.\n  * Developed and launched Numerai Finance's core AI-powered credit scoring model, achieving 20% higher accuracy than traditional methods in initial pilot programs.\n  * Built and managed a remote team of 5 engineers and data scientists.\n  * Responsible for all aspects of company operations, including product development, fundraising, and marketing.\n  * Successfully onboarded initial partnerships with microfinance institutions in Nigeria and Kenya.\n\n- **Postdoctoral Research Fellow, California Institute of Technology (Caltech)** (Aug 2019 \u2013 Dec 2022)\n  * Conducted research in observational cosmology, focusing on the analysis of large-scale structure in the universe.\n  * Published 5 peer-reviewed articles in leading astrophysics journals, including *The Astrophysical Journal*.\n  * Developed and implemented novel data analysis pipelines using Python and machine learning algorithms.\n  * Presented research findings at international conferences.\n  * Mentored undergraduate research assistants.\n\n- **PhD, Astrophysics, Harvard University** (Sept 2015 \u2013 July 2019)\n  * Dissertation: \u201cMapping Dark Matter Halos with Weak Gravitational Lensing.\u201d\n  * Awarded Harvard University Fellowship for outstanding academic performance.\n  * Served as a teaching assistant for introductory astronomy courses.\n\n- **Research Intern, NASA Jet Propulsion Laboratory (JPL)** (Summer 2014)\n  * Assisted with the development of data analysis tools for the Cassini mission.\n  * Gained experience in working with large datasets and high-performance computing.\n\n- **Skills:** Python, Machine Learning (TensorFlow, PyTorch, scikit-learn), Data Analysis (Pandas, NumPy), Statistical Modeling, Financial Modeling, Credit Risk Assessment, Cloud Computing (AWS, GCP), Leadership, Team Management, Fundraising, Public Speaking.\n- **Certifications:** Completion of Y Combinator Startup School (2022).\n- **Education:** PhD, Astrophysics, Harvard University; BA, Physics, Yale University (Summa Cum Laude).",
+    "lookingFor": "I\u2019m currently focused on scaling Numerai Finance and am actively seeking connections that can accelerate our growth. Specifically, I\u2019m looking to connect with:\n\n* **Series A Investors:** Funds specializing in fintech and AI, with a particular interest in financial inclusion in emerging markets. We\u2019re looking for investors who can provide not just capital but also strategic guidance and access to their network.\n* **Experienced Fintech Advisors:** Individuals with a proven track record of scaling fintech platforms, particularly those operating in Africa or Latin America. I'm looking for mentorship on navigating regulatory hurdles and building a robust compliance framework.\n* **Machine Learning Engineers (Model Deployment & Security Focused):** Talented engineers with expertise in deploying and securing AI models in a production environment. Experience with financial data and fraud detection is a plus.\n* **Partnerships with Microfinance Institutions (MFIs):**  MFIs in Africa and Latin America interested in integrating our AI-powered credit scoring model to expand their reach and improve their risk management.\n\nI\u2019m also open to connecting with other founders in the YC community and learning from their experiences.  I'm particularly interested in discussing best practices for building and managing remote teams.  I'm *not* currently seeking introductions to marketing agencies \u2013 we're prioritizing product development and user acquisition through organic channels at this stage.",
+    "notes": "Valeria is incredibly sharp and driven, but can sometimes get lost in the technical details. When making introductions, emphasize the *impact* of Numerai Finance \u2013 the real-world benefits for underserved communities \u2013 rather than getting bogged down in the specifics of the AI model. She recently completed YC and is still navigating the post-program landscape. She mentioned being particularly interested in speaking with founders who successfully raised a Series A within 6-9 months of graduating YC. She's very focused on maintaining a lean team and prefers to avoid unnecessary meetings. Do *not* suggest anyone who pitches overly complex solutions or lacks a strong understanding of the challenges faced by MFIs in emerging markets. She's mentioned a slight preference for introductions facilitated by other YC founders.",
+    "locationAvailability": "Based in San Francisco, California, but open to remote collaboration and travel to key markets in Africa and Latin America.",
+    "introPreferences": "Successful introductions to potential investors and advisors are critical for Numerai Finance\u2019s growth. Here are my preferences:\n\n* **Hard Requirements:**\n  * The person *must* have a demonstrable track record of success in fintech or AI.\n  * They *must* have a genuine interest in financial inclusion.\n  * They *must* be willing to dedicate time to provide mentorship or consider investment.\n* **Soft Preferences:**\n  * Experience with emerging markets (Africa, Latin America) is highly valued.\n  * A strong network within the fintech ecosystem is a plus.\n  * Introductions should be concise and clearly articulate the value proposition of Numerai Finance.\n* **Avoid:**\n  * Introductions to individuals who are solely focused on short-term profits.\n  * Warm introductions that feel forced or lack a clear connection.\n  * Long-winded emails with excessive background information. Keep it brief and to the point.\n* **Introduction Style:** I prefer a brief email introduction with a clear ask \u2013 e.g., \u201cWould you be open to a 15-minute call to discuss Numerai Finance?\u201d",
+    "personalPreferences": "I prefer direct and efficient communication. Email is fine for initial contact, but I'm most responsive on WhatsApp (+1-XXX-XXX-XXXX \u2013 please ask for confirmation before adding). I appreciate concise updates and avoid unnecessary small talk. I\u2019m generally available for calls during Pacific Standard Time business hours, but can be flexible for important conversations. Please don\u2019t follow up excessively \u2013 I will respond as soon as I\u2019m able.",
+    "meetingAndSchedulingPreferences": "* Please send a brief agenda before any scheduled meeting.\n* I prefer video calls over phone calls whenever possible.\n* I\u2019m generally available for meetings between 9:00 AM and 5:00 PM PST.\n* Please confirm meeting times at least 24 hours in advance."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 26.617072105407715,
+      "input_tokens": 753,
+      "output_tokens": 1748,
+      "problems": []
+    }
+  ],
+  "success": true
+}

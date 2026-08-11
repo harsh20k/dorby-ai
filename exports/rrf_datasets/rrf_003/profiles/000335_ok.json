@@ -1,0 +1,54 @@
+{
+  "id": 335,
+  "archetype": "Canadian Tech Leader, SaaS Focus",
+  "given_name": "Marcus Martins",
+  "style_version": 21,
+  "archetypes_version": 56,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Marcus Martins is a first-time founder, 38, based in Toronto. He previously spent 12 years at Shopify, working his way up from a junior developer to a Senior Engineering Manager leading a team focused on the core checkout experience. He left Shopify a year ago to build 'FlowState,' a SaaS platform aimed at streamlining project management for remote creative teams \u2013 specifically targeting agencies and in-house marketing departments. He\u2019s highly technical, a bit introverted, and very data-driven. He's currently seed-funded and focused on achieving product-market fit and scaling the sales team. A distinctive detail: he\u2019s a passionate amateur astronomer and often uses space metaphors in his presentations. He\u2019s looking for strategic advisors with experience scaling SaaS companies and potential Series A investors. He is very responsive, but prefers asynchronous communication initially.",
+    "positioning": "I'm the founder and CEO of FlowState, a project management SaaS designed specifically for the unique needs of remote creative teams. We're tackling the frustrating inefficiencies that arise when traditional project management tools are forced onto workflows built around ideation, iteration, and visual collaboration.  Think Asana or Monday.com, but rebuilt from the ground up with creatives in mind. \n\nWe're seeing incredible early traction \u2013 currently onboarding over 50 paying customers, with a 92% retention rate after the first month. Key features include integrated visual feedback loops, automated task dependencies based on creative asset status, and a unique \u2018Focus Mode\u2019 designed to minimize distractions.  We've identified a significant gap in the market for a solution that truly understands the creative process.\n\nWe recently closed a $750k seed round led by Amplify Ventures and are now focused on accelerating our go-to-market strategy.  Specifically, we're building out our sales and customer success teams and investing heavily in product development to expand our integrations with popular creative tools like Adobe Creative Cloud and Figma. Our immediate goal is to reach 200 paying customers and demonstrate consistent month-over-month revenue growth, positioning us strongly for a Series A raise in Q2 2025.  I believe FlowState has the potential to become the leading project management platform for the future of creative work.",
+    "background": "* **FlowState (Founder & CEO)**, Toronto, ON (2023 \u2013 Present)\n    * Led all aspects of company formation, fundraising, product development, and go-to-market strategy.\n    * Secured $750k in seed funding from Amplify Ventures.\n    * Built and launched a fully functional SaaS platform with a 92% initial customer retention rate.\n    * Established key partnerships with early adopter agencies and marketing teams.\n* **Shopify (Senior Engineering Manager)**, Ottawa, ON (2011 \u2013 2023)\n    * Managed a team of 8 engineers responsible for the core checkout experience, processing billions of dollars in transactions annually.\n    * Led the redesign of the Shopify checkout flow, resulting in a 15% increase in conversion rates.\n    * Implemented new testing frameworks and CI/CD pipelines, improving code quality and release velocity.\n    * Mentored junior engineers and fostered a collaborative team environment.\n* **Shopify (Software Engineer)**, Ottawa, ON (2011 \u2013 2016)\n    * Developed and maintained key features of the Shopify platform using Ruby on Rails.\n    * Contributed to the development of Shopify Payments and Shopify Shipping.\n    * Collaborated with product managers and designers to deliver high-quality user experiences.\n* **Education:**\n    * **University of Waterloo**, Bachelor of Computer Science (2007 \u2013 2011)\n* **Skills:** SaaS, Project Management, Agile Methodologies, Ruby on Rails, JavaScript, React, AWS, Team Leadership, Product Strategy, Fundraising, Go-to-Market Strategy, Data Analysis, Customer Success.",
+    "lookingFor": "I\u2019m actively seeking connections who can help FlowState accelerate its growth and achieve its full potential.  My primary focus right now is building a strong advisory board and identifying potential Series A investors.\n\n* **Strategic Advisors:** Individuals with proven experience scaling SaaS companies, particularly those targeting the creative industry.  Experience with marketing automation, customer success, and sales strategy is highly valued. I\u2019m open to both formal and informal advisory roles.\n* **Series A Investors:** Venture capital firms with a focus on early-stage SaaS investments, ideally with a portfolio that includes companies targeting the enterprise or SMB market.  We're looking for partners who can provide not only capital but also strategic guidance and industry connections.\n* **Potential Partners:** Companies offering complementary tools or services to creative teams (e.g., design software, marketing platforms). We're exploring potential integration opportunities to enhance the FlowState user experience.\n* **Talent:** Experienced sales professionals with a track record of success in the SaaS space, specifically those with experience selling to marketing agencies and in-house creative teams.  We're also looking for a Customer Success Manager to help us onboard and support our growing customer base.  \n\nI'm always open to connecting with other founders and learning from their experiences.  I'm particularly interested in hearing from people who have successfully navigated the challenges of scaling a SaaS business in Canada.",
+    "notes": "Marcus is highly intelligent and articulate, though he can sometimes get lost in technical details. He\u2019s very responsive to messages, but prefers to start with asynchronous communication (email or LinkedIn messaging) before scheduling a call. He\u2019s extremely data-driven, so be prepared to back up any claims with metrics. He referenced his passion for astronomy during our initial call, using the analogy of \u2018finding the right orbit\u2019 for his company. He's currently scoring a 7/10 on our 'founder fit' assessment \u2013 strong technical skills and a clear vision, but needs to refine his storytelling and networking abilities.  He mentioned being particularly interested in connecting with investors who understand the nuances of the creative industry.  Avoid overly aggressive sales pitches; he prefers a consultative approach.",
+    "locationAvailability": "I'm based in Toronto, Canada, but am comfortable with remote meetings and occasional travel within North America.",
+    "introPreferences": "* **Hard Requirements:**\n    * Introductions to partners at VC firms actively investing in Seed/Series A SaaS companies.\n    * Introductions to experienced SaaS advisors with a background in marketing or sales.\n    * Individuals with direct experience scaling a similar SaaS product.\n* **Soft Preferences:**\n    * People who have previously worked at or advised companies like Shopify, Asana, Monday.com, or Adobe.\n    * Individuals with a strong network within the Canadian tech ecosystem.\n    * Introductions should be personalized and highlight the potential synergy between FlowState and the recipient's expertise.\n* **Framing Suggestions:** Please emphasize FlowState\u2019s strong early traction, our unique focus on creative teams, and our potential to disrupt the project management market. Mention my background at Shopify as a point of credibility.",
+    "personalPreferences": "I prefer communication via LinkedIn messaging or email initially.  I generally respond to messages within 24-48 hours.  I\u2019m not a big fan of cold calls.",
+    "meetingAndSchedulingPreferences": "I'm happy to hop on a quick call to discuss further. I\u2019m flexible with scheduling and can usually accommodate meetings within a week.  I prefer to receive a calendar invite with a clear agenda."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 31.696321964263916,
+      "input_tokens": 807,
+      "output_tokens": 1587,
+      "problems": []
+    }
+  ],
+  "success": true
+}

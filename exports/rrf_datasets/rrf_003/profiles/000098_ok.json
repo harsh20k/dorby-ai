@@ -1,0 +1,54 @@
+{
+  "id": 98,
+  "archetype": "Fintech/Proptech Serial Founder",
+  "given_name": "Camille Singh",
+  "style_version": 6,
+  "archetypes_version": 16,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Camille Singh is a serial fintech/proptech founder, currently focused on building a platform leveraging AI for automated property valuation and investment analysis. Her distinctive career detail is a previous, highly successful exit in the alternative lending space - she built and sold 'LendForward' to a major bank five years ago. This gives her credibility and access to capital, but also a reputation for being highly ambitious and fast-moving. She\u2019s now looking to disrupt the commercial real estate investment market, believing current valuation methods are archaic and inefficient. She\u2019s actively fundraising for her current venture, 'ValueAI', and seeking strategic partners with expertise in data science, commercial real estate, and potentially, institutional investment. She\u2019s known for being direct, data-driven, and having a relatively short attention span \u2013 she values efficiency and demonstrable results. She\u2019s also approachable and genuinely excited about innovation.",
+    "positioning": "As Founder & CEO of ValueAI, I\u2019m leading a team dedicated to revolutionizing commercial real estate investment through the power of artificial intelligence. We\u2019re building a platform that provides automated, data-driven property valuations and investment analysis, moving beyond traditional appraisal methods that are slow, expensive, and often inaccurate. Having previously founded and successfully exited LendForward, a leading alternative lending platform acquired by First National Bank in 2019, I\u2019ve seen firsthand the transformative potential of fintech. ValueAI represents the next evolution \u2013 applying those lessons to a $16 trillion market ripe for disruption. \n\nWe're currently in a seed funding round, demonstrating strong early traction with pilot programs showing a 30% improvement in valuation accuracy compared to traditional methods, and a 50% reduction in turnaround time. Our core technology leverages advanced machine learning algorithms, incorporating diverse data sources including market trends, property characteristics, and economic indicators. We\u2019re not just building a valuation tool; we\u2019re creating an intelligent investment ecosystem that empowers investors to make informed decisions with confidence. I\u2019m passionate about democratizing access to commercial real estate investment and believe ValueAI is uniquely positioned to lead this charge.",
+    "background": "* **ValueAI, Founder & CEO** (2022 \u2013 Present)\n    * Led all aspects of company formation, including strategy, product development, fundraising, and team building.\n    * Secured $1.5M in pre-seed funding from angel investors and venture capital firms focused on proptech and AI.\n    * Developed and launched MVP of automated property valuation platform, achieving 30% accuracy improvement over traditional appraisals.\n    * Built a core team of data scientists, software engineers, and real estate professionals.\n\n* **LendForward, Founder & CEO** (2016 \u2013 2019)\n    * Founded and scaled an online lending platform specializing in small business loans.\n    * Secured $25M in Series A funding led by Insight Venture Partners.\n    * Grew loan portfolio to over $100M, achieving profitability within 18 months.\n    * Successfully exited to First National Bank for an undisclosed sum.\n\n* **Goldman Sachs, Investment Banking Analyst** (2014 \u2013 2016)\n    * Analyzed financial statements and developed financial models for M&A transactions.\n    * Assisted in the execution of several high-profile deals in the fintech sector.\n    * Conducted industry research and prepared pitch books for potential clients.\n\n* **Massachusetts Institute of Technology (MIT), Master of Science in Financial Engineering** (2012 \u2013 2014)\n    * Focused on quantitative finance, machine learning, and risk management.\n    * Completed a thesis on the application of AI to credit scoring.\n\n* **Stanford University, Bachelor of Science in Economics** (2008 \u2013 2012)\n    * Graduated *summa cum laude* with honors in Economics.\n    * President of the Stanford Entrepreneurship Club.\n\n**Skills:** Fintech, Proptech, AI/ML, Data Science, Financial Modeling, Valuation, Investment Analysis, Fundraising, Venture Capital, M&A, Python, SQL, Leadership, Strategic Planning, Business Development.",
+    "lookingFor": "I\u2019m actively seeking connections within the commercial real estate and venture capital ecosystems. Specifically, I\u2019m looking to:\n\n* **Strategic Partners:** Individuals with deep expertise in commercial real estate investment trusts (REITs), property management, and institutional investment.\n* **Data Science Leaders:** Experts in machine learning, data engineering, and geospatial analysis who can contribute to the development and refinement of our valuation algorithms.\n* **Investors:** Venture capitalists and angel investors with a strong track record in proptech and fintech, particularly those interested in participating in our Series A round.\n* **Industry Advisors:** Seasoned professionals who can provide guidance on navigating the regulatory landscape and building strategic partnerships.\n\nI\u2019m open to informational interviews and exploring potential collaboration opportunities. I'm also keen to connect with founders who have successfully scaled proptech businesses and are willing to share their insights.  I\u2019m particularly interested in learning about innovative approaches to data acquisition and integration within the real estate sector.  I am *not* currently looking for service providers (marketing, legal, etc.).",
+    "notes": "Camille is highly driven and responds best to concise, data-backed communication. She values efficiency and expects quick follow-up. She's very focused on fundraising at the moment. \n\n* **Recent Conversation (Oct 26th):** Discussed potential partnership with a data analytics firm, but she felt their pricing was too high. \n* **Priority:** Secure Series A funding by Q1 2024.\n* **Communication Preference:** Prefers LinkedIn messaging initially, followed by brief phone calls. Avoid lengthy email chains.\n* **Potential Roadblock:** May be resistant to suggestions that deviate significantly from her existing strategy. Be prepared to support your recommendations with concrete evidence.",
+    "locationAvailability": "I am based in San Francisco, California, but frequently travel for investor meetings and industry events. I am open to remote collaboration and am comfortable working with teams located across different time zones.",
+    "introPreferences": "* When introducing me, please emphasize my successful exit with LendForward and my current focus on leveraging AI to disrupt commercial real estate.\n* Highlight ValueAI's strong early traction and the potential for significant ROI.\n* Focus on individuals with a proven track record in either fintech or proptech. \n* Avoid introducing me to individuals who are primarily focused on residential real estate \u2013 my focus is exclusively commercial.\n*  A brief, targeted introduction is preferred \u2013 she has limited time.",
+    "personalPreferences": "* LinkedIn messaging is best for initial contact.\n* Prefers short, concise communication.\n* Active on Twitter (@CamilleSinghAI) - good for gauging her current interests.\n* Doesn't respond well to overly promotional or 'fluffy' content.",
+    "meetingAndSchedulingPreferences": "I generally prefer 30-minute meetings. Please send a calendar invite with a clear agenda. I am flexible with video conferencing platforms (Zoom, Google Meet, etc.)."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 28.55276894569397,
+      "input_tokens": 826,
+      "output_tokens": 1512,
+      "problems": []
+    }
+  ],
+  "success": true
+}

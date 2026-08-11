@@ -1,0 +1,54 @@
+{
+  "id": 226,
+  "archetype": "Brand Builder, Youth/Culture Focused",
+  "given_name": "Hassan Olsen",
+  "style_version": 14,
+  "archetypes_version": 38,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Hassan Olsen is a 32-year-old marketing leader currently focused on building the brand for 'Elevate', a new platform merging esports, streetwear, and fitness. His background is unique: he started in grassroots community organizing around skateboarding, then transitioned into digital marketing with a successful streetwear brand, 'Concrete Jungle', where he spearheaded viral campaigns leveraging TikTok and influencer marketing. He's now applying that understanding of youth culture and authentic engagement to Elevate, aiming to position it as *the* lifestyle brand for the next generation of athletes and creatives. He\u2019s actively seeking connections with investors, potential brand partners, and individuals skilled in Web3/metaverse integrations within the sports and entertainment space. He\u2019s very particular about who he connects with \u2013 authenticity and a genuine understanding of the target demographic are paramount.",
+    "positioning": "Hassan Olsen is a brand strategist and marketing executive driving growth at Elevate, a next-generation platform at the intersection of esports, streetwear, and fitness. He brings a proven track record of building thriving communities and launching impactful campaigns, particularly within youth culture. At Elevate, Hassan is focused on establishing a strong brand identity and fostering authentic engagement with a Gen Z audience. He\u2019s passionate about leveraging innovative marketing strategies and forging strategic partnerships to expand Elevate\u2019s reach and impact. He is actively seeking connections with individuals who share a vision for building a brand that resonates deeply with the next generation.",
+    "background": "- **Elevate** (2023 \u2013 Present) \u2013 Head of Marketing. Leading all marketing initiatives, including brand building, digital strategy, influencer marketing, and community engagement.\n- **Concrete Jungle** (2018 \u2013 2023) \u2013 Digital Marketing Manager. Grew social media following by 400% and drove a 250% increase in online sales through targeted campaigns and influencer collaborations.\n- **Concrete Jungle** (2016 \u2013 2018) \u2013 Community Manager. Responsible for building and managing the brand\u2019s online and offline communities, organizing events, and fostering brand loyalty.\n- **Independent Skateboarding Organizer** (2012 \u2013 2016) \u2013 Founder & Lead Organizer. Organized and promoted local skateboarding events, built a strong network within the skateboarding community, and managed event logistics.\n- **Education:** Bachelor of Arts in Communications, University of California, Berkeley (2012 \u2013 2016)\n- **Skills:** Digital Marketing, Social Media Marketing, Influencer Marketing, Brand Strategy, Community Building, Event Planning, Content Creation, Data Analytics, TikTok Marketing, Web3, Metaverse.\n- **Awards/Recognition:** 'Marketing Innovator of the Year' - Concrete Jungle (2022)\n- **Projects:** Led the 'Reclaim the Streets' campaign for Concrete Jungle, a viral TikTok challenge that generated over 10 million views.\n- **Software Proficiency:** Adobe Creative Suite, Google Analytics, Hootsuite, Sprout Social, Meta Business Suite.",
+    "lookingFor": "I\u2019m actively seeking connections with:\n- **Investors:** Angel investors and venture capitalists interested in the future of sports, esports, and lifestyle brands.\n- **Brand Partners:** Companies aligned with Elevate\u2019s values and target audience, particularly in the streetwear, fitness, and gaming industries.\n- **Web3/Metaverse Experts:** Individuals with experience integrating Web3 technologies and metaverse activations into brand strategies.\n- **Influencers & Content Creators:** Talented individuals with a strong presence within the gaming, skateboarding, and streetwear communities.\n\nI\u2019m particularly interested in discussing potential collaborations, investment opportunities, and innovative marketing strategies. I\u2019m open to informal conversations and exploring mutually beneficial partnerships. I'm also keen to learn from others who are pushing boundaries in the digital space and building authentic connections with Gen Z.",
+    "notes": "Hassan is incredibly focused on brand authenticity. He's wary of overly polished or corporate approaches. He responded well to a discussion about community-led marketing. Mentioned his skateboarding background is a core influence on his approach. He's currently exploring NFT integrations for Elevate, but wants to avoid 'gimmicky' applications. Follow up regarding potential introductions to Web3 developers.",
+    "locationAvailability": "Hassan Olsen is based in Los Angeles, California, with a focus on networking opportunities within the West Coast tech and entertainment scenes.",
+    "introPreferences": "Hard Requirements:\n- **Prioritize:** Introductions to investors with a demonstrated track record in consumer brands, specifically those targeting Gen Z.\n- **Exclude:** Introductions to individuals involved in fast fashion or brands with questionable ethical practices.\n\nSoft Preferences:\n- **Best Fit:** Individuals who understand the intersection of esports, streetwear, and fitness.\n- **Introduction Style:** Keep introductions concise and highlight shared interests or potential synergies. A brief personal note explaining *why* you think the connection would be valuable is highly appreciated.\n- **Key Information to Include:** Briefly mention Elevate\u2019s mission and Hassan\u2019s role in building the brand. Avoid overly promotional language.",
+    "personalPreferences": "- I prefer initial contact via LinkedIn message or email. \n- I'm generally quick to respond, but please allow up to 24-48 hours for a reply.",
+    "meetingAndSchedulingPreferences": "I am available for virtual meetings most weekdays. I prefer a brief introductory call before scheduling a longer meeting to ensure a good fit. Please provide a suggested time and date, and I will confirm as soon as possible."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 22.11042618751526,
+      "input_tokens": 759,
+      "output_tokens": 1162,
+      "problems": []
+    }
+  ],
+  "success": true
+}

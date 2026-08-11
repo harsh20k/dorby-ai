@@ -1,0 +1,63 @@
+{
+  "id": 227,
+  "archetype": "Global Civic Tech Leader",
+  "given_name": "Alejandro Volkov",
+  "style_version": 14,
+  "archetypes_version": 38,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Alejandro Volkov is a seasoned software engineer and architect transitioning into a leadership role within the civic tech space. He spent the first decade of his career building large-scale e-commerce platforms, gaining deep expertise in scalability and microservices. However, a frustrating experience navigating bureaucratic red tape when trying to start a small business spurred him to pivot. Now, he's focused on applying his technical skills to making government services more accessible and efficient. He's currently leading the development of 'CivitasCore,' an open-source platform for streamlining permitting and licensing processes for small businesses, initially focused on Latin American markets. He's actively seeking connections with impact investors, government officials open to innovation, and other civic tech founders facing similar challenges. A key detail is his fluency in both English and Russian, allowing him to bridge connections between Eastern European tech talent and global civic tech initiatives.",
+    "positioning": "Alejandro Volkov is a technology leader dedicated to building open-source solutions that empower citizens and improve government efficiency. Currently leading the development of CivitasCore, a platform designed to simplify permitting for small businesses, Alejandro leverages his extensive experience in scalable systems architecture to tackle complex civic challenges. He\u2019s passionate about fostering collaboration between the public and private sectors to drive impactful change. Alejandro is actively seeking connections with individuals involved in open government initiatives, impact investing, and organizations focused on emerging market tech solutions. He believes in the power of technology to create a more equitable and accessible world.",
+    "background": "- **Founder & CEO, CivitasCore (2022 \u2013 Present):** Leading the development and implementation of an open-source platform to streamline permitting and licensing processes for small businesses, initially focused on Colombia and Mexico.\n- **Principal Software Architect, StellarCommerce (2016 \u2013 2022):** Architected and scaled the core e-commerce platform, handling peak loads of over 1 million transactions per hour. Led a team of 10+ engineers.\n- **Senior Software Engineer, NovaTech Solutions (2012 \u2013 2016):** Developed and maintained key components of a large-scale payment processing system.\n- **Education:** Master of Science in Computer Science, Moscow State University (2010 \u2013 2012); Bachelor of Science in Computer Science, Saint Petersburg State Polytechnical University (2006 \u2013 2010).\n- **Skills:** Java, Python, Kubernetes, Docker, AWS, Azure, Microservices Architecture, Scalable Systems Design, Agile Development, Project Management, Open Source Development, Fluent in English and Russian.\n- **Awards & Recognition:** StellarCommerce 'Innovation Award' (2019) for contributions to platform scalability.\n- **Open Source Contributions:** Active contributor to several open-source projects related to data visualization and API development.\n- **Volunteer Experience:** Tech mentor for underprivileged youth in Saint Petersburg, Russia (2008-2010).",
+    "lookingFor": "- **Impact Investors:** Seeking seed funding to expand CivitasCore's platform features and geographic reach.\n- **Government Officials (Colombia, Mexico, Brazil):** Interested in connecting with individuals open to piloting and adopting CivitasCore within their jurisdictions.\n- **Civic Tech Founders:** Looking to exchange best practices and collaborate on shared challenges in the open government space.\n- **Software Engineers (Latin America, Eastern Europe):** Exploring potential partnerships for development and localization support, particularly individuals with experience in Russian or Spanish.\n- **Advisors:** Seeking guidance from experienced entrepreneurs and civic tech leaders on scaling an open-source platform.\n- Specifically hoping to connect with individuals involved in organizations like Code for America, OpenGov Foundation, and similar initiatives.",
+    "notes": "Alejandro is highly motivated and deeply committed to his mission. He's a strong technical leader but still relatively new to fundraising. He mentioned being particularly interested in investors who understand the complexities of working within government systems. He\u2019s very responsive and enthusiastic, but can get deeply technical in conversations \u2013 be prepared to steer him back to the broader business implications if needed. He's currently exploring potential integrations with existing government databases.",
+    "locationAvailability": "Based in Medellin, Colombia, with a focus on Latin American markets but open to global collaboration.",
+    "introPreferences": "## Hard Requirements:\n* **Prioritize:** Introductions to impact investors actively investing in Latin American civic tech.\n* **Exclude:** Introductions to individuals solely focused on traditional enterprise software sales.\n\n## Soft Preferences:\n* **Best Fit:** Individuals with a proven track record of supporting early-stage, open-source projects.\n* **Introduction Style:** Keep it concise and highlight Alejandro\u2019s technical expertise and the potential social impact of CivitasCore.  A brief mention of his fluency in Russian can be a conversation starter.\n* **Key Information to Include:** Mention the CivitasCore platform and its focus on simplifying permitting for small businesses.  Briefly highlight his background at StellarCommerce.",
+    "personalPreferences": "- Prefers initial contact via email.\n- Open to short calls (30 minutes max) to discuss potential collaborations.",
+    "meetingAndSchedulingPreferences": "Generally available for meetings during standard business hours (GMT-5). Prefers video calls (Google Meet or Zoom) to facilitate more personal connections. Please schedule at least 24 hours in advance."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 22.870999097824097,
+      "input_tokens": 752,
+      "output_tokens": 1217,
+      "problems": [
+        "background: possible truncation (ends with '...Upgrade, 2018)</li>\n</ul>')"
+      ]
+    },
+    {
+      "attempt": 2,
+      "elapsed_s": 20.859051942825317,
+      "input_tokens": 752,
+      "output_tokens": 1128,
+      "problems": []
+    }
+  ],
+  "success": true
+}

@@ -1,0 +1,54 @@
+{
+  "id": 179,
+  "archetype": "SaaS Ecosystem & AI Connector",
+  "given_name": "Alejandro Tanaka",
+  "style_version": 12,
+  "archetypes_version": 30,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Alejandro Tanaka is a seasoned SaaS professional who's recently pivoted to focus on the burgeoning intersection of SaaS and AI agents. He spent the first 10 years of his career in traditional sales and marketing roles at established SaaS companies, then spent 5 years as a founding member of a hypergrowth marketing automation platform. He's now an independent consultant, specifically helping SaaS businesses integrate AI agents into their product offerings and go-to-market strategies. A distinctive detail is that he's a certified prompt engineer \u2013 a skill he actively leverages in his consulting work. He's building a network of both SaaS leaders and AI/ML experts to facilitate these integrations, and is very focused on practical, revenue-generating applications of AI, not just hype. He's pragmatic and values efficiency.",
+    "positioning": "Alejandro Tanaka is a strategic advisor specializing in the integration of Artificial Intelligence agents into SaaS ecosystems. With over 15 years of experience in the SaaS industry, spanning sales, marketing, and product go-to-market strategies, I help companies unlock new revenue streams and enhance customer experiences through intelligent automation. My expertise lies in identifying opportunities to leverage AI agents for tasks like lead qualification, personalized onboarding, customer support, and data analysis. I\u2019m passionate about bridging the gap between cutting-edge AI technologies and the practical needs of SaaS businesses. I\u2019ve successfully guided multiple companies through the initial phases of AI agent implementation, resulting in improved key metrics such as conversion rates and customer lifetime value. My approach is data-driven, focusing on measurable results and scalable solutions. I thrive on complex challenges and am dedicated to helping clients navigate the rapidly evolving landscape of AI-powered SaaS.",
+    "background": "- **Independent AI & SaaS Consultant** (2023 - Present)\n    * Providing strategic guidance to SaaS companies on AI agent integration, covering use case identification, technology selection, implementation, and performance measurement.\n    * Developing and delivering workshops on prompt engineering and AI agent best practices for SaaS teams.\n    * Technologies utilized: OpenAI APIs (GPT-3, GPT-4), LangChain, Pinecone, various SaaS marketing & sales platforms (HubSpot, Salesforce, Marketo).\n\n- **Founding Marketing Team Member, AutomateNow** (2018 - 2023) \u2013 *Series B funded marketing automation platform.*\n    * Led the development and execution of growth marketing strategies, increasing user acquisition by 300% in 2 years.\n    * Managed a team of 5 marketing specialists, focusing on content marketing, SEO, paid advertising, and social media.\n    * Spearheaded the integration of AI-powered personalization features into the AutomateNow platform.\n\n- **Senior Marketing Manager, CloudSolutions Inc.** (2013 - 2018) \u2013 *Enterprise cloud storage provider.*\n    * Responsible for developing and implementing marketing campaigns targeting enterprise clients.\n    * Managed a budget of $500K and consistently exceeded lead generation targets.\n    * Collaborated with sales teams to develop effective sales enablement materials.\n\n- **Sales Development Representative, DataStream Analytics** (2008 - 2013) \u2013 *Business intelligence software company.*\n    * Consistently exceeded quota for qualified leads generated.\n    * Developed strong prospecting and communication skills.\n\n- **Education:**\n    * **MBA, Stanford University Graduate School of Business** (2008)\n    * **BS, Computer Science, University of California, Berkeley** (2006)\n\n- **Certifications:**\n    * **Certified Prompt Engineer \u2013 LearnPrompting.org** (2023)\n    * **HubSpot Inbound Marketing Certification** (2017)\n",
+    "lookingFor": "I'm actively expanding my network within the SaaS and AI agent communities. I'm seeking connections with:\n\n* **SaaS Founders & Heads of Product:** Interested in exploring how AI agents can unlock new features, improve user experience, and drive revenue growth.\n* **AI/ML Engineers & Researchers:** Looking to collaborate on innovative AI agent applications within the SaaS space.\n* **Venture Capitalists & Angel Investors:** Focused on AI-powered SaaS solutions \u2013 happy to share insights on emerging trends.\n* **SaaS Marketing Leaders:** Discussing strategies for leveraging AI agents in marketing automation and personalization.\n\n**Do connect if:** You're building or investing in AI-powered SaaS, or are a technical expert passionate about the intersection of these fields.\n\n**Don't connect if:** You're primarily focused on general AI hype, or are a recruiter for roles outside of AI/SaaS consulting or engineering. I'm not looking for sales pitches for unrelated products/services. I'm also not interested in purely academic research \u2013 I'm focused on *applied* AI.",
+    "notes": "Alejandro is highly responsive and very focused on tangible ROI from AI implementations. He\u2019s expressed slight frustration with the amount of \u2018fluff\u2019 in the current AI conversation. He mentioned he prioritizes introductions that are mutually beneficial and avoids warm introductions just for the sake of it. He\u2019s currently evaluating several AI agent platforms for a client in the CRM space, so connections in that area could be particularly valuable. He's a quick study and seems genuinely invested in staying ahead of the curve.",
+    "locationAvailability": "Based in San Francisco, CA (PST). Open to remote meetings and occasional travel to key tech hubs.",
+    "introPreferences": "When introducing me, please emphasize my experience in *both* SaaS and AI, and my focus on practical applications. \n\n* **Hard Requirement:** The person you're introducing me to should be directly involved in either building or investing in AI-powered SaaS solutions.\n* **Soft Preference:** If they\u2019ve already experimented with AI agents, even if the results weren't ideal, that\u2019s a plus \u2013 I enjoy tackling challenges.\n* **Intro Style:** A brief, direct message highlighting the mutual benefit of connecting is ideal. E.g., 'Alejandro is a consultant helping SaaS companies integrate AI agents, and I thought you two might have interesting perspectives to share.' Avoid lengthy introductions or overly enthusiastic endorsements.\n* **Avoid:** Introducing me to people who are simply \u2018interested\u2019 in AI but haven't taken concrete steps to implement it.",
+    "personalPreferences": "Prefers asynchronous communication (email or LinkedIn messaging) for initial contact. Quick to respond, but dislikes unnecessary meetings.",
+    "meetingAndSchedulingPreferences": "* Please include a brief agenda when requesting a meeting.\n* I typically respond to meeting requests within 24 hours.\n* I prefer 30-minute meetings initially to assess potential synergy.\n* Calendar access is helpful for efficient scheduling."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 26.057549715042114,
+      "input_tokens": 861,
+      "output_tokens": 1437,
+      "problems": []
+    }
+  ],
+  "success": true
+}

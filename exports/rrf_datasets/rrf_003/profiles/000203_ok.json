@@ -1,0 +1,54 @@
+{
+  "id": 203,
+  "archetype": "Operator-Turned-Founder, Automation Focus",
+  "given_name": "Alejandro Patel",
+  "style_version": 13,
+  "archetypes_version": 33,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Alejandro Patel is a former Head of Global Operations at a fast-growing logistics tech company, 'ShipSwift', where he spearheaded the implementation of robotic process automation (RPA) across multiple departments, resulting in significant cost savings and efficiency gains. He became increasingly frustrated with the limitations of off-the-shelf automation solutions and the lack of truly customizable options. He left ShipSwift six months ago to found 'FlowForge', a company building a no-code automation platform specifically tailored for mid-sized businesses \u2013 those too large for simple task automation but not complex enough to justify enterprise-level solutions. He\u2019s currently focused on seed funding and building a core engineering team. He's a pragmatic, data-driven operator who values clear communication and demonstrable results. He's looking for investors with a track record in B2B SaaS, and experienced engineers specializing in workflow orchestration and UI/UX.",
+    "positioning": "As Founder & CEO of FlowForge, I'm building the future of automation for mid-market businesses. Having spent over a decade optimizing global operations at ShipSwift, I witnessed firsthand the transformative power of automation \u2013 and the limitations of existing solutions. FlowForge is a no-code platform empowering businesses to design, deploy, and manage custom automation workflows without needing extensive technical expertise. We bridge the gap between basic task automation and complex enterprise RPA, offering a scalable and affordable solution. My expertise lies in identifying operational bottlenecks, designing efficient processes, and implementing automation strategies that deliver measurable ROI. I'm passionate about democratizing automation and helping businesses unlock their full potential by streamlining workflows and freeing up valuable resources. I\u2019m currently seeking strategic partners and investors to accelerate our growth and expand our platform capabilities.",
+    "background": "- **FlowForge, Founder & CEO** (Present)\n    * Led company inception, including market research, product definition, and business plan development.\n    * Currently focused on securing seed funding and building a founding engineering team.\n    * Developed initial product roadmap and go-to-market strategy.\n\n- **ShipSwift, Head of Global Operations** (2018 \u2013 2023)\n    * Oversaw all global operational functions, including logistics, warehousing, and customer support.\n    * Spearheaded the implementation of Robotic Process Automation (RPA) across key departments, resulting in a 25% reduction in operational costs and a 15% increase in efficiency.\n    * Managed a team of 50+ employees across multiple locations.\n    * Led the successful integration of three acquired companies, streamlining operations and achieving synergy targets.\n    * Championed data-driven decision-making, implementing KPIs and dashboards to track performance.\n\n- **LogiCorp Solutions, Operations Manager** (2015 \u2013 2018)\n    * Managed daily operations for a regional distribution center, ensuring efficient order fulfillment and on-time delivery.\n    * Implemented lean manufacturing principles, resulting in a 10% reduction in waste and a 5% improvement in productivity.\n    * Developed and maintained strong relationships with key suppliers and customers.\n\n- **Education:**\n    * **Master of Business Administration (MBA)**, University of California, Berkeley \u2013 Haas School of Business (2013 \u2013 2015)\n    * **Bachelor of Science in Industrial Engineering**, Georgia Institute of Technology (2009 \u2013 2013)\n\n- **Skills:** RPA, Workflow Automation, Process Improvement, Lean Manufacturing, Supply Chain Management, Data Analysis, Project Management, Team Leadership, B2B SaaS, No-Code/Low-Code Platforms, Go-to-Market Strategy, Seed Funding.",
+    "lookingFor": "I\u2019m actively seeking connections with individuals who can contribute to the growth of FlowForge. My priorities are:\n\n* **Seed Stage Investors:** Specifically, VCs with a strong portfolio in B2B SaaS, particularly those focused on automation and developer tools.  I\u2019m looking for investors who understand the mid-market opportunity and can provide strategic guidance.\n* **Experienced Engineers:**  We are building out our core engineering team and need talented individuals with expertise in workflow orchestration (e.g., Camunda, Zeebe), UI/UX design, and backend development (Python preferred).\n* **Automation Consultants:**  Partnerships with firms specializing in process automation and digital transformation would be valuable for expanding our reach and providing implementation support to clients.\n* **Potential Strategic Partners:** Companies offering complementary technologies (e.g., CRM, ERP) that could integrate with FlowForge.\n\nI'm open to informational interviews and introductions.  I'm particularly interested in learning about best practices for scaling a SaaS business and navigating the competitive automation landscape.",
+    "notes": "- Last conversation with Sarah Chen (Accel) \u2013 positive initial reaction to pitch deck, but wants to see more traction. Follow up next week with user acquisition numbers.\n- Prioritized finding a strong CTO.  LinkedIn search ongoing, targeting engineers with RPA/workflow experience.\n- FlowForge website launch scheduled for end of next month.  Need to finalize marketing materials.\n- Attending the Automation Anywhere Imagine conference in July \u2013 good opportunity for networking and lead generation.",
+    "locationAvailability": "I am based in San Francisco, California, but am comfortable with remote communication and occasional travel to meet with investors and potential team members. I'm flexible to travel to major tech hubs.",
+    "introPreferences": "When making introductions, please:\n\n* **Hard Requirement:** Ensure the contact has direct experience with B2B SaaS investment *or* has a strong technical background in workflow automation.\n* **Soft Preference:** Prioritize introductions to individuals who have previously invested in or worked with companies targeting the mid-market.\n* **Introduction Style:** A concise email highlighting FlowForge\u2019s unique value proposition and my background would be ideal.  Please mention my experience at ShipSwift and the problem we\u2019re solving.\n* **Avoid:**  Generic introductions or contacts with no relevant experience. I value quality over quantity.",
+    "personalPreferences": "I prefer email for initial contact and am generally responsive during business hours.  I enjoy discussing the future of work and am a keen follower of the latest developments in AI and automation.  Outside of work, I enjoy hiking and playing tennis.",
+    "meetingAndSchedulingPreferences": "- Prefer Zoom meetings for initial conversations.\n- Quick follow-up after meetings is appreciated.\n- I'm decisive and value efficient decision-making."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 18.263031005859375,
+      "input_tokens": 839,
+      "output_tokens": 1365,
+      "problems": []
+    }
+  ],
+  "success": true
+}

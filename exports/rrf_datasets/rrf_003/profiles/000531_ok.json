@@ -1,0 +1,54 @@
+{
+  "id": 531,
+  "archetype": "Operator-Investor, Deep Tech Focus",
+  "given_name": "Maria Haruna",
+  "style_version": 32,
+  "archetypes_version": 89,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Maria Haruna is a first-time founder, a materials scientist by training, building a company called 'Aether Composites' focused on self-healing polymers for aerospace applications. Her distinctive career detail is a prior 5-year stint as a research fellow at the Max Planck Institute for Polymer Research, where she developed the core IP now underpinning Aether. She\u2019s aiming for a Seed round, targeting investors with deep tech expertise and a demonstrated interest in advanced materials and sustainability. She's deeply technical and prioritizes data-driven discussions. She's European-based (Germany) and prefers direct, efficient communication. She's slightly wary of 'hype' and prefers investors who understand the long development cycles inherent in materials science. She's a strong operator but recognizes she needs investor guidance on scaling and go-to-market strategy, especially within the highly regulated aerospace sector.",
+    "positioning": "Aether Composites is revolutionizing aerospace maintenance with its proprietary self-healing polymer technology. We\u2019ve developed a material that autonomously repairs micro-cracks, significantly extending the lifespan of composite aircraft components, reducing downtime, and decreasing lifecycle costs. Our initial target market is the commercial aviation sector, specifically focusing on auxiliary power unit (APU) nacelles and other non-structural components. Unlike traditional repair methods, which are labor-intensive and often require aircraft grounding, Aether\u2019s polymers offer a proactive, preventative solution that minimizes disruption and maximizes operational efficiency. We\u2019ve achieved >95% self-healing efficiency in laboratory testing and are currently completing rigorous FAA certification trials. We\u2019ve secured Letters of Intent (LOIs) with two Tier 1 aerospace suppliers representing a potential pipeline of $15M in annual recurring revenue within 3 years. We are currently raising a $3M Seed round to scale production, expand our team, and accelerate certification for broader aerospace applications.",
+    "background": "* **Founder & CEO, Aether Composites** (2023 \u2013 Present)\n    * Leading all aspects of company strategy, fundraising, product development, and operations.\n    * Secured initial seed funding from angel investors and grant funding from the German Federal Ministry for Economic Affairs and Climate Action.\n    * Built a team of 5 highly skilled materials scientists and engineers.\n* **Research Fellow, Max Planck Institute for Polymer Research** (2018 \u2013 2023)\n    * Led a research group focused on the development of self-healing polymers for extreme environments.\n    * Published 12 peer-reviewed articles in leading materials science journals (e.g., *Advanced Materials*, *Macromolecules*).\n    * Filed 3 patent applications related to Aether\u2019s core technology.\n    * Managed a research budget of \u20ac500,000 annually.\n* **Materials Scientist, Airbus** (2016 \u2013 2018)\n    * Conducted research on advanced composite materials for aircraft structures.\n    * Contributed to the development of new materials for the A350 XWB aircraft.\n    * Developed expertise in polymer characterization, mechanical testing, and failure analysis.\n* **PhD in Materials Science and Engineering**, Technical University of Munich (2013 \u2013 2016)\n    * Dissertation: 'Self-Healing Mechanisms in Polymer Networks'.\n    * GPA: 1.0 (highest grade)\n* **MSc in Chemistry**, University of Heidelberg (2010 \u2013 2013)\n* **BSc in Chemistry**, University of Freiburg (2007 \u2013 2010)",
+    "lookingFor": "## Investor Introductions\n* **Seed-Stage VCs:** Funds with a focus on deep tech, materials science, and aerospace.  Specifically interested in investors with experience in hardware startups and a demonstrated understanding of long development cycles.\n* **Corporate Venture Capital (CVC):**  Looking for strategic partnerships with aerospace companies interested in incorporating self-healing materials into their products.\n\n## Expert Introductions\n* **FAA Certification Experts:** Individuals with extensive experience navigating the FAA certification process for new materials in aerospace applications.\n* **Aerospace Supply Chain Consultants:**  Experts who can advise on optimizing our go-to-market strategy and building relationships with Tier 1 suppliers.\n* **Manufacturing Scale-Up Advisors:** Individuals with experience scaling production of advanced materials, particularly polymers.",
+    "notes": "Maria is exceptionally bright and technically proficient, but can sometimes get lost in the details. She\u2019s eager to discuss the science behind Aether\u2019s technology, but needs gentle guidance to focus on the business implications. She\u2019s a very direct communicator and appreciates honesty and transparency.  She\u2019s particularly sensitive to investors who don\u2019t understand the complexities of materials science and the regulatory hurdles involved in aerospace.  \n\n*   She's actively seeking mentorship from experienced founders who have successfully navigated the Seed stage.\n*   Avoid overly optimistic projections; she prefers realistic assessments and data-driven discussions.\n*   Highlight any portfolio companies with similar technical challenges or regulatory requirements.",
+    "locationAvailability": "Based in Aachen, Germany. Willing to travel to key investor locations in Europe and the US, but prefers initial meetings to be conducted remotely.",
+    "introPreferences": "* **Hard Requirements:**\n    * Introductions should be to investors or experts with a clear understanding of deep tech and materials science.\n    * Introductions should be to individuals who are known for providing constructive feedback and strategic guidance.\n* **Soft Preferences:**\n    * Prior experience with aerospace or related industries is highly desirable.\n    * The introducer should be able to vouch for my technical expertise and the potential of Aether\u2019s technology.\n    * Please pre-brief the contact on the core benefits of self-healing polymers and the potential market opportunity.",
+    "personalPreferences": "I prefer initial communication via email.  I'm responsive on LinkedIn, but email is best for detailed discussions.  Brief follow-up summaries after meetings are greatly appreciated.",
+    "meetingAndSchedulingPreferences": "I prefer meetings to be focused and efficient, with a clear agenda. Please share any relevant materials in advance. I'm typically available for meetings during standard European business hours. I appreciate a quick debrief after any introductions to understand the initial impression and any key takeaways."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 17.812687873840332,
+      "input_tokens": 789,
+      "output_tokens": 1330,
+      "problems": []
+    }
+  ],
+  "success": true
+}

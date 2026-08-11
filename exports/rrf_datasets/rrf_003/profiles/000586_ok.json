@@ -1,0 +1,54 @@
+{
+  "id": 586,
+  "archetype": "European Tech/AI Builder & Advisor",
+  "given_name": "Jamal Vargas",
+  "style_version": 36,
+  "archetypes_version": 98,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Jamal Vargas is a 38-year-old, British-Spanish dual national currently leading 'Synapse Solutions,' a seed-stage AI company focused on predictive maintenance for mid-sized manufacturing firms in the DACH region (Germany, Austria, Switzerland). He previously spent 8 years at McKinsey, specializing in digital transformation within industrial clients. A key detail is that during his McKinsey tenure, he *built* a proprietary methodology for rapid AI prototyping \u2013 a process he\u2019s now leveraging heavily at Synapse. He\u2019s actively fundraising for a Series A round and seeking strategic partnerships to accelerate market penetration. He\u2019s very focused on demonstrating ROI for clients quickly and is therefore selective about the types of manufacturing businesses he targets. He's a polished, confident networker, but values genuine connection over superficiality. He\u2019s driven by the potential of AI to revitalize European manufacturing.",
+    "positioning": "Jamal Vargas is the Founder & CEO of Synapse Solutions, an AI-powered predictive maintenance platform designed to unlock operational efficiency for mid-market manufacturers. We\u2019re tackling a critical pain point \u2013 unplanned downtime \u2013 which costs these businesses significant revenue and impacts their competitiveness. Synapse leverages cutting-edge machine learning algorithms to analyze real-time sensor data, predict equipment failures *before* they occur, and optimize maintenance schedules.  Our core value proposition is delivering a demonstrable return on investment within the first 90 days of implementation.  We\u2019re particularly focused on the DACH region, a market ripe for digital transformation and boasting a strong industrial base.  My background in management consulting, specifically at McKinsey & Company, provided me with deep insights into the challenges facing these businesses and the opportunity to build a scalable, impactful solution. We\u2019re not just selling software; we\u2019re building a partnership focused on driving tangible business outcomes and empowering manufacturers to thrive in the age of Industry 4.0.  Ultimately, Synapse Solutions aims to be the leading AI partner for European mid-market manufacturers, driving innovation and resilience across their operations.",
+    "background": "- **Founder & CEO, Synapse Solutions (2022 \u2013 Present)**\n  - Led all aspects of company formation, fundraising, product development, and go-to-market strategy.\n  - Secured seed funding of \u20ac1.5M from leading European angel investors.\n  - Developed and launched Synapse\u2019s core predictive maintenance platform, achieving a 30% reduction in unplanned downtime for initial pilot customers.\n  - Built a high-performing team of data scientists, engineers, and sales professionals.\n- **Principal, McKinsey & Company (2014 \u2013 2022)**\n  - Advised Fortune 500 companies on digital transformation strategies across various industries, with a specialization in industrial manufacturing.\n  - Led large-scale implementation projects, delivering significant cost savings and revenue growth for clients.\n  - Developed and patented a proprietary methodology for rapid AI prototyping ('Accelerated Intelligence Framework'), enabling faster and more efficient development of AI solutions.\n  - Mentored junior consultants and contributed to the firm's knowledge management initiatives.\n- **Consultant, Accenture (2012 \u2013 2014)**\n  - Supported the delivery of IT consulting projects for public sector clients.\n  - Gained experience in project management, requirements gathering, and system integration.\n- **Education:**\n  - MBA, INSEAD (2012)\n  - MSc, Engineering Science, University of Oxford (2010)\n  - BA, Mechanical Engineering, Imperial College London (2008)",
+    "lookingFor": "I\u2019m currently focused on securing a Series A investment to scale Synapse Solutions and expand our market reach.  I\u2019m actively seeking connections with:\n\n*   **Venture Capital firms** specializing in B2B SaaS and industrial AI, particularly those with a European focus and a commitment to long-term partnerships.\n*   **Strategic partners** within the manufacturing ecosystem \u2013 system integrators, industrial automation vendors, and industry associations \u2013 who can help us accelerate market adoption and expand our customer base.\n*   **Manufacturing executives** (Heads of Operations, CIOs, CTOs) at mid-sized manufacturing firms in the DACH region who are actively exploring AI-driven solutions to improve operational efficiency and reduce costs.\n*   **Experienced advisors** with a deep understanding of the industrial AI landscape and a track record of success in scaling technology companies.\n\nI'm open to introductory calls and meetings to discuss potential collaborations and investment opportunities. I\u2019m particularly interested in learning about firms that have successfully implemented AI solutions in similar contexts and can share best practices.",
+    "notes": "*   Jamal is a highly articulate and persuasive communicator. Focus on demonstrating clear ROI and alignment with his target market (DACH region mid-market manufacturers).\n*   Mentioned during a recent conversation that he\u2019s skeptical of overly hyped AI solutions \u2013 prefers a pragmatic, data-driven approach.\n*   Successfully connected him with Klaus Schmidt (Siemens) last month \u2013 positive feedback on that introduction.\n*   He\u2019s currently reviewing a term sheet from a US-based VC firm, but is prioritizing European investors.\n*   Strong advocate for responsible AI and ethical data practices.  This is a key differentiator for him.\n*   Avoid pitching solutions that are not specifically targeted at predictive maintenance or the manufacturing sector.",
+    "locationAvailability": "Jamal Vargas is based in London, UK, but frequently travels to the DACH region. He is open to remote meetings and is available for travel as needed.",
+    "introPreferences": "*   **Hard Requirements:** Introductions should be to individuals with decision-making authority within relevant organizations (VC firms, manufacturing companies).  No junior-level contacts, please.\n*   **Soft Preferences:**  Prioritize introductions to individuals with a demonstrated track record of investing in or partnering with industrial AI companies.\n*   **Ideal Contact Profile:**  VC Partner with a focus on Series A investments in B2B SaaS; Head of Operations at a mid-sized manufacturing firm in Germany; Industry Analyst specializing in industrial automation.\n*   **Introduction Style:**  A concise and personalized email introducing the connection, highlighting the potential synergies between Synapse Solutions and the recipient\u2019s interests.  Avoid lengthy explanations \u2013 let Jamal lead the conversation.\n*   **Avoid:**  Cold introductions via LinkedIn InMail.  Referrals from trusted sources are highly valued.  Don't position Synapse as a \u2018general AI\u2019 company \u2013 emphasize our focus on predictive maintenance.",
+    "personalPreferences": "Prefers direct communication. Email is best for initial contact.  Quick to respond. Appreciates concise and well-structured communication. Not a fan of overly formal language.",
+    "meetingAndSchedulingPreferences": "Generally flexible with scheduling. Prefers meetings to be focused and outcome-oriented.  Happy to use Calendly for easy scheduling."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 30.81182289123535,
+      "input_tokens": 788,
+      "output_tokens": 1453,
+      "problems": []
+    }
+  ],
+  "success": true
+}

@@ -1,0 +1,54 @@
+{
+  "id": 46,
+  "archetype": "Emerging Market E-commerce Founder",
+  "given_name": "Wei Jansen",
+  "style_version": 3,
+  "archetypes_version": 8,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Wei Jansen is a 34-year-old Ghanaian-Dutch founder and CEO of 'Ananse Market', a rapidly growing e-commerce platform focused on connecting local artisans and farmers directly to consumers across West Africa. A distinctive career detail is her prior experience as a supply chain logistics consultant for a major NGO, which gave her deep insights into the challenges and opportunities of last-mile delivery and micro-enterprise support in the region. She's currently seeking Series A funding to expand Ananse Market's reach beyond Ghana and Nigeria, invest in warehousing infrastructure, and develop a more robust mobile-first platform. Wei is fiercely committed to empowering local producers and creating sustainable economic opportunities, positioning Ananse Market as more than just an e-commerce site \u2013 it's a platform for inclusive growth. Her background blends a Western business education with a deep understanding of local African markets, making her a compelling founder. She\u2019s a pragmatic leader, focused on measurable impact and scalable solutions.",
+    "positioning": "I'm Wei Jansen, founder and CEO of Ananse Market \u2013 *empowering West African artisans and farmers through direct-to-consumer e-commerce*. We\u2019re building the leading digital marketplace connecting local producers with a rapidly expanding consumer base across Ghana, Nigeria, and soon, the wider West African region. Ananse Market isn\u2019t just about selling products; it\u2019s about fostering economic empowerment, preserving traditional crafts, and building resilient supply chains. \n\nInitially, we focused on curated collections of handcrafted goods, recognizing a gap in the market for authentic, high-quality African products accessible to both local and international buyers. However, we quickly pivoted to include agricultural produce, responding to a critical need for farmers to access fair prices and reduce post-harvest losses. This expansion necessitated significant investment in cold chain logistics and quality control, challenges we\u2019ve successfully navigated through strategic partnerships with local transportation providers and agricultural cooperatives. \n\nOur core value proposition lies in our hyper-local approach. We don\u2019t simply list products; we build relationships with producers, providing them with training in digital marketing, inventory management, and financial literacy. This holistic approach ensures product quality, fosters sustainable practices, and drives long-term growth for our partners. We\u2019re currently experiencing 30% month-over-month growth and are poised to become the dominant e-commerce player in West Africa's burgeoning digital economy. We believe that unlocking the potential of African entrepreneurs is key to creating a more equitable and prosperous future, and Ananse Market is at the forefront of this movement.",
+    "background": "- **CEO & Founder, Ananse Market** (2020 \u2013 Present)\n    - Led all aspects of business development, strategy, and operations for a rapidly growing e-commerce platform focused on West Africa.\n    - Secured seed funding of $500,000 and demonstrated consistent month-over-month growth exceeding 30%.\n    - Built and managed a team of 30+ employees across Ghana and Nigeria, focusing on talent development and local expertise.\n    - Oversaw the development and launch of a mobile-first e-commerce platform with integrated payment and logistics solutions.\n    - Established strategic partnerships with over 200 local artisans and farmers, providing them with access to new markets and fair prices.\n    - Implemented robust quality control measures and supply chain management systems to ensure product integrity and timely delivery.\n\n- **Supply Chain Consultant, Global Aid Network** (2018 \u2013 2020)\n    - Designed and implemented efficient supply chain solutions for humanitarian aid projects in rural Ghana and Nigeria.\n    - Managed logistics for the distribution of essential goods, including food, medicine, and agricultural supplies.\n    - Developed and maintained relationships with local suppliers, transportation providers, and community stakeholders.\n    - Conducted needs assessments and market research to identify opportunities for improving supply chain efficiency.\n    - Led training programs for local staff on supply chain management best practices.\n\n- **Education:**\n    - **MBA, INSEAD** (Fontainebleau, France) \u2013 2016-2018\n    - **BSc, Economics, University of Amsterdam** (Amsterdam, Netherlands) \u2013 2012-2016\n\n- **Skills:** E-commerce, Supply Chain Management, Logistics, Business Development, Strategic Planning, Fundraising, Team Leadership, Digital Marketing, Financial Modeling, Market Research, Cross-Cultural Communication, French (Fluent), Twi (Conversational).",
+    "lookingFor": "I\u2019m actively seeking strategic investors for our Series A round ($2-3M) to fuel Ananse Market\u2019s expansion across West Africa. Specifically, I\u2019m looking for:\n\n* **Venture Capital firms** with a focus on emerging markets, particularly Africa, and a demonstrated commitment to impact investing.\n* **Angel investors** with experience in e-commerce and a strong network in the African tech ecosystem.\n* **Partnerships** with logistics companies specializing in last-mile delivery in challenging environments.\n* **Mentors** who have successfully scaled e-commerce businesses in similar markets.\n\nI'm particularly interested in connecting with individuals and organizations that share our vision of empowering local producers and driving inclusive economic growth.  I\u2019m open to exploring strategic alliances with companies offering complementary services, such as payment processing, warehousing, or marketing solutions.  We are based in Accra, Ghana, but are flexible regarding investor location.  I'm attending TechCrunch Disrupt Africa in December and would welcome meetings there.",
+    "notes": "* Recent conversation with [Investor Name] - positive initial interest, follow up next week with detailed pitch deck.\n* Key takeaway from last investor call: emphasize unit economics & customer acquisition cost.\n* Wei is passionate about her mission and can be very persuasive. Highlight the social impact alongside the financial returns.\n* Sensitive about discussing early challenges with logistics \u2013 frame as \u2018lessons learned\u2019.\n* She prefers direct communication and values transparency. \n* Ananse Market's Instagram is a good resource for visual context: @AnanseMarket (link in bio).",
+    "locationAvailability": "Currently based in Accra, Ghana.  I am open to travel for investor meetings and conferences.  Remote work is acceptable for advisory roles. Willing to consider establishing a regional hub in Lagos, Nigeria, within the next 12 months.",
+    "introPreferences": "When making introductions, please:\n\n* Briefly highlight Ananse Market\u2019s focus on empowering West African artisans and farmers.\n* Mention our strong growth metrics (30% month-over-month).\n* Frame the introduction as an opportunity to explore potential investment or partnership synergies.\n* Avoid introductions to firms solely focused on B2C e-commerce in developed markets \u2013 we need investors with emerging market expertise.\n* A short, personalized note explaining *why* you think this connection would be valuable is greatly appreciated. \n* Please copy me on all introductory emails.",
+    "personalPreferences": "I prefer to communicate via email initially, and I'm happy to jump on a call afterward. WhatsApp is fine for quick follow-ups.",
+    "meetingAndSchedulingPreferences": "I'm in the GMT time zone. Please schedule meetings at least 24 hours in advance. I generally have availability in the mornings (GMT) and am flexible on Fridays. Video calls are preferred."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 27.643617153167725,
+      "input_tokens": 804,
+      "output_tokens": 1555,
+      "problems": []
+    }
+  ],
+  "success": true
+}

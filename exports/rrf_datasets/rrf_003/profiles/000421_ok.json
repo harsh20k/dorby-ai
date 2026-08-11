@@ -1,0 +1,54 @@
+{
+  "id": 421,
+  "archetype": "Technical Co-Founder/CTO for Hire",
+  "given_name": "Diego Lopes",
+  "style_version": 26,
+  "archetypes_version": 71,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Diego Lopes is a seasoned full-stack engineer with a deep background in scaling early-stage SaaS platforms. He\u2019s a pragmatic builder, having spent years at a moderately successful (but ultimately acquired) marketing automation company where he was instrumental in taking their tech from a scrappy MVP to a robust, enterprise-ready solution. He\u2019s done the startup grind *once* and isn\u2019t keen to repeat the equity-only rollercoaster. He\u2019s looking for a paid CTO/Co-founder role where he can leverage his experience to build something impactful, but wants financial security and a clear path to a salary. He\u2019s particularly interested in B2B SaaS, ideally in the FinTech or Healthcare space, and is wary of companies that haven't validated their core market. He's very direct, values efficiency, and dislikes overly 'fluffy' business language. He's based in Lisbon, Portugal, but is comfortable with remote work and occasional travel to the US East Coast.",
+    "positioning": "A highly experienced technical leader and full-stack engineer, I\u2019m currently seeking a Co-founder or CTO role with an early-stage B2B SaaS company poised for rapid growth. My core strength lies in translating business requirements into scalable, reliable, and maintainable technical solutions. I\u2019ve spent the last decade building and scaling platforms, most notably at MarketLeap (acquired by Innovate Solutions in 2022), where I progressed from Senior Engineer to VP of Engineering, leading a team of 15+ developers. \n\nAt MarketLeap, I spearheaded the migration from a monolithic architecture to a microservices-based system, resulting in a 40% reduction in infrastructure costs and a significant improvement in platform stability. I also led the implementation of a data-driven approach to feature development, utilizing A/B testing and user analytics to prioritize impactful improvements. I\u2019m proficient in the full stack \u2013 JavaScript (React, Node.js), Python, AWS, PostgreSQL, and DevOps best practices. \n\nI\u2019m currently focused on opportunities where I can apply my experience to build a strong technical foundation and drive innovation. I am prioritizing engagements with a strong financial component; I\u2019m open to discussing equity, but a competitive salary is a must. I\u2019m particularly interested in FinTech and Healthcare SaaS, and believe a strong product-market fit is non-negotiable.",
+    "background": "- **VP of Engineering, MarketLeap** (2019 \u2013 2022)\n  - Led a team of 15+ engineers responsible for the development and maintenance of the MarketLeap marketing automation platform.\n  - Oversaw the migration to a microservices architecture, improving scalability and reducing costs.\n  - Implemented a data-driven approach to feature development, leveraging A/B testing and user analytics.\n  - Managed the full software development lifecycle, from requirements gathering to deployment and monitoring.\n  - Technologies: React, Node.js, Python, AWS (EC2, S3, Lambda, RDS), PostgreSQL, Docker, Kubernetes, CI/CD pipelines.\n\n- **Senior Software Engineer, MarketLeap** (2017 \u2013 2019)\n  - Developed and maintained key features of the MarketLeap platform, focusing on the front-end and back-end.\n  - Contributed to the design and implementation of RESTful APIs.\n  - Mentored junior engineers and provided technical guidance.\n\n- **Software Engineer, CodeNova** (2015 \u2013 2017)\n  - Developed web applications using Java, Spring, and MySQL.\n  - Gained experience in agile development methodologies.\n  - Contributed to the development of a new e-commerce platform.\n\n- **Education:**\n  - **Master of Science in Computer Science**, University of Lisbon, Portugal (2013 \u2013 2015)\n  - **Bachelor of Science in Computer Engineering**, Instituto Superior T\u00e9cnico, Portugal (2009 \u2013 2013)\n\n- **Skills:** Full-Stack Development, JavaScript (React, Node.js), Python, AWS, PostgreSQL, Microservices, DevOps, Agile Methodologies, Team Leadership, Software Architecture.\n\n- **Languages:** Portuguese (Native), English (Fluent), Spanish (Conversational)",
+    "lookingFor": "I am actively seeking a Co-founder or CTO role in an early-stage (Seed/Series A) B2B SaaS company. My ideal opportunity will meet the following criteria:\n\n* **Industry Focus:** Primarily interested in FinTech or Healthcare SaaS, but open to considering other verticals with strong growth potential.\n* **Stage:** Seed to Series A \u2013 I'm looking to build *with* a company, not rescue one.\n* **Team:** A passionate and motivated founding team with a clear vision and a strong understanding of their target market.\n* **Technology Stack:** While I'm proficient in many technologies, a modern stack utilizing JavaScript, Python, and AWS is preferred.\n* **Financial Structure:**  I am prioritizing roles with a competitive salary and a clear path to financial stability. Equity is welcome, but should be *in addition to*, not *instead of*, a substantial salary.\n\nI am *not* interested in:\n\n* Equity-only positions.\n* Companies without a validated product-market fit.\n* Roles that require extensive travel (occasional travel to the US East Coast is acceptable).\n* Companies with a \u2018move fast and break things\u2019 mentality \u2013 I prioritize building robust and scalable solutions.\n\nI\u2019m looking for a long-term partnership where I can leverage my experience to build a successful and impactful product. I\u2019m a hands-on leader who enjoys solving complex technical challenges and mentoring engineers.",
+    "notes": "* Diego is very direct and values efficiency. Avoid overly verbose introductions or lengthy explanations. Get straight to the point.\n* He is wary of 'hype' and prefers to focus on concrete results. Highlight quantifiable achievements when making introductions.\n* He recently ended a consulting engagement that wasn\u2019t a good fit due to a lack of clear direction from the founding team. He emphasized the importance of a strong founding team with a clear vision.\n* He mentioned being open to a quick call to assess alignment before committing to a longer conversation.\n* He\u2019s been following the developments in the AI-powered financial analysis space and expressed interest in companies operating in that area.\n* He\u2019s a strong advocate for clean code and test-driven development. He dislikes technical debt and prioritizes maintainability.\n* Last interaction: Brief LinkedIn message exchange on 2024-01-15. He responded positively to a post about scaling microservices.",
+    "locationAvailability": "Based in Lisbon, Portugal. Comfortable with remote work and occasional travel to the US East Coast. Open to relocation for the right opportunity.",
+    "introPreferences": "* **Target Individuals:** Founders (CEO, COO) and early-stage investors (Angel, Seed) focused on B2B SaaS, specifically in FinTech or Healthcare.\n* **Introduction Style:** Concise and direct. Briefly highlight the company's mission, traction, and the specific challenge they are facing. Focus on how Diego's experience can help them overcome that challenge.\n* **Information to Include:**\n    * Diego's experience scaling SaaS platforms at MarketLeap.\n    * His proficiency in modern technologies (JavaScript, Python, AWS).\n    * His preference for a paid engagement with equity as a bonus.\n* **Information to Avoid:**\n    * Overly enthusiastic or hyperbolic language.\n    * Details about his personal life or hobbies.\n    * Assumptions about his interest in equity-only positions.\n* **Preferred Format:** Warm email introduction. A brief LinkedIn connection request *after* the email is acceptable.\n* **Call to Action:** Suggest a quick 15-minute call to discuss potential synergies.",
+    "personalPreferences": "Prefers direct communication via email. Avoid calls without prior scheduling.",
+    "meetingAndSchedulingPreferences": "* Available for video calls during standard European business hours (GMT+0). \n* Prefers Google Meet or Zoom.\n* Please provide a clear agenda in advance of any scheduled meeting. \n* I typically require 24 hours' notice for scheduling meetings."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 29.3874671459198,
+      "input_tokens": 769,
+      "output_tokens": 1765,
+      "problems": []
+    }
+  ],
+  "success": true
+}

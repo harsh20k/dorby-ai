@@ -1,0 +1,63 @@
+{
+  "id": 200,
+  "archetype": "AI-Focused Founder, Early Stage",
+  "given_name": "Chidi Lopes",
+  "style_version": 13,
+  "archetypes_version": 33,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Chidi Lopes is a first-time founder, 34, with a strong technical background in computer vision and a recent MBA. He spent 7 years at a large automotive manufacturer, initially as a research scientist focused on self-driving car perception, then transitioning into a product management role where he realized the limitations of existing AI solutions for edge case detection. This frustration spurred him to leave and found 'PerceptAI', a startup developing a novel AI platform for anomaly detection in industrial environments, initially targeting manufacturing quality control. He\u2019s currently leading a seed round, focusing on investors with deep tech experience and a willingness to support a capital-intensive hardware/software play. He's very focused on building a strong advisory board with operational experience in scaling AI companies. He's a pragmatic founder, valuing clear communication and data-driven decision making.",
+    "positioning": "As Founder & CEO of PerceptAI, I'm building the next generation of anomaly detection for industrial applications. We leverage cutting-edge computer vision and machine learning to identify defects and inefficiencies in manufacturing processes *before* they impact production. Having spent years at Stellar Automotive developing perception systems for autonomous vehicles, I recognized a critical gap in the market: robust, reliable AI that can perform in complex, real-world industrial settings. PerceptAI\u2019s platform isn't just about identifying problems; it's about providing actionable insights that significantly improve quality, reduce waste, and optimize operational efficiency. We\u2019re currently seeking seed funding to scale our pilot programs and expand our engineering team. My focus is on building a team and technology capable of transforming quality control from a reactive process to a proactive, intelligent system. I\u2019m passionate about bridging the gap between academic AI research and practical, impactful industrial solutions.",
+    "background": "- **PerceptAI**, *Founder & CEO* (October 2022 \u2013 Present)\n  - Led all aspects of company formation, including business plan development, fundraising, product roadmap definition, and team building.\n  - Secured initial seed funding commitments totaling $750k.\n  - Developed and launched a beta version of the PerceptAI anomaly detection platform, currently undergoing pilot testing with three manufacturing partners.\n  - Managed a small engineering team focused on computer vision, machine learning, and edge computing.\n\n- **Stellar Automotive**, *Product Manager, Advanced Driver Assistance Systems* (January 2019 \u2013 October 2022)\n  - Defined product requirements and led the development of new features for Stellar\u2019s ADAS portfolio, specifically focusing on perception and sensor fusion.\n  - Managed cross-functional teams including engineering, validation, and marketing.\n  - Increased feature adoption by 20% through data-driven prioritization and user feedback analysis.\n  - Led the integration of a new LiDAR sensor, resulting in a 15% improvement in object detection accuracy.\n\n- **Stellar Automotive**, *Research Scientist, Computer Vision* (July 2016 \u2013 January 2019)\n  - Conducted research in deep learning for object detection, semantic segmentation, and 3D reconstruction.\n  - Published research papers in leading computer vision conferences (CVPR, ICCV).\n  - Developed and implemented novel algorithms for improving the robustness of perception systems in challenging environmental conditions.\n\n- **Massachusetts Institute of Technology (MIT)**, *Master of Business Administration (MBA)* (August 2021 \u2013 May 2023) \u2013 Part-time\n- **Stanford University**, *Doctor of Philosophy (PhD), Computer Science* (September 2012 \u2013 June 2016) \u2013 Focus: Computer Vision\n- **University of California, Berkeley**, *Bachelor of Science (BS), Electrical Engineering and Computer Sciences* (September 2008 \u2013 May 2012)\n\nSkills: Computer Vision, Deep Learning, Machine Learning, Python, TensorFlow, PyTorch, Edge Computing, Product Management, Agile Development, Fundraising, Business Strategy, Data Analysis, Sensor Fusion.",
+    "lookingFor": "I\u2019m actively seeking connections with investors specializing in early-stage AI and deep tech, particularly those with experience in industrial automation and hardware/software integration. Ideally, I'm looking for partners who can offer more than just capital \u2013 strategic guidance, operational expertise, and access to relevant industry networks are highly valued. \n\nSpecifically, I\u2019m hoping to connect with:\n\n* **Seed-stage VCs:** Focusing on pre-Series A rounds ($2-5M).\n* **Angel Investors:** With a track record of successful investments in AI-powered hardware startups.\n* **Industry Advisors:** Experienced executives in manufacturing, quality control, or industrial IoT.\n* **Potential Strategic Partners:** Companies operating in the industrial automation space who could benefit from integrating our technology.\n\nI'm also open to discussing potential partnerships and collaborations with research institutions and academic labs.",
+    "notes": "- Chidi is highly articulate and knowledgeable about his space. \n- He's clearly focused on fundraising and building out his team.\n- Expressed a strong need for advisors with operational experience scaling AI companies.\n- Mentioned a potential pilot with a major aerospace manufacturer - follow up on this.\n- LinkedIn profile is well-maintained and professional.\n- Follow up in 2 weeks to check on fundraising progress.",
+    "locationAvailability": "I'm based in Boston, Massachusetts, but am frequently traveling to meet with investors and potential partners. I'm open to remote meetings and travel as needed.",
+    "introPreferences": "When making introductions, please highlight PerceptAI\u2019s unique value proposition: our ability to deliver robust, reliable anomaly detection in complex industrial environments. \n\n* **Hard Requirement:** Introductions should be to individuals with decision-making authority regarding investment or strategic partnerships.\n* **Soft Preference:** Prioritize contacts with a demonstrated interest in AI, industrial automation, or quality control.\n* **Avoid:** Introductions to generalist investors or individuals outside of the relevant industry.\n* I prefer a concise, personalized introduction that clearly articulates the potential synergy between PerceptAI and the contact. A brief overview of my background and the problem we\u2019re solving is helpful.",
+    "personalPreferences": "I'm a big fan of cycling and enjoy spending time outdoors when I'm not working. I prefer asynchronous communication \u2013 email is great \u2013 but am happy to jump on a quick call when needed.",
+    "meetingAndSchedulingPreferences": "- Prefer short, focused meetings (30-45 minutes).\n- Happy to meet virtually or in person.\n- Quick follow-up after initial meetings is appreciated."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 25.136794090270996,
+      "input_tokens": 848,
+      "output_tokens": 1398,
+      "problems": [
+        "background: possible truncation (ends with '... Git, Agile Methodologies')"
+      ]
+    },
+    {
+      "attempt": 2,
+      "elapsed_s": 19.253813982009888,
+      "input_tokens": 848,
+      "output_tokens": 1401,
+      "problems": []
+    }
+  ],
+  "success": true
+}

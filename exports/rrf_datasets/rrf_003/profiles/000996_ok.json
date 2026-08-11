@@ -1,0 +1,54 @@
+{
+  "id": 996,
+  "archetype": "Early-Stage Investor/Operator Hybrid",
+  "given_name": "Kai Vargas",
+  "style_version": 61,
+  "archetypes_version": 167,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Kai Vargas is a first-time founder in the AI-powered creator tooling space. He previously spent a decade as a quantitative analyst at a high-frequency trading firm, giving him a strong technical foundation and a data-driven approach. He left to build 'Muse,' a platform that helps independent writers and artists generate and monetize content using personalized AI models. He\u2019s a very analytical, somewhat introverted operator who prioritizes demonstrable traction and efficient scaling. He's currently raising a seed round and is looking for investors and advisors with experience in both AI/ML and the creator economy. A distinctive detail is his insistence on building a 'capital-efficient' startup \u2013 he's extremely conscious of burn rate and prefers bootstrapping where possible, even while seeking funding. He\u2019s not interested in \u2018hype\u2019 and wants practical, revenue-focused growth.",
+    "positioning": "I\u2019m the founder of Muse, an AI-powered content creation platform designed to empower independent artists and writers. We\u2019re building a personalized AI engine that dramatically reduces the friction of content creation, enabling creators to focus on their vision rather than the technical hurdles. Muse isn't about replacing creators; it's about augmenting their abilities and unlocking new revenue streams. We\u2019ve recently achieved significant traction with early adopters, demonstrating a 30% week-over-week growth in active users and a strong positive response to our initial monetization features. Our focus is on building a sustainable, capital-efficient business model that prioritizes creator ownership and long-term value creation. We are currently raising a seed round to scale our infrastructure, expand our AI model offerings, and accelerate user acquisition within the rapidly expanding creator market.",
+    "background": "\u2014 **Founder & CEO, Muse (2023 \u2013 Present)**\n   * Led all aspects of product development, fundraising, and go-to-market strategy for Muse, an AI-powered content creation platform.\n   * Developed and implemented a proprietary AI model training pipeline using PyTorch and TensorFlow, resulting in a 40% improvement in content quality based on user feedback.\n   * Achieved 30% week-over-week growth in active users through organic marketing and a focus on creator community engagement.\n   * Currently managing a small, remote team of engineers and designers.\n   * Responsible for securing initial angel investment and preparing for seed round fundraising.\n\n\u2014 **Quantitative Analyst, NovaTrade Capital (2013 \u2013 2023)**\n   * Developed and maintained high-frequency trading algorithms using Python, C++, and SQL.\n   * Conducted statistical analysis of market data to identify arbitrage opportunities and improve trading strategies.\n   * Managed a portfolio of automated trading systems, achieving an average annual return of 18%.\n   * Led a team of junior analysts in the development and implementation of new trading models.\n   * Responsible for ensuring compliance with regulatory requirements and risk management protocols.\n\n\u2014 **Research Intern, MIT Media Lab (Summer 2012)**\n   * Assisted with research on human-computer interaction and the development of novel user interfaces.\n   * Conducted user studies and analyzed data to evaluate the effectiveness of different interface designs.\n   * Contributed to the publication of a research paper on the topic of affective computing.\n\n\u2014 **Education:**\n   * **Massachusetts Institute of Technology (MIT)**, Cambridge, MA\n     * Master of Science in Financial Engineering (2013)\n   * **University of California, Berkeley**, Berkeley, CA\n     * Bachelor of Science in Mathematics (2011), *Summa Cum Laude* ",
+    "lookingFor": "* **Seed-stage Investors:** Seeking investors with a proven track record in AI/ML and the creator economy, with check sizes between $500k - $1.5M.\n* **AI/ML Engineers:** Experienced engineers specializing in large language models (LLMs), generative AI, and model optimization.\n* **Creator Economy Advisors:** Individuals with deep understanding of the creator landscape, monetization strategies, and community building.\n* **Strategic Partnerships:** Potential collaborations with platforms and tools serving independent creators.\n* **Early Adopter Feedback:** Connecting with writers and artists willing to provide ongoing feedback on Muse\u2019s features and functionality.\n* **Introductions to relevant accelerator programs focused on AI and/or Creator Tech.**",
+    "notes": "\u2014 Kai is very focused on unit economics and demonstrable growth. He\u2019s skeptical of \u2018vanity metrics.\u2019\n\u2014 He\u2019s a strong technical founder but acknowledges needing support on the marketing/community building side.\n\u2014 During our last call, he emphasized his desire to build a \u2018lean\u2019 startup and avoid unnecessary spending.\n\u2014 He\u2019s highly responsive but prefers asynchronous communication (email/Slack) over frequent calls.\n\u2014 He\u2019s mentioned being particularly interested in investors who can offer operational support, not just capital.\n\u2014 Potential risk: He might be *too* conservative in his growth projections. Needs nudging to think bigger.\n\u2014 He's actively reading and referencing articles from Stratechery and The Tilt.",
+    "locationAvailability": "Based in Boston, MA, generally available for virtual meetings and occasional travel to the NYC/SF area.",
+    "introPreferences": "* **Ideal introductions:** Investors with experience in AI/ML and creator tools *specifically*.\n* **Hard requirement:** Investors must have a track record of supporting early-stage, capital-efficient startups.\n* **Soft preference:** Introductions to individuals with experience at companies like Substack, Patreon, or Midjourney.\n* **Avoid:** Generalist investors or those focused on high-burn, venture-backed models.\n* **Please include a brief note highlighting the investor\u2019s relevant experience when making an introduction.",
+    "personalPreferences": "I prefer concise communication and data-driven insights. I'm most responsive to emails with clear subject lines and actionable requests.",
+    "meetingAndSchedulingPreferences": "* Please send a calendar invite with a brief agenda before scheduling a meeting.\n* I typically prefer 30-minute meetings to start.\n* I'm generally available during East Coast business hours."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 17.294517040252686,
+      "input_tokens": 755,
+      "output_tokens": 1296,
+      "problems": []
+    }
+  ],
+  "success": true
+}

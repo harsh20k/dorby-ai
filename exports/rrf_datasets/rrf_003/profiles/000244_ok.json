@@ -1,0 +1,54 @@
+{
+  "id": 244,
+  "archetype": "Serial Entrepreneur - AI/Music Tech",
+  "given_name": "Sana Dubois",
+  "style_version": 15,
+  "archetypes_version": 40,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Sana Dubois is a serial entrepreneur currently focused on building 'Auralytics', an AI platform that provides personalized music discovery and royalty distribution analytics for independent artists. She's had two previous successful exits \u2013 one in music streaming (sold to a larger platform) and one in AI-powered music composition tools. A distinctive detail is her strong belief in asynchronous communication as a productivity multiplier, and she actively seeks to build teams and networks that prioritize it. She\u2019s now seeking strategic partners and investors to scale Auralytics, and is also keen to connect with other founders tackling similar challenges in the creator economy. She\u2019s deeply technical, but also understands the creative needs of musicians, positioning her as a unique bridge between technology and artistry. She\u2019s comfortable being the \u2018face\u2019 of her companies but prefers initial engagement through thoughtful written communication, allowing her to assess alignment before committing to meetings.",
+    "positioning": "I am a technology entrepreneur driven by the belief that AI can unlock unprecedented opportunities for both artists and the music industry as a whole. Currently, I am the founder and CEO of Auralytics, a platform leveraging cutting-edge machine learning to deliver hyper-personalized music recommendations to listeners while simultaneously providing independent artists with granular, actionable insights into their royalty streams.  My focus isn\u2019t simply on 'disrupting' the industry, but on building sustainable, equitable ecosystems that empower creators and foster genuine connection with their audience.\n\nMy journey began with a deep fascination with the intersection of data science and creative expression.  This led me to found 'Harmonia', a music streaming service that differentiated itself through its algorithmic curation \u2013 a system I architected and led the development of.  Harmonia's success wasn\u2019t just in user acquisition; it was in demonstrably increasing artist revenue through targeted promotion. This was acquired by StreamWave in 2018. Following this, I founded 'Sonaris', an AI-powered music composition tool aimed at assisting producers and songwriters. Sonaris focused on generative music, allowing users to overcome creative blocks and rapidly prototype new ideas.  Sonaris was acquired by Native Instruments in 2021.\n\nI'm now channeling my experiences and learnings into Auralytics, addressing the critical need for transparency and data-driven decision-making within the independent music space. I\u2019m seeking partners who share a vision of a more equitable and innovative future for music, and who appreciate the power of a focused, asynchronous approach to building and scaling impactful technology.  I see Auralytics as a key enabler for the next generation of independent artists and a catalyst for a more vibrant and sustainable music ecosystem.",
+    "background": "- **Auralytics, Founder & CEO** (2023 \u2013 Present): Leading all aspects of company strategy, product development, fundraising, and team building.  Successfully secured seed funding of $3.5M. Currently focused on scaling the platform and expanding the engineering team.\n- **Sonaris, Founder & CEO** (2021 \u2013 2023): Developed and launched an AI-powered music composition tool, achieving 10,000+ active users within the first year.  Led the acquisition by Native Instruments, resulting in a 3x return for investors.\n- **Harmonia, Founder & CEO** (2016 \u2013 2018):  Conceptualized, built, and launched a music streaming service with a focus on algorithmic curation.  Grew user base to 500,000+ subscribers. Oversaw the acquisition by StreamWave.\n- **Data Scientist, Spotify** (2014 \u2013 2016):  Developed and implemented machine learning models for music recommendation and playlist generation.  Improved click-through rates by 15% through personalized recommendations.\n- **Research Assistant, MIT Media Lab** (2012 \u2013 2014):  Conducted research on the application of artificial intelligence to musical creativity.  Published research papers in peer-reviewed journals.",
+    "lookingFor": "- **Strategic Investors:**  Seeking Series A funding to accelerate platform development and market expansion.\n- **Partnerships with Independent Artist Collectives:**  Interested in collaborating with organizations representing independent musicians to integrate Auralytics into their workflows.\n- **Connections to AI/ML Engineers with Music Industry Experience:**  Building a world-class engineering team focused on music-specific applications of AI.\n- **Advisors with Expertise in Royalty Distribution & Blockchain Technology:** Looking for guidance on navigating the complexities of music rights management.\n- **Introductions to VCs specializing in Creator Economy & Music Tech:**  Specifically targeting firms with a strong track record in supporting early-stage startups.",
+    "notes": "Sana is a highly focused and driven entrepreneur. She prioritizes deep thinking and strategic planning, and values asynchronous communication immensely \u2013 she's expressed a preference for detailed email summaries before scheduling calls. She\u2019s currently reading 'Measure What Matters' and is actively experimenting with OKRs within Auralytics. \n\n- Last spoke on 2024-01-26, discussing potential investor connections. She specifically mentioned a desire to avoid 'spray and pray' introductions and prefers targeted recommendations.\n- She\u2019s committed to attending the Music Tech Summit in Austin in March 2024 but is actively avoiding large networking events in favor of pre-scheduled, focused meetings.\n- She's particularly interested in learning about companies leveraging AI for music metadata enrichment.",
+    "locationAvailability": "I am currently based in Brooklyn, New York, but am fully open to remote collaboration and occasional travel. I am considering establishing a secondary base in Los Angeles in the coming year.",
+    "introPreferences": "- **Hard Requirements:** Introductions *must* be to individuals with demonstrable experience in either AI/ML or the music industry (preferably both).  The individual should be at a decision-making level (VP, Director, Partner). \n- **Soft Preferences:**  I'm particularly interested in introductions to individuals who are actively building or investing in the creator economy.  A shared interest in asynchronous communication practices is a strong plus.\n- **Avoid:** Introductions to sales or marketing professionals unless they have a deep understanding of the technical challenges facing the music industry.\n- **Introduction Style:** I prefer concise, personalized introductions that highlight the mutual benefit of a connection.  Please include a brief overview of the individual\u2019s relevant experience and a specific reason why you believe we would connect well.  A LinkedIn message with a thoughtful note is preferred over a direct email.",
+    "personalPreferences": "I am most responsive to communication via email. I check Slack infrequently and prefer not to receive unsolicited phone calls. I generally respond to emails within 24-48 hours. I am a morning person and find it easier to focus on complex tasks early in the day. Outside of work, I enjoy playing the piano and exploring new music.",
+    "meetingAndSchedulingPreferences": "I strongly prefer to schedule meetings with a clear agenda and pre-shared materials. I'm a proponent of asynchronous communication and believe that efficient written communication can often replace the need for a meeting altogether."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 20.47740387916565,
+      "input_tokens": 810,
+      "output_tokens": 1495,
+      "problems": []
+    }
+  ],
+  "success": true
+}

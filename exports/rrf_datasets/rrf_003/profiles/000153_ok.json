@@ -1,0 +1,54 @@
+{
+  "id": 153,
+  "archetype": "Fintech/Trading Infrastructure Founder-Operator",
+  "given_name": "Kenji Zhang",
+  "style_version": 10,
+  "archetypes_version": 26,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Kenji Zhang is a 38-year-old, second-time founder currently building 'AetherFlow,' a low-latency data feed and execution platform targeting algorithmic trading firms and quant funds. He's intensely focused on the technical challenges of building *reliable* infrastructure \u2013 a direct response to frustrations he experienced at his first startup, 'NovaPay,' where scalability issues nearly killed the business. He's a deeply technical person, comfortable coding alongside his engineers, but recognizes the need to network for fundraising and strategic partnerships. His distinctive career detail is his early experience as a high-frequency trader at a proprietary firm *before* founding NovaPay \u2013 giving him unique insight into the needs of his target customers. He's a bit skeptical of 'hype' and prefers to connect with people who can demonstrate deep technical understanding. He's actively seeking Series A funding and strategic partners with expertise in market data distribution and regulatory technology. He's based in Chicago, but open to remote collaboration.",
+    "positioning": "A seasoned technology leader and founder, I'm driving innovation at the intersection of finance and infrastructure. As CEO of AetherFlow, we're building the next generation of low-latency data and execution solutions for algorithmic trading, empowering quantitative firms with the speed and reliability they demand. My background blends hands-on engineering with a deep understanding of market dynamics, honed through experience both as a high-frequency trader and a startup founder. I'm passionate about solving complex technical challenges and building scalable, resilient systems. AetherFlow isn\u2019t just about faster data; it\u2019s about unlocking new possibilities for sophisticated trading strategies and leveling the playing field for quantitative investors. We\u2019re focused on delivering a truly differentiated product through relentless attention to detail and a commitment to engineering excellence. I'm actively seeking strategic collaborations and investment to accelerate our growth and expand our platform capabilities.",
+    "background": " * **AetherFlow, CEO & Founder** (January 2022 \u2013 Present)\n    * Led seed funding round of $3.5M from leading fintech VCs.\n    * Architected and oversaw the development of AetherFlow\u2019s core low-latency data feed and execution engine, achieving sub-millisecond latency.\n    * Built a team of 12 highly skilled engineers and quantitative developers.\n    * Secured pilot programs with three Tier 1 quantitative trading firms.\n    * Key technologies: C++, Rust, Kafka, FPGA acceleration, AWS.\n* **NovaPay, Co-founder & CTO** (June 2016 \u2013 December 2021)\n    * Co-founded a mobile-first payment platform targeting small businesses.\n    * Led the development of the entire technology stack, including mobile apps, backend APIs, and security infrastructure.\n    * Grew user base to over 50,000 merchants before facing scaling challenges.\n    * Oversaw a team of 20+ engineers, product managers, and designers.\n    * Lessons learned: Critical importance of robust infrastructure and proactive scalability planning.\n* **Jane Street Capital, Quantitative Trader** (August 2014 \u2013 May 2016)\n    * Developed and maintained automated trading strategies for a variety of asset classes.\n    * Gained deep understanding of market microstructure, order book dynamics, and risk management.\n    * Consistently achieved top performance rankings within the trading team.\n    * Utilized Python, SQL, and proprietary trading tools.\n* **Massachusetts Institute of Technology (MIT), Cambridge, MA** (September 2010 \u2013 June 2014)\n    * Bachelor of Science in Computer Science, minor in Mathematics.\n    * GPA: 3.9/4.0\n    * Relevant coursework: Algorithms, Data Structures, Machine Learning, Probability, Statistics, Financial Modeling.\n    * Undergraduate Research Assistant in the MIT Media Lab, focusing on distributed systems.",
+    "lookingFor": "## Connections & Opportunities\n\nI\u2019m currently focused on accelerating AetherFlow\u2019s growth and expanding our platform capabilities. I'm seeking connections in the following areas:\n\n* **Series A Investors:**  We\u2019re preparing to raise a Series A round ($10-15M) to scale our engineering team, expand our data coverage, and accelerate our go-to-market strategy.  I'm particularly interested in investors with a strong track record in fintech infrastructure and a deep understanding of the algorithmic trading landscape.\n* **Strategic Partnerships:**  I\u2019m actively exploring partnerships with companies specializing in:\n    * **Market Data Distribution:**  Providers with established relationships with exchanges and data vendors.\n    * **Regulatory Technology (RegTech):** Firms offering solutions for compliance, reporting, and surveillance.\n    * **Cloud Infrastructure:**  Experts in optimizing performance and scalability on AWS and other cloud platforms.\n* **Experienced Engineering Talent:** We are hiring top-tier C++, Rust, and FPGA engineers.  Referrals are highly appreciated!\n* **Algorithmic Trading Firms & Quant Funds:**  I\u2019m always interested in connecting with potential customers to gather feedback and explore collaboration opportunities.  I'm particularly keen to speak with firms utilizing advanced quantitative strategies and requiring ultra-low latency data feeds.\n\nI'm not currently looking for marketing or sales support.",
+    "notes": "Kenji is very technically astute and will quickly assess your understanding of the underlying technology. He's pragmatic and dislikes overly optimistic pitches. He\u2019s responsive but prefers direct communication \u2013 avoid lengthy email chains. He\u2019s still somewhat sensitive about the scaling issues at NovaPay, so framing conversations around *reliability* and *scalability* will resonate. He\u2019s been actively attending industry conferences (e.g., QuantCon, FIX Trading Community events) and is building a network within the algorithmic trading community. He\u2019s a bit of a 'hands-on' CEO, still regularly contributing to the codebase.",
+    "locationAvailability": "Based in Chicago, IL. Open to remote meetings and occasional travel to key financial centers like New York and London.",
+    "introPreferences": "* **Hard Requirements:**\n    * Individuals with direct experience in building or operating financial infrastructure.\n    * Investors actively deploying capital in the fintech space, specifically infrastructure.\n    * Individuals with strong technical backgrounds (engineering, quantitative finance).\n* **Soft Preferences:**\n    * Connections to firms actively utilizing low-latency data feeds.\n    * Individuals with a proven track record of successful exits in the fintech industry.\n    * Introductions should be concise and highlight the recipient\u2019s relevant expertise.  Please avoid generic introductions.\n* **Avoid:**\n    * Marketing professionals.\n    * Individuals solely focused on cryptocurrency or blockchain (unless related to infrastructure). \n    * Cold emails or unsolicited pitches. I prefer warm introductions.",
+    "personalPreferences": "Prefers direct messaging on LinkedIn or a quick phone call to gauge interest before a formal meeting.  I'm generally available for calls after 2 PM CT.",
+    "meetingAndSchedulingPreferences": ""
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 26.109118938446045,
+      "input_tokens": 814,
+      "output_tokens": 1490,
+      "problems": []
+    }
+  ],
+  "success": true
+}

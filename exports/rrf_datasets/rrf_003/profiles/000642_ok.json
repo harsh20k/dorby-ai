@@ -1,0 +1,54 @@
+{
+  "id": 642,
+  "archetype": "Product Leader, Growth & AI Focus",
+  "given_name": "Felix Bianchi",
+  "style_version": 39,
+  "archetypes_version": 107,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Felix Bianchi is a seasoned product leader with a strong track record in growth, particularly in the B2B SaaS space. He\u2019s spent the last 15 years building and scaling products, but his most distinctive experience was leading the international expansion of a MarTech platform into the APAC region \u2013 a challenging but incredibly successful venture. He\u2019s now pivoting his focus to explore the potential of AI, specifically generative AI, to unlock new growth levers in B2B. He\u2019s not an AI *engineer* but a product leader looking to identify and validate AI-powered product opportunities. He\u2019s actively seeking seed-stage AI startups to potentially advise or invest in, and is also open to exploring advisory roles with companies looking to integrate AI into existing products. He's a direct communicator, values efficiency, and prefers introductions that are laser-focused on specific opportunities.",
+    "positioning": "I am the founder of \u2018GrowthForge AI\u2019, a venture focused on identifying and validating early-stage applications of generative AI within the B2B software landscape. We operate as a lean, agile consultancy and micro-VC, partnering with founders who are building truly innovative solutions. Our core value proposition is bridging the gap between cutting-edge AI technology and demonstrable business impact. Many AI startups struggle with product-market fit, often building technology in search of a problem. GrowthForge AI flips this model. We begin with deeply understanding unmet needs in the B2B space \u2013 particularly within sales, marketing, and customer success \u2013 and then proactively source and evaluate AI solutions that can uniquely address those challenges. \n\nWe specialize in rapid prototyping and validation, leveraging no-code/low-code tools and lean experimentation methodologies to quickly assess the potential of AI-powered features and products. Our target audience is seed-stage AI startups with a strong technical foundation but limited go-to-market expertise, as well as established B2B companies seeking to strategically integrate AI into their existing offerings. We are particularly interested in applications of Large Language Models (LLMs) to automate complex workflows, personalize customer experiences, and unlock new revenue streams. Our approach is data-driven, prioritizing metrics like user engagement, conversion rates, and customer lifetime value to ensure that our investments and advisory efforts are focused on solutions that deliver tangible results.",
+    "background": "- **Founder, GrowthForge AI** (2023 \u2013 Present): Leading the strategic direction, product validation, and investment activities of a venture focused on generative AI applications in B2B.\n- **VP of Product, StellarMarTech** (2018 \u2013 2023): Oversaw the product roadmap, development, and launch of a leading marketing automation platform, driving a 300% increase in annual recurring revenue (ARR).\n- **Head of International Product, StellarMarTech** (2015 \u2013 2018): Spearheaded the successful expansion of StellarMarTech into the APAC region, adapting the product for local markets and building a regional product team. This included navigating complex localization challenges and building integrations with key regional platforms.\n- **Senior Product Manager, CloudSolutions Inc.** (2012 \u2013 2015): Managed the development and launch of a new cloud-based CRM solution, focusing on user experience and feature prioritization.\n- **Product Manager, DataDynamics Ltd.** (2008 \u2013 2012): Contributed to the development of a data analytics platform, gaining experience in agile development methodologies and data-driven product management.\n- **Education:** MBA, Stanford University Graduate School of Business (2008). BS, Computer Science, Massachusetts Institute of Technology (2006).",
+    "lookingFor": "I'm actively seeking connections with founders building innovative AI-powered solutions for B2B, particularly in the areas of sales intelligence, marketing automation, and customer success. I'm especially interested in companies leveraging LLMs in novel ways. I'm open to exploring both advisory roles and potential seed investments. \n\nSpecifically, I'm looking for:\n- **Founders:** Early-stage AI startups (pre-Series A) with a compelling product vision and demonstrable technical expertise.\n- **Investors:** Angel investors and seed funds with a focus on AI and B2B SaaS.\n- **Industry Experts:** Individuals with deep knowledge of specific B2B verticals (e.g., healthcare, finance, manufacturing) who can provide insights into unmet needs and potential AI applications.\n- **Product Leaders:** Individuals with experience building and scaling successful B2B products, particularly those with an interest in AI.\n\nI prioritize connections that are mutually beneficial and focused on creating tangible value. I\u2019m less interested in general networking and more interested in targeted introductions to individuals who can help me accelerate GrowthForge AI\u2019s mission.",
+    "notes": "Felix is highly focused on generative AI opportunities right now. He's a very direct communicator and appreciates brevity. He recently discussed a potential advisory role with a startup building an AI-powered sales prospecting tool \u2013 follow up on that if you have any relevant connections. He's currently evaluating several potential investments and is particularly interested in companies with strong technical teams.",
+    "locationAvailability": "I am currently based in San Francisco, California, and am available for travel throughout the US and internationally. I have frequent travel planned to New York and London in the coming months. I am open to considering relocation for the right opportunity, but currently prefer to maintain a presence in the Bay Area.",
+    "introPreferences": "When making introductions, please emphasize my experience leading international product expansion and my focus on identifying practical AI applications for B2B. \n\n**Hard Requirements:**\n- The contact should be directly involved in an AI startup or a B2B company exploring AI integration.\n- They should have a decision-making role or significant influence within their organization.\n\n**Soft Preferences:**\n- Experience with LLMs is a plus.\n- A demonstrated track record of innovation is highly valued.\n- Please avoid overly technical introductions \u2013 I'm a product leader, not an engineer. Keep the focus on business value and market opportunity.",
+    "personalPreferences": "I prefer to connect via LinkedIn initially. WhatsApp is acceptable for quick follow-ups.",
+    "meetingAndSchedulingPreferences": "I generally prefer meetings to be scheduled with at least 24 hours' notice. I am most available for meetings between 9:00 AM and 12:00 PM PST. I respond best to concise meeting agendas and prefer video calls over phone calls."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 24.040033102035522,
+      "input_tokens": 797,
+      "output_tokens": 1368,
+      "problems": []
+    }
+  ],
+  "success": true
+}

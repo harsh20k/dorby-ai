@@ -1,0 +1,54 @@
+{
+  "id": 992,
+  "archetype": "Serial Founder, Global Operator",
+  "given_name": "Viktor Andersson",
+  "style_version": 61,
+  "archetypes_version": 166,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Viktor Andersson is a Swedish-American serial founder with a consistent track record of building and scaling SaaS businesses, particularly in the logistics and supply chain space. He\u2019s a \u2018global operator\u2019 because his companies have always had a strong international focus, often starting with a European beachhead before expanding into North America and Asia. A distinctive detail is his early experience as a competitive sailor, which heavily influences his approach to business \u2013 emphasizing strategy, adaptability, and a long-term view. He's currently building a platform focused on predictive logistics risk management, leveraging AI to identify potential disruptions *before* they impact supply chains. He\u2019s at the seed stage, having secured a small pre-seed round, and is now actively fundraising for a larger seed. He's looking for strategic investors with supply chain expertise and potential pilot customers. He presents as highly articulate, data-driven, and subtly competitive.",
+    "positioning": "I\u2019m building Foresight Logistics, a predictive risk management platform for global supply chains. We leverage machine learning to identify and quantify potential disruptions \u2013 from geopolitical instability and weather events to supplier financial health \u2013 giving businesses the lead time they need to proactively mitigate risk and maintain operational continuity. The market is ripe for disruption; current solutions are largely reactive and lack the predictive power to truly protect bottom lines. We\u2019ve achieved significant traction in early customer conversations, demonstrating a clear demand for our solution, and are currently focused on refining our core algorithms and building out our MVP. Our initial focus is on the automotive and electronics industries, two sectors particularly vulnerable to supply chain shocks. Foresight Logistics isn\u2019t just about avoiding problems; it\u2019s about building resilient, future-proof supply chains.",
+    "background": "- **Founder & CEO, Streamline Global (2018 \u2013 Present):** Led the development and launch of a cloud-based transportation management system (TMS) focused on optimizing freight brokerage operations. Grew revenue from $0 to $8M ARR within 3 years, securing key partnerships with major freight carriers and shippers. Successfully expanded operations into the DACH region (Germany, Austria, Switzerland). Technologies used: React, Node.js, PostgreSQL, AWS. Managed a team of 30+ engineers, sales, and operations professionals.\n- **Co-founder & CTO, Navig8 Solutions (2015 \u2013 2018):** Architected and built a real-time vessel tracking and analytics platform for the maritime industry. Oversaw all technical aspects of the company, including software development, infrastructure, and data security. Secured a $2M Series A funding round. Key achievement: Reduced average vessel downtime by 15% for key clients. Technologies used: Python, Django, Docker, Kubernetes, Azure.\n- **Lead Software Engineer, Ericsson (2012 \u2013 2015):** Developed and maintained core components of Ericsson\u2019s network management software. Focused on improving system performance and scalability. Gained experience in agile development methodologies and large-scale software projects. Collaborated with cross-functional teams across multiple continents.\n- **Consultant, Accenture (2010 \u2013 2012):** Provided consulting services to Fortune 500 companies in the telecommunications industry. Specialized in business process optimization and IT strategy. Developed strong analytical and problem-solving skills.\n- **Education:**\n    - **MBA, Stanford Graduate School of Business (2008 \u2013 2010):** Focused on Entrepreneurship and Global Management.\n    - **M.S., Computer Science, KTH Royal Institute of Technology, Stockholm (2004 \u2013 2008):** Specialization in Artificial Intelligence.\n    - **B.S., Engineering Physics, Uppsala University, Sweden (2001 \u2013 2004):**\n- **Early Career:** Competitive Sailor (National Level, Sweden) \u2013 Ranked among the top 10 sailors in Sweden for several years. Developed a strong understanding of strategy, risk management, and teamwork. This experience significantly shaped my approach to problem-solving and long-term planning.  Managed logistics for sailing campaigns across Europe, providing early exposure to supply chain complexities.",
+    "lookingFor": "- Introductions to Venture Capital firms specializing in Seed and Series A funding, particularly those with a focus on logistics, supply chain, or AI.\n- Connections to C-level executives (CIOs, COOs, VPs of Supply Chain) at automotive manufacturers and large electronics companies.\n- Potential pilot customers interested in testing our predictive risk management platform.\n- Advisors with deep experience in supply chain risk management and machine learning.\n- Strategic partners who can provide access to relevant data sources or technology.\n- Industry experts who can provide insights into emerging trends and challenges in the logistics sector.",
+    "notes": "- Viktor is highly articulate and presents a compelling vision for Foresight Logistics. He\u2019s very data-driven and quickly zeroes in on key metrics.\n- He subtly emphasizes his sailing background as a metaphor for his business approach \u2013 strategic, adaptable, and focused on long-term outcomes.\n- He\u2019s currently in the process of refining his pitch deck and preparing for a larger seed round.  He's particularly interested in investors who can provide more than just capital \u2013 strategic guidance and industry connections are highly valued.\n- Last conversation (10/26): He mentioned a promising lead with a major automotive supplier in Germany. Follow up next week to check on progress.\n- He seems receptive to feedback but can be somewhat resistant to suggestions that challenge his core assumptions. Approach discussions with data and a collaborative mindset.",
+    "locationAvailability": "Based in San Francisco, California, and generally available for virtual meetings. Travel to Europe is possible with advance notice.",
+    "introPreferences": "- Ideal introductions: VCs with a demonstrated track record of investing in supply chain tech, or CXOs at target companies (automotive, electronics) who are actively seeking solutions to supply chain risk.\n- Hard requirement: Introductions should be warm \u2013 a personal connection is highly preferred. Cold emails are unlikely to be effective.\n- Soft preference: Introductions to individuals with a technical background or a strong understanding of machine learning are a plus.\n- Please provide a brief context about the connection and why they might be a good fit for Foresight Logistics.",
+    "personalPreferences": "- I prefer concise and data-driven communication. Bullet points and summaries are appreciated.\n- I'm most responsive to email, but open to quick calls for initial introductions.",
+    "meetingAndSchedulingPreferences": "- I typically schedule meetings 30-60 minutes in advance.\n- Please send a brief agenda before the meeting.\n- I prefer to keep meetings focused and action-oriented.  Let's aim for clear outcomes and next steps."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 27.441205978393555,
+      "input_tokens": 750,
+      "output_tokens": 1413,
+      "problems": []
+    }
+  ],
+  "success": true
+}

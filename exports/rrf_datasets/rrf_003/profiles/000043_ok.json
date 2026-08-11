@@ -1,0 +1,72 @@
+{
+  "id": 43,
+  "archetype": "Early-Stage Neurotech Founder",
+  "given_name": "Camille Bianchi",
+  "style_version": 3,
+  "archetypes_version": 8,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Camille Bianchi is a 34-year-old founder and CEO of 'Synapse Solutions,' a pre-seed neurotech company focused on developing non-invasive brain-computer interfaces (BCIs) for personalized mental wellness. Her distinctive career detail is a prior five-year stint as a computational neuroscientist at MIT\u2019s Media Lab, where she specialized in decoding emotional states from EEG data. This experience forms the core IP behind Synapse Solutions. She's currently fundraising to finalize product development and initiate clinical trials. She's highly analytical, a strong communicator, and deeply passionate about making mental healthcare more accessible and proactive. She's particularly interested in connecting with investors who understand deep tech and have a portfolio focused on healthcare or AI. She's also seeking advisors with experience in medical device regulation and go-to-market strategy for B2C health technologies. She\u2019s very focused on building a strong, ethical, and scientifically rigorous company.",
+    "positioning": "Camille Bianchi is the Founder and CEO of Synapse Solutions, a neurotechnology company pioneering personalized mental wellness through accessible brain-computer interfaces. We\u2019re building a future where proactive mental healthcare is a reality for everyone. Synapse Solutions is developing a non-invasive, wearable BCI device paired with an AI-powered platform that learns an individual\u2019s unique neural signatures associated with stress, anxiety, and focus. Our technology provides real-time biofeedback and personalized interventions, empowering users to self-regulate their emotional states and improve their cognitive performance. \n\nWe recently pivoted from a broader BCI applications focus to specifically address the rapidly growing mental wellness market, recognizing the urgent need for effective and preventative solutions. This strategic shift allows us to leverage our core IP \u2013 a proprietary algorithm for decoding emotional states from EEG data \u2013 in a targeted and impactful way.  I lead a small, but incredibly talented team of neuroscientists, engineers, and designers. My focus is on fundraising, strategic partnerships, and ensuring the scientific integrity of our product development. \n\n**One-liner:** Synapse Solutions: Empowering mental wellness through the power of the brain.",
+    "background": "- **CEO & Founder, Synapse Solutions** (2023 \u2013 Present)\n  - Led seed fundraising efforts, securing initial angel investment of $500k.\n  - Developed and refined the company\u2019s business plan and go-to-market strategy.\n  - Built and managed a team of 5 engineers, neuroscientists, and designers.\n  - Oversaw the development of the initial BCI prototype and AI algorithms.\n\n- **Research Scientist, MIT Media Lab** (2018 \u2013 2023)\n  - Conducted cutting-edge research in computational neuroscience, specializing in EEG signal processing and machine learning.\n  - Published 8 peer-reviewed articles in leading neuroscience journals (e.g., *NeuroImage*, *Journal of Neuroscience*).\n  - Led a research project focused on decoding emotional states from EEG data, resulting in a novel algorithm with 92% accuracy.\n  - Secured $100k in research funding through competitive grant applications.\n  - Mentored undergraduate and graduate students in research methodologies.\n\n- **Data Science Intern, Boston Children\u2019s Hospital** (Summer 2017)\n  - Analyzed large datasets of patient medical records to identify patterns and predict health outcomes.\n  - Developed data visualization tools to communicate findings to clinicians and researchers.\n\n- **Education:**\n  - **PhD, Neuroscience**, Massachusetts Institute of Technology (MIT) (2018 \u2013 2023)\n    - Dissertation: *Decoding Emotional States from Non-Invasive Brain Signals: A Machine Learning Approach.*\n  - **BS, Biomedical Engineering**, Stanford University (2014 \u2013 2018)\n    - GPA: 3.9/4.0, *Summa Cum Laude*\n\n- **Skills:**\n  - Neuroscience: EEG signal processing, fMRI analysis, neuroanatomy, cognitive neuroscience.\n  - Machine Learning: Deep learning, supervised learning, unsupervised learning, time series analysis.\n  - Programming: Python (expert), MATLAB, R.\n  - Data Analysis & Visualization: Pandas, NumPy, Scikit-learn, Tableau.\n  - Project Management: Agile methodologies, Scrum.\n  - Communication & Leadership: Public speaking, grant writing, team management.",
+    "lookingFor": "Currently focused on securing our seed round ($2M) to finalize product development and initiate clinical trials.  Seeking strategic investors with a proven track record in deep tech, healthcare, and/or AI.  Specifically interested in funds with a portfolio focused on B2C health technologies and a long-term investment horizon.\n\n*   **Investors:** Seed-stage VCs, Angel investors with relevant industry experience.\n*   **Advisors:** Individuals with expertise in:\n    *   Medical device regulatory pathways (FDA 510(k) submission).\n    *   B2C healthcare marketing and go-to-market strategy.\n    *   Neuromarketing and user experience design.\n*   **Potential Partners:** Companies specializing in wearable sensor technology, digital mental health platforms, or corporate wellness programs.  \n*   **Networking:**  Connecting with other neurotech founders, researchers, and industry leaders to share insights and explore potential collaborations.\n\nOpen to introductions to individuals at: Pear Ventures, Amplify Partners, Lux Capital, and potential board members with experience in scaling early-stage health tech companies. Ideally located in the Boston/Cambridge area, but open to remote connections.",
+    "notes": "*   Spoke with Dr. Anya Sharma (NeuroNexus Ventures) last week \u2013 positive initial conversation, sending follow-up deck.  She requested more detail on our IP protection strategy.\n*   Priority: Secure a lead investor for our seed round by end of Q1.\n*   Sensitive:  Be mindful of discussing specific details of our algorithms publicly \u2013 protect our core IP.\n*   Personal:  Passionate about ethical AI and ensuring our technology is used responsibly.\n*   Strategic shift to mental wellness is key \u2013 emphasize this in all pitches.\n*   Avoid connecting with recruiters at this stage \u2013 focused on fundraising, not hiring.",
+    "locationAvailability": "Based in Boston, Massachusetts.  Willing to travel for investor meetings and industry events.  Also comfortable with remote meetings and communication.  Prefer to build a core team physically located in the Boston/Cambridge area.",
+    "introPreferences": "When making introductions, please highlight my background in computational neuroscience at MIT and the unique IP behind Synapse Solutions.  Specifically mention our proprietary algorithm for decoding emotional states from EEG data and its potential for personalized mental wellness. \n\n*   Please include a brief summary of Synapse Solutions\u2019 mission and target market.\n*   Avoid introducing me to individuals solely focused on general AI applications \u2013 prioritize connections with those in healthcare or neurotech.\n*   If introducing me to an investor, please share their investment thesis and portfolio companies beforehand.\n*   A warm introduction with a concise context is always preferred.",
+    "personalPreferences": "I prefer to communicate via email initially, and I\u2019m happy to schedule a call afterwards.  I\u2019m also active on LinkedIn.",
+    "meetingAndSchedulingPreferences": "I am in the Eastern Time Zone (ET).  Generally available for meetings during business hours (9am-5pm ET). Please send a calendar invite with a brief agenda.  I prefer shorter, focused meetings (30-60 minutes) to maximize efficiency. I am flexible and can adapt to accommodate different schedules."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 22.764089822769165,
+      "input_tokens": 816,
+      "output_tokens": 1660,
+      "problems": [
+        "background: possible truncation (ends with '...nal Neurofeedback Society')"
+      ]
+    },
+    {
+      "attempt": 2,
+      "elapsed_s": 23.413074016571045,
+      "input_tokens": 816,
+      "output_tokens": 1655,
+      "problems": [
+        "background: possible truncation (ends with '...dership & Team Management')"
+      ]
+    },
+    {
+      "attempt": 3,
+      "elapsed_s": 22.253135919570923,
+      "input_tokens": 816,
+      "output_tokens": 1624,
+      "problems": []
+    }
+  ],
+  "success": true
+}

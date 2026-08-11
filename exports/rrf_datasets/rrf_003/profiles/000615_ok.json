@@ -1,0 +1,54 @@
+{
+  "id": 615,
+  "archetype": "Experienced EdTech Entrepreneur",
+  "given_name": "Yara Moreau",
+  "style_version": 38,
+  "archetypes_version": 103,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Yara Moreau is a serial EdTech entrepreneur, currently focused on scaling 'LearnLeap,' a platform leveraging AI to personalize learning pathways for K-12 students, particularly in STEM fields. Her distinctive career detail is having successfully navigated a major international expansion into the Brazilian market with a previous company, 'EduNova,' giving her deep understanding of localized learning needs and regulatory landscapes. She's aiming to establish LearnLeap as the dominant personalized learning solution in North America, then replicate the Brazilian success globally. She\u2019s highly data-driven, a strong negotiator, and intensely focused on demonstrable learning outcomes. She\u2019s seeking investors and strategic partners with experience in scaling EdTech businesses and navigating complex regulatory environments. She's also looking for top-tier AI/ML engineers with experience in educational applications.",
+    "positioning": "LearnLeap is revolutionizing K-12 STEM education through adaptive, AI-powered learning pathways. We're tackling the critical challenge of student engagement and knowledge retention in subjects often perceived as difficult. Our platform doesn\u2019t just deliver content; it *orchestrates* a personalized learning experience, dynamically adjusting difficulty, content format, and pacing based on real-time student performance. We leverage cutting-edge AI algorithms to identify knowledge gaps and provide targeted interventions, ensuring every student receives the support they need to succeed.  We\u2019ve seen incredible *traction* in our early adopter schools, with average STEM scores increasing by 15% and student engagement metrics showing a 30% improvement.  Our core value proposition is simple: unlock every student\u2019s potential in STEM.  We are currently focused on the North American market, with a robust roadmap for international expansion, informed by my previous experience successfully scaling EduNova into Brazil. LearnLeap isn\u2019t just another EdTech tool; it\u2019s a platform built for the future of learning, fostering a generation of critical thinkers and problem-solvers.  We\u2019re actively seeking strategic investors and partners to accelerate our growth and expand our impact.",
+    "background": "- **LearnLeap, Founder & CEO (2021 \u2013 Present):** Leading all aspects of the company, from product development and fundraising to sales and marketing. Successfully secured $5M in seed funding and launched the platform in 50+ schools.\n- **EduNova, VP of International Expansion (2016 \u2013 2021):** Spearheaded the company\u2019s expansion into the Brazilian market, navigating complex regulatory hurdles and establishing key partnerships with local educational institutions.  Increased EduNova\u2019s international revenue by 40% within three years.\n- **BrightSpark Education, Product Manager (2013 \u2013 2016):**  Managed the development and launch of several successful educational software products, focusing on user experience and data-driven optimization.\n- **Education:**\n    - **MBA, Harvard Business School (2011 \u2013 2013)** - Focused on Technology & Entrepreneurship.\n    - **MS, Computer Science, Stanford University (2009 \u2013 2011)** - Specialization in Artificial Intelligence.\n    - **BS, Mathematics, Massachusetts Institute of Technology (2005 \u2013 2009)** - Minor in Education.\n- **Skills:** AI/ML, EdTech, Product Management, International Business Development, Fundraising, Strategic Planning, Data Analysis, Python, Java, Portuguese (fluent).",
+    "lookingFor": "- Introductions to Series A investors specializing in EdTech (focus on impact investing preferred).\n- Connections to Superintendents and Heads of School in large US school districts (specifically targeting California, Texas, and Florida).\n- Senior AI/ML engineers with 3+ years of experience in developing and deploying machine learning models for educational applications. Must have experience with personalization algorithms.\n- Strategic partners with experience in curriculum development and content creation for STEM subjects.\n- Introductions to regulatory experts specializing in EdTech compliance in the US and Latin America.",
+    "notes": "Yara is exceptionally articulate and passionate about her vision for LearnLeap. She\u2019s highly analytical and data-driven, frequently referencing key performance indicators and user engagement metrics. She is very familiar with the Brazilian EdTech landscape and views it as a potential model for future international expansion.  She\u2019s a strong negotiator and isn\u2019t afraid to push back on terms she deems unfavorable.  She values transparency and direct communication. Key takeaway: focus conversations on demonstrable results and LearnLeap\u2019s potential for scalability. Be prepared to discuss the company\u2019s competitive advantage and its long-term financial projections. Avoid generic pitches; she responds best to tailored proposals.",
+    "locationAvailability": "Currently based in Palo Alto, California. Open to travel nationally and internationally, and comfortable with remote meetings.",
+    "introPreferences": "- **Hard Requirements:** Any introductions to investors *must* have a demonstrable track record of investing in successful EdTech companies. Any engineering candidates *must* have a strong portfolio showcasing relevant AI/ML projects. \n- **Soft Preferences:**  I appreciate introductions to individuals who are proactive, well-connected, and genuinely interested in improving educational outcomes.  I prefer introductions from people who have a strong understanding of the EdTech market and its challenges.\n- **Introduction Framing:** Please emphasize LearnLeap\u2019s unique AI-powered personalization capabilities and its proven track record of improving student outcomes.  Highlight my experience successfully scaling EduNova internationally.",
+    "personalPreferences": "I prefer to communicate via email initially, followed by a brief phone call. I'm generally responsive, but please allow 24-48 hours for a reply.",
+    "meetingAndSchedulingPreferences": "I generally prefer morning meetings (PST). Please send a calendar invite with a brief agenda. I\u2019m comfortable with Zoom or Google Meet. Please include any relevant materials or pre-reading in the invite."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 18.351322889328003,
+      "input_tokens": 840,
+      "output_tokens": 1226,
+      "problems": []
+    }
+  ],
+  "success": true
+}

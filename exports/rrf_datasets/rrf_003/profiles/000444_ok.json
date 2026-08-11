@@ -1,0 +1,54 @@
+{
+  "id": 444,
+  "archetype": "Product Leader, Embedded Finance Expertise",
+  "given_name": "Ingrid Weber",
+  "style_version": 27,
+  "archetypes_version": 74,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Ingrid Weber is a seasoned Product Leader specializing in embedded finance, currently focused on building out the financial services offering for a rapidly growing logistics platform, 'ShipStream'. Her distinctive career detail is a prior stint at a very early-stage fintech startup that was *almost* successful - it achieved significant traction but ultimately failed to secure Series B funding due to macroeconomic conditions. This experience deeply informs her current, more cautious approach to scaling, prioritizing profitability and sustainable growth over hyper-growth. She's seeking connections to investors with a long-term view, potential partners for integrating ShipStream's financial products, and top-tier engineering talent. She's pragmatic, data-driven, and very aware of the challenges inherent in building financial products. She's also a mentor to several women in tech and actively participates in industry events, but prefers targeted networking to large conferences.",
+    "positioning": "Ingrid Weber is a product leader passionate about unlocking value through embedded finance. Currently, I\u2019m leading the expansion of financial services at ShipStream, a logistics platform revolutionizing supply chain efficiency. We\u2019re building a suite of products \u2013 including working capital solutions, instant payouts, and integrated insurance \u2013 designed to empower our carriers and streamline their operations. My focus is on identifying key market opportunities, defining product strategy, and driving execution to deliver measurable impact. Previously, I honed my expertise in fintech at NovaPay, where I led the development of their core payment infrastructure. While NovaPay faced challenging market conditions, the experience provided invaluable lessons in building scalable, compliant, and user-centric financial products. I thrive on tackling complex problems, collaborating with cross-functional teams, and delivering innovative solutions that drive growth and improve customer outcomes. I\u2019m particularly excited about the potential of embedded finance to democratize access to financial services and create a more equitable economic landscape.",
+    "background": "* **Head of Product, Financial Services, ShipStream** (January 2022 \u2013 Present)\n    * Leading the product strategy, roadmap, and execution for ShipStream's financial services offerings.\n    * Defined and launched a working capital solution for carriers, resulting in a 20% increase in carrier retention.\n    * Spearheaded the integration of instant payout functionality, improving carrier satisfaction scores by 15%.\n    * Collaborated with engineering, design, and marketing teams to deliver a seamless user experience.\n    * Managed a team of product managers and analysts, fostering a data-driven and collaborative environment.\n    * Key technologies utilized: SQL, Python, Amplitude, Mixpanel, Jira, Confluence.\n* **Lead Product Manager, NovaPay** (June 2018 \u2013 December 2021)\n    * Led the product development of NovaPay\u2019s core payment processing platform.\n    * Defined and prioritized features based on market research, user feedback, and competitive analysis.\n    * Managed the entire product lifecycle, from ideation to launch and iteration.\n    * Worked closely with engineering to ensure timely and high-quality product delivery.\n    * Oversaw compliance with relevant regulations, including PCI DSS and KYC/AML.\n    * Grew transaction volume by 300% during tenure.\n* **Associate Product Manager, FinTech Solutions Inc.** (August 2016 \u2013 May 2018)\n    * Assisted in the development of a mobile banking application.\n    * Conducted user research and analyzed data to identify areas for improvement.\n    * Wrote user stories and acceptance criteria.\n    * Collaborated with designers and engineers to create wireframes and prototypes.\n    * Gained experience with agile development methodologies.\n* **B.S., Computer Science, University of California, Berkeley** (2012 \u2013 2016)",
+    "lookingFor": "I\u2019m actively seeking connections with individuals who can contribute to ShipStream\u2019s growth and the expansion of our financial services offerings. Specifically, I'm looking for:\n\n* **Investors:** Seeking Series B/C investors with a demonstrated track record of supporting fintech and logistics companies. I'm particularly interested in funds with a long-term investment horizon and a deep understanding of embedded finance.\n* **Potential Partners:** Exploring partnerships with companies offering complementary financial products or services, such as insurance providers, fraud detection platforms, and credit scoring agencies.\n* **Engineering Talent:**  ShipStream is expanding its engineering team. I\u2019m looking to connect with experienced engineers specializing in payments, risk management, and backend infrastructure (specifically Python and Go).\n* **Product Leaders:** Interested in connecting with other product leaders in the embedded finance space to share best practices and learn from each other.\n\nI'm open to informational interviews and would appreciate introductions to relevant individuals within your network. Please feel free to reach out if you believe there's a potential synergy.",
+    "notes": "- Ingrid is highly selective about who she connects with. She values quality over quantity.\n- Her experience at NovaPay left her somewhat wary of 'hype' and focused on demonstrable unit economics.\n- She\u2019s a strong advocate for diversity and inclusion in tech.\n- She\u2019s a mentor with 'Girls Who Code' and occasionally speaks at industry events.\n- Data privacy and security are paramount concerns for her, given the nature of the financial products she builds.\n- She's currently evaluating several risk management solutions.",
+    "locationAvailability": "Ingrid is based in San Francisco, California, and is open to remote collaboration. She's willing to travel occasionally for key meetings and industry events.",
+    "introPreferences": "* Please highlight my experience building and scaling financial products within larger platforms.\n* Focus on my experience at ShipStream and the positive impact our financial services are having on carriers.\n* If introducing me to an investor, please emphasize our focus on sustainable growth and profitability.\n* Avoid framing me as a 'disruptor' - I prefer 'innovator' or 'enabler'.\n* Do *not* mention NovaPay without context \u2013 briefly acknowledge it as a valuable learning experience.\n* A brief summary of *their* company/role and why you think a connection would be mutually beneficial is extremely helpful.",
+    "personalPreferences": "I prefer to communicate via email initially, then happy to jump on a quick call. I appreciate direct and constructive feedback, and I'm a fast responder.",
+    "meetingAndSchedulingPreferences": "Flexible - Calendly link available upon request. Prefer 30-minute introductory calls."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 23.977431058883667,
+      "input_tokens": 821,
+      "output_tokens": 1366,
+      "problems": []
+    }
+  ],
+  "success": true
+}

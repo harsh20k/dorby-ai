@@ -1,0 +1,54 @@
+{
+  "id": 550,
+  "archetype": "Founder-Turned-Strategic Operator",
+  "given_name": "Jamal Lopes",
+  "style_version": 34,
+  "archetypes_version": 92,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Jamal Lopes is a two-time founder who successfully exited his first company, a B2B SaaS platform for supply chain optimization, and is now focused on advising and investing in early-stage companies. His distinctive career detail is a deep understanding of both the technical *and* operational challenges faced by startups, making him valuable as a strategic operator. He's currently serving as a Board Chair for a seed-stage logistics tech company and actively looking for opportunities to mentor and invest in founders tackling complex problems in the future of work and sustainable supply chains. He's less interested in purely 'hype' driven ventures and prioritizes demonstrable traction and strong unit economics. He\u2019s known for being direct, but supportive, and values intellectual honesty in potential partners.",
+    "positioning": "Jamal Lopes is a seasoned technology executive and entrepreneur with a passion for building and scaling innovative companies. Following a successful exit from his previous venture, Jamal now focuses on leveraging his experience to guide early-stage founders through the challenges of growth. He specializes in operationalizing vision, building high-performing teams, and establishing sustainable business models. Currently serving as Board Chair at LogiFlow, Jamal is dedicated to helping companies navigate the complexities of modern supply chains and build a more resilient future.",
+    "background": "* Founder & CEO, ChainWise Solutions (2018 \u2013 2023) \u2013 Led all aspects of company strategy, product development, and fundraising, culminating in acquisition by Global Logistics Inc.\n* Lead Software Engineer, Amazon (2015 \u2013 2018) \u2013 Developed and maintained key components of Amazon\u2019s fulfillment center automation systems.\n* Co-founder & CTO, StudentHub (2012 \u2013 2015) \u2013 Built and launched a campus-focused social networking platform.\n* B.S. Computer Science, Massachusetts Institute of Technology (2012)\n* Seed Investment - Early stage investment in 'GreenRoute' - a carbon-neutral delivery platform (2024)\n* Board Chair, LogiFlow (2023 - Present) - Guiding strategic direction, fundraising, and operational scaling.\n* Led $5M Series A round for ChainWise Solutions.\n* Implemented Agile methodologies across engineering and product teams at ChainWise, resulting in a 30% increase in sprint velocity.\n* Mentored 5+ early-stage founders through Y Combinator and Techstars programs.\n* Keynote speaker at Supply Chain Innovation Conference (2022).\n* Proficient in Python, Java, AWS, and data analytics tools.\n* Experience with cap table management and term sheet negotiations.\n* Developed and implemented a data-driven sales strategy at ChainWise, increasing lead conversion rates by 15%.",
+    "lookingFor": "* **Seed/Series A Founders:** Seeking ambitious founders tackling significant problems in logistics, supply chain, and the future of work.\n* **Strategic Advisor Roles:** Open to serving as an advisor to companies needing operational expertise and strategic guidance.\n* **Investment Opportunities:** Identifying early-stage companies with strong unit economics, demonstrable traction, and a clear path to profitability.\n* **Fellow Founders:** Connecting with other experienced founders to share learnings and explore potential collaborations.\n* **VC/PE Partners:** Building relationships with investors focused on early-stage technology companies.\n* **Specifically looking for companies leveraging AI/ML to improve supply chain efficiency.**\n* **Hard Requirement:** Demonstrated customer validation and a clear revenue model.\n* **Soft Preference:** Founders with a strong technical background and a commitment to sustainability.",
+    "notes": "* Active in the MIT alumni network \u2013 strong ties to the Boston tech scene.\n* Recently participated in a webinar on 'Scaling SaaS Businesses' \u2013 keen to share insights.\n* Mentioned interest in companies utilizing blockchain for supply chain transparency in a recent conversation with Sarah Chen.\n* Prioritizes efficiency in communication \u2013 prefers concise updates and direct questions.\n* Highly responsive on LinkedIn \u2013 frequently checks messages and engages with relevant content.\n* Flagged as a potential mentor for founders in the Techstars program.",
+    "locationAvailability": "Based in Boston, MA, with willingness to travel nationally for promising opportunities.",
+    "introPreferences": "* **DO introduce me to:** Founders who are beyond the idea stage and have demonstrable traction (e.g., paying customers, pilot programs).\n* **DO introduce me to:** VCs/PE firms actively investing in seed/Series A rounds in the logistics/supply chain space.\n* **DO NOT introduce me to:** Founders seeking 'seed' funding for purely conceptual ideas with no MVP.\n* **DO NOT introduce me to:** Sales/Marketing professionals pitching services \u2013 I\u2019m not currently evaluating vendors.\n* **Preferred Introduction Style:** A brief, personalized message highlighting the founder's traction and the specific problem they are solving.\n* **Hard Requirement:** Introductions should be relevant to my investment/advisory focus \u2013 logistics, supply chain, future of work.\n* **Soft Preference:** Introductions from mutual connections within the MIT network.\n* **Avoid:** Cold introductions without context or a clear value proposition.\n* **I respond best to concise and direct messaging.**\n* **I'm not currently interested in roles that are purely advisory without an equity stake.**",
+    "personalPreferences": "I prefer email for initial communication and am generally available for quick calls. I value directness and transparency in all interactions.",
+    "meetingAndSchedulingPreferences": "I typically prefer 30-minute introductory calls to assess potential fit. Please use Calendly to schedule a meeting."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 15.937968015670776,
+      "input_tokens": 767,
+      "output_tokens": 1171,
+      "problems": []
+    }
+  ],
+  "success": true
+}

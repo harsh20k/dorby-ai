@@ -1,0 +1,66 @@
+{
+  "id": 863,
+  "archetype": "Strategic Finance & Operations Advisor",
+  "given_name": "Nadia Tanaka",
+  "style_version": 53,
+  "archetypes_version": 146,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Nadia Tanaka is a seasoned finance and operations advisor specializing in the seed to Series A stage. She spent the first decade of her career in traditional investment banking, but deliberately pivoted to the startup world after leading the financial due diligence for a particularly innovative (and ultimately successful) biotech firm. This experience sparked a passion for helping early-stage companies navigate the complexities of fundraising and building scalable operations. She now operates as an independent advisor, working with a portfolio of 3-5 companies at a time, and is particularly interested in companies focused on sustainable technologies and climate tech. She\u2019s building a reputation for 'getting her hands dirty' \u2013 not just providing high-level strategy, but actively rolling up her sleeves to build financial models, implement systems, and negotiate key deals. She\u2019s actively looking to expand her network of venture capitalists, angel investors, and other operators who can add value to her portfolio companies.",
+    "positioning": "Nadia Tanaka is a strategic finance and operations advisor dedicated to empowering early-stage companies to achieve sustainable growth. With a background in investment banking and a passion for innovation, I bring a unique blend of financial expertise and operational acumen to help startups navigate critical stages of development. I specialize in cash management, fundraising strategy, and building scalable financial infrastructure, working closely with founders to optimize performance and attract investment. Currently, I\u2019m advising a portfolio of companies in the climate tech and sustainable solutions space, focusing on maximizing impact alongside financial returns. My strength lies in translating complex financial data into actionable insights and driving tangible results, and I'm eager to connect with individuals who share a commitment to building a more sustainable future.",
+    "background": "* **Independent Finance & Operations Advisor** (2021 \u2013 Present)\n    * Advise early-stage companies (Seed - Series A) on financial modeling, forecasting, budgeting, and cash flow management.\n    * Develop and execute fundraising strategies, including pitch deck creation, investor outreach, and term sheet negotiation.\n    * Implement operational improvements to enhance efficiency, reduce costs, and scale infrastructure.\n    * Technologies Used: QuickBooks Online, NetSuite (implementation experience), Excel (advanced financial modeling), Pitchbook, Crunchbase.\n* **Associate, Investment Banking \u2013 Technology Group, Goldman Sachs** (2015 \u2013 2021)\n    * Executed M&A transactions, including due diligence, valuation, and financial modeling.\n    * Advised clients on capital raising activities, including IPOs, debt offerings, and private placements.\n    * Developed industry expertise in the technology, media, and telecommunications sectors.\n    * Key Projects: Lead financial due diligence on a $500M acquisition in the biotech space.\n* **Education \u2013 Stanford University, MBA** (2013 \u2013 2015)\n    * Concentration: Finance\n    * Relevant Coursework: Financial Modeling, Venture Capital, Private Equity, Corporate Strategy.\n* **Education \u2013 University of California, Berkeley, BA Economics** (2009 \u2013 2013)\n    * Graduated *Summa Cum Laude*.\n* **Skills:** Financial Modeling, Fundraising, Due Diligence, M&A, Cash Management, Budgeting & Forecasting, Operational Efficiency, Venture Capital, Start-up Advisory, Financial Statement Analysis, Excel (Expert), NetSuite, QuickBooks Online.",
+    "lookingFor": "* **Venture Capitalists:** Seeking introductions to VCs focused on Seed and Series A investments in climate tech and sustainable solutions.\n* **Angel Investors:** Connecting with angel investors interested in participating in early-stage funding rounds.\n* **Founders:** Expanding network with founders of high-growth startups facing financial or operational challenges.\n* **Operational Experts:**  Looking for experienced operators (e.g., Head of Finance, VP of Operations) who can provide mentorship and guidance to my portfolio companies.\n* **Service Providers:**  Interested in learning about best-in-class legal, accounting, and insurance services tailored for startups.\n* **Strategic Partnerships:** Opportunities for collaborative partnerships with other advisors or consulting firms.",
+    "notes": "* Nadia is highly regarded for her practical, hands-on approach. She doesn't just deliver reports; she helps *implement* solutions.\n* Recently completed a successful Series A raise for one of her portfolio companies \u2013 a vertical farming startup.\n* She's currently prioritizing companies with demonstrable social or environmental impact.\n* Open to informal coffee chats to explore potential synergies and learn about new investment opportunities.\n*  Strong advocate for diversity and inclusion in the startup ecosystem.",
+    "locationAvailability": "Nadia Tanaka is currently based in San Francisco, California, and is open to occasional travel for client meetings and industry events. She is not actively seeking relocation at this time.",
+    "introPreferences": "* **Hard Requirements:** Introductions should be to individuals with decision-making authority (e.g., Partner at a VC firm, CEO of a relevant company).\n* **Hard Requirements:**  Avoid introducing Nadia to junior-level associates or individuals without a clear value proposition for her network.\n* **Soft Preferences:**  A brief, personalized note explaining the connection and highlighting shared interests is highly appreciated.\n* **Soft Preferences:**  Prioritize introductions to individuals actively investing in or operating within the climate tech and sustainable solutions space.\n* **Avoid:**  Cold introductions without any prior context or connection.\n* **Avoid:**  Requests for free consulting or advice without a clear expectation of reciprocity.",
+    "personalPreferences": "I prefer direct and concise communication. Email is generally my preferred channel, but I'm also responsive on LinkedIn. I value authenticity and transparency in professional interactions.",
+    "meetingAndSchedulingPreferences": "* Please include a brief agenda when requesting a meeting.\n*  I\u2019m generally available for 30-minute introductory calls."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 22.21752905845642,
+      "input_tokens": 731,
+      "output_tokens": 1210,
+      "problems": [
+        "background: possible truncation (ends with '...-up scenarios.</li>\n</ul>')",
+        "lookingFor: possible truncation (ends with '...profitability.</li>\n</ul>')",
+        "notes: possible truncation (ends with '...up valuations.</li>\n</ul>')",
+        "introPreferences: possible truncation (ends with '...cold outreach.</li>\n</ul>')"
+      ]
+    },
+    {
+      "attempt": 2,
+      "elapsed_s": 19.965797901153564,
+      "input_tokens": 731,
+      "output_tokens": 1215,
+      "problems": []
+    }
+  ],
+  "success": true
+}

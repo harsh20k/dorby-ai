@@ -1,0 +1,54 @@
+{
+  "id": 18,
+  "archetype": "Infrastructure/Robotics Pre-Seed Founder (US/UK)",
+  "given_name": "Nikolai Suzuki",
+  "style_version": 2,
+  "archetypes_version": 4,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Nikolai Suzuki is a first-time founder, 32, with a background in highly specialized robotics engineering (specifically, underwater robotics for oil & gas inspection \u2013 a niche that gives him deep technical cred but isn't directly applicable to his current venture). He's building 'TerraForm Robotics,' a company automating concrete infrastructure repair (bridges, roads, etc.) using small, agile robots. He's *bootstrapped* to date, relying on savings and a small angel check, and is now aggressively pursuing a pre-seed round to scale a pilot program in Texas. He\u2019s particularly focused on US infrastructure funding opportunities (IIJA/Bipartisan Infrastructure Law). He\u2019s a naturally introverted, technically-focused person who's learning to network on the fly. He's slightly wary of 'hype' and prefers concrete conversations. He's targeting a $750k pre-seed to expand his team and refine his robotic system for wider deployment. He\u2019s based in London but spending significant time traveling to the US for fundraising and pilot program oversight.",
+    "positioning": "I\u2019m the founder of TerraForm Robotics, building the future of infrastructure maintenance. We\u2019re tackling the $2+ trillion backlog of concrete repair in the US with a novel robotics platform that dramatically reduces cost, improves safety, and extends the lifespan of critical infrastructure. Having spent years designing and deploying complex robotic systems in challenging environments, I recognized a massive opportunity to apply that expertise to a sector ripe for disruption. We\u2019ve completed a successful pilot program in Texas, demonstrating significant cost savings and efficiency gains. Currently, we\u2019re focused on securing a pre-seed round to scale our operations and capitalize on the unprecedented infrastructure investment happening across the US. I\u2019m actively seeking connections with investors specializing in robotics, construction tech, and climate tech, as well as potential strategic partners within the infrastructure and construction industries. Let\u2019s connect if you\u2019re passionate about building resilient infrastructure and have a vision for a more automated future.",
+    "background": "- **Founder & CEO, TerraForm Robotics** (London, UK & Austin, TX) \u2013 2023 \u2013 Present\n   - Led all aspects of company formation, product development, and initial market validation.\n   - Secured initial angel investment of $50k.\n   - Completed a successful pilot program with a Texas-based construction firm, demonstrating a 30% reduction in repair costs and a 40% improvement in worker safety.\n   - Developed and refined the core robotic platform for autonomous concrete repair.\n   - Currently fundraising a $750k pre-seed round.\n\n- **Senior Robotics Engineer, OceanTech Solutions** (Aberdeen, Scotland) \u2013 2018 \u2013 2023\n   - Designed, built, and deployed remotely operated vehicles (ROVs) for underwater inspection and repair of oil and gas infrastructure.\n   - Led a team of 3 engineers in the development of a new ROV control system, resulting in a 20% increase in operational efficiency.\n   - Managed a budget of $500k for ROV maintenance and upgrades.\n   - Published 2 peer-reviewed papers on underwater robotics.\n\n- **Research Assistant, Imperial College London** (London, UK) \u2013 2016 \u2013 2018\n   - Conducted research on advanced control algorithms for autonomous robots.\n   - Developed and implemented simulations to test robot performance in various environments.\n\n- **Education:**\n   - PhD, Robotics, Imperial College London \u2013 2016 \u2013 2018\n   - MSc, Mechanical Engineering, University of Cambridge \u2013 2014 \u2013 2016\n   - BA, Engineering Science, Oxford University \u2013 2011 \u2013 2014\n\n- **Skills:** Robotics, Automation, Computer Vision, Machine Learning, Python, ROS, C++, Mechanical Design, Project Management, Fundraising, Technical Leadership.",
+    "lookingFor": "## Investment & Partnerships\n- **Pre-Seed Investors:** Seeking investors with a focus on robotics, construction tech, climate tech, or infrastructure.\n- **Strategic Partners:** Interested in connecting with construction firms, infrastructure companies, and government agencies involved in infrastructure repair and maintenance.\n- **Mentors:** Seeking guidance from experienced founders and investors in the robotics and hardware space.\n\n## Expertise & Support\n- **US Infrastructure Funding:** Connections to individuals familiar with the IIJA (Bipartisan Infrastructure Law) and related funding opportunities.\n- **Texas Construction Network:** Introductions to key players in the Texas construction and infrastructure markets.\n- **Robotics Manufacturing:** Contacts with reputable robotics manufacturers and supply chain partners.",
+    "notes": "Nikolai is a highly intelligent and driven individual, but relatively new to the fundraising game. He's a bit reserved and prefers to focus on the technical details of his product. He\u2019s been receptive to feedback on his pitch, but sometimes struggles to articulate the 'big picture' vision. His background in underwater robotics is impressive, but he needs to clearly explain how those skills translate to concrete infrastructure. He recently attended a construction tech conference in Austin and made some promising connections, but is still actively seeking a lead investor. He is *very* focused on demonstrating tangible ROI and is wary of investors who prioritize hype over substance. He mentioned a previous attempt at a different startup that failed due to a lack of market research \u2013 he\u2019s keen to avoid repeating that mistake. He\u2019s currently staying with friends in Austin to minimize expenses during the fundraising process.",
+    "locationAvailability": "Currently splitting time between London, UK and Austin, TX, with frequent travel to other US locations; open to connecting with individuals globally.",
+    "introPreferences": "- **Hard Requirements:** Investors with a demonstrated track record in robotics or construction tech; Construction firms actively seeking automation solutions.\n- **Soft Preferences:** Individuals with experience in the US infrastructure market; Founders who have successfully raised pre-seed funding.\n- **Avoid:** Generalist investors without specific expertise in hardware or robotics; Individuals primarily interested in software-only solutions.\n- **Introduction Guidance:** Please briefly highlight the investor's/contact's relevant experience and their potential interest in TerraForm Robotics' mission.",
+    "personalPreferences": "I prefer direct and concise communication. Email is fine for initial contact, but I'm happy to jump on a quick call to discuss things further. I'm not a big fan of lengthy back-and-forth; I appreciate people who get straight to the point. I'm generally responsive, but may take a bit longer to reply if I'm in the field testing the robots.",
+    "meetingAndSchedulingPreferences": "I'm flexible with meeting formats \u2013 happy to do video calls, phone calls, or in-person meetings when possible. Please send a brief agenda beforehand so I can prepare."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 24.98927116394043,
+      "input_tokens": 779,
+      "output_tokens": 1453,
+      "problems": []
+    }
+  ],
+  "success": true
+}

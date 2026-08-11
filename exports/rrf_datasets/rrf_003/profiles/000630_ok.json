@@ -1,0 +1,54 @@
+{
+  "id": 630,
+  "archetype": "Serial Founder, New Venture Exploration",
+  "given_name": "Fatima Abara",
+  "style_version": 38,
+  "archetypes_version": 105,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Fatima Abara is a serial founder currently between ventures, actively exploring opportunities at the intersection of AI and sustainable agriculture. She previously built and successfully exited two companies: a precision irrigation platform and a farm-to-table logistics network. Her distinctive detail is a strong emphasis on ethical AI deployment \u2013 she's wary of 'black box' solutions and prioritizes transparency and explainability. Now, she's looking for seed funding and co-founders for a new venture focused on AI-powered crop disease prediction and preventative measures, specifically targeting smallholder farms in developing countries. She\u2019s highly connected in both the tech and agtech spaces, but specifically values introductions to impact investors and AI researchers with a demonstrated commitment to responsible innovation.",
+    "positioning": "Fatima Abara is a seasoned entrepreneur with a proven track record of building and scaling impactful technology companies in the agricultural sector. She specializes in identifying and leveraging emerging technologies, particularly AI and machine learning, to address critical challenges in food security and sustainability. Following successful exits from both 'AquaWise' and 'HarvestLink', Fatima is currently focused on identifying and validating her next venture, seeking to apply cutting-edge AI to empower smallholder farmers and build more resilient food systems. She\u2019s passionate about ethical AI and believes technology should be a force for positive change, prioritizing solutions that are transparent, explainable, and accessible to all.",
+    "background": "- **Founder & CEO, AquaWise (2018 \u2013 2022):** Led the development and commercialization of a precision irrigation platform utilizing sensor data and machine learning to optimize water usage in agriculture. Achieved 3x revenue growth in the final year and successfully exited to a major agricultural technology firm.\n- **Founder & CEO, HarvestLink (2015 \u2013 2018):** Developed and launched a logistics network connecting smallholder farms directly with restaurants and consumers, reducing food waste and increasing farmer income. Secured $2M in seed funding and established partnerships with over 100 farms.\n- **Data Science Consultant, AgriCorp (2013 \u2013 2015):** Provided data analysis and modeling services to a large agricultural conglomerate, focusing on yield prediction and supply chain optimization.\n- **Education:** PhD, Agricultural Engineering, Stanford University (2013). MS, Computer Science, Massachusetts Institute of Technology (2009). BS, Biology, University of California, Berkeley (2007).\n- **Skills:** Machine Learning, Deep Learning, Data Analysis, Predictive Modeling, Agricultural Technology, Supply Chain Management, Business Development, Fundraising, Team Leadership, Python, R, SQL, Cloud Computing (AWS, Azure).\n- **Awards & Recognition:** Forbes 30 Under 30 (2020), TechCrunch Disrupt Startup Battlefield Finalist (AquaWise, 2019), AgriFuture Innovation Award (HarvestLink, 2017).",
+    "lookingFor": "- **Seed Funding:** Seeking $500K - $1M in seed funding for a new venture focused on AI-powered crop disease prediction.\n- **Co-founder (Technical Lead):** Looking for a strong technical co-founder with expertise in computer vision, deep learning, and edge computing.\n- **Impact Investors:** Interested in connecting with investors who prioritize social and environmental impact alongside financial returns.\n- **AI Researchers (Ethical AI focus):** Seeking introductions to researchers specializing in explainable AI (XAI) and responsible AI development.\n- **Agricultural Extension Specialists:** Connections to experts working directly with smallholder farmers in developing countries (particularly Sub-Saharan Africa and Southeast Asia).\n- **Do not:** Contact me with pitches for generic AI solutions without a clear application to agriculture.\n- **Do not:** Introduce me to VCs solely focused on late-stage growth equity.",
+    "notes": "Fatima is currently in the 'discovery' phase of her new venture, actively conducting market research and validating her hypothesis. She\u2019s incredibly diligent and takes a very analytical approach to evaluating opportunities. Recent conversations indicate a strong preference for partnerships with organizations already embedded in the agricultural ecosystem. Data quality on HarvestLink\u2019s impact metrics is somewhat limited, so framing pitches around measurable social impact will be key. She is highly responsive but prefers asynchronous communication initially.",
+    "locationAvailability": "San Francisco, California",
+    "introPreferences": "- **Ideal Candidates (Technical Lead):** PhD in Computer Science or related field, 3+ years experience in deep learning, proven ability to build and deploy machine learning models in a production environment.\n- **Introduction Style:** Warm introductions are preferred, with a brief summary of the connection\u2019s relevant experience and why they might be a good fit.\n- **Hard Requirement (Investors):** Demonstrated track record of investing in early-stage agtech or climate tech companies.\n- **Soft Preference (Researchers):** Publications in leading AI conferences (NeurIPS, ICML, ICLR) are a plus.\n- **Do not:** Introduce me to individuals who are solely interested in financial gain without a genuine commitment to impact.\n- **Do not:** Cold introductions \u2013 a mutual connection is essential.",
+    "personalPreferences": "I prefer to start conversations via email and am generally available for brief calls. I value direct and concise communication.",
+    "meetingAndSchedulingPreferences": "I'm flexible with meeting times but prefer to schedule calls at least 24 hours in advance. Please send a brief agenda beforehand."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 17.567922830581665,
+      "input_tokens": 817,
+      "output_tokens": 1141,
+      "problems": []
+    }
+  ],
+  "success": true
+}

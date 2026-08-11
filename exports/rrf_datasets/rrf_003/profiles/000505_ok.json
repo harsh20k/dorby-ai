@@ -1,0 +1,54 @@
+{
+  "id": 505,
+  "archetype": "Healthcare/Regulated Tech Builder",
+  "given_name": "Liang Yamamoto",
+  "style_version": 31,
+  "archetypes_version": 85,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Liang Yamamoto is a 38-year-old founder and CEO of 'Synapse Bio', a company developing AI-powered diagnostic tools for early cancer detection, specifically focusing on rare and aggressive subtypes. Her distinctive career detail is a prior 8-year stint as a regulatory affairs specialist *within* the FDA, giving her unparalleled insight into the approval process. She's currently raising a Series B round to scale clinical trials and commercialize their lead product. Liang is highly focused on data privacy and ethical AI implementation in healthcare, constantly referencing the need for 'responsible innovation'. She's driven, detail-oriented, and can be perceived as somewhat reserved until she trusts a connection. She\u2019s very aware of the challenges of bringing regulated tech to market and is seeking investors and advisors who understand this landscape.",
+    "positioning": "As CEO of Synapse Bio, I\u2019m dedicated to fundamentally changing the landscape of cancer diagnostics. We\u2019re building AI-powered tools that move beyond reactive treatment to proactive, personalized prevention. Our core technology leverages advanced machine learning algorithms to analyze complex multi-omic data \u2013 genomics, proteomics, metabolomics \u2013 identifying subtle biomarkers indicative of early-stage cancer, particularly in rare subtypes often missed by conventional screening methods. \n\nMy background within the FDA instilled in me a deep appreciation for the rigorous standards and ethical considerations paramount in healthcare innovation. At Synapse Bio, we don\u2019t just aim to create groundbreaking technology; we strive to build *trustworthy* technology. We are committed to data privacy, algorithmic transparency, and equitable access to our diagnostic solutions. \n\nWe recently completed a successful Phase I clinical trial demonstrating a significant improvement in early detection rates for pancreatic neuroendocrine tumors, a particularly challenging cancer to diagnose. This achievement has garnered significant attention from key opinion leaders and potential partners. We are now focused on scaling our operations, expanding our clinical validation, and navigating the regulatory pathway towards FDA approval. Ultimately, my vision is to empower patients and clinicians with the information they need to make informed decisions, transforming cancer from a life-threatening disease into a manageable condition.",
+    "background": "* **Synapse Bio, CEO & Founder** (2020 \u2013 Present)\n    * Spearheaded the company\u2019s vision, strategy, and execution, securing $8M in Seed funding and $15M in Series A financing.\n    * Led the development and validation of Synapse Bio\u2019s AI-powered diagnostic platform, resulting in a successful Phase I clinical trial with demonstrated improvements in early cancer detection.\n    * Built and managed a high-performing team of data scientists, engineers, and clinical experts.\n    * Established strategic partnerships with leading academic medical centers and pharmaceutical companies.\n    * Responsible for all aspects of regulatory compliance and submissions.\n* **U.S. Food and Drug Administration, Regulatory Affairs Specialist** (2012 \u2013 2020)\n    * Reviewed and evaluated pre-market submissions for novel medical devices, ensuring compliance with FDA regulations (21 CFR Part 820, ISO 13485).\n    * Led cross-functional teams in the preparation of deficiency letters and responses to FDA inquiries.\n    * Developed and implemented regulatory strategies for medical device manufacturers.\n    * Served as a subject matter expert on regulatory pathways for AI/ML-enabled medical devices.\n    * Contributed to the development of FDA guidance documents on emerging technologies.\n* **Massachusetts Institute of Technology (MIT), Ph.D. Biomedical Engineering** (2008 \u2013 2012)\n    * Dissertation: \u201cDevelopment of a Microfluidic Platform for Circulating Tumor Cell Isolation and Analysis.\u201d\n    * GPA: 3.9/4.0\n    * Recipient of the National Science Foundation Graduate Research Fellowship.\n* **Stanford University, B.S. Chemical Engineering** (2004 \u2013 2008)\n    * Minor: Biology\n    * Graduated *Summa Cum Laude*.\n* **Skills:** Machine Learning, Deep Learning, AI/ML Regulatory Compliance, FDA Submissions (510(k), PMA), Clinical Trial Management, Data Analysis (Python, R), Biomarker Discovery, Genomics, Proteomics, Metabolomics, Regulatory Strategy, Team Leadership, Fundraising, Business Development.",
+    "lookingFor": "* **Fundraising (Series B):** Seeking $25M - $35M to scale clinical trials (Phase II/III) and prepare for commercial launch. Target valuation: $80M - $100M post-money.\n* **Strategic Investors:** Prioritizing investors with experience in healthcare AI, diagnostics, or oncology. Specifically targeting funds with a demonstrated track record of supporting regulated tech companies.\n* **Introductions to:**\n    * **Healthcare-focused Venture Capital Partners:** Andreessen Horowitz (Bio + Health), General Catalyst, New Enterprise Associates (Healthcare).\n    * **Key Opinion Leaders (KOLs):** Leading oncologists specializing in pancreatic, ovarian, and lung cancers.\n    * **Potential Pharma Partners:** Companies actively seeking to expand their diagnostic capabilities (e.g., Roche, Novartis, Merck).\n* **Advisory Board Members:** Seeking individuals with expertise in regulatory affairs (FDA experience preferred), clinical oncology, and commercialization of medical devices.\n* **Talent Acquisition:**\n    * **Head of Clinical Operations:** Experienced in managing multi-site clinical trials and navigating the regulatory landscape.\n    * **Senior Data Scientist (AI/ML):** Expertise in developing and deploying AI/ML models for medical image analysis and biomarker discovery.\n    * **Regulatory Affairs Counsel:** Specialized in FDA regulations for AI/ML-enabled medical devices.",
+    "notes": "Liang is highly intelligent and driven, but can come across as reserved initially. She's extremely focused on the regulatory aspects of her business, which is a strength, but can sometimes lead to over-analysis. Boardy score: 8/10. Previous conversations indicate a strong preference for data-driven decision-making and a cautious approach to partnerships. She's sensitive to discussions around ethical AI and data privacy \u2013 avoid framing questions that suggest a disregard for these principles. Internal flag: High potential, but requires a relationship built on trust and demonstrated understanding of the complexities of regulated healthcare tech. Prioritize introductions from trusted sources.",
+    "locationAvailability": "Based in Boston, MA, but open to travel for key meetings. Primarily operates remotely, but maintains a lab space for the team.",
+    "introPreferences": "To ensure a successful introduction, please adhere to the following:\n* **Hard Requirements:**\n    * **Investor Focus:** Must be actively investing in healthcare AI and/or diagnostics. No generalist funds, please.\n    * **Regulatory Understanding:** Investors *must* demonstrate a clear understanding of the challenges and opportunities associated with FDA approval for AI/ML-enabled medical devices. \n    * **Long-Term Vision:** Seeking partners who share our commitment to responsible innovation and long-term value creation.\n* **Soft Preferences:**\n    * **Warm Introductions:** A personal connection is highly valued. Avoid cold outreach.\n    * **Briefing Materials:** Please provide a concise overview of the investor's portfolio and investment thesis prior to the introduction.\n    * **Avoid:** Introductions to individuals solely focused on short-term financial gains or those without a genuine interest in improving patient outcomes.",
+    "personalPreferences": "Prefers communication via email or LinkedIn messaging initially. I am generally responsive, but appreciate concise and well-structured communications.",
+    "meetingAndSchedulingPreferences": "Please allow 24-48 hours for scheduling. I typically block off dedicated time for meetings and prioritize preparation beforehand."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 22.785505056381226,
+      "input_tokens": 870,
+      "output_tokens": 1625,
+      "problems": []
+    }
+  ],
+  "success": true
+}

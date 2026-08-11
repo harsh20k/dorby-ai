@@ -1,0 +1,63 @@
+{
+  "id": 331,
+  "archetype": "Academic Researcher, Entrepreneurial Transition",
+  "given_name": "Jamal Mahmoud",
+  "style_version": 21,
+  "archetypes_version": 55,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Jamal Mahmoud is a recently transitioned materials science PhD. He spent years researching novel perovskite solar cell materials, achieving a breakthrough in stability and efficiency. He's now the founder and CEO of 'Solara Futures,' a pre-seed startup aiming to commercialize this technology, initially targeting off-grid power solutions for rural communities in Sub-Saharan Africa. He\u2019s incredibly technical and focused on the science, but is quickly learning the ropes of fundraising and business development. He\u2019s highly motivated by impact and sustainability, and a bit naive about the realities of venture capital. He's actively seeking seed funding and strategic partnerships with manufacturing companies, and is open to advice from experienced entrepreneurs. He's slightly averse to overly aggressive sales pitches and prioritizes genuine connection and understanding of the technical details.",
+    "positioning": "As Founder and CEO of Solara Futures, I am leading the development and commercialization of next-generation perovskite solar cell technology. Our core innovation lies in a proprietary compositional engineering approach that dramatically enhances the long-term stability of perovskite materials, addressing a critical barrier to their widespread adoption. We\u2019ve demonstrated a 25% increase in operational lifespan compared to leading competitors, while maintaining comparable power conversion efficiencies. Initially, we are focusing on delivering affordable and reliable off-grid power solutions to underserved rural communities in Sub-Saharan Africa, a market segment currently reliant on expensive and polluting diesel generators. Our business model centers around a \u2018solar-as-a-service\u2019 approach, providing flexible financing options and ongoing maintenance to ensure accessibility. We recently completed a successful pilot program in Tanzania, demonstrating strong user acceptance and a clear path to scalability. We are currently refining our manufacturing process for pilot production and actively seeking seed funding to expand our team and accelerate market entry. Solara Futures is not simply building solar cells; we are building energy independence and fostering sustainable development.",
+    "background": "My career has been deeply rooted in materials science, transitioning from academic research to entrepreneurial leadership. \n\n* **Founder & CEO, Solara Futures (2023 \u2013 Present):** Leading all aspects of startup operations, including technology development, business strategy, fundraising, and team building. Secured initial pre-seed funding of $100k through angel investors.\n* **Postdoctoral Research Fellow, Stanford University (2020 \u2013 2023):** Led a research team investigating novel perovskite compositions for improved solar cell performance and stability. Published 8 peer-reviewed articles in high-impact journals (e.g., *Nature Energy*, *Advanced Materials*). Secured a $50k research grant from the National Science Foundation.\n* **PhD, Materials Science & Engineering, Massachusetts Institute of Technology (2016 \u2013 2020):** Dissertation: 'Improving Perovskite Solar Cell Stability Through Compositional Engineering.' GPA: 4.0/4.0. Awarded the MIT Presidential Fellowship.\n* **Research Intern, National Renewable Energy Laboratory (NREL) (Summer 2015):** Conducted research on thin-film solar cell fabrication and characterization. \n* **BS, Chemical Engineering, California Institute of Technology (2012 \u2013 2016):** Minor in Physics. Graduated *summa cum laude*.\n\n**Skills:** Perovskite Materials, Thin Film Deposition, Solar Cell Fabrication, Materials Characterization (XRD, SEM, TEM), Data Analysis (Python, MATLAB), Project Management, Team Leadership, Scientific Writing, Grant Writing, Business Development.\n\n**Certifications:** None currently, but actively considering a short course on Venture Capital financing.",
+    "lookingFor": "I am actively seeking connections to accelerate Solara Futures\u2019 growth. Specifically:\n\n* **Seed Investors:** Angels and micro-VCs with a focus on climate tech, deep tech, and impact investing. Target investment range: $500k - $1M.\n* **Manufacturing Partners:** Companies with experience in thin-film coating and semiconductor fabrication, particularly those interested in licensing our technology or establishing a joint venture.\n* **Strategic Advisors:** Experienced entrepreneurs and industry veterans who can provide guidance on scaling a hardware startup.\n* **Potential Customers:** Organizations operating in the off-grid energy sector in Sub-Saharan Africa, including NGOs and local distributors.\n* **Talent:** A highly motivated and skilled process engineer with experience in scaling manufacturing processes for materials science applications.",
+    "notes": "* Jamal is very technically focused; avoid overly simplistic explanations. He appreciates deep dives into the science.\n* He\u2019s relatively new to the fundraising world and can be easily overwhelmed by jargon. Be patient and clear.\n* He\u2019s highly values-driven and genuinely passionate about the impact of his work. Appeals to profit alone will likely fall flat.\n* Previously spoke with [Investor Name] \u2013 positive initial conversation but requires further validation of our pilot program results.\n* Avoid introductions to firms solely focused on software or consumer applications.\n* He's highly responsive on LinkedIn and email.",
+    "locationAvailability": "I am currently based in Palo Alto, California, but frequently travel to East Africa for project implementation. I will be in Dar es Salaam, Tanzania from November 15th-22nd and available for meetings during that time.",
+    "introPreferences": "When making introductions, please adhere to the following:\n\n1. **Investor Profile:** Focus on seed-stage investors with a demonstrated track record in climate tech and a clear understanding of the challenges and opportunities in the renewable energy sector.\n2. **Company Stage:** I am not interested in conversations with firms that exclusively invest in Series A or later-stage companies.\n3. **Connection Type:** Ideally, introductions should be to partners or principals at the investment firm, not junior associates.\n4. **Warm Introductions:** Cold emails are unlikely to receive a response. A personal connection and a brief explanation of Solara Futures\u2019 potential are essential.\n5. **Pre-Briefing:** Please briefly share our pitch deck with the investor prior to the introduction.",
+    "personalPreferences": "I prefer to communicate via email initially, and I'm happy to schedule a call afterward. I generally respond to messages within 24-48 hours. I'm always open to discussing the latest advancements in materials science!",
+    "meetingAndSchedulingPreferences": "I am generally flexible with meeting times and can adjust to accommodate different schedules."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 22.460548877716064,
+      "input_tokens": 793,
+      "output_tokens": 1397,
+      "problems": [
+        "meetingAndSchedulingPreferences: possible truncation (ends with '...endly Link - placeholder]')"
+      ]
+    },
+    {
+      "attempt": 2,
+      "elapsed_s": 20.240583896636963,
+      "input_tokens": 793,
+      "output_tokens": 1352,
+      "problems": []
+    }
+  ],
+  "success": true
+}

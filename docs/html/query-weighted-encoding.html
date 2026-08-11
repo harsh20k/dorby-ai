@@ -1,0 +1,292 @@
+<title>The profile is drowning the ask</title>
+<style>
+  :root {
+    --ground: #fbfaf8;
+    --panel: #ffffff;
+    --ink: #17191d;
+    --ink-soft: #565c66;
+    --ink-faint: #8d949e;
+    --rule: #e3e0d9;
+    --accent: #1f6f6b;        /* signal: the query */
+    --accent2: #b8722a;       /* the profile */
+    --accent-soft: #e2efed;
+    --band: #f1efea;
+    --good: #2f6b4f;
+    --mono: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+    --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    --serif: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --ground: #121417; --panel: #1a1d21; --ink: #eae8e3;
+      --ink-soft: #a6adb6; --ink-faint: #767d87; --rule: #2c3138;
+      --accent: #5fb8b1; --accent2: #d99a55; --accent-soft: #1a2c2b; --band: #21252a;
+      --good: #6fbd92;
+    }
+  }
+  :root[data-theme="dark"] {
+    --ground: #121417; --panel: #1a1d21; --ink: #eae8e3; --ink-soft: #a6adb6;
+    --ink-faint: #767d87; --rule: #2c3138; --accent: #5fb8b1; --accent2: #d99a55;
+    --accent-soft: #1a2c2b; --band: #21252a; --good: #6fbd92;
+  }
+  :root[data-theme="light"] {
+    --ground: #fbfaf8; --panel: #ffffff; --ink: #17191d; --ink-soft: #565c66;
+    --ink-faint: #8d949e; --rule: #e3e0d9; --accent: #1f6f6b; --accent2: #b8722a;
+    --accent-soft: #e2efed; --band: #f1efea; --good: #2f6b4f;
+  }
+
+  body { background: var(--ground); color: var(--ink); font-family: var(--sans);
+         line-height: 1.6; -webkit-font-smoothing: antialiased; }
+  .wrap { max-width: 62rem; margin: 0 auto; padding: 3.5rem 1.5rem 5rem;
+          display: flex; flex-direction: column; gap: 2.6rem; }
+  .eyebrow { font-family: var(--mono); font-size: .7rem; letter-spacing: .14em;
+             text-transform: uppercase; color: var(--accent); margin-bottom: .9rem; }
+  h1 { font-family: var(--serif); font-weight: 600; font-size: clamp(2rem, 5.5vw, 3.2rem);
+       line-height: 1.1; letter-spacing: -.02em; text-wrap: balance; margin-bottom: 1rem; }
+  .lede { font-size: 1.12rem; color: var(--ink-soft); max-width: 46ch; }
+  h2 { font-family: var(--serif); font-size: 1.5rem; font-weight: 600; letter-spacing: -.01em;
+       padding-bottom: .5rem; border-bottom: 1px solid var(--rule); margin-bottom: 1.2rem;
+       text-wrap: balance; }
+  h3 { font-size: 1rem; font-weight: 650; margin-bottom: .4rem; }
+  p { max-width: 68ch; } p + p { margin-top: .85rem; }
+  code { font-family: var(--mono); font-size: .88em; background: var(--band);
+         padding: .1em .35em; border-radius: 3px; }
+
+  /* the 2% bar */
+  .ratio { border: 1px solid var(--rule); border-radius: 8px; overflow: hidden;
+           background: var(--panel); }
+  .ratio .bar { display: flex; height: 3.1rem; font-family: var(--mono); font-size: .75rem; }
+  .ratio .prof { flex: 97.9; background: var(--accent2); color: #fff;
+                 display: flex; align-items: center; padding-left: .9rem; }
+  .ratio .qry { flex: 2.1; background: var(--accent); min-width: 3px; }
+  .ratio .cap { display: flex; justify-content: space-between; padding: .7rem .9rem;
+                font-size: .82rem; color: var(--ink-soft); border-top: 1px solid var(--rule); }
+  .swatch { display: inline-block; width: .62rem; height: .62rem; border-radius: 2px;
+            margin-right: .35rem; vertical-align: middle; }
+
+  /* alpha curve */
+  .chart { background: var(--panel); border: 1px solid var(--rule); border-radius: 8px;
+           padding: 1.4rem 1.2rem 1rem; overflow-x: auto; }
+  .chart svg { display: block; min-width: 34rem; width: 100%; height: auto; }
+  .legend { display: flex; gap: 1.4rem; flex-wrap: wrap; font-size: .82rem;
+            color: var(--ink-soft); margin-top: .6rem; padding-left: .2rem; }
+
+  .tablewrap { overflow-x: auto; border: 1px solid var(--rule); border-radius: 8px;
+               background: var(--panel); }
+  table { border-collapse: collapse; width: 100%; font-size: .88rem; }
+  th, td { padding: .55rem .8rem; text-align: right; white-space: nowrap;
+           border-bottom: 1px solid var(--rule); }
+  th:first-child, td:first-child { text-align: left; }
+  thead th { font-family: var(--mono); font-size: .68rem; letter-spacing: .07em;
+             text-transform: uppercase; color: var(--ink-faint); background: var(--band); }
+  tbody tr:last-child td { border-bottom: none; }
+  td.num { font-family: var(--mono); font-variant-numeric: tabular-nums; }
+  tr.hero td { background: var(--accent-soft); font-weight: 650; }
+  tr.base td { border-top: 2px solid var(--ink-faint); border-bottom: 2px solid var(--ink-faint); }
+  .best { color: var(--accent); font-weight: 650; }
+
+  .callout { border-left: 3px solid var(--accent2); background: var(--panel);
+             padding: 1rem 1.2rem; border-radius: 0 8px 8px 0; }
+  .callout h3 { color: var(--accent2); }
+  pre { background: var(--band); padding: .9rem 1rem; border-radius: 6px;
+        overflow-x: auto; font-family: var(--mono); font-size: .82rem; line-height: 1.5; }
+  ul { padding-left: 1.1rem; max-width: 68ch; } li + li { margin-top: .4rem; }
+  footer { padding-top: 1.5rem; border-top: 1px solid var(--rule);
+           font-size: .84rem; color: var(--ink-faint); }
+</style>
+
+<div class="wrap">
+
+  <header>
+    <div class="eyebrow">Boardy AI · RecSys · seeker representation</div>
+    <h1>The profile is drowning the ask</h1>
+    <p class="lede">The search query is 2% of the seeker's text. Encoding it
+    separately and weighting it up takes recall@1 from 0.18 to 0.30 — with no
+    training at all.</p>
+  </header>
+
+  <section>
+    <p>Every model in this project builds the seeker side as one string: eight
+    tagged profile fields with <code>Search query: …</code> appended. Measured on
+    the 200 real pairs, that query averages <strong>218 characters against a
+    10,178-character seeker string</strong>.</p>
+
+    <div class="ratio">
+      <div class="bar">
+        <div class="prof">profile — 8 biography fields</div>
+        <div class="qry"></div>
+      </div>
+      <div class="cap">
+        <span><span class="swatch" style="background:var(--accent2)"></span>profile · 9,960 chars · ~2,450 tokens</span>
+        <span><span class="swatch" style="background:var(--accent)"></span>search query · 218 chars · <strong>2.1%</strong></span>
+      </div>
+    </div>
+
+    <p style="margin-top:1.2rem">That 2% is the only part that says what the
+    person wants <em>right now</em>. The rest is biography. So: encode the two
+    separately and combine them as
+    <code>normalize(α·Q̂ + (1−α)·P̂)</code>, sweeping α from all-profile to
+    all-query.</p>
+  </section>
+
+  <section>
+    <h2>The α curve</h2>
+    <div class="chart">
+      <svg viewBox="0 0 720 300" role="img" aria-label="Recall@1 and MRR rising as query weight increases">
+        <!-- grid -->
+        <g stroke="currentColor" opacity=".13" stroke-width="1">
+          <line x1="58" y1="250" x2="700" y2="250"/>
+          <line x1="58" y1="200" x2="700" y2="200"/>
+          <line x1="58" y1="150" x2="700" y2="150"/>
+          <line x1="58" y1="100" x2="700" y2="100"/>
+          <line x1="58" y1="50"  x2="700" y2="50"/>
+        </g>
+        <g fill="currentColor" opacity=".5" font-size="11" font-family="ui-monospace,monospace" text-anchor="end">
+          <text x="50" y="254">0.0</text><text x="50" y="204">0.15</text>
+          <text x="50" y="154">0.30</text><text x="50" y="104">0.45</text>
+          <text x="50" y="54">0.60</text>
+        </g>
+        <!-- x labels: alpha 0 .. 1 mapped 58..700 -->
+        <g fill="currentColor" opacity=".5" font-size="11" font-family="ui-monospace,monospace" text-anchor="middle">
+          <text x="58"  y="272">0.0</text><text x="186" y="272">0.2</text>
+          <text x="315" y="272">0.4</text><text x="443" y="272">0.6</text>
+          <text x="572" y="272">0.8</text><text x="700" y="272">1.0</text>
+          <text x="379" y="292" opacity=".8">α  —  weight on the query vector</text>
+        </g>
+
+        <!-- MRR: 0.2357,0.2950,0.3362,0.3884,0.4064,0.4309,0.4649,0.5009,0.4958,0.4924,0.5019
+             y = 250 - v/0.60*200 -->
+        <polyline fill="none" stroke="var(--accent)" stroke-width="2.5"
+          points="58,171.4 122,151.7 186,138.0 250,120.5 315,114.5 379,106.4 443,95.0 507,83.0 572,84.7 636,85.9 700,82.7"/>
+        <!-- R@1: 0.09,0.14,0.18,0.24,0.23,0.23,0.25,0.30,0.29,0.28,0.30 -->
+        <polyline fill="none" stroke="var(--accent2)" stroke-width="2.5" stroke-dasharray="5 3"
+          points="58,220.0 122,203.3 186,190.0 250,170.0 315,173.3 379,173.3 443,166.7 507,150.0 572,153.3 636,156.7 700,150.0"/>
+
+        <!-- baseline reference lines -->
+        <line x1="58" y1="144.3" x2="700" y2="144.3" stroke="var(--accent)" stroke-width="1" opacity=".45" stroke-dasharray="2 4"/>
+        <line x1="58" y1="190.0" x2="700" y2="190.0" stroke="var(--accent2)" stroke-width="1" opacity=".45" stroke-dasharray="2 4"/>
+        <text x="700" y="139" fill="var(--accent)" font-size="10" text-anchor="end"
+              font-family="ui-monospace,monospace" opacity=".85">current MRR 0.317</text>
+        <text x="700" y="185" fill="var(--accent2)" font-size="10" text-anchor="end"
+              font-family="ui-monospace,monospace" opacity=".85">current R@1 0.180</text>
+
+        <!-- markers at the endpoints and optimum -->
+        <circle cx="58" cy="171.4" r="3.5" fill="var(--accent)"/>
+        <circle cx="443" cy="95.0" r="4.5" fill="var(--accent)"/>
+        <circle cx="700" cy="82.7" r="3.5" fill="var(--accent)"/>
+      </svg>
+      <div class="legend">
+        <span><span class="swatch" style="background:var(--accent)"></span>MRR</span>
+        <span><span class="swatch" style="background:var(--accent2)"></span>recall@1</span>
+        <span>dotted = today's concatenated baseline · all 200 real pairs</span>
+      </div>
+    </div>
+    <p style="margin-top:.9rem">Both metrics rise monotonically as the query gains
+    weight, cross the current baseline by α≈0.2–0.3, and plateau around
+    α≈0.6–0.7. α=0 is profile-only; α=1 is query-only.</p>
+  </section>
+
+  <section>
+    <h2>All 200 real pairs · 100 positive queries · 178 candidates</h2>
+    <div class="tablewrap">
+      <table>
+        <thead><tr><th>Seeker representation</th><th>Pair AUC</th><th>Hard-neg</th><th>MRR</th><th>R@1</th><th>R@5</th><th>R@10</th></tr></thead>
+        <tbody>
+          <tr><td><code>profile_only</code></td><td class="num">0.5424</td><td class="num">0.4862</td><td class="num">0.2357</td><td class="num">0.0900</td><td class="num">0.3900</td><td class="num">0.5000</td></tr>
+          <tr class="base"><td><code>concat_baseline</code> — today</td><td class="num">0.5593</td><td class="num">0.5046</td><td class="num">0.3171</td><td class="num">0.1800</td><td class="num">0.4700</td><td class="num">0.5900</td></tr>
+          <tr><td><code>query_first</code></td><td class="num">0.5730</td><td class="num">0.5304</td><td class="num">0.3528</td><td class="num">0.2100</td><td class="num">0.5300</td><td class="num">0.6500</td></tr>
+          <tr><td><code>query_x10_front</code></td><td class="num">0.5879</td><td class="num">0.5546</td><td class="num">0.3599</td><td class="num">0.2000</td><td class="num">0.5600</td><td class="num">0.6500</td></tr>
+          <tr><td><code>alpha_0.3</code></td><td class="num">0.5785</td><td class="num">0.5404</td><td class="num">0.3884</td><td class="num">0.2400</td><td class="num">0.5700</td><td class="num">0.6800</td></tr>
+          <tr class="hero"><td><code>alpha_0.6</code></td><td class="num best">0.5872</td><td class="num">0.5818</td><td class="num">0.4649</td><td class="num">0.2500</td><td class="num">0.7500</td><td class="num">0.8900</td></tr>
+          <tr><td><code>alpha_0.7</code></td><td class="num">0.5799</td><td class="num">0.5856</td><td class="num">0.5009</td><td class="num best">0.3000</td><td class="num">0.7600</td><td class="num">0.8900</td></tr>
+          <tr><td><code>query_only</code></td><td class="num">0.5530</td><td class="num best">0.5914</td><td class="num best">0.5019</td><td class="num best">0.3000</td><td class="num best">0.7800</td><td class="num best">0.9100</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p style="margin-top:.9rem"><strong><code>alpha_0.6</code> beats today's
+    baseline on every metric on every population</strong> — all-200, train-131 and
+    holdout-69. On the holdout, recall@1 goes from <strong>8 of 29 to 17 of
+    29</strong>.</p>
+    <p><code>concat_baseline</code> reproduces frozen Voyage-4-nano's published
+    all-200 row digit-for-digit (0.5593 / 0.3171 / 0.1800 / 0.5900), so the
+    harness is doing nothing new to the baseline.</p>
+  </section>
+
+  <section>
+    <h2>Why it works</h2>
+    <p>Jaccard token overlap with the <em>true</em> candidate versus a random
+    distractor:</p>
+    <div class="tablewrap">
+      <table>
+        <thead><tr><th>Seeker text</th><th>vs target</th><th>vs distractor</th><th>Discrimination</th></tr></thead>
+        <tbody>
+          <tr><td>query only</td><td class="num">0.0314</td><td class="num">0.0244</td><td class="num best">1.29×</td></tr>
+          <tr><td>profile only</td><td class="num">0.1697</td><td class="num">0.1630</td><td class="num">1.04×</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p style="margin-top:.9rem">The profile overlaps everything about equally.
+    1.04× is almost no discrimination — it isn't neutral filler, it's noise, and
+    averaging it into the seeker vector dilutes the query's 1.29× edge. Text-level
+    tricks (front-loading, repeating) help only a little because concatenation
+    still forces one shared vector; separating the encodes is what actually
+    works.</p>
+  </section>
+
+  <section>
+    <h2>The caveat, stated first</h2>
+    <div class="callout">
+      <h3>The retrieval metric is partly circular</h3>
+      <p>“Retrieval” here means finding the candidate who was actually introduced
+      to this seeker — and those candidates were originally selected <em>by
+      Boardy production, using this same search query</em>. A query-only encoder
+      is therefore partly re-deriving production's own retrieval decision. Some
+      of that recall@10 of 0.9100 is exactly that.</p>
+      <p style="margin-top:.7rem"><strong>Two things bound it.</strong> Name
+      leakage is ruled out: only 6 of 100 queries share a rare capitalised token
+      with their target, and they are topic terms (<code>Vancouver</code>,
+      <code>SEIS</code>, <code>PayPal</code>), not identity giveaways. And the
+      accept/decline metrics are not circular at all — pair AUC and hard-negative
+      AUC score one pair directly, with no corpus and no ranking. There,
+      <code>query_only</code>'s hard-negative AUC of <strong>0.5914</strong> is
+      the best of any model measured on all 200, ahead of Qwen micro-6 (0.5608)
+      and Arm A (0.5558).</p>
+      <p style="margin-top:.7rem">Treat the retrieval numbers as an upper bound
+      and the hard-negative AUC as the clean signal. Both point the same way.</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>It's cheaper to serve, not more expensive</h2>
+    <pre>seeker_vector = normalize( α · encode(query) + (1−α) · encode(profile) )</pre>
+    <p><code>encode(profile)</code> depends only on the user's profile, so it is
+    precomputed offline and cached exactly like candidate vectors. The only online
+    work is <code>encode(query)</code> — <strong>~55 tokens instead of
+    ~2,500</strong>. That is a materially <em>faster</em> online encode than
+    today's path, plus one vector add and a normalize. No fine-tuning, no new
+    model, no new serving dependency.</p>
+  </section>
+
+  <section>
+    <h2>Caveats</h2>
+    <ul>
+      <li>One run, no replicate. The effect is far larger than the one-query
+      resolution limit (R@1 moves 12 of 100; 9 of 29 on the holdout), but the
+      exact α optimum is not resolved — 0.6 vs 0.7 is 5 queries.</li>
+      <li>Text-level arms confound “more weight” with “protected from truncation”
+      at 4096 tokens. The α arms don't, which is why they carry the conclusion.</li>
+      <li>Frozen Voyage-4-nano only — untested on the fine-tuned adapters,
+      Voyage-4-large, or the open-weight models.</li>
+      <li>The easy/hard negative split is pinned to the baseline text for every
+      arm, so arms are scored on identical populations.</li>
+      <li>The 100 positive queries come from only 78 unique seekers.</li>
+    </ul>
+  </section>
+
+  <footer>
+    Package <code>query_weighted/</code> · writeup
+    <code>docs/query-weighted-encoding-experiment.md</code> · run <code>qw_001</code><br>
+    16 arms · frozen voyage-4-nano · no training · Modal cost $0.08 · 2026-07-31
+  </footer>
+
+</div>

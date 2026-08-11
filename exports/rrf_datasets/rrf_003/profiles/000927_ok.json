@@ -1,0 +1,54 @@
+{
+  "id": 927,
+  "archetype": "Swiss MusicTech Founder, Legal Needs",
+  "given_name": "Olivia Kimura",
+  "style_version": 57,
+  "archetypes_version": 156,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Olivia Kimura is a first-time founder, originally a classically trained violinist, who pivoted to tech after realizing the limitations faced by independent musicians in managing their rights and revenue. She's building 'Sonaris,' a platform leveraging blockchain technology to offer transparent royalty distribution and smart contracts for music licensing. She's deeply technical for a founder, having completed a coding bootcamp after leaving a professional orchestra. She's based in Zurich, Switzerland, and is currently facing a critical gap in legal expertise \u2013 specifically concerning Swiss copyright law and blockchain regulations \u2013 and is willing to offer equity to secure the right advisor. She\u2019s intensely focused, a bit impatient, and values direct communication. Her background gives her deep empathy for musicians, which influences her product vision. She's self-funded so far and acutely aware of runway. She's fiercely independent but recognizes she *needs* legal help now.",
+    "positioning": "I'm the founder of Sonaris, a next-generation music rights and royalty management platform built on blockchain. We're tackling the $40 billion problem of opaque and delayed royalty payments for independent musicians. Sonaris provides artists with real-time visibility into their earnings, automated smart contracts for licensing, and a secure, transparent ledger for all transactions. \n\nOur core offering is a SaaS platform integrating directly with digital distributors (Spotify, Apple Music, etc.) and offering a suite of tools for rights registration, licensing, and royalty tracking. We're initially focused on the Swiss market, leveraging its progressive regulatory environment for blockchain, with plans for EU expansion in 2025. \n\nKey milestones include a successful beta launch with 50 independent artists generating over CHF 10,000 in tracked royalties, and securing a partnership with a leading Swiss music collective for pilot program integration. Our team is lean but highly skilled, comprising experienced developers and music industry veterans. We\u2019re currently raising a seed round, prioritizing strategic partnerships and legal counsel to accelerate growth and ensure full regulatory compliance.  We\u2019re not just building a platform; we\u2019re building a fairer, more transparent future for music creators.",
+    "background": "* **Founder & CEO, Sonaris** (Zurich, Switzerland) \u2013 2023 \u2013 Present\n    * Led all aspects of company formation, product development, and initial market entry.\n    * Secured beta partnerships with 50+ independent musicians and one major Swiss music collective.\n    * Managed and oversaw the development of the Sonaris platform utilizing React, Node.js, and Solidity.\n    * Responsible for initial seed funding and runway management.\n* **Violinist, Zurich Tonhalle Orchestra** (Zurich, Switzerland) \u2013 2018 \u2013 2022\n    * Performed as a core member of a world-renowned symphony orchestra.\n    * Collaborated with internationally acclaimed conductors and soloists.\n    * Developed strong performance skills, discipline, and attention to detail.\n* **Coding Bootcamp Graduate, Le Wagon** (Zurich, Switzerland) \u2013 2022\n    * Intensive full-stack web development training program.\n    * Built multiple web applications utilizing Ruby on Rails, JavaScript, and PostgreSQL.\n    * Gained proficiency in agile development methodologies.\n* **Master of Music, Performance (Violin)** \u2013 Conservatoire de Paris, France \u2013 2014 \u2013 2018\n    * Awarded a full scholarship based on exceptional musical talent.\n    * Studied under leading violin pedagogues.\n    * Performed extensively in solo and ensemble settings.\n* **Bachelor of Music, Performance (Violin)** \u2013 University of Music and Performing Arts Vienna, Austria \u2013 2010 \u2013 2014\n    * Dean\u2019s List all semesters.\n    * Recipient of the \u2018Outstanding Performance\u2019 award in 2013.\n* **Skills:** Solidity, React, Node.js, JavaScript, HTML, CSS, Blockchain Technology, Smart Contracts, Music Copyright Law (basic understanding), Royalty Accounting, Agile Development, Project Management, Public Speaking, Violin Performance.",
+    "lookingFor": "I'm actively seeking a legal advisor with deep expertise in Swiss copyright law *and* blockchain regulations. This isn't just about compliance; it's about structuring our smart contracts and tokenomics to be legally sound and future-proof. I'm open to offering a significant equity stake in Sonaris for the right partner \u2013 someone who believes in our vision and is willing to be a long-term contributor.\n\nSpecifically, I\u2019d like introductions to:\n* **Lawyers specializing in Swiss Digital Asset/Blockchain Law:**  Experience with NFTs and digital rights management is a huge plus.\n* **Legal professionals with a background in music copyright:**  Understanding the nuances of PROs (Performing Rights Organizations) and collective rights management is critical.\n* **Potential angel investors/firms with a focus on MusicTech and/or Blockchain:** Seed stage, $500k - $1M investment range.\n* **Experienced advisors who have successfully navigated the regulatory landscape for blockchain-based platforms in Europe.**\n\nI\u2019m also open to connecting with other founders in the Swiss MusicTech space to share learnings and build a stronger ecosystem.  I'm particularly interested in discussing strategies for navigating the complex legal environment and securing funding.",
+    "notes": "Olivia is incredibly passionate and driven, but also under immense pressure to get Sonaris legally compliant ASAP. She\u2019s self-funded and very conscious of burn rate. She\u2019s a bit impatient and prefers direct communication \u2013 no fluff. She\u2019s been interviewing lawyers but hasn\u2019t found the right fit yet.  She mentioned a frustrating experience with a firm that didn't understand the technical aspects of blockchain. \n\n* **Sensitivity:** Be mindful of her limited resources.  Don't suggest expensive firms without first discussing potential equity arrangements.\n* **Recent Update:** She\u2019s currently reviewing a term sheet from a small Swiss VC, but legal due diligence is a major hurdle.\n* **Equity Discussion:** She's prepared to offer between 5-10% equity for the right legal counsel.",
+    "locationAvailability": "I am primarily based in Zurich, Switzerland, but am comfortable with remote collaboration. I can travel within Switzerland and to neighboring EU countries as needed.",
+    "introPreferences": "When making introductions, please emphasize the following:\n* **Sonaris\u2019s unique value proposition:** Transparent royalty distribution and smart contracts for musicians.\n* **My technical background:** I\u2019m not a typical founder \u2013 I understand the technology deeply.\n* **The urgency of our legal needs:** We need someone who can hit the ground running and provide practical advice.\n\n**Hard Requirements:**\n* Proven expertise in Swiss copyright law *and* blockchain regulations.\n* Willingness to consider equity as part of the compensation.\n\n**Soft Preferences:**\n* Experience working with startups.\n* A genuine interest in the music industry.\n* A proactive and collaborative approach.\n\n**Intro Style:** I prefer direct emails with a concise overview of the contact's experience and how they might be able to help Sonaris. Please avoid lengthy introductions or unnecessary formalities.",
+    "personalPreferences": "I prefer email communication initially. I check Slack regularly but respond to email more consistently. I\u2019m most responsive during European business hours.",
+    "meetingAndSchedulingPreferences": "I generally prefer short, focused video calls (30-45 minutes). I\u2019m available most weekdays, but please schedule in advance via Calendly (link available upon request). I'm flexible but need at least 24 hours notice for scheduling changes."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 28.80470299720764,
+      "input_tokens": 869,
+      "output_tokens": 1619,
+      "problems": []
+    }
+  ],
+  "success": true
+}

@@ -1,0 +1,54 @@
+{
+  "id": 485,
+  "archetype": "Texas-Based, Multi-Vertical Builder",
+  "given_name": "Rosa Johansson",
+  "style_version": 30,
+  "archetypes_version": 81,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Rosa Johansson is a serial entrepreneur based in Austin, Texas. She\u2019s built and successfully exited businesses in both the real estate tech and sustainable agriculture spaces. Her distinctive detail is a strong focus on bridging the gap between physical asset development and cutting-edge technology. Currently, she\u2019s exploring opportunities in the energy sector, specifically around microgrids and distributed energy resources, believing these are key to resilient and sustainable infrastructure. She's looking for co-founders and strategic investors who share her vision of building companies that positively impact both profitability *and* the planet. She\u2019s very direct, values efficiency, and is comfortable taking calculated risks. She\u2019s less interested in purely financial plays and more focused on projects with a tangible, positive impact.",
+    "positioning": "I\u2019m a Texas-based entrepreneur with a passion for building companies that solve real-world problems. My background is rooted in leveraging technology to optimize physical assets, and I\u2019ve successfully navigated diverse industries \u2013 from streamlining property management with innovative tech solutions to pioneering sustainable farming practices. I recently exited my real estate tech venture, Farmstead Properties, after scaling it to manage over $500M in assets. Now, I\u2019m deeply focused on the future of energy and the critical role of distributed energy resources in creating a more resilient and sustainable infrastructure. I\u2019m actively seeking collaborators and investors who share this vision and are eager to build the next generation of energy solutions. I believe the intersection of technology and infrastructure presents an unparalleled opportunity for innovation and impact.",
+    "background": "- **Founder & CEO, Farmstead Properties (2018 \u2013 2023):** Led the development and scaling of a property management platform specializing in sustainable and eco-friendly housing. Oversaw acquisition of 50+ properties, achieving a 20% YoY growth rate in AUM. Successfully exited to a private equity firm in Q4 2023.\n- **Founder & CEO, Verdant Harvest (2015 \u2013 2018):** Pioneered a vertical farming operation utilizing AI-powered climate control and automated harvesting. Secured $1.5M in seed funding and established partnerships with local grocery chains. Reduced water consumption by 90% compared to traditional farming methods.\n- **Management Consultant, Bain & Company (2012 \u2013 2015):** Advised Fortune 500 clients on strategy and operations, specializing in the energy and real estate sectors. Led projects resulting in $20M+ in cost savings.\n- **Education:** MBA, Harvard Business School (2010 \u2013 2012); BS, Mechanical Engineering, Massachusetts Institute of Technology (2006 \u2013 2010)\n- **Skills:** Strategic Planning, Venture Capital, Financial Modeling, Real Estate Development, Sustainable Agriculture, Distributed Energy Resources, Microgrids, AI/ML Applications, Team Leadership, Fundraising, Exit Strategy, P&L Management, Go-to-Market Strategy.\n- **Certifications:** LEED AP (Leadership in Energy and Environmental Design Accredited Professional)",
+    "lookingFor": "I'm currently exploring opportunities in the distributed energy resources (DER) space, specifically focusing on microgrids and energy storage solutions. I\u2019m seeking:\n\n*   **Co-founders:** Technical leaders with deep expertise in energy engineering, grid management, and software development. Someone who can hit the ground running and isn\u2019t afraid to challenge assumptions.\n*   **Seed/Series A Investors:** Funds with a proven track record of supporting early-stage climate tech companies. I\u2019m looking for partners who are aligned with my vision of building a sustainable and impactful business.\n*   **Strategic Partnerships:** Connections to utilities, energy retailers, and technology providers who are interested in collaborating on innovative DER projects.\n*   **Introduce me to** individuals building cutting-edge hardware or software solutions for microgrid control, energy optimization, and grid resilience.\n*   **I\u2019m particularly interested in** companies that are developing solutions for underserved communities or addressing energy access challenges.",
+    "notes": "Rosa is incredibly direct and efficient in her communication. She doesn\u2019t waste time with small talk and appreciates concise, data-driven pitches. She\u2019s been fielding a lot of inbound requests since the Farmstead Properties exit, so prioritize introductions that are highly relevant to her current focus on DERs. She's been very clear she's *not* interested in purely financial investments without a strong impact component. She recently mentioned a particular interest in projects that leverage blockchain for energy trading. Avoid pitching her anything related to traditional real estate investment unless it has a clear sustainability angle. She\u2019s currently attending the RE+ conference in September and is open to meeting there. Last conversation (8/15) focused on the challenges of integrating DERs into existing grid infrastructure.",
+    "locationAvailability": "Rosa is based in Austin, Texas and is open to remote collaboration. She is willing to travel for key meetings and conferences, but prefers to minimize unnecessary travel.",
+    "introPreferences": "*   **Hard Requirement:** Any introduction *must* clearly articulate how the connection aligns with Rosa\u2019s focus on distributed energy resources, microgrids, or energy storage.\n*   **Soft Preference:** Prioritize introductions to individuals who are actively building and deploying technologies, rather than consultants or advisors.\n*   **Include in Introduction:** A brief summary of the connection\u2019s expertise, relevant experience, and a specific reason why they would be a valuable contact for Rosa.\n*   **Do not:** Introduce Rosa to anyone seeking funding for projects unrelated to energy or sustainability. Avoid lengthy, generic emails. Keep it concise and focused.\n*   **Preferred Connection Type:** Warm introductions via email are preferred. LinkedIn requests without a personalized message will likely be ignored.",
+    "personalPreferences": "Rosa prefers direct communication and values transparency. She responds best to concise emails and is generally available for calls during business hours (Central Time).",
+    "meetingAndSchedulingPreferences": "Rosa is available for meetings remotely via Zoom or Google Meet. Please send a calendar invite with proposed times, and she will respond promptly. She is in the Central Time Zone (CT)."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 25.700819969177246,
+      "input_tokens": 820,
+      "output_tokens": 1294,
+      "problems": []
+    }
+  ],
+  "success": true
+}

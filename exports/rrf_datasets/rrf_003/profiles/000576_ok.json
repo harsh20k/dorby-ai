@@ -1,0 +1,54 @@
+{
+  "id": 576,
+  "archetype": "AI Founder, Early Stage, Toronto-US",
+  "given_name": "Javier Yamamoto",
+  "style_version": 35,
+  "archetypes_version": 96,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Javier Yamamoto is a 34-year-old, first-time founder currently bootstrapping an AI-powered predictive maintenance platform for industrial robotics, called 'Synapse Robotics'. He has a strong background in mechatronics and machine learning, honed during a PhD at the University of Toronto. A distinctive detail is that he spent two years *embedded* with a major automotive manufacturer (Stellantis, Windsor plant) during his PhD, directly observing and analyzing robotic failure patterns \u2013 this forms the core IP of Synapse Robotics. He\u2019s now based in Boston, actively raising a seed round and seeking early adopter pilot customers, particularly in the automotive and aerospace industries. He\u2019s very focused on demonstrating ROI quickly and prefers a data-driven, pragmatic approach. He\u2019s comfortable with technical deep-dives but also needs to articulate the business value clearly to investors. He\u2019s a bit introverted, preferring direct, concise communication, and values authentic connections over superficial networking. He\u2019s aiming to position himself as a technical leader with practical, real-world experience in applying AI to industrial challenges.",
+    "positioning": "I\u2019m Javier Yamamoto, founder of Synapse Robotics, an early-stage company revolutionizing predictive maintenance for industrial robotics through cutting-edge AI. My background is deeply rooted in both the theoretical foundations of machine learning and the practical realities of industrial automation. Having completed my PhD at the University of Toronto, my research focused on applying deep learning techniques to predict and prevent failures in complex robotic systems. Crucially, this wasn\u2019t purely academic; I spent two years embedded within a Stellantis manufacturing facility, directly observing and analyzing robotic performance in a high-volume production environment. This experience provided invaluable insights into the specific challenges faced by manufacturers and informed the development of Synapse Robotics\u2019 core technology. \n\nSynapse Robotics offers a cloud-based platform that leverages sensor data and advanced algorithms to identify anomalies and predict potential equipment failures *before* they occur. This minimizes downtime, reduces maintenance costs, and maximizes operational efficiency. We\u2019re currently focused on the automotive and aerospace sectors, where the stakes are high and the potential ROI is substantial. I\u2019m actively seeking strategic partnerships with companies looking to implement Industry 4.0 solutions and investors who understand the transformative power of AI in manufacturing.\n\nI aim to be seen as a thought leader in the field of AI-powered industrial maintenance \u2013 a technical founder who isn\u2019t afraid to get his hands dirty and understands the critical link between research and real-world application. I welcome introductions to VPs of Operations, Heads of Maintenance, and investors specializing in industrial technology and AI. I\u2019m particularly interested in connecting with individuals who have a strong understanding of the challenges facing advanced manufacturing and a willingness to embrace innovative solutions.",
+    "background": "* **Founder & CEO, Synapse Robotics** (Boston, MA) \u2013 January 2023 \u2013 Present\n    * Led all aspects of company formation, including business plan development, fundraising strategy, and product development.\n    * Developed and implemented the core AI algorithms for predictive maintenance, leveraging TensorFlow and PyTorch.\n    * Secured initial seed funding commitments totaling $250,000.\n    * Built and deployed a minimum viable product (MVP) currently undergoing pilot testing with two automotive suppliers.\n    * Managed a remote team of three machine learning engineers and a front-end developer.\n    * Skills: Python, TensorFlow, PyTorch, Cloud Computing (AWS, Azure), Data Analysis, Machine Learning, Deep Learning, Robotics, Predictive Maintenance, Business Development, Fundraising.\n\n* **PhD Candidate, Mechanical Engineering, University of Toronto** (Toronto, ON) \u2013 September 2018 \u2013 December 2022\n    * Dissertation: \u201cReal-time Anomaly Detection in Industrial Robotic Systems using Deep Learning.\u201d\n    * Conducted extensive research in machine learning, specifically focusing on time-series analysis and anomaly detection.\n    * Published three peer-reviewed papers in leading robotics and AI conferences (ICRA, IROS, NeurIPS).\n    * **Embedded Research Engineer, Stellantis (Windsor Assembly Plant)** \u2013 2020-2022 (Two-year full-time embedded position)\n        * Collaborated directly with manufacturing engineers to identify and analyze robotic failure patterns.\n        * Collected and processed large datasets of sensor data from industrial robots.\n        * Developed and validated machine learning models for predicting robotic failures, resulting in a 15% reduction in unplanned downtime during the pilot phase.\n        * Tools: ROS (Robot Operating System), MATLAB, Simulink, Python, SQL, Data Visualization tools.\n\n* **Research Assistant, University of Toronto Robotics Lab** \u2013 September 2016 \u2013 August 2018\n    * Assisted with the development and testing of novel robotic algorithms.\n    * Contributed to the design and construction of robotic prototypes.\n    * Managed laboratory resources and maintained equipment.\n\n* **B.Eng, Mechatronics Engineering, McMaster University** (Hamilton, ON) \u2013 September 2012 \u2013 April 2016\n    * Graduated with Honours.",
+    "lookingFor": "I\u2019m actively seeking connections who can help accelerate Synapse Robotics\u2019 growth. Specifically, I\u2019m looking for:\n\n* **Seed Investors:** Angels and VCs specializing in industrial technology, AI, and robotics. I\u2019m targeting a $1.5M seed round to scale our engineering team and expand our pilot program.\n* **Pilot Customers:** Automotive and aerospace manufacturers interested in implementing predictive maintenance solutions. I\u2019m particularly interested in companies with a large fleet of industrial robots and a commitment to continuous improvement.\n* **Industry Advisors:** Experienced professionals in the manufacturing and robotics industries who can provide guidance on product development, go-to-market strategy, and customer acquisition.\n* **Connections to Automotive/Aerospace OEM\u2019s:** Introductions to decision-makers within major automotive and aerospace companies (e.g., Ford, Boeing, Airbus).\n\nIdeal contacts are those who:\n* Have a deep understanding of the challenges facing the manufacturing industry.\n* Are open to exploring innovative solutions based on AI and machine learning.\n* Can provide valuable feedback on our product and business model.\n* Are willing to champion our solution within their organizations.\n\nI\u2019m also open to discussing potential partnerships with companies that offer complementary technologies or services. I\u2019m *not* currently seeking general mentorship or career advice.",
+    "notes": "* Recent conversation with Sarah Chen (Accel) \u2013 positive initial feedback on the technology, but concerned about market size. Need to refine messaging around total addressable market.\n* Following up with John Davis (GM) regarding a potential introduction to their Head of Advanced Manufacturing.\n* Prioritize reaching out to contacts at Tesla \u2013 they are a key target customer.\n* Currently experimenting with different LinkedIn ad campaigns to generate leads. Tracking conversion rates closely.\n* Need to update investor deck with latest pilot program results.\n* Considering attending Automate 2024 in Chicago \u2013 potential networking opportunity.",
+    "locationAvailability": "I am currently based in Boston, Massachusetts, but frequently travel for business. I am open to remote meetings and occasional in-person visits to key locations, including the Detroit area and Toronto.",
+    "introPreferences": "* **Keep it concise:** Please avoid lengthy introductions. A brief overview of my background and Synapse Robotics is sufficient.\n* **Focus on the value proposition:** Highlight the potential benefits of our technology for the recipient\u2019s organization.\n* **Be specific:** If you know the recipient is facing challenges related to robotic maintenance, mention that specifically.\n* **Avoid overly enthusiastic language:** I prefer a professional and data-driven tone.\n* **Do *not* offer to connect me with potential investors without first discussing it with me.** I have a specific fundraising strategy and prefer to control the narrative.\n* **Preferred method of introduction:** A short, personalized LinkedIn message followed by an email is ideal.\n* **Please avoid cold outreach on my behalf.**",
+    "personalPreferences": "I generally respond to LinkedIn messages within 24-48 hours. Email is also fine. I prefer direct, to-the-point communication and appreciate it when people respect my time. I\u2019m not a big fan of phone calls unless they\u2019re scheduled in advance.",
+    "meetingAndSchedulingPreferences": "Please send a calendar invite with a brief agenda prior to scheduling a meeting. I prefer meetings to be focused and productive, with clear objectives. I often review materials beforehand, so please share any relevant documents in advance."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 29.89139413833618,
+      "input_tokens": 869,
+      "output_tokens": 1804,
+      "problems": []
+    }
+  ],
+  "success": true
+}

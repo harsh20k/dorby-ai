@@ -1,0 +1,54 @@
+{
+  "id": 34,
+  "archetype": "Hospitality Veteran, Tech-Enabled Innovation",
+  "given_name": "Felix Volkov",
+  "style_version": 3,
+  "archetypes_version": 6,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Felix Volkov is a seasoned hospitality executive who made a deliberate pivot into hospitality technology. He spent 15+ years running high-end boutique hotels, culminating in being GM of a flagship property. He became deeply frustrated with the inefficiencies and lack of personalization afforded by legacy hotel systems. This led him to learn to code and eventually co-found 'Aura Hospitality,' a startup building AI-powered revenue management and guest experience platforms specifically for independent hotels. He's now focused on scaling Aura and securing Series A funding. He's a bit of a 'hands-on' founder, still very detail-oriented and focused on the operational impact of the tech he's building. He's looking for investors with hospitality experience and advisors who can help navigate the complexities of the hotel tech landscape. He\u2019s also cautiously starting to build out his leadership team, prioritizing engineers with a strong understanding of customer needs.",
+    "positioning": "Felix Volkov is the Co-founder and CEO of Aura Hospitality, an AI-driven platform transforming revenue management and guest experience for independent hotels. Having spent over fifteen years in luxury hospitality operations, including serving as General Manager of The Beaumont in London, I identified a critical gap in the market: a lack of sophisticated, yet accessible, technology for boutique properties. Aura Hospitality addresses this by providing a unified platform that leverages machine learning to optimize pricing, personalize guest interactions, and streamline operational workflows. We've achieved significant traction with a cohort of early adopter hotels, demonstrating a 15% average increase in RevPAR and a 20% improvement in guest satisfaction scores. My focus is now on scaling our operations, expanding our product suite, and securing Series A funding to accelerate our growth and empower more independent hotels to thrive in a competitive landscape. I believe technology should *enhance*, not replace, the human touch in hospitality.",
+    "background": "* **Aura Hospitality (2021 \u2013 Present):** Co-founder & CEO. Led seed round of $2M. Responsible for product vision, fundraising, strategic partnerships, and overall company growth. Currently managing a team of 12 engineers, data scientists, and hospitality specialists.\n* **The Beaumont (2017 \u2013 2021):** General Manager. Oversaw all aspects of hotel operations, consistently exceeding revenue and guest satisfaction targets. Implemented new service standards resulting in a 10% increase in repeat guest bookings. Managed a team of 150+ employees.\n* **The Savoy (2013 \u2013 2017):** Hotel Manager. Managed multiple departments including Front Office, Housekeeping, and Concierge. Spearheaded a successful initiative to improve guest check-in/check-out efficiency, reducing wait times by 25%.\n* **Claridge's Hotel (2008 \u2013 2013):** Assistant Manager, Food & Beverage. Gained extensive experience in high-volume, luxury dining operations. Managed budgets, supervised staff, and ensured exceptional service standards.\n* **Education:** MSc in Hospitality Management, \u00c9cole h\u00f4teli\u00e8re de Lausanne (2008). BA (Hons) in Business Administration, University of Warwick (2006).\n* **Skills:** Revenue Management, Hotel Operations, Guest Experience, Team Leadership, P&L Management, Strategic Planning, Fundraising, Python, SQL, Data Analysis, Machine Learning (basic understanding), CRM Software (Salesforce, Hubspot), PMS Systems (Opera, Cloudbeds).",
+    "lookingFor": "Aura Hospitality is currently preparing for a Series A funding round and I'm actively seeking connections with venture capital firms specializing in hospitality tech and SaaS. I\u2019m prioritizing investors with a demonstrated track record of supporting early-stage companies and a genuine understanding of the challenges and opportunities within the independent hotel sector.\n\nI\u2019m also looking to expand my advisory board with experienced operators and technologists who can provide guidance on product development, scaling operations, and navigating the complexities of the hotel technology landscape. Specifically, I'm interested in:\n\n* **Experienced Hotel General Managers:** Individuals who can offer insights into the day-to-day operational needs of independent hotels.\n* **SaaS Growth Experts:** Professionals with a proven ability to scale early-stage SaaS companies.\n* **AI/ML Engineers:** Senior engineers with experience building and deploying machine learning models in a commercial setting. \n\nI am open to discussing potential partnerships with hotel management companies and technology providers that align with our vision.",
+    "notes": "* Felix is *very* focused on the operational benefits of Aura. He doesn\u2019t get overly excited about \u2018shiny objects\u2019 \u2013 he wants to see tangible ROI.\n* He\u2019s still very hands-on with the product and occasionally jumps into code. \n* He\u2019s building a strong company culture focused on empathy and customer-centricity.\n* Recently closed a pilot program with a small hotel group in Miami \u2013 results were very positive. Follow up on this.\n* He's a bit wary of overly aggressive sales tactics. Prefers a consultative approach.",
+    "locationAvailability": "I am based in London, UK, but am frequently traveling to the US for business. I am comfortable with remote meetings and can accommodate various time zones.",
+    "introPreferences": "* **Hard Requirements:** Introductions to VCs with a demonstrated history of investing in hospitality tech (Series A stage preferred).\n* **Soft Preferences:**  Individuals with a strong network within the independent hotel sector. Advisors with experience scaling SaaS businesses. Engineers with a passion for solving real-world problems.\n* **Framing for Introductions:** 'Felix is a former hotel GM who built a truly innovative AI platform for independent hotels. He\u2019s solving a big pain point and is seeing fantastic results with early adopters.'  Avoid highlighting the coding aspect unless the recipient is technically inclined.\n* **Avoid:** Introductions to firms focused solely on consumer-facing travel apps.  Generalist investors without hospitality experience.",
+    "personalPreferences": "I prefer to communicate via email initially, then happy to hop on a call.",
+    "meetingAndSchedulingPreferences": "Generally available for calls in the afternoons (GMT)."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 21.41619086265564,
+      "input_tokens": 799,
+      "output_tokens": 1286,
+      "problems": []
+    }
+  ],
+  "success": true
+}

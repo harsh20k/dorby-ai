@@ -1,0 +1,762 @@
+<title>Query-Weighted Topology — Frozen vs Fine-Tuned</title>
+<meta name="description" content="3D embedding topology of the 200 real Boardy pairs: profile-only vs query-mediated seeker&#8594;candidate connections, frozen encoder vs fine-tuned top1_ctrl adapter.">
+<style>
+  :root {
+    --bg: #0b0e14;
+    --panel: #12161fcc;
+    --panel-solid: #12161f;
+    --border: #232838;
+    --text: #e6e9f0;
+    --text-dim: #8b93a7;
+    --text-faint: #545c72;
+    --seeker: #6d7fff;
+    --query: #ffb020;
+    --candidate: #22d3ee;
+    --pos: #34d399;
+    --neg: #fb7185;
+    --accent: #6d7fff;
+    --radius: 10px;
+  }
+  :root[data-theme="light"] {
+    --bg: #f4f5f9;
+    --panel: #ffffffdd;
+    --panel-solid: #ffffff;
+    --border: #d8dbe6;
+    --text: #1a1d29;
+    --text-dim: #565e75;
+    --text-faint: #9199ad;
+    --seeker: #3b4fdb;
+    --query: #b8790a;
+    --candidate: #0891a8;
+    --pos: #158a5f;
+    --neg: #c22850;
+  }
+  @media (prefers-color-scheme: light) {
+    :root:not([data-theme="dark"]) {
+      --bg: #f4f5f9;
+      --panel: #ffffffdd;
+      --panel-solid: #ffffff;
+      --border: #d8dbe6;
+      --text: #1a1d29;
+      --text-dim: #565e75;
+      --text-faint: #9199ad;
+      --seeker: #3b4fdb;
+      --query: #b8790a;
+      --candidate: #0891a8;
+      --pos: #158a5f;
+      --neg: #c22850;
+    }
+  }
+  * { box-sizing: border-box; }
+  html, body {
+    margin: 0; padding: 0; width: 100%; height: 100%; overflow: hidden;
+    background: var(--bg); color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, Helvetica, Arial, sans-serif;
+  }
+  .mono { font-family: "SF Mono", ui-monospace, "Cascadia Code", Menlo, Consolas, monospace; }
+  #stage {
+    position: fixed; inset: 0; touch-action: none; cursor: grab;
+    background:
+      radial-gradient(ellipse 80% 60% at 50% 42%, color-mix(in srgb, var(--seeker) 7%, transparent), transparent 70%),
+      var(--bg);
+  }
+  #stage.dragging { cursor: grabbing; }
+  #stage.hoverable { cursor: pointer; }
+
+  .panel {
+    position: fixed;
+    background: var(--panel);
+    backdrop-filter: blur(10px);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 14px 16px;
+    z-index: 10;
+  }
+  #header {
+    top: 16px; left: 16px; max-width: 340px;
+  }
+  #header h1 {
+    margin: 0 0 4px; font-size: 15px; font-weight: 650; letter-spacing: -0.01em;
+  }
+  #header p {
+    margin: 0; font-size: 12px; line-height: 1.5; color: var(--text-dim);
+  }
+  #controls {
+    top: 16px; right: 16px; width: 236px;
+  }
+  .ctrl-group { margin-bottom: 12px; }
+  .ctrl-group:last-child { margin-bottom: 0; }
+  .ctrl-label {
+    font-size: 10px; text-transform: uppercase; letter-spacing: 0.06em;
+    color: var(--text-faint); margin-bottom: 6px; font-weight: 600;
+  }
+  .seg {
+    display: flex; border: 1px solid var(--border); border-radius: 7px; overflow: hidden;
+  }
+  .seg button {
+    flex: 1; background: transparent; border: none; color: var(--text-dim);
+    font-size: 11.5px; padding: 7px 6px; cursor: pointer; font-family: inherit;
+    border-right: 1px solid var(--border); transition: background 0.15s, color 0.15s;
+  }
+  .seg button:last-child { border-right: none; }
+  .seg button.active { background: var(--accent); color: #0b0e14; font-weight: 600; }
+  .seg button:hover:not(.active) { background: var(--border); color: var(--text); }
+
+  #search-input {
+    width: 100%; background: var(--bg); border: 1px solid var(--border);
+    border-radius: 7px; color: var(--text); font-size: 12px; padding: 7px 9px;
+    font-family: inherit; outline: none;
+  }
+  #search-input:focus { border-color: var(--accent); }
+  #search-input::placeholder { color: var(--text-faint); }
+
+  .slider-row {
+    display: flex; align-items: center; gap: 8px;
+  }
+  .slider-row input[type=range] {
+    flex: 1; accent-color: var(--accent); height: 4px;
+  }
+  .slider-row .slider-val {
+    font-size: 11px; color: var(--text); min-width: 46px; text-align: right;
+  }
+  .toggle-row {
+    display: flex; align-items: center; justify-content: space-between;
+    font-size: 11.5px; color: var(--text-dim); cursor: pointer; user-select: none;
+  }
+  .toggle-row input[type=checkbox] { accent-color: var(--accent); width: 15px; height: 15px; cursor: pointer; }
+
+  #legend {
+    bottom: 16px; left: 16px; width: 220px;
+  }
+  .legend-row {
+    display: flex; align-items: center; gap: 8px; font-size: 11.5px;
+    color: var(--text-dim); margin-bottom: 6px;
+  }
+  .legend-row:last-child { margin-bottom: 0; }
+  .swatch { width: 10px; height: 10px; flex-shrink: 0; }
+  .swatch.circle { border-radius: 50%; }
+  .swatch.diamond { transform: rotate(45deg); width: 8px; height: 8px; }
+  .line-swatch { width: 16px; height: 2px; flex-shrink: 0; }
+
+  #stats {
+    bottom: 16px; right: 16px; width: 220px;
+  }
+  #stats .row {
+    display: flex; justify-content: space-between; font-size: 11.5px;
+    padding: 3px 0; color: var(--text-dim);
+  }
+  #stats .row b { color: var(--text); font-weight: 600; }
+  #stats .caveat {
+    margin-top: 8px; padding-top: 8px; border-top: 1px solid var(--border);
+    font-size: 10.5px; line-height: 1.5; color: var(--text-faint);
+  }
+
+  #tooltip {
+    position: fixed; pointer-events: none; z-index: 20;
+    background: var(--panel-solid); border: 1px solid var(--border);
+    border-radius: 8px; padding: 9px 11px; font-size: 11.5px;
+    display: none; max-width: 260px; line-height: 1.45;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.35);
+  }
+  #tooltip .t-head {
+    display: flex; align-items: center; gap: 6px; margin-bottom: 5px;
+  }
+  #tooltip .t-dot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }
+  #tooltip .t-type {
+    font-size: 10px; text-transform: uppercase; letter-spacing: 0.05em;
+    font-weight: 700; color: var(--text);
+  }
+  #tooltip .t-id { color: var(--text-faint); font-size: 10px; margin-bottom: 4px; }
+  #tooltip .t-body { color: var(--text-dim); }
+
+  #detail {
+    position: fixed; top: 0; right: 0; bottom: 0; width: 380px;
+    background: var(--panel-solid); border-left: 1px solid var(--border);
+    z-index: 40; padding: 20px 20px 24px; overflow-y: auto;
+    transform: translateX(100%); transition: transform 0.22s ease;
+  }
+  #detail.open { transform: translateX(0); }
+  #detail-close {
+    position: absolute; top: 16px; right: 16px; width: 26px; height: 26px;
+    border-radius: 50%; border: 1px solid var(--border); background: transparent;
+    color: var(--text-dim); font-size: 14px; cursor: pointer; line-height: 1;
+  }
+  #detail-close:hover { background: var(--border); color: var(--text); }
+  #detail .d-head { display: flex; align-items: center; gap: 8px; margin: 4px 32px 2px 0; }
+  #detail .d-dot { width: 11px; height: 11px; border-radius: 50%; flex-shrink: 0; }
+  #detail .d-type {
+    font-size: 11px; text-transform: uppercase; letter-spacing: 0.06em; font-weight: 700;
+  }
+  #detail .d-id { font-size: 10.5px; color: var(--text-faint); margin-bottom: 16px; word-break: break-all; }
+  #detail .d-section-label {
+    font-size: 10px; text-transform: uppercase; letter-spacing: 0.06em; font-weight: 700;
+    color: var(--text-faint); margin: 18px 0 8px;
+  }
+  #detail .d-text {
+    font-size: 12px; line-height: 1.65; color: var(--text-dim);
+    white-space: pre-wrap; word-break: break-word;
+  }
+  #detail .d-query-box {
+    font-size: 12px; line-height: 1.6; color: var(--text);
+    background: color-mix(in srgb, var(--query) 12%, transparent);
+    border: 1px solid color-mix(in srgb, var(--query) 35%, transparent);
+    border-radius: 8px; padding: 8px 10px;
+  }
+  .conn-row {
+    display: flex; align-items: flex-start; gap: 8px; padding: 9px 8px;
+    border-radius: 7px; cursor: pointer; margin-bottom: 4px;
+  }
+  .conn-row:hover { background: var(--border); }
+  .conn-row .c-dot { width: 8px; height: 8px; border-radius: 2px; margin-top: 4px; flex-shrink: 0; }
+  .conn-row .c-main { flex: 1; min-width: 0; }
+  .conn-row .c-label {
+    font-size: 9.5px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em;
+    padding: 1px 6px; border-radius: 4px; display: inline-block; margin-bottom: 3px;
+  }
+  .conn-row .c-label.pos { background: color-mix(in srgb, var(--pos) 20%, transparent); color: var(--pos); }
+  .conn-row .c-label.neg { background: color-mix(in srgb, var(--neg) 20%, transparent); color: var(--neg); }
+  .conn-row .c-excerpt { font-size: 11px; color: var(--text-dim); line-height: 1.4; }
+  .conn-row .c-query { font-size: 10.5px; color: var(--text-faint); margin-top: 3px; font-style: italic; }
+
+  @media (max-width: 720px) {
+    #controls { width: 180px; }
+    #legend, #stats { width: 170px; }
+    #header { max-width: 240px; }
+    #detail { width: 100%; }
+  }
+</style>
+
+<canvas id="stage"></canvas>
+
+<div id="header" class="panel">
+  <h1>Query-Weighted Topology</h1>
+  <p>200 real Boardy pairs, PCA'd to 3D. Seeker and candidate profiles connect either
+  directly, or through the search query that mediated the match — drag to rotate,
+  scroll to zoom.</p>
+</div>
+
+<div id="controls" class="panel">
+  <div class="ctrl-group">
+    <div class="ctrl-label">Model</div>
+    <div class="seg" id="seg-model">
+      <button data-val="frozen" class="active">Frozen nano</button>
+      <button data-val="top1_ctrl">Fine-tuned</button>
+    </div>
+  </div>
+  <div class="ctrl-group">
+    <div class="ctrl-label">Projection</div>
+    <div class="seg" id="seg-proj">
+      <button data-val="pca" class="active">PCA (3D)</button>
+      <button data-val="raw3">Raw dims 1-3</button>
+    </div>
+  </div>
+  <div class="ctrl-group">
+    <div class="ctrl-label">Connection</div>
+    <div class="seg" id="seg-mode">
+      <button data-val="direct" class="active">Direct</button>
+      <button data-val="query">Via query</button>
+    </div>
+  </div>
+  <div class="ctrl-group">
+    <div class="ctrl-label">Pairs shown</div>
+    <div class="seg" id="seg-labels">
+      <button data-val="both" class="active">Both</button>
+      <button data-val="pos">Accepted</button>
+      <button data-val="neg">Declined</button>
+    </div>
+  </div>
+  <div class="ctrl-group">
+    <div class="ctrl-label">Search profiles</div>
+    <input id="search-input" class="mono" type="text" placeholder="e.g. fundraise, NYC…" autocomplete="off">
+  </div>
+  <div class="ctrl-group">
+    <div class="ctrl-label">Seekers shown (random sample)</div>
+    <div class="slider-row">
+      <input id="sample-slider" type="range" min="1" step="1">
+      <span class="slider-val mono" id="sample-val">—</span>
+    </div>
+  </div>
+  <div class="ctrl-group">
+    <label class="toggle-row">
+      Hide all edges
+      <input type="checkbox" id="hide-edges-toggle">
+    </label>
+  </div>
+</div>
+
+<div id="legend" class="panel">
+  <div class="legend-row"><span class="swatch circle" style="background:var(--seeker)"></span>Seeker profile</div>
+  <div class="legend-row"><span class="swatch diamond" style="background:var(--query)"></span>Search query</div>
+  <div class="legend-row" style="margin-bottom:10px"><span class="swatch" style="background:var(--candidate)"></span>Candidate profile</div>
+  <div class="legend-row"><span class="line-swatch" style="background:var(--pos)"></span>Accepted intro</div>
+  <div class="legend-row"><span class="line-swatch" style="background:var(--neg)"></span>Declined intro</div>
+</div>
+
+<div id="stats" class="panel">
+  <div class="row"><span>Model</span><b id="stat-model" class="mono">frozen</b></div>
+  <div class="row"><span>Nodes</span><b id="stat-nodes" class="mono">—</b></div>
+  <div class="row"><span>Edges</span><b id="stat-edges" class="mono">—</b></div>
+  <div class="row"><span id="stat-var-label">3-PC variance</span><b id="stat-var" class="mono">—</b></div>
+  <div class="caveat" id="stat-caveat">PCA to 3D keeps only ~13&#8211;16% of embedding variance &#8212; positions
+  show coarse structure, not exact distances. Query nodes exist only in "via query" mode.</div>
+</div>
+
+<div id="tooltip"></div>
+
+<div id="detail">
+  <button id="detail-close" aria-label="Close">✕</button>
+  <div id="detail-body"></div>
+</div>
+
+<script>
+const DATA = __GRAPH_DATA__;
+
+const canvas = document.getElementById('stage');
+const ctx = canvas.getContext('2d');
+let W, H, DPR;
+function resize() {
+  DPR = Math.min(window.devicePixelRatio || 1, 2);
+  W = window.innerWidth; H = window.innerHeight;
+  canvas.width = W * DPR; canvas.height = H * DPR;
+  canvas.style.width = W + 'px'; canvas.style.height = H + 'px';
+  ctx.setTransform(DPR, 0, 0, DPR, 0, 0);
+}
+window.addEventListener('resize', resize);
+resize();
+
+// ---- state ----
+let state = {
+  model: 'frozen', mode: 'direct', labelFilter: 'both', proj: 'pca',
+  search: '', sampleN: DATA.seeker_ids.length, hideEdges: false,
+};
+let yaw = 0.5, pitch = -0.3, zoom = 1.0;
+let autoRotate = true;
+
+// ---- one-time lookups (id -> array index, id -> text, id -> connections) ----
+const seekerIdx = {}; DATA.seeker_ids.forEach((id, i) => seekerIdx[id] = i);
+const candIdx = {}; DATA.candidate_ids.forEach((id, i) => candIdx[id] = i);
+
+// stable shuffle of seeker ids, computed once — the sample slider always
+// takes a prefix of this list, so the same N seekers stay selected across
+// every model/mode/projection toggle within this page load.
+const shuffledSeekerIds = (() => {
+  const arr = DATA.seeker_ids.slice();
+  for (let i = arr.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [arr[i], arr[j]] = [arr[j], arr[i]];
+  }
+  return arr;
+})();
+
+// pair records per seeker / per candidate, for the click-detail sidebar
+const pairsBySeeker = {}, pairsByCandidate = {};
+DATA.pair_ids.forEach((pid, i) => {
+  const rec = {
+    pairId: pid, label: DATA.labels[i],
+    seekerId: DATA.seeker_id_by_pair[i], candidateId: DATA.candidate_id_by_pair[i],
+    queryText: DATA.query_text_full[i],
+  };
+  (pairsBySeeker[rec.seekerId] ||= []).push(rec);
+  (pairsByCandidate[rec.candidateId] ||= []).push(rec);
+});
+
+// ---- build node/edge lists for current state ----
+function buildScene() {
+  const mFull = DATA.models[state.model];
+  const m = mFull[state.proj]; // { seeker_xyz, query_xyz, cand_xyz }
+  const seekerXYZ = m.seeker_xyz, queryXYZ = m.query_xyz, candXYZ = m.cand_xyz;
+
+  const sampleSet = new Set(shuffledSeekerIds.slice(0, state.sampleN));
+  const q = state.search.trim().toLowerCase();
+
+  // filter at the pair level first, then only instantiate nodes that survive
+  const activePairs = [];
+  DATA.pair_ids.forEach((pid, i) => {
+    const label = DATA.labels[i];
+    if (state.labelFilter !== 'both' && state.labelFilter !== label) return;
+    const sId = DATA.seeker_id_by_pair[i], cId = DATA.candidate_id_by_pair[i];
+    if (!sampleSet.has(sId)) return;
+    if (q) {
+      const hit = DATA.seeker_text_full[seekerIdx[sId]].toLowerCase().includes(q)
+        || DATA.candidate_text_full[candIdx[cId]].toLowerCase().includes(q)
+        || DATA.query_text_full[i].toLowerCase().includes(q);
+      if (!hit) return;
+    }
+    activePairs.push(i);
+  });
+
+  const nodes = [];
+  const seekerNodeIdx = {}, candNodeIdx = {};
+
+  function ensureSeeker(sId) {
+    if (sId in seekerNodeIdx) return seekerNodeIdx[sId];
+    const i = seekerIdx[sId];
+    seekerNodeIdx[sId] = nodes.length;
+    nodes.push({
+      x: seekerXYZ[i][0], y: seekerXYZ[i][1], z: seekerXYZ[i][2],
+      type: 'seeker', id: sId, text: DATA.seeker_text[i],
+    });
+    return seekerNodeIdx[sId];
+  }
+  function ensureCand(cId) {
+    if (cId in candNodeIdx) return candNodeIdx[cId];
+    const i = candIdx[cId];
+    candNodeIdx[cId] = nodes.length;
+    nodes.push({
+      x: candXYZ[i][0], y: candXYZ[i][1], z: candXYZ[i][2],
+      type: 'candidate', id: cId, text: DATA.candidate_text[i],
+    });
+    return candNodeIdx[cId];
+  }
+
+  const edges = [];
+  activePairs.forEach(i => {
+    const label = DATA.labels[i];
+    const pid = DATA.pair_ids[i];
+    const sNode = ensureSeeker(DATA.seeker_id_by_pair[i]);
+    const cNode = ensureCand(DATA.candidate_id_by_pair[i]);
+    if (state.mode === 'direct') {
+      edges.push({ a: sNode, b: cNode, label });
+    } else {
+      const qNodeIdx = nodes.length;
+      nodes.push({
+        x: queryXYZ[i][0], y: queryXYZ[i][1], z: queryXYZ[i][2],
+        type: 'query', id: pid, text: DATA.query_text[i],
+      });
+      edges.push({ a: sNode, b: qNodeIdx, label });
+      edges.push({ a: qNodeIdx, b: cNode, label });
+    }
+  });
+
+  const variance = state.proj === 'pca' ? mFull.explained_variance : mFull.raw_dim0_variance;
+  return { nodes, edges, variance };
+}
+
+let scene = buildScene();
+
+function updateStats() {
+  document.getElementById('stat-model').textContent = state.model === 'frozen' ? 'frozen nano' : 'fine-tuned (top1_ctrl)';
+  document.getElementById('stat-nodes').textContent = scene.nodes.length;
+  document.getElementById('stat-edges').textContent = scene.edges.length;
+  const v = scene.variance.reduce((a, b) => a + b, 0) * 100;
+  document.getElementById('stat-var-label').textContent = state.proj === 'pca' ? '3-PC variance' : 'Raw dims 1-3 variance';
+  document.getElementById('stat-var').textContent = (v < 1 ? v.toFixed(2) : v.toFixed(1)) + '%';
+  document.getElementById('stat-caveat').innerHTML = state.proj === 'pca'
+    ? 'PCA to 3D keeps only ~13&#8211;16% of embedding variance &#8212; positions show coarse structure, not exact distances.'
+    : 'Raw dims 1-3 are arbitrary, untrained-for-importance directions &#8212; they keep &lt;1% of variance, ~50x less than PCA. Shown to make that concrete, not as a better view.';
+}
+updateStats();
+
+// ---- 3D math ----
+function project(node) {
+  let { x, y, z } = node;
+  // yaw (Y axis)
+  let cx = x * Math.cos(yaw) - z * Math.sin(yaw);
+  let cz = x * Math.sin(yaw) + z * Math.cos(yaw);
+  // pitch (X axis)
+  let cy = y * Math.cos(pitch) - cz * Math.sin(pitch);
+  cz = y * Math.sin(pitch) + cz * Math.cos(pitch);
+
+  const camZ = 3.2 / zoom;
+  const depth = camZ + cz;
+  const scale = (camZ / Math.max(depth, 0.35)) * Math.min(W, H) * 0.34;
+  const sx = W / 2 + cx * scale;
+  const sy = H / 2 + cy * scale;
+  return { sx, sy, depth, scaleF: scale / (Math.min(W, H) * 0.34) };
+}
+
+function colorFor(type) {
+  const cs = getComputedStyle(document.documentElement);
+  if (type === 'seeker') return cs.getPropertyValue('--seeker').trim();
+  if (type === 'query') return cs.getPropertyValue('--query').trim();
+  return cs.getPropertyValue('--candidate').trim();
+}
+function edgeColor(label) {
+  const cs = getComputedStyle(document.documentElement);
+  return label === 'pos' ? cs.getPropertyValue('--pos').trim() : cs.getPropertyValue('--neg').trim();
+}
+
+let lastProj = [];       // screen-space cache for hit-testing
+let hoverIdx = -1;        // index into scene.nodes, or -1
+
+function nodeRadius(n, scaleF) {
+  const baseR = n.type === 'query' ? 2.8 : n.type === 'seeker' ? 3.6 : 3.2;
+  return Math.max(0.6, baseR * scaleF);
+}
+
+function draw() {
+  ctx.clearRect(0, 0, W, H);
+  const proj = scene.nodes.map(project);
+  lastProj = proj;
+
+  // connected-edge set for the hovered node, for a highlight pass
+  const hoverEdgeSet = new Set();
+  if (hoverIdx >= 0) {
+    scene.edges.forEach((e, i) => { if (e.a === hoverIdx || e.b === hoverIdx) hoverEdgeSet.add(i); });
+  }
+
+  // edges — depth-sorted by average, drawn far to near
+  if (!state.hideEdges) {
+    const edgeList = scene.edges.map((e, i) => {
+      const pa = proj[e.a], pb = proj[e.b];
+      return { e, i, pa, pb, avgDepth: (pa.depth + pb.depth) / 2 };
+    }).sort((a, b) => b.avgDepth - a.avgDepth);
+
+    for (const { e, i, pa, pb, avgDepth } of edgeList) {
+      const hovered = hoverEdgeSet.has(i);
+      const baseAlpha = Math.max(0.06, Math.min(0.5, 1.4 / avgDepth - 0.15));
+      const alpha = hoverIdx >= 0 ? (hovered ? Math.min(1, baseAlpha + 0.55) : baseAlpha * 0.25) : baseAlpha;
+      ctx.strokeStyle = hexToRgba(edgeColor(e.label), alpha);
+      ctx.lineWidth = hovered ? 1.8 : 1;
+      ctx.beginPath();
+      ctx.moveTo(pa.sx, pa.sy);
+      ctx.lineTo(pb.sx, pb.sy);
+      ctx.stroke();
+    }
+  }
+
+  // nodes — depth-sorted far to near
+  const nodeList = scene.nodes.map((n, i) => ({ n, p: proj[i], i })).sort((a, b) => b.p.depth - a.p.depth);
+  for (const { n, p, i } of nodeList) {
+    const r = nodeRadius(n, p.scaleF);
+    const isHovered = i === hoverIdx;
+    const connected = hoverIdx >= 0 && scene.edges.some(e => (e.a === hoverIdx && e.b === i) || (e.b === hoverIdx && e.a === i));
+    const fade = hoverIdx >= 0 && !isHovered && !connected;
+    const alpha = Math.max(0.35, Math.min(1, 1.6 / p.depth - 0.2)) * (fade ? 0.3 : 1);
+    const color = colorFor(n.type);
+
+    ctx.save();
+    if (isHovered) {
+      ctx.shadowColor = color;
+      ctx.shadowBlur = 16;
+    } else {
+      ctx.shadowColor = color;
+      ctx.shadowBlur = 4;
+    }
+    ctx.fillStyle = hexToRgba(color, alpha);
+    ctx.beginPath();
+    if (n.type === 'candidate') {
+      ctx.fillRect(p.sx - r, p.sy - r, r * 2, r * 2);
+    } else if (n.type === 'query') {
+      ctx.translate(p.sx, p.sy);
+      ctx.rotate(Math.PI / 4);
+      ctx.fillRect(-r * 0.85, -r * 0.85, r * 1.7, r * 1.7);
+    } else {
+      ctx.arc(p.sx, p.sy, r, 0, Math.PI * 2);
+      ctx.fill();
+    }
+    ctx.restore();
+
+    if (isHovered) {
+      ctx.save();
+      ctx.strokeStyle = hexToRgba(color, 0.95);
+      ctx.lineWidth = 1.5;
+      ctx.beginPath();
+      ctx.arc(p.sx, p.sy, r + 5, 0, Math.PI * 2);
+      ctx.stroke();
+      ctx.restore();
+    }
+  }
+
+  if (autoRotate) yaw += 0.0022;
+  requestAnimationFrame(draw);
+}
+
+function hexToRgba(hex, a) {
+  hex = hex.trim();
+  const r = parseInt(hex.slice(1, 3), 16), g = parseInt(hex.slice(3, 5), 16), b = parseInt(hex.slice(5, 7), 16);
+  return `rgba(${r},${g},${b},${a})`;
+}
+
+// ---- interaction ----
+const CLICK_THRESHOLD = 4;
+let dragging = false, lastX = 0, lastY = 0, movedDist = 0, pointerDown = false;
+canvas.addEventListener('pointerdown', e => {
+  pointerDown = true; movedDist = 0; autoRotate = false;
+  lastX = e.clientX; lastY = e.clientY;
+  canvas.setPointerCapture(e.pointerId);
+});
+const tooltip = document.getElementById('tooltip');
+const TYPE_LABEL = { seeker: 'Seeker profile', query: 'Search query', candidate: 'Candidate profile' };
+
+function hideTooltip() {
+  if (hoverIdx !== -1) { hoverIdx = -1; canvas.classList.remove('hoverable'); }
+  tooltip.style.display = 'none';
+}
+
+function findHoverNode(clientX, clientY) {
+  const HIT_RADIUS = 14;
+  let best = -1, bestDist = HIT_RADIUS;
+  for (let i = 0; i < lastProj.length; i++) {
+    const p = lastProj[i];
+    const r = nodeRadius(scene.nodes[i], p.scaleF);
+    const dx = p.sx - clientX, dy = p.sy - clientY;
+    const dist = Math.sqrt(dx * dx + dy * dy) - r;
+    if (dist < bestDist) { bestDist = dist; best = i; }
+  }
+  return best;
+}
+
+canvas.addEventListener('pointermove', e => {
+  if (pointerDown) {
+    const dx = e.clientX - lastX, dy = e.clientY - lastY;
+    movedDist += Math.hypot(dx, dy);
+    if (movedDist > CLICK_THRESHOLD) {
+      dragging = true;
+      canvas.classList.add('dragging');
+      yaw += dx * 0.006;
+      pitch += dy * 0.006;
+      pitch = Math.max(-1.4, Math.min(1.4, pitch));
+      hideTooltip();
+    }
+    lastX = e.clientX; lastY = e.clientY;
+    return;
+  }
+  const idx = findHoverNode(e.clientX, e.clientY);
+  if (idx === -1) { hideTooltip(); return; }
+  hoverIdx = idx;
+  canvas.classList.add('hoverable');
+  const n = scene.nodes[idx];
+  const color = colorFor(n.type);
+  tooltip.innerHTML =
+    `<div class="t-head"><span class="t-dot" style="background:${color}"></span>` +
+    `<span class="t-type" style="color:${color}">${TYPE_LABEL[n.type]}</span></div>` +
+    `<div class="t-id mono">${n.id}</div>` +
+    `<div class="t-body">${n.text || ''}</div>`;
+  tooltip.style.display = 'block';
+  const margin = 16;
+  let left = e.clientX + 16, top = e.clientY + 16;
+  if (left + 260 > W) left = e.clientX - 276;
+  if (top + 140 > H) top = e.clientY - 140;
+  tooltip.style.left = Math.max(margin, left) + 'px';
+  tooltip.style.top = Math.max(margin, top) + 'px';
+});
+canvas.addEventListener('pointerleave', hideTooltip);
+window.addEventListener('pointerup', e => {
+  if (pointerDown && movedDist <= CLICK_THRESHOLD) {
+    const idx = findHoverNode(e.clientX, e.clientY);
+    if (idx !== -1) selectNode(scene.nodes[idx]);
+  }
+  pointerDown = false; dragging = false; canvas.classList.remove('dragging');
+});
+canvas.addEventListener('wheel', e => {
+  e.preventDefault();
+  zoom = Math.max(0.4, Math.min(3.5, zoom * (1 - e.deltaY * 0.001)));
+}, { passive: false });
+
+// ---- click-to-select detail sidebar ----
+const detailPanel = document.getElementById('detail');
+const detailBody = document.getElementById('detail-body');
+document.getElementById('detail-close').addEventListener('click', () => detailPanel.classList.remove('open'));
+
+function escapeHtml(s) {
+  return (s || '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+}
+
+function connRow(rec, otherType, otherId, otherText) {
+  const color = colorFor(otherType);
+  const excerpt = escapeHtml((otherText || '').slice(0, 140)) + (otherText && otherText.length > 140 ? '…' : '');
+  const queryLine = rec.queryText
+    ? `<div class="c-query">"${escapeHtml(rec.queryText.replace(/^Search query:\s*/i, '').slice(0, 90))}"</div>`
+    : '';
+  return `<div class="conn-row" data-jump-type="${otherType}" data-jump-id="${escapeHtml(otherId)}">
+    <span class="c-dot" style="background:${color}"></span>
+    <div class="c-main">
+      <span class="c-label ${rec.label}">${rec.label === 'pos' ? 'Accepted' : 'Declined'}</span>
+      <div class="c-excerpt">${excerpt}</div>
+      ${queryLine}
+    </div>
+  </div>`;
+}
+
+function renderDetail(node) {
+  const color = colorFor(node.type);
+  let html = `<div class="d-head"><span class="d-dot" style="background:${color}"></span>` +
+    `<span class="d-type" style="color:${color}">${TYPE_LABEL[node.type]}</span></div>` +
+    `<div class="d-id mono">${escapeHtml(node.id)}</div>`;
+
+  if (node.type === 'query') {
+    const i = DATA.pair_ids.indexOf(node.id);
+    const sId = DATA.seeker_id_by_pair[i], cId = DATA.candidate_id_by_pair[i], label = DATA.labels[i];
+    html += `<div class="d-section-label">Full query</div><div class="d-query-box">${escapeHtml(DATA.query_text_full[i])}</div>`;
+    html += `<div class="d-section-label">Connects</div>`;
+    html += connRow({ label, queryText: '' }, 'seeker', sId, DATA.seeker_text_full[seekerIdx[sId]]);
+    html += connRow({ label, queryText: '' }, 'candidate', cId, DATA.candidate_text_full[candIdx[cId]]);
+  } else {
+    const fullText = node.type === 'seeker' ? DATA.seeker_text_full[seekerIdx[node.id]] : DATA.candidate_text_full[candIdx[node.id]];
+    html += `<div class="d-section-label">Full profile</div><div class="d-text">${escapeHtml(fullText)}</div>`;
+
+    const conns = node.type === 'seeker' ? (pairsBySeeker[node.id] || []) : (pairsByCandidate[node.id] || []);
+    const otherType = node.type === 'seeker' ? 'candidate' : 'seeker';
+    html += `<div class="d-section-label">${otherType === 'candidate' ? 'Connected candidates' : 'Connected seekers'} (${conns.length})</div>`;
+    conns.forEach(rec => {
+      const otherId = node.type === 'seeker' ? rec.candidateId : rec.seekerId;
+      const otherText = otherType === 'candidate' ? DATA.candidate_text_full[candIdx[otherId]] : DATA.seeker_text_full[seekerIdx[otherId]];
+      html += connRow(rec, otherType, otherId, otherText);
+    });
+  }
+  detailBody.innerHTML = html;
+
+  detailBody.querySelectorAll('.conn-row').forEach(row => {
+    row.addEventListener('click', () => {
+      const type = row.dataset.jumpType, id = row.dataset.jumpId;
+      const idx = scene.nodes.findIndex(n => n.type === type && n.id === id);
+      if (idx !== -1) selectNode(scene.nodes[idx]);
+    });
+  });
+}
+
+function selectNode(node) {
+  renderDetail(node);
+  detailPanel.classList.add('open');
+}
+
+function wireSeg(id, key) {
+  const el = document.getElementById(id);
+  el.querySelectorAll('button').forEach(btn => {
+    btn.addEventListener('click', () => {
+      el.querySelectorAll('button').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      state[key] = btn.dataset.val;
+      hideTooltip();
+      scene = buildScene();
+      updateStats();
+    });
+  });
+}
+wireSeg('seg-model', 'model');
+wireSeg('seg-mode', 'mode');
+wireSeg('seg-labels', 'labelFilter');
+wireSeg('seg-proj', 'proj');
+
+// search box
+const searchInput = document.getElementById('search-input');
+searchInput.addEventListener('input', () => {
+  state.search = searchInput.value;
+  hideTooltip();
+  scene = buildScene();
+  updateStats();
+});
+
+// sample slider — prefix of the one shuffle computed at load, so the same
+// N seekers stay selected across model/mode/projection toggles
+const sampleSlider = document.getElementById('sample-slider');
+const sampleVal = document.getElementById('sample-val');
+sampleSlider.max = String(DATA.seeker_ids.length);
+sampleSlider.value = String(DATA.seeker_ids.length);
+sampleVal.textContent = `${DATA.seeker_ids.length} / ${DATA.seeker_ids.length}`;
+sampleSlider.addEventListener('input', () => {
+  state.sampleN = parseInt(sampleSlider.value, 10);
+  sampleVal.textContent = `${state.sampleN} / ${DATA.seeker_ids.length}`;
+  hideTooltip();
+  scene = buildScene();
+  updateStats();
+});
+
+// hide-edges toggle
+document.getElementById('hide-edges-toggle').addEventListener('change', e => {
+  state.hideEdges = e.target.checked;
+});
+
+draw();
+</script>

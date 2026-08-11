@@ -71,12 +71,7 @@
   .wrap { width: min(1180px, calc(100% - 2rem)); margin: 0 auto; padding: 2rem 0 4rem; }
 
   header.hero { display: grid; gap: 0.6rem; margin-bottom: 1.6rem; }
-  .brand { font-size: clamp(1.6rem, 3.6vw, 2.2rem); letter-spacing: -0.02em; margin: 0; font-weight: 700; display: flex; align-items: baseline; gap: 0.6rem; flex-wrap: wrap; }
-  .n-badge {
-    font-size: 0.65rem; font-weight: 700; letter-spacing: 0.02em; text-transform: uppercase;
-    color: var(--good); background: var(--good-bg); border-radius: 999px; padding: 0.25rem 0.6rem;
-    vertical-align: middle;
-  }
+  .brand { font-size: clamp(1.6rem, 3.6vw, 2.2rem); letter-spacing: -0.02em; margin: 0; font-weight: 700; }
   .lede { margin: 0; max-width: 60rem; color: var(--ink-2); font-size: 0.95rem; }
   .lede code { background: var(--surface-1); border: 1px solid var(--border); border-radius: 4px; padding: 0.05rem 0.35rem; font-size: 0.85em; }
   .meta { margin: 0; font-size: 0.8rem; color: var(--muted); }
@@ -119,43 +114,7 @@
     position: absolute; font-size: 0.68rem; color: var(--muted); top: -1.05rem; transform: translateX(-50%);
   }
 
-  .fields-tooltip {
-    position: fixed; z-index: 50; pointer-events: none; opacity: 0; visibility: hidden;
-    transform: translateY(4px); transition: opacity 0.1s ease, transform 0.1s ease;
-    background: var(--panel); border: 1px solid var(--border); border-radius: 8px;
-    box-shadow: 0 6px 20px rgba(0,0,0,0.18); padding: 0.6rem 0.7rem;
-    max-width: min(26rem, 90vw);
-  }
-  .fields-tooltip.is-visible { opacity: 1; visibility: visible; transform: translateY(0); }
-  .fields-tooltip .tt-name { font-size: 0.78rem; font-weight: 700; margin: 0 0 0.4rem; color: var(--ink); }
-  .fields-tooltip table { border-collapse: collapse; width: 100%; table-layout: fixed; }
-  .fields-tooltip th {
-    text-align: left; font-size: 0.66rem; font-weight: 700; text-transform: uppercase;
-    letter-spacing: 0.02em; color: var(--muted); padding: 0 0.5rem 0.3rem 0; white-space: normal;
-  }
-  .fields-tooltip td {
-    text-align: left; vertical-align: top; font-size: 0.75rem; color: var(--ink-2);
-    padding: 0 0.5rem 0 0; white-space: normal; font-family: inherit; font-variant-numeric: normal;
-  }
-  .fields-tooltip .tt-field {
-    display: inline-block; background: var(--surface-1); border: 1px solid var(--border);
-    border-radius: 4px; padding: 0.02rem 0.35rem; margin: 0 0.2rem 0.2rem 0; font-size: 0.72rem;
-    font-family: ui-monospace, "SF Mono", "Cascadia Code", Menlo, Consolas, monospace;
-  }
-  .fields-tooltip .tt-check { font-size: 0.95rem; }
-  .fields-tooltip .tt-check.yes { color: var(--good); }
-  .fields-tooltip .tt-check.no { color: var(--muted); }
-
   .section-title { margin: 1.7rem 0 0.2rem; font-size: 0.95rem; font-weight: 700; }
-  .section-divider { border: none; border-top: 1px solid var(--border); margin: 2.6rem 0 1.6rem; }
-  .brand-sub {
-    font-size: clamp(1.2rem, 2.6vw, 1.5rem); letter-spacing: -0.02em; margin: 0 0 0.6rem;
-    font-weight: 700; display: flex; align-items: baseline; gap: 0.6rem; flex-wrap: wrap;
-  }
-  .fieldsel-tag {
-    font-size: 0.72rem; font-weight: 700; color: var(--judge); background: color-mix(in srgb, var(--judge) 14%, transparent);
-    border-radius: 4px; padding: 0.05rem 0.35rem;
-  }
   .section-sub { margin: 0 0 0.4rem; font-size: 0.78rem; color: var(--muted); }
 
   .findings { display: grid; gap: 0.7rem; margin-top: 0.6rem; }
@@ -197,39 +156,32 @@
 </style>
 </head>
 <body>
-  <div class="fields-tooltip" id="fields-tooltip" role="tooltip"></div>
   <div class="wrap">
     <header class="hero">
-      <h1 class="brand">LLM judge vs. embedding baselines <span class="n-badge">n = 69 (holdout)</span></h1>
+      <h1 class="brand">LLM judge vs. embedding baselines</h1>
       <p class="lede">
         Can an LLM predict accept/decline from two full profiles alone, with
         <strong>no <code>searchQuery</code></strong> — the one thing every
-        embedding baseline below gets? <strong>Every chart and table on this
-        page is scored on the frozen 69-pair real holdout split</strong>
-        (<code>data/synthetic/seed_split.json</code>'s <code>eval_pair_ids</code>),
-        not the full 200-pair real dataset — this is the smaller, harder,
-        user-disjoint slice used for the project's one-time final comparisons,
-        matching <code>docs/baseline-results-holdout.md</code>. 200-pair
-        numbers exist per-experiment in <code>docs/llm-judge-experiment.md</code>
-        and <code>docs/llm-judge-focused-prompt-experiment.md</code> but are not
-        plotted here, to keep every row on this page the same population.
+        embedding baseline below gets? Matched frozen 69-pair real holdout,
+        so every row is the same population. Full writeup:
+        <code>docs/llm-judge-experiment.md</code>.
       </p>
       <p class="meta" id="meta-line"></p>
       <div class="legend">
         <span class="swatch"><span class="dot" style="background:var(--baseline)"></span>Embedding baseline (gets the query)</span>
-        <span class="swatch"><span class="dot" style="background:var(--judge)"></span>LLM judge (see "Gets query?" column — most withhold it, one variant doesn't)</span>
+        <span class="swatch"><span class="dot" style="background:var(--judge)"></span>LLM judge (no query)</span>
       </div>
     </header>
 
     <main>
       <div class="chart-card">
-        <p class="chart-title">Pair ROC-AUC, ranked <span class="n-badge">n = 69 (holdout)</span></p>
+        <p class="chart-title">Pair ROC-AUC, ranked</p>
         <p class="chart-sub">Dashed line = chance (0.5). Bar length is AUC on this 0.5–1.0 scale.</p>
         <div id="chart-auc"></div>
       </div>
 
       <div class="chart-card">
-        <p class="chart-title">Hard-negative AUC vs. easy-negative AUC <span class="n-badge">n = 69 (holdout)</span></p>
+        <p class="chart-title">Hard-negative AUC vs. easy-negative AUC</p>
         <p class="chart-sub">
           Every real negative is production's own false positive — a plausible-looking intro a human still declined —
           so hard negatives (lexically similar to the query, superficially plausible) are the only population that exists
@@ -241,66 +193,21 @@
       <p class="section-title">Findings</p>
       <div class="findings" id="findings"></div>
 
-      <p class="section-title">Full comparison table <span class="n-badge">n = 69 (holdout)</span></p>
-      <p class="section-sub">All metrics, matched 69-pair holdout — 12 embedding-baseline rows + 9 LLM-judge (model, framing, backend) rows. MRR is retrieval-only — no LLM-judge row has one (see below).</p>
+      <p class="section-title">Full comparison table</p>
+      <p class="section-sub">All metrics, matched 69-pair holdout. MRR is retrieval-only — no LLM-judge row has one (see below).</p>
       <div class="table-scroll">
         <table id="full-table"></table>
       </div>
 
-      <p class="section-title">LLM-judge run detail <span class="n-badge">n = 69 (holdout)</span></p>
-      <p class="section-sub">All nine (model, framing, backend) combinations tested — decision behavior, not just the AUC summary above.</p>
+      <p class="section-title">LLM-judge run detail</p>
+      <p class="section-sub">All four (model, framing) combinations tested — decision behavior, not just the AUC summary above.</p>
       <div class="table-scroll">
         <table id="judge-table"></table>
-      </div>
-
-      <hr class="section-divider" />
-
-      <h2 class="brand-sub">All 200 real pairs <span class="n-badge">n = 200 (all)</span></h2>
-      <p class="lede">
-        Same comparison, scored on the full 200-pair real dataset (train + holdout, no synthetic
-        pairs) instead of the frozen 69-pair holdout above — a larger, more stable sample, but not
-        the population <code>docs/baseline-results-holdout.md</code>'s one-time final numbers use.
-        Adds two rows the holdout section doesn't have: <b>Voyage-4-large and Voyage-4-nano
-        re-run with the exact same field selection and searchQuery as the focused LLM judge</b>
-        (<code>positioning</code> + <code>lookingFor</code> + query for the seeker,
-        <code>positioning</code> + <code>background</code> + <code>lookingFor</code> for the
-        candidate — see <code>baselines/voyage_large_field_selected/</code> and
-        <code>baselines/voyage_nano_field_selected/</code>), so the LLM-judge and embedding
-        approaches can be compared on identical inputs, not just identical pairs.
-      </p>
-
-      <div class="chart-card">
-        <p class="chart-title">Pair ROC-AUC, ranked <span class="n-badge">n = 200 (all)</span></p>
-        <p class="chart-sub">Dashed line = chance (0.5). Bar length is AUC on this 0.5–1.0 scale.</p>
-        <div id="chart-auc-all"></div>
-      </div>
-
-      <div class="chart-card">
-        <p class="chart-title">Hard-negative AUC vs. easy-negative AUC <span class="n-badge">n = 200 (all)</span></p>
-        <p class="chart-sub">Sorted by hard-neg AUC. Same rationale as the holdout chart above.</p>
-        <div id="chart-hardness-all"></div>
-      </div>
-
-      <p class="section-title">Full comparison table <span class="n-badge">n = 200 (all)</span></p>
-      <p class="section-sub">
-        Baseline rows (full-profile text) from <code>docs/baseline-results-all.json</code>; the two
-        <span class="fieldsel-tag">field-selected</span> Voyage rows use the focused judge's exact
-        field selection instead. MRR is retrieval-only — no LLM-judge row has one.
-      </p>
-      <div class="table-scroll">
-        <table id="full-table-all"></table>
-      </div>
-
-      <p class="section-title">LLM-judge run detail <span class="n-badge">n = 200 (all)</span></p>
-      <p class="section-sub">All twelve (model, framing, backend) combinations, scored on all 200 real pairs — includes three candidate-side field-permutation runs not scored on the holdout.</p>
-      <div class="table-scroll">
-        <table id="judge-table-all"></table>
       </div>
     </main>
   </div>
 
-  <script id="data" type="application/json">{"generated_at": "2026-07-25T15:43:39Z", "protocol_note": "frozen 69-pair real holdout (data/synthetic/seed_split.json eval_pair_ids) only \u2014 same population for every row, unlike baseline-results-all.md's full-dataset numbers. See docs/possible-bugs.md #3 and docs/twotower-run-001-results.md.", "rows": [{"name": "Qwen3-Embedding-8B (field-selected, same fields)", "kind": "field_selected", "gets_query": true, "pair_auc": 0.6862068965517241, "accuracy_at_half": 0.5507246376811594, "best_f1": 0.6588235294117647, "hard_auc": 0.5689655172413793, "easy_auc": 0.8551724137931034, "mrr": 0.5820653165480751, "seeker_fields": ["positioning", "lookingFor"], "candidate_fields": ["positioning", "background", "lookingFor"]}, {"name": "LLM judge: gemini-3.1-flash-lite (focused, seeker=lookingFor only, direct Google API)", "kind": "llm_judge", "gets_query": true, "pair_auc": 0.6698275862068965, "accuracy_at_half": 0.6376811594202898, "best_f1": 0.6153846153846154, "hard_auc": 0.7163793103448277, "easy_auc": 0.6413793103448275, "mrr": null, "seeker_fields": ["lookingFor"], "candidate_fields": ["positioning", "background", "lookingFor"]}, {"name": "Qwen3-Embedding-8B (open)", "kind": "baseline", "gets_query": true, "pair_auc": 0.6594827586206896, "accuracy_at_half": 0.5072463768115942, "best_f1": 0.647887323943662, "hard_auc": 0.6258620689655172, "easy_auc": 0.7586206896551724, "mrr": 0.403986674245295, "seeker_fields": ["positioning", "background", "lookingFor", "notes", "locationAvailability", "introPreferences", "personalPreferences", "meetingAndSchedulingPreferences"], "candidate_fields": ["positioning", "background", "lookingFor", "notes", "locationAvailability", "introPreferences", "personalPreferences", "meetingAndSchedulingPreferences"]}, {"name": "LLM judge: gemini-3.1-flash-lite (focused, w/ query, direct Google API)", "kind": "llm_judge", "gets_query": true, "pair_auc": 0.6530172413793104, "accuracy_at_half": 0.6086956521739131, "best_f1": 0.6176470588235294, "hard_auc": 0.6784482758620689, "easy_auc": 0.560344827586207, "mrr": null, "seeker_fields": ["positioning", "lookingFor"], "candidate_fields": ["positioning", "background", "lookingFor"]}, {"name": "Voyage-4-large (field-selected: positioning+lookingFor+query / positioning+background+lookingFor)", "kind": "field_selected", "gets_query": true, "pair_auc": 0.6431034482758621, "accuracy_at_half": 0.43478260869565216, "best_f1": 0.6567164179104478, "hard_auc": 0.5586206896551724, "easy_auc": 0.7482758620689655, "mrr": 0.6148809523809524, "seeker_fields": ["positioning", "lookingFor"], "candidate_fields": ["positioning", "background", "lookingFor"]}, {"name": "Hybrid TF-IDF+nano", "kind": "baseline", "gets_query": true, "pair_auc": 0.639655172413793, "accuracy_at_half": 0.5072463768115942, "best_f1": 0.631578947368421, "hard_auc": 0.6034482758620691, "easy_auc": 0.7172413793103448, "mrr": 0.4043028322440087, "seeker_fields": ["positioning", "background", "lookingFor", "notes", "locationAvailability", "introPreferences", "personalPreferences", "meetingAndSchedulingPreferences"], "candidate_fields": ["positioning", "background", "lookingFor", "notes", "locationAvailability", "introPreferences", "personalPreferences", "meetingAndSchedulingPreferences"]}, {"name": "LLM judge: gemini-3.1-flash-lite (naive)", "kind": "llm_judge", "gets_query": false, "pair_auc": 0.6357758620689655, "accuracy_at_half": 0.5942028985507246, "best_f1": 0.6, "hard_auc": 0.646551724137931, "easy_auc": 0.5637931034482758, "mrr": null, "seeker_fields": ["positioning", "background", "lookingFor", "notes", "locationAvailability", "introPreferences", "personalPreferences", "meetingAndSchedulingPreferences"], "candidate_fields": ["positioning", "background", "lookingFor", "notes", "locationAvailability", "introPreferences", "personalPreferences", "meetingAndSchedulingPreferences"]}, {"name": "LLM judge: gemini-3.1-flash-lite (focused + seeker background, direct Google API)", "kind": "llm_judge", "gets_query": true, "pair_auc": 0.6301724137931034, "accuracy_at_half": 0.5797101449275363, "best_f1": 0.625, "hard_auc": 0.6689655172413793, "easy_auc": 0.553448275862069, "mrr": null, "seeker_fields": ["positioning", "lookingFor", "background"], "candidate_fields": ["positioning", "background", "lookingFor"]}, {"name": "LLM judge: gemini-3.1-flash-lite (focused, w/ query, OpenRouter)", "kind": "llm_judge", "gets_query": true, "pair_auc": 0.6202586206896552, "accuracy_at_half": 0.6231884057971014, "best_f1": 0.625, "hard_auc": 0.6517241379310345, "easy_auc": 0.5413793103448277, "mrr": null, "seeker_fields": ["positioning", "lookingFor"], "candidate_fields": ["positioning", "background", "lookingFor"]}, {"name": "Voyage-4-large (production)", "kind": "baseline", "gets_query": true, "pair_auc": 0.6086206896551725, "accuracy_at_half": 0.43478260869565216, "best_f1": 0.6153846153846154, "hard_auc": 0.6017241379310345, "easy_auc": 0.6, "mrr": 0.528667801726667, "seeker_fields": ["positioning", "background", "lookingFor", "notes", "locationAvailability", "introPreferences", "personalPreferences", "meetingAndSchedulingPreferences"], "candidate_fields": ["positioning", "background", "lookingFor", "notes", "locationAvailability", "introPreferences", "personalPreferences", "meetingAndSchedulingPreferences"]}, {"name": "Voyage-4-nano (field-selected, same fields)", "kind": "field_selected", "gets_query": true, "pair_auc": 0.6060344827586207, "accuracy_at_half": 0.43478260869565216, "best_f1": 0.6041666666666666, "hard_auc": 0.503448275862069, "easy_auc": 0.7931034482758621, "mrr": 0.5064254056087086, "seeker_fields": ["positioning", "lookingFor"], "candidate_fields": ["positioning", "background", "lookingFor"]}, {"name": "TF-IDF (lexical)", "kind": "baseline", "gets_query": true, "pair_auc": 0.5922413793103449, "accuracy_at_half": 0.5797101449275363, "best_f1": 0.6363636363636365, "hard_auc": 0.5017241379310344, "easy_auc": 0.7551724137931035, "mrr": 0.2474815913137905, "seeker_fields": ["positioning", "background", "lookingFor", "notes", "locationAvailability", "introPreferences", "personalPreferences", "meetingAndSchedulingPreferences"], "candidate_fields": ["positioning", "background", "lookingFor", "notes", "locationAvailability", "introPreferences", "personalPreferences", "meetingAndSchedulingPreferences"]}, {"name": "LLM judge: gemini-3.1-flash-lite (focused, seeker=positioning only, direct Google API)", "kind": "llm_judge", "gets_query": true, "pair_auc": 0.5913793103448276, "accuracy_at_half": 0.5942028985507246, "best_f1": 0.6041666666666666, "hard_auc": 0.5620689655172414, "easy_auc": 0.6172413793103448, "mrr": null, "seeker_fields": ["positioning"], "candidate_fields": ["positioning", "background", "lookingFor"]}, {"name": "LLM judge: gemini-3.1-flash-lite (calibrated)", "kind": "llm_judge", "gets_query": false, "pair_auc": 0.5900862068965518, "accuracy_at_half": 0.5652173913043478, "best_f1": 0.6052631578947368, "hard_auc": 0.5879310344827586, "easy_auc": 0.5310344827586206, "mrr": null, "seeker_fields": ["positioning", "background", "lookingFor", "notes", "locationAvailability", "introPreferences", "personalPreferences", "meetingAndSchedulingPreferences"], "candidate_fields": ["positioning", "background", "lookingFor", "notes", "locationAvailability", "introPreferences", "personalPreferences", "meetingAndSchedulingPreferences"]}, {"name": "LLM judge: gemma-3-27b-it (Bedrock, naive)", "kind": "llm_judge", "gets_query": false, "pair_auc": 0.5823275862068966, "accuracy_at_half": 0.5507246376811594, "best_f1": 0.6075949367088608, "hard_auc": 0.621551724137931, "easy_auc": 0.49310344827586206, "mrr": null, "seeker_fields": ["positioning", "background", "lookingFor", "notes", "locationAvailability", "introPreferences", "personalPreferences", "meetingAndSchedulingPreferences"], "candidate_fields": ["positioning", "background", "lookingFor", "notes", "locationAvailability", "introPreferences", "personalPreferences", "meetingAndSchedulingPreferences"]}, {"name": "LLM judge: qwen3-32b (Bedrock, naive)", "kind": "llm_judge", "gets_query": false, "pair_auc": 0.5801724137931035, "accuracy_at_half": 0.5072463768115942, "best_f1": 0.6086956521739131, "hard_auc": 0.6224137931034484, "easy_auc": 0.496551724137931, "mrr": null, "seeker_fields": ["positioning", "background", "lookingFor", "notes", "locationAvailability", "introPreferences", "personalPreferences", "meetingAndSchedulingPreferences"], "candidate_fields": ["positioning", "background", "lookingFor", "notes", "locationAvailability", "introPreferences", "personalPreferences", "meetingAndSchedulingPreferences"]}, {"name": "Voyage-4-nano", "kind": "baseline", "gets_query": true, "pair_auc": 0.5793103448275863, "accuracy_at_half": 0.43478260869565216, "best_f1": 0.5979381443298969, "hard_auc": 0.5706896551724138, "easy_auc": 0.6206896551724138, "mrr": 0.46104957904626953, "seeker_fields": ["positioning", "background", "lookingFor", "notes", "locationAvailability", "introPreferences", "personalPreferences", "meetingAndSchedulingPreferences"], "candidate_fields": ["positioning", "background", "lookingFor", "notes", "locationAvailability", "introPreferences", "personalPreferences", "meetingAndSchedulingPreferences"]}, {"name": "twotower arm_a_real_only", "kind": "baseline", "gets_query": true, "pair_auc": 0.5793103448275863, "accuracy_at_half": 0.42028985507246375, "best_f1": 0.6097560975609757, "hard_auc": 0.5, "easy_auc": 0.6551724137931034, "mrr": 0.3882152169591429, "seeker_fields": ["positioning", "background", "lookingFor", "notes", "locationAvailability", "introPreferences", "personalPreferences", "meetingAndSchedulingPreferences"], "candidate_fields": ["positioning", "background", "lookingFor", "notes", "locationAvailability", "introPreferences", "personalPreferences", "meetingAndSchedulingPreferences"]}, {"name": "twotower run_001", "kind": "baseline", "gets_query": true, "pair_auc": 0.578448275862069, "accuracy_at_half": 0.42028985507246375, "best_f1": 0.6190476190476191, "hard_auc": 0.4844827586206897, "easy_auc": 0.6931034482758621, "mrr": 0.282930784473066, "seeker_fields": ["positioning", "background", "lookingFor", "notes", "locationAvailability", "introPreferences", "personalPreferences", "meetingAndSchedulingPreferences"], "candidate_fields": ["positioning", "background", "lookingFor", "notes", "locationAvailability", "introPreferences", "personalPreferences", "meetingAndSchedulingPreferences"]}, {"name": "BGE-en-ICL (open)", "kind": "baseline", "gets_query": true, "pair_auc": 0.5750000000000001, "accuracy_at_half": 0.4057971014492754, "best_f1": 0.6021505376344085, "hard_auc": 0.5862068965517242, "easy_auc": 0.5655172413793104, "mrr": 0.5157030428284888, "seeker_fields": ["positioning", "background", "lookingFor", "notes", "locationAvailability", "introPreferences", "personalPreferences", "meetingAndSchedulingPreferences"], "candidate_fields": ["positioning", "background", "lookingFor", "notes", "locationAvailability", "introPreferences", "personalPreferences", "meetingAndSchedulingPreferences"]}, {"name": "E5-mistral-7b-instruct (open)", "kind": "baseline", "gets_query": true, "pair_auc": 0.5663793103448276, "accuracy_at_half": 0.42028985507246375, "best_f1": 0.6105263157894737, "hard_auc": 0.48793103448275865, "easy_auc": 0.7137931034482758, "mrr": 0.22444410848659233, "seeker_fields": ["positioning", "background", "lookingFor", "notes", "locationAvailability", "introPreferences", "personalPreferences", "meetingAndSchedulingPreferences"], "candidate_fields": ["positioning", "background", "lookingFor", "notes", "locationAvailability", "introPreferences", "personalPreferences", "meetingAndSchedulingPreferences"]}, {"name": "zembed-1-embedding (open)", "kind": "baseline", "gets_query": true, "pair_auc": 0.5051724137931035, "accuracy_at_half": 0.5797101449275363, "best_f1": 0.6041666666666666, "hard_auc": 0.47586206896551725, "easy_auc": 0.5241379310344828, "mrr": 0.0643481222215541, "seeker_fields": ["positioning", "background", "lookingFor", "notes", "locationAvailability", "introPreferences", "personalPreferences", "meetingAndSchedulingPreferences"], "candidate_fields": ["positioning", "background", "lookingFor", "notes", "locationAvailability", "introPreferences", "personalPreferences", "meetingAndSchedulingPreferences"]}, {"name": "NV-Embed-v2 (open, approx.)", "kind": "baseline", "gets_query": true, "pair_auc": 0.503448275862069, "accuracy_at_half": 0.5072463768115942, "best_f1": 0.5918367346938774, "hard_auc": 0.37586206896551727, "easy_auc": 0.6, "mrr": 0.10924396120973041, "seeker_fields": ["positioning", "background", "lookingFor", "notes", "locationAvailability", "introPreferences", "personalPreferences", "meetingAndSchedulingPreferences"], "candidate_fields": ["positioning", "background", "lookingFor", "notes", "locationAvailability", "introPreferences", "personalPreferences", "meetingAndSchedulingPreferences"]}, {"name": "Frozen BERT", "kind": "baseline", "gets_query": true, "pair_auc": 0.45948275862068966, "accuracy_at_half": 0.42028985507246375, "best_f1": 0.6153846153846154, "hard_auc": 0.4224137931034483, "easy_auc": 0.6379310344827586, "mrr": 0.1370748200674727, "seeker_fields": ["positioning", "background", "lookingFor", "notes", "locationAvailability", "introPreferences", "personalPreferences", "meetingAndSchedulingPreferences"], "candidate_fields": ["positioning", "background", "lookingFor", "notes", "locationAvailability", "introPreferences", "personalPreferences", "meetingAndSchedulingPreferences"]}], "judge_detail": [{"name": "gemini-3.1-flash-lite (naive)", "backend": "openrouter", "variant": "naive", "n": 69, "pair_auc": 0.6357758620689655, "decision_accuracy": 0.5942028985507246, "f1": 0.5882352941176471, "yes_rate": 0.5652173913043478, "yes_rate_pos": 0.6896551724137931, "yes_rate_neg": 0.475, "mean_confidence": 88.84057971014492, "mean_confidence_correct": 89.26829268292683, "mean_confidence_wrong": 88.21428571428571, "hard_auc": 0.646551724137931, "easy_auc": 0.5637931034482758}, {"name": "gemini-3.1-flash-lite (calibrated)", "backend": "openrouter", "variant": "calibrated", "n": 69, "pair_auc": 0.5900862068965518, "decision_accuracy": 0.5652173913043478, "f1": 0.4, "yes_rate": 0.30434782608695654, "yes_rate_pos": 0.3448275862068966, "yes_rate_neg": 0.275, "mean_confidence": 86.95652173913044, "mean_confidence_correct": 87.94871794871794, "mean_confidence_wrong": 85.66666666666667, "hard_auc": 0.5879310344827586, "easy_auc": 0.5310344827586206}, {"name": "gemma-3-27b-it (Bedrock, naive)", "backend": "bedrock", "variant": "naive", "n": 69, "pair_auc": 0.5823275862068966, "decision_accuracy": 0.5507246376811594, "f1": 0.6075949367088608, "yes_rate": 0.7246376811594203, "yes_rate_pos": 0.8275862068965517, "yes_rate_neg": 0.65, "mean_confidence": 83.1159420289855, "mean_confidence_correct": 82.76315789473684, "mean_confidence_wrong": 83.54838709677419, "hard_auc": 0.621551724137931, "easy_auc": 0.49310344827586206}, {"name": "qwen3-32b (Bedrock, naive)", "backend": "bedrock", "variant": "naive", "n": 69, "pair_auc": 0.5801724137931035, "decision_accuracy": 0.5072463768115942, "f1": 0.5526315789473685, "yes_rate": 0.6811594202898551, "yes_rate_pos": 0.7241379310344828, "yes_rate_neg": 0.65, "mean_confidence": 82.76811594202898, "mean_confidence_correct": 83.14285714285714, "mean_confidence_wrong": 82.38235294117646, "hard_auc": 0.6224137931034484, "easy_auc": 0.496551724137931}, {"name": "gemini-3.1-flash-lite (focused, w/ query, OpenRouter)", "backend": "openrouter", "variant": "focused", "n": 69, "pair_auc": 0.6202586206896552, "decision_accuracy": 0.6231884057971014, "f1": 0.6060606060606061, "yes_rate": 0.5362318840579711, "yes_rate_pos": 0.6896551724137931, "yes_rate_neg": 0.425, "mean_confidence": 89.20289855072464, "mean_confidence_correct": 89.30232558139535, "mean_confidence_wrong": 89.03846153846153, "hard_auc": 0.6517241379310345, "easy_auc": 0.5413793103448277}, {"name": "gemini-3.1-flash-lite (focused, w/ query, direct Google API)", "backend": "google", "variant": "focused", "n": 69, "pair_auc": 0.6530172413793104, "decision_accuracy": 0.6086956521739131, "f1": 0.6086956521739131, "yes_rate": 0.5797101449275363, "yes_rate_pos": 0.7241379310344828, "yes_rate_neg": 0.475, "mean_confidence": 89.92753623188406, "mean_confidence_correct": 90.35714285714286, "mean_confidence_wrong": 89.25925925925925, "hard_auc": 0.6784482758620689, "easy_auc": 0.560344827586207}, {"name": "gemini-3.1-flash-lite (focused + seeker background, direct Google API)", "backend": "google", "variant": "seeker_background", "n": 69, "pair_auc": 0.6301724137931034, "decision_accuracy": 0.5797101449275363, "f1": 0.6027397260273972, "yes_rate": 0.6376811594202898, "yes_rate_pos": 0.7586206896551724, "yes_rate_neg": 0.55, "mean_confidence": 89.78260869565217, "mean_confidence_correct": 90.25, "mean_confidence_wrong": 89.13793103448276, "hard_auc": 0.6689655172413793, "easy_auc": 0.553448275862069}, {"name": "gemini-3.1-flash-lite (focused, seeker=lookingFor only, direct Google API)", "backend": "google", "variant": "focused", "n": 69, "pair_auc": 0.6698275862068965, "decision_accuracy": 0.6376811594202898, "f1": 0.6153846153846154, "yes_rate": 0.5217391304347826, "yes_rate_pos": 0.6896551724137931, "yes_rate_neg": 0.4, "mean_confidence": 90.07246376811594, "mean_confidence_correct": 90.3409090909091, "mean_confidence_wrong": 89.6, "hard_auc": 0.7163793103448277, "easy_auc": 0.6413793103448275}, {"name": "gemini-3.1-flash-lite (focused, seeker=positioning only, direct Google API)", "backend": "google", "variant": "focused", "n": 69, "pair_auc": 0.5913793103448276, "decision_accuracy": 0.5942028985507246, "f1": 0.5625, "yes_rate": 0.5072463768115942, "yes_rate_pos": 0.6206896551724138, "yes_rate_neg": 0.425, "mean_confidence": 89.6376811594203, "mean_confidence_correct": 89.63414634146342, "mean_confidence_wrong": 89.64285714285714, "hard_auc": 0.5620689655172414, "easy_auc": 0.6172413793103448}]}</script>
-  <script id="data-all" type="application/json">{"generated_at": "2026-07-25T15:43:39Z", "protocol_note": "same pair/retrieval/slices for all; (no query) = profile-only seeker text (no searchQuery)", "rows": [{"name": "TF-IDF (lexical)", "kind": "baseline", "gets_query": true, "pair_auc": 0.6717003676470588, "accuracy_at_half": 0.5227272727272727, "best_f1": 0.6735870818915802, "hard_auc": 0.5802022058823529, "easy_auc": 0.8009558823529412, "mrr": 0.3311695838308243, "seeker_fields": ["positioning", "background", "lookingFor", "notes", "locationAvailability", "introPreferences", "personalPreferences", "meetingAndSchedulingPreferences"], "candidate_fields": ["positioning", "background", "lookingFor", "notes", "locationAvailability", "introPreferences", "personalPreferences", "meetingAndSchedulingPreferences"]}, {"name": "LLM judge: gemini-3.1-flash-lite (focused, w/ query, direct Google API)", "kind": "llm_judge", "gets_query": true, "pair_auc": 0.6450500000000001, "accuracy_at_half": 0.595, "best_f1": 0.6859205776173286, "hard_auc": 0.6711, "easy_auc": 0.6132, "mrr": null, "seeker_fields": ["positioning", "lookingFor"], "candidate_fields": ["positioning", "background", "lookingFor"]}, {"name": "LLM judge: gemini-3.1-flash-lite (focused, candidate=background+lookingFor, direct Google API)", "kind": "llm_judge", "gets_query": true, "pair_auc": 0.6355500000000001, "accuracy_at_half": 0.605, "best_f1": 0.6711409395973155, "hard_auc": 0.6449, "easy_auc": 0.639, "mrr": null, "seeker_fields": ["positioning", "lookingFor"], "candidate_fields": ["background", "lookingFor"]}, {"name": "LLM judge: gemini-3.1-flash-lite (focused, seeker=lookingFor only, direct Google API)", "kind": "llm_judge", "gets_query": true, "pair_auc": 0.6327, "accuracy_at_half": 0.595, "best_f1": 0.6711409395973155, "hard_auc": 0.7106, "easy_auc": 0.5794, "mrr": null, "seeker_fields": ["lookingFor"], "candidate_fields": ["positioning", "background", "lookingFor"]}, {"name": "LLM judge: gemini-3.1-flash-lite (focused, candidate=positioning+background, direct Google API)", "kind": "llm_judge", "gets_query": true, "pair_auc": 0.6274, "accuracy_at_half": 0.6, "best_f1": 0.6666666666666666, "hard_auc": 0.6419, "easy_auc": 0.6112000000000001, "mrr": null, "seeker_fields": ["positioning", "lookingFor"], "candidate_fields": ["positioning", "background"]}, {"name": "LLM judge: gemini-3.1-flash-lite (focused, candidate=positioning+lookingFor, direct Google API)", "kind": "llm_judge", "gets_query": true, "pair_auc": 0.6274, "accuracy_at_half": 0.605, "best_f1": 0.6711409395973155, "hard_auc": 0.5792, "easy_auc": 0.7082000000000002, "mrr": null, "seeker_fields": ["positioning", "lookingFor"], "candidate_fields": ["positioning", "lookingFor"]}, {"name": "LLM judge: gemini-3.1-flash-lite (focused + seeker background, direct Google API)", "kind": "llm_judge", "gets_query": true, "pair_auc": 0.622, "accuracy_at_half": 0.6, "best_f1": 0.6721311475409835, "hard_auc": 0.6464000000000001, "easy_auc": 0.6279999999999999, "mrr": null, "seeker_fields": ["positioning", "lookingFor", "background"], "candidate_fields": ["positioning", "background", "lookingFor"]}, {"name": "LLM judge: gemini-3.1-flash-lite (focused, w/ query, OpenRouter)", "kind": "llm_judge", "gets_query": true, "pair_auc": 0.6177, "accuracy_at_half": 0.59, "best_f1": 0.673992673992674, "hard_auc": 0.6682000000000001, "easy_auc": 0.5784, "mrr": null, "seeker_fields": ["positioning", "lookingFor"], "candidate_fields": ["positioning", "background", "lookingFor"]}, {"name": "LLM judge: gemini-3.1-flash-lite (naive)", "kind": "llm_judge", "gets_query": false, "pair_auc": 0.61765, "accuracy_at_half": 0.605, "best_f1": 0.6714801444043322, "hard_auc": 0.6384000000000001, "easy_auc": 0.6556, "mrr": null, "seeker_fields": ["positioning", "background", "lookingFor", "notes", "locationAvailability", "introPreferences", "personalPreferences", "meetingAndSchedulingPreferences"], "candidate_fields": ["positioning", "background", "lookingFor", "notes", "locationAvailability", "introPreferences", "personalPreferences", "meetingAndSchedulingPreferences"]}, {"name": "LLM judge: gemini-3.1-flash-lite (focused, seeker=positioning only, direct Google API)", "kind": "llm_judge", "gets_query": true, "pair_auc": 0.6087, "accuracy_at_half": 0.6, "best_f1": 0.6690909090909091, "hard_auc": 0.6007, "easy_auc": 0.653, "mrr": null, "seeker_fields": ["positioning"], "candidate_fields": ["positioning", "background", "lookingFor"]}, {"name": "Voyage-4-large (field-selected: positioning+lookingFor+query / positioning+background+lookingFor)", "kind": "field_selected", "gets_query": true, "pair_auc": 0.5961, "accuracy_at_half": 0.495, "best_f1": 0.6688963210702341, "hard_auc": 0.525, "easy_auc": 0.6612, "mrr": 0.4019241178221728, "seeker_fields": ["positioning", "lookingFor"], "candidate_fields": ["positioning", "background", "lookingFor"]}, {"name": "LLM judge: gemini-3.1-flash-lite (calibrated)", "kind": "llm_judge", "gets_query": false, "pair_auc": 0.5907, "accuracy_at_half": 0.55, "best_f1": 0.6666666666666667, "hard_auc": 0.5917, "easy_auc": 0.6344, "mrr": null, "seeker_fields": ["positioning", "background", "lookingFor", "notes", "locationAvailability", "introPreferences", "personalPreferences", "meetingAndSchedulingPreferences"], "candidate_fields": ["positioning", "background", "lookingFor", "notes", "locationAvailability", "introPreferences", "personalPreferences", "meetingAndSchedulingPreferences"]}, {"name": "Qwen3-Embedding-8B (field-selected, same fields)", "kind": "field_selected", "gets_query": true, "pair_auc": 0.5839999999999999, "accuracy_at_half": 0.58, "best_f1": 0.6734006734006733, "hard_auc": 0.48360000000000003, "easy_auc": 0.7208, "mrr": 0.3012640632212843, "seeker_fields": ["positioning", "lookingFor"], "candidate_fields": ["positioning", "background", "lookingFor"]}, {"name": "LLM judge: gemma-3-27b-it (Bedrock, naive)", "kind": "llm_judge", "gets_query": false, "pair_auc": 0.57645, "accuracy_at_half": 0.565, "best_f1": 0.6666666666666666, "hard_auc": 0.5934, "easy_auc": 0.6206, "mrr": null, "seeker_fields": ["positioning", "background", "lookingFor", "notes", "locationAvailability", "introPreferences", "personalPreferences", "meetingAndSchedulingPreferences"], "candidate_fields": ["positioning", "background", "lookingFor", "notes", "locationAvailability", "introPreferences", "personalPreferences", "meetingAndSchedulingPreferences"]}, {"name": "Voyage-4-large (production)", "kind": "baseline", "gets_query": true, "pair_auc": 0.5726000000000001, "accuracy_at_half": 0.505, "best_f1": 0.6688963210702341, "hard_auc": 0.5421999999999999, "easy_auc": 0.654, "mrr": 0.3100120655779739, "seeker_fields": ["positioning", "background", "lookingFor", "notes", "locationAvailability", "introPreferences", "personalPreferences", "meetingAndSchedulingPreferences"], "candidate_fields": ["positioning", "background", "lookingFor", "notes", "locationAvailability", "introPreferences", "personalPreferences", "meetingAndSchedulingPreferences"]}, {"name": "Voyage-4-nano (field-selected, same fields)", "kind": "field_selected", "gets_query": true, "pair_auc": 0.5658, "accuracy_at_half": 0.5, "best_f1": 0.6688963210702341, "hard_auc": 0.455, "easy_auc": 0.6768, "mrr": 0.3531683743447766, "seeker_fields": ["positioning", "lookingFor"], "candidate_fields": ["positioning", "background", "lookingFor"]}, {"name": "Voyage-4-nano", "kind": "baseline", "gets_query": true, "pair_auc": 0.5614, "accuracy_at_half": 0.505, "best_f1": 0.6712328767123288, "hard_auc": 0.5064, "easy_auc": 0.6915999999999999, "mrr": 0.3007289166394498, "seeker_fields": ["positioning", "background", "lookingFor", "notes", "locationAvailability", "introPreferences", "personalPreferences", "meetingAndSchedulingPreferences"], "candidate_fields": ["positioning", "background", "lookingFor", "notes", "locationAvailability", "introPreferences", "personalPreferences", "meetingAndSchedulingPreferences"]}, {"name": "LLM judge: qwen3-32b (Bedrock, naive)", "kind": "llm_judge", "gets_query": false, "pair_auc": 0.5474000000000001, "accuracy_at_half": 0.555, "best_f1": 0.6666666666666666, "hard_auc": 0.5767, "easy_auc": 0.5491999999999999, "mrr": null, "seeker_fields": ["positioning", "background", "lookingFor", "notes", "locationAvailability", "introPreferences", "personalPreferences", "meetingAndSchedulingPreferences"], "candidate_fields": ["positioning", "background", "lookingFor", "notes", "locationAvailability", "introPreferences", "personalPreferences", "meetingAndSchedulingPreferences"]}, {"name": "voyage_nano_no_query", "kind": "baseline", "gets_query": true, "pair_auc": 0.5416, "accuracy_at_half": 0.505, "best_f1": 0.6688963210702341, "hard_auc": 0.4770000000000001, "easy_auc": 0.6712, "mrr": 0.2236394907790712, "seeker_fields": ["positioning", "background", "lookingFor", "notes", "locationAvailability", "introPreferences", "personalPreferences", "meetingAndSchedulingPreferences"], "candidate_fields": ["positioning", "background", "lookingFor", "notes", "locationAvailability", "introPreferences", "personalPreferences", "meetingAndSchedulingPreferences"]}, {"name": "voyage_large_no_query", "kind": "baseline", "gets_query": true, "pair_auc": 0.5252, "accuracy_at_half": 0.495, "best_f1": 0.6689895470383276, "hard_auc": 0.47259999999999996, "easy_auc": 0.6184000000000001, "mrr": 0.2502801407503594, "seeker_fields": ["positioning", "background", "lookingFor", "notes", "locationAvailability", "introPreferences", "personalPreferences", "meetingAndSchedulingPreferences"], "candidate_fields": ["positioning", "background", "lookingFor", "notes", "locationAvailability", "introPreferences", "personalPreferences", "meetingAndSchedulingPreferences"]}, {"name": "bert_frozen_no_query", "kind": "baseline", "gets_query": true, "pair_auc": 0.4699, "accuracy_at_half": 0.5, "best_f1": 0.6757679180887373, "hard_auc": 0.41080000000000005, "easy_auc": 0.6516000000000001, "mrr": 0.0941420312732453, "seeker_fields": ["positioning", "background", "lookingFor", "notes", "locationAvailability", "introPreferences", "personalPreferences", "meetingAndSchedulingPreferences"], "candidate_fields": ["positioning", "background", "lookingFor", "notes", "locationAvailability", "introPreferences", "personalPreferences", "meetingAndSchedulingPreferences"]}, {"name": "Frozen BERT", "kind": "baseline", "gets_query": true, "pair_auc": 0.46969999999999995, "accuracy_at_half": 0.5, "best_f1": 0.6757679180887373, "hard_auc": 0.41080000000000005, "easy_auc": 0.6507999999999999, "mrr": 0.0941420312732453, "seeker_fields": ["positioning", "background", "lookingFor", "notes", "locationAvailability", "introPreferences", "personalPreferences", "meetingAndSchedulingPreferences"], "candidate_fields": ["positioning", "background", "lookingFor", "notes", "locationAvailability", "introPreferences", "personalPreferences", "meetingAndSchedulingPreferences"]}], "judge_detail": [{"name": "gemini-3.1-flash-lite (naive)", "backend": "openrouter", "variant": "naive", "n": 200, "pair_auc": 0.61765, "decision_accuracy": 0.605, "f1": 0.6325581395348837, "yes_rate": 0.575, "yes_rate_pos": 0.68, "yes_rate_neg": 0.47, "mean_confidence": 88.45, "mean_confidence_correct": 88.63636363636364, "mean_confidence_wrong": 88.16455696202532, "hard_auc": 0.6384000000000001, "easy_auc": 0.6556}, {"name": "gemini-3.1-flash-lite (calibrated)", "backend": "openrouter", "variant": "calibrated", "n": 200, "pair_auc": 0.5907, "decision_accuracy": 0.55, "f1": 0.45121951219512196, "yes_rate": 0.32, "yes_rate_pos": 0.37, "yes_rate_neg": 0.27, "mean_confidence": 87.325, "mean_confidence_correct": 87.81818181818181, "mean_confidence_wrong": 86.72222222222223, "hard_auc": 0.5917, "easy_auc": 0.6344}, {"name": "gemma-3-27b-it (Bedrock, naive)", "backend": "bedrock", "variant": "naive", "n": 200, "pair_auc": 0.57645, "decision_accuracy": 0.565, "f1": 0.6506024096385542, "yes_rate": 0.745, "yes_rate_pos": 0.81, "yes_rate_neg": 0.68, "mean_confidence": 81.575, "mean_confidence_correct": 81.8141592920354, "mean_confidence_wrong": 81.26436781609195, "hard_auc": 0.5934, "easy_auc": 0.6206}, {"name": "qwen3-32b (Bedrock, naive)", "backend": "bedrock", "variant": "naive", "n": 200, "pair_auc": 0.5474000000000001, "decision_accuracy": 0.555, "f1": 0.6276150627615062, "yes_rate": 0.695, "yes_rate_pos": 0.75, "yes_rate_neg": 0.64, "mean_confidence": 82.515, "mean_confidence_correct": 82.37837837837837, "mean_confidence_wrong": 82.68539325842697, "hard_auc": 0.5767, "easy_auc": 0.5491999999999999}, {"name": "gemini-3.1-flash-lite (focused, w/ query, OpenRouter)", "backend": "openrouter", "variant": "focused", "n": 200, "pair_auc": 0.6177, "decision_accuracy": 0.59, "f1": 0.5980392156862745, "yes_rate": 0.52, "yes_rate_pos": 0.61, "yes_rate_neg": 0.43, "mean_confidence": 89.575, "mean_confidence_correct": 89.95762711864407, "mean_confidence_wrong": 89.02439024390245, "hard_auc": 0.6682000000000001, "easy_auc": 0.5784}, {"name": "gemini-3.1-flash-lite (focused, w/ query, direct Google API)", "backend": "google", "variant": "focused", "n": 200, "pair_auc": 0.6450500000000001, "decision_accuracy": 0.595, "f1": 0.6197183098591549, "yes_rate": 0.565, "yes_rate_pos": 0.66, "yes_rate_neg": 0.47, "mean_confidence": 89.7, "mean_confidence_correct": 90.33613445378151, "mean_confidence_wrong": 88.76543209876543, "hard_auc": 0.6711, "easy_auc": 0.6132}, {"name": "gemini-3.1-flash-lite (focused + seeker background, direct Google API)", "backend": "google", "variant": "seeker_background", "n": 200, "pair_auc": 0.622, "decision_accuracy": 0.6, "f1": 0.6428571428571429, "yes_rate": 0.62, "yes_rate_pos": 0.72, "yes_rate_neg": 0.52, "mean_confidence": 89.75, "mean_confidence_correct": 90.0, "mean_confidence_wrong": 89.375, "hard_auc": 0.6464000000000001, "easy_auc": 0.6279999999999999}, {"name": "gemini-3.1-flash-lite (focused, seeker=lookingFor only, direct Google API)", "backend": "google", "variant": "focused", "n": 200, "pair_auc": 0.6327, "decision_accuracy": 0.595, "f1": 0.6086956521739131, "yes_rate": 0.535, "yes_rate_pos": 0.63, "yes_rate_neg": 0.44, "mean_confidence": 90.225, "mean_confidence_correct": 90.67226890756302, "mean_confidence_wrong": 89.5679012345679, "hard_auc": 0.7106, "easy_auc": 0.5794}, {"name": "gemini-3.1-flash-lite (focused, seeker=positioning only, direct Google API)", "backend": "google", "variant": "focused", "n": 200, "pair_auc": 0.6087, "decision_accuracy": 0.6, "f1": 0.6, "yes_rate": 0.5, "yes_rate_pos": 0.6, "yes_rate_neg": 0.4, "mean_confidence": 89.2, "mean_confidence_correct": 89.375, "mean_confidence_wrong": 88.9375, "hard_auc": 0.6007, "easy_auc": 0.653}, {"name": "gemini-3.1-flash-lite (focused, candidate=positioning+background, direct Google API)", "backend": "google", "variant": "focused", "n": 200, "pair_auc": 0.6274, "decision_accuracy": 0.6, "f1": 0.6363636363636364, "yes_rate": 0.6, "yes_rate_pos": 0.7, "yes_rate_neg": 0.5, "mean_confidence": 89.8, "mean_confidence_correct": 90.08333333333333, "mean_confidence_wrong": 89.375, "hard_auc": 0.6419, "easy_auc": 0.6112000000000001}, {"name": "gemini-3.1-flash-lite (focused, candidate=positioning+lookingFor, direct Google API)", "backend": "google", "variant": "focused", "n": 200, "pair_auc": 0.6274, "decision_accuracy": 0.605, "f1": 0.572972972972973, "yes_rate": 0.425, "yes_rate_pos": 0.53, "yes_rate_neg": 0.32, "mean_confidence": 89.925, "mean_confidence_correct": 90.20661157024793, "mean_confidence_wrong": 89.49367088607595, "hard_auc": 0.5792, "easy_auc": 0.7082000000000002}, {"name": "gemini-3.1-flash-lite (focused, candidate=background+lookingFor, direct Google API)", "backend": "google", "variant": "focused", "n": 200, "pair_auc": 0.6355500000000001, "decision_accuracy": 0.605, "f1": 0.6519823788546255, "yes_rate": 0.635, "yes_rate_pos": 0.74, "yes_rate_neg": 0.53, "mean_confidence": 89.15, "mean_confidence_correct": 89.54545454545455, "mean_confidence_wrong": 88.54430379746836, "hard_auc": 0.6449, "easy_auc": 0.639}]}</script>
+  <script id="data" type="application/json">{"generated_at": "2026-07-25T15:43:39Z", "protocol_note": "frozen 69-pair real holdout (data/synthetic/seed_split.json eval_pair_ids) only \u2014 same population for every row, unlike baseline-results-all.md's full-dataset numbers. See docs/possible-bugs.md #3 and docs/twotower-run-001-results.md.", "rows": [{"name": "Qwen3-Embedding-8B (open)", "kind": "baseline", "gets_query": true, "pair_auc": 0.6594827586206896, "accuracy_at_half": 0.5072463768115942, "best_f1": 0.647887323943662, "hard_auc": 0.6258620689655172, "easy_auc": 0.7586206896551724, "mrr": 0.403986674245295}, {"name": "LLM judge: gemini-3.1-flash-lite (naive)", "kind": "llm_judge", "gets_query": false, "pair_auc": 0.640948275862069, "accuracy_at_half": 0.6086956521739131, "best_f1": 0.6153846153846154, "hard_auc": 0.6543103448275862, "easy_auc": 0.5603448275862069, "mrr": null}, {"name": "Hybrid TF-IDF+nano", "kind": "baseline", "gets_query": true, "pair_auc": 0.639655172413793, "accuracy_at_half": 0.5072463768115942, "best_f1": 0.631578947368421, "hard_auc": 0.6034482758620691, "easy_auc": 0.7172413793103448, "mrr": 0.4043028322440087}, {"name": "LLM judge: gemini-3.1-flash-lite (structured_cot)", "kind": "llm_judge", "gets_query": false, "pair_auc": 0.6336206896551723, "accuracy_at_half": 0.5507246376811594, "best_f1": 0.6329113924050632, "hard_auc": 0.6267241379310347, "easy_auc": 0.5603448275862069, "mrr": null}, {"name": "Voyage-4-large (production)", "kind": "baseline", "gets_query": true, "pair_auc": 0.6086206896551725, "accuracy_at_half": 0.43478260869565216, "best_f1": 0.6153846153846154, "hard_auc": 0.6017241379310345, "easy_auc": 0.6, "mrr": 0.528667801726667}, {"name": "TF-IDF (lexical)", "kind": "baseline", "gets_query": true, "pair_auc": 0.5922413793103449, "accuracy_at_half": 0.5797101449275363, "best_f1": 0.6363636363636365, "hard_auc": 0.5017241379310344, "easy_auc": 0.7551724137931035, "mrr": 0.2474815913137905}, {"name": "Voyage-4-nano", "kind": "baseline", "gets_query": true, "pair_auc": 0.5793103448275863, "accuracy_at_half": 0.43478260869565216, "best_f1": 0.5979381443298969, "hard_auc": 0.5706896551724138, "easy_auc": 0.6206896551724138, "mrr": 0.46104957904626953}, {"name": "twotower arm_a_real_only", "kind": "baseline", "gets_query": true, "pair_auc": 0.5793103448275863, "accuracy_at_half": 0.42028985507246375, "best_f1": 0.6097560975609757, "hard_auc": 0.5, "easy_auc": 0.6551724137931034, "mrr": 0.3882152169591429}, {"name": "twotower run_001", "kind": "baseline", "gets_query": true, "pair_auc": 0.578448275862069, "accuracy_at_half": 0.42028985507246375, "best_f1": 0.6190476190476191, "hard_auc": 0.4844827586206897, "easy_auc": 0.6931034482758621, "mrr": 0.282930784473066}, {"name": "BGE-en-ICL (open)", "kind": "baseline", "gets_query": true, "pair_auc": 0.5750000000000001, "accuracy_at_half": 0.4057971014492754, "best_f1": 0.6021505376344085, "hard_auc": 0.5862068965517242, "easy_auc": 0.5655172413793104, "mrr": 0.5157030428284888}, {"name": "E5-mistral-7b-instruct (open)", "kind": "baseline", "gets_query": true, "pair_auc": 0.5663793103448276, "accuracy_at_half": 0.42028985507246375, "best_f1": 0.6105263157894737, "hard_auc": 0.48793103448275865, "easy_auc": 0.7137931034482758, "mrr": 0.22444410848659233}, {"name": "zembed-1-embedding (open)", "kind": "baseline", "gets_query": true, "pair_auc": 0.5051724137931035, "accuracy_at_half": 0.5797101449275363, "best_f1": 0.6041666666666666, "hard_auc": 0.47586206896551725, "easy_auc": 0.5241379310344828, "mrr": 0.0643481222215541}, {"name": "NV-Embed-v2 (open, approx.)", "kind": "baseline", "gets_query": true, "pair_auc": 0.503448275862069, "accuracy_at_half": 0.5072463768115942, "best_f1": 0.5918367346938774, "hard_auc": 0.37586206896551727, "easy_auc": 0.6, "mrr": 0.10924396120973041}, {"name": "Frozen BERT", "kind": "baseline", "gets_query": true, "pair_auc": 0.45948275862068966, "accuracy_at_half": 0.42028985507246375, "best_f1": 0.6153846153846154, "hard_auc": 0.4224137931034483, "easy_auc": 0.6379310344827586, "mrr": 0.1370748200674727}], "judge_detail": [{"name": "gemini-3.1-flash-lite (naive)", "backend": "openrouter", "variant": "naive", "n": 69, "pair_auc": 0.640948275862069, "decision_accuracy": 0.6086956521739131, "f1": 0.5970149253731343, "yes_rate": 0.5507246376811594, "yes_rate_pos": 0.6896551724137931, "yes_rate_neg": 0.45, "mean_confidence": 88.26086956521739, "mean_confidence_correct": 88.69047619047619, "mean_confidence_wrong": 87.5925925925926, "hard_auc": 0.6543103448275862, "easy_auc": 0.5603448275862069}, {"name": "gemini-3.1-flash-lite (structured_cot)", "backend": "openrouter", "variant": "structured_cot", "n": 69, "pair_auc": 0.6336206896551723, "decision_accuracy": 0.5507246376811594, "f1": 0.6172839506172839, "yes_rate": 0.7536231884057971, "yes_rate_pos": 0.8620689655172413, "yes_rate_neg": 0.675, "mean_confidence": 36.46376811594203, "mean_confidence_correct": 36.21052631578947, "mean_confidence_wrong": 36.774193548387096, "hard_auc": 0.6267241379310347, "easy_auc": 0.5603448275862069}]}</script>
   <script>
     const DATA = JSON.parse(document.getElementById("data").textContent);
 
@@ -312,50 +219,6 @@
     }
     function pct(x, digits = 1) {
       return x === null || x === undefined ? "—" : (x * 100).toFixed(digits) + "%";
-    }
-
-    // ---- shared hover tooltip: seeker fields / candidate fields / query yes-no ----
-    const tooltipEl = document.getElementById("fields-tooltip");
-
-    function fieldChips(fields) {
-      if (!fields || !fields.length) return '<span class="tt-field">(none)</span>';
-      return fields.map((f) => `<span class="tt-field">${f}</span>`).join("");
-    }
-
-    function showFieldsTooltip(row, evt) {
-      const r = row._data;
-      tooltipEl.innerHTML = `
-        <p class="tt-name">${r.name}</p>
-        <table>
-          <thead>
-            <tr><th>Seeker fields</th><th>Candidate fields</th><th>Query</th></tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>${fieldChips(r.seeker_fields)}</td>
-              <td>${fieldChips(r.candidate_fields)}</td>
-              <td><span class="tt-check ${r.gets_query ? "yes" : "no"}">${r.gets_query ? "☑" : "☐"}</span></td>
-            </tr>
-          </tbody>
-        </table>
-      `;
-      tooltipEl.classList.add("is-visible");
-      positionFieldsTooltip(evt);
-    }
-
-    function positionFieldsTooltip(evt) {
-      const pad = 14;
-      const ttRect = tooltipEl.getBoundingClientRect();
-      let x = evt.clientX + pad;
-      let y = evt.clientY + pad;
-      if (x + ttRect.width > window.innerWidth - pad) x = evt.clientX - ttRect.width - pad;
-      if (y + ttRect.height > window.innerHeight - pad) y = evt.clientY - ttRect.height - pad;
-      tooltipEl.style.left = `${Math.max(pad, x)}px`;
-      tooltipEl.style.top = `${Math.max(pad, y)}px`;
-    }
-
-    function hideFieldsTooltip() {
-      tooltipEl.classList.remove("is-visible");
     }
 
     // ---- bar chart: Pair AUC, ranked ----
@@ -371,17 +234,14 @@
         const row = document.createElement("div");
         row.className = "bar-row" + (r.kind === "llm_judge" ? " is-judge" : "");
         row.innerHTML = `
-          <div class="name">${r.name}</div>
+          <div class="name" title="${r.name}">${r.name}</div>
           <div class="bar-track">
             <div class="bar-fill" style="width:${pctWidth}%; background:${r.kind === "llm_judge" ? "var(--judge)" : "var(--baseline)"}"></div>
             ${chanceAt !== undefined ? `<div class="chance-line" style="left:${((chanceAt - min) / (max - min)) * 100}%"></div>` : ""}
           </div>
           <div class="value">${fmt(v)}</div>
         `;
-        row._data = r;
-        row.addEventListener("mouseenter", (evt) => showFieldsTooltip(row, evt));
-        row.addEventListener("mousemove", positionFieldsTooltip);
-        row.addEventListener("mouseleave", hideFieldsTooltip);
+        row.title = `${r.name}: ${valueKey} = ${fmt(v)}`;
         el.appendChild(row);
       }
     }
@@ -409,33 +269,6 @@
        Qwen3-Embedding-8B's 0.6595 ceiling. None of this is deployable: a per-candidate LLM call is out of scope
        under the project's &lt;100ms serving budget, and there's no retrieval column for any LLM-judge row because
        ranking a full candidate corpus per query would need tens of thousands of calls.`,
-      `<b>Giving flash-lite the search query back — while trimming each profile to only positioning/lookingFor
-       (seeker) and positioning/background/lookingFor (candidate)</b> — via OpenRouter landed at pair AUC 0.6203,
-       between the naive no-query judge (0.6358) and Voyage-4-large (0.6086). The <b>same prompt called through
-       Google's own API directly</b> (not OpenRouter) scored pair AUC 0.6530 — 2nd-best of anything in this project —
-       and hard-negative AUC 0.6784, the best of any config tested. See docs/llm-judge-focused-prompt-experiment.md
-       for the full OpenRouter-vs-direct-API gap this surfaced.`,
-      `<b>Adding the seeker's own <code>background</code> field to that same prompt made it worse</b>, consistently:
-       pair AUC 0.6530→0.6302 on the holdout and 0.6451→0.6220 on all 200 pairs, with hard-neg AUC also dropping
-       (0.6784→0.6690) — small but the same direction both times. See docs/llm-judge-seeker-background-experiment.md.`,
-      `<b>The same field selection on Qwen3-Embedding-8B (not an LLM judge — the strongest embedding model in this
-       project) sets a new project-wide high: pair AUC 0.6862</b>, ahead of its own full-profile score (0.6595) and
-       every LLM judge. But its hard-negative AUC is only 0.5689 (vs. 0.8552 easy-neg) — the same lexical-overlap
-       pattern every embedding baseline shows, unlike the LLM judge's 0.6784. Best <i>overall</i> AUC and best
-       <i>hard-negative</i> AUC are different models. See docs/qwen3-embedding-field-selected-experiment.md.`,
-      `<b>Dropping the focused prompt's seeker down to <code>lookingFor</code> alone beats the two-field version on
-       the holdout</b> — pair AUC 0.6530→0.6698 and hard-negative AUC 0.6784→0.7164, the best hard-negative AUC of
-       any config in this project. <code>positioning</code> alone is much weaker (holdout pair AUC 0.5914, hard-neg
-       0.5621) — close to chance-plus, and closer to an embedding baseline's usual easy/hard pattern than to the LLM
-       judge's. <code>lookingFor</code>, not <code>positioning</code>, is what the focused prompt's advantage runs
-       on. See docs/llm-judge-seeker-field-isolation-experiment.md.`,
-      `<b>On the candidate side, no two-field subset beats the full three-field candidate</b> (positioning+background+
-       lookingFor, 0.6451) — every permutation drops pair AUC, but not evenly. Dropping <code>positioning</code>
-       hurts least (<code>background+lookingFor</code>: 0.6356, hard-neg 0.6449, closest to the full config).
-       Dropping <code>background</code> hurts hard-negative discrimination the most — <code>positioning+lookingFor</code>
-       is the only candidate config where hard-neg AUC (0.5792) falls <i>below</i> easy-neg AUC (0.7082), the pattern
-       every embedding baseline shows and the opposite of what makes this judge distinctive elsewhere. 200-pair only
-       (no holdout run for this sweep). See docs/llm-judge-candidate-field-permutation-experiment.md.`,
     ];
     for (const f of findings) {
       const div = document.createElement("div");
@@ -446,7 +279,7 @@
 
     // ---- full comparison table ----
     const fullCols = [
-      ["Model", (r) => r.name + (r.kind === "field_selected" ? ' <span class="fieldsel-tag">field-selected</span>' : ""), "left"],
+      ["Model", (r) => r.name, "left"],
       ["Pair AUC", (r) => fmt(r.pair_auc)],
       ["Hard-neg AUC", (r) => fmt(r.hard_auc)],
       ["Easy-neg AUC", (r) => fmt(r.easy_auc)],
@@ -455,23 +288,20 @@
       ["MRR", (r) => (r.mrr === null || r.mrr === undefined ? '<span class="na">n/a</span>' : fmt(r.mrr))],
       ["Gets query?", (r) => (r.gets_query ? "yes" : "no")],
     ];
-    function renderFullTable(elId, rows) {
-      const el = document.getElementById(elId);
-      el.innerHTML = `
-        <thead><tr>${fullCols.map(([label], i) => `<th style="${i===0?'text-align:left':''}">${label}</th>`).join("")}</tr></thead>
-        <tbody>
-          ${rows.map((r) => `
-            <tr class="${r.kind === "llm_judge" ? "is-judge" : ""}">
-              ${fullCols.map(([label, fn], i) => i === 0
-                ? `<th>${fn(r)}</th>`
-                : `<td>${fn(r)}</td>`
-              ).join("")}
-            </tr>
-          `).join("")}
-        </tbody>
-      `;
-    }
-    renderFullTable("full-table", DATA.rows);
+    const fullTable = document.getElementById("full-table");
+    fullTable.innerHTML = `
+      <thead><tr>${fullCols.map(([label], i) => `<th style="${i===0?'text-align:left':''}">${label}</th>`).join("")}</tr></thead>
+      <tbody>
+        ${DATA.rows.map((r) => `
+          <tr class="${r.kind === "llm_judge" ? "is-judge" : ""}">
+            ${fullCols.map(([label, fn], i) => i === 0
+              ? `<th>${fn(r)}</th>`
+              : `<td>${fn(r)}</td>`
+            ).join("")}
+          </tr>
+        `).join("")}
+      </tbody>
+    `;
 
     // ---- LLM-judge detail table ----
     const judgeCols = [
@@ -488,34 +318,20 @@
       ["Conf. when right", (r) => r.mean_confidence_correct.toFixed(1)],
       ["Conf. when wrong", (r) => r.mean_confidence_wrong.toFixed(1)],
     ];
-    function renderJudgeTable(elId, rows) {
-      const el = document.getElementById(elId);
-      el.innerHTML = `
-        <thead><tr>${judgeCols.map(([label], i) => `<th style="${i===0?'text-align:left':''}">${label}</th>`).join("")}</tr></thead>
-        <tbody>
-          ${rows.map((r) => `
-            <tr>
-              ${judgeCols.map(([label, fn], i) => i === 0
-                ? `<th>${fn(r)}</th>`
-                : `<td>${fn(r)}</td>`
-              ).join("")}
-            </tr>
-          `).join("")}
-        </tbody>
-      `;
-    }
-    renderJudgeTable("judge-table", DATA.judge_detail);
-
-    // ---- n=200 (all real pairs) section ----
-    const DATA_ALL = JSON.parse(document.getElementById("data-all").textContent);
-
-    renderBarChart("chart-auc-all", DATA_ALL.rows, "pair_auc", { min: 0.45, max: 0.68, chance: 0.5 });
-    const hardnessRowsAll = [...DATA_ALL.rows]
-      .filter((r) => r.hard_auc !== null && r.hard_auc !== undefined)
-      .sort((a, b) => b.hard_auc - a.hard_auc);
-    renderBarChart("chart-hardness-all", hardnessRowsAll, "hard_auc", { min: 0.35, max: 0.68, chance: 0.5 });
-    renderFullTable("full-table-all", DATA_ALL.rows);
-    renderJudgeTable("judge-table-all", DATA_ALL.judge_detail);
+    const judgeTable = document.getElementById("judge-table");
+    judgeTable.innerHTML = `
+      <thead><tr>${judgeCols.map(([label], i) => `<th style="${i===0?'text-align:left':''}">${label}</th>`).join("")}</tr></thead>
+      <tbody>
+        ${DATA.judge_detail.map((r) => `
+          <tr>
+            ${judgeCols.map(([label, fn], i) => i === 0
+              ? `<th>${fn(r)}</th>`
+              : `<td>${fn(r)}</td>`
+            ).join("")}
+          </tr>
+        `).join("")}
+      </tbody>
+    `;
   </script>
 </body>
 </html>

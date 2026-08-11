@@ -1,0 +1,54 @@
+{
+  "id": 656,
+  "archetype": "Ex-BigCo Founder, AI Infrastructure",
+  "given_name": "Jamal Castillo",
+  "style_version": 40,
+  "archetypes_version": 109,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Jamal Castillo is a former Principal Engineer at Google Cloud, specializing in Kubernetes and distributed systems. He left to found 'SynapseForge,' a startup building a serverless inference platform specifically tailored for large language models (LLMs). His core value proposition is drastically reducing LLM inference costs for enterprise customers by optimizing hardware utilization and employing novel scheduling algorithms. He's extremely focused on technical deep-dives, and less interested in 'fluff' or high-level business strategy. He's actively fundraising (Series A) and seeking strategic partnerships with hardware vendors. He\u2019s a direct communicator and values efficiency. A key detail: he was the lead architect on a key cost-saving feature within Google Cloud\u2019s Vertex AI, giving him deep credibility in the space.",
+    "positioning": "Jamal Castillo is the Founder and CEO of SynapseForge, a next-generation serverless inference platform designed to unlock the full potential of large language models. Having spent over a decade building scalable infrastructure at Google, I\u2019ve witnessed firsthand the escalating costs associated with LLM deployment. SynapseForge directly addresses this challenge by delivering up to 70% cost reductions through intelligent resource allocation and optimized hardware utilization. We empower enterprises to innovate with AI without being constrained by prohibitive infrastructure expenses. My expertise lies in distributed systems, Kubernetes, and the intricacies of LLM architecture, allowing me to lead a team focused on pushing the boundaries of efficient AI inference.",
+    "background": "- **SynapseForge, Founder & CEO** (2023 \u2013 Present)\n  - Led seed funding round of $3.5M from leading AI-focused VCs.\n  - Defined and executed product roadmap, focusing on serverless LLM inference.\n  - Built core engineering team and established a culture of rapid iteration.\n  - Developed and patented novel scheduling algorithms for optimized hardware utilization.\n\n- **Google Cloud, Principal Engineer** (2016 \u2013 2023)\n  - Led the architecture and development of a cost-optimization feature within Vertex AI, resulting in a 25% reduction in average inference costs for users.\n  - Managed a team of 8 engineers focused on Kubernetes-based infrastructure.\n  - Contributed significantly to the evolution of Google\u2019s internal container orchestration platform.\n  - Authored and presented technical papers on distributed systems at industry conferences.\n\n- **Amazon Web Services, Software Development Engineer** (2013 \u2013 2016)\n  - Developed and maintained core components of the EC2 Container Service (ECS).\n  - Focused on improving the scalability and reliability of containerized applications.\n\n- **Education:**\n  - M.S., Computer Science, Stanford University (2013)\n  - B.S., Computer Engineering, Massachusetts Institute of Technology (2011)",
+    "lookingFor": "I'm actively seeking connections with individuals who can contribute to SynapseForge's growth and impact. Specifically, I'm looking to connect with:\n\n- **Series A Investors:** Focused on deep-tech, AI infrastructure, and cloud computing. We're aiming to close a $15-20M round in Q1 2024.\n- **Hardware Vendors (Nvidia, AMD, Intel):** Exploring strategic partnerships to optimize SynapseForge for specific hardware architectures.\n- **Enterprise AI Leaders:** Heads of AI/ML, CTOs, and VPs of Engineering at companies actively deploying LLMs at scale. I'm keen to understand their pain points and demonstrate how SynapseForge can address them.\n- **Experienced Go Engineers:** Building out our core infrastructure team. Looking for individuals with deep experience in distributed systems and Kubernetes.\n\nI\u2019m particularly interested in conversations centered around technical challenges, performance optimization, and the future of AI infrastructure. I\u2019m less interested in general networking or marketing discussions.",
+    "notes": "Jamal is highly technical and prefers to dive directly into implementation details. He responds best to concise, data-driven communication. He\u2019s currently prioritizing fundraising and strategic partnerships. Recent conversations indicate a slight concern regarding competition from larger cloud providers, but he believes SynapseForge\u2019s specialized focus on LLM inference provides a significant competitive advantage. He\u2019s very protective of his time and prefers to keep initial outreach focused and to-the-point. He has limited patience for 'sales pitches' and appreciates directness. Data quality regarding his past contributions at Google is strong, verified through public conference talks and internal references. He\u2019s been receptive to introductions to hardware specialists but less so to purely financial investors without a strong technical understanding.",
+    "locationAvailability": "I am based in San Francisco, California, and am open to remote meetings. Limited availability for travel outside of the Bay Area in the next quarter due to fundraising efforts.",
+    "introPreferences": "When making introductions to Jamal, please adhere to the following:\n\n* **Hard Requirements:**\n  - The individual *must* have a demonstrable understanding of LLMs and/or cloud infrastructure.\n  - For investors, a clear investment thesis focused on deep-tech is essential.\n  - For potential partners, a technical background and decision-making authority are crucial.\n* **Soft Preferences:**\n  - Prior experience with Kubernetes or distributed systems is highly valued.\n  - A focus on cost optimization or performance improvement is a strong plus.\n* **Introduction Messaging:**\n  - Briefly highlight the connection\u2019s relevant expertise and how it aligns with SynapseForge\u2019s mission.\n  - Avoid overly promotional language or generic introductions. \n  - Frame the connection as a potential opportunity for a technical discussion or collaboration. \n  - *Specifically mention* you understand Jamal prioritizes technical depth and efficiency.",
+    "personalPreferences": "I prefer email (jamal.castillo@synapseforge.ai) for initial contact. I respond best to concise, well-structured messages. I\u2019m generally unavailable for calls before 10 AM PST.",
+    "meetingAndSchedulingPreferences": "I typically schedule meetings in 30-minute blocks to maximize efficiency. Please send a brief agenda in advance so I can prepare. I'm available for meetings most weekdays between 10 AM and 5 PM PST. I prefer to use Google Calendar for scheduling."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 25.082595825195312,
+      "input_tokens": 816,
+      "output_tokens": 1327,
+      "problems": []
+    }
+  ],
+  "success": true
+}

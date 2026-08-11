@@ -1,0 +1,54 @@
+{
+  "id": 915,
+  "archetype": "Healthcare AI & Security Builder",
+  "given_name": "Priya Kaur",
+  "style_version": 56,
+  "archetypes_version": 154,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Priya Kaur is a seasoned healthcare AI security leader, currently the CEO and founder of \u2018Aegis Health AI,\u2019 a startup focused on federated learning for medical imaging analysis. Her distinctive career detail is a prior 8-year stint at the FDA, where she was instrumental in developing early frameworks for AI/ML device regulation. This gives her uniquely deep insight into both the technical *and* regulatory landscapes. She\u2019s now raising a Series A and is looking for strategic investors, potential partners for data access (with strong privacy safeguards), and advisors with experience scaling healthcare AI companies. She\u2019s very focused on responsible AI and data governance, and actively avoids purely \u2018move fast and break things\u2019 approaches. She's a thought leader, frequently speaking at industry events, and values genuine connections over superficial networking.",
+    "positioning": "As CEO and Founder of Aegis Health AI, I'm driving the next generation of secure and compliant AI solutions for medical imaging. We leverage federated learning to unlock the power of distributed datasets, enabling collaborative research and improved diagnostic accuracy without compromising patient privacy. My background at the FDA equipped me with a unique understanding of the regulatory challenges and opportunities within the healthcare AI space. I\u2019m passionate about building AI systems that are not only innovative but also ethically sound and demonstrably safe.  We're focused on addressing key pain points in radiology and cardiology \u2013 reducing diagnostic errors, accelerating research timelines, and ultimately improving patient outcomes. Aegis Health AI is poised to become a leader in responsible AI for healthcare, and I\u2019m actively seeking partners and investors who share this vision.",
+    "background": "- **CEO & Founder, Aegis Health AI** (2022 \u2013 Present)\n  * Led seed funding round of $2.5M, establishing core team and developing MVP for federated learning platform.\n  * Spearheaded product development, focusing on secure multi-party computation and differential privacy techniques.\n  * Secured pilot partnerships with three leading hospital systems for initial data validation and model training.\n  * Developed and implemented a comprehensive data governance framework aligned with HIPAA and GDPR regulations.\n\n- **Senior Advisor, Healthcare AI, Deloitte** (2021 \u2013 2022)\n  * Advised healthcare organizations on AI strategy, risk management, and regulatory compliance.\n  * Led workshops and training sessions on responsible AI principles and best practices.\n  * Contributed to white papers and thought leadership articles on the future of AI in healthcare.\n\n- **FDA, Division of Digital Health** (2014 \u2013 2021)\n  * Served as a key member of the team developing regulatory frameworks for AI/ML-based medical devices.\n  * Led the evaluation of pre-market submissions for AI-powered diagnostic tools, focusing on safety and effectiveness.\n  * Authored guidance documents and presented at industry conferences on AI/ML regulation.\n  * Collaborated with international regulatory bodies to harmonize AI standards.\n\n- **Education:**\n  * PhD, Biomedical Engineering, Stanford University (2014)\n  * BS, Computer Science, Massachusetts Institute of Technology (2010)\n\n- **Skills:** Federated Learning, Differential Privacy, Secure Multi-Party Computation, HIPAA Compliance, GDPR Compliance, AI/ML Regulation, Medical Imaging, Data Governance, Python, TensorFlow, PyTorch, Risk Management, Strategic Planning, Public Speaking.",
+    "lookingFor": "I\u2019m currently focused on expanding Aegis Health AI\u2019s network and securing a Series A funding round.  I\u2019m actively seeking connections with:\n\n* **Investors:**  Specifically, venture capital firms with a demonstrated track record of investing in early-stage healthcare AI companies, particularly those focused on security and compliance. We\u2019re looking for partners who understand the long-term value of responsible AI and are committed to sustainable growth.\n* **Strategic Partners:** Hospital systems and research institutions with large, diverse medical imaging datasets and a commitment to data privacy. We\u2019re interested in exploring collaborative opportunities to validate our platform and accelerate the development of new diagnostic tools.  Strong data use agreements and IRB processes are critical.\n* **Advisors:** Experienced entrepreneurs and industry leaders with a proven track record of scaling healthcare AI companies.  Guidance on go-to-market strategy, sales, and operations would be invaluable.\n* **Experts in Federated Learning & Privacy Enhancing Technologies:** Individuals with deep technical expertise in areas like homomorphic encryption or secure aggregation.\n\nI\u2019m also open to connecting with thought leaders in the healthcare AI space to discuss emerging trends and best practices.  I\u2019m particularly interested in conversations around the ethical implications of AI and the importance of building trust in these technologies. I'm *not* interested in purely speculative or hype-driven conversations.",
+    "notes": "* Priya is very discerning about who she connects with.  She prioritizes quality over quantity.\n* She is highly knowledgeable about FDA regulations and will likely ask detailed questions about data privacy and security.\n* Avoid pitching her solutions that are not explicitly focused on security or compliance.\n* She recently spoke at HIMSS and is actively following developments in the AI Act.\n* She's very passionate about her work and happy to share her vision for the future of healthcare AI.",
+    "locationAvailability": "Based in Boston, MA, but frequently travels for conferences and investor meetings.  Open to virtual meetings and travel within the US and internationally.",
+    "introPreferences": "* **Hard Requirements:**  Introductions should be to individuals at the VP level or above at venture capital firms, C-suite executives at hospital systems, or founders/CEOs of comparable healthcare AI companies.\n* **Soft Preferences:** Introductions should highlight the recipient\u2019s expertise in healthcare AI, security, or regulatory compliance.  A brief overview of their relevant experience and a clear explanation of why a connection with Priya would be mutually beneficial is essential.\n* **Avoid:**  Introductions to individuals solely focused on marketing or sales.  Do not introduce her to individuals who are not decision-makers or influencers.\n* **Introduction Style:**  Keep it concise and professional, focusing on mutual interests and potential synergies.",
+    "personalPreferences": "Prefers email for initial contact.  Happy to connect on LinkedIn.  Brief, data-driven updates are appreciated \u2013 avoid lengthy, overly promotional messages.",
+    "meetingAndSchedulingPreferences": "Generally available for 30-60 minute meetings.  Prefers mornings (EST) or early afternoons.  Video calls are preferred, but phone calls are acceptable.  Please send a brief agenda in advance to ensure a productive conversation. She often has back-to-back meetings, so punctuality is greatly appreciated.  A quick follow-up email summarizing key takeaways is always welcome."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 24.844337940216064,
+      "input_tokens": 837,
+      "output_tokens": 1418,
+      "problems": []
+    }
+  ],
+  "success": true
+}

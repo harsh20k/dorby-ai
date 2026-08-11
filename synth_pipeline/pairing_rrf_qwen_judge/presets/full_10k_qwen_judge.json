@@ -1,0 +1,57 @@
+{
+  "_readme": [
+    "Full-scale pairing run over the entire 9,659-profile pool from",
+    "artifacts/bedrock_synth/run_20260804_023936, judged with qwen.qwen3-32b-v1:0",
+    "on Bedrock instead of gemini-3.1-flash-lite (see",
+    "synth_pipeline/pairing_rrf_qwen_judge/__init__.py for the accuracy/cost tradeoff).",
+    "generate_profiles is disabled — this reuses a pool already paid for."
+  ],
+
+  "batch_id": "rrf_qwen_full_001",
+
+  "generate_profiles": {
+    "enabled": false,
+    "count": 9659,
+    "model_id": "google.gemma-3-27b-it",
+    "concurrency": 16,
+    "region": "us-east-1"
+  },
+
+  "profile_run": "artifacts/bedrock_synth/run_20260804_023936",
+
+  "query_gen_concurrency": 12,
+  "_query_gen_concurrency": "query_gen.py was serial (1 call at a time) until this run measured ~42/min against 12091 targets; now threaded like the judge phase.",
+
+  "pairing": {
+    "enabled": true,
+    "seeker_frac": 0.43,
+    "recall_k": 10,
+    "top_k": 5,
+    "dense_weight": 2.0,
+    "lexical_weight": 1.0,
+    "rrf_k": 60,
+    "max_pairs_per_seeker": null,
+    "min_dense_similarity": null,
+    "seed": 42
+  },
+
+  "embedding": {
+    "model": "Qwen/Qwen3-Embedding-8B",
+    "backend": "modal",
+    "batch_size": 2,
+    "max_length": 4096,
+    "use_chroma": true
+  },
+
+  "judge": {
+    "enabled": true,
+    "concurrency": 24,
+    "_note": "qwen.qwen3-32b-v1:0 via AWS Bedrock (tf_provisioner), see judge.py in this package. Bumped from 8->24 after the first ~400 judged pairs showed steady throughput (~66/min) with zero throttling errors -- concurrency=8 was leaving an estimated 6.3h ETA on the table."
+  },
+
+  "export": {
+    "enabled": true,
+    "dest": "exports/rrf_datasets_qwen_judge",
+    "include_embeddings": false
+  }
+}

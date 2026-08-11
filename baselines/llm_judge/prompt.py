@@ -22,15 +22,30 @@ Two framings are available:
     ``naive`` is scored against a label it was never told about — if naive
     calls almost everything a match, that is a framing artifact, not a
     capability ceiling, and this variant separates the two.
+
+``structured_cot``
+    Same naive framing (no calibration hints), but instead of a direct yes/no
+    the model must score six independent aspects (location/availability,
+    ask-offer alignment, skill/domain evidence, seniority/stage fit,
+    domain/industry fit, practical constraints) with cited evidence, and the
+    verdict is a fixed-weight aggregate of those six scores, computed in code
+    from ``baselines/llm_judge/structured.py`` rather than trusted from the
+    model. Tests whether forcing that decomposition before an answer moves
+    pair AUC versus ``naive``'s direct call. Prompt source of truth is
+    ``prompts/structured_cot.md``; push changes to LangSmith Hub with
+    ``python -m baselines.llm_judge.push_prompts`` before a paid run.
 """
 
 from __future__ import annotations
 
+from pathlib import Path
 from typing import Any, Literal, Mapping
 
 from baselines.bert_frozen.text import profile_to_text
 
-Variant = Literal["naive", "calibrated"]
+Variant = Literal["naive", "calibrated", "structured_cot"]
+
+PROMPTS_DIR = Path(__file__).resolve().parent / "prompts"
 
 _RESPONSE_CONTRACT = """
 Respond with a single JSON object and nothing else:
@@ -93,6 +108,7 @@ was declined.
 SYSTEM_PROMPTS: dict[str, str] = {
     "naive": _NAIVE_SYSTEM,
     "calibrated": _CALIBRATED_SYSTEM,
+    "structured_cot": (PROMPTS_DIR / "structured_cot.md").read_text(encoding="utf-8").strip(),
 }
 
 

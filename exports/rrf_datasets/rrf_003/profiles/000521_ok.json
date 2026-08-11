@@ -1,0 +1,54 @@
+{
+  "id": 521,
+  "archetype": "Deep Tech Founder, Early Stage, Canada",
+  "given_name": "Soraya Nkosi",
+  "style_version": 32,
+  "archetypes_version": 88,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Soraya Nkosi is a brilliant, but relatively introverted, materials scientist turned founder. She completed her PhD at the University of Toronto focusing on novel perovskite materials for solar energy, and then spent a frustrating two years at a large energy corporation where her research was sidelined by bureaucratic processes and short-term profit goals. This experience fueled her desire to build a company that could rapidly translate cutting-edge materials science into real-world climate solutions. Her current company, 'Luminary Materials', is developing a proprietary coating that dramatically increases the efficiency of existing silicon solar panels, offering a cost-effective upgrade path for existing infrastructure. She\u2019s deeply technical, often getting lost in the details, and needs help with the 'business' side of things \u2013 fundraising, sales, and strategic partnerships. She's based in Toronto and very focused on securing seed funding from Canadian VCs with a demonstrated interest in cleantech. She's also keen to connect with solar panel manufacturers for pilot projects.",
+    "positioning": "Luminary Materials is revolutionizing solar energy efficiency through a novel, spray-on perovskite coating. Our technology seamlessly integrates with existing silicon solar panels, boosting their power output by an average of 25-30% \u2013 a significant leap forward in performance without requiring expensive panel replacements. We\u2019re targeting the large-scale solar farm market initially, offering a compelling ROI for operators looking to maximize energy generation from their existing assets.  Early pilot data indicates a payback period of under 18 months for most installations.  We\u2019ve recently secured a letter of intent from a major Canadian solar farm operator for a 1MW pilot project, and are currently finalizing our seed round to scale production and expand our team. Our core differentiator lies in the stability and scalability of our perovskite formulation, overcoming the common degradation issues that have plagued previous attempts at perovskite-silicon tandem cells. We project $2M ARR within 24 months of seed funding, based on conservative market penetration estimates.",
+    "background": "- **PhD, Materials Science & Engineering**, University of Toronto (2018-2022). Dissertation: \u2018Enhanced Stability and Performance of Perovskite Materials for Next-Generation Solar Cells\u2019. Awarded the University of Toronto Graduate Scholarship. \n- **Research Scientist**, NovaTech Energy (2022-2024). Led research and development efforts on advanced materials for energy storage and generation. Responsibilities included materials synthesis, characterization, and performance testing.  Successfully filed 2 provisional patents related to novel battery electrode materials (projects ultimately shelved due to market prioritization).\n- **M.Sc., Chemistry**, McGill University (2016-2018). Focused on organic synthesis and characterization of functional materials.\n- **B.Sc., Honours Chemistry**, University of British Columbia (2012-2016). Graduated with First Class Honours.\n- **Skills:** Perovskite synthesis & characterization, materials science, thin film deposition, solar cell fabrication & testing, X-ray diffraction (XRD), scanning electron microscopy (SEM), data analysis (Python, MATLAB), scientific writing, patent application process.\n- **Certifications:** Project Management Professional (PMP) - completed training, certification pending.",
+    "lookingFor": "## Investment\n- **Seed-Stage VCs:** Specifically seeking Canadian VCs with a focus on cleantech, deep tech, and materials science.  Target investment size: $1.5M - $2M.\n- **Angel Investors:**  Individuals with experience in the energy sector and a passion for climate solutions.\n\n## Strategic Partnerships\n- **Solar Panel Manufacturers:**  Interested in exploring partnerships for integrating Luminary Materials\u2019 coating into their manufacturing processes.\n- **Solar Farm Operators:** Seeking opportunities for pilot projects and long-term supply agreements.\n- **Materials Science Experts:**  Advisors with expertise in perovskite stability and large-scale manufacturing.\n\n## Mentorship/Advisory\n- **Experienced Startup Founders:**  Guidance on scaling a deep-tech company and navigating the fundraising process.",
+    "notes": "Soraya is incredibly intelligent and passionate about her technology, but can be quite reserved in social settings. She's often more comfortable discussing the technical details of her work than the business aspects. She\u2019s very focused on the scientific rigor of her work and can be skeptical of overly optimistic marketing claims. When making introductions, emphasize the quantifiable benefits of her technology (e.g., efficiency gains, ROI) and the strong scientific foundation of Luminary Materials.  Avoid overly broad introductions \u2013 she prefers targeted connections with individuals who have specific expertise or resources to offer. She previously had a negative experience with an investor who lacked technical understanding, so highlighting the depth of her scientific background is crucial.  She's a diligent researcher and will likely do her homework on anyone you introduce her to. Bullet point: She\u2019s very receptive to data-driven insights and constructive criticism.",
+    "locationAvailability": "Soraya is based in Toronto, Ontario, and is generally available for meetings remotely. She is willing to travel within Canada and occasionally to the US for critical meetings or conferences.",
+    "introPreferences": "- **Hard Requirements:** Introductions *must* be to individuals with demonstrated experience in the cleantech or materials science sectors. No general networking requests, please.\n- **Soft Preferences:**  Ideally, introductions should be to individuals who have a track record of successful investments in deep-tech companies or have held leadership positions at major solar energy companies.  A brief, personalized note explaining *why* this connection would be valuable to Luminary Materials is highly appreciated. Please flag any potential conflicts of interest upfront.\n- **Introduction Style:**  A concise and professional introduction that highlights Soraya\u2019s technical expertise and the potential market impact of Luminary Materials is preferred. Avoid hyperbole; focus on facts and data.",
+    "personalPreferences": "Soraya prefers email for initial contact (soraya.nkosi@luminarymaterials.com). She\u2019s responsive on LinkedIn but doesn't check it as frequently as email. Short, concise communication is appreciated. Updates on follow-up actions are always welcome.",
+    "meetingAndSchedulingPreferences": "Soraya prefers meetings to be focused and efficient, with a clear agenda.  Please send any relevant materials (e.g., pitch deck, technical specifications) in advance. She prefers to join meetings 5-10 minutes early to review notes and prepare. A brief follow-up summary after each meeting is helpful for ensuring alignment and tracking action items."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 19.0127112865448,
+      "input_tokens": 790,
+      "output_tokens": 1369,
+      "problems": []
+    }
+  ],
+  "success": true
+}

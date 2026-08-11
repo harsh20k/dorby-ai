@@ -1,0 +1,54 @@
+{
+  "id": 884,
+  "archetype": "US-Based Deep Tech Builder",
+  "given_name": "Ravi Dubois",
+  "style_version": 54,
+  "archetypes_version": 149,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Ravi Dubois is a 38-year-old founder and CEO of 'CipherCore,' a pre-seed AI security startup focused on protecting large language models from adversarial attacks. His background is deeply rooted in academic research \u2013 he has a PhD in Cryptography from MIT \u2013 and a brief, impactful stint at a DARPA-funded research lab where he led a team developing novel obfuscation techniques. He's currently fundraising a seed round, aiming to commercialize his team\u2019s research and become a leader in the emerging field of LLM security. He\u2019s actively seeking connections with investors specializing in deep tech, particularly those with a history of backing AI/ML companies, and potential strategic partners who can help with go-to-market strategy. He's highly technical, prefers direct communication, and is skeptical of 'hype' \u2013 he values substance and demonstrable results.",
+    "positioning": "As CEO of CipherCore, I\u2019m building the next generation of defenses against adversarial attacks on large language models. Our proprietary technology, born from years of research in cryptography and machine learning, provides robust protection for LLMs, ensuring data integrity and preventing malicious manipulation. We\u2019re at a critical juncture, poised to capitalize on the rapidly growing demand for LLM security as these models become increasingly integrated into critical infrastructure. I\u2019m actively seeking strategic investors and partners who share our vision for a secure and trustworthy AI future. Connecting now allows you to get in on the ground floor of a company tackling a foundational challenge in the AI landscape.",
+    "background": "- **CipherCore, CEO & Founder** (2023 \u2013 Present): Led the formation of CipherCore, securing initial pre-seed funding and assembling a team of leading AI security researchers. Currently focused on product development, fundraising, and establishing strategic partnerships.\n- **DARPA (Defense Advanced Research Projects Agency), Research Lead** (2020 \u2013 2023): Led a team of five researchers in developing and implementing novel obfuscation techniques for sensitive data, resulting in two published papers in top-tier cryptography conferences.\n- **MIT, Postdoctoral Researcher** (2018 \u2013 2020): Conducted research in differential privacy and homomorphic encryption, contributing to advancements in data security and privacy-preserving machine learning.\n- **MIT, PhD, Cryptography** (2014 \u2013 2018): Dissertation focused on the formal verification of cryptographic protocols. Awarded the 'Outstanding Dissertation' prize.\n- **Stanford University, BS, Computer Science (with Honors)** (2010 \u2013 2014): Specialized in algorithms and data structures. Graduated *summa cum laude*.\n- **Skills:** Cryptography, Machine Learning, Deep Learning, Python, C++, Data Security, Adversarial Machine Learning, Differential Privacy, Homomorphic Encryption, LLM Security, Threat Modeling.\n- **Certifications:** Certified Information Systems Security Professional (CISSP) \u2013 *inactive, but demonstrates prior knowledge*.\n- **Publications:** Author of 5 peer-reviewed publications in leading cryptography and security conferences (e.g., CRYPTO, CCS).\n- **Awards & Recognition:** MIT Outstanding Dissertation Award (2018), Stanford University Dean's List (all semesters).",
+    "lookingFor": "## Investors\n- Seed-stage investors with a focus on deep tech, AI/ML, and cybersecurity.\n- Investors with a demonstrated understanding of the LLM landscape and the associated security risks.\n- Investment amounts ranging from $2M - $5M.\n\n## Strategic Partners\n- Companies with established go-to-market channels in the AI/ML or cybersecurity space.\n- Organizations seeking to integrate robust LLM security solutions into their products or services.\n- Potential partners for joint research and development initiatives.\n\n## Advisors\n- Experienced entrepreneurs with a successful track record in building and scaling deep tech startups.\n- Industry veterans with deep expertise in AI security and cryptography.",
+    "notes": "- Ravi is extremely focused and direct in his communication. He appreciates concise, data-driven pitches.\n- He's skeptical of marketing hype and prefers to discuss technical details.\n- He values intellectual honesty and transparency.\n- Past conversations indicate he prioritizes building a strong engineering team.\n- He's currently exploring potential collaborations with academic institutions.\n- Avoid overly general or vague inquiries \u2013 he responds best to specific questions about CipherCore's technology and market opportunity.",
+    "locationAvailability": "Based in Cambridge, Massachusetts, but open to remote meetings and collaborations with partners and investors across the US.",
+    "introPreferences": "## Hard Requirements\n- Individuals with direct investment decision-making authority at seed-stage venture capital firms.\n- Professionals with a deep understanding of AI/ML security or cryptography.\n- Introductions must come from individuals with a pre-existing relationship with the target.\n\n## Soft Preferences\n- Individuals with a track record of backing successful deep tech startups.\n- People who can offer strategic advice and mentorship beyond financial investment.\n- Introductions should highlight the potential synergies between CipherCore and the target's portfolio or expertise.",
+    "personalPreferences": "I prefer direct and concise communication. I\u2019m most responsive to emails and LinkedIn messages. I\u2019m generally unavailable for lengthy phone calls unless scheduled in advance. I appreciate thoughtful questions and a clear understanding of our technology.",
+    "meetingAndSchedulingPreferences": "I'm generally available for virtual meetings during Eastern Time business hours. Please allow at least 24 hours' notice for scheduling."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 18.404762029647827,
+      "input_tokens": 776,
+      "output_tokens": 1166,
+      "problems": []
+    }
+  ],
+  "success": true
+}

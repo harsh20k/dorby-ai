@@ -1,0 +1,54 @@
+{
+  "id": 819,
+  "archetype": "Media/Communications Founder/Operator",
+  "given_name": "Marcus Castillo",
+  "style_version": 50,
+  "archetypes_version": 138,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Marcus Castillo is a seasoned communications strategist who spent the first half of his career as a foreign correspondent, specifically covering Latin American politics and culture. He burned out on the constant travel and risk, but realized his knack for distilling complex issues into compelling narratives was highly valuable. He transitioned into helping tech startups \u2013 particularly those with a social impact mission \u2013 craft their messaging and build their brand. He's now running a small consultancy, 'Castillo Communications,' focused on early-stage founders and is actively seeking partnerships with venture capitalists and angel investors who prioritize authentic storytelling. He\u2019s pragmatic and direct, valuing efficiency and substance over fluff. He\u2019s also a bit of a coffee snob and loves discussing film.",
+    "positioning": "Marcus Castillo helps early-stage tech founders translate their vision into compelling narratives that resonate with investors, customers, and the media. With a background in international journalism, I understand how to dissect complex issues and craft accessible, impactful stories. I specialize in building brand foundations, developing key messaging, and executing strategic communications plans, particularly for companies focused on social impact. I don\u2019t just write press releases; I build relationships and craft narratives that drive real results. My approach is data-driven, focused on measurable outcomes, and tailored to the unique challenges of the startup ecosystem.",
+    "background": "- **Founder & Principal, Castillo Communications** (2021 \u2013 Present)\n\t* Launched and scaled a boutique communications consultancy serving early-stage tech startups, securing a client roster including Seed and Series A funded companies.\n\t* Developed and implemented comprehensive communications strategies, resulting in an average 30% increase in media mentions for clients.\n\t* Advised founders on investor relations, pitch deck messaging, and public speaking.\n\n- **Senior Communications Consultant, LaunchPad Collective** (2019 \u2013 2021)\n\t* Provided communications support to a portfolio of 20+ high-growth startups across various industries.\n\t* Led media relations efforts, securing coverage in TechCrunch, Forbes, and Wired.\n\t* Managed content creation, including blog posts, white papers, and social media campaigns.\n\n- **Foreign Correspondent, Global News Network** (2012 \u2013 2019)\n\t* Reported from over 15 countries in Latin America, covering political unrest, economic development, and cultural trends.\n\t* Filed daily reports for television, radio, and online platforms, reaching a global audience.\n\t* Developed strong relationships with local sources and experts.\n\n- **Education:**\n\t* **Master of Journalism, Columbia University** (2010 \u2013 2012)\n\t* **Bachelor of Arts, Political Science, Yale University** (2006 \u2013 2010)",
+    "lookingFor": "- Venture Capitalists and Angel Investors actively investing in early-stage, impact-focused startups.\n- Founders of pre-seed and seed-stage companies who are seeking guidance on crafting their core narrative.\n- Individuals with experience in public relations, content marketing, and brand strategy within the tech sector.\n- Potential collaborators for joint workshops or webinars on communications best practices for startups.\n- Introductions to founders who might benefit from Castillo Communications\u2019 services.\n- Mentors with experience scaling a consultancy.\n- People interested in discussing the intersection of journalism and venture capital.",
+    "notes": "Marcus is incredibly direct and values efficient communication. He responds best to concise messages that get straight to the point. He\u2019s not a fan of overly promotional pitches. \n\n* **Recent Update:** Just finished a successful campaign for a climate tech startup that raised a $5M seed round. Happy to share case studies.\n* **Coffee:** He's a bit of a coffee snob. Don\u2019t offer him instant.\n* **Film:** He's a huge film buff, particularly classic cinema. A good conversation starter.\n* **Avoid:** Don't ask him about his time as a foreign correspondent unless *he* brings it up. It's a sensitive topic.",
+    "locationAvailability": "Based in Brooklyn, NY, but frequently travels to San Francisco and Boston for client meetings. Available for remote consultations.",
+    "introPreferences": "- I prefer introductions that highlight the potential synergy between my work and the recipient's interests or expertise.\n- Please avoid generic introductions; a personalized note explaining the connection is greatly appreciated.\n- Focus on the value I can bring to the recipient, rather than simply stating my title or company.\n- Don\u2019t connect me with people who are clearly not relevant to my areas of expertise (e.g., insurance sales).\n- A brief summary of the recipient\u2019s work/interests would be incredibly helpful.",
+    "personalPreferences": "Prefers email communication; quick phone calls are okay, but dislikes long, unstructured meetings.",
+    "meetingAndSchedulingPreferences": "- I generally prefer 30-minute Zoom calls for initial consultations.\n- I'm most available during Eastern Standard Time business hours."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 16.160792112350464,
+      "input_tokens": 755,
+      "output_tokens": 1068,
+      "problems": []
+    }
+  ],
+  "success": true
+}

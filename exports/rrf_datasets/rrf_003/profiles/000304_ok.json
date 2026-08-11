@@ -1,0 +1,54 @@
+{
+  "id": 304,
+  "archetype": "Toronto-Based AI/Community Builder",
+  "given_name": "Takumi Suzuki",
+  "style_version": 19,
+  "archetypes_version": 50,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Takumi Suzuki is a 34-year-old Toronto-based AI community builder and entrepreneur. He's deeply involved in the local AI scene, having previously worked as a machine learning engineer at a large bank, but became disillusioned with the slow pace of innovation and lack of community focus. He left to found 'Synapse Hub,' a platform and physical co-working space designed to connect AI researchers, startups, and investors. Synapse Hub is gaining traction, but Takumi is now focused on scaling it sustainably, specifically through strategic partnerships with larger corporations and securing seed funding. A key differentiator for Synapse Hub is its emphasis on ethical AI development and fostering a diverse community - something Takumi is very passionate about. He's a highly energetic and collaborative individual, always seeking to connect people and facilitate knowledge sharing. He's particularly interested in applications of AI for social good.",
+    "positioning": "I'm Takumi Suzuki, and I'm building Synapse Hub \u2013 Toronto\u2019s emerging epicenter for applied AI and community-driven innovation. We're more than just a co-working space; we're a curated ecosystem designed to accelerate the development and deployment of responsible AI solutions. Having spent several years as a Machine Learning Engineer at RBC, I witnessed firsthand the incredible potential of AI, but also the challenges of translating research into real-world impact within a large organization. That\u2019s what inspired me to create Synapse Hub. \n\nCurrently, we\u2019re focused on expanding our network of corporate partners. We believe that collaboration between established companies and dynamic startups is crucial for driving innovation and ensuring AI benefits everyone. We\u2019ve already secured pilot projects with two major Canadian retailers, demonstrating the value of our community and the quality of the AI solutions being developed within Synapse Hub. We're seeing strong traction with early-stage AI startups focused on areas like healthcare, fintech, and sustainable energy. \n\nI\u2019m passionate about fostering a diverse and inclusive AI community, and we're actively working to address the underrepresentation of women and minorities in the field.  I\u2019m always open to connecting with individuals and organizations who share this vision. I\u2019m looking for investors who understand the long-term value of building a thriving AI ecosystem, and mentors who can guide us through the challenges of scaling a rapidly growing startup. Ultimately, my goal is to make Toronto a global leader in ethical and impactful AI development.",
+    "background": "- **Founder & CEO, Synapse Hub** (Toronto, ON) \u2013 January 2022 \u2013 Present\n    * Led the conceptualization, launch, and growth of Synapse Hub, a co-working space and community platform for AI startups, researchers, and investors.\n    * Secured initial seed funding through angel investors and grant programs.\n    * Established partnerships with two major Canadian retail companies for AI pilot projects.\n    * Developed and implemented community events, workshops, and mentorship programs focusing on ethical AI and diversity.\n    * Managed a team of 5 full-time employees and a network of freelance contractors.\n    * Technologies utilized: Node.js, React, PostgreSQL, AWS, Slack, Hubspot, Stripe.\n\n- **Machine Learning Engineer, RBC** (Toronto, ON) \u2013 June 2018 \u2013 December 2021\n    * Developed and deployed machine learning models for fraud detection, risk assessment, and customer personalization.\n    * Collaborated with cross-functional teams (data scientists, software engineers, business analysts) to deliver data-driven solutions.\n    * Implemented model monitoring and evaluation frameworks to ensure performance and accuracy.\n    * Technologies utilized: Python (Scikit-learn, TensorFlow, PyTorch), SQL, Hadoop, Spark, AWS SageMaker, Git.\n\n- **Research Assistant, University of Toronto** (Toronto, ON) \u2013 September 2016 \u2013 May 2018\n    * Assisted Professor Sheila McGregor with research on deep learning algorithms for natural language processing.\n    * Contributed to the publication of two peer-reviewed research papers in leading AI conferences.\n    * Developed and implemented data preprocessing pipelines and evaluation metrics.\n    * Technologies utilized: Python, TensorFlow, Keras, Linux.\n\n- **Education:**\n    * **Master of Science in Computer Science (Specialization: Artificial Intelligence)** \u2013 University of Toronto, 2018\n    * **Bachelor of Science in Computer Engineering** \u2013 University of Waterloo, 2016\n\n- **Skills:** Machine Learning, Deep Learning, Natural Language Processing, Python, TensorFlow, PyTorch, Scikit-learn, SQL, AWS, Data Analysis, Community Building, Entrepreneurship, Leadership, Project Management, Public Speaking.",
+    "lookingFor": "I\u2019m actively seeking connections to help scale Synapse Hub and amplify our impact. Specifically, I'm looking to connect with:\n\n* **Seed-stage investors** with a focus on AI, fintech, and/or community-driven ventures.  We\u2019re preparing for a seed round in Q1 2024 and are looking for partners who share our vision for ethical and responsible AI.\n* **Corporate Innovation Leaders** at large Canadian corporations (financial services, retail, healthcare) interested in exploring partnerships with AI startups. We can offer access to cutting-edge technology, pilot project opportunities, and a pipeline of talent.\n* **Experienced mentors** with a background in scaling startups, particularly in the tech or co-working space. Guidance on fundraising, team building, and strategic partnerships would be invaluable.\n* **AI researchers and engineers** passionate about contributing to a vibrant and inclusive community. We\u2019re always looking for talent to join our network and participate in our events.\n* **Individuals passionate about ethical AI** who can contribute to our community initiatives and help us promote responsible AI development.  \n\nI'm open to introductory calls and virtual meetings to discuss potential collaborations. I\u2019m particularly interested in learning about best practices for building and scaling AI communities.",
+    "notes": "Takumi is a highly engaging and enthusiastic individual. He's very articulate about his vision for Synapse Hub and clearly passionate about building a strong AI ecosystem in Toronto. \u2013 He mentioned he's attending the Collision Conference next month - potentially a good venue for introductions. - Follow up with him regarding potential introductions to a few VC firms specializing in seed-stage funding. He seemed particularly interested in firms with a strong ESG focus. - He\u2019s very active on LinkedIn and Twitter, frequently sharing articles and engaging in discussions about AI and community building. He\u2019s a strong advocate for diversity and inclusion in the tech industry.",
+    "locationAvailability": "Toronto, Ontario, Canada. Open to remote meetings and occasional travel.",
+    "introPreferences": "When making introductions, please keep the following in mind:\n\n* **Hard Requirement:**  The contact must have a genuine interest in AI or be involved in a related field (e.g., venture capital, corporate innovation).  I\u2019m not interested in purely social introductions.\n* **Soft Preference:**  Contacts with a demonstrated commitment to ethical AI and diversity are highly preferred.  \n* **Introduction Style:** A concise and personalized introduction highlighting the potential synergies between myself and the contact is ideal.  Please avoid generic templates.\n* **Avoid:** Introducing me to individuals who are solely focused on sales or marketing \u2013 I'm primarily interested in strategic partnerships and investment opportunities.\n* **Ideal Contacts:**  VPs of Innovation, Heads of AI, Seed-Stage Investors, Angel Investors, Experienced Startup Founders.",
+    "personalPreferences": "Coffee, coding, community, and continuous learning.",
+    "meetingAndSchedulingPreferences": "- Please provide at least 24 hours\u2019 notice for meeting requests.\n- I prefer virtual meetings via Zoom or Google Meet."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 22.068303108215332,
+      "input_tokens": 855,
+      "output_tokens": 1640,
+      "problems": []
+    }
+  ],
+  "success": true
+}

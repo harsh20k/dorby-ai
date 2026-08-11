@@ -1,0 +1,54 @@
+{
+  "id": 536,
+  "archetype": "Deep Tech Founder, Research Heavy",
+  "given_name": "Kai Johansson",
+  "style_version": 33,
+  "archetypes_version": 90,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Kai Johansson is a 38-year-old Swedish-American founder and CEO of 'Synapse Robotics,' a company developing advanced, bio-inspired robotic manipulation systems for logistics and warehousing. He holds a PhD in Robotics from MIT and spent several years as a research scientist at Google DeepMind before striking out on his own. A key detail is that his PhD research focused specifically on octopus-inspired soft robotics \u2013 a niche area he's successfully translated into a competitive advantage for Synapse. He\u2019s currently laser-focused on securing Series A funding to scale production and expand into new markets. He\u2019s highly technical, data-driven, and values deep conversations with investors and potential partners who understand the complexities of his technology. He's a bit introverted, preferring direct communication and avoiding overly 'fluffy' networking. He\u2019s based in Boston, but willing to travel to key investor hubs.",
+    "positioning": "I\u2019m Kai Johansson, CEO and founder of Synapse Robotics. We\u2019re building the next generation of robotic manipulation systems, moving beyond rigid industrial robots to create adaptable, intelligent solutions inspired by the incredible dexterity of natural organisms \u2013 specifically, octopuses.  My background is deeply rooted in robotics research, and I\u2019ve spent the last decade translating cutting-edge academic work into real-world applications.  \n\nAt Synapse, we\u2019ve developed a proprietary soft robotic gripper and control system that dramatically improves pick-and-place accuracy and speed, particularly when dealing with a diverse range of objects. This is a significant leap forward for industries like e-commerce fulfillment and warehousing, where automation is critical but traditional robots often struggle with delicate or irregularly shaped items. We\u2019ve already completed successful pilot programs with several major logistics providers, demonstrating a 30% increase in throughput and a 20% reduction in damage rates.\n\nI believe that the future of automation lies in bio-inspired design.  We\u2019re not simply replicating existing robotic solutions; we are fundamentally rethinking how robots interact with the physical world.  I\u2019m uniquely positioned to lead this effort, combining my technical expertise, entrepreneurial drive, and a deep understanding of the challenges facing the logistics industry. I\u2019m actively seeking strategic investors who share our vision and can help us scale our operations to meet the growing demand for intelligent automation.  I'm especially interested in partners who can contribute not just capital, but also expertise in manufacturing, supply chain management, and go-to-market strategy.",
+    "background": "- **CEO & Founder, Synapse Robotics** (2021 \u2013 Present): Led all aspects of company formation, fundraising (seed round secured in 2022), product development, and pilot program execution.\n- **Research Scientist, Google DeepMind** (2018 \u2013 2021): Conducted research in reinforcement learning and robotic control, focusing on the development of algorithms for complex manipulation tasks.\n- **PhD, Robotics, Massachusetts Institute of Technology (MIT)** (2014 \u2013 2018): Dissertation: \u201cBio-Inspired Soft Robotics: Design and Control of Octopus-Inspired Grippers.\u201d  Awarded the MIT Presidential Fellowship.\n- **Research Assistant, Stanford University Robotics Lab** (2012 \u2013 2014): Assisted with the development of autonomous navigation systems for unmanned aerial vehicles.\n- **BS, Mechanical Engineering, California Institute of Technology (Caltech)** (2008 \u2013 2012): Graduated Summa Cum Laude.\n- **Skills:** Robotic Manipulation, Soft Robotics, Reinforcement Learning, Computer Vision, Machine Learning, Python, C++, ROS (Robot Operating System), Project Management, Leadership, Fundraising, Strategic Planning\n- **Publications:** Authored 12 peer-reviewed publications in leading robotics journals and conferences (e.g., ICRA, IROS, RSS).\n- **Patents:** 3 granted patents related to soft robotic gripper design and control algorithms.\n- **Awards & Recognition:** MIT Presidential Fellowship, Caltech Engineering Award, Google DeepMind Research Award.",
+    "lookingFor": "I am currently focused on raising a Series A round to scale Synapse Robotics and accelerate our go-to-market strategy. Specifically, I am seeking:\n\n- **Series A Investors:** Venture capital firms with a focus on robotics, automation, and AI, and a demonstrated track record of supporting deep tech companies.\n- **Strategic Partners:** Companies in the logistics, warehousing, and e-commerce industries interested in exploring potential collaborations or pilot programs.\n- **Industry Experts:** Individuals with deep experience in manufacturing, supply chain management, and robotics deployment.\n- **Mentors:** Experienced entrepreneurs who have successfully scaled hardware companies.\n- **Connections to:**  Limited Partners (LPs) at leading VC funds.\n- **Desired Company Stage (for potential partners):**  Established companies with existing infrastructure and a willingness to innovate.\n- **Geographic Focus:** Primarily North America and Europe, but open to discussing opportunities globally.\n- I'm also open to connecting with individuals who have a strong understanding of the robotics market and can provide valuable insights and feedback.",
+    "notes": "Spoke with Sarah Chen (Lightspeed) last week \u2013 she was impressed with the tech demo but has concerns about manufacturing scalability. Need to prepare a detailed plan addressing this. Follow up with her next Tuesday. \n\nAlso, need to refine the pitch deck to better emphasize the ROI for potential customers.  The 30% throughput increase is a key selling point. \n\nDavid Lee (Andreessen Horowitz) expressed interest but wants to see more data from the pilot programs.  Prioritize compiling a comprehensive report summarizing the results. \n\nGenerally, I find that investors respond well to a highly technical, data-driven presentation. Avoid overly hyped claims. \n\nRemind myself to emphasize the defensibility of our IP \u2013 the octopus-inspired design is a significant differentiator. \n\nNeed to schedule a meeting with a supply chain expert to get their input on sourcing and manufacturing options.",
+    "locationAvailability": "Currently based in Boston, Massachusetts. I am willing to travel to meet with investors and partners, and am open to considering remote work arrangements for key hires.",
+    "introPreferences": "- **Industries:** Robotics, Automation, Logistics, Supply Chain, Artificial Intelligence, Manufacturing.\n- **Company Size:**  Venture capital firms managing $200M+ in assets.  Companies with >$100M in annual revenue.\n- **Role Types:** General Partners at VC firms, Heads of Corporate Development, CTOs, VP of Engineering.\n- **Desired Qualities:**  Deep technical understanding, a proven track record of success, a strong network in the robotics industry, and a willingness to take calculated risks.  \n- **Avoid:** Individuals who are not comfortable with technical complexity or who prioritize short-term gains over long-term innovation.\n- I prefer introductions that are concise and highlight the potential synergy between our companies or areas of expertise.",
+    "personalPreferences": "I generally prefer direct and concise communication.  Email is fine for initial contact, but I'm happy to jump on a quick call to discuss things further.  I'm not a big fan of lengthy email chains.",
+    "meetingAndSchedulingPreferences": "I\u2019m most responsive to scheduling requests sent via email. I typically require 24-48 hours notice for meetings.  I prefer video calls over phone calls whenever possible."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 22.491011142730713,
+      "input_tokens": 832,
+      "output_tokens": 1560,
+      "problems": []
+    }
+  ],
+  "success": true
+}

@@ -1,0 +1,54 @@
+{
+  "id": 58,
+  "archetype": "AI/Data Security Founder & Advisor",
+  "given_name": "Sofia Haruna",
+  "style_version": 4,
+  "archetypes_version": 10,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Sofia Haruna is a 34-year-old founder deeply rooted in the intersection of AI and cybersecurity. She previously spent 7 years at a DARPA-funded research lab focusing on adversarial machine learning, specifically developing techniques to detect and mitigate bias in AI systems used for threat detection. This experience highlighted a critical gap in the market: existing security tools are easily bypassed by AI-powered attacks, and the speed of AI development outpaces the ability to create robust defenses. She's now building 'Aegis AI,' a platform that provides proactive, AI-driven security for other AI systems \u2013 essentially, AI protecting AI. She's seeking seed funding and strategic partnerships with companies deploying AI at scale. Sofia is highly technical, direct, and prioritizes substance over fluff. She's open to advisory roles if Aegis AI's funding isn't immediately secured, leveraging her unique expertise. She's notoriously difficult to impress with 'vaporware' and prefers data-driven conversations.",
+    "positioning": "I'm the founder of Aegis AI, a cybersecurity company focused on securing the rapidly evolving landscape of artificial intelligence. We address the critical vulnerability of AI systems to sophisticated, AI-powered attacks, providing proactive defense through our proprietary AI-driven threat detection and mitigation platform. Our target market is organizations deploying AI in critical infrastructure, finance, and healthcare, where the stakes are highest. We recently completed a successful alpha program with three key clients, demonstrating a 95% detection rate of novel AI-based attacks. Aegis AI isn't just building another security tool; we\u2019re building the immune system for the age of intelligent machines.",
+    "background": "- **2023 \u2013 Present: Founder & CEO, Aegis AI.** Leading all aspects of company creation, including product development, fundraising, and team building. Secured initial pre-seed funding of $250k from angel investors.\n- **2016 \u2013 2023: Research Scientist, Stellar Dynamics Lab (DARPA-funded).** Led a team of four researchers in developing novel adversarial machine learning techniques to enhance the robustness of AI-based threat detection systems.\n    - Published 8 peer-reviewed papers in top AI security conferences (e.g., NeurIPS, ICML, USENIX Security).\n    - Developed a patented algorithm for detecting and mitigating bias in AI models, resulting in a 20% improvement in detection accuracy for previously unseen threats.\n    - Managed a research budget of $1.5M annually.\n- **2014 \u2013 2016: Data Scientist, Cygnus Intelligence.** Developed and deployed machine learning models for fraud detection in the financial sector.\n    - Improved fraud detection rates by 15%, saving the company an estimated $500k annually.\n- **2010 \u2013 2014: Massachusetts Institute of Technology (MIT).** Bachelor of Science in Computer Science, minor in Mathematics. GPA: 3.9/4.0. Dean\u2019s List all semesters.\n- **Certifications:** Certified Information Systems Security Professional (CISSP), TensorFlow Developer Certificate.",
+    "lookingFor": "- Introductions to Seed-stage VCs specializing in AI and cybersecurity (e.g., Amplify Partners, Innovation Endeavors).\n- Potential customers: CISOs and security architects at companies deploying AI in financial services, healthcare, or critical infrastructure.\n- Strategic partnerships with companies offering complementary AI platforms or security solutions.\n- Advisors with experience scaling early-stage cybersecurity companies.\n- Warm introductions to leaders at NIST regarding AI security standards.\n- Experts in AI model governance and explainability.\n- Individuals with experience navigating the regulatory landscape of AI in highly regulated industries.\n- Mentors who have successfully navigated the challenges of building a deep-tech company.",
+    "notes": "- Sofia is *very* technically astute and will quickly identify superficial understanding. Focus on quantifiable results and technical depth in any introduction.\n- She\u2019s currently prioritizing fundraising and product development. Advisory roles are a secondary consideration, but a possibility if funding is delayed.\n- She recently presented at Black Hat on adversarial attacks against LLMs \u2013 a good conversation starter.\n- Avoid generic pitches. She's looking for specific, targeted opportunities.\n- Mentioned interest in companies working on differential privacy techniques.",
+    "locationAvailability": "Based in Boston, MA. Open to remote meetings and occasional travel.",
+    "introPreferences": "- **Must-Have:** Individuals with a strong technical background in AI or cybersecurity.\n- **Preferred:** Experience with AI model governance, risk management, or compliance.\n- **Dealbreaker:** Sales-focused individuals with limited technical understanding.\n- **Framing:** Highlight the technical challenges of securing AI systems and Aegis AI's unique approach.\n- **Avoid:** Introductions to generalist investors or companies with overly broad security offerings.\n- **Connection Level:** Director-level or above is preferred.\n- **Company Stage:** Series A and beyond for potential partnerships.",
+    "personalPreferences": "I prefer concise and direct communication. Email is best for initial contact; I\u2019m less responsive to LinkedIn messages.",
+    "meetingAndSchedulingPreferences": "I typically schedule meetings via Calendly. I prefer shorter, focused meetings (30-45 minutes) with a clear agenda."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 21.41973614692688,
+      "input_tokens": 849,
+      "output_tokens": 1115,
+      "problems": []
+    }
+  ],
+  "success": true
+}

@@ -1,0 +1,63 @@
+{
+  "id": 516,
+  "archetype": "Bank-Grade Engineer - Automation Specialist",
+  "given_name": "Omar Sokolov",
+  "style_version": 32,
+  "archetypes_version": 87,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Omar Sokolov is a highly specialized automation engineer with a background in high-frequency trading systems. He spent the first decade of his career building and maintaining ultra-low latency trading platforms, demanding extreme reliability and precision. He\u2019s now applying that expertise to the burgeoning fintech automation space, specifically focusing on automating compliance and risk management processes for smaller banks and credit unions. He's the CTO and co-founder of 'RegFlow,' a startup building a no-code automation platform for regulatory reporting. He\u2019s currently raising a Seed round to scale the platform and expand the team. He\u2019s fiercely protective of engineering quality and prioritizes building a robust, scalable system over rapid feature deployment. He's a bit of a perfectionist, sometimes to a fault, and values deep technical conversations over networking fluff.",
+    "positioning": "As CTO and co-founder of RegFlow, I'm driven by a simple, yet crucial mission: to level the playing field for community banks and credit unions. These institutions are vital to local economies, but they often struggle under the weight of increasingly complex regulatory requirements. RegFlow offers a no-code automation platform that streamlines regulatory reporting, reduces compliance costs, and frees up valuable resources for these organizations to focus on their core business \u2013 serving their communities. \n\nMy background is somewhat unconventional for a startup founder. I spent the first ten years of my career as a core developer building high-frequency trading systems for a proprietary trading firm. That experience ingrained in me a deep appreciation for system reliability, performance, and the critical importance of precision.  We operated in an environment where milliseconds mattered, and a single bug could cost millions.  I\u2019m bringing that same rigor and attention to detail to the fintech automation space. \n\nWe\u2019ve recently achieved significant traction, onboarding our first five pilot customers and demonstrating a 70% reduction in reporting time for one key regulatory form. We're now focused on scaling our platform, expanding our team, and securing Seed funding to accelerate our growth. My vision is to build RegFlow into the leading automation solution for financial institutions of all sizes, empowering them to navigate the ever-changing regulatory landscape with confidence.",
+    "background": "- **RegFlow, CTO & Co-founder** (January 2023 \u2013 Present)\n  - Led all technical aspects of RegFlow, from initial architecture design to platform development and deployment.\n  - Built a no-code automation platform for regulatory reporting using Python, Django, and PostgreSQL.\n  - Oversaw the implementation of robust security measures and compliance protocols.\n  - Successfully onboarded five pilot customers, demonstrating significant cost savings and efficiency gains.\n  - Currently leading Seed funding round.\n\n- **NovaTech Systems, Senior Software Engineer** (June 2013 \u2013 December 2022)\n  - Core developer on a high-frequency trading platform, responsible for designing, implementing, and maintaining critical components.\n  - Specialized in low-latency systems programming using C++ and Linux.\n  - Led the optimization of key trading algorithms, resulting in a 15% increase in execution speed.\n  - Implemented rigorous testing and monitoring procedures to ensure system stability and reliability.\n  - Mentored junior engineers and contributed to the development of best practices.\n\n- **Education:**\n  - **Master of Science in Computer Science**, Massachusetts Institute of Technology (MIT), Cambridge, MA (2011 \u2013 2013)\n    - Thesis: \u201cOptimizing Network Latency in High-Frequency Trading Environments\u201d\n  - **Bachelor of Science in Computer Engineering**, Stanford University, Stanford, CA (2007 \u2013 2011)\n\n- **Skills:**\n  - **Programming Languages:** Python, C++, Java, SQL\n  - **Frameworks/Libraries:** Django, React, TensorFlow (basic)\n  - **Databases:** PostgreSQL, MySQL\n  - **Cloud Platforms:** AWS (EC2, S3, RDS), Azure (basic)\n  - **DevOps:** Docker, Kubernetes, CI/CD pipelines\n  - **Regulatory Compliance:** Familiar with FINRA, SEC, and FDIC regulations (general awareness)\n  - **Trading Systems:** Experience with order management systems (OMS), market data feeds, and algorithmic trading strategies.",
+    "lookingFor": "* **Seed Funding:** Raising $2M to scale RegFlow\u2019s platform and expand the team. Target valuation: $8-10M pre-money.\n* **Strategic Investors:** Seeking investors with experience in fintech, regulatory technology (RegTech), or enterprise software.\n* **Introductions to:**\n  * **Venture Capital Firms:** Accel, Sequoia, Andreessen Horowitz (fintech focus).\n  * **Angel Investors:** Individuals with a strong track record in financial services or automation.\n  * **Industry Influencers:** Thought leaders in RegTech and banking automation.\n* **Hiring:**\n  * **Senior Backend Engineer (Python/Django):**  Must have experience building scalable, high-performance web applications. 5+ years experience.\n  * **DevOps Engineer:**  Experience with AWS, Docker, Kubernetes, and CI/CD pipelines. 3+ years experience.\n  * **Compliance/Regulatory Specialist:**  Strong understanding of financial regulations (FINRA, SEC, FDIC).  Certified Regulatory Compliance Manager (CRCM) a plus.\n* **Partnerships:**\n  * **Potential integrations with core banking systems (Fiserv, Jack Henry).** Looking for introductions to technical leads.\n  * **Channel partners with established relationships with community banks and credit unions.**",
+    "notes": "Omar is technically brilliant but can be very detail-oriented and sometimes slow to make decisions. He\u2019s fiercely independent and values technical depth over networking. Initial Boardy score: 7/10 (high potential, moderate risk).  He's extremely concerned with code quality and scalability \u2013 a potential bottleneck if he's unwilling to compromise for speed.  Previous conversation indicated a slight aversion to marketing/sales pitches; focus on technical discussions and genuine interest in the product. Avoid overly enthusiastic or 'hype' driven introductions.  He\u2019s very responsive to well-researched inquiries.",
+    "locationAvailability": "Based in New York City, but open to remote work and travel within the US.",
+    "introPreferences": "To ensure a productive introduction, please keep the following in mind:\n* **Hard Requirements:**\n  * **Investor Focus:**  Must have a demonstrated interest in fintech, specifically RegTech or automation.\n  * **Technical Understanding:**  The investor should have a basic understanding of software architecture and cloud technologies.\n  * **Long-Term Vision:**  Looking for investors who are aligned with RegFlow\u2019s long-term vision of transforming regulatory compliance.\n* **Soft Preferences:**\n  * **Intro Style:**  A concise, informative email introduction is preferred.  Avoid lengthy, overly promotional messages.\n  * **Relationship Quality:**  I value genuine connections and long-term relationships over quick wins.\n  * **Avoid:**  Introductions to investors who are primarily focused on short-term returns or speculative investments.",
+    "personalPreferences": "Prefer email or LinkedIn messaging for initial contact. I respond best to direct, technically focused communication.",
+    "meetingAndSchedulingPreferences": ""
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 28.76864218711853,
+      "input_tokens": 860,
+      "output_tokens": 1675,
+      "problems": [
+        "background: possible truncation (ends with '...CI/CD, Docker, Kubernetes')"
+      ]
+    },
+    {
+      "attempt": 2,
+      "elapsed_s": 21.503563165664673,
+      "input_tokens": 860,
+      "output_tokens": 1560,
+      "problems": []
+    }
+  ],
+  "success": true
+}

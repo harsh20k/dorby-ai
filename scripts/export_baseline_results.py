@@ -314,7 +314,12 @@ HOLDOUT_LABELS = {
 HOLDOUT_PROTOCOL_NOTE = (
     "frozen 69-pair real holdout (data/synthetic/seed_split.json eval_pair_ids) only — "
     "same population for every row, unlike baseline-results-all.md's full-dataset numbers. "
-    "See docs/possible-bugs.md #3 and docs/twotower-run-001-results.md."
+    "See docs/possible-bugs.md #3 and docs/twotower-run-001-results.md. "
+    "WARNING: this population (29 positive queries, 65-candidate corpus) ranks weak "
+    "models reliably but carries NO ranking information among strong ones — Spearman "
+    "vs. the all-200 ranking is +0.976 across the bottom 8 models and -0.029 across "
+    "the top 6. Do not choose between competitive models on this table; use "
+    "docs/baseline-results-real200.md. See docs/all-200-baseline-sweep.md."
 )
 
 

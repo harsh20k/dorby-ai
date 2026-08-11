@@ -1,0 +1,54 @@
+{
+  "id": 337,
+  "archetype": "Serial Entrepreneur, AI/Tech Focus",
+  "given_name": "Noor Ibrahim",
+  "style_version": 21,
+  "archetypes_version": 56,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Noor Ibrahim is a seasoned serial entrepreneur with a strong background in computer vision and machine learning. Her distinctive career detail is successfully exiting a computer vision company focused on agricultural yield optimization (AgriSight) to a major agricultural tech firm five years ago. This experience fueled her current venture, 'Synapse Solutions,' an AI platform designed to automate and optimize clinical trial participant recruitment. She's acutely aware of the massive delays and costs associated with clinical trials and believes AI can drastically improve the process. She\u2019s currently in a seed round, having already secured a small angel investment, and is actively seeking Series A funding. She\u2019s highly data-driven, focused on demonstrable ROI, and expects a high level of professionalism and efficiency from her network. She\u2019s not interested in \u2018blue sky\u2019 pitches; she wants to see concrete plans and demonstrable traction. She's a direct communicator, valuing transparency and honesty. She\u2019s based in Boston but is comfortable with remote interactions.",
+    "positioning": "I\u2019m Noor Ibrahim, founder and CEO of Synapse Solutions. We\u2019re building the AI-powered engine for clinical trial recruitment. The current process is notoriously slow, expensive, and prone to delays \u2013 costing pharmaceutical companies billions annually. Synapse Solutions dramatically accelerates participant identification and enrollment using a proprietary AI model that analyzes unstructured data from electronic health records, social media, and patient advocacy groups, identifying ideal candidates with unprecedented accuracy. \n\nWe've developed a minimum viable product (MVP) and completed a pilot program with a leading oncology research center, demonstrating a 30% reduction in recruitment timelines and a 15% cost savings. We\u2019re currently expanding our pilot program to three additional sites and scaling our engineering team. \n\nWe\u2019re now raising a $5 million Series A to fuel our go-to-market strategy, expand our data science capabilities, and build out our sales and marketing team. We're targeting pharmaceutical companies and Contract Research Organizations (CROs) and are particularly focused on trials in oncology, cardiology, and neurology. We\u2019re not just building a product; we\u2019re tackling a systemic problem within the healthcare industry, and we're confident Synapse Solutions will become the industry standard for clinical trial recruitment.",
+    "background": "* **Synapse Solutions, CEO & Founder** (2021 \u2013 Present)\n    * Led all aspects of company formation, product development, and fundraising.\n    * Secured seed funding from angel investors and established key partnerships with research institutions.\n    * Developed and launched MVP, demonstrating significant improvements in clinical trial recruitment efficiency.\n    * Built and managed a high-performing team of data scientists, engineers, and healthcare professionals.\n* **AgriSight, Co-founder & CTO** (2016 \u2013 2020) \u2013 *Acquired by TerraNova AgTech*\n    * Led the development of a computer vision platform for precision agriculture, optimizing crop yields by analyzing aerial imagery.\n    * Scaled the platform to cover over 1 million acres across North America.\n    * Managed a team of 20+ engineers and data scientists.\n    * Successfully exited the company through acquisition, delivering significant returns to investors.\n* **MIT Lincoln Laboratory, Research Scientist** (2014 \u2013 2016)\n    * Conducted research in computer vision and machine learning, focusing on object detection and image classification.\n    * Published research papers in leading academic conferences.\n    * Collaborated with industry partners to translate research into real-world applications.\n* **Education:**\n    * **Ph.D., Computer Science, Massachusetts Institute of Technology (MIT)** (2014)\n    * **M.S., Computer Science, Stanford University** (2012)\n    * **B.S., Electrical Engineering, California Institute of Technology (Caltech)** (2010)\n* **Skills:** Machine Learning, Deep Learning, Computer Vision, Python, TensorFlow, PyTorch, Data Analysis, Statistical Modeling, Clinical Trial Operations, SaaS, Fundraising, Team Leadership, Strategic Planning.",
+    "lookingFor": "I\u2019m actively seeking connections with individuals who can contribute to the growth of Synapse Solutions. Specifically, I'm looking for:\n\n* **Series A Investors:** Venture capital firms with a focus on healthcare IT, AI, and digital health. We are targeting firms with investment sizes between $3M - $7M, and a track record of supporting high-growth startups. We've a detailed deck and data room ready.\n* **Strategic Partners:** Pharmaceutical companies and CROs interested in piloting or integrating our platform into their existing clinical trial workflows. We\u2019re particularly interested in partners with large, complex trial programs.\n* **Key Hires:**\n    * **VP of Sales:** Experienced sales leader with a proven track record in selling SaaS solutions to the pharmaceutical industry. (Hard Requirement)\n    * **Senior Data Scientist:** PhD-level data scientist with expertise in natural language processing and healthcare data. (Hard Requirement)\n    * **Clinical Trial Operations Consultant:** Seasoned professional with deep knowledge of clinical trial regulations and best practices. (Soft Preference)\n\nI'm also open to connecting with other founders in the AI/healthcare space to share insights and best practices. I'm available for brief introductory calls to explore potential synergies.",
+    "notes": "Spoke with Noor on 10/26. She's incredibly sharp and laser-focused. She\u2019s not interested in lengthy introductory conversations; get straight to the point. She\u2019s very data-driven and wants to see concrete evidence of value. She mentioned AgriSight's exit was a key learning experience \u2013 she's wary of over-promising and under-delivering. She\u2019s currently scoring potential investors based on their understanding of the clinical trial landscape. Internal score: 9/10. High potential. She's particularly interested in investors who can offer strategic guidance beyond capital. Recommend warm introductions only \u2013 cold outreach is unlikely to be successful. She is very responsive via email, but prefers concise communication.",
+    "locationAvailability": "Noor is based in Boston, Massachusetts, but is open to remote meetings and occasional travel to key industry events.",
+    "introPreferences": "* **Hard Requirements:** Introductions must be to decision-makers (e.g., Partners at VC firms, VPs at Pharma companies). No junior-level introductions, please.\n* **Soft Preferences:** Introductions should highlight the potential ROI of Synapse Solutions \u2013 specifically, the cost savings and time reductions associated with faster clinical trial recruitment.\n* **Framing Suggestion:** 'Noor is building an AI platform that\u2019s poised to disrupt the clinical trial recruitment process. She\u2019s recently completed a successful pilot program and is now raising a Series A to scale her operations.\u2019\n* **Avoid:** Introducing Noor to individuals who are not directly involved in investment decisions or strategic partnerships. Do not position Synapse Solutions as a \u2018futuristic\u2019 or \u2018bleeding-edge\u2019 technology; focus on its practical benefits and demonstrable results.",
+    "personalPreferences": "I prefer email for initial contact (noor.ibrahim@synapsesolutions.ai). I typically respond to emails within 24-48 hours. Slack is acceptable for quick follow-ups after an initial connection.",
+    "meetingAndSchedulingPreferences": "I\u2019m flexible with meeting times and am happy to accommodate your schedule. I prefer to have a brief agenda sent in advance. I'm comfortable with video conferencing (Zoom, Google Meet) and prefer to receive calendar invites directly."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 24.87782120704651,
+      "input_tokens": 812,
+      "output_tokens": 1592,
+      "problems": []
+    }
+  ],
+  "success": true
+}

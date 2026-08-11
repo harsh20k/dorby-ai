@@ -1,0 +1,54 @@
+{
+  "id": 231,
+  "archetype": "Healthcare AI Security Specialist",
+  "given_name": "Kavya Silva",
+  "style_version": 14,
+  "archetypes_version": 38,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Kavya Silva is a highly specialized Healthcare AI Security Specialist. She's spent the last 8 years moving from general cybersecurity into the very nascent field of securing AI/ML models *specifically* within healthcare. A distinctive career detail is her prior experience as a clinical data analyst \u2013 she understands the data *and* the security needs, bridging a critical gap. Currently, she\u2019s focused on navigating the evolving regulatory landscape (HIPAA, GDPR, emerging AI-specific guidelines) and building robust security frameworks for AI-driven diagnostic tools. She\u2019s proactively networking to connect with other specialists, regulatory experts, and companies pioneering responsible AI in healthcare, aiming to establish herself as a thought leader and contribute to industry best practices. She's frustrated by the lack of standardization in this field and wants to help forge some.",
+    "positioning": "Kavya Silva is a dedicated Healthcare AI Security Specialist with a unique background blending clinical data analysis and cybersecurity expertise. She focuses on securing artificial intelligence and machine learning applications within healthcare environments, ensuring patient data privacy and system integrity. Kavya is passionate about building robust security frameworks that meet evolving regulatory requirements, including HIPAA and emerging AI-specific legislation. She's currently leading the implementation of a novel adversarial training program to enhance the resilience of diagnostic AI models at NovaHealth. Kavya actively seeks connections with fellow security professionals, AI developers, and regulatory experts to collaborate on shaping the future of responsible AI in healthcare.",
+    "background": "* **NovaHealth (2021 \u2013 Present):** Lead AI Security Engineer. Responsible for designing, implementing, and maintaining security protocols for all AI/ML applications, including diagnostic imaging and predictive analytics. Led a team of three security engineers.\n* **SecureMed Solutions (2018 \u2013 2021):** Senior Security Analyst, Healthcare Focus. Specialized in vulnerability assessments and penetration testing of healthcare IT systems. Developed and delivered security awareness training programs for clinical staff.\n* **St. Jude Medical Center (2016 \u2013 2018):** Clinical Data Analyst. Analyzed patient data to identify trends and improve clinical outcomes. Gained deep understanding of healthcare data flows and privacy requirements.\n* **University of California, Berkeley (2014 \u2013 2016):** Master of Science in Cybersecurity. Focused on machine learning security and privacy-preserving technologies.\n* **Stanford University (2010 \u2013 2014):** Bachelor of Science in Biomedical Engineering.\n* **Skills:** AI/ML Security, HIPAA Compliance, GDPR, Data Privacy, Vulnerability Assessment, Penetration Testing, Threat Modeling, Adversarial Machine Learning, Python, TensorFlow, PyTorch, Cloud Security (AWS, Azure, GCP), Risk Management, Incident Response.\n* **Certifications:** Certified Information Systems Security Professional (CISSP), Certified Ethical Hacker (CEH), AWS Certified Security \u2013 Specialty.",
+    "lookingFor": "* **Connections with other AI Security Specialists:** Specifically those focused on healthcare applications and facing similar regulatory challenges.\n* **Regulatory Experts:** Individuals with deep knowledge of HIPAA, GDPR, and emerging AI-specific regulations.\n* **AI/ML Developers:** Interested in collaborating on secure-by-design AI development practices.\n* **Companies pioneering responsible AI in healthcare:** Seeking to learn from best practices and explore potential partnerships.\n* **Speaking Opportunities:** Kavya is building a thought leadership profile and is interested in presenting at industry conferences and webinars.\n* I'm particularly interested in connecting with anyone working on federated learning solutions for healthcare, as I believe this is a promising approach to privacy-preserving AI.",
+    "notes": "Kavya is highly articulate and knowledgeable about her field. She's a strong advocate for proactive security measures and is frustrated by the reactive approach often taken in healthcare. She mentioned a current project involving the security of a new AI-powered diagnostic tool for early cancer detection. She's also actively following the NIST AI Risk Management Framework development.  Follow-up on potential collaboration with her regarding a webinar on AI security in healthcare.",
+    "locationAvailability": "Kavya is based in the San Francisco Bay Area, California, and is available for virtual meetings and travel within the US.",
+    "introPreferences": "## Hard Requirements\n* **Prioritize:** Introductions to individuals directly involved in AI security within healthcare organizations (hospitals, clinics, medical device manufacturers).\n* **Exclude:** Sales pitches or introductions to individuals solely focused on general cybersecurity without healthcare expertise.\n\n## Soft Preferences\n* **Best Fit:** Individuals with a technical background and a strong understanding of AI/ML principles.\n* **Introduction Style:** A brief, personalized message highlighting Kavya\u2019s expertise and the potential synergy between her and the contact. Please mention her background in both clinical data analysis and cybersecurity.\n* **Key Information to Include:** Kavya\u2019s work at NovaHealth and her focus on securing AI-driven diagnostic tools.",
+    "personalPreferences": "* Prefers initial contact via LinkedIn messaging.\n* Is responsive to email but may have a slight delay due to meeting schedules.",
+    "meetingAndSchedulingPreferences": "Kavya is generally available for virtual meetings during Pacific Standard Time business hours. She prefers a brief introductory call (15-20 minutes) to assess mutual interest before scheduling longer meetings. Please send a calendar invite with a clear agenda."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 15.270661115646362,
+      "input_tokens": 750,
+      "output_tokens": 1115,
+      "problems": []
+    }
+  ],
+  "success": true
+}

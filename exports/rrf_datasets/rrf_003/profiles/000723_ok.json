@@ -1,0 +1,63 @@
+{
+  "id": 723,
+  "archetype": "Product Leader, AI & Growth Focused",
+  "given_name": "Aisha Tanaka",
+  "style_version": 44,
+  "archetypes_version": 121,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Aisha Tanaka is a seasoned Product Leader with a fascinating trajectory. She started her career in a large enterprise (Microsoft) learning the ropes of product management at scale, then boldly founded a growth-focused SaaS startup that ultimately didn't scale *despite* initially strong traction. This experience taught her invaluable lessons about building lean, data-driven products, and the critical importance of AI-powered personalization. She\u2019s now laser-focused on finding a role at a company leveraging AI to solve real user problems, ideally in a growth-stage environment where she can apply her full skillset. She\u2019s very analytical, a strong communicator, and deeply passionate about building products people love. Her 'failure' with her startup is something she's open about, framing it as a huge learning opportunity, and she's eager to contribute that insight to a winning team. She's a bit of a 'quiet leader' \u2013 prefers to let data and results speak for themselves, but is very thoughtful and strategic in her approach. She's also a keen networker, but values quality over quantity in her connections.",
+    "positioning": "Aisha Tanaka is a results-oriented Product Leader with a proven track record of driving growth through data-driven product strategy and innovative AI applications. Currently exploring opportunities at the intersection of AI and high-growth technology, I specialize in identifying and capitalizing on emerging market trends. My experience spans both large-scale enterprise product development and the agility of a startup environment, providing a unique perspective on building and scaling successful products. I excel at translating complex technical concepts into actionable product roadmaps and fostering cross-functional collaboration to deliver exceptional user experiences. I'm particularly interested in connecting with leaders and innovators who are shaping the future of AI-powered personalization and automation.  Recent work has focused on developing and implementing AI-driven A/B testing frameworks that resulted in a 15% increase in conversion rates for a key product feature.",
+    "background": "- **Microsoft, Product Manager (2016 \u2013 2019)**\n  * Managed the roadmap and execution for a core feature within Microsoft Teams, focused on enhancing user collaboration. \n  * Led cross-functional teams (engineering, design, marketing) through the entire product lifecycle, from ideation to launch and iteration.\n  * Utilized data analytics (Power BI, Excel) to identify user pain points and prioritize feature development, resulting in a 10% increase in daily active users.\n  * Championed user research initiatives, conducting surveys and user interviews to gather insights and inform product decisions.\n\n- **Founder & CEO, NovaGrowth (2019 \u2013 2022)**\n  * Founded a SaaS startup focused on personalized email marketing for small businesses. \n  * Defined the product vision, strategy, and roadmap, securing seed funding of $500,000.\n  * Built and launched a minimum viable product (MVP) within six months, acquiring over 200 paying customers.\n  * Implemented a data-driven growth marketing strategy, utilizing Google Analytics and HubSpot to track key metrics and optimize campaigns.\n  * *Key Learning:* While initial traction was strong, scaling proved challenging due to competitive pressures and a lack of AI-driven personalization capabilities.\n\n- **Consultant, Growth Strategy (2022 \u2013 2023)**\n  * Provided strategic consulting services to early-stage startups, focusing on product-market fit, growth hacking, and AI integration.\n  * Conducted market research, competitive analysis, and user interviews to identify opportunities for growth.\n  * Developed and implemented growth marketing strategies, utilizing A/B testing, SEO, and social media marketing.\n  * Advised clients on the selection and implementation of AI-powered tools and technologies.\n\n- **Education:**\n  * **University of Washington, Seattle, WA** - Bachelor of Science in Computer Science (2016)\n  * **Completed several online courses in Machine Learning and AI** (Coursera, Udacity) \u2013 ongoing professional development focusing on LLMs and generative AI.",
+    "lookingFor": "- Connections at AI-first companies (Series A \u2013 Series C).\n- Product Leaders driving AI innovation in areas like personalization, automation, and predictive analytics.\n- Opportunities to leverage my experience in building and scaling data-driven products.\n- Mentorship from experienced AI practitioners.\n- Introductions to VCs specializing in AI and machine learning.\n- Am open to remote roles or roles based in the Seattle area.\n- Keen to learn about companies tackling challenging problems with AI \u2013 bonus points for solutions focused on improving user experience.\n- Not currently seeking advisory board positions.",
+    "notes": "Aisha is incredibly bright and articulate. Our initial call focused heavily on her learnings from NovaGrowth \u2013 she\u2019s very open about the challenges she faced and how she's applying those lessons to her current search. She\u2019s a thoughtful listener and asks insightful questions. She\u2019s not a \u2018hype\u2019 person; she\u2019s very pragmatic about AI and focused on delivering tangible value. She mentioned being particularly interested in companies that are *actually* deploying AI, not just talking about it. She prefers a direct and concise communication style. I have a follow-up scheduled next week to discuss potential opportunities at [Company X].",
+    "locationAvailability": "Based in Seattle, WA, with willingness to travel for the right opportunity.",
+    "introPreferences": "- Warm email introductions are preferred, with a brief context explaining why we connected.\n- Please highlight my experience with both startup and enterprise product development.\n- Mention my passion for AI-driven personalization and my eagerness to learn.\n- Avoid introductions to roles that are purely execution-focused; I'm looking for strategic leadership opportunities.\n- Don't introduce me to companies focused solely on AI infrastructure \u2013 I'm interested in AI *applications*.",
+    "personalPreferences": "I appreciate a quick follow-up after an introduction \u2013 a brief thank you note is always welcome.",
+    "meetingAndSchedulingPreferences": "I typically prefer 30-minute video calls to start, and I'm flexible with scheduling during business hours."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 22.921003103256226,
+      "input_tokens": 752,
+      "output_tokens": 1290,
+      "problems": [
+        "background: possible truncation (ends with '...oogle Analytics Certified')"
+      ]
+    },
+    {
+      "attempt": 2,
+      "elapsed_s": 22.54129195213318,
+      "input_tokens": 752,
+      "output_tokens": 1297,
+      "problems": []
+    }
+  ],
+  "success": true
+}

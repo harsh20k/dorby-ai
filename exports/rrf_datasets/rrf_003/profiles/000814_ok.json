@@ -1,0 +1,54 @@
+{
+  "id": 814,
+  "archetype": "Global Operator/Advisor, Now Founder",
+  "given_name": "Omar Volkov",
+  "style_version": 50,
+  "archetypes_version": 137,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Omar Volkov is a first-generation immigrant originally from Latvia, with a strong background in supply chain optimization and international logistics. He spent over 15 years building and scaling operations for a fast-fashion company across Europe and Southeast Asia, eventually becoming their COO. A key, distinctive detail is that he *personally* negotiated the opening of their first manufacturing facility in Vietnam, navigating complex local regulations and cultural nuances. He's now founded 'NovaFlow', a platform leveraging AI to predict supply chain disruptions and offer proactive mitigation strategies for small to medium-sized businesses. He's looking to connect with potential investors, early adopters of his platform, and other founders tackling similar challenges in global trade. He's very direct, values efficiency, and dislikes overly 'fluffy' networking approaches. He\u2019s based in Berlin but travels frequently.",
+    "positioning": "Omar Volkov is the founder of NovaFlow, a next-generation supply chain risk management platform. Having spent years navigating the complexities of global logistics, I\u2019ve witnessed firsthand the devastating impact of unforeseen disruptions. NovaFlow leverages cutting-edge AI to provide proactive insights, enabling businesses to anticipate and mitigate risks *before* they impact operations. I help companies build resilient supply chains and unlock sustainable growth in an increasingly volatile world, offering a data-driven approach to a traditionally reactive field. My experience building international operations from the ground up uniquely positions me to understand the challenges faced by businesses operating across borders.",
+    "background": "- **Founder & CEO, NovaFlow** (Berlin, Germany, 2023 \u2013 Present)\n  * Led all aspects of company formation, from initial concept and fundraising to product development and go-to-market strategy.\n  * Secured seed funding of \u20ac750k from angel investors focused on supply chain tech.\n  * Developed and launched NovaFlow\u2019s MVP, currently onboarding pilot customers.\n\n- **Chief Operating Officer, Stellar Threads** (Ho Chi Minh City, Vietnam / London, UK, 2010 \u2013 2022)\n  * Oversaw global operations, including sourcing, manufacturing, logistics, and distribution, across 15 countries.\n  * Scaled operations from $5M to $150M in annual revenue within 12 years.\n  * *Personally negotiated and secured the lease and build-out of Stellar Threads\u2019 first manufacturing facility in Vietnam, navigating local regulations and establishing key supplier relationships.*\n  * Implemented lean manufacturing principles, resulting in a 20% reduction in production costs.\n  * Led a team of over 500 employees across multiple departments.\n\n- **Supply Chain Manager, Baltic Textiles** (Riga, Latvia, 2008 \u2013 2010)\n  * Managed the sourcing and procurement of raw materials for textile production.\n  * Optimized logistics processes, reducing lead times by 15%.\n\n- **Education:**\n  * **MBA, INSEAD** (Fontainebleau, France, 2007 \u2013 2008)\n  * **BSc, Economics, University of Latvia** (Riga, Latvia, 2004 \u2013 2007)",
+    "lookingFor": "- Investors interested in early-stage supply chain technology.\n- Early adopters of NovaFlow willing to provide feedback and case studies.\n- Founders building innovative solutions for global trade and logistics.\n- Mentors with experience scaling tech companies in Europe and Asia.\n- Strategic partners with expertise in AI/ML and data analytics.\n- Connections to potential talent in software engineering and supply chain management.\n- Individuals familiar with the challenges of operating in Southeast Asian markets.",
+    "notes": "Omar is very direct and appreciates concise communication. He's not interested in long, drawn-out networking conversations. He\u2019s currently prioritizing meetings related to fundraising and securing pilot customers for NovaFlow. He recently presented at the Supply Chain Innovation Summit in Amsterdam and is happy to share his presentation deck. He\u2019s fluent in Latvian, Russian, English, and conversational German. He\u2019s actively researching potential Series A investors. Avoid pitching him anything unrelated to supply chain or AI \u2013 he\u2019s very focused. He gets frustrated with vague requests.",
+    "locationAvailability": "Based in Berlin, Germany, with frequent travel to London, Amsterdam, and Southeast Asia.",
+    "introPreferences": "- Focus on shared interests in supply chain, AI, or global trade.\n- Highlight any relevant experience or connections the introducer has.\n- Keep introductions brief and to the point \u2013 Omar values efficiency.\n- *Do not* offer generic or overly enthusiastic introductions.\n- Prioritize introductions to individuals who can offer tangible value (e.g., investment, partnership opportunities).\n- Mention if the connection has a vested interest in helping startups.",
+    "personalPreferences": "Prefers email for initial contact.",
+    "meetingAndSchedulingPreferences": "- Prefers video calls to phone calls.\n- Typically available for meetings in the late afternoon or early evening (CET).\n- Can be flexible with scheduling, but appreciates advance notice."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 16.660640001296997,
+      "input_tokens": 756,
+      "output_tokens": 1070,
+      "problems": []
+    }
+  ],
+  "success": true
+}

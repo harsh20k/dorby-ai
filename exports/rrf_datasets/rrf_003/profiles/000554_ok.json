@@ -1,0 +1,54 @@
+{
+  "id": 554,
+  "archetype": "Early-Stage Tech Founder, Europe-Based",
+  "given_name": "Marcus Dubois",
+  "style_version": 34,
+  "archetypes_version": 93,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Marcus Dubois is a 34-year-old French-Canadian founder currently based in Berlin, Germany. He\u2019s building \u2018SynapseFlow\u2019, a B2B SaaS platform leveraging AI to optimize supply chain logistics for small to medium-sized manufacturers. A distinctive element of his career is a prior 5-year stint as a structural engineer, which deeply informs his approach to building robust and scalable systems. He's a first-time founder, highly technical, and focused on securing seed funding and building a strong engineering team. He's pragmatic, data-driven, and actively seeking advisors who've successfully navigated similar challenges. He's very focused on the European market but open to US investors with European presence. He\u2019s not interested in purely financial investors; he wants partners who understand the complexities of industrial tech.",
+    "positioning": "Marcus Dubois is a founder and CEO focused on building resilient and intelligent supply chains. Leveraging a unique background in structural engineering and a passion for applying AI, he leads SynapseFlow in delivering a SaaS solution that empowers manufacturers to optimize logistics, reduce costs, and improve efficiency. He\u2019s currently focused on securing seed funding to scale the platform and expand the engineering team. Marcus believes in a data-driven approach to problem-solving and strives to create a positive impact through technological innovation.",
+    "background": "* **Founder & CEO, SynapseFlow** (Berlin, Germany) \u2013 2023 \u2013 Present\n* Developing and leading the vision, strategy, and execution of a B2B SaaS platform for supply chain optimization.\n* Securing initial angel investment and building a core team of engineers and data scientists.\n* **Lead Structural Engineer, Atelier d'Ing\u00e9nierie Structurale** (Montreal, Canada) \u2013 2018 \u2013 2023\n* Led design and analysis of complex structural systems for industrial and commercial projects.\n* Managed project teams and ensured compliance with building codes and safety regulations.\n* Developed expertise in finite element analysis (FEA) and CAD software (AutoCAD, Revit).\n* **Research Assistant, McGill University \u2013 Department of Civil Engineering** (Montreal, Canada) \u2013 2016 \u2013 2018\n* Conducted research on the application of machine learning to predictive maintenance in infrastructure.\n* Published research findings in peer-reviewed journals and presented at international conferences.\n* **B.Eng. Civil Engineering, McGill University** (Montreal, Canada) \u2013 2012 \u2013 2016\n* Graduated with honors; focused on structural analysis and computational modeling.\n* Proficient in Python, Java, and SQL.\n* Fluent in English and French.",
+    "lookingFor": "* **Seed-Stage Investors:** Seeking investors with a demonstrated track record in B2B SaaS, industrial tech, and/or supply chain solutions. Preference for European-based or US investors with strong European presence.\n* **Supply Chain Experts:** Connecting with individuals with deep experience in supply chain management, logistics, and manufacturing operations to provide strategic guidance.\n* **AI/ML Engineers:** Recruiting talented engineers specializing in AI, machine learning, and data science to join the SynapseFlow team.\n* **Technical Advisors:** Seeking advisors with expertise in scaling SaaS platforms and building robust, secure infrastructure.\n* **Potential Partnerships:** Exploring collaborative opportunities with complementary technology providers in the logistics and manufacturing space.\n* **Mentorship:** Open to connecting with experienced founders who have successfully navigated similar challenges.",
+    "notes": "* Actively engaging in the Berlin startup ecosystem. Attended Tech Open Air 2024.\n* Recently had a positive conversation with [User ID: 78921] about potential integration opportunities.\n* Prioritizes connections that offer tangible value \u2013 technical expertise, investment, or strategic partnerships.\n* High responsiveness to direct messages on LinkedIn.\n* Seems particularly interested in learning about successful scaling strategies for early-stage SaaS companies.",
+    "locationAvailability": "Currently based in Berlin, Germany, and open to remote meetings. Willing to travel within Europe for key opportunities.",
+    "introPreferences": "* **Ideal Introductions:** Seed-stage VCs focusing on European B2B SaaS, particularly those with expertise in industrial tech.\n* **Strongly Prefer:** Introductions to engineers with 3+ years of experience in AI/ML and a passion for solving real-world problems.\n* **Good to Have:** Introductions to supply chain consultants with experience in the manufacturing sector.\n* **Avoid:** Introductions to purely financial investors without industry expertise.\n* **Avoid:** Recruiters pitching generic sales/marketing roles.\n* **Introduction Style:** Brief, concise, and highlighting the mutual benefit of connecting. Focus on SynapseFlow's value proposition and Marcus's unique background.\n* **Warm Introductions Only:** Please do not send cold emails or LinkedIn connection requests.",
+    "personalPreferences": "Prefers concise and direct communication. Most responsive via email. Appreciates thoughtful and well-researched outreach.",
+    "meetingAndSchedulingPreferences": "Generally available for 30-minute introductory calls. Prefers using Calendly for scheduling."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 14.91226601600647,
+      "input_tokens": 773,
+      "output_tokens": 1081,
+      "problems": []
+    }
+  ],
+  "success": true
+}

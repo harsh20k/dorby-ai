@@ -1,0 +1,54 @@
+{
+  "id": 837,
+  "archetype": "Amazon Operations Excellence to AI Advisor",
+  "given_name": "Kai Nakamura",
+  "style_version": 51,
+  "archetypes_version": 141,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Kai Nakamura is a former Senior Manager of Global Delivery at Amazon, specializing in supply chain optimization and automation. A distinctive detail is that he led the initial rollout of robotic process automation (RPA) within Amazon's fulfillment centers in Europe, significantly reducing processing times and costs. He left Amazon to found 'AetherScale,' a boutique consultancy focused on helping mid-sized businesses navigate AI adoption, specifically within their operations. He\u2019s targeting companies struggling with scaling AI solutions beyond proof-of-concept, offering a blend of strategic planning, implementation guidance, and change management. He positions himself as a \u2018translator\u2019 between technical AI teams and business stakeholders. He\u2019s subtly looking for potential acquisition by a larger consultancy or a seed funding round for AetherScale, but primarily focuses on client work currently. He's pragmatic, data-driven, and avoids hype around AI, preferring to emphasize ROI and operational impact.",
+    "positioning": "Kai Nakamura is a seasoned operations leader and AI transformation advisor dedicated to bridging the gap between cutting-edge technology and tangible business results. Having spent over a decade at Amazon, driving operational excellence across global supply chains, I now leverage that experience to guide organizations through the complexities of AI adoption. My core philosophy centers on a pragmatic approach \u2013 identifying high-impact opportunities, building scalable solutions, and fostering a culture of continuous improvement. \n\nCurrently, as the founder of AetherScale, I specialize in helping mid-market companies move beyond pilot projects and achieve sustainable ROI from their AI investments. I\u2019ve seen firsthand how transformative AI can be when implemented strategically, and I\u2019m passionate about empowering businesses to unlock its full potential. I focus particularly on automating workflows, optimizing resource allocation, and enhancing decision-making through data-driven insights. \n\nMy expertise spans the entire AI lifecycle, from initial assessment and strategy development to implementation, training, and ongoing support. I excel at translating complex technical concepts into clear, actionable recommendations for business leaders, ensuring alignment and driving successful outcomes. I\u2019m actively seeking partnerships with forward-thinking organizations ready to embrace the future of operations, and eager to share my insights on building resilient, AI-powered businesses.",
+    "background": "- **AetherScale, Founder & Principal Consultant** (2023 \u2013 Present)\n    * Established and leads a consultancy specializing in AI transformation for mid-market businesses, with a focus on operational efficiency and scalability.\n    * Developed and delivered AI strategy roadmaps for clients in the manufacturing, logistics, and retail sectors.\n    * Led implementation projects leveraging machine learning, computer vision, and natural language processing to automate key processes, resulting in an average of 15% cost reduction for clients.\n    * Secured and managed a portfolio of consulting engagements with a combined value exceeding $500,000.\n\n- **Amazon, Senior Manager, Global Delivery** (2016 \u2013 2023)\n    * Led a team of 20+ operations managers responsible for the end-to-end delivery of products across Amazon\u2019s European fulfillment network.\n    * Spearheaded the initial rollout of Robotic Process Automation (RPA) in European fulfillment centers, reducing manual processing time by 25% and improving order accuracy by 10%. This involved cross-functional collaboration with engineering, IT, and operations teams.\n    * Managed a budget of $10M+ and consistently exceeded key performance indicators (KPIs) related to delivery speed, cost efficiency, and customer satisfaction.\n    * Implemented a new warehouse management system (WMS) across multiple facilities, resulting in a 12% increase in throughput.\n    * Developed and implemented a data-driven approach to capacity planning, optimizing resource allocation and reducing operational costs.\n\n- **Amazon, Operations Manager** (2013 \u2013 2016)\n    * Managed daily operations of a large-scale fulfillment center, overseeing a team of 100+ associates.\n    * Implemented Lean manufacturing principles to streamline processes and improve efficiency.\n    * Reduced defect rates by 18% through the implementation of quality control measures.\n\n- **Education:**\n    * **MBA, Harvard Business School** (2011 \u2013 2013)\n    * **B.S., Industrial Engineering, Stanford University** (2007 \u2013 2011), *Summa Cum Laude* \n\n- **Skills:** Artificial Intelligence (AI), Machine Learning (ML), Robotic Process Automation (RPA), Supply Chain Management, Operations Management, Lean Manufacturing, Data Analysis, Project Management, Change Management, Strategic Planning, Business Process Optimization, Warehouse Management Systems (WMS), Python, SQL, Tableau.",
+    "lookingFor": "I am actively seeking connections with leaders at mid-sized companies (revenue $50M - $500M) who are exploring or currently implementing AI solutions within their operations. I\u2019m particularly interested in discussing challenges related to scaling AI beyond proof-of-concept and achieving measurable ROI.  I\u2019m open to both short-term consulting engagements and longer-term advisory roles.\n\nSpecifically, I\u2019m looking for:\n* **Introductions to VPs of Operations, CIOs, and CTOs** at companies in the manufacturing, logistics, and retail industries.\n* **Partnerships with AI solution providers** specializing in operational applications (e.g., computer vision for quality control, machine learning for demand forecasting).\n* **Opportunities to present at industry conferences and webinars** on the topic of AI transformation.\n\nI am also open to exploring potential investment opportunities for AetherScale, specifically seed funding to accelerate growth and expand our service offerings. While not my primary focus currently, I'm always interested in discussing strategic partnerships that could benefit both organizations.  I\u2019m also keen to connect with other consultants and advisors in the AI space to share best practices and collaborate on projects.",
+    "notes": "Kai is a very pragmatic and data-driven individual. He's not a 'hype man' for AI; he focuses on tangible ROI and operational improvements. He's very articulate and can translate complex technical concepts into business language. He is subtly exploring options for scaling AetherScale, so be mindful of that when making introductions. He\u2019s excellent at quickly assessing a company\u2019s AI readiness and identifying quick wins. He\u2019s slightly hesitant to discuss funding publicly, so avoid leading with that topic. He\u2019s most responsive to inquiries that focus on specific operational challenges and demonstrate a clear understanding of his expertise.",
+    "locationAvailability": "Kai Nakamura is currently based in Seattle, Washington, and is open to remote work. He is willing to travel for client engagements, but prefers to minimize travel whenever possible.",
+    "introPreferences": "* **Hard Requirement:** Introductions should be to decision-makers (VP level or higher) with direct responsibility for operations or technology.\n* **Soft Preference:** Prioritize companies in the manufacturing, logistics, or retail industries.\n* **Intro Style:** Keep introductions concise and focused on the potential value Kai can bring to the recipient's organization. Highlight his Amazon experience and his ability to deliver measurable results.\n* **Avoid:** Introducing him to purely academic contacts or individuals who are simply curious about AI without a clear application in mind.\n* **Do:** Briefly mention AetherScale's focus on pragmatic AI implementation and ROI.\n* **Do:** Frame the introduction as a potential opportunity to explore how AI can solve specific operational challenges.",
+    "personalPreferences": "Kai is a direct communicator and appreciates efficiency. He prefers email communication initially, followed by a brief phone call to discuss potential opportunities.",
+    "meetingAndSchedulingPreferences": "Kai is generally flexible with meeting times and is comfortable with video conferencing. He prefers to schedule follow-up actions during meetings to ensure clear accountability."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 31.732627153396606,
+      "input_tokens": 800,
+      "output_tokens": 1638,
+      "problems": []
+    }
+  ],
+  "success": true
+}

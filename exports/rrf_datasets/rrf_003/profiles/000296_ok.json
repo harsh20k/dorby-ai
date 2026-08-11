@@ -1,0 +1,54 @@
+{
+  "id": 296,
+  "archetype": "Fintech Founder, Web3 & AI Focus",
+  "given_name": "Isabela Chen",
+  "style_version": 18,
+  "archetypes_version": 49,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Isabela Chen is a first-time founder, 32, building 'SynapseFi', a platform aiming to bridge traditional finance with decentralized finance (DeFi) using AI-powered risk assessment. She previously spent 7 years as a quantitative analyst at a large, established hedge fund, but became increasingly frustrated with the slow pace of innovation and lack of accessibility in traditional finance. A key differentiator for SynapseFi is its proprietary AI model that analyzes on-chain and off-chain data to provide more accurate credit scores for DeFi lending, opening up opportunities for underbanked populations. She\u2019s currently bootstrapping, having raised a small pre-seed round from angel investors, and is now focused on securing a seed round to scale the platform and expand the team. Isabela is very technically savvy, often diving into the code herself, and prioritizes building a strong, technically-proficient team. She's extremely focused on regulatory compliance and building trust in the DeFi space. She's direct, data-driven, and values efficiency in communication.",
+    "positioning": "I'm Isabela Chen, founder and CEO of SynapseFi, a fintech infrastructure company revolutionizing access to credit through the convergence of AI and decentralized finance. We\u2019re building the rails for a more inclusive and efficient financial system, tackling the critical challenge of risk assessment in the DeFi space. Current solutions are limited by reliance on volatile on-chain data, hindering wider adoption and excluding significant portions of the population. SynapseFi\u2019s proprietary AI engine analyzes both on-chain and traditional financial data, providing a more holistic and accurate credit scoring mechanism, enabling responsible lending and unlocking new opportunities for individuals and institutions. We\u2019re currently in the early stages of scaling our platform and are focused on building strategic partnerships with DeFi protocols and traditional financial institutions. We recently completed a successful beta test with a select group of users, demonstrating a 30% improvement in risk prediction accuracy compared to existing models.",
+    "background": "Isabela Chen's professional journey is marked by a consistent pursuit of innovation at the intersection of finance and technology.\n\n* **SynapseFi, Founder & CEO** (2023 \u2013 Present): Leading the development and execution of SynapseFi\u2019s vision, securing initial funding, and building the core team. Responsible for all aspects of the business, from product development and engineering to fundraising and regulatory compliance.\n* **Quantum Leap Capital, Quantitative Analyst** (2016 \u2013 2023): Developed and implemented quantitative models for risk management and portfolio optimization. Specialized in statistical arbitrage and high-frequency trading strategies. Consistently exceeded performance benchmarks, contributing to a 15% increase in portfolio returns year-over-year. Led a project to integrate machine learning into the firm\u2019s trading algorithms, resulting in a 10% reduction in trading costs.\n* **Education:**\n    * **Massachusetts Institute of Technology (MIT), Cambridge, MA** \u2013 Master of Science in Financial Engineering (2016)\n    * **Stanford University, Stanford, CA** \u2013 Bachelor of Science in Mathematics (2014), *Summa Cum Laude* \u2013 Minor in Computer Science\n* **Skills:** Python, Solidity, Machine Learning (TensorFlow, PyTorch), Data Analysis (SQL, R), Financial Modeling, Risk Management, Blockchain Technology, DeFi Protocols, Statistical Analysis, Portfolio Optimization.\n* **Certifications:** Chartered Financial Analyst (CFA) Level 1 (2017)",
+    "lookingFor": "## Strategic Partnerships & Funding\n\n* **Seed Investors:** Seeking $2-3M seed round from VCs specializing in Fintech, Web3, and AI. Target investor profile: Funds with a demonstrated track record of supporting early-stage infrastructure plays, particularly those focused on DeFi and AI-driven solutions. Preference for investors who can provide strategic guidance and access to industry networks.\n* **DeFi Protocol Partnerships:** Exploring collaborations with established DeFi lending protocols to integrate SynapseFi\u2019s risk assessment engine. Seeking protocols with a strong user base and a commitment to responsible lending practices.\n* **Technical Talent:** Actively recruiting experienced Solidity developers and Machine Learning engineers with a strong understanding of blockchain technology and financial modeling. Looking for individuals who are passionate about building innovative solutions and are comfortable working in a fast-paced startup environment.\n* **Regulatory Counsel:** Seeking legal counsel specializing in DeFi and financial regulations to navigate the evolving regulatory landscape.",
+    "notes": "* Isabela is very responsive via email and Slack, but prefers concise communication. Avoid lengthy introductory emails. \n* She's extremely focused on the technical aspects of her platform and will likely dive into details quickly. \n* Recently presented at a DeFi conference in London \u2013 positive reception, particularly regarding the AI model. \n* She's currently exploring options for obtaining a Trustworthy Systems certification to further build trust and transparency in the platform. \n* Prioritized building a strong technical team over rapid user acquisition.",
+    "locationAvailability": "Based in San Francisco, California, with willingness to travel domestically for key meetings and events.",
+    "introPreferences": "## Introduction Guidelines\n\n* **Hard Requirements:**\n    * Introductions to Seed-stage VCs focused on Fintech, Web3, and AI infrastructure.\n    * Introductions to founders of leading DeFi lending protocols (Aave, Compound, MakerDAO).\n    * Introductions to experienced Solidity developers with 3+ years of experience.\n* **Soft Preferences:**\n    * Emphasize SynapseFi\u2019s unique AI-powered risk assessment model and its potential to unlock new opportunities in the DeFi space.\n    * Highlight Isabela\u2019s background as a quantitative analyst and her deep understanding of both traditional finance and blockchain technology.\n    * Avoid introductions to investors who are solely focused on consumer-facing DeFi applications.",
+    "personalPreferences": "I prefer direct and efficient communication. Slack is great for quick questions, and email is best for more detailed discussions. Please avoid overly formal or lengthy introductions.",
+    "meetingAndSchedulingPreferences": "Please send calendar invites with a clear agenda and a brief overview of the discussion points."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 22.198507070541382,
+      "input_tokens": 747,
+      "output_tokens": 1281,
+      "problems": []
+    }
+  ],
+  "success": true
+}

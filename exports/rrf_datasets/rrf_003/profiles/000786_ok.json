@@ -1,0 +1,63 @@
+{
+  "id": 786,
+  "archetype": "AI/Web3 Founder Pivoting",
+  "given_name": "Kenji Reyes",
+  "style_version": 48,
+  "archetypes_version": 132,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Kenji Reyes is a 38-year-old founder who initially made a splash in the early Web3 space with a decentralized social media platform that ultimately struggled to gain mass adoption. He\u2019s a brilliant technical mind but recognizes his initial focus was too broad and lacked a clear, immediate user need. He's now pivoting to leverage his AI/ML expertise, specifically in generative AI, to build tools for small and medium-sized businesses (SMBs) \u2013 focusing on automating content creation and marketing tasks. He\u2019s looking for strategic advisors, potential investors with a focus on applied AI, and SMB owners willing to be early adopters and provide feedback. He\u2019s slightly wary of \u2018pure\u2019 crypto investors who don\u2019t understand the practical applications of AI. He\u2019s highly analytical, values data-driven decision-making, and prefers direct, concise communication. He\u2019s a hands-on leader who still enjoys coding and staying close to the technical details.",
+    "positioning": "A seasoned technology leader and founder, I\u2019m currently focused on building practical AI solutions for the SMB market. Having navigated the complexities of launching and scaling a Web3 startup, I\u2019ve learned the critical importance of solving tangible problems with demonstrable ROI. My core competency lies in bridging the gap between cutting-edge AI/ML technologies \u2013 particularly generative AI \u2013 and the everyday needs of businesses. I\u2019m passionate about empowering SMBs with tools that level the playing field, allowing them to compete effectively in a rapidly evolving digital landscape. I'm currently leading the development of 'ContentForge,' an AI-powered platform designed to automate content creation, personalize marketing campaigns, and drive measurable results for small businesses. I'm seeking collaborative partners who share my vision and are committed to building innovative solutions that deliver real value.",
+    "background": "- **Founder & CEO, NovaSocial (2018 \u2013 2023):** Led the development and launch of NovaSocial, a decentralized social media platform built on blockchain technology. Managed a team of 25+ engineers, designers, and marketers. Secured $3M in seed funding. Oversaw all aspects of product development, marketing, and operations. Ultimately, the platform faced challenges in achieving widespread user adoption due to network effects and usability hurdles.\n- **Lead Machine Learning Engineer, Data Insights Corp (2016 \u2013 2018):** Developed and deployed machine learning models for predictive analytics and customer segmentation. Improved customer retention rates by 15% through targeted marketing campaigns. Led a team of 3 junior engineers, providing mentorship and technical guidance.\n- **Software Engineer, TechForward Solutions (2014 \u2013 2016):** Contributed to the development of a cloud-based CRM system. Gained experience in full-stack development, including front-end, back-end, and database technologies.\n- **Education:**\n  - **Master of Science in Computer Science, Stanford University (2012 \u2013 2014):** Specialization in Artificial Intelligence. GPA: 3.9/4.0\n  - **Bachelor of Science in Computer Engineering, University of California, Berkeley (2008 \u2013 2012):** Graduated with honors.\n- **Skills:**\n  - **Programming Languages:** Python (Expert), JavaScript (Proficient), Solidity (Intermediate)\n  - **AI/ML Technologies:** TensorFlow, PyTorch, scikit-learn, Generative AI (GPT-3, DALL-E 2), Natural Language Processing (NLP)\n  - **Blockchain Technologies:** Ethereum, Solidity, Smart Contracts\n  - **Cloud Platforms:** AWS (Amazon Web Services), Google Cloud Platform (GCP)\n  - **Data Analysis & Visualization:** SQL, Tableau, Power BI\n  - **Project Management:** Agile methodologies, Scrum\n- **Awards & Recognition:**\n  - \u201c30 Under 30\u201d - Forbes Technology (2019)\n  - \u201cInnovation Award\u201d - TechCrunch Disrupt (2018) - for NovaSocial\n  - Stanford University Graduate Fellowship (2012-2014)\n- **Publications:** Authored two peer-reviewed papers on decentralized social networks.",
+    "lookingFor": "- **Strategic Advisors:** Experienced entrepreneurs or investors with a proven track record of scaling SMB-focused SaaS businesses. Seeking guidance on go-to-market strategy, sales & marketing, and fundraising.\n- **Seed Investors:** Angel investors or venture capital firms interested in applied AI solutions for SMBs. Looking for investments in the $500K - $1M range.\n- **SMB Owners/Operators:** Businesses in the retail, e-commerce, or professional services industries willing to participate in beta testing and provide feedback on ContentForge.\n- **AI/ML Engineers:** Talented engineers with experience in generative AI and content creation. Seeking individuals passionate about building innovative products.\n- **Do NOT connect with:**\n  - Individuals solely focused on cryptocurrency speculation or NFT projects.\n  - Recruiters pitching roles outside of the AI/ML or SaaS space.\n  - Individuals offering unsolicited marketing services.\n- **Ideal Connection Profile:** Founders, VPs of Marketing, Heads of Innovation at SMBs (5-200 employees). Investors with a portfolio focused on applied AI, SaaS, or SMB tech.",
+    "notes": "Kenji is highly analytical and responds well to data-driven pitches. He's still processing the lessons learned from NovaSocial and is cautious about overhyping technology. He\u2019s actively researching potential competitors and is particularly interested in understanding their pricing models and customer acquisition strategies. He's a quick learner and values efficiency in communication \u2013 keep it concise and focused on tangible value. Recent interactions suggest he's initially reserved but opens up quickly when discussing technical details. He\u2019s currently reading 'The Lean Startup' and frequently references principles of customer development.",
+    "locationAvailability": "Based in San Francisco, California (PST). Open to remote meetings and occasional travel within the US.",
+    "introPreferences": "When making an introduction to Kenji, please emphasize:\n- His expertise in AI/ML and his focus on practical applications for SMBs.\n- His experience as a founder and his ability to build and scale technology products.\n- The potential for a mutually beneficial partnership \u2013 whether it's providing strategic advice, investment, or user feedback.\n\n**Hard Requirements:**\n- The connection must have a demonstrable link to the SMB market or the AI/ML investment space.\n- The introduction should be concise and clearly articulate the value proposition for Kenji.\n\n**Soft Preferences:**\n- Highlight any shared connections or mutual interests.\n- Briefly mention any relevant news or articles about the connection.",
+    "personalPreferences": "I prefer initial contact via LinkedIn messaging, and I'm generally responsive. Feel free to follow up after a few days if you haven't heard back. I'm also reachable on WhatsApp if you have my number.",
+    "meetingAndSchedulingPreferences": "I generally prefer to schedule short (30-minute) introductory calls to assess potential synergies. I'm flexible with scheduling and can usually accommodate meetings within 24-48 hours notice."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 32.42228603363037,
+      "input_tokens": 772,
+      "output_tokens": 1534,
+      "problems": [
+        "background: possible truncation (ends with '...hine Learning \u2013 Specialty')"
+      ]
+    },
+    {
+      "attempt": 2,
+      "elapsed_s": 26.63494300842285,
+      "input_tokens": 772,
+      "output_tokens": 1522,
+      "problems": []
+    }
+  ],
+  "success": true
+}

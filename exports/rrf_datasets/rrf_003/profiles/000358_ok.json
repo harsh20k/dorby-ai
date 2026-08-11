@@ -1,0 +1,54 @@
+{
+  "id": 358,
+  "archetype": "Health-Tech Founder, B2B Pivot",
+  "given_name": "Diego Volkov",
+  "style_version": 22,
+  "archetypes_version": 59,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Diego Volkov is a first-time founder, 34, with a background in biomedical engineering. He initially built 'VitalityNow,' a direct-to-consumer personalized vitamin subscription service, leveraging at-home testing kits and AI-driven recommendations. While VitalityNow gained traction with a loyal customer base (around 25,000 subscribers), scaling proved expensive and profitability elusive due to customer acquisition costs and churn. He realized the real value lay in the data VitalityNow collected \u2013 a rich, anonymized dataset of biomarkers and lifestyle information. He\u2019s now pivoting the company to a B2B model, offering this data as a service to pharmaceutical companies and clinical research organizations (CROs) for drug discovery and clinical trial recruitment. He's currently raising a Series A to build out the data infrastructure, secure regulatory compliance (HIPAA, GDPR), and expand the sales team. He\u2019s particularly focused on partnerships with companies working on preventative medicine and personalized healthcare solutions. He\u2019s energetic, data-driven, and a quick learner, but relatively new to the complexities of B2B sales and fundraising.",
+    "positioning": "I'm Diego Volkov, founder and CEO of VitalityNow, a health-tech company undergoing an exciting transformation. We started with a direct-to-consumer personalized vitamin service, helping individuals optimize their health through data-driven insights. We've built a robust technology platform and, more importantly, a valuable dataset of anonymized health information. Recognizing the significant market opportunity, we\u2019re now pivoting to become a leading provider of real-world health data to pharmaceutical companies and CROs, accelerating drug discovery and improving clinical trial efficiency.\n\nThis transition is fueled by the realization that our core asset isn\u2019t the vitamins themselves, but the rich insights we've gleaned from thousands of user profiles. We\u2019ve proven our ability to collect, analyze, and secure sensitive health data, and are now poised to empower others with this valuable resource. We\u2019re focused on enabling a future where preventative medicine is powered by real-world evidence.\n\nI'm passionate about bridging the gap between consumer health data and pharmaceutical innovation. I believe that by democratizing access to this information, we can significantly accelerate the development of life-changing therapies and improve health outcomes globally. I\u2019m actively seeking strategic partners and investors who share this vision and are committed to driving innovation in the healthcare sector.\n\nRecently, we completed a successful pilot program with a major pharmaceutical company, demonstrating the value of our data in identifying potential candidates for a Phase II clinical trial, reducing recruitment time by 30%. This success has validated our B2B strategy and fueled our current Series A fundraising round.",
+    "background": "- **VitalityNow, Founder & CEO** (2020 \u2013 Present)\n  * Led all aspects of the company, from initial concept and product development to fundraising, marketing, and operations. Company size grew to 25 employees.\n  * Successfully launched a direct-to-consumer personalized vitamin subscription service, acquiring over 25,000 subscribers.\n  * Spearheaded the development of a proprietary AI-driven recommendation engine, analyzing biomarkers and lifestyle data to personalize vitamin formulations.\n  * Managed a $2M seed funding round in 2021.\n  * Led the strategic pivot from D2C to B2B, rebranding and repositioning the company as a health data provider.\n  * Oversaw data security and compliance efforts, ensuring adherence to HIPAA and GDPR regulations.\n\n- **Research Engineer, BioTech Innovations Inc.** (2018 \u2013 2020)\n  * Conducted research and development in the field of biomedical engineering, focusing on novel drug delivery systems.\n  * Contributed to the development of a patented microfluidic device for targeted drug delivery.\n  * Managed research projects, collaborating with cross-functional teams and presenting findings at scientific conferences.\n  * Secured $100k in grant funding for research projects.\n\n- **Education:**\n  * **Ph.D., Biomedical Engineering**, Massachusetts Institute of Technology (MIT), 2018\n  * **B.S., Chemical Engineering**, Stanford University, 2014, *Summa Cum Laude*\n\n- **Skills:**\n  * **Technical:** Python, R, Machine Learning, Data Analysis, Statistical Modeling, SQL, HIPAA Compliance, GDPR Compliance, Microfluidics, Drug Delivery Systems.\n  * **Business:** Fundraising, Strategic Planning, Product Management, Marketing, Sales, Team Leadership, Business Development, Financial Modeling.\n  * **Certifications:** Certified Health Data Analyst (CHDA)",
+    "lookingFor": "I\u2019m actively seeking connections within the pharmaceutical and clinical research industries. Specifically, I\u2019m looking to connect with VPs of Data Science, Heads of Clinical Trial Operations, and Innovation Leaders at companies focused on preventative medicine, personalized healthcare, and drug discovery. I\u2019m particularly interested in organizations with a strong commitment to leveraging real-world evidence.\n\nI\u2019m also seeking introductions to Series A investors with a proven track record of investing in health-tech companies, particularly those with a B2B focus. Ideal investors have experience scaling data-driven businesses and understand the complexities of the healthcare regulatory landscape.\n\nHere\u2019s a breakdown of the types of connections I\u2019m most interested in:\n\n* **Pharmaceutical Companies:** Targeting companies with annual revenues exceeding $500M actively investing in R&D.\n* **CROs (Clinical Research Organizations):** Seeking partnerships with CROs managing large-scale clinical trials.\n* **Series A Investors:** Funds with investment sizes between $5M and $15M, specializing in health-tech.\n* **Strategic Advisors:** Experienced entrepreneurs and industry veterans with expertise in B2B sales, data licensing, and healthcare regulations.\n\nI'm open to exploring potential partnerships, data licensing agreements, and investment opportunities. I\u2019m also eager to learn from others in the industry and share my experiences building and scaling a health-tech company. I\u2019m available for virtual coffee chats and introductory calls to discuss potential synergies.",
+    "notes": "Spoke with Anya Sharma (VC at Health Ventures) on 10/26. She was interested in the data asset but concerned about the relatively small dataset size compared to competitors. Need to emphasize the *quality* of the data and our unique biomarker panel. Follow up with her next week with a more detailed data report.\n\nHad a brief conversation with Ben Carter (Head of Data Science at PharmaCorp) at the HealthTech Summit. He mentioned they are actively looking for data sources to improve clinical trial recruitment. Send him a personalized email with a case study showing our pilot program results. \n\nCaution: Avoid discussing specific patient data \u2013 always emphasize anonymization and compliance. \n\nReminder: Prepare a concise pitch deck highlighting the B2B value proposition and Series A ask.",
+    "locationAvailability": "Based in Boston, MA, but open to remote connections globally.",
+    "introPreferences": "When making introductions, please prioritize individuals who are decision-makers or key influencers within their organizations. I\u2019m particularly interested in introductions to people who have a direct need for real-world health data or are actively seeking innovative solutions to improve clinical trial efficiency.\n\n**Hard Requirements:**\n* **Relevant Role:** VP level or above in Data Science, Clinical Operations, or Innovation.\n* **Company Stage:** Established pharmaceutical companies or CROs with significant R&D budgets.\n* **Investor Focus:** Series A investors specializing in health-tech.\n\n**Soft Preferences:**\n* Experience with data licensing agreements.\n* Familiarity with HIPAA and GDPR regulations.\n* A proactive and collaborative mindset.\n\nPlease avoid introducing me to individuals who are solely focused on the D2C side of healthcare or who lack decision-making authority. Warm introductions with a brief context about my company and the value we offer are highly preferred.",
+    "personalPreferences": "I prefer concise and direct communication. Email is my primary mode of contact, but I'm also responsive on LinkedIn. I\u2019m a morning person and generally respond to messages within 24 hours.",
+    "meetingAndSchedulingPreferences": "I prefer virtual meetings (Zoom or Google Meet) over phone calls whenever possible. Please send a calendar invite with a brief agenda in advance. I typically require 24 hours\u2019 notice for scheduling. I always send a follow-up email summarizing key takeaways and action items after each meeting."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 24.47016191482544,
+      "input_tokens": 791,
+      "output_tokens": 1801,
+      "problems": []
+    }
+  ],
+  "success": true
+}

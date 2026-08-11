@@ -1,0 +1,54 @@
+{
+  "id": 705,
+  "archetype": "Ex-Finance Founder, Now AI Builder",
+  "given_name": "Zainab Kowalski",
+  "style_version": 43,
+  "archetypes_version": 118,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Zainab Kowalski is a fascinating case \u2013 a former investment banker who made partner at a boutique firm specializing in fintech before pivoting *completely* to AI. She wasn't content just investing *in* the space; she wanted to *build*. Her current venture, 'Synapse Analytics,' is a pre-seed AI company focused on predictive analytics for supply chain resilience. This pivot wasn\u2019t impulsive. She saw firsthand the inefficiencies and vulnerabilities in supply chains during her banking days, and believes AI is the key to solving them. She\u2019s incredibly driven, data-focused, and a bit impatient \u2013 she wants to move quickly. She\u2019s looking to connect with seed-stage investors, AI/ML engineers with supply chain experience, and advisors who've successfully scaled early-stage tech companies. She\u2019s not interested in purely financial investors who don\u2019t understand the technical challenges. She's very direct and values efficiency in communication.",
+    "positioning": "A results-oriented entrepreneur and former financial services leader, Zainab Kowalski is dedicated to leveraging the power of Artificial Intelligence to build resilient and efficient supply chains. With over 10 years of experience in investment banking, including achieving Partner at Blackwood Capital, I developed a deep understanding of market dynamics and operational vulnerabilities. This experience fueled my passion for applying AI solutions to address critical business challenges. Currently, I am the Founder of Synapse Analytics, a pre-seed startup developing predictive analytics tools to mitigate supply chain disruptions. Synapse Analytics utilizes cutting-edge machine learning algorithms to forecast potential risks and optimize resource allocation. I am seeking strategic partners, seed funding, and talented engineers to accelerate our growth and deliver impactful solutions to a global market. My focus is on building a sustainable, data-driven future for supply chain management.",
+    "background": "- **Founder, Synapse Analytics** (October 2023 \u2013 Present)\n    * Leading all aspects of a pre-seed AI startup focused on supply chain predictive analytics.\n    * Developed and implemented machine learning models for risk assessment and demand forecasting.\n    * Secured initial seed funding commitments totaling $250,000.\n    * Built a small, agile team of data scientists and software engineers.\n    * Skills: Python, Machine Learning (specifically time series analysis & forecasting), Supply Chain Management, Startup Leadership, Fundraising.\n\n- **Partner, Blackwood Capital** (June 2018 \u2013 September 2023)\n    * Managed a portfolio of fintech investments, specializing in supply chain finance and blockchain solutions.\n    * Led due diligence processes, financial modeling, and deal negotiations for investments totaling over $100 million.\n    * Mentored junior analysts and contributed to the firm\u2019s investment strategy.\n    * Consistently exceeded performance targets and identified key market trends.\n    * Skills: Investment Banking, Financial Modeling, Due Diligence, Deal Negotiation, Fintech, Venture Capital, Portfolio Management.\n\n- **Associate, Sterling Partners** (July 2015 \u2013 May 2018)\n    * Supported senior investment professionals in all stages of the investment process.\n    * Conducted market research, industry analysis, and company valuations.\n    * Prepared investment memos and presentations for internal review.\n    * Skills: Financial Analysis, Market Research, Valuation, Investment Analysis.\n\n- **Education:**\n    * **MBA, Harvard Business School** (2013 \u2013 2015)\n    * **BS, Economics, Massachusetts Institute of Technology (MIT)** (2009 \u2013 2013)\n\n- **Certifications:**\n    * Chartered Financial Analyst (CFA) Level 1 (Completed 2014)",
+    "lookingFor": "I am actively seeking connections to accelerate the growth of Synapse Analytics and expand my network within the AI and supply chain ecosystems. Specifically, I'm looking for:\n\n* **Seed-Stage Investors:** Funds with a demonstrated interest in AI-driven solutions for enterprise applications, particularly in supply chain.  I'm *not* interested in purely financial investors without sector expertise.\n* **AI/ML Engineers (Supply Chain Focus):**  Experienced engineers specializing in time-series analysis, predictive modeling, and supply chain optimization.  Proficiency in Python and relevant ML frameworks is essential.\n* **Strategic Advisors:**  Individuals with a proven track record of scaling early-stage tech companies.  Experience navigating the complexities of the supply chain industry is a significant plus.\n* **Supply Chain Leaders:**  VPs and Directors of Supply Chain at large enterprises who are facing challenges with resilience and efficiency.  I'm looking for potential pilot customers and feedback on our solution.\n\nI'm open to informal conversations, mentorship opportunities, and potential collaborations.  I'm particularly interested in connecting with individuals at companies like project44, Blue Yonder, and FourKites.",
+    "notes": "Zainab is a high-energy, direct communicator. She\u2019s very focused on quantifiable results and isn\u2019t afraid to ask tough questions. Her finance background is crucial context \u2013 she understands the ROI implications of her technology. Avoid pitching her 'AI for AI's sake' \u2013 she needs to see a clear business case. Emphasize her experience at Blackwood Capital when introducing her to investors; it adds significant credibility. She's currently prioritizing fundraising and team building. She\u2019s very selective with her time, so introductions should be highly targeted. Data points about successful supply chain implementations of AI are particularly valuable.",
+    "locationAvailability": "Based in Boston, MA, but open to remote connections and travel for key opportunities.",
+    "introPreferences": "* **Hard Requirements:** Do *not* introduce her to venture capitalists who don\u2019t have a demonstrated history of investing in AI or supply chain tech.\n* **Soft Preferences:** Prioritize introductions to individuals who are decision-makers or key influencers within their organizations.\n* **Framing:** When introducing Zainab to investors, highlight her experience at Blackwood Capital and her deep understanding of the financial implications of supply chain disruptions. When introducing her to potential engineers, emphasize the opportunity to work on cutting-edge AI solutions and make a real-world impact. Position her as a pragmatic, results-oriented founder who is focused on solving a critical business problem.\n* **Avoid:** Don\u2019t position her as \u2018just\u2019 an AI founder; emphasize the intersection of AI and supply chain expertise.",
+    "personalPreferences": "Direct communication, data-driven discussions, efficient scheduling, prefers email initially.",
+    "meetingAndSchedulingPreferences": "Prefers concise meetings with a clear agenda.  She\u2019s comfortable with back-to-back meetings but appreciates a 5-minute buffer between sessions."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 26.12366819381714,
+      "input_tokens": 883,
+      "output_tokens": 1418,
+      "problems": []
+    }
+  ],
+  "success": true
+}

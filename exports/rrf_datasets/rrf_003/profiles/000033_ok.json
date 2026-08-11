@@ -1,0 +1,54 @@
+{
+  "id": 33,
+  "archetype": "Biotech/Deep Tech, APAC Focus",
+  "given_name": "Hassan Lindqvist",
+  "style_version": 2,
+  "archetypes_version": 6,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Hassan Lindqvist is a Swedish-born, Singapore-based founder and CEO of 'BioNexus Innovations,' a deep tech startup focused on personalized medicine using AI-driven diagnostics. His distinctive career detail is a previous decade spent as a highly successful venture capitalist *within* a large Japanese conglomerate (Mitsui & Co.), giving him unique insight into both Western investment strategies and the nuances of Asian business culture. He\u2019s now deliberately building a bridge between the two, seeking Series A funding, strategic partnerships with Western biotech firms, and access to talent with expertise in both AI/ML and advanced genomics. He's deeply pragmatic and values directness, having seen 'fluff' slow deals in Asia. He\u2019s relatively new to being *the* founder, rather than the investor, and is still refining his pitch and network.",
+    "positioning": "Hassan Lindqvist is the Founder and CEO of BioNexus Innovations, a Singapore-based deep tech company revolutionizing personalized medicine through AI-powered diagnostics. Leveraging a decade of experience as a venture capital investor with Mitsui & Co., Hassan understands the critical intersection of cutting-edge scientific advancements and strategic investment. BioNexus Innovations is focused on developing and commercializing a novel platform that analyzes genomic data to predict individual responses to therapeutic interventions, enabling clinicians to deliver truly personalized treatment plans. Recent accomplishments include securing seed funding, building a core team of leading scientists and engineers, and achieving promising preliminary results in clinical trials for early cancer detection. Hassan is actively seeking Series A funding to scale operations, expand the clinical trial pipeline, and forge strategic partnerships with Western pharmaceutical and biotechnology companies. He brings a unique perspective, bridging Western innovation with Asian market access and navigating complex regulatory landscapes. He is particularly interested in connecting with investors and industry leaders who share a vision for the future of precision medicine and a commitment to ethical AI development.",
+    "background": "* **BioNexus Innovations, Singapore** \u2013 *Founder & CEO* (2022 \u2013 Present)\n    * Spearheaded the founding and development of BioNexus Innovations, securing $2M in seed funding within the first year.\n    * Led the development of a proprietary AI platform for genomic data analysis, resulting in a 92% accuracy rate in predicting treatment response in preliminary trials.\n    * Built and managed a high-performing team of 15 scientists, engineers, and business professionals.\n    * Established strategic partnerships with key clinical research institutions in Singapore and Japan.\n    * Responsible for all aspects of company operations, including strategy, fundraising, product development, and marketing.\n* **Mitsui & Co., Tokyo, Japan** \u2013 *Principal, Venture Capital* (2012 \u2013 2022)\n    * Managed a $150M venture capital portfolio focused on early-stage biotech and deep tech companies globally.\n    * Led due diligence, deal structuring, and negotiation for over 30 investments, with an average IRR of 22%.\n    * Sourced and evaluated investment opportunities in areas such as genomics, AI, and medical devices.\n    * Served on the boards of directors of several portfolio companies, providing strategic guidance and operational support.\n    * Developed and maintained a strong network of industry contacts, including investors, entrepreneurs, and researchers.\n* **Karolinska Institutet, Stockholm, Sweden** \u2013 *Research Scientist* (2008 \u2013 2012)\n    * Conducted research in the field of molecular biology, focusing on gene expression and disease mechanisms.\n    * Published 10 peer-reviewed articles in leading scientific journals.\n    * Presented research findings at international conferences.\n    * Managed a research team of 3 technicians and students.\n    * Secured research grants totaling $500,000.\n* **Chalmers University of Technology, Gothenburg, Sweden** - *PhD Candidate, Bioinformatics* (2004-2008)\n    * Developed novel algorithms for analyzing large-scale genomic datasets.\n    * Successfully defended PhD dissertation on the application of machine learning to personalized medicine.",
+    "lookingFor": "I'm currently focused on securing Series A funding for BioNexus Innovations, ideally in the $8-12M range. We're seeking investors with a strong understanding of the biotech landscape and a long-term vision for personalized medicine. Beyond funding, strategic partnerships with established pharmaceutical and biotechnology companies in North America and Europe are a high priority \u2013 particularly those interested in accessing Asian markets. \n\nSpecifically, I'm looking for:\n\n* **Investors:** Series A investors specializing in deep tech and biotech, with a demonstrated track record of success.\n* **Strategic Partners:** Pharmaceutical and biotech companies seeking to expand their presence in Asia or collaborate on innovative diagnostic solutions.\n* **Advisors:** Experienced entrepreneurs and industry leaders with expertise in AI, genomics, and regulatory affairs.\n* **Talent:**  AI/ML engineers with experience in healthcare applications and genomic data analysis.  Experience working in Asian markets is a plus.\n\nI'm open to connecting with individuals who can provide mentorship, introduce me to potential investors or partners, or offer valuable insights into the challenges and opportunities of the Asian biotech market.",
+    "notes": "Hassan is very direct and values efficiency. He's been burned by overly optimistic projections in the past. He responds best to data-driven pitches and straightforward communication. He\u2019s still refining his founder \u2018story\u2019 and can sometimes be overly focused on the technical details. Recent conversations indicate he\u2019s particularly sensitive to concerns about data privacy and ethical AI. He is a strong advocate for Singapore as a hub for biotech innovation. Data quality on his previous investment returns is excellent, sourced directly from Mitsui\u2019s internal records. He prefers initial contact via LinkedIn message.",
+    "locationAvailability": "Currently based in Singapore, with frequent travel to Japan and the United States. We are primarily focused on the Asian market, but are open to global partnerships and expansion opportunities.",
+    "introPreferences": "* **Hard Requirements:** No introductions to individuals involved in direct competitor companies (e.g., Guardant Health, Exact Sciences).\n* **Soft Preferences:** Introductions to partners at top-tier VC firms (Andreessen Horowitz, Sequoia Capital, Kleiner Perkins) are highly valued.\n* **Introduction Framing:** Please highlight BioNexus Innovations\u2019 unique position bridging Western innovation with Asian market access. Emphasize the strong scientific foundation and the potential for rapid commercialization.\n* **Avoid:** Generic introductions or unsolicited sales pitches. Hassan prefers a targeted approach based on mutual interests.\n* **Key Talking Points:**  AI-driven diagnostics, personalized medicine, Asian market expertise, strong IP portfolio.",
+    "personalPreferences": "I prefer initial communication via LinkedIn messaging. I\u2019m generally responsive but can be slow to reply during peak travel periods. WhatsApp is acceptable for quick follow-ups after an initial connection.",
+    "meetingAndSchedulingPreferences": "I generally prefer virtual meetings initially, followed by in-person meetings if a strong connection is established. I use Calendly for scheduling."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 27.308061838150024,
+      "input_tokens": 859,
+      "output_tokens": 1478,
+      "problems": []
+    }
+  ],
+  "success": true
+}

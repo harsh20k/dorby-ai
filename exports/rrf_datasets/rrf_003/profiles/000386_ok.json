@@ -1,0 +1,63 @@
+{
+  "id": 386,
+  "archetype": "Ex-Big Tech Operational Excellence Leader",
+  "given_name": "Camille Lopes",
+  "style_version": 24,
+  "archetypes_version": 65,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Camille Lopes is a former Senior Black Belt in Amazon\u2019s operational excellence program, specializing in supply chain optimization and process automation. She spent 8 years at Amazon, rising through the ranks and consistently delivering significant cost savings through Lean and Six Sigma methodologies. She left Amazon seeking more direct leadership responsibility and the chance to apply her skills in a faster-paced, more entrepreneurial environment. She\u2019s now a Director of Operations at a mid-stage Series B logistics company, but actively looking for a VP of Operations role at a Series C or later startup, ideally in the sustainable goods or circular economy space. She\u2019s pragmatic, data-driven, and highly focused on measurable impact. She's a strong advocate for inclusive leadership and building high-performing, diverse teams. A key detail: she spearheaded a project at Amazon that reduced packaging waste by 15% across a major product line, a point she\u2019s proud of and often references.",
+    "positioning": "A highly analytical and results-oriented operations leader, I specialize in building and scaling efficient, data-driven processes. As Director of Operations at NovaLogistics, I\u2019m focused on optimizing our fulfillment network and driving continuous improvement across all operational facets. Prior to NovaLogistics, I spent eight years at Amazon, culminating as a Senior Black Belt where I consistently exceeded cost-savings targets through the implementation of Lean and Six Sigma principles. I\u2019m passionate about leveraging technology and process improvement to unlock operational efficiency and create sustainable solutions. I thrive in fast-paced environments and excel at leading cross-functional teams to deliver impactful results. I'm currently seeking opportunities to leverage my experience in a VP of Operations capacity at a high-growth company committed to innovation and positive impact.",
+    "background": "\u2022 **NovaLogistics,** Director of Operations (2022 \u2013 Present)\n    \u25e6 Led a 30% reduction in order fulfillment time through process automation and workflow optimization.\n    \u25e6 Implemented a new warehouse management system (WMS), resulting in a 20% increase in inventory accuracy.\n    \u25e6 Managed a team of 50+ operations professionals across multiple locations.\n    \u25e6 Spearheaded the development and implementation of key performance indicators (KPIs) to track operational performance.\n\u2022 **Amazon,** Senior Black Belt (2014 \u2013 2022)\n    \u25e6 Led cross-functional teams to identify and implement process improvements, resulting in over $10M in annual cost savings.\n    \u25e6 Developed and delivered Lean and Six Sigma training programs to employees at all levels.\n    \u25e6 Championed a packaging optimization initiative that reduced waste by 15% across the \u2018EcoEssentials\u2019 product line.\n    \u25e6 Managed multiple simultaneous projects, consistently delivering results on time and within budget.\n    \u25e6 Mentored junior Black Belts and Green Belts in Lean Six Sigma methodology.\n\u2022 **Education:**\n    \u25e6 **University of Michigan,** Ann Arbor, MI \u2013 Master of Science, Industrial & Operations Engineering (2014)\n    \u25e6 **Georgia Institute of Technology,** Atlanta, GA \u2013 Bachelor of Science, Mechanical Engineering (2012)\n\u2022 **Skills:** Lean Six Sigma (Black Belt Certified), Process Improvement, Supply Chain Management, Data Analysis (SQL, Excel, Tableau), Project Management (PMP), Warehouse Management Systems (WMS), Logistics, Cross-Functional Team Leadership, Change Management, Statistical Process Control (SPC).",
+    "lookingFor": "\u2022 VP of Operations roles at Series C or later stage startups.\n\u2022 Companies focused on sustainable goods, circular economy, or ethical supply chains.\n\u2022 Opportunities to build and scale operational infrastructure.\n\u2022 Leadership roles with significant P&L responsibility.\n\u2022 Companies with a strong commitment to data-driven decision-making and continuous improvement.\n\u2022 Open to roles in the San Francisco Bay Area, New York City, or fully remote positions.",
+    "notes": "Camille is a highly effective operator but can be direct and data-focused in her communication, which some may perceive as lacking 'soft skills' \u2013 this is a misinterpretation of her pragmatic approach. Note: she\u2019s very passionate about sustainability and will likely prioritize companies with strong ESG commitments. Caution: she\u2019s not interested in roles that are primarily focused on cost-cutting without a clear strategy for long-term growth and efficiency. She\u2019s an active member of the Atlanta chapter of the Association for Supply Chain Management (ASCM) and frequently attends industry conferences.",
+    "locationAvailability": "I am primarily looking for opportunities based in the San Francisco Bay Area or New York City, but I am open to fully remote positions. I am willing to travel up to 25% of the time for business needs. Relocation is a possibility for the right opportunity.",
+    "introPreferences": "\u2022 **Hard Requirements:** Introductions to VPs or C-level executives at target companies.\n\u2022 **Soft Preferences:** Introductions should highlight my experience in scaling operations and driving measurable results, specifically mentioning my work at Amazon and NovaLogistics.\n\u2022 **Avoid:** Introductions to recruiters who specialize in entry-level positions or roles outside of operations leadership. Please do *not* introduce me to companies focused solely on financial services or traditional manufacturing. A brief note summarizing the company\u2019s mission and stage is highly appreciated.",
+    "personalPreferences": "I prefer to connect via LinkedIn initially. Feel free to send me a message with a brief summary of why you think we should connect. Email is also fine for follow-up, but LinkedIn is my primary professional platform.",
+    "meetingAndSchedulingPreferences": "I'm generally available for brief introductory calls during the week. I prefer to schedule meetings using Calendly to streamline the process."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 23.971783876419067,
+      "input_tokens": 793,
+      "output_tokens": 1219,
+      "problems": [
+        "background: possible truncation (ends with '...ment, conflict resolution')"
+      ]
+    },
+    {
+      "attempt": 2,
+      "elapsed_s": 15.971735000610352,
+      "input_tokens": 793,
+      "output_tokens": 1191,
+      "problems": []
+    }
+  ],
+  "success": true
+}

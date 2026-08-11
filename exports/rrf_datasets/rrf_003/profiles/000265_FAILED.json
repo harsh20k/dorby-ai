@@ -1,0 +1,76 @@
+{
+  "id": 265,
+  "archetype": "AI-Driven Founder, Early Traction",
+  "given_name": "Mikael Volkov",
+  "style_version": 16,
+  "archetypes_version": 43,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Mikael Volkov is a first-time founder, a former quantitative analyst who pivoted into AI after realizing the limitations of traditional financial modeling. He\u2019s built \u2018Synapse Insights\u2019, an AI-powered platform that analyzes unstructured data (news articles, social media, earnings calls) to provide predictive signals for small and medium-sized businesses (SMBs) regarding supply chain disruptions. He\u2019s incredibly data-driven, valuing demonstrable results above all else. He's currently focused on securing a Seed round to expand his engineering team and accelerate sales & marketing efforts. A key 'wedge' for Synapse is initially targeting the specialty food and beverage industry, where supply chain volatility significantly impacts profitability. He\u2019s a direct communicator, sometimes to a fault, and prefers to discuss metrics and technical details rather than 'fluff'. He's extremely focused on ARR and LTV/CAC, and is wary of vanity metrics. He's a relatively recent immigrant to the US, and while fluent in English, sometimes misses subtle cultural cues in communication.",
+    "positioning": "Synapse Insights is revolutionizing supply chain risk management for SMBs. Traditional methods rely on lagging indicators and siloed data, leaving businesses vulnerable to costly disruptions. We leverage cutting-edge Natural Language Processing (NLP) and Machine Learning (ML) algorithms to proactively identify potential risks *before* they impact operations. Our platform ingests and analyzes vast amounts of unstructured data \u2013 news feeds, social media chatter, geopolitical reports, and even supplier earnings calls \u2013 to provide actionable, predictive insights. We\u2019re currently focused on the specialty food and beverage sector, a $200B+ market acutely sensitive to supply chain instability. We\u2019ve achieved $30k MRR with a 70% retention rate, demonstrating strong product-market fit. Our ideal customer is a food/beverage manufacturer or distributor with $5M-$50M in annual revenue, experiencing frequent supply chain challenges and lacking dedicated risk management resources. We\u2019re seeking Seed funding to scale our engineering team, expand our data coverage, and accelerate go-to-market efforts, aiming for $1M ARR within the next 12 months. We provide a significant ROI by minimizing downtime, optimizing inventory levels, and securing competitive pricing.",
+    "background": "* **Quant Researcher, Citadel LLC (2018 \u2013 2021):** Developed and backtested algorithmic trading strategies, focusing on statistical arbitrage and market microstructure. Managed a portfolio with ~$50M in AUM, consistently exceeding performance benchmarks. Responsible for data pipeline development, model validation, and risk management. Proficient in Python, R, and SQL.\n* **Data Science Intern, Two Sigma Investments (Summer 2017):** Contributed to a research project on alternative data sources for predicting market movements. Implemented machine learning models using scikit-learn and TensorFlow. Gained experience in data cleaning, feature engineering, and model evaluation.\n* **Research Assistant, Massachusetts Institute of Technology (MIT) (2016 \u2013 2018):** Assisted Professor David Sengeh with research on computational social science. Conducted statistical analysis of large-scale datasets using Python and R. Co-authored a research paper published in the *Journal of Artificial Intelligence Research*.\n* **Education:** Master of Science in Financial Engineering, Massachusetts Institute of Technology (MIT), 2018. Bachelor of Science in Mathematics, Moscow State University, 2016 (Summa Cum Laude).\n* **Certifications:** Chartered Financial Analyst (CFA) Level 1 (Passed, 2019). AWS Certified Machine Learning \u2013 Specialty (2023).\n* **Skills:** Python, R, SQL, Machine Learning (NLP, Time Series Analysis, Regression), Data Visualization (Tableau, Power BI), Cloud Computing (AWS), Statistical Modeling, Financial Modeling, Data Pipeline Development, Risk Management, Algorithmic Trading.",
+    "lookingFor": "I'm actively seeking connections with investors specializing in Seed-stage AI and SaaS companies.  Specifically, I\u2019m interested in VCs with a demonstrated track record of supporting data-driven startups and a deep understanding of the SMB market.  I\u2019m also looking to connect with experienced operators \u2013 particularly those with expertise in scaling early-stage sales and marketing teams \u2013 who might be open to advisory roles.\n\n* **Ideal Investor Profile:** Seed-stage funds ($5M - $20M check size), focus on AI/ML, SaaS, or FinTech. Preference for investors who have previously backed companies tackling complex data challenges.\n* **Desired Connections:** Founders of other AI-powered SMB solutions, experienced sales leaders in the SaaS space, angel investors with a technical background.\n* **Industry Focus:** Supply chain, logistics, FinTech, data analytics.\n* **Geographic Preference:** US-based investors, but open to discussing opportunities with international funds.",
+    "notes": "Mikael is extremely focused on metrics and ROI. Avoid vague statements or marketing jargon. He responds best to data-driven pitches and transparent communication.  He's currently prioritizing fundraising and scaling the engineering team. \n\n* **Data Quality Warning:** His LinkedIn profile is relatively new and may not fully reflect his previous experience. \n* **Recent Conversation Summary (10/26/2023):** Discussed potential synergies with a supply chain visibility platform. He was interested but skeptical of their data accuracy.\n* **Intro Style:** Please emphasize the traction Synapse Insights has achieved and the technical depth of the solution. Briefly mention his background at Citadel to establish credibility.  Avoid language around 'disruption' or 'innovation' \u2013 he finds it unhelpful.",
+    "locationAvailability": "I am currently based in Boston, Massachusetts, but am open to remote meetings and occasional travel to meet with investors and partners on the East Coast and West Coast.",
+    "introPreferences": "* **Hard Requirements:** Investor must have a demonstrable track record of investing in Seed-stage AI/SaaS companies.\n* **Soft Preferences:** Experience in the supply chain or FinTech space is a plus.  Prior investments in companies targeting SMBs are highly desirable.\n* **Intro Style:** Keep it concise and focused on Synapse Insights\u2019 traction and technical advantage.  Highlight the $30k MRR and 70% retention rate.  Mention his prior experience as a quant at Citadel \u2013 it adds credibility.\n* **Avoid:**  Introducing him to generalist investors or those without a clear understanding of AI/ML. Avoid pitches focused on 'future potential' without concrete evidence of early success.",
+    "personalPreferences": "I prefer to communicate via email initially, as it allows me to be more thoughtful in my responses. I'm generally responsive, but please allow 24-48 hours for a reply.  I appreciate direct and honest feedback. I check Slack occasionally, but email is best for initial contact. I\u2019m not a big fan of lengthy phone calls without a clear agenda.",
+    "meetingAndSchedulingPreferences": "Please use this Calendly link to schedule a meeting: [https://calendly.com/mikaelvolkov/synapse-insights-intro]"
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 20.989145040512085,
+      "input_tokens": 804,
+      "output_tokens": 1494,
+      "problems": [
+        "background: possible truncation (ends with '...aminers (2021)</li>\n</ul>')",
+        "meetingAndSchedulingPreferences: possible truncation (ends with '...[fictional Calendly link]')"
+      ]
+    },
+    {
+      "attempt": 2,
+      "elapsed_s": 21.40148615837097,
+      "input_tokens": 804,
+      "output_tokens": 1542,
+      "problems": [
+        "background: possible truncation (ends with '...alty</li>\n    </ul>\n</ul>')",
+        "meetingAndSchedulingPreferences: possible truncation (ends with '...y.com/mikaelvolkov/30min]')"
+      ]
+    },
+    {
+      "attempt": 3,
+      "elapsed_s": 20.67402720451355,
+      "input_tokens": 804,
+      "output_tokens": 1513,
+      "problems": [
+        "meetingAndSchedulingPreferences: possible truncation (ends with '...v/synapse-insights-intro]')"
+      ]
+    }
+  ],
+  "success": false
+}

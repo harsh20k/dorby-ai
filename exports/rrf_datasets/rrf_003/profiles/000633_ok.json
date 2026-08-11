@@ -1,0 +1,54 @@
+{
+  "id": 633,
+  "archetype": "Early-Stage Biotech/HealthTech Founder",
+  "given_name": "Aisha Oduya",
+  "style_version": 39,
+  "archetypes_version": 106,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Aisha Oduya is a 38-year-old founder and CEO of 'SynapseBio', a pre-clinical stage biotech company developing a novel AI-powered platform for accelerated drug discovery focused on neurodegenerative diseases, specifically Alzheimer's. Her distinctive career detail is a previous 8-year stint as a computational biologist *within* a large pharmaceutical company (Pfizer) where she became deeply frustrated with the slow pace of innovation and bureaucratic hurdles. This experience fuels her drive at SynapseBio. She\u2019s currently raising a $5M Seed round and is particularly focused on connecting with venture capitalists specializing in biotech and AI, as well as potential pharmaceutical partners for future licensing/collaboration. She\u2019s very data-driven and appreciates direct communication, but is wary of overly optimistic pitches. She prioritizes investors who understand the long timelines and high risks inherent in drug development. She\u2019s based in Boston, but frequently travels to conferences and investor meetings on the West Coast.",
+    "positioning": "SynapseBio is revolutionizing drug discovery for neurodegenerative diseases through the application of advanced artificial intelligence and machine learning. Our proprietary platform, 'NeuroLens,' dramatically accelerates the identification and validation of novel drug targets, significantly reducing the time and cost associated with bringing life-changing therapies to market. Unlike traditional drug discovery methods that rely on lengthy and expensive laboratory experiments, NeuroLens leverages a unique combination of multi-omics data integration, advanced computational modeling, and predictive algorithms to pinpoint promising therapeutic candidates with unprecedented accuracy. \n\nWe are initially focused on Alzheimer\u2019s disease, a devastating condition affecting millions worldwide. Current treatment options are limited and largely address symptoms rather than the underlying causes of the disease. NeuroLens is designed to identify novel targets that address the root biological mechanisms driving Alzheimer\u2019s progression, paving the way for truly disease-modifying therapies. \n\nOur target audience includes pharmaceutical companies seeking to expand their pipelines with innovative assets, venture capital firms specializing in biotech and AI, and ultimately, patients and their families desperately seeking effective treatments for neurodegenerative diseases. SynapseBio is not just building a company; we are building a future where neurodegenerative diseases are no longer a life sentence. We are actively seeking strategic partnerships and investment to accelerate our research and development efforts and bring NeuroLens to its full potential.",
+    "background": "- **CEO & Founder, SynapseBio** (2022 \u2013 Present): Leading all aspects of the company, from strategy and fundraising to team building and scientific direction. Successfully secured initial pre-seed funding and advanced the NeuroLens platform to pre-clinical validation.\n- **Principal Scientist, Computational Biology, Pfizer** (2014 \u2013 2022): Led a team of computational biologists in the discovery and validation of novel drug targets for neurological disorders. Developed and implemented machine learning algorithms to analyze large-scale genomic and proteomic datasets. Published numerous peer-reviewed articles in leading scientific journals and presented research findings at international conferences.  Frustrated by the slow pace of innovation within a large pharmaceutical organization, prompting the decision to found SynapseBio.\n- **Postdoctoral Fellow, Broad Institute of MIT and Harvard** (2012 \u2013 2014): Conducted research on the genetic basis of complex diseases, focusing on the application of genome-wide association studies (GWAS) and bioinformatics analysis.\n- **Ph.D., Bioinformatics, Stanford University** (2008 \u2013 2012): Dissertation: 'Predictive Modeling of Protein-Protein Interactions for Drug Target Identification'.\n- **B.S., Biology, Massachusetts Institute of Technology (MIT)** (2004 \u2013 2008): Graduated *Summa Cum Laude*.",
+    "lookingFor": "I'm currently focused on closing our $5M Seed round to accelerate the development and validation of our NeuroLens platform and initiate lead optimization studies. I'm actively seeking connections with:\n\n*   **Venture Capitalists:** Specifically, firms with a demonstrated track record of investing in early-stage biotech and AI companies.  I\u2019m looking for partners who understand the long-term nature of drug development and are comfortable with the associated risks.\n*   **Pharmaceutical Companies:**  Interested in exploring potential licensing or collaboration opportunities for our lead compounds. We are open to strategic partnerships that leverage our AI platform to accelerate their own drug discovery efforts.\n*   **Key Opinion Leaders (KOLs):** In the field of Alzheimer\u2019s disease and neurodegenerative disorders.  Guidance and validation from leading researchers would be invaluable.\n\nI'm particularly interested in investors who have a strong scientific background and can offer more than just capital \u2013 strategic advice and industry connections are highly valued. I\u2019m *not* interested in purely financially-driven investors who lack a genuine understanding of the biotech landscape.",
+    "notes": "Aisha is very focused on data and scientific rigor. She's a strong communicator but can be skeptical of hype. Recent conversation (11/15) highlighted her frustration with investors who don't appreciate the complexities of AI in drug discovery. Mention her Pfizer experience \u2013 it's a key motivator. She's attending the JP Morgan Healthcare Conference in January.",
+    "locationAvailability": "I\u2019m currently based in Boston, Massachusetts, and frequently travel for investor meetings and industry conferences. I anticipate frequent travel to the San Francisco Bay Area in the coming months. I am open to relocating if necessary for the right opportunity, but Boston is currently my preferred base of operations.",
+    "introPreferences": "When making introductions, please emphasize:\n\n*   The unique AI-powered approach of NeuroLens and its potential to disrupt the drug discovery process.\n*   My experience at Pfizer and the insights gained from working within a large pharmaceutical organization.\n*   The strong scientific foundation of SynapseBio and the potential for significant return on investment.\n\n**Hard Requirements:**\n*   Investment firms with a dedicated biotech/healthtech fund.\n*   Pharmaceutical companies actively researching neurodegenerative diseases.\n\n**Please avoid:**\n*   Introductions to individuals who are not directly involved in investment decisions or strategic partnerships.\n*   Overly optimistic or unrealistic assessments of the company\u2019s potential. Aisha values honesty and transparency.",
+    "personalPreferences": "I prefer initial contact via email and am responsive on LinkedIn. I\u2019m not a big fan of cold calls.",
+    "meetingAndSchedulingPreferences": "I\u2019m generally available for meetings during standard business hours (Eastern Time). I prefer to schedule meetings at least 24 hours in advance. Video conferencing is preferred for initial meetings, but I am open to in-person meetings when feasible. Please send a brief agenda with any pre-reading materials prior to the meeting."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 26.059247255325317,
+      "input_tokens": 806,
+      "output_tokens": 1411,
+      "problems": []
+    }
+  ],
+  "success": true
+}

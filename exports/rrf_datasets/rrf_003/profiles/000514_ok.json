@@ -1,0 +1,54 @@
+{
+  "id": 514,
+  "archetype": "Bootstrapped Tech Founder - Revenue Focused",
+  "given_name": "Amara Nkosi",
+  "style_version": 31,
+  "archetypes_version": 87,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Amara Nkosi is a 34-year-old, first-time founder of 'Synapse Solutions,' a B2B SaaS platform providing automated data quality checks for marketing datasets. She\u2019s a highly technical founder \u2013 a former data scientist \u2013 who initially built the product to solve a pain point *she* experienced repeatedly at a previous role. She\u2019s deliberately bootstrapped Synapse, prioritizing revenue generation and demonstrable customer value over rapid, VC-backed growth. She\u2019s now at a stage where scaling requires strategic partnerships and potentially a small seed round, but she\u2019s deeply wary of giving up control and wants to find investors who understand her approach. A distinctive career detail is that before diving into data science, Amara spent two years as a professional jazz pianist, which influences her problem-solving approach \u2013 improvisational, iterative, and focused on harmony. She's fiercely independent, pragmatic, and data-driven, but also values genuine relationships and long-term sustainability.",
+    "positioning": "I'm Amara Nkosi, founder and CEO of Synapse Solutions. We\u2019re tackling the pervasive problem of bad data in marketing \u2013 inaccurate contact information, duplicate leads, and incomplete profiles \u2013 which costs businesses billions annually. Synapse automates the process of data cleansing and validation, integrating seamlessly with popular marketing automation platforms like HubSpot, Marketo, and Salesforce. \n\nI initially built Synapse because I was *frustrated* with the amount of time my team and I spent at 'Apex Analytics' manually cleaning data. It was a constant drain on resources and a major impediment to accurate marketing campaigns. I knew there had to be a better way, and after months of prototyping during evenings and weekends, Synapse was born.\n\nWe\u2019ve taken a deliberate approach to growth, focusing on organic acquisition and customer retention. We\u2019ve achieved a 20% month-over-month revenue increase for the past six months, and currently serve over 50 paying customers, ranging from small marketing agencies to mid-sized e-commerce businesses. Our customer churn rate is consistently below 2%. My vision is to become the industry standard for data quality in marketing, empowering businesses to make data-driven decisions with confidence. I believe in building a sustainable, profitable company that prioritizes customer value over hype and vanity metrics. I'm currently exploring strategic partnerships and a potential seed round to accelerate our growth while maintaining our core values.",
+    "background": "- **Founder & CEO, Synapse Solutions** (Jan 2022 \u2013 Present)\n  * Led all aspects of product development, marketing, sales, and operations for a B2B SaaS platform focused on automated data quality for marketing datasets.\n  * Achieved 20% MoM revenue growth for the last six months, onboarding over 50 paying customers.\n  * Developed and implemented a data-driven customer acquisition strategy, resulting in a CAC of $75 and an LTV of $300.\n  * Managed all technical aspects of the platform, including infrastructure, security, and scaling.\n  * Responsible for all fundraising efforts (currently exploring seed round).\n\n- **Senior Data Scientist, Apex Analytics** (June 2018 \u2013 Dec 2021)\n  * Developed and deployed machine learning models for customer segmentation, churn prediction, and lead scoring.\n  * Led a team of three junior data scientists, providing mentorship and technical guidance.\n  * Conducted extensive data analysis to identify key business insights and inform marketing strategies.\n  * Significantly improved the accuracy of lead scoring models, resulting in a 15% increase in qualified leads.\n  * Proactively identified and resolved data quality issues impacting model performance.\n\n- **Data Scientist, Quantify Research** (Aug 2016 \u2013 May 2018)\n  * Performed statistical analysis and data mining to support research projects in the financial services industry.\n  * Developed data visualization dashboards to communicate complex data insights to stakeholders.\n  * Collaborated with cross-functional teams to define data requirements and implement data collection processes.\n\n- **Education:**\n  * **Master of Science in Data Science**, University of California, Berkeley (2014 \u2013 2016)\n  * **Bachelor of Arts in Mathematics**, Yale University (2010 \u2013 2014)\n\n- **Skills:** Python, SQL, Machine Learning (Scikit-learn, TensorFlow, PyTorch), Data Visualization (Tableau, Matplotlib, Seaborn), Cloud Computing (AWS, Azure), Data Quality Management, Statistical Modeling, Marketing Automation (HubSpot, Marketo, Salesforce), Leadership, Strategic Planning.",
+    "lookingFor": "* **Seed Funding:** Exploring a $500k - $1M seed round at a pre-money valuation of $3-4M. Prioritizing investors with a strong understanding of B2B SaaS and a long-term investment horizon.\n* **Strategic Partnerships:**\n  * **Marketing Automation Platform Integrations:** Seeking introductions to partnership managers at HubSpot, Marketo, and Salesforce to explore deeper integration opportunities.\n  * **Data Enrichment Providers:** Interested in connecting with companies offering data enrichment services to enhance Synapse's data quality capabilities.\n* **Mentorship:**  Looking for experienced SaaS founders who have successfully bootstrapped and scaled their businesses.  Specifically, advice on navigating the transition from founder-led sales to building a scalable sales team.\n* **Introductions:**\n  * **Angels:** Angel investors with a track record of investing in early-stage SaaS companies.\n  * **Micro-VCs:** Venture capital firms specializing in seed-stage investments ($1M - $5M).\n* **Advisory Board Members:** Seeking individuals with expertise in data science, marketing, and business development to join our advisory board.",
+    "notes": "Amara is highly intelligent and technically proficient. She\u2019s very clear about her vision for Synapse and her aversion to rapid, unsustainable growth. She\u2019s extremely data-driven and will push back on any advice or suggestions that aren\u2019t supported by data. Boardy score: 8/10.  \n\n* **Caution:** She's fiercely independent and may be resistant to outside influence.  Avoid overly aggressive sales tactics or pitches that focus solely on valuation.  \n* **Sensitivity:**  She's sensitive to questions about fundraising and will likely want to control the narrative.  \n* **Internal Flag:**  She mentioned a previous negative experience with a VC firm that tried to push her towards a different product direction. Be mindful of this when discussing long-term strategy.",
+    "locationAvailability": "Based in San Francisco, CA. Willing to travel for key meetings and events, but prefers remote communication whenever possible.",
+    "introPreferences": "To ensure a successful introduction, please adhere to the following:\n\n* **Hard Requirements:**\n  * **Investor Focus:**  Investors must have a demonstrable track record of investing in B2B SaaS companies, *specifically* those focused on data quality or marketing technology.\n  * **Stage Alignment:**  Looking for investors comfortable with seed-stage investments and a valuation range of $3-4M pre-money.\n  * **Long-Term Vision:**  Investors should understand and appreciate our commitment to sustainable growth and customer value.\n* **Soft Preferences:**\n  * **Warm Introductions:**  A personal connection to the investor is highly preferred.  A simple email introduction is less effective.\n  * **Brief & Concise:**  Keep the introduction brief and to the point, highlighting Synapse\u2019s key achievements and traction.\n  * **Avoidance:** Do not introduce me to investors known for aggressive tactics or a focus on short-term gains. I value long-term partnerships based on mutual respect and trust.",
+    "personalPreferences": "I prefer to communicate via email or LinkedIn initially. I\u2019m responsive and appreciate clear, concise communication. I\u2019m not a big fan of cold calls.",
+    "meetingAndSchedulingPreferences": "I generally prefer meetings to be scheduled with at least 24 hours' notice. I'm available for meetings between 10 AM and 4 PM PST. Please send a brief agenda beforehand so I can prepare."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 43.36344504356384,
+      "input_tokens": 860,
+      "output_tokens": 1742,
+      "problems": []
+    }
+  ],
+  "success": true
+}

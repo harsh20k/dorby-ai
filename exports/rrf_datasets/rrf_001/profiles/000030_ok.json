@@ -1,0 +1,54 @@
+{
+  "id": 30,
+  "archetype": "Global Operator - Flexible Location",
+  "given_name": "Mateus Nguyen",
+  "style_version": 2,
+  "archetypes_version": 6,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Mateus Nguyen is a seasoned operations leader specializing in scaling tech startups in Southeast Asia. He has a unique background \u2013 starting his career as a logistics officer in the Vietnamese Navy before transitioning into the private sector. This experience instilled in him a strong discipline and problem-solving ability, crucial for navigating the complexities of rapid growth. He's currently the Head of Operations at 'Bloom Logistics,' a Series B startup focused on last-mile delivery solutions for e-commerce in Indonesia, Vietnam, and the Philippines. They recently secured a significant funding round and are aggressively expanding. He's looking to build out his team with top-tier talent, particularly in data analytics and regional expansion, and is also exploring potential strategic partnerships to enhance their tech stack and reach.",
+    "positioning": "As Head of Operations at Bloom Logistics, I lead the charge in scaling our last-mile delivery network across Southeast Asia. We're tackling the unique logistical challenges of a rapidly growing e-commerce market, leveraging technology and data to optimize routes, improve efficiency, and enhance customer experience. Prior to Bloom, I spent several years building and refining operational infrastructure at early-stage startups, developing a robust skillset in supply chain management, process optimization, and team leadership. I'm passionate about building high-performing teams and creating scalable solutions that drive tangible business results. My focus is on translating strategic vision into operational excellence, ensuring Bloom Logistics remains at the forefront of innovation in the region. I thrive in dynamic environments and am dedicated to fostering a culture of continuous improvement.",
+    "background": "- **Bloom Logistics, Indonesia (2021 \u2013 Present)**\n  Head of Operations: Responsible for end-to-end operations, including logistics, warehousing, transportation, and customer support. Led the successful expansion into the Philippines market, increasing delivery capacity by 40% within six months. Implemented a new route optimization algorithm, resulting in a 15% reduction in delivery costs. Managed a team of over 200 employees across three countries.\n\n- **NovaTech Solutions, Vietnam (2018 \u2013 2021)**\n  Operations Manager: Spearheaded the development and implementation of standardized operational procedures, improving efficiency by 25%. Oversaw the launch of a new product line, managing all aspects of supply chain and distribution. Successfully negotiated contracts with key vendors, resulting in significant cost savings.\n\n- **Vietnamese Navy (2013 \u2013 2018)**\n  Logistics Officer: Managed the logistical support for naval operations, including procurement, inventory control, and transportation. Developed and implemented efficient supply chain processes, ensuring timely delivery of critical resources. Received commendation for exceptional performance and leadership.\n\n- **Education:**\n  MBA, National University of Singapore (NUS), 2018\n  Bachelor of Science in Logistics Management, Vietnam Maritime University, 2013\n\n- **Skills:** Supply Chain Management, Logistics, Operations Management, Process Optimization, Data Analysis (SQL, Python - basic), Team Leadership, Strategic Planning, Vendor Negotiation, Project Management, Cross-Functional Collaboration, P&L Management, Lean Six Sigma (Green Belt).",
+    "lookingFor": "Bloom Logistics is entering a hyper-growth phase, and I'm actively seeking connections to support our expansion. Specifically, I'm looking to connect with:\n\n* **Data Scientists specializing in route optimization and predictive analytics:** We're building out our data science team and need individuals with experience in applying machine learning to complex logistical problems.\n* **Experienced Operations Leaders with Southeast Asia market expertise:** Individuals who have successfully scaled operations in Indonesia, Vietnam, or the Philippines are highly valued.\n* **Potential Partners for technology integration:** We're exploring partnerships with companies offering innovative solutions in areas such as warehouse automation, delivery drones, and real-time tracking.\n* **Investors with a focus on Southeast Asian logistics:** We are always open to discussing potential future funding rounds and strategic investment opportunities.\n\nI'm particularly interested in introductions to individuals who are passionate about solving challenging problems and driving innovation in the logistics industry. I\u2019m also open to informal conversations with founders of early-stage logistics tech companies.",
+    "notes": "* Mateus is extremely focused on building a strong, data-driven operations team. He prioritizes candidates with proven experience in scaling businesses in emerging markets.\n* He\u2019s very proud of his military background and often draws parallels between naval logistics and startup operations \u2013 emphasizing discipline and execution.\n* He\u2019s currently evaluating several warehouse automation solutions and is keen to hear from companies with demonstrable ROI.\n* He's attending the Tech in Asia conference in Jakarta next month \u2013 a good opportunity for introductions.",
+    "locationAvailability": "I am currently based in Jakarta, Indonesia, but am comfortable with frequent travel throughout Southeast Asia and open to remote collaboration as needed.",
+    "introPreferences": "* **Hard Requirements:** Proven experience in scaling operations in Southeast Asia. Strong analytical skills and a data-driven mindset.\n* **Soft Preferences:** Experience in the e-commerce or logistics industry. Familiarity with the challenges of last-mile delivery. A proactive and results-oriented attitude.\n* **Intro Framing:** Please highlight the candidate's experience in scaling operations in similar markets and their ability to solve complex logistical problems. Mention their comfort level with ambiguity and their willingness to roll up their sleeves. Focus on quantifiable achievements whenever possible. Avoid introducing candidates who are solely focused on theoretical concepts \u2013 we need practical, hands-on operators.",
+    "personalPreferences": "I prefer initial contact via LinkedIn or email.",
+    "meetingAndSchedulingPreferences": "Generally available for calls in the afternoons (Indonesia time)."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 24.442795753479004,
+      "input_tokens": 799,
+      "output_tokens": 1183,
+      "problems": []
+    }
+  ],
+  "success": true
+}

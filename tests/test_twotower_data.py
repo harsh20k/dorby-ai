@@ -23,7 +23,11 @@ SPLIT_PATH = DATA_DIR / "synthetic" / "seed_split.json"
 
 @pytest.fixture(scope="module")
 def bundle():
-    return build_split_bundle(DATA_DIR, SPLIT_PATH)
+    # ``include_synth`` became False by default on 2026-07-30 (the quarantine —
+    # see data/archive/batch_500_001_quarantined/README.md). Passed explicitly
+    # here so this fixture keeps testing the full-pool behaviour it was written
+    # for; the new default is covered by tests/test_quarantine_batch_500_001.py.
+    return build_split_bundle(DATA_DIR, SPLIT_PATH, include_synth=True)
 
 
 def test_canonical_counts():

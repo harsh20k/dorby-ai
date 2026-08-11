@@ -1,0 +1,54 @@
+{
+  "id": 31,
+  "archetype": "US-Based, Global Ambition",
+  "given_name": "Fatima Lopes",
+  "style_version": 2,
+  "archetypes_version": 6,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Fatima Lopes is a seasoned growth marketing leader currently focused on scaling a SaaS company into the Canadian and Latin American markets. Her distinctive career detail is a strong foundation in international distribution partnerships, built during a 5-year stint at a global edtech firm. She\u2019s excellent at identifying and closing strategic alliances and building localized marketing campaigns. She\u2019s now at a stage where she\u2019s looking to leverage her experience \u2013 either through advisory roles, board positions, or a new executive opportunity \u2013 to help other US-based companies achieve similar international expansion. She\u2019s particularly keen on companies with a strong social impact component. She's data-driven, pragmatic, and a strong communicator, but prefers directness and efficiency in her networking.",
+    "positioning": "Fatima Lopes is a results-oriented growth marketing executive with a proven track record of successfully launching and scaling SaaS solutions in North and South American markets. Currently the Head of Growth at NovaLearn, a rapidly expanding learning management system provider, Fatima is responsible for driving revenue growth through strategic partnerships, localized marketing initiatives, and data-driven optimization. Previously, Fatima spent five years at GlobalEdTech, where she spearheaded the development of key distribution partnerships across Latin America, resulting in a 30% increase in regional revenue. She excels at identifying market opportunities, building high-performing teams, and translating complex data into actionable insights. Fatima is actively seeking opportunities to leverage her international expansion expertise \u2013 either as an advisor, board member, or in a senior leadership role \u2013 with companies committed to innovation and positive social impact. She is passionate about building bridges between US technology and emerging markets.",
+    "background": "* **Head of Growth, NovaLearn** (2021 \u2013 Present)\n    * Led the development and execution of NovaLearn\u2019s North American and Latin American market entry strategy, resulting in a 25% increase in qualified leads within the first year.\n    * Oversaw a team of 8 marketing professionals, including content creators, digital marketing specialists, and partnership managers.\n    * Implemented a data-driven marketing automation system, improving lead nurturing efficiency by 40%.\n    * Secured key partnerships with leading educational institutions in Canada and Mexico.\n    * Managed a marketing budget of $500,000, consistently delivering ROI above industry benchmarks.\n* **International Partnerships Manager, GlobalEdTech** (2016 \u2013 2021)\n    * Built and maintained a network of over 50 distribution partners across 12 Latin American countries.\n    * Negotiated and closed strategic partnership agreements, resulting in a 30% increase in regional revenue.\n    * Developed localized marketing materials and campaigns tailored to specific cultural nuances.\n    * Conducted market research to identify new opportunities for expansion.\n    * Trained and supported partner teams on product knowledge and sales techniques.\n* **Marketing Manager, EduSpark** (2014 \u2013 2016)\n    * Developed and executed marketing campaigns to promote EduSpark\u2019s online learning platform.\n    * Managed social media presence and content creation, increasing brand awareness by 20%.\n    * Analyzed marketing data and provided insights to improve campaign performance.\n    * Collaborated with sales team to generate leads and close deals.\n* **Marketing Associate, BrightFuture Tutoring** (2013 \u2013 2014)\n    * Supported the marketing team with various tasks, including event planning, email marketing, and social media management.\n    * Assisted with the creation of marketing materials and presentations.",
+    "lookingFor": "Fatima Lopes is actively exploring opportunities to leverage her international growth expertise. She is particularly interested in connecting with:\n\n* **Advisory Roles:** Providing strategic guidance to US-based companies looking to expand into Canada and Latin America.\n* **Board Positions:** Serving on the boards of companies with a strong focus on international expansion and social impact.\n* **Executive Leadership Roles:** Seeking a Head of Growth or similar leadership position within a company with significant international ambitions.\n\nIdeal companies are SaaS-based, operating in the education, sustainability, or healthcare sectors. She\u2019s open to companies in other sectors if the international expansion challenge is compelling. She is specifically looking to connect with:\n\n* **Founders and CEOs** of companies actively planning international expansion.\n* **Venture Capitalists** investing in companies with global potential.\n* **Experienced international marketing professionals** to share insights and best practices.",
+    "notes": "Fatima is highly responsive and appreciates direct communication. She\u2019s been actively engaging with content related to international market entry strategies on LinkedIn. Recent conversations indicate she's particularly interested in the nuances of marketing to the Brazilian market. Data suggests she prioritizes companies with a clearly defined social mission. Please avoid introductions to roles solely focused on domestic US marketing. She's a fast evaluator and will quickly identify if a connection is mutually beneficial.",
+    "locationAvailability": "Fatima Lopes is currently based in Austin, Texas, but is open to travel throughout North and South America. She is also comfortable with remote work arrangements.",
+    "introPreferences": "* **Hard Requirements:** No recruitment agencies. No roles that are exclusively focused on US domestic markets.\n* **Soft Preferences:** Introductions should highlight the potential for international expansion and the company's commitment to social impact.\n* **Framing:** When making an introduction, please emphasize Fatima\u2019s experience building distribution partnerships and her data-driven approach to growth marketing. Briefly mention any shared connections or common interests.\n* **Avoid:** Generic connection requests. Introductions to individuals solely focused on fundraising without a clear international growth strategy.",
+    "personalPreferences": "Fatima prefers initial contact via LinkedIn message. She is responsive to email (fatima.lopes@example.com), and is open to a brief introductory call. She appreciates concise and direct communication.",
+    "meetingAndSchedulingPreferences": ""
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 20.296892881393433,
+      "input_tokens": 866,
+      "output_tokens": 1247,
+      "problems": []
+    }
+  ],
+  "success": true
+}

@@ -1,0 +1,63 @@
+{
+  "id": 29,
+  "archetype": "Repeat Founder/Operator - Scaling Focus",
+  "given_name": "Alejandro Singh",
+  "style_version": 3,
+  "archetypes_version": 6,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Alejandro Singh is a serial entrepreneur with a particular knack for identifying and scaling overlooked AI/ML applications in the logistics and supply chain space. He\u2019s had two successful exits \u2013 one a logistics software company acquired by SAP, the other a predictive maintenance platform bought by Siemens. He\u2019s now working on a new venture, 'FlowState AI,' focused on optimizing last-mile delivery using reinforcement learning. He\u2019s currently raising a Series A and is very focused on finding strong engineering talent and strategic partnerships with major logistics providers. He\u2019s a pragmatic operator, less interested in \u2018blue sky\u2019 thinking and more focused on demonstrable ROI. He\u2019s known for being direct, sometimes to a fault, and extremely data-driven. He acts as an informal advisor to a few seed-stage startups, but is very selective, prioritizing opportunities that align with his logistics/AI interests. He prefers direct communication and values efficiency above all else.",
+    "positioning": "Alejandro Singh is the Founder and CEO of FlowState AI, a company applying advanced reinforcement learning techniques to revolutionize last-mile delivery optimization. Having previously built and successfully exited two high-growth companies in the logistics technology sector, Alejandro brings a unique blend of technical depth and operational expertise. At FlowState AI, he\u2019s focused on building a scalable platform that demonstrably reduces delivery costs, improves on-time performance, and minimizes environmental impact. His prior experience includes leading the engineering team at RouteLogic (acquired by SAP) and founding PredicTech, a predictive maintenance solution for fleet management (acquired by Siemens). Alejandro is passionate about leveraging AI to solve real-world problems and is actively seeking strategic partnerships to accelerate FlowState AI\u2019s market traction. He believes the future of logistics hinges on data-driven decision-making and intelligent automation, and he\u2019s building a team to lead the charge.",
+    "background": "- **FlowState AI (2022 \u2013 Present):** Founder & CEO. Leading all aspects of the company, from fundraising and product development to team building and market strategy. Currently focused on securing Series A funding and scaling the platform to handle increased demand.\n- **PredicTech (2016 \u2013 2020):** Founder & CEO. Built and scaled a predictive maintenance platform for commercial fleets, utilizing machine learning to reduce downtime and optimize maintenance schedules. Successfully exited to Siemens for an undisclosed amount.\n- **RouteLogic (2012 \u2013 2016):** VP of Engineering. Led a team of 25+ engineers in the development and implementation of a cloud-based transportation management system (TMS). Integral in the company's growth and eventual acquisition by SAP.\n- **IBM (2008 \u2013 2012):** Software Engineer. Developed and maintained software solutions for the supply chain management division.\n\n**Education:**\n- **Stanford University (2006 \u2013 2008):** Master of Science in Computer Science, specializing in Artificial Intelligence.\n- **Massachusetts Institute of Technology (2002 \u2013 2006):** Bachelor of Science in Electrical Engineering and Computer Science.\n\n**Skills:**\n- **Technical:** Python, TensorFlow, PyTorch, Reinforcement Learning, Machine Learning, Cloud Computing (AWS, Azure, GCP), Data Science, SQL, Software Architecture.\n- **Business:** Venture Capital, Fundraising, Strategic Partnerships, Team Leadership, Product Management, Market Analysis, Supply Chain Management, Logistics, SaaS.",
+    "lookingFor": "FlowState AI is currently focused on closing our Series A round and expanding our engineering team. I\u2019m actively seeking introductions to venture capital firms specializing in logistics tech and AI, particularly those with a demonstrated history of supporting companies at the growth stage. We\u2019re looking for investors who understand the complexities of the supply chain and can provide strategic support beyond capital. \n\nSpecifically, I'm interested in:\n\n* **VC Partners:** Targeting firms with $50M+ to deploy and experience in B2B SaaS.\n* **Strategic Investors:** Logistics providers (e.g., UPS, FedEx, DHL) interested in exploring potential partnerships and integration opportunities.\n* **Senior Machine Learning Engineers:** Experienced in reinforcement learning, particularly those with a background in robotics or optimization problems. We need individuals who can hit the ground running and contribute to our core platform.\n* **Head of Sales:** A seasoned sales leader with a proven track record of selling complex software solutions to enterprise clients in the logistics space. \n\nI'm also open to connecting with other founders in the AI/ML space to share learnings and best practices.",
+    "notes": "* Alejandro is very direct and values efficiency. Avoid lengthy introductions and get straight to the point.\n* He's laser-focused on ROI and demonstrable results. Presentations should be data-driven and focused on quantifiable benefits.\n* He's currently prioritizing Series A fundraising and engineering talent. \n* Recently attended the LogiTech conference and is actively following developments in autonomous delivery.\n* Avoid pitching him anything outside of logistics or AI \u2013 he's highly focused.",
+    "locationAvailability": "Alejandro is primarily based in Palo Alto, California, but is open to travel for key meetings and potential investment opportunities. He\u2019s also comfortable with remote collaboration.",
+    "introPreferences": "* **Hard Requirements:** Any potential investor *must* have a demonstrable track record of investing in B2B SaaS companies. Any engineering candidate *must* have 3+ years of experience with reinforcement learning.\n* **Soft Preferences:** Investors who have experience in the logistics industry are highly preferred. Engineering candidates with experience in robotics or optimization are a plus.\n* **Intro Framing:** Please emphasize the potential for significant ROI and the scalability of FlowState AI\u2019s platform. For engineering candidates, highlight their specific experience with reinforcement learning algorithms and their ability to work independently.\n* **Avoid:** Introducing him to early-stage startups without significant traction or individuals lacking relevant experience.",
+    "personalPreferences": "Prefers direct communication via email or WhatsApp.",
+    "meetingAndSchedulingPreferences": "Generally available for meetings after 2 PM PST."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 23.318892002105713,
+      "input_tokens": 801,
+      "output_tokens": 1301,
+      "problems": [
+        "notes: possible truncation (ends with '...ional TechCrunch article]')"
+      ]
+    },
+    {
+      "attempt": 2,
+      "elapsed_s": 24.591007232666016,
+      "input_tokens": 801,
+      "output_tokens": 1283,
+      "problems": []
+    }
+  ],
+  "success": true
+}

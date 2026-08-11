@@ -1,0 +1,54 @@
+{
+  "id": 962,
+  "archetype": "E-commerce Rollup/Logistics Builder",
+  "given_name": "Ravi Andersson",
+  "style_version": 59,
+  "archetypes_version": 161,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Ravi Andersson is a serial e-commerce entrepreneur who built a successful direct-to-consumer (DTC) brand in the outdoor gear space, focusing on sustainable materials. He exited that business two years ago and is now deeply involved in building infrastructure for e-commerce rollups, specifically tackling the massive pain point of reverse logistics \u2013 returns. He\u2019s not a VC, but actively invests *angel* checks into companies solving problems in this space. He's a very direct, data-driven operator who values efficiency and demonstrable traction above all else. He\u2019s currently building a tech-enabled returns processing and refurbishment center network, aiming to reduce waste and increase recovery value for returned goods. He\u2019s looking for operational expertise, technology partners, and potential acquisition targets within the reverse logistics ecosystem.",
+    "positioning": "I\u2019m building the future of e-commerce returns. Having spent the last decade building and scaling a direct-to-consumer brand, I intimately understand the friction \u2013 and frankly, the financial bleed \u2013 caused by inefficient reverse logistics. After successfully exiting [Brand Name Redacted], I\u2019m now focused on solving this problem at scale. Currently, I\u2019m leading the development of a national network of tech-enabled returns processing centers focused on maximizing recovery value through refurbishment, resale, and responsible recycling. My core expertise lies in operational excellence, supply chain optimization, and building high-performing teams. I'm passionate about creating a more sustainable e-commerce ecosystem, and believe that efficient reverse logistics is a critical piece of that puzzle. I'm actively seeking strategic partnerships and innovative technologies that can accelerate our growth and deliver tangible value to our clients. I\u2019m a hands-on operator and thrive in fast-paced, challenging environments. I\u2019m always open to connecting with fellow builders and problem-solvers in the e-commerce and logistics space.",
+    "background": " * **Founder & CEO, Peak Ascent Outdoors (2016 \u2013 2022):** Led all aspects of a direct-to-consumer outdoor gear brand, from product development and marketing to operations and fulfillment. Grew revenue from $0 to $15M+ in 5 years, achieving a 30% YoY growth rate for three consecutive years. Successfully negotiated and managed a profitable exit to [Acquirer Name Redacted]. Reduced return rates by 15% through proactive quality control and detailed product descriptions.\n* **Operations Manager, Adventure Logistics (2014 \u2013 2016):** Managed a team of 20+ employees responsible for warehousing, fulfillment, and shipping for multiple e-commerce clients. Implemented a new warehouse management system (WMS) that increased order fulfillment speed by 20% and reduced shipping errors by 10%.\n* **Supply Chain Analyst, Global Retail Group (2012 \u2013 2014):** Analyzed supply chain data to identify opportunities for cost reduction and efficiency improvements. Developed and implemented a new inventory management strategy that reduced inventory holding costs by 12%.\n* **Education: MBA, Stanford Graduate School of Business (2010 \u2013 2012):** Focused on Entrepreneurship and Operations Management.\n* **Education: BS, Industrial Engineering, University of Michigan (2006 \u2013 2010):** Graduated *Cum Laude*.  Completed a senior project focused on optimizing warehouse layout for increased efficiency.",
+    "lookingFor": "I\u2019m actively expanding my network within the e-commerce logistics space, specifically around reverse logistics. I'm looking to connect with:\n\n* **Founders of early-stage (Seed \u2013 Series A) companies** developing innovative solutions for returns processing, refurbishment, or resale. I make small angel investments \u2013 typically $25k-$50k \u2013 and offer operational support.\n* **Technology Partners:** Companies offering AI-powered sorting, automated inspection, or data analytics solutions for returns.\n* **Operational Experts:** Individuals with deep experience in warehouse management, logistics network design, and reverse supply chain optimization. Specifically, experience scaling multi-site operations is highly valuable.\n* **Potential Acquisition Targets:**  Small to medium-sized returns processing facilities with strong regional presence and a commitment to sustainability.\n\nI\u2019m *not* interested in conversations with VCs or general consulting firms. I value direct, data-driven discussions and demonstrable traction.  I'm happy to provide advice and mentorship to promising founders, but my primary focus is on building and scaling my own business.  I\u2019m also open to exploring strategic partnerships with established e-commerce brands looking to improve their returns processes.",
+    "notes": "* **Priority:** Reverse logistics tech and operational scaling.\n* **Caveat:** Very direct. Doesn't sugarcoat feedback. Appreciates concise communication.\n* **Signal:** Mentions of 'refurbishment,' 'resale,' 'circular economy,' or 'waste reduction' pique his interest.\n* **Context:** Recently closed a seed round for his returns processing venture.  Focus is now on site selection and tech integration.\n* **Recent Update:** Attending Shoptalk in March \u2013 actively seeking potential partners there.",
+    "locationAvailability": "Based in Denver, Colorado. Willing to travel domestically for promising opportunities.",
+    "introPreferences": "* Introductions should be to founders with demonstrable traction (at least $100k MRR).\n*  Please include a brief summary of the company's technology and key metrics in the introduction.\n*  Avoid introductions to generic service providers (e.g., marketing agencies).\n*  I prefer initial contact via LinkedIn message; please don't cold email.\n*  If introducing for investment, *clearly* state the amount being raised and the use of funds.\n*  Respect my time \u2013 keep introductions concise and focused.",
+    "personalPreferences": "I'm a big fan of trail running and backcountry skiing. Always up for a coffee if you're in Denver.",
+    "meetingAndSchedulingPreferences": "* Prefer 30-minute introductory calls.\n*  I use Calendly for scheduling: [Link Redacted for privacy].\n*  I\u2019m generally unavailable on Fridays."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 18.037437915802002,
+      "input_tokens": 916,
+      "output_tokens": 1307,
+      "problems": []
+    }
+  ],
+  "success": true
+}

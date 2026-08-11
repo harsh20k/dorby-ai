@@ -1,0 +1,54 @@
+{
+  "id": 634,
+  "archetype": "Growth Operator, Scaling Commerce Tech",
+  "given_name": "Anh Wang",
+  "style_version": 39,
+  "archetypes_version": 106,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Anh Wang is a seasoned growth operator currently building 'ShopSpark,' a B2B SaaS platform designed to help direct-to-consumer (DTC) brands quickly launch and scale affiliate and influencer marketing programs. Her distinctive career detail is a six-year stint at a hypergrowth mobile gaming company where she was *solely* responsible for user acquisition through influencer marketing \u2013 a role she built from the ground up, managing a seven-figure monthly budget. She's now looking for seed-stage and Series A investors who understand the commerce tech space, as well as potential enterprise clients (DTC brands with $5M+ in annual revenue) for ShopSpark. She's very focused, data-driven, and prioritizes efficiency. She's not interested in purely 'idea' stage pitches; she wants to see traction. She's a no-nonsense communicator and prefers direct introductions.",
+    "positioning": "ShopSpark is revolutionizing how direct-to-consumer brands approach affiliate and influencer marketing. Existing solutions are fragmented, complex, and often require significant internal resources to manage effectively. We provide a streamlined, all-in-one platform that empowers brands to launch, manage, and optimize affiliate and influencer programs with speed and efficiency. Our core value proposition is dramatically reduced time-to-revenue for these programs, coupled with enhanced data insights to maximize ROI. \n\nWe differentiate ourselves through a proprietary 'SmartMatch' algorithm that connects brands with high-performing influencers based on audience demographics, engagement rates, and brand alignment. Unlike traditional affiliate networks, ShopSpark offers integrated creative asset management, automated commission tracking, and real-time performance dashboards. We\u2019re initially targeting DTC brands in the beauty, fashion, and wellness verticals with $5M - $50M in annual revenue, but our platform is scalable to accommodate brands of any size and across a wide range of product categories.  ShopSpark isn\u2019t just a software platform; it's a growth engine designed to unlock the power of the creator economy for ambitious DTC brands. We are currently in a closed beta with promising early results and are preparing for a public launch in Q1 2024.",
+    "background": "- **Founder & CEO, ShopSpark (2023 - Present):** Leading all aspects of product development, fundraising, and go-to-market strategy for a B2B SaaS platform focused on affiliate & influencer marketing for DTC brands.\n- **Head of Influencer Marketing, Stellar Games (2017 - 2023):**  Built and scaled the influencer marketing program from zero to a seven-figure monthly spend, driving significant user acquisition and revenue growth for a top-10 grossing mobile game. Managed a team of agency partners and directly negotiated contracts with over 500 influencers.  Reduced cost-per-install (CPI) by 35% through data-driven optimization and strategic influencer selection.\n- **Growth Marketing Manager, BloomBox (2015 - 2017):**  Responsible for driving customer acquisition through various digital marketing channels, including Facebook Ads, Google Ads, and email marketing.  Increased monthly recurring revenue (MRR) by 60% within 18 months.\n- **Marketing Associate, Zenith Tech (2014 - 2015):** Supported the marketing team with content creation, social media management, and event planning.\n- **Education:** BA, Marketing, University of California, Berkeley (2014)",
+    "lookingFor": "I'm actively seeking connections with investors who have a strong understanding of the commerce tech landscape, particularly SaaS and marketplace models. I\u2019m specifically interested in seed-stage and Series A investors with a track record of supporting high-growth startups.  I'm not looking for purely advisory relationships; I'm seeking capital and strategic guidance.\n\nAdditionally, I'm looking to connect with DTC brand executives (Heads of Marketing, CMOs, CEOs) at companies with $5M+ in annual revenue who are actively looking to scale their affiliate and influencer marketing efforts.  I\u2019m particularly interested in brands in the beauty, fashion, and wellness verticals.  I\u2019d appreciate introductions to individuals who are open to exploring innovative solutions to improve their ROI on creator marketing.\n\n*   **Investor Focus:** Seed/Series A, Commerce Tech, SaaS, Marketplace.\n*   **DTC Brand Criteria:** $5M+ Revenue, Beauty/Fashion/Wellness preferred, actively seeking to scale influencer programs.",
+    "notes": "Anh is very direct and data-driven. She's a quick study and values efficiency. She recently spoke with [Name redacted - internal note] about potential integration partnerships. Mention that she built the entire influencer program at Stellar Games single-handedly - she's proud of that achievement. Avoid pitching her 'blue sky' ideas; she wants to see demonstrable results and a clear path to profitability.",
+    "locationAvailability": "I am currently based in San Francisco, California, and am available for meetings both in-person and virtually. I am open to travel to meet with potential investors or clients on the East Coast, and have plans to attend Shoptalk in March 2024.",
+    "introPreferences": "When making introductions, please emphasize my experience building and scaling influencer marketing programs at Stellar Games. Highlight ShopSpark's ability to dramatically reduce time-to-revenue for DTC brands.  I *strongly* prefer warm introductions over cold outreach. \n\n*   **Hard Requirement:**  Relevant experience in either venture capital (commerce tech focus) or executive leadership at a DTC brand.\n*   **Soft Preference:**  Experience with affiliate marketing platforms or a demonstrated understanding of the creator economy.\n*   **Avoid:**  Vague introductions or pitches for unrelated services. I value brevity and directness.",
+    "personalPreferences": "I prefer to connect initially via LinkedIn or email. WhatsApp is fine for quick follow-ups.",
+    "meetingAndSchedulingPreferences": "I typically respond to meeting requests within 24 hours. I prefer meetings to be scheduled with a clear agenda and a defined time limit (30-60 minutes). My calendar is most open in the mornings (PST). I'm comfortable with Zoom or Google Meet."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 22.625284910202026,
+      "input_tokens": 805,
+      "output_tokens": 1312,
+      "problems": []
+    }
+  ],
+  "success": true
+}

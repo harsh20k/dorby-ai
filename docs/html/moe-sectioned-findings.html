@@ -1,0 +1,459 @@
+<meta charset="utf-8">
+<title>Sectioned MoE — findings</title>
+<style>
+  :root {
+    --ink:#14171c; --ink-2:#3d4550; --ink-3:#6d7683;
+    --paper:#f7f8fa; --surface:#ffffff; --line:#dde1e7; --line-soft:#eaedf1;
+    --accent:#2f5fd0; --accent-dim:#e8eefc;
+    --good:#0e7c66; --good-dim:#e3f3ef;
+    --warn:#a8501c; --warn-dim:#fbeee5;
+    --dead:#8b8f97; --dead-dim:#eff0f2;
+    --serif: ui-serif, "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+    --sans:  ui-sans-serif, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+    --mono:  ui-monospace, "SF Mono", "JetBrains Mono", Menlo, Consolas, monospace;
+    --measure: 68ch;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --ink:#e8eaee; --ink-2:#b3bac4; --ink-3:#858d99;
+      --paper:#101318; --surface:#171b21; --line:#2b313a; --line-soft:#21262d;
+      --accent:#7ea3f0; --accent-dim:#1a2437;
+      --good:#4fb99e; --good-dim:#122a25;
+      --warn:#d98a55; --warn-dim:#2a1d13;
+      --dead:#767d88; --dead-dim:#1c1f25;
+    }
+  }
+  :root[data-theme="dark"] {
+    --ink:#e8eaee; --ink-2:#b3bac4; --ink-3:#858d99;
+    --paper:#101318; --surface:#171b21; --line:#2b313a; --line-soft:#21262d;
+    --accent:#7ea3f0; --accent-dim:#1a2437;
+    --good:#4fb99e; --good-dim:#122a25;
+    --warn:#d98a55; --warn-dim:#2a1d13;
+    --dead:#767d88; --dead-dim:#1c1f25;
+  }
+  :root[data-theme="light"] {
+    --ink:#14171c; --ink-2:#3d4550; --ink-3:#6d7683;
+    --paper:#f7f8fa; --surface:#ffffff; --line:#dde1e7; --line-soft:#eaedf1;
+    --accent:#2f5fd0; --accent-dim:#e8eefc;
+    --good:#0e7c66; --good-dim:#e3f3ef;
+    --warn:#a8501c; --warn-dim:#fbeee5;
+    --dead:#8b8f97; --dead-dim:#eff0f2;
+  }
+
+  body {
+    background: var(--paper); color: var(--ink);
+    font-family: var(--sans); font-size: 16.5px; line-height: 1.62;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 1080px; margin: 0 auto; padding: 0 24px 120px; }
+
+  header.top { padding: 72px 0 40px; border-bottom: 1px solid var(--line); margin-bottom: 48px; }
+  .eyebrow {
+    font-family: var(--mono); font-size: 11.5px; letter-spacing: .14em;
+    text-transform: uppercase; color: var(--ink-3); margin-bottom: 20px;
+  }
+  h1 {
+    font-family: var(--serif); font-size: clamp(34px, 5.2vw, 56px);
+    line-height: 1.08; font-weight: 600; letter-spacing: -0.02em;
+    text-wrap: balance; margin-bottom: 22px;
+  }
+  .standfirst {
+    font-family: var(--serif); font-size: clamp(18px, 2.2vw, 22px);
+    line-height: 1.5; color: var(--ink-2); max-width: 58ch;
+  }
+  .standfirst em { color: var(--ink); font-style: italic; }
+
+  section { margin-bottom: 64px; }
+  h2 {
+    font-family: var(--serif); font-size: clamp(24px, 3vw, 31px);
+    font-weight: 600; letter-spacing: -0.015em; line-height: 1.2;
+    margin-bottom: 8px; text-wrap: balance;
+  }
+  h2 .num {
+    font-family: var(--mono); font-size: 12px; letter-spacing: .1em;
+    color: var(--accent); display: block; margin-bottom: 10px; font-weight: 500;
+  }
+  h3 { font-size: 15px; font-weight: 650; margin: 32px 0 10px; }
+  p { margin-bottom: 15px; max-width: var(--measure); }
+  .sub { color: var(--ink-3); font-size: 15px; margin-bottom: 26px; max-width: var(--measure); }
+  code {
+    font-family: var(--mono); font-size: .88em;
+    background: var(--line-soft); padding: 1.5px 5px; border-radius: 3px;
+  }
+  a { color: var(--accent); }
+  ul { margin: 0 0 16px 0; padding-left: 20px; max-width: var(--measure); }
+  li { margin-bottom: 7px; }
+
+  /* headline result */
+  .headline {
+    background: var(--surface); border: 1px solid var(--line);
+    border-radius: 8px; padding: 28px 26px; margin: 30px 0;
+  }
+  .headline .big {
+    font-family: var(--mono); font-size: clamp(38px, 6vw, 60px);
+    font-weight: 600; letter-spacing: -0.03em; color: var(--good);
+    font-variant-numeric: tabular-nums; line-height: 1;
+  }
+  .headline .vs { font-size: 15px; color: var(--ink-3); margin-top: 10px; }
+
+  /* bar chart */
+  .bars { display: flex; flex-direction: column; gap: 3px; margin: 24px 0 8px; }
+  .bar-row {
+    display: grid; grid-template-columns: 200px 1fr 74px;
+    align-items: center; gap: 12px; font-size: 13.5px;
+  }
+  .bar-row .lbl { text-align: right; color: var(--ink-2); line-height: 1.3; }
+  .bar-row .lbl small { display: block; color: var(--ink-3); font-size: 11px; }
+  .track { background: var(--line-soft); border-radius: 3px; height: 26px; position: relative; }
+  .fill { height: 100%; border-radius: 3px; background: var(--dead); }
+  .fill.win { background: var(--good); }
+  .fill.base { background: var(--accent); }
+  .fill.lose { background: var(--warn); }
+  .bar-row .val {
+    font-family: var(--mono); font-size: 13px; font-variant-numeric: tabular-nums;
+    color: var(--ink);
+  }
+  .axis {
+    display: grid; grid-template-columns: 200px 1fr 74px; gap: 12px;
+    font-family: var(--mono); font-size: 10.5px; color: var(--ink-3);
+  }
+  .axis .ticks { display: flex; justify-content: space-between; }
+  .chartnote { font-size: 12.5px; color: var(--ink-3); margin-top: 12px; max-width: 62ch; }
+
+  /* predicted vs happened */
+  .pvh { display: grid; gap: 2px; background: var(--line); border: 1px solid var(--line);
+         border-radius: 6px; overflow: hidden; margin: 26px 0; }
+  .pvh .hdr, .pvh .rw {
+    display: grid; grid-template-columns: 1fr 1fr 96px; gap: 2px; background: var(--line);
+  }
+  .pvh .hdr > div {
+    background: var(--surface); padding: 10px 16px;
+    font-family: var(--mono); font-size: 10.5px; letter-spacing: .1em;
+    text-transform: uppercase; color: var(--ink-3);
+  }
+  .pvh .rw > div { background: var(--surface); padding: 15px 16px; font-size: 14px; }
+  .pvh .rw .verdict { display: grid; place-items: center; }
+  .tag {
+    font-size: 10.5px; font-weight: 700; letter-spacing: .06em;
+    padding: 3px 9px; border-radius: 99px; text-transform: uppercase;
+  }
+  .tag.hit { background: var(--good-dim); color: var(--good); }
+  .tag.miss { background: var(--warn-dim); color: var(--warn); }
+
+  .tw { overflow-x: auto; margin: 24px 0; }
+  table { border-collapse: collapse; width: 100%; min-width: 460px; font-size: 14.5px; }
+  th, td { text-align: left; padding: 11px 14px; border-bottom: 1px solid var(--line-soft); vertical-align: top; }
+  th {
+    font-size: 11.5px; letter-spacing: .08em; text-transform: uppercase;
+    color: var(--ink-3); font-weight: 600; border-bottom: 1px solid var(--line);
+  }
+  td.n { font-family: var(--mono); font-variant-numeric: tabular-nums; white-space: nowrap; }
+
+  .note {
+    border-left: 2px solid var(--accent); padding: 2px 0 2px 18px;
+    margin: 26px 0; max-width: var(--measure);
+  }
+  .note.risk { border-left-color: var(--warn); }
+  .note .lbl {
+    font-family: var(--mono); font-size: 10.5px; letter-spacing: .12em;
+    text-transform: uppercase; color: var(--accent); display: block; margin-bottom: 6px;
+  }
+  .note.risk .lbl { color: var(--warn); }
+  .note p:last-child { margin-bottom: 0; }
+
+  .bugs { display: grid; gap: 14px; margin: 26px 0; }
+  .bug {
+    background: var(--surface); border: 1px solid var(--line);
+    border-left: 3px solid var(--warn); border-radius: 6px; padding: 16px 18px;
+  }
+  .bug .t { font-weight: 650; font-size: 14.5px; margin-bottom: 5px; }
+  .bug .d { font-size: 13.5px; color: var(--ink-2); line-height: 1.55; }
+  .bug .tell {
+    font-size: 12.5px; color: var(--ink-3); margin-top: 8px;
+    font-family: var(--mono);
+  }
+
+  footer {
+    border-top: 1px solid var(--line); padding-top: 22px;
+    font-size: 13px; color: var(--ink-3); max-width: var(--measure);
+  }
+
+  @media (max-width: 680px) {
+    .bar-row, .axis { grid-template-columns: 118px 1fr 60px; }
+    .pvh .hdr, .pvh .rw { grid-template-columns: 1fr; }
+    .pvh .rw .verdict { place-items: start; }
+  }
+</style>
+
+<div class="wrap">
+
+<header class="top">
+  <div class="eyebrow">dorby-ai · results · 2026-07-31</div>
+  <h1>The good idea, and the wrong reason</h1>
+  <p class="standfirst">
+    Splitting a networking request into its individual asks, and scoring each one
+    separately, beats every model we have tried on this task. The clever part we
+    designed to go with it — learning <em>which</em> ask matters — turns out to
+    contribute nothing at all.
+  </p>
+</header>
+
+<!-- ============================================ 01 -->
+<section>
+  <h2><span class="num">01 — the result</span>First thing here to beat plain logistic regression</h2>
+  <p class="sub">
+    Five random seeds, each a fresh 5-fold split by person, on 131 real
+    accept/decline outcomes.
+  </p>
+
+  <div class="headline">
+    <div class="big">0.6467</div>
+    <div class="vs">
+      versus <strong>0.5758</strong> for logistic regression on the same folds —
+      a margin of <strong>+0.071</strong>, winning <strong>5 of 5 seeds</strong>.
+    </div>
+  </div>
+
+  <div class="bars">
+    <div class="bar-row">
+      <div class="lbl">per-ask + attention<small>the proposal</small></div>
+      <div class="track"><div class="fill win" style="width:100.0%"></div></div>
+      <div class="val">0.6467</div>
+    </div>
+    <div class="bar-row">
+      <div class="lbl">per-ask + plain average<small>no attention at all</small></div>
+      <div class="track"><div class="fill win" style="width:95.7%"></div></div>
+      <div class="val">0.6404</div>
+    </div>
+    <div class="bar-row">
+      <div class="lbl">logistic regression<small>the standing bar</small></div>
+      <div class="track"><div class="fill base" style="width:51.7%"></div></div>
+      <div class="val">0.5758</div>
+    </div>
+    <div class="bar-row">
+      <div class="lbl">frozen "best ask wins"<small>the control</small></div>
+      <div class="track"><div class="fill lose" style="width:38.7%"></div></div>
+      <div class="val">0.5568</div>
+    </div>
+    <div class="bar-row">
+      <div class="lbl">one expert, not four<small>ablation</small></div>
+      <div class="track"><div class="fill lose" style="width:30.4%"></div></div>
+      <div class="val">0.5446</div>
+    </div>
+    <div class="bar-row">
+      <div class="lbl">Qwen3-8B embeddings<small>instead of keyword matching</small></div>
+      <div class="track"><div class="fill lose" style="width:29.5%"></div></div>
+      <div class="val">0.5433</div>
+    </div>
+  </div>
+  <div class="axis">
+    <div></div>
+    <div class="ticks"><span>0.50 — coin flip</span><span>0.65</span></div>
+    <div></div>
+  </div>
+  <p class="chartnote">
+    Bar length is lift above a coin flip, so a bar twice as long is twice as far
+    from chance. Blue is the model to beat; green beat it in every seed; orange
+    did not.
+  </p>
+</section>
+
+<!-- ============================================ 02 -->
+<section>
+  <h2><span class="num">02 — predictions vs outcomes</span>What we said would happen</h2>
+  <p class="sub">
+    The proposal was written and published <em>before</em> any of this ran. Here
+    it is, marked.
+  </p>
+
+  <div class="pvh">
+    <div class="hdr">
+      <div>What the proposal predicted</div>
+      <div>What actually happened</div>
+      <div>Verdict</div>
+    </div>
+    <div class="rw">
+      <div>Splitting the request into separate asks will help, because one ask usually carries the decision and averaging buries it.</div>
+      <div>It helped, by +0.071, in every seed. This is the entire gain.</div>
+      <div class="verdict"><span class="tag hit">Right</span></div>
+    </div>
+    <div class="rw">
+      <div>Learning <em>which</em> ask matters will beat a fixed rule, since the fixed rule is just the learned one with the weights frozen.</div>
+      <div>A <strong>plain average</strong> of all asks scores 0.6404 against learned attention's 0.6467. The learned part contributes nothing measurable.</div>
+      <div class="verdict"><span class="tag miss">Wrong</span></div>
+    </div>
+    <div class="rw">
+      <div>The mixture of experts may be redundant with the pooling — they both decide "what matters here."</div>
+      <div>Not redundant. Four experts beat one by 0.102, the first time the mixture has earned its place in this project.</div>
+      <div class="verdict"><span class="tag miss">Wrong</span></div>
+    </div>
+    <div class="rw">
+      <div>Better embeddings are the most valuable next step — swap keyword matching for Qwen3-8B, the strongest open model we had measured.</div>
+      <div>Qwen3 scored <strong>worse</strong> (0.5433), losing to logistic regression in 4 of 5 seeds, even after fixing a real bug in how we called it.</div>
+      <div class="verdict"><span class="tag miss">Wrong</span></div>
+    </div>
+    <div class="rw">
+      <div>Forcing the router to look only at the ask will stop it latching onto "who is asking" instead.</div>
+      <div>It did. The shortcut measure fell below its warning threshold and below the previous model's level.</div>
+      <div class="verdict"><span class="tag hit">Right</span></div>
+    </div>
+  </div>
+
+  <div class="note">
+    <span class="lbl">The honest reading</span>
+    <p>
+      One prediction right, and it happened to be the one the whole thing rested
+      on. The three sophisticated ideas layered on top of it were all wrong, and
+      each was wrong in the direction of "the clever thing didn't beat the simple
+      thing." That is worth more than a clean win: the simple version is cheaper
+      to run, easier to explain, and now the one we would ship.
+    </p>
+  </div>
+</section>
+
+<!-- ============================================ 03 -->
+<section>
+  <h2><span class="num">03 — what changed</span>One row per ask, instead of one row per pair</h2>
+
+  <p>
+    A person's networking request is not one thing. In our data the median seeker
+    writes <strong>five separate asks</strong> — customers, hiring, fundraising,
+    partnerships — and an introduction is usually accepted because it satisfies
+    <em>one</em> of them.
+  </p>
+
+  <p>
+    Before this experiment, all of that reached the model as a single number: how
+    many sections the person wrote. Everything else was averaged into one
+    whole-profile similarity score. 131 training examples stayed 131 rows.
+  </p>
+
+  <p>
+    Now each ask becomes its own row — 131 pairs become <strong>708 rows</strong> —
+    and the model answers a narrower, more answerable question: <em>does this
+    person satisfy this specific request?</em> The per-ask verdicts are then
+    combined into one decision about the pair.
+  </p>
+
+  <div class="note">
+    <span class="lbl">A real example</span>
+    <p>
+      Alan runs a returns-logistics company and wrote four asks. Garrett, an
+      operations executive, ranks <strong>92nd percentile</strong> on Alan's
+      "brand-side operators" ask and <strong>70th</strong> on his "SaaS companies
+      for partnerships" ask — correctly, since Garrett is a person, not a
+      company. They connected. The old model averaged those four numbers together
+      before ever looking at them.
+    </p>
+  </div>
+</section>
+
+<!-- ============================================ 04 -->
+<section>
+  <h2><span class="num">04 — the misses</span>Three defects found along the way</h2>
+  <p class="sub">
+    Each one would have produced a confident, wrong answer. All three were caught
+    by a result looking strange rather than by anything failing.
+  </p>
+
+  <div class="bugs">
+    <div class="bug">
+      <div class="t">The reduction layers <em>were</em> the model</div>
+      <div class="d">
+        Two layers whose job was to shrink the embeddings held roughly
+        <strong>960,000 parameters</strong> — fitted on 708 rows. The model had
+        far more capacity to memorise than there was data to learn from.
+      </div>
+      <div class="tell">tell: four runs, four different rankings of the same five arms</div>
+    </div>
+    <div class="bug">
+      <div class="t">The GPU run loaded the model at double precision</div>
+      <div class="d">
+        An 8-billion-parameter model at full precision is ~32 GB of weights before
+        a single calculation, on a 40 GB card. Our own existing code already
+        loaded it correctly; this script was written fresh instead of copied.
+      </div>
+      <div class="tell">tell: out of memory, 36.68 GiB allocated, 942 MiB free</div>
+    </div>
+    <div class="bug">
+      <div class="t">Half the embeddings were computed the wrong way</div>
+      <div class="d">
+        Qwen3 treats a <em>question</em> and an <em>answer</em> differently and
+        needs to be told which is which. We told it everything was an answer.
+        Fixing it did not rescue the score — which is itself the finding.
+      </div>
+      <div class="tell">tell: found by reading our own model registry, not by any error</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================ 05 -->
+<section>
+  <h2><span class="num">05 — corroboration</span>The Qwen3 result stopped being surprising</h2>
+
+  <p>
+    When Qwen3-8B embeddings lost to plain keyword matching here, it looked like an
+    anomaly — that model was believed to beat the production system outright.
+  </p>
+
+  <p>
+    <strong>That belief was retracted a day later</strong>, for unrelated reasons.
+    Re-scored on all 200 real pairs instead of a 69-pair slice, Qwen3 loses to the
+    production model on every measure, with a below-chance score on the hardest
+    cases. So this experiment and that one now agree, from completely different
+    directions: <em>dense semantic embeddings are not the lever on this problem.</em>
+  </p>
+
+  <div class="tw">
+    <table>
+      <thead><tr><th>Where Qwen3-8B was measured</th><th>Result</th></tr></thead>
+      <tbody>
+        <tr><td>Whole-profile matching, 69-pair slice <em>(retracted)</em></td><td class="n">beat production</td></tr>
+        <tr><td>Whole-profile matching, all 200 pairs</td><td class="n">lost to production</td></tr>
+        <tr><td>Per-ask matching, this experiment</td><td class="n">lost to keyword matching</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- ============================================ 06 -->
+<section>
+  <h2><span class="num">06 — what we are not claiming</span>Limits, stated plainly</h2>
+
+  <ul>
+    <li><strong>131 examples.</strong> A consistent +0.071 across five seeds is reportable; it is not a large study. Fold-to-fold variation within a seed runs 0.10–0.18.</li>
+    <li><strong>Re-seeding does not add data.</strong> It varies the split and the starting weights, so it bounds one kind of noise, not sampling error. The true uncertainty is wider than the seed spread suggests.</li>
+    <li><strong>The final held-out set has not been touched</strong> — and, awkwardly, we now know it cannot settle this. That 69-pair set was recently shown to rank strong models no better than chance. It reliably identifies broken models and nothing else.</li>
+    <li><strong>There is no clean way to score this yet.</strong> The larger 200-pair population is the right one, but this model trains on 131 of those 200. Closing that gap needs more real labelled outcomes, not a better architecture.</li>
+    <li><strong>No latency measurement exists.</strong> Nothing here has been timed against the 100 ms budget the product actually has.</li>
+  </ul>
+
+  <div class="note risk">
+    <span class="lbl">If you read one caveat</span>
+    <p>
+      This is a cross-validated result on 131 outcomes, not a verified win. What
+      makes it worth reporting is that it held in every seed and that the effect
+      has a plain mechanical explanation. What would make it real is more labelled
+      data — which is the actual bottleneck, and has been for a while.
+    </p>
+  </div>
+</section>
+
+<!-- ============================================ 07 -->
+<section>
+  <h2><span class="num">07 — what we would do next</span></h2>
+  <ul>
+    <li><strong>Strip it back further.</strong> If a plain average matches learned attention, test whether the three similarity numbers alone match the whole 32-dimensional interaction block. The simple version keeps winning; find its floor. Free to run.</li>
+    <li><strong>Keep the per-ask verdicts regardless of accuracy.</strong> They let the product say <em>"we introduced Garrett because you asked for brand-side operations leaders."</em> Nothing else we have built can produce that sentence.</li>
+    <li><strong>Stop buying embeddings.</strong> Two independent measurements now say dense semantics do not move this problem. Spend on labelled outcomes instead.</li>
+  </ul>
+</section>
+
+<footer>
+  Cross-validated on 131 real accept/decline outcomes; final holdout unspent.
+  Code: <code>moe_sectioned/</code> · full tables:
+  <code>docs/moe-sectioned-experiment.md</code> · the pre-experiment proposal,
+  kept unedited: <a href="moe-sectioned-plan.html">moe-sectioned-plan.html</a>.
+</footer>
+
+</div>

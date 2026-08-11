@@ -1,0 +1,54 @@
+{
+  "id": 245,
+  "archetype": "Enterprise Product - Healthcare/SaaS",
+  "given_name": "Emeka Haddad",
+  "style_version": 15,
+  "archetypes_version": 40,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Emeka Haddad is a seasoned product leader with a unique trajectory. He spent the first half of his career in financial technology (FinTech) at large enterprise SaaS companies like BlackRock and FIS, specializing in risk management and compliance platforms. About 5 years ago, he pivoted *into* healthcare, driven by a personal experience with a family member\u2019s complex care journey. He\u2019s now focused on applying his SaaS expertise to solve significant problems in the healthcare space, specifically around interoperability and patient data management. He's a strategic thinker, comfortable navigating complex regulatory landscapes, and is looking for a leadership role where he can build and scale a healthcare-focused product. He\u2019s not looking for a \u2018disruptive\u2019 startup; he wants to leverage established infrastructure and drive meaningful change within existing systems. He\u2019s a quiet leader, preferring to empower his teams and let their work speak for itself. He values data-driven decision-making and has a knack for translating technical complexities into clear business value. He\u2019s actively seeking connections to VPs and Directors of Product at established healthcare providers and large healthcare SaaS companies.",
+    "positioning": "A highly accomplished and results-oriented product leader, Emeka Haddad brings over 15 years of experience building and scaling enterprise SaaS solutions, with a focused transition into the healthcare technology sector five years ago. My career has been defined by a commitment to leveraging technology to solve complex business challenges, initially within the highly regulated financial services industry, and now within the equally complex healthcare landscape. I excel at bridging the gap between technical innovation and strategic business objectives, consistently delivering products that drive measurable impact. Currently, I lead product strategy and execution for a suite of interoperability solutions at Stellar Health Systems, focused on streamlining data exchange between hospitals, payers, and patients. Prior to Stellar, I honed my skills at BlackRock and FIS, where I was instrumental in developing and launching risk management platforms used by Fortune 500 companies. I am passionate about applying my expertise to improve patient outcomes, reduce healthcare costs, and enhance the overall care experience. I\u2019m particularly interested in opportunities that allow me to leverage my understanding of data security, compliance (HIPAA, GDPR), and API integration to build scalable and impactful healthcare solutions. I see a significant opportunity to leverage the advancements in cloud computing, AI, and machine learning to create a more connected and efficient healthcare ecosystem, and I am eager to contribute my leadership and expertise to an organization that shares this vision.",
+    "background": "- **Stellar Health Systems, Director of Product, Interoperability (2019 \u2013 Present):** Led the product roadmap and execution for a suite of interoperability solutions, resulting in a 30% increase in data exchange efficiency and a 15% reduction in administrative costs for partner hospitals. Managed a team of 8 product managers and designers. Championed the adoption of FHIR standards and developed a robust API integration strategy.\n- **FIS, Senior Product Manager, Risk & Compliance (2015 \u2013 2019):** Led the development and launch of a new risk management platform for financial institutions, achieving 20% market share within the first year. Collaborated with engineering, marketing, and sales teams to define product requirements and go-to-market strategy. Managed a budget of $2M.\n- **BlackRock, Product Manager, Aladdin Platform (2012 \u2013 2015):** Contributed to the evolution of the Aladdin platform, a leading investment management system. Focused on enhancing data analytics and reporting capabilities. Gained extensive experience in Agile development methodologies.\n- **Citigroup, Associate, Technology (2008 \u2013 2012):** Supported the development and implementation of trading systems. Developed strong analytical and problem-solving skills.",
+    "lookingFor": "- Director or VP of Product roles focused on healthcare SaaS.\n- Companies with established market presence and a commitment to innovation, specifically in areas like patient data management, population health, or value-based care.\n- Opportunities to leverage my experience with interoperability standards (FHIR, HL7).\n- Connections to product leaders at large healthcare providers (e.g., Kaiser Permanente, Mayo Clinic) and healthcare technology companies (e.g., Epic Systems, Cerner).\n- Seeking introductions to individuals responsible for strategic product planning and innovation within healthcare organizations.\n- Open to roles that involve building and scaling product teams.",
+    "notes": "Emeka is a thoughtful and deliberate communicator. He\u2019s not one to jump into quick decisions, preferring to analyze data and gather input from his team. He mentioned a strong desire to find a company with a positive culture and a clear sense of purpose. He\u2019s particularly interested in companies that are actively working to address health equity issues. He attended the HIMSS conference in March and expressed excitement about the potential of AI in healthcare, but also cautioned against hype. He's currently reading 'The Innovator's Dilemma'. Last conversation (4/26/2024) - confirmed still actively looking, prioritizing companies with strong data governance frameworks. He is available for a quick chat next week.",
+    "locationAvailability": "Currently based in Boston, Massachusetts, and open to remote work or relocation for the right opportunity. I am flexible regarding location and prioritize finding a role that aligns with my career goals.",
+    "introPreferences": "- **Hard Requirements:** Introductions to VPs or Directors of Product at companies with >$500M annual revenue in the healthcare technology space.\n- **Soft Preferences:** Individuals with a strong understanding of interoperability standards and a demonstrated track record of building successful healthcare SaaS products.\n- **Desired Introduction Style:** A warm, personalized introduction that highlights my relevant experience and expresses my genuine interest in the company and the individual's work.  Please share a brief context on *why* you think we'd connect well.\n- **Avoid:** Introductions to recruiters or individuals in sales/marketing roles. I prefer to connect directly with product leaders.",
+    "personalPreferences": "I prefer email for initial contact and am generally responsive during business hours. I\u2019m a morning person and often schedule calls before noon. I value concise and data-driven communication. I am not a fan of overly formal networking events and prefer more intimate, focused conversations. I check LinkedIn daily.",
+    "meetingAndSchedulingPreferences": "I am flexible with meeting formats (video call, phone call) and am comfortable using a variety of scheduling tools."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 23.44985604286194,
+      "input_tokens": 812,
+      "output_tokens": 1346,
+      "problems": []
+    }
+  ],
+  "success": true
+}

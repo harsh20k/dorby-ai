@@ -1,0 +1,54 @@
+{
+  "id": 568,
+  "archetype": "Toronto-Based Tech Founder/Operator",
+  "given_name": "Nadia Sokolov",
+  "style_version": 35,
+  "archetypes_version": 95,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Nadia Sokolov is a repeat founder currently focused on scaling 'Synapse Solutions', a B2B SaaS platform focused on predictive analytics for supply chain resilience. Her distinctive career detail is a previous, quietly successful exit from a logistics tech company she founded in university, which gave her early access to capital and a strong network, but also a desire to build something more impactful. She's now looking to leverage her network for strategic partnerships, mentorship around scaling a Series A company, and potential investors for a future Series B. She's pragmatic, data-driven, and values genuine connection over superficial networking. She's based in Toronto and actively involved in the local tech ecosystem.",
+    "positioning": "Nadia Sokolov is a technology leader and serial entrepreneur dedicated to building resilient and intelligent supply chains. As the Founder & CEO of Synapse Solutions, I\u2019m focused on empowering businesses to anticipate and mitigate disruptions through advanced predictive analytics. My background blends a deep technical understanding of data science with a proven track record of scaling successful SaaS businesses.  I\u2019m passionate about the intersection of technology and operational efficiency, and believe that proactive risk management is the key to long-term success in today\u2019s volatile global landscape.  \n\nI\u2019m actively seeking connections with industry experts, potential strategic partners, and investors who share this vision. I particularly value individuals who can offer insights into navigating the complexities of Series A/B fundraising, scaling engineering teams, and expanding into new market segments. I aim to be seen as a thought leader in supply chain technology and a collaborative partner for organizations seeking to optimize their operations.  I welcome introductions to individuals at Fortune 500 companies facing significant supply chain challenges, as well as VCs specializing in B2B SaaS and AI/ML.  Ultimately, I want to be positioned as a resourceful and forward-thinking leader driving innovation in a critical industry.",
+    "background": "* **Founder & CEO, Synapse Solutions** (Toronto, ON) \u2013 January 2021 \u2013 Present\n    * Led the development and launch of Synapse Solutions, a B2B SaaS platform leveraging machine learning to predict and mitigate supply chain disruptions. \n    * Secured $3.5M in seed funding from leading venture capital firms, including Amplify Ventures and Radical Ventures.\n    * Built and scaled a team of 20+ engineers, data scientists, and sales professionals.\n    * Achieved 300% YoY revenue growth in the last fiscal year, onboarding key clients in the automotive and pharmaceutical industries.\n    * Responsible for all aspects of company strategy, operations, and fundraising.\n    * Key technologies utilized: Python, TensorFlow, AWS (S3, EC2, Lambda), PostgreSQL, React.\n\n* **Founder & CEO, LogiFlow Technologies** (Waterloo, ON) \u2013 September 2016 \u2013 December 2020\n    * Founded LogiFlow Technologies, a logistics optimization platform utilizing real-time tracking and route planning.\n    * Developed and implemented a proprietary algorithm that reduced delivery times by an average of 15% for clients.\n    * Successfully exited the company through acquisition by a larger logistics firm (details confidential) in December 2020.\n    * Managed a team of 8 developers and operations personnel.\n    * Key technologies utilized: Java, SQL, Google Maps API, Android Development.\n\n* **Software Engineering Intern, Shopify** (Waterloo, ON) \u2013 Summer 2015\n    * Contributed to the development of Shopify\u2019s inventory management system.\n    * Gained experience with Agile development methodologies and collaborative coding practices.\n    * Implemented unit tests and participated in code reviews.\n\n* **Undergraduate Research Assistant, University of Waterloo** (Waterloo, ON) \u2013 September 2014 \u2013 April 2016\n    * Assisted Professor Emily Carter in researching machine learning applications for predictive maintenance.\n    * Developed and tested algorithms for anomaly detection in industrial equipment.\n    * Published research findings in a peer-reviewed conference paper.",
+    "lookingFor": "I\u2019m actively seeking connections to accelerate the growth of Synapse Solutions and expand our impact on the supply chain industry. Specifically, I\u2019m looking for:\n\n* **Strategic Partnerships:** Introductions to VP-level or C-level executives at large organizations (Fortune 500) experiencing significant supply chain vulnerabilities. We\u2019re particularly interested in the automotive, pharmaceutical, and electronics sectors.\n* **Series B Investors:**  Connections to venture capital firms specializing in B2B SaaS and AI/ML.  We\u2019re targeting a $15-20M Series B round in Q1 2025.\n* **Mentorship:**  Guidance from experienced SaaS founders who have successfully scaled companies through Series A and beyond.  I'm particularly interested in learning best practices for building high-performing engineering teams and navigating complex sales cycles.\n* **Industry Experts:**  Individuals with deep knowledge of supply chain management, predictive analytics, and risk mitigation. I\u2019m keen to exchange insights and explore potential collaborations.\n* **Talent:** Referrals for experienced Data Scientists (specializing in time series analysis) and Full-Stack Engineers proficient in React and AWS. \n\nI value quality over quantity in my network. I\u2019m prioritizing connections with individuals who are genuinely interested in collaborating and contributing to the success of Synapse Solutions.  I'm open to virtual coffee chats and informational interviews.",
+    "notes": "* Had a great conversation with David Chen (Amplify Ventures) last week \u2013 he suggested connecting with Sarah Lee at Intel for potential partnership opportunities. Follow up next week.\n*  Currently exploring integration possibilities with SAP Ariba. Need to research their API documentation.\n*  Attending the Supply Chain Innovation Summit in Chicago next month.  Looking to connect with potential clients and partners.\n*  Prioritize following up with introductions to potential advisors suggested by Emily Carter.\n*  Research potential candidates for Data Science role \u2013 focus on candidates with experience in anomaly detection.",
+    "locationAvailability": "Nadia Sokolov is based in Toronto, Ontario, and is open to both remote and in-person meetings. She frequently travels for conferences and client engagements.",
+    "introPreferences": "* When making introductions, please provide a brief context explaining why the connection would be mutually beneficial.  Focus on shared interests or potential synergies.\n* I prefer concise and professional introductions \u2013 avoid overly lengthy emails or subjective opinions.\n* Please include a LinkedIn profile link for both parties.\n*  I\u2019m most receptive to introductions facilitated by individuals I have a pre-existing relationship with.\n*  I *do not* appreciate cold introductions or unsolicited pitches.  A warm introduction based on a genuine connection is always preferred.\n* Please avoid introducing me to individuals solely seeking funding without a clear understanding of Synapse Solutions' value proposition.",
+    "personalPreferences": "I prefer to connect via LinkedIn initially. Email is also acceptable for more detailed communication. I generally respond to messages within 24-48 hours. I'm a big coffee drinker, so feel free to suggest virtual coffee chats!",
+    "meetingAndSchedulingPreferences": "Please send a brief agenda or overview of the proposed meeting topic in advance. I appreciate thoughtful preparation and efficient use of time.  I'm typically available for meetings between 10 AM and 4 PM EST."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 29.489444971084595,
+      "input_tokens": 863,
+      "output_tokens": 1566,
+      "problems": []
+    }
+  ],
+  "success": true
+}

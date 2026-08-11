@@ -1,0 +1,54 @@
+{
+  "id": 171,
+  "archetype": "Fintech/Payments Builder, Global Ambition",
+  "given_name": "Maria Chen",
+  "style_version": 11,
+  "archetypes_version": 28,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Maria Chen is a seasoned product leader in the cross-border payments space. She\u2019s currently building \u2018NovaPay\u2019, a platform designed to drastically reduce friction and costs for SMEs sending and receiving payments internationally. A distinctive element of her career is a two-year stint embedded within a major central bank's digital currency initiative \u2013 a period that gave her unique insight into regulatory landscapes and the future of money. She's now laser-focused on securing pilot programs with key merchants and raising a Series A round, so is aggressively networking for both. She\u2019s ambitious, globally-minded, and values data-driven decision-making. She's pragmatic but optimistic about the future of fintech. She\u2019s a firm believer in open APIs and interoperability.",
+    "positioning": "Maria Chen is a dynamic product leader specializing in the evolution of global payments infrastructure. As Founder & CEO of NovaPay, she is spearheading the development of a next-generation platform designed to empower small and medium-sized enterprises with seamless and cost-effective cross-border payment solutions. Prior to NovaPay, Maria held leadership roles at both established fintech firms and within the innovation arm of a major central bank, where she contributed to research and development surrounding Central Bank Digital Currencies (CBDCs). This experience provided her with a deep understanding of the regulatory complexities and emerging opportunities within the financial landscape. Maria\u2019s core competency lies in identifying pain points in existing payment systems and architecting innovative solutions that leverage emerging technologies to deliver tangible value to businesses. She is passionate about fostering financial inclusion and building a more efficient and accessible global economy.",
+    "background": "- **Founder & CEO, NovaPay** (2023 \u2013 Present)\n -- Leading all aspects of product strategy, development, and go-to-market for a cross-border payments platform targeting SMEs.\n -- Secured seed funding of $1.5M. Building initial MVP and onboarding first pilot customers.\n -- Technologies: React, Node.js, PostgreSQL, AWS, Stripe Connect.\n- **Product Manager, Ripple** (2020 \u2013 2023)\n -- Managed the development and launch of new features within RippleNet, focused on improving liquidity and reducing transaction costs.\n -- Collaborated with engineering, design, and marketing teams to deliver user-centric solutions.\n -- Technologies: Python, SQL, Jira, Confluence, Agile methodologies.\n- **Innovation Specialist, Central Bank of [Fictional Country - Eldoria]** (2018 \u2013 2020)\n -- Embedded within the Central Bank\u2019s digital currency research team, contributing to the design and testing of a potential CBDC.\n -- Conducted market research and analysis on the impact of digital currencies on monetary policy.\n -- Technologies: Blockchain fundamentals, cryptography, data analysis tools.\n- **Education:**\n -- MBA, Stanford Graduate School of Business (2016 \u2013 2018)\n -- BS, Computer Science, Massachusetts Institute of Technology (2012 \u2013 2016)\n- **Certifications:**\n -- Certified Scrum Product Owner (CSPO)\n -- Payments Risk Professional (PRP)",
+    "lookingFor": "I\u2019m actively seeking connections to accelerate NovaPay\u2019s growth. Specifically, I\u2019m looking to engage with:\n\n*   **Potential Pilot Customers:** SMEs with significant cross-border payment needs, particularly those in the e-commerce, import/export, and freelance sectors. I\u2019m keen to understand your current payment challenges and explore how NovaPay can provide a more efficient and cost-effective solution.\n*   **Strategic Partners:** Companies with complementary technologies or market reach in the payments ecosystem, such as FX providers, remittance companies, or logistics firms.\n*   **Series A Investors:** Venture capital firms with a proven track record of investing in fintech companies, particularly those focused on payments and blockchain technology.\n\n\n**Do:** Reach out if you have direct experience with cross-border payments, a strong network within the fintech industry, or are an investor actively deploying capital in the space.\n\n**Don\u2019t:** Contact me with unsolicited marketing materials, recruitment offers (unless for very senior engineering roles), or requests for general advice on starting a business. I\u2019m focused on specific, strategic opportunities at this time.",
+    "notes": "Maria is incredibly focused and data-driven. She's very articulate about NovaPay's value proposition and has a clear vision for the future of cross-border payments. She mentioned a slight preference for introductions that highlight the potential for scaling NovaPay's technology, particularly its API integration capabilities. She is currently prioritizing connections in the Southeast Asia market. Initial conversation indicated she\u2019s less interested in purely crypto-focused investors.",
+    "locationAvailability": "Based in San Francisco, CA (Pacific Time). Open to travel within North America and Europe for key meetings.",
+    "introPreferences": "When making an introduction, please:\n\n*   **Hard Requirement:** Clearly state the recipient\u2019s relevance to NovaPay\u2019s current needs (pilot customers, investors, strategic partners).\n*   **Soft Preference:** Briefly mention my background at Ripple and the Central Bank of Eldoria to establish credibility.\n*   **Intro Style:** Keep the introduction concise and focused on the potential mutual benefit. A short email or LinkedIn message is preferred. Avoid lengthy explanations or excessive flattery.\n*   **Emphasize:** NovaPay\u2019s focus on reducing friction and costs for SMEs, and its commitment to open APIs and interoperability.",
+    "personalPreferences": "Prefers asynchronous communication (email/Slack) for initial outreach. Values directness and transparency.",
+    "meetingAndSchedulingPreferences": "*   Please include a brief agenda when requesting a meeting.\n*   I typically respond to meeting requests within 24-48 hours.\n*   I have limited availability on Fridays. \n*   Calendar access is granted only after initial contact and a clear understanding of the meeting purpose."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 17.15038514137268,
+      "input_tokens": 872,
+      "output_tokens": 1251,
+      "problems": []
+    }
+  ],
+  "success": true
+}

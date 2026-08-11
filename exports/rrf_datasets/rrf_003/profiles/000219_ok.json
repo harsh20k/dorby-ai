@@ -1,0 +1,54 @@
+{
+  "id": 219,
+  "archetype": "AI-First Behavioral Data Founder",
+  "given_name": "Leilani Yamamoto",
+  "style_version": 14,
+  "archetypes_version": 36,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Leilani Yamamoto is a 28-year-old founder and CEO of 'Synapse Insights,' a pre-seed startup developing a consumer-facing AI product that analyzes user behavior across various digital platforms to provide personalized insights for self-improvement. She has a strong background in behavioral psychology and machine learning, having previously worked as a data scientist at a large tech company. A distinctive detail is that she self-taught much of her early ML skills through competitive Kaggle challenges, giving her a practical, hands-on approach. She's currently laser-focused on securing seed funding and building out her core engineering team. She's very active in the AI/ML community and presents herself as a thought leader in the emerging field of behavioral AI. She's approachable but intensely driven and values direct communication.",
+    "positioning": "Leilani Yamamoto is the Founder and CEO of Synapse Insights, an AI-powered platform helping individuals understand and improve their daily habits through behavioral data analysis. We\u2019re building the future of self-awareness, translating complex data into actionable insights. Currently focused on securing seed funding to scale our platform and expand our engineering team, I\u2019m passionate about the intersection of behavioral science, machine learning, and ethical AI development. I'm actively seeking connections with investors, advisors, and engineers who share our vision for a more data-driven approach to personal growth. I frequently speak on behavioral AI and am always open to discussing industry trends and potential collaborations.",
+    "background": "- **Founder & CEO, Synapse Insights** (Jan 2023 \u2013 Present)\n  * Led all aspects of startup development, from ideation and product design to fundraising and team building.\n  * Developed core algorithms for behavioral pattern recognition using Python, TensorFlow, and PyTorch.\n  * Secured initial pre-seed funding of $150k.\n  * Built and launched a beta version of the Synapse Insights mobile application.\n- **Data Scientist, NovaTech Solutions** (June 2020 \u2013 Dec 2022)\n  * Developed and deployed machine learning models for customer churn prediction, resulting in a 15% reduction in churn rate.\n  * Conducted A/B testing and statistical analysis to optimize marketing campaigns.\n  * Collaborated with cross-functional teams to integrate data science solutions into existing products.\n- **Research Assistant, Stanford Behavioral Psychology Lab** (Sept 2018 \u2013 May 2020)\n  * Assisted with research studies on cognitive biases and decision-making.\n  * Analyzed large datasets using R and SPSS.\n  * Co-authored a research paper published in the *Journal of Behavioral Economics*.\n- **Education:**\n  * **M.S., Computational Social Science**, Stanford University (2018 \u2013 2020)\n  * **B.A., Psychology**, University of California, Berkeley (2014 \u2013 2018)\n- **Skills:** Python, TensorFlow, PyTorch, R, SQL, Data Visualization (Tableau, Matplotlib), Machine Learning, Behavioral Psychology, Statistical Analysis, A/B Testing, Product Management, Fundraising.",
+    "lookingFor": "- **Seed Investors:** Actively seeking investors with a focus on AI, consumer tech, and behavioral science.  Target check sizes: $500k - $1M.\n- **AI/ML Engineers:** Looking to connect with experienced engineers specializing in machine learning, particularly those with a passion for building consumer-facing products.  Specifically need expertise in scalable backend infrastructure.\n- **Advisors:** Seeking advisors with experience in scaling early-stage startups, particularly in the AI/ML space.  Experience with user acquisition and growth marketing is highly valued.\n- **Connections to potential partners:**  Exploring potential partnerships with companies in the wellness, productivity, and self-improvement industries.\n- I\u2019m open to informational calls with anyone working on interesting applications of behavioral AI.  I\u2019m always eager to learn from others in the field.",
+    "notes": "Leilani is a highly driven and articulate founder. She's incredibly knowledgeable about the technical aspects of her product, but also deeply understands the psychology behind user behavior. She's very responsive and appreciates direct communication. She's mentioned struggling to find engineers with both strong technical skills *and* a genuine interest in behavioral science. Follow up on potential investor introductions from the last AI conference.",
+    "locationAvailability": "Based in San Francisco, California, with a focus on networking within the Bay Area and remotely with investors and talent globally.",
+    "introPreferences": "Hard Requirements: Please prioritize introductions to seed-stage investors actively deploying capital in AI/ML and consumer tech. Please *exclude* introductions to venture capitalists solely focused on enterprise software.\nSoft Preferences: When making introductions, please briefly highlight the potential synergies between Synapse Insights and the recipient\u2019s portfolio or expertise.  A short, personalized note emphasizing Leilani\u2019s background in both behavioral science and machine learning is ideal.  Introductions to engineers should emphasize the opportunity to work on a cutting-edge consumer product with a meaningful impact.  Avoid overly formal introductions; Leilani prefers a conversational and direct approach.",
+    "personalPreferences": "I prefer initial contact via LinkedIn or email. I\u2019m generally available for quick calls but prefer to schedule longer meetings in advance.  I\u2019m not currently active on Twitter.",
+    "meetingAndSchedulingPreferences": "I'm generally available for meetings during weekdays, PST. I prefer video calls (Zoom or Google Meet) over phone calls whenever possible. Please include a brief agenda when requesting a meeting."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 16.53881287574768,
+      "input_tokens": 755,
+      "output_tokens": 1183,
+      "problems": []
+    }
+  ],
+  "success": true
+}

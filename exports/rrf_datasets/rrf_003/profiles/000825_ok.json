@@ -1,0 +1,54 @@
+{
+  "id": 825,
+  "archetype": "Healthcare AI & Value-Based Care Leader",
+  "given_name": "Theo Suzuki",
+  "style_version": 50,
+  "archetypes_version": 139,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Theo Suzuki is a Director of AI Strategy at a mid-sized, regional integrated health system (Coastal Health Alliance). He\u2019s spent the last 15 years in healthcare, starting in data analytics and progressively moving into AI implementation. A distinctive detail is his prior experience *running* a small, rural primary care clinic for three years after completing his MBA \u2013 this gives him a unique, grounded perspective on the challenges faced by frontline providers. He's currently focused on scaling AI-powered tools to improve care coordination and reduce readmissions within Coastal Health\u2019s accountable care organization (ACO). He\u2019s actively looking to connect with other healthcare leaders implementing AI, particularly those with experience in value-based care, and is open to advising early-stage healthcare AI startups. He's generally approachable but dislikes overly 'hype-y' conversations about AI and prefers practical discussions about ROI and measurable impact.",
+    "positioning": "Theo Suzuki leads the development and implementation of artificial intelligence strategies at Coastal Health Alliance, driving improvements in clinical outcomes and operational efficiency. He specializes in translating complex AI concepts into actionable solutions that address real-world healthcare challenges, particularly within value-based care arrangements. Theo leverages his deep understanding of healthcare workflows and data analytics to identify opportunities for AI to enhance care coordination, personalize treatment plans, and reduce costs. He\u2019s passionate about empowering clinicians with data-driven insights and believes AI should augment, not replace, human expertise. He's a dedicated advocate for responsible AI deployment, emphasizing ethical considerations and patient privacy.",
+    "background": "- **Director of AI Strategy, Coastal Health Alliance** (2021 \u2013 Present)\n  * Led the development and execution of the organization\u2019s AI strategy, resulting in a 15% reduction in 30-day readmission rates for heart failure patients through predictive modeling.\n  * Secured $2M in funding for AI-powered care management platform implementation.\n  * Built and mentored a team of data scientists and AI engineers.\n\n- **Senior Manager, Data Analytics, InnovaCare** (2018 \u2013 2021)\n  * Developed and maintained dashboards and reports to track key performance indicators (KPIs) related to value-based care contracts.\n  * Led the analysis of patient data to identify trends and opportunities for improvement in care delivery.\n  * Collaborated with clinical teams to implement data-driven interventions.\n\n- **Clinic Manager/Owner, Willow Creek Family Practice** (2015 \u2013 2018) \u2013 *Rural primary care clinic; self-funded startup*\n  * Managed all aspects of clinic operations, including patient care, billing, and staffing.\n  * Implemented electronic health record (EHR) system and streamlined workflows.\n  * Grew patient volume by 20% through community outreach and marketing efforts.\n\n- **Data Analyst, Providence Hospital** (2012 \u2013 2015)\n  * Performed statistical analysis of patient data to support research and quality improvement initiatives.\n  * Developed and maintained databases for clinical and administrative data.\n\n- **MBA, University of Washington** (2010 \u2013 2012)\n- **BS, Biology, Stanford University** (2006 \u2013 2010)",
+    "lookingFor": "- Healthcare leaders actively implementing AI/ML solutions in value-based care settings.\n- Professionals with expertise in natural language processing (NLP) applied to clinical documentation.\n- Founders/CEOs of early-stage healthcare AI startups focused on care coordination or chronic disease management.\n- Individuals interested in discussing best practices for responsible AI deployment in healthcare.\n- Mentorship opportunities \u2013 Theo is keen to both offer and receive mentorship related to AI strategy.\n- Thought leaders in the intersection of AI and health equity.\n- Networking with experts in patient risk stratification and predictive analytics.",
+    "notes": "Theo is incredibly pragmatic and doesn\u2019t suffer fools gladly. He\u2019s been burned by overly optimistic AI vendors in the past. Focus conversations on *demonstrable* ROI and real-world impact. He\u2019s very open to sharing his experiences at Coastal Health, especially regarding the challenges of integrating AI into existing clinical workflows. \n\n*   He's currently reading 'The Alignment Problem' by Brian Christian.\n*   He recently presented at the HIMSS conference on the use of AI to reduce hospital readmissions.\n*   Avoid buzzwords; he'll call you out on them. \n*   He\u2019s a big fan of cycling and often incorporates it into weekend travel for conferences.",
+    "locationAvailability": "Based in Seattle, Washington. Available for virtual meetings and occasional travel within the Western US.",
+    "introPreferences": "- Only introduce Theo to people with a *specific* and *relevant* AI application or expertise.\n- Avoid introductions to sales or marketing representatives unless they can demonstrate a deep understanding of healthcare workflows.\n- Highlight the potential for mutual learning and collaboration in the introduction.\n- Briefly mention any shared connections or common interests.\n- Do *not* introduce him to anyone pitching 'general purpose' AI solutions \u2013 he wants specifics.\n- A short, personalized note explaining *why* you think the connection would be valuable is highly appreciated.",
+    "personalPreferences": "Prefers email for initial contact; happy to move to Zoom after a brief exchange.",
+    "meetingAndSchedulingPreferences": "- Prefers 30-minute meetings to start.\n- Generally unavailable on Friday afternoons."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 19.612746000289917,
+      "input_tokens": 762,
+      "output_tokens": 1156,
+      "problems": []
+    }
+  ],
+  "success": true
+}

@@ -1,0 +1,54 @@
+{
+  "id": 727,
+  "archetype": "Global Strategic Advisor/Consultant",
+  "given_name": "Jamal Vargas",
+  "style_version": 44,
+  "archetypes_version": 122,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Jamal Vargas is a former VP at a major international bank (Deutsche Bank) who transitioned to independent consulting after leading a successful restructuring project in Southeast Asia. He\u2019s now a strategic advisor, focusing on fintech and insurtech startups seeking to expand internationally, particularly into emerging markets. His distinctive career detail is his deep understanding of regulatory landscapes in Asia and his fluency in multiple languages. He's currently focused on building a portfolio of high-growth startups he can actively mentor and potentially invest in, leveraging his network and experience to accelerate their global expansion. He\u2019s not looking for a full-time role, but rather selective engagements where he can make a significant impact. He presents as highly competent, direct, and values efficiency. He\u2019s a \u2018roll up your sleeves\u2019 type who prefers to quickly assess a situation and offer actionable advice.",
+    "positioning": "Jamal Vargas is a globally-focused strategic advisor specializing in market entry and expansion for fintech and insurtech companies. With over fifteen years of experience in international banking and management consulting, I help startups navigate the complexities of global operations, particularly within emerging markets. I\u2019ve recently completed a significant engagement advising a Series B fintech firm on its successful expansion into Indonesia, resulting in a 300% increase in user acquisition within the first six months. My expertise lies in bridging the gap between innovative technology and the often-challenging regulatory environments of high-growth regions. I\u2019m currently seeking to partner with ambitious founders who are poised to disrupt their respective industries and are looking for a seasoned advisor to accelerate their international growth. Connecting with me now offers access to a proven track record of success, a deep network of regional contacts, and a pragmatic approach to overcoming the hurdles of global expansion.",
+    "background": "- **Deutsche Bank, Vice President, Global Transaction Banking (2010 \u2013 2022)**\n  - Led cross-functional teams in the development and implementation of new banking products and services across Southeast Asia, focusing on digital payment solutions and trade finance.\n  - Managed a portfolio of over 50 corporate clients with combined annual revenue exceeding $2 billion.\n  - Spearheaded a successful restructuring initiative in Indonesia, improving operational efficiency by 25% and reducing costs by 18%.\n  - Consistently exceeded annual revenue targets, achieving an average growth rate of 15% year-over-year.\n  - Developed and maintained strong relationships with key regulatory bodies in the region.\n\n- **McKinsey & Company, Management Consultant (2007 \u2013 2010)**\n  - Advised Fortune 500 clients on strategic initiatives across various industries, including financial services, retail, and consumer goods.\n  - Conducted extensive market research and analysis to identify growth opportunities and develop innovative solutions.\n  - Led project teams in the implementation of strategic recommendations, ensuring successful execution and measurable results.\n  - Developed expertise in financial modeling, data analysis, and project management.\n\n- **JPMorgan Chase, Financial Analyst (2005 \u2013 2007)**\n  - Supported senior management in the analysis of financial data and the preparation of business reports.\n  - Assisted in the development of financial models and forecasts.\n  - Gained experience in various aspects of investment banking, including mergers and acquisitions, and capital markets.\n\n- **Education:**\n  - **MBA, Harvard Business School (2005)** \u2013 Concentrated in Finance and Strategy.\n  - **BA, Economics, Yale University (2003)** \u2013 *Summa Cum Laude*.\n\n- **Certifications:**\n  - Chartered Financial Analyst (CFA)\n  - Project Management Professional (PMP)",
+    "lookingFor": "- Introductions to Series A and Series B fintech/insurtech startups with ambitious international expansion plans.\n- Connections with venture capitalists and angel investors focused on emerging markets.\n- Opportunities to serve as an advisor or board member to high-growth startups.\n- Founders actively seeking guidance on navigating regulatory hurdles in Southeast Asia and Latin America.\n- Individuals with expertise in cross-border payments, digital lending, and blockchain technology.\n- Discussions around the future of financial services in emerging economies.\n- *Not* interested in roles requiring significant travel to North America \u2013 focus is entirely on international markets.",
+    "notes": "Jamal is incredibly direct and efficient in his communication. He appreciates concise updates and a clear articulation of challenges and opportunities. He\u2019s a \u2018problem solver\u2019 at heart and expects a similar mindset from those he engages with. During our initial call, he emphasized the importance of demonstrable traction and a well-defined go-to-market strategy. He's less interested in 'idea stage' ventures. He's a strong networker but prefers quality over quantity in his connections. He\u2019s currently exploring potential angel investments in a couple of startups he\u2019s advising, so be mindful of potential conflicts of interest when making introductions.  He mentioned a particular interest in startups leveraging AI for financial inclusion.",
+    "locationAvailability": "Based in Singapore, with frequent travel throughout Southeast Asia and Latin America.",
+    "introPreferences": "- Warm email introductions are preferred, with a brief summary of the connection's relevant experience and why they are reaching out.\n- Please include a link to their LinkedIn profile and a concise pitch deck or executive summary.\n- Highlight any specific challenges they are facing with international expansion.\n- *Do not* introduce Jamal to individuals who are solely seeking funding without a clear business plan or demonstrable traction.\n- Avoid introductions to companies that are already well-established multinational corporations.",
+    "personalPreferences": "Prefers concise and data-driven communication. Follow-up via LinkedIn is acceptable.",
+    "meetingAndSchedulingPreferences": "Generally available for 30-minute video calls. Please provide a suggested time slot and a brief agenda in advance."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 17.003883123397827,
+      "input_tokens": 751,
+      "output_tokens": 1237,
+      "problems": []
+    }
+  ],
+  "success": true
+}

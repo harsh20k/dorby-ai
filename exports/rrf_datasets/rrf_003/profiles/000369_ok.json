@@ -1,0 +1,54 @@
+{
+  "id": 369,
+  "archetype": "Fintech Operator Turned Founder",
+  "given_name": "Leilani Haruna",
+  "style_version": 23,
+  "archetypes_version": 61,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Leilani Haruna is a 34-year-old former Head of Payments Risk at a mid-sized neobank, now founding \u2018AetherPay\u2019, a fintech startup focused on embedded finance solutions for the creator economy. She\u2019s deeply technical in risk and compliance, but recognized a significant gap in the market for streamlined payment rails *specifically* tailored to the needs of individual creators and small businesses operating within platforms like Patreon, Substack, and Twitch. Her distinctive career detail is a six-month sabbatical spent volunteering with a microfinance organization in Kenya, which solidified her belief in democratizing financial access \u2013 a core tenet of AetherPay. She's currently fundraising (Seed round) and building out her core engineering team. She\u2019s laser-focused on finding investors and advisors who understand both the complexities of payments *and* the nuances of the creator landscape. She's highly analytical, data-driven, and not afraid to challenge conventional wisdom.",
+    "positioning": "I am the founder and CEO of AetherPay, a fintech startup building the next-generation payment infrastructure for the creator economy. Having spent the last eight years immersed in the world of payments risk and compliance, I identified a critical need for more flexible and accessible financial solutions for independent creators and small businesses. At [Previous Company Name], I led a team responsible for mitigating over $50 million in potential fraud losses annually, while simultaneously improving user onboarding conversion rates by 15% through data-driven risk modeling. \n\nNow, at AetherPay, I\u2019m leveraging that expertise to create a platform that empowers creators to seamlessly accept payments, manage their finances, and scale their businesses. We\u2019re focused on embedded finance solutions, making it easy for platforms to integrate robust payment capabilities directly into their existing ecosystems. I'm passionate about building a more equitable financial system and unlocking the economic potential of the creator economy. \n\nMy background blends a strong technical foundation with a deep understanding of regulatory landscapes and a genuine commitment to financial inclusion. I\u2019m actively seeking strategic partnerships and investment to accelerate AetherPay\u2019s growth and impact.",
+    "background": "- **AetherPay**, Founder & CEO (2023 \u2013 Present)\n    - Led seed round fundraising efforts (currently in progress).\n    - Developed and validated core product vision and go-to-market strategy.\n    - Built initial MVP and secured early adopter clients.\n    - Focused on product development, team building, and investor relations.\n- **NovaBank**, Head of Payments Risk (2019 \u2013 2023)\n    - Managed a team of 10 risk analysts responsible for fraud prevention, AML compliance, and chargeback management.\n    - Reduced fraud losses by 20% year-over-year through implementation of machine learning-based risk scoring models.\n    - Improved user onboarding conversion rates by 15% by optimizing risk assessment processes.\n    - Led cross-functional collaboration with engineering, product, and legal teams.\n- **FinTech Solutions Inc.**, Risk Analyst (2017 \u2013 2019)\n    - Conducted risk assessments for new payment products and services.\n    - Monitored transaction data for suspicious activity and investigated potential fraud cases.\n    - Assisted in the development and implementation of AML compliance programs.\n- **Education:**\n    - **Stanford University**, MBA (2015 \u2013 2017), Concentration: Finance\n    - **University of California, Berkeley**, BA Economics (2011 \u2013 2015)\n- **Skills:** Payments, Risk Management, Fraud Prevention, AML Compliance, Data Analysis, Machine Learning, Python, SQL, Regulatory Compliance (PCI DSS, KYC), Financial Modeling, Leadership, Team Management, Startup Operations.",
+    "lookingFor": "- Seed-stage investors with experience in fintech and/or the creator economy.\n- Strategic advisors with expertise in payments infrastructure, regulatory compliance, or platform scaling.\n- Engineering talent with a strong background in backend development and payments processing (specifically, experience with Stripe Connect, Braintree, or similar platforms).\n- Connections to platform CEOs or heads of product within the creator economy (Patreon, Substack, Twitch, etc.).\n- Mentorship from experienced fintech founders.",
+    "notes": "Leilani is a highly driven and analytical individual. She's very focused on building a sustainable and ethical business. Caution: She can be quite critical of solutions that don't prioritize the needs of creators. Note: She\u2019s passionate about financial inclusion and is particularly interested in connecting with individuals who share that value. Important: She\u2019s currently very time-constrained due to fundraising and product development efforts. Be respectful of her time and come prepared with a clear value proposition. She is actively involved in the Women in Fintech community and frequently attends industry events.",
+    "locationAvailability": "I am currently based in San Francisco, California, but am open to remote work and travel. While I prefer to build AetherPay\u2019s core team in the Bay Area, I am flexible regarding the location of investors and advisors. I am willing to travel to meet with potential partners and investors as needed.",
+    "introPreferences": "- **Hard Requirements:** Introductions to seed-stage investors actively deploying capital in fintech or the creator economy. Introductions to engineering leads with proven experience building scalable payments infrastructure.\n- **Soft Preferences:** Introductions to platform CEOs or heads of product at major creator platforms (Patreon, Substack, Twitch, YouTube).\n- **Avoid:** Introductions to individuals offering purely marketing or PR services. Introductions to investors who are not familiar with the fintech landscape. Introductions to individuals who are not prepared to discuss specific investment terms or strategic partnership opportunities. Please frame introductions by highlighting my experience in payments risk and AetherPay\u2019s focus on the creator economy.",
+    "personalPreferences": "I generally respond quickest to emails. LinkedIn is great for initial connections, but please don\u2019t hesitate to reach out directly via email for more substantive conversations. I'm always happy to chat about the future of finance and the creator economy!",
+    "meetingAndSchedulingPreferences": "I prefer to schedule meetings via Calendly to streamline the process. I am generally available for video calls during standard business hours (PST). "
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 18.889306783676147,
+      "input_tokens": 795,
+      "output_tokens": 1321,
+      "problems": []
+    }
+  ],
+  "success": true
+}

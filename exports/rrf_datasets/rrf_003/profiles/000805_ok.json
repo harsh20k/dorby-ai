@@ -1,0 +1,63 @@
+{
+  "id": 805,
+  "archetype": "AI/Automation Focused Operator",
+  "given_name": "Kai Santos",
+  "style_version": 49,
+  "archetypes_version": 136,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Kai Santos is a Director of Automation & AI Strategy at a mid-sized logistics firm, 'SwiftRoute Solutions'. They previously spent 8 years as a hands-on data scientist, specializing in predictive modeling for supply chain optimization. A key detail: Kai spearheaded a successful internal 'AI Literacy' program at their previous company, recognizing a skills gap was hindering AI adoption. This experience shaped their current focus \u2013 not just *implementing* AI, but enabling organizations to *understand* and *benefit* from it. They are now looking to connect with vendors offering robust, explainable AI solutions, and with other leaders tackling similar organizational change challenges. They\u2019re also subtly exploring opportunities to consult on AI strategy, leaning towards engagements that involve both technical implementation and training/enablement.",
+    "positioning": "As Director of Automation & AI Strategy at SwiftRoute Solutions, I lead the development and execution of our company\u2019s AI roadmap, focused on optimizing logistics operations and enhancing customer experience. My core expertise lies in translating complex business challenges into actionable AI solutions, with a proven track record of delivering measurable ROI through data-driven insights. I specialize in leveraging machine learning, robotic process automation (RPA), and natural language processing (NLP) to streamline workflows, reduce costs, and improve decision-making. \n\nCurrently, I'm focused on scaling our AI initiatives across multiple departments, ensuring seamless integration with existing systems, and fostering a data-centric culture. My approach emphasizes explainable AI (XAI) \u2013 transparency and understanding are paramount. I work closely with cross-functional teams to identify opportunities, prioritize projects, and manage implementation, always keeping the end-user in mind. I target companies facing complex logistical challenges, particularly those seeking to improve efficiency, reduce errors, and gain a competitive edge through intelligent automation. We\u2019re actively evaluating solutions in areas like predictive maintenance, dynamic route optimization, and automated customer support.",
+    "background": "- **Director of Automation & AI Strategy, SwiftRoute Solutions** (2021 \u2013 Present)\n   * Responsible for developing and implementing the company\u2019s overall AI strategy, aligning with business objectives.\n   * Led a cross-functional team of data scientists, engineers, and business analysts.\n   * Successfully deployed an AI-powered demand forecasting model, resulting in a 15% reduction in inventory costs.\n   * Managed a budget of $500,000 for AI initiatives.\n   * Key technologies: Python (Scikit-learn, TensorFlow, PyTorch), AWS (SageMaker, Lambda, S3), Azure Machine Learning, RPA tools (UiPath, Automation Anywhere).\n\n- **Senior Data Scientist, Global Logistics Inc.** (2013 \u2013 2021)\n   * Developed and maintained predictive models for supply chain optimization, including demand forecasting, route optimization, and risk assessment.\n   * Led the development and implementation of an internal 'AI Literacy' program, training over 100 employees on basic AI concepts and applications. This resulted in a 30% increase in AI project proposals from non-technical teams.\n   * Collaborated with engineering teams to deploy models into production environments.\n   * Utilized statistical modeling, machine learning algorithms, and data visualization techniques to identify trends and insights.\n   * Tools & Technologies: R, Python (Pandas, NumPy, Matplotlib), SQL, Tableau, Hadoop, Spark.\n\n- **Education:**\n   * **Master of Science in Data Science,** University of California, Berkeley (2011 \u2013 2013)\n   * **Bachelor of Science in Mathematics,** Stanford University (2007 \u2013 2011)\n\n- **Skills:** Machine Learning, Deep Learning, Natural Language Processing (NLP), Robotic Process Automation (RPA), Data Visualization, Statistical Modeling, Predictive Analytics, Supply Chain Optimization, Data Mining, Python, R, SQL, AWS, Azure, XAI, Project Management, Stakeholder Management, Training & Development.",
+    "lookingFor": "I am actively seeking connections with individuals and organizations focused on leveraging AI to drive tangible business value. My priorities are threefold:\n\n1. **AI Solution Providers:** I'm particularly interested in vendors offering robust, scalable, and *explainable* AI solutions in the logistics and supply chain space. I\u2019m looking for partners who can demonstrate a clear understanding of our business challenges and offer solutions that integrate seamlessly with our existing infrastructure. Specifically, I'm exploring solutions for:\n   * Dynamic route optimization\n   * Predictive maintenance of fleet vehicles\n   * Automated customer support (chatbots)\n   * Fraud detection\n\n2. **Industry Leaders & Peers:** I want to connect with other leaders who are implementing AI strategies within their organizations, especially in the logistics, transportation, and warehousing sectors. I\u2019m eager to share best practices, learn from their experiences, and explore potential collaborative opportunities. I am interested in discussing challenges related to data governance, model deployment, and organizational change management.\n\n3. **AI Consultants & Strategists:** I\u2019m open to exploring potential partnerships with consultants who specialize in AI strategy, particularly those with a strong background in change management and employee training. I'm looking for individuals who can help us accelerate our AI adoption and build a sustainable data-driven culture. \n\nI\u2019m also interested in speaking opportunities at industry events focused on AI and logistics.",
+    "notes": "- Kai is a strong advocate for 'AI Literacy' and believes that successful AI implementation requires a well-informed workforce.\n- He\u2019s very focused on explainability \u2013 he dislikes 'black box' AI solutions.\n- Recently attended the 'AI in Supply Chain' webinar series \u2013 noted strong interest in the speaker from 'LogiVision'.\n- Data discrepancy noted: LinkedIn profile lists UiPath as a 'proficient' skill, but internal notes indicate he hasn\u2019t used it directly in 2 years. \n- Active member of the 'AI & Logistics Professionals' LinkedIn group.\n- Best intro: Highlight SwiftRoute Solutions' commitment to innovation and Kai's leadership in driving their AI strategy. Avoid overly technical jargon.",
+    "locationAvailability": "I am based in Chicago, Illinois, but I am open to remote collaboration and occasional travel within the United States and internationally as needed.",
+    "introPreferences": "- **Ideal Connection Profile:** Director-level or above, responsible for AI strategy or innovation within a logistics, transportation, or warehousing company. Alternatively, a VP of Sales or Business Development at an AI solution provider with a relevant product offering.\n- **Introduction Style:** A concise and personalized introduction highlighting the mutual benefits of connecting. Focus on the connection's potential to address a specific business challenge or explore a collaborative opportunity.\n- **Key Messaging Points:**\n   * Kai is a thought leader in AI adoption within the logistics industry.\n   * SwiftRoute Solutions is actively investing in AI to optimize its operations.\n   * Kai is specifically interested in exploring XAI solutions.\n- **Preferred Communication:** LinkedIn InMail initially, followed by email if a connection is established. Please avoid cold calls.",
+    "personalPreferences": "I prefer to receive follow-up communications via email and am generally responsive within 24 hours. I\u2019m always open to a quick virtual coffee chat to discuss potential collaborations.",
+    "meetingAndSchedulingPreferences": "I generally prefer virtual meetings via Zoom or Google Meet. I'm available during standard business hours (Central Time)."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 27.334372997283936,
+      "input_tokens": 779,
+      "output_tokens": 1466,
+      "problems": [
+        "background: possible truncation (ends with '...tion:** Tableau, Power BI')"
+      ]
+    },
+    {
+      "attempt": 2,
+      "elapsed_s": 33.99596381187439,
+      "input_tokens": 779,
+      "output_tokens": 1565,
+      "problems": []
+    }
+  ],
+  "success": true
+}

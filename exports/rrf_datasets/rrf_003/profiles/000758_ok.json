@@ -1,0 +1,54 @@
+{
+  "id": 758,
+  "archetype": "Fintech/Stablecoin Explorer",
+  "given_name": "Naledi Lindqvist",
+  "style_version": 46,
+  "archetypes_version": 127,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Naledi Lindqvist is a seasoned product leader with a background in traditional finance (specifically, risk management at a large bank) who pivoted into the blockchain space about 5 years ago. Her distinctive career detail is having *built* a risk scoring model for a DeFi lending protocol that demonstrably reduced bad debt by 20% \u2013 a feat that\u2019s quite rare in the space. Now, she\u2019s focused on the institutional adoption of stablecoins, believing the infrastructure isn\u2019t mature enough for large-scale integration and that better risk management tools are crucial. She\u2019s currently leading product at a smaller, venture-backed company developing a compliance and risk analytics platform specifically for stablecoins and is actively seeking strategic partnerships with both traditional financial institutions and established crypto firms. She\u2019s direct, data-driven, and highly skeptical of hype. She wants to talk to people who understand the *regulatory* hurdles and the *technical* challenges involved in making stablecoins truly institutional-grade.",
+    "positioning": "A product leader bridging the gap between traditional finance and the evolving world of blockchain, I\u2019m currently focused on de-risking the stablecoin ecosystem. At Aethel Analytics, we\u2019re building the compliance and risk intelligence layer that will enable institutional investors to confidently participate in the stablecoin market. Our platform provides real-time monitoring, automated compliance checks, and advanced risk scoring for stablecoins and their underlying reserves. We target asset managers, hedge funds, and corporate treasuries looking to allocate capital to digital assets, as well as stablecoin issuers seeking to demonstrate regulatory compliance. We recently closed a seed round led by Pantera Capital and are seeing strong inbound interest from several Tier 1 financial institutions. My core value proposition is translating complex regulatory requirements into actionable data and building scalable solutions that address the unique challenges of stablecoin risk management.  I'm passionate about building robust, transparent, and compliant infrastructure that unlocks the full potential of decentralized finance.",
+    "background": "\u2022 **Aethel Analytics, Head of Product** (January 2023 \u2013 Present)\n    * Led the product strategy and roadmap for Aethel\u2019s stablecoin risk analytics platform, from initial concept to beta launch.\n    * Managed a cross-functional team of engineers, data scientists, and compliance experts.\n    * Secured seed funding and established key partnerships with data providers and regulatory consultants.\n    * Defined and tracked key performance indicators (KPIs) related to platform adoption, user engagement, and risk reduction.\n    * Spearheaded user research and competitive analysis to identify market opportunities and unmet needs.\n\u2022 **Olympus Protocol, Product Manager** (June 2019 \u2013 December 2022)\n    * Led the development and launch of new features for a leading DeFi lending protocol.\n    * Designed and implemented a novel risk scoring model for loan applicants, resulting in a 20% reduction in bad debt and a significant improvement in protocol profitability. This model incorporated on-chain data, off-chain credit scores (where available), and collateralization ratios.\n    * Conducted A/B testing and data analysis to optimize user experience and improve key metrics.\n    * Collaborated with smart contract developers to ensure seamless integration of new features.\n    * Managed a team of junior product managers and analysts.\n\u2022 **Goldman Sachs, Risk Management Associate** (August 2016 \u2013 May 2019)\n    * Conducted risk assessments for fixed income, currency, and commodity (FICC) trading desks.\n    * Developed and maintained risk models using statistical software (SAS, R).\n    * Monitored market conditions and identified potential risk exposures.\n    * Prepared reports for senior management on risk performance.\n    * Assisted with the implementation of new regulatory requirements (e.g., Dodd-Frank Act).\n    * Received the \u201cRising Star\u201d award for outstanding performance in 2018.\n\u2022 **Education:**\n    * Master of Science in Financial Engineering, Columbia University (2014 \u2013 2016)\n    * Bachelor of Science in Mathematics, Massachusetts Institute of Technology (2010 \u2013 2014).  Minor in Economics.",
+    "lookingFor": "I'm actively seeking connections within the institutional finance and blockchain spaces. My primary objectives are to establish strategic partnerships and gain insights into the evolving regulatory landscape. Specifically, I\u2019m interested in:\n\n\u2022 **Pilot Partners:**  Financial institutions (asset managers, hedge funds, banks) interested in piloting Aethel\u2019s platform for stablecoin risk management.  Ideal partners have existing digital asset strategies or are actively exploring them. We are looking for institutions with a dedicated crypto team and a willingness to provide feedback on our product.\n\u2022 **Build Clients:**  Stablecoin issuers seeking to enhance their compliance and risk management capabilities.  We are particularly interested in working with issuers of algorithmic stablecoins and those operating in jurisdictions with stringent regulatory requirements.\n\u2022 **Regulatory Experts:**  Legal professionals and compliance officers specializing in digital asset regulation.  I'm keen to discuss emerging regulatory trends and best practices.\n\u2022 **Technology Integrators:**  Companies providing custody solutions, trading platforms, or data analytics services for digital assets.  I am interested in exploring potential integration opportunities.\n\nI'm *not* currently looking for sales pitches or recruitment opportunities. I\u2019m focused on building genuine relationships and collaborating on solutions that advance the responsible adoption of stablecoins.  I respond best to concise, well-articulated requests with a clear value proposition.",
+    "notes": "\u2022 Naledi is a no-nonsense professional. She appreciates direct communication and data-driven arguments. Avoid overly promotional language or vague claims.\n\u2022 She\u2019s *very* skeptical of projects that lack a clear regulatory strategy.\n\u2022 We discussed her frustration with the lack of standardized risk metrics for stablecoins on 10/26.  She feels this is a major impediment to institutional adoption.\n\u2022 She mentioned she's attending the Consensus conference in April and is open to meeting there.  I'll follow up with a calendar invite.\n\u2022 She\u2019s particularly interested in learning about any innovative approaches to reserve auditing and transparency.",
+    "locationAvailability": "Based in New York City, but open to remote discussions and travel.",
+    "introPreferences": "When making introductions to Naledi, please adhere to the following:\n\n\u2022 **Hard Requirements:**\n    * The individual must have a demonstrable understanding of either traditional finance *or* blockchain technology.\n    * They must be in a decision-making role or have direct influence over strategic initiatives.\n    * They must be open to exploring potential partnerships or collaborations.\n\u2022 **Soft Preferences:**\n    * Prior experience with risk management or compliance is highly valued.\n    * A strong network within the institutional finance or blockchain space is a plus.\n    * Individuals who are actively seeking solutions to address the challenges of stablecoin risk are preferred.\n\u2022 **Framing:**\n    * Emphasize the value proposition of Aethel Analytics \u2013 specifically, our ability to de-risk stablecoin investments and enable institutional adoption.\n    * Highlight Naledi's expertise in risk management and her track record of building successful products in the blockchain space.\n    * Avoid pitching Aethel as a \u201ccrypto company.\u201d Position us as a technology provider for financial institutions.",
+    "personalPreferences": "Prefers email for initial contact.  I\u2019m a direct communicator and appreciate brevity.  I\u2019m most responsive during East Coast business hours.",
+    "meetingAndSchedulingPreferences": "Please send a brief agenda in advance of any scheduled meetings. I value efficient use of time and prefer meetings to be focused and action-oriented.  I typically follow up with a summary of key takeaways and action items within 24 hours."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 28.293757915496826,
+      "input_tokens": 728,
+      "output_tokens": 1642,
+      "problems": []
+    }
+  ],
+  "success": true
+}

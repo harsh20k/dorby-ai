@@ -1,0 +1,54 @@
+{
+  "id": 802,
+  "archetype": "Technical Founder, Deeply Hands-On",
+  "given_name": "Camille Mensah",
+  "style_version": 49,
+  "archetypes_version": 135,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Camille Mensah is a 38-year-old technical founder and CEO of 'SynapseFlow,' a pre-seed AI-powered workflow automation platform targeted at data science teams. Her distinctive career detail is a prior 8-year stint as a core engineer at a major quantitative trading firm (Two Sigma) where she specialized in high-frequency data pipelines and low-latency systems. This experience deeply informs her technical approach to SynapseFlow \u2013 she\u2019s *not* building just another UI; she's focused on the fundamental efficiency of data movement and processing. She's currently fundraising for a seed round and actively seeking strategic advisors with experience scaling developer tools and AI/ML platforms. She's very hands-on, still writing significant portions of the core SynapseFlow engine. She prioritizes genuine technical discussion and is wary of 'hype-driven' investors. She\u2019s based in Brooklyn, NY, but open to remote interactions.",
+    "positioning": "As CEO and Founder of SynapseFlow, I\u2019m building the next generation of workflow automation for data science. We empower data scientists to spend less time wrangling data and more time building models. SynapseFlow isn't just a visual workflow tool; it\u2019s a fundamentally re-engineered data pipeline engine built for speed and scalability. My background leading high-frequency trading systems at Two Sigma instilled in me a deep appreciation for the crucial role of efficient data infrastructure. \n\nWe\u2019re focused on solving the bottlenecks that plague data science teams \u2013 slow ETL processes, inconsistent data quality, and the operational overhead of managing complex pipelines. SynapseFlow addresses these challenges with a unique architecture that leverages in-memory processing and a declarative workflow language. Our early adopters are seeing a 30-50% reduction in pipeline execution time, allowing them to iterate faster and deliver more value. \n\nCurrently, we are seeking strategic investors and advisors who understand the nuances of the data science landscape and share our vision for a more efficient and collaborative future. We're looking for partners who can help us scale our platform and expand our reach to larger organizations.",
+    "background": "* **SynapseFlow, CEO & Founder** (2022 \u2013 Present)\n    * Led all aspects of company formation, product development, and early customer acquisition.\n    * Architected and developed the core SynapseFlow engine using Python, Rust, and Apache Arrow.\n    * Secured initial pre-seed funding and built a small, high-performing engineering team.\n    * Responsible for defining product roadmap, go-to-market strategy, and overall company vision.\n* **Two Sigma, Software Engineer \u2013 Quantitative Trading Systems** (2014 \u2013 2022)\n    * Designed, developed, and maintained low-latency data pipelines for high-frequency trading algorithms.\n    * Specialized in optimizing data ingestion, processing, and distribution across distributed systems.\n    * Technologies used: C++, Python, Kafka, Redis, gRPC, Linux, AWS.\n    * Led a team of 3 engineers in the development of a new data validation framework, resulting in a 15% reduction in trade errors.\n    * Contributed to the development of a proprietary market data feed handler, improving data accuracy and reliability.\n* **Massachusetts Institute of Technology (MIT), Ph.D. in Computer Science** (2010 \u2013 2014)\n    * Dissertation: \u201cScalable Algorithms for Real-Time Data Stream Processing.\u201d\n    * Research focused on distributed systems, data mining, and machine learning.\n* **University of California, Berkeley, B.S. in Computer Science** (2006 \u2013 2010)\n    * Graduated *Summa Cum Laude*.\n    * Relevant coursework: Algorithms, Data Structures, Database Systems, Machine Learning.\n\n**Skills:** Python, Rust, C++, Apache Arrow, Kafka, Redis, gRPC, AWS, Docker, Kubernetes, SQL, Data Modeling, Machine Learning, Distributed Systems, Data Engineering, Software Architecture, Leadership, Fundraising.",
+    "lookingFor": "I\u2019m actively seeking connections with individuals who can contribute to the growth of SynapseFlow. My priorities are tiered as follows:\n\n**Tier 1: Strategic Advisors & Seed Investors**\n* Seasoned founders with experience scaling developer tools or AI/ML platforms.\n* Venture capitalists specializing in pre-seed/seed stage investments in the data science and AI space.  Specifically, firms with a technical partner.\n* Individuals with deep understanding of the data engineering landscape and emerging trends.\n\n**Tier 2: Potential Customers & Early Adopters**\n* Data Science Leaders and Engineering Managers at companies leveraging large datasets.\n* Organizations actively seeking to improve the efficiency and scalability of their data pipelines.\n* Companies in the FinTech, Healthcare, and AdTech industries.\n\n**Tier 3: Key Talent**\n* Highly skilled Rust and Python engineers with experience in distributed systems.\n* Data Scientists with a strong engineering background and a passion for building scalable solutions.\n\nI'm also interested in connecting with thought leaders in the data science community and participating in relevant industry events. I am *not* currently seeking marketing or sales support; my focus is on product and technology.",
+    "notes": "* Camille is highly technical and responds best to data-driven discussions. Avoid overly promotional or 'fluffy' messaging.\n* She is skeptical of buzzwords and prefers concrete examples over abstract concepts.\n* Confirmed strong network within the Two Sigma alumni community.\n* Active contributor to the Apache Arrow open-source project.\n* Recently attended the Data Council conference in San Francisco (October 2023).\n* LinkedIn activity suggests a strong interest in data governance and data quality.\n* Caution: She is very selective about who she spends her time with and values authenticity.",
+    "locationAvailability": "I am based in Brooklyn, New York, but comfortable with remote communication and occasional travel to meet with potential investors and partners. I am available across US timezones.",
+    "introPreferences": "* Introductions should highlight the introducer\u2019s genuine relationship with Camille and their understanding of SynapseFlow\u2019s technical approach.\n* Ideal connections are individuals with a demonstrable track record of building and scaling successful data-driven products.\n* Please include a brief summary of the connection\u2019s relevant experience and their potential value to SynapseFlow.\n* Preferred communication method is email \u2013 a concise and well-written email is far more effective than a lengthy LinkedIn message.\n* Key messaging points: Focus on SynapseFlow\u2019s unique architecture, its potential to significantly improve data pipeline efficiency, and Camille\u2019s deep technical expertise. Avoid overhyping or making unrealistic claims.",
+    "personalPreferences": "I prefer to communicate via email initially, and I\u2019m generally responsive. Feel free to follow up if you haven't heard back within a few days. I'm a big fan of strong coffee and open-source software.",
+    "meetingAndSchedulingPreferences": "I generally prefer short, focused video calls (30-45 minutes) to initial meetings. I am flexible with scheduling and can accommodate various time zones."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 26.314005136489868,
+      "input_tokens": 778,
+      "output_tokens": 1513,
+      "problems": []
+    }
+  ],
+  "success": true
+}

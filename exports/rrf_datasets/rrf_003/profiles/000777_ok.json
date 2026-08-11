@@ -1,0 +1,54 @@
+{
+  "id": 777,
+  "archetype": "Deep Tech Builder, Research-Heavy, Global",
+  "given_name": "Tariq Johansson",
+  "style_version": 47,
+  "archetypes_version": 130,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Tariq Johansson is a 42-year-old Swedish-American physicist turned entrepreneur. He spent a decade in academia, specializing in advanced materials science and quantum computing, before realizing the slow pace of research wasn't for him. He transitioned to industry, initially at Intel, then leading materials R&D at a smaller robotics firm. Now, he's the founder and CEO of 'Aether Dynamics,' a pre-seed startup developing novel superconducting materials for room-temperature quantum sensors. His distinctive career detail is a patent for a process dramatically reducing the manufacturing cost of high-temperature superconductors. He\u2019s currently focused on securing seed funding and building strategic partnerships with manufacturers capable of scaling production. He's particularly interested in connections in Europe and Asia, given the advanced manufacturing capabilities in those regions. He's very focused on *practical* applications of quantum technology, not purely theoretical advancements. He can be a bit blunt but is ultimately collaborative when he sees genuine technical merit.",
+    "positioning": "I\u2019m Tariq Johansson, founder and CEO of Aether Dynamics, focused on revolutionizing sensor technology through breakthroughs in superconducting materials. We\u2019re developing a new generation of quantum sensors with unprecedented sensitivity and performance, applicable across industries like medical imaging, industrial inspection, and environmental monitoring. My background in physics and materials science, coupled with a decade of experience in both academic research and industrial R&D, allows me to bridge the gap between cutting-edge science and real-world applications. We recently demonstrated a 40% improvement in signal-to-noise ratio compared to existing sensors using our prototype material. I\u2019m actively seeking connections with investors specializing in deep tech, particularly those with experience in materials science and quantum computing, as well as manufacturing partners capable of rapid scaling.",
+    "background": "\u2022 **Founder & CEO, Aether Dynamics** (2022 \u2013 Present): Led all aspects of startup formation, including technology development, fundraising, and team building. Secured initial pre-seed funding of $500k. Currently managing a team of 4 engineers and 2 research scientists. Developed and filed a provisional patent for a novel manufacturing process for high-temperature superconductors, reducing production costs by an estimated 60%. \n\u2022 **Head of Materials R&D, Nova Robotics** (2018 \u2013 2022): Led a team of 8 materials scientists and engineers responsible for the development of advanced materials for robotic systems. Spearheaded the development of a new polymer composite that increased robot arm strength by 35% while reducing weight by 20%. Managed a $2M annual R&D budget. \n\u2022 **Research Scientist, Intel Labs** (2015 \u2013 2018): Conducted research on novel materials for advanced semiconductor devices. Published 7 peer-reviewed articles in leading scientific journals, including *Nature Materials* and *Advanced Functional Materials*. Collaborated with a team of 15 researchers on projects related to quantum computing and spintronics. \n\u2022 **Postdoctoral Researcher, Massachusetts Institute of Technology (MIT)** (2012 \u2013 2015): Conducted independent research on the synthesis and characterization of novel superconducting materials. Secured a $100k research grant from the National Science Foundation (NSF). Mentored 3 graduate students. \n\u2022 **PhD in Physics, Stanford University** (2008 \u2013 2012): Dissertation focused on the theoretical and experimental investigation of high-temperature superconductivity. Graduated *summa cum laude*. \n\u2022 **BS in Physics & Mathematics, University of California, Berkeley** (2004 \u2013 2008): Minor in Computer Science. Received the University\u2019s Outstanding Undergraduate Research Award.",
+    "lookingFor": "\u2022 Seed-stage investors with a focus on deep tech, materials science, and quantum computing (Series A leads are also welcome for exploratory conversations).\n\u2022 Manufacturing partners with expertise in thin-film deposition, materials processing, and cryogenic systems \u2013 ideally with existing capacity in Europe or Asia.\n\u2022 Introductions to key opinion leaders (KOLs) in the quantum sensing and materials science communities.\n\u2022 Potential customers in the medical imaging, industrial inspection, and environmental monitoring sectors.\n\u2022 Experts in scaling hardware production \u2013 particularly those with experience navigating supply chain challenges.\n\u2022 Mentors with experience successfully scaling a deep tech startup from pre-seed to Series A.\n\u2022 *Do not* connect me with venture capitalists solely focused on software or consumer applications.\n\u2022 *Do not* introduce me to consultants offering generic business advice; I need technical and operational expertise.",
+    "notes": "\u2022 Tariq is very direct and values intellectual honesty. He's not interested in fluff or hype. \n\u2022 [2023-10-26] Had a good call with Sarah Chen at Quantum Ventures \u2013 she seemed genuinely interested in the tech, but her fund size may be too small for a meaningful investment. \n\u2022 He mentioned he's particularly frustrated with the lack of readily available manufacturing capacity for advanced materials. This is a major pain point.\n\u2022 He responds best to data and technical details. Avoid overly broad or abstract language. \n\u2022 He's open to collaborations but wary of IP risks. A strong NDA is essential.\n\u2022 [2023-11-15] Responded positively to an intro to Dr. Klaus Schmidt at Fraunhofer Institute \u2013 potential manufacturing partner.",
+    "locationAvailability": "Based in Boston, Massachusetts, but willing to travel extensively \u2013 particularly to Europe and Asia \u2013 for critical meetings and due diligence. Open to remote collaboration and virtual meetings.",
+    "introPreferences": "\u2022 **Hard Requirement:** Introductions *must* be to individuals with a demonstrable understanding of materials science or quantum technology. No generalists, please.\n\u2022 **Soft Preference:** Prioritize introductions to individuals with direct investment experience in hardware startups.\n\u2022 **Intro Style:** A concise, informative email highlighting Aether Dynamics\u2019 key achievements and Tariq\u2019s background is preferred. \n\u2022 *Do not* simply forward my LinkedIn profile \u2013 provide context and explain why this connection would be valuable.\n\u2022 *Do not* make overly enthusiastic or hyperbolic claims about the technology. Tariq prefers a measured and realistic tone.\n\u2022 The intro email should briefly mention the patent for cost reduction \u2013 it\u2019s a key differentiator.\n\u2022 If introducing to a potential manufacturing partner, please highlight their relevant capabilities and capacity.",
+    "personalPreferences": "Prefers direct communication and avoids unnecessary formalities. Email is the primary mode of communication.",
+    "meetingAndSchedulingPreferences": "Generally flexible with meeting times. Prefers video calls over phone calls. Google Calendar is preferred for scheduling."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 20.53830885887146,
+      "input_tokens": 804,
+      "output_tokens": 1401,
+      "problems": []
+    }
+  ],
+  "success": true
+}

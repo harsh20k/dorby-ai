@@ -1,0 +1,54 @@
+{
+  "id": 767,
+  "archetype": "Legal/Financial Founder, Infrastructure Play",
+  "given_name": "Mei Silva",
+  "style_version": 47,
+  "archetypes_version": 129,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Mei Silva is a 38-year-old founder building 'LexiFlow,' a platform using blockchain technology to streamline and automate legal contract lifecycle management, specifically focusing on complex syndicated loan agreements. Her background is as a former structured finance lawyer at a top-tier firm, Sullivan & Cromwell, where she became deeply frustrated with the inefficiencies and opacity of the existing systems. She\u2019s deeply technical for a lawyer, having taken several coding courses during her time at S&C to build internal tools. LexiFlow is post-seed, actively raising a Series A. She's meticulous, data-driven, and prioritizes building robust, scalable infrastructure over rapid, flashy growth. She's looking for investors with deep understanding of both legal tech *and* financial infrastructure, and strategic partners with large institutional clients in the lending space. She\u2019s wary of VCs who push for unsustainable growth or lack a genuine understanding of the regulatory complexities of the legal industry.",
+    "positioning": "Mei Silva is the founder and CEO of LexiFlow, a blockchain-based contract lifecycle management platform revolutionizing syndicated loan administration. Leveraging my decade of experience in structured finance law, I identified a critical need for increased transparency and efficiency in a historically opaque process. LexiFlow streamlines the complexities of loan agreements, reducing operational risk and unlocking significant cost savings for lenders and borrowers. We\u2019re currently focused on scaling our platform with key institutional partners and securing Series A funding to expand our engineering team and accelerate market adoption. I\u2019m actively seeking connections with investors specializing in legal tech and financial infrastructure, as well as strategic advisors with deep industry relationships.",
+    "background": " * **2010 \u2013 2018: Sullivan & Cromwell, New York, NY \u2013 Associate Attorney, Structured Finance Group.**  Represented leading banks, funds, and corporations in a variety of complex financing transactions, including syndicated loans, collateralized loan obligations (CLOs), and asset-backed securities. Managed due diligence, negotiated loan documentation, and advised clients on regulatory compliance. Consistently exceeded billable hour targets, averaging 2300+ hours annually. Led the legal work on a $5 billion syndicated loan for a major energy company in 2016. \n * **2018 \u2013 2020: Sullivan & Cromwell, New York, NY \u2013 Special Counsel, Structured Finance Group.** Promoted to Special Counsel recognizing expertise in syndicated loan documentation and risk management. Mentored junior associates and took on increased responsibility for client relationship management. Developed and implemented a new internal workflow for CLO documentation review, reducing turnaround time by 15%. \n * **2020 \u2013 2022: Independent Consultant \u2013 Legal Tech & Blockchain.** Provided legal and technical consulting services to early-stage blockchain startups focused on financial applications. Conducted legal analysis of DeFi protocols and advised clients on regulatory risks. Completed online courses in Solidity and Javascript to deepen technical understanding. \n * **2022 \u2013 Present: LexiFlow, New York, NY \u2013 Founder & CEO.**  Founded LexiFlow to address the inefficiencies in syndicated loan administration using blockchain technology. Secured seed funding of $2.5 million from angel investors and a small venture fund. Built a core team of engineers and legal professionals. Launched a beta version of the platform with three pilot clients, demonstrating a 20% reduction in loan administration costs. Currently leading Series A fundraising efforts.",
+    "lookingFor": "* **Series A Investors:** Funds with $50M+ under management and a demonstrated track record of investing in legal tech or financial infrastructure companies.\n* **Strategic Partners:** Institutional lenders (banks, insurance companies, pension funds) interested in piloting LexiFlow\u2019s platform.\n* **Legal Tech Advisors:** Experienced legal tech entrepreneurs who can provide guidance on product development and market strategy.\n* **Blockchain Developers:** Senior Solidity developers with experience building scalable and secure decentralized applications.\n* **Do Not Contact:** Generalist VCs without a clear understanding of the legal industry or blockchain technology.\n* **Do Not Contact:** Investors solely focused on consumer-facing applications \u2013 LexiFlow is a B2B solution.\n* **Do Not Contact:** Individuals offering 'growth hacking' services \u2013 we prioritize sustainable growth.",
+    "notes": "[03/15/2024] Had a good initial call with Sarah Chen at Amplify Ventures. She seemed genuinely interested but asked a lot of basic questions about blockchain. Need to prep a more tailored pitch for her. \n[03/22/2024] Spoke with David Lee at Sequoia. He was impressed with the tech but expressed concern about the regulatory landscape. Emphasized the importance of our legal team and proactive compliance efforts. \n* She is very data-driven and responds well to quantifiable results. \n* Avoid overly technical jargon \u2013 explain blockchain concepts in plain English. \n* She's sensitive to discussions around 'disruption' \u2013 frame LexiFlow as a facilitator of efficiency, not a replacement for existing players. \n* She\u2019s a strong advocate for women in tech \u2013 highlight the diversity of the LexiFlow team.",
+    "locationAvailability": "Based in New York City, but willing to travel to meet with investors and partners. Open to remote collaboration with distributed teams. Primarily focused on opportunities within the US and Europe.",
+    "introPreferences": "* **Hard Requirement:** Introductions must be to individuals with decision-making authority (Partner level at VC firms, Managing Director at lenders).\n* **Soft Preference:** Introductions to individuals with a background in both law *and* technology are highly preferred.\n* **Intro Style:** Keep the intro concise and focused on the value proposition of LexiFlow. Highlight my legal background and the problem we\u2019re solving. \n* **Example \u2013 Good Intro:** \u2018Mei Silva is the founder of LexiFlow, a blockchain-based platform streamlining syndicated loan administration. As a former structured finance lawyer, she uniquely understands the pain points in this process and is building a solution to address them.\u2019\n* **Example \u2013 Bad Intro:** \u2018Mei is working on a really cool blockchain project. You should talk to her!\u2019\n* **Do Not:** Introduce me to junior-level employees or individuals who are not relevant to our target audience.\n* **Do Not:** Send a generic LinkedIn connection request without a personalized message.",
+    "personalPreferences": "Prefers email communication for initial contact. Responds best to concise and well-structured messages.",
+    "meetingAndSchedulingPreferences": "Generally available for meetings during standard business hours (EST). Prefers using Calendly for scheduling. Happy to do video calls or in-person meetings in NYC."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 18.60516881942749,
+      "input_tokens": 798,
+      "output_tokens": 1396,
+      "problems": []
+    }
+  ],
+  "success": true
+}

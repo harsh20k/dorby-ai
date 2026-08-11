@@ -1,0 +1,54 @@
+{
+  "id": 360,
+  "archetype": "AI-Driven Founder, Early Stage",
+  "given_name": "Zainab Volkov",
+  "style_version": 22,
+  "archetypes_version": 60,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Zainab Volkov is a 32-year-old founder and CEO of 'Synapse Insights,' a pre-seed AI company specializing in predictive analytics for supply chain resilience. Her distinctive career detail is a prior 5-year stint as a quantitative analyst at a large hedge fund, giving her a strong financial modeling background *and* an understanding of how to translate complex data insights into tangible ROI. She's currently focused on closing a $2M seed round and forging strategic partnerships with logistics providers. She's energetic, data-driven, and acutely aware of the need for practical, implementable AI solutions\u2014not just 'shiny object' technology. She's looking to connect with investors who understand the supply chain space, potential enterprise clients, and advisors with experience scaling AI startups. She's very direct, values efficiency, and isn't interested in purely 'networking' conversations without a clear purpose.",
+    "positioning": "I\u2019m Zainab Volkov, founder and CEO of Synapse Insights, an AI-powered platform helping companies proactively mitigate supply chain disruptions. We leverage cutting-edge machine learning to predict potential bottlenecks, optimize inventory levels, and build more resilient logistics networks. Before founding Synapse Insights, I spent five years as a quantitative analyst at Blackwood Capital, where I honed my skills in data modeling, risk assessment, and translating complex analytical findings into actionable investment strategies. \n\nI launched Synapse Insights after witnessing firsthand the fragility of global supply chains during the pandemic. The reactive approach to disruptions is simply unsustainable. We\u2019re building a proactive solution that empowers businesses to anticipate challenges *before* they impact their bottom line. We\u2019ve already secured pilot programs with two mid-sized manufacturers, demonstrating a 15% improvement in inventory optimization and a 10% reduction in supply chain costs.\n\nMy passion lies in building practical AI solutions that drive real business value. I\u2019m deeply committed to fostering a data-driven culture and empowering organizations to make informed decisions in a rapidly changing world. I\u2019m actively seeking strategic partners and investors who share this vision and are eager to help us scale our impact. I\u2019m particularly excited about the intersection of AI and sustainability in supply chain management.\n\nI believe the future of supply chains is predictive, resilient, and transparent. Synapse Insights is at the forefront of this transformation, and I\u2019m eager to connect with individuals who are shaping the future of logistics and supply chain innovation.",
+    "background": "- **CEO & Founder, Synapse Insights** (2023 - Present)\n  * Led all aspects of company formation, including fundraising, product development, and go-to-market strategy.\n  * Secured pre-seed funding of $500K from angel investors.\n  * Developed and launched MVP of Synapse Insights\u2019 predictive analytics platform.\n  * Secured pilot programs with two manufacturing clients, demonstrating significant cost savings and efficiency gains.\n  * Built a core team of three data scientists and two software engineers.\n\n- **Quantitative Analyst, Blackwood Capital** (2018 - 2023)\n  * Developed and implemented statistical models for risk management and portfolio optimization.\n  * Conducted in-depth analysis of market trends and economic indicators.\n  * Presented findings to senior management and investment committees.\n  * Managed a portfolio of $50M in assets.\n  * Consistently exceeded performance targets and received positive performance reviews.\n\n- **Education:**\n  * **Massachusetts Institute of Technology (MIT)**, Cambridge, MA\n    * Master of Science in Financial Engineering (2018)\n    * GPA: 3.9/4.0\n  * **University of California, Berkeley** , Berkeley, CA\n    * Bachelor of Science in Mathematics (2016)\n    * Minor: Computer Science\n    * Phi Beta Kappa\n\n- **Skills:**\n  * Machine Learning (Python, TensorFlow, PyTorch)\n  * Data Modeling & Statistical Analysis (R, SQL)\n  * Financial Modeling & Valuation\n  * Supply Chain Management\n  * Risk Management\n  * Predictive Analytics\n  * Leadership & Team Management\n  * Business Development & Fundraising\n  * Communication & Presentation Skills\n\n- **Certifications:**\n  * Chartered Financial Analyst (CFA) Level 1 (Passed)\n\n- **Awards & Recognition:**\n  * MIT Sloan School of Management \u2013 Dean\u2019s List (2017, 2018)\n  * UC Berkeley \u2013 Regents\u2019 Scholar (2012-2016)",
+    "lookingFor": "I'm actively building my network to accelerate Synapse Insights' growth and impact. I'm looking for strategic partners, investors, and advisors who can contribute to our success. Specifically, I'm interested in connecting with:\n\n* **Seed-Stage Investors:** Firms with a focus on AI, supply chain technology, or enterprise SaaS. Ideal fund size: $5M - $50M.  We're targeting a $2M seed round to scale our platform and expand our sales team.\n* **Supply Chain Executives:** Individuals in leadership roles at large manufacturing, logistics, or retail companies. I'm eager to learn about their biggest challenges and explore potential partnership opportunities.\n* **AI/ML Advisors:** Experienced entrepreneurs or technical experts who have successfully scaled AI startups. I'm seeking guidance on product development, go-to-market strategy, and team building.\n* **Logistics Providers:** Companies offering warehousing, transportation, or fulfillment services. We believe our platform can significantly enhance their efficiency and resilience.\n\nI'm particularly interested in introductions to individuals at companies like Prologistics, Flexport, and FourKites. I'm also open to connecting with investors who have a track record of supporting innovative AI companies. I'm *not* currently seeking mentorship or general networking connections; my focus is on strategic partnerships and funding.\n\nI am open to speaking at industry events focusing on AI in supply chain and would appreciate introductions to event organizers.",
+    "notes": "Spoke with David Chen (Accel) on 10/26. He was intrigued by the pilot program results but wants to see more traction before considering an investment. He suggested connecting with Sarah Lee at Insight Partners. Follow up with Sarah next week. \n\nHad a quick chat with Maria Rodriguez (Flexport) at the AI in Logistics conference. She expressed interest in exploring a potential integration with Synapse Insights. Send her a detailed proposal outlining the benefits of our platform. \n\nReceived an inbound request from a 'growth hacker' offering their services. Politely declined \u2013 we\u2019re focused on product-market fit before scaling. \n\nZainab mentioned she's very direct and dislikes time-wasting. Keep introductions concise and focused on mutual value. She's also a big fan of data-driven decision-making, so be prepared to back up any claims with metrics.",
+    "locationAvailability": "Based in Boston, MA, but open to remote connections globally.",
+    "introPreferences": "When making introductions, please adhere to the following:\n\n* **Hard Requirements:**\n  * **Investor Focus:** Must invest in pre-seed/seed-stage AI or supply chain tech companies.\n  * **Executive Level:** Introductions to individuals with decision-making authority (VP or higher).\n  * **Relevance:** The connection must have a direct relevance to Synapse Insights' business.\n\n* **Soft Preferences:**\n  * **Existing Portfolio:** Preference for investors with a portfolio company in the logistics space.\n  * **Technical Background:** A technical understanding of AI/ML is a plus.\n  * **Strategic Alignment:** Preference for partners who share our vision for a more resilient and sustainable supply chain.\n\nPlease *avoid* introducing me to:\n  * Individuals seeking employment.\n  * General networking contacts without a clear purpose.\n  * Individuals who are not actively involved in decision-making.",
+    "personalPreferences": "I prefer concise and direct communication. Email is generally best for initial contact. I'm a morning person and respond quickest to messages before noon EST. I value efficiency and appreciate it when people come prepared for meetings.",
+    "meetingAndSchedulingPreferences": "I prefer short, focused meetings (30 minutes max). Please send a brief agenda in advance. I\u2019m available for video calls via Zoom or Google Meet. Please use Calendly to schedule meetings: [link to Calendly]. Please send a quick follow-up email summarizing key takeaways after each meeting."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 25.288898706436157,
+      "input_tokens": 785,
+      "output_tokens": 1833,
+      "problems": []
+    }
+  ],
+  "success": true
+}

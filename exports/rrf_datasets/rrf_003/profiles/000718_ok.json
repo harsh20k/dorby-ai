@@ -1,0 +1,63 @@
+{
+  "id": 718,
+  "archetype": "Early-Stage Mobility Innovator",
+  "given_name": "Amara Johansson",
+  "style_version": 44,
+  "archetypes_version": 121,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Amara Johansson is a 34-year-old co-founder and CTO of 'FlowState Robotics,' a pre-seed startup developing AI-powered route optimization and predictive maintenance solutions for commercial electric vehicle fleets. Her distinctive career detail is a prior 5-year stint as a robotics engineer *within* a large logistics company (DHL), giving her deep, practical understanding of the pain points FlowState is solving. She's currently laser-focused on securing a seed round and pilot programs with key fleet operators. She's technically brilliant, a bit introverted, and values direct communication. She's particularly interested in connecting with VCs specializing in climate tech and mobility, as well as potential strategic partners who can provide access to fleet data or integration opportunities. She\u2019s wary of overly \u2018salesy\u2019 approaches and prefers data-driven conversations.",
+    "positioning": "As Co-founder and CTO of FlowState Robotics, I\u2019m driving the development of cutting-edge AI solutions to revolutionize commercial fleet management. We\u2019re tackling the critical challenges of range anxiety, downtime, and operational inefficiency in the rapidly evolving electric vehicle landscape. My background in robotics engineering, specifically within large-scale logistics operations, informs our pragmatic, problem-first approach. We\u2019ve recently achieved significant milestones in our predictive maintenance algorithms, demonstrating a potential 15% reduction in unscheduled downtime for EV fleets. \n\nFlowState isn\u2019t just building software; we\u2019re building a platform that empowers fleet operators to maximize utilization, minimize costs, and accelerate their transition to sustainable transportation. We\u2019re currently focused on securing seed funding to scale our development efforts and deploy pilot programs with key strategic partners. Connecting with me now offers the opportunity to get in on the ground floor of a rapidly growing company poised to become a leader in the future of mobility. I\u2019m particularly keen to discuss potential collaborations that leverage our technology to address specific fleet management challenges.",
+    "background": "- **Co-founder & CTO, FlowState Robotics** (Jan 2023 \u2013 Present)\n  - Led the technical vision and development of FlowState's AI-powered route optimization and predictive maintenance platform for commercial EV fleets.\n  - Secured pre-seed funding of $250k based on a demonstrable MVP and a clear market opportunity.\n  - Built and managed a small, high-performing engineering team.\n  - Spearheaded the development of proprietary algorithms achieving >90% accuracy in predicting EV component failures.\n  - Responsible for all aspects of the tech stack, including cloud infrastructure, data pipelines, and machine learning models.\n\n- **Robotics Engineer, DHL Supply Chain** (June 2018 \u2013 Dec 2022)\n  - Designed, deployed, and maintained automated guided vehicles (AGVs) and robotic sorting systems within a large-scale distribution center.\n  - Led a project to integrate AI-powered vision systems for improved package identification and routing, resulting in a 8% increase in throughput.\n  - Developed and implemented preventative maintenance schedules for robotic equipment, reducing downtime by 12%.\n  - Collaborated with cross-functional teams (operations, IT, maintenance) to optimize robotic system performance.\n  - Identified and resolved complex technical issues related to robot hardware, software, and integration.\n\n- **Research Assistant, Robotics Institute, Carnegie Mellon University** (Sept 2016 \u2013 May 2018)\n  - Conducted research on advanced motion planning algorithms for autonomous robots.\n  - Published research papers in peer-reviewed conferences and journals.\n  - Assisted in the development of a novel robotic manipulation system.\n  - Gained experience in programming languages such as Python, C++, and ROS.\n\n- **Education:**\n  - **Master of Science, Robotics, Carnegie Mellon University** (2018)\n  - **Bachelor of Science, Mechanical Engineering, Massachusetts Institute of Technology (MIT)** (2016)\n\n- **Certifications:**\n  - AWS Certified Machine Learning \u2013 Specialty (2023)\n  - Certified ScrumMaster (CSM) (2022)",
+    "lookingFor": "- Strategic investors specializing in ClimateTech and Mobility (Seed stage).\n- Fleet operators (electric vehicle focus) interested in pilot programs.\n- Mentors with experience scaling early-stage robotics/AI companies.\n- Partnerships with companies providing fleet data or integration APIs.\n- Advisors with expertise in regulatory compliance within the transportation sector.\n- Individuals with a strong technical background in machine learning and robotics.\n- Introductions to key decision-makers at major logistics companies.\n- I'm *not* currently seeking sales or marketing assistance.",
+    "notes": "Amara is incredibly sharp and technically focused. She can get lost in the details, so framing conversations around business impact is helpful. She's somewhat introverted and prefers direct, data-driven communication. During our initial call, she was very enthusiastic about the potential of FlowState's technology but also realistic about the challenges ahead. She specifically mentioned needing help navigating the complexities of fleet operator procurement processes. \n\nShe\u2019s been responsive to follow-ups, but prefers email over LinkedIn messaging. She's actively seeking feedback on her pitch deck and is open to connecting with experienced founders. She's wary of anyone who overpromises or tries to take a 'spray and pray' approach to networking. A warm email introduction highlighting a shared interest in AI/robotics is ideal. Avoid pushing flowery language or unsubstantiated claims.",
+    "locationAvailability": "Based in Boston, MA. Occasional travel to industry events and potential pilot program locations.",
+    "introPreferences": "- Warm email introductions are preferred, directly addressing the potential value for both parties.\n- Please include a brief summary of the contact's role and their specific areas of expertise.\n- If introducing to a VC, highlight any relevant portfolio companies or investment thesis alignment.\n- *Do not* introduce me to individuals solely focused on sales or marketing; I\u2019m looking for technical and strategic connections.",
+    "personalPreferences": "Prefers concise and direct communication. Follow-up via email is appreciated.",
+    "meetingAndSchedulingPreferences": "Happy to jump on a quick 30-minute call to discuss potential synergies. I generally block off time on Tuesdays and Thursdays for external meetings."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 22.73012399673462,
+      "input_tokens": 750,
+      "output_tokens": 1316,
+      "problems": [
+        "background: possible truncation (ends with '...\n  - Six Sigma Green Belt')"
+      ]
+    },
+    {
+      "attempt": 2,
+      "elapsed_s": 18.27662992477417,
+      "input_tokens": 750,
+      "output_tokens": 1337,
+      "problems": []
+    }
+  ],
+  "success": true
+}

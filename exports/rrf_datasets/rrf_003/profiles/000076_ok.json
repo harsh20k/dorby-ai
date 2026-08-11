@@ -1,0 +1,54 @@
+{
+  "id": 76,
+  "archetype": "Full-Stack Engineer, Growth-Minded & Active",
+  "given_name": "Aiko Dubois",
+  "style_version": 5,
+  "archetypes_version": 13,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Aiko Dubois is a seasoned full-stack engineer currently focused on building and scaling developer tools. She spent the first part of her career in FinTech, gaining a deep understanding of security and reliability at scale, but recently pivoted to the developer experience space. A distinctive detail is that she consistently builds and open-sources side projects related to her work \u2013 a testament to her proactive learning and \u2018maker\u2019 mentality. She\u2019s now looking to leverage her experience to either join a fast-growing startup in the devtools space or potentially angel invest in early-stage companies. She's particularly interested in tools that improve developer velocity and reduce cognitive load. She's very direct and prioritizes efficiency, both in her work and interactions.",
+    "positioning": "Aiko Dubois is a highly motivated and results-oriented full-stack engineer with 8+ years of experience building and scaling robust, secure, and user-friendly applications. My background is rooted in the fast-paced world of FinTech, where I honed my skills in designing and implementing complex systems capable of handling high transaction volumes and stringent security requirements. More recently, I\u2019ve transitioned my focus to developer experience (DevEx), a space I\u2019m incredibly passionate about. I believe the key to unlocking innovation lies in empowering developers with the right tools and workflows. Currently, I\u2019m focused on leveraging my full-stack expertise to build and scale solutions that dramatically improve developer velocity and reduce friction in the development lifecycle. I\u2019m a strong advocate for open-source principles and actively contribute to the developer community through personal projects. I\u2019m seeking opportunities to apply my expertise to challenging problems in the DevEx landscape, either through a leadership role in a growth-stage startup or through strategic investment in promising early-stage ventures. I pride myself on being a pragmatic problem-solver, a relentless learner, and a collaborative team player.",
+    "background": "* **Lead Software Engineer, NovaPay (2021 \u2013 Present)**\n    * Led the development and launch of NovaPay\u2019s internal developer portal, resulting in a 30% reduction in onboarding time for new engineers.\n    * Architected and implemented a new microservices-based authentication system, improving security and scalability.\n    * Mentored junior engineers and fostered a culture of code quality and continuous improvement.\n    * Key technologies: React, Node.js, TypeScript, Kubernetes, AWS, PostgreSQL, Terraform.\n* **Senior Software Engineer, Stellar Financial (2018 \u2013 2021)**\n    * Developed and maintained critical components of Stellar Financial\u2019s core trading platform.\n    * Implemented real-time data streaming pipelines using Kafka and Flink.\n    * Contributed to the design and implementation of a high-frequency trading system.\n    * Technologies: Java, Spring Boot, Kafka, Flink, AWS, MySQL.\n* **Software Engineer, Apex Investments (2016 \u2013 2018)**\n    * Built and maintained web applications using Python and Django.\n    * Developed RESTful APIs for data access and integration.\n    * Gained experience in agile development methodologies.\n    * Technologies: Python, Django, PostgreSQL, AWS.\n* **Personal Projects (Ongoing)**\n    * **CodeFlow (Open Source):** A VS Code extension for streamlining code review workflows (https://github.com/aikodubois/codeflow).\n    * **DevKit:** A CLI tool for automating common developer tasks (https://github.com/aikodubois/devkit).\n    * Contributor to several other open-source DevEx projects.",
+    "lookingFor": "* **Early-stage DevTools Startups:** Particularly interested in companies building tools for observability, testing, CI/CD, or developer onboarding.\n* **Seed/Angel Investment Opportunities:** Seeking to invest in pre-seed or seed-stage companies with a strong technical team and a compelling vision for the future of developer experience.\n* **Introductions to VCs:** Focused on firms specializing in DevTools and SaaS.\n* **Connections with DevEx Leaders:** Keen to connect with individuals shaping the future of developer productivity and satisfaction.\n* I'm actively exploring roles as a Principal Engineer or Engineering Manager in companies with a strong engineering culture and a commitment to innovation. I'm less interested in roles that are heavily focused on maintenance without opportunity for building new things.",
+    "notes": "Aiko is extremely efficient and values direct communication. She\u2019s very quick to assess opportunities and isn\u2019t afraid to say no if it doesn\u2019t align with her goals. \n* **Recent Update:** Just finished a deep dive into LangChain and is exploring potential applications within DevEx. \n* **Do:** Be concise and focus on the value proposition. Share data and metrics whenever possible. \n* **Don't:** Pitch her overly complex or unproven technologies. Avoid lengthy introductions or unnecessary fluff. She prefers to get straight to the point. She\u2019s very independent and doesn\u2019t require a lot of hand-holding.",
+    "locationAvailability": "Aiko is currently based in San Francisco, CA, and is open to remote opportunities. She anticipates attending the DevRelCon conference in Austin, TX in November.",
+    "introPreferences": "* **Hard Requirements:**\n    * Introductions *must* be to individuals who are decision-makers or key influencers in the DevTools space.\n    * The person being introduced should have a clear understanding of Aiko's background and interests (briefly share her positioning).\n    * Introductions should be warm and personalized, not cold or generic.\n* **Soft Preferences:**\n    * Prioritize introductions to founders and early team members of startups.\n    * Prefer introductions to individuals with a strong technical background.\n    * Avoid introducing Aiko to recruiters unless she specifically requests it.\n* **Absolutely Do Not:**\n    * Introduce Aiko to sales or marketing representatives without prior approval.\n    * Send mass emails or LinkedIn connection requests with generic messages.",
+    "personalPreferences": "Prefers Slack or email for initial communication. Enjoys hiking and rock climbing in her free time. Regularly contributes to open-source projects.",
+    "meetingAndSchedulingPreferences": "I typically prefer 30-minute calls to assess fit. I'm available most afternoons PST. Please send a calendar invite with a clear agenda."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 20.03527307510376,
+      "input_tokens": 789,
+      "output_tokens": 1343,
+      "problems": []
+    }
+  ],
+  "success": true
+}

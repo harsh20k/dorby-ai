@@ -1,0 +1,54 @@
+{
+  "id": 848,
+  "archetype": "Serial Tech Founder, Now AI-Focused",
+  "given_name": "Sofia Kowalski",
+  "style_version": 52,
+  "archetypes_version": 143,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Sofia Kowalski is a serial entrepreneur who built and successfully exited a logistics tech company focused on optimizing last-mile delivery for small businesses. She's now pivoting her focus entirely to applying AI/ML to the manufacturing sector, believing there's massive untapped potential for predictive maintenance and process optimization. Her current venture, 'ForgeAI,' is a small, seed-stage company developing a platform that uses computer vision and machine learning to detect defects in manufactured goods *before* they reach quality control, drastically reducing waste and improving efficiency. She\u2019s actively seeking seed funding and strategic partnerships with manufacturers willing to pilot her technology. She's a pragmatic, data-driven leader, comfortable with technical details but primarily focused on delivering tangible ROI for her clients. A key detail is she self-funded ForgeAI initially, demonstrating her commitment, but now needs external capital to scale. She\u2019s a strong networker, but values quality over quantity in her connections.",
+    "positioning": "Sofia Kowalski is the Founder & CEO of ForgeAI, an early-stage company revolutionizing quality control in manufacturing through the power of Artificial Intelligence. Having previously built and successfully exited LogiShift, a technology platform streamlining last-mile delivery, Sofia recognized a similar opportunity for disruption within the manufacturing sector. ForgeAI\u2019s core offering is a cutting-edge platform leveraging computer vision and machine learning algorithms to identify defects in real-time during the manufacturing process. This proactive approach dramatically reduces waste, lowers production costs, and improves overall product quality. Sofia\u2019s expertise lies in identifying market inefficiencies, building high-performing teams, and translating complex technology into tangible business value. Currently, she\u2019s focused on securing seed funding to accelerate platform development and expand ForgeAI\u2019s pilot program with key manufacturing partners. She\u2019s passionate about bridging the gap between AI innovation and real-world industrial applications, and believes ForgeAI will become the standard for predictive quality assurance.",
+    "background": "* **ForgeAI, Founder & CEO** (Jan 2023 \u2013 Present)\n    * Led all aspects of company formation, including product development, fundraising, and team building.\n    * Developed and validated ForgeAI\u2019s core AI algorithms for defect detection, achieving 92% accuracy in initial trials.\n    * Secured initial pilot program with Beta Manufacturing, a leading automotive component supplier.\n    * Self-funded initial development and operations.\n* **LogiShift, Founder & CEO** (Jun 2018 \u2013 Dec 2022)\n    * Built and scaled a SaaS platform optimizing last-mile delivery for small and medium-sized businesses.\n    * Grew LogiShift to over 500 paying customers and a team of 30 employees.\n    * Successfully exited to ParcelPro in December 2022.\n    * Key technologies utilized: React, Node.js, AWS, PostgreSQL.\n* **Data Analytics Consultant, Accenture** (Sep 2016 \u2013 Jun 2018)\n    * Provided data analytics and business intelligence solutions to clients in the retail and logistics industries.\n    * Developed and implemented predictive models for demand forecasting and inventory optimization.\n    * Skills: Python, SQL, Tableau, Machine Learning (regression, clustering).\n* **Education:**\n    * **Massachusetts Institute of Technology (MIT), Cambridge, MA** \u2013 Master of Science in Computer Science (2016)\n    * **Stanford University, Stanford, CA** \u2013 Bachelor of Science in Industrial Engineering (2014)\n* **Skills:** AI/ML, Computer Vision, SaaS, Startup Leadership, Business Development, Predictive Analytics, Python, SQL, AWS, React, Node.js, Data Visualization, Logistics Optimization, Manufacturing Processes.",
+    "lookingFor": "I'm actively seeking strategic partners and seed funding to accelerate ForgeAI\u2019s growth and expand our impact on the manufacturing industry. Specifically, I'm looking for:\n\n* **Seed Investors:** Angel investors or seed-stage VCs with a demonstrated interest in AI/ML, industrial tech, or manufacturing. Ideal investment size: $1M - $2M.  I'm particularly interested in firms with portfolio companies in related areas that could offer synergistic opportunities.\n* **Manufacturing Partnerships:**  I'm keen to connect with manufacturing leaders (VP of Operations, CTO, Head of Quality Control) at companies with complex manufacturing processes and a willingness to embrace innovative technologies.  Target industries include automotive, aerospace, and electronics.\n* **Introductions to:**\n    * Individuals at leading manufacturing trade organizations (e.g., NAM, SME).\n    * Experts in edge computing and real-time data processing for industrial applications.\n    * Potential advisors with experience scaling AI/ML startups in the B2B space.\n* **Leads on:** Government grants or funding opportunities focused on advanced manufacturing and AI adoption.\n\nI'm open to discussing potential collaborations, pilot programs, and investment opportunities. I\u2019m particularly interested in companies facing significant challenges with quality control and waste reduction.",
+    "notes": "Spoke with David Chen (CXO at AlphaTech) last week \u2013 he expressed cautious interest in ForgeAI, but is concerned about integration complexity with their existing systems. Need to prepare a more detailed integration plan. Sofia is a very direct communicator, highly data-driven, and clearly understands the technical aspects of her product. She's a strong founder, having proven herself with LogiShift. She\u2019s very focused on ROI and minimizing risk for potential partners. Follow-up with her on the integration plan by end of week.  She mentioned a potential connection to a VP of Operations at Stellar Dynamics - worth pursuing.  Seems genuinely passionate about solving a real problem in manufacturing.  Her LinkedIn activity is focused on industry news and AI advancements.",
+    "locationAvailability": "I'm based in Boston, MA, and am frequently traveling to manufacturing facilities across the US. I\u2019m open to relocation for the right opportunity, but prefer to maintain a presence in the Northeast.",
+    "introPreferences": "When making introductions, please keep the following in mind:\n\n* **Hard Requirements:**  Contacts should be decision-makers or key influencers within manufacturing companies (VP level or higher).\n* **Soft Preferences:**  Individuals with a demonstrated interest in AI/ML and a proactive approach to innovation are highly preferred.\n* **Intro Style:**  Focus on ForgeAI's ability to deliver quantifiable ROI through reduced waste and improved quality.  Highlight my previous success with LogiShift as evidence of my execution capabilities.\n* **Avoid:**  Introducting me to purely academic contacts or individuals without clear decision-making authority.\n* **Briefing:** Please share a quick overview of the contact\u2019s background and interests *before* the introduction.  I appreciate a heads-up!\n* **Subject Line:** Suggest something like: 'ForgeAI - AI-Powered Quality Control for [Company Name]'",
+    "personalPreferences": "Email is my preferred method of communication. I'm responsive and generally check my inbox several times a day. I\u2019m not a big fan of long phone calls without a clear agenda.",
+    "meetingAndSchedulingPreferences": "I prefer short, focused meetings (30-45 minutes) with a clear agenda. Please send a calendar invite with a brief description of the meeting purpose. I'm comfortable with video conferencing (Zoom, Google Meet), and I always appreciate a follow-up summary of key takeaways."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 21.295666933059692,
+      "input_tokens": 920,
+      "output_tokens": 1560,
+      "problems": []
+    }
+  ],
+  "success": true
+}

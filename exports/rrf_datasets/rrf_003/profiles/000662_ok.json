@@ -1,0 +1,54 @@
+{
+  "id": 662,
+  "archetype": "Investor/Scout Focused on Founders",
+  "given_name": "Malia Sokolov",
+  "style_version": 40,
+  "archetypes_version": 110,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Malia Sokolov is a seasoned angel investor and scout, currently operating as a solo GP focusing on pre-seed and seed stage companies in the climate tech and sustainable materials spaces. Her distinctive career detail is a prior life as a materials scientist \u2013 she *built* things before she funded them, which gives her a unique ability to assess technical feasibility. She\u2019s looking for founders with deep technical expertise, particularly in areas like carbon capture, alternative proteins, and circular economy solutions. She\u2019s not just looking to write checks; she actively wants to leverage her network to help founders connect with strategic partners and early customers. She\u2019s highly analytical and values data-driven decision making, but also trusts her gut based on her scientific background. She\u2019s relatively new to the solo GP world (less than 2 years) and is still building her track record, so she\u2019s also open to co-investment opportunities with established funds. She\u2019s very particular about who she works with \u2013 she prioritizes integrity and intellectual honesty.",
+    "positioning": "Malia Sokolov is a venture investor dedicated to accelerating the development and deployment of groundbreaking climate technologies. As a solo General Partner, she focuses on pre-seed and seed stage investments in companies pioneering solutions across carbon removal, sustainable materials, and the circular economy. Malia brings a unique perspective to the investment landscape, blending a rigorous scientific background with a deep understanding of market dynamics. She isn\u2019t simply a capital provider; she\u2019s a strategic partner, leveraging her extensive network to connect founders with key customers, advisors, and collaborators. Malia is passionate about backing ambitious teams tackling the world\u2019s most pressing environmental challenges and driving measurable impact. Her approach centers on identifying technically feasible and commercially viable innovations with the potential for significant scale.",
+    "background": "- **Solo General Partner, Aurora Climate Ventures** (2022 \u2013 Present)\n    - Led all aspects of fund operations, including deal sourcing, due diligence, investment execution, and portfolio management.\n    - Deployed $1.2M across 4 portfolio companies focused on alternative proteins and carbon capture technologies.\n    - Developed and implemented a proprietary due diligence framework incorporating technical feasibility assessments.\n    - Actively mentor portfolio founders, providing guidance on product development, fundraising, and market entry.\n\n- **Research Scientist, Nova Materials Inc.** (2018 \u2013 2022)\n    - Conducted research and development in advanced materials, specializing in biodegradable polymers.\n    - Published 7 peer-reviewed articles in leading materials science journals.\n    - Led a team of 3 researchers in the development of a novel bio-plastic formulation, resulting in a patent application.\n    - Managed a $500K research budget and collaborated with industry partners on technology transfer initiatives.\n\n- **Consultant, GreenTech Analytics** (2016 \u2013 2018)\n    - Provided market research and competitive analysis to cleantech companies.\n    - Supported clients in developing go-to-market strategies and identifying investment opportunities.\n    - Conducted due diligence on potential acquisitions and partnerships.\n\n- **Education:**\n    - Ph.D., Materials Science & Engineering, Stanford University (2018)\n    - B.S., Chemistry, Massachusetts Institute of Technology (2016) \u2013 *Summa Cum Laude*",
+    "lookingFor": "I am actively seeking connections with exceptional founders building companies at the forefront of climate innovation. My investment focus is pre-seed and seed stage, with a particular interest in technologies addressing carbon removal, alternative proteins, sustainable materials, and the circular economy. I'm especially keen on companies with a strong scientific foundation and a clear path to commercialization.\n\nSpecifically, I\u2019m looking to connect with:\n\n*   Founders who have a deep understanding of the underlying science behind their technology.\n*   Teams tackling large, addressable markets with scalable solutions.\n*   Companies with early traction and a demonstrated ability to execute.\n*   Individuals seeking not just capital, but also strategic guidance and access to a strong network.\n\nI'm also open to co-investment opportunities with other venture funds and angel investors who share my investment thesis. I'm particularly interested in learning about promising deals that may be outside of my immediate network. I welcome introductions to potential portfolio companies, as well as fellow investors and industry experts.",
+    "notes": "Malia is highly selective and prioritizes technical depth and integrity in the founders she backs. She's still building her track record as a solo GP, so she\u2019s more likely to take smaller checks initially, with potential for follow-on investments. She's very direct and appreciates concise communication. She\u2019s currently exploring opportunities in the alternative protein space \u2013 specifically, companies developing scalable fermentation processes. She recently attended the Carbon Removal Conference in Washington D.C. and is actively following several emerging technologies in that area. Data room requests should be kept streamlined; she values clear, concise documentation. She\u2019s slightly wary of \u2018hype\u2019 driven startups and prefers to base her decisions on verifiable data and technical feasibility. She\u2019s been burned once by a founder who overpromised on their technology, so due diligence is paramount.",
+    "locationAvailability": "Malia is based in San Francisco, California, but is open to connecting with founders and investors globally. She is comfortable with remote meetings and travel as needed, though prefers initial conversations to be conducted virtually.",
+    "introPreferences": "When making introductions to Malia, please keep the following in mind:\n\n*   **Hard Requirements:**\n    *   The company *must* be focused on climate tech or sustainable materials.\n    *   The company *must* be at the pre-seed or seed stage.\n    *   The founding team *must* have a strong technical background.\n\n*   **Soft Preferences:**\n    *   Companies with a demonstrable environmental impact are highly preferred.\n    *   Founders with a clear vision and a strong sense of purpose.\n    *   Teams that are coachable and open to feedback.\n\n*   **Introduction Messaging:**\n    *   Briefly highlight the company's core technology and its potential impact.\n    *   Emphasize the founder\u2019s technical expertise and relevant experience.\n    *   Clearly state the ask \u2013 whether it's a quick introductory call or a more in-depth discussion.\n    *   Avoid overly promotional language; focus on facts and substance.\n    *   A short (1-2 sentence) personal connection to *why* you think Malia would be a good fit is extremely helpful.",
+    "personalPreferences": "I prefer to communicate via email initially. I\u2019m responsive, but I get a high volume of emails, so please be concise. I\u2019m also open to LinkedIn messaging, but email is my primary channel. I appreciate directness and honesty in communication.",
+    "meetingAndSchedulingPreferences": "I generally prefer 30-minute introductory calls. I\u2019m available most weekdays between 9am-5pm PST. Please include a brief agenda when scheduling a meeting, outlining the key topics you\u2019d like to discuss. I value efficient use of time and appreciate thoughtful preparation."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 23.444590091705322,
+      "input_tokens": 814,
+      "output_tokens": 1523,
+      "problems": []
+    }
+  ],
+  "success": true
+}

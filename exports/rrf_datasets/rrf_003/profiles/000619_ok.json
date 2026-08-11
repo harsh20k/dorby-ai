@@ -1,0 +1,54 @@
+{
+  "id": 619,
+  "archetype": "Early-Stage AI/SaaS Builder",
+  "given_name": "Diego Almeida",
+  "style_version": 38,
+  "archetypes_version": 103,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Diego Almeida is a first-time founder, 32, currently building 'SynapseFlow,' a SaaS platform leveraging AI to automate data pipeline orchestration for small to medium-sized marketing agencies. He previously spent 8 years in data engineering at larger tech companies, but felt constrained by bureaucracy and a lack of ownership. A defining moment was leading a small internal project at his last company \u2013 a data pipeline automation tool \u2013 which dramatically improved team efficiency but was ultimately shelved due to not aligning with core product strategy. This experience fueled his desire to build something himself. He\u2019s technically strong, but recognizes he needs help with fundraising and go-to-market strategy. He's actively seeking seed funding and mentors with experience scaling SaaS businesses. He's laser-focused on his niche and is very aware of the competitive landscape.",
+    "positioning": "Diego Almeida is the Founder & CEO of SynapseFlow, a SaaS platform revolutionizing data pipeline orchestration for marketing agencies. Leveraging cutting-edge AI, SynapseFlow simplifies complex data workflows, empowering agencies to deliver faster, more insightful results for their clients. Diego brings eight years of experience in data engineering from companies like DataNexus and CloudScale, where he consistently delivered scalable and efficient data solutions. He is passionate about building intuitive tools that unlock the power of data for businesses and is currently focused on securing seed funding to accelerate SynapseFlow\u2019s growth and expand its feature set.",
+    "background": "- **Founder & CEO, SynapseFlow** (Jan 2023 \u2013 Present)\n    * Led all aspects of company formation, including product development, fundraising, and initial marketing efforts.\n    * Developed and launched the MVP of SynapseFlow, achieving initial traction with 5 paying customers.\n    * Responsible for technical architecture, utilizing Python, AWS, and various AI/ML frameworks.\n    * Currently focused on securing seed funding and building a core engineering team.\n\n- **Senior Data Engineer, CloudScale** (June 2018 \u2013 Dec 2022)\n    * Designed, built, and maintained large-scale data pipelines using Spark, Kafka, and Snowflake.\n    * Led a project to automate data ingestion processes, resulting in a 20% reduction in data processing time.\n    * Mentored junior data engineers and contributed to the development of best practices.\n    * Spearheaded the internal development of a data pipeline automation tool (subsequently shelved).\n\n- **Data Engineer, DataNexus** (Aug 2015 \u2013 June 2018)\n    * Developed and maintained ETL processes for various data sources.\n    * Contributed to the development of a data warehouse solution using Redshift.\n    * Gained experience in data modeling, data quality, and data governance.\n\n- **Education: Master of Science in Data Science, Stanford University** (2013 \u2013 2015)\n    * GPA: 3.8/4.0\n    * Relevant Coursework: Machine Learning, Data Mining, Database Systems, Statistical Modeling\n\n- **Education: Bachelor of Science in Computer Science, University of California, Berkeley** (2009 \u2013 2013)\n    * Relevant Coursework: Algorithms, Data Structures, Software Engineering\n\n- **Skills:** Python, AWS (S3, EC2, Lambda, RDS), Snowflake, Spark, Kafka, SQL, Machine Learning (scikit-learn, TensorFlow), Data Pipeline Orchestration (Airflow), Docker, Kubernetes, SaaS Development, Agile Methodologies.",
+    "lookingFor": "## Investment & Mentorship\n\n* **Seed Investors:** Seeking $500k - $1M seed round to expand engineering team and accelerate go-to-market strategy.  Focus on investors with a track record in SaaS and/or AI.\n* **SaaS Founders (Series A/B):**  Looking for mentorship on scaling a SaaS business, particularly in areas of sales, marketing, and customer success.\n* **Marketing Agency Leaders:**  Connections to marketing agencies (50-200 employees) for potential beta testing and early adoption.\n* **AI/ML Engineers:**  Experienced engineers with a passion for building scalable and reliable AI-powered solutions.\n\n## Not Interested In:\n\n*  Generalist investors \u2013 prefer sector-specific expertise.\n*  Opportunities unrelated to SaaS or AI.\n*  Sales-focused pitches \u2013 initial conversations should focus on understanding SynapseFlow's vision.",
+    "notes": "Diego is highly responsive and genuinely enthusiastic about SynapseFlow. He's very technically capable but acknowledges his need for support in areas outside of engineering. He recently attended a SaaS conference in San Francisco and is actively networking.  He's been particularly receptive to advice regarding customer acquisition cost (CAC) and lifetime value (LTV).  Data suggests he's actively engaging with content related to data pipeline automation and marketing technology.  He\u2019s a fast learner and seems eager to implement feedback.",
+    "locationAvailability": "San Francisco, CA",
+    "introPreferences": "* **Ideal Introductions:** Founders/Partners at Seed-stage VC firms specializing in SaaS/AI.  Marketing agency CEOs/CTOs who are actively seeking solutions to improve data pipeline efficiency.\n* **Introduction Style:**  A brief, personalized email highlighting SynapseFlow\u2019s value proposition and Diego\u2019s background is preferred.  Avoid lengthy introductions.\n* **Hard Requirement:**  Investors *must* have experience investing in SaaS businesses.\n* **Soft Preference:**  A connection with a history of successful exits in the marketing technology space is a plus.\n* **Do Not:** Introduce Diego to recruiters or sales representatives \u2013 he is not currently hiring outside of engineering roles.",
+    "personalPreferences": "Prefers asynchronous communication (email/Slack) initially.  He values directness and appreciates concise, actionable feedback.",
+    "meetingAndSchedulingPreferences": "Flexible with meeting times, generally prefers 30-minute introductory calls.  Follow-up is appreciated, but not expected immediately."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 23.190621852874756,
+      "input_tokens": 821,
+      "output_tokens": 1274,
+      "problems": []
+    }
+  ],
+  "success": true
+}

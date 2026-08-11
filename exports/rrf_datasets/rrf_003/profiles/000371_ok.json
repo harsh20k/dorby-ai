@@ -1,0 +1,63 @@
+{
+  "id": 371,
+  "archetype": "Healthcare Tech Operator/Founder",
+  "given_name": "Sana Dubois",
+  "style_version": 23,
+  "archetypes_version": 62,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Sana Dubois is a former hospital administrator with a strong background in process optimization and patient flow. She became frustrated with the inefficiencies she saw firsthand \u2013 particularly around post-discharge care and readmission rates. She's now founded 'Continuum Care Solutions,' a company developing an AI-powered platform that proactively manages patient recovery after hospital discharge, aiming to reduce readmissions and improve patient outcomes. She's seeking seed funding and strategic partnerships with hospital systems willing to pilot her technology. She's highly data-driven, a bit impatient with 'fluff,' and values direct communication. She's also very focused on the clinical impact of her work, not just the technology itself. A distinctive detail is her prior research fellowship at NIH focused on behavioral economics and adherence to treatment plans, giving her a unique perspective on the 'last mile' of care.",
+    "positioning": "As founder and CEO of Continuum Care Solutions, I\u2019m building the future of post-acute care. Having spent years within hospital administration, I witnessed firsthand the critical gap in support patients face after discharge \u2013 a gap that dramatically impacts readmission rates and overall health outcomes. We\u2019re leveraging AI and behavioral science to provide personalized, proactive support that keeps patients on track with their recovery plans. \n\nPrior to founding Continuum Care Solutions, I led operational improvements at St. Luke\u2019s Hospital, streamlining patient flow and reducing average length of stay by 15% through data-driven process redesign. My background also includes a research fellowship at the National Institutes of Health, where I investigated the behavioral economics of medication adherence. This experience deeply informed my understanding of the challenges patients face in managing their health outside of a clinical setting. \n\nI\u2019m passionate about leveraging technology to create a more equitable and effective healthcare system. I\u2019m currently focused on securing seed funding and building strategic partnerships with forward-thinking hospital systems committed to improving post-discharge care.  I'm a firm believer that technology should serve clinical needs, and I'm looking for collaborators who share that vision.",
+    "background": "- **Continuum Care Solutions,** Founder & CEO (2023 \u2013 Present)\n    - Spearheading all aspects of company development, including product strategy, fundraising, team building, and market validation.\n    - Developed and patented core AI algorithms for personalized recovery plan creation and proactive intervention.\n    - Secured initial angel investment of $250K.\n- **St. Luke\u2019s Hospital,** Director of Operations (2018 \u2013 2023)\n    - Led process improvement initiatives resulting in a 15% reduction in average length of stay.\n    - Managed a team of 10+ analysts and project managers.\n    - Implemented a new electronic health record (EHR) system, streamlining data management and improving clinical workflows.\n    - Oversaw budget of $2M.\n- **National Institutes of Health (NIH),** Research Fellow (2016 \u2013 2018)\n    - Conducted research on the behavioral economics of medication adherence.\n    - Published peer-reviewed articles in leading medical journals.\n    - Presented research findings at national and international conferences.\n- **Education:**\n    - **Harvard Business School,** MBA (2016)\n    - **Johns Hopkins University,** B.S. in Biomedical Engineering (2014) \u2013 *Summa Cum Laude*\n- **Skills:** AI/ML (basic proficiency), Data Analysis (SQL, Python, R), Process Improvement (Lean Six Sigma Certified), Project Management (PMP Certified), Healthcare Operations, EHR Systems (Epic, Cerner), Behavioral Economics, Strategic Planning, Fundraising.",
+    "lookingFor": "- **Seed Funding:** Seeking $1.5M - $2M to scale platform development and expand pilot programs.\n- **Strategic Partnerships:** Collaborations with hospital systems (500+ beds) interested in piloting Continuum Care Solutions.\n- **Advisors:** Experienced healthcare tech entrepreneurs and investors with a track record of successful exits.\n- **Mentors:** Individuals with expertise in scaling early-stage healthcare startups.",
+    "notes": "Sana is highly focused and results-oriented. She appreciates direct communication and dislikes ambiguity. Be prepared to present data and quantifiable results when engaging with her. \n\n- **Caution:** She's skeptical of overly hyped technologies and prefers solutions grounded in clinical evidence. Avoid pitches that focus solely on the 'cool factor' without demonstrating clear clinical impact.\n- **Important:** She is deeply committed to improving patient outcomes and is motivated by social impact. Framing conversations around this aspect will resonate strongly.\n- She is an active member of the Healthcare Information and Management Systems Society (HIMSS).",
+    "locationAvailability": "I'm primarily based in Boston, Massachusetts, but I'm open to remote collaboration and frequent travel to meet with potential partners and investors. While I prefer a hybrid work model, I'm willing to consider fully remote opportunities for the right team and project. Relocation is a possibility for a compelling opportunity.",
+    "introPreferences": "- **Hard Requirements:** Introductions to VPs of Innovation or Chief Medical Information Officers (CMIOs) at large hospital systems (500+ beds).\n- **Soft Preferences:** Introductions to seed-stage healthcare investors specializing in digital health or AI.\n- **Avoid:** Introductions to generalist investors or individuals outside of the healthcare industry.  Please *do not* introduce me to recruiters at this time.\n- When making an introduction, please highlight my background in both healthcare operations *and* research, and emphasize the quantifiable impact of my previous work at St. Luke's.",
+    "personalPreferences": "I generally respond quickest to email. Feel free to connect on LinkedIn, but please send a personalized message referencing our shared connection or a specific area of mutual interest. I\u2019m always happy to discuss innovative solutions to improve patient care.",
+    "meetingAndSchedulingPreferences": "I prefer to schedule meetings via Calendly to streamline the process and avoid back-and-forth emails. I typically block off time for focused work in the mornings, so afternoons are usually best for calls."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 22.11441707611084,
+      "input_tokens": 791,
+      "output_tokens": 1188,
+      "problems": [
+        "background: possible truncation (ends with '...Communication, Leadership')"
+      ]
+    },
+    {
+      "attempt": 2,
+      "elapsed_s": 17.813394784927368,
+      "input_tokens": 791,
+      "output_tokens": 1294,
+      "problems": []
+    }
+  ],
+  "success": true
+}

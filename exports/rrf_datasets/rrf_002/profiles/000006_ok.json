@@ -1,0 +1,54 @@
+{
+  "id": 6,
+  "archetype": "AI/ML Technical Leader & Builder",
+  "given_name": "Naledi Oduya",
+  "style_version": 1,
+  "archetypes_version": 1,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Naledi Oduya is a seasoned AI/ML leader currently heading up the AI Platform team at 'NovaTech Solutions', a mid-sized fintech company. Her distinctive career detail is a prior stint as a research scientist at a robotics firm focused on reinforcement learning for autonomous systems - a background she leverages to build robust and adaptable AI solutions. She's now focused on scaling NovaTech's AI capabilities to personalize financial services, and is actively seeking connections with investors, potential partners specializing in federated learning, and top-tier ML engineers. She\u2019s a strong advocate for responsible AI and prioritizes explainability in her models. She's a pragmatic leader, favoring practical implementations over purely theoretical research, but remains deeply connected to the academic community.",
+    "positioning": "As Head of AI Platform at NovaTech Solutions, I lead a team responsible for the end-to-end lifecycle of our machine learning models \u2013 from data ingestion and feature engineering to model training, deployment, and monitoring. NovaTech is revolutionizing personal finance through data-driven insights, and my team is central to delivering that vision. We're currently focused on building a next-generation AI platform leveraging cloud-native technologies and advanced machine learning techniques to personalize financial recommendations and fraud detection. Prior to NovaTech, I spent several years in robotics research, specializing in reinforcement learning. This background informs my approach to building adaptive and resilient AI systems. I'm passionate about translating cutting-edge research into practical, scalable solutions that drive tangible business value. I\u2019m actively seeking collaborations to expand our capabilities in areas like federated learning and responsible AI.",
+    "background": "- **NovaTech Solutions, Head of AI Platform** (2021 \u2013 Present)\n  -- Spearhead the development and implementation of NovaTech\u2019s AI strategy, aligning it with overall business objectives.\n  -- Manage a team of 15+ data scientists, ML engineers, and data engineers.\n  -- Oversaw the migration of our ML infrastructure to a Kubernetes-based cloud platform (AWS).\n  -- Led the successful launch of a personalized financial recommendation engine, resulting in a 15% increase in user engagement.\n  -- Championed the adoption of MLOps best practices, improving model deployment frequency by 40%.\n\n- **Robotics Innovations Ltd., Research Scientist** (2018 \u2013 2021)\n  -- Conducted research in reinforcement learning, focusing on developing algorithms for autonomous robotic systems.\n  -- Published multiple peer-reviewed papers in leading AI conferences (NeurIPS, ICML).\n  -- Developed and implemented a novel reward function for robotic navigation, improving efficiency by 25%.\n  -- Collaborated with engineers to integrate research prototypes into real-world robotic platforms.\n\n- **Data Insights Corp., Data Scientist** (2016 \u2013 2018)\n  -- Built and deployed predictive models for customer churn and fraud detection.\n  -- Developed data pipelines using Python, SQL, and Spark.\n  -- Presented data-driven insights to stakeholders, influencing business decisions.\n\n- **Education:**\n  -- PhD, Computer Science (Machine Learning), Stanford University (2016)\n  -- MSc, Artificial Intelligence, University of Oxford (2012)\n  -- BSc, Mathematics, Massachusetts Institute of Technology (2010)\n\n- **Skills:** Python, TensorFlow, PyTorch, Kubernetes, AWS, SQL, Spark, Reinforcement Learning, Deep Learning, MLOps, Data Visualization, Statistical Modeling, Federated Learning, Responsible AI.",
+    "lookingFor": "## Connections & Opportunities\n\n* **Investors:** Seeking seed to Series B investors with a demonstrated interest in fintech and AI-driven personalization. We're looking for partners who understand the long-term value of building a robust AI platform.\n* **Federated Learning Experts:** Interested in connecting with researchers and practitioners specializing in federated learning. We're exploring opportunities to leverage this technology to enhance data privacy and model accuracy.\n* **ML Engineering Talent:** Actively recruiting top-tier ML engineers with experience in building and deploying scalable machine learning systems. Specifically, looking for expertise in Kubernetes, cloud platforms (AWS, GCP, Azure), and MLOps tools.\n* **Strategic Partnerships:** Exploring potential partnerships with companies offering complementary technologies or services in the financial services or AI space.  Introductions to leaders in data security and privacy are particularly valuable.\n* **Thought Leadership:**  Interested in connecting with other AI leaders to share best practices and discuss emerging trends in the field. I\u2019m open to participating in industry events and webinars.",
+    "notes": "[10/26/2023] - Naledi is a high-potential candidate. Prioritized for introductions to our VC network. \n[11/02/2023] - She specifically requested introductions to individuals working on differential privacy techniques. Added a tag for \u2018Differential Privacy\u2019 to her profile. \n[11/09/2023] - Followed up with Naledi regarding a potential partnership with DataGuard Inc. She expressed strong interest. \n* **Internal Tag:** 'AI Platform Leader - Fintech'\n* **Caution:** Naledi is very focused on responsible AI. Avoid introducing her to companies with questionable data practices.\n* **Best Intro:**  Focus introductions on her need for scaling her AI platform and finding top engineering talent. Highlight our network\u2019s expertise in cloud infrastructure and MLOps.\n* **Platform Action:** Flagged for inclusion in our 'Fintech AI Leaders' group.",
+    "locationAvailability": "I am based in New York City, but am open to connecting with individuals remotely from anywhere in the world. I frequently travel for industry events and conferences.",
+    "introPreferences": "## Introduction Guidelines\n\n* **Hard Requirements:**\n  -- Introductions must be to individuals at the Director level or above.\n  -- Prioritize introductions to individuals with a strong technical background in AI/ML.\n  -- Ensure the contact has a demonstrable interest in fintech or related industries.\n* **Soft Preferences:**\n  -- Introductions to individuals with experience in federated learning or differential privacy are highly valued.\n  -- A brief, personalized note explaining the potential synergy between Naledi and the contact is essential.\n  -- Avoid introductions to purely sales-focused individuals.",
+    "personalPreferences": "LinkedIn messaging is best for initial contact. Happy to connect via email (naledi.oduya@novatech.com) for longer conversations.  I\u2019m not currently active on Twitter.",
+    "meetingAndSchedulingPreferences": "I generally prefer 30-minute introductory calls to assess mutual fit. I'm flexible with scheduling and can adapt to different time zones."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 23.37583899497986,
+      "input_tokens": 854,
+      "output_tokens": 1431,
+      "problems": []
+    }
+  ],
+  "success": true
+}

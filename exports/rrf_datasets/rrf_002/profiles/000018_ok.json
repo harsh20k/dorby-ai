@@ -1,0 +1,63 @@
+{
+  "id": 18,
+  "archetype": "Investor & Advisor, Family Office Focus",
+  "given_name": "Naledi Kimura",
+  "style_version": 2,
+  "archetypes_version": 4,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Naledi Kimura is a second-generation principal at Kairos Family Office, a multi-family office focused on early-stage venture capital in climate tech and sustainable agriculture. Her father founded Kairos, but Naledi has been instrumental in shifting the firm\u2019s focus to impact investing, leveraging her background in environmental engineering and a deep network built through MIT. She\u2019s a technically astute investor, able to quickly grasp the complexities of new technologies, but also prioritizes strong founder teams with a clear vision for scalability and positive social impact. She\u2019s currently leading a new fund dedicated to pre-seed and seed stage investments. A distinctive detail: she spent two years *working* on a vertical farm project in Singapore after graduating, before joining Kairos, giving her unique operational insight. She's actively seeking founder introductions, particularly those with demonstrable traction and a strong commitment to sustainability. She\u2019s known for being direct, highly analytical, and valuing efficiency in the diligence process.",
+    "positioning": "Naledi Kimura is a Principal at Kairos Family Office, a leading multi-family office dedicated to deploying capital into high-growth, impact-driven ventures. I spearhead early-stage investments, focusing on climate tech and sustainable agriculture, with a particular emphasis on pre-seed and seed stage opportunities. My role encompasses all aspects of the investment lifecycle, from sourcing and due diligence to portfolio management and value creation. I leverage a blend of technical expertise \u2013 holding a degree in Environmental Engineering from MIT \u2013 and a practical understanding of operational challenges gained through hands-on experience in the agritech sector. At Kairos, I\u2019ve been pivotal in refining our investment thesis towards impactful technologies poised to address critical global challenges. My focus is on identifying and supporting visionary founders building scalable solutions with demonstrable environmental and social returns. I am passionate about fostering innovation and driving sustainable growth within the portfolio, actively mentoring founders and connecting them with valuable resources. I\u2019m seeking to build long-term relationships with exceptional entrepreneurs who share our commitment to a more sustainable future.",
+    "background": "- **Principal, Kairos Family Office** (2018 \u2013 Present)\n    - Lead investor for a portfolio of 15+ early-stage climate tech and sustainable agriculture companies.\n    - Developed and implemented the firm\u2019s impact investing framework, resulting in a 30% increase in ESG-focused investments.\n    - Spearheaded the launch of the \u2018Terra Nova\u2019 fund, a $50M venture fund dedicated to pre-seed and seed stage climate solutions.\n    - Managed due diligence processes, including technical assessments, market analysis, and financial modeling.\n    - Actively involved in portfolio company governance, providing strategic guidance and operational support.\n\n- **Project Engineer, SkyGreens** (Singapore) (2016 \u2013 2018)\n    - Contributed to the design, construction, and operation of a large-scale vertical farm in Singapore.\n    - Managed hydroponic systems, environmental controls, and data analytics to optimize crop yields.\n    - Developed and implemented sustainable farming practices, reducing water consumption by 20%.\n    - Gained invaluable operational experience in the agritech sector.\n\n- **Education:**\n    - **Massachusetts Institute of Technology (MIT)**, Cambridge, MA \u2013 Master of Science, Environmental Engineering (2016)\n    - **Stanford University**, Stanford, CA \u2013 Bachelor of Science, Civil and Environmental Engineering (2014)\n\n- **Skills:**\n    - Venture Capital, Due Diligence, Financial Modeling, Impact Investing, ESG Analysis, Climate Tech, Sustainable Agriculture, Agritech, Hydroponics, Data Analytics, Project Management, Strategic Planning, Portfolio Management, Lean Startup Methodologies, Technical Assessments, Risk Management.",
+    "lookingFor": "## Investment Opportunities & Network Expansion\n\nI am actively seeking connections with founders and innovators in the following areas:\n\n* **Climate Tech:** Specifically, companies focused on carbon capture, renewable energy storage, sustainable materials, and circular economy solutions.\n* **Sustainable Agriculture:** Including precision farming, vertical farming, alternative proteins, and regenerative agriculture technologies.\n* **Pre-Seed & Seed Stage Startups:** I am particularly interested in companies with a demonstrable MVP and early traction.\n\nI am also interested in connecting with:\n\n* **Angel Investors:** Individuals with a track record of successful early-stage investments in climate tech and sustainable agriculture.\n* **Venture Capital Partners:** Firms specializing in impact investing and sustainability.\n* **Industry Experts & Advisors:** Individuals with deep knowledge in relevant sectors who can provide mentorship and guidance to our portfolio companies.\n\nI welcome introductions to exceptional founders with compelling visions and the potential to drive meaningful change. I am open to exploring investment opportunities across North America and Europe.",
+    "notes": "Naledi is a high-value target for founder introductions. [Timestamp: 2024-02-29 - Initial profile scan completed]. She's very direct in her questioning during initial calls, prioritizing technical feasibility and scalability. Avoid introductions of \u2018idea-stage\u2019 companies without a clear path to an MVP. She responds best to concise, data-driven introductions highlighting key metrics (traction, revenue, team experience). [Timestamp: 2024-03-08 - Feedback from prior introduction, successful investment]. Kairos is currently deploying from the Terra Nova fund, so focus introductions on companies seeking seed funding ($500k - $3M). Internal tag: #climetech #impactinvesting #familyoffice. She's attending the Sustainable Agriculture Summit in Amsterdam next month - potential networking opportunity. [Timestamp: 2024-03-15 - Event confirmed]. Prioritize introductions from trusted connectors within the MIT alumni network.",
+    "locationAvailability": "Naledi Kimura is based in Boston, Massachusetts, but is open to connecting with founders and investors globally through virtual meetings and occasional travel.",
+    "introPreferences": "## Introduction Guidelines\n\n* **Hard Requirements:**\n    - Founders must have a demonstrable MVP or early traction (revenue, pilot programs, LOIs).\n    - Companies must be focused on climate tech or sustainable agriculture.\n    - Introductions *must* include a concise executive summary (max 2 paragraphs) outlining the company\u2019s mission, technology, and key metrics.\n* **Soft Preferences:**\n    - Prioritize introductions from individuals with a strong existing relationship with the founder.\n    - Avoid introductions of companies seeking funding rounds larger than $3M at this stage.\n    - Best fit: Founders with a technical background and a clear understanding of their target market.",
+    "personalPreferences": "Prefers email for initial contact. Quick responses via LinkedIn messaging. Generally unavailable for calls before 10 AM EST.",
+    "meetingAndSchedulingPreferences": "Generally prefers 30-minute introductory calls. Please include a brief agenda when scheduling."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 19.710522174835205,
+      "input_tokens": 846,
+      "output_tokens": 1448,
+      "problems": [
+        "notes: possible truncation (ends with '...** \u2018ClimateTech-Priority\u2019')"
+      ]
+    },
+    {
+      "attempt": 2,
+      "elapsed_s": 25.18682599067688,
+      "input_tokens": 846,
+      "output_tokens": 1467,
+      "problems": []
+    }
+  ],
+  "success": true
+}

@@ -1,0 +1,519 @@
+<title>Static reciprocal two-tower — findings</title>
+<style>
+  :root {
+    color-scheme: light;
+    --surface:        #fcfcfb;
+    --page:           #f9f9f7;
+    --ink:            #0b0b0b;
+    --ink-2:          #52514e;
+    --muted:          #898781;
+    --grid:           #e1e0d9;
+    --axis:           #c3c2b7;
+    --border:         rgba(11,11,11,0.10);
+    --card:           #ffffff;
+    --series-fwd:     #2a78d6;
+    --series-comb:    #eb6834;
+    --warn-bg:        #fdf3df;
+    --warn-border:    #e9c37a;
+    --warn-ink:       #6b4d10;
+    --good-ink:       #006300;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:where(:not([data-theme="light"])) {
+      color-scheme: dark;
+      --surface:      #1a1a19;
+      --page:         #0d0d0d;
+      --ink:          #ffffff;
+      --ink-2:        #c3c2b7;
+      --muted:        #898781;
+      --grid:         #2c2c2a;
+      --axis:         #383835;
+      --border:       rgba(255,255,255,0.10);
+      --card:         #17181a;
+      --series-fwd:   #3987e5;
+      --series-comb:  #d95926;
+      --warn-bg:      #2a2415;
+      --warn-border:  #6b551f;
+      --warn-ink:     #e7c477;
+      --good-ink:     #0ca30c;
+    }
+  }
+  :root[data-theme="dark"] {
+    color-scheme: dark;
+    --surface:      #1a1a19;
+    --page:         #0d0d0d;
+    --ink:          #ffffff;
+    --ink-2:        #c3c2b7;
+    --muted:        #898781;
+    --grid:         #2c2c2a;
+    --axis:         #383835;
+    --border:       rgba(255,255,255,0.10);
+    --card:         #17181a;
+    --series-fwd:   #3987e5;
+    --series-comb:  #d95926;
+    --warn-bg:      #2a2415;
+    --warn-border:  #6b551f;
+    --warn-ink:     #e7c477;
+    --good-ink:     #0ca30c;
+  }
+
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--page);
+    color: var(--ink);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    line-height: 1.55;
+  }
+  .page {
+    max-width: 780px;
+    margin: 0 auto;
+    padding: 56px 24px 96px;
+  }
+  h1, h2, h3 {
+    font-family: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+    font-weight: 600;
+    text-wrap: balance;
+    margin: 0 0 0.4em;
+  }
+  h1 { font-size: 2rem; letter-spacing: -0.01em; }
+  h2 { font-size: 1.3rem; margin-top: 2.6em; }
+  h3 { font-size: 1.02rem; margin-top: 1.6em; }
+  p { margin: 0 0 1em; color: var(--ink); max-width: 66ch; }
+  .lede { font-size: 1.1rem; color: var(--ink-2); max-width: 62ch; }
+  .eyebrow {
+    font-size: 0.72rem;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+    color: var(--muted);
+    font-weight: 600;
+    margin-bottom: 0.6em;
+  }
+  code, .mono {
+    font-family: ui-monospace, "SF Mono", "Cascadia Code", "Roboto Mono", monospace;
+    font-size: 0.92em;
+  }
+  .formula {
+    font-family: ui-monospace, "SF Mono", "Cascadia Code", "Roboto Mono", monospace;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 14px 18px;
+    font-size: 0.92rem;
+    color: var(--ink-2);
+    overflow-x: auto;
+    margin: 1em 0 1.4em;
+  }
+  .formula .hl { color: var(--ink); font-weight: 600; }
+  hr.rule {
+    border: none;
+    border-top: 1px solid var(--grid);
+    margin: 2.8em 0;
+  }
+
+  .status-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.76rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    padding: 4px 10px 4px 8px;
+    border-radius: 999px;
+    background: var(--warn-bg);
+    border: 1px solid var(--warn-border);
+    color: var(--warn-ink);
+    margin-bottom: 1.4em;
+  }
+  .status-chip::before {
+    content: "";
+    width: 6px; height: 6px;
+    border-radius: 50%;
+    background: var(--warn-ink);
+    flex: none;
+  }
+
+  /* --- diagram --- */
+  .diagram-wrap {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 20px 8px 12px;
+    margin: 1.8em 0;
+  }
+  .diagram-wrap svg { display: block; width: 100%; height: auto; }
+  .diagram-caption {
+    text-align: center;
+    font-size: 0.78rem;
+    color: var(--muted);
+    margin-top: 6px;
+  }
+
+  /* --- cards / callouts --- */
+  .callout {
+    border: 1px solid var(--border);
+    background: var(--card);
+    border-radius: 10px;
+    padding: 18px 20px;
+    margin: 1.4em 0;
+  }
+  .callout.warn {
+    background: var(--warn-bg);
+    border-color: var(--warn-border);
+  }
+  .callout.warn p { color: var(--warn-ink); }
+  .callout p:last-child { margin-bottom: 0; }
+
+  /* --- legend --- */
+  .legend {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    font-size: 0.82rem;
+    color: var(--ink-2);
+    margin: 0.6em 0 1.2em;
+    flex-wrap: wrap;
+  }
+  .legend-item { display: flex; align-items: center; gap: 7px; }
+  .swatch { width: 11px; height: 11px; border-radius: 3px; flex: none; }
+  .swatch.fwd { background: var(--series-fwd); }
+  .swatch.comb { background: var(--series-comb); }
+
+  /* --- bar chart --- */
+  .chart-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 22px 22px 10px;
+    margin: 1em 0 1.8em;
+  }
+  .bar-group { margin: 0 0 22px; }
+  .bar-group:last-child { margin-bottom: 4px; }
+  .bar-group-label {
+    font-size: 0.86rem;
+    font-weight: 600;
+    color: var(--ink);
+    margin-bottom: 10px;
+  }
+  .bar-row { display: flex; align-items: center; gap: 12px; margin-bottom: 7px; }
+  .bar-row .name { width: 96px; flex: none; font-size: 0.78rem; color: var(--ink-2); text-align: right; }
+  .bar-track {
+    position: relative;
+    flex: 1;
+    height: 22px;
+    background: linear-gradient(to right, var(--grid) 1px, transparent 1px) 0 0/ 12.5% 100%;
+  }
+  .bar-track .chance-line {
+    position: absolute; left: 0; top: -4px; bottom: -4px;
+    width: 1px; background: var(--axis);
+  }
+  .bar-fill {
+    position: absolute; top: 1px; bottom: 1px; left: 0;
+    border-radius: 0 4px 4px 0;
+    transition: filter 0.15s ease;
+  }
+  .bar-fill.fwd { background: var(--series-fwd); }
+  .bar-fill.comb { background: var(--series-comb); }
+  .bar-fill:hover { filter: brightness(1.12); cursor: default; }
+  .bar-val {
+    width: 56px; flex: none; font-family: ui-monospace, "SF Mono", monospace;
+    font-variant-numeric: tabular-nums; font-size: 0.8rem; color: var(--ink);
+  }
+  .chance-label {
+    font-size: 0.68rem; color: var(--muted); margin-top: 2px;
+    padding-left: 108px;
+  }
+  .bar-fill[title] { cursor: help; }
+
+  /* --- delta dots --- */
+  .delta-row {
+    display: flex; align-items: center; gap: 14px; margin: 10px 0 4px;
+  }
+  .delta-row .name { width: 96px; flex: none; font-size: 0.78rem; color: var(--ink-2); text-align: right; }
+  .delta-track { position: relative; flex: 1; height: 30px; }
+  .delta-zero { position: absolute; left: 50%; top: 0; bottom: 0; width: 1px; background: var(--axis); }
+  .delta-whisker { position: absolute; top: 14px; height: 2px; background: var(--ink-2); }
+  .delta-dot {
+    position: absolute; top: 8px; width: 14px; height: 14px; border-radius: 50%;
+    background: var(--series-comb); border: 2px solid var(--card);
+    box-shadow: 0 0 0 1px var(--border);
+  }
+  .delta-caption { font-size: 0.7rem; color: var(--muted); padding-left: 110px; margin-top: 4px;}
+
+  /* --- table --- */
+  .table-wrap { overflow-x: auto; margin: 1.2em 0 1.6em; }
+  table { border-collapse: collapse; width: 100%; font-size: 0.86rem; min-width: 480px; }
+  th, td { text-align: right; padding: 8px 10px; border-bottom: 1px solid var(--grid); font-variant-numeric: tabular-nums; }
+  th:first-child, td:first-child { text-align: left; font-variant-numeric: normal; }
+  th { color: var(--muted); font-weight: 600; font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.04em; }
+  tr.highlight td { background: color-mix(in srgb, var(--series-comb) 12%, transparent); font-weight: 600; }
+  tr.highlight td:first-child { border-left: 2px solid var(--series-comb); padding-left: 8px; }
+
+  /* --- footer --- */
+  .repro {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 16px 18px;
+    font-family: ui-monospace, "SF Mono", "Cascadia Code", monospace;
+    font-size: 0.82rem;
+    color: var(--ink-2);
+    overflow-x: auto;
+    white-space: pre;
+    line-height: 1.7;
+  }
+  .repro .comment { color: var(--muted); }
+  footer {
+    margin-top: 3em;
+    padding-top: 1.6em;
+    border-top: 1px solid var(--grid);
+    font-size: 0.78rem;
+    color: var(--muted);
+  }
+  ul.next-steps { padding-left: 1.2em; margin: 0 0 1em; }
+  ul.next-steps li { margin-bottom: 0.6em; max-width: 62ch; }
+</style>
+
+<div class="page">
+
+  <div class="eyebrow">Boardy AI · dorby-ai · baselines/reciprocal_static</div>
+  <h1>Does knowing what the candidate wants help predict the match?</h1>
+  <p class="lede">
+    A static reciprocal scoring rule — built from Ga Wu's "Dynamic Reciprocal
+    User Matching with Fast Weight Programmers" proposal — tested against the
+    real 200-pair accept/decline dataset. No training, one fitted number.
+  </p>
+
+  <div class="status-chip">Directionally positive, not statistically proven</div>
+
+  <div class="diagram-wrap">
+    <svg viewBox="0 0 720 220" role="img" aria-label="Diagram of the forward and reciprocal scoring paths between a seeker and a candidate">
+      <defs>
+        <marker id="arrow-fwd" markerWidth="9" markerHeight="9" refX="7" refY="4" orient="auto">
+          <path d="M0,0 L8,4 L0,8 Z" fill="var(--series-fwd)" />
+        </marker>
+        <marker id="arrow-comb" markerWidth="9" markerHeight="9" refX="7" refY="4" orient="auto">
+          <path d="M0,0 L8,4 L0,8 Z" fill="var(--series-comb)" />
+        </marker>
+      </defs>
+      <style>
+        .node-box { fill: var(--card); stroke: var(--border); stroke-width: 1; }
+        .node-label { fill: var(--ink); font-size: 13px; font-family: ui-monospace, "SF Mono", monospace; text-anchor: middle; }
+        .role-label { fill: var(--muted); font-size: 11px; font-family: -apple-system, sans-serif; text-anchor: middle; }
+        .person-label { fill: var(--ink-2); font-size: 12px; font-weight: 600; font-family: -apple-system, sans-serif; text-anchor: middle; }
+        .edge-label { font-size: 11px; font-family: ui-monospace, "SF Mono", monospace; text-anchor: middle; }
+      </style>
+
+      <text x="150" y="24" class="person-label">seeker (u)</text>
+      <text x="570" y="24" class="person-label">candidate (i)</text>
+
+      <!-- seeker boxes -->
+      <rect x="70" y="40" width="160" height="42" rx="8" class="node-box" />
+      <text x="150" y="59" class="node-label">k_u</text>
+      <text x="150" y="74" class="role-label">look-for + query</text>
+
+      <rect x="70" y="150" width="160" height="42" rx="8" class="node-box" />
+      <text x="150" y="169" class="node-label">v_u</text>
+      <text x="150" y="184" class="role-label">background</text>
+
+      <!-- candidate boxes -->
+      <rect x="490" y="40" width="160" height="42" rx="8" class="node-box" />
+      <text x="570" y="59" class="node-label">k_i</text>
+      <text x="570" y="74" class="role-label">look-for</text>
+
+      <rect x="490" y="150" width="160" height="42" rx="8" class="node-box" />
+      <text x="570" y="169" class="node-label">v_i</text>
+      <text x="570" y="184" class="role-label">background</text>
+
+      <!-- forward: k_u -> v_i -->
+      <line x1="230" y1="61" x2="484" y2="167" stroke="var(--series-fwd)" stroke-width="2" marker-end="url(#arrow-fwd)" />
+      <text x="360" y="100" class="edge-label" fill="var(--series-fwd)">s_forward = k_u · v_i</text>
+
+      <!-- reciprocal: k_i -> v_u -->
+      <line x1="490" y1="61" x2="236" y2="167" stroke="var(--series-comb)" stroke-width="2" marker-end="url(#arrow-comb)" />
+      <text x="360" y="140" class="edge-label" fill="var(--series-comb)">s_reciprocal = k_i · v_u</text>
+    </svg>
+    <div class="diagram-caption">What the seeker wants vs. what the candidate offers — and the reverse. <span class="mono">S = s_forward + λ·s_reciprocal</span></div>
+  </div>
+
+  <h2>What was tested</h2>
+  <p>
+    The paper's real contribution — a Fast Weight Programmer memory that
+    adapts a user's preference vector from a session's (impression, skip,
+    like, message, …, timestamp) history — needs interaction logs this
+    project's dataset does not have: every real pair is a single static
+    (seeker, candidate, accept/decline) outcome, no session, no sequence.
+    That mechanism wasn't built here; fabricating histories to exercise it
+    would defeat the point of an offline eval.
+  </p>
+  <p>
+    What the paper's own math reduces to with zero history — <span class="mono">q_t = Norm(k_u)</span> —
+    is exactly this dataset's shape. So this experiment implements that
+    slice, plus the one piece nothing else in this project had tried: the
+    static <strong>reciprocal</strong> term, scoring not just whether the
+    seeker's stated want matches the candidate's background, but the
+    reverse — whether the candidate's own want matches the seeker's
+    background too.
+  </p>
+  <div class="formula">
+    s_forward(u, i)&nbsp;&nbsp;&nbsp;= k_u · v_i&nbsp;&nbsp;<span style="color:var(--muted)"># what u wants vs. what i offers</span><br />
+    s_reciprocal(i, u) = k_i · v_u&nbsp;&nbsp;<span style="color:var(--muted)"># what i wants vs. what u offers</span><br />
+    <span class="hl">S(u, i) = s_forward + λ · s_reciprocal</span>&nbsp;&nbsp;<span style="color:var(--muted)">λ = 1.75, fit by grid search on 131 real train pairs only</span>
+  </div>
+  <p>
+    Both k and v come from the <em>same</em> frozen <code>voyage-4-nano</code> —
+    zero fine-tuning, one scalar fit. The paper leaves the two encoders
+    "potentially different"; untying them is a further step, not this one.
+  </p>
+
+  <h2>Results</h2>
+  <p>Adding the reciprocal term lifted pair ROC-AUC on every population checked — train (where λ was fit), and both eval populations it never touched.</p>
+
+  <div class="legend">
+    <div class="legend-item"><span class="swatch fwd"></span>forward-only (today's one-directional score)</div>
+    <div class="legend-item"><span class="swatch comb"></span>combined, λ = 1.75 (+ reciprocal term)</div>
+  </div>
+
+  <div class="chart-card">
+    <div class="bar-group">
+      <div class="bar-group-label">Holdout — 69 real pairs, 65-candidate corpus</div>
+      <div class="bar-row">
+        <div class="name">forward-only</div>
+        <div class="bar-track"><div class="chance-line"></div><div class="bar-fill fwd" style="width:42.65%" title="pair ROC-AUC 0.5853"></div></div>
+        <div class="bar-val">0.5853</div>
+      </div>
+      <div class="bar-row">
+        <div class="name">combined</div>
+        <div class="bar-track"><div class="chance-line"></div><div class="bar-fill comb" style="width:62.05%" title="pair ROC-AUC 0.6241"></div></div>
+        <div class="bar-val">0.6241</div>
+      </div>
+      <div class="chance-label">bars start at chance (AUC 0.5) · +0.0388 gained</div>
+    </div>
+    <div class="bar-group">
+      <div class="bar-group-label">All 200 real pairs, 178-candidate corpus</div>
+      <div class="bar-row">
+        <div class="name">forward-only</div>
+        <div class="bar-track"><div class="chance-line"></div><div class="bar-fill fwd" style="width:31.9%" title="pair ROC-AUC 0.5638"></div></div>
+        <div class="bar-val">0.5638</div>
+      </div>
+      <div class="bar-row">
+        <div class="name">combined</div>
+        <div class="bar-track"><div class="chance-line"></div><div class="bar-fill comb" style="width:48.2%" title="pair ROC-AUC 0.5964"></div></div>
+        <div class="bar-val">0.5964</div>
+      </div>
+      <div class="chance-label">bars start at chance (AUC 0.5) · +0.0326 gained</div>
+    </div>
+  </div>
+
+  <h3>But is the gain real?</h3>
+  <p>
+    A 5,000-resample bootstrap of the AUC delta (stratified by label) says:
+    probably, not certainly. Both intervals cross zero.
+  </p>
+  <div class="chart-card">
+    <div class="delta-row">
+      <div class="name">Holdout</div>
+      <div class="delta-track">
+        <div class="delta-zero"></div>
+        <div class="delta-whisker" style="left:29.5%; width:36.6%;"></div>
+        <div class="delta-dot" style="left:calc(62.1% - 7px);"></div>
+      </div>
+    </div>
+    <div class="delta-caption">Δ AUC = +0.0388, 95% CI [−0.0655, 0.1474] · P(Δ&gt;0) = 0.76</div>
+    <div class="delta-row" style="margin-top:18px;">
+      <div class="name">All-200</div>
+      <div class="delta-track">
+        <div class="delta-zero"></div>
+        <div class="delta-whisker" style="left:39.6%; width:41.5%;"></div>
+        <div class="delta-dot" style="left:calc(60.2% - 7px);"></div>
+      </div>
+    </div>
+    <div class="delta-caption">Δ AUC = +0.0326, 95% CI [−0.0333, 0.0994] · P(Δ&gt;0) = 0.84</div>
+  </div>
+  <p>
+    Same sign in three separate checks — train (where λ was fit), holdout,
+    and all-200 — for zero training cost. That consistency is the reason
+    to keep pulling this thread. It is not, on its own, proof the gain
+    survives at this sample size.
+  </p>
+
+  <h3>Against everything else measured on this dataset</h3>
+  <p>
+    Ranked by pair AUC against <code>docs/baseline-results-real200.md</code>.
+    The combined score sits at or above every frozen baseline and every
+    fine-tuned <code>twotower</code> arm except two Qwen3-Embedding fine-tunes —
+    with zero training.
+  </p>
+
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>model</th><th>pair AUC</th><th>MRR</th></tr></thead>
+      <tbody>
+        <tr><td>twotower Qwen micro-1</td><td>0.6828</td><td>0.4972</td></tr>
+        <tr><td>twotower Qwen micro-6</td><td>0.6810</td><td>0.5847</td></tr>
+        <tr class="highlight"><td>reciprocal static (this run)</td><td>0.6241</td><td>0.4785</td></tr>
+        <tr><td>twotower Arm A (v2)</td><td>0.5983</td><td>0.5326</td></tr>
+        <tr><td>twotower top1_ctrl</td><td>0.5974</td><td>0.5436</td></tr>
+        <tr><td>Voyage-4-large (production)</td><td>0.6086</td><td>0.5287</td></tr>
+        <tr><td>Voyage-4-nano (frozen)</td><td>0.5793</td><td>0.4610</td></tr>
+        <tr><td>TF-IDF (lexical)</td><td>0.5922</td><td>0.2475</td></tr>
+      </tbody>
+    </table>
+    <div class="chance-label" style="padding-left:0; margin-top:6px;">holdout population, 69 pairs — sorted by publication order in baseline-results-real200.md, not rank</div>
+  </div>
+
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>model</th><th>pair AUC</th><th>MRR</th></tr></thead>
+      <tbody>
+        <tr><td>twotower top1_ctrl</td><td>0.5683</td><td>0.3550</td></tr>
+        <tr><td>twotower Qwen micro-6</td><td>0.5947</td><td>0.3031</td></tr>
+        <tr class="highlight"><td>reciprocal static (this run)</td><td>0.5964</td><td>0.3461</td></tr>
+        <tr><td>Voyage-4-large (production)</td><td>0.5726</td><td>0.3102</td></tr>
+        <tr><td>Voyage-4-nano (frozen)</td><td>0.5593</td><td>0.3171</td></tr>
+        <tr><td>TF-IDF (lexical)</td><td>0.5649</td><td>0.1313</td></tr>
+      </tbody>
+    </table>
+    <div class="chance-label" style="padding-left:0; margin-top:6px;">all-200 population, 178-candidate corpus</div>
+  </div>
+
+  <p>
+    What it does <em>not</em> beat: retrieval. MRR trails Voyage-4-large and
+    <code>top1_ctrl</code> on both populations — expected, since retrieval here
+    ranks by <code>s_forward</code> alone, using only the short
+    <code>lookingFor</code> + query text rather than each baseline's full
+    profile. The gain is a <strong>reranking effect</strong>, which is exactly
+    where the paper places the reciprocal term (never in retrieval) — and
+    it's cheap under this project's &lt;100&nbsp;ms serving budget, since it's
+    one precomputed dot product per already-retrieved candidate.
+  </p>
+
+  <hr class="rule" />
+
+  <h2>What's next</h2>
+  <ul class="next-steps">
+    <li><strong>Untie the encoders.</strong> This run uses one frozen model for both look-for and background views. The paper leaves them "potentially different" — two separately-trained LoRA adapters is the natural next step.</li>
+    <li><strong>Tighten the confidence before trusting λ = 1.75</strong> — a larger eval population or k-fold re-fitting over the 131 train pairs would narrow the bootstrap interval before this informs a real decision.</li>
+    <li><strong>Try full calibration</strong> (<code>w1·s_fwd + w2·s_recip + b</code>) instead of one shared scalar — more flexible, same fit-on-train-only discipline.</li>
+  </ul>
+
+  <div class="repro">
+<span class="comment"># Modal (used for this run)</span>
+modal run baselines/reciprocal_static/modal_eval.py --run-id real200_001
+modal volume get dorby-reciprocal-static-eval real200_001/metrics.json \
+    ./artifacts/reciprocal_static/metrics.json
+
+<span class="comment"># tests</span>
+pytest tests/test_reciprocal_static.py -q
+  </div>
+
+  <footer>
+    Full write-up: <code>docs/reciprocal-static-experiment.md</code>. Source
+    paper: Ga Wu, "Dynamic Reciprocal User Matching with Fast Weight
+    Programmers" (Boardy AI, 2026-06-07). Isolated package:
+    <code>baselines/reciprocal_static/</code> — nothing under
+    <code>baselines/{bert_frozen,voyage_nano}</code> or <code>twotower/</code>
+    was modified.
+  </footer>
+
+</div>

@@ -1,0 +1,76 @@
+{
+  "id": 269,
+  "archetype": "Texas-Based, AI/Fintech Explorer",
+  "given_name": "Grace Vargas",
+  "style_version": 17,
+  "archetypes_version": 44,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Grace Vargas is a first-time founder, 34, based in Austin, TX. She spent 8 years in quantitative trading roles at bulge bracket banks, becoming increasingly frustrated by the lack of agility and the slow adoption of genuinely innovative tech. She left to build 'NovaFi', a platform using generative AI to optimize personal financial planning for high-net-worth individuals. NovaFi isn\u2019t about robo-advising; it's about providing bespoke, hyper-personalized strategies that are usually only available to ultra-wealthy clients. She\u2019s self-funded so far, has a functional MVP with 25 beta users, and is now focused on raising a seed round. She\u2019s deeply pragmatic, data-driven, and doesn\u2019t have time for buzzword-heavy pitches. Her distinctive career detail is a side-hustle she maintained *throughout* her finance career: teaching herself advanced coding through online courses and building personal projects, demonstrating a long-held passion for the tech side that\u2019s now driving NovaFi. She's actively looking for investors who understand both finance *and* the nuances of AI, and who aren't afraid to get their hands dirty understanding the underlying tech.",
+    "positioning": "NovaFi is revolutionizing personal financial planning for affluent individuals. We\u2019re tackling the massive inefficiency in how high-net-worth individuals manage their finances \u2013 a reliance on expensive, often slow-moving advisors who lack the tools to truly optimize outcomes. NovaFi leverages generative AI to create hyper-personalized financial strategies, going beyond simple portfolio allocation to encompass tax optimization, estate planning considerations, and even alternative asset allocation. \n\nOur MVP has demonstrated a consistent 15% improvement in potential after-tax returns for beta users compared to their existing financial plans. We\u2019re focused on a wedge strategy, initially targeting individuals with $1M - $10M in investable assets. This segment is underserved by traditional wealth management firms and is hungry for innovative solutions. We differentiate through our AI-powered personalization, our focus on holistic financial planning (not just investment advice), and our commitment to transparency and control for the end user.  We\u2019re currently seeking $1.5M in seed funding to scale our engineering team and expand our user acquisition efforts. Our ARR target for year one post-seed is $500k.",
+    "background": "- **Founder & CEO, NovaFi** (Austin, TX) \u2013 Jan 2023 \u2013 Present\n    * Led all aspects of company formation, product development (MVP), and user acquisition.\n    * Developed and implemented NovaFi's core AI algorithms and financial modeling engine.\n    * Secured initial 25 beta users with strong positive feedback and demonstrated value proposition.\n    * Responsible for all fundraising efforts, including pitch deck creation and investor outreach.\n\n- **Quantitative Trader, Goldman Sachs** (New York, NY) \u2013 June 2019 \u2013 Dec 2022\n    * Developed and maintained automated trading strategies for fixed income securities, resulting in a 12% increase in P&L within the first year.\n    * Collaborated with technology teams to implement new data feeds and improve trading infrastructure.\n    * Conducted rigorous backtesting and risk analysis to ensure strategy robustness.\n    * Consistently exceeded performance targets and received positive performance reviews.\n\n- **Quantitative Analyst, Morgan Stanley** (New York, NY) \u2013 July 2015 \u2013 May 2019\n    * Built and validated financial models for derivative pricing and risk management.\n    * Performed statistical analysis of market data to identify trading opportunities.\n    * Presented research findings to senior management and trading desks.\n    * Contributed to the development of new risk management methodologies.\n\n- **Education:**\n    * **Master of Science in Financial Engineering**, Columbia University \u2013 2015\n    * **Bachelor of Science in Mathematics**, University of Texas at Austin \u2013 2013 (Summa Cum Laude)\n\n- **Certifications:**\n    * CFA Level 1 (Completed)\n    * Completed several online courses in Machine Learning and Deep Learning (Coursera, Udacity).",
+    "lookingFor": "I'm actively seeking connections with investors who understand the potential of AI to disrupt the financial services industry, particularly those with a track record of backing early-stage fintech companies. I\u2019m *not* interested in investors who view AI as a buzzword or who lack a strong technical understanding. I'm looking for smart money \u2013 investors who can provide valuable guidance and strategic support beyond capital.\n\nSpecifically, I'm targeting:\n\n* **Seed-stage VCs** focused on fintech and AI (check sizes: $500k - $2M).\n* **Angel investors** with experience in quantitative finance or machine learning.\n* **Operators** with experience scaling early-stage fintech startups.\n* **Potential strategic partners** \u2013 companies with complementary technologies or access to relevant customer segments.\n\nI'm also open to connecting with other founders building innovative AI-powered financial products. I'm always eager to learn from others and share my experiences.",
+    "notes": "Grace is very direct and data-driven. She responds best to concise, well-structured communication.  Avoid overly enthusiastic or hyperbolic language. She values technical depth and is quick to identify BS. \n\n* **Data Quality Warning:** NovaFi\u2019s user numbers are currently small (25 beta users). Focus introductions on the *potential* of the technology and Grace\u2019s strong background.\n* **Recent Conversation (11/15):** Discussed potential synergy with a firm specializing in embedded finance. Grace was interested but emphasized NovaFi\u2019s focus on direct-to-consumer model for now.\n* **Intro Guidance:** Frame NovaFi as a sophisticated, AI-powered financial planning tool, *not* a robo-advisor. Highlight her quant trading background.",
+    "locationAvailability": "I am currently based in Austin, Texas, and am open to remote meetings. I am available to travel to key investor locations as needed.",
+    "introPreferences": "Please adhere to these guidelines when making introductions:\n\n* **Hard Requirements:** Investor must have demonstrated experience investing in AI *and* fintech.  No generalist funds, please.\n* **Soft Preferences:**  Preference for investors who have a technical background or strong technical advisors.  Past investments in quantitative finance are a plus.\n* **Intro Style:** Keep it concise. Focus on NovaFi\u2019s unique value proposition \u2013 AI-powered personalization for high-net-worth individuals \u2013 and Grace\u2019s relevant experience.  Briefly mention the MVP and initial traction (25 beta users, 15% return improvement). \n* **Avoid:**  Vague introductions or overly enthusiastic language. Do *not* position NovaFi as a 'disruptive' or 'revolutionary' technology. Let the data speak for itself.",
+    "personalPreferences": "I prefer to communicate via email or LinkedIn initially. I\u2019m responsive but generally prioritize focused work blocks, so immediate replies aren\u2019t always possible.  A brief follow-up is appreciated if I don't respond within 48 hours. I generally don\u2019t check Slack outside of work hours.",
+    "meetingAndSchedulingPreferences": "You can schedule a meeting directly through my Calendly link: [https://calendly.com/gracevargas-novafi/30min]"
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 30.513264179229736,
+      "input_tokens": 804,
+      "output_tokens": 1509,
+      "problems": [
+        "background: possible truncation (ends with '...Level 1 (2016)</li>\n</ul>')",
+        "meetingAndSchedulingPreferences: possible truncation (ends with '...cevargas-credileap/30min]')"
+      ]
+    },
+    {
+      "attempt": 2,
+      "elapsed_s": 21.09385919570923,
+      "input_tokens": 804,
+      "output_tokens": 1512,
+      "problems": [
+        "background: possible truncation (ends with '...Level 1 (2020)</li>\n</ul>')",
+        "meetingAndSchedulingPreferences: possible truncation (ends with '...endly Link - placeholder]')"
+      ]
+    },
+    {
+      "attempt": 3,
+      "elapsed_s": 22.132640838623047,
+      "input_tokens": 804,
+      "output_tokens": 1583,
+      "problems": [
+        "meetingAndSchedulingPreferences: possible truncation (ends with '...gracevargas-novafi/30min]')"
+      ]
+    }
+  ],
+  "success": false
+}

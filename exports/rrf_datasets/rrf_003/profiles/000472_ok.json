@@ -1,0 +1,54 @@
+{
+  "id": 472,
+  "archetype": "Deep Tech/AI Investor & Operator",
+  "given_name": "Olivia Fernandez",
+  "style_version": 29,
+  "archetypes_version": 79,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Olivia Fernandez is a seasoned AI product leader with a unique background: she was an early engineer at a highly successful, but ultimately acquired, computer vision startup. This experience instilled in her a deep understanding of the entire AI product lifecycle, from initial research to scaling for enterprise adoption, *and* the challenges of exit strategy. She\u2019s currently leading product at a mid-stage robotics company, but is actively exploring opportunities to leverage her expertise as an operator or advisor for early-stage deep tech AI startups \u2013 particularly those focused on applied AI in industrial automation, robotics, or healthcare. She\u2019s very selective about who she connects with, prioritizing individuals with demonstrated technical depth and a realistic view of the AI landscape (i.e., not hype-driven). She\u2019s extremely busy and values concise, relevant introductions.",
+    "positioning": "I lead product strategy and execution at Nova Robotics, a rapidly growing company building intelligent robotic solutions for logistics and warehousing. My focus is on translating cutting-edge AI research into tangible product features that deliver measurable value for our customers \u2013 optimizing efficiency, reducing costs, and improving safety. Prior to Nova, I was an early engineer at SightLine AI, a computer vision startup specializing in real-time object detection for autonomous vehicles. I experienced firsthand the excitement and challenges of building a company from the ground up, navigating the complexities of fundraising, scaling, and ultimately, being acquired by a larger player. That experience shaped my understanding of what it takes to build *sustainable* AI businesses. I\u2019m passionate about identifying and nurturing innovative AI applications with the potential to disrupt traditional industries. I believe the next wave of AI innovation will be driven by practical applications that solve real-world problems, not just theoretical breakthroughs. I\u2019m always open to connecting with fellow builders, investors, and researchers who share this vision. My strength lies in taking complex technical concepts and translating them into compelling product roadmaps and go-to-market strategies. I\u2019m particularly adept at identifying and mitigating the risks associated with deploying AI in real-world environments.  I\u2019m looking to leverage my experience to help promising AI startups navigate the challenges of product development, scaling, and achieving a successful exit.",
+    "background": "- **Nova Robotics,** *VP of Product* (2021 \u2013 Present)\n  - Led the development and launch of Nova\u2019s flagship autonomous mobile robot (AMR) platform, resulting in a 30% increase in warehouse throughput for key clients.\n  - Defined and executed the product roadmap, incorporating advanced AI algorithms for path planning, object recognition, and anomaly detection.\n  - Managed a team of product managers, designers, and engineers.\n- **SightLine AI,** *Software Engineer* (2017 \u2013 2021) \u2013 *Acquired by AutoCorp*\n  - Core contributor to the development of SightLine\u2019s real-time object detection system, utilizing deep learning techniques.\n  - Played a key role in securing Series A and Series B funding rounds.\n  - Led the integration of new sensor technologies into the platform.\n- **Massachusetts Institute of Technology (MIT),** *Master of Science in Computer Science* (2015 \u2013 2017)\n  - Specialization in Artificial Intelligence and Robotics.\n  - Thesis: \u201cImproving the Robustness of Deep Learning Models to Adversarial Attacks.\u201d\n- **Stanford University,** *Bachelor of Science in Electrical Engineering* (2011 \u2013 2015)\n- **Skills:** Deep Learning (TensorFlow, PyTorch), Computer Vision (OpenCV), Robotics (ROS), Python, C++, Product Management, Agile Development, Data Analysis, Machine Learning, Cloud Computing (AWS, Azure)",
+    "lookingFor": "I'm currently exploring opportunities to advise or invest in early-stage (Seed/Series A) deep tech AI startups. Specifically, I\u2019m interested in companies focused on:\n\n*   **Industrial Automation:** AI-powered solutions for manufacturing, logistics, and supply chain optimization.\n*   **Robotics:**  Companies developing innovative robotic hardware and software, particularly those leveraging AI for perception and control.\n*   **Healthcare AI:**  AI applications for diagnostics, drug discovery, and personalized medicine.\n\nI'm particularly keen to connect with:\n\n*   Founders with strong technical backgrounds and a clear vision for their product.\n*   Investors specializing in deep tech and AI.\n*   Experienced product leaders in the AI space.\n\n**Please do *not* send me pitches for:**\n\n*   AI-powered marketing tools.\n*   Generative AI applications without a clear practical use case.\n*   Companies with unrealistic valuations.",
+    "notes": "*   Recently spoke at the AI in Manufacturing conference in Boston \u2013 happy to share insights.\n*   Currently prioritizing companies with demonstrable traction and a strong team.\n*   I\u2019m actively reviewing pitch decks but response times may be slow.\n*   Introductions should be concise and highlight the technical depth of the startup.\n*   Avoid overly promotional language \u2013 I prefer a direct and honest approach.",
+    "locationAvailability": "I am based in Boston, Massachusetts, and primarily focused on opportunities in the North American market. I am open to remote collaboration and occasional travel to meet with promising startups and investors. I\u2019m available for virtual meetings most weekdays.",
+    "introPreferences": "When making introductions, please adhere to the following guidelines:\n\n*   **Hard Requirements:**\n    *   The individual you\u2019re introducing me to *must* have a strong technical background in AI or a related field.  I need to be able to have a substantive technical conversation.\n    *   The startup/investment opportunity must be genuinely innovative and address a significant market need.\n    *   Please confirm the individual is actively seeking connection \u2013 cold introductions are not appreciated.\n*   **Recommended Emphasis:**\n    *   Highlight the startup\u2019s unique technical advantages and competitive differentiators.\n    *   Briefly summarize the team\u2019s expertise and track record.\n    *   Focus on the problem the startup is solving and the potential impact of their solution.\n*   **Avoid:**\n    *   Generic introductions that lack specific details.\n    *   Overly hyped language or unsubstantiated claims.\n    *   Introducing me to individuals who are simply looking for \u2018advice\u2019 without a clear ask or offering.\n*   **Ideal introduction phrasing:** \u201cOlivia, I\u2019d like to introduce you to [Name], the founder of [Startup]. They\u2019re building [brief description of the product] using [key AI technologies]. I thought you\u2019d be interested in their approach to [specific challenge] given your experience at SightLine and Nova.\u201d",
+    "personalPreferences": "I prefer to be contacted via email.  LinkedIn messaging is acceptable for quick follow-ups, but please avoid lengthy messages.",
+    "meetingAndSchedulingPreferences": "I generally block off Friday afternoons for focused work.  Mornings and Tuesdays/Wednesdays are best for meetings."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 28.56835389137268,
+      "input_tokens": 846,
+      "output_tokens": 1481,
+      "problems": []
+    }
+  ],
+  "success": true
+}

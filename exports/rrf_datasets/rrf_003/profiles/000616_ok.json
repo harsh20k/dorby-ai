@@ -1,0 +1,77 @@
+{
+  "id": 616,
+  "archetype": "Serial Founder, Tech & Ops",
+  "given_name": "Aisha Nkosi",
+  "style_version": 38,
+  "archetypes_version": 104,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Aisha Nkosi is a serial founder currently focused on building 'Synapse Solutions,' a company leveraging AI for predictive maintenance in industrial robotics. Her career began as a robotics engineer, transitioned into operations leadership at a large manufacturing firm, and then she spent a decade founding and scaling three prior startups \u2013 a drone delivery service (failed due to regulatory hurdles), a sustainable packaging company (acquired by a larger competitor), and a logistics optimization platform (still running, but largely passive income). She's now keenly focused on industrial applications of AI, believing predictive maintenance is a massive, underserved market. She\u2019s looking for seed funding and strategic partnerships, particularly with companies already operating in the industrial automation space. She\u2019s very direct and values efficiency, but also cares deeply about ethical AI development and building a diverse team. She's slightly wary of 'hype' and prefers substance over flashy presentations.",
+    "positioning": "Aisha Nkosi is the Founder and CEO of Synapse Solutions, a company developing AI-powered predictive maintenance solutions for industrial robotics. With a background in robotics engineering and extensive experience in operations and entrepreneurship, Aisha brings a unique blend of technical expertise and business acumen to the table. She has a proven track record of building and scaling successful ventures, navigating complex challenges, and delivering innovative solutions. Aisha is passionate about leveraging technology to improve efficiency, reduce downtime, and drive sustainability within the industrial sector. She\u2019s currently focused on securing seed funding and forging strategic partnerships to accelerate Synapse Solutions' growth.",
+    "background": "- **Synapse Solutions, Founder & CEO** (2023 - Present)\n  * Leading all aspects of company development, including product vision, fundraising, team building, and go-to-market strategy.\n  * Developed a proprietary AI algorithm for predicting robotic component failures with 92% accuracy (validated through pilot programs).\n  * Secured initial seed funding of $250,000 from angel investors.\n\n- **LogiFlow Solutions, Founder & Executive Chairman** (2018 - 2023) \u2013 *Passive Role after 2021*\n  * Founded and initially led a logistics optimization platform utilizing machine learning to streamline supply chains.\n  * Grew the company to $5M ARR with a team of 30+ employees.\n  * Stepped back from day-to-day operations in 2021, retaining a board seat and equity stake.\n\n- **EcoPack Innovations, Founder & CEO** (2015 - 2018)\n  * Developed and marketed biodegradable packaging solutions for the food and beverage industry.\n  * Successfully secured Series A funding and achieved significant market penetration.\n  * Acquired by Green Solutions Inc. for an undisclosed sum.\n\n- **Precision Manufacturing Corp., Operations Manager** (2012 - 2015)\n  * Led a team of 50+ engineers and technicians in optimizing manufacturing processes and improving efficiency.\n  * Implemented lean manufacturing principles, resulting in a 15% reduction in production costs.\n  * Managed a $10M annual budget and oversaw the installation of new automation equipment.\n\n- **Massachusetts Institute of Technology (MIT), Master of Science in Robotics** (2010 - 2012)\n  * Focused research on advanced robotic control systems and machine learning.\n  * Published peer-reviewed papers in leading robotics journals.\n\n- **Carnegie Mellon University, Bachelor of Science in Mechanical Engineering** (2006 - 2010)\n  * Graduated *Summa Cum Laude* with honors.\n\n**Skills:** AI/ML, Predictive Maintenance, Robotics, Operations Management, Supply Chain Optimization, Fundraising, Team Leadership, Lean Manufacturing, Python, C++, Data Analysis, Business Strategy.",
+    "lookingFor": "## Strategic Partnerships\n* Seeking introductions to VPs of Operations or Heads of Innovation at large industrial automation companies (e.g., ABB, Siemens, FANUC).\n* Interested in exploring potential integration partnerships for Synapse Solutions' AI platform.\n\n## Investment\n* Actively raising a $2M seed round. Looking for investors with experience in industrial tech and a long-term investment horizon.\n* Open to connecting with angel investors and seed-stage venture capital firms.\n\n## Advisory\n* Mentorship from experienced AI entrepreneurs who have successfully scaled companies in the B2B space.\n* Advisors with deep knowledge of the industrial robotics market and regulatory landscape.\n\n**Do Not:** Introduce me to lifestyle investors or individuals solely focused on consumer-facing technologies. I'm not interested in purely financial investors without industry expertise.",
+    "notes": "Aisha is highly focused and direct. She responds quickly to relevant inquiries but can be dismissive of time-wasters. Recent LinkedIn activity indicates an increased focus on thought leadership content related to ethical AI in manufacturing. She is actively attending industry conferences (Automate, RoboBusiness) and presenting on Synapse Solutions' technology. Data suggests a slight preference for warm introductions over cold outreach. Her previous company, LogiFlow, is still generating revenue, providing a degree of financial flexibility.",
+    "locationAvailability": "Boston, Massachusetts, USA",
+    "introPreferences": "* **Ideal Connection Profile:** VP of Engineering, Director of Innovation, or Head of Digital Transformation at a major industrial robotics firm. Technical background is highly preferred.\n* **Introduction Style:** Concise and direct. Briefly highlight the value proposition of Synapse Solutions and the potential synergy with the target's organization.\n* **Hard Requirement:** The individual *must* have decision-making authority related to technology adoption or partnerships.\n* **Soft Preference:** Experience with predictive maintenance or AI-driven solutions is a plus.\n* **Do Not:** Introduce me to junior-level employees or individuals without clear decision-making power.\n* **Preferred Initial Contact:** Email introduction.",
+    "personalPreferences": "I prefer concise communication and appreciate directness. I\u2019m not a fan of overly formal networking events.",
+    "meetingAndSchedulingPreferences": "I generally prefer short, focused meetings (30-45 minutes). I\u2019m comfortable with video calls and in-person meetings in the Boston area. Please include a brief agenda when scheduling."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 46.32831811904907,
+      "input_tokens": 826,
+      "output_tokens": 1227,
+      "problems": [
+        "background: possible truncation (ends with '...der 35 (2019).</li>\n</ul>')",
+        "lookingFor: possible truncation (ends with '...ic valuations.</li>\n</ul>')",
+        "introPreferences: possible truncation (ends with '... or logistics.</li>\n</ul>')"
+      ]
+    },
+    {
+      "attempt": 2,
+      "elapsed_s": 19.82506513595581,
+      "input_tokens": 826,
+      "output_tokens": 1324,
+      "problems": [
+        "background: possible truncation (ends with '...(Kenya, 2019).</li>\n</ul>')",
+        "lookingFor: possible truncation (ends with '...ain logistics.</li>\n</ul>')",
+        "locationAvailability: suspiciously short (14 chars)",
+        "introPreferences: possible truncation (ends with '...e proposition.</li>\n</ul>')"
+      ]
+    },
+    {
+      "attempt": 3,
+      "elapsed_s": 20.827166080474854,
+      "input_tokens": 826,
+      "output_tokens": 1324,
+      "problems": []
+    }
+  ],
+  "success": true
+}

@@ -1,0 +1,54 @@
+{
+  "id": 573,
+  "archetype": "Prediction Markets & Web3 Builder",
+  "given_name": "Sana Ishikawa",
+  "style_version": 35,
+  "archetypes_version": 96,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Sana Ishikawa is a seasoned product manager transitioning from traditional fintech to the world of decentralized prediction markets. Her distinctive career detail is a five-year stint at a high-frequency trading firm *before* moving into product, giving her a unique understanding of market mechanics and risk. She\u2019s now focused on building user-friendly interfaces for complex prediction market protocols, believing that accessibility is key to mainstream adoption. She\u2019s actively seeking connections with builders, investors, and legal experts in the Web3 space, particularly those focused on decentralized finance (DeFi) and governance tokens. She views herself as a bridge between the established financial world and the emerging decentralized one, and wants to be positioned as a pragmatic, results-oriented leader who understands both the technical and the business sides of prediction markets. She\u2019s currently leading a small team developing a novel interface for a Layer 2 prediction market protocol, and is seeking seed funding.",
+    "positioning": "A product leader with a unique background bridging traditional finance and the burgeoning world of decentralized prediction markets. I specialize in translating complex technical concepts into intuitive user experiences, driving adoption through thoughtful design and strategic market positioning. My experience in high-frequency trading provides me with a deep understanding of market dynamics, risk management, and the importance of liquidity \u2013 critical elements often overlooked in early-stage Web3 projects. I\u2019m currently focused on building the next generation of prediction market interfaces, designed to empower users with access to sophisticated forecasting tools and decentralized financial opportunities. I\u2019m passionate about fostering community-driven governance and believe prediction markets have the potential to revolutionize decision-making processes across a wide range of industries. I'm seeking opportunities to collaborate with innovative teams and investors who share my vision for a more transparent and accessible financial future.  I want to be known as someone who can de-risk Web3 projects by applying principles of sound financial engineering and user-centric design.  I\u2019m particularly interested in discussing opportunities around Layer 2 scaling solutions, decentralized oracle services, and the integration of prediction markets with DeFi protocols.  Connect with me if you\u2019re building the future of forecasting or are interested in exploring the potential of decentralized prediction.",
+    "background": "* **Product Manager, Augur Labs** (2022 \u2013 Present)\n    * Led the product development of a new Layer 2 interface for the Augur protocol, resulting in a 30% increase in user engagement within the first quarter of launch.\n    * Conducted extensive user research and A/B testing to optimize the user experience, focusing on simplifying complex concepts like market creation and settlement.\n    * Collaborated with smart contract developers to implement new features and improve the security of the platform.\n    * Managed a team of three designers and engineers, fostering a collaborative and agile development environment.\n    * Spearheaded the integration of Chainlink oracles for enhanced data reliability.\n* **Product Manager, FinTech Solutions Inc.** (2019 \u2013 2022)\n    * Managed the product roadmap for a mobile trading platform, overseeing the development and launch of new features such as algorithmic trading tools and portfolio analytics.\n    * Increased user retention by 15% through the implementation of personalized onboarding flows and in-app tutorials.\n    * Conducted market research and competitive analysis to identify new opportunities for growth.\n    * Collaborated with marketing and sales teams to develop and execute product launch strategies.\n    * Utilized data analytics to track key performance indicators (KPIs) and identify areas for improvement.\n* **Quantitative Trader, Nova Trading Group** (2014 \u2013 2019)\n    * Developed and implemented automated trading strategies for various asset classes, including equities, futures, and options.\n    * Managed risk exposure and optimized trading parameters to maximize profitability.\n    * Conducted statistical analysis and backtesting to evaluate the performance of trading models.\n    * Maintained a strong understanding of market microstructure and regulatory requirements.\n    * Proficient in Python, R, and SQL for data analysis and algorithm development.\n* **Software Engineering Intern, Global Payments Corp.** (Summer 2013)\n    * Assisted in the development of a new payment processing system using Java and Spring framework.\n    * Gained experience in agile development methodologies and software testing.\n    * Contributed to the documentation and maintenance of existing software systems.\n\n**Skills:** Product Management, Web3, DeFi, Prediction Markets, User Experience (UX), User Interface (UI), Agile Development, Smart Contracts, Blockchain Technology, Data Analytics, Quantitative Analysis, Python, R, SQL, Market Research, Competitive Analysis, Risk Management, Chainlink, Layer 2 Scaling Solutions.",
+    "lookingFor": "I'm actively seeking connections with individuals who are building within the prediction market and Web3 space. Specifically:\n\n* **Seed-stage investors** focused on DeFi, prediction markets, and decentralized governance.\n* **Experienced smart contract developers** with expertise in Solidity and Layer 2 scaling solutions.\n* **Legal counsel** specializing in Web3 regulations and compliance.\n* **Founders of early-stage prediction market protocols** looking for partnerships or collaboration opportunities.\n* **Community builders** with a strong understanding of tokenomics and decentralized governance.\n\nI\u2019m particularly interested in discussing opportunities related to improving the user experience of prediction markets, increasing liquidity, and fostering community participation. I'm also keen to learn from others who are tackling the challenges of scalability, security, and regulatory compliance in the Web3 space. I'm open to advisory roles and potential board seats for promising projects.  I'm looking for introductions to VCs who actively invest in protocols utilizing optimistic rollups and ZK-rollups.  I'm hoping to connect with people building tools for decentralized identity and reputation systems as well.",
+    "notes": "* Following up with Alex from Polymarket next week regarding potential integration opportunities.\n* Researching the legal implications of offering prediction markets in different jurisdictions.\n* Need to schedule a demo of our new interface for potential investors.\n* Received positive feedback on the UI/UX from initial user testing \u2013 prioritizing accessibility features.\n* Exploring potential partnerships with decentralized oracle providers beyond Chainlink.\n* Currently reading 'The Wisdom of Crowds' \u2013 relevant to the core principles of prediction markets.",
+    "locationAvailability": "I am currently based in San Francisco, California, but am open to remote collaboration and travel as needed. I am also available for occasional in-person meetings in New York City and Austin.",
+    "introPreferences": "* Please keep introductions concise and focused on shared interests related to prediction markets, Web3, or DeFi.\n* I prefer introductions via LinkedIn message or email, with a brief context explaining the connection.\n* Avoid overly promotional introductions \u2013 I\u2019m more interested in building genuine relationships.\n* If you're connecting me with a potential investor, please share a brief overview of their investment thesis and portfolio.\n* When making an introduction, please highlight any specific areas where I might be able to offer value or expertise.\n* I appreciate a heads-up before making an introduction, allowing me to prepare accordingly.\n* Do *not* introduce me to anyone selling marketing services or NFT projects unrelated to prediction markets.",
+    "personalPreferences": "I prefer to communicate via email or LinkedIn message initially. I\u2019m most responsive during Pacific Standard Time business hours. Feel free to share relevant articles or resources \u2013 I\u2019m always eager to learn. I'm a big fan of concise communication and appreciate directness.",
+    "meetingAndSchedulingPreferences": "Please send a brief agenda or list of topics you\u2019d like to discuss before scheduling a meeting. I prefer 30-minute meetings to start, and am happy to extend if necessary. I'm available for video calls via Zoom or Google Meet."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 29.39311194419861,
+      "input_tokens": 858,
+      "output_tokens": 1634,
+      "problems": []
+    }
+  ],
+  "success": true
+}

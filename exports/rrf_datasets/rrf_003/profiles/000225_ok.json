@@ -1,0 +1,63 @@
+{
+  "id": 225,
+  "archetype": "Experienced Healthtech Operator-Turned-Founder",
+  "given_name": "Rafael Johansson",
+  "style_version": 14,
+  "archetypes_version": 38,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Rafael Johansson is a seasoned healthtech professional who spent 15 years in regulatory affairs and commercialization roles at large pharmaceutical companies, culminating in a VP position at Novartis. He became deeply frustrated with the inefficiencies and costs associated with navigating global regulatory landscapes for new medical devices and therapies. This frustration led him to found 'ReguNav', a startup offering an AI-powered platform designed to streamline regulatory submissions and accelerate market access for healthtech companies. He's currently focused on seed funding and early customer acquisition, seeking connections with VCs specializing in healthtech, regulatory experts, and potential pilot customers \u2013 particularly those developing innovative medical devices. He's very specific about the type of investor he wants, prioritizing those with operational experience in the healthtech space, not just financial backing. He's direct and values efficient communication.",
+    "positioning": "Rafael Johansson is the Founder & CEO of ReguNav, an AI-driven regulatory pathway and submission platform for medical device and pharmaceutical companies. Prior to founding ReguNav, Rafael spent fifteen years leading regulatory and commercialization strategies at global pharmaceutical leaders like Novartis and Pfizer. He\u2019s passionate about reducing the time and cost associated with bringing innovative healthcare solutions to market. Currently, Rafael is focused on securing seed funding and building strategic partnerships to accelerate ReguNav\u2019s growth and expand its platform capabilities. He\u2019s actively seeking connections with individuals who can provide insights into the evolving regulatory landscape and contribute to ReguNav\u2019s mission of simplifying healthcare compliance.",
+    "background": "- **Founder & CEO, ReguNav** (2023 - Present): Leading all aspects of the company, including strategy, fundraising, product development, and team building. Focused on developing an AI-powered platform to streamline regulatory submissions.\n- **Vice President, Regulatory Affairs, Novartis** (2018 - 2022): Led a team responsible for global regulatory strategy and submissions for a portfolio of novel therapies, including cell and gene therapies.\n- **Director, Global Regulatory Affairs, Pfizer** (2013 - 2018): Managed the regulatory lifecycle for multiple pharmaceutical products, from pre-clinical development to post-market surveillance.\n- **Senior Regulatory Affairs Manager, Johnson & Johnson** (2008 - 2013): Focused on submissions to the FDA and EMA for medical devices.\n- **Education: PhD, Pharmacology, University of California, San Francisco** (2008)\n- **Education: BS, Biology, Stanford University** (2004)\n- **Skills:** Regulatory Affairs (FDA, EMA, MHRA), Medical Device Regulations (MDR, IVDR), Pharmaceutical Regulations (GxP), AI/ML (basic understanding), Commercialization Strategy, Team Leadership, Fundraising, Venture Capital, Product Management, Strategic Planning, Data Analysis.\n- **Certifications:** Regulatory Affairs Certification (RAC)\n- **Publications:** Author of three peer-reviewed articles on regulatory pathways for innovative therapies.\n- **Awards:** Novartis Innovation Award (2021) - Recognized for contributions to accelerated drug approval.\n- **Languages:** English (Native), Swedish (Conversational)",
+    "lookingFor": "I'm actively seeking the following connections:\n- **Seed-stage VCs:** Specifically, firms with a demonstrated track record of investing in healthtech companies *and* partners with operational experience in the regulatory field. I'm not interested in purely financial investors.\n- **Medical Device Founders/CEOs:** Individuals who have recently navigated the regulatory approval process for innovative medical devices. I'm looking for potential pilot customers and feedback on ReguNav\u2019s platform.\n- **Regulatory Affairs Consultants:** Experienced consultants specializing in FDA and EMA submissions, particularly those with expertise in AI/ML-driven regulatory strategies. I'm open to exploring potential advisory roles.\n- **Strategic Partnerships:** Companies offering complementary services in the healthtech space (e.g., clinical trial management, market access consulting). \n\nI'm also open to informational interviews with individuals who have successfully scaled healthtech startups. I'm particularly interested in learning about best practices for customer acquisition and fundraising.",
+    "notes": "Spoke with Rafael on 10/26. He's *very* focused on finding investors who understand the intricacies of healthtech regulation \u2013 he emphasized this repeatedly. He's also wary of VCs who offer 'just money' and want a seat on the board without adding strategic value. He has a strong network from his time at Novartis but wants to expand it with more focused, startup-oriented connections. He's currently demoing ReguNav to a handful of potential pilot customers.",
+    "locationAvailability": "Rafael is based in Boston, MA, but frequently travels to meet with investors and potential customers on the East and West Coasts.",
+    "introPreferences": "Hard Requirements:\n- **Prioritize:** Introductions to Seed-stage VCs specializing in healthtech *with operational experience*.\n- **Exclude:** Introductions to generalist investors or those with no prior healthtech investments.\n\nSoft Preferences:\n- **Best Fit:** Individuals who have a demonstrated understanding of the challenges associated with regulatory submissions for medical devices and pharmaceuticals.\n- **Introduction Style:** Keep the introduction concise and focused on ReguNav\u2019s value proposition \u2013 streamlining regulatory pathways and accelerating market access. Highlight Rafael\u2019s experience at Novartis and Pfizer.\n- **Key Information to Include:** Briefly mention ReguNav\u2019s AI-powered platform and its potential to reduce the time and cost of regulatory compliance.",
+    "personalPreferences": "I prefer initial contact via LinkedIn or email. I respond quickly to concise and well-structured messages.",
+    "meetingAndSchedulingPreferences": "I am generally available for virtual meetings during East Coast business hours. Please schedule meetings at least 24 hours in advance to allow for preparation."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 22.297146797180176,
+      "input_tokens": 765,
+      "output_tokens": 1164,
+      "problems": [
+        "background: possible truncation (ends with '...Medical Device Regulation')"
+      ]
+    },
+    {
+      "attempt": 2,
+      "elapsed_s": 23.165059804916382,
+      "input_tokens": 765,
+      "output_tokens": 1223,
+      "problems": []
+    }
+  ],
+  "success": true
+}

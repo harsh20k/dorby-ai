@@ -1,0 +1,63 @@
+{
+  "id": 725,
+  "archetype": "Prediction Market Community Builder",
+  "given_name": "Theo Yamamoto",
+  "style_version": 44,
+  "archetypes_version": 122,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Theo Yamamoto is a rising star in the prediction market space, specifically focused on community building and increasing diversity within it. They transitioned from a quantitative finance background (specifically algorithmic trading) to see the potential for prediction markets to be a more accessible and impactful application of forecasting skills. A distinctive detail is that Theo *built* a successful, albeit small, prediction market platform focused on local political outcomes as a side project during their finance career \u2013 this gives them deep technical understanding *and* a passion for the space. Currently, Theo is focused on scaling a series of workshops and events aimed at onboarding newcomers, particularly women, into prediction markets, hoping to foster a more inclusive and robust ecosystem. They are actively seeking partnerships with larger platforms and funding to expand these initiatives. They present as highly analytical, data-driven, but also very enthusiastic and approachable, with a strong belief in the power of collective intelligence.",
+    "positioning": "Theo Yamamoto is a community builder and event organizer dedicated to accelerating the growth of the prediction market ecosystem. Leveraging a background in quantitative finance and a passion for forecasting, Theo focuses on lowering the barrier to entry for newcomers, with a particular emphasis on increasing female participation. They are the driving force behind 'Foresight Forward,' a series of workshops and networking events gaining traction within the space. Theo\u2019s unique ability to translate complex concepts into accessible learning experiences, coupled with a data-driven approach to community growth, makes them a valuable connector and thought leader. Currently, Theo is actively seeking strategic partnerships to scale Foresight Forward and expand its reach. Connecting with Theo now offers an opportunity to contribute to a rapidly evolving field and shape the future of decentralized forecasting.",
+    "background": "- **Founder & Lead Organizer, Foresight Forward (2023 \u2013 Present):** Conceptualized, launched, and currently leads Foresight Forward, a community initiative focused on education and networking within the prediction market space.  Responsibilities include curriculum development, event planning and execution (both online and in-person), speaker acquisition, and community management.  Successfully hosted 5 workshops with an average attendee satisfaction rating of 4.8/5 and a 30% female participation rate \u2013 significantly higher than the industry average. Increased community membership by 150% in the last six months.\n- **Quantitative Analyst, NovaTech Capital (2020 \u2013 2023):** Developed and implemented algorithmic trading strategies for a multi-billion dollar portfolio, specializing in statistical arbitrage and volatility modeling.  Responsibilities included data analysis, model backtesting, risk management, and performance reporting.  Contributed to a 12% increase in portfolio returns through the implementation of a novel volatility forecasting model. Proficient in Python, R, and SQL.\n- **Independent Developer (Side Project) \u2013 LocalForecast (2018 \u2013 2020):** Designed, built, and maintained a prediction market platform focused on local political outcomes.  Utilized blockchain technology for secure and transparent data recording and settlement.  Managed all aspects of the project, from frontend development to smart contract deployment.  Gained over 500 active users and achieved a 90% accuracy rate in predicting local election results.\n- **Research Assistant, MIT Media Lab (Summer 2019):** Assisted Professor Alex Pentland with research on social physics and collective intelligence.  Responsibilities included data collection, analysis, and visualization.  Contributed to a research paper published in *Nature*.\n- **Education:** Master of Science in Financial Engineering, Massachusetts Institute of Technology (MIT), 2020. Bachelor of Science in Mathematics, Stanford University, 2018.  GPA: 3.9/4.0 (both degrees). \n- **Certifications:** Certified Quantitative Finance Analyst (CQFA), 2021.",
+    "lookingFor": "- Introductions to founders and key decision-makers at established prediction market platforms (e.g., Augur, Polymarket, Gnosis).\n- Potential sponsors for Foresight Forward workshops and events \u2013 particularly organizations committed to diversity and inclusion in tech.\n- Mentorship from experienced community builders in the Web3 space.\n- Collaborators for developing educational content tailored to newcomers.\n- Individuals with expertise in marketing and growth hacking for Web3 communities.\n- Anyone interested in volunteering at Foresight Forward events.\n- Data-driven insights into community engagement and retention strategies.\n- Connections to organizations supporting women in blockchain and finance.",
+    "notes": "Theo is incredibly articulate and passionate about prediction markets. They have a knack for explaining complex technical concepts in a way that\u2019s accessible to a broad audience. Our last call focused on potential sponsorship opportunities for Foresight Forward, and they were very receptive to feedback on crafting a compelling sponsorship package. They are actively tracking metrics around workshop attendance and participant demographics and are always eager to discuss data-driven improvements. They mentioned a strong preference for building genuine relationships based on mutual value, rather than transactional networking. Be prepared to discuss the potential for long-term collaboration. They're also very interested in hearing about successful strategies for attracting and retaining female users in the Web3 space.",
+    "locationAvailability": "Based in Boston, MA, with frequent travel to San Francisco and New York for industry events.",
+    "introPreferences": "- Warm email introductions are preferred, with a brief summary of the connection's relevance to Theo's work.\n- Please highlight any shared interests or existing connections.\n- When introducing to platform founders, emphasize Foresight Forward's focus on onboarding new users and increasing diversity.\n- Avoid introducing Theo to individuals solely seeking investment or fundraising opportunities \u2013 they are currently focused on community building.\n- Subject line: 'Introduction - [Your Name] to Theo Yamamoto - Prediction Markets & Community'",
+    "personalPreferences": "Theo prefers to follow up via LinkedIn after an initial connection.",
+    "meetingAndSchedulingPreferences": "Theo is generally available for 30-minute video calls and prefers to schedule meetings using Calendly."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 31.7334041595459,
+      "input_tokens": 748,
+      "output_tokens": 1421,
+      "problems": [
+        "background: possible truncation (ends with '...on (GAIQ) \u2013 Obtained 2017')"
+      ]
+    },
+    {
+      "attempt": 2,
+      "elapsed_s": 20.672091722488403,
+      "input_tokens": 748,
+      "output_tokens": 1242,
+      "problems": []
+    }
+  ],
+  "success": true
+}

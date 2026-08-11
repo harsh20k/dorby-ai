@@ -80,11 +80,65 @@ now has two working generators — local Ollama and AWS Bedrock — see
 profiles into a new pos/neg dataset is designed but not yet built.
 **Separately: a new generalizable open-weight embedding baseline**
 (`baselines/hf_embedding/`, see "Open-weight HF embedding baselines" below)
-found that **Qwen3-Embedding-8B (Apache 2.0, free) beats Voyage-4-large —
-Boardy's own production model — on the core accept/decline task** (pair
-ROC-AUC 0.6595 vs 0.6086), the first model of any kind in this project to
-do so. Full results and two real model-loading compatibility issues found
-and fixed along the way in `docs/hf-embedding-baseline-findings.md`.
+found on the 69-pair holdout that Qwen3-Embedding-8B beat Voyage-4-large
+(0.6595 vs 0.6086 pair AUC). **That claim was retracted on 2026-07-31** — see
+`docs/all-200-baseline-sweep.md`. Re-scored on all 200 real pairs through the
+same code path, Qwen loses to Voyage-4-large on every metric (pair AUC 0.5529
+vs 0.5726, MRR 0.2045 vs 0.3102, R@1 0.0500 vs 0.1300) with a below-chance
+hard-negative AUC of 0.4680. **No open-weight model beats production overall**;
+BGE-en-ICL is the closest, beating it on retrieval (MRR 0.3190, R@1 0.1700) but
+not on AUC. The two model-loading compatibility fixes in
+`docs/hf-embedding-baseline-findings.md` remain valid.
+
+**Read `docs/baseline-results-real200.md`, not
+`docs/baseline-results-holdout.md`, when comparing models.** The 69-pair
+holdout ranks weak models reliably but carries no information among strong
+ones: Spearman against the all-200 ranking is +0.976 across the bottom 8
+models and **−0.029 across the top 6** — and every decision in this project
+has been made among that top group. The all-200 population (100 positive
+queries, 178-candidate corpus) is built by `eval_real_full/`.
+
+## Experiment isolation — the rule that overrides convenience
+
+**When trying a new idea, do not edit the previous experiment's code files. Copy
+what you need into a new isolated package and edit the copy.**
+
+Every experiment in this repo must stay a reproducible, isolated run. Editing a
+shared file retroactively changes what the *earlier* experiment did — its numbers
+in `docs/` can no longer be reproduced from the current tree, and that result
+silently becomes unverifiable. This repo's value is largely its accumulated,
+comparable measurements; that only holds if each one can still be re-run.
+Duplication is cheap, a broken audit trail is not.
+
+- **New idea → new top-level package**, not a new flag or mode bolted onto an
+  existing one. Own `config.py`, own entry point, own `artifacts/<experiment>/`
+  output dir. Precedents: `twotower_rrf_triplet_bigbatch/`,
+  `twotower_rrf_triplet_ablation/`, `moe_reranker/`.
+- **Copy, then edit** — even when the change is purely additive and
+  backward-compatible. An additive edit still alters the file the earlier
+  experiment ran against. (This was learned the hard way: the MoE experiment
+  first added aggregation modes directly to
+  `baselines/voyage_nano_sectioned/aggregate.py`, then had to be unwound.)
+- **Importing shared code read-only is fine and encouraged.** Isolation means
+  "don't modify", not "don't reuse" — `baselines/metrics.py` should still be the
+  single source of truth for how "good" is measured, called unchanged. Prefer
+  public API over private `_underscore` helpers.
+- **Pin every deliberate duplicate with a test** asserting the copy still agrees
+  numerically with the original, so the two cannot drift unnoticed. Example:
+  `tests/test_moe_aggregation.py::test_matches_shared_baseline_on_shared_modes`.
+- **Input data: copy it, never read live, never write back.** Freeze a copy into
+  the experiment's own namespace with provenance — source path, content hash, and
+  a `--verify` mode proving the source hasn't shifted since import. Pattern:
+  `moe_reranker/import_rrf.py`. This matters most for `artifacts/pairing_rrf/` and
+  `artifacts/synth/`, which are still being iterated on.
+- **Log it**: a row in `docs/experiment-graphs-index.md` plus its own
+  `docs/<experiment>-experiment.md` with results tables and repro commands.
+- **If shared files were already edited**, restore them byte-identical to their
+  pre-experiment state and verify with
+  `git diff <pre-experiment-commit> -- <paths>` (expect empty output).
+
+Orthogonal to git workflow: working directly on `main` is fine for small changes;
+editing another experiment's code is not, regardless of branch.
 
 ## Setup
 
@@ -215,6 +269,7 @@ accept/decline outcome on the 200 real seed pairs. Full writeup in
 python -m baselines.llm_judge.eval --data-dir data --variant naive --split all
 python -m baselines.llm_judge.eval --data-dir data --variant naive --split holdout  # free: shared cache
 python -m baselines.llm_judge.eval --data-dir data --variant calibrated --split all
+python -m baselines.llm_judge.eval --data-dir data --variant structured_cot --split holdout
 python -m baselines.llm_judge.eval --data-dir data --model anthropic/claude-sonnet-4.5
 # Bedrock backend instead of OpenRouter (tf_provisioner AWS account, no OpenRouter credits needed)
 python -m baselines.llm_judge.eval --data-dir data --backend bedrock --model google.gemma-3-27b-it
@@ -250,6 +305,14 @@ ceiling.** Things worth carrying forward:
   0.5901 — it only made the model more skeptical (yes-rate 56.5%→30.4%), not
   more discriminating. Stated `confidence` is also useless (88.6 when right vs
   88.2 when wrong) — the signal is all in the yes/no, not the confidence.
+- **Forcing multi-aspect CoT scoring didn't help either.** `structured_cot`
+  (score six weighted aspects with evidence, aggregate in code, see
+  `baselines/llm_judge/structured.py`) scored *below* `naive` on the identical
+  holdout, run back-to-back: pair AUC 0.6336 vs 0.6409, decision accuracy
+  0.5507 vs 0.6087, hard-neg AUC 0.6267 vs 0.6543. Averaging six independent
+  0-5 scores regresses toward the boundary (yes-rate jumped to 75.4% from
+  55.1%) rather than sharpening the call. `naive` stays the labeling judge for
+  the next synthetic batch. Full writeup in `docs/llm-judge-experiment.md`.
 
 **This is not deployable** — a per-candidate LLM call is out of scope under the
 <100 ms budget, and there are no retrieval metrics for it (no shared vector
@@ -382,6 +445,31 @@ default ("only for staged files with human sign-off") — use it
 consciously, not as the default path for future batches, and re-check
 `docs/possible-bugs.md` for confirmed data-quality issues before trusting
 a judge-only-promoted batch at face value.
+
+**Those 460 pairs are now quarantined (2026-07-30). Do not train on them.**
+They are known-harmful, not merely unhelpful: a classifier shown *only* the
+candidate's profile text predicts their label with 99.2% accuracy
+(`docs/possible-bugs.md` #4 — the generator leaked the label into the text),
+and `twotower` `run_001` trained on them scored 0.4845 hard-negative AUC,
+*below chance*, while `arm_a_real_only` beat it on a fifth of the data.
+
+They are **not deleted** — removing them from `data/dataset_*.json` would
+retroactively change what `run_001` trained on and make its published numbers
+unreproducible, exactly what the isolation rule above exists to prevent.
+Quarantine is enforced at the **loader**:
+`twotower/data.py::build_split_bundle(include_synth=...)` now defaults to
+`False`, as do `TrainConfig` and both training CLIs (`--include-synth` is a
+new explicit opt-in; `--real-only` still works and still wins). An archived
+copy with SHA-256 provenance lives in
+`data/archive/batch_500_001_quarantined/` (see its `README.md`), pinned
+against drift by `tests/test_quarantine_batch_500_001.py`.
+
+Note the count trap this exposed: `data/dataset_*.json` holds **660 pairs /
+1,217 contact ids**, but only **200 pairs / 297 contacts are real** (129
+seekers, 178 candidates). Any "contacts in the dataset" figure that isn't
+filtered on the `cmsynth*` prefix is counting quarantined synthetic data —
+`docs/moe-rrf003-synthetic-training-findings.md` carried exactly that error
+until it was corrected.
 
 ### Standalone profile generation (local Ollama + AWS Bedrock)
 
@@ -523,6 +611,86 @@ training data. Topology also diverges sharply from real data (80% of contacts
 carry both labels vs 5% real; 5.2 vs 0.67 edges/node). Full results, the
 distribution-shift finding, and remaining gaps are in
 `docs/profile-generation-local-and-bedrock.md`.
+
+### RRF pairing + LLM judge (`synth_pipeline/pairing_rrf/`) — full doc: `docs/rrf-pairing-pipeline.md`
+
+Second-generation labeling path, replacing the fusion *scorer* used by
+`synth_pipeline/pairing/` with **two independent retrieval channels plus an LLM
+judge**, so retrieval and labeling come from different model families and no
+scorer grades its own ranking (the 0.868-AUC circularity that undermined
+`pair_test_001`).
+
+Flow: profiles → disjoint split → one query per `lookingFor` section (Bedrock) →
+Qwen3-Embedding-8B on Modal, N+1 seeker vectors (whole profile + one per section)
+→ `.npy` files, then Chroma → dense top-10 ‖ BM25 top-10 → weighted RRF (dense
+2:1, `rrf_k=60`) → top-5 → `google/gemini-3.1-flash-lite` judge, one call per
+pair, no deadband → pos / hard-negative.
+
+```bash
+export AWS_PROFILE=tf_provisioner AWS_DEFAULT_REGION=us-east-1
+
+# the reusable template — every knob lives in a preset, not in flags
+python scripts/generate_rrf_dataset.py                                   # defaults
+python scripts/generate_rrf_dataset.py --preset my_run.json              # tuned
+python scripts/generate_rrf_dataset.py --profile-run <dir> --skip-generate
+python scripts/generate_rrf_dataset.py --dry-run                         # plan only
+
+# prompts are hub-only — push before any paid run
+python -m synth_pipeline.pairing_rrf.push_prompts --tag v1
+
+# browse a batch — three tabs in one self-contained file, zero network requests:
+#   Pairs      leakage/circularity probes + every pair's retrieval provenance
+#              and judge reasoning
+#   Topology   force-directed graph, this batch beside the 200 real pairs
+#   Embeddings the Qwen3 vectors in 3D (PCA), seeker anchors with their
+#              lookingFor asks tethered, pos/neg pair edges
+# (the other build_*_browser scripts don't understand this layout — no
+# failure_mode, no human-review gate)
+python scripts/build_rrf_browser.py --batch-id rrf_002
+open artifacts/pairing_rrf/rrf_002/_browser.html
+
+# degrades instead of failing: --no-real drops the comparison pane when data/
+# is absent (it's gitignored), and without numpy/sklearn the embeddings tab is
+# hidden while the first two still build
+```
+
+Presets live in `synth_pipeline/pairing_rrf/presets/`; the preset that produced a
+batch is copied into its output so results are reproducible. Stages
+(`generate_profiles`/`pairing`/`judge`/`export`) toggle independently, and
+`queries.json` + the judge cache make re-runs cheap.
+
+**First run `rrf_002`: 275 pairs (64 pos / 211 neg), $0.62 judge cost, ≈$1.40
+all in.** Two findings worth carrying forward: the judge's yes-rate collapsed
+from the experiment's 56.5% to 23.3% on retrieved synthetic candidates (harder,
+more homogeneous population — expect ~3 negatives per positive), and a
+**duplicate-pair defect** was found and fixed — a seeker's several queries can
+retrieve the same candidate, and judged independently 25 keys came back labeled
+both `pos` and `neg`. `fuse.deduplicate_pairs()` now enforces global
+`(seeker, candidate)` uniqueness by default.
+
+Prompts are **hub-only with no local fallback** (`prompt_hub.py`), matching
+`scripts/profile_gen_prompt_hub.py`: `-/pair-rrf-query:v1`, `-/pair-rrf-judge:v1`.
+Note `PROFILE_GEN_PROMPT_GENERATE` must be pinned to v3+ — unpinned it falls back
+to `LANGSMITH_PROMPT_TAG=v1` and every profile dies with
+`KeyError: 'ref_example_1'`.
+
+Labels are a model's opinion, not real accept/decline outcomes. Batches stay in
+`artifacts/pairing_rrf/<batch_id>/`, are exported to the git-tracked
+`exports/rrf_datasets/`, and **nothing is promoted** into `data/dataset_*.json`.
+
+**Trainability probes on `rrf_002`** (table in `docs/rrf-pairing-pipeline.md`):
+the generation-artifact leak that destroyed `run_001` is gone — candidate-profile-
+only prediction is 0.634 AUC, not 99.2% accuracy — and lexical circularity dropped
+from `pair_test_001`'s 0.868 to 0.701. The live weakness is **per-node base rate**:
+seeker identity alone, with no text at all, predicts the label at 0.687, because
+**12 of 40 seekers were rejected on every candidate**. So do not train a plain
+pairwise classifier on this batch; train **within a seeker**, which cancels that
+base rate by construction. 28 of 40 seekers carry both classes, giving **249
+(anchor, +, −) triplets** — `run_001`'s pool had 5 of 91, which is the sole reason
+`two-tower-fine-tune-plan.md` picked `ContrastiveLoss` over
+`MultipleNegativesRankingLoss`. That constraint is now lifted. Judge accuracy on
+the hard slice is 0.5942, so any model trained here must be scored on the **real**
+holdout, never on held-out synthetic pairs.
 
 ### Two-tower LoRA fine-tune (`twotower/` + Modal)
 

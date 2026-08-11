@@ -1,0 +1,54 @@
+{
+  "id": 442,
+  "archetype": "Neurotech/Biotech Founder, Early Stage Funding",
+  "given_name": "Aiko Pereira",
+  "style_version": 27,
+  "archetypes_version": 74,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Aiko Pereira is a 32-year-old founder with a PhD in Neuroscience. She's building 'Synapse Solutions', a company developing non-invasive neurostimulation devices for treating chronic pain. A distinctive detail is that she *originally* trained as a classical pianist and credits her understanding of brain plasticity and rhythm with informing her approach to neurotech. She\u2019s currently in pre-seed, having bootstrapped initial prototyping and validation, and is actively seeking investors who understand both the technical complexity and the potential market disruption. She's very focused on ethical considerations within neurotech, and wants to build a company that prioritizes patient well-being. She's a strong communicator, comfortable presenting complex science to both technical and non-technical audiences. She's based in Boston, but is open to remote work and travel for key meetings. She's a bit wary of 'hype' in the neurotech space and prioritizes genuine connection over superficial networking.",
+    "positioning": "I\u2019m Aiko Pereira, founder of Synapse Solutions, a neurotechnology company pioneering non-invasive solutions for chronic pain management. We\u2019re leveraging cutting-edge neurostimulation techniques to offer a drug-free alternative for millions suffering from debilitating conditions. My background is deeply rooted in neuroscience, combined with a unique understanding of brain plasticity honed through years as a classical pianist \u2013 a surprising foundation, but one that informs our approach to rhythmic neurostimulation. We\u2019ve achieved promising initial results with our prototype, demonstrating significant pain reduction in early user trials, and are now focused on scaling our technology and securing seed funding. I\u2019m passionate about building a company that not only delivers impactful therapeutic benefits, but also prioritizes ethical considerations and patient-centric design. I\u2019m actively seeking strategic partners and investors who share this vision and can contribute to our growth and market penetration. We\u2019re aiming to redefine chronic pain treatment, and I believe Synapse Solutions is uniquely positioned to lead this transformation.",
+    "background": "- **Founder & CEO, Synapse Solutions** (Boston, MA - January 2023 \u2013 Present)\n  * Spearheaded all aspects of company formation, including business plan development, fundraising strategy, and team building.\n  * Led the design, prototyping, and initial validation of a non-invasive neurostimulation device for chronic pain.\n  * Secured initial grant funding and established key partnerships with research institutions.\n  * Developed and implemented a comprehensive regulatory strategy for FDA clearance.\n  * Skills: Neurostimulation, EEG analysis, Signal Processing, Python, MATLAB, Business Development, Fundraising, Leadership.\n\n- **Postdoctoral Research Fellow, Massachusetts General Hospital (MGH)** (Boston, MA - September 2020 \u2013 December 2022)\n  * Conducted independent research on the neural mechanisms of chronic pain, focusing on the role of brain plasticity.\n  * Published peer-reviewed articles in high-impact journals, including *Neuron* and *Pain*.\n  * Mentored junior researchers and presented research findings at international conferences.\n  * Expertise: fMRI analysis, Electrophysiology, Animal Models of Pain, Data Analysis, Scientific Writing.\n\n- **PhD, Neuroscience, Stanford University** (Stanford, CA - September 2016 \u2013 August 2020)\n  * Dissertation: 'Rhythmic Entrainment of Neural Oscillations for Pain Modulation.'\n  * Developed novel computational models of neural circuitry involved in pain processing.\n  * Awarded the Stanford Graduate Fellowship for outstanding academic achievement.\n  * Skills: Computational Neuroscience, Neural Modeling, Machine Learning, Data Visualization.\n\n- **BMus, Piano Performance, Juilliard School** (New York, NY - September 2012 \u2013 May 2016)\n  * Developed a deep understanding of musical structure, rhythm, and the relationship between motor skills and brain function.",
+    "lookingFor": "I am currently raising a pre-seed round to scale Synapse Solutions and prepare for clinical trials. I'm seeking strategic investors with experience in neurotech, biotech, or medical devices, and who are aligned with our vision of ethical and patient-centered innovation. \n\nSpecifically, I'm looking for:\n\n* **Investors:** Seed and pre-seed investors with a focus on hardware-driven healthcare solutions. We're looking for $750k - $1.5M to fund our first clinical trial and expand our team.\n* **Advisors:** Experienced entrepreneurs who have successfully navigated the regulatory landscape for medical devices.\n* **Partners:** Neurologists and pain management specialists interested in collaborating on clinical research.\n* **Potential Team Members:**  Experienced electrical engineers with expertise in embedded systems and signal processing.\n\nI\u2019m also open to connecting with other founders in the neurotech space to share insights and learn from each other.  Introductions to individuals at relevant venture capital firms (e.g., Khosla Ventures, Andreessen Horowitz - health tech focus) would be particularly valuable.",
+    "notes": "- Aiko is highly articulate and capable of explaining complex scientific concepts in a clear and accessible manner. \n- She's very sensitive to the \u2018hype\u2019 surrounding certain areas of neurotech and prefers grounded, evidence-based discussions.\n- Her background in music is a genuine asset, informing her approach to neurostimulation, but may require clarifying for some investors.\n- She\u2019s a member of the Neurotech Leaders Community and actively participates in industry events.\n- Due diligence should verify the initial trial data as it is currently unpublished. \n- She has expressed concerns about predatory fundraising practices and prioritizes transparency.",
+    "locationAvailability": "I am based in Boston, Massachusetts, but am willing to travel for important meetings and am comfortable working remotely. I'm open to exploring opportunities on the West Coast as well.",
+    "introPreferences": "* **Do:** Highlight my scientific background and the potential impact of Synapse Solutions on chronic pain management.\n* **Do:** Emphasize our focus on non-invasive and drug-free treatment options.\n* **Don't:** Oversell the technology or make unsubstantiated claims.\n* **Don't:** Frame Synapse Solutions as solely a 'tech' company \u2013 it's a healthcare company first.\n* **Ideal Introduction:** A warm introduction to a relevant investor or advisor, briefly outlining my background and the key benefits of our technology.  A short email summarizing the opportunity is appreciated.",
+    "personalPreferences": "I prefer to communicate via email initially, and am happy to schedule video calls. I appreciate direct and constructive feedback.",
+    "meetingAndSchedulingPreferences": "Flexible with scheduling. Happy to meet virtually or in person (Boston preferred). "
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 23.95743227005005,
+      "input_tokens": 829,
+      "output_tokens": 1410,
+      "problems": []
+    }
+  ],
+  "success": true
+}

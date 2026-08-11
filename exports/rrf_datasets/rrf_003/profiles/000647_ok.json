@@ -1,0 +1,54 @@
+{
+  "id": 647,
+  "archetype": "NYC Tech/AI Builder - Stealth Mode",
+  "given_name": "Camille Mahmoud",
+  "style_version": 40,
+  "archetypes_version": 108,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Camille Mahmoud is a serial entrepreneur currently building 'Synapse Insights,' a stealth-mode AI startup focused on predictive analytics for supply chain optimization. Her distinctive career detail is a prior successful exit from a hardware-focused robotics company, which gives her a unique perspective on blending physical world constraints with AI solutions. She\u2019s fiercely independent, data-driven, and currently laser-focused on assembling a small, highly skilled engineering team. She\u2019s based in NYC and actively seeking seed funding. She's pragmatic and direct, valuing efficiency and demonstrable results over lengthy presentations.",
+    "positioning": "Synapse Insights is developing a next-generation predictive analytics platform for supply chain resilience. We leverage a novel combination of time-series forecasting, anomaly detection, and causal inference to provide businesses with proactive insights into potential disruptions \u2013 from raw material shortages to logistical bottlenecks. Unlike traditional supply chain management software which relies heavily on historical data and reactive responses, Synapse Insights focuses on *anticipating* issues before they impact operations. Our core value proposition is to dramatically reduce risk, optimize inventory levels, and improve overall supply chain efficiency, ultimately driving significant cost savings and revenue growth for our clients. \n\nWe\u2019re initially targeting mid-to-large sized manufacturers and distributors in the consumer packaged goods (CPG) and automotive industries \u2013 sectors particularly vulnerable to supply chain volatility. Our technology is built on a scalable, cloud-native architecture utilizing a proprietary blend of open-source libraries and custom-built algorithms. What sets us apart is our ability to integrate unstructured data sources \u2013 news feeds, geopolitical events, weather patterns \u2013 into our predictive models, providing a holistic and nuanced view of potential disruptions. We are currently in a closed beta with three key clients, demonstrating a 20-30% improvement in forecast accuracy compared to existing solutions. We're focused on rapid iteration and delivering demonstrable value to our early adopters.",
+    "background": "- **Founder & CEO, Synapse Insights** (2023 \u2013 Present): Leading all aspects of startup development, including product strategy, fundraising, team building, and customer acquisition.\n- **CEO & Co-founder, Atlas Robotics** (2018 \u2013 2022): Grew Atlas Robotics from seed stage to acquisition by a Fortune 500 industrial automation company. Led the development and launch of a novel robotic arm for precision manufacturing, securing key partnerships with major automotive suppliers. Oversaw all fundraising efforts, raising $15M in venture capital. \n- **Lead Robotics Engineer, Boston Dynamics** (2015 \u2013 2018): Contributed to the development of advanced locomotion algorithms for the Spot robot, focusing on dynamic stability and terrain adaptation. Led a team of engineers in the design and implementation of new sensor integration systems.\n- **Research Assistant, MIT CSAIL** (2013 \u2013 2015): Conducted research in the field of computer vision and machine learning, specializing in object recognition and scene understanding. Published multiple peer-reviewed papers in leading robotics conferences.\n- **B.S. in Mechanical Engineering, Massachusetts Institute of Technology** (2013). Minor in Computer Science. Graduated *Summa Cum Laude*.",
+    "lookingFor": "I'm actively building out the core engineering team at Synapse Insights and seeking connections with exceptional technical talent. Specifically, I\u2019m looking for:\n\n* **Senior Machine Learning Engineers:** Deep expertise in time-series analysis, forecasting, and anomaly detection. Experience with PyTorch or TensorFlow is a must.\n* **Full-Stack Engineers:** Strong proficiency in Python, cloud technologies (AWS, Azure, GCP), and building scalable web applications.\n* **Data Engineers:** Experience building and maintaining data pipelines, with a focus on data quality and reliability.\n\nBeyond engineering, I\u2019m also open to connecting with:\n\n* **Seed-stage investors** with a track record of investing in AI and supply chain technology. I\u2019m particularly interested in investors who can provide strategic guidance and access to relevant industry networks.\n* **Potential pilot customers** within the CPG and automotive industries who are facing significant supply chain challenges and are open to exploring innovative solutions.",
+    "notes": "Camille is highly focused and values direct communication. She\u2019s currently prioritizing engineering hires above all else. She recently spoke with [Contact Name] about potential candidates \u2013 follow up on that connection. She's very skeptical of 'hype' and prefers concrete results and demonstrable ROI. Avoid pitching overly complex solutions without clear use cases.",
+    "locationAvailability": "I\u2019m based in New York City and primarily focused on building a team within the NYC area. I'm willing to consider remote engineers, but prefer candidates who are able to collaborate in person on a regular basis. I have limited travel planned in the next quarter, but am open to attending relevant industry conferences.",
+    "introPreferences": "When making introductions, please emphasize:\n\n* **My background at Atlas Robotics:** This demonstrates my ability to build and scale a successful hardware/software company.\n* **The practical application of our technology:** Focus on the tangible benefits for businesses \u2013 cost savings, reduced risk, improved efficiency.\n* **The speed of our iteration:** We're a lean, agile team and are moving quickly.\n\n**Hard Requirements:**\n* For engineering candidates: Proven experience in a relevant field and a strong portfolio of projects.\n* For investors: Demonstrated experience investing in early-stage AI startups.\n\n**Avoid:** Overly lengthy introductions or pitches. I prefer concise, direct communication.",
+    "personalPreferences": "Prefer initial contact via email. I respond quickly to well-written, concise messages.",
+    "meetingAndSchedulingPreferences": "I generally prefer morning or early afternoon meetings. I'm available for video calls via Google Meet or Zoom. Please send a brief agenda in advance of any scheduled meeting to ensure we stay focused and productive."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 17.916948080062866,
+      "input_tokens": 801,
+      "output_tokens": 1239,
+      "problems": []
+    }
+  ],
+  "success": true
+}

@@ -1,0 +1,54 @@
+{
+  "id": 351,
+  "archetype": "Toronto-Based AI/Legal Tech Builder",
+  "given_name": "Leilani Rossi",
+  "style_version": 22,
+  "archetypes_version": 58,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Leilani Rossi is a 28-year-old founder and CEO of 'LexiFlow,' a Toronto-based startup building an AI-powered contract analysis and automation platform specifically for small to medium-sized law firms. She has a strong technical background, originally studying Computer Science with a minor in Legal Studies at University of Waterloo. A distinctive detail is that *before* founding LexiFlow, she spent two years as a software engineer at a major litigation support firm, experiencing firsthand the pain points of contract review and due diligence. This experience fueled her passion for applying AI to streamline legal processes. She's currently leading a seed round, aggressively hiring engineers, and focused on expanding LexiFlow\u2019s functionality beyond contract review into automated drafting and compliance. She\u2019s energetic, data-driven, and very focused on building a scalable, impactful product. She\u2019s likely very responsive online but prefers direct, concise communication. She\u2019s comfortable with remote work but values in-person connections when possible for team building.",
+    "positioning": "As Founder & CEO of LexiFlow, I'm tackling a significant bottleneck in the legal industry: the tedious and error-prone process of contract analysis. LexiFlow is an AI-powered platform designed to automate key aspects of contract review, due diligence, and compliance, specifically tailored for the needs of small and medium-sized law firms. We\u2019re leveraging cutting-edge NLP and machine learning to dramatically reduce review times, minimize risk, and free up legal professionals to focus on higher-value strategic work.\n\nWe launched our beta program six months ago and have already secured partnerships with five firms, demonstrating a clear market demand. Early traction shows an average of 70% time savings on contract review tasks for our beta users. We're currently focused on expanding our feature set to include automated contract drafting and compliance monitoring. \n\nWe\u2019ve recently launched a $1.5M seed round to scale our engineering team and accelerate product development. My key priorities are building a world-class engineering team, expanding our customer base, and establishing LexiFlow as the leading AI solution for legal professionals. I\u2019m passionate about the intersection of law and technology and believe LexiFlow has the potential to revolutionize the legal landscape.",
+    "background": "* **LexiFlow, Founder & CEO** (January 2023 \u2013 Present)\n    * Led all aspects of company formation, fundraising, product development, and go-to-market strategy.\n    * Secured seed funding commitments totaling $1.2M.\n    * Built and launched a functional beta version of LexiFlow, acquiring five key partner firms.\n    * Managed a small but growing team of developers and legal consultants.\n    * Oversaw the development and implementation of LexiFlow's core AI algorithms, resulting in a 70% average reduction in contract review time for beta users.\n* **Litigation Support Solutions (LSS), Software Engineer** (June 2021 \u2013 December 2022)\n    * Developed and maintained software tools for eDiscovery and contract analysis.\n    * Contributed to the development of a new AI-powered document review platform.\n    * Gained hands-on experience with the challenges and inefficiencies of traditional legal workflows.\n    * Collaborated with legal professionals to understand their needs and translate them into technical requirements.\n* **University of Waterloo, Bachelor of Computer Science (Minor in Legal Studies)** (September 2017 \u2013 May 2021)\n    * Dean\u2019s List, consistently achieving a GPA of 3.8/4.0.\n    * Relevant coursework included: Artificial Intelligence, Machine Learning, Data Structures & Algorithms, Contract Law, Intellectual Property Law.\n    * Capstone project focused on the application of NLP to legal document summarization.\n\n**Skills:** Python, NLP, Machine Learning, Legal Tech, Contract Law, Agile Development, Project Management, Team Leadership, Fundraising, Go-to-Market Strategy, AWS, Docker, Kubernetes.",
+    "lookingFor": "I'm actively seeking talented individuals to join the LexiFlow team and help us build the future of legal tech. Specifically, I'm focused on expanding our engineering capabilities.\n\n* **Key Hires:**\n    * **Senior Machine Learning Engineer:** Expertise in NLP, transformer models (BERT, GPT-3), and building scalable AI applications. 3+ years experience required.\n    * **Full-Stack Engineer:** Proficient in React, Node.js, and cloud technologies (AWS). Experience with legal tech a plus.\n    * **Data Scientist:** Experience with data cleaning, feature engineering, and model evaluation. Strong analytical skills required.\n\n* **Strategic Partnerships:**\n    * **Law Firms:** Seeking partnerships with forward-thinking firms interested in piloting and implementing LexiFlow.\n    * **Legal Tech Integrators:** Exploring potential integrations with existing legal practice management systems.\n\n* **Investors:**\n    * Completing our seed round \u2013 looking for strategic investors with experience in AI and legal tech. Stage: Seed ($500k - $1.5M).\n\nI\u2019m open to connecting with individuals who are passionate about innovation in the legal industry and have a strong technical background.  I'm particularly interested in those with experience building and scaling SaaS products.",
+    "notes": "Leilani is a highly motivated and articulate founder. She clearly understands the problem she\u2019s solving and has a compelling vision for LexiFlow. She\u2019s very responsive and eager to discuss potential collaborations. During our initial call (2023-10-26), she emphasized the importance of finding engineers who are not only technically skilled but also genuinely interested in the legal domain. She\u2019s currently prioritizing engineering talent above all else. She mentioned a strong preference for candidates with experience working with large language models. Internal scoring: A+ \u2013 High potential. Recommend warm introductions to relevant engineering leads at companies like DeepMind and Hugging Face.",
+    "locationAvailability": "I am based in Toronto, Canada, but am comfortable with remote team members. I am available for travel within North America as needed.",
+    "introPreferences": "* **Hard Requirements:**\n    * Introductions to Senior Machine Learning Engineers with 3+ years of experience in NLP and transformer models.\n    * Introductions to VCs actively investing in Seed-stage AI/Legal Tech startups.\n    * Introductions to partners at mid-sized law firms (50-200 lawyers) actively seeking to modernize their workflows.\n* **Soft Preferences:**\n    * Individuals with a demonstrable interest in the legal industry.\n    * Contacts with a strong network within the Toronto tech ecosystem.\n    * Introductions should highlight LexiFlow\u2019s traction and potential for rapid growth.\n* **Framing Suggestion:** Please emphasize LexiFlow\u2019s unique focus on the *small to medium-sized* law firm market \u2013 a largely underserved segment.",
+    "personalPreferences": "I prefer to connect via LinkedIn or email. Quick, direct communication is appreciated. I generally respond to messages within 24-48 hours.",
+    "meetingAndSchedulingPreferences": "I'm flexible with meeting times and happy to work around others' schedules. I'm comfortable with video calls and prefer a brief agenda to be shared beforehand. I'm happy to let others manage scheduling."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 20.97064518928528,
+      "input_tokens": 822,
+      "output_tokens": 1566,
+      "problems": []
+    }
+  ],
+  "success": true
+}

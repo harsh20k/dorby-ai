@@ -1,0 +1,54 @@
+{
+  "id": 800,
+  "archetype": "Bootstrapped Deep Tech Founder (US)",
+  "given_name": "Mateus Wang",
+  "style_version": 49,
+  "archetypes_version": 135,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Mateus Wang is a 38-year-old founder and CEO of 'Synaptic Robotics', a pre-seed robotics company focused on developing adaptive grasping solutions for unstructured environments \u2013 think warehouse automation, disaster relief, and agricultural harvesting. He has a PhD in Robotics from MIT and spent 5 years as a research scientist at NASA\u2019s Jet Propulsion Laboratory (JPL) specializing in haptic feedback and reinforcement learning for robotic manipulation. A key detail: While at JPL, he co-led a project that *almost* went commercial, but was ultimately shelved due to bureaucratic hurdles, fueling his desire to build a nimble, independent company. He's currently laser-focused on securing pilot customers within the logistics sector to validate his core technology and is deliberately avoiding large VC rounds until significant traction is demonstrated. He\u2019s a deeply technical leader, often getting his hands dirty with coding and hardware, and is seeking connections who understand the challenges of bringing complex robotics solutions to market. He's pragmatic and values direct communication, prioritizing technical depth over 'fluff'.",
+    "positioning": "I'm Mateus Wang, CEO and founder of Synaptic Robotics. We\u2019re building the next generation of adaptive robotic grasping systems. Current robotic solutions struggle with the variability inherent in real-world environments \u2013 picking up oddly shaped objects, dealing with unpredictable textures, and adapting to changing conditions. Synaptic Robotics solves this through a novel combination of advanced haptic sensing, reinforcement learning, and bio-inspired design. \n\nOur core offering is a modular, software-defined gripper that can be integrated into existing robotic arms, significantly expanding their capabilities without requiring a complete system overhaul. We\u2019re initially targeting the logistics and warehousing industry, providing automation solutions for e-commerce fulfillment centers and distribution hubs. Our approach isn\u2019t about replacing human workers, but augmenting their capabilities and tackling tasks that are unsafe, repetitive, or physically demanding. \n\nWe're currently focused on securing pilot deployments with key logistics partners to demonstrate the ROI of our technology and refine our product-market fit. We believe that a strong technical foundation and a relentless focus on customer needs are the keys to success in the rapidly evolving robotics landscape.",
+    "background": "* **PhD, Robotics, Massachusetts Institute of Technology (MIT)**, Cambridge, MA (2010 \u2013 2015) \u2013 Dissertation: 'Reinforcement Learning for Dexterous Manipulation in Cluttered Environments'. GPA: 4.0. Relevant coursework: Machine Learning, Computer Vision, Control Theory, Haptics.\n* **Research Scientist, Jet Propulsion Laboratory (JPL), NASA**, Pasadena, CA (2015 \u2013 2020) \u2013 Led a team of engineers in the development of advanced robotic manipulation systems for space exploration. Key projects included: \n    * *Robotic Sample Acquisition System (RSAS)*: Developed and tested a robotic arm capable of collecting and analyzing geological samples on Mars (project ultimately defunded despite successful prototype).  Utilized ROS, Python, C++, and SolidWorks.\n    * *Haptic Teleoperation System*: Designed and implemented a haptic feedback system for remote robotic operation, improving precision and control.  Experience with force sensors, actuators, and real-time control systems.\n* **Software Engineering Intern, Google**, Mountain View, CA (Summer 2014) \u2013 Developed and implemented algorithms for image recognition and object detection.  Proficient in Java, Python, and machine learning libraries.\n* **BS, Computer Science, Stanford University**, Stanford, CA (2006 \u2013 2010) \u2013 Minor in Mechanical Engineering. Dean\u2019s List all semesters.\n* **Skills:** Robotics (ROS, Gazebo, MoveIt!), Machine Learning (TensorFlow, PyTorch, scikit-learn), Computer Vision (OpenCV), Programming (Python, C++, Java), Haptics, Reinforcement Learning, CAD (SolidWorks, Fusion 360), Embedded Systems, Control Systems, Data Analysis (Pandas, NumPy).",
+    "lookingFor": "I'm actively seeking connections within the logistics, warehousing, and manufacturing industries. Specifically, I'm looking to connect with:\n\n* **Logistics/Warehouse Operations Managers:** Individuals responsible for automation strategy and implementation within large fulfillment centers. We're particularly interested in understanding pain points related to object handling and pick-and-place operations.\n* **Robotics System Integrators:** Companies specializing in deploying and maintaining robotic automation solutions. Potential partners for scaling our technology and reaching a wider customer base.\n* **Early Adopter Companies:** Businesses willing to pilot our technology and provide valuable feedback on real-world performance. We\u2019re flexible and happy to work with companies on a trial basis.\n* **Robotics Engineers with experience in grasping and manipulation:** Individuals with a strong technical background who can contribute to our R&D efforts.  We are *not* currently hiring, but open to informal technical discussions.\n\n**Prioritized Connections:**\n\n* **Tier 1:** Decision-makers at logistics companies with >$100M in annual revenue.\n* **Tier 2:** Experienced robotics system integrators focused on warehouse automation.\n* **Tier 3:** Researchers and academics working on similar problems in robotics and AI.\n\nI'm also open to connecting with angel investors and advisors who have a deep understanding of the robotics industry, but are patient and aligned with our bootstrapped approach.",
+    "notes": "* Mateus is highly responsive to technical inquiries, but less so to generic sales pitches.\n* He's very proud of his work at JPL, but also clearly frustrated by the political obstacles he encountered there.\n* He\u2019s a member of the Robotics Industry Association (RIA) and frequently attends industry conferences.\n* Verify his PhD thesis \u2013 it\u2019s a good conversation starter.\n* Initial outreach should focus on the specific challenges Synaptic Robotics solves, rather than a broad overview of the company.\n* He\u2019s currently exploring potential partnerships with a small robotics startup in Boston specializing in vision systems.",
+    "locationAvailability": "I am based in Palo Alto, California, but am comfortable with remote meetings and occasional travel to visit potential customers and partners across the United States.",
+    "introPreferences": "* **Ideal Connection Profile:** VP of Operations or Director of Automation at a major logistics company.  Someone who is actively exploring new technologies to improve efficiency and reduce costs. \n* **Preferred Intro Style:** Direct and concise. Highlight the potential ROI of Synaptic Robotics' technology.  Focus on the specific challenges the connection faces and how our solution can address them. \n* **Key Messaging Points:** \n    * Adaptive grasping for unstructured environments.\n    * Software-defined gripper \u2013 easy integration with existing systems.\n    * Proven technology based on NASA research.\n* **Communication Preference:** Email is preferred for initial contact.  I am responsive to LinkedIn messages, but prefer more detailed inquiries via email.\n* **Avoid:** Introductions to VCs at this stage \u2013 we\u2019re not actively fundraising.",
+    "personalPreferences": "I prefer to communicate via email for detailed discussions, and I\u2019m generally available for quick chats over LinkedIn. I\u2019m not a big fan of lengthy phone calls unless absolutely necessary.",
+    "meetingAndSchedulingPreferences": "I\u2019m generally available for video calls during Pacific Standard Time business hours. Please send a brief agenda in advance."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 20.78363800048828,
+      "input_tokens": 792,
+      "output_tokens": 1547,
+      "problems": []
+    }
+  ],
+  "success": true
+}

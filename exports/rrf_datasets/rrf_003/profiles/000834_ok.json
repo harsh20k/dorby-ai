@@ -1,0 +1,54 @@
+{
+  "id": 834,
+  "archetype": "Founder-Turned-Sales & AI Advisor",
+  "given_name": "Emeka Olsen",
+  "style_version": 51,
+  "archetypes_version": 140,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Emeka Olsen is a serial entrepreneur who successfully exited a SaaS company focused on sales enablement, then pivoted to advising other founders. His distinctive career detail is a very deep understanding of the *practical* application of AI in sales \u2013 not just the hype. He's particularly focused on helping early-stage founders build scalable go-to-market strategies that incorporate AI without overspending or falling for buzzwords. He\u2019s based in Connecticut, enjoys the lifestyle, and isn\u2019t looking to relocate, but is open to remote advisory roles. He\u2019s very direct and values efficiency, and is *extremely* skeptical of fluff. He's currently building a small, curated network of AI/ML engineers he can tap for quick consultations for his clients. He's actively seeking connections to VCs who prioritize pragmatic AI implementation and founders who are truly ready to scale with data-driven sales strategies.",
+    "positioning": "I\u2019m Emeka Olsen, and I help early-stage founders build and scale revenue engines. After leading [previous company name - redacted for privacy] from seed to acquisition, I realized many founders struggle not with *having* a great product, but with getting it into the hands of the right customers efficiently. I\u2019ve spent the last year advising a select group of companies, focusing on go-to-market strategy, sales process optimization, and \u2013 increasingly \u2013 the responsible integration of AI. I'm deeply skeptical of 'AI-washing' and focus on delivering tangible ROI. \n\nMy approach is hands-on. I don\u2019t deliver abstract frameworks; I roll up my sleeves and work with teams to build pipelines, implement automation, and refine messaging. I\u2019m particularly adept at identifying low-hanging fruit where AI can dramatically improve conversion rates and reduce customer acquisition cost. I've recently helped a Series A startup increase qualified leads by 35% through a targeted AI-powered outreach campaign. \n\nCurrently, I\u2019m focused on expanding my network of technical advisors \u2013 specifically, AI/ML engineers with a proven track record in sales applications. I believe the future of sales is deeply intertwined with AI, but success hinges on finding the right talent to implement it effectively. I\u2019m always open to connecting with founders who are serious about leveraging AI to accelerate growth and VCs who understand the difference between hype and genuine opportunity.",
+    "background": "- **Advisor, Various Startups (2023 - Present):** Providing strategic guidance on go-to-market strategy, sales process optimization, and AI implementation. Key accomplishments include a 35% increase in qualified leads for a Series A SaaS company and a 20% reduction in customer acquisition cost for a B2B marketplace.\n- **Founder & CEO, SalesBoost (2018 - 2023):** Led the company from inception to acquisition by [acquirer - redacted for privacy]. SalesBoost was a SaaS platform focused on sales enablement, providing tools for personalized outreach, lead scoring, and sales coaching. Achieved $5M ARR and a 3x revenue growth in the final year prior to acquisition.\n  - Built and managed a high-performing sales team of 20+ reps.\n  - Secured $3M in seed and Series A funding.\n  - Oversaw all aspects of product development, marketing, and operations.\n- **Sales Manager, HubSpot (2015 - 2018):** Managed a team of Account Executives responsible for selling HubSpot\u2019s marketing and sales software to mid-market businesses. Consistently exceeded sales quotas, achieving 120% of target in 2017.\n  - Implemented new sales training programs that resulted in a 15% increase in team performance.\n  - Developed and maintained strong relationships with key clients.\n- **Education:**\n  - **MBA, Yale School of Management (2013 - 2015):** Focus on Entrepreneurship and Marketing.\n  - **BS, Computer Science, Cornell University (2009 - 2013):** Minor in Economics.\n- **Skills:** Go-to-Market Strategy, Sales Management, Sales Enablement, AI/ML (Practical Application), Data Analysis, Customer Acquisition, Lead Generation, SaaS, CRM, HubSpot, Salesforce, Python (basic proficiency), SQL (intermediate proficiency).",
+    "lookingFor": "I\u2019m actively seeking connections within a few key areas. First, I'm looking to connect with Venture Capitalists, specifically those focused on early-stage companies (Seed to Series A) and who have a demonstrated understanding of the *practical* applications of AI. I'm less interested in generalist funds and more focused on firms with a thesis around data-driven growth. \n\nSecond, I'm interested in expanding my network of AI/ML engineers with a proven track record of delivering results in a sales context. I'm looking for individuals who can provide quick, focused consultations to my clients on specific challenges. I\u2019m open to both full-time and freelance arrangements.\n\nFinally, I'm always open to speaking with founders who are actively scaling their revenue engines. I\u2019m particularly interested in companies that are leveraging data and AI to drive growth. I'm not currently taking on new long-term advisory engagements, but I'm happy to offer quick consultations or introductions.\n\n- **Introductions to:** AI/ML engineers specializing in sales applications.\n- **Partnerships with:** VC firms focused on early-stage, data-driven companies.\n- **Opportunities to:** Share insights on AI and sales at industry events.\n- **Ideal Founders:** Series A, B2B SaaS, demonstrable data maturity.",
+    "notes": "Emeka is exceptionally direct and values efficiency. He\u2019s quick to cut through the noise and get to the core of a problem. He's extremely skeptical of AI hype and prioritizes pragmatic solutions with quantifiable results. He\u2019s building a very curated network and is selective about who he connects with. He's based in Connecticut and enjoys the work-life balance it provides \u2013 relocation is unlikely. He\u2019s a strong advocate for data-driven decision-making and is passionate about helping founders build sustainable growth engines. Be prepared to articulate a clear value proposition and avoid overly technical jargon.",
+    "locationAvailability": "I am based in Connecticut and primarily work remotely. I am not actively seeking relocation. I'm available for occasional travel for key engagements, but prefer to maintain a remote work setup.",
+    "introPreferences": "- **Hard Requirement:** Any introduction *must* be to someone actively building or investing in companies leveraging AI for sales/revenue growth.\n- **Soft Preference:** Prioritize introductions to individuals with a technical background (AI/ML engineers, data scientists).\n- **Intro Style:** Direct and concise. Avoid lengthy introductions or unnecessary background information. Focus on the specific value the connection can bring.\n- **Avoid:** Introductions to generalist VCs or individuals with no specific expertise in AI or sales.\n- **Do:** Briefly highlight the connection\u2019s relevant experience and expertise.\n- **Do:** Clearly state the purpose of the introduction.",
+    "personalPreferences": "I prefer email communication for initial contact and am generally available for calls during regular business hours (Eastern Time).",
+    "meetingAndSchedulingPreferences": "I typically respond to meeting requests within 24-48 hours and am flexible with scheduling. Please include a brief agenda with your meeting request."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 26.605754852294922,
+      "input_tokens": 809,
+      "output_tokens": 1568,
+      "problems": []
+    }
+  ],
+  "success": true
+}

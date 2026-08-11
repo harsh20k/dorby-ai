@@ -1,0 +1,54 @@
+{
+  "id": 546,
+  "archetype": "Canadian Tech Executive/Advisor",
+  "given_name": "Sofia Lopes",
+  "style_version": 34,
+  "archetypes_version": 92,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Sofia Lopes is a seasoned technology executive currently operating as an independent advisor and fractional CTO, primarily focused on helping early-stage SaaS companies scale. She has a strong background in engineering leadership, particularly in distributed systems and data engineering, stemming from a decade at Shopify. A distinctive career detail is her pivot *from* a highly successful engineering management role *to* a more advisory one, driven by a desire to have broader impact across multiple innovative organizations. She\u2019s based in Toronto, but open to remote work and travel, and is actively seeking board positions or advisory roles with companies tackling complex technical challenges. She\u2019s very particular about the quality of connections she makes, preferring to engage with founders who demonstrate a strong technical vision and a commitment to building robust, scalable systems. She values direct communication and efficiency.",
+    "positioning": "I'm Sofia Lopes, a technology advisor and fractional CTO specializing in guiding early-stage SaaS companies through the critical phases of scaling and technical maturation. My career has been deeply rooted in building and leading high-performing engineering teams, most notably during a decade at Shopify where I held multiple leadership positions within the infrastructure and data engineering organizations. I\u2019ve navigated the challenges of rapid growth, architectural evolution, and maintaining engineering excellence while scaling to millions of users. \n\nCurrently, I leverage that experience to provide strategic guidance to founders and leadership teams, helping them define their technical roadmap, optimize their architecture, and build world-class engineering cultures. I\u2019m passionate about helping companies avoid common pitfalls and build sustainable, scalable technology foundations. I bring a pragmatic, hands-on approach, combined with a deep understanding of modern cloud technologies and best practices. \n\nI excel at quickly assessing complex technical landscapes, identifying key areas for improvement, and translating technical concepts into actionable business strategies. I\u2019m not just a strategist; I\u2019m comfortable rolling up my sleeves and contributing directly to technical solutions when needed.  My unique position allows me to offer a blend of strategic oversight and practical implementation expertise, accelerating growth and maximizing the impact of technology investments.\n\nI am uniquely positioned to help companies avoid the costly mistakes often made during rapid scaling, build high-performing engineering teams, and create a competitive advantage through innovative technology solutions. I am particularly interested in working with companies that have ambitious technical visions and a commitment to building exceptional products.",
+    "background": "- **Independent Technology Advisor & Fractional CTO** (2023 - Present): Providing strategic technical guidance and leadership to early-stage SaaS companies. Focus on architecture, scaling, and engineering culture.\n- **Shopify** (2013 - 2023):\n    - *Director of Engineering, Data Engineering* (2020 - 2023): Led a team of 50+ engineers responsible for building and maintaining Shopify\u2019s core data infrastructure. Oversaw the development of data pipelines, analytics platforms, and machine learning models.\n    - *Senior Engineering Manager, Infrastructure* (2017 - 2020): Managed multiple teams responsible for the reliability, scalability, and performance of Shopify\u2019s core platform infrastructure.\n    - *Software Engineer, Infrastructure* (2013 - 2017): Contributed to the development of key infrastructure components, including the platform\u2019s queuing system and distributed caching layer.\n- **University of Waterloo** (2009 - 2013): Bachelor of Computer Science, Honours. Co-op program with placements at Google and Microsoft.\n- **Certifications:** AWS Certified Solutions Architect \u2013 Associate, Certified Scrum Master (CSM)\n- **Skills:** SaaS Architecture, Distributed Systems, Data Engineering, Cloud Computing (AWS, GCP, Azure), Engineering Leadership, Agile Development, DevOps, Python, Java, Go, Kubernetes, Docker, CI/CD, Technical Strategy, Mentorship.",
+    "lookingFor": "I am currently seeking opportunities to leverage my experience as an advisor and fractional CTO. I\u2019m particularly interested in connecting with:\n\n*   **Board positions** at high-growth SaaS companies with a strong technical foundation.\n*   **Advisory roles** where I can provide strategic guidance on technical roadmap and scaling challenges.\n*   **Early-stage SaaS founders** (Seed to Series B) who are building innovative products and have a clear technical vision.\n*   **Venture Capital firms** focused on SaaS and technology investments. I\u2019m interested in exploring opportunities to provide technical due diligence.\n*   **Introductions to companies** utilizing advanced data engineering techniques (e.g., real-time data pipelines, machine learning-powered personalization).\n*   I'm open to opportunities in the Toronto/Waterloo corridor, but am comfortable working remotely and traveling as needed. I'm also interested in companies with a strong commitment to open-source technologies.  Specifically, I'm looking to connect with companies tackling challenges in areas like e-commerce, fintech, and healthcare.",
+    "notes": "Spoke with Alex at Amplify Ventures last week - he's looking for technical advisors for a few portfolio companies. Will follow up with him on potential fits. Sofia mentioned a strong preference for companies with a 'builder' mentality - founders who are hands-on and deeply involved in the technical details.  She\u2019s very selective about the projects she takes on, prioritizing those where she can have a significant impact.  Confirmed she's attending the TechTO conference next month - good opportunity for a casual catch-up.  She's also expressed interest in mentoring aspiring engineering leaders \u2013 potentially a good avenue for building relationships. Reminder: send her the article on serverless architecture she requested.",
+    "locationAvailability": "I am currently based in Toronto, Ontario, Canada. I am open to remote work and travel within North America.",
+    "introPreferences": "*   **Founders:** Must be technically proficient and have a clear vision for their product.\n*   **Companies:** Seed to Series B stage, focused on SaaS, preferably in e-commerce, fintech, or healthcare.\n*   **Industries:** SaaS, E-commerce, Fintech, Healthcare, Data Analytics.\n*   **Company Size:** 10-100 employees.\n*   **Role Types:** CEO, CTO, VP of Engineering.\n*   **Qualities:** Strong technical background, ambitious vision, commitment to engineering excellence, open to feedback and collaboration.  I\u2019m *not* interested in introductions to companies with a purely sales-driven culture or those lacking a clear technical strategy.",
+    "personalPreferences": "I prefer direct and concise communication. Please feel free to reach out via LinkedIn or email. I generally respond to messages within 24-48 hours.",
+    "meetingAndSchedulingPreferences": "I'm generally available for virtual meetings and can accommodate various time zones. Please send a brief agenda in advance to ensure we make the most of our time."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 33.08815407752991,
+      "input_tokens": 820,
+      "output_tokens": 1437,
+      "problems": []
+    }
+  ],
+  "success": true
+}

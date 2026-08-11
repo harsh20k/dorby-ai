@@ -1,0 +1,54 @@
+{
+  "id": 910,
+  "archetype": "Canadian Tech & Entrepreneurship Hub",
+  "given_name": "Hassan Kimura",
+  "style_version": 56,
+  "archetypes_version": 153,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Hassan Kimura is a first-time founder, originally a highly skilled but somewhat isolated machine learning engineer, now building a B2B SaaS platform for automated grant writing for Canadian tech startups. He\u2019s deeply passionate about democratizing access to funding, having personally struggled with the grant application process early in his career. He's incredibly technical but realizing he needs to build a strong network to succeed. A key detail about his past is a brief, but impactful, stint at a small AI research lab in Montreal focused on natural language processing \u2013 this directly informs his current product. He's aiming for seed funding and is very focused on finding advisors with experience scaling SaaS businesses and navigating the Canadian funding landscape. He\u2019s very direct and appreciates efficiency; he doesn\u2019t want to waste anyone\u2019s time. He is a recent immigrant to Canada and is still building his network.",
+    "positioning": "I\u2019m Hassan Kimura, founder of Grantify, a SaaS platform automating the grant writing process for Canadian tech startups. We\u2019re tackling the massive pain point of time-consuming and complex grant applications, a significant barrier to growth for early-stage companies. Grantify leverages cutting-edge NLP and machine learning to analyze funding opportunities, tailor applications, and dramatically increase success rates. We recently completed our MVP and are seeing strong initial traction with a cohort of 20 beta users \u2013 initial data shows a 60% reduction in application time and a 30% increase in submitted applications. \n\nCanada has an incredible ecosystem of funding programs, but navigating them is incredibly difficult. Grantify simplifies this process, allowing founders to focus on building their businesses instead of spending weeks on paperwork. We\u2019re focused on building a scalable solution that empowers innovative companies across the country. Our immediate goal is to secure seed funding to expand our engineering team and accelerate user acquisition. \n\nI believe passionately in democratizing access to capital and empowering Canadian innovators. I'm building Grantify to be the go-to resource for any Canadian tech startup seeking non-dilutive funding. We\u2019re not just building software; we\u2019re building a bridge to opportunity.",
+    "background": "- **University of Waterloo, PhD in Electrical and Computer Engineering (2018-2022)**: Specialization in Machine Learning, with a focus on Natural Language Processing. Dissertation: 'Contextual Embeddings for Low-Resource Language Translation'. Published two peer-reviewed papers in leading AI conferences.\n- **Element AI (Montreal, QC), Research Engineer (2022-2023)**: Briefly worked on developing NLP models for financial document analysis. This role exposed me to the practical challenges of deploying AI in a real-world setting and solidified my interest in building scalable solutions.\n- **Freelance Machine Learning Consultant (2023)**: Provided consulting services to several small businesses, building custom machine learning models for tasks like customer churn prediction and fraud detection. This experience taught me the importance of understanding client needs and delivering tangible results.\n- **Skills:** Python, TensorFlow, PyTorch, NLP, Machine Learning, Data Analysis, Statistical Modeling, Grant Writing (self-taught, extensive experience with Canadian funding programs), SaaS Product Development.\n- **Certifications:** AWS Certified Machine Learning \u2013 Specialty (2022)\n- **Education:** Bachelor of Science in Engineering, McGill University (2014-2018), Minor in Computer Science.\n- **Projects:** Developed a personal project \u2013 a sentiment analysis tool for Canadian political discourse \u2013 during my PhD, demonstrating my ability to build and deploy NLP models independently.\n- **Awards & Recognition:** University of Waterloo Graduate Scholarship (2018-2022), Dean\u2019s List (McGill University, 2014-2018). \n- **Early Career:** Started coding at age 12, participating in robotics clubs and coding competitions throughout high school. This early exposure sparked my passion for technology and laid the foundation for my future career.\n- **Immigration to Canada:** Immigrated to Canada from [Redacted] in 2014 to pursue my undergraduate studies. This experience instilled in me a deep appreciation for the opportunities Canada offers and a desire to give back to the community.\n- **Volunteer Experience:** Mentored undergraduate students in machine learning at the University of Waterloo (2020-2022).",
+    "lookingFor": "I\u2019m currently focused on securing seed funding for Grantify and building a strong advisory board. I\u2019m looking to connect with investors who have a track record of supporting early-stage SaaS companies in Canada, particularly those focused on B2B solutions. \n\nSpecifically, I\u2019m seeking introductions to: \n*   Angel investors with deep experience in the Canadian tech ecosystem.\n*   VC firms specializing in seed-stage funding (pre-seed considered).\n*   Founders who have successfully navigated the Canadian grant landscape and are willing to share their insights.\n\nI\u2019m also actively seeking advisors with expertise in: \n*   SaaS growth marketing and sales.\n*   Scaling engineering teams.\n*   Canadian government funding programs and policies.\n\nI\u2019m open to discussing potential partnerships with organizations that can help us reach a wider audience of Canadian tech startups. I'm particularly interested in collaborations with incubators, accelerators, and industry associations.",
+    "notes": "Hassan is extremely focused and driven. He's very quick to assess value and doesn't seem to have much patience for small talk. He\u2019s clearly very intelligent and capable, but needs help with networking and building relationships. He\u2019s still relatively new to the Canadian business community and is actively seeking mentorship. \n\n*   Recent conversation (October 26th) indicated a strong preference for data-driven decision-making and a skepticism towards overly optimistic projections.\n*   He mentioned struggling to find advisors who truly understand the nuances of the Canadian funding landscape.\n*   He\u2019s committed to building a diverse and inclusive team at Grantify.\n*   Follow-up: Send him articles on successful Canadian SaaS companies and potential investors. Be prepared to discuss specific metrics and KPIs.",
+    "locationAvailability": "I'm based in Toronto, Ontario, and frequently travel to Montreal for networking events and potential partnerships. I'm open to relocating within Canada if the right opportunity arises.",
+    "introPreferences": "When making introductions, please prioritize relevance and quality over quantity. I'm looking for meaningful connections that can genuinely help Grantify grow. \n\n*   **Please DO:** Clearly articulate the potential synergy between Grantify and the person you're introducing me to. Highlight their relevant experience or expertise.\n*   **Please DO NOT:** Make introductions to people who are outside of my target audience (e.g., investors who don't focus on seed-stage Canadian tech).\n*   **Hard Requirement:** Any potential advisor *must* have demonstrable experience scaling a B2B SaaS business.\n*   Warm introductions are *strongly* preferred. Cold emails are unlikely to receive a response.\n*   Please keep introductions concise and focused. I appreciate efficiency and directness.",
+    "personalPreferences": "I prefer to communicate via email initially, then move to a quick call if the connection seems promising. I'm responsive and value clear, concise communication.",
+    "meetingAndSchedulingPreferences": "I'm generally available for meetings during standard business hours (EST). I prefer to schedule meetings in advance and appreciate a clear agenda. I'm comfortable with both video calls and in-person meetings, but prefer video calls for initial conversations. Please send a calendar invite with a brief description of the meeting's purpose."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 25.114194869995117,
+      "input_tokens": 799,
+      "output_tokens": 1614,
+      "problems": []
+    }
+  ],
+  "success": true
+}

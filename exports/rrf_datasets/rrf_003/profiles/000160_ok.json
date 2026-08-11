@@ -1,0 +1,54 @@
+{
+  "id": 160,
+  "archetype": "India-Focused Early Stage Investor",
+  "given_name": "Soraya Nguyen",
+  "style_version": 10,
+  "archetypes_version": 26,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Soraya Nguyen is a Partner at Kalaari Capital, a well-respected early-stage VC firm focused on India. She *specifically* focuses on SaaS and Fintech startups demonstrating early revenue. Her distinctive detail is that she previously spent 5 years as a software engineer at a major fintech company (Razorpay) before transitioning to the investment side. This gives her a very technical due diligence capability and a strong preference for founders who can *show* product-market fit instead of just talking about it. She\u2019s currently leading Kalaari\u2019s Series A round for a promising agritech platform and is actively building her pipeline of seed-stage deals. She\u2019s very direct, values efficiency, and is frustrated by founders who haven\u2019t deeply considered unit economics. She's comfortable with remote meetings but prefers concise, data-driven presentations. She's highly networked within the Indian startup ecosystem, particularly in Bangalore and Mumbai.",
+    "positioning": "A seasoned technology executive turned venture capitalist, I\u2019m passionate about empowering the next generation of Indian founders building disruptive companies. As a Partner at Kalaari Capital, I focus on pre-seed and seed-stage investments in SaaS and Fintech, prioritizing ventures demonstrating tangible revenue and a clear path to profitability. My background as a software engineer at Razorpay provides me with a unique perspective on technical feasibility and scalability. I thrive on identifying exceptional teams tackling significant market opportunities with innovative solutions. I\u2019m a firm believer in data-driven decision-making and actively seek out founders who possess a deep understanding of their unit economics. I\u2019m not just an investor; I\u2019m a partner dedicated to providing strategic guidance, operational support, and access to a robust network to accelerate growth and maximize impact. I'm particularly interested in companies leveraging technology to address the unique challenges and opportunities within the Indian market.",
+    "background": "* **Kalaari Capital, Partner** (2021 \u2013 Present)\n    * Led and participated in 15+ seed and pre-seed investments, with a focus on SaaS and Fintech.\n    * Currently leading Kalaari\u2019s Series A investment in \u2018AgriYield\u2019 \u2013 an agritech platform projected to achieve 3x revenue growth in the next 12 months.\n    * Mentored portfolio companies on product development, go-to-market strategy, and team building.\n    * Increased deal flow by 40% through targeted networking and industry event participation.\n* **Razorpay, Software Engineer** (2016 \u2013 2021)\n    * Developed and maintained key features for Razorpay\u2019s payment gateway, handling over $5 billion in annual transaction volume.\n    * Led the implementation of a new fraud detection system, reducing fraudulent transactions by 25%.\n    * Collaborated with product managers and designers to deliver high-quality, user-friendly solutions.\n    * Consistently exceeded performance expectations, receiving multiple awards for technical excellence.\n* **Indian Institute of Technology Delhi, Bachelor of Technology (Computer Science)** (2012 \u2013 2016)\n    * Graduated with honors, ranking in the top 5% of the class.\n    * Conducted research in machine learning and artificial intelligence, publishing a paper at a leading international conference.\n    * Actively participated in student clubs and organizations, including the Entrepreneurship Cell.\n* **Delhi Public School, New Delhi, High School Diploma** (2009 \u2013 2012)\n    * Consistently ranked among the top students in the class.\n    * Captain of the school\u2019s debate team, winning multiple regional competitions.",
+    "lookingFor": "## Investment Opportunities\n\nI\u2019m actively seeking pre-seed and seed-stage startups in India, specifically within the SaaS and Fintech sectors. I\u2019m *highly* selective and prioritize companies demonstrating:\n\n* **Early Revenue Traction:** Minimum $10k MRR preferred. Show me the numbers!\n* **Scalable Business Models:**  Focus on solutions with the potential for rapid growth and expansion.\n* **Strong Founding Teams:**  I look for founders with technical expertise, business acumen, and a relentless drive to succeed.\n* **Deep Market Understanding:**  A clear understanding of the Indian market and its unique challenges.\n\n## Network Expansion\n\n* **Founders:**  I\u2019m always open to connecting with ambitious founders building innovative companies.\n* **Angel Investors:**  I\u2019m interested in collaborating with angel investors on seed-stage deals.\n* **Industry Experts:**  Connections to individuals with expertise in SaaS, Fintech, and the Indian startup ecosystem are highly valued.\n* **Potential Exit Partners:** Building relationships with later-stage investors and strategic acquirers.\n\nI\u2019m *not* currently interested in idea-stage ventures or companies lacking a clear path to monetization. Please prioritize data and concrete achievements when reaching out.",
+    "notes": "Soraya is extremely focused and efficient. She responds quickly to relevant pitches, but will dismiss those that don't meet her criteria immediately. She values directness and dislikes fluff. Recent activity shows she\u2019s been actively researching companies in the embedded finance space. She\u2019s been attending several fintech conferences in Mumbai and Bangalore in the past month. Be prepared to answer detailed questions about unit economics and customer acquisition costs. She\u2019s generally receptive to warm introductions from trusted sources, but cold outreach should be highly targeted and data-driven. Avoid lengthy presentations; she prefers concise summaries.",
+    "locationAvailability": "Based in Bangalore, India, but comfortable with remote meetings and occasional travel to Mumbai and Delhi.",
+    "introPreferences": "* **Hard Requirements:**\n    * Founder has demonstrable revenue (minimum $10k MRR).\n    * Company is in the SaaS or Fintech space.\n    * Company is based in India.\n* **Soft Preferences:**\n    * Founder has a technical background.\n    * Company is targeting a large and growing market.\n    * Founder has previous entrepreneurial experience.\n* **Avoid:**\n    * Idea-stage ventures.\n    * Companies without a clear monetization strategy.\n    * Founders who are not data-driven.\n* **Introduction Notes:** Please include a concise summary of the company\u2019s revenue, key metrics, and the founder\u2019s background. Highlight any unique differentiators.",
+    "personalPreferences": "Prefers quick, direct communication via email or LinkedIn.  Avoid lengthy phone calls unless pre-scheduled.",
+    "meetingAndSchedulingPreferences": ""
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 18.90223789215088,
+      "input_tokens": 820,
+      "output_tokens": 1367,
+      "problems": []
+    }
+  ],
+  "success": true
+}

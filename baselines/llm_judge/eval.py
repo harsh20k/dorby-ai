@@ -46,7 +46,20 @@ from baselines.llm_judge.metrics import (
 )
 from baselines.llm_judge.prompt import SYSTEM_PROMPTS, build_user_prompt
 from baselines.llm_judge.real_pairs import load_real_pairs, pair_id
+from baselines.llm_judge.structured import parse_structured_verdict
 from baselines.metrics import neg_hardness_slice_metrics, pair_metrics
+
+# structured_cot emits six {name, weight, score, evidence} objects plus a
+# synthesis paragraph — several times the naive/calibrated response's 2-4
+# sentence reasoning + yes/no, so it needs more than DEFAULT_MAX_TOKENS (600)
+# to avoid being cut off mid-JSON (see judge.py's max_tokens preflight note).
+STRUCTURED_MAX_TOKENS = 1500
+
+PARSE_FNS: dict[str, Any] = {
+    "naive": None,  # None -> judge.py's default (parse_verdict)
+    "calibrated": None,
+    "structured_cot": parse_structured_verdict,
+}
 
 
 def build_requests(
@@ -114,6 +127,11 @@ def run_eval(
         if done == total or done % 10 == 0:
             print(f"  judged {done}/{total}", flush=True)
 
+    judge_all_kwargs: dict[str, Any] = {}
+    parse_fn = PARSE_FNS.get(variant)
+    if parse_fn is not None:
+        judge_all_kwargs["parse_fn"] = parse_fn
+
     verdicts, errors = judge_all(
         requests,
         make_call_fn=make_call_fn,
@@ -121,6 +139,7 @@ def run_eval(
         workers=workers,
         max_attempts=max_attempts,
         on_progress=progress,
+        **judge_all_kwargs,
     )
 
     if errors:
@@ -275,17 +294,21 @@ def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
     p.add_argument(
         "--max-tokens",
         type=int,
-        default=DEFAULT_MAX_TOKENS,
-        help="Output token cap. The verdict schema needs a few hundred at most — "
-        "left high, OpenRouter's credit preflight check reserves against the "
-        "model's absolute ceiling instead of real usage (see docs/llm-judge-experiment.md).",
+        default=None,
+        help="Output token cap. Default: 600 for naive/calibrated, "
+        f"{STRUCTURED_MAX_TOKENS} for structured_cot (six scored aspects + "
+        "evidence needs more room). Left unset, OpenRouter's credit preflight "
+        "check reserves against the model's absolute ceiling instead of real "
+        "usage (see docs/llm-judge-experiment.md).",
     )
     p.add_argument(
         "--variant",
         choices=sorted(SYSTEM_PROMPTS),
         default="naive",
         help="'naive' asks plainly if it's a good match; 'calibrated' also states "
-        "that production already deemed the pair relevant and the base rate is 50/50.",
+        "that production already deemed the pair relevant and the base rate is "
+        "50/50; 'structured_cot' scores six weighted aspects with evidence before "
+        "a verdict is aggregated in code.",
     )
     p.add_argument("--temperature", type=float, default=0.0)
     p.add_argument(
@@ -317,6 +340,9 @@ def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
 def main(argv: list[str] | None = None) -> int:
     args = parse_args(argv)
     load_env_file(args.env_file)
+
+    if args.max_tokens is None:
+        args.max_tokens = STRUCTURED_MAX_TOKENS if args.variant == "structured_cot" else DEFAULT_MAX_TOKENS
 
     if args.backend == "openrouter":
         model = args.model or DEFAULT_MODEL

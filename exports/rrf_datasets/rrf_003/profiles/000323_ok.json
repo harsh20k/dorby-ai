@@ -1,0 +1,54 @@
+{
+  "id": 323,
+  "archetype": "Entertainment/Tech Hybrid Entrepreneur",
+  "given_name": "Rafael Martins",
+  "style_version": 20,
+  "archetypes_version": 54,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Rafael Martins is a Brazilian-American entrepreneur focused on democratizing access to high-quality visual effects (VFX) for independent filmmakers. He spent his early career as a VFX artist on large studio productions, becoming frustrated with the prohibitive costs and complex pipelines that limited creative freedom for smaller projects. He founded 'Luminary Studios,' a cloud-based platform offering AI-powered VFX tools and a collaborative marketplace connecting independent artists with filmmakers. Luminary is currently raising a Series A round to scale its platform and expand its AI capabilities. He's particularly interested in connecting with investors who understand both the entertainment and AI spaces, and with potential strategic partners who can help with distribution and artist acquisition. He's a bit wary of investors who haven't worked in creative industries, valuing practical understanding of the workflow and pain points.",
+    "positioning": "Luminary Studios is revolutionizing visual effects for the independent film and content creation markets. We\u2019re building the future of filmmaking by removing the traditional barriers to entry for high-quality VFX. For too long, compelling visual storytelling has been limited by budget constraints and complex, proprietary software. Luminary solves this by offering a fully cloud-based suite of AI-powered tools \u2013 from rotoscoping and compositing to simulations and 3D tracking \u2013 accessible through a subscription model. \n\nOur core value proposition is threefold: affordability, accessibility, and collaboration. We empower filmmakers to realize their creative visions without the exorbitant costs of traditional VFX houses. Our platform\u2019s intuitive interface and automated workflows significantly reduce the technical expertise required, making VFX accessible to a wider range of creators. And our integrated marketplace fosters a vibrant community of freelance VFX artists, connecting them directly with projects and providing a sustainable income stream.\n\nWe recently completed a successful beta program with over 50 independent filmmakers, resulting in a 40% reduction in average VFX costs and a 30% faster turnaround time. We\u2019re now focused on scaling our platform, expanding our AI capabilities, and building strategic partnerships to accelerate adoption within the indie film community. We see a significant opportunity to disrupt the $15 billion global VFX market by empowering the next generation of visual storytellers.",
+    "background": "Rafael Martins has over 12 years of experience in the visual effects industry, spanning both large-scale studio productions and independent projects. \n\n* **Founder & CEO, Luminary Studios (2021 \u2013 Present):** Led all aspects of company creation, fundraising (Seed round completed in Q4 2022), product development, and market launch. Responsible for building a team of engineers, artists, and business development professionals. Oversaw the successful completion of the beta program and initial customer acquisition.\n* **Senior VFX Artist, Digital Domain (2016 \u2013 2021):** Contributed to the visual effects for blockbuster films including *Avengers: Endgame*, *Fast & Furious 9*, and *Jungle Cruise*. Specialized in procedural effects and compositing. Managed a team of junior artists and mentored new hires. Achieved 'Key Artist' status, consistently exceeding performance expectations.\n* **VFX Artist, ILM (2013 \u2013 2016):** Gained foundational experience in VFX pipeline development and production. Worked on projects such as *Star Wars: The Force Awakens* and *Rogue One: A Star Wars Story*. Developed expertise in Nuke, Maya, and Houdini.\n* **Education:** Master of Fine Arts (MFA) in Digital Arts, University of Southern California (2013). Bachelor of Science (BS) in Computer Science, Universidade Estadual de Campinas (UNICAMP), Brazil (2011).\n* **Skills:** Nuke, Maya, Houdini, Python, Machine Learning (TensorFlow, PyTorch), Cloud Computing (AWS, Azure), Project Management, Team Leadership, Visual Storytelling.\n* **Certifications:** AWS Certified Cloud Practitioner (2022)",
+    "lookingFor": "Currently seeking strategic partners and investors to support Luminary Studios\u2019 Series A funding round.\n\n* **Investors:**\n    * Stage: Series A, with potential for follow-on investment.\n    * Focus: Venture capital firms specializing in AI, MediaTech, and SaaS.\n    * Preference: Investors with a demonstrated understanding of the entertainment industry and/or visual effects workflows.\n* **Strategic Partners:**\n    * Distribution: Companies with established relationships with independent filmmakers and content creators (e.g., film festivals, online distribution platforms).\n    * Artist Acquisition: VFX studios or artist collectives interested in expanding their reach and accessing new projects.\n* **Advisors:**\n    * Individuals with experience in scaling SaaS businesses and building strong artist communities.\n* **Talent:**\n    * Senior Machine Learning Engineer specializing in computer vision and generative AI.\n    * Experienced Sales & Marketing professional with a proven track record in the media & entertainment space.",
+    "notes": "* Rafael is highly selective about who he brings into the Luminary ecosystem. He prioritizes individuals who genuinely understand the challenges faced by independent filmmakers.\n* He's had negative experiences with investors who treated VFX as a 'black box' and lacked appreciation for the artistic and technical complexities involved.\n* He's particularly interested in introductions to investors who have previously backed companies like Artlist, FilmConvert, or similar creative tech platforms.\n* Validate any investor's understanding of the VFX pipeline *before* making an introduction. Ask specific questions about their experience with compositing, simulations, or 3D tracking.\n* He\u2019s fluent in Portuguese and English.",
+    "locationAvailability": "Rafael is currently based in Los Angeles, California. He will be attending the NAB Show in Las Vegas from April 14-17 and is available for meetings during that time.",
+    "introPreferences": "* **Investor Profile:** Seed/Series A funds with >$50M AUM, focused on AI/MediaTech. Prior investments in creative tools or platforms are a major plus.\n* **Connection Type:** Warm introductions only. Cold emails are unlikely to receive a response.\n* **Introduction Style:** Please provide a concise and compelling introduction highlighting the investor's relevant experience and potential synergy with Luminary Studios. Avoid generic pitches.\n* **Hard Requirements:** Investors *must* demonstrate a genuine interest in the entertainment industry and a willingness to learn about the VFX workflow. \n* **Soft Preferences:** Introductions to investors with a strong network within the independent film community are highly valued.",
+    "personalPreferences": "I prefer to connect initially via LinkedIn or email. Quick, direct communication is appreciated. I'm generally responsive, but please allow up to 24 hours for a reply during peak periods.",
+    "meetingAndSchedulingPreferences": "I am flexible with meeting times and can accommodate both virtual and in-person meetings."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 23.828684091567993,
+      "input_tokens": 798,
+      "output_tokens": 1443,
+      "problems": []
+    }
+  ],
+  "success": true
+}

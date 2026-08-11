@@ -1,0 +1,54 @@
+{
+  "id": 560,
+  "archetype": "AI/ML Research to Founder",
+  "given_name": "Malia Reyes",
+  "style_version": 34,
+  "archetypes_version": 94,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Malia Reyes is a recent PhD graduate from Stanford\u2019s AI Lab who founded \u2018Synapse Insights\u2019 six months ago. Her PhD focused on explainable AI (XAI) for medical diagnostics, and she's now applying that research to build a platform that helps non-technical healthcare professionals understand and trust AI-driven insights. She's currently in seed fundraising, seeking investors familiar with both healthcare and deep tech. A key detail: she intentionally left a lucrative research position at Google to pursue her startup, demonstrating strong conviction and risk tolerance. She's very focused and efficient, valuing direct communication and demonstrable expertise in potential connections.",
+    "positioning": "Malia Reyes is the Founder and CEO of Synapse Insights, a company developing XAI solutions for the healthcare industry.  Driven by a passion for bridging the gap between cutting-edge AI and practical clinical application, I'm focused on building tools that empower healthcare professionals to confidently utilize and interpret AI-driven diagnostics.  My background in explainable AI, honed through doctoral research at Stanford, allows me to address critical concerns around trust and transparency in medical AI.  Currently, I'm leading Synapse Insights through seed funding, building a strong team, and refining our core platform for initial clinical trials.",
+    "background": "* PhD, Artificial Intelligence, Stanford University (2020-2024) \u2013 Dissertation: 'Towards Robust and Interpretable AI for Medical Image Analysis'\n* Research Intern, Google AI Healthcare (Summer 2023) \u2013 Developed novel XAI techniques for radiology image interpretation.\n* Research Assistant, Stanford Machine Learning Group (2020-2022) \u2013 Contributed to research on adversarial robustness in deep learning.\n* Master of Science, Computer Science, Stanford University (2018-2020)\n* Bachelor of Science, Computer Science, Massachusetts Institute of Technology (2014-2018)\n* Published 5 peer-reviewed papers in top-tier AI/ML conferences (NeurIPS, ICML, ICLR).\n* Developed and deployed a prototype XAI tool for diabetic retinopathy detection during PhD.\n* Proficient in Python, TensorFlow, PyTorch, and cloud computing platforms (AWS, GCP).\n* Experience with medical imaging modalities (MRI, CT, X-ray).\n* Strong understanding of healthcare regulations (HIPAA, FDA).\n* Led a team of 3 research assistants during doctoral studies.\n* Awarded Stanford Graduate Fellowship (2020-2024).",
+    "lookingFor": "* **Seed Stage Investors:**  Specifically looking for funds with a focus on healthcare AI and deep tech, with check sizes between $500k-$2M.\n* **Healthcare Professionals (Radiologists, Pathologists):** Seeking advisors and early adopters to provide clinical feedback on Synapse Insights\u2019 platform. \n* **AI/ML Engineers (XAI expertise):**  Expanding the engineering team with individuals experienced in explainable AI and medical image analysis.\n* **Strategic Partnerships:** Exploring collaborations with hospitals and medical institutions for pilot programs and data access.\n* **Mentors:** Experienced founders who have successfully navigated seed fundraising and early-stage company building.\n* **Legal Counsel:**  Experienced in startup formation, seed funding, and intellectual property law in the healthcare space.\n* **Individuals with strong network in the digital health space.**",
+    "notes": "* Malia is highly focused on XAI and is very selective about who she spends time with. \n* She\u2019s recently been attending the HLTH conference and is actively networking in the digital health space.\n* She mentioned being particularly interested in funds that have invested in companies like PathAI or Paige.AI.\n* She has a strong preference for concise, data-driven conversations \u2013 avoid overly promotional pitches.\n* She\u2019s actively using the platform to research potential investors and advisors.",
+    "locationAvailability": "Based in Palo Alto, CA. Open to remote meetings and travel to key conferences and investor locations.",
+    "introPreferences": "* **Ideal Introductions:**  Partners at seed-stage venture capital firms specializing in healthcare AI; Radiologists or Pathologists at leading hospitals;  Engineers with 3+ years of experience in XAI.\n* **Hard No\u2019s:**  Sales/Marketing professionals; Individuals offering general business advice (needs domain expertise);  Investors focused solely on consumer health applications.\n* **Introduction Style:**  A brief, direct email highlighting the connection's relevant experience and how it aligns with Synapse Insights\u2019 needs.  Avoid lengthy introductions \u2013 Malia prefers to quickly assess fit.\n* **Preferred Background:**  Investors who have publicly stated interest in explainability or responsible AI.\n* **Don't introduce:** Anyone who hasn't done their homework on Synapse Insights (website: [fictional website address]).\n* **Important to mention:**  Her PhD from Stanford and her previous experience at Google.",
+    "personalPreferences": "I prefer email for initial contact and value clear, concise communication. I'm a quick responder when the message is focused and relevant.",
+    "meetingAndSchedulingPreferences": "I generally prefer 30-minute introductory calls to assess mutual fit."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 18.312346696853638,
+      "input_tokens": 765,
+      "output_tokens": 1095,
+      "problems": []
+    }
+  ],
+  "success": true
+}

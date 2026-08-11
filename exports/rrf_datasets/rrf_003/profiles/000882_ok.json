@@ -1,0 +1,54 @@
+{
+  "id": 882,
+  "archetype": "Fintech/AI Founder, Early Stage",
+  "given_name": "Jamal Andersson",
+  "style_version": 54,
+  "archetypes_version": 149,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Jamal Andersson is a first-time founder, 32, building 'NovaCredit AI', a platform using machine learning to assess creditworthiness for individuals with limited or no traditional credit history \u2013 specifically focusing on the 'new collar' workforce (skilled trades, vocational training graduates). He previously spent 5 years as a data scientist at a large, traditional bank, becoming frustrated with the systemic biases in existing credit scoring models. He left to build a fairer system. He\u2019s currently pre-seed, closing a round and actively seeking advisors with experience in regulatory compliance within fintech and potential early adopters within the skilled trades education sector. He\u2019s a very data-driven person, slightly introverted but passionate about his mission, and prioritizes authenticity and intellectual honesty in his interactions. He's based in Chicago but open to remote collaboration.",
+    "positioning": "Jamal Andersson is the founder and CEO of NovaCredit AI, a fintech startup revolutionizing credit access for the new collar workforce. Leveraging cutting-edge machine learning techniques, NovaCredit AI delivers more accurate and equitable credit risk assessments, opening doors to financial inclusion for millions. Prior to founding NovaCredit AI, Jamal spent five years as a data scientist at First National Bank, where he identified and quantified systemic biases within traditional credit scoring models. He\u2019s now building the solution he wished existed, and is actively seeking strategic partners to accelerate deployment and navigate the evolving regulatory landscape. Now is the ideal time to connect \u2013 we're closing our pre-seed round and are looking for advisors and early adopters to shape the future of inclusive finance.",
+    "background": "- **Founder & CEO, NovaCredit AI** (Chicago, IL, 2023 - Present)\n  * Spearheading all aspects of company development, from product vision and engineering to fundraising and team building.\n  * Developed and implemented proprietary machine learning algorithms for credit risk assessment, achieving 15% higher predictive accuracy than traditional models in beta testing.\n  * Secured initial seed funding commitments totaling $300,000.\n- **Data Scientist, First National Bank** (Chicago, IL, 2018 - 2023)\n  * Led the development of fraud detection models, reducing fraudulent transactions by 8% annually.\n  * Conducted statistical analysis and data mining to identify trends in customer behavior and risk profiles.\n  * Presented findings and recommendations to senior management, influencing key strategic decisions.\n  * Mentored junior data scientists in statistical modeling and machine learning techniques.\n- **Education:** Master of Science in Data Science, University of Illinois at Urbana-Champaign (2016 - 2018)\n  * GPA: 3.9/4.0\n  * Relevant coursework: Machine Learning, Statistical Modeling, Data Mining, Financial Econometrics.\n- **Education:** Bachelor of Science in Mathematics, Northwestern University (2012 - 2016)\n  * Minor: Computer Science\n- **Skills:** Python, R, SQL, Machine Learning (Regression, Classification, Clustering), Deep Learning (TensorFlow, PyTorch), Statistical Modeling, Data Visualization (Tableau, Power BI), Credit Risk Modeling, Fintech Regulations (CCPA, GDPR).\n- **Certifications:** Certified Analytics Professional (CAP)",
+    "lookingFor": "## Investors\n* Seed-stage investors with a focus on fintech and AI, particularly those interested in financial inclusion.\n* Investors with experience in navigating regulatory compliance within the financial services industry.\n\n## Advisors\n* Experienced fintech entrepreneurs who have successfully navigated the pre-seed and seed stages of fundraising.\n* Legal counsel specializing in fintech regulations and compliance.\n\n## Early Adopters\n* Vocational schools and trade organizations willing to pilot NovaCredit AI with their graduates.\n* Employers in the skilled trades actively seeking innovative solutions for employee financial wellness.",
+    "notes": "- Jamal is highly analytical and values data-driven decision-making. Expect detailed questions.\n- He's passionate about his mission but can be reserved in initial interactions.\n- He's currently prioritizing meetings that directly contribute to fundraising or product validation.\n- He's wary of 'hype' and prefers substance over style.\n- He responds best to concise, well-structured communication.\n- He previously expressed interest in connecting with individuals who have experience building credit scoring models for underserved populations.",
+    "locationAvailability": "Jamal is based in Chicago, Illinois, but is open to remote meetings and collaborations. He is willing to travel for key investor meetings or strategic partnerships.",
+    "introPreferences": "## Hard Requirements\n* Individuals with direct experience in fintech, particularly in credit scoring or lending.\n* Investors actively deploying capital in the pre-seed or seed stage.\n* Professionals with a strong understanding of regulatory compliance in the financial services industry.\n\n## Soft Preferences\n* Connections with a demonstrated commitment to social impact and financial inclusion.\n* Individuals who can offer practical advice and mentorship.\n* Introductions should be concise and highlight the specific value proposition of NovaCredit AI.",
+    "personalPreferences": "Jamal prefers direct and honest communication. He appreciates brevity and clarity in messaging. He is most responsive to emails and LinkedIn messages.",
+    "meetingAndSchedulingPreferences": "Jamal prefers 30-minute introductory calls to assess mutual fit. He is generally available for meetings during standard business hours (CST)."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 18.4179630279541,
+      "input_tokens": 776,
+      "output_tokens": 1131,
+      "problems": []
+    }
+  ],
+  "success": true
+}

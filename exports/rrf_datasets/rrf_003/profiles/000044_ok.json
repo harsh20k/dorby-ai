@@ -1,0 +1,54 @@
+{
+  "id": 44,
+  "archetype": "E-commerce to Logistics Problem Solver",
+  "given_name": "Priya Kowalski",
+  "style_version": 3,
+  "archetypes_version": 8,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Priya Kowalski is a 38-year-old founder and CEO of 'ReturnFlow,' a SaaS platform specializing in optimizing reverse logistics for mid-sized e-commerce businesses. Her background is unique: she *started* as a highly successful Etsy seller specializing in handmade jewelry before scaling to a multi-channel operation and personally experiencing the nightmare of returns processing. This firsthand experience fueled her to build ReturnFlow, focusing on automation and data-driven insights to reduce costs and improve customer satisfaction in the often-overlooked world of returns. She's currently seeking Series A funding to expand her engineering team and broaden ReturnFlow's integration capabilities. She\u2019s laser-focused on becoming the leading solution for brands selling between $1M-$20M annually, a segment she believes is underserved by existing enterprise-level solutions. A key differentiator for Priya is her deep empathy for the seller's perspective, which informs every product decision. She's a pragmatic, data-driven leader, but also highly personable and passionate about empowering small businesses.",
+    "positioning": "Priya Kowalski is the Founder & CEO of ReturnFlow, the intelligent reverse logistics platform built *by* e-commerce sellers, *for* e-commerce sellers. We empower mid-market brands to transform returns from a cost center into a competitive advantage. Having personally navigated the complexities of scaling a multi-channel e-commerce business, I recognized a critical gap in the market: robust, affordable, and user-friendly solutions for managing the reverse supply chain. \n\nReturnFlow isn\u2019t just about processing returns; it\u2019s about unlocking valuable data insights hidden within them. Our platform automates key processes \u2013 from return authorization and label generation to inventory reconciliation and fraud detection \u2013 freeing up valuable time and resources for our clients to focus on growth. We integrate seamlessly with major e-commerce platforms like Shopify, WooCommerce, and Amazon, providing a centralized hub for managing all returns activity.\n\nWe recently pivoted from a purely Shopify-focused solution to a multi-platform approach, significantly expanding our addressable market. This strategic shift, coupled with the launch of our predictive analytics dashboard, has resulted in a 300% increase in qualified leads over the past quarter. Our mission is simple: to make returns easy, efficient, and even *profitable* for every e-commerce business.  **One-liner:** ReturnFlow: Turning returns into revenue for mid-market e-commerce.",
+    "background": "- **ReturnFlow, Founder & CEO** (2021 \u2013 Present)\n    - Led all aspects of company strategy, fundraising, product development, and go-to-market execution.\n    - Secured seed funding of $750K from angel investors focused on e-commerce and logistics.\n    - Built and scaled a remote team of 12 engineers, customer success managers, and marketing specialists.\n    - Oversaw the development and launch of ReturnFlow\u2019s core platform, resulting in a 4.8-star rating on Shopify App Store.\n    - Increased monthly recurring revenue (MRR) by 250% year-over-year.\n    - Spearheaded the successful pivot to a multi-platform integration strategy.\n\n- **Etsy Seller \u2013 'Sparkle & Stone Designs'** (2015 \u2013 2021)\n    - Built and operated a highly successful Etsy shop specializing in handmade jewelry, achieving 'Star Seller' status consistently.\n    - Managed all aspects of the business, including product design, manufacturing, marketing, customer service, and fulfillment.\n    - Scaled sales from $0 to over $500K annually across Etsy, personal website, and select wholesale partnerships.\n    - Developed a deep understanding of the challenges and opportunities facing small e-commerce businesses, particularly in the area of returns management.\n\n- **Marketing Consultant (Freelance)** (2012 \u2013 2015)\n    - Provided marketing consulting services to small businesses in various industries, including social media marketing, content creation, and email marketing.\n\n- **Education:**\n    - **MBA, Marketing & Entrepreneurship** \u2013 University of California, Berkeley, Haas School of Business (2010 \u2013 2012)\n    - **BA, Communications** \u2013 Stanford University (2006 \u2013 2010)\n\n- **Skills:** E-commerce Operations, Reverse Logistics, SaaS, Fundraising, Team Leadership, Product Management, Shopify, WooCommerce, Amazon Seller Central, Data Analytics, Customer Success, Marketing Strategy, Supply Chain Management.",
+    "lookingFor": "Currently raising a Series A round ($3M - $5M) to accelerate product development and expand our sales and marketing efforts. Specifically seeking investors with experience in e-commerce, logistics, or SaaS, and a demonstrated track record of supporting high-growth startups. \n\n* **Strategic Partners:**  Logistics providers (3PLs, fulfillment centers) interested in integrating with ReturnFlow to offer a more comprehensive solution to their clients.\n* **Potential Acquisition Targets:**  Small, complementary technology companies in the returns management or e-commerce space.\n* **Advisors:** Experienced e-commerce entrepreneurs or industry experts who can provide guidance on scaling and market expansion.\n* **Key Integrations:**  Looking to connect with developers specializing in integrations with platforms like Klaviyo, ShipStation and other popular e-commerce tools.\n\nOpen to connecting with founders of mid-market e-commerce brands ($1M - $20M revenue) to gather feedback and explore potential partnerships.  Geographically focused on North America, but open to discussing opportunities with international partners.  I'm particularly interested in speaking with individuals who've struggled with returns and are looking for a better solution.",
+    "notes": "* Had a great call with David Chen at Amplify Partners last week \u2013 he\u2019s warm interested, but wants to see stronger traction on Amazon integration. Follow up next week with demo. \n* Priya is *very* sensitive about being positioned as just another 'returns' company \u2013 emphasize the data analytics and insights aspect. \n* She\u2019s a huge advocate for small businesses and loves sharing her own story. Encourage her to do so in investor pitches. \n* Mention the Etsy background \u2013 it's a HUGE differentiator. \n* Reminder: She prefers direct, data-driven communication. Avoid fluff. \n* Prioritize connecting her with people in the Shopify ecosystem \u2013 she has strong relationships there.",
+    "locationAvailability": "Based in San Francisco, CA.  Open to remote work and travel within North America.  Willing to consider relocation for the right opportunity, but prefer a West Coast location.",
+    "introPreferences": "When making introductions, please highlight my background as a former Etsy seller and the unique perspective that brings to solving reverse logistics challenges. \n\n*  Focus on ReturnFlow's ability to *reduce costs and improve customer satisfaction* through automation and data insights.\n*  Specifically mention our integration capabilities with Shopify, WooCommerce, and Amazon.\n*  Please avoid introducing me to individuals solely focused on enterprise-level logistics solutions \u2013 our target market is mid-sized e-commerce businesses.\n*  If introducing to an investor, briefly mention our Series A fundraising round and our traction to date.",
+    "personalPreferences": "I prefer to connect via email initially, then happy to jump on a quick call. WhatsApp is fine for quick follow-ups.",
+    "meetingAndSchedulingPreferences": "I'm in the Pacific Time Zone (PST).  Generally available for meetings between 9am-5pm PST. Please send a calendar invite with a brief agenda.  I prefer 30-minute meetings to start."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 34.05421710014343,
+      "input_tokens": 813,
+      "output_tokens": 1623,
+      "problems": []
+    }
+  ],
+  "success": true
+}

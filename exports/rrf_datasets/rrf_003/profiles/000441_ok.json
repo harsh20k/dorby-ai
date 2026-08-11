@@ -1,0 +1,54 @@
+{
+  "id": 441,
+  "archetype": "Serial SaaS Builder, AI Ecosystem Navigator",
+  "given_name": "Isabela Martins",
+  "style_version": 27,
+  "archetypes_version": 74,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Isabela Martins is a seasoned SaaS founder who\u2019s successfully exited two companies. Her distinctive trait is a deep, almost academic understanding of network effects and marketplace dynamics, which she now applies to the burgeoning AI ecosystem. She\u2019s currently building 'SynapseAI,' a platform designed to connect AI model developers with businesses needing customized AI solutions, acting as a 'marketplace of expertise.' She's not just building *a* company, but trying to *shape* the AI landscape by fostering collaboration and reducing fragmentation. She's extremely focused on responsible AI deployment and is keen to connect with individuals who share that vision. She's past the 'growth at all costs' stage and values sustainable, ethical business practices. She's looking for strategic investors and key partnerships to accelerate SynapseAI's growth and establish it as a leading force in the AI marketplace.",
+    "positioning": "I'm Isabela Martins, founder of SynapseAI, a platform designed to unlock the full potential of Artificial Intelligence for businesses of all sizes. We're building a curated marketplace connecting businesses with leading AI model developers, providing access to customized solutions and expert guidance. Having successfully navigated the SaaS landscape with two prior ventures \u2013 scaling and ultimately exiting both \u2013 I'm now laser-focused on fostering a more collaborative and accessible AI ecosystem. My core belief is that the future of AI isn't about monolithic solutions, but about empowering businesses to build precisely what they need, leveraging the power of specialized models. We've already achieved significant traction with early adopters in the fintech and healthcare sectors, demonstrating a clear market need for our approach. My current focus is on scaling our developer network and forging strategic partnerships to expand our reach and impact. I\u2019m passionate about responsible AI development and deployment, and believe that ethical considerations must be at the forefront of innovation.",
+    "background": "- **Founder & CEO, SynapseAI** (2023 - Present)\n  - Spearheading the development and launch of a curated AI model marketplace, connecting businesses with specialized AI developers.\n  - Led seed funding round of $3M, securing investment from leading venture capital firms focused on AI and SaaS.\n  - Built and managed a team of 15 engineers, data scientists, and business development professionals.\n  - Key technologies utilized: Python, TensorFlow, AWS, PostgreSQL, React.\n\n- **Founder & CEO, CloudScale Solutions** (2016 - 2022) \u2013 *Acquired by Apex Technologies*\n  - Developed and launched a cloud-based CRM platform targeting small and medium-sized businesses.\n  - Grew revenue from $0 to $15M ARR within 5 years, achieving profitability within 3 years.\n  - Successfully negotiated and closed acquisition deal with Apex Technologies for an undisclosed sum.\n  - Implemented agile development methodologies and a data-driven approach to product development.\n  - Technologies used: Ruby on Rails, PostgreSQL, AWS, Salesforce integration.\n\n- **VP of Product, DataFlow Analytics** (2013 - 2016)\n  - Led the product strategy and roadmap for a data analytics platform focused on marketing automation.\n  - Increased user engagement by 40% through the implementation of new features and improved user experience.\n  - Managed a team of product managers and designers, fostering a collaborative and innovative environment.\n  - Conducted extensive market research and competitive analysis to identify new opportunities for growth.\n  - Expertise in A/B testing, user research, and data-driven decision-making.\n\n- **Software Engineer, InnovateTech** (2010 - 2013)\n  - Developed and maintained software applications using Java and other programming languages.\n  - Contributed to the design and implementation of new features and functionalities.\n  - Collaborated with cross-functional teams to deliver high-quality software solutions.\n  - Gained experience in software development lifecycle and agile methodologies.",
+    "lookingFor": "I'm actively seeking connections within the AI investment community, specifically VCs with a thesis around AI infrastructure and marketplaces. I'm looking for Series A funding to accelerate SynapseAI\u2019s growth and expand our developer network. Beyond funding, strategic partnerships are crucial. I\u2019m keen to connect with:\n\n*   **Leaders of AI model development companies:** Particularly those specializing in niche areas like computer vision, NLP, and time-series analysis.\n*   **Heads of Innovation at large enterprises:** Individuals responsible for exploring and implementing AI solutions within their organizations (Fintech, Healthcare, Manufacturing prioritized).\n*   **Experts in AI ethics and responsible AI development:** To advise on best practices and ensure our platform promotes ethical AI deployment.\n*   **Talented AI Engineers:** We are currently hiring for senior AI/ML engineers with experience in model deployment and scaling.\n\nI\u2019m also open to advisory roles and would welcome introductions to individuals with experience building and scaling successful marketplaces. I\u2019m particularly interested in learning from others who have successfully navigated the challenges of balancing growth with ethical considerations in the AI space.",
+    "notes": "- Isabela is highly selective about partnerships \u2013 she prioritizes long-term value and shared values over quick wins.\n- She's a strong advocate for open-source AI and believes in the importance of democratizing access to AI technology.\n- She has a PhD in Computer Science (Network Theory) \u2013 this informs her understanding of marketplace dynamics.\n- Potential conflict: She sits on the advisory board of a competing AI platform (small investment, non-controlling stake).\n- Clarification needed: Confirm her specific interest in 'responsible AI' - is this a marketing angle, or a deeply held conviction? (leaning towards the latter).\n- She's a frequent speaker at AI conferences and is actively building her personal brand within the AI community.",
+    "locationAvailability": "I'm based in San Francisco, California, but am comfortable with remote collaboration and frequent travel to key tech hubs like New York and Boston.",
+    "introPreferences": "*   **Do:** Introduce me to VCs focused on AI infrastructure or marketplaces, explicitly mentioning SynapseAI\u2019s focus on connecting businesses with specialized AI models.\n*   **Do:** Highlight my previous successes in building and scaling SaaS companies.\n*   **Don't:** Position me as simply seeking funding; emphasize the strategic partnership opportunities.\n*   **Don't:** Introduce me to individuals solely focused on general-purpose AI solutions (e.g., ChatGPT alternatives).\n*   Ideal introductions are warm and concise, highlighting the potential synergies between my work at SynapseAI and the recipient\u2019s expertise.",
+    "personalPreferences": "I prefer asynchronous communication via email or LinkedIn messaging initially. I'm always open to a quick call, but appreciate a brief agenda beforehand. Constructive feedback is welcome, especially regarding our platform\u2019s usability and market positioning.",
+    "meetingAndSchedulingPreferences": "Flexible with scheduling. Prefer 30-minute introductory calls. Zoom/Google Meet preferred."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 28.663196802139282,
+      "input_tokens": 822,
+      "output_tokens": 1472,
+      "problems": []
+    }
+  ],
+  "success": true
+}

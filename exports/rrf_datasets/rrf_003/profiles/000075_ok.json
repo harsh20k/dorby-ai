@@ -1,0 +1,54 @@
+{
+  "id": 75,
+  "archetype": "Enterprise AI/Data Infrastructure Builder",
+  "given_name": "Camille Nguyen",
+  "style_version": 5,
+  "archetypes_version": 12,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Camille Nguyen is a seasoned data infrastructure engineer currently leading a team at a large financial institution, 'Apex Capital', focused on building a scalable and secure platform for their expanding AI/ML initiatives. She's a pragmatic builder \u2013 not a research scientist \u2013 and deeply cares about operationalizing AI. A distinctive detail: early in her career, she spent two years at a small cybersecurity firm *before* pivoting to data engineering. This gives her a unique perspective on data security that she leverages heavily. She's now looking to expand her network with other enterprise AI infrastructure leaders, particularly those facing similar challenges in regulated industries. She's open to advising early-stage companies building tools in the data observability/governance space, but is *not* actively looking for a new role. She\u2019s a bit introverted and appreciates direct, efficient communication.",
+    "positioning": "A highly motivated and results-oriented Data Infrastructure Engineering Leader with 12+ years of experience designing, building, and scaling data platforms for complex enterprise environments. Currently at Apex Capital, I lead a team responsible for the end-to-end data infrastructure supporting our rapidly growing AI and Machine Learning programs. My focus is on delivering robust, secure, and scalable solutions that empower data scientists and analysts to drive impactful business outcomes. I possess a deep understanding of cloud technologies (AWS, Azure, GCP), data warehousing solutions (Snowflake, Redshift), data streaming technologies (Kafka, Kinesis), and data governance best practices. Prior to specializing in data infrastructure, I spent time in cybersecurity, which instilled in me a rigorous approach to data security and compliance \u2013 a crucial element in today\u2019s data landscape. I am passionate about bridging the gap between data engineering and machine learning operations, ensuring that AI initiatives are not only innovative but also reliable, auditable, and secure. I am keen to connect with other leaders tackling similar challenges in the financial services sector and beyond.",
+    "background": "- **Apex Capital, New York, NY**\n  *Director of Data Infrastructure* (2020 \u2013 Present)\n    - Led a team of 8 engineers in the design and implementation of a new data platform for AI/ML, resulting in a 30% reduction in model deployment time.\n    - Spearheaded the adoption of a data mesh architecture, improving data accessibility and agility across the organization.\n    - Implemented robust data security measures, ensuring compliance with industry regulations (SOC2, GDPR, CCPA).\n    - Managed a $5M annual budget for data infrastructure projects.\n    - Collaborated with data science teams to optimize data pipelines for performance and scalability.\n\n- **DataFlow Solutions, San Francisco, CA**\n  *Senior Data Engineer* (2017 \u2013 2020)\n    - Designed and built scalable data pipelines using Spark, Kafka, and AWS services.\n    - Developed and maintained data quality monitoring systems, improving data accuracy and reliability.\n    - Mentored junior data engineers, fostering a culture of learning and innovation.\n    - Contributed to the development of a new data cataloging tool, enhancing data discoverability.\n\n- **CyberGuard Technologies, Boston, MA**\n  *Security Analyst* (2015 \u2013 2017)\n    - Conducted vulnerability assessments and penetration testing of web applications and network infrastructure.\n    - Developed and implemented security policies and procedures.\n    - Responded to security incidents and performed forensic analysis.\n    - Gained foundational knowledge of data encryption, access control, and data loss prevention techniques.\n\n- **Acme Corporation, Boston, MA**\n  *Data Engineer* (2013 \u2013 2015)\n    - Built and maintained ETL pipelines using Python and SQL.\n    - Developed and implemented data warehousing solutions using Redshift.\n    - Supported business intelligence reporting and analytics initiatives.",
+    "lookingFor": "I\u2019m actively seeking connections with:\n\n*   **Heads of Data/ML Infrastructure** at large financial institutions and other regulated industries (healthcare, insurance) \u2013 particularly those wrestling with data governance and security challenges at scale.\n*   **Engineering Leaders** building data observability and data quality tools.  I'm interested in understanding the latest advancements and potential solutions for monitoring and managing complex data pipelines.\n*   **VPs of Engineering** at companies focused on AI/ML platform development. I'm open to informal advisory roles where I can share insights from my experience in enterprise deployments.\n\nI\u2019m *not* currently looking for a new role, but am always open to expanding my network and learning from others.  I'm particularly interested in discussions around data mesh architectures, data security best practices, and the operationalization of machine learning models.",
+    "notes": "Camille is a bit reserved initially but incredibly thoughtful and pragmatic once you get to know her. She\u2019s very focused on *practical* solutions and gets frustrated with overly theoretical discussions. Her background in cybersecurity is a major asset \u2013 she\u2019s unusually sensitive to data security risks. \n\n*   She's extremely busy, so keep introductions concise and to the point.\n*   Don't pitch her on anything that isn't demonstrably enterprise-ready.\n*   She's a strong advocate for open-source technologies, but understands the realities of vendor lock-in.\n*   Recent update:  Her team just completed a major migration to Snowflake, so she's currently deep in that ecosystem.",
+    "locationAvailability": "I am based in New York City and primarily work remotely, though I travel to Apex Capital offices occasionally. I anticipate limited travel for conferences in Q4.",
+    "introPreferences": "*Hard Requirements*:\n    - Relevant experience in enterprise data infrastructure or AI/ML platform development.\n    - Demonstrated leadership experience (Director level or above).\n    - Clear value proposition \u2013 explain *specifically* how this connection will be mutually beneficial.\n\n*Soft Preferences*:\n    - Experience in regulated industries (finance, healthcare, insurance).\n    - Familiarity with data mesh architectures.\n    - A willingness to share insights and best practices.\n\n*Do Not*:\n    - Introduce her to recruiters or anyone selling recruitment services.\n    - Introduce her to junior-level engineers or individuals without a clear leadership role.\n    - Send lengthy, rambling emails without a clear purpose.",
+    "personalPreferences": "I enjoy hiking and reading science fiction in my free time. I prefer email communication for initial contact and am responsive during business hours. I'm not very active on social media.",
+    "meetingAndSchedulingPreferences": "I generally prefer 30-minute virtual meetings. Please include a brief agenda when scheduling to ensure we make the most of our time. I\u2019m available most afternoons EST."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 31.15059208869934,
+      "input_tokens": 785,
+      "output_tokens": 1442,
+      "problems": []
+    }
+  ],
+  "success": true
+}

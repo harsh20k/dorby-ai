@@ -1,0 +1,390 @@
+<title>Does this person want you back?</title>
+<style>
+  :root {
+    --ground: #fbfaf8;
+    --panel: #ffffff;
+    --ink: #17191d;
+    --ink-soft: #565c66;
+    --ink-faint: #8d949e;
+    --rule: #e3e0d9;
+    --fwd: #1f6f6b;           /* the forward check — what everyone measures */
+    --rev: #a8482f;           /* the reverse check — what nobody measured */
+    --fwd-soft: #e2efed;
+    --rev-soft: #f6e6e0;
+    --band: #f1efea;
+    --good: #2f6b4f;
+    --warn: #8a6d1f;
+    --mono: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+    --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    --serif: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --ground: #121417; --panel: #1a1d21; --ink: #eae8e3; --ink-soft: #a6adb6;
+      --ink-faint: #767d87; --rule: #2c3138; --fwd: #5fb8b1; --rev: #e08a6c;
+      --fwd-soft: #1a2c2b; --rev-soft: #2e211c; --band: #21252a;
+      --good: #6fbd92; --warn: #d4b25e;
+    }
+  }
+  :root[data-theme="dark"] {
+    --ground: #121417; --panel: #1a1d21; --ink: #eae8e3; --ink-soft: #a6adb6;
+    --ink-faint: #767d87; --rule: #2c3138; --fwd: #5fb8b1; --rev: #e08a6c;
+    --fwd-soft: #1a2c2b; --rev-soft: #2e211c; --band: #21252a;
+    --good: #6fbd92; --warn: #d4b25e;
+  }
+  :root[data-theme="light"] {
+    --ground: #fbfaf8; --panel: #ffffff; --ink: #17191d; --ink-soft: #565c66;
+    --ink-faint: #8d949e; --rule: #e3e0d9; --fwd: #1f6f6b; --rev: #a8482f;
+    --fwd-soft: #e2efed; --rev-soft: #f6e6e0; --band: #f1efea;
+    --good: #2f6b4f; --warn: #8a6d1f;
+  }
+
+  body { background: var(--ground); color: var(--ink); font-family: var(--sans);
+         line-height: 1.6; -webkit-font-smoothing: antialiased; }
+  .wrap { max-width: 62rem; margin: 0 auto; padding: 3.5rem 1.5rem 5rem;
+          display: flex; flex-direction: column; gap: 2.8rem; }
+  .eyebrow { font-family: var(--mono); font-size: .7rem; letter-spacing: .14em;
+             text-transform: uppercase; color: var(--fwd); margin-bottom: .9rem; }
+  h1 { font-family: var(--serif); font-weight: 600; font-size: clamp(2rem, 5.5vw, 3.2rem);
+       line-height: 1.1; letter-spacing: -.02em; text-wrap: balance; margin-bottom: 1rem; }
+  .lede { font-size: 1.15rem; color: var(--ink-soft); max-width: 48ch; }
+  h2 { font-family: var(--serif); font-size: 1.5rem; font-weight: 600; letter-spacing: -.01em;
+       padding-bottom: .5rem; border-bottom: 1px solid var(--rule); margin-bottom: 1.2rem;
+       text-wrap: balance; }
+  h3 { font-size: 1.02rem; font-weight: 650; margin-bottom: .4rem; }
+  h3.rule { border-top: 1px solid var(--rule); padding-top: 1.3rem; margin-top: 1.8rem; }
+  p { max-width: 68ch; } p + p { margin-top: .85rem; }
+  ul { max-width: 68ch; padding-left: 1.1rem; margin-top: .7rem; }
+  li { margin-bottom: .45rem; }
+  code { font-family: var(--mono); font-size: .88em; background: var(--band);
+         padding: .1em .35em; border-radius: 3px; }
+  em.term { font-style: normal; color: var(--ink-faint); font-family: var(--mono);
+            font-size: .8em; }
+
+  .callout { background: var(--panel); border: 1px solid var(--rule);
+             border-left: 3px solid var(--fwd); border-radius: 6px;
+             padding: 1.1rem 1.3rem; max-width: 68ch; }
+  .callout.rev { border-left-color: var(--rev); }
+  .callout.warn { border-left-color: var(--warn); }
+  .callout p { max-width: none; }
+
+  .oneline { font-family: var(--serif); font-size: 1.35rem; line-height: 1.45;
+             max-width: 40ch; color: var(--ink); }
+
+  figure { margin: 0; }
+  figcaption { font-size: .82rem; color: var(--ink-faint); margin-top: .7rem;
+               max-width: 60ch; }
+  .svgbox { background: var(--panel); border: 1px solid var(--rule);
+            border-radius: 8px; padding: 1rem; overflow-x: auto; }
+  svg { display: block; max-width: 100%; height: auto; min-width: 44rem; }
+
+  /* SVG styling via classes — presentation attributes with var() are unreliable */
+  .box-f { fill: var(--fwd-soft); stroke: var(--fwd); stroke-width: 1.5; }
+  .box-r { fill: var(--rev-soft); stroke: var(--rev); stroke-width: 1.5; }
+  svg text { font-family: var(--sans); }
+  .t-name  { font-size: 15px; font-weight: 650; fill: var(--ink); }
+  .t-body  { font-size: 13px; fill: var(--ink); }
+  .t-lab   { font-family: var(--mono); font-size: 11px; fill: var(--ink-faint); }
+  .t-lab-f { font-family: var(--mono); font-size: 11px; fill: var(--fwd); }
+  .t-lab-r { font-family: var(--mono); font-size: 11px; fill: var(--rev); }
+  .t-ok    { font-size: 13px; font-weight: 600; fill: var(--good); }
+  .t-no    { font-size: 13px; font-weight: 600; fill: var(--rev); }
+  .t-note  { font-size: 13px; fill: var(--ink-soft); }
+  .arr-f { stroke: var(--fwd); stroke-width: 2; fill: none; }
+  .arr-r { stroke: var(--rev); stroke-width: 2; fill: none; stroke-dasharray: 6 4; }
+  .head-f { fill: var(--fwd); } .head-r { fill: var(--rev); }
+
+  .tablescroll { overflow-x: auto; border: 1px solid var(--rule);
+                 border-radius: 8px; background: var(--panel); }
+  table { border-collapse: collapse; width: 100%; font-size: .9rem; }
+  th, td { padding: .6rem .85rem; text-align: left; border-bottom: 1px solid var(--rule); }
+  th { font-family: var(--mono); font-size: .7rem; letter-spacing: .07em;
+       text-transform: uppercase; color: var(--ink-faint); font-weight: 500;
+       white-space: nowrap; }
+  tbody tr:last-child td { border-bottom: none; }
+  td.num { font-family: var(--mono); font-variant-numeric: tabular-nums; }
+  td.gain { font-family: var(--mono); color: var(--good); font-weight: 600; }
+  .dim { color: var(--ink-faint); }
+
+  .cols { display: grid; grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+          gap: 1rem; }
+  .card { background: var(--panel); border: 1px solid var(--rule);
+          border-radius: 8px; padding: 1.1rem 1.2rem; }
+  .card h3 { margin-bottom: .5rem; }
+  .card p { font-size: .92rem; color: var(--ink-soft); max-width: none; }
+  .card .tag { font-family: var(--mono); font-size: .68rem; letter-spacing: .1em;
+               text-transform: uppercase; margin-bottom: .55rem; display: block; }
+  .card.f .tag { color: var(--fwd); } .card.r .tag { color: var(--rev); }
+
+  .lam { display: flex; align-items: baseline; gap: .9rem; flex-wrap: wrap;
+         background: var(--panel); border: 1px solid var(--rule);
+         border-radius: 8px; padding: 1.3rem 1.4rem; }
+  .lam .big { font-family: var(--mono); font-size: 2.6rem; font-weight: 600;
+              color: var(--rev); line-height: 1; }
+  .lam .txt { font-size: .95rem; color: var(--ink-soft); max-width: 44ch; }
+
+  footer { border-top: 1px solid var(--rule); padding-top: 1.4rem;
+           font-size: .82rem; color: var(--ink-faint); }
+  footer code { font-size: .82em; }
+</style>
+
+<div class="wrap">
+
+  <header>
+    <div class="eyebrow">Reciprocity · plain-language explainer</div>
+    <h1>Does this person want you back?</h1>
+    <p class="lede">Every model in this project checked one direction. The
+      other direction turned out to matter more.</p>
+  </header>
+
+  <section>
+    <h2>The idea in one sentence</h2>
+    <p class="oneline">An intro involves two people, and both have to want it —
+      but every model here only ever checked one direction.</p>
+    <p style="margin-top:1.2rem">Until now the question was always: <em>does this
+      candidate match what the seeker asked for?</em> Nobody asked the other
+      half: <em>does the seeker match what the candidate is looking for?</em></p>
+  </section>
+
+  <section>
+    <h2>Why that matters</h2>
+    <p>The knowledge-graph experiment caught a perfect example. Adrian searched
+      for a proptech investor. Kunle's profile hit every keyword — proptech,
+      real estate, investor. One-direction check: great match. Adrian declined.</p>
+    <p>Reason: Kunle wasn't an investor. He was out raising money himself. Two
+      people both looking for a check, neither holding one. Checking only
+      Adrian's side made it look great. Checking Kunle's side would have killed
+      it instantly.</p>
+
+    <figure>
+      <div class="svgbox">
+        <svg viewBox="0 0 760 260" role="img"
+             aria-label="Adrian wants an investor; Kunle looks like one, so the forward check passes. But Kunle also wants an investor, and Adrian is not one, so the reverse check fails.">
+          <defs>
+            <marker id="ah-f" viewBox="0 0 10 10" refX="9" refY="5"
+                    markerWidth="6" markerHeight="6" orient="auto">
+              <path class="head-f" d="M0,0 L10,5 L0,10 z"/>
+            </marker>
+            <marker id="ah-r" viewBox="0 0 10 10" refX="9" refY="5"
+                    markerWidth="6" markerHeight="6" orient="auto">
+              <path class="head-r" d="M0,0 L10,5 L0,10 z"/>
+            </marker>
+          </defs>
+
+          <!-- people boxes -->
+          <g>
+            <rect class="box-f" x="18" y="60" width="200" height="140" rx="8"/>
+            <text class="t-name" x="34" y="88">Adrian</text>
+            <text class="t-lab-f" x="34" y="115">WANTS</text>
+            <text class="t-body" x="34" y="134">a proptech investor</text>
+            <text class="t-lab" x="34" y="161">IS</text>
+            <text class="t-body" x="34" y="180">a proptech founder</text>
+          </g>
+
+          <g>
+            <rect class="box-r" x="542" y="60" width="200" height="140" rx="8"/>
+            <text class="t-name" x="558" y="88">Kunle</text>
+            <text class="t-lab-r" x="558" y="115">WANTS</text>
+            <text class="t-body" x="558" y="134">a real-estate investor</text>
+            <text class="t-lab" x="558" y="161">IS</text>
+            <text class="t-body" x="558" y="180">an operator raising money</text>
+          </g>
+
+          <!-- forward arrow -->
+          <g>
+            <line class="arr-f" x1="228" y1="105" x2="530" y2="105"
+                  marker-end="url(#ah-f)"/>
+            <text class="t-lab-f" x="379" y="94" text-anchor="middle">FORWARD — what we measure</text>
+            <text class="t-ok" x="379" y="126" text-anchor="middle">✓ looks like a match</text>
+          </g>
+
+          <!-- reverse arrow -->
+          <g>
+            <line class="arr-r" x1="532" y1="165" x2="230" y2="165"
+                  marker-end="url(#ah-r)"/>
+            <text class="t-lab-r" x="379" y="154" text-anchor="middle">REVERSE — nobody measured</text>
+            <text class="t-no" x="379" y="186" text-anchor="middle">✗ Adrian has no money to give</text>
+          </g>
+
+          <text class="t-note" x="379" y="232" text-anchor="middle">Real outcome: declined.</text>
+        </svg>
+      </div>
+      <figcaption>The forward check passes on keywords. The reverse check is the
+        one that would have caught it.</figcaption>
+    </figure>
+  </section>
+
+  <section>
+    <h2>How it's built</h2>
+    <p>Each person's profile gets split into two piles:</p>
+    <div class="cols">
+      <div class="card f">
+        <span class="tag">Pile 1</span>
+        <h3>What I want</h3>
+        <p>Their <code>lookingFor</code> section — plus their search query, if
+          they're the one doing the searching.</p>
+      </div>
+      <div class="card r">
+        <span class="tag">Pile 2</span>
+        <h3>What I am</h3>
+        <p>Everything else: background, positioning, notes, location,
+          preferences.</p>
+      </div>
+    </div>
+    <p style="margin-top:1.2rem">Then you compute two scores instead of one:</p>
+    <ul>
+      <li><strong>Forward:</strong> does what the seeker <em>wants</em> line up
+        with what the candidate <em>is</em>?</li>
+      <li><strong>Reverse:</strong> does what the <em>candidate</em> wants line
+        up with what the <em>seeker</em> is?</li>
+    </ul>
+    <p>Final score = forward + λ × reverse, where λ is a single number tuned on
+      the training pairs only.</p>
+  </section>
+
+  <section>
+    <h2>The interesting part</h2>
+    <div class="lam">
+      <div class="big">1.75</div>
+      <div class="txt">That's what the tuned number came out at. The reverse
+        direction ended up weighted <strong>almost twice as heavily as the
+        forward one</strong>.</div>
+    </div>
+    <p style="margin-top:1.2rem">Which is a striking thing to find, because the
+      forward direction is the only one anybody has ever measured. If it holds
+      up, "does this person want you back" matters more than "does this person
+      match your search."</p>
+  </section>
+
+  <section>
+    <h2>Results, honestly</h2>
+    <div class="tablescroll">
+      <table>
+        <thead>
+          <tr><th>Population</th><th>Forward only</th><th>With reverse</th><th>Gain</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Holdout (69 pairs)</td><td class="num">0.5853</td><td class="num">0.6241</td><td class="gain">+0.039</td></tr>
+          <tr><td>All 200 pairs</td><td class="num">0.5638</td><td class="num">0.5964</td><td class="gain">+0.033</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p style="margin-top:1rem">No training whatsoever — a frozen off-the-shelf
+      model, one number tuned. It improved on all three groups tested.</p>
+
+    <div class="callout warn" style="margin-top:1.4rem">
+      <h3>But this didn't beat the pack — it's a promising lead</h3>
+      <p style="margin-top:.5rem">When you resample the data to check how solid
+        the gain is, the range of plausible answers still includes "no gain at
+        all" — roughly 76% and 84% likely to be real on the two groups. At 200
+        pairs you can't tell the difference. What makes it worth taking
+        seriously isn't any single number, it's that three separate groups all
+        moved the same way for essentially zero cost.</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>Two more things worth knowing</h2>
+    <div class="callout">
+      <h3>It helps with judging, not finding</h3>
+      <p style="margin-top:.5rem">Retrieval numbers are unchanged, deliberately.
+        You can't search your index by "who wants me" — that would mean
+        re-ranking everyone on every query. It's a second-pass filter over a
+        shortlist, which fits exactly the two-stage shape this project keeps
+        arriving at.</p>
+    </div>
+    <div class="callout rev" style="margin-top:1rem">
+      <h3>This is the simplest possible version of the idea</h3>
+      <p style="margin-top:.5rem">The full design in the professor's paper learns
+        from a user's history — what got shown, what got clicked, in what order.
+        This data has none of that, just one static accept/decline per pair. The
+        paper's own math says that with no history, it reduces to precisely what
+        was built here. So this is the floor of the idea, not the ceiling.</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>The experiments behind this</h2>
+    <p>Four separate pieces of work, in plain words.</p>
+
+    <h3 class="rule">1. The reciprocity run itself</h3>
+    <p>A frozen, off-the-shelf embedding model — nothing trained, nothing
+      fine-tuned. Every profile was cut into the two piles described above, and
+      both scores were computed for every pair.</p>
+    <p>The one number that needed choosing, λ, was picked by trying every value
+      from −2 to 2 in steps of 0.05 and keeping whichever scored best
+      <strong>on the 131 training pairs only</strong>. The holdout pairs were
+      never looked at while choosing it. On the training pairs the score went
+      from 0.5512 to 0.5944; the best value was 1.75.</p>
+    <p>Then that fixed number was applied, untouched, to two groups it had never
+      seen: the 69 holdout pairs and the full 200. Both improved. Total cost was
+      a few minutes on a rented GPU.</p>
+    <p>The honesty check: the data was resampled 5,000 times to see how much of
+      the gain could just be luck. The answer was that the gain is probably real
+      but not provably real — the plausible range still touches zero on both
+      groups. That's a limit of having 200 pairs, not a flaw in the method.</p>
+
+    <h3 class="rule">2. The knowledge-graph experiment (where the Adrian case came from)</h3>
+    <p>Three profiles, three LLM calls, no training. One real person appeared in
+      two different real pairs with opposite outcomes — accepted in one, declined
+      in the other. Each profile was turned into a small map of facts: their role,
+      their industry, what they need, where they are.</p>
+    <p>The maps were merged, and one concept turned out to touch all three people:
+      proptech. Same shared topic, opposite real outcomes. The declined pair had
+      <em>more</em> words in common than the accepted one.</p>
+    <p>Reading the actual profile text explained why, and this is the part that
+      matters: the accepted match had weaker keyword overlap but the two roles
+      fit together — one wanted peers and mentoring, the other could be a peer
+      and mentor. The declined match had perfect keyword overlap and two people
+      standing on the same side of the table. That's the failure this whole
+      reciprocity idea is built to catch.</p>
+
+    <h3 class="rule">3. The search-query sweep (why one direction isn't enough)</h3>
+    <p>A separate experiment turned a dial controlling how much the search query
+      counted versus the rest of a person's profile. Turning it up made
+      <em>finding</em> the right person dramatically better — the right person
+      landed in the top ten 91% of the time instead of 59%.</p>
+    <p>But it barely moved <em>predicting whether they'd say yes</em>. That score
+      went from 0.559 to 0.587 and then back down again.</p>
+    <p>That's the finding that makes reciprocity interesting. Better one-direction
+      matching solves the finding problem and leaves the accepting problem
+      untouched. So the missing signal isn't "match harder" — it's something
+      one-direction matching structurally cannot see.</p>
+
+    <h3 class="rule">4. The wall everything else hit</h3>
+    <p>Every model tried in this project — off-the-shelf ones, the production
+      model, and every fine-tuned version — scores between roughly 0.55 and 0.60
+      at telling accept from decline. Fine-tuning didn't break out of it. A
+      mixture-of-experts design didn't break out of it, and its own results
+      concluded the problem was the data, not the design.</p>
+    <p>Two things have crept above that band. One is an LLM that reads both
+      profiles in full and is never shown the search query at all. The other is
+      this reciprocity term. Both are about <strong>whether two people fit
+      together</strong>, not about whether their words look alike. That's the
+      pattern worth following.</p>
+
+    <h3 class="rule">What hasn't been done yet</h3>
+    <ul>
+      <li>Both piles are read by the same frozen model. Training a separate one
+        for each is untested.</li>
+      <li>λ was fitted once. Fitting it repeatedly on different slices of the
+        training data would show how stable 1.75 really is.</li>
+      <li>The combination is deliberately simple — forward plus a multiple of
+        reverse. A slightly more flexible formula is cheap and untried.</li>
+      <li>Most importantly: 200 pairs is too few to settle any of this. More
+        real labelled outcomes would do more than any new architecture.</li>
+    </ul>
+  </section>
+
+  <footer>
+    <p>Sources: <code>docs/reciprocal-static-experiment.md</code> ·
+      <code>docs/knowledge-graph-experiment.md</code> ·
+      <code>docs/query-weighted-encoding-experiment.md</code> ·
+      <code>docs/baseline-results-real200.md</code>.
+      Reproduce with <code>python -m baselines.reciprocal_static.eval --data-dir data</code>.</p>
+    <p style="margin-top:.5rem">Scores quoted are pair ROC-AUC unless stated
+      otherwise. Labels are real human accept/decline outcomes on intros
+      production had already recommended.</p>
+  </footer>
+
+</div>

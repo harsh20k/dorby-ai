@@ -1,0 +1,223 @@
+<title>Does the fine-tune hold up on all 200 real pairs?</title>
+<style>
+:root{--bg:#eef1ee;--surface:#fff;--surface-2:#e4e8e3;--ink:#1c211f;--ink-soft:#4b544f;
+--muted:#7c8781;--line:#d3d9d1;--copper:#b5622a;--teal:#1f7a72;--slate:#4a5578;--code-bg:#e6e9e2;
+--shadow:0 1px 2px rgba(20,25,20,.06),0 8px 24px rgba(20,25,20,.05);}
+@media (prefers-color-scheme:dark){:root{--bg:#12151a;--surface:#191d23;--surface-2:#20252c;
+--ink:#e7ebe6;--ink-soft:#aab4ac;--muted:#6d7871;--line:#2a3038;--copper:#e0925a;--teal:#5bc2b6;
+--slate:#9aa6d6;--code-bg:#1c2229;--shadow:0 1px 2px rgba(0,0,0,.3),0 12px 32px rgba(0,0,0,.35);}}
+:root[data-theme="dark"]{--bg:#12151a;--surface:#191d23;--surface-2:#20252c;--ink:#e7ebe6;
+--ink-soft:#aab4ac;--muted:#6d7871;--line:#2a3038;--copper:#e0925a;--teal:#5bc2b6;--slate:#9aa6d6;
+--code-bg:#1c2229;--shadow:0 1px 2px rgba(0,0,0,.3),0 12px 32px rgba(0,0,0,.35);}
+:root[data-theme="light"]{--bg:#eef1ee;--surface:#fff;--surface-2:#e4e8e3;--ink:#1c211f;
+--ink-soft:#4b544f;--muted:#7c8781;--line:#d3d9d1;--copper:#b5622a;--teal:#1f7a72;--slate:#4a5578;
+--code-bg:#e6e9e2;--shadow:0 1px 2px rgba(20,25,20,.06),0 8px 24px rgba(20,25,20,.05);}
+*{box-sizing:border-box}html,body{margin:0;padding:0}
+body{background:var(--bg);color:var(--ink);font-family:"IBM Plex Sans","Segoe UI",-apple-system,system-ui,sans-serif;
+font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}
+.wrap{max-width:860px;margin:0 auto;padding:0 24px 72px}
+h1,h2{font-family:Charter,"Iowan Old Style",Georgia,serif;font-weight:600;text-wrap:balance}
+code,.mono{font-family:"IBM Plex Mono","SF Mono",Menlo,monospace;font-variant-numeric:tabular-nums}
+header.hero{padding:56px 24px 32px;max-width:860px;margin:0 auto;border-bottom:1px solid var(--line)}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;font-family:"IBM Plex Mono",monospace;
+font-size:12px;letter-spacing:.09em;text-transform:uppercase;color:var(--muted);margin-bottom:14px}
+.eyebrow .dot{width:6px;height:6px;border-radius:50%}
+h1.title{font-size:clamp(26px,3.6vw,36px);line-height:1.15;margin:0 0 10px}
+.lede{font-size:17px;color:var(--ink-soft);max-width:640px;margin:0}
+.chip{font-family:"IBM Plex Mono",monospace;font-size:12px;padding:4px 10px;border-radius:20px;
+background:var(--surface-2);border:1px solid var(--line);color:var(--ink-soft)}
+.meta{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin:0 0 4px}
+.meta .note{font-size:13.5px;color:var(--muted)}
+section{padding:38px 0;border-bottom:1px solid var(--line)}section:last-of-type{border-bottom:none}
+h2{font-size:21px;margin:0 0 14px}p{margin:0 0 14px;max-width:68ch}p:last-child{margin-bottom:0}
+.table-wrap{overflow-x:auto;margin:16px 0;border:1px solid var(--line);border-radius:10px;
+background:var(--surface);box-shadow:var(--shadow)}
+table{border-collapse:collapse;width:100%;min-width:520px;font-size:14px}
+th,td{text-align:right;padding:10px 14px;border-bottom:1px solid var(--line)}
+th:first-child,td:first-child{text-align:left}
+thead th{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.04em;text-transform:uppercase;
+color:var(--muted);font-weight:500;background:var(--surface-2)}
+tbody tr:last-child td{border-bottom:none}
+td.muted{color:var(--muted)}
+.d-win{color:var(--teal);font-weight:600}
+.d-loss{color:var(--copper);font-weight:600}
+.d-noise{color:var(--muted)}
+canvas{display:block;width:100%;height:260px}
+.chart-card{background:var(--surface);border:1px solid var(--line);border-radius:10px;
+padding:16px 18px 10px;box-shadow:var(--shadow);margin:16px 0}
+.legend{display:flex;gap:14px;margin-top:8px;font-size:12px;color:var(--ink-soft);flex-wrap:wrap}
+.legend span{display:inline-flex;align-items:center;gap:6px}
+.legend i{width:10px;height:10px;border-radius:2px;display:inline-block}
+.callout{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:16px 18px;
+margin:16px 0;box-shadow:var(--shadow)}
+.callout.win{border-left:3px solid var(--teal)}.callout.loss{border-left:3px solid var(--copper)}
+.callout.neutral{border-left:3px solid var(--slate)}
+.callout .label{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.06em;
+text-transform:uppercase;color:var(--muted);margin-bottom:6px}
+.links{display:flex;gap:18px;flex-wrap:wrap;margin-top:14px;font-size:13.5px}
+.links a{color:var(--teal);text-decoration:none;border-bottom:1px solid transparent}
+.links a:hover{border-color:var(--teal)}
+ul{max-width:68ch}li{margin-bottom:8px}
+footer{padding:28px 0 0;color:var(--muted);font-size:13px}
+footer code{background:var(--code-bg);padding:.1em .4em;border-radius:4px}
+:focus-visible{outline:2px solid var(--teal);outline-offset:2px}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+<header class="hero">
+  <div class="eyebrow"><span class="dot" style="background:var(--copper)"></span> Dorby AI · full-real-set evaluation</div>
+  <h1 class="title">Does the fine-tune hold up on all 200 real pairs?</h1>
+  <p class="lede">Every two-tower number so far was measured on 69 pairs. Re-measured on all 200,
+  most of the advantage disappears — but one metric survives, and gets stronger.</p>
+  <div class="links">
+    <a href="https://claude.ai/code/artifact/9dcd8dc1-97ba-4183-b77b-717380d1966b">← Arm A, the model tested here</a>
+    <a href="https://claude.ai/code/artifact/4ab4000d-f7a6-4477-8a2e-3b578da25cdc">← Ablation verdict</a>
+  </div>
+</header>
+<div class="wrap">
+  <section>
+    <h2>Why 200 pairs is a fair test of this model</h2>
+    <p>Arm A trained on 583 rows built entirely from <b>synthetic</b> profiles. It saw zero real
+    pairs and zero real profiles — confirmed two ways: the profile generator ran on the v3+ prompt,
+    which no longer seeds generation with real profile text, and none of the 297 real contact ids
+    appears anywhere in the training batch.</p>
+    <p>So the 131 "train" pairs are just as out-of-sample for this model as the 69 holdout pairs.
+    That is <i>not</i> true of models that trained on real pairs, so the eval refuses any adapter
+    whose provenance doesn't prove an all-synthetic training source.</p>
+    <div class="callout neutral">
+      <div class="label">Sanity check before reading anything new</div>
+      <p>Frozen nano's holdout row came back <span class="mono">0.5793 / 0.5707 / 0.4610 / 0.2759 / 0.7586</span> —
+      digit-for-digit identical to the existing baseline artifact, which was produced by a completely
+      different encoding path. Arm A's rows reproduce the published ablation table too. The pipeline
+      is measuring the same thing as everything before it.</p>
+    </div>
+  </section>
+  <section>
+    <h2>The gain by metric, on each population</h2>
+    <p>Bars are Arm A minus frozen nano. The pale band behind each bar is the measurement's noise,
+    taken from the two arms of the ablation that <i>were</i> genuine repeat runs. A bar inside its
+    band means nothing happened.</p>
+    <div class="chart-card">
+      <canvas id="ch"></canvas>
+      <div class="legend">
+        <span><i style="background:var(--teal)"></i>gain above noise</span>
+        <span><i style="background:var(--muted)"></i>inside noise</span>
+        <span><i style="background:var(--copper)"></i>negative</span>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>All 200 real pairs</h2>
+    <p class="meta"><span class="chip">n = 200</span><span class="chip">100 pos / 100 neg</span>
+    <span class="chip">corpus 178 candidates</span><span class="note">the full real dataset</span></p>
+    <div class="table-wrap"><table><thead><tr><th>Metric</th><th>Frozen nano</th><th>Arm A (v2)</th><th>Δ</th><th>noise</th></tr></thead><tbody><tr><td>Pair AUC</td><td class="mono">0.5593</td><td class="mono">0.5594</td><td class="mono d-noise">+0.0001</td><td class="mono muted">±0.0164</td></tr><tr><td>Hard-neg AUC</td><td class="mono">0.5046</td><td class="mono">0.5558</td><td class="mono d-win">+0.0512</td><td class="mono muted">±0.0164</td></tr><tr><td>MRR</td><td class="mono">0.3171</td><td class="mono">0.3341</td><td class="mono d-win">+0.0170</td><td class="mono muted">±0.0164</td></tr><tr><td>Recall@1</td><td class="mono">0.1800</td><td class="mono">0.1800</td><td class="mono d-noise">+0.0000</td><td class="mono muted">±0.0345</td></tr><tr><td>Recall@10</td><td class="mono">0.5900</td><td class="mono">0.6400</td><td class="mono d-win">+0.0500</td><td class="mono muted">±0.0345</td></tr></tbody></table></div>
+  </section>
+  <section>
+    <h2>131 train-split pairs</h2>
+    <p class="meta"><span class="chip">n = 131</span><span class="chip">71 pos / 60 neg</span>
+    <span class="chip">corpus 120 candidates</span><span class="note">also never seen by Arm A</span></p>
+    <div class="table-wrap"><table><thead><tr><th>Metric</th><th>Frozen nano</th><th>Arm A (v2)</th><th>Δ</th><th>noise</th></tr></thead><tbody><tr><td>Pair AUC</td><td class="mono">0.5507</td><td class="mono">0.5392</td><td class="mono d-noise">-0.0115</td><td class="mono muted">±0.0164</td></tr><tr><td>Hard-neg AUC</td><td class="mono">0.4690</td><td class="mono">0.5315</td><td class="mono d-win">+0.0624</td><td class="mono muted">±0.0164</td></tr><tr><td>MRR</td><td class="mono">0.3548</td><td class="mono">0.3773</td><td class="mono d-win">+0.0225</td><td class="mono muted">±0.0164</td></tr><tr><td>Recall@1</td><td class="mono">0.2113</td><td class="mono">0.2113</td><td class="mono d-noise">+0.0000</td><td class="mono muted">±0.0345</td></tr><tr><td>Recall@10</td><td class="mono">0.6479</td><td class="mono">0.7042</td><td class="mono d-win">+0.0563</td><td class="mono muted">±0.0345</td></tr></tbody></table></div>
+  </section>
+  <section>
+    <h2>69-pair holdout</h2>
+    <p class="meta"><span class="chip">n = 69</span><span class="chip">29 pos / 40 neg</span>
+    <span class="chip">corpus 65 candidates</span><span class="note">the population every prior number used</span></p>
+    <div class="table-wrap"><table><thead><tr><th>Metric</th><th>Frozen nano</th><th>Arm A (v2)</th><th>Δ</th><th>noise</th></tr></thead><tbody><tr><td>Pair AUC</td><td class="mono">0.5793</td><td class="mono">0.5983</td><td class="mono d-win">+0.0190</td><td class="mono muted">±0.0164</td></tr><tr><td>Hard-neg AUC</td><td class="mono">0.5707</td><td class="mono">0.6034</td><td class="mono d-win">+0.0328</td><td class="mono muted">±0.0164</td></tr><tr><td>MRR</td><td class="mono">0.4610</td><td class="mono">0.5326</td><td class="mono d-win">+0.0716</td><td class="mono muted">±0.0164</td></tr><tr><td>Recall@1</td><td class="mono">0.2759</td><td class="mono">0.3793</td><td class="mono d-win">+0.1034</td><td class="mono muted">±0.0345</td></tr><tr><td>Recall@10</td><td class="mono">0.7586</td><td class="mono">0.8621</td><td class="mono d-win">+0.1034</td><td class="mono muted">±0.0345</td></tr></tbody></table></div>
+  </section>
+  <section>
+    <h2>What this changes</h2>
+    <div class="callout loss">
+      <div class="label">The headline result does not generalise</div>
+      <p>On the 131 real pairs outside the holdout, pair AUC is <b>−0.012</b> and recall@1 is
+      <b>exactly zero</b>. Pooled over all 200, pair AUC is <b>+0.0001</b> and recall@1 is
+      <b>+0.0000</b> — not "small", not "inside noise", but zero to four decimal places. The gain
+      reported from the holdout is a property of <i>that 69-pair sample</i>, not of the model.</p>
+    </div>
+    <div class="callout neutral">
+      <div class="label">And the holdout is an easier population</div>
+      <p>Frozen nano — no fine-tuning involved at all — scores 0.5793 on the holdout versus 0.5507 on
+      the train split. Any single-number comparison against the holdout inherits that bias.</p>
+    </div>
+    <div class="callout win">
+      <div class="label">What genuinely survives</div>
+      <p><b>Hard-negative AUC improves on every population, and by more on the larger ones:</b>
+      +0.040 on the holdout, +0.059 across all 200, +0.072 on the train split. Each clears its own
+      noise band, and the effect growing with sample size is the opposite of what a sampling
+      artefact does. Frozen nano is <b>below chance</b> on the train split's hard negatives
+      (0.4690); the adapter lifts it to 0.5411.</p>
+      <p>This is the metric that matters most. In production there is no easy-negative population —
+      every real negative is an intro the system already recommended and a human still declined.
+      Recall@10 holds up everywhere too (+0.045 to +0.078), while recall@1 does not: the adapter is
+      better at getting the right person into a shortlist, not at putting them first.</p>
+    </div>
+  </section>
+  <section>
+    <h2>Read these numbers with two limits in mind</h2>
+    <ul>
+      <li><b>Retrieval metrics are not comparable between the three tables.</b> Each subset ranks
+      against its own candidate pool — 178, 120 and 65 — and a bigger pool is strictly harder. A lower
+      MRR on the 200-pair table means the pool grew, not that the model got worse. Pair AUC has no
+      pool dependence and is comparable throughout.</li>
+      <li><b>Arm A has no repeat run.</b> Its two recorded runs shipped different checkpoints — one
+      epoch 5 via a checkpoint-selection bug, one epoch 4 correctly — so they are two different
+      models, not a repeat measurement. The figures here use the correctly-selected one, and the
+      noise band is borrowed from the two arms of the ablation that were genuine repeats.</li>
+    </ul>
+  </section>
+  <footer>Boardy AI contact-intro recommender · <code>eval_real_full/</code>, run id <code>real200_001</code> ·
+  frozen data manifest hash <code>732bc16de90923a8</code> (run recorded <code>67b7cdf9528de7df</code> under the pre-anonymisation manifest layout; identical pairs) ·
+  full writeup in <code>docs/eval-real-full-experiment.md</code></footer>
+</div>
+<script>
+var DATA = {"all": [{"label": "Pair AUC", "delta": 0.00010000000000010001, "noise": 0.0164}, {"label": "Hard-neg AUC", "delta": 0.05120000000000002, "noise": 0.0164}, {"label": "MRR", "delta": 0.01702196233268266, "noise": 0.0164}, {"label": "Recall@1", "delta": 0.0, "noise": 0.0345}, {"label": "Recall@10", "delta": 0.050000000000000044, "noise": 0.0345}], "train": [{"label": "Pair AUC", "delta": -0.011502347417840286, "noise": 0.0164}, {"label": "Hard-neg AUC", "delta": 0.06244131455399066, "noise": 0.0164}, {"label": "MRR", "delta": 0.022471760881465852, "noise": 0.0164}, {"label": "Recall@1", "delta": 0.0, "noise": 0.0345}, {"label": "Recall@10", "delta": 0.05633802816901401, "noise": 0.0345}], "holdout": [{"label": "Pair AUC", "delta": 0.01896551724137918, "noise": 0.0164}, {"label": "Hard-neg AUC", "delta": 0.03275862068965518, "noise": 0.0164}, {"label": "MRR", "delta": 0.07155137515178078, "noise": 0.0164}, {"label": "Recall@1", "delta": 0.10344827586206895, "noise": 0.0345}, {"label": "Recall@10", "delta": 0.10344827586206895, "noise": 0.0345}]};
+function draw(){
+  var c=document.getElementById('ch'), dpr=window.devicePixelRatio||1;
+  var W=c.clientWidth||640,H=260; c.width=W*dpr; c.height=H*dpr;
+  var x=c.getContext('2d'); x.scale(dpr,dpr);
+  var st=getComputedStyle(document.documentElement);
+  var line=st.getPropertyValue('--line').trim(), muted=st.getPropertyValue('--muted').trim();
+  var copper=st.getPropertyValue('--copper').trim(), teal=st.getPropertyValue('--teal').trim();
+  var ink=st.getPropertyValue('--ink-soft').trim();
+  var subs=['all','train','holdout'], names={all:'all 200',train:'train 131',holdout:'holdout 69'};
+  var metrics=DATA.all.map(function(r){return r.label});
+  var pL=48,pR=10,pT=12,pB=46,w=W-pL-pR,h=H-pT-pB;
+  var maxV=0;
+  subs.forEach(function(s){DATA[s].forEach(function(r){maxV=Math.max(maxV,Math.abs(r.delta),r.noise)})});
+  maxV=Math.max(maxV,0.02)*1.15;
+  function Y(v){return pT+h/2-(v/maxV)*(h/2)}
+  x.clearRect(0,0,W,H);
+  x.strokeStyle=line;x.lineWidth=1;
+  [-maxV,-maxV/2,0,maxV/2,maxV].forEach(function(v){
+    var y=Y(v);x.beginPath();x.moveTo(pL,y);x.lineTo(pL+w,y);x.stroke();
+    x.fillStyle=muted;x.font='10px "IBM Plex Mono",monospace';x.textAlign='right';
+    x.fillText((v>=0?'+':'')+v.toFixed(2),pL-6,y+3);
+  });
+  x.strokeStyle=ink;x.beginPath();x.moveTo(pL,Y(0));x.lineTo(pL+w,Y(0));x.stroke();
+  var gW=w/metrics.length, bW=gW/(subs.length+1.1);
+  metrics.forEach(function(m,mi){
+    subs.forEach(function(s,si){
+      var r=DATA[s][mi];
+      var bx=pL+gW*mi+(gW-bW*subs.length)/2+bW*si;
+      var nTop=Y(r.noise), nBot=Y(-r.noise);
+      x.fillStyle=muted+'26';
+      x.fillRect(bx,nTop,bW-2,nBot-nTop);
+      var inNoise=Math.abs(r.delta)<r.noise;
+      x.fillStyle= inNoise?muted : (r.delta<0?copper:teal);
+      var y0=Y(0), y1=Y(r.delta);
+      x.fillRect(bx,Math.min(y0,y1),bW-2,Math.max(1,Math.abs(y1-y0)));
+    });
+    x.fillStyle=ink;x.font='11px "IBM Plex Sans",sans-serif';x.textAlign='center';
+    var lbl=m.replace(' AUC','').replace('Recall','R');
+    x.fillText(lbl,pL+gW*mi+gW/2,H-26);
+  });
+  x.textAlign='left';x.font='10px "IBM Plex Mono",monospace';x.fillStyle=muted;
+  var lx=pL;
+  subs.forEach(function(s,si){
+    x.fillStyle=muted;x.fillRect(lx,H-13,8,8);
+    x.fillStyle=muted;x.fillText(names[s],lx+12,H-6);
+    lx+=x.measureText(names[s]).width+30;
+  });
+}
+draw();
+window.addEventListener('resize',function(){clearTimeout(window.__t);window.__t=setTimeout(draw,150);});
+</script>

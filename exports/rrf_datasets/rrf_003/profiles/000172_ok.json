@@ -1,0 +1,54 @@
+{
+  "id": 172,
+  "archetype": "Serial Entrepreneur, Diverse Portfolio",
+  "given_name": "Amara Kaur",
+  "style_version": 11,
+  "archetypes_version": 29,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Amara Kaur is a 38-year-old serial entrepreneur based in Austin, Texas. She started her career in software engineering but quickly pivoted to applying those skills to real estate tech. She successfully built and sold a property management software company five years ago, using the proceeds to invest in a diverse portfolio of ventures. Currently, she's focused on two main areas: a seed-stage AI-powered logistics platform and a boutique co-living development project. She\u2019s a connector by nature, always looking for synergies between her projects and opportunities to advise/invest in promising early-stage companies. A distinctive detail is her passion for sustainable building practices \u2013 she insists on incorporating them into all her real estate projects, even if it increases initial costs. She\u2019s actively seeking strategic partners and investors who understand the long-term value of both technological innovation *and* environmental responsibility. She\u2019s very time-constrained and values direct, efficient communication.",
+    "positioning": "Amara Kaur is a seasoned entrepreneur and investor specializing in the intersection of technology and real estate. Following a successful exit from her property management software company, she now directs a diverse portfolio encompassing early-stage venture capital and innovative real estate development. Her focus is on identifying and nurturing disruptive technologies \u2013 particularly within logistics and supply chain \u2013 and creating sustainable, community-focused living spaces. Amara leverages her technical background and business acumen to identify and solve complex problems, consistently seeking opportunities to build scalable solutions with a positive social and environmental impact. She\u2019s a firm believer in the power of collaboration and actively seeks to connect with individuals and organizations that share her vision for a more innovative and sustainable future.  Her current projects demonstrate a commitment to not just profitability, but to building enduring value for stakeholders and communities.",
+    "background": "- **Founder & CEO, NovaProp Solutions (2018 - 2023):** Led the development and sale of a cloud-based property management platform utilized by over 500 property managers. Responsibilities included product vision, engineering leadership, fundraising (Seed & Series A), and M&A negotiations. Technologies used: Python, Django, PostgreSQL, AWS, React.\n- **Lead Software Engineer, TechForward Inc. (2015 - 2018):** Designed and implemented key features for a large-scale e-commerce platform. Focused on optimizing performance and scalability. Technologies used: Java, Spring, MySQL, Docker, Kubernetes.\n- **Co-Founder & Managing Partner, Kairos Logistics (2023 - Present):** Seed-stage startup developing an AI-powered logistics platform optimizing last-mile delivery. Responsibilities include strategy, fundraising, and investor relations.\n- **Developer & Principal, Bloom Living (2022 - Present):** Boutique co-living development project focused on sustainable design and community building in Austin, TX. Oversees all aspects of development, from site selection to construction management.\n- **Education:** Master of Science in Computer Science, Stanford University (2015). Bachelor of Science in Computer Engineering, University of Texas at Austin (2013).\n- **Certifications:** LEED AP (Leadership in Energy and Environmental Design Accredited Professional).\n- **Skills:** Software Development (Python, Java, React), Cloud Computing (AWS, Azure), Data Science (Machine Learning, AI), Real Estate Development, Financial Modeling, Venture Capital, Project Management, Leadership, Negotiation, Sustainable Building Practices.",
+    "lookingFor": "I'm actively seeking strategic partners and investors for both Kairos Logistics and Bloom Living. For Kairos, I\u2019m particularly interested in connecting with individuals with experience in supply chain management, AI/ML, and venture capital focused on logistics tech. For Bloom Living, I\u2019m looking for investors who are aligned with our vision of sustainable and community-focused development. \n\n**Do:**\n* Introductions to VCs specializing in Seed/Series A funding for logistics and proptech.\n* Connections to experienced supply chain executives.\n* Individuals passionate about sustainable building and co-living.\n* Mentors with experience scaling early-stage startups.\n\n**Don't:**\n* Sales pitches for unrelated products or services.\n* Recruiters (unless for very senior engineering roles at Kairos).\n* Requests for mentorship (I'm happy to offer advice selectively, but I\u2019m currently stretched thin).\n* General networking requests without a specific connection point. I prioritize focused conversations over broad introductions.",
+    "notes": "Amara is highly selective with her time. She's a direct communicator and appreciates efficiency. She mentioned a strong preference for introductions that are *specifically* relevant to her current projects. She\u2019s also passionate about ESG investing and frequently brings up sustainability in conversations. There was a slight data inconsistency regarding her involvement with Bloom Living \u2013 initial data suggested a passive investor role, but she clarified she\u2019s actively managing the development. She is very responsive to messages that demonstrate prior research on her ventures.",
+    "locationAvailability": "Based in Austin, Texas (Central Time). Frequent travel to the West Coast and occasional international trips.",
+    "introPreferences": "When making an introduction, please emphasize my experience building and scaling NovaProp Solutions and my current focus on Kairos Logistics and Bloom Living. \n\n* **Hard Requirement:** The introduction *must* be relevant to either logistics tech, AI/ML, venture capital, or sustainable real estate.\n* **Soft Preference:** Highlight any shared connections or common interests between the individuals involved.\n* **Intro Style:** A concise email with a clear explanation of the potential synergy is preferred. Please avoid lengthy introductions or overly promotional language. A brief LinkedIn message to pre-warm the connection is helpful, but not required.  I'm most receptive to warm intros from people I've connected with previously.",
+    "personalPreferences": "Prefers asynchronous communication (email or LinkedIn messaging) initially. Values concise and data-driven communication. Not a fan of overly formal interactions.",
+    "meetingAndSchedulingPreferences": "* Please include a brief agenda with meeting requests.\n* Calendar access is appreciated for efficient scheduling.\n* I typically block off 30-60 minutes for initial meetings.\n*  I prefer to keep meetings focused and action-oriented. Follow-up summaries are helpful."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 23.24015212059021,
+      "input_tokens": 867,
+      "output_tokens": 1312,
+      "problems": []
+    }
+  ],
+  "success": true
+}

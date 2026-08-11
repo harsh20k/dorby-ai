@@ -1,0 +1,54 @@
+{
+  "id": 440,
+  "archetype": "European Deep Tech Founder, US Expansion",
+  "given_name": "Kai Tanaka",
+  "style_version": 27,
+  "archetypes_version": 74,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Kai Tanaka is a 38-year-old Japanese-German founder and CEO of 'Aether Dynamics,' a Berlin-based company developing advanced solid-state battery technology for electric aviation. He has a PhD in Materials Science from ETH Zurich and a strong background in automotive engineering (specifically, early work at Porsche on hybrid vehicle battery systems). Aether Dynamics has achieved significant traction in Europe, securing Series A funding and partnerships with several regional airlines for proof-of-concept testing. Kai is now laser-focused on US expansion \u2013 specifically, securing Series B funding from US venture capitalists and establishing a strategic manufacturing partnership in the US. He\u2019s a technically brilliant leader, but somewhat introverted and relies heavily on building strong relationships with key investors and partners. A distinctive detail is his unusual fluency in both Japanese and German, alongside English, stemming from a childhood split between those cultures \u2013 a detail that gives him a unique perspective on global supply chains and manufacturing.",
+    "positioning": "I\u2019m Kai Tanaka, founder and CEO of Aether Dynamics, revolutionizing electric aviation with next-generation solid-state battery technology. We\u2019re tackling the critical challenge of energy density and safety in flight, enabling longer ranges and more sustainable air travel. Having successfully secured Series A funding and established key partnerships across Europe, we\u2019ve demonstrated significant traction and are now poised for rapid growth. My focus is on scaling our technology and expanding into the US market. I'm passionate about building a high-performing team and fostering a culture of innovation. We\u2019re not just building batteries; we\u2019re building the future of flight. I\u2019m actively seeking strategic investors and partners who share our vision for a cleaner, more efficient aviation industry. We've developed a proprietary manufacturing process that dramatically reduces production costs, giving us a competitive edge in a rapidly evolving market. I believe Aether Dynamics is uniquely positioned to become a leader in the electric aviation revolution.",
+    "background": "- **CEO & Founder, Aether Dynamics** (Berlin, Germany) \u2013 2019 \u2013 Present\n    * Led all aspects of company strategy, fundraising, product development, and operations.\n    * Secured \u20ac15M in Series A funding from leading European venture capital firms.\n    * Established partnerships with three regional airlines for pilot testing of Aether Dynamics battery systems.\n    * Built and scaled a team of 45+ engineers, scientists, and business professionals.\n    * Oversaw the development and patenting of core solid-state battery technology.\n    * Utilizing tools: Jira, Asana, Python (for data analysis), SolidWorks.\n\n- **Senior Materials Scientist, Porsche AG** (Stuttgart, Germany) \u2013 2016 \u2013 2019\n    * Led research and development efforts focused on advanced battery materials for hybrid and electric vehicles.\n    * Contributed to the development of next-generation battery prototypes, improving energy density and cycle life.\n    * Conducted extensive materials characterization and analysis using techniques such as SEM, TEM, and XRD.\n    * Collaborated with cross-functional teams, including engineers, chemists, and manufacturing specialists.\n    * Tools used: MATLAB, OriginLab, SEM, TEM, XRD.\n\n- **Research Associate, ETH Zurich** (Zurich, Switzerland) \u2013 2012 \u2013 2016\n    * Conducted PhD research on novel solid-state electrolytes for lithium-ion batteries.\n    * Published multiple peer-reviewed articles in leading scientific journals.\n    * Presented research findings at international conferences.\n    * Developed expertise in materials synthesis, characterization, and electrochemical testing.\n\n- **Intern, Toyota Motor Corporation** (Toyota City, Japan) \u2013 Summer 2011\n    * Assisted with the development and testing of fuel cell technology.\n    * Gained practical experience in automotive engineering and manufacturing processes.",
+    "lookingFor": "I'm actively seeking connections to facilitate Aether Dynamics\u2019 expansion into the US market. Specifically, I\u2019m looking for:\n\n* **Series B Investors:** US-based venture capital firms specializing in deep tech, cleantech, and aerospace, with investment sizes in the $20M - $40M range.\n* **Strategic Manufacturing Partners:** US companies with established battery manufacturing facilities and expertise in scaling production.\n* **Aviation Industry Experts:** Individuals with deep knowledge of the US aviation regulatory landscape (FAA certification) and market dynamics.\n* **Potential Board Advisors:** Experienced individuals with a track record of successfully scaling deep tech companies.\n\nI\u2019m also open to discussing potential partnerships with US airlines interested in exploring the benefits of our solid-state battery technology. I'm available for introductory calls and virtual meetings to discuss potential synergies and opportunities. I'm particularly interested in individuals who can provide guidance on navigating the US funding ecosystem and building a strong US-based team.",
+    "notes": "- Kai is highly technical and may require prompting to discuss business strategy in layman\u2019s terms. \n- He\u2019s cautiously optimistic about US market entry but aware of the challenges associated with regulatory compliance and securing manufacturing capacity.\n- His fluency in Japanese could be leveraged for potential supply chain partnerships, but this hasn't been explicitly prioritized yet.\n- He frequently mentions a desire to avoid \u2018vaporware\u2019 and emphasizes the importance of demonstrable results. \n- Be mindful of time zone differences; he's based in Berlin (CET).",
+    "locationAvailability": "I am based in Berlin, Germany, but frequently travel to the US for business. I am open to remote collaboration and virtual meetings.",
+    "introPreferences": "* Please emphasize Aether Dynamics\u2019 proven traction in Europe and our unique technological advantage.\n* Avoid overly promotional language; Kai prefers a factual and data-driven approach.\n* Ideally, introductions should be to individuals with direct decision-making authority or significant influence within their organizations.\n* Do *not* introduce him to individuals solely focused on early-stage seed funding; we are seeking Series B investment.\n* A brief overview of the introducer's relationship with Kai and the context of the introduction is greatly appreciated.",
+    "personalPreferences": "I prefer concise and direct communication. Email is my primary channel, but I\u2019m also responsive on LinkedIn. I appreciate constructive feedback and value transparency.",
+    "meetingAndSchedulingPreferences": "Flexible with scheduling. Prefer 30-60 minute meetings. Video calls preferred initially."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 18.6443350315094,
+      "input_tokens": 821,
+      "output_tokens": 1351,
+      "problems": []
+    }
+  ],
+  "success": true
+}

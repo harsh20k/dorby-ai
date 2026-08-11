@@ -1,0 +1,63 @@
+{
+  "id": 354,
+  "archetype": "Enterprise SaaS Founder, AI-Focused",
+  "given_name": "Jamal Nguyen",
+  "style_version": 22,
+  "archetypes_version": 59,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Jamal Nguyen is a first-time founder, 36, with a Ph.D. in Computer Science specializing in formal verification of AI systems. He built his company, 'VerityAI', around the idea of bringing 'deterministic AI' \u2013 AI where outcomes are predictable and auditable \u2013 to complex enterprise workflows like supply chain management. He's deeply technical, often still coding, and slightly uncomfortable with 'fluff' in marketing. He previously spent 7 years at a large consulting firm (Accenture) where he witnessed firsthand the risks and lack of transparency in early AI deployments. VerityAI is currently in seed funding, and Jamal is laser-focused on securing Series A within the next 6-9 months. He's looking for advisors, potential customers (Fortune 500 supply chain leaders), and investors with a strong understanding of AI risk management. He\u2019s particularly interested in connections who can help him navigate regulatory landscapes emerging around AI governance.",
+    "positioning": "I'm Jamal Nguyen, Founder and CEO of VerityAI, a company dedicated to building deterministic AI solutions for the enterprise. My background is deeply rooted in computer science and formal verification, stemming from a Ph.D. focused on ensuring the reliability and predictability of AI systems. I founded VerityAI to address a critical gap I observed during my time at Accenture: the inherent risks and lack of transparency in many early AI deployments within large organizations.\n\nWe\u2019re building a platform that allows companies to confidently integrate AI into their core workflows, particularly within complex supply chains, without sacrificing control or auditability.  Our core technology focuses on providing verifiable guarantees about AI behavior, moving beyond the 'black box' approach that dominates the current market.\n\nCurrently, we\u2019re focused on securing our Series A funding round and expanding our pilot program with key enterprise partners.  I'm passionate about the responsible development and deployment of AI, and believe deterministic AI is crucial for unlocking its full potential while mitigating potential harms. I\u2019m eager to connect with individuals who share this vision, and who can contribute to building a more trustworthy AI future.\n\nI\u2019m particularly excited about the recent advancements in formal methods and their application to modern machine learning techniques.  We\u2019re at a pivotal moment where we can build AI systems that are not only powerful but also demonstrably safe and reliable, and VerityAI is at the forefront of that movement.",
+    "background": "* **VerityAI, Founder & CEO** (2022 - Present)\n    * Led all aspects of company formation, fundraising (Seed round completed - $2.5M), product development, and go-to-market strategy.\n    * Developed core AI verification technology based on formal methods, resulting in a patent-pending solution for deterministic AI.\n    * Built and managed a team of 8 engineers and researchers.\n    * Secured pilot programs with two Fortune 500 companies in the supply chain and logistics sectors.\n    * Responsible for all investor relations and fundraising efforts.\n* **Accenture, Senior Consultant** (2015 - 2022)\n    * Led and delivered AI and Machine Learning projects for clients across multiple industries, including retail, finance, and healthcare.\n    * Specialized in supply chain optimization and predictive analytics.\n    * Developed and implemented machine learning models for demand forecasting, inventory management, and fraud detection.\n    * Managed project budgets exceeding $500,000 and teams of up to 5 consultants.\n    * Identified a critical need for more reliable and auditable AI solutions, leading to the founding of VerityAI.\n* **University of California, Berkeley, Ph.D. Computer Science** (2010 \u2013 2015)\n    * Dissertation: \u201cFormal Verification of Probabilistic Programs with Applications to Machine Learning\u201d.\n    * Research focused on developing novel techniques for verifying the correctness and safety of AI systems.\n    * Published multiple peer-reviewed papers in top-tier conferences such as NeurIPS and ICML.\n    * Awarded the Outstanding Graduate Student Researcher Award in 2014.\n* **Massachusetts Institute of Technology (MIT), B.S. Computer Science** (2006 \u2013 2010)\n    * Graduated *summa cum laude*.\n    * Focused on artificial intelligence and software engineering.\n    * Completed a research internship at Microsoft Research.\n\n**Skills:**\n* **Technical:** Python, TensorFlow, PyTorch, Formal Verification (SMT Solvers, Model Checking), Machine Learning, Deep Learning, Supply Chain Optimization, Data Science, Cloud Computing (AWS, Azure, GCP).\n* **Business:**  Fundraising, Investor Relations, Product Management, Strategic Planning, Team Leadership, Project Management, Client Management, Business Development, Go-to-Market Strategy.\n* **Languages:** English (Native), Vietnamese (Fluent).",
+    "lookingFor": "I\u2019m actively seeking connections who can help accelerate VerityAI\u2019s growth and impact.  I\u2019m particularly interested in individuals who are passionate about responsible AI and understand the critical need for deterministic solutions in enterprise environments.\n\n* **Potential Customers:** Supply chain leaders (VP level and above) at Fortune 500 companies, especially in the manufacturing, retail, and logistics sectors. I'm looking for those experiencing challenges with AI explainability, risk management, or regulatory compliance.\n* **Investors:**  Venture capitalists specializing in AI, enterprise SaaS, and deep tech.  Specifically, I\u2019m targeting Series A investors with a demonstrated track record of supporting companies focused on AI risk and governance.  Fund size preference: $50M - $200M.\n* **Advisors:** Experienced entrepreneurs and industry veterans with expertise in AI, enterprise sales, and regulatory affairs.  Individuals with a strong technical background are highly valued.\n* **Partners:**  Technology partners who can complement our platform and expand our reach.  I\u2019m open to exploring integrations with leading supply chain management software providers.\n\nI'm also keen to connect with researchers working on formal verification, explainable AI (XAI), and trustworthy machine learning.  I\u2019m always interested in learning about the latest advancements in the field and exploring potential collaborations. I'm willing to offer advisory roles to promising academics.\n\nI\u2019m *not* currently seeking connections from marketing agencies or individuals offering generic business services. I\u2019m focused on building authentic relationships with individuals who can provide strategic value to VerityAI.",
+    "notes": "Spoke with Sarah Chen (Accel) last week. She's lukewarm on VerityAI, citing market timing concerns around 'deterministic AI' being too niche.  She suggested focusing on 'AI explainability' as a more marketable angle.  I disagree, but worth considering messaging adjustments. \n\nHad a productive conversation with David Lee (Sequoia) on Tuesday. He seemed genuinely interested in the technology and the potential for disruption.  Follow up scheduled for next week to discuss potential due diligence.  \n\nNeed to remind myself to ask potential investors about their portfolio companies' experiences with AI risk and compliance. It's a key differentiator for VerityAI.\n\nReceived an inbound connection request from a recruiter specializing in AI/ML engineers - ignore for now, we are not actively hiring, but keep a record in case needs change.\n\nJamal is very focused on technical details and can sometimes get lost in the weeds. Remind him to keep pitches concise and focused on business value.",
+    "locationAvailability": "Based in San Francisco, CA, and open to remote connections globally.",
+    "introPreferences": "When making introductions to me, please prioritize the following:\n\n* **Hard Requirements:**\n    * Individuals must hold a senior-level position (Director, VP, C-level) within a relevant organization.\n    * Investors must have a dedicated AI/ML investment focus and a fund size between $50M - $200M.\n    * Potential customers must be actively involved in supply chain management or related areas.\n\n* **Soft Preferences:**\n    * Individuals with a technical background or a strong understanding of AI/ML concepts.\n    * Those who have demonstrated a commitment to responsible AI and ethical considerations.\n    * Connections who are proactive and engaged in the AI community.\n\nPlease *avoid* introducing me to:\n    * Individuals with limited decision-making authority.\n    * Recruiters or sales representatives offering unrelated services.\n    * Individuals who are not actively seeking new solutions or investments.\n\nBriefly explain the connection's relevance to VerityAI and highlight any shared interests or priorities.  A concise and targeted introduction is highly appreciated.",
+    "personalPreferences": "I prefer direct and concise communication.  Email is my primary method of contact.  I'm not a big fan of long, rambling messages.  I respond best to well-structured requests and clear calls to action. I\u2019m a morning person, so earlier in the day is often best for reaching me.",
+    "meetingAndSchedulingPreferences": "I prefer short, focused meetings (30-45 minutes) with a clear agenda. Please send a brief overview of the topics you'd like to discuss in advance.  I'm available for video calls via Zoom or Google Meet.  Please use Calendly to schedule a meeting: [link to Calendly].  I always send a brief follow-up email summarizing key takeaways and action items after each meeting."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 33.3125102519989,
+      "input_tokens": 781,
+      "output_tokens": 2000,
+      "problems": [
+        "background: possible truncation (ends with '...ising, Investor Relations')"
+      ]
+    },
+    {
+      "attempt": 2,
+      "elapsed_s": 27.631428003311157,
+      "input_tokens": 781,
+      "output_tokens": 2007,
+      "problems": []
+    }
+  ],
+  "success": true
+}

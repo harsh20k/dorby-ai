@@ -1,0 +1,54 @@
+{
+  "id": 653,
+  "archetype": "Biotech/Deep Tech Founder - Japan Focus",
+  "given_name": "Theo Singh",
+  "style_version": 40,
+  "archetypes_version": 109,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Theo Singh is a 38-year-old British-Indian founder currently based in Tokyo. He's the CEO of 'Synaptic Bloom', a biotech startup focused on developing novel biopolymers for sustainable packaging \u2013 specifically, materials derived from fungal mycelium. His distinctive career detail is a prior decade spent as a quantitative analyst in London, giving him a unique perspective on data-driven bio-manufacturing and scalability. He\u2019s pivoting from pure research to commercialization, prioritizing the Japanese market due to its advanced materials science infrastructure and consumer demand for eco-friendly products. He\u2019s actively seeking seed funding and strategic partnerships to accelerate production and distribution within Japan, and is keen to connect with investors specializing in sustainable materials and Japanese market entry experts. He\u2019s fairly direct and values efficiency, but appreciates a thoughtful approach to networking.",
+    "positioning": "Theo Singh is the CEO and Founder of Synaptic Bloom, a biotechnology company revolutionizing sustainable packaging through the innovative use of fungal mycelium-based biopolymers. With a background bridging quantitative finance and cutting-edge biotechnology, Theo leads a team dedicated to creating high-performance, eco-friendly alternatives to traditional plastics. Synaptic Bloom is poised to disrupt the packaging industry, offering a scalable and sustainable solution that addresses the growing global demand for environmentally responsible materials. Theo\u2019s vision is to establish Synaptic Bloom as a leading provider of biopolymers in the Japanese market, leveraging the country\u2019s commitment to innovation and sustainability. He\u2019s a firm believer in the power of data-driven development and rigorous scientific validation to unlock the full potential of biomaterials.",
+    "background": "- **CEO & Founder, Synaptic Bloom (Tokyo, Japan) \u2013 2022 \u2013 Present**\n    - Secured seed funding of $500,000 from angel investors focused on sustainable technologies.\n    - Led the development of a proprietary mycelium cultivation process yielding biopolymers with comparable strength and flexibility to conventional plastics.\n    - Established initial partnerships with Japanese packaging manufacturers for pilot testing and market validation.\n    - Currently focused on scaling production and securing Series A funding.\n\n- **Quantitative Analyst, GlobalVest Capital (London, UK) \u2013 2012 \u2013 2022**\n    - Developed and implemented algorithmic trading strategies for fixed income securities, consistently exceeding performance benchmarks by an average of 8% annually.\n    - Managed a portfolio of $20M+ in assets, utilizing advanced statistical modeling and risk management techniques.\n    - Led cross-functional teams in the development of new financial products and trading platforms.\n    - Mentored junior analysts in quantitative modeling and data analysis.\n\n- **Research Assistant, Imperial College London \u2013 2008 \u2013 2012**\n    - Conducted research in biomaterials and tissue engineering, publishing findings in peer-reviewed journals.\n    - Assisted in the development of novel biomaterials for medical applications.\n    - Gained expertise in cell culture, material characterization, and data analysis.\n\n- **Education:**\n    - PhD, Bioengineering, Imperial College London (2012)\n    - MSc, Mathematics & Finance, University of Oxford (2008)\n    - BA, Mathematics, Cambridge University (2006)",
+    "lookingFor": "I am actively seeking strategic partnerships and seed funding to accelerate the commercialization of Synaptic Bloom's mycelium-based biopolymers within the Japanese market. I'm particularly interested in connecting with:\n\n- **Investors:** Venture capital firms specializing in sustainable materials, biotech, and/or Japanese market entry. We are currently raising a $2M Series A round.\n- **Packaging Manufacturers:** Japanese companies seeking to integrate sustainable materials into their product lines. We're looking for pilot testing opportunities and long-term supply agreements.\n- **Distribution Partners:** Companies with established distribution networks in Japan, particularly those serving the food & beverage, cosmetics, and consumer goods industries.\n- **Regulatory Experts:** Individuals with deep knowledge of Japanese packaging regulations and certifications related to bioplastics and sustainable materials.\n\nI am also open to connecting with other founders in the deep tech space, particularly those navigating the challenges of scaling a biotech startup in Asia. I\u2019m keen to learn from experienced entrepreneurs and share insights on data-driven biomaterial development.",
+    "notes": "Theo is highly focused on the Japanese market and is very aware of the nuances of doing business there. He's data-driven in his approach and expects a clear understanding of ROI from potential partners. He\u2019s previously expressed frustration with introductions that haven't been pre-vetted for relevance \u2013 he values efficiency and dislikes wasting time. He's currently in the process of finalizing a detailed market analysis report for Japan, which he's happy to share with qualified investors. He's a quick learner and adapts well to new information. Recent conversations indicate he\u2019s slightly concerned about navigating the complex Japanese certification process for bioplastics and would welcome introductions to experts in that area. Data quality regarding his prior investment experience at GlobalVest is confirmed via LinkedIn; his claims regarding performance benchmarks are consistent with public filings.",
+    "locationAvailability": "Theo Singh is currently based in Tokyo, Japan and is open to remote meetings. He is willing to travel within Japan for key partnership discussions, but international travel is limited at this time due to fundraising efforts.",
+    "introPreferences": "When making introductions to Theo, please keep the following in mind:\n\n- **Hard Requirements:**\n    - The individual *must* have a demonstrable connection to the Japanese market (e.g., established business in Japan, experience working with Japanese companies).\n    - Investors should have a proven track record of investing in sustainable materials or biotech startups.\n\n- **Soft Preferences:**\n    - Individuals with experience in the packaging industry are highly preferred.\n    - Those with a strong understanding of biomaterials and circular economy principles are a plus.\n\n- **Introduction Messaging:**\n    - Briefly highlight the potential synergy between Synaptic Bloom and the individual's expertise or company.\n    - Emphasize Theo's focus on the Japanese market and his commitment to sustainable solutions.\n    - Frame the introduction as an opportunity for a strategic discussion, rather than a sales pitch. For example: 'I thought you two should connect given [Individual's Company]'s work in sustainable packaging and Theo's innovative mycelium-based biopolymers - I believe there's potential for a valuable conversation around market opportunities in Japan.'",
+    "personalPreferences": "I prefer initial contact via email. I respond quickly to well-articulated messages that get straight to the point. I\u2019m generally available for calls during standard business hours in Japan (JST).",
+    "meetingAndSchedulingPreferences": "I prefer meetings to be concise and focused, ideally no longer than 30 minutes. Please send a brief agenda in advance so I can prepare. I\u2019m happy to use Calendly for scheduling. Follow-up summaries outlining action items are greatly appreciated."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 27.378175973892212,
+      "input_tokens": 817,
+      "output_tokens": 1476,
+      "problems": []
+    }
+  ],
+  "success": true
+}

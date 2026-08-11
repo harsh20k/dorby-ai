@@ -1,0 +1,54 @@
+{
+  "id": 565,
+  "archetype": "Growth & Ops Executive, Transitioning",
+  "given_name": "Priya Mueller",
+  "style_version": 35,
+  "archetypes_version": 95,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Priya Mueller is a seasoned Growth & Operations executive with a strong background in scaling SaaS companies, specifically those focused on developer tools. Her distinctive career detail is a successful turnaround of a struggling customer success organization at a Series B startup, dramatically improving retention and expanding upsell opportunities. She's currently between roles after a company restructuring and is actively seeking a similar leadership position, or exploring advisory roles with early-stage companies. She's pragmatic, data-driven, and excels at building high-performing teams. She's looking for companies with a clear product-market fit and a strong engineering foundation. She prioritizes companies that genuinely value customer feedback and have a vision for long-term sustainable growth, not just hyper-growth at all costs.",
+    "positioning": "Priya Mueller is a results-oriented Growth and Operations leader with over 12 years of experience driving revenue and efficiency within fast-paced SaaS organizations. Specializing in scaling operations for developer-focused companies, I have a proven track record of building and optimizing key functions including customer success, sales operations, and marketing operations. I recently led a successful turnaround of the customer success department at InnovateTech, increasing customer retention by 25% and boosting upsell revenue by 18%. Currently, I am exploring leadership opportunities where I can leverage my expertise to build and scale high-performing teams and drive sustainable growth.",
+    "background": "- **Head of Growth Operations, InnovateTech** (2021 \u2013 2024) \u2013 Led cross-functional initiatives to optimize growth engine, focusing on data-driven decision-making and process improvement.\n- **Director of Customer Success, InnovateTech** (2019 \u2013 2021) \u2013 Revamped customer success strategy, resulting in a 25% increase in customer retention and 18% increase in upsell revenue.\n- **Senior Manager, Sales Operations, CodeSpark** (2017 \u2013 2019) \u2013 Implemented Salesforce automation and reporting improvements, boosting sales team efficiency by 15%.\n- **Manager, Marketing Operations, DevFlow** (2015 \u2013 2017) \u2013 Managed marketing automation platform (Marketo), lead scoring, and campaign analytics.\n- **Business Analyst, TechSolutions Inc.** (2013 \u2013 2015) \u2013 Conducted market research and competitive analysis to support strategic decision-making.\n- **MBA, Stanford University Graduate School of Business** (2011 \u2013 2013)\n- **BS, Industrial Engineering, University of Michigan** (2007 \u2013 2011)\n- Proficient in Salesforce, Marketo, Google Analytics, SQL, and data visualization tools (Tableau, Power BI).",
+    "lookingFor": "- **Leadership Roles:** Seeking VP of Operations, Head of Growth, or similar executive positions within Series A/B SaaS companies.\n- **Developer Tool Focus:** Specifically interested in companies building products for developers (DevOps, API platforms, low-code/no-code, etc.).\n- **Advisory Opportunities:** Open to advising early-stage startups on growth strategy and operational scaling.\n- **Strong Engineering Culture:** Prioritizing companies with a demonstrated commitment to technical excellence and a collaborative engineering team.\n- **Data-Driven Decision Making:** Seeking organizations that embrace data analytics and use insights to drive strategic initiatives.\n- **Companies with established PMF:** Looking for businesses that have demonstrated clear product-market fit and are ready to scale.\n- **Investor Connections:** Seeking introductions to VCs focused on SaaS and developer tools.",
+    "notes": "- Priya is a highly engaged member of the 'SaaS Growth Leaders' community on this platform. \n- She recently commented on a post regarding best practices for customer success automation, indicating strong expertise in that area.\n- She\u2019s been actively researching companies in the observability space. \n- Mention her success at InnovateTech when making introductions \u2013 it\u2019s a strong talking point.\n- She\u2019s open to remote roles, but prefers companies with a presence in the San Francisco Bay Area.",
+    "locationAvailability": "Based in San Francisco, CA, and open to travel.",
+    "introPreferences": "- **Ideal Introductions:** VPs of Engineering or CEOs of Series A/B SaaS companies in the developer tools space.\n- **Good Introductions:** Investors specializing in SaaS and developer tools; Heads of Growth at fast-growing startups.\n- **Avoid:** Recruiters pitching roles outside of Growth/Operations; introductions to companies with unclear product-market fit.\n- **Introduction Style:** Please provide context about *why* you think Priya would be a good fit for the connection. A brief summary of the company's challenges and opportunities is appreciated.\n- **Hard Requirement:** Must be a SaaS company with demonstrable revenue.\n- **Soft Requirement:** A preference for companies with a strong emphasis on engineering excellence and a collaborative culture.\n- Don't introduce her to companies that are pre-seed or still in 'idea' phase.",
+    "personalPreferences": "I prefer initial communication via email. I\u2019m generally responsive during business hours, and appreciate concise and direct messaging.",
+    "meetingAndSchedulingPreferences": "Happy to schedule a brief introductory call to discuss potential opportunities."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 21.192238807678223,
+      "input_tokens": 765,
+      "output_tokens": 1115,
+      "problems": []
+    }
+  ],
+  "success": true
+}

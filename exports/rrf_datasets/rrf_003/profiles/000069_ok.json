@@ -1,0 +1,54 @@
+{
+  "id": 69,
+  "archetype": "Serial Entrepreneur, Real Estate/Tech Hybrid",
+  "given_name": "Kai Lopes",
+  "style_version": 5,
+  "archetypes_version": 12,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Kai Lopes is a 42-year-old serial entrepreneur who made his first fortune in early-stage SaaS, then pivoted to real estate about 8 years ago. He doesn't *just* buy property; he's obsessed with applying technology \u2013 specifically, AI-driven predictive analytics and smart building systems \u2013 to increase property value and streamline management. His distinctive career detail is a failed attempt to create a blockchain-based property title system that, while technologically sound, was ahead of its time and faced regulatory hurdles. He's learned from that experience and is now focused on more incremental, but still impactful, tech integrations. He's currently raising a Series A for 'Nexus Living,' a company building and managing 'future-proof' rental properties with embedded smart home tech and data-driven tenant experience optimization. He\u2019s highly energetic, a fast talker, and prone to getting *very* excited about data. He needs introductions to VCs specializing in PropTech and strategic partners with expertise in smart building infrastructure.",
+    "positioning": "A seasoned entrepreneur and real estate innovator, I'm building the future of living with Nexus Living. Having successfully navigated the dynamic landscape of SaaS startups, I\u2019ve transitioned my focus to revolutionizing the residential real estate experience through the strategic application of technology. Nexus Living isn\u2019t simply about constructing buildings; it\u2019s about crafting intelligent ecosystems that anticipate tenant needs, optimize operational efficiency, and maximize long-term value. My background in data analytics and machine learning allows me to identify emerging trends and translate them into tangible improvements in property management and tenant satisfaction. I\u2019m passionate about leveraging AI to create truly responsive and personalized living spaces. Currently, we are focused on scaling our portfolio of 'future-proof' rental properties across key urban markets, integrating cutting-edge smart home technology, and developing a proprietary platform for data-driven property optimization. I'm a firm believer in the power of technology to unlock untapped potential in the real estate sector and am actively seeking partners and investors who share this vision. My goal is to redefine the rental experience, making it more convenient, sustainable, and enjoyable for everyone.",
+    "background": "- **Founder & CEO, NovaTech Solutions (2008 - 2016):** Led the development and launch of a cloud-based CRM platform, achieving 300% revenue growth within three years. Successfully secured $5M in seed funding and oversaw a team of 40+ engineers, sales, and marketing professionals. Exited via acquisition by SalesForce in 2016.\n- **Managing Partner, Lopes Investments (2016 - 2018):** Managed a portfolio of angel investments in early-stage tech companies, focusing on SaaS, AI, and blockchain technologies. Developed a strong network of industry contacts and honed skills in due diligence and deal structuring.\n- **Founder & CEO, BlockEstate (2018 - 2020):** Pioneered a blockchain-based property title registry system aimed at streamlining real estate transactions and enhancing transparency. While the project faced regulatory challenges and ultimately did not achieve widespread adoption, it provided invaluable insights into the complexities of the real estate industry and the potential of distributed ledger technology. (Lesson learned: timing is *everything*).\n- **Founder & CEO, Nexus Living (2020 - Present):** Established a real estate development and management company focused on building and operating \u2018future-proof\u2019 rental properties. Currently overseeing the development of three projects in Austin, TX, and Denver, CO, integrating smart home technology, data analytics, and sustainable building practices. Successfully completed a seed round of $2M and currently raising a Series A to accelerate growth and expand into new markets. Implemented a proprietary tenant experience platform that leverages AI to personalize services and improve resident satisfaction.",
+    "lookingFor": "I'm actively seeking strategic connections to accelerate Nexus Living's growth. Specifically, I\u2019m looking for:\n\n*   **Series A Investors:** PropTech-focused VCs with a track record of supporting innovative real estate companies. We are targeting $10M to scale our development pipeline and expand our technology platform.\n*   **Smart Building Technology Partners:** Companies specializing in IoT devices, building automation systems, and energy management solutions. I'm particularly interested in integration partners for our existing platform.\n*   **Real Estate Developers:** Potential joint venture partners with expertise in urban development and a shared vision for the future of living.\n*   **Introductions to leading Property Management Software (PMS) companies:** We're exploring potential integrations to enhance our operational efficiency.\n\nI\u2019m open to informal conversations and always happy to share our vision for Nexus Living. I\u2019m available for virtual meetings and occasional travel to key industry events.",
+    "notes": "Kai is *extremely* enthusiastic and moves quickly. He\u2019ll likely jump right into discussing the data behind his projects. He's a bit of a tech evangelist, so be prepared for a detailed explanation of the AI algorithms driving his tenant experience platform. He's still a little sensitive about the BlockEstate experience \u2013 avoid bringing it up unless *he* does. He\u2019s very focused on ROI and quantifiable results. \n\n*   **Recent Update:** Just finalized a partnership with a local energy provider to integrate smart grid technology into our Austin properties. \n*   **Do:** Highlight any experience you have with data analytics, smart home technology, or PropTech investing.\n*   **Don't:** Waste his time with generic pitches or vague promises. He values directness and concrete proposals.",
+    "locationAvailability": "I'm based in Austin, Texas, and frequently travel to Denver, Colorado, for project oversight. I am also open to travel for investor meetings and industry events.",
+    "introPreferences": "*Hard Requirements*:\n    *   Investor must have a demonstrated history of investing in PropTech companies (Series A or later).\n    *   Partner must have a proven track record of successful technology integration in real estate projects.\n    *   Connection must be a decision-maker or have direct access to decision-makers.\n\n*Soft Preferences*:\n    *   Individuals with a strong understanding of AI and machine learning.\n    *   Connections with experience in sustainable building practices.\n    *   People who are genuinely interested in the future of living and are open to new ideas.\n\n*Please do not introduce me to:* \n    *   Individuals who are solely focused on traditional real estate investment without an interest in technology.\n    *   People who are unfamiliar with the PropTech landscape.\n    *   Cold outreach \u2013 a warm introduction is *essential*.",
+    "personalPreferences": "I'm a bit of a data geek outside of work, too \u2013 I enjoy analyzing sports statistics and building predictive models. I also enjoy hiking and exploring new restaurants. Prefer email for initial contact, but I'm responsive on LinkedIn as well.",
+    "meetingAndSchedulingPreferences": "I generally prefer 30-minute virtual meetings to start. I'm flexible with scheduling but require at least 24 hours' notice. Please send a calendar invite with a clear agenda."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 871.8235599994659,
+      "input_tokens": 785,
+      "output_tokens": 1509,
+      "problems": []
+    }
+  ],
+  "success": true
+}

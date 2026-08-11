@@ -1,0 +1,54 @@
+{
+  "id": 114,
+  "archetype": "Toronto-Based AI/Tech Builder",
+  "given_name": "Anh Diallo",
+  "style_version": 7,
+  "archetypes_version": 19,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Anh Diallo is a 32-year-old, Toronto-based Machine Learning Engineer currently leading the development of a core AI component at 'Synapse Solutions', a rapidly growing cybersecurity startup. She has a strong academic background in Computer Science from the University of Waterloo. A distinctive detail is her prior experience *not* in a large tech company, but in a specialized research lab focused on explainable AI (XAI) \u2013 this gives her a unique perspective on building trustworthy AI systems, a key differentiator for Synapse. She's now focused on scaling that expertise to a commercial product. She\u2019s actively looking to connect with potential investors, advisors who have experience scaling early-stage SaaS companies, and other ML engineers specializing in anomaly detection and threat intelligence. She's very focused on the ethical implications of AI and seeks connections with people who share that concern. Her overall goal is to build a leading AI-powered security platform while maintaining a commitment to responsible AI development.",
+    "positioning": "As a Machine Learning Engineer at Synapse Solutions, I\u2019m at the forefront of developing AI-driven solutions to combat evolving cybersecurity threats. Synapse is a rapidly expanding startup focused on proactive threat detection and response, leveraging cutting-edge machine learning techniques. My primary focus is building and deploying robust anomaly detection models to identify and neutralize malicious activity in real-time. I lead a small team responsible for the full ML lifecycle \u2013 from data ingestion and feature engineering to model training, evaluation, and deployment. \n\nMy background in explainable AI (XAI) informs my approach to building trustworthy and transparent AI systems, crucial in the security domain where understanding *why* a system flags a threat is as important as the detection itself. We\u2019re currently scaling our platform to handle increasing data volumes and expanding our threat intelligence capabilities. I'm particularly interested in connecting with individuals involved in the venture capital space, especially those focusing on seed and Series A funding for cybersecurity companies. I'm also keen to explore partnerships with organizations focused on ethical AI development and responsible data handling. I believe proactive collaboration is essential to building a more secure and trustworthy digital future. Feel free to connect \u2013 I\u2019m always open to discussing the latest advancements in AI and cybersecurity.",
+    "background": "- **Synapse Solutions, Toronto, ON** (January 2022 \u2013 Present)\n    *Machine Learning Engineer*\n    * Led the development and deployment of real-time anomaly detection models, resulting in a 20% improvement in threat detection accuracy.\n    * Managed a team of two junior ML engineers, providing mentorship and technical guidance.\n    * Designed and implemented data pipelines for processing large volumes of security data.\n    * Collaborated with security analysts to refine models based on real-world threat intelligence.\n    * Instrumental in migrating the ML infrastructure to a cloud-based platform (AWS), improving scalability and reducing operational costs by 15%.\n\n- **Vector Institute, Toronto, ON** (September 2020 \u2013 December 2021)\n    *Research Associate, Explainable AI (XAI) Lab*\n    * Conducted research on novel XAI techniques for improving the transparency and interpretability of deep learning models.\n    * Published two peer-reviewed papers at leading AI conferences (NeurIPS & ICML) on the topic of counterfactual explanations.\n    * Developed a prototype XAI toolkit for security applications, demonstrating the feasibility of using explainable AI to enhance threat detection.\n    * Collaborated with researchers from academia and industry on joint research projects.\n\n- **University of Waterloo, Waterloo, ON** (September 2016 \u2013 May 2020)\n    *Bachelor of Computer Science, Honours\n    * GPA: 92% (Dean\u2019s List all years)\n    * Specialization: Artificial Intelligence\n    * Capstone Project: Developed a machine learning model for predicting fraudulent transactions, achieving 95% accuracy.\n    * Relevant Coursework: Machine Learning, Deep Learning, Data Mining, Statistics, Probability, Algorithms, Data Structures.",
+    "lookingFor": "I'm actively seeking connections with individuals who can contribute to the growth of Synapse Solutions and the broader AI/cybersecurity ecosystem. Specifically, I'm looking to connect with:\n\n* **Venture Capitalists:** Seed and Series A investors with a focus on cybersecurity and AI startups.\n* **Experienced SaaS Advisors:** Individuals with a proven track record of scaling early-stage SaaS companies, particularly in the B2B space.\n* **Machine Learning Engineers:** Experts in anomaly detection, time series analysis, and threat intelligence. Experience with cloud-based ML platforms (AWS, Azure, GCP) is a plus.\n* **Ethical AI Advocates:** Individuals and organizations committed to responsible AI development and deployment.\n\nI\u2019m particularly interested in discussing potential investment opportunities, receiving guidance on scaling our platform, and exploring collaborations on research and development projects. I'm open to informal conversations and knowledge sharing. Ideally, I\u2019d like to connect with people who have a strong technical background and a genuine interest in building a more secure digital world. I'm also keen to learn from others who have successfully navigated the challenges of building and scaling AI-powered products.",
+    "notes": "* Anh is very active on Twitter (handle: @AnhDialloAI), frequently sharing insights on AI and cybersecurity. \n* She recently presented at the 'AI in Cybersecurity' conference in Montreal. \n* Publicly available data indicates a slight discrepancy in the dates for her research associate role at the Vector Institute \u2013 LinkedIn shows a slightly longer tenure than her CV. \n* Prefers direct messaging over connection requests with generic notes. \n* She is a strong advocate for diversity and inclusion in the tech industry.",
+    "locationAvailability": "I\u2019m based in Toronto, Ontario, and primarily work from our downtown office. I'm available for meetings in the Greater Toronto Area and am open to virtual meetings as well. I travel occasionally to industry conferences and events.",
+    "introPreferences": "When making introductions, please:\n\n**Hard Requirements:**\n* Focus on my expertise in anomaly detection and XAI.\n* Ensure the contact is relevant to cybersecurity or AI investment/advisory.\n* Confirm the contact has decision-making authority or significant influence.\n\n**Soft Preferences:**\n* Highlight my passion for building trustworthy AI systems.\n* Mention my recent presentation at the 'AI in Cybersecurity' conference.\n* Avoid introducing me to recruiters unless specifically requested. \n* Keep the introduction concise and focused on shared interests.",
+    "personalPreferences": "I prefer to follow up via email initially. I\u2019m always open to constructive feedback and enjoy learning from others. Quick, direct communication is appreciated.",
+    "meetingAndSchedulingPreferences": "I generally prefer video calls over phone calls. I\u2019m flexible with scheduling but typically have limited availability during lunch hours."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 28.048079252243042,
+      "input_tokens": 830,
+      "output_tokens": 1453,
+      "problems": []
+    }
+  ],
+  "success": true
+}

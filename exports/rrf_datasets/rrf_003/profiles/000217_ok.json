@@ -1,0 +1,54 @@
+{
+  "id": 217,
+  "archetype": "Serial Entrepreneur - Deep Tech/Fintech",
+  "given_name": "Sana Rossi",
+  "style_version": 14,
+  "archetypes_version": 36,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Sana Rossi is a seasoned serial entrepreneur based in Tel Aviv, Israel. She\u2019s had two successful exits \u2013 one in cybersecurity (acquired by Palo Alto Networks) and one in digital health (acquired by Philips). She's now focused on building a fintech company, 'NovaPay,' which aims to leverage AI and blockchain to provide micro-loans and financial inclusion services to underserved communities in emerging markets. She\u2019s actively seeking strategic partners, investors with a strong impact focus, and advisors with experience scaling fintech solutions internationally. A distinctive detail is her strong belief in 'responsible innovation,' meaning she prioritizes ethical AI development and data privacy in everything NovaPay does. She's known for being direct, data-driven, and highly collaborative.",
+    "positioning": "Sana Rossi is the Founder and CEO of NovaPay, a fintech startup revolutionizing access to financial services in emerging markets.  NovaPay utilizes cutting-edge AI and blockchain technology to deliver micro-loans and financial literacy tools, fostering economic empowerment.  Prior to NovaPay, Sana successfully led two companies to acquisition \u2013 a cybersecurity firm and a digital health platform \u2013 demonstrating a consistent track record of innovation and market disruption.  She is currently focused on securing Series A funding and expanding NovaPay's operations into Southeast Asia and Sub-Saharan Africa, actively seeking collaborations with organizations aligned with her vision of ethical and inclusive fintech solutions. Sana is a thought leader in responsible AI and a frequent speaker at fintech conferences.",
+    "background": "- **Founder & CEO, NovaPay** (2022 \u2013 Present): Leading all aspects of strategy, product development, and fundraising for a fintech startup focused on micro-lending and financial inclusion.\n- **Founder & CEO, Cygnus Security** (2016 \u2013 2020): Built and scaled a cybersecurity company specializing in threat intelligence, culminating in acquisition by Palo Alto Networks.\n- **Founder & CEO, HealthLeap Technologies** (2012 \u2013 2016): Developed a remote patient monitoring platform, acquired by Philips Healthcare.\n- **Consultant, McKinsey & Company** (2008 \u2013 2012): Advised Fortune 500 companies on strategy and operations, specializing in technology and healthcare.\n- **Education:** PhD, Computer Science, Technion \u2013 Israel Institute of Technology (2008)\n- **Education:** BSc, Computer Engineering, Tel Aviv University (2004)\n- **Skills:** Fintech, AI/ML, Blockchain, Cybersecurity, Digital Health, Strategy, Leadership, Fundraising, Product Management, Market Analysis, Go-to-Market Strategy, Responsible AI, Data Privacy.\n- **Awards & Recognition:** Forbes Israel 30 Under 30 (2018), Ernst & Young Entrepreneur of the Year Finalist (2020).",
+    "lookingFor": "I\u2019m actively seeking connections with:\n- **Impact Investors:**  Specifically those with a demonstrated commitment to financial inclusion and emerging markets.  Series A funding is our immediate priority.\n- **Fintech Advisors:**  Experienced individuals with a proven track record of scaling fintech companies internationally, particularly in Southeast Asia and Africa.\n- **Blockchain Experts:**  Individuals with deep expertise in decentralized finance (DeFi) and secure blockchain implementations.\n- **Strategic Partners:**  Organizations with established distribution networks or complementary technologies in the financial services sector.\n- **Introductions to:** Key executives at leading microfinance institutions and development banks.\n\nI\u2019m also open to discussing potential collaborations with research institutions focused on ethical AI and responsible innovation in fintech.  I'm particularly interested in exploring partnerships that can help us mitigate bias in our AI algorithms and ensure data privacy for our users.",
+    "notes": "Sana is a very direct and efficient communicator. She values data-driven insights and is quick to assess the potential value of a connection.  Mentioned she's currently reading a lot about regulatory frameworks for fintech in emerging markets.  She's also very passionate about the social impact of NovaPay and explicitly stated that alignment on values is crucial.  Follow-up: Send her the article on the Kenyan mobile money landscape.",
+    "locationAvailability": "Based in Tel Aviv, Israel, with frequent travel to Southeast Asia and Sub-Saharan Africa.",
+    "introPreferences": "## Hard Requirements:\n- **Prioritize:** Introductions to investors actively deploying capital in fintech companies focused on emerging markets.\n- **Exclude:** Introductions to individuals solely focused on Web3 speculation or crypto trading.\n- **Essential Information:**  Please include a brief summary of the contact\u2019s investment focus, relevant experience, and any existing portfolio companies in the fintech space.\n\n## Soft Preferences:\n- **Style:**  A concise and professional email introduction is preferred.  Avoid lengthy or overly promotional messages.\n- **Best Fit:**  Contacts with a demonstrated commitment to social impact and responsible innovation are highly valued.\n- **Warm Introductions:**  A personal connection to the introducer is always appreciated, as Sana places a high value on trust and rapport.",
+    "personalPreferences": "- Prefers initial contact via LinkedIn message or email.\n- Occasionally checks WhatsApp, but email is the most reliable method.",
+    "meetingAndSchedulingPreferences": "Generally available for virtual meetings during Israeli business hours (GMT+3).  Prefers short, focused meetings with a clear agenda.  Happy to accommodate different time zones when necessary, but please provide ample notice."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 25.480748891830444,
+      "input_tokens": 754,
+      "output_tokens": 1143,
+      "problems": []
+    }
+  ],
+  "success": true
+}

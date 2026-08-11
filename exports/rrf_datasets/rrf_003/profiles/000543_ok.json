@@ -1,0 +1,63 @@
+{
+  "id": 543,
+  "archetype": "Experienced Healthcare Consultant/Advisor",
+  "given_name": "Anh Volkov",
+  "style_version": 33,
+  "archetypes_version": 91,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Anh Volkov is a seasoned healthcare consultant specializing in operational efficiency and digital transformation within hospital systems. She spent the first half of her career in direct hospital administration, giving her a unique perspective when advising clients. A distinctive career detail is that she spearheaded the implementation of a hospital-wide AI-powered diagnostic tool at St. Jude\u2019s, significantly reducing diagnostic error rates \u2013 a project she frequently references. Now, she\u2019s looking to move away from purely project-based consulting and into a more strategic advisory role, potentially with a health tech company or a large healthcare system's innovation arm. She\u2019s particularly interested in companies leveraging generative AI to improve patient outcomes and reduce administrative burden. She\u2019s based in Boston but willing to travel, and highly values introductions to individuals driving innovation in the healthcare space.",
+    "positioning": "Anh Volkov is a highly accomplished healthcare consultant with over 15 years of experience driving operational improvements and digital transformation within leading hospital systems. My expertise lies in bridging the gap between clinical needs and technological solutions, consistently delivering measurable results that enhance patient care and optimize resource allocation. Currently, I operate as an independent advisor, partnering with organizations to streamline processes, implement innovative technologies, and navigate the evolving healthcare landscape. A hallmark of my approach is a deep understanding of the challenges faced by both clinicians and administrators, stemming from my own experience in hospital leadership. I recently completed a complex operational overhaul for a large regional hospital network, resulting in a 15% reduction in patient wait times and a 10% increase in staff satisfaction. I\u2019m uniquely positioned to help organizations not only adopt new technologies but also to build the infrastructure and processes necessary to ensure successful integration and long-term sustainability. My passion is identifying opportunities to leverage data and AI to create a more efficient, equitable, and patient-centered healthcare system.",
+    "background": "- **Principal Consultant, Volkov Healthcare Solutions** (2020 \u2013 Present): Leading independent consulting practice providing strategic guidance and implementation support to hospitals and healthcare systems. Focus areas include operational efficiency, digital transformation, and revenue cycle management.\n- **Senior Manager, Deloitte Consulting** (2017 \u2013 2020): Advised hospital and health system clients on strategic initiatives, including mergers and acquisitions, service line expansion, and technology implementation.\n- **Administrator, St. Jude\u2019s Hospital** (2010 \u2013 2017): Progressively responsible roles culminating in Assistant Administrator. Oversaw daily operations of multiple departments, managed budgets, and led cross-functional teams. *Key Achievement:* Led the successful implementation of an AI-powered diagnostic tool, reducing diagnostic error rates by 8%.\n- **Clinical Coordinator, Massachusetts General Hospital** (2008 \u2013 2010): Coordinated clinical trials and provided support to research teams. Gained valuable experience in patient care and data management.\n- **Education:** MBA, Harvard Business School (2008). BS, Biology, Massachusetts Institute of Technology (2006).\n- **Certifications:** Certified Professional in Healthcare Information and Management Systems (CPHIMS), Lean Six Sigma Black Belt.",
+    "lookingFor": "I am actively seeking opportunities to leverage my expertise in a more strategic and impactful capacity. I\u2019m particularly drawn to roles that allow me to shape the future of healthcare through innovation and technology.\n\n- **Target Roles:** Chief Strategy Officer (Healthcare), VP of Innovation (Healthcare), Healthcare Advisor (Health Tech Company), Director of Digital Transformation (Large Hospital System).\n- **Industry Focus:** Health Tech (specifically AI/ML applications in diagnostics and patient care), Hospital Systems, Healthcare Consulting.\n- **Company Size:** Open to both established organizations and high-growth startups.\n- **Geographic Preference:** Boston area strongly preferred, but open to remote opportunities or relocation for the right role.\n- **Seeking Introductions To:** Leaders at companies developing and deploying innovative healthcare technologies. Executives responsible for strategic planning and digital transformation within large hospital systems. Venture capitalists investing in the healthcare space.\n- I\u2019m also interested in learning about advisory board opportunities where I can contribute my expertise to emerging health tech companies.",
+    "notes": "Spoke with David Chen at InnovaHealth last week \u2013 good initial conversation, but they\u2019re currently focused on revenue cycle management, not the AI side I'm most interested in. Follow up in Q1. Had a really productive call with Sarah Lee from General Catalyst \u2013 she suggested I connect with a portfolio company, NeuroTech Solutions. Will reach out to Sarah for an intro. My St. Jude\u2019s AI implementation continues to be a strong talking point \u2013 consistently generates interest. Need to update LinkedIn with more specifics about the project\u2019s ROI. Considering attending the HLTH conference in Vegas this fall.",
+    "locationAvailability": "I am currently based in Boston, Massachusetts, and am open to remote work or relocation for the right opportunity. Willing to travel extensively.",
+    "introPreferences": "- I\u2019m looking for introductions to individuals who are actively driving innovation in healthcare, particularly in the areas of AI, machine learning, and data analytics.\n- Ideally, these individuals would be in leadership positions (VP level or above) within health tech companies or large hospital systems.\n- I\u2019m particularly interested in connecting with people who are open to discussing strategic partnerships or advisory opportunities.\n- Bonus points if they have a background in operational efficiency or a demonstrated track record of successful technology implementation.\n- I prefer introductions to individuals who are proactive and forward-thinking, with a genuine passion for improving patient care.",
+    "personalPreferences": "I respond best to concise and direct communication. Email is my preferred method of contact, and I appreciate a brief summary of the context when receiving introductions.",
+    "meetingAndSchedulingPreferences": "I am generally available for virtual meetings during standard business hours. Please send a calendar invite with a brief agenda."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 19.863260984420776,
+      "input_tokens": 820,
+      "output_tokens": 1365,
+      "problems": [
+        "background: possible truncation (ends with '...se (2015-2017)</li>\n</ul>')"
+      ]
+    },
+    {
+      "attempt": 2,
+      "elapsed_s": 21.91322612762451,
+      "input_tokens": 820,
+      "output_tokens": 1222,
+      "problems": []
+    }
+  ],
+  "success": true
+}

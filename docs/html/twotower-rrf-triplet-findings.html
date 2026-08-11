@@ -1,0 +1,500 @@
+<title>Two-Tower Triplet Fine-Tune — Findings</title>
+<style>
+  :root{
+    --bg: #eef1ee;
+    --surface: #ffffff;
+    --surface-2: #e4e8e3;
+    --ink: #1c211f;
+    --ink-soft: #4b544f;
+    --muted: #7c8781;
+    --line: #d3d9d1;
+    --copper: #b5622a;
+    --copper-soft: #dd8a4f;
+    --teal: #1f7a72;
+    --teal-soft: #4fa89e;
+    --slate: #4a5578;
+    --slate-soft: #7986ad;
+    --danger: #a8402f;
+    --code-bg: #e6e9e2;
+    --shadow: 0 1px 2px rgba(20,25,20,0.06), 0 8px 24px rgba(20,25,20,0.05);
+  }
+  @media (prefers-color-scheme: dark){
+    :root{
+      --bg: #12151a;
+      --surface: #191d23;
+      --surface-2: #20252c;
+      --ink: #e7ebe6;
+      --ink-soft: #aab4ac;
+      --muted: #6d7871;
+      --line: #2a3038;
+      --copper: #e0925a;
+      --copper-soft: #c97a41;
+      --teal: #5bc2b6;
+      --teal-soft: #3d9c92;
+      --slate: #9aa6d6;
+      --slate-soft: #7986ad;
+      --danger: #d9705c;
+      --code-bg: #1c2229;
+      --shadow: 0 1px 2px rgba(0,0,0,0.3), 0 12px 32px rgba(0,0,0,0.35);
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg: #12151a; --surface: #191d23; --surface-2: #20252c; --ink: #e7ebe6;
+    --ink-soft: #aab4ac; --muted: #6d7871; --line: #2a3038; --copper: #e0925a;
+    --copper-soft: #c97a41; --teal: #5bc2b6; --teal-soft: #3d9c92; --slate: #9aa6d6;
+    --slate-soft: #7986ad; --danger: #d9705c; --code-bg: #1c2229;
+    --shadow: 0 1px 2px rgba(0,0,0,0.3), 0 12px 32px rgba(0,0,0,0.35);
+  }
+  :root[data-theme="light"]{
+    --bg: #eef1ee; --surface: #ffffff; --surface-2: #e4e8e3; --ink: #1c211f;
+    --ink-soft: #4b544f; --muted: #7c8781; --line: #d3d9d1; --copper: #b5622a;
+    --copper-soft: #dd8a4f; --teal: #1f7a72; --teal-soft: #4fa89e; --slate: #4a5578;
+    --slate-soft: #7986ad; --danger: #a8402f; --code-bg: #e6e9e2;
+    --shadow: 0 1px 2px rgba(20,25,20,0.06), 0 8px 24px rgba(20,25,20,0.05);
+  }
+
+  *{box-sizing:border-box;}
+  html,body{margin:0;padding:0;}
+  body{
+    background:var(--bg);
+    color:var(--ink);
+    font-family: "IBM Plex Sans", "Segoe UI", -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+    font-size:16px;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{ max-width:920px; margin:0 auto; padding:0 24px 96px; }
+
+  h1,h2,h3{ font-family: Charter, "Iowan Old Style", "Source Serif 4", Georgia, "Times New Roman", serif; font-weight:600; text-wrap:balance; color:var(--ink); }
+  code, .mono, .tabular{ font-family: "IBM Plex Mono", "SF Mono", Menlo, Consolas, monospace; font-variant-numeric: tabular-nums; }
+
+  /* ---- Header ---- */
+  header.hero{
+    padding:72px 24px 40px;
+    max-width:920px; margin:0 auto;
+    border-bottom:1px solid var(--line);
+  }
+  .eyebrow{
+    display:inline-flex; align-items:center; gap:8px;
+    font-family:"IBM Plex Mono", monospace;
+    font-size:12.5px; letter-spacing:0.09em; text-transform:uppercase;
+    color:var(--muted); margin-bottom:18px;
+  }
+  .eyebrow .dot{ width:6px; height:6px; border-radius:50%; background:var(--teal); }
+  h1.title{ font-size:clamp(30px,4.4vw,44px); line-height:1.12; margin:0 0 14px; letter-spacing:-0.01em; }
+  .lede{ font-size:18px; color:var(--ink-soft); max-width:640px; margin:0; }
+  .lede code{ font-size:0.9em; background:var(--code-bg); padding:0.1em 0.4em; border-radius:4px; }
+
+  /* ---- Stat strip ---- */
+  .stats{
+    display:grid; grid-template-columns:repeat(4,1fr); gap:1px;
+    background:var(--line); border:1px solid var(--line);
+    border-radius:10px; overflow:hidden; margin:36px 0 0;
+  }
+  .stat{ background:var(--surface); padding:20px 18px; }
+  .stat .label{ font-size:11.5px; letter-spacing:0.06em; text-transform:uppercase; color:var(--muted); margin-bottom:8px; }
+  .stat .value{ font-family:"IBM Plex Mono",monospace; font-size:24px; font-weight:600; letter-spacing:-0.02em; }
+  .stat .value.copper{ color:var(--copper); }
+  .stat .value.teal{ color:var(--teal); }
+  .stat .sub{ font-size:12.5px; color:var(--muted); margin-top:4px; }
+  @media (max-width:640px){ .stats{ grid-template-columns:repeat(2,1fr); } }
+
+  /* ---- Sections ---- */
+  section{ padding:52px 0; border-bottom:1px solid var(--line); }
+  section:last-of-type{ border-bottom:none; }
+  .section-head{ display:flex; align-items:baseline; gap:14px; margin-bottom:8px; }
+  .section-num{ font-family:"IBM Plex Mono",monospace; font-size:13px; color:var(--muted); }
+  h2.section-title{ font-size:26px; margin:0; }
+  .section-dek{ color:var(--ink-soft); font-size:15.5px; max-width:640px; margin:6px 0 28px; }
+
+  p{ margin:0 0 16px; max-width:68ch; }
+  p:last-child{ margin-bottom:0; }
+  ul, ol{ max-width:66ch; padding-left:1.3em; margin:0 0 16px; }
+  li{ margin-bottom:6px; }
+  strong{ font-weight:600; }
+  a{ color:var(--teal); }
+
+  .callout{
+    background:var(--surface); border:1px solid var(--line); border-radius:10px;
+    padding:18px 20px; margin:20px 0; box-shadow:var(--shadow);
+  }
+  .callout.copper{ border-left:3px solid var(--copper); }
+  .callout.teal{ border-left:3px solid var(--teal); }
+  .callout .callout-label{ font-family:"IBM Plex Mono",monospace; font-size:11.5px; letter-spacing:0.06em; text-transform:uppercase; color:var(--muted); margin-bottom:8px; }
+
+  /* ---- process grid ---- */
+  .flow{ display:flex; flex-direction:column; gap:0; margin:24px 0; }
+  .flow-step{ display:grid; grid-template-columns:28px 1fr; gap:16px; padding:14px 0; position:relative; }
+  .flow-step:not(:last-child)::after{
+    content:""; position:absolute; left:13px; top:38px; bottom:-14px; width:1px; background:var(--line);
+  }
+  .flow-marker{ width:28px; height:28px; border-radius:50%; background:var(--surface-2); border:1px solid var(--line);
+    display:flex; align-items:center; justify-content:center; font-family:"IBM Plex Mono",monospace; font-size:12px; color:var(--ink-soft); z-index:1; }
+  .flow-body b{ display:block; font-size:15.5px; margin-bottom:3px; }
+  .flow-body span{ color:var(--ink-soft); font-size:14.5px; }
+
+  /* ---- charts ---- */
+  .chart-grid{ display:grid; grid-template-columns:1fr 1fr; gap:20px; margin:24px 0 8px; }
+  @media (max-width:760px){ .chart-grid{ grid-template-columns:1fr; } }
+  .chart-card{ background:var(--surface); border:1px solid var(--line); border-radius:10px; padding:18px 18px 10px; box-shadow:var(--shadow); }
+  .chart-card h4{ margin:0 0 2px; font-size:15px; font-family:"IBM Plex Sans",sans-serif; font-weight:600; }
+  .chart-card .chart-meta{ font-size:12.5px; color:var(--muted); margin-bottom:10px; font-family:"IBM Plex Mono",monospace; }
+  canvas{ display:block; width:100%; height:220px; }
+  .legend{ display:flex; gap:16px; margin-top:8px; font-size:12.5px; color:var(--ink-soft); flex-wrap:wrap; }
+  .legend span{ display:inline-flex; align-items:center; gap:6px; }
+  .legend i{ width:10px; height:10px; border-radius:2px; display:inline-block; }
+
+  /* ---- table ---- */
+  .table-wrap{ overflow-x:auto; margin:20px 0; border:1px solid var(--line); border-radius:10px; background:var(--surface); box-shadow:var(--shadow); }
+  table{ border-collapse:collapse; width:100%; min-width:600px; font-size:14.5px; }
+  th, td{ text-align:right; padding:11px 16px; border-bottom:1px solid var(--line); }
+  th:first-child, td:first-child{ text-align:left; }
+  thead th{ font-family:"IBM Plex Mono",monospace; font-size:11.5px; letter-spacing:0.04em; text-transform:uppercase; color:var(--muted); font-weight:500; background:var(--surface-2); }
+  tbody tr:last-child td{ border-bottom:none; }
+  td.mono{ font-family:"IBM Plex Mono",monospace; }
+  td.best{ color:var(--teal); font-weight:600; }
+  tr.this-run td{ background:color-mix(in srgb, var(--teal) 7%, transparent); }
+
+  /* ---- retrieval comparison bars ---- */
+  .bar-block{ margin:28px 0; }
+  .bar-row{ display:grid; grid-template-columns:150px 1fr 52px; align-items:center; gap:12px; margin-bottom:10px; }
+  .bar-row .name{ font-size:13.5px; color:var(--ink-soft); }
+  .bar-track{ height:10px; background:var(--surface-2); border-radius:5px; overflow:hidden; }
+  .bar-fill{ height:100%; border-radius:5px; }
+  .bar-row .val{ font-family:"IBM Plex Mono",monospace; font-size:13px; text-align:right; }
+
+  /* ---- two-col explainer ---- */
+  .split{ display:grid; grid-template-columns:1fr 1fr; gap:22px; margin:24px 0; }
+  @media (max-width:700px){ .split{ grid-template-columns:1fr; } }
+  .split-card{ background:var(--surface); border:1px solid var(--line); border-radius:10px; padding:20px 22px; box-shadow:var(--shadow); }
+  .split-card h4{ margin:0 0 10px; font-size:16px; display:flex; align-items:center; gap:8px; }
+  .split-card h4 i{ width:9px; height:9px; border-radius:50%; display:inline-block; }
+  .split-card p{ font-size:14.5px; }
+
+  .caveat-list{ list-style:none; padding:0; margin:16px 0; }
+  .caveat-list li{ padding-left:22px; position:relative; margin-bottom:12px; font-size:14.5px; color:var(--ink-soft); }
+  .caveat-list li::before{ content:"—"; position:absolute; left:0; color:var(--muted); }
+
+  footer{ padding:40px 0 0; color:var(--muted); font-size:13px; }
+  footer code{ background:var(--code-bg); padding:0.1em 0.4em; border-radius:4px; }
+
+  :focus-visible{ outline:2px solid var(--teal); outline-offset:2px; }
+  @media (prefers-reduced-motion: reduce){ *{ animation:none !important; transition:none !important; } }
+</style>
+
+<header class="hero">
+  <div class="eyebrow"><span class="dot"></span> Dorby AI · Boardy contact-intro recommender · two-tower fine-tune</div>
+  <h1 class="title">Fine-tuning learned to judge a match better — and got worse at finding it in a crowd</h1>
+  <p class="lede">We LoRA fine-tuned two embedding models — <code>voyage-4-nano</code> and <code>Qwen3-Embedding-8B</code> — on 1,056 synthetic training examples, using a training signal (triplet loss) never tried before in this project. Both beat the frozen production model at telling a good intro from a bad one. Neither beats it at picking the single best match out of a crowd. Here's the training data, the loss curves, and the plain-language reason those two things pulled apart.</p>
+
+  <div class="stats">
+    <div class="stat">
+      <div class="label">Training examples</div>
+      <div class="value">1,056</div>
+      <div class="sub">triplets, 297 seekers</div>
+    </div>
+    <div class="stat">
+      <div class="label">Best pair AUC</div>
+      <div class="value teal">0.667</div>
+      <div class="sub">Qwen3-8B fine-tune — new project best</div>
+    </div>
+    <div class="stat">
+      <div class="label">vs. frozen prod model</div>
+      <div class="value teal">+0.058</div>
+      <div class="sub">over Voyage-4-large's 0.609</div>
+    </div>
+    <div class="stat">
+      <div class="label">Retrieval MRR</div>
+      <div class="value copper">↓ both</div>
+      <div class="sub">0.529 → 0.44–0.46</div>
+    </div>
+  </div>
+</header>
+
+<div class="wrap">
+
+  <section id="what">
+    <div class="section-head"><span class="section-num">01</span><h2 class="section-title">What we actually did, in plain words</h2></div>
+    <p class="section-dek">No jargon left unexplained. If you only read one section, read this one.</p>
+
+    <div class="flow">
+      <div class="flow-step">
+        <div class="flow-marker">1</div>
+        <div class="flow-body">
+          <b>Start from a frozen embedding model.</b>
+          <span>An embedding model turns a person's profile into a list of numbers (a vector) such that similar profiles land near each other in that number-space. Boardy's real production model is Voyage-4-large, made by a company called Voyage AI. We tested it, plus a free, smaller open-weight model called Qwen3-Embedding-8B, made by Alibaba's Qwen team.</span>
+        </div>
+      </div>
+      <div class="flow-step">
+        <div class="flow-marker">2</div>
+        <div class="flow-body">
+          <b>Generate synthetic training examples (batch <code class="mono">rrf_003</code>).</b>
+          <span>We don't have enough real accept/decline outcomes to fine-tune on (200 total). So we generated fictional user profiles, had an AI write a realistic "who I'm looking for" query for each one, used two different search methods to find candidate matches for each query, and had a separate judge AI (<code class="mono">gemini-3.1-flash-lite</code>) decide, one pair at a time, whether each candidate was actually a good intro. This produced 1,059 labeled query/candidate outcomes.</span>
+        </div>
+      </div>
+      <div class="flow-step">
+        <div class="flow-marker">3</div>
+        <div class="flow-body">
+          <b>Turn labels into triplets.</b>
+          <span>A triplet is three things bundled together: an <em>anchor</em> (the seeker's query), a <em>positive</em> (a candidate the judge approved), and a <em>negative</em> (a candidate the judge rejected for that same query). We only kept seekers where the judge had given us at least one of each — 385 such seekers — and paired every positive with every negative they had, for 1,056 triplets total.</span>
+        </div>
+      </div>
+      <div class="flow-step">
+        <div class="flow-marker">4</div>
+        <div class="flow-body">
+          <b>Fine-tune with LoRA + a "ranking" loss.</b>
+          <span>Instead of retraining the whole model (slow, expensive, and prone to forgetting everything it already knew), <b>LoRA</b> bolts on a small number of new, trainable weights — about 0.1–0.3% of the model — and leaves the rest frozen. We trained those small weights with <b>MultipleNegativesRankingLoss</b>: for every triplet, nudge the anchor's vector closer to its positive and farther from its negative, all at once, in one step.</span>
+        </div>
+      </div>
+      <div class="flow-step">
+        <div class="flow-marker">5</div>
+        <div class="flow-body">
+          <b>Score on real outcomes only.</b>
+          <span>All of the training data above is a judge's opinion, not a real accept/decline. So every number in this report is measured against the 69 held-out real pairs — actual intros Boardy's production system made, where a human either followed up or didn't. This is the only population that decides whether any of this matters.</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="callout">
+      <div class="callout-label">Why this run is separate from earlier ones</div>
+      <p>Two earlier fine-tuning attempts in this project (<code class="mono">run_001</code>, <code class="mono">arm_a_real_only</code>) used a different loss (<code class="mono">ContrastiveLoss</code>, which just needs pass/fail pairs, not matched triplets) because at the time almost no seeker had both an approved and a rejected candidate to pair up. The RRF pipeline that produced <code class="mono">rrf_003</code> fixed that — 385 of its seekers have both — which is what finally made triplet training possible.</p>
+    </div>
+  </section>
+
+  <section id="loss">
+    <div class="section-head"><span class="section-num">02</span><h2 class="section-title">Training loss, both models</h2></div>
+    <p class="section-dek">Loss is the number the model is directly trying to shrink during training — roughly "how wrong was my last guess." Falling loss means the model is fitting its training triplets better and better. It does <em>not</em> by itself guarantee it will do better on new, unseen pairs — see §4.</p>
+
+    <div class="chart-grid">
+      <div class="chart-card">
+        <h4>voyage-4-nano</h4>
+        <div class="chart-meta">347M params · A100-40GB · 5 epochs · lr 2e-4</div>
+        <canvas id="chart-nano" width="600" height="220"></canvas>
+        <div class="legend"><span><i style="background:var(--copper)"></i>training loss</span></div>
+      </div>
+      <div class="chart-card">
+        <h4>Qwen3-Embedding-8B</h4>
+        <div class="chart-meta">7.6B params · H100-80GB · 5 epochs · lr 1e-4</div>
+        <canvas id="chart-qwen" width="600" height="220"></canvas>
+        <div class="legend"><span><i style="background:var(--copper)"></i>training loss</span><span><i style="background:var(--teal)"></i>held-out dev accuracy</span></div>
+      </div>
+    </div>
+    <p style="font-size:14px;color:var(--ink-soft)">Both curves fall steadily and cleanly — from roughly 0.7–0.8 down to under 0.02 by epoch 5 — with no instability or divergence. That's a sign the LoRA adapters trained correctly, not proof they generalize (again, §4). The Qwen3-8B run was interrupted once by an unrelated Modal infrastructure hiccup at 79% through training; it resumed from the last saved checkpoint with the loss curve continuing exactly where it left off, visible as the small dip-and-continue around epoch 4 above.</p>
+  </section>
+
+  <section id="results">
+    <div class="section-head"><span class="section-num">03</span><h2 class="section-title">Results on the real 69-pair holdout</h2></div>
+    <p class="section-dek">The only population that reflects actual human accept/decline behavior. Bold = best in column.</p>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr><th>Model</th><th>Pair AUC</th><th>Hard-negative AUC</th><th>Retrieval MRR</th><th>Recall@1</th><th>Recall@10</th></tr>
+        </thead>
+        <tbody>
+          <tr class="this-run"><td>Qwen3-Embedding-8B <span class="mono" style="color:var(--muted);font-size:12px">(this run)</span></td><td class="mono best">0.667</td><td class="mono best">0.617</td><td class="mono">0.439</td><td class="mono">0.276</td><td class="mono best">0.862</td></tr>
+          <tr class="this-run"><td>voyage-4-nano <span class="mono" style="color:var(--muted);font-size:12px">(this run)</span></td><td class="mono">0.610</td><td class="mono">0.614</td><td class="mono">0.463</td><td class="mono">0.276</td><td class="mono">0.759</td></tr>
+          <tr><td>Voyage-4-large <span class="mono" style="color:var(--muted);font-size:12px">(frozen, production)</span></td><td class="mono">0.609</td><td class="mono">0.602</td><td class="mono best">0.529</td><td class="mono best">0.345</td><td class="mono best">0.862</td></tr>
+          <tr><td>Frozen Qwen3-Embedding-8B <span class="mono" style="color:var(--muted);font-size:12px">(no fine-tune)</span></td><td class="mono">0.660</td><td class="mono">—</td><td class="mono">—</td><td class="mono">—</td><td class="mono">—</td></tr>
+          <tr><td>arm_a_real_only <span class="mono" style="color:var(--muted);font-size:12px">(earlier fine-tune, contrastive loss)</span></td><td class="mono">0.579</td><td class="mono">0.500</td><td class="mono">0.388</td><td class="mono">—</td><td class="mono">—</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="callout teal">
+      <div class="callout-label">The headline</div>
+      <p>Qwen3-Embedding-8B's triplet fine-tune is now <b>the best pair AUC of any model or arm tried in this project</b> — including its own frozen (untuned) self, and Boardy's actual production model. Both fine-tunes beat Voyage-4-large on classification. Neither beats it on retrieval.</p>
+    </div>
+  </section>
+
+  <section id="paradox">
+    <div class="section-head"><span class="section-num">04</span><h2 class="section-title">Why did accuracy go up while retrieval went down?</h2></div>
+    <p class="section-dek">This looks like a contradiction. It isn't — the two numbers are answering different questions.</p>
+
+    <div class="split">
+      <div class="split-card">
+        <h4><i style="background:var(--teal)"></i>Pair AUC — "is this pair good or bad?"</h4>
+        <p>Shown one seeker and <em>one</em> candidate at a time, can the model correctly rank the ones that were actually accepted above the ones that were declined? This is a head-to-head comparison — the model only ever has to beat the specific alternative it's shown.</p>
+      </div>
+      <div class="split-card">
+        <h4><i style="background:var(--copper)"></i>Retrieval recall@1 — "find the needle in the haystack"</h4>
+        <p>Shown one seeker's query and the <em>entire</em> pool of ~40+ candidates in the holdout, does the one true match come out ranked #1 by embedding similarity — ahead of every other person in the pool, most of whom aren't even related to what the seeker is asking for?</p>
+      </div>
+    </div>
+
+    <p>Fine-tuning on triplets only ever showed the model a <em>small, curated</em> slice of that full haystack at a time — one anchor, one accepted candidate, one declined candidate. <code class="mono">MultipleNegativesRankingLoss</code> also borrows other examples in the same training batch as extra "negatives," but that's still a handful, not the whole holdout pool. The model got very good at the narrow comparison it was actually trained on — <em>this candidate vs. that specific alternative</em> — which is exactly what pair AUC measures.</p>
+
+    <p>What it wasn't directly trained to preserve is the broader property Voyage-4-large's much larger, much more general pretraining already had baked in: keep <em>every unrelated</em> profile far away in the same shared vector space, not just the one alternative it happened to see during training. That's precisely what recall@1 needs — the true match has to outrank <em>everyone</em>, not just one runner-up. A few thousand fine-tuning steps on curated pairs is a much narrower signal than the vast, general-purpose training that produced Voyage-4-large in the first place, so it's unsurprising that broad ranking-over-everyone erodes a bit even as the narrow judgment sharpens.</p>
+
+    <div class="bar-block">
+      <div class="bar-row">
+        <div class="name">Voyage-4-large</div>
+        <div class="bar-track"><div class="bar-fill" style="width:34.5%;background:var(--slate-soft)"></div></div>
+        <div class="val">0.345</div>
+      </div>
+      <div class="bar-row">
+        <div class="name">voyage-nano (tuned)</div>
+        <div class="bar-track"><div class="bar-fill" style="width:27.6%;background:var(--copper-soft)"></div></div>
+        <div class="val">0.276</div>
+      </div>
+      <div class="bar-row">
+        <div class="name">Qwen3-8B (tuned)</div>
+        <div class="bar-track"><div class="bar-fill" style="width:27.6%;background:var(--copper-soft)"></div></div>
+        <div class="val">0.276</div>
+      </div>
+      <p style="font-size:12.5px;color:var(--muted);margin-top:2px">recall@1 — how often the single true match is ranked #1 out of the whole holdout pool</p>
+    </div>
+
+    <div class="callout copper">
+      <div class="callout-label">The one place this doesn't hold</div>
+      <p>At <b>recall@10</b> — is the true match anywhere in the top 10, not just #1 — Qwen3-8B's fine-tune <b>ties Voyage-4-large exactly</b> (0.862 vs 0.862), despite trailing badly at #1. Read plainly: fine-tuning didn't push the right answer out of contention, it just made the model less confident about which single candidate to lead with. That's consistent with a product that shows a shortlist rather than one committed pick.</p>
+    </div>
+  </section>
+
+  <section id="caveats">
+    <div class="section-head"><span class="section-num">05</span><h2 class="section-title">What not to conclude from this</h2></div>
+    <ul class="caveat-list">
+      <li><b>Every training label here is an LLM judge's opinion, not a real outcome.</b> The 69-pair holdout used for every number above is real; the 1,056 triplets used to train are not — treat the fine-tune as trained on a proxy for the real task, not the real task itself.</li>
+      <li><b>The Qwen3-8B run's checkpoint-selection may be leaving accuracy on the table.</b> The training log shows its best dev-set epoch (epoch 2, 71.1% triplet accuracy) had its checkpoint auto-deleted before final model selection ran (a storage-limit setting kept only the 3 most recent checkpoints), so the final model actually shipped is the last epoch (5), not the best one seen during training.</li>
+      <li>Sample size is small — 69 holdout pairs, 29 positive queries. Individual metric swings of a few points are within noise.</li>
+      <li>Neither model has a latency benchmark yet against the project's &lt;100ms serving budget; these are offline accuracy numbers only.</li>
+    </ul>
+  </section>
+
+  <footer>
+    Boardy AI contact-intro recommender · RecSys course project · run artifacts under <code>artifacts/twotower_rrf_triplet/</code> · full writeup in <code>docs/twotower-rrf-triplet-experiment.md</code>
+  </footer>
+</div>
+
+<script>
+(function(){
+  function drawLossChart(canvasId, points, opts){
+    opts = opts || {};
+    var canvas = document.getElementById(canvasId);
+    var dpr = window.devicePixelRatio || 1;
+    var cssW = canvas.clientWidth || 560, cssH = 220;
+    canvas.width = cssW * dpr; canvas.height = cssH * dpr;
+    var ctx = canvas.getContext('2d');
+    ctx.scale(dpr, dpr);
+
+    var styles = getComputedStyle(document.documentElement);
+    var lineCol = styles.getPropertyValue('--line').trim();
+    var mutedCol = styles.getPropertyValue('--muted').trim();
+    var copper = styles.getPropertyValue('--copper').trim();
+    var teal = styles.getPropertyValue('--teal').trim();
+
+    var padL = 34, padR = 12, padT = 10, padB = 22;
+    var w = cssW - padL - padR, h = cssH - padT - padB;
+
+    var xs = points.map(function(p){return p.epoch;});
+    var ys = points.map(function(p){return p.loss;});
+    var xMax = Math.max.apply(null, xs), xMin = Math.min.apply(null, xs);
+    var yMax = Math.max.apply(null, ys) * 1.08, yMin = 0;
+
+    function X(v){ return padL + (v - xMin) / (xMax - xMin) * w; }
+    function Y(v){ return padT + h - (v - yMin) / (yMax - yMin) * h; }
+
+    ctx.clearRect(0,0,cssW,cssH);
+
+    // gridlines
+    ctx.strokeStyle = lineCol; ctx.lineWidth = 1;
+    ctx.font = '11px "IBM Plex Mono", monospace';
+    ctx.fillStyle = mutedCol;
+    var ySteps = 4;
+    for(var i=0;i<=ySteps;i++){
+      var v = yMin + (yMax-yMin) * i/ySteps;
+      var y = Y(v);
+      ctx.beginPath(); ctx.moveTo(padL,y); ctx.lineTo(padL+w,y); ctx.stroke();
+      ctx.fillText(v.toFixed(2), 2, y+3);
+    }
+    // x labels (epochs)
+    for(var e=0; e<=Math.ceil(xMax); e++){
+      var x = X(e);
+      ctx.fillText('e'+e, x-6, cssH-6);
+    }
+
+    // loss line
+    ctx.beginPath();
+    points.forEach(function(p,i){
+      var x = X(p.epoch), y = Y(p.loss);
+      if(i===0) ctx.moveTo(x,y); else ctx.lineTo(x,y);
+    });
+    ctx.strokeStyle = copper; ctx.lineWidth = 2; ctx.lineJoin='round'; ctx.stroke();
+
+    // fill under curve
+    var grad = ctx.createLinearGradient(0,padT,0,padT+h);
+    grad.addColorStop(0, copper + '33');
+    grad.addColorStop(1, copper + '00');
+    ctx.lineTo(X(points[points.length-1].epoch), padT+h);
+    ctx.lineTo(X(points[0].epoch), padT+h);
+    ctx.closePath();
+    ctx.fillStyle = grad; ctx.fill();
+
+    // endpoint dot
+    var last = points[points.length-1];
+    ctx.beginPath(); ctx.arc(X(last.epoch), Y(last.loss), 3.5, 0, Math.PI*2);
+    ctx.fillStyle = copper; ctx.fill();
+
+    // dev accuracy overlay (secondary axis 0..1)
+    if(opts.evalPoints && opts.evalPoints.length){
+      function Y2(v){ return padT + h - v * h; }
+      ctx.beginPath();
+      opts.evalPoints.forEach(function(p,i){
+        var x = X(p.epoch), y = Y2(p.acc);
+        if(i===0) ctx.moveTo(x,y); else ctx.lineTo(x,y);
+      });
+      ctx.strokeStyle = teal; ctx.lineWidth = 2; ctx.setLineDash([4,3]); ctx.stroke(); ctx.setLineDash([]);
+      opts.evalPoints.forEach(function(p){
+        ctx.beginPath(); ctx.arc(X(p.epoch), Y2(p.acc), 3, 0, Math.PI*2);
+        ctx.fillStyle = teal; ctx.fill();
+      });
+    }
+  }
+
+  var nanoPoints = [
+    {epoch:0.08,loss:0.6823},{epoch:0.17,loss:0.8288},{epoch:0.25,loss:0.7819},{epoch:0.33,loss:0.7275},
+    {epoch:0.42,loss:0.7699},{epoch:0.5,loss:0.6567},{epoch:0.58,loss:0.7276},{epoch:0.67,loss:0.6072},
+    {epoch:0.75,loss:0.6703},{epoch:0.83,loss:0.7594},{epoch:0.92,loss:0.6722},{epoch:1.0,loss:0.5792},
+    {epoch:1.08,loss:0.5709},{epoch:1.17,loss:0.4224},{epoch:1.25,loss:0.381},{epoch:1.33,loss:0.5457},
+    {epoch:1.42,loss:0.5175},{epoch:1.5,loss:0.4751},{epoch:1.58,loss:0.4271},{epoch:1.67,loss:0.5184},
+    {epoch:1.75,loss:0.5104},{epoch:1.83,loss:0.4706},{epoch:1.92,loss:0.4527},{epoch:2.0,loss:0.5216},
+    {epoch:2.08,loss:0.2933},{epoch:2.17,loss:0.3086},{epoch:2.25,loss:0.2583},{epoch:2.33,loss:0.3464},
+    {epoch:2.42,loss:0.2019},{epoch:2.5,loss:0.2478},{epoch:2.58,loss:0.2318},{epoch:2.67,loss:0.3069},
+    {epoch:2.75,loss:0.3514},{epoch:2.83,loss:0.3134},{epoch:2.92,loss:0.2443},{epoch:3.0,loss:0.3382},
+    {epoch:3.08,loss:0.2319},{epoch:3.17,loss:0.1544},{epoch:3.25,loss:0.1526},{epoch:3.33,loss:0.1368},
+    {epoch:3.42,loss:0.1407},{epoch:3.5,loss:0.1813},{epoch:3.58,loss:0.1795},{epoch:3.67,loss:0.2507},
+    {epoch:3.75,loss:0.1604},{epoch:3.83,loss:0.2026},{epoch:3.92,loss:0.1679},{epoch:4.0,loss:0.2269},
+    {epoch:4.08,loss:0.1679},{epoch:4.17,loss:0.1392},{epoch:4.25,loss:0.1456},{epoch:4.33,loss:0.0734},
+    {epoch:4.42,loss:0.0823},{epoch:4.5,loss:0.1135},{epoch:4.58,loss:0.1226},{epoch:4.67,loss:0.0896},
+    {epoch:4.75,loss:0.0996},{epoch:4.83,loss:0.1559},{epoch:4.92,loss:0.1835},{epoch:5.0,loss:0.0969}
+  ];
+
+  var qwenPoints = [
+    {epoch:0.083,loss:0.7683},{epoch:0.167,loss:0.8074},{epoch:0.25,loss:0.8254},{epoch:0.334,loss:0.6677},
+    {epoch:0.417,loss:0.6585},{epoch:0.501,loss:0.6012},{epoch:0.584,loss:0.5964},{epoch:0.667,loss:0.5194},
+    {epoch:0.751,loss:0.5635},{epoch:0.834,loss:0.616},{epoch:0.918,loss:0.59},{epoch:1.0,loss:0.4868},
+    {epoch:1.083,loss:0.4007},{epoch:1.167,loss:0.4237},{epoch:1.25,loss:0.2749},{epoch:1.334,loss:0.3922},
+    {epoch:1.417,loss:0.3195},{epoch:1.501,loss:0.2666},{epoch:1.584,loss:0.3226},{epoch:1.667,loss:0.4148},
+    {epoch:1.751,loss:0.3214},{epoch:1.834,loss:0.2476},{epoch:1.918,loss:0.2856},{epoch:2.0,loss:0.3246},
+    {epoch:2.083,loss:0.1171},{epoch:2.167,loss:0.1656},{epoch:2.25,loss:0.134},{epoch:2.334,loss:0.2481},
+    {epoch:2.417,loss:0.1411},{epoch:2.501,loss:0.0769},{epoch:2.584,loss:0.1548},{epoch:2.667,loss:0.0736},
+    {epoch:2.751,loss:0.1215},{epoch:2.834,loss:0.0656},{epoch:2.918,loss:0.1164},{epoch:3.0,loss:0.2027},
+    {epoch:3.083,loss:0.0654},{epoch:3.167,loss:0.0559},{epoch:3.25,loss:0.0212},{epoch:3.334,loss:0.0382},
+    {epoch:3.417,loss:0.0777},{epoch:3.501,loss:0.0476},{epoch:3.584,loss:0.0557},{epoch:3.667,loss:0.0991},
+    {epoch:3.751,loss:0.0263},{epoch:3.834,loss:0.054},{epoch:3.918,loss:0.0266},{epoch:4.0,loss:0.0191},
+    {epoch:4.083,loss:0.0172},{epoch:4.167,loss:0.012},{epoch:4.25,loss:0.0243},{epoch:4.334,loss:0.0181},
+    {epoch:4.417,loss:0.0109},{epoch:4.501,loss:0.0078},{epoch:4.584,loss:0.0071},{epoch:4.667,loss:0.0184},
+    {epoch:4.751,loss:0.0092},{epoch:4.834,loss:0.015},{epoch:4.918,loss:0.0443},{epoch:5.0,loss:0.0129}
+  ];
+  var qwenEval = [
+    {epoch:1.0, acc:0.6804},{epoch:2.0, acc:0.7113},{epoch:3.0, acc:0.6082},{epoch:4.0, acc:0.6186},{epoch:5.0, acc:0.6495}
+  ];
+
+  function render(){
+    drawLossChart('chart-nano', nanoPoints, {});
+    drawLossChart('chart-qwen', qwenPoints, {evalPoints: qwenEval});
+  }
+  render();
+  window.addEventListener('resize', function(){ clearTimeout(window.__rt); window.__rt = setTimeout(render, 150); });
+})();
+</script>

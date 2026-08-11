@@ -1,0 +1,54 @@
+{
+  "id": 251,
+  "archetype": "Hospitality/Entertainment Venue Builder",
+  "given_name": "Theo Okafor",
+  "style_version": 15,
+  "archetypes_version": 41,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Theo Okafor is a seasoned hospitality and entertainment venue developer, currently focused on experiential retail and \u2018eat-ertainment\u2019 concepts. He\u2019s spent the last 15 years building and scaling venues, but has a distinctive focus on data-driven design and operational optimization. He doesn\u2019t just *build* spaces, he builds profitable systems *within* spaces. He's currently leading the expansion of 'Nova Experiences', a rapidly growing chain of immersive entertainment centers, and is actively looking to connect with investors, technology providers specializing in guest experience analytics, and potential site acquisition partners. He's particularly interested in urban redevelopment opportunities. He's a pragmatic leader, very detail-oriented, and values efficiency. He\u2019s been burned by overly ambitious concepts lacking solid financial models in the past, so risk mitigation is a key priority for him now.",
+    "positioning": "A results-driven leader with over 15 years of experience in the development and operation of high-performance hospitality and entertainment venues, I specialize in translating innovative concepts into profitable realities. My core competency lies in the strategic integration of data analytics, operational efficiency, and guest experience design to maximize revenue generation and ROI. Currently, as the Vice President of Development at Nova Experiences, I am leading the national expansion of our immersive entertainment center portfolio, overseeing all aspects of site selection, design, construction, and launch.  Prior to Nova Experiences, I honed my skills at several leading firms, consistently exceeding expectations in complex, large-scale projects.  I'm adept at navigating the challenges of permitting, zoning, and community engagement, while simultaneously maintaining a laser focus on financial performance.  I believe the future of entertainment lies in creating experiences that are both memorable and measurable \u2013 spaces that not only delight guests but also provide valuable data insights for continuous improvement. I'm passionate about identifying underserved markets and developing unique concepts that cater to evolving consumer preferences.  I'm seeking opportunities to leverage my expertise to drive growth and innovation in the evolving landscape of experiential retail and entertainment, and to partner with organizations that share a commitment to data-driven decision-making and exceptional guest experiences.",
+    "background": "- **Nova Experiences, VP of Development** (2021 \u2013 Present)\n  - Led expansion strategy resulting in the opening of 8 new locations across the US in 24 months.\n  - Oversaw a $75M capital expenditure budget, consistently delivering projects on time and under budget.\n  - Implemented a data analytics platform to track guest behavior and optimize venue layouts, increasing per-capita spending by 15%.\n  - Negotiated lease agreements and secured permits for prime locations in key metropolitan areas.\n- **Apex Entertainment Group, Director of Development** (2016 \u2013 2021)\n  - Managed the development of a $50M mixed-use entertainment complex, including a live music venue, bowling alley, and restaurant.\n  - Streamlined the construction process, reducing project timelines by 20%.\n  - Developed and implemented operational procedures that improved staff efficiency and guest satisfaction.\n- **Luxe Hospitality Ventures, Project Manager** (2012 \u2013 2016)\n  - Oversaw the renovation and rebranding of 5 boutique hotels, resulting in a 25% increase in occupancy rates.\n  - Managed cross-functional teams, including architects, designers, and contractors.\n  - Developed and maintained project budgets and schedules.\n- **HKS Architects, Architectural Designer** (2008 \u2013 2012)\n  - Contributed to the design of large-scale hospitality and entertainment projects.\n  - Developed 3D models and renderings to visualize design concepts.",
+    "lookingFor": "- Strategic investors interested in funding the expansion of Nova Experiences.\n- Technology partners specializing in real-time guest analytics and operational efficiency solutions (e.g., foot traffic monitoring, queue management, POS integration).\n- Site acquisition specialists with a proven track record in urban redevelopment projects.\n- Introductions to key decision-makers at municipalities and economic development agencies.\n- Networking opportunities with other leaders in the experiential retail and entertainment industries.\n- Potential partnerships with companies offering innovative food and beverage concepts for our venues.\n- I'm open to discussing advisory roles for emerging entertainment concepts.",
+    "notes": "Theo is incredibly focused and analytical. He\u2019s very direct in his communication and appreciates efficiency. He mentioned being particularly interested in solutions that can demonstrably improve ROI. He was impressed by a recent presentation on dynamic pricing models for entertainment venues. He\u2019s committed to attending the IAAPA Expo in November and is looking for pre-arranged meetings. (Note: confirmed attendance at IAAPA Expo, November 14-17). He expressed frustration with vendors who overpromise and underdeliver. He's looking for reliable partners, not just flashy ideas. He's also keen on exploring opportunities to incorporate sustainable design practices into Nova Experiences\u2019 projects.",
+    "locationAvailability": "Currently based in Dallas, Texas, but open to travel and considering opportunities with a national scope. I am also open to remote collaboration and potential relocation for the right opportunity.",
+    "introPreferences": "- **Hard Requirements:** Introductions should be to individuals with decision-making authority (C-level executives, Directors, VPs) in relevant industries (investments, technology, real estate).\n- **Soft Preferences:** I appreciate introductions to individuals who are known for their strategic thinking and data-driven approach.\n- **Desired Introduction Style:**  A concise and impactful email introduction, highlighting the mutual benefits of a connection.  Please include a brief summary of the individual\u2019s expertise and how it aligns with Nova Experiences\u2019 goals.\n- **Avoid:**  Warm introductions to junior-level employees or individuals with limited decision-making power.  I'm not interested in unsolicited sales pitches.",
+    "personalPreferences": "I prefer to communicate via email initially, followed by a phone call if appropriate. I'm most responsive during business hours (CST). I\u2019m a morning person and generally prefer to schedule meetings before noon. I value directness and transparency in communication.",
+    "meetingAndSchedulingPreferences": "I generally prefer virtual meetings to save on travel time, but am happy to meet in person for significant discussions."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 24.39215588569641,
+      "input_tokens": 809,
+      "output_tokens": 1312,
+      "problems": []
+    }
+  ],
+  "success": true
+}

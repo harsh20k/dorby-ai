@@ -1,0 +1,473 @@
+{
+  "generated_at": "2026-07-31T01:52:35.174284+00:00",
+  "population": "the 200 real seed pairs (100 positive queries, 178-candidate corpus)",
+  "rows": {
+    "tfidf": {
+      "label": "TF-IDF (lexical)",
+      "family": "baseline",
+      "source": "artifacts/eval_real_full/real200_baselines_local/tfidf/metrics.json",
+      "library_versions": {
+        "sklearn": "1.9.0",
+        "numpy": "2.4.6",
+        "scipy": "1.18.0",
+        "torch": "2.13.0",
+        "python": "3.14.6"
+      },
+      "subsets": {
+        "all": {
+          "pair_auc": 0.5649000000000001,
+          "hard_neg_auc": 0.5164,
+          "easy_neg_auc": 0.6848,
+          "mrr": 0.13128435510896397,
+          "recall@1": 0.05,
+          "recall@10": 0.26,
+          "n_candidates": 178
+        },
+        "train": {
+          "pair_auc": 0.5593896713615023,
+          "hard_neg_auc": 0.48732394366197185,
+          "easy_neg_auc": 0.6647887323943662,
+          "mrr": 0.15538086174187243,
+          "recall@1": 0.07042253521126761,
+          "recall@10": 0.2535211267605634,
+          "n_candidates": 120
+        },
+        "holdout": {
+          "pair_auc": 0.5922413793103449,
+          "hard_neg_auc": 0.5017241379310344,
+          "easy_neg_auc": 0.7551724137931035,
+          "mrr": 0.2474815913137905,
+          "recall@1": 0.13793103448275862,
+          "recall@10": 0.4827586206896552,
+          "n_candidates": 65
+        }
+      }
+    },
+    "bert": {
+      "label": "Frozen BERT",
+      "family": "baseline",
+      "source": "artifacts/eval_real_full/real200_baselines/bert/metrics.json",
+      "library_versions": null,
+      "subsets": {
+        "all": {
+          "pair_auc": 0.46969999999999995,
+          "hard_neg_auc": 0.41080000000000005,
+          "easy_neg_auc": 0.6507999999999999,
+          "mrr": 0.0941420312732453,
+          "recall@1": 0.02,
+          "recall@10": 0.18,
+          "n_candidates": 178
+        },
+        "holdout": {
+          "pair_auc": 0.45948275862068966,
+          "hard_neg_auc": 0.4224137931034483,
+          "easy_neg_auc": 0.6379310344827586,
+          "mrr": 0.1370748200674727,
+          "recall@1": 0.06896551724137931,
+          "recall@10": 0.3103448275862069,
+          "n_candidates": 65
+        }
+      }
+    },
+    "frozen": {
+      "label": "Voyage-4-nano (frozen)",
+      "family": "baseline",
+      "source": "artifacts/eval_real_full/real200_001/frozen/metrics.json",
+      "library_versions": null,
+      "subsets": {
+        "all": {
+          "pair_auc": 0.5592999999999999,
+          "hard_neg_auc": 0.5046,
+          "easy_neg_auc": 0.696,
+          "mrr": 0.31712172371325414,
+          "recall@1": 0.18,
+          "recall@10": 0.59,
+          "n_candidates": 178
+        },
+        "train": {
+          "pair_auc": 0.5507042253521126,
+          "hard_neg_auc": 0.46901408450704224,
+          "easy_neg_auc": 0.6638497652582159,
+          "mrr": 0.35480381790123583,
+          "recall@1": 0.2112676056338028,
+          "recall@10": 0.647887323943662,
+          "n_candidates": 120
+        },
+        "holdout": {
+          "pair_auc": 0.5793103448275863,
+          "hard_neg_auc": 0.5706896551724138,
+          "easy_neg_auc": 0.6206896551724138,
+          "mrr": 0.46104957904626953,
+          "recall@1": 0.27586206896551724,
+          "recall@10": 0.7586206896551724,
+          "n_candidates": 65
+        }
+      }
+    },
+    "voyage_large": {
+      "label": "Voyage-4-large (production)",
+      "family": "baseline",
+      "source": "artifacts/eval_real_full/real200_voyage_large/metrics.json",
+      "library_versions": null,
+      "subsets": {
+        "all": {
+          "pair_auc": 0.5726000000000001,
+          "hard_neg_auc": 0.5421999999999999,
+          "easy_neg_auc": 0.654,
+          "mrr": 0.3102233167451074,
+          "recall@1": 0.13,
+          "recall@10": 0.7,
+          "n_candidates": 178
+        },
+        "train": {
+          "pair_auc": 0.5582159624413147,
+          "hard_neg_auc": 0.5173708920187794,
+          "easy_neg_auc": 0.6244131455399061,
+          "mrr": 0.3583528514687222,
+          "recall@1": 0.15492957746478872,
+          "recall@10": 0.7605633802816901,
+          "n_candidates": 120
+        },
+        "holdout": {
+          "pair_auc": 0.6086206896551725,
+          "hard_neg_auc": 0.6017241379310345,
+          "easy_neg_auc": 0.6,
+          "mrr": 0.528667801726667,
+          "recall@1": 0.3448275862068966,
+          "recall@10": 0.8620689655172413,
+          "n_candidates": 65
+        }
+      }
+    },
+    "qwen8b": {
+      "label": "Qwen3-Embedding-8B (open)",
+      "family": "open-weight",
+      "source": "artifacts/eval_real_full/real200_baselines/qwen8b/metrics.json",
+      "library_versions": null,
+      "subsets": {
+        "all": {
+          "pair_auc": 0.5529,
+          "hard_neg_auc": 0.46799999999999997,
+          "easy_neg_auc": 0.7208,
+          "mrr": 0.20448531974208503,
+          "recall@1": 0.05,
+          "recall@10": 0.55,
+          "n_candidates": 178
+        },
+        "holdout": {
+          "pair_auc": 0.6543103448275862,
+          "hard_neg_auc": 0.6275862068965518,
+          "easy_neg_auc": 0.7448275862068965,
+          "mrr": 0.4097338006820765,
+          "recall@1": 0.1724137931034483,
+          "recall@10": 0.896551724137931,
+          "n_candidates": 65
+        }
+      }
+    },
+    "e5_mistral": {
+      "label": "E5-Mistral-7B-instruct (open)",
+      "family": "open-weight",
+      "source": "artifacts/eval_real_full/real200_baselines/e5_mistral/metrics.json",
+      "library_versions": {
+        "sklearn": "1.9.0",
+        "numpy": "2.4.6",
+        "torch": "2.13.0+cu130",
+        "transformers": "4.57.6",
+        "sentence_transformers": "5.6.1"
+      },
+      "subsets": {
+        "all": {
+          "pair_auc": 0.45970000000000005,
+          "hard_neg_auc": 0.37720000000000004,
+          "easy_neg_auc": 0.6144000000000001,
+          "mrr": 0.11585423614082113,
+          "recall@1": 0.03,
+          "recall@10": 0.3,
+          "n_candidates": 178
+        },
+        "holdout": {
+          "pair_auc": 0.5663793103448276,
+          "hard_neg_auc": 0.48793103448275865,
+          "easy_neg_auc": 0.7137931034482758,
+          "mrr": 0.2244441084865923,
+          "recall@1": 0.06896551724137931,
+          "recall@10": 0.5517241379310345,
+          "n_candidates": 65
+        }
+      }
+    },
+    "zembed": {
+      "label": "zembed-1-embedding (open)",
+      "family": "open-weight",
+      "source": "artifacts/eval_real_full/real200_baselines/zembed/metrics.json",
+      "library_versions": {
+        "sklearn": "1.9.0",
+        "numpy": "2.4.6",
+        "torch": "2.13.0+cu130",
+        "transformers": "4.57.6",
+        "sentence_transformers": "5.6.1"
+      },
+      "subsets": {
+        "all": {
+          "pair_auc": 0.4707,
+          "hard_neg_auc": 0.4864,
+          "easy_neg_auc": 0.4816000000000001,
+          "mrr": 0.03770158644872605,
+          "recall@1": 0.01,
+          "recall@10": 0.08,
+          "n_candidates": 178
+        },
+        "holdout": {
+          "pair_auc": 0.5086206896551724,
+          "hard_neg_auc": 0.47758620689655173,
+          "easy_neg_auc": 0.5275862068965518,
+          "mrr": 0.06405538564952294,
+          "recall@1": 0.0,
+          "recall@10": 0.13793103448275862,
+          "n_candidates": 65
+        }
+      }
+    },
+    "bge_en_icl": {
+      "label": "BGE-en-ICL (open, zero-shot)",
+      "family": "open-weight",
+      "source": "artifacts/eval_real_full/real200_baselines/bge_en_icl/metrics.json",
+      "library_versions": {
+        "sklearn": "1.9.0",
+        "numpy": "2.4.6",
+        "torch": "2.13.0+cu130",
+        "transformers": "4.57.6",
+        "sentence_transformers": "5.6.1"
+      },
+      "subsets": {
+        "all": {
+          "pair_auc": 0.5388999999999999,
+          "hard_neg_auc": 0.5226,
+          "easy_neg_auc": 0.5928,
+          "mrr": 0.3190436464282151,
+          "recall@1": 0.17,
+          "recall@10": 0.62,
+          "n_candidates": 178
+        },
+        "holdout": {
+          "pair_auc": 0.5750000000000001,
+          "hard_neg_auc": 0.5862068965517242,
+          "easy_neg_auc": 0.5655172413793104,
+          "mrr": 0.5157030428284887,
+          "recall@1": 0.3793103448275862,
+          "recall@10": 0.7586206896551724,
+          "n_candidates": 65
+        }
+      }
+    },
+    "nv_embed": {
+      "label": "NV-Embed-v2 (open, non-commercial, approx.)",
+      "family": "open-weight",
+      "source": "artifacts/eval_real_full/real200_baselines/nv_embed/metrics.json",
+      "library_versions": {
+        "sklearn": "1.9.0",
+        "numpy": "2.4.6",
+        "torch": "2.13.0+cu130",
+        "transformers": "4.44.2",
+        "sentence_transformers": "3.0.1"
+      },
+      "subsets": {
+        "all": {
+          "pair_auc": 0.4841,
+          "hard_neg_auc": 0.38359999999999994,
+          "easy_neg_auc": 0.6608,
+          "mrr": 0.08565265909921446,
+          "recall@1": 0.04,
+          "recall@10": 0.16,
+          "n_candidates": 178
+        },
+        "holdout": {
+          "pair_auc": 0.503448275862069,
+          "hard_neg_auc": 0.37586206896551727,
+          "easy_neg_auc": 0.6,
+          "mrr": 0.10924396120973043,
+          "recall@1": 0.034482758620689655,
+          "recall@10": 0.2413793103448276,
+          "n_candidates": 65
+        }
+      }
+    },
+    "arm_a_v2": {
+      "label": "twotower Arm A (v2)",
+      "family": "fine-tuned",
+      "source": "artifacts/eval_real_full/real200_001/arm_a_v2/metrics.json",
+      "library_versions": null,
+      "subsets": {
+        "all": {
+          "pair_auc": 0.5594,
+          "hard_neg_auc": 0.5558000000000001,
+          "easy_neg_auc": 0.6416,
+          "mrr": 0.3341436860459368,
+          "recall@1": 0.18,
+          "recall@10": 0.64,
+          "n_candidates": 178
+        },
+        "train": {
+          "pair_auc": 0.5392018779342723,
+          "hard_neg_auc": 0.5314553990610329,
+          "easy_neg_auc": 0.6131455399061033,
+          "mrr": 0.3772755787827017,
+          "recall@1": 0.2112676056338028,
+          "recall@10": 0.704225352112676,
+          "n_candidates": 120
+        },
+        "holdout": {
+          "pair_auc": 0.5982758620689654,
+          "hard_neg_auc": 0.603448275862069,
+          "easy_neg_auc": 0.603448275862069,
+          "mrr": 0.5326009541980503,
+          "recall@1": 0.3793103448275862,
+          "recall@10": 0.8620689655172413,
+          "n_candidates": 65
+        }
+      }
+    },
+    "top1_ctrl": {
+      "label": "twotower top1_ctrl",
+      "family": "fine-tuned",
+      "source": "artifacts/eval_real_full/real200_top1/top1_ctrl/metrics.json",
+      "library_versions": null,
+      "subsets": {
+        "all": {
+          "pair_auc": 0.5683,
+          "hard_neg_auc": 0.5484000000000001,
+          "easy_neg_auc": 0.6836,
+          "mrr": 0.3549826466399895,
+          "recall@1": 0.19,
+          "recall@10": 0.69,
+          "n_candidates": 178
+        },
+        "train": {
+          "pair_auc": 0.5474178403755869,
+          "hard_neg_auc": 0.4953051643192488,
+          "easy_neg_auc": 0.6666666666666666,
+          "mrr": 0.40539774464038375,
+          "recall@1": 0.22535211267605634,
+          "recall@10": 0.7323943661971831,
+          "n_candidates": 120
+        },
+        "holdout": {
+          "pair_auc": 0.5974137931034483,
+          "hard_neg_auc": 0.6120689655172414,
+          "easy_neg_auc": 0.6241379310344828,
+          "mrr": 0.543594237452997,
+          "recall@1": 0.3793103448275862,
+          "recall@10": 0.8620689655172413,
+          "n_candidates": 65
+        }
+      }
+    },
+    "top1_sharp": {
+      "label": "twotower top1_sharp",
+      "family": "fine-tuned",
+      "source": "artifacts/eval_real_full/real200_top1/top1_sharp/metrics.json",
+      "library_versions": null,
+      "subsets": {
+        "all": {
+          "pair_auc": 0.5428999999999999,
+          "hard_neg_auc": 0.45780000000000004,
+          "easy_neg_auc": 0.7164,
+          "mrr": 0.30097855384155214,
+          "recall@1": 0.14,
+          "recall@10": 0.64,
+          "n_candidates": 178
+        },
+        "train": {
+          "pair_auc": 0.5335680751173709,
+          "hard_neg_auc": 0.4070422535211267,
+          "easy_neg_auc": 0.6854460093896714,
+          "mrr": 0.35890139919997427,
+          "recall@1": 0.19718309859154928,
+          "recall@10": 0.6619718309859155,
+          "n_candidates": 120
+        },
+        "holdout": {
+          "pair_auc": 0.5629310344827586,
+          "hard_neg_auc": 0.5241379310344828,
+          "easy_neg_auc": 0.6586206896551724,
+          "mrr": 0.47348222277047763,
+          "recall@1": 0.27586206896551724,
+          "recall@10": 0.7241379310344828,
+          "n_candidates": 65
+        }
+      }
+    },
+    "qwen_micro6": {
+      "label": "twotower Qwen micro-6",
+      "family": "fine-tuned",
+      "source": "artifacts/eval_real_full/real200_qwen/qwen_micro6/metrics.json",
+      "library_versions": null,
+      "subsets": {
+        "all": {
+          "pair_auc": 0.5947000000000001,
+          "hard_neg_auc": 0.5608,
+          "easy_neg_auc": 0.6707999999999998,
+          "mrr": 0.3030844863328289,
+          "recall@1": 0.14,
+          "recall@10": 0.66,
+          "n_candidates": 178
+        },
+        "train": {
+          "pair_auc": 0.5483568075117372,
+          "hard_neg_auc": 0.5192488262910797,
+          "easy_neg_auc": 0.5849765258215962,
+          "mrr": 0.3521525675322538,
+          "recall@1": 0.18309859154929578,
+          "recall@10": 0.704225352112676,
+          "n_candidates": 120
+        },
+        "holdout": {
+          "pair_auc": 0.6810344827586207,
+          "hard_neg_auc": 0.6396551724137931,
+          "easy_neg_auc": 0.6689655172413793,
+          "mrr": 0.5847380422342942,
+          "recall@1": 0.4482758620689655,
+          "recall@10": 0.896551724137931,
+          "n_candidates": 65
+        }
+      }
+    },
+    "qwen_micro1": {
+      "label": "twotower Qwen micro-1",
+      "family": "fine-tuned",
+      "source": "artifacts/eval_real_full/real200_qwen/qwen_micro1/metrics.json",
+      "library_versions": null,
+      "subsets": {
+        "all": {
+          "pair_auc": 0.5604,
+          "hard_neg_auc": 0.48279999999999995,
+          "easy_neg_auc": 0.698,
+          "mrr": 0.27343673775279953,
+          "recall@1": 0.14,
+          "recall@10": 0.56,
+          "n_candidates": 178
+        },
+        "train": {
+          "pair_auc": 0.5056338028169014,
+          "hard_neg_auc": 0.41173708920187796,
+          "easy_neg_auc": 0.6225352112676057,
+          "mrr": 0.32967024527989025,
+          "recall@1": 0.19718309859154928,
+          "recall@10": 0.647887323943662,
+          "n_candidates": 120
+        },
+        "holdout": {
+          "pair_auc": 0.6827586206896552,
+          "hard_neg_auc": 0.6172413793103448,
+          "easy_neg_auc": 0.7310344827586206,
+          "mrr": 0.4971790661445834,
+          "recall@1": 0.3448275862068966,
+          "recall@10": 0.8620689655172413,
+          "n_candidates": 65
+        }
+      }
+    }
+  },
+  "missing": []
+}

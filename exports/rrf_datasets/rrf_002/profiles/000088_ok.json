@@ -1,0 +1,63 @@
+{
+  "id": 88,
+  "archetype": "AI Founder, Early Stage, North America",
+  "given_name": "Olamide Yamamoto",
+  "style_version": 6,
+  "archetypes_version": 16,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Olamide Yamamoto is a first-time founder, a highly skilled machine learning engineer who spent the first eight years of her career at a large defense contractor, building predictive models for logistical optimization. She *hated* the bureaucracy and slow pace, but the work itself \u2013 applying cutting-edge AI to complex problems \u2013 she loved. She recently left to found 'Synapse Insights,' a company building AI-powered tools for small and medium-sized marketing agencies to automate A/B testing and personalization at scale. She\u2019s technically brilliant but still learning the ropes of fundraising and go-to-market strategy. She\u2019s based in Toronto, but frequently travels to the US for investor meetings. Her distinctive career detail is that extended time in a highly regulated, risk-averse environment; it\u2019s made her exceptionally rigorous about data privacy and model explainability, a key differentiator for Synapse Insights. She's currently raising a pre-seed round and actively seeking advisors with experience in SaaS sales and marketing.",
+    "positioning": "I\u2019m Olamide Yamamoto, founder and CEO of Synapse Insights. We\u2019re building the AI-powered co-pilot marketing agencies need to unlock hyper-personalization and dramatically improve campaign performance. For years, I witnessed firsthand the power of machine learning to optimize complex systems. But the tools available to smaller marketing teams are often either too expensive, too complex, or lack the crucial safeguards needed to operate responsibly in today\u2019s data privacy landscape. \n\nSynapse Insights addresses this gap. Our platform automates the A/B testing process, identifying optimal messaging and creative variations with remarkable speed and accuracy. But we go beyond simply boosting click-through rates. We focus on building *explainable* AI models \u2013 meaning agencies can understand *why* certain variations perform better, allowing them to refine their strategies and build deeper customer relationships. We prioritize data privacy by design, ensuring compliance with all relevant regulations. \n\nI bring a unique perspective to this space. My background in advanced analytics within the defense sector instilled in me a deep commitment to rigor, security, and responsible AI development. I\u2019m passionate about democratizing access to these powerful tools and empowering marketing agencies to deliver truly personalized experiences. I\u2019m seeking strategic partners, advisors, and early adopters who share this vision. We\u2019re particularly focused on agencies serving the e-commerce, travel, and financial services verticals.",
+    "background": "- **Founder & CEO, Synapse Insights** (Aug 2023 \u2013 Present)\n  * Led all aspects of company formation, including product development, market research, and fundraising.\n  * Developed and deployed the core AI algorithms powering the Synapse Insights platform.\n  * Built and managed a small, high-performing team of engineers and data scientists.\n  * Secured initial seed funding commitments.\n\n- **Senior Machine Learning Engineer, Kestrel Dynamics** (June 2015 \u2013 July 2023)\n  * Designed, developed, and deployed machine learning models for predictive maintenance, supply chain optimization, and resource allocation within a complex defense ecosystem.\n  * Led a team of engineers in the development of a novel anomaly detection system that reduced logistical errors by 15%.\n  * Responsible for data quality assurance and model validation, ensuring compliance with stringent security protocols.\n  * Mentored junior engineers in machine learning best practices.\n\n- **Education:**\n  * **M.Sc., Computer Science (Machine Learning Specialization)**, University of Toronto (2013 \u2013 2015)\n  * **B.Eng., Electrical Engineering**, Queen\u2019s University (2009 \u2013 2013)\n\n- **Skills:** Python, TensorFlow, PyTorch, Scikit-learn, SQL, Data Visualization (Tableau, Power BI), Cloud Computing (AWS, Azure), A/B Testing, Statistical Modeling, Data Privacy Compliance (GDPR, CCPA), Agile Development.",
+    "lookingFor": "I\u2019m actively seeking connections to accelerate Synapse Insights\u2019 growth. Specifically, I\u2019m looking for:\n\n**1. Investors (Pre-Seed/Seed):**\n  * Angel investors and micro-VCs with a focus on AI/ML and SaaS.\n  * Investment size: $500k - $1M.\n  * Ideal investors have experience in B2B software and understand the marketing technology landscape.\n\n**2. Advisors:**\n  * Experienced SaaS sales leaders who can provide guidance on go-to-market strategy.\n  * Marketing technology veterans with a proven track record of scaling early-stage companies.\n  * Experts in data privacy and AI ethics.\n\n**3. Potential Customers/Partners:**\n  * Marketing agencies (5-50 employees) serving e-commerce, travel, or financial services clients.\n  * Agencies actively seeking to improve campaign performance through personalization and automation.\n  * Potential integration partners with complementary marketing technology solutions.\n\n**Not a good fit:**\n  * Individuals solely focused on web3 or blockchain technologies.\n  * Recruiters (unless specifically targeting experienced machine learning engineers for Synapse Insights).\n  * Individuals offering services unrelated to SaaS, AI, or marketing technology.",
+    "notes": "Olamide is currently preparing her pitch deck for a series of investor meetings next month. She's particularly keen to get feedback on her financial projections. \n\n* **Recent Interaction (Oct 26, 2023):** Had a positive introductory call with [Contact Name] at [VC Firm]. They expressed interest, but require a more detailed technical due diligence report. Following up with that next week.\n* **Key Insight:** Olamide is extremely focused on building a sustainable and ethical AI business. This is a significant differentiator, but it also requires careful messaging to avoid being perceived as 'slow' or 'risk-averse.'\n* **Request:** When making introductions, please emphasize Olamide's technical expertise and her commitment to data privacy. A brief mention of her background at Kestrel Dynamics can add credibility.\n* **Caution:** She's very busy and prefers concise communication. Avoid lengthy emails or unnecessary meetings.",
+    "locationAvailability": "I\u2019m based in Toronto, Canada, but travel frequently to the United States, particularly to New York City, Boston, and the San Francisco Bay Area, for investor meetings and industry events. I\u2019m open to virtual meetings at any time.",
+    "introPreferences": "Please read these carefully \u2013 a well-crafted introduction is *extremely* valuable to me.\n\n**Hard Requirements:**\n  * **Relevance:** The person you\u2019re introducing me to *must* be relevant to my stated 'lookingFor' criteria (investors, advisors, potential customers).\n  * **Context:** Clearly explain *why* you think this connection would be mutually beneficial.\n  * **Warm Introduction:** A direct email introduction is preferred over a LinkedIn connection request.\n\n**Soft Preferences:**\n  * **Shared Connections:** Bonus points if you and the person you\u2019re introducing me to have a strong existing relationship.\n  * **Brief & Concise:** Keep the introduction email short and to the point \u2013 no more than 3-4 paragraphs.\n  * **Highlight Synapse Insights\u2019 Value Proposition:** Briefly mention our focus on explainable AI and data privacy.\n\n**Avoid:**\n  * Introducing me to individuals who are clearly outside of my target audience.\n  * Sending generic, mass-produced introduction emails.\n  * Pressure tactics or aggressive sales pitches.",
+    "personalPreferences": "I prefer to communicate via email initially, then move to a quick phone call if the connection seems promising. I check my email several times a day, but response times can vary depending on my workload. Slack is acceptable for quick questions, but I generally avoid lengthy discussions on that platform.",
+    "meetingAndSchedulingPreferences": "I typically block out Fridays for focused work. I'm available for meetings most other days, but please schedule at least 24 hours in advance. I prefer 30-minute meetings to start."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 31.584140062332153,
+      "input_tokens": 856,
+      "output_tokens": 1716,
+      "problems": [
+        "background: possible truncation (ends with '...ersity of Waterloo \u2013 2013')"
+      ]
+    },
+    {
+      "attempt": 2,
+      "elapsed_s": 30.373302936553955,
+      "input_tokens": 856,
+      "output_tokens": 1724,
+      "problems": []
+    }
+  ],
+  "success": true
+}

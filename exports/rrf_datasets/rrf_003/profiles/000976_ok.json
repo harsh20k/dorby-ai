@@ -1,0 +1,54 @@
+{
+  "id": 976,
+  "archetype": "Early-Stage AI/ML Founder-Builder",
+  "given_name": "Kai Patel",
+  "style_version": 60,
+  "archetypes_version": 163,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Kai Patel is a 32-year-old founder and CEO of 'Synapse Insights,' a pre-seed AI-powered market research platform. He spent 5 years at Amazon as a Applied Scientist on the Alexa Shopping team, where he spearheaded the development of a novel personalization algorithm that increased conversion rates by 12%. He left Amazon frustrated with the slow pace of innovation in a large organization and wanting to build something from the ground up. Synapse Insights aims to provide small and medium-sized businesses (SMBs) with affordable, actionable market intelligence typically only accessible to large enterprises. He's a very data-driven, analytical thinker, and can sometimes come across as direct, but is ultimately passionate about empowering SMBs. He is actively fundraising a seed round and looking for advisors with experience scaling SaaS businesses and navigating the AI landscape. He\u2019s particularly interested in investors with a strong portfolio in B2B SaaS and a demonstrated understanding of machine learning applications.",
+    "positioning": "I'm Kai Patel, Founder & CEO of Synapse Insights. We're building the next generation of market research, democratizing access to critical insights for SMBs. Traditional market research is expensive, slow, and often inaccessible to the businesses that need it most. Synapse Insights leverages cutting-edge AI and natural language processing to analyze vast datasets \u2013 social media, reviews, news articles \u2013 delivering real-time, actionable intelligence on market trends, competitor analysis, and customer sentiment. We\u2019ve recently launched our beta program with 20 SMBs across diverse verticals, and early results show a 25% increase in marketing ROI for participating businesses. Our core value proposition is simple: empower SMBs to make data-driven decisions and compete effectively in today\u2019s dynamic market. We\u2019re currently focused on refining our platform based on beta feedback and preparing for a public launch in Q1 2024. We\u2019re achieving impressive results with a lean team and are excited about the potential to disrupt the $80 billion market research industry.",
+    "background": "* **Synapse Insights, Founder & CEO** (Aug 2023 \u2013 Present)\n    * Led all aspects of company formation, including product development, fundraising, and team building.\n    * Developed and implemented the core AI algorithms using Python, TensorFlow, and NLP techniques.\n    * Secured initial beta customers and managed the beta program, gathering crucial user feedback.\n    * Responsible for overall business strategy and market positioning.\n* **Amazon, Applied Scientist - Alexa Shopping** (Jun 2018 \u2013 Jul 2023)\n    * Designed, developed, and deployed machine learning models for personalized product recommendations within the Alexa Shopping experience.\n    * Led the development of a novel personalization algorithm resulting in a 12% increase in conversion rates and a 7% lift in average order value. (Quantifiable Impact)\n    * Collaborated with engineering and product teams to integrate models into production systems.\n    * Conducted A/B testing and performance analysis to optimize model accuracy and efficiency.\n    * Mentored junior scientists in machine learning best practices.\n* **Stanford University, Ph.D. in Computer Science** (Sep 2014 \u2013 May 2018)\n    * Dissertation: \u201cScalable Algorithms for Real-Time Sentiment Analysis of Social Media Data.\u201d\n    * Specialized in Natural Language Processing, Machine Learning, and Data Mining.\n    * Published research papers in top-tier conferences (ACL, EMNLP).\n* **University of California, Berkeley, B.S. in Computer Science** (Aug 2010 \u2013 May 2014)\n    * Graduated *Summa Cum Laude* with Honors.\n    * Relevant coursework: Artificial Intelligence, Machine Learning, Data Structures and Algorithms.\n* **Skills:** Python, TensorFlow, PyTorch, NLP, Machine Learning, Data Mining, A/B Testing, Statistical Modeling, AWS, SQL, Data Visualization (Tableau, Power BI)",
+    "lookingFor": "I'm actively seeking connections to support Synapse Insights' growth and fundraising efforts. Specifically:\n\n* **Seed Investors:** Targeting funds with $2M - $5M check sizes, focused on B2B SaaS and AI/ML applications. We're looking for investors who understand the market research landscape and can provide strategic guidance.\n* **AI/ML Advisors:** Experienced advisors with a proven track record of scaling AI-first products. Expertise in areas like model deployment, data privacy, and AI ethics is highly valued.\n* **SaaS Growth Experts:** Mentors with experience in go-to-market strategy, customer acquisition, and sales optimization for early-stage SaaS companies.\n* **Potential Strategic Partners:** Companies offering complementary services to SMBs (e.g., CRM, marketing automation) who might be interested in integration opportunities.\n* **Talent Acquisition:**  We're currently hiring a Senior Machine Learning Engineer and a Full-Stack Developer. Ideal candidates have experience with cloud deployment and building scalable web applications. \n\nI\u2019m open to informational calls and happy to share our deck with qualified investors.  I\u2019m particularly interested in investors who have a portfolio company in the competitive intelligence space but aren\u2019t direct competitors.",
+    "notes": "* Kai is very direct and focused on quantifiable results. Expect detailed questions about metrics and ROI.\n* During our initial call, he was very responsive and clearly articulated his vision for Synapse Insights.\n* He mentioned being frustrated with the bureaucracy of large companies, which is a key driver for his entrepreneurial venture.\n* Data quality check: Confirmed his Amazon employment history through LinkedIn.\n* Past Interaction: Introduced him to Sarah Chen (Investor at Alpha Ventures) on 10/26/2023. Sarah expressed initial interest but is currently oversubscribed.\n* Potential Red Flag: Seems very hands-on and may struggle to delegate as the company grows. Needs to be mindful of building a strong leadership team.",
+    "locationAvailability": "Currently based in San Francisco, CA, and willing to travel to meet with investors and potential partners on the West Coast and East Coast.",
+    "introPreferences": "When making introductions, please keep the following in mind:\n\n* **Hard Requirements:**\n    * Investors must have a demonstrable track record of investing in B2B SaaS companies.\n    * Advisors should have direct experience scaling AI/ML-powered products.\n* **Soft Preferences:**\n    * Prior experience in the market research or competitive intelligence space is a plus.\n    * A strong network within the SMB ecosystem is highly valued.\n* **Introduction Style:**\n    * Please provide a concise and compelling summary of Synapse Insights\u2019 value proposition.\n    * Highlight Kai\u2019s background at Amazon and his expertise in machine learning.\n    * Frame the introduction as a mutually beneficial opportunity for both parties.\n* **Do\u2019s:**\n    * Emphasize the potential for significant ROI for investors.\n    * Focus on the impact Synapse Insights can have on SMBs.\n* **Don\u2019ts:**\n    * Don\u2019t oversell the product \u2013 Kai prefers a data-driven approach.\n    * Don\u2019t introduce him to individuals who are not relevant to his current priorities.",
+    "personalPreferences": "I prefer email communication for initial outreach and am generally available for calls during Pacific Standard Time business hours. I respond quickly and value clear, concise communication.",
+    "meetingAndSchedulingPreferences": ""
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 29.213019847869873,
+      "input_tokens": 814,
+      "output_tokens": 1585,
+      "problems": []
+    }
+  ],
+  "success": true
+}

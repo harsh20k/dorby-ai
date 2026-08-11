@@ -1,0 +1,54 @@
+{
+  "id": 456,
+  "archetype": "AI/ML Founder, Early Stage",
+  "given_name": "Jing Ishikawa",
+  "style_version": 28,
+  "archetypes_version": 76,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Jing Ishikawa is a 34-year-old, first-time founder building 'SynapseFlow,' a platform that simplifies the deployment and monitoring of large language models (LLMs) for enterprise applications. Her distinctive career detail is a PhD in Computational Linguistics *followed* by three years as a quantitative trader at a high-frequency trading firm. This background gives her a unique perspective \u2013 understanding both the theoretical underpinnings of AI *and* the real-world demands of high-performance, low-latency systems. SynapseFlow is currently in stealth, focused on solving the 'last mile' problem of LLM integration: the complex infrastructure and ongoing management needed to make these models truly useful for businesses. She's actively fundraising a seed round, targeting VCs specializing in AI infrastructure and developer tools. She's laser-focused on finding investors who understand the technical complexities and the potential for rapid scaling. Jing is very direct, highly analytical, and values efficiency in communication. She\u2019s comfortable discussing technical details and expects potential investors and partners to be as well.",
+    "positioning": "I'm Jing Ishikawa, founder of SynapseFlow, a platform designed to drastically reduce the complexity and cost of deploying and maintaining Large Language Models (LLMs) within enterprise environments. We\u2019re tackling the critical 'last mile' challenge \u2013 bridging the gap between cutting-edge AI research and practical business application. Businesses are eager to leverage the power of LLMs, but are hampered by the significant engineering effort required for robust, scalable, and secure deployment. SynapseFlow provides a fully managed solution, automating infrastructure provisioning, model monitoring, and performance optimization. \n\nWe\u2019re initially targeting financial services, healthcare, and legal industries \u2013 sectors where data security and reliability are paramount, and the potential ROI from LLM integration is substantial. Early traction with pilot programs demonstrates a 70% reduction in infrastructure costs and a 5x increase in developer velocity. \n\nWe\u2019re currently raising a $3M seed round to accelerate product development, expand our engineering team, and scale our go-to-market strategy. I'm actively seeking connections with venture capitalists specializing in AI infrastructure, developer tools, and enterprise SaaS. I\u2019m also keen to connect with experienced engineering leaders who have scaled similar platforms. Let\u2019s discuss how SynapseFlow can unlock the true potential of LLMs for your portfolio companies or organization.",
+    "background": "* **SynapseFlow, Founder & CEO** (2023 \u2013 Present)\n    * Led all aspects of company formation, product development, and fundraising.\n    * Developed core platform architecture and initial LLM integration framework.\n    * Secured early pilot customers in financial services and healthcare.\n* **Jane Street Capital, Quantitative Trader** (2020 \u2013 2023)\n    * Developed and deployed high-frequency trading algorithms using Python, C++, and statistical modeling.\n    * Managed risk and optimized trading strategies, achieving a consistent 15% annual return on capital.\n    * Collaborated with engineers to improve infrastructure performance and reduce latency.\n* **Massachusetts Institute of Technology (MIT), PhD, Computational Linguistics** (2016 \u2013 2020)\n    * Dissertation: \u201cContextualized Embeddings for Natural Language Understanding.\u201d\n    * Research focused on developing novel neural network architectures for language modeling.\n    * Published multiple peer-reviewed papers in top-tier NLP conferences (ACL, EMNLP).\n* **Stanford University, BS, Computer Science (with Honors)** (2012 \u2013 2016)\n    * GPA: 3.9/4.0\n    * Relevant coursework: Artificial Intelligence, Machine Learning, Data Structures and Algorithms.\n    * Recipient of the President\u2019s Scholar Award.",
+    "lookingFor": "I'm actively seeking strategic partners and investors to help SynapseFlow become the leading platform for LLM deployment and management. Specifically, I\u2019m looking for:\n\n* **Seed-stage VCs:** Firms with a strong track record in AI infrastructure, developer tools, and enterprise SaaS. I\u2019m prioritizing funds that understand the technical complexities of LLMs and can provide valuable operational support.\n* **Angel Investors:** Individuals with deep expertise in AI and a history of successful early-stage investments.\n* **Experienced Engineering Leaders:** Individuals with experience scaling cloud-based platforms and managing high-performing engineering teams. I\u2019m particularly interested in those with experience in Kubernetes, distributed systems, and MLOps.\n* **Potential Early Adopters:** Companies in financial services, healthcare, and legal industries that are actively exploring LLM integration. I\u2019m open to discussing pilot programs and collaborative partnerships.\n\nI\u2019m also interested in connecting with individuals who can provide mentorship and guidance on fundraising, product development, and go-to-market strategy. I'm aiming to close our seed round by the end of Q1 2024 and would appreciate introductions to relevant contacts.",
+    "notes": "Jing is exceptionally bright and technically proficient. She's very direct and doesn't waste time on pleasantries. She's comfortable diving deep into technical details. \n\n* **Recent Conversation:** Had a promising initial conversation with [VC Name] \u2013 they expressed interest but wanted to see more traction. Follow up with Jing to see if she has updated metrics.\n* **Priority:** Closing the seed round is her absolute top priority. Don\u2019t offer introductions that don\u2019t directly contribute to this goal.\n* **Sensitivity:** She's protective of the SynapseFlow technology and reluctant to share detailed architectural information without an NDA. \n* **Current Focus:** She\u2019s currently refining her pitch deck and preparing for investor meetings. She's also actively recruiting a senior backend engineer.",
+    "locationAvailability": "Based in Boston, MA, but open to remote meetings and travel to key locations including San Francisco and New York.",
+    "introPreferences": "* **Hard Requirements:**\n    * Individuals must have a demonstrable understanding of AI/ML technologies, particularly LLMs.\n    * VCs must specialize in seed-stage investments in AI infrastructure or developer tools.\n* **Soft Preferences:**\n    * Connections with individuals who have a track record of successful exits in the AI space.\n    * Individuals with strong networks within the target industries (finance, healthcare, legal).\n* **Introduction Framing:** Please emphasize Jing\u2019s unique background \u2013 her PhD in Computational Linguistics combined with her experience in high-frequency trading. Highlight SynapseFlow\u2019s potential to address a significant pain point in the LLM deployment process. Avoid overly generic introductions.",
+    "personalPreferences": "I prefer to communicate via email initially to allow for concise and focused discussions. I value direct feedback and appreciate clear, data-driven insights. I'm generally available for calls during East Coast business hours. Quick turnaround on responses is appreciated.",
+    "meetingAndSchedulingPreferences": "* 30-minute introductory calls are preferred.\n* Please send a brief agenda in advance.\n* I'm happy to share a more detailed deck after an initial positive conversation."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 29.92894411087036,
+      "input_tokens": 881,
+      "output_tokens": 1503,
+      "problems": []
+    }
+  ],
+  "success": true
+}

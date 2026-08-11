@@ -1,0 +1,63 @@
+{
+  "id": 361,
+  "archetype": "Academic Researcher, AI/Cybersecurity Focus",
+  "given_name": "Kai Pereira",
+  "style_version": 22,
+  "archetypes_version": 60,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Kai Pereira is a rising star in the field of adversarial machine learning, specifically focusing on the security vulnerabilities of large language models. They recently completed a postdoctoral fellowship at MIT's Computer Science and Artificial Intelligence Laboratory (CSAIL) and are now an Assistant Professor at Carnegie Mellon University. A distinctive career detail is their prior experience as a red team cybersecurity consultant before entering academia \u2013 this gives them a very practical, 'attacker's mindset' that informs their research. They are actively building a research group, seeking funding for novel projects, and interested in collaborations with industry partners who are facing real-world LLM security challenges. They are passionate about responsible AI and bridging the gap between academic research and practical application. They are relatively new to the professorship and actively networking to establish their name and build a strong research team.",
+    "positioning": "I'm Kai Pereira, an Assistant Professor at Carnegie Mellon University\u2019s School of Computer Science, where I lead the Secure AI Lab. My research centers on the intersection of artificial intelligence and cybersecurity, with a particular emphasis on the robustness and security of large language models (LLMs). Prior to joining CMU, I completed a postdoctoral fellowship at MIT\u2019s CSAIL, focusing on developing novel adversarial attack and defense mechanisms for deep learning systems. \n\nMy background is somewhat unique \u2013 I spent several years as a red team consultant, performing penetration testing and vulnerability assessments for Fortune 500 companies. This experience instilled in me a deeply pragmatic understanding of real-world security threats, which I now apply to the challenges posed by increasingly sophisticated AI systems. I believe a proactive, 'attacker's perspective' is crucial for building truly secure and reliable AI.\n\nCurrently, I\u2019m focused on securing LLMs against prompt injection attacks, data poisoning, and model stealing. I\u2019m also exploring techniques for verifiable AI and developing methods to detect and mitigate bias in AI systems. I'm eager to collaborate with researchers and industry professionals who share a commitment to responsible AI development. \n\nI\u2019m actively building my research group at CMU and seeking motivated PhD students and postdoctoral fellows. I\u2019m particularly interested in candidates with strong backgrounds in machine learning, cybersecurity, and formal methods.  I\u2019m excited about the potential of AI to solve complex problems, but only if we address the inherent security risks proactively.",
+    "background": "- **Assistant Professor, Carnegie Mellon University (2023 \u2013 Present):** Leading the Secure AI Lab, responsible for research direction, grant writing, student mentorship, and course development. Currently teaching a graduate-level course on AI Security.\n- **Postdoctoral Fellow, MIT Computer Science and Artificial Intelligence Laboratory (CSAIL) (2021 \u2013 2023):** Researched adversarial machine learning, focusing on developing robust defense mechanisms against adversarial attacks on deep learning models. Published multiple papers in top-tier AI conferences (NeurIPS, ICML, ICLR).\n- **Red Team Consultant, SecureTech Solutions (2018 \u2013 2021):** Performed penetration testing, vulnerability assessments, and security audits for a diverse range of clients, including financial institutions, healthcare providers, and government agencies. Led several high-impact security engagements and consistently exceeded client expectations. Company size: 50-100 employees.\n- **Education:** PhD in Computer Science, Stanford University (2018). Dissertation: \u201cAdversarial Robustness in Deep Learning: Attacks, Defenses, and Theoretical Foundations.\u201d GPA: 3.9/4.0\n- **Education:** MS in Computer Science, Stanford University (2015). GPA: 3.8/4.0\n- **Education:** BS in Computer Science, University of California, Berkeley (2013). GPA: 3.7/4.0, *Summa Cum Laude* \n- **Skills:** Machine Learning (Deep Learning, Reinforcement Learning, Generative Models), Cybersecurity (Penetration Testing, Vulnerability Analysis, Cryptography), Programming (Python, TensorFlow, PyTorch, C++), Formal Methods, Data Analysis, Statistical Modeling, Scientific Writing, Grant Proposal Writing.\n- **Publications:** Authored 15+ peer-reviewed publications in leading AI and cybersecurity conferences and journals. (Full list available on Google Scholar: [fictional Google Scholar link]).\n- **Awards & Recognition:**  MIT CSAIL Postdoctoral Fellowship (2021), Stanford Graduate Fellowship (2013-2018), Best Paper Award at ICML Workshop on Security in Machine Learning (2022).\n- **Projects:** Developed a novel adversarial attack algorithm that significantly reduces the robustness of LLMs against prompt injection attacks (published at NeurIPS 2023). Led a project to develop a verifiable AI framework for ensuring the integrity of machine learning models (ongoing).\n- **Certifications:** Certified Ethical Hacker (CEH), Offensive Security Certified Professional (OSCP).",
+    "lookingFor": "I\u2019m actively seeking collaborations and connections within both academia and industry. My primary goal is to build a strong and impactful research program at CMU, and that requires a diverse network of collaborators. \n\nI'm particularly interested in connecting with:\n- **Industry Researchers:** Individuals working on the practical security challenges of deploying LLMs in real-world applications. I'm looking for opportunities to translate my research into tangible solutions for industry partners.\n- **Founders of AI Startups:**  Especially those focused on LLMs, generative AI, or AI security. I\u2019m open to discussing potential research collaborations, advisory roles, and investment opportunities. Company stage: Seed to Series A.\n- **Academic Researchers:** Colleagues working on related topics in AI security, adversarial machine learning, formal methods, and privacy-preserving AI. I'm interested in joint research projects, co-authored publications, and student exchanges.\n- **Investors:** Venture capitalists and angel investors interested in supporting early-stage AI security companies. I\u2019m seeking funding for my research projects and can provide technical due diligence on potential investments.\n\nI\u2019m also open to mentoring aspiring AI researchers and providing guidance to students interested in pursuing careers in this field. I'm looking to build a diverse and inclusive research group at CMU.  I'm particularly keen on connecting with individuals who are passionate about responsible AI development and committed to addressing the ethical challenges posed by AI technologies.  I am also seeking connections with individuals who have experience navigating the grant application process for NSF and DARPA funding.",
+    "notes": "Spoke with Anya Sharma (Head of AI Security at LexiCorp) last week. She\u2019s very interested in our prompt injection defense work. Follow up to schedule a demo of our prototype. \n\nMet Dr. Ben Carter (Professor at Stanford) at NeurIPS. He suggested I connect with his former student, David Lee, who\u2019s now a research scientist at Google Brain. Will reach out to David. \n\nReceived an email from a recruiter at a cybersecurity firm. They're looking for AI security experts, but the role seems heavily focused on incident response, which isn't my area of expertise.  Politely declined.\n\nNeed to remember Kai prefers direct communication and dislikes lengthy email chains.  Mentioned he\u2019s a big fan of concise summaries and actionable insights.\n\nHe's currently applying for an NSF grant and is stressed about the deadline.  Offer support if possible. He's also mentioned a desire to attend the Black Hat conference this year.",
+    "locationAvailability": "Located in Pittsburgh, PA, but open to remote collaborations and virtual meetings.",
+    "introPreferences": "When making introductions, please prioritize individuals who are actively working on the security of large language models or have a strong interest in this area. I'm specifically looking for introductions to:\n- **Technical Leaders at Companies Deploying LLMs:** Individuals with decision-making authority regarding AI security investments.\n- **Researchers with Expertise in Formal Verification:**  Especially those working on applying formal methods to AI systems.\n- **Program Managers at DARPA and NSF:** Individuals responsible for funding AI security research.\n\n**Hard Requirements:**\n- The individual should have a strong technical background in either AI or cybersecurity.\n- The individual should be open to discussing research collaborations or potential partnerships.\n\n**Soft Preferences:**\n- The individual should have a demonstrated track record of innovation and leadership.\n- The individual should be passionate about responsible AI development.\n\nAvoid introducing me to individuals who are solely focused on AI marketing or sales \u2013 I\u2019m looking for technical experts and researchers.",
+    "personalPreferences": "I prefer concise and direct communication. I'm a big fan of bullet points and clear summaries. I respond quickly to emails and am always happy to jump on a quick call to discuss potential collaborations.  I prefer asynchronous communication when possible to allow for focused work time.",
+    "meetingAndSchedulingPreferences": "I typically prefer 30-minute virtual meetings to discuss initial collaborations. Please send a calendar invite with a brief agenda.  I'm generally available during weekday afternoons (EST).  I value preparation for meetings \u2013 please come prepared with specific questions or ideas to discuss. I will always send a brief follow-up email summarizing key takeaways and action items."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 29.079431772232056,
+      "input_tokens": 786,
+      "output_tokens": 1730,
+      "problems": [
+        "background: possible truncation (ends with '...ation, hypothesis testing')"
+      ]
+    },
+    {
+      "attempt": 2,
+      "elapsed_s": 28.94806671142578,
+      "input_tokens": 786,
+      "output_tokens": 1949,
+      "problems": []
+    }
+  ],
+  "success": true
+}

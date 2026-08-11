@@ -1,0 +1,54 @@
+{
+  "id": 229,
+  "archetype": "Student Founder - Campus Community Focus",
+  "given_name": "Javier Patel",
+  "style_version": 14,
+  "archetypes_version": 38,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Javier Patel is a 22-year-old recent graduate from MIT, currently running 'CampusConnect', a platform designed to facilitate micro-communities within universities based around shared interests (think: hiking clubs, study groups, volunteer organizations). He's self-funded so far, relying on a small seed investment from a family friend. He\u2019s *extremely* focused on scaling within the Ivy League schools first, believing that success there will unlock broader adoption. He\u2019s a classic \u2018hustler\u2019 \u2013 very energetic, data-driven, and constantly seeking advice from more experienced founders. A distinctive detail: Javier actively participates in and *organizes* the communities on his platform to maintain genuine user engagement and gather feedback. He\u2019s slightly wary of overly formal networking, preferring authentic connections with people who understand the challenges of building a community from the ground up.",
+    "positioning": "Javier Patel is the Founder and CEO of CampusConnect, a platform empowering students to create and join hyper-local communities within their universities. We're focused on solving the problem of fragmented campus life by providing a centralized hub for interest-based groups and activities. Recently, we launched a beta program at Brown University with promising early engagement metrics. I'm actively seeking connections with experienced founders, investors specializing in early-stage EdTech, and individuals with expertise in community building and user growth, particularly within the higher education space. My goal is to scale CampusConnect rapidly and become the leading platform for fostering vibrant campus communities.",
+    "background": "- **Founder & CEO, CampusConnect** (Jan 2023 \u2013 Present)\n  * Led all aspects of product development, marketing, and user acquisition.\n  * Secured initial seed funding of $25,000.\n  * Launched beta program at Brown University, achieving 20% student adoption within the first month.\n  * Personally moderate and actively participate in 5+ CampusConnect communities to drive engagement and gather user feedback.\n- **Software Engineering Intern, Google** (Summer 2022)\n  * Developed and tested features for Google Maps using Python and JavaScript.\n  * Collaborated with a team of engineers on a large-scale project.\n- **Research Assistant, MIT Media Lab** (Sept 2021 \u2013 May 2022)\n  * Assisted Professor Rosalind Picard with research on affective computing.\n  * Contributed to the development of a novel emotion recognition algorithm.\n- **Education:** Massachusetts Institute of Technology (MIT) \u2013 Bachelor of Science in Computer Science (May 2023), GPA: 3.9/4.0, *Magna Cum Laude*.\n- **Skills:** Python, JavaScript, React, Node.js, SQL, Data Analysis, User Experience (UX) Design, Community Management, Project Management, Public Speaking.\n- **Awards & Recognition:** MIT Dean's List (all semesters), HackMIT Finalist (2021).",
+    "lookingFor": "I'm specifically looking to connect with:\n- **Seed-stage investors** focused on EdTech or community-driven platforms.\n- **Founders** who have successfully scaled early-stage startups, particularly in the university/student market. I'm keen to learn from your experiences.\n- **Marketing professionals** with expertise in user acquisition and growth hacking for mobile apps.\n- **Individuals with experience building and managing online communities** \u2013 I\u2019m always looking for ways to improve engagement and retention.\n\nI'm open to informational interviews, mentorship opportunities, and potential collaborations. I'm also actively seeking introductions to relevant individuals within the venture capital and EdTech ecosystems. Ideally, I'd like to connect with people who have a genuine interest in supporting student entrepreneurship and building positive campus communities.",
+    "notes": "Javier is *very* responsive and enthusiastic. He\u2019s particularly excited about the potential for CampusConnect to address student mental health through stronger community connections. He mentioned a slight concern about maintaining authenticity as the platform scales \u2013 he\u2019s determined not to let it become \u2018just another social media app\u2019. He's currently working on a pitch deck for a larger seed round. Follow-up on his request for an introduction to Sarah Chen at Amplify Ventures.",
+    "locationAvailability": "Javier Patel is based in Boston, MA, and is primarily focused on networking opportunities within the Northeast region, especially around major university hubs.",
+    "introPreferences": "Hard Requirements:\n* Prioritize introductions to investors actively deploying capital in the EdTech space \u2013 pre-seed and seed stage.\n* Ensure the introduction highlights CampusConnect\u2019s focus on *hyper-local* communities and our early traction at Brown University.\n\nSoft Preferences:\n* Introductions to founders who have built and scaled platforms targeting Gen Z are highly valuable.\n* I prefer introductions that are concise and clearly articulate the potential synergy between my work and the recipient's expertise. Avoid lengthy email chains.\n* Please avoid introducing me to individuals solely focused on enterprise solutions \u2013 my target market is exclusively students.",
+    "personalPreferences": "I generally respond quickest to messages on LinkedIn or email. Please avoid contacting me via phone unless previously arranged. I'm happy to jump on a quick video call but prefer initial contact through written communication.",
+    "meetingAndSchedulingPreferences": "I'm generally available for meetings during weekday afternoons (EST). I prefer 30-minute video calls and am comfortable using Google Meet, Zoom, or Microsoft Teams. Please send a calendar invite with a clear agenda."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 21.60173535346985,
+      "input_tokens": 753,
+      "output_tokens": 1164,
+      "problems": []
+    }
+  ],
+  "success": true
+}

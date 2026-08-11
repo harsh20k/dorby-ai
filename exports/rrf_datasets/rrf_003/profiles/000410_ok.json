@@ -1,0 +1,54 @@
+{
+  "id": 410,
+  "archetype": "European Cybersecurity Professional",
+  "given_name": "Felix Eriksson",
+  "style_version": 25,
+  "archetypes_version": 68,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Felix Eriksson is a 28-year-old Swedish cybersecurity engineer with a recent PhD in applied cryptography from KTH Royal Institute of Technology. He's highly skilled in penetration testing, threat modeling, and incident response, but his distinctive career detail is a year spent as a 'red team' consultant for a major Scandinavian bank *before* finishing his PhD. This experience gave him a very practical understanding of real-world vulnerabilities and a frustration with the slow pace of traditional security implementations. He\u2019s now the founder and CEO of 'Aegis Insights,' a pre-seed cybersecurity startup focused on automated vulnerability discovery using AI-powered fuzzing techniques, specifically targeting embedded systems in the automotive industry. He's seeking seed funding and strategic partnerships to scale his solution, and is prioritizing a move to Berlin to tap into the German automotive tech ecosystem. He's highly technical, direct, and values efficiency in communication. He's also very focused on building a strong engineering team.",
+    "positioning": "Aegis Insights is revolutionizing automotive cybersecurity by proactively identifying vulnerabilities *before* they can be exploited. Our AI-powered fuzzing platform automatically discovers hidden flaws in embedded systems, dramatically reducing the risk of costly recalls and reputational damage. We\u2019re targeting Tier 1 automotive suppliers and OEMs, offering a cost-effective solution that integrates seamlessly into existing development workflows. Currently, we\u2019re completing a successful pilot program with a leading Swedish automotive component manufacturer, demonstrating a 30% increase in vulnerability detection compared to traditional methods. We've built a minimum viable product and are now focused on securing seed funding to expand our engineering team and accelerate product development. We believe proactive security is no longer a luxury, but a necessity in the rapidly evolving automotive landscape.",
+    "background": "- **Founder & CEO, Aegis Insights** (2023 \u2013 Present)\n  * Led all aspects of company formation, including business plan development, fundraising strategy, and product roadmap.\n  * Developed and refined the core AI-powered fuzzing technology, resulting in a demonstrable increase in vulnerability detection rates.\n  * Secured pilot program with a major Swedish automotive component manufacturer, validating the product's market potential.\n  * Built and managed a small team of early-stage engineers.\n\n- **Red Team Consultant, Nordea Bank** (2021 \u2013 2022)\n  * Conducted comprehensive penetration testing and vulnerability assessments across critical banking infrastructure.\n  * Developed and executed realistic attack simulations to identify weaknesses in security controls.\n  * Provided detailed reports and remediation recommendations to improve the bank\u2019s security posture.\n  * Gained invaluable practical experience in identifying and exploiting real-world vulnerabilities.\n\n- **PhD Candidate, Applied Cryptography, KTH Royal Institute of Technology** (2018 \u2013 2023)\n  * Dissertation: \u201cNovel Applications of Fuzzing Techniques in Cryptographic Protocol Verification.\u201d\n  * Conducted research on advanced fuzzing methodologies and their application to cryptographic systems.\n  * Published research papers in leading cybersecurity conferences (e.g., Black Hat, USENIX Security).\n  * Developed and implemented novel algorithms for vulnerability discovery.\n\n- **Security Analyst Intern, Ericsson** (Summer 2017)\n  * Assisted in the analysis of network traffic and security logs.\n  * Participated in vulnerability assessments and incident response activities.\n  * Gained experience with security tools and technologies.\n\n- **M.Sc. in Computer Science, KTH Royal Institute of Technology** (2016 \u2013 2018)\n- **B.Sc. in Computer Science, Uppsala University** (2013 \u2013 2016)\n\n**Skills:** Penetration Testing, Fuzzing, Vulnerability Assessment, Threat Modeling, Incident Response, Cryptography, Python, C++, Linux, Reverse Engineering, AI/ML (basic), Automotive Security (CAN bus, AUTOSAR).",
+    "lookingFor": "We are currently raising a \u20ac750,000 seed round to accelerate product development and expand our engineering team. Specifically, we are looking for:\n\n* **Seed-stage Venture Capital Firms:** Focused on cybersecurity, AI, or automotive technology. We\u2019re open to firms with a European presence and a strong track record of supporting early-stage startups.\n* **Strategic Investors:** Automotive OEMs or Tier 1 suppliers interested in partnering to integrate our technology into their development processes.\n* **Experienced Software Engineers:** Specifically, we're seeking engineers with strong C++ and Python skills, and a passion for cybersecurity. Experience with embedded systems and fuzzing is a significant plus. We need at least two senior-level engineers and one mid-level engineer.\n* **Advisors:** Individuals with deep expertise in automotive cybersecurity and/or AI-powered security solutions. \n\nWe are particularly interested in establishing a presence in Berlin to leverage the city\u2019s thriving automotive tech ecosystem.",
+    "notes": "Spoke with Lars Schmidt at Innovation Foundry on 2024-02-15. He expressed interest but wants to see more traction. Need to send him the pilot program results ASAP. \n\n* **Action Item:** Follow up with Lars Schmidt by 2024-02-22. \n* **Potential Issue:** Our current server infrastructure is reaching capacity. Need to allocate budget for scaling. \n* **Key Relationship:** Maintaining a strong relationship with Johan Karlsson at Volvo is crucial for future partnerships.\n\nRecent LinkedIn data suggests a high demand for cybersecurity engineers in Berlin. This validates our decision to prioritize expansion there. We need to refine our recruitment strategy to target candidates in the region. There's also a potential discrepancy in the reported vulnerability detection rate \u2013 need to double-check the methodology used in the pilot program.",
+    "locationAvailability": "Based in Stockholm, Sweden, with planned expansion to Berlin, Germany.",
+    "introPreferences": "I\u2019m always open to connecting with investors and potential partners in the automotive and cybersecurity spaces. \n\n* **Hard Requirements:** Please introduce me as the Founder & CEO of Aegis Insights, a company developing AI-powered vulnerability discovery for automotive embedded systems. Emphasize our pilot program success and the potential for significant ROI.\n* **Soft Preferences:** Introductions to individuals with a technical background are preferred. I appreciate concise and direct communication.\n* **Avoid:** Please do *not* introduce me to individuals solely focused on blockchain or cryptocurrency \u2013 it\u2019s not relevant to our business. Avoid introductions to generalist investors without specific interest in cybersecurity or automotive tech. \n\nI'm particularly interested in connecting with individuals at Bosch, Continental, and Volkswagen.",
+    "personalPreferences": "I prefer email for initial communication. I'm generally available for calls after 10:00 AM CET. I'm a fan of concise, data-driven conversations.",
+    "meetingAndSchedulingPreferences": "I prefer short, focused meetings (30 minutes max). Please send a brief agenda beforehand. Follow-up emails summarizing key takeaways are appreciated."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 26.3139750957489,
+      "input_tokens": 762,
+      "output_tokens": 1495,
+      "problems": []
+    }
+  ],
+  "success": true
+}

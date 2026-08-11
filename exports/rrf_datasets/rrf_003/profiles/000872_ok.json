@@ -1,0 +1,54 @@
+{
+  "id": 872,
+  "archetype": "Quant Finance Founder/Operator",
+  "given_name": "Chidi Volkov",
+  "style_version": 53,
+  "archetypes_version": 147,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Chidi Volkov is a 38-year-old founder who previously spent a decade as a quantitative researcher at a prominent systematic hedge fund. He specialized in applying machine learning to options pricing and volatility prediction. He left to found 'Numerai Insights', a fintech startup offering AI-powered risk analytics to smaller hedge funds and family offices who can't afford in-house quant teams. He's currently focused on scaling Numerai Insights, securing a Series A round, and expanding their model coverage beyond equities into fixed income and FX. He's deeply technical but understands the business side, and is looking for connections that can help with fundraising, strategic partnerships (especially data providers), and attracting top engineering talent. He\u2019s slightly skeptical of 'hype' and prioritizes demonstrable results.",
+    "positioning": "Chidi Volkov is the Founder and CEO of Numerai Insights, a fintech company democratizing access to sophisticated quantitative risk analytics. Leveraging a decade of experience building and deploying machine learning models at Renaissance Technologies, Chidi leads a team focused on delivering actionable insights to hedge funds and family offices. Numerai Insights\u2019 core offering utilizes proprietary algorithms to identify and quantify hidden risks, providing a competitive edge in today's volatile markets. Currently, we are focused on expanding our model suite to include fixed income and FX, and seeking strategic partnerships to accelerate growth. I'm particularly interested in connecting with investors who understand the power of data-driven decision-making and operators who have successfully scaled similar businesses.",
+    "background": "- **Founder & CEO, Numerai Insights** (2021 \u2013 Present)\n  * Led all aspects of company formation, product development, fundraising, and team building.\n  * Developed and deployed proprietary machine learning models for risk analytics, resulting in a demonstrable improvement in client portfolio performance.\n  * Secured seed funding of $3M from leading fintech venture capital firms.\n  * Built a team of 8 data scientists and engineers.\n\n- **Quantitative Researcher, Renaissance Technologies** (2013 \u2013 2021)\n  * Conducted research in statistical arbitrage, options pricing, and volatility forecasting.\n  * Developed and backtested algorithmic trading strategies, resulting in significant P&L contributions.\n  * Implemented and maintained large-scale data pipelines using Python, SQL, and cloud technologies (AWS).\n  * Collaborated with a team of world-class mathematicians, physicists, and computer scientists.\n\n- **Education:**\n  * PhD, Financial Engineering, Columbia University (2013)\n  * MS, Mathematics, Massachusetts Institute of Technology (2009)\n  * BS, Mathematics & Computer Science, Stanford University (2007)\n\n- **Skills:** Python, SQL, Machine Learning (Regression, Classification, Time Series Analysis, Deep Learning), Statistical Modeling, Data Visualization (Tableau, matplotlib), Cloud Computing (AWS), Options Pricing, Risk Management, Algorithmic Trading, Financial Modeling, C++ (proficient but not current).",
+    "lookingFor": "- **Investors:** Seeking Series A funding ($8-12M) to accelerate product development and expand sales & marketing efforts.\n- **Strategic Partners:** Interested in exploring partnerships with data providers (alternative data preferred) and technology vendors.\n- **Engineering Talent:** Actively recruiting experienced machine learning engineers and data scientists with a strong background in finance.\n- **Advisors:** Seeking mentorship from experienced fintech entrepreneurs and industry veterans.\n- **Hedge Fund Managers/CIOs:**  Interested in discussing potential pilot programs and feedback on our risk analytics platform.\n- **Family Office Executives:**  Exploring opportunities to provide tailored risk management solutions.\n- **Connections to potential clients:** Specifically, smaller hedge funds (<$500M AUM) and multi-family offices.",
+    "notes": "- Chidi is highly focused on building a sustainable, long-term business, not chasing short-term gains.\n- He recently presented at the AI in Finance Summit in New York and received positive feedback on Numerai Insights\u2019 approach.\n- He is currently prioritizing building out the fixed income modeling capabilities of the platform.\n- He is wary of overly optimistic or unsubstantiated claims regarding AI performance.",
+    "locationAvailability": "Chidi Volkov is currently based in New York City and is open to occasional travel for meetings and conferences. He is not actively seeking relocation at this time.",
+    "introPreferences": "- **Hard Requirements:** Introductions should be to individuals with demonstrable experience in fintech, venture capital, or quantitative finance.\n- **Hard Requirements:** Please provide context on *why* you think an introduction would be mutually beneficial \u2013 a short note explaining the connection is greatly appreciated.\n- **Soft Preferences:**  I prefer introductions to individuals who are decision-makers or key influencers within their organizations.\n- **Soft Preferences:**  Avoid introductions to individuals solely focused on sales or marketing \u2013 I'm primarily interested in strategic partnerships and investment opportunities.\n- **Avoid:** Cold introductions via LinkedIn message - a warm introduction is significantly more effective.\n- **Best Approach:** A brief email introduction with a clear value proposition for both parties.",
+    "personalPreferences": "I prefer direct and concise communication. I\u2019m most responsive to email. I appreciate thoughtful questions and a data-driven approach to discussions.",
+    "meetingAndSchedulingPreferences": "- Please share a brief agenda in advance of any scheduled meetings.\n- I typically prefer 30-60 minute meetings.\n- Following up with a concise summary of key takeaways is always appreciated."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 15.970979928970337,
+      "input_tokens": 738,
+      "output_tokens": 1160,
+      "problems": []
+    }
+  ],
+  "success": true
+}

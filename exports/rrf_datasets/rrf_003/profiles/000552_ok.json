@@ -1,0 +1,54 @@
+{
+  "id": 552,
+  "archetype": "Serial Founder, Global Operator",
+  "given_name": "Javier Mahmoud",
+  "style_version": 34,
+  "archetypes_version": 92,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Javier Mahmoud is a seasoned serial entrepreneur with a focus on scaling tech companies, particularly in the logistics and supply chain space. He's had two successful exits \u2013 one a last-mile delivery platform sold to a private equity firm, and another a SaaS inventory management solution acquired by Oracle. His distinctive career detail is his consistent ability to bridge the gap between North American and European markets, having lived and built teams on both continents. He's currently building a venture studio focused on pre-seed/seed stage companies addressing inefficiencies in global trade, specifically looking at blockchain-based solutions for provenance and financing. He\u2019s less interested in pure tech and more focused on deeply understanding and solving operational problems. He\u2019s a direct communicator, values efficiency, and isn\u2019t afraid to challenge conventional wisdom.",
+    "positioning": "Javier Mahmoud is a venture builder and operator specializing in the future of global supply chains. Having successfully founded and exited companies in both North America and Europe, I bring a unique perspective to identifying and scaling high-potential ventures. Currently, I\u2019m leading a venture studio focused on pre-seed and seed-stage opportunities leveraging blockchain and data analytics to optimize international trade. I'm passionate about building resilient, transparent, and efficient systems that connect businesses across borders. My experience centers around building high-performing teams and navigating complex regulatory landscapes, delivering measurable value to investors and customers.",
+    "background": "* **Founder & CEO, Nova Logistics (2018-2022):** Led the development and sale of a last-mile delivery platform to Sentinel Capital Partners.\n* **Founder & CEO, ChainSafe Solutions (2014-2018):** Built and exited a SaaS inventory management solution acquired by Oracle.\n* **VP, Operations, GlobalTech Industries (2010-2014):** Oversaw European operations, driving 30% YoY revenue growth.\n* **Director, Business Development, Transcontinental Freight (2007-2010):** Expanded market share in emerging European markets.\n* **Consultant, McKinsey & Company (2005-2007):** Focused on supply chain optimization for Fortune 500 clients.\n* **MBA, Stanford Graduate School of Business (2003-2005):** Concentration in Strategy and Operations.\n* **BS, Engineering, Massachusetts Institute of Technology (1999-2003):** Major in Mechanical Engineering, Minor in Economics.\n* **Led cross-functional teams of 50+ engineers, product managers, and marketers.**\n* **Secured $25M+ in venture capital funding across multiple ventures.**\n* **Experienced in navigating complex international trade regulations (US, EU, Asia).**\n* **Proficient in Lean Startup methodologies and Agile development.**\n* **Deep understanding of blockchain technologies and their applications in supply chain management.**\n* **Fluent in English, Spanish, and German.**",
+    "lookingFor": "* **Pre-seed/Seed Stage Founders:** Building innovative solutions in global trade, supply chain, and logistics.\n* **Blockchain Developers:** Experienced in building and deploying decentralized applications (dApps) on platforms like Ethereum and Hyperledger.\n* **Supply Chain Experts:** Individuals with deep domain knowledge of international trade finance, customs brokerage, and logistics operations.\n* **Early-Stage Investors:** Venture capitalists and angel investors focused on pre-seed and seed-stage opportunities in the supply chain tech space.\n* **Strategic Partners:** Companies with complementary technologies or market access in the logistics and trade sectors.\n* **Mentors:** Experienced entrepreneurs who have successfully scaled companies in international markets.\n* **I'm open to discussing potential advisory roles for promising startups.**\n* **Specifically interested in companies addressing provenance, financing gaps, and risk mitigation in global trade.**",
+    "notes": "* Javier is very direct and values efficiency in communication. Avoid lengthy introductions \u2013 get straight to the point.\n* He recently participated in the Supply Chain Innovation Summit in Berlin and is actively exploring opportunities in the DACH region.\n* He's a member of the Global Supply Chain Council and frequently shares insights on LinkedIn.\n* He's less interested in 'disruptive' technologies for the sake of disruption and more focused on solutions with demonstrable ROI.\n* He\u2019s been known to quickly dismiss pitches that lack a clear understanding of operational challenges.",
+    "locationAvailability": "Based in London, UK, with frequent travel to the US. Open to remote meetings.",
+    "introPreferences": "* **Ideal Introductions:** Founders with proven traction and a clear understanding of the supply chain landscape.\n* **Must-Have:** A concise pitch deck outlining the problem, solution, market opportunity, and team.\n* **Strongly Preferred:** Individuals with experience scaling companies in both North America and Europe.\n* **Avoid:** Introductions to consultants offering generic services \u2013 I'm looking for operators, not advisors.\n* **Do Not Introduce:** Individuals pitching purely speculative blockchain projects without a clear use case.\n* **Introduction Style:** Keep it brief and focused. Highlight the individual's relevant experience and why they would be a good fit for my venture studio.\n* **Preferred Background:** Individuals who have built and scaled successful tech companies.\n* **Stage Preference:** Pre-seed and Seed stage, although will consider very early Series A.\n* **I'm not currently looking for investment opportunities outside of the supply chain/logistics space.**",
+    "personalPreferences": "I prefer email for initial contact. I'm a fairly direct communicator and value concise messaging. I'm generally available for short calls to discuss potential opportunities.",
+    "meetingAndSchedulingPreferences": "I typically schedule 30-minute introductory calls. Please include a brief agenda when requesting a meeting."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 17.29605484008789,
+      "input_tokens": 764,
+      "output_tokens": 1223,
+      "problems": []
+    }
+  ],
+  "success": true
+}

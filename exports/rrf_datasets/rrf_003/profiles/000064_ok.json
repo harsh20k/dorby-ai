@@ -1,0 +1,54 @@
+{
+  "id": 64,
+  "archetype": "Bootstrapped AI Founder, Global Nomad",
+  "given_name": "Mateus Kimura",
+  "style_version": 4,
+  "archetypes_version": 11,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Mateus Kimura is a 34-year-old, Brazilian-Japanese founder currently bootstrapping 'SynapseFlow,' an AI-powered workflow automation tool specifically for remote marketing teams. He's a serial entrepreneur; his first venture, a sustainable tourism platform in Brazil, failed spectacularly but taught him invaluable lessons about lean startup methodology and the importance of a strong tech foundation. He's intentionally location-independent, currently based in Lisbon but frequently traveling. He's deeply technical, having taught himself significant coding skills alongside his business studies, and prioritizes building a *useful* product over chasing hype. He\u2019s looking for early adopters, strategic advisors with experience scaling SaaS products, and potential channel partners who serve the remote work space. He's a direct communicator, values efficiency, and isn\u2019t afraid to ask for help, but is very careful about who he trusts with his time.",
+    "positioning": "I'm the founder of SynapseFlow, an AI-powered workflow automation tool designed to streamline marketing operations for fully remote teams. We're tackling the challenge of fragmented communication and duplicated effort that plagues distributed marketing departments, offering a centralized platform to orchestrate campaigns, manage content, and track performance. SynapseFlow leverages generative AI to automate repetitive tasks like social media scheduling, report generation, and even initial draft content creation, freeing up marketers to focus on strategy and creativity. We\u2019ve recently launched a beta program with promising early results showing a 20% increase in team productivity for our initial users. I\u2019m passionate about building tools that empower remote workers and believe AI can be a powerful enabler for a more flexible and efficient future of work.",
+    "background": "- **2023 - Present: Founder & CEO, SynapseFlow (Lisbon, Portugal)**: Leading all aspects of product development, fundraising, marketing, and sales for an AI-powered workflow automation platform. Responsible for initial architecture, development of core AI models (using Python and TensorFlow), and securing early beta customers.\n- **2018 - 2022: Founder & CEO, EcoExplore (Rio de Janeiro, Brazil)**: Conceptualized and launched a sustainable tourism platform connecting travelers with local eco-friendly experiences. Managed a team of 10, oversaw marketing and operations, and secured seed funding of $50,000. Ultimately, the venture faced challenges related to scalability and competition, leading to closure in 2022.\n- **2016 - 2018: Marketing Consultant, Freelance (Remote)**: Provided digital marketing services to small and medium-sized businesses, specializing in SEO, social media marketing, and content creation. Increased client website traffic by an average of 30% within six months.\n- **2012 - 2016: Bachelor of Business Administration, Funda\u00e7\u00e3o Getulio Vargas (FGV) - Rio de Janeiro, Brazil**: Graduated with honors. Focused coursework on entrepreneurship, marketing, and data analytics. Completed a semester abroad at the University of California, Berkeley.\n- **Certifications**: Google Analytics Individual Qualification, HubSpot Inbound Marketing Certification\n- During EcoExplore, aggressively adopted and became proficient in no-code tools like Bubble and Zapier to quickly iterate and build MVPs, recognizing the need for rapid prototyping.\n- Consistently self-taught in programming languages relevant to AI/ML, including Python, JavaScript, and basic TensorFlow.",
+    "lookingFor": "- Introductions to VCs focused on early-stage SaaS and AI startups (Series Seed/A).\n- Beta users: Marketing managers and directors at remote-first companies with teams of 5-20.\n- Strategic advisors with experience scaling SaaS businesses, particularly within the marketing tech space.\n- Potential channel partners: Agencies specializing in remote work solutions or marketing automation.\n- Connections to AI/ML engineers with experience in workflow automation and natural language processing (contract or full-time).\n- Introductions to thought leaders in the remote work/distributed teams space for potential content collaboration.\n- Feedback on SynapseFlow\u2019s beta version - specifically usability and feature prioritization.\n- Warm introductions to relevant industry publications for potential press coverage.",
+    "notes": "- Mateus is extremely responsive but prefers concise communication. Avoid lengthy emails.\n- He\u2019s very protective of his time and will quickly assess if a connection is valuable.\n- He recently mentioned struggling with user acquisition and is actively seeking cost-effective marketing strategies.\n- He\u2019s open to advisory support but wary of unsolicited advice \u2013 prefers a collaborative approach.\n- He\u2019s currently exploring integrations with Slack and Asana.\n- He\u2019s a strong advocate for the benefits of remote work and enjoys discussing the future of work.",
+    "locationAvailability": "Currently based in Lisbon, Portugal, but frequently travels. Fully remote work is preferred and I\u2019m open to exploring opportunities globally.",
+    "introPreferences": "- **Must-Have**: Individuals with demonstrable experience in scaling SaaS products.\n- **Strongly Preferred**: Connections at companies actively utilizing marketing automation tools.\n- **Dealbreaker**: Individuals solely focused on selling me services \u2013 I\u2019m looking for genuine collaboration.\n- **Framing**: Please emphasize my focus on *practical* AI solutions for remote marketing teams, not just hype.\n- **Connection Level**: Ideally, introductions to Directors, VPs, or C-level executives.\n- **Avoid**: Recruiters \u2013 I\u2019m not currently hiring.\n- **Bonus**: Individuals with a strong network within the remote work community.",
+    "personalPreferences": "I prefer direct and efficient communication. Feel free to reach out via LinkedIn or email, but please keep messages concise and to the point. I'm generally available for short video calls.",
+    "meetingAndSchedulingPreferences": "I prefer using Calendly for scheduling meetings. Happy to connect via Zoom or Google Meet. Please share a brief agenda beforehand to ensure we make the most of our time."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 20.077128887176514,
+      "input_tokens": 850,
+      "output_tokens": 1240,
+      "problems": []
+    }
+  ],
+  "success": true
+}

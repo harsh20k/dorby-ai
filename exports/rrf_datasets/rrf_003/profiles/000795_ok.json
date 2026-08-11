@@ -1,0 +1,54 @@
+{
+  "id": 795,
+  "archetype": "Ex-Big Tech, Founder Pivot",
+  "given_name": "Malia Haddad",
+  "style_version": 49,
+  "archetypes_version": 134,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Malia Haddad is a former Senior Machine Learning Scientist at Autodesk, specializing in generative design algorithms. She left to found 'FormFlow AI', a startup focused on applying generative AI to optimize supply chain logistics \u2013 specifically, packaging design to reduce waste and shipping costs. She\u2019s highly technical, but now needs to build a network of potential clients (CPG companies, logistics firms) and investors. Her distinctive career detail is her deep understanding of both the creative *and* technical sides of design, which she leverages to explain the value of her AI solutions to non-technical stakeholders. She\u2019s looking for seed funding and early adopters. She\u2019s very focused on sustainability as a core value proposition.",
+    "positioning": "As Founder and CEO of FormFlow AI, I\u2019m revolutionizing supply chain efficiency through the power of generative artificial intelligence. We specialize in optimizing packaging design \u2013 a traditionally iterative and wasteful process \u2013 by leveraging advanced algorithms to create designs that minimize material usage, reduce shipping volume, and enhance product protection. My background as a Senior Machine Learning Scientist at Autodesk instilled in me a deep understanding of both the technical possibilities and the creative constraints inherent in design.  We're not just building software; we're building a more sustainable future for logistics.  FormFlow AI targets CPG companies, e-commerce fulfillment centers, and logistics providers seeking to reduce their environmental impact and operational costs.  Our approach moves beyond simple cost reduction to provide a quantifiable, data-driven path towards circular economy principles within packaging and distribution. We offer a SaaS platform with API integration for seamless workflow integration and custom algorithm development for unique client needs.  We\u2019re particularly adept at handling complex geometric constraints and material properties, delivering solutions others struggle to achieve.",
+    "background": "* **FormFlow AI, Founder & CEO** (2023 \u2013 Present)\n    * Led all aspects of startup development, including product vision, fundraising (seed round in progress), team building, and go-to-market strategy.\n    * Developed and implemented generative AI algorithms for packaging optimization, resulting in a demonstrated 15-20% reduction in material usage during beta testing.\n    * Secured initial pilot programs with two mid-sized CPG companies.\n    * Technologies: Python, TensorFlow, PyTorch, AWS (S3, EC2, Lambda), Docker, Kubernetes, PostgreSQL.\n* **Autodesk, Senior Machine Learning Scientist** (2018 \u2013 2023)\n    * Led the development of generative design algorithms for Autodesk Fusion 360, focusing on optimizing component geometry for additive manufacturing.\n    * Managed a team of 3 junior scientists, providing mentorship and guidance on research and development projects.\n    * Published 2 peer-reviewed papers on generative design and presented research at international conferences (SIGGRAPH, ICRA).\n    * Collaborated with product managers and engineers to integrate AI solutions into existing workflows.\n    * Company Size: 10,000+ employees\n    * Technologies: Python, C++, TensorFlow, CUDA, Git, Agile methodologies.\n* **Stanford University, Ph.D. in Computer Science (AI/Machine Learning)** (2014 \u2013 2018)\n    * Dissertation: \u201cConstrained Optimization with Generative Adversarial Networks for Complex Design Spaces.\u201d\n    * Relevant Coursework: Machine Learning, Deep Learning, Computer Vision, Robotics, Optimization.\n    * GPA: 3.9/4.0\n* **Massachusetts Institute of Technology (MIT), B.S. in Mechanical Engineering** (2010 \u2013 2014)\n    * Minor in Computer Science\n    * Relevant Coursework: CAD/CAM, Robotics, Control Systems, Data Structures and Algorithms.\n    * Dean\u2019s List all semesters.\n* **Skills:** Machine Learning, Deep Learning, Generative Design, Python, TensorFlow, PyTorch, AWS, Cloud Computing, Algorithm Development, Data Analysis, Optimization, Supply Chain Management, Packaging Design, C++, Git, Agile Development, Public Speaking, Technical Communication.",
+    "lookingFor": "I\u2019m actively seeking connections within the CPG industry, particularly individuals involved in packaging innovation, sustainability initiatives, and supply chain optimization. I'm interested in speaking with VPs of Operations, Heads of Sustainability, and Innovation Directors. I\u2019m also looking to connect with seed-stage investors focused on AI, sustainability, and supply chain technologies. \n\nSpecifically, I'm interested in:\n\n* **Potential Clients:** CPG companies with a commitment to reducing packaging waste and improving supply chain efficiency. We\u2019re especially interested in businesses using complex packaging or shipping high volumes.\n* **Strategic Partners:** Logistics providers and fulfillment centers looking to integrate AI-powered optimization into their operations.\n* **Seed Investors:** Angel investors and venture capital firms with a demonstrated track record of supporting early-stage AI startups.\n* **Mentors/Advisors:** Experienced entrepreneurs who have successfully scaled a SaaS business in the supply chain or AI space.  I'm particularly interested in learning from those who've navigated successful fundraising rounds.\n\nMy priority is securing seed funding to scale our engineering team and expand our pilot programs.  Secondarily, I\u2019m focused on building relationships with potential clients to secure long-term contracts.  I\u2019m always open to informational conversations to explore potential synergies.",
+    "notes": "* Malia is highly articulate and passionate about her work. She effectively translates complex technical concepts into business value.\n* Mention her Autodesk background \u2013 it carries significant weight.\n* She\u2019s very focused on the environmental impact of packaging.\n* She\u2019s a member of the Sustainable Packaging Coalition (SPC).\n* Caution: She can get deeply technical quickly \u2013 steer conversations back to business outcomes if necessary.\n* Last interaction: LinkedIn message exchange on 10/26. She expressed interest in a follow-up call.\n* Potential Match: VP of Sustainability at Unilever \u2013 strong alignment with her target market.",
+    "locationAvailability": "I am based in San Francisco, California, but am comfortable with remote meetings and occasional travel to client sites and industry events.",
+    "introPreferences": "* Introductions should highlight FormFlow AI\u2019s ability to reduce packaging waste and lower shipping costs. \n* Ideal connections are VPs of Operations or Sustainability Directors at CPG companies with revenues exceeding $500 million.\n* Please mention my background at Autodesk to establish credibility.\n* Preferred communication method: Email initially, followed by a brief introductory call.\n* Avoid introductions to generalist investors \u2013 focus on firms specializing in AI or sustainability.\n* Key messaging: \u2018Malia is solving a significant problem in the supply chain with innovative AI technology.\u2019\n* Please pre-qualify contacts to ensure they have decision-making authority related to packaging or sustainability.",
+    "personalPreferences": "I prefer to communicate via email for initial contact, and I'm always happy to connect on LinkedIn. I\u2019m generally responsive and appreciate concise communication.",
+    "meetingAndSchedulingPreferences": "I\u2019m flexible with meeting times and prefer video conferencing. I\u2019m in Pacific Time (PST)."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 26.080234050750732,
+      "input_tokens": 781,
+      "output_tokens": 1498,
+      "problems": []
+    }
+  ],
+  "success": true
+}

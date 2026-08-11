@@ -1,0 +1,54 @@
+{
+  "id": 349,
+  "archetype": "Early-Stage Founder, Student Social App",
+  "given_name": "Kavya Novak",
+  "style_version": 21,
+  "archetypes_version": 58,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Kavya Novak is a first-time founder, 28, building 'CampusConnect,' a social app designed to facilitate genuine connections between students *within* universities, focusing on shared interests and study groups rather than broad social networking. Before founding CampusConnect, Kavya spent five years in university operations at MIT, specifically within student life and residential support. This experience gave her deep insight into the pain points of student social life\u2014the difficulty of finding like-minded peers beyond introductory classes\u2014and a network of potential early adopters. She\u2019s very data-driven, constantly A/B testing features based on user feedback. She's currently pre-seed, having bootstrapped the initial MVP and is now raising a $500k round to scale marketing and expand the engineering team. Kavya is highly responsive and values direct communication, but is also extremely busy and appreciates concise, well-structured requests. She\u2019s a strong believer in building a supportive community *around* her app, and that extends to her professional network. A distinctive detail: she\u2019s a competitive ultimate frisbee player, which informs her team-building philosophy.",
+    "positioning": "I'm Kavya Novak, founder of CampusConnect, a mobile app revolutionizing how students connect on campus. We\u2019re tackling the pervasive problem of social fragmentation within universities. While existing platforms cater to broad social networking, CampusConnect focuses on fostering *meaningful* connections based on shared academic interests, hobbies, and study groups. We\u2019re building a hyper-local community platform designed to enhance the student experience and combat feelings of isolation.\n\nWe launched our MVP at MIT six months ago and have achieved impressive organic growth \u2013 currently serving over 1,500 active users with a 4.8-star rating. User retention is exceptionally strong, with over 70% of users engaging weekly. This demonstrates a clear need for a dedicated platform that prioritizes genuine connection over superficial engagement. Our key differentiator is our algorithm, which uses a proprietary interest-matching system and event-based grouping to facilitate organic interactions. \n\nCurrently, we are raising a $500k pre-seed round to accelerate user acquisition, expand our engineering team, and integrate with university learning management systems. We\u2019re looking for investors who understand the nuances of the student market and share our vision for building a thriving campus community. We project to expand to five additional universities by the end of next year and achieve profitability within 18 months.",
+    "background": "* **Founder & CEO, CampusConnect** (Jan 2023 \u2013 Present)\n    * Led all aspects of product development, from ideation and design to launch and iteration.\n    * Secured initial user base of 1,500+ active users through targeted outreach and university partnerships.\n    * Developed and implemented a data-driven growth strategy, resulting in a 70% weekly user retention rate.\n    * Managed all financial operations, including bootstrapping the MVP and preparing for pre-seed funding.\n* **Associate, Office of Student Life, MIT** (July 2018 \u2013 Dec 2022)\n    * Managed a portfolio of student organizations, providing guidance on event planning, budgeting, and leadership development.\n    * Oversaw residential life for a cohort of 300+ students, addressing student concerns and fostering a positive community environment.\n    * Implemented a new student mentorship program, resulting in a 20% increase in student satisfaction with campus support services.\n    * Collaborated with university departments to improve student engagement initiatives.\n* **Education:**\n    * **Massachusetts Institute of Technology (MIT)** \u2013 Bachelor of Science in Management, Minor in Computer Science (2018)\n* **Skills:**\n    * Product Management\n    * User Acquisition & Growth\n    * Community Building\n    * Data Analysis (Google Analytics, Mixpanel)\n    * Project Management (Agile methodologies)\n    * University Operations\n    * Lean Startup Principles\n    * Python (basic proficiency)\n    * Mobile App Development (familiar with React Native)",
+    "lookingFor": "I'm actively seeking connections who can help accelerate CampusConnect\u2019s growth. Specifically, I'm looking to connect with:\n\n* **Pre-Seed/Seed Stage Investors:**  Individuals or firms with a demonstrated interest in EdTech, social networking, or student-focused startups.  We\u2019re seeking $500k to scale our marketing efforts and expand our engineering team. Ideal investors have experience advising early-stage founders and understand the unique challenges of the university market.\n* **Experienced Mobile App Developers:** We're looking to add a full-stack engineer with expertise in React Native and backend development (Node.js preferred).  Experience building scalable mobile applications is a must.\n* **University Partnerships Managers:** Individuals with existing relationships with university student life departments who can help us facilitate pilot programs and expand our reach to new campuses.\n* **Mentors/Advisors:** Seasoned entrepreneurs who have successfully navigated the challenges of building and scaling a mobile app. Guidance on fundraising, marketing, and team building would be invaluable.\n\n**Hard Requirements:** Demonstrated experience in the relevant field (investing, development, university partnerships).  \n**Soft Preferences:**  A genuine passion for improving the student experience and a willingness to actively contribute to our community.",
+    "notes": "Spoke with Kavya on 10/26. She's incredibly articulate and passionate about CampusConnect. She's very focused on user validation and data-driven decision-making, constantly iterating based on user feedback. She's a bit overwhelmed with the fundraising process but incredibly organized.  She mentioned her background in university operations is proving invaluable in understanding the needs of her target market. She\u2019s a strong advocate for her app and clearly understands its value proposition.  Internal scoring: A+ \u2013 high potential.  Recommend warm introductions to investors focused on EdTech; emphasize her operational experience at MIT. Be mindful of her time \u2013 keep introductions concise and focused.",
+    "locationAvailability": "I am based in Boston, Massachusetts, but am flexible with remote meetings and occasional travel to key university locations.",
+    "introPreferences": "* **Hard Requirements for Introductions:**\n    * Investors actively deploying capital in the pre-seed/seed stage.\n    * Individuals with direct experience in EdTech or social networking.\n    * Developers with 3+ years of React Native experience.\n* **Soft Preferences for Introductions:**\n    * Contacts who have a personal connection to the university ecosystem (alumni, faculty, etc.).\n    * Individuals known for being responsive and supportive of early-stage founders.\n* **Introduction Framing:** Please highlight my experience at MIT and the strong user engagement we've achieved with CampusConnect. Emphasize our focus on building a genuine community and solving a real problem for students. Avoid framing us as just another 'social media app.'",
+    "personalPreferences": "I prefer communication via email or LinkedIn messaging. Response times are typically within 24-48 hours, but may be slightly longer during peak fundraising periods. I'm happy to quickly hop on a call for a quick chat.",
+    "meetingAndSchedulingPreferences": "I'm generally flexible with meeting times and happy to work around your schedule. I prefer calendar invites with a clear agenda. I am comfortable participating via video conference and don\u2019t require assistance with scheduling."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 28.538015127182007,
+      "input_tokens": 812,
+      "output_tokens": 1567,
+      "problems": []
+    }
+  ],
+  "success": true
+}

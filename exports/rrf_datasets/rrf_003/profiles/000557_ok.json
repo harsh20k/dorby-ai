@@ -1,0 +1,54 @@
+{
+  "id": 557,
+  "archetype": "Deep Tech, Med Device Commercialization",
+  "given_name": "Takumi Nakamura",
+  "style_version": 34,
+  "archetypes_version": 93,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Takumi Nakamura is a seasoned biomedical engineer and entrepreneur who recently spun out a novel neurostimulation device from his research at MIT. He\u2019s the founder and CEO of \u2018Synapse Dynamics,\u2019 a pre-seed startup focused on non-invasive treatment for chronic pain. His distinctive career detail is a prior stint as a classical pianist \u2013 he believes this honed his precision and sensitivity, skills directly applicable to the delicate calibration needed for his neurostimulation technology. He\u2019s now intensely focused on securing Series A funding and building a commercialization team, navigating the complex FDA approval process. He's highly technical, but recognizes the need for strong business acumen and is actively seeking experienced advisors and potential strategic partners. He\u2019s a bit reserved, preferring data-driven discussions to overly enthusiastic pitches.",
+    "positioning": "Takumi Nakamura is the founder and CEO of Synapse Dynamics, a neurotechnology company developing a novel, non-invasive device for chronic pain management. Leveraging years of research in neural interfaces and signal processing, Synapse Dynamics is poised to disrupt the multi-billion dollar pain relief market. My background combines rigorous engineering principles with a deep understanding of clinical needs, resulting in a technology that is both innovative and patient-centric. Currently, I am focused on securing Series A funding and establishing key partnerships to accelerate product development and regulatory approval.",
+    "background": "- Founder & CEO, Synapse Dynamics (2023 - Present)\n- Principal Investigator, Neurostimulation Lab, MIT (2018 - 2023)\n  - Led research team in the development of novel transcranial alternating current stimulation (tACS) protocols.\n  - Secured $1.5M in grant funding from NIH and NSF.\n  - Published 12 peer-reviewed articles in leading neuroscience journals.\n- Research Engineer, Boston Dynamics (2016 - 2018)\n  - Developed control algorithms for advanced robotic systems.\n  - Specialized in signal processing and machine learning applications.\n- Visiting Researcher, University of Tokyo, Department of Robotics (2015)\n- MS, Electrical Engineering, Stanford University (2013 - 2015)\n- BS, Biomedical Engineering, Massachusetts Institute of Technology (2009 - 2013)\n- Patent applicant: \u2018Method and Apparatus for Targeted Neural Modulation\u2019 (US Provisional Patent Application No. 63/XXX,XXX)\n- Proficient in Python, MATLAB, C++, LabVIEW, and various neuroimaging software packages (e.g., EEGLAB).",
+    "lookingFor": "- **Series A Investors:** Seeking $5-8M to fund clinical trials and scale manufacturing.\n- **Experienced Med Device Regulatory Consultants:** Specifically, individuals with a proven track record navigating FDA 510(k) and PMA processes for neurostimulation devices.\n- **Commercialization Strategists:** Professionals with expertise in market access, reimbursement, and sales/marketing for medical devices.\n- **Potential Strategic Partners:** Companies with established distribution networks in pain management or neurology.\n- **Advisors with experience in scaling early-stage neurotech companies.**\n- **Key Opinion Leaders (KOLs):** Neurologists and pain specialists interested in evaluating and potentially advocating for our technology.",
+    "notes": "- Takumi is highly analytical and values data-driven insights. Avoid overly aggressive sales pitches.\n- He\u2019s particularly interested in investors with a deep understanding of neuroscience or medical devices.\n- Recently attended the Neurotech Leaders Forum and expressed interest in connecting with attendees from Medtronic and Boston Scientific.\n- He's a member of the MIT Enterprise Forum and frequently participates in their events.\n- Prioritized connections within the first two weeks of October.",
+    "locationAvailability": "Based in Cambridge, MA, and willing to travel for key meetings and investor presentations.",
+    "introPreferences": "- **Ideal Introductions:** VC partners specializing in digital health or medical devices, with a portfolio focused on Series A investments.\n- **Strongly Prefer:** Introductions from mutual connections with a demonstrated understanding of neurotechnology.\n- **Avoid:** Introductions to individuals focused on pre-seed funding or unrelated industries.\n- **Good to Have:** Introductions to individuals with experience in clinical trial design and execution.\n- **Introduction Style:** Concise and focused, highlighting the potential ROI of Synapse Dynamics.\n- **Do Not Introduce:** Marketing agencies or individuals offering purely advisory services without a clear investment or partnership angle.\n- **Preferred Title:** Partner, Principal, or Managing Director at investment firms.",
+    "personalPreferences": "I generally respond to emails within 24-48 hours. I appreciate concise and well-structured communication. While I'm active on LinkedIn, I prefer detailed discussions to be conducted via email.",
+    "meetingAndSchedulingPreferences": "I am available for virtual meetings via Zoom or Google Meet. Please provide at least 48 hours\u2019 notice for scheduling requests."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 19.030731916427612,
+      "input_tokens": 766,
+      "output_tokens": 1035,
+      "problems": []
+    }
+  ],
+  "success": true
+}

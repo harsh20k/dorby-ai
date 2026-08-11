@@ -1,0 +1,54 @@
+{
+  "id": 889,
+  "archetype": "Ex-BigCo Operator, Now Founder",
+  "given_name": "Sanjay Silva",
+  "style_version": 54,
+  "archetypes_version": 150,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Sanjay Silva is a former Senior Operations Manager at Rivian, specializing in scaling complex supply chains for new vehicle production. He was instrumental in navigating the early chip shortages and establishing key relationships with Tier 2 & 3 suppliers. He left Rivian frustrated by the bureaucratic speed and a desire to apply his lean manufacturing and logistics expertise to a smaller, more agile environment. He's now founded 'FlowState Logistics,' a consultancy focused on helping early-stage hardware companies (specifically in the EV space and robotics) build resilient and efficient supply chains *before* they hit scaling bottlenecks. He's seeking seed funding and strategic partnerships with VC firms specializing in hardware and early-stage companies needing supply chain expertise. He\u2019s very data-driven and focused on ROI for his clients.",
+    "positioning": "Sanjay Silva is the Founder & CEO of FlowState Logistics, a consultancy dedicated to building resilient and efficient supply chains for early-stage hardware companies. Having spent five years scaling operations at Rivian through a period of unprecedented supply chain disruption, Sanjay brings a unique, battle-tested perspective to the challenges faced by emerging manufacturers. He specializes in identifying and mitigating risks *before* they impact production, leveraging lean manufacturing principles and a deep network of global suppliers. FlowState Logistics isn\u2019t just about fixing problems; it\u2019s about proactively building a foundation for scalable growth. Now is the ideal time to connect \u2013 Sanjay is actively seeking seed funding and strategic partnerships to expand FlowState's reach and impact.",
+    "background": "- **Founder & CEO, FlowState Logistics** (2023 \u2013 Present)\n  - Launched and scaled a supply chain consultancy specializing in hardware startups, focusing on EV and robotics companies. \n  - Developed and implemented supply chain risk assessment frameworks, resulting in a 20% reduction in potential disruption costs for initial clients.\n  - Secured initial contracts with three seed-stage robotics companies.\n- **Senior Operations Manager, Rivian** (2018 \u2013 2023)\n  - Led a team responsible for sourcing and managing Tier 2 & 3 suppliers for critical vehicle components.\n  - Successfully navigated the global chip shortage, securing key allocations and minimizing production delays.\n  - Implemented a data-driven supplier performance management system, improving on-time delivery rates by 15%.\n  - Managed a $50M+ annual procurement budget.\n- **Supply Chain Analyst, Tesla** (2016 \u2013 2018)\n  - Supported the development and implementation of supply chain strategies for battery production.\n  - Conducted market research and identified potential new suppliers.\n- **B.S., Industrial & Systems Engineering, University of Michigan** (2012 \u2013 2016)\n- **Certified Supply Chain Professional (CSCP)** \u2013 APICS\n- **Lean Six Sigma Green Belt** \u2013 ASQ\n- **Proficient in:** SAP, Oracle, Tableau, Microsoft Excel (advanced modeling), Python (basic data analysis)",
+    "lookingFor": "## Investors\n- Seed-stage venture capital firms focused on hardware and deep tech.\n- Investors with a demonstrated understanding of supply chain challenges in the EV and robotics sectors.\n- Funding to scale FlowState Logistics\u2019 team and expand service offerings.\n\n## Strategic Partners\n- Established supply chain service providers (e.g., freight forwarders, warehousing companies) seeking to expand their reach into the startup ecosystem.\n- Manufacturing consultants with complementary expertise (e.g., design for manufacturability).\n\n## Potential Clients\n- Early-stage hardware companies (Seed to Series A) in the EV, robotics, and IoT spaces.\n- Companies experiencing or anticipating supply chain bottlenecks.\n- Founders seeking expert guidance on building resilient and scalable supply chains.",
+    "notes": "- Sanjay is highly analytical and expects data to support all claims. \n- He\u2019s very responsive on LinkedIn but prefers initial contact via email.\n- He\u2019s passionate about helping startups avoid the pitfalls he experienced at Rivian.\n- Avoid pitching solutions that are overly complex or lack a clear ROI.\n- He\u2019s a strong believer in building long-term relationships.\n- Mentioning Rivian (and his experience there) is a good conversation starter.",
+    "locationAvailability": "Based in Austin, Texas, but open to remote collaboration and travel to client sites.",
+    "introPreferences": "## Hard Requirements\n- Introductions to Partners or Principals at seed-stage hardware-focused VC firms.\n- Introductions to CEOs/Founders of early-stage EV or robotics companies actively seeking supply chain expertise.\n\n## Soft Preferences\n- Individuals with a strong technical background and understanding of manufacturing processes.\n- Those with a proven track record of successful investments in hardware startups.\n- Introductions should be warm and personalized, highlighting the potential synergy between Sanjay and the recipient.",
+    "personalPreferences": "Sanjay prefers concise and direct communication. He appreciates thoughtful questions and is always willing to share his expertise. He\u2019s most responsive to messages that demonstrate a clear understanding of his work and the challenges faced by early-stage hardware companies.",
+    "meetingAndSchedulingPreferences": "Prefers initial meetings to be 30-45 minutes via video conference. Generally available during standard business hours (Central Time)."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 19.00682282447815,
+      "input_tokens": 781,
+      "output_tokens": 1119,
+      "problems": []
+    }
+  ],
+  "success": true
+}

@@ -1,0 +1,54 @@
+{
+  "id": 611,
+  "archetype": "Full-Stack Engineer - Toronto Tech",
+  "given_name": "Nikolai Oduya",
+  "style_version": 37,
+  "archetypes_version": 102,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Nikolai Oduya is a 32-year-old full-stack engineer based in Toronto. He's a highly competent engineer, but his career has been slightly unconventional. He took a year off *after* his Bachelor's to backpack Southeast Asia, working odd jobs (including some surprisingly relevant freelance web dev) to fund his travels. This experience gave him a broader perspective and a strong ability to adapt, which he now leverages in fast-paced startup environments. He\u2019s currently the lead engineer at \u2018SynapseFlow,\u2019 a very early-stage startup building a no-code automation platform for marketing teams. He\u2019s passionate about making complex technology accessible and is actively looking for advisors and potential seed investors with experience in the SaaS space. He\u2019s also open to connecting with other engineers, particularly those with expertise in scalable backend systems and AI integration. He's direct, appreciates efficiency, and values authenticity in professional relationships. He's very focused on building a strong engineering team at SynapseFlow.",
+    "positioning": "SynapseFlow is revolutionizing marketing automation. We\u2019re building a no-code platform that empowers marketing teams to orchestrate complex workflows without relying on developers or complex scripting. The current landscape is fragmented \u2013 marketers are forced to stitch together multiple tools, leading to data silos, inefficiencies, and a lack of true end-to-end visibility. SynapseFlow addresses this critical pain point by providing a unified, intuitive interface for designing, deploying, and analyzing marketing campaigns. Built on a robust, scalable architecture utilizing TypeScript, React, and a serverless backend, our platform offers unparalleled flexibility and performance. We\u2019ve recently achieved significant traction with early adopters, demonstrating a 30% increase in campaign efficiency and a 20% reduction in marketing spend. We are currently focused on securing seed funding to accelerate product development and expand our go-to-market strategy. We believe SynapseFlow represents the future of marketing automation, enabling businesses to unlock the full potential of their marketing data and drive measurable results. I\u2019m leading the technical vision and execution, ensuring we deliver a world-class product that meets the evolving needs of our users.",
+    "background": "Nikolai Oduya\n\n* **Lead Engineer, SynapseFlow** (Toronto, ON) \u2013 January 2023 \u2013 Present\n    * Spearheading the development of SynapseFlow\u2019s core platform, from architectural design to implementation and deployment.\n    * Leading a small but growing team of engineers, fostering a collaborative and innovative environment.\n    * Responsible for ensuring the scalability, reliability, and security of the platform.\n    * Key technologies: TypeScript, React, Node.js, AWS (Lambda, S3, DynamoDB), PostgreSQL, Docker, Kubernetes.\n    * Successfully launched the MVP and onboarded initial beta users.\n* **Software Engineer, Stellar Dynamics** (Toronto, ON) \u2013 June 2020 \u2013 December 2022\n    * Developed and maintained key features for Stellar Dynamics\u2019 flagship data analytics platform.\n    * Contributed to the migration of legacy systems to a modern microservices architecture.\n    * Implemented automated testing frameworks to improve code quality and reduce regressions.\n    * Technologies: Python, Django, JavaScript, React, PostgreSQL, AWS.\n* **Freelance Web Developer** (Southeast Asia) \u2013 August 2019 \u2013 May 2020\n    * Provided web development services to small businesses and entrepreneurs across Thailand, Vietnam, and Cambodia.\n    * Gained experience working with diverse clients and adapting to rapidly changing requirements.\n    * Built and deployed websites using HTML, CSS, JavaScript, and WordPress.\n* **Education:**\n    * **Bachelor of Science in Computer Engineering**, University of Waterloo (Waterloo, ON) \u2013 September 2015 \u2013 June 2019\n        * Co-op placements at Shopify and Google.\n        * Dean's List (2017, 2018, 2019).\n* **Skills:** TypeScript, React, Node.js, Python, JavaScript, HTML, CSS, AWS, Docker, Kubernetes, PostgreSQL, Git, Agile methodologies, Software Architecture, Scalability, Microservices.",
+    "lookingFor": "* Introductions to seed-stage investors specializing in SaaS and marketing technology.\n* Advisors with experience scaling early-stage startups.\n* Senior backend engineers with expertise in building scalable and resilient systems (5+ years experience preferred).\n* AI/ML engineers interested in integrating AI-powered features into our platform.\n* Potential strategic partners in the marketing technology ecosystem.",
+    "notes": "Nikolai is a very sharp engineer with a clear vision for SynapseFlow. He's pragmatic, focused, and understands the challenges of building a scalable platform. He's not afraid to get his hands dirty and is deeply involved in the technical details. He's a good communicator but prefers directness and avoids unnecessary fluff. He\u2019s particularly interested in finding investors who can offer more than just capital \u2013 mentorship and strategic guidance are highly valued. He mentioned a slight frustration with the current talent pool in Toronto for senior backend roles; he\u2019s looking for someone with proven experience in handling high-volume data processing. Follow-up should focus on connecting him with relevant investors and engineers. Avoid overly optimistic or \u2018hype-driven\u2019 pitches; he appreciates a realistic assessment of challenges and opportunities.",
+    "locationAvailability": "Currently based in Toronto, Ontario. I'm generally available for meetings in person within the GTA, and comfortable with remote communication for broader connections. Limited travel availability in the short term due to product development priorities.",
+    "introPreferences": "* **Hard Requirements for Investor Introductions:** Must have a demonstrable track record of investing in early-stage SaaS companies. Familiarity with the marketing technology landscape is a significant plus.\n* **Soft Preferences:** Investors who are actively engaged with their portfolio companies and offer mentorship.\n* **Introduction Framing:** Please emphasize SynapseFlow's traction with early adopters and our potential to disrupt the marketing automation market. Highlight the team's technical expertise and our commitment to building a scalable and innovative platform.\n* **For Engineer Introductions:** Focus on candidates with strong experience in building and maintaining high-performance backend systems. Experience with serverless architectures and database optimization is highly desirable. Please ensure candidates have a portfolio showcasing their relevant projects.",
+    "personalPreferences": "I prefer email for initial contact. Quick and to the point is always appreciated.",
+    "meetingAndSchedulingPreferences": "I'm generally available for meetings during standard business hours (EST). I prefer a brief agenda to be shared in advance to ensure we make the most of our time. I'm comfortable with video calls (Zoom/Google Meet) or in-person meetings in Toronto. A quick follow-up email summarizing key takeaways is always appreciated."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 25.221285104751587,
+      "input_tokens": 851,
+      "output_tokens": 1444,
+      "problems": []
+    }
+  ],
+  "success": true
+}

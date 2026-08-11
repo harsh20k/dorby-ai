@@ -1,0 +1,74 @@
+{
+  "id": 267,
+  "archetype": "Operator-Investor, Real Estate Focus",
+  "given_name": "Soraya Nguyen",
+  "style_version": 16,
+  "archetypes_version": 44,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Soraya Nguyen is a first-generation Vietnamese-American who built her career in proptech, starting with boots-on-the-ground property management before pivoting to technology solutions. A distinctive detail is that she spent two years embedded with a construction tech firm *before* founding her current company, which gave her deep insight into the pain points of that side of the real estate equation. She's currently focused on scaling 'NestHaven,' a platform streamlining the fragmented short-term rental (STR) management space, specifically targeting smaller, independent operators. She\u2019s looking for Series A funding and strategic partners who understand the operational complexities of STRs, not just the financial upside. She\u2019s a direct communicator, values efficiency, and is intensely focused on building a sustainable, profitable business. She\u2019s wary of \u2018hype\u2019 and prioritizes demonstrable traction. She\u2019s based in Austin, but open to remote connections.",
+    "positioning": "NestHaven is solving the critical fragmentation problem in the short-term rental (STR) management sector. Independent STR operators \u2013 representing the vast majority of the market \u2013 are overwhelmed by a patchwork of tools for pricing, communication, cleaning, maintenance, and guest support. This leads to inefficiency, lost revenue, and burnout. NestHaven is an all-in-one operating system, providing a unified platform to manage the entire STR lifecycle, from listing optimization to post-checkout cleaning verification. We\u2019ve achieved a 25% MoM growth in ARR over the last six months, currently at $750k ARR, with a strong focus on unit economics. Our wedge is automated dynamic pricing and communication, quickly demonstrating ROI for new customers. Our ideal customer is a property manager or owner managing 5-25 properties looking to scale without adding significant overhead. We differentiate through our deep understanding of the *operational* challenges faced by STRs \u2013 a perspective gained from years in the field and from my time embedded within a construction tech company focused on renovation projects for STR properties.",
+    "background": "- **Founder & CEO, NestHaven** (Austin, TX) - 2022 \u2013 Present\n\t* Led all aspects of company formation, product development, fundraising, and go-to-market strategy.\n\t* Secured $1.2M in seed funding from angel investors and pre-seed venture funds.\n\t* Built and scaled a remote team of 15 engineers, designers, and customer success representatives.\n\t* Implemented a data-driven approach to customer acquisition and retention, resulting in a 60% customer lifetime value.\n\t* Spearheaded product roadmap, prioritizing features based on user feedback and market analysis.\n\t* Currently focused on Series A fundraising and expanding market share.\n\n- **Strategic Advisor, BuildTech Solutions** (Remote) - 2020 \u2013 2022\n\t* Immersed within a construction technology firm building software for residential renovations, specifically focusing on STR properties.\n\t* Provided insights into the STR market, identifying key pain points and opportunities for technology intervention.\n\t* Contributed to product development roadmap, ensuring alignment with market needs.\n\t* Developed and presented market research to executive leadership.\n\n- **Regional Property Manager, Haven Residential** (Denver, CO) - 2018 \u2013 2020\n\t* Managed a portfolio of 150+ residential properties, overseeing all aspects of property operations, including tenant screening, lease negotiations, rent collection, and maintenance.\n\t* Increased occupancy rates by 10% through proactive marketing and tenant retention strategies.\n\t* Reduced operating expenses by 15% by implementing cost-effective maintenance and repair solutions.\n\t* Streamlined property management processes, improving efficiency and tenant satisfaction.\n\n- **Assistant Property Manager, Sterling Properties** (San Jose, CA) - 2016 \u2013 2018\n\t* Assisted in the day-to-day management of a large residential portfolio.\n\t* Gained experience in lease administration, tenant relations, and property maintenance.\n\t* Supported the property manager in resolving tenant issues and ensuring compliance with local regulations.\n\n- **Education:**\n\t* **MBA, Stanford Graduate School of Business** - 2020\n\t* **BA, Economics, University of California, Berkeley** - 2016\n\n- **Certifications:**\n\t* Certified Property Manager (CPM)",
+    "lookingFor": "I\u2019m actively seeking connections within the venture capital and real estate technology ecosystems. Specifically, I'm targeting Series A investors with a demonstrated track record of backing disruptive proptech companies, ideally those who understand the nuances of the STR market. I\u2019m less interested in purely financial investors and prioritize partners who can offer strategic guidance and operational expertise. \n\nHere's a breakdown of ideal connections:\n\n* **VC Partners:** Focused on Seed/Series A, with a portfolio including proptech, hospitality tech, or marketplace businesses.\n* **STR Operators:** Managing 25+ properties, willing to pilot new technologies and provide feedback.\n* **Strategic Partners:** Companies offering complementary services to STR operators (e.g., insurance, financing, legal).\n* **Experienced Operators:** Individuals with a proven track record of scaling SaaS businesses in the real estate space.\n\nI\u2019m particularly interested in discussing potential partnerships that can accelerate our growth and expand our reach within the STR market.",
+    "notes": "Soraya is extremely focused and data-driven. She\u2019s a strong communicator but prefers direct, concise interactions. She\u2019s actively fundraising and is highly selective about who she spends time with. \n\n* **Data Quality Warning:** ARR figure updated as of 11/15/2023. \n* **Recent Conversation Summary (11/8/2023):** Discussed potential synergies with [Investor Name] \u2013 they expressed interest in the STR space but were hesitant about the regulatory landscape. \n* **Intro Guidance:** When introducing, highlight NestHaven's operational focus and traction. Avoid overly optimistic projections. She responds well to data and concrete examples. Don't waste her time with 'fluff.' She is currently prioritizing conversations with investors who can demonstrate a deep understanding of the complexities of STR management.",
+    "locationAvailability": "I am currently based in Austin, Texas, but am comfortable with remote meetings and occasional travel to key markets. I\u2019m flexible and prioritize efficient use of time.",
+    "introPreferences": "* **Hard Requirement:** Introductions to partners at Series A funds ($50M+ AUM) actively deploying capital in proptech.\n* **Soft Preference:** Introductions to STR operators with established portfolios and a willingness to innovate.\n* **Intro Style:** Please provide a brief, concise introduction highlighting the value proposition for both parties. Focus on my operational experience and NestHaven\u2019s demonstrable traction. Avoid lengthy narratives.\n* **Investor Profile:** I\u2019m looking for investors who have a strong understanding of the STR market and can offer strategic guidance beyond capital.\n* **Connection Type:** Ideal introductions are to decision-makers \u2013 partners or principals at venture firms. \n* **Avoid:** Introductions to junior associates or individuals with limited decision-making authority.",
+    "personalPreferences": "I prefer email for initial contact and am responsive during business hours. I typically follow up within 24-48 hours. I appreciate direct and honest communication and value efficiency. LinkedIn is fine for staying connected after an initial conversation.",
+    "meetingAndSchedulingPreferences": "Please use this Calendly link to schedule a meeting: [Placeholder Calendly Link]"
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 31.089444875717163,
+      "input_tokens": 799,
+      "output_tokens": 1483,
+      "problems": [
+        "meetingAndSchedulingPreferences: possible truncation (ends with '...m/sorayanguyen-terraform]')"
+      ]
+    },
+    {
+      "attempt": 2,
+      "elapsed_s": 18.32781720161438,
+      "input_tokens": 799,
+      "output_tokens": 1364,
+      "problems": [
+        "meetingAndSchedulingPreferences: possible truncation (ends with '...endly Link \u2013 Placeholder]')"
+      ]
+    },
+    {
+      "attempt": 3,
+      "elapsed_s": 30.65668511390686,
+      "input_tokens": 799,
+      "output_tokens": 1637,
+      "problems": [
+        "meetingAndSchedulingPreferences: possible truncation (ends with '...laceholder Calendly Link]')"
+      ]
+    }
+  ],
+  "success": false
+}

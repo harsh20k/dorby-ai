@@ -1,0 +1,54 @@
+{
+  "id": 58,
+  "archetype": "Customer Success Leader Turned Founder",
+  "given_name": "Amir Jansen",
+  "style_version": 4,
+  "archetypes_version": 11,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Amir Jansen is a former Head of Customer Success at a rapidly growing, mid-market SaaS company focused on marketing automation. He consistently identified a gap in the market: while platforms offered robust features, clients struggled to *effectively* utilize them, leading to low adoption and churn. This frustration, coupled with a passion for data-driven optimization, led him to found 'Momentum Insights'. Momentum Insights is a consultancy specializing in post-implementation optimization for SaaS products, offering fractional data science and customer success engineering expertise to help clients unlock the full value of their technology investments. He's targeting Series B/C SaaS companies who've hit a growth plateau and suspect under-utilization is a key factor. He\u2019s very focused on demonstrating quantifiable ROI for his clients and building a reputation for rapid, impactful results. He\u2019s a bit of a pragmatist \u2013 he doesn\u2019t get caught up in buzzwords and prefers to focus on tangible outcomes. He\u2019s also actively seeking investors who understand the value of long-term customer relationships.",
+    "positioning": "Momentum Insights helps ambitious SaaS companies break through growth plateaus by maximizing the ROI of their existing technology stack. We specialize in post-implementation optimization, acting as a fractional team of data scientists and customer success engineers to unlock hidden value and drive user adoption. Too often, companies invest significantly in powerful SaaS platforms, only to see limited impact due to low utilization, complex integrations, and a lack of tailored insights. This results in frustrated customers, increased churn, and ultimately, unrealized revenue potential.\n\nWe bridge this gap by deeply analyzing user behavior, identifying friction points, and developing data-driven strategies to improve onboarding, feature adoption, and overall customer experience. Our approach isn't about implementing *more* tools; it's about making the tools you already have work *smarter*. We focus on quick wins \u2013 delivering measurable results within the first 90 days \u2013 and building a sustainable framework for continuous optimization.\n\nRecently, we successfully helped a marketing automation platform increase qualified lead generation by 22% within eight weeks by identifying and addressing key usability issues within their lead scoring framework. We\u2019ve also partnered with a customer relationship management (CRM) provider to refine their onboarding process, resulting in a 15% reduction in support tickets and a significant increase in user engagement. At Momentum Insights, we believe that the true power of SaaS lies not just in the technology itself, but in how effectively it\u2019s leveraged to achieve business objectives. We are committed to empowering our clients to realize that full potential.",
+    "background": "* **Head of Customer Success, MarketSpark (2019 \u2013 2023):** Led a team of 15 CSMs supporting a portfolio of 80+ mid-market clients. Consistently exceeded customer retention targets, achieving a 92% renewal rate and a 130% net revenue retention rate.\n* **Senior Customer Success Manager, DataFlow Analytics (2016 \u2013 2019):** Responsible for onboarding, training, and ongoing support for a diverse range of enterprise clients. Developed and implemented a new customer onboarding program that reduced time-to-value by 30%.\n* **Business Analyst, TechSolutions Inc. (2014 \u2013 2016):** Conducted market research, analyzed data, and developed business requirements for new software applications. Proficient in SQL, Excel, and data visualization tools.\n* **Skills:** SaaS, Customer Success, Data Analysis, SQL, Customer Onboarding, Churn Reduction, Data Visualization (Tableau, Power BI), Project Management, Team Leadership, Strategic Planning, CRM (Salesforce, HubSpot), Marketing Automation (Marketo, Pardot). \n* **Certifications:** Certified Customer Success Manager (CCSM), Google Analytics Certified.",
+    "lookingFor": "* **Series B/C SaaS Founders & CEOs:** Interested in connecting with leaders of rapidly growing SaaS companies facing challenges with user adoption or realizing the full potential of their technology investments.\n* **Venture Capitalists (focused on SaaS):** Seeking investors who understand the importance of customer success and long-term value creation.\n* **Head of Customer Success (at larger SaaS orgs):** Keen to exchange insights and best practices with peers. Open to potential strategic partnerships.\n* **Fractional CTO/Data Science Leaders:** Exploring potential collaboration opportunities and expanding our network of expert consultants.\n* **Potential Clients:** Companies with $10M - $50M ARR utilizing complex SaaS platforms and experiencing plateaued growth.\n* **Introductions to:** Individuals responsible for platform adoption and optimization within target companies.",
+    "notes": "Amir is highly data-driven and pragmatic. He\u2019s not interested in \u2018fluff\u2019 or theoretical approaches; he wants to see tangible results. He\u2019s a strong communicator and excels at translating complex data into actionable insights. He's currently focused on building out his team of fractional consultants and securing seed funding. He can be a bit skeptical of overly optimistic projections and prefers a realistic assessment of challenges and opportunities. He recently presented at the SaaS Growth Summit on the topic of 'Beyond Adoption: Maximizing ROI on Your SaaS Investments.' Be aware he\u2019s *very* focused on quantifiable ROI and will likely ask detailed questions about a potential client\u2019s current metrics. He's actively building his LinkedIn presence and is open to sharing thought leadership content.",
+    "locationAvailability": "Amir is currently based in Austin, Texas, and is available for travel throughout North America. He\u2019s open to considering remote team members and is flexible regarding future location.",
+    "introPreferences": "* **Hard Requirements:** Introductions should be to decision-makers or key influencers within SaaS companies with $10M+ ARR.\n* **Strongly Preferred:** Individuals responsible for customer success, product management, or data analytics.\n* **Good to Have:** VCs with a demonstrated track record of investing in SaaS businesses.\n* **Do NOT introduce:** Sales representatives, marketing generalists, or individuals outside of the SaaS industry.\n* **Please include:** A brief summary of the person\u2019s role and their company\u2019s current challenges related to SaaS adoption or optimization. A warm, personalized introduction is always appreciated.",
+    "personalPreferences": "Amir prefers to connect via LinkedIn initially. Email is also acceptable for follow-up communication. He responds best to concise, well-structured messages.",
+    "meetingAndSchedulingPreferences": "Amir typically prefers 30-minute virtual meetings. He is generally available during standard business hours (Central Time) and is flexible with scheduling."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 22.844438552856445,
+      "input_tokens": 805,
+      "output_tokens": 1377,
+      "problems": []
+    }
+  ],
+  "success": true
+}

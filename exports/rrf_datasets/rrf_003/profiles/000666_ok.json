@@ -1,0 +1,54 @@
+{
+  "id": 666,
+  "archetype": "Ex-BigCo Exec, Now Founder",
+  "given_name": "Kai Garcia",
+  "style_version": 41,
+  "archetypes_version": 111,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Kai Garcia is a former Director of Engineering at Uber, specializing in scaling international ride-sharing infrastructure. He left to found 'TerraFlow,' a logistics platform focused on optimizing last-mile delivery for sustainable e-commerce brands. His key insight came from seeing the inefficiencies and environmental impact of Uber's delivery services, particularly in dense urban areas. TerraFlow isn't competing directly with Uber Eats or DoorDash; instead, it targets brands committed to carbon-neutral shipping and offers a white-labeled delivery solution using a network of e-bikes and electric vehicles. He\u2019s currently seeking Series A funding and strategic partnerships with sustainable packaging companies and micro-fulfillment centers. He\u2019s a pragmatic leader, data-driven, and deeply committed to environmental sustainability. He values direct communication and dislikes overly-hyped pitches.",
+    "positioning": "TerraFlow is revolutionizing last-mile delivery for e-commerce brands prioritizing sustainability. We provide a white-labeled, fully-integrated logistics solution utilizing a network of eco-friendly vehicles \u2013 primarily e-bikes and electric vans \u2013 to minimize carbon footprint and optimize delivery efficiency. Our target customers are direct-to-consumer (DTC) brands in the apparel, beauty, and food & beverage sectors who are actively marketing their commitment to environmental responsibility. Unlike traditional delivery services, we offer complete transparency into our carbon emissions and provide data-driven insights to help brands further reduce their impact. We\u2019ve secured pilot programs with five leading sustainable brands and are demonstrating a 30% reduction in delivery emissions compared to standard options. We're currently focused on expanding our network within major metropolitan areas and building out our technology platform to automate routing and optimize delivery schedules. We are seeking strategic investors and partners to accelerate our growth and establish TerraFlow as the leading sustainable logistics provider.",
+    "background": "* **TerraFlow, Founder & CEO** (2023 \u2013 Present)\n    * Spearheading all aspects of company development, including product strategy, fundraising, team building, and market expansion.\n    * Led seed funding round, securing $1.2M in investment.\n    * Developed and launched MVP of TerraFlow\u2019s delivery platform.\n    * Established partnerships with initial cohort of sustainable e-commerce brands.\n* **Uber, Director of Engineering** (2018 \u2013 2023)\n    * Led a team of 30+ engineers responsible for scaling Uber\u2019s ride-sharing infrastructure in international markets (specifically Southeast Asia and Latin America).\n    * Oversaw the development and deployment of new features to optimize driver efficiency and improve rider experience.\n    * Implemented real-time monitoring and alerting systems to ensure system reliability and performance.\n    * Reduced latency by 15% through infrastructure optimization.\n* **Google, Software Engineer** (2015 \u2013 2018)\n    * Developed and maintained core components of Google Maps\u2019 routing algorithms.\n    * Contributed to the development of new features for Google\u2019s autonomous vehicle project.\n    * Proficient in Python, Java, C++, and Go.\n* **Education:**\n    * **Stanford University**, M.S. Computer Science (2013 \u2013 2015)\n    * **Massachusetts Institute of Technology (MIT)**, B.S. Electrical Engineering & Computer Science (2009 \u2013 2013)\n* **Skills:** Logistics, Supply Chain Management, Software Engineering, Cloud Computing (AWS, GCP), Data Analytics, Machine Learning, Team Leadership, Strategic Planning, Fundraising, Sustainability, Python, Java, C++, Go, Agile Methodologies.",
+    "lookingFor": "I'm actively seeking connections to accelerate TerraFlow's growth and impact. Specifically, I'm targeting:\n\n**Investors:**\n* **Series A Venture Capital Firms:** Focused on sustainability, logistics, or e-commerce. Looking for firms with experience scaling technology companies and a demonstrated commitment to impact investing.  Investment size: $8M - $15M.\n* **Strategic Investors:**  Companies in the sustainable packaging, micro-fulfillment, or electric vehicle space.  Interested in exploring potential partnerships and synergies.\n* **Angel Investors:** Individuals with a strong understanding of the logistics industry and a passion for sustainability.\n\n**Partners:**\n* **Sustainable Packaging Companies:** To offer integrated solutions to our clients, reducing overall environmental impact.\n* **Micro-Fulfillment Center Operators:** To expand our delivery network and improve delivery speed.\n* **E-bike and Electric Vehicle Manufacturers:** To secure favorable pricing and access to the latest technology.\n* **ESG Consultants:**  Seeking expertise in measuring and reporting our environmental impact.\n\nI\u2019m *not* currently interested in conversations with recruiters or individuals offering unsolicited marketing services. I prioritize direct, substantive conversations with individuals who can genuinely contribute to TerraFlow\u2019s mission. I'm also open to advisory board members with relevant industry experience.",
+    "notes": "Profile sourced from LinkedIn and TerraFlow's website. Kai is highly responsive via email (kai.garcia@terraflow.com) and prefers direct communication. He recently presented at the Sustainable E-Commerce Summit and is gaining traction within the eco-conscious brand community. Be aware that he is very focused on quantifiable impact and dislikes vague promises. Introductory requests should clearly articulate the value proposition for TerraFlow.",
+    "locationAvailability": "Currently based in San Francisco, CA, but open to remote collaboration and occasional travel.",
+    "introPreferences": "* Please clearly state the connection's relevance to TerraFlow's mission (sustainability, logistics, e-commerce).\n* Avoid overly promotional or \u2018salesy\u2019 introductions. Kai values authenticity and directness.\n* Prioritize introductions to investors actively deploying capital in the sustainable tech space.\n* Briefly highlight the connection\u2019s expertise and how it aligns with TerraFlow\u2019s current needs.\n* Do *not* introduce Kai to recruiters or individuals offering generic business services.\n* A short, concise email introduction is preferred \u2013 keep it under 150 words.",
+    "personalPreferences": "Prefers asynchronous communication when possible; Slack for quick questions.",
+    "meetingAndSchedulingPreferences": "I generally prefer virtual meetings (Zoom or Google Meet) and am available most afternoons PST. Please send a brief agenda in advance to ensure a productive conversation."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 23.732120275497437,
+      "input_tokens": 791,
+      "output_tokens": 1334,
+      "problems": []
+    }
+  ],
+  "success": true
+}

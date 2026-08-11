@@ -1,0 +1,54 @@
+{
+  "id": 888,
+  "archetype": "Bootstrapped Founder, Emerging Market Focus",
+  "given_name": "Olamide Sokolov",
+  "style_version": 54,
+  "archetypes_version": 150,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Olamide Sokolov is a Nigerian-Polish founder bootstrapping a fintech platform called 'AjoVest' focused on democratizing access to investment opportunities for informal savings groups ('Ajo' or 'Esusu' in West Africa). She has a background in data science and previously worked at a large European bank, but left to address the financial inclusion gap she observed during frequent visits to her family in Nigeria. She's fiercely independent and resourceful, prioritizing sustainable growth over rapid scaling. Her distinctive career detail is a short stint as a data analyst for a political campaign in Poland, which honed her skills in understanding complex social dynamics and targeting specific groups \u2013 skills she now applies to understanding the nuances of the informal financial sector. She's currently seeking strategic partnerships to expand AjoVest\u2019s reach and build out its technology, specifically looking for mentorship and access to API integrations for mobile money platforms. She\u2019s wary of venture capital at this stage, preferring to maintain control and build a truly community-driven product.",
+    "positioning": "Olamide Sokolov is the Founder & CEO of AjoVest, a fintech platform bridging the gap between traditional finance and Nigeria\u2019s vibrant informal savings communities. Leveraging data-driven insights, AjoVest empowers \u2018Ajo\u2019 groups to collectively invest in diversified portfolios, fostering financial literacy and wealth creation. Having previously honed her analytical skills at Deutsche Bank, Olamide recognized a critical need for accessible investment solutions tailored to the unique needs of the Nigerian market. AjoVest is gaining traction with strong user growth and positive community feedback, and Olamide is currently focused on strategic partnerships to accelerate impact and expand service offerings. Connecting now offers the opportunity to be part of a ground-floor venture poised to revolutionize financial inclusion in emerging markets.",
+    "background": "- **Founder & CEO, AjoVest** (Lagos, Nigeria) \u2013 2022 \u2013 Present: Led all aspects of product development, market research, user acquisition, and fundraising (bootstrapped). Achieved 15% month-over-month user growth in the first six months of launch. \n- **Data Analyst, Deutsche Bank** (Frankfurt, Germany) \u2013 2019 \u2013 2021: Developed and maintained data models to identify risk and optimize investment strategies. Collaborated with cross-functional teams to improve data quality and reporting accuracy.\n- **Data Analyst, Polish Green Party Campaign** (Warsaw, Poland) \u2013 2018 (Contract): Analyzed voter data to identify key demographics and tailor campaign messaging. Contributed to a 10% increase in voter turnout in targeted districts.\n- **MSc, Data Science**, Warsaw University of Technology (Poland) \u2013 2017 \u2013 2019: Focused on Machine Learning and statistical modeling. Thesis: 'Predictive Modeling of Financial Market Volatility'.\n- **BSc, Economics**, University of Lagos (Nigeria) \u2013 2013 \u2013 2017: Graduated *summa cum laude*. President of the University Economics Society.\n- **Skills**: Python, SQL, Data Visualization (Tableau, Power BI), Machine Learning, Financial Modeling, Statistical Analysis, Agile Methodologies, User Research, Market Analysis.\n- **Certifications**: Certified Data Science Professional (CDSP), Google Analytics Individual Qualification.\n- **Languages**: English (Fluent), Polish (Fluent), Yoruba (Native).",
+    "lookingFor": "## Strategic Partnerships\n- Mobile money platform integrations: Seeking API access and potential co-marketing opportunities.\n- Financial literacy NGOs: Collaboration on educational workshops and user onboarding programs.\n\n## Mentorship\n- Experienced fintech founders: Guidance on scaling a bootstrapped startup in emerging markets.\n- Experts in regulatory compliance: Advice on navigating the complex financial regulations in Nigeria.\n\n## Advisory Support\n- Advisors with experience in community-led financial solutions: Input on product development and market positioning.",
+    "notes": "- Olamide is very protective of her company\u2019s vision and prefers partners who share her commitment to financial inclusion over pure profit maximization.\n- She responds best to concise, data-driven communication. Avoid overly enthusiastic or sales-focused pitches.\n- She\u2019s highly resourceful and prefers to solve problems independently, but values thoughtful advice and strategic guidance.\n- She\u2019s actively building a strong network of fellow female founders in Africa.\n- She previously expressed frustration with investors who didn't understand the nuances of the Nigerian market.\n- She is extremely time-sensitive and values prompt responses.",
+    "locationAvailability": "Based in Lagos, Nigeria, but open to remote collaboration and virtual meetings. Willing to travel for strategic partnerships.",
+    "introPreferences": "## Hard Requirements\n- Individuals with direct experience in the African fintech landscape.\n- Advisors/Partners with a proven track record of supporting early-stage startups.\n- Contacts at leading mobile money providers in Nigeria (e.g., MTN MoMo, Airtel Money).\n\n## Soft Preferences\n- Introductions from fellow founders or trusted advisors in the fintech space.\n- Individuals who demonstrate a genuine interest in financial inclusion and social impact.\n- Avoid introductions to venture capitalists at this stage \u2013 Olamide is currently focused on bootstrapping.",
+    "personalPreferences": "Olamide prefers direct and honest communication. She values efficiency and appreciates when people get straight to the point. She\u2019s most responsive on LinkedIn and email, and occasionally checks WhatsApp for urgent matters.",
+    "meetingAndSchedulingPreferences": "Prefers initial conversations to be brief (30 minutes) and focused on mutual value. Scheduling is best coordinated via email, allowing for consideration of the time difference."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 21.12676215171814,
+      "input_tokens": 782,
+      "output_tokens": 1177,
+      "problems": []
+    }
+  ],
+  "success": true
+}

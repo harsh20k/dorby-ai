@@ -1,0 +1,266 @@
+<title>Splitting the Profile Into Sections — nomad_drift_sectioned</title>
+<style>
+  :root {
+    --bg: #eef0f3; --surface: #ffffff; --surface-2: #e4e8ed;
+    --ink: #1b2027; --ink-muted: #5b6472; --ink-faint: #8a93a1; --line: #d3d9e0;
+    --profile: #2b6ca3; --profile-soft: #2b6ca31a;
+    --query: #c23d78; --query-soft: #c23d781a;
+    --amber: #a8641c; --amber-fill: #d98c2b; --amber-soft: #d98c2b22;
+    --good: #2f7d5a;
+    --font-serif: ui-serif, Georgia, "Iowan Old Style", "Palatino Linotype", Palatino, serif;
+    --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    --font-mono: ui-monospace, "SF Mono", "Cascadia Code", "Roboto Mono", Menlo, Consolas, monospace;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #14181f; --surface: #1b212b; --surface-2: #232a35;
+      --ink: #eef1f5; --ink-muted: #93a0b3; --ink-faint: #5f6a7a; --line: #2c3542;
+      --profile: #5a9bd6; --profile-soft: #5a9bd626;
+      --query: #e0679f; --query-soft: #e0679f26;
+      --amber: #e0a355; --amber-fill: #e0a355; --amber-soft: #e0a35528;
+      --good: #57b78a;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #14181f; --surface: #1b212b; --surface-2: #232a35;
+    --ink: #eef1f5; --ink-muted: #93a0b3; --ink-faint: #5f6a7a; --line: #2c3542;
+    --profile: #5a9bd6; --profile-soft: #5a9bd626;
+    --query: #e0679f; --query-soft: #e0679f26;
+    --amber: #e0a355; --amber-fill: #e0a355; --amber-soft: #e0a35528;
+    --good: #57b78a;
+  }
+  :root[data-theme="light"] {
+    --bg: #eef0f3; --surface: #ffffff; --surface-2: #e4e8ed;
+    --ink: #1b2027; --ink-muted: #5b6472; --ink-faint: #8a93a1; --line: #d3d9e0;
+    --profile: #2b6ca3; --profile-soft: #2b6ca31a;
+    --query: #c23d78; --query-soft: #c23d781a;
+    --amber: #a8641c; --amber-fill: #d98c2b; --amber-soft: #d98c2b22;
+    --good: #2f7d5a;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--ink); font-family: var(--font-sans); font-size: 16px; line-height: 1.6; }
+  .page { max-width: 760px; margin: 0 auto; padding: 52px 24px 88px; }
+  h1, h2 { font-family: var(--font-serif); text-wrap: balance; font-weight: 600; }
+  h1 { font-size: 1.9rem; line-height: 1.2; margin: 0 0 10px; letter-spacing: -0.01em; }
+  h2 { font-size: 1.2rem; margin: 2.6em 0 0.8em; padding-top: 0.8em; border-top: 1px solid var(--line); }
+  h2 .kicker { display: block; font-family: var(--font-mono); font-size: 0.68rem; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink-faint); margin-bottom: 0.5em; }
+  p { margin: 0 0 1.05em; }
+  p.dek { font-family: var(--font-serif); font-size: 1.08rem; color: var(--ink-muted); margin: 0 0 1.8em; max-width: 62ch; }
+  .eyebrow { font-family: var(--font-mono); font-size: 0.7rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-faint); margin-bottom: 0.8em; }
+  code { font-family: var(--font-mono); font-size: 0.88em; background: var(--surface-2); padding: 0.1em 0.4em; border-radius: 4px; }
+  pre { font-family: var(--font-mono); font-size: 0.8rem; background: var(--surface-2); border: 1px solid var(--line); border-radius: 8px; padding: 13px 15px; overflow-x: auto; line-height: 1.55; }
+  .muted { color: var(--ink-muted); }
+  strong { font-weight: 650; }
+
+  .callout { background: var(--surface); border: 1px solid var(--line); border-left: 3px solid var(--amber-fill); border-radius: 8px; padding: 14px 18px; margin: 1.3em 0; font-size: 0.96rem; }
+  .callout.finding { border-left-color: var(--good); }
+  .callout.warn { border-left-color: var(--query); }
+
+  .chart-card { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 18px 20px 12px; margin: 1.2em 0 1.6em; }
+  .chart-title { font-size: 0.86rem; font-weight: 600; margin-bottom: 2px; }
+  .chart-sub { font-size: 0.78rem; color: var(--ink-muted); margin-bottom: 10px; }
+  .chart-wrap { overflow-x: auto; }
+  .axis-label { font-family: var(--font-mono); font-size: 10px; fill: var(--ink-faint); }
+  .gridline { stroke: var(--line); stroke-width: 1; }
+  .legend { display: flex; gap: 18px; flex-wrap: wrap; margin-top: 10px; font-size: 0.79rem; }
+  .legend-item { display: flex; align-items: center; gap: 6px; color: var(--ink-muted); }
+  .swatch { width: 14px; height: 3px; border-radius: 2px; display: inline-block; }
+  .swatch.dash { background: repeating-linear-gradient(90deg, currentColor 0 5px, transparent 5px 8px); }
+  .dot-tip { position: absolute; pointer-events: none; background: var(--ink); color: var(--bg); font-family: var(--font-mono); font-size: 11px; padding: 5px 8px; border-radius: 6px; white-space: nowrap; opacity: 0; transition: opacity 0.1s; transform: translate(-50%, -130%); z-index: 5; }
+  .chart-pos { position: relative; }
+
+  table.results { width: 100%; border-collapse: collapse; font-size: 0.86rem; }
+  table.results th, table.results td { padding: 8px 10px; text-align: right; border-bottom: 1px solid var(--line); font-variant-numeric: tabular-nums; font-family: var(--font-mono); }
+  table.results th:first-child, table.results td:first-child { text-align: left; font-family: var(--font-sans); }
+  table.results thead th { font-family: var(--font-sans); font-weight: 600; font-size: 0.76rem; color: var(--ink-muted); text-transform: uppercase; letter-spacing: 0.03em; border-bottom: 1px solid var(--ink-faint); }
+  table.results tr.hi td { background: var(--amber-soft); font-weight: 650; }
+  .table-wrap { overflow-x: auto; margin: 1.2em 0; }
+
+  footer { margin-top: 3.4em; padding-top: 1.3em; border-top: 1px solid var(--line); font-size: 0.82rem; color: var(--ink-faint); }
+</style>
+
+<div class="page">
+  <div class="eyebrow">nomad_drift_sectioned — follow-up to nomad_drift</div>
+  <h1>Splitting the profile into asks beats blending in the whole thing</h1>
+  <p class="dek">In plain words: instead of mixing a seeker's <em>entire</em> biography into the
+    search, pick out just the one paragraph of their profile that&rsquo;s actually about what
+    they&rsquo;re asking for right now, and mix in only that. It beats mixing in the whole
+    profile on almost every measure &mdash; but the calibration method used to pick the mix
+    ratio couldn&rsquo;t actually detect the improvement, which is its own useful lesson.</p>
+
+  <div class="callout finding">
+    <strong>Plain-language summary:</strong> a seeker's profile often has several separate
+    asks going at once ("I want investors" / "I want a co-founder" / "I want customers"). The
+    old approach averaged all of them into one vector before mixing in the query, which waters
+    down whichever one the query is actually about. This experiment picks out just the
+    relevant paragraph first. Result: better at finding the right person, better at telling
+    real matches from fake ones, at almost every mixing ratio tested &mdash; new best scores on
+    4 of 5 metrics measured on all 200 real pairs.</p>
+  </div>
+
+  <h2><span class="kicker">The comparison</span>Best score reached, whole profile vs. one relevant section</h2>
+  <div class="table-wrap">
+    <table class="results">
+      <thead><tr><th>metric</th><th>whole profile (best)</th><th>one section (best)</th><th>change</th></tr></thead>
+      <tbody>
+        <tr><td>pair AUC <span class="muted">(accept/decline accuracy)</span></td><td>0.5872</td><td class="hi">0.5927</td><td>+0.0055</td></tr>
+        <tr><td>hard-negative AUC <span class="muted">(the realistic case)</span></td><td>0.5914</td><td class="hi">0.5958</td><td>+0.0044</td></tr>
+        <tr><td>MRR <span class="muted">(rank of the true match)</span></td><td>0.5019</td><td class="hi">0.5159</td><td>+0.0140</td></tr>
+        <tr><td>Recall@1 <span class="muted">(landed in 1st place)</span></td><td>0.3000</td><td class="hi">0.3200</td><td>+0.0200</td></tr>
+        <tr><td>Recall@10</td><td class="hi">0.9100</td><td>0.9200</td><td>+0.0100</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="muted" style="font-size:0.86rem">Every row above is the best value found anywhere
+    across an 11-point mixing-ratio sweep (0% query / 100% profile, through 100% query / 0%
+    profile) on all 200 real pairs. The "one section" version wins outright on 4 of 5, and at
+    two specific ratios (30% and 70% query) it beats the whole-profile version on
+    <em>every</em> metric simultaneously &mdash; not a trade-off, a straight improvement.</p>
+
+  <div class="chart-card">
+    <div class="chart-title">Accept/decline accuracy across the full mixing-ratio sweep, all 200 real pairs</div>
+    <div class="chart-sub">0% = pure profile (or section), 100% = pure query</div>
+    <div class="chart-pos"><div class="chart-wrap" id="chart1"></div><div class="dot-tip" id="tip1"></div></div>
+    <div class="legend">
+      <span class="legend-item"><span class="swatch" style="background:var(--profile)"></span>whole profile blended in</span>
+      <span class="legend-item"><span class="swatch" style="background:var(--amber-fill)"></span>one relevant section blended in</span>
+    </div>
+  </div>
+
+  <h2><span class="kicker">The honest catch</span>The calibration never actually saw this</h2>
+  <p>The mixing ratio was tuned on a separate, 13x-bigger set of made-up practice profiles
+    before ever touching real data (same method as <code>nomad_drift</code>). That tuning
+    process picked "100% query, 0% profile" as the best ratio &mdash; and at 100% query, it no
+    longer matters at all whether the leftover 0% is the whole profile or one section, because
+    it's multiplied by zero either way. The improvement above only shows up in the
+    <em>middle</em> of the ratio range (30-80% query), which the tuning process was never able
+    to distinguish. It's a real result, just one the automated tuning step couldn't have found
+    on its own &mdash; it took looking at the two full result tables side by side.</p>
+
+  <div class="callout warn">
+    <strong>A second honest catch:</strong> picking which section is "the relevant one" (by
+    comparing it to the query) was only right <strong>48.8%</strong> of the time against the
+    practice data's known correct answer &mdash; barely better than a coin flip. It still helped
+    on real data anyway. That's a genuinely surprising result worth sitting with, not a clean
+    story: a fairly unreliable selection step still moved every metric in the right direction.</p>
+
+  <h2><span class="kicker">Reproduce</span>Commands</h2>
+  <pre>modal run nomad_drift_sectioned/modal_run.py --run-id nds_001
+modal volume get dorby-nomad-drift-sectioned-results nds_001/metrics.json ./artifacts/nomad_drift_sectioned/nds_001/metrics.json
+modal volume get dorby-nomad-drift-sectioned-results nds_001/calibration.json ./artifacts/nomad_drift_sectioned/nds_001/calibration.json
+
+python -m pytest tests/test_nomad_drift_sectioned.py -q   # CPU-only, no GPU needed</pre>
+
+  <footer>
+    <code>nomad_drift_sectioned/</code> &mdash; isolated package, own Modal app
+    (<code>dorby-nomad-drift-sectioned</code>), own artifacts dir. Reuses
+    <code>nomad_drift.calibrate</code>, <code>query_weighted.eval.encode_everything</code> /
+    <code>score_arm</code>, and <code>synth_pipeline.pairing_rrf.sections.seeker_vectors</code>
+    (the same section-splitter <code>baselines/voyage_nano_sectioned</code> uses) unmodified.
+    See <code>docs/nomad-drift-sectioned-experiment.md</code>,
+    <code>docs/nomad-drift-experiment.md</code>, and
+    <code>docs/lookingfor-sectioning-findings.md</code> for the full writeups.
+  </footer>
+</div>
+
+<script>
+(function () {
+  const whole = [
+    {a:0.0, v:0.5424}, {a:0.1, v:0.5578}, {a:0.2, v:0.5699}, {a:0.3, v:0.5785},
+    {a:0.4, v:0.5834}, {a:0.5, v:0.5866}, {a:0.6, v:0.5872}, {a:0.7, v:0.5799},
+    {a:0.8, v:0.5695}, {a:0.9, v:0.5619}, {a:1.0, v:0.5530}
+  ];
+  const section = [
+    {a:0.0, v:0.5627}, {a:0.1, v:0.5715}, {a:0.2, v:0.5811}, {a:0.3, v:0.5870},
+    {a:0.4, v:0.5927}, {a:0.5, v:0.5898}, {a:0.6, v:0.5876}, {a:0.7, v:0.5808},
+    {a:0.8, v:0.5724}, {a:0.9, v:0.5620}, {a:1.0, v:0.5530}
+  ];
+
+  const css = getComputedStyle(document.documentElement);
+  const tok = (name) => css.getPropertyValue(name).trim();
+
+  function makeLineChart(mount, tipEl, series, opts) {
+    const W = Math.min(700, mount.clientWidth || 700), H = opts.height || 220;
+    const M = {l: 40, r: 16, t: 14, b: 26};
+    const iw = W - M.l - M.r, ih = H - M.t - M.b;
+    const x = (v) => M.l + v * iw;
+    const y = (v) => M.t + ih - ((v - opts.yMin) / (opts.yMax - opts.yMin)) * ih;
+
+    const svgns = "http://www.w3.org/2000/svg";
+    const svg = document.createElementNS(svgns, "svg");
+    svg.setAttribute("class", "chart");
+    svg.setAttribute("width", W);
+    svg.setAttribute("height", H);
+    svg.setAttribute("viewBox", `0 0 ${W} ${H}`);
+
+    opts.yTicks.forEach((t) => {
+      const gy = y(t);
+      const gl = document.createElementNS(svgns, "line");
+      gl.setAttribute("x1", M.l); gl.setAttribute("x2", W - M.r);
+      gl.setAttribute("y1", gy); gl.setAttribute("y2", gy);
+      gl.setAttribute("class", "gridline");
+      svg.appendChild(gl);
+      const lab = document.createElementNS(svgns, "text");
+      lab.setAttribute("x", M.l - 6); lab.setAttribute("y", gy + 3);
+      lab.setAttribute("text-anchor", "end");
+      lab.setAttribute("class", "axis-label");
+      lab.textContent = t.toFixed(2);
+      svg.appendChild(lab);
+    });
+    [0, 0.2, 0.4, 0.6, 0.8, 1.0].forEach((t) => {
+      const lab = document.createElementNS(svgns, "text");
+      lab.setAttribute("x", x(t)); lab.setAttribute("y", H - 6);
+      lab.setAttribute("text-anchor", "middle");
+      lab.setAttribute("class", "axis-label");
+      lab.textContent = Math.round(t * 100) + "%";
+      svg.appendChild(lab);
+    });
+
+    series.forEach((s) => {
+      const pts = s.data.map((d) => [x(d.a), y(d.v)]);
+      const path = document.createElementNS(svgns, "path");
+      path.setAttribute("d", pts.map((p, i) => (i === 0 ? "M" : "L") + p[0].toFixed(2) + " " + p[1].toFixed(2)).join(" "));
+      path.setAttribute("fill", "none");
+      path.setAttribute("stroke", s.color);
+      path.setAttribute("stroke-width", 2.6);
+      path.setAttribute("stroke-linecap", "round");
+      path.setAttribute("stroke-linejoin", "round");
+      svg.appendChild(path);
+
+      pts.forEach((p, i) => {
+        const isBest = i === s.bestIdx;
+        const c = document.createElementNS(svgns, "circle");
+        c.setAttribute("cx", p[0]); c.setAttribute("cy", p[1]);
+        c.setAttribute("r", isBest ? 5 : 3);
+        c.setAttribute("fill", isBest ? tok("--amber-fill") : s.color);
+        c.setAttribute("stroke", tok("--surface"));
+        c.setAttribute("stroke-width", isBest ? 2 : 1);
+        c.style.cursor = "pointer";
+        c.addEventListener("mousemove", () => {
+          tipEl.style.opacity = 1;
+          tipEl.style.left = p[0] + "px";
+          tipEl.style.top = p[1] + "px";
+          tipEl.textContent = `${Math.round(s.data[i].a * 100)}% query — AUC ${s.data[i].v.toFixed(4)}`;
+        });
+        c.addEventListener("mouseleave", () => { tipEl.style.opacity = 0; });
+        svg.appendChild(c);
+      });
+    });
+
+    mount.appendChild(svg);
+  }
+
+  const wholeBest = whole.reduce((bi, d, i, arr) => d.v > arr[bi].v ? i : bi, 0);
+  const sectionBest = section.reduce((bi, d, i, arr) => d.v > arr[bi].v ? i : bi, 0);
+
+  makeLineChart(
+    document.getElementById("chart1"),
+    document.getElementById("tip1"),
+    [
+      {data: whole, color: tok("--profile"), bestIdx: wholeBest},
+      {data: section, color: tok("--amber-fill"), bestIdx: sectionBest}
+    ],
+    {yMin: 0.54, yMax: 0.6, yTicks: [0.55, 0.57, 0.59], height: 220}
+  );
+})();
+</script>

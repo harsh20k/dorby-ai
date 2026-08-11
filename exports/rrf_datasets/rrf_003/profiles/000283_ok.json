@@ -1,0 +1,54 @@
+{
+  "id": 283,
+  "archetype": "Toronto-Based Tech & Finance Networker",
+  "given_name": "Wei Nguyen",
+  "style_version": 17,
+  "archetypes_version": 47,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Wei Nguyen is a seasoned data scientist currently leading a team at a rapidly growing FinTech startup in Toronto called 'NovaVest'. He specializes in applying machine learning to credit risk assessment and fraud detection. A distinctive detail is that he *transitioned* into data science from a background in theoretical physics \u2013 a detail he subtly emphasizes as demonstrating strong analytical and problem-solving skills. He's actively looking to connect with potential investors for NovaVest\u2019s Series B funding round, and also to recruit top-tier data science talent. He's well-connected within the Toronto tech scene, but wants to expand his network within the investment community, particularly those focused on early-stage FinTech. He\u2019s not interested in recruitment pitches from agencies; he prefers direct connections. He's pragmatic and appreciates direct communication, valuing efficiency and clear articulation of value propositions.",
+    "positioning": "Wei Nguyen is a data science leader driving innovation in credit risk and fraud prevention at NovaVest, a Toronto-based FinTech company poised for significant growth. He leads a team of talented data scientists, applying cutting-edge machine learning techniques to build robust and scalable risk models. Wei\u2019s focus is on leveraging data to empower smarter lending decisions, minimize losses, and ultimately, expand financial inclusion. His approach is rooted in a deeply analytical mindset, honed through a previous career in theoretical physics, which provides him with a unique perspective on complex problem-solving. He is passionate about building a high-performing team and fostering a culture of continuous learning and experimentation within NovaVest. He believes data-driven insights are the key to unlocking the future of finance.",
+    "background": "- **NovaVest, Toronto, ON** \u2013 *Head of Data Science* (January 2022 \u2013 Present)\n  - Led the development and deployment of a new machine learning model for credit risk assessment, resulting in a 15% reduction in loan defaults within the first quarter.\n  - Built and scaled a data science team from 3 to 10, implementing robust hiring processes and mentorship programs.\n  - Spearheaded the adoption of a new cloud-based data infrastructure, improving data processing speed by 40%.\n  - Collaborated with engineering and product teams to integrate machine learning models into NovaVest\u2019s core lending platform.\n  - Responsible for the development and maintenance of fraud detection systems, mitigating $2.3 million in potential losses in 2023.\n\n- **Quantify Capital, Toronto, ON** \u2013 *Senior Data Scientist* (June 2019 \u2013 December 2021)\n  - Developed and implemented algorithmic trading strategies, contributing to a 8% increase in portfolio returns.\n  - Conducted extensive research on alternative data sources for investment analysis.\n  - Collaborated with traders and portfolio managers to refine trading models and risk management strategies.\n  - Led a project to automate the data pipeline, reducing manual data processing time by 60%.\n  - Presented research findings to senior management and external investors.\n\n- **University of Toronto, Toronto, ON** \u2013 *Postdoctoral Fellow, Physics* (September 2016 \u2013 May 2019)\n  - Conducted research in theoretical cosmology, focusing on the early universe and the formation of large-scale structures.\n  - Published several peer-reviewed articles in leading scientific journals.\n  - Presented research findings at international conferences.\n  - Mentored graduate students in research projects.\n\n- **Massachusetts Institute of Technology (MIT), Cambridge, MA** \u2013 *Doctor of Philosophy (PhD), Physics* (September 2012 \u2013 August 2016)\n  - Dissertation focused on the application of statistical mechanics to complex systems.\n  - Developed novel computational methods for simulating physical phenomena.\n  - Received multiple awards for research excellence.\n\n- **University of Waterloo, Waterloo, ON** \u2013 *Bachelor of Science (BSc), Physics (Honours)* (September 2008 \u2013 April 2012)\n  - Graduated with high distinction.\n  - Active member of the physics club and participated in several research projects.",
+    "lookingFor": "Wei Nguyen is currently focused on expanding NovaVest's network within the investment community as we prepare for our Series B funding round. We're seeking strategic investors who understand the FinTech landscape and share our vision for revolutionizing credit access. Ideally, we are looking for introductions to partners at venture capital firms specializing in early-stage FinTech companies, with investment sizes ranging from $10M to $25M.\n\nI am also actively recruiting top-tier data science talent to join our growing team. We are specifically looking for individuals with expertise in machine learning, deep learning, and statistical modeling, particularly those with experience in credit risk, fraud detection, or algorithmic trading. Senior data scientists and engineering leads are of particular interest.\n\nHere's a breakdown of connection types I'm seeking:\n\n*   **Venture Capitalists:** Partners or Principals at firms investing in FinTech.\n*   **Angel Investors:** Individuals with a demonstrated track record of successful FinTech investments.\n*   **Data Science Leaders:** Heads of Data Science or Machine Learning at other FinTech companies.\n*   **Experienced Data Scientists:** Individuals with 3+ years of experience in machine learning and a strong academic background.\n\n**Please note:** I am *not* interested in unsolicited recruitment pitches from staffing agencies. I prefer direct connections. I am also not currently looking to connect with individuals outside of the North American FinTech ecosystem.",
+    "notes": "Profile created based on LinkedIn research and a simulated persona. Wei Nguyen's background in physics is a key differentiator and should be leveraged in introductions. His stated preferences regarding recruitment are firm; respecting these will be crucial for maintaining a positive relationship. Recent activity suggests a strong focus on fundraising and team building. Confirmed NovaVest is actively hiring on LinkedIn. No known discrepancies.",
+    "locationAvailability": "Wei Nguyen is based in Toronto, Ontario, Canada (Eastern Time Zone). He is frequently available for virtual meetings and occasional travel within North America.",
+    "introPreferences": "When making introductions to Wei Nguyen, please adhere to the following guidelines:\n\n*   **Hard Requirements:**\n    *   Ensure the individual has a clear understanding of NovaVest\u2019s mission and business model (available at [fictional website]).\n    *   Verify the individual\u2019s LinkedIn profile is up-to-date and reflects their stated expertise.\n    *   Do not introduce recruitment agencies.\n*   **Soft Preferences:**\n    *   Highlight any shared connections or mutual interests.\n    *   Briefly summarize the individual\u2019s relevant experience and how it aligns with NovaVest\u2019s needs.\n    *   Avoid lengthy introductions; keep it concise and focused on value.\n    *   Prioritize introductions to individuals in leadership positions.",
+    "personalPreferences": "Wei prefers direct and concise communication. He is responsive to emails and LinkedIn messages. Brief, well-structured messages are appreciated. He is available for quick calls to discuss potential opportunities.",
+    "meetingAndSchedulingPreferences": "Please provide a brief agenda and any relevant materials in advance of scheduled meetings. Wei prefers to keep meetings focused and action-oriented. A short debrief after the meeting to summarize key takeaways is also appreciated."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 22.986303091049194,
+      "input_tokens": 793,
+      "output_tokens": 1549,
+      "problems": []
+    }
+  ],
+  "success": true
+}

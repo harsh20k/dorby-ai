@@ -1,0 +1,54 @@
+{
+  "id": 53,
+  "archetype": "Operational Excellence from Big Tech",
+  "given_name": "Liang Nkosi",
+  "style_version": 4,
+  "archetypes_version": 10,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Liang Nkosi is a former Senior Operations Manager at Amazon Web Services (AWS), specializing in supply chain optimization for their hardware division during a period of rapid expansion. A key achievement was leading a project to diversify sourcing for critical components, mitigating risk during the 2021-2022 chip shortages. He left AWS to found 'Flowstate Logistics,' a consultancy focused on helping early-stage hardware startups build resilient and scalable supply chains *from the beginning*, avoiding the costly mistakes he saw frequently at Amazon. He positions himself as a preventative solution, not a crisis manager. He\u2019s actively seeking connections with seed-stage founders and early-stage VCs who invest in hardware, IoT, and robotics. He's pragmatic, data-driven, and slightly wary of 'hype' \u2013 he'll push back on unrealistic timelines or overly optimistic projections. He prioritizes long-term sustainability over rapid, unsustainable growth.",
+    "positioning": "Flowstate Logistics partners with early-stage hardware startups to build supply chains engineered for resilience and scalability. We understand that a robust supply chain isn\u2019t just about cost; it\u2019s about mitigating risk, ensuring consistent product delivery, and ultimately, enabling sustainable growth. Too often, ambitious founders with groundbreaking innovations find themselves hampered by logistical bottlenecks and unforeseen disruptions. We solve this by providing a holistic, proactive approach to supply chain design, encompassing sourcing, manufacturing, logistics, and inventory management. \n\nOur core value proposition is preventative: we build *before* the problems arise. We don't parachute in to fix a broken supply chain; we architect one that's built to withstand the inevitable shocks of the global market. We specialize in guiding startups through the complex landscape of component sourcing, supplier qualification, and international logistics, leveraging best practices gleaned from years of experience at scale. We're particularly adept at navigating the challenges of component shortages, geopolitical instability, and evolving regulatory requirements.\n\nRecently, Flowstate Logistics completed a pilot program with 'Nova Robotics,' a seed-stage company developing agricultural robots. We successfully established a diversified sourcing strategy for their key sensors and microcontrollers, reducing their lead times by 30% and significantly lowering their exposure to supply chain risk. We\u2019re currently onboarding two new clients in the IoT space, focusing on optimizing their manufacturing processes and establishing robust quality control procedures. Our ultimate goal is to empower hardware startups to focus on innovation, confident that their supply chain can support their ambitions.",
+    "background": "* **Amazon Web Services (AWS), Senior Operations Manager (2018 \u2013 2023):** Led cross-functional teams responsible for supply chain optimization for AWS hardware, including servers, networking equipment, and storage devices. Managed a budget of $50M+ and oversaw a portfolio of over 200 suppliers.\n* **Key Achievement:** Spearheaded a sourcing diversification project during the global chip shortage (2021-2022), mitigating supply disruptions and ensuring continued product availability. This involved identifying and qualifying alternative suppliers, negotiating long-term contracts, and implementing robust risk management protocols.\n* **Amazon, Operations Finance Analyst (2016 \u2013 2018):** Analyzed operational data to identify cost-saving opportunities and improve efficiency across Amazon\u2019s fulfillment network. Developed and implemented financial models to support strategic decision-making.\n* **Massachusetts Institute of Technology (MIT), Master of Engineering in Supply Chain Management (2014 \u2013 2016):** Focused on advanced topics in logistics, inventory management, and supply chain risk management. Thesis: 'The Impact of Geopolitical Risk on Global Supply Chains.'\n* **Stanford University, Bachelor of Science in Industrial Engineering (2010 \u2013 2014):** Graduated *summa cum laude*. Relevant coursework included operations research, statistics, and data analysis.",
+    "lookingFor": "* **Seed-Stage Hardware Founders:** Specifically seeking founders building innovative products in robotics, IoT, and industrial automation. I'm interested in understanding their supply chain challenges and exploring how Flowstate Logistics can help them build a resilient foundation.\n* **Early-Stage VCs (Seed/Series A):**  Looking to connect with investors who are actively deploying capital into hardware startups.  I can provide due diligence insights related to supply chain risk and scalability.\n* **Supply Chain Professionals (Senior Roles):**  Interested in networking with experienced supply chain leaders to share best practices and explore potential collaborations.\n* **Manufacturing Partners (Contract Manufacturers):**  Connections to reputable and reliable contract manufacturers, particularly those specializing in low-to-mid volume production.\n* **Component Distributors:**  Relationships with distributors offering access to a wide range of components, including hard-to-find and specialized parts.\n* **Mentorship opportunities:** I\u2019m open to advising or mentoring aspiring entrepreneurs in the hardware space.",
+    "notes": "Liang is highly analytical and data-driven. He\u2019s not easily swayed by marketing hype and prefers to focus on concrete solutions and measurable results. He\u2019s passionate about helping startups avoid the pitfalls he witnessed at Amazon. He\u2019s currently very focused on building out Flowstate Logistics\u2019 network of trusted suppliers and partners. \n\n* He recently presented at the Hardware Startup Summit in San Francisco, focusing on the importance of supply chain resilience. \n* He\u2019s actively contributing to a series of articles on LinkedIn about best practices for hardware supply chain management. \n* **Caution:** He can be blunt and direct in his feedback. Avoid introducing him to companies with unrealistic expectations or poorly defined product specifications. He will politely but firmly decline to engage if he believes a project is fundamentally flawed. He\u2019s particularly skeptical of \u2018vaporware\u2019 and projects lacking a clear path to manufacturability.",
+    "locationAvailability": "Liang is currently based in Palo Alto, California, and is open to travel within the United States and internationally. He maintains a strong preference for working with companies based in North America, but will consider opportunities elsewhere.",
+    "introPreferences": "* **Ideal Introductions:** Seed-stage hardware founders actively seeking supply chain guidance, and partners at Seed/Series A VCs focused on hardware.\n* **Acceptable Introductions:** Experienced supply chain professionals with a proven track record in hardware, and contract manufacturers with strong quality control processes.\n* **Hard Requirements:**  The connection *must* be involved in the hardware space. No software-only companies, please.\n* **Soft Preferences:**  Individuals with a demonstrated understanding of lean manufacturing principles and a commitment to sustainable supply chain practices.\n* **Do NOT Introduce:**  Marketing agencies, sales representatives offering non-essential services, or individuals with vague or undefined roles.",
+    "personalPreferences": "Liang prefers to connect initially via LinkedIn or email. He responds best to concise and well-structured communication. He is generally available for brief introductory calls but prefers to schedule more in-depth discussions after an initial assessment of potential synergies.",
+    "meetingAndSchedulingPreferences": "Liang generally prefers virtual meetings via Zoom or Google Meet. He is flexible with scheduling but typically requires at least 24 hours' notice. He is not a fan of overly formal meeting agendas and prefers a conversational approach."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 26.50628399848938,
+      "input_tokens": 806,
+      "output_tokens": 1505,
+      "problems": []
+    }
+  ],
+  "success": true
+}

@@ -1,0 +1,72 @@
+{
+  "id": 91,
+  "archetype": "Entertainment Tech Operator & Founder",
+  "given_name": "Olivia Haddad",
+  "style_version": 6,
+  "archetypes_version": 17,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Olivia Haddad is a serial operator in the entertainment tech space. She spent a decade at Disney in their streaming technology division, specifically focused on personalization and recommendation engines. She left Disney as a VP to co-found 'Muse', a platform using AI to assist independent filmmakers with script analysis and market viability prediction. Muse is currently in seed funding, and Olivia is primarily focused on securing strategic partnerships with studios, production companies, and talent agencies. She\u2019s very data-driven, but also has a strong creative sensibility stemming from her time working directly with content creators at Disney. She\u2019s looking for investors with deep entertainment industry expertise and connections to potential Muse clients. She\u2019s open to advisory board members, but wants people who can actively contribute, not just lend their name. She's very protective of her time and prefers efficient, targeted introductions.",
+    "positioning": "I\u2019m a builder, operator, and strategist at the intersection of entertainment and technology. For the past decade, I\u2019ve been deeply immersed in the challenges and opportunities of delivering personalized content experiences at scale. My experience at Disney, culminating in a VP role within their streaming technology team, solidified my understanding of the critical role data plays in captivating audiences and driving business results. I led teams responsible for the recommendation engines driving user engagement across multiple platforms, and honed a keen ability to translate complex technical insights into actionable strategies for content acquisition and creation. \n\nNow, as co-founder of Muse, I\u2019m applying that experience to empower the next generation of storytellers. Muse is an AI-powered platform that helps independent filmmakers assess the market potential of their scripts *before* they invest significant time and resources in production. We analyze scripts for thematic resonance, audience appeal, and competitive landscape, providing data-driven insights to increase the likelihood of success. We're not replacing creative vision; we\u2019re augmenting it with a layer of intelligent analysis.\n\nI\u2019m passionate about democratizing access to data and technology for independent creators. I believe that everyone with a compelling story deserves the opportunity to connect with an audience, and Muse is designed to level the playing field. I'm particularly interested in building relationships with individuals and organizations who share this vision and can help us scale our impact. I thrive in fast-paced, collaborative environments and am always eager to explore new opportunities to leverage technology to innovate in the entertainment industry.",
+    "background": "- **Co-founder, Muse** (2023 - Present)\n  - Leading all aspects of business development, fundraising, and strategic partnerships.\n  - Focused on securing seed funding and establishing key relationships with studios, production companies, and talent agencies.\n  - Oversaw development of core AI models and platform architecture.\n  - Skills: AI/ML, Script Analysis, Business Development, Fundraising, Partnership Management, Product Strategy, Team Leadership.\n\n- **Vice President, Streaming Technology, Disney** (2015 - 2023)\n  - Led teams responsible for personalization and recommendation engines across Disney+, Hulu, and ESPN+.\n  - Managed a budget of $20M+ and a team of 50+ engineers, data scientists, and product managers.\n  - Increased user engagement by 15% through implementation of new recommendation algorithms.\n  - Spearheaded the development of a new A/B testing framework for content discovery.\n  - Skills: Recommendation Systems, Personalization, Data Science, A/B Testing, Team Management, Budget Management, Strategic Planning.\n\n- **Software Engineer, Pixar** (2013 - 2015)\n  - Developed tools and pipelines for rendering and animation.\n  - Contributed to the development of proprietary software used in feature film production.\n  - Skills: C++, Python, RenderMan, Animation Pipelines.\n\n- **Education:**\n  - Master of Science, Computer Science, Stanford University (2013)\n  - Bachelor of Science, Computer Science, Massachusetts Institute of Technology (2011)\n\n- **Certifications:**\n  - Project Management Professional (PMP)",
+    "lookingFor": "I'm actively seeking connections to accelerate Muse's growth and impact. Specifically:\n\n**Priority 1: Strategic Investors:**\n  - Individuals or firms with a proven track record of investing in early-stage entertainment tech companies.\n  - Experience with SaaS models and a strong understanding of the media and content creation landscape.\n  - Investment size: $5M - $10M.\n\n**Priority 2: Studio/Production Company Partnerships:**\n  - Heads of Development or Innovation at major studios (e.g., Universal, Warner Bros., Sony).\n  - Executives at independent production companies with a focus on feature film or television development.\n  - Interested in exploring potential integrations of Muse into their existing workflows.\n\n**Priority 3: Talent Agency Connections:**\n  - Agents or executives at leading talent agencies (e.g., CAA, WME, UTA).\n  - Looking for introductions to clients who could benefit from using Muse to refine their scripts and increase their chances of getting projects greenlit.\n\n**Not a Good Fit:**\n  - Individuals solely focused on web3 or blockchain applications within entertainment (unless it directly supports the core Muse value proposition).\n  - Generalist investors without specific entertainment industry experience.\n  - Individuals offering marketing services without a clear understanding of our target audience.",
+    "notes": "Just completed a series of pitches to potential seed investors. Received positive feedback on the Muse concept, but need to refine the financial projections. \n\n- Had a very productive call with Sarah Chen at Paramount last week. She's intrigued by the potential of Muse to streamline their script development process. Following up next week to schedule a demo.\n- Received an introduction to David Lee at CAA. Initial outreach sent \u2013 waiting to hear back.\n- Regarding introductions, I'm currently prioritizing access to decision-makers at major studios and investment firms. Please avoid making introductions to junior-level employees.\n- I\u2019m very focused on efficient communication and quick decision-making. Please keep initial outreach concise and to the point.",
+    "locationAvailability": "I am primarily based in Los Angeles, California, but frequently travel to New York and occasionally to London for industry events. I'm available for meetings both in-person and virtually.",
+    "introPreferences": "Please adhere to these guidelines when making introductions:\n\n**Hard Requirements:**\n  - **Clear Value Proposition:** The introduction *must* articulate how Muse directly addresses the recipient's needs or challenges.\n  - **Targeted Recipient:** Ensure the recipient has decision-making authority or significant influence within a relevant organization (studio, production company, investment firm).\n  - **Concise Context:** Keep the introduction email brief and focused \u2013 no more than 5-6 sentences.\n\n**Soft Preferences:**\n  - **Warm Introductions:** I strongly prefer warm introductions over cold emails.\n  - **Shared Connections:** Highlight any shared connections or common interests between myself and the recipient.\n  - **Avoid Generic Introductions:** Please refrain from sending generic introductions that don't demonstrate a clear understanding of Muse.\n\n**Profiles to Avoid:**\n  - Individuals who are clearly uninterested in technology or data-driven insights.\n  - Individuals who are already heavily invested in competing solutions.\n  - Individuals whose LinkedIn profile suggests they are not actively engaged in their industry.",
+    "personalPreferences": "I prefer to communicate via email or LinkedIn messaging. Please avoid calling me directly unless it\u2019s a pre-scheduled meeting. I respond most quickly to concise, well-written messages.",
+    "meetingAndSchedulingPreferences": "I generally block out Mondays for focused work. I\u2019m flexible with meeting times Tuesday-Friday. Please use Calendly (link available upon request) to schedule a meeting."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 29.282829999923706,
+      "input_tokens": 844,
+      "output_tokens": 1957,
+      "problems": [
+        "introPreferences: possible truncation (ends with '...here. \n\nBest,\n[Your Name]')"
+      ]
+    },
+    {
+      "attempt": 2,
+      "elapsed_s": 31.130185842514038,
+      "input_tokens": 844,
+      "output_tokens": 1768,
+      "problems": [
+        "meetingAndSchedulingPreferences: possible truncation (ends with '...[fictional Calendly link]')"
+      ]
+    },
+    {
+      "attempt": 3,
+      "elapsed_s": 30.24017906188965,
+      "input_tokens": 844,
+      "output_tokens": 1668,
+      "problems": []
+    }
+  ],
+  "success": true
+}

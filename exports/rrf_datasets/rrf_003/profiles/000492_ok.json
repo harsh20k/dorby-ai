@@ -1,0 +1,54 @@
+{
+  "id": 492,
+  "archetype": "Early-Career Cybersecurity Specialist",
+  "given_name": "Jamal Tanaka",
+  "style_version": 30,
+  "archetypes_version": 83,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Jamal Tanaka is a recent MSc graduate in Cybersecurity from a UK university, but originally from Japan. He's highly skilled in penetration testing and incident response, having completed multiple Capture the Flag (CTF) competitions and a significant internship at a UK-based financial institution. He's now actively seeking a full-time role in Europe, ideally in Germany or the Netherlands, focused on offensive security or security operations. He's eager to apply his technical skills in a real-world setting and contribute to a strong security posture. A key detail is his fluency in Japanese, English, and German \u2013 he sees this as a valuable asset in increasingly globalized cybersecurity environments. He's enthusiastic, a quick learner, and keen to network with professionals in the field.",
+    "positioning": "A highly motivated and technically proficient cybersecurity specialist, I bring a strong foundation in both theoretical knowledge and practical application. My recent Master's degree, coupled with hands-on experience gained through internships and competitive CTF participation, has equipped me with a robust skillset in areas such as penetration testing, vulnerability assessment, and incident response. I\u2019m particularly passionate about proactive security measures and leveraging cutting-edge technologies to mitigate emerging threats. Currently, I am actively seeking a challenging and rewarding role within a forward-thinking organization in Europe, where I can contribute to a robust security posture and continue to develop my expertise. I\u2019m eager to connect with professionals who share a similar passion for cybersecurity and are driving innovation within the industry. My multilingual capabilities \u2013 fluency in Japanese, English, and German \u2013 allow me to bridge communication gaps and contribute effectively in diverse, international teams.",
+    "background": "- **Education:**\n  - MSc Cybersecurity, University of Bristol, UK (Sept 2022 \u2013 Sept 2023) \u2013 Dissertation: \u2018Novel Approaches to Detecting and Mitigating Advanced Persistent Threats\u2019 (Achieved Distinction).\n  - BSc Computer Science, Tokyo Institute of Technology, Japan (Sept 2018 \u2013 June 2022) \u2013 GPA: 3.8/4.0\n\n- **Experience:**\n  - Security Intern, Barclays (London, UK) (June 2023 \u2013 Sept 2023) \u2013 Conducted vulnerability assessments on web applications and internal systems. Assisted in incident response investigations, analyzing security logs and identifying root causes. Contributed to the development of security awareness training materials.\n  - Junior Penetration Tester (Volunteer), Open Security Foundation (Remote) (Jan 2022 \u2013 May 2022) \u2013 Participated in bug bounty programs and vulnerability disclosure initiatives. Gained experience in using penetration testing tools such as Metasploit and Burp Suite.\n\n- **Skills:**\n  - **Technical:** Penetration Testing (Kali Linux, Metasploit, Burp Suite), Vulnerability Assessment (Nessus, OpenVAS), Incident Response, SIEM (Splunk, ELK Stack), Network Security, Cryptography, Python, Java, C++, Linux/Windows Administration.\n  - **Languages:** Japanese (Native), English (Fluent), German (Proficient \u2013 B2 Level).\n  - **Certifications:** CompTIA Security+, Certified Ethical Hacker (CEH) \u2013 *in progress*.\n\n- **Projects:**\n  - Developed a custom intrusion detection system using machine learning algorithms for university research project.\n  - Led a team in a national Capture the Flag (CTF) competition, achieving 3rd place overall.\n",
+    "lookingFor": "I am actively seeking a full-time position in the cybersecurity field within Europe, specifically in Germany or the Netherlands. My ideal role would focus on offensive security (penetration testing, red teaming) or security operations (incident response, threat intelligence). \n\nI am particularly interested in connecting with:\n\n- Security Engineers and Architects at companies with a strong commitment to innovation.\n- Team Leads and Hiring Managers in cybersecurity departments.\n- Professionals working in industries such as finance, technology, and critical infrastructure.\n\nIntroduce me to individuals who can provide insights into the cybersecurity landscape in Germany and the Netherlands. I\u2019m also keen to learn about opportunities for professional development and mentorship within the field. I'm open to roles with a strong emphasis on continuous learning and skill development, and I'm eager to contribute to a collaborative and dynamic team environment. I\u2019m also looking for opportunities to leverage my German language skills.",
+    "notes": "Jamal is a very enthusiastic and quick learner. He\u2019s still relatively early in his career, so mentorship would be extremely valuable for him. He\u2019s very focused on getting his foot in the door in Europe and is willing to be flexible on the specifics of the role to achieve that. He's recently been actively applying for positions in Berlin and Amsterdam. \n\nHe's a strong communicator in English, but can be slightly hesitant to speak in German when discussing highly technical topics \u2013 encourage him to practice! He's currently focused on finishing his CEH certification. \n\n**Do not** emphasize his lack of extensive professional experience; focus on his strong academic background and internship. He's mentioned he's had a few frustrating interviews where employers seemed to prioritize years of experience over potential. He\u2019s particularly interested in companies that value diversity and inclusion.",
+    "locationAvailability": "I am currently based in Bristol, UK, but I am eager to relocate to Germany or the Netherlands. I am open to fully remote positions or roles that require occasional travel within Europe.",
+    "introPreferences": "- **Hard Requirements:**\n  - Introductions should be to individuals *directly involved* in hiring for cybersecurity roles.\n  - Please include a brief summary of my key skills (penetration testing, incident response, German language proficiency) in the introduction.\n  - Ensure the recipient is aware that I am actively seeking a role and open to relocation.\n\n- **Soft Preferences:**\n  - Introductions to individuals who have previously hired recent graduates are highly valued.\n  - If possible, highlight any connections the recipient may have to the German or Dutch cybersecurity community.\n  - Please avoid introducing me to recruiters unless they specialize in cybersecurity roles in Germany or the Netherlands.\n\n- **Avoid:**\n  - Generic introductions to large groups or mailing lists.\n  - Introductions to individuals who are not in a position to influence hiring decisions.\n  - Vague or uninformative introductions.",
+    "personalPreferences": "I prefer to communicate via email initially, but I'm also comfortable with LinkedIn messaging. I'm generally responsive and appreciate clear and concise communication.",
+    "meetingAndSchedulingPreferences": "I am in the GMT+1 time zone. I am available for virtual meetings most evenings and weekends. Please allow at least 24 hours' notice for scheduling."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 21.187288999557495,
+      "input_tokens": 818,
+      "output_tokens": 1446,
+      "problems": []
+    }
+  ],
+  "success": true
+}

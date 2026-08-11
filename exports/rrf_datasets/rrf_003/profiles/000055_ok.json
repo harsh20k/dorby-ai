@@ -1,0 +1,54 @@
+{
+  "id": 55,
+  "archetype": "Early Career Operator to Founder",
+  "given_name": "Emeka Haruna",
+  "style_version": 4,
+  "archetypes_version": 10,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Emeka Haruna is a recent MIT graduate (2021) who spent two years as an early employee at a fast-growing EdTech startup, SkillBridge, focused on micro-internships for college students. He was initially in operations, handling student onboarding and employer relations, but quickly took on a project management role leading the launch of SkillBridge\u2019s university partnerships program. He saw a significant gap in how universities supported students in securing *paid* early career experiences and is now building 'Launchpad,' a platform connecting universities directly with vetted, project-based opportunities from startups and scale-ups. He's currently bootstrapping and seeking seed funding. He's very data-driven, a strong communicator, and keen to leverage his network from SkillBridge and MIT.",
+    "positioning": "I'm the founder of Launchpad, a platform revolutionizing how universities prepare students for the future of work. We connect institutions directly with high-quality, paid project opportunities at innovative companies, bridging the gap between classroom learning and real-world experience. Launchpad addresses the critical need for accessible early career experience, especially for students from non-traditional backgrounds. We\u2019ve just launched a pilot program with three universities and are already seeing a 30% increase in student placement rates in paid roles. My background in scaling SkillBridge\u2019s university partnerships has given me unique insight into the challenges and opportunities in this space, and I'm passionate about democratizing access to impactful career pathways.",
+    "background": "* **Founder, Launchpad** (2023 \u2013 Present): Spearheaded all aspects of Launchpad\u2019s development, from initial concept to pilot program launch, including market research, platform development, and university partnership acquisition.\n* **Project Manager, SkillBridge** (2021 \u2013 2023): Led the launch and expansion of SkillBridge's University Partnerships program, securing partnerships with 25+ universities, resulting in a 40% increase in university participation within the first year.\n* **Operations Associate, SkillBridge** (2021): Managed student onboarding, employer relations, and data analysis, contributing to a 20% improvement in student satisfaction scores.\n* **MIT, Cambridge, MA** (2017 \u2013 2021): Bachelor of Science in Computer Science, minor in Entrepreneurship. GPA: 3.9/4.0. Relevant coursework: Data Structures, Algorithms, Machine Learning, New Ventures.\n* **HackMIT Winner** (2020): Led a team that developed a mobile application for personalized learning, winning the top prize at the annual HackMIT competition.\n* **Dean\u2019s List, MIT** (All Semesters)\n* **Summer Intern, Google** (2020): Software Engineering Intern, focused on developing and testing new features for Google Maps.\n* **Relevant Skills:** Project Management, Data Analysis (SQL, Excel, Google Analytics), Partnership Development, Early-Stage Startup Operations, Full-Stack Web Development (JavaScript, React, Node.js), Communication, Leadership.",
+    "lookingFor": "* Introductions to Seed-Stage Investors focused on EdTech and Future of Work.\n* Connections with university career services leaders (Directors, Associate Directors).\n* Introductions to startup founders (Series A/B) who actively hire interns/early career talent.\n* Advisory support from experienced EdTech entrepreneurs.\n* Warm introductions to potential pilot university partners (targeting large public universities).\n* Feedback on Launchpad\u2019s value proposition from university students.\n* Mentorship on fundraising strategy and pitch deck refinement.\n* Potential co-founders with strong marketing or sales experience.",
+    "notes": "* Emeka is incredibly responsive and articulate. He's very focused on building a scalable solution. \n* He's actively fundraising and has a solid pitch deck. \n* He mentioned being particularly interested in investors who understand the challenges faced by first-generation college students.\n* He's a very quick learner and eager to iterate on feedback. \n* Last conversation (10/26) he was exploring potential integrations with existing university LMS systems.",
+    "locationAvailability": "Based in Boston, MA, but open to remote meetings and occasional travel. Willing to consider relocation for the right investment opportunity.",
+    "introPreferences": "* **Must-Have:** Connections with investors actively deploying capital in the EdTech space.\n* **Ideal:** Individuals who have experience building and scaling EdTech platforms.\n* **Dealbreaker:** Introductions to individuals with no prior experience in education or technology.\n* **Framing:** Please emphasize Emeka\u2019s experience at SkillBridge and his data-driven approach to solving a real problem for students and universities.\n* **Preferred Connection Level:** Partner or Principal at VC firms; Director or VP of Talent at high-growth startups.\n* **Avoid:** Cold emails or LinkedIn messages \u2013 warm introductions only, please.\n* **Bonus:** Connections with alumni from MIT or other top engineering schools.",
+    "personalPreferences": "I prefer to connect on LinkedIn initially and then move to a quick call. I\u2019m generally available for calls in the late afternoon/early evening.",
+    "meetingAndSchedulingPreferences": "I use Calendly for scheduling meetings \u2013 link available upon request. I\u2019m flexible with meeting formats (Zoom, Google Meet, phone call) and prefer concise, focused discussions."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 16.469635248184204,
+      "input_tokens": 850,
+      "output_tokens": 1126,
+      "problems": []
+    }
+  ],
+  "success": true
+}

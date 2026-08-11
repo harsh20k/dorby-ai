@@ -1,0 +1,54 @@
+{
+  "id": 947,
+  "archetype": "Academic AI/Cybersecurity Researcher",
+  "given_name": "Liang Bianchi",
+  "style_version": 58,
+  "archetypes_version": 159,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Liang Bianchi is a rising star in the field of adversarial machine learning, specifically focusing on the security of large language models (LLMs). They recently completed a post-doc at MIT, where they developed a novel defense mechanism against prompt injection attacks. Now, they\u2019re transitioning to a research scientist role at a well-funded cybersecurity startup, \u2018Aetherium Defense\u2019, but are actively seeking seed funding for a spin-off company based on their MIT research. This spin-off, \u2018Synapse Guard\u2019, aims to offer a commercial solution for LLM security auditing and real-time threat detection. They\u2019re highly technical, a bit introverted, and value direct, efficient communication. Their distinctive career detail is a prior background in competitive programming, which honed their problem-solving skills and gave them a unique perspective on algorithmic vulnerabilities. They are very focused on translating academic research into practical, deployable security solutions.",
+    "positioning": "I'm Liang Bianchi, a research scientist specializing in the intersection of artificial intelligence and cybersecurity, currently transitioning to Aetherium Defense. My core expertise lies in adversarial machine learning, with a particular focus on the vulnerabilities of large language models (LLMs). I recently completed a postdoctoral research fellowship at MIT, where I spearheaded the development of \u2018ShieldAI\u2019, a novel defense mechanism against prompt injection attacks \u2013 a significant threat to the security and reliability of LLM-powered applications. My work has been published in leading AI security conferences (NeurIPS, ICML, CCS) and generated considerable interest from both academic and industry partners. I\u2019m now focused on translating this research into tangible security solutions and am actively exploring opportunities to scale \u2018ShieldAI\u2019 through a dedicated venture. I\u2019m passionate about building robust and trustworthy AI systems and believe proactive security measures are crucial as LLMs become increasingly integrated into critical infrastructure. I\u2019m eager to connect with investors, cybersecurity leaders, and fellow researchers who share this vision. I bring a unique blend of theoretical depth and practical implementation experience, positioning me as a valuable asset in the rapidly evolving landscape of AI security.",
+    "background": "- **Aetherium Defense, Research Scientist** (August 2024 \u2013 Present)\n    * Leading research efforts in LLM security, focusing on identifying and mitigating emerging threats.\n    * Developing and implementing novel algorithms for real-time threat detection and response.\n    * Collaborating with engineering teams to integrate security features into Aetherium\u2019s product suite.\n\n- **Massachusetts Institute of Technology (MIT), Postdoctoral Research Fellow** (September 2021 \u2013 July 2024)\n    * Developed \u2018ShieldAI\u2019, a novel defense mechanism against prompt injection attacks, resulting in a 35% improvement in LLM robustness against adversarial inputs (measured via benchmark datasets).\n    * Published research findings in top-tier AI security conferences, including NeurIPS, ICML, and CCS.\n    * Secured $50,000 in research funding through MIT\u2019s internal grant program.\n    * Mentored two graduate students in AI security research.\n\n- **Stanford University, Ph.D. in Computer Science (AI/Security)** (September 2017 \u2013 August 2021)\n    * Dissertation: \u201cAdversarial Robustness of Deep Neural Networks: A Game-Theoretic Approach.\u201d\n    * GPA: 3.9/4.0\n    * Awarded the Stanford Graduate Fellowship.\n    * Developed a novel algorithm for generating adversarial examples, achieving state-of-the-art performance on ImageNet.\n\n- **University of California, Berkeley, B.S. in Computer Science** (September 2013 \u2013 May 2017)\n    * Minor in Mathematics.\n    * Graduated *Summa Cum Laude*.\n    * Ranked in the top 5% of the graduating class.\n    * Active member of the competitive programming team, consistently placing in the top 10 at regional competitions.\n\n- **Skills:** Python, TensorFlow, PyTorch, Keras, Machine Learning, Deep Learning, Adversarial Machine Learning, Cybersecurity, Natural Language Processing (NLP), Prompt Engineering, Game Theory, Statistical Analysis, Data Visualization.\n\n- **Publications:**\n    * Bianchi, L., et al. \"ShieldAI: Defending Large Language Models Against Prompt Injection Attacks.\" *NeurIPS*, 2023.\n    * Bianchi, L., et al. \"A Game-Theoretic Framework for Adversarial Robustness.\" *ICML*, 2022.\n    * Bianchi, L., et al. \"Generating Adversarial Examples via Gradient-Based Optimization.\" *CCS*, 2021.",
+    "lookingFor": "- **Seed Funding:** Seeking $500k - $1M seed funding for 'Synapse Guard', a spin-off company focused on LLM security auditing and threat detection.\n- **Strategic Partnerships:** Interested in collaborating with cybersecurity firms to integrate 'ShieldAI' into their product offerings.\n- **Introductions to Venture Capitalists:** Specifically targeting VCs specializing in AI/Cybersecurity (Lightspeed, Andreessen Horowitz, Sequoia).\n- **LLM Security Experts:** Connecting with researchers and engineers working on LLM security to exchange ideas and explore potential collaborations.\n- **Potential Early Adopters:** Seeking companies interested in piloting 'Synapse Guard' for their LLM-powered applications.",
+    "notes": "Liang is a highly focused and technically proficient researcher. They can be initially reserved, but are very enthusiastic when discussing their work. The spin-off company, 'Synapse Guard', is still in its early stages \u2013 the business plan is solid, but the team is currently limited to Liang and a co-founder (a former classmate). They are somewhat averse to 'fluff' and prefer direct, data-driven conversations. They are particularly sensitive about the potential for their research to be misused, and will carefully vet potential partners. They\u2019ve expressed interest in a potential advisory role with a leading AI ethics organization, but haven\u2019t actively pursued it yet. Recent update: They presented 'ShieldAI' at a private industry event and received positive feedback from several potential investors. They are currently preparing a detailed pitch deck.",
+    "locationAvailability": "I am based in Cambridge, Massachusetts, but am open to remote collaboration and travel. I\u2019m flexible with work arrangements and happy to participate in virtual meetings or in-person events as needed. I\u2019m also willing to relocate for the right opportunity.",
+    "introPreferences": "- **Hard Requirements:**\n    * **Focus on Technical Expertise:** Introductions should emphasize my expertise in adversarial machine learning and LLM security. Avoid framing me as a general AI researcher.\n    * **Targeted Contacts:** Prioritize introductions to VCs specializing in AI/Cybersecurity or cybersecurity leaders responsible for LLM security.\n    * **Concise Introduction:** Keep the introduction brief and to the point. I prefer efficiency.\n\n- **Soft Preferences:**\n    * **Highlight 'ShieldAI':** Mention my work on 'ShieldAI' and its potential impact on LLM security.\n    * **Avoid Overselling:** I prefer a realistic assessment of my work and its potential. Avoid hyperbole.\n    * **Pre-briefing:** If possible, please briefly inform the contact about my background and research interests before making the introduction. This helps ensure a more productive conversation.\n    * **Don't emphasize the 'spin-off' too early:** Let the conversation organically move to Synapse Guard. Start with my research and expertise.",
+    "personalPreferences": "I prefer email as my primary mode of communication. I tend to be analytical and appreciate data-driven discussions. Outside of research, I enjoy competitive programming and solving algorithmic puzzles.",
+    "meetingAndSchedulingPreferences": "- I generally prefer meetings to be scheduled with at least 24 hours\u2019 notice.\n- My availability is typically best during weekday afternoons (Eastern Time).\n- I am comfortable with 30-minute or 60-minute meetings, depending on the agenda."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 22.77682399749756,
+      "input_tokens": 736,
+      "output_tokens": 1696,
+      "problems": []
+    }
+  ],
+  "success": true
+}

@@ -1,0 +1,54 @@
+{
+  "id": 696,
+  "archetype": "Serial Founder, Biotech/Deep Tech",
+  "given_name": "Nikolai Reyes",
+  "style_version": 42,
+  "archetypes_version": 116,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Nikolai Reyes is a serial entrepreneur currently focused on cellular agriculture, specifically cultivated seafood. He\u2019s had two successful exits \u2013 a SaaS platform for logistics and a renewable energy microgrid company \u2013 and is now applying his operational expertise to a field he believes is crucial for global food security and environmental sustainability. His distinctive career detail is a period spent living and working in the Philippines, fostering a deep understanding of APAC markets and supply chains, which heavily influences his current business strategy. He\u2019s looking for investors, strategic partners with distribution networks in Asia, and scientific advisors to help scale his cultivated seafood venture. He's very direct and values efficiency, so his profile will reflect that. He\u2019s not interested in \u2018networking for the sake of networking\u2019 \u2013 every connection needs a clear purpose.",
+    "positioning": "I\u2019m building the future of seafood. As CEO of AquaGenesis, we\u2019re pioneering the production of sustainable, high-quality cultivated seafood, addressing the growing global demand while mitigating the devastating impacts of traditional fishing. We\u2019re leveraging cutting-edge cellular agriculture technology to create ocean-friendly protein, focusing initially on high-value species like grouper and tuna. My background isn\u2019t traditionally \u2018biotech\u2019 \u2013 I\u2019m a builder, an operator, a founder who\u2019s successfully scaled two companies from seed to exit. I bring that rigorous execution focus to AquaGenesis, alongside a deep commitment to sustainability.  I spent a significant portion of my career navigating the complexities of supply chains and market entry in Southeast Asia, specifically the Philippines, giving me a unique perspective on the potential \u2013 and the challenges \u2013 of deploying this technology in APAC.  We\u2019re currently closing our Series A and are actively seeking strategic partners to accelerate our go-to-market strategy.  If you\u2019re an investor focused on food tech, a potential distribution partner in Asia, or possess deep expertise in cellular agriculture, I\u2019d welcome a direct connection.",
+    "background": "- **CEO, AquaGenesis** (2022 \u2013 Present)\n    - Led seed funding round of $3M, establishing initial lab operations and core R&D team.\n    - Developed strategic partnerships with leading research institutions in cellular agriculture.\n    - Currently leading Series A fundraising efforts, targeting $15M to scale production and initiate pilot programs.\n    - Focused on developing a robust, scalable bioprocess for cultivated seafood production.\n\n- **Founder & CEO, Energrid Solutions** (2016 \u2013 2021)\n    - Founded and scaled a renewable energy microgrid company serving off-grid communities in Southeast Asia.\n    - Secured $8M in venture capital funding and achieved profitability within three years.\n    - Successfully exited to a regional energy conglomerate in 2021.\n    - Oversaw all aspects of the business, including strategy, operations, finance, and fundraising.\n\n- **Founder & CEO, LogiFlow Technologies** (2012 \u2013 2016)\n    - Developed and launched a SaaS platform optimizing logistics and supply chain management for SMEs.\n    - Grew the platform to over 500 paying customers and achieved a 30% year-over-year revenue growth.\n    - Successfully exited to a larger supply chain software provider in 2016.\n    - Led product development, sales, and marketing efforts.\n\n- **Operations Manager, Global Logistics Inc.** (2009 \u2013 2012)\n    - Managed a team of 20+ logistics professionals, overseeing the efficient movement of goods across international borders.\n    - Implemented process improvements resulting in a 15% reduction in shipping costs.\n    - Gained extensive experience in international trade, customs regulations, and supply chain optimization.\n\n- **Volunteer \u2013 Rural Electrification Project, Philippines** (2008 \u2013 2009)\n    - Spent a year working with a non-profit organization to implement sustainable energy solutions in rural communities in the Philippines.\n    - Developed a deep understanding of the challenges and opportunities in emerging markets.",
+    "lookingFor": "I'm laser-focused on accelerating AquaGenesis\u2019 growth and impact. I\u2019m not looking for general networking; I need specific expertise and connections. \n\n**Investors:**\n- Series A investors with a proven track record in food tech and/or biotech ($5M+ check size).\n- Impact investors aligned with our sustainability mission.\n- Individuals comfortable with the long-term R&D cycle inherent in cellular agriculture.\n\n**Strategic Partners:**\n- Food distributors with established networks in key APAC markets (Singapore, Japan, South Korea, Philippines).\n- Seafood processors and retailers interested in piloting cultivated seafood products.\n- Companies with expertise in food safety and regulatory compliance.\n\n**Advisors/Experts:**\n- PhD-level scientists with expertise in cell line development, bioprocessing, and food science.\n- Regulatory experts familiar with the approval pathways for cultivated seafood in key markets.\n- Individuals with experience scaling biomanufacturing operations.\n\n**I am *not* interested in:**\n- Cold outreach from recruiters.\n- General \u2018thought leadership\u2019 conversations without a clear objective.\n- Individuals seeking mentorship or career advice.",
+    "notes": "- Recently presented at the Future Food Tech conference in San Francisco \u2013 generated significant interest.\n- Have a strong relationship with Dr. Anya Sharma at MIT \u2013 happy to connect for scientific validation.\n- Highly efficient communicator \u2013 prefer direct, concise messages.\n- Spent significant time in the Philippines \u2013 deeply understand the nuances of the APAC market.\n- AquaGenesis is actively seeking a Head of Bioprocessing \u2013 please share relevant candidates.\n- Don\u2019t waste my time with pitches for unrelated ventures.",
+    "locationAvailability": "Based in San Francisco, CA, but frequently travel to Singapore and the Philippines. Open to virtual meetings globally.",
+    "introPreferences": "When making introductions, please adhere to the following:\n\n**Hard Requirements:**\n- The introduction must be to someone directly relevant to AquaGenesis\u2019 needs (as outlined in my \u2018Looking For\u2019 section).\n- Include a brief explanation of *why* you think the connection would be valuable, highlighting specific synergies.\n- Clearly state the individual\u2019s title and company size.\n\n**Soft Preferences:**\n- I prefer introductions via email, with a concise and professional subject line.\n- Keep the introduction brief and to the point \u2013 I value efficiency.\n- Please ensure the recipient is aware of my background and AquaGenesis\u2019 mission.\n\n**Avoid:**\n- Vague introductions without a clear purpose.\n- Including irrelevant information or lengthy background stories.\n- Introducing me to individuals who are clearly outside of my target audience.",
+    "personalPreferences": "Email is best. I respond quickly to concise, well-written messages.",
+    "meetingAndSchedulingPreferences": "Generally available for calls between 9 AM - 12 PM PST.  Happy to schedule via Calendly (link available upon request). Prefer 30-minute introductory calls."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 26.557976007461548,
+      "input_tokens": 887,
+      "output_tokens": 1498,
+      "problems": []
+    }
+  ],
+  "success": true
+}

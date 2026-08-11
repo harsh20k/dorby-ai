@@ -1,0 +1,54 @@
+{
+  "id": 866,
+  "archetype": "Product Leader, SaaS & GRC",
+  "given_name": "Rosa Weber",
+  "style_version": 53,
+  "archetypes_version": 146,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Rosa Weber is a seasoned Product Leader currently focused on building out the next generation of a GRC SaaS platform. She\u2019s spent the last 15 years in product, starting in engineering then transitioning to product management. A distinctive detail is her early career experience *within* a large audit firm, giving her a unique understanding of the customer need from the inside, which she leverages heavily. She's now aiming to move into a more strategic leadership role, potentially VP of Product, at a company that\u2019s scaling rapidly and has a strong emphasis on innovation within the GRC space. She's actively networking to find mentors and connections who have successfully navigated that transition and are building truly impactful GRC products. She\u2019s pragmatic, data-driven, and values deep subject matter expertise.",
+    "positioning": "Rosa Weber is a product leader driving innovation in the Governance, Risk, and Compliance (GRC) space. Currently leading product strategy and execution at CompliantCore, a leading SaaS provider, I specialize in translating complex regulatory requirements into intuitive and impactful software solutions. My background uniquely blends technical expertise with a deep understanding of audit and compliance processes, honed during my early career at Deloitte. I\u2019m passionate about building products that empower organizations to proactively manage risk and achieve operational excellence. I\u2019m particularly interested in connecting with other product leaders tackling similar challenges, as well as potential investors and advisors focused on the future of GRC technology.",
+    "background": "- **CompliantCore, Senior Product Manager** (2020 \u2013 Present)\n  * Led the product roadmap and execution for the core risk management module, resulting in a 30% increase in user adoption.\n  * Spearheaded the integration of AI-powered risk scoring, improving detection accuracy by 25%.\n  * Conducted extensive user research and competitive analysis to identify market opportunities and unmet needs.\n  * Managed a cross-functional team of engineers, designers, and data scientists.\n  * Technologies: Agile/Scrum, Jira, Confluence, AWS, Python (basic), SQL, Figma.\n\n- **AuditBoard, Product Manager** (2017 \u2013 2020)\n  * Managed the product lifecycle for the internal audit module, focusing on workflow automation and reporting.\n  * Collaborated with sales and marketing teams to develop product positioning and launch strategies.\n  * Implemented A/B testing frameworks to optimize product features and user experience.\n\n- **Deloitte, Senior Auditor** (2012 \u2013 2017)\n  * Conducted financial and operational audits for Fortune 500 companies across various industries.\n  * Developed and implemented audit procedures to ensure compliance with regulatory requirements (SOX, GDPR, etc.).\n  * Gained firsthand experience with the pain points and challenges faced by compliance professionals.\n\n- **Education: Stanford University, MBA** (2010 \u2013 2012), Concentration in Product Management\n- **Education: University of California, Berkeley, BS in Computer Science** (2006 \u2013 2010)\n- **Skills:** Product Strategy, Product Roadmap, Agile Development, GRC, Risk Management, Compliance, SaaS, User Research, Data Analysis, A/B Testing, Stakeholder Management, Jira, Confluence, SQL, Python (basic).",
+    "lookingFor": "- **Mentorship:** Seeking experienced VPs of Product at high-growth SaaS companies to discuss career progression and leadership strategies.\n- **Strategic Partnerships:** Exploring potential collaborations with companies offering complementary GRC solutions.\n- **Investment Opportunities:** Open to connecting with investors focused on early-stage GRC technology companies.\n- **Industry Insights:** Interested in learning about emerging trends and best practices in the GRC space.\n- **Advisory Roles:** Seeking advisors with expertise in scaling product organizations.\n- **Networking:** Connecting with other product leaders in the SaaS space to share knowledge and experiences.\n- **Potential Customers:** Connecting with CISOs, CROs, and Compliance Directors at large enterprises.",
+    "notes": "- Rosa is currently evaluating several new AI/ML technologies for potential integration into CompliantCore\u2019s platform.\n- She's been actively involved in the development of a new industry standard for automated compliance reporting.\n- Recently presented at the RSA Conference on the future of risk management in the cloud.\n- She\u2019s very focused on data-driven decision making and is a strong advocate for user research.\n- She\u2019s particularly keen on companies that are pushing the boundaries of GRC through innovative technology.",
+    "locationAvailability": "Rosa Weber is currently based in San Francisco, California and is open to considering remote opportunities. She will be attending the Gartner Security & Risk Management Summit in June.",
+    "introPreferences": "- **Hard Requirements:** Introductions should be to VPs of Product at SaaS companies with ARR > $50M, or to investors specializing in GRC/Cybersecurity.\n- **Soft Preferences:** Introductions to individuals with a strong technical background are preferred.\n- **Avoid:** Introductions to sales or marketing representatives unless they have a direct connection to product strategy.\n- **Introduction Style:** Please provide a brief context about my background and why I'm reaching out.\n- **Connection Quality:** Prioritize quality over quantity \u2013 I'm looking for meaningful connections, not just LinkedIn requests.\n- **Mutual Connection Bonus:** Introductions through mutual connections are highly valued.",
+    "personalPreferences": "I prefer to connect via LinkedIn initially, and I'm comfortable with quick video calls. I generally respond to messages within 24-48 hours.",
+    "meetingAndSchedulingPreferences": "- I prefer to have a brief agenda sent in advance of any meetings.\n- I am available for 30-minute introductory calls."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 22.378352880477905,
+      "input_tokens": 737,
+      "output_tokens": 1217,
+      "problems": []
+    }
+  ],
+  "success": true
+}

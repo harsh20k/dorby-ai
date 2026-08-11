@@ -1,0 +1,63 @@
+{
+  "id": 96,
+  "archetype": "AI-First Founder, Early Stage",
+  "given_name": "Marcus Martins",
+  "style_version": 7,
+  "archetypes_version": 16,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Marcus Martins is a 34-year-old founder and CEO of 'Synapse Insights,' a pre-seed AI-powered market research platform. He previously spent 5 years at a large, traditional market research firm (Nielsen) where he became deeply frustrated with the slow pace of innovation and reliance on outdated methodologies. This experience fuels his passion for building a faster, more accurate, and democratized market intelligence solution leveraging Large Language Models (LLMs). He's currently focused on closing a seed round, demonstrating strong early traction with beta users, and refining the core AI algorithms. He\u2019s a very technical founder, deeply involved in the model training and data pipeline aspects, and often speaks in technical detail. He's a bit impatient with 'fluff' and prioritizes direct, efficient communication. He\u2019s based in Austin, Texas, but open to remote work and travel. A key distinctive detail is he self-taught much of his machine learning expertise *after* leaving Nielsen, attending intensive online courses and building personal projects.",
+    "positioning": "As CEO and Founder of Synapse Insights, I'm building the next generation of market intelligence. We\u2019re tackling the pervasive problem of slow, expensive, and often inaccurate market research by leveraging the power of Large Language Models. Traditional methods rely on manual surveys and analysis, resulting in delayed insights and significant costs. Synapse Insights automates this process, delivering real-time, data-driven insights at a fraction of the cost. We\u2019re currently in pre-seed, demonstrating significant traction with a rapidly growing beta user base. Our proprietary AI algorithms analyze vast datasets \u2013 social media trends, news articles, product reviews, and more \u2013 to identify emerging market opportunities and predict consumer behavior. We\u2019ve achieved a 30% MoM growth in beta user engagement and are seeing promising early conversion rates. I'm deeply passionate about applying cutting-edge AI to solve real-world business challenges and democratizing access to critical market information. We're not just building a product; we're building a platform that empowers companies of all sizes to make smarter, faster decisions. We are actively seeking strategic investors who share our vision and can contribute to our technical roadmap.",
+    "background": "* **Synapse Insights, CEO & Founder** (Oct 2022 \u2013 Present)\n    * Led all aspects of company formation, including business plan development, fundraising strategy, and team building.\n    * Designed and implemented the core AI algorithms utilizing Python, TensorFlow, and transformer models (BERT, GPT-3).\n    * Managed the development of the SaaS platform, overseeing front-end development (React) and back-end infrastructure (AWS).\n    * Achieved 30% MoM growth in beta user engagement and secured LOIs from several key potential customers.\n    * Successfully completed a pre-seed funding round of $150,000.\n* **Nielsen, Senior Market Research Analyst** (Jun 2017 \u2013 Sep 2022)\n    * Conducted quantitative and qualitative market research for Fortune 500 clients across various industries.\n    * Developed and presented data-driven insights to senior management, informing strategic decision-making.\n    * Managed large-scale survey projects, overseeing data collection, analysis, and reporting.\n    * Identified and implemented process improvements to enhance research efficiency and accuracy.\n    * Became proficient in statistical analysis software (SPSS, SAS) and data visualization tools (Tableau).\n* **University of Texas at Austin, BBA in Finance** (Aug 2013 \u2013 May 2017)\n    * Graduated *Cum Laude* with a focus on financial modeling and data analysis.\n    * Dean\u2019s List all semesters.\n    * President of the University Investment Club.\n* **Skills:** Python, TensorFlow, PyTorch, Large Language Models (LLMs), BERT, GPT-3, Data Analysis, Statistical Modeling, Market Research, SaaS, AWS, React, SQL, Data Visualization (Tableau, Power BI), Financial Modeling, Business Strategy, Fundraising, Team Leadership.",
+    "lookingFor": "I'm actively looking to expand my network with individuals who can contribute to the growth of Synapse Insights. Specifically, I'm seeking:\n\n* **Seed-Stage Investors:** Angel investors and venture capital firms with a focus on AI, SaaS, and market research. I\u2019m looking for partners who understand the technical intricacies of our platform and can provide strategic guidance.\n* **AI/ML Engineers:** Experienced engineers specializing in LLMs, data pipelines, and model optimization. We\u2019re scaling our AI infrastructure and need top talent.\n* **Strategic Advisors:** Seasoned entrepreneurs and industry experts with experience in scaling SaaS businesses and navigating the market research landscape.\n* **Potential Customers/Partners:** Companies seeking to leverage AI-powered market intelligence to gain a competitive edge. We\u2019re open to pilot programs and strategic partnerships.\n\nI'm always open to discussing opportunities for collaboration and knowledge sharing. I'm particularly interested in connecting with individuals who are passionate about the intersection of AI and business.",
+    "notes": "Marcus is very direct and values efficiency in communication. He responds best to concise, well-articulated messages that get straight to the point. He's highly technical and enjoys discussing the intricacies of the AI models. He's currently prioritizing fundraising and engineering talent. \n\n* **Recent Conversation (10/26):** Discussed potential investor leads with John Doe. Follow up with John regarding introductions to firms specializing in AI. \n* **Priority:** Close Seed Round by end of November.\n* **Communication Preference:** Prefers email for initial contact, followed by a brief call to assess fit.",
+    "locationAvailability": "I am based in Austin, Texas, but Synapse Insights operates as a fully remote company. I am open to travel for investor meetings and industry events.",
+    "introPreferences": "* When introducing me, please emphasize my technical background and experience building AI-powered solutions.\n* Focus on my previous experience at Nielsen and how it fueled my passion for disrupting the market research industry.\n* Highlight our early traction and the potential of our platform to revolutionize market intelligence.\n* I prefer introductions to individuals who are genuinely interested in learning about our technology and exploring potential collaboration opportunities. \n* Avoid overly promotional or sales-focused introductions.",
+    "personalPreferences": "* Prefer email for initial contact: marcus.martins@synapseinsights.ai\n* LinkedIn is acceptable for quick messages.\n* I'm not very active on Twitter.\n* Prefer direct, concise communication.",
+    "meetingAndSchedulingPreferences": "I am generally available for meetings during business hours (Central Time). Please send a calendar invite with a clear agenda. I prefer shorter, focused meetings (30-45 minutes) to maximize efficiency."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 22.262537002563477,
+      "input_tokens": 831,
+      "output_tokens": 1593,
+      "problems": [
+        "background: possible truncation (ends with '...ng, Go-to-Market Strategy')"
+      ]
+    },
+    {
+      "attempt": 2,
+      "elapsed_s": 34.20110201835632,
+      "input_tokens": 831,
+      "output_tokens": 1440,
+      "problems": []
+    }
+  ],
+  "success": true
+}

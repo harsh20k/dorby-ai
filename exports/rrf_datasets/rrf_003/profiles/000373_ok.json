@@ -1,0 +1,54 @@
+{
+  "id": 373,
+  "archetype": "US Reverse Logistics/E-commerce Founder",
+  "given_name": "Mikael Nakamura",
+  "style_version": 23,
+  "archetypes_version": 62,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Mikael Nakamura is a serial entrepreneur currently focused on scaling his reverse logistics startup, 'ReturnFlow'. He previously spent several years as a data scientist at a major shipping company, witnessing firsthand the massive inefficiencies and costs associated with e-commerce returns. This experience sparked the idea for ReturnFlow, which uses AI-powered grading and dynamic pricing to maximize recovery value for returned items. He's a highly analytical, data-driven founder, but also understands the operational complexities of the returns process. He\u2019s actively seeking strategic partnerships with larger e-commerce platforms and investors who understand the potential of turning returns into a profit center. He\u2019s a bit of a perfectionist and can be overly focused on data, sometimes needing a nudge to prioritize speed to market.",
+    "positioning": "As Founder and CEO of ReturnFlow, I\u2019m tackling the $761 billion problem of e-commerce returns. We\u2019re building the intelligent reverse logistics platform that transforms returns from a cost center into a revenue stream for brands. Before ReturnFlow, I spent five years at FedEx as a Senior Data Scientist, where I developed predictive models for package flow and identified significant opportunities to optimize the returns process \u2013 the seed for what is now ReturnFlow. \n\nI'm passionate about leveraging data and technology to solve complex supply chain challenges. ReturnFlow isn't just about processing returns; it's about understanding *why* items are returned and using that insight to improve product quality, reduce waste, and ultimately, boost brand profitability. We offer a unique combination of AI-powered grading, dynamic pricing, and streamlined logistics, allowing brands to maximize recovery value and minimize environmental impact.\n\nMy expertise lies in data science, machine learning, supply chain management, and building high-performing teams. I\u2019m currently focused on scaling ReturnFlow\u2019s operations and expanding our partnerships within the e-commerce ecosystem. I'm always open to connecting with fellow founders, investors, and industry leaders who share a vision for a more sustainable and efficient future of e-commerce.",
+    "background": "\u2022 **ReturnFlow, Founder & CEO** (2021 \u2013 Present)\n    \u25e6 Led seed funding round of $2.5M.\n    \u25e6 Developed and launched ReturnFlow\u2019s core AI-powered grading and pricing engine.\n    \u25e6 Grew team to 25 employees.\n    \u25e6 Secured partnerships with 15+ e-commerce brands.\n    \u25e6 Responsible for overall strategy, product development, and fundraising.\n\u2022 **FedEx, Senior Data Scientist** (2016 \u2013 2021)\n    \u25e6 Developed predictive models for package volume and delivery times, resulting in a 12% reduction in delivery delays.\n    \u25e6 Led a project to analyze returns data, identifying key drivers of return rates and opportunities for improvement.\n    \u25e6 Built and maintained data pipelines using Python, SQL, and cloud-based data warehousing solutions (AWS).\n    \u25e6 Mentored junior data scientists.\n\u2022 **University of California, Berkeley, PhD, Statistics** (2012 \u2013 2016)\n    \u25e6 Dissertation: \u201cBayesian Modeling of Time-Series Data with Applications to Logistics.\u201d\n    \u25e6 GPA: 3.9/4.0\n\u2022 **Stanford University, BS, Mathematics** (2008 \u2013 2012)\n    \u25e6 Minor: Computer Science\n    \u25e6 Dean\u2019s List all semesters.\n\n**Skills:** Python, SQL, Machine Learning (Regression, Classification, Clustering), Data Visualization (Tableau, Power BI), AWS, Supply Chain Management, Reverse Logistics, E-commerce, Leadership, Team Building, Data Analysis, Statistical Modeling.",
+    "lookingFor": "\u2022 **Strategic Partnerships:** E-commerce platforms (Shopify, Magento, BigCommerce) interested in integrating ReturnFlow\u2019s technology.\n\u2022 **Series A Investors:** Venture capital firms specializing in supply chain technology and e-commerce.\n\u2022 **Advisors:** Experienced operators in the reverse logistics space who can provide guidance on scaling and growth.\n\u2022 **Key Hires:** A VP of Sales with a proven track record in B2B SaaS sales, and a Head of Operations with deep experience in logistics and fulfillment.",
+    "notes": "Mikael is highly data-driven and can sometimes get lost in the details. While this is a strength, it can also lead to analysis paralysis. He's receptive to feedback, but prefers data-backed arguments. \n\n\u2022 **Caution:** He\u2019s very protective of ReturnFlow\u2019s intellectual property and will be hesitant to share detailed technical information without a formal NDA.\n\u2022 **Note:** He is an active member of the Sustainable E-commerce Consortium and is passionate about reducing waste in the industry.\n\u2022 **Important:** He\u2019s currently prioritizing partnerships that can provide access to large volumes of returns data for model training and validation.",
+    "locationAvailability": "I'm based in San Francisco, California, but am open to remote collaboration. I'm willing to travel domestically for key meetings and conferences, and potentially open to relocating for the right investment opportunity. We are building a hybrid team, with a strong preference for individuals located within the Pacific Time Zone.",
+    "introPreferences": "\u2022 **Hard Requirements:** Introductions to VPs or Directors of Partnerships at Shopify, Magento, or BigCommerce.\n\u2022 **Soft Preferences:** Introductions to investors at firms like Kleiner Perkins, Sequoia Capital, or Andreessen Horowitz. Individuals with experience in supply chain or e-commerce are highly valued.\n\u2022 **Avoid:** Introductions to recruiters or individuals offering services unrelated to strategic partnerships or investment. Please do not introduce me to individuals solely interested in marketing or PR services.\n\u2022 **Framing:** Please highlight ReturnFlow\u2019s unique AI-powered approach and our ability to significantly increase recovery value for returned items.",
+    "personalPreferences": "I prefer to connect via LinkedIn initially. Email is also fine for follow-up. I'm generally quick to respond, but please allow up to 24-48 hours during peak periods. I appreciate concise and data-driven communication.",
+    "meetingAndSchedulingPreferences": "I typically use Calendly for scheduling meetings. Please feel free to book a time that works for you through my Calendly link."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 25.142050981521606,
+      "input_tokens": 800,
+      "output_tokens": 1315,
+      "problems": []
+    }
+  ],
+  "success": true
+}

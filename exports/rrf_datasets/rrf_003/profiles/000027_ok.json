@@ -1,0 +1,54 @@
+{
+  "id": 27,
+  "archetype": "AI-Focused Enterprise Builder",
+  "given_name": "Liang Reyes",
+  "style_version": 2,
+  "archetypes_version": 5,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Liang Reyes is a seasoned data science leader who recently pivoted from a highly successful, but internally-focused role at a large financial institution to building an AI-powered compliance solution for the healthcare industry. Her distinctive career detail is a very early, successful implementation of federated learning for fraud detection \u2013 a project she led at age 28 that gained internal recognition but remained largely outside the public sphere. She\u2019s now looking to leverage that expertise to scale a new startup, \u2018Aether Compliance,\u2019 focused on automating HIPAA and GDPR compliance checks for hospitals and insurance providers. She's actively seeking strategic partnerships with larger healthcare systems and seed funding. She's very focused on data privacy and ethical AI, and wants to be seen as a thought leader in responsible AI deployment within heavily regulated industries. She's pragmatic and prioritizes demonstrable ROI over purely academic approaches.",
+    "positioning": "Liang Reyes is a data science executive and founder of Aether Compliance, an AI-driven platform automating regulatory compliance for the healthcare sector. With over 12 years of experience architecting and deploying machine learning solutions, Liang specializes in building robust, scalable, and ethically-aligned AI systems for complex, data-sensitive environments. Previously, she led the advanced analytics team at Crestwood Financial, where she pioneered the implementation of federated learning for fraud detection, resulting in a 15% reduction in fraudulent transactions. At Aether Compliance, Liang is focused on leveraging cutting-edge AI to simplify HIPAA and GDPR compliance, reducing administrative burdens and minimizing risk for healthcare providers. She is actively seeking strategic partnerships with healthcare systems and investors interested in the future of responsible AI in healthcare. Liang is passionate about bridging the gap between innovative AI technology and pragmatic business needs, delivering measurable value while upholding the highest standards of data privacy and security.",
+    "background": "* **Founder & CEO, Aether Compliance** (2023 \u2013 Present)\n    * Spearheaded the development and launch of Aether Compliance, an AI-powered platform automating HIPAA and GDPR compliance checks for healthcare organizations.\n    * Secured seed funding of $1.2M from angel investors specializing in healthcare technology.\n    * Built and led a team of 5 data scientists and engineers, fostering a culture of innovation and ethical AI development.\n    * Developed and implemented a proprietary AI model achieving 98% accuracy in identifying potential compliance violations.\n    * Currently focused on securing pilot programs with major hospital networks.\n* **Director, Advanced Analytics, Crestwood Financial** (2018 \u2013 2023)\n    * Led a team of 10 data scientists responsible for developing and deploying machine learning models across various business functions including fraud detection, risk management, and customer churn prediction.\n    * Successfully implemented a federated learning system for fraud detection, reducing fraudulent transactions by 15% and improving model accuracy by 10%.\n    * Managed a budget of $500K for data science projects and infrastructure.\n    * Collaborated with engineering and product teams to integrate machine learning models into existing systems.\n    * Presented research findings at internal conferences and workshops.\n* **Senior Data Scientist, NovaTech Solutions** (2015 \u2013 2018)\n    * Developed and deployed machine learning models for predictive maintenance in the manufacturing sector.\n    * Conducted data analysis and feature engineering to improve model performance.\n    * Collaborated with cross-functional teams to identify and address business challenges.\n    * Contributed to the development of a proprietary data science platform.\n* **Data Science Intern, Global Analytics Group** (2014)\n    * Assisted in the development of statistical models for market research.\n    * Performed data cleaning and preprocessing tasks.\n    * Gained experience with various data analysis tools and techniques.",
+    "lookingFor": "I\u2019m actively seeking strategic partnerships with healthcare systems (hospitals, insurance providers) interested in piloting Aether Compliance to streamline their regulatory processes and reduce compliance costs. We\u2019re particularly interested in organizations with complex data environments and a commitment to data privacy. \n\nSpecifically, I\u2019m looking for:\n\n* **Strategic Partnerships:** Collaboration to deploy and refine Aether Compliance within real-world healthcare settings.\n* **Seed Funding (Series A):** Investors with a focus on AI-driven healthcare solutions and a strong understanding of regulatory compliance.\n* **Advisors:** Individuals with expertise in healthcare regulations (HIPAA, GDPR), data privacy, and AI ethics.\n* **Connections to Healthcare CIOs/CISOs:** Introductions to key decision-makers responsible for data security and compliance within healthcare organizations.\n\nI'm also open to connecting with other founders in the AI/healthcare space to share learnings and explore potential synergies.",
+    "notes": "Liang is highly responsive and very focused on quantifiable results. She's comfortable discussing the technical details of her AI models but always frames it in terms of business impact. She's very aware of the ethical implications of AI and proactively addresses concerns about data privacy. She recently mentioned being frustrated with investors who prioritize hype over substance. Best approach is to lead with a clear understanding of her business and a specific value proposition. Avoid overly technical jargon unless she initiates it. She's been actively posting on LinkedIn about data privacy and responsible AI \u2013 a good starting point for engagement.",
+    "locationAvailability": "Currently based in Boston, MA. Open to travel within the US and potentially Europe for strategic partnerships. Not actively seeking relocation at this time.",
+    "introPreferences": "* **Hard Requirements:** Do *not* introduce Liang to anyone selling generic cybersecurity solutions. She's looking for specialized compliance tools, not broad security platforms.\n* **Soft Preferences:** Introductions to individuals with a demonstrated track record of innovation in healthcare or a deep understanding of regulatory challenges are highly valued.\n* **Introduction Framing:** Please emphasize Liang\u2019s expertise in federated learning and her commitment to ethical AI. Frame the introduction as a potential collaboration to solve a specific compliance challenge.\n* **Avoid:** VCs who haven't invested in healthcare or AI previously. Generalist investors are unlikely to understand the nuances of her business.",
+    "personalPreferences": "I prefer initial contact via LinkedIn messaging. Follow-up can be via email. I respond best to concise and well-structured communication. I\u2019m generally available for brief introductory calls during EST business hours.",
+    "meetingAndSchedulingPreferences": "I prefer virtual meetings initially to assess fit. I use Calendly for scheduling: [fictional Calendly link]."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 22.235520124435425,
+      "input_tokens": 859,
+      "output_tokens": 1372,
+      "problems": []
+    }
+  ],
+  "success": true
+}

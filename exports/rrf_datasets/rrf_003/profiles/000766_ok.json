@@ -1,0 +1,54 @@
+{
+  "id": 766,
+  "archetype": "Serial Entrepreneur, Operating Advisor",
+  "given_name": "Beatriz Weber",
+  "style_version": 47,
+  "archetypes_version": 129,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Beatriz Weber is a serial entrepreneur with a strong background in SaaS and Fintech. She successfully founded and exited a regtech company focused on KYC/AML compliance for crypto exchanges five years ago. Now, she primarily acts as an operating advisor to early-stage (Seed - Series A) fintech startups, focusing on go-to-market strategy, regulatory navigation, and scaling operations. She\u2019s particularly interested in companies tackling challenges in decentralized finance (DeFi) and embedded finance. She's selective about her advisory roles, prioritizing those with strong technical teams and a clear path to profitability. She's also quietly angel investing, writing smaller checks ($25k-$100k) in promising founders she believes in. She's known for being direct, pragmatic, and very focused on execution. She dislikes 'fluff' and prefers data-driven discussions.",
+    "positioning": "Beatriz Weber is a seasoned operating advisor and angel investor specializing in the fintech landscape. Having successfully navigated the complexities of regulatory compliance and rapid scaling with her previous company, I now dedicate my time to helping early-stage founders build sustainable and impactful businesses. My expertise lies in streamlining go-to-market strategies, navigating the evolving regulatory environment, and establishing robust operational foundations. I\u2019m currently advising three Seed-stage companies focused on DeFi and embedded finance solutions, and actively seeking new opportunities to leverage my experience. I\u2019m particularly keen to connect with founders tackling pain points in the financial infrastructure space and investors seeking insights into emerging fintech trends.",
+    "background": "\u2022 **Founder & CEO, CompliantX (2016 \u2013 2019):** Led the development and launch of a SaaS platform providing automated KYC/AML compliance solutions for cryptocurrency exchanges. Grew revenue from $0 to $8M ARR within 2.5 years. Successfully secured $5M in Series A funding from leading venture capital firms. Oversaw a team of 45 employees across engineering, sales, and customer success. Exited to a publicly traded financial technology company in 2019 for an undisclosed sum.\n\u2022 **Head of Product, SecurePay (2013 \u2013 2016):** Responsible for the product roadmap and execution of SecurePay\u2019s core payment processing platform. Launched a new mobile payment SDK that increased mobile transaction volume by 30% within the first year. Managed a product team of 10 engineers, designers, and product managers. Collaborated closely with sales and marketing teams to identify and prioritize new product features.\n\u2022 **Senior Consultant, Deloitte (2010 \u2013 2013):** Advised financial institutions on regulatory compliance and risk management strategies. Led engagements focused on anti-money laundering (AML) and fraud prevention. Developed and implemented compliance programs for clients in the banking and investment management industries. Presented findings and recommendations to senior management teams.\n\u2022 **Education:** MBA, Stanford Graduate School of Business (2010). BS, Computer Science, Massachusetts Institute of Technology (2008). Graduated *Summa Cum Laude*.",
+    "lookingFor": "\u2022 Introductions to Seed & Series A fintech founders (DeFi, embedded finance, payments infrastructure preferred).\n\u2022 Connections to VCs specializing in early-stage fintech investments (Series A, Seed).\n\u2022 Opportunities to share insights on regulatory compliance in the crypto space.\n\u2022 Potential co-investors for angel investments ($25k - $100k).\n\u2022 Founders seeking advice on scaling operations and go-to-market strategy.\n\u2022 Do NOT introduce me to projects lacking a clear path to profitability.\n\u2022 Do NOT pitch me NFT projects or Web3 ventures without demonstrable utility.\n\u2022 Warm introductions only \u2013 cold emails are immediately deleted.",
+    "notes": "[March 15, 2024] Had a great call with David from FinFlow. Very impressed with his technical background and the team's focus on solving a real problem. Likely to make an angel investment. [Feb 29, 2024] Met Beatriz at the Fintech Forward conference. She's incredibly direct and asks tough questions, but genuinely wants to help. She's a no-nonsense advisor \u2013 avoid buzzwords. [Jan 10, 2024] She mentioned she's particularly interested in companies that can help traditional financial institutions integrate with DeFi protocols. Flag this when making intros. She\u2019s very protective of her time and prioritizes quality over quantity. Avoid sending her anything that isn\u2019t thoroughly vetted.",
+    "locationAvailability": "Based in San Francisco, California. Willing to travel to key fintech hubs (NYC, London) for promising opportunities. Open to remote collaboration with teams globally.",
+    "introPreferences": "\u2022 **Hard Requirement:** Founders *must* have a strong technical co-founder and a demonstrable understanding of the regulatory landscape.\n\u2022 **Soft Preference:** I prefer founders who have previously built and scaled a successful technology product.\n\u2022 **Intro Style:** Please provide a concise summary of the company, the problem they're solving, and the founder's background. Highlight any relevant experience in fintech or regulatory compliance. \n\u2022 **Do NOT:** Send me a lengthy pitch deck without a brief introductory email. I don't have time to sift through irrelevant information.\n\u2022 **Do NOT:** Introduce me to founders who are solely focused on fundraising \u2013 I'm looking for partners, not clients.\n\u2022 I respond best to introductions that clearly articulate *why* this connection would be mutually beneficial.",
+    "personalPreferences": "Prefers direct communication via email or LinkedIn. Avoid lengthy phone calls unless pre-scheduled.",
+    "meetingAndSchedulingPreferences": "I generally prefer 30-minute Zoom meetings. Please use Calendly to schedule a time that works for both of us. I'm typically available between 10 am and 4 pm PST."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 22.42292308807373,
+      "input_tokens": 802,
+      "output_tokens": 1226,
+      "problems": []
+    }
+  ],
+  "success": true
+}

@@ -1,0 +1,54 @@
+{
+  "id": 303,
+  "archetype": "Ex-BigCo Leader, AI/Digital Transformation",
+  "given_name": "Zainab Tanaka",
+  "style_version": 19,
+  "archetypes_version": 50,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Zainab Tanaka is a former VP of Innovation at a major retail bank (Chase) who spearheaded their early, somewhat unsuccessful, foray into AI-powered personalization. She learned *hard* lessons about data governance, model explainability, and the internal resistance to change within a massive organization. She left to found 'Aether Insights', a boutique consultancy focused on helping established financial institutions *actually* implement AI/ML solutions, focusing on risk mitigation and demonstrating ROI. She\u2019s very pragmatic, a little cynical about hype, and deeply focused on delivering tangible business value. She\u2019s currently raising a seed round to build out a proprietary 'AI Readiness Assessment' tool for banks and is looking for investors and strategic partners with deep fintech experience. She\u2019s a strong believer in ethical AI and is vocal about the need for responsible AI practices.",
+    "positioning": "I\u2019m Zainab Tanaka, founder of Aether Insights, a consultancy dedicated to demystifying and delivering real-world AI and digital transformation for financial institutions. Having spent over 15 years within the financial services sector, most recently as VP of Innovation at Chase, I\u2019ve witnessed firsthand the challenges \u2013 and the immense opportunities \u2013 that lie within embracing AI. My time at Chase was pivotal; leading a team to implement AI-driven personalization uncovered critical roadblocks beyond simply building the technology: data silos, legacy infrastructure, and a significant gap in understanding the ethical and regulatory implications. \n\nNow, at Aether Insights, we bypass the 'shiny object' syndrome and focus on practical, measurable results. We don\u2019t pitch AI as a magic bullet; we deliver a strategic framework for implementation, assessing existing infrastructure, identifying high-impact use cases, and ensuring responsible AI governance. We specialize in helping banks navigate the complexities of model risk management, data privacy, and algorithmic bias, turning potential liabilities into competitive advantages. \n\nWe\u2019re currently developing a proprietary \u2018AI Readiness Assessment\u2019 tool \u2013 a diagnostic platform that provides a comprehensive evaluation of an institution\u2019s preparedness for AI adoption. This isn\u2019t just a checklist; it's a dynamic assessment that delivers actionable insights and a clear roadmap for success. We're seeking seed funding to accelerate development and expand our team, and are particularly interested in connecting with investors who understand the unique nuances of the fintech landscape and the importance of responsible AI.",
+    "background": "- **Founder & CEO, Aether Insights** (2023 - Present)\n    - Leading a boutique consultancy specializing in AI/ML strategy and implementation for financial institutions.\n    - Developing and launching the 'AI Readiness Assessment' platform (currently in beta).\n    - Key responsibilities include client acquisition, strategic planning, team management, and product development.\n    - Technologies used: Python (Scikit-learn, TensorFlow), AWS (SageMaker, S3), Data Governance frameworks (COBIT, NIST).\n\n- **Vice President, Innovation, JPMorgan Chase & Co.** (2018 \u2013 2023)\n    - Led a team responsible for identifying, evaluating, and implementing emerging technologies, with a focus on Artificial Intelligence and Machine Learning.\n    - Spearheaded the development and launch of a personalized banking platform utilizing AI-powered recommendations (project ultimately sunsetted due to data quality and model explainability issues).\n    - Managed a budget of $5M and a team of 15 data scientists, engineers, and product managers.\n    - Technologies used: AWS, Azure, Python, R, SQL, Tableau, Agile methodologies.\n\n- **Director, Digital Strategy, American Express** (2015 \u2013 2018)\n    - Developed and executed digital strategy for the Global Commercial Payments division.\n    - Led the implementation of a new customer relationship management (CRM) system.\n    - Managed a team of 8 marketing and analytics professionals.\n    - Technologies used: Salesforce, Marketo, Google Analytics.\n\n- **Associate, McKinsey & Company** (2012 \u2013 2015)\n    - Served as a consultant on a variety of projects for financial services clients, focusing on operational efficiency and digital transformation.\n\n- **Education:**\n    - **MBA, Harvard Business School** (2012)\n    - **BS, Computer Science, Stanford University** (2010)\n\n- **Skills:** Artificial Intelligence, Machine Learning, Digital Transformation, Fintech, Data Governance, Model Risk Management, Strategic Planning, Leadership, Consulting, Project Management, Python, R, SQL, AWS, Azure, Agile Methodologies, Data Visualization.",
+    "lookingFor": "I\u2019m actively seeking connections that can accelerate Aether Insights\u2019 growth and impact. Specifically, I'm focused on:\n\n* **Seed Funding:** Looking for investors with a proven track record in fintech and a strong understanding of the AI landscape. We\u2019re targeting a $1.5M seed round to finalize development of our AI Readiness Assessment tool and expand our team.\n* **Strategic Partnerships:**  Interested in collaborating with established fintech companies and system integrators who can help us scale our reach and deliver our solutions to a wider audience.\n* **Connections to Chief Risk Officers (CROs) and Heads of AI/ML at Tier 1 Banks:**  I need introductions to decision-makers who are actively grappling with the challenges of AI implementation and risk management.  I\u2019m particularly interested in institutions with over $100B in assets.\n* **Advisors with Deep Regulatory Expertise:**  Seeking advisors with a strong background in financial regulations (e.g., GDPR, CCPA, model risk management guidelines) to help us navigate the evolving regulatory landscape.\n* **Potential Pilot Clients:** We are offering early access to our AI Readiness Assessment tool to select banks in exchange for feedback and case study opportunities.",
+    "notes": "Zainab is incredibly direct and values efficiency. She\u2019s skeptical of overly optimistic AI promises and prefers a data-driven approach. She\u2019s had a few frustrating experiences with 'innovation theater' at large banks and is very focused on delivering tangible ROI. \u2013 Last conversation (10/26) she mentioned being particularly interested in investors who understand the importance of model explainability and fairness.  She\u2019s open to speaking engagements if they\u2019re focused on practical AI implementation, not just hype.  Avoid pitching her anything that sounds like a 'black box' solution. She\u2019s a fast mover when she finds the right fit.",
+    "locationAvailability": "Based in New York, NY (USA). Open to remote meetings and travel.",
+    "introPreferences": "- **Hard Requirements:** Any introduction *must* be to someone with decision-making authority within a financial institution (VP level or higher) or a relevant investor (Partner level or higher).\n- **Soft Preferences:** I prefer introductions that come with a brief, personalized note explaining why the connection might be mutually beneficial. A simple 'Zainab is building a great company and I thought you should connect' isn't helpful.\n- **Avoid:** Please do *not* introduce me to junior-level employees or individuals who are solely focused on sales. I'm looking for strategic partnerships and investment, not lead generation.",
+    "personalPreferences": "Direct communication, data-driven insights, problem-solving, ethical AI.",
+    "meetingAndSchedulingPreferences": "- Prefer short, focused meetings (30-45 minutes).\n- Available for meetings most weekdays.\n- Please send a brief agenda in advance."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 28.84634494781494,
+      "input_tokens": 859,
+      "output_tokens": 1569,
+      "problems": []
+    }
+  ],
+  "success": true
+}

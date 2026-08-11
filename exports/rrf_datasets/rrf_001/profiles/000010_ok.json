@@ -1,0 +1,63 @@
+{
+  "id": 10,
+  "archetype": "Corporate Exit to Startup Advisor",
+  "given_name": "Marcus Kimura",
+  "style_version": 1,
+  "archetypes_version": 3,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Marcus Kimura is a former VP of Engineering at a large FinTech company (NovaPay) who recently left to become an advisor and angel investor focused on early-stage AI/ML startups, specifically within the financial services space. He\u2019s particularly interested in companies applying AI to fraud detection, algorithmic trading, and personalized financial planning. A distinctive detail is that during his time at NovaPay, he led the team that successfully migrated their entire core banking system to a microservices architecture \u2013 a complex and highly impactful project. He's looking to leverage his technical expertise and network to help promising founders avoid common pitfalls and scale effectively. He's very deliberate in his networking, seeking specific individuals who can offer valuable insights or potential partnerships for his portfolio companies. He values efficiency and direct communication.",
+    "positioning": "A seasoned technology leader with over 15 years of experience building and scaling high-performance engineering teams, I\u2019ve transitioned from corporate innovation to actively supporting the next generation of FinTech disruptors. As an advisor and angel investor, I focus on early-stage AI/ML startups poised to revolutionize financial services. My background includes a successful tenure at NovaPay, where I spearheaded the migration of their core banking infrastructure to a microservices architecture, significantly improving scalability and resilience. I\u2019m passionate about identifying exceptional founders with innovative solutions and providing strategic guidance in areas such as technology roadmap development, team building, and go-to-market strategy. I bring a blend of deep technical expertise, operational experience, and a strong network within the financial technology ecosystem. I'm particularly keen on supporting companies addressing challenges in fraud prevention, algorithmic trading, and personalized wealth management. My value proposition lies in accelerating growth through pragmatic advice and access to a network of industry experts and potential investors.",
+    "background": "- **Angel Investor & Advisor** (Present)\n  - Independently evaluating and investing in early-stage AI/ML startups focused on FinTech.\n  - Providing strategic guidance to portfolio companies on technical architecture, product development, and scaling.\n  - Mentoring founders on team building, fundraising, and market positioning.\n\n- **Vice President of Engineering, NovaPay** (2016 \u2013 2023)\n  - Led a team of 150+ engineers responsible for the development and maintenance of NovaPay\u2019s core banking platform.\n  - Successfully spearheaded the migration of the monolithic core banking system to a microservices architecture, resulting in a 30% reduction in infrastructure costs and a 20% increase in system uptime.\n  - Oversaw the implementation of cutting-edge technologies, including Kafka, Kubernetes, and AWS cloud services.\n  - Championed Agile methodologies and DevOps practices, fostering a culture of continuous improvement.\n  - Managed budgets exceeding $20M annually.\n\n- **Senior Software Engineer, Stellaris Technologies** (2010 \u2013 2016)\n  - Designed and developed high-performance trading algorithms for a leading proprietary trading firm.\n  - Contributed to the development of a low-latency trading platform using C++ and Python.\n  - Collaborated with quantitative analysts to optimize trading strategies.\n\n- **Education:**\n  - **Massachusetts Institute of Technology (MIT)**, Cambridge, MA \u2013 Master of Science in Computer Science (2010)\n  - **Stanford University**, Stanford, CA \u2013 Bachelor of Science in Electrical Engineering (2008)\n\n- **Skills:**\n  - Microservices Architecture, Cloud Computing (AWS, Azure, GCP), Kubernetes, Docker, Kafka, Python, Java, C++, Agile Methodologies, DevOps, Machine Learning, Data Science, Financial Modeling, Team Leadership, Strategic Planning, Risk Management.",
+    "lookingFor": "## Networking Objectives\n\n* **Founders of Early-Stage FinTech Startups:** Specifically seeking founders building AI/ML powered solutions in fraud detection, algorithmic trading, and personalized financial planning. Open to reviewing pitch decks and offering mentorship.\n* **Venture Capitalists & Angel Investors:** Looking to connect with investors actively deploying capital in the FinTech space. Seeking opportunities for co-investment and potential syndicate participation.\n* **Industry Experts in AI/ML & Finance:** Interested in connecting with individuals possessing deep expertise in these areas to provide guidance to my portfolio companies.\n* **Talent Acquisition Professionals:** Building a network of recruiters specializing in engineering and data science roles within the FinTech industry to support portfolio company hiring needs.\n\n**Desired Interactions:**\n\n* Introductions to promising startups that align with my investment thesis.\n* Collaboration opportunities on due diligence processes.\n* Insights into emerging trends and technologies within the FinTech landscape.\n* Potential partnerships to leverage expertise and resources.",
+    "notes": "Marcus is a highly targeted networker. Introductions should be *extremely* relevant to his stated interests. [Timestamp: 2024-02-29] \u2013 He\u2019s currently evaluating three potential investments in the fraud detection space. \n\n* **Prioritize:** Founders with demonstrated technical expertise and a clear understanding of the financial services industry. Avoid introductions to companies with purely conceptual ideas lacking a concrete technical plan. \n* **Platform Action:** Tag any relevant connections with #FinTech, #AI, #ML, #AngelInvesting. \n* **Caveat:** Marcus is very busy. Keep introductions concise and focused on the value proposition for *him* and his portfolio companies. Avoid overly lengthy emails or generic requests. \n* He expressed interest in connecting with someone at 'DataSecure' specifically - [Follow-up needed on lead source].",
+    "locationAvailability": "I am based in Palo Alto, California, but readily connect with individuals remotely. I am particularly interested in opportunities within the North American and European FinTech ecosystems.",
+    "introPreferences": "## Introduction Guidelines\n\n* **Hard Requirements:**\n  - The individual *must* be directly involved in an early-stage FinTech startup (founder/CTO preferred) OR be a relevant investor/expert.\n  - A concise (2-3 sentence) summary of their company/role and how it aligns with my investment focus is *mandatory*.\n* **Soft Preferences:**\n  - Prioritize introductions from mutual connections (2nd-degree connections are acceptable).\n  - Avoid introductions to service providers (e.g., marketing agencies, legal firms) unless specifically requested.\n  - Focus on individuals who are proactive and eager to engage in a meaningful conversation.",
+    "personalPreferences": "Email is generally best. I occasionally check LinkedIn messages. WhatsApp is fine for quick follow-ups if we've already connected.",
+    "meetingAndSchedulingPreferences": "I prefer short, focused video calls (30 minutes max). Please include a brief agenda when scheduling."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 25.495769739151,
+      "input_tokens": 843,
+      "output_tokens": 1383,
+      "problems": [
+        "background: possible truncation (ends with '...igma Black Belt Certified')"
+      ]
+    },
+    {
+      "attempt": 2,
+      "elapsed_s": 24.388433933258057,
+      "input_tokens": 843,
+      "output_tokens": 1426,
+      "problems": []
+    }
+  ],
+  "success": true
+}

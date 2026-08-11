@@ -1,0 +1,54 @@
+{
+  "id": 613,
+  "archetype": "Product-Led Founder - Early Traction",
+  "given_name": "Malia Mueller",
+  "style_version": 38,
+  "archetypes_version": 103,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Malia Mueller is a 32-year-old founder and CEO of 'SynapseFlow,' a B2B SaaS platform focused on automating content repurposing for marketing teams. She previously spent 7 years as a data scientist at a large advertising agency, where she became deeply frustrated with the manual, repetitive nature of adapting content for different platforms. This sparked the idea for SynapseFlow. She's technically very strong, still involved in the product's architecture, but is now primarily focused on fundraising and go-to-market strategy. SynapseFlow has just closed a small seed round and is showing promising early traction with a handful of pilot customers. She's *very* focused on finding the right advisors and early hires who understand her vision for AI-powered content orchestration. She's slightly impatient and values direct communication. She's based in Austin, TX, but willing to travel for key meetings.",
+    "positioning": "SynapseFlow is revolutionizing how marketing teams approach content creation and distribution. In today\u2019s fragmented digital landscape, marketers spend an exorbitant amount of time and resources simply *repackaging* existing content for different platforms \u2013 a process that\u2019s both inefficient and creatively stifling. We solve this problem with an AI-powered platform that automatically repurposes long-form content (blog posts, webinars, reports) into a multitude of short-form assets optimized for channels like LinkedIn, Twitter, TikTok, and Instagram. \n\nOur core value proposition is simple: drastically reduce content creation time, increase content reach, and improve marketing ROI. SynapseFlow isn't just about automation; it\u2019s about *intelligent* automation. Our proprietary algorithms analyze content for key themes, extract compelling snippets, and generate platform-specific variations, all while maintaining brand voice and consistency. We're currently focused on serving B2B SaaS companies and marketing agencies, a market segment ripe for disruption. \n\nWe recently launched our beta program and have already seen incredible results with our initial cohort of users, experiencing a 40% reduction in content creation time and a 25% increase in social media engagement. We've secured $750k in seed funding led by [Fictional VC Firm: Apex Ventures] and are now focused on scaling our team and expanding our platform capabilities. SynapseFlow is poised to become the leading platform for content orchestration, empowering marketers to do more with less and unlock the full potential of their content.",
+    "background": "- **CEO & Founder, SynapseFlow** (January 2023 \u2013 Present)\n    - Led all aspects of company formation, fundraising, product development, and go-to-market strategy.\n    - Currently focused on scaling the team, securing strategic partnerships, and driving revenue growth.\n    - Oversaw the successful launch of the SynapseFlow beta program and secured initial pilot customers.\n- **Senior Data Scientist, Stellar Advertising** (June 2016 \u2013 December 2022)\n    - Developed and implemented machine learning models to optimize advertising campaigns, resulting in a 15% increase in click-through rates.\n    - Led a team of data scientists in the analysis of large datasets to identify key consumer insights.\n    - Spearheaded the development of a new data visualization tool that improved campaign performance reporting.\n    - Consistently recognized for innovation and technical expertise.\n- **Education:**\n    - **Master of Science in Data Science**, University of Texas at Austin (2014 \u2013 2016)\n    - **Bachelor of Science in Computer Science**, Rice University (2010 \u2013 2014)\n- **Skills:** Python, Machine Learning, Natural Language Processing (NLP), Data Visualization (Tableau, Power BI), SQL, Cloud Computing (AWS, Azure), Agile Development, Product Management, Go-to-Market Strategy, Fundraising.",
+    "lookingFor": "- Introductions to experienced B2B SaaS marketing leaders who can serve as advisors.\n- Introductions to angel investors specializing in AI and marketing technology (check size: $100k - $250k).\n- A Head of Engineering with a strong background in full-stack development and experience building scalable SaaS platforms. Looking for someone who's comfortable being hands-on in the early stages.\n- A VP of Sales with a proven track record of building and scaling sales teams in the B2B space.  Must have experience selling to marketing teams.\n- Introductions to content marketing leaders at mid-to-large sized B2B SaaS companies for potential case studies and partnerships.",
+    "notes": "Malia is extremely passionate about SynapseFlow and its potential. She's very intelligent and quick to grasp new concepts, but can also be impatient and direct. She values data-driven decision-making and isn't afraid to challenge assumptions. She's a strong technical leader, which is both a strength and a potential weakness \u2013 she needs to delegate more effectively as the company grows.  She's particularly sensitive to conversations that downplay the importance of AI in content creation.  When making introductions, emphasize any experience the contact has with AI-powered marketing tools.  She responds best to concise, clear communication \u2013 avoid overly fluffy language or lengthy introductions.  A quick, targeted email is preferred over a long LinkedIn message.",
+    "locationAvailability": "Malia is based in Austin, Texas, and is open to travel for important meetings and opportunities. She's also comfortable with remote collaboration.",
+    "introPreferences": "- **Hard Requirements:** Any introduction *must* be to someone with direct experience in B2B SaaS or AI-powered marketing technology. No general networking requests, please.\n- **Soft Preferences:** Prefer introductions to individuals who are known for being proactive and willing to share their expertise.  Strong preference for those with a track record of advising or investing in early-stage startups.\n- **Introduction Framing:** Please emphasize SynapseFlow's focus on *intelligent* automation and its potential to significantly improve marketing ROI. Briefly mention our recent seed funding and early traction. Avoid framing SynapseFlow as a simple 'content automation' tool; highlight the AI-driven aspects of our platform.  Specifically mention we are looking for advisors and early hires.",
+    "personalPreferences": "Prefers email for initial contact.  Keep it brief and to the point.",
+    "meetingAndSchedulingPreferences": "Generally available for meetings between 10 AM and 4 PM Central Time. Prefers video calls (Zoom or Google Meet). Please send a brief agenda in advance of any scheduled meeting."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 35.51651310920715,
+      "input_tokens": 849,
+      "output_tokens": 1376,
+      "problems": []
+    }
+  ],
+  "success": true
+}

@@ -1,0 +1,54 @@
+{
+  "id": 146,
+  "archetype": "Toronto-Based AI/Tech Builder",
+  "given_name": "Grace Zhang",
+  "style_version": 9,
+  "archetypes_version": 25,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Grace Zhang is a 32-year-old Toronto-based machine learning engineer and technical co-founder. She recently (6 months ago) successfully exited a seed-stage startup focused on AI-powered predictive maintenance for industrial equipment. While financially secure, she's now deeply interested in applying her skills to climate tech, specifically solutions around smart grids and energy optimization. She\u2019s looking to connect with other founders, early-stage investors, and experienced engineers in the space. A key detail is that she *actively* mentors junior engineers, particularly women, and prioritizes building a supportive community. She's less interested in purely theoretical research and more focused on practical, deployable solutions. She's a pragmatic optimist, valuing data-driven decisions and rapid iteration.",
+    "positioning": "A highly motivated and results-oriented machine learning engineer and technical co-founder with a proven track record of building and scaling AI-powered solutions. I specialize in time series analysis, anomaly detection, and model deployment within resource-constrained environments. My recent experience leading the technical development of a predictive maintenance platform has honed my ability to translate complex business challenges into actionable engineering strategies. I am currently exploring opportunities within the climate tech sector, specifically focused on leveraging AI to optimize energy consumption and improve grid resilience. I excel in bridging the gap between research and implementation, and I am passionate about fostering a collaborative and inclusive engineering culture. I offer expertise in full-stack ML development, cloud infrastructure (AWS, GCP), and agile methodologies. I\u2019m eager to contribute to impactful projects and connect with individuals driving innovation in sustainable technologies.",
+    "background": "\u2022 **Co-founder & CTO, Prescient Machines (2021 \u2013 2024):** Led all technical aspects of a seed-stage startup developing AI-powered predictive maintenance solutions for heavy industrial equipment. Key accomplishments included:\n    * Architected and deployed a real-time anomaly detection system using LSTM networks, resulting in a 15% reduction in unplanned downtime for pilot customers.\n    * Managed a team of 4 engineers, fostering a culture of continuous learning and collaboration.\n    * Secured $1.2M in seed funding.\n    * Successfully exited to a larger industrial automation company.\n    * Technologies used: Python, TensorFlow, PyTorch, AWS (EC2, S3, Lambda, SageMaker), Docker, Kubernetes, PostgreSQL.\n\u2022 **Machine Learning Engineer, SensorTech Solutions (2019 \u2013 2021):** Developed and deployed machine learning models for sensor data analysis, focusing on predictive analytics for environmental monitoring.\n    * Implemented a novel data preprocessing pipeline that improved model accuracy by 10%.\n    * Contributed to the development of a cloud-based platform for real-time data visualization and analysis.\n    * Technologies used: Python, scikit-learn, Pandas, NumPy, AWS, REST APIs.\n\u2022 **Research Assistant, University of Toronto (2017 \u2013 2019):** Conducted research in the field of computer vision, focusing on object detection and image segmentation.\n    * Published research findings in a peer-reviewed conference.\n    * Developed and implemented deep learning models using TensorFlow and Keras.\n    * Technologies used: Python, TensorFlow, Keras, OpenCV, Linux.\n\u2022 **Education:** Master of Applied Science in Electrical & Computer Engineering, University of Toronto (2019); Bachelor of Science in Engineering Science, University of Toronto (2017).",
+    "lookingFor": "I\u2019m actively seeking connections with individuals involved in the following:\n\n* **Climate Tech Founders (Seed - Series A):** Specifically those working on solutions related to smart grids, energy storage, carbon capture, and renewable energy optimization.\n* **Early-Stage Investors (Pre-Seed - Seed):** Focused on climate tech and AI/ML applications.\n* **Experienced ML Engineers:** With expertise in time series analysis, reinforcement learning, and edge computing \u2013 especially those interested in applying their skills to climate challenges.\n* **Data Scientists:** Specializing in energy systems modeling and forecasting.\n\nI\u2019m *also* very interested in connecting with:\n    - Mentors with experience scaling early-stage tech companies.\n    - Individuals passionate about building inclusive and diverse engineering teams.\n\n**I am *not* currently looking for:**\n    - Roles in purely academic research.\n    - Connections focused on web development or front-end engineering.\n    - Recruiters offering roles outside of the climate tech space.\n    - Individuals primarily interested in discussing blockchain or cryptocurrency.",
+    "notes": "\u2022 Grace is a highly engaged user, consistently responding to messages within 24 hours.\n\u2022 She's expressed strong interest in mentoring junior engineers, particularly through the 'Tech Allies' program.\n\u2022 Recent conversation (2024-10-26) indicated a preference for connecting with founders who have a strong technical background. \n\u2022 Data quality flagged: LinkedIn profile indicates a potential gap in employment history between 2017-2019 (addressed by University research assistant role).",
+    "locationAvailability": "Currently based in Toronto, Ontario. Open to remote collaboration and occasional travel within North America for relevant opportunities.",
+    "introPreferences": "When making introductions to Grace, please keep the following in mind:\n\n* **Highlight Technical Depth:** Emphasize the recipient\u2019s technical expertise and experience, particularly in AI/ML and relevant climate tech domains.\n* **Focus on Practical Application:** Frame the connection in terms of how their work can contribute to real-world solutions.\n* **Mention Shared Interests:** If possible, highlight any shared interests or connections to the Toronto tech ecosystem.\n* **Keep it Concise:** Grace prefers brief, focused introductions that get straight to the point.\n\n**Avoid:**\n* Overly promotional or sales-oriented introductions.\n* Introducing individuals with purely sales or marketing backgrounds.\n* General introductions without a clear connection to her interests in climate tech and AI.",
+    "personalPreferences": "I prefer to connect on LinkedIn initially. Email is fine for follow-up. I appreciate constructive feedback and am always open to learning. Quick, direct communication is best.",
+    "meetingAndSchedulingPreferences": "Generally available for virtual meetings during weekday afternoons (EST). Please send a calendar invite with a brief agenda."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 20.818117141723633,
+      "input_tokens": 776,
+      "output_tokens": 1336,
+      "problems": []
+    }
+  ],
+  "success": true
+}

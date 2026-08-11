@@ -1,0 +1,54 @@
+{
+  "id": 66,
+  "archetype": "AI/Web3 Founder, Early Stage Funding",
+  "given_name": "Zainab Dubois",
+  "style_version": 5,
+  "archetypes_version": 12,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Zainab Dubois is a first-time founder, 32, building 'SynapseFlow,' an AI-powered platform for decentralized content creation and ownership. She previously spent 8 years at a large advertising agency, culminating in a role as a Creative Director, but grew increasingly frustrated with the centralized control and lack of creator compensation models. This frustration fueled her pivot to Web3 and AI. SynapseFlow aims to empower creators with tools to mint, manage, and monetize their content directly, using AI to assist with content generation, optimization, and audience discovery. She's currently in pre-seed, actively fundraising, and is very focused on building a strong technical team. She\u2019s deeply passionate about ethical AI and ensuring creators retain full ownership of their work. A key distinctive detail is that she self-funded the initial MVP development using savings from a successful side-hustle designing and selling generative art NFTs \u2013 this demonstrates both technical aptitude and entrepreneurial drive. She\u2019s a quick learner, intensely driven, and can sometimes come across as very direct.",
+    "positioning": "I'm the founder and CEO of SynapseFlow, a platform revolutionizing content creation and ownership through the power of AI and Web3. We're tackling a critical problem: the current content landscape is dominated by centralized platforms that extract value from creators while offering limited control and inadequate compensation. SynapseFlow flips this model on its head. We provide creators with a suite of AI-powered tools to seamlessly mint, manage, and monetize their content directly, fostering a more equitable and sustainable ecosystem. \n\nOur core value proposition lies in three key areas: AI-assisted creation, decentralized ownership via NFTs, and direct-to-fan monetization. We're building tools that empower creators \u2013 from writers and artists to musicians and filmmakers \u2013 to unlock new revenue streams and build stronger relationships with their audiences. Our initial focus is on visual artists and short-form video creators, a segment underserved by existing Web3 infrastructure. \n\nWe recently launched a closed beta program with a cohort of 50 creators, and the results have been incredibly promising. Early data shows a 30% increase in creator earnings compared to traditional platforms, and a significant boost in audience engagement. We\u2019re currently refining the platform based on user feedback and preparing for a public launch in Q1 2024. I\u2019m passionate about building a future where creators thrive, and I believe SynapseFlow is uniquely positioned to lead this change. We're not just building a platform; we're building a movement.",
+    "background": "* **Creative Director, Zenith Advertising (2016 \u2013 2024):** Led cross-functional teams in the development and execution of award-winning advertising campaigns for Fortune 500 clients. Managed budgets up to $5M and consistently exceeded client expectations. Responsible for concept development, art direction, and campaign performance analysis.\n* **Art Director, Zenith Advertising (2014 \u2013 2016):** Conceptualized and designed visual assets for a variety of marketing channels, including print, digital, and social media. Collaborated with copywriters and other creatives to deliver compelling and effective messaging.\n* **Freelance Graphic Designer (2012 \u2013 2014):** Built a diverse portfolio of design work for small businesses and individuals. Gained experience in client management, project planning, and time management.\n* **BFA, Graphic Design, Rhode Island School of Design (2012):** Graduated with honors, specializing in visual communication and interactive media. Demonstrated a strong aptitude for creative problem-solving and technical proficiency.\n* **Notable Achievement:** Successfully spearheaded the \u2018Reimagine Tomorrow\u2019 campaign for GlobalTech, resulting in a 15% increase in brand awareness and a 10% lift in sales.\n* **Side Project (2021-Present):** Developed and sold generative art NFTs, demonstrating proficiency in blockchain technology and generating initial capital for SynapseFlow.",
+    "lookingFor": "* **Seed/Pre-Seed Investors:** Specifically looking for investors with experience in AI, Web3, and creator economy startups. Seeking $500k - $1M to scale our platform and expand our team.\n* **AI/ML Engineers:** Experienced in developing and deploying AI models for content generation, optimization, and personalization. Proficiency in Python, TensorFlow, and PyTorch is highly desirable.\n* **Blockchain Developers:** Solid understanding of Solidity, smart contracts, and decentralized application development. Experience with NFT standards (ERC-721, ERC-1155) is a plus.\n* **Strategic Advisors:** Individuals with deep industry knowledge and connections in the creator economy, Web3, or AI space. Seeking guidance on market strategy, fundraising, and product development.\n* **Creators:** Early adopters willing to provide feedback and help shape the future of SynapseFlow. Particularly interested in visual artists and short-form video creators.\n* **Partnerships:** Exploring potential collaborations with existing Web3 platforms and creator tools.\n* **Mentorship:** Seeking guidance from experienced founders who have successfully navigated the startup journey.",
+    "notes": "Zainab is a highly motivated and intelligent founder with a clear vision for SynapseFlow. She's incredibly passionate about empowering creators and building a more equitable content ecosystem. She's a fast learner and isn't afraid to challenge conventional wisdom. Her background in advertising gives her a strong understanding of content creation and audience engagement, while her experience with NFTs demonstrates her technical aptitude and entrepreneurial spirit. \n\n* She's currently very focused on fundraising and building her technical team. Any introductions to relevant investors or engineers would be greatly appreciated.\n* She's very sensitive to discussions around the ethical implications of AI and is committed to building a responsible and transparent platform. \n* She recently presented at the Web3 Creator Summit and received positive feedback on her vision. \n* She's always open to learning and welcomes constructive criticism. Be prepared for direct questions and a no-nonsense approach.",
+    "locationAvailability": "I am currently based in Brooklyn, New York, and am open to travel within the US for investor meetings and industry events. I\u2019m not actively seeking relocation at this time, but am flexible depending on funding opportunities.",
+    "introPreferences": "* **Must-Haves:** Investors actively deploying capital in pre-seed/seed stage Web3 or AI startups. Engineers with 3+ years of experience in relevant technologies.\n* **Strongly Preferred:** Individuals with a demonstrated track record of success in the creator economy. Advisors with experience scaling early-stage companies.\n* **Good-to-Haves:** Individuals with a strong network within the NFT community.  Creators with a significant following on social media.\n* **Do NOT introduce me to:** VCs who primarily invest in later-stage companies.  Sales/Marketing professionals unless specifically requested. Generalists without a deep understanding of Web3 or AI.",
+    "personalPreferences": "I prefer to connect via LinkedIn or email initially. I\u2019m responsive and appreciate concise communication. I'm most productive in the mornings and afternoons.",
+    "meetingAndSchedulingPreferences": "I'm generally available for virtual meetings during business hours. I prefer using Google Meet or Zoom for video calls. Please allow at least 24 hours\u2019 notice for scheduling."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 26.280155181884766,
+      "input_tokens": 811,
+      "output_tokens": 1533,
+      "problems": []
+    }
+  ],
+  "success": true
+}

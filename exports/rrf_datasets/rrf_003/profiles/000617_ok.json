@@ -1,0 +1,65 @@
+{
+  "id": 617,
+  "archetype": "Corporate Escapee, Impact-Driven Founder",
+  "given_name": "Anh Yamamoto",
+  "style_version": 38,
+  "archetypes_version": 104,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Anh Yamamoto is a former quantitative analyst at Goldman Sachs who left to found 'Bloom Metrics', a company developing AI-powered tools to optimize sustainable agriculture practices for smallholder farmers in Southeast Asia. She was deeply frustrated by the financial industry\u2019s disconnect from tangible impact and felt her skills could be better utilized addressing food security challenges. She\u2019s seeking seed funding and connections to agritech experts, particularly those with experience in the specific challenges of smallholder farming. She's very focused on measurable impact and is wary of 'impact washing' \u2013 she wants genuine, verifiable results. She\u2019s still relatively new to the startup world and values mentorship from experienced founders, but is very independent and driven. Her background is heavily quantitative, but she\u2019s actively building a team with complementary skills. She's meticulous and data-driven, sometimes to a fault, and can come across as reserved initially.",
+    "positioning": "Anh Yamamoto is the Founder and CEO of Bloom Metrics, a venture leveraging artificial intelligence to improve the efficiency and sustainability of smallholder farms in Southeast Asia. Prior to founding Bloom Metrics, Anh spent seven years as a Quantitative Analyst at Goldman Sachs, where she developed sophisticated modeling techniques for risk management. Recognizing a profound opportunity to apply her analytical skills to address global food security challenges, Anh transitioned her focus to agricultural technology. Bloom Metrics is currently focused on developing a predictive analytics platform that optimizes crop yields while minimizing environmental impact, empowering farmers with data-driven insights. She\u2019s passionate about building a scalable, impactful business that delivers both financial returns and positive social outcomes.",
+    "background": "* **Bloom Metrics, Founder & CEO** (2023 \u2013 Present)\n    * Led seed round fundraising efforts, securing initial commitments totaling $300,000.\n    * Developed the core AI algorithms for crop yield prediction, achieving 85% accuracy in pilot programs.\n    * Built and managed a small team of data scientists and agricultural specialists.\n    * Established partnerships with local farming cooperatives in Vietnam and Thailand.\n    * Currently focused on expanding pilot programs and securing Series A funding.\n* **Goldman Sachs, Quantitative Analyst** (2016 \u2013 2023)\n    * Developed and maintained complex statistical models for risk assessment and portfolio optimization.\n    * Conducted independent research on financial market dynamics, contributing to the firm\u2019s trading strategies.\n    * Collaborated with cross-functional teams to implement new risk management methodologies.\n    * Consistently exceeded performance expectations, receiving multiple performance awards.\n    * Mentored junior analysts in quantitative modeling techniques.\n* **Massachusetts Institute of Technology (MIT), PhD, Financial Engineering** (2012 \u2013 2016)\n    * Dissertation: \u201cStochastic Modeling of High-Frequency Trading Data\u201d.\n    * GPA: 3.9/4.0\n    * Recipient of the Dean\u2019s Fellowship for Academic Excellence.\n* **Stanford University, BS, Mathematics (with Honors)** (2008 \u2013 2012)\n    * Minor: Computer Science\n    * Graduated *Summa Cum Laude*.\n* **Skills:** Python, R, Machine Learning (TensorFlow, PyTorch), Statistical Modeling, Data Analysis, Financial Modeling, Risk Management, Agile Development, Vietnamese (fluent), Project Management.",
+    "lookingFor": "* **Seed Investors:** Seeking investors with a demonstrated commitment to impact investing, particularly in agritech and sustainable food systems. Target investment size: $1M - $2M.\n* **Agritech Mentors:** Experienced founders or advisors in the agritech space willing to provide guidance on scaling a startup, navigating regulatory landscapes, and building strategic partnerships.\n* **Smallholder Farming Experts:** Individuals with deep knowledge of the challenges and opportunities facing smallholder farmers in Southeast Asia, particularly around technology adoption and access to finance.\n* **Data Science Talent:** Experienced data scientists with a passion for applying AI to solve real-world problems, specifically in the agricultural domain.\n* **Partnerships:** Exploring potential partnerships with NGOs and government agencies working on sustainable agriculture initiatives.\n* **Do not contact:** Venture capitalists solely focused on high-growth, short-term exits. We prioritize long-term impact over rapid scaling.\n* **Intro Requests:** Please prioritize introductions that are warm and come with a personal recommendation.",
+    "notes": "Anh is highly analytical and expects data to support all claims. She's recently attended the AgriTechX conference and is actively following developments in precision farming. Initial contact through LinkedIn messaging has yielded low response rates; a warm introduction is strongly preferred. She's currently refining her pitch deck and is preparing for a series of investor meetings in Q1 2024. She is very selective about who she spends her time with and prioritizes quality over quantity in her network.",
+    "locationAvailability": "Singapore, Singapore",
+    "introPreferences": "* **Ideal Candidates:** Seasoned agritech founders, impact investors with relevant portfolio companies, or experts in smallholder farming in Southeast Asia.\n* **Introduction Style:** Concise and personalized introductions highlighting the potential synergy between Anh and the introducer\u2019s connection. Focus on shared values and potential areas of collaboration.\n* **Hard Requirement:** Any potential connection *must* have a demonstrated understanding of, and commitment to, sustainable agriculture.\n* **Soft Preference:** Prior experience working with startups, particularly in emerging markets.\n* **Do not introduce:** Individuals primarily focused on traditional finance or unrelated industries.\n* **Context is Key:** Please provide context on why you think this connection would be valuable for Anh and Bloom Metrics.",
+    "personalPreferences": "Prefers asynchronous communication when possible, allowing time for thoughtful responses. Values directness and transparency.",
+    "meetingAndSchedulingPreferences": "Generally prefers short, focused meetings with a clear agenda. Happy to schedule virtual meetings via Zoom or Google Meet. Follow-up communication is appreciated."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 21.80392622947693,
+      "input_tokens": 829,
+      "output_tokens": 1215,
+      "problems": [
+        "background: possible truncation (ends with '...Communication.</li>\n</ul>')",
+        "lookingFor: possible truncation (ends with '...nstrable ROI).</li>\n</ul>')",
+        "introPreferences: possible truncation (ends with '...zation is key.</li>\n</ul>')"
+      ]
+    },
+    {
+      "attempt": 2,
+      "elapsed_s": 21.474153995513916,
+      "input_tokens": 829,
+      "output_tokens": 1244,
+      "problems": []
+    }
+  ],
+  "success": true
+}

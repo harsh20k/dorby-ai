@@ -1,0 +1,65 @@
+{
+  "id": 628,
+  "archetype": "Boardy Scout/Deal Partner, Emerging Tech",
+  "given_name": "Kai Almeida",
+  "style_version": 39,
+  "archetypes_version": 105,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Kai Almeida is a former hardware engineer who transitioned into venture capital, specifically focusing on seed-stage companies building novel applications of materials science and advanced manufacturing. They had a successful, but ultimately frustrating, stint at a large tech company designing microchips, finding the bureaucracy stifled innovation. This experience fueled their desire to work with early-stage founders. They're currently a 'Boardy Scout' \u2013 essentially an independent deal source \u2013 for Boardy Ventures, looking for pre-seed and seed-stage investments. Kai is deeply analytical, driven by technical feasibility, and prioritizes teams with strong IP potential. They are *not* interested in purely software-driven businesses without a strong hardware component or materials innovation. They are actively trying to build a network of fellow scouts and angel investors to co-invest with and share deal flow. They\u2019re fairly direct and value concise communication.",
+    "positioning": "Kai Almeida is a venture scout and early-stage investment advisor with a deep background in hardware engineering and materials science. As a Boardy Scout, Kai focuses on identifying and evaluating pre-seed and seed-stage companies developing disruptive technologies at the intersection of hardware, materials, and manufacturing. Their technical expertise allows for a uniquely rigorous assessment of feasibility and scalability. Kai is passionate about supporting ambitious founders building the future of physical products and is actively seeking collaborative investment opportunities with aligned partners. They bring a pragmatic, engineering-focused lens to the often-hype-driven world of early-stage venture.",
+    "background": "* **Boardy Ventures - Scout** (2023 - Present)\n    * Sourcing, screening, and performing initial due diligence on pre-seed and seed-stage investment opportunities.\n    * Developing investment theses focused on advanced materials, robotics, and novel manufacturing techniques.\n    * Building and maintaining relationships with founders, angel investors, and other venture scouts.\n    * Presenting investment recommendations to the Boardy Ventures investment team.\n* **NovaTech Solutions - Senior Hardware Engineer** (2018 - 2023)\n    * Led the design and testing of microchip components for high-performance computing applications.\n    * Managed a team of junior engineers and collaborated with cross-functional teams (software, manufacturing, QA).\n    * Patented a novel thermal management solution for high-density microprocessors (US Patent No. 12,345,678).\n    * Consistently exceeded performance targets, but increasingly frustrated by bureaucratic processes.\n* **MIT - Master of Science, Materials Science and Engineering** (2016 - 2018)\n    * Thesis: 'Novel Polymer Composites for Flexible Electronics'.\n    * GPA: 3.9/4.0\n* **Stanford University - Bachelor of Science, Mechanical Engineering** (2012 - 2016)\n    * Minor: Computer Science.\n    * Relevant Coursework: Robotics, Thermodynamics, Solid Mechanics, Digital Design.\n* **Skills:** Materials Science, Hardware Design, Microfabrication, Robotics, CAD (SolidWorks, AutoCAD), Simulation Software (COMSOL, ANSYS), Due Diligence, Financial Modeling (basic), Patent Analysis, Technical Writing.",
+    "lookingFor": "* **Co-investment opportunities:** Actively seeking angel investors and other scouts to co-invest in seed-stage deals (ticket size: $50k - $250k).\n* **Founders:** Early-stage founders (pre-seed/seed) building hardware-focused companies with defensible IP.\n* **Introductions to:** Venture capitalists specializing in deep tech and hardware (Series A and beyond).\n* **Expert Advisors:** Individuals with expertise in specific materials science applications (e.g., battery technology, advanced ceramics).\n* **Deal Flow:** Referrals of promising early-stage companies operating in the advanced materials or robotics space.\n* **Do not:** Send opportunities for purely software companies, web3 projects, or consumer-facing apps without a substantial hardware component.\n* **Specifically interested in:** Companies utilizing novel manufacturing processes (e.g., additive manufacturing, biofabrication).",
+    "notes": "Kai is highly responsive but values direct and concise communication. They have a strong technical background and will quickly identify weaknesses in a company's technical claims. Recent conversations indicate a growing interest in companies addressing supply chain resilience through localized manufacturing. Data quality is good; LinkedIn profile is actively maintained. They are fairly selective about the deals they bring to Boardy Ventures, prioritizing technical rigor and long-term potential over short-term hype.",
+    "locationAvailability": "San Francisco, California",
+    "introPreferences": "* **Ideal Candidates:** Founders with PhDs or extensive industry experience in relevant technical fields.\n* **Introduction Style:** Brief and focused on the company's technical innovation and market opportunity. Avoid lengthy introductions or excessive fluff.\n* **Hard Requirement:** The company *must* have a significant hardware component or be developing novel materials.\n* **Soft Preference:** Teams with strong IP protection (patents filed/granted).\n* **Do not:** Introduce companies seeking purely financial investment without a clear understanding of their technical challenges.\n* **Preferred Industries:** Robotics, Advanced Manufacturing, Battery Technology, Aerospace, Medical Devices.",
+    "personalPreferences": "Prefers email communication over phone calls initially. Values efficiency and directness.",
+    "meetingAndSchedulingPreferences": "Happy to schedule 30-minute introductory calls. Prefers to review a deck or executive summary *before* any meeting."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 17.336769104003906,
+      "input_tokens": 823,
+      "output_tokens": 1272,
+      "problems": [
+        "background: possible truncation (ends with '...al Assessment.</li>\n</ul>')",
+        "lookingFor: possible truncation (ends with '...lying science.</li>\n</ul>')",
+        "introPreferences: possible truncation (ends with '... technologies.</li>\n</ul>')"
+      ]
+    },
+    {
+      "attempt": 2,
+      "elapsed_s": 20.422409057617188,
+      "input_tokens": 823,
+      "output_tokens": 1161,
+      "problems": []
+    }
+  ],
+  "success": true
+}

@@ -1,0 +1,54 @@
+{
+  "id": 835,
+  "archetype": "Emerging Markets Fintech Intelligence Builder",
+  "given_name": "Grace Zhang",
+  "style_version": 51,
+  "archetypes_version": 141,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Grace Zhang is a first-time founder, originally from a quantitative finance background, now laser-focused on building 'AfrinSight,' a financial intelligence platform specifically tailored for the complexities of the Nigerian (and eventually broader West African) market. Her distinctive career detail is a 3-year stint at a high-frequency trading firm *after* a Masters in Financial Engineering \u2013 this gives her a unique understanding of data infrastructure and latency requirements, which she\u2019s applying to the AfrinSight platform. She's extremely data-driven, aiming to provide small and medium-sized businesses (SMBs) with credit risk assessments and market insights previously inaccessible to them. She\u2019s actively fundraising a seed round, seeking investors who understand the nuances of emerging markets and are patient for long-term growth. She\u2019s highly aware of the need to build a strong, localized team and is networking to find both technical talent and experienced advisors with on-the-ground knowledge. She\u2019s a fast learner, comfortable with ambiguity, and possesses a quiet confidence that belies her first-time founder status. She's very focused on demonstrable impact and sustainable growth, not just rapid scaling.",
+    "positioning": "Grace Zhang is a fintech entrepreneur dedicated to unlocking financial access and opportunity within underserved markets, starting with Nigeria. I\u2019m the founder and CEO of AfrinSight, a financial intelligence platform designed to empower small and medium-sized businesses with the data they need to thrive. My background blends rigorous quantitative finance with a deep understanding of technological infrastructure \u2013 a combination I believe is crucial for building impactful fintech solutions in complex environments.  We\u2019re currently focused on developing a proprietary credit risk scoring model that leverages alternative data sources to overcome the limitations of traditional credit bureaus. \n\nPrior to AfrinSight, I spent three years at OptiTrade, a leading high-frequency trading firm, where I honed my skills in data analysis, algorithmic development, and low-latency systems. This experience instilled in me a relentless focus on data quality, scalability, and operational efficiency \u2013 principles that are deeply embedded in AfrinSight\u2019s architecture. I recognized a significant gap in the market for accessible and reliable financial intelligence, particularly for businesses operating outside of the formal banking sector. \n\nI\u2019m currently leading a seed funding round to accelerate AfrinSight\u2019s product development, expand our data coverage, and build a world-class team. I\u2019m passionate about building a sustainable and impactful business that contributes to economic growth and financial inclusion in Africa. I'm particularly interested in connecting with investors and advisors who share this vision and possess a deep understanding of the region\u2019s unique challenges and opportunities.",
+    "background": "- **Founder & CEO, AfrinSight** (2023 \u2013 Present)\n  * Spearheaded the development of AfrinSight\u2019s core platform, including data ingestion pipelines, credit risk modeling algorithms, and user interface.\n  * Secured initial pilot partnerships with 15 SMBs in Lagos, demonstrating a 20% improvement in their access to credit.\n  * Developed a comprehensive business plan and financial projections, currently being used to raise seed funding.\n  * Built and managed a small, agile team of engineers and data scientists.\n\n- **Quantitative Researcher, OptiTrade** (2020 \u2013 2023)\n  * Developed and implemented high-frequency trading algorithms, resulting in a 5% increase in trading profitability.\n  * Conducted rigorous statistical analysis of market data to identify arbitrage opportunities.\n  * Collaborated with software engineers to optimize trading infrastructure for low latency and high throughput.\n  * Contributed to the development of a new risk management system.\n\n- **Financial Engineer, Quantex Capital** (2019 \u2013 2020)\n  * Developed pricing models for complex derivative products.\n  * Performed stress testing and scenario analysis to assess portfolio risk.\n  * Assisted in the development of a new trading strategy.\n\n- **Education:**\n  * **M.S., Financial Engineering, Columbia University** (2017 \u2013 2019) \u2013 GPA: 3.9/4.0, Dean\u2019s List all semesters.\n  * **B.S., Mathematics, University of California, Berkeley** (2013 \u2013 2017) \u2013 Summa Cum Laude, Phi Beta Kappa.\n\n- **Skills:** Python, SQL, Machine Learning (Regression, Classification, Clustering), Data Visualization (Tableau, Power BI), Financial Modeling, Credit Risk Analysis, Statistical Analysis, Algorithmic Trading, Cloud Computing (AWS, Azure), Agile Development, Product Management.",
+    "lookingFor": "I am actively seeking connections with investors who have a demonstrated track record of supporting early-stage fintech companies in emerging markets. I'm particularly interested in funds that prioritize long-term value creation and are comfortable with the inherent risks and rewards of investing in Africa.  I\u2019m looking for more than just capital; I\u2019m seeking strategic partners who can provide mentorship, guidance, and access to their network.\n\nSpecifically, I'm looking for:\n * **Seed-stage investors:**  Targeting a $500K - $1M seed round.\n * **Fintech advisors:**  Experienced professionals with expertise in credit risk, regulatory compliance, and market entry strategies in Nigeria.\n * **Technical talent:**  Full-stack engineers with experience building scalable and robust web applications.\n * **Potential partnerships:**  Collaboration opportunities with local banks, microfinance institutions, and other financial service providers.\n\nI'm also open to introductions to individuals who have successfully navigated the challenges of building and scaling fintech businesses in similar markets. I'm keen to learn from their experiences and avoid common pitfalls.  I'm attending the Africa Fintech Summit in April and would appreciate introductions to relevant attendees.",
+    "notes": "Grace is incredibly sharp and articulate. She\u2019s very focused on the data and has a clear vision for AfrinSight. She's realistic about the challenges ahead but exudes a quiet confidence that's very compelling. She's actively researching competitors but doesn't seem overly concerned, believing her focus on hyper-local data and alternative credit scoring gives her a significant advantage.  She's particularly sensitive to the need to build a strong, local team and is wary of parachuting in 'experts' who don't understand the nuances of the Nigerian market.  Be mindful of her time \u2013 she's juggling a lot. Avoid overly generic introductions; she's looking for *specific* expertise and connections.  Data quality is a major concern for her, so focus on individuals with experience in data governance and validation.",
+    "locationAvailability": "Grace is currently based in Lagos, Nigeria. She is open to occasional travel for investor meetings and industry events, but prefers remote communication for day-to-day interactions. She is not currently considering relocation.",
+    "introPreferences": "- **Hard Requirement:** Any introduction *must* be to someone with direct experience in African fintech \u2013 ideally Nigeria specifically.\n- **Strong Preference:** Investors with a portfolio focused on Series A and beyond. Grace wants partners who can support her long-term.\n- **Soft Preference:** Individuals who have a track record of successfully navigating regulatory hurdles in emerging markets.\n- **Intro Style:** Brief, impactful, and focused on the specific value the connection can bring to AfrinSight. Avoid lengthy background stories.\n- **Do Not Introduce:** Individuals offering generic 'business advice' or unsolicited marketing services.\n- **Preferred Introduction Focus:**  Highlight AfrinSight\u2019s unique data advantage and its potential to disrupt the traditional credit scoring market.\n- **Follow-Up:** Grace is incredibly responsive, but appreciates concise communication.",
+    "personalPreferences": "Grace is a keen reader of science fiction and enjoys hiking in her free time. She prefers direct and honest communication.",
+    "meetingAndSchedulingPreferences": "Grace is generally flexible with meeting times, but prefers to schedule calls in the late morning or early afternoon her time (WAT). She responds promptly to emails and prefers to follow up with a brief summary of action items after each meeting."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 31.536824703216553,
+      "input_tokens": 801,
+      "output_tokens": 1718,
+      "problems": []
+    }
+  ],
+  "success": true
+}

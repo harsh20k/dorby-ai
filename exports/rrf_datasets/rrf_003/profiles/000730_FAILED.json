@@ -1,0 +1,74 @@
+{
+  "id": 730,
+  "archetype": "AI Infrastructure & Automation Focus",
+  "given_name": "Yara Kaur",
+  "style_version": 45,
+  "archetypes_version": 123,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Yara Kaur is a rising star in the AI infrastructure space, specifically focused on autonomous agents and orchestration. She\u2019s a former robotics engineer who pivoted to software after realizing the bottleneck wasn\u2019t hardware capability, but the *management* of complex AI systems. This gives her a unique perspective \u2013 she understands the needs of the \u2018edge\u2019 (where robots operate) and translates those into scalable software solutions. Currently, she's Head of Platform at 'SynapseFlow', a seed-stage startup building an agent orchestration platform. A distinctive detail is she led the open-sourcing of a core component of her previous company\u2019s agent framework, gaining her recognition in the community. She\u2019s now focused on driving adoption of SynapseFlow and building partnerships with companies deploying AI agents at scale. She\u2019s very practical and results-oriented, valuing demonstrable impact over theoretical discussions.",
+    "positioning": "As Head of Platform at SynapseFlow, I\u2019m building the foundational layer for the next generation of AI-powered automation. We're solving the critical challenge of managing and orchestrating increasingly complex agent-based systems, allowing companies to move beyond isolated AI experiments and deploy truly autonomous workflows. My focus is on creating a robust, scalable, and developer-friendly platform that unlocks the full potential of AI agents across industries like logistics, manufacturing, and customer service. We've recently achieved significant traction with early adopters, demonstrating a 3x increase in agent deployment velocity. \n\nI bring a unique blend of robotics engineering and software expertise to this role, having spent years understanding the real-world needs of AI at the edge. I\u2019m passionate about bridging the gap between research and implementation, and I\u2019m actively seeking connections with leaders and innovators who are pushing the boundaries of AI infrastructure. Connecting with me now offers the opportunity to explore how SynapseFlow can accelerate your AI initiatives and streamline your agent workflows.",
+    "background": "- **Head of Platform, SynapseFlow** (2023 \u2013 Present)\n    - Spearheading the development and execution of SynapseFlow\u2019s platform strategy, focusing on scalability, reliability, and developer experience.\n    - Led the successful launch of SynapseFlow's v1.0 platform, resulting in 20+ active enterprise pilot programs.\n    - Built and manage a team of 6 engineers focused on core platform infrastructure and agent orchestration tools.\n    - Responsible for defining and tracking key platform metrics, including agent deployment frequency, workflow execution time, and system resource utilization.\n\n- **Senior Software Engineer, Robotics Systems, NovaDynamics** (2020 \u2013 2023)\n    - Led the development of the agent framework for NovaDynamics\u2019 autonomous warehouse robots.\n    - Championed the open-sourcing of 'AgentCore,' a core component of the framework, resulting in a 40% increase in community contributions and a significant boost to NovaDynamics\u2019 brand recognition within the robotics community. (GitHub link: [fictional github link])\n    - Designed and implemented robust error handling and monitoring systems for deployed robot fleets, reducing downtime by 15%.\n    - Collaborated with hardware engineers to optimize agent performance on resource-constrained embedded systems.\n\n- **Robotics Engineer, Research & Development, OmniTech Solutions** (2018 \u2013 2020)\n    - Conducted research and development in the area of multi-agent robotic systems, focusing on collaborative task planning and execution.\n    - Developed and tested algorithms for robot navigation, object recognition, and manipulation.\n    - Contributed to the design and construction of a novel robotic platform for agricultural applications.\n\n- **Education:**\n    - **M.S., Robotics, Carnegie Mellon University** (2018)\n        - Thesis: \u201cDistributed Task Allocation in Multi-Agent Robotic Systems\u201d\n    - **B.S., Mechanical Engineering, Massachusetts Institute of Technology (MIT)** (2016)\n\n- **Certifications:**\n    - Certified Kubernetes Administrator (CKA)\n    - AWS Certified Developer \u2013 Associate",
+    "lookingFor": "- Introductions to CTOs and Heads of AI at companies actively deploying AI agents in production.\n- Potential partners for integrating SynapseFlow with leading AI model providers and data platforms.\n- Investors focused on early-stage AI infrastructure companies.\n- Individuals with deep expertise in distributed systems, serverless computing, and agent-based architectures.\n- Companies struggling with the operational complexity of managing large-scale AI agent deployments.\n- Advisors with experience scaling developer platforms.",
+    "notes": "Yara is incredibly sharp and articulate. She can quickly grasp complex technical concepts and explain them in a clear and concise manner. She\u2019s very passionate about her work at SynapseFlow and genuinely believes in the value of their platform. During our initial call, she emphasized the importance of practical solutions and demonstrable ROI. She\u2019s a strong advocate for open-source and community collaboration. \n\nA good introduction for Yara would focus on the specific pain points the recipient is facing with AI agent deployment and how SynapseFlow's orchestration capabilities could address those challenges. She\u2019s less interested in theoretical discussions and more focused on finding real-world use cases. She mentioned a particular interest in connecting with individuals at companies in the logistics and manufacturing sectors.",
+    "locationAvailability": "Based in San Francisco, CA, with frequent travel to industry conferences and customer sites.",
+    "introPreferences": "- Please include a brief explanation of *why* you're making the introduction \u2013 what shared interests or pain points connect Yara with the recipient.\n- Highlight any relevant experience the recipient has with AI agents, orchestration platforms, or related technologies.\n- Warm email introductions are preferred. LinkedIn connection requests without context are less effective.\n- Focus on the *business* value of SynapseFlow \u2013 how it can help the recipient achieve their goals. Avoid overly technical details in the initial introduction.",
+    "personalPreferences": "Prefers to follow up via email initially.",
+    "meetingAndSchedulingPreferences": "Generally available for 30-minute introductory calls. Prefers meetings to be focused and agenda-driven."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 23.547844886779785,
+      "input_tokens": 748,
+      "output_tokens": 1299,
+      "problems": [
+        "background: possible truncation (ends with '...ons Architect \u2013 Associate')"
+      ]
+    },
+    {
+      "attempt": 2,
+      "elapsed_s": 26.62288999557495,
+      "input_tokens": 748,
+      "output_tokens": 1345,
+      "problems": [
+        "background: possible truncation (ends with '...ons Architect \u2013 Associate')"
+      ]
+    },
+    {
+      "attempt": 3,
+      "elapsed_s": 25.6500461101532,
+      "input_tokens": 748,
+      "output_tokens": 1292,
+      "problems": [
+        "background: possible truncation (ends with '...ied Developer \u2013 Associate')"
+      ]
+    }
+  ],
+  "success": false
+}

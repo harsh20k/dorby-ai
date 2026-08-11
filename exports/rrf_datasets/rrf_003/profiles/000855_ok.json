@@ -1,0 +1,72 @@
+{
+  "id": 855,
+  "archetype": "Data-Driven Infrastructure Builder",
+  "given_name": "Lucas Patel",
+  "style_version": 53,
+  "archetypes_version": 145,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Lucas Patel is a 34-year-old, highly analytical engineer who transitioned from a traditional data science role at a large consulting firm to founding a startup, 'Arboreal Insights,' focused on applying computer vision and machine learning to forest health monitoring. A distinctive career detail is his co-authoring of a published paper on novel LiDAR data processing techniques *during* his Master's program \u2013 a testament to his academic rigor and early research aptitude. He\u2019s currently seeking Series A funding to scale Arboreal Insights\u2019 platform and expand into urban forestry applications. He\u2019s deeply technical but understands the business side and is comfortable pitching to investors. He\u2019s driven by a passion for environmental sustainability and data-driven decision-making. He\u2019s very focused, sometimes to the point of being perceived as direct, but genuinely values strong professional relationships. He\u2019s looking for investors with experience in climate tech and strategic advisors who can help navigate the complexities of government contracting related to forestry management.",
+    "positioning": "I\u2019m the founder and CEO of Arboreal Insights, a company leveraging AI and remote sensing to revolutionize forest health monitoring. We\u2019re building a comprehensive data platform that provides actionable insights for forest managers, conservation organizations, and policymakers. My background is rooted in data science and engineering, with a strong emphasis on geospatial analysis and machine learning. After years of consulting on large-scale data projects, I identified a critical gap in the application of advanced analytics to environmental challenges. Arboreal Insights addresses this gap by providing a scalable, cost-effective solution for monitoring forest ecosystems, detecting early signs of stress, and optimizing resource allocation. We\u2019ve recently completed a successful pilot program with the US Forest Service, demonstrating significant improvements in detection accuracy and efficiency. I\u2019m currently leading our Series A fundraising round and focused on expanding our team and platform capabilities to address the growing demand for data-driven forestry solutions. I'm particularly interested in exploring partnerships that leverage our technology for urban forestry and carbon sequestration initiatives.",
+    "background": "* **Arboreal Insights, CEO & Founder** (2021 \u2013 Present)\n    * Led all aspects of company formation, including business plan development, fundraising, product development, and team building.\n    * Secured seed funding of $750K from angel investors.\n    * Oversaw the development and deployment of a proprietary AI-powered platform for forest health monitoring using LiDAR and multispectral imagery.\n    * Successfully completed a pilot program with the US Forest Service, demonstrating a 30% improvement in early stress detection.\n    * Key Technologies: Python, TensorFlow, PyTorch, AWS (S3, EC2, SageMaker), LiDAR data processing, Computer Vision, Geospatial Analysis.\n* **Deloitte Consulting, Data Scientist** (2018 \u2013 2021)\n    * Developed and implemented machine learning models for various client projects across industries, including finance, healthcare, and retail.\n    * Led data analysis and visualization efforts to identify key insights and inform business decisions.\n    * Managed data pipelines and ensured data quality and integrity.\n    * Key Technologies: SQL, Python, R, Tableau, Power BI, Machine Learning (Regression, Classification, Clustering).\n* **University of California, Berkeley, Research Assistant** (2016 \u2013 2018)\n    * Conducted research on novel LiDAR data processing techniques for 3D forest mapping.\n    * Co-authored a peer-reviewed publication in *Remote Sensing of Environment* on optimized point cloud filtering algorithms.\n    * Developed and maintained Python scripts for data analysis and visualization.\n* **Education:**\n    * **Master of Science, Data Science**, University of California, Berkeley (2018)\n    * **Bachelor of Science, Computer Science**, Stanford University (2016)\n* **Skills:** Python, TensorFlow, PyTorch, LiDAR, Computer Vision, Machine Learning, Data Analysis, Data Visualization, SQL, AWS, Geospatial Analysis, Statistical Modeling, Remote Sensing, Project Management.",
+    "lookingFor": "I'm actively seeking introductions to Series A investors with a demonstrated interest in climate tech, specifically companies focused on sustainability and environmental monitoring. Ideal investors have a portfolio that includes companies in the geospatial analytics or precision forestry spaces and have a track record of supporting rapid growth. I\u2019m particularly interested in firms that can offer strategic guidance beyond capital. \n\nI'm also looking for strategic advisors with experience in:\n\n*   **Government Contracting:** Navigating the complexities of securing and managing contracts with federal agencies like the US Forest Service and Department of Agriculture.\n*   **Urban Forestry:** Expertise in the unique challenges and opportunities of applying our technology to urban environments.\n*   **Carbon Sequestration:** Understanding the evolving carbon credit markets and potential applications for our platform.\n\nSpecifically, I'd appreciate introductions to:\n\n*   Partners at venture capital firms specializing in climate tech (e.g., Breakthrough Energy Ventures, Lowercarbon Capital).\n*   Former government officials with experience in forestry management and environmental policy.\n*   Leaders of urban forestry initiatives in major cities (e.g., New York City, Los Angeles). \n\nI'm open to exploring potential partnerships with companies offering complementary technologies, such as drone operators and remote sensing data providers.",
+    "notes": "Lucas is exceptionally sharp and focused \u2013 almost laser-like. Our initial call was very efficient; he jumped straight into the business model and key metrics without much small talk. He clearly knows his tech inside and out. He's very confident in Arboreal Insights' potential but seems slightly wary of over-promising, which is a good sign. Mentioned the USFS pilot was key in validating their core algorithm. He\u2019s clearly a builder at heart, but recognizes the need for strong business acumen. Follow-up should focus on his fundraising timeline and potential concerns about scaling the team. He seemed receptive to the idea of a warm introduction to someone with experience navigating government contracts. Flagged: he can be a little terse in email, so keep communications concise and data-driven. High potential, but requires a direct and pragmatic approach.",
+    "locationAvailability": "I am based in San Francisco, California, but am frequently traveling for investor meetings and industry events. I am open to relocating for the right opportunity, and comfortable with frequent travel.",
+    "introPreferences": "When making introductions, please keep the following in mind:\n\n*   **Hard Requirements:** Individuals should have a demonstrable track record of investing in or advising early-stage climate tech companies.\n*   **Soft Preferences:** Experience with geospatial analytics or remote sensing is highly valued.\n*   **Intro Style:** Please frame the introduction by highlighting Arboreal Insights\u2019 unique approach to forest health monitoring and our successful pilot program with the US Forest Service. I\u2019m particularly interested in discussing our Series A funding round and potential strategic partnerships.\n*   **Avoid:** Introductions to individuals who are not actively involved in investing or advising companies in the climate tech space. \n*   **Preferred Contact Method:** Email is best for initial outreach.  A brief LinkedIn message to pre-warm the connection is also appreciated.\n*   **Key Talking Points:**  Highlight our proprietary AI algorithms and the scalability of our platform.",
+    "personalPreferences": "I prefer email for most communications. Quick, concise messaging is appreciated \u2013 I'm very efficient with my time.",
+    "meetingAndSchedulingPreferences": "I generally prefer 30-minute video calls for initial meetings. Please send a calendar invite with a clear agenda. I'm available during standard business hours (PST). Please allow 24-48 hours for a response to scheduling requests."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 31.84420394897461,
+      "input_tokens": 910,
+      "output_tokens": 1446,
+      "problems": [
+        "background: possible truncation (ends with '...ons Architect \u2013 Associate')"
+      ]
+    },
+    {
+      "attempt": 2,
+      "elapsed_s": 23.21370530128479,
+      "input_tokens": 910,
+      "output_tokens": 1644,
+      "problems": [
+        "background: possible truncation (ends with '...** DJI Pilot, Pix4Dmapper')"
+      ]
+    },
+    {
+      "attempt": 3,
+      "elapsed_s": 31.369017124176025,
+      "input_tokens": 910,
+      "output_tokens": 1609,
+      "problems": []
+    }
+  ],
+  "success": true
+}

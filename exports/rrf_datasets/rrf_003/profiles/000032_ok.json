@@ -1,0 +1,63 @@
+{
+  "id": 32,
+  "archetype": "Serial Founder, Tech Executive",
+  "given_name": "Hassan Oduya",
+  "style_version": 2,
+  "archetypes_version": 6,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Hassan Oduya is a serial founder with a strong background in AI-driven logistics and supply chain optimization. He's successfully exited two companies \u2013 one focused on route optimization for delivery services and another on predictive maintenance for trucking fleets. He's now building a new venture, 'SynapseFlow,' focused on applying generative AI to dynamic resource allocation across entire supply networks, aiming for real-time responsiveness to disruptions. He's looking for seed funding and strategic partners with expertise in manufacturing and large-scale logistics. He\u2019s a very data-driven person who values efficiency and clear communication. He\u2019s currently based in Boston, but open to opportunities with a global impact. A key detail: Hassan is a passionate advocate for ethical AI and is committed to building responsible AI solutions. He avoids overly 'hype-driven' pitches and prefers to engage with individuals who demonstrate a deep understanding of the underlying technology.",
+    "positioning": "Hassan Oduya is a seasoned technology executive and serial entrepreneur specializing in the application of artificial intelligence to optimize complex logistical systems. As the Founder & CEO of SynapseFlow, he\u2019s pioneering the use of generative AI for dynamic resource allocation, enabling unprecedented resilience and efficiency in global supply chains. Prior successes include the founding and successful exit of RouteWise (acquired by Fleet Solutions, 2020) and PreCog Logistics (acquired by Global Transport, 2017). Hassan\u2019s expertise spans machine learning, data analytics, software development, and strategic leadership. He possesses a proven track record of building high-performing teams, securing venture capital, and delivering innovative solutions that drive significant ROI. Currently, Hassan is focused on securing seed funding and strategic partnerships to accelerate the development and deployment of SynapseFlow. He seeks to connect with investors and industry leaders who share a commitment to ethical AI and a vision for the future of supply chain management.",
+    "background": " * **Founder & CEO, SynapseFlow** (Boston, MA) \u2013 2023 \u2013 Present\n    * Led the conceptualization, development, and initial funding rounds for a generative AI-powered supply chain optimization platform.\n    * Developed core AI algorithms for dynamic resource allocation, resulting in a 15% reduction in simulated supply chain disruption costs during beta testing.\n    * Built a core team of 8 engineers and data scientists.\n    * Secured initial angel investment of $750k.\n* **Founder & CEO, PreCog Logistics** (San Francisco, CA) \u2013 2015 \u2013 2017\n    * Founded and scaled a predictive maintenance platform for trucking fleets, utilizing machine learning to anticipate equipment failures.\n    * Increased fleet uptime by 20% and reduced maintenance costs by 12% for key clients.\n    * Successfully secured $3M in Series A funding.\n    * Led the company through acquisition by Global Transport for $12M.\n* **Founder & CEO, RouteWise** (Austin, TX) \u2013 2012 \u2013 2020\n    * Developed a route optimization platform for last-mile delivery services, leveraging advanced algorithms and real-time traffic data.\n    * Achieved a 30% reduction in delivery times and a 15% reduction in fuel consumption for partner companies.\n    * Grew RouteWise to over 50 employees and secured partnerships with major delivery providers.\n    * Successfully sold the company to Fleet Solutions for $25M.\n* **Software Engineer, IBM** (Austin, TX) \u2013 2010 \u2013 2012\n    * Developed and maintained software solutions for enterprise clients, focusing on data analytics and cloud computing.\n    * Contributed to the development of a new data visualization tool that improved data accessibility for business users.\n    * Received the \u2018Innovation Award\u2019 for contributions to a key client project.",
+    "lookingFor": "I'm currently seeking strategic partners and seed funding to accelerate the growth of SynapseFlow. I'm looking to connect with:\n\n* **Investors:** Angel investors and venture capital firms specializing in AI, logistics, and supply chain technology. Seed round target: $3M - $5M.\n* **Strategic Partners:** Companies in the manufacturing, logistics, and retail sectors interested in piloting and implementing our platform. Specifically, I'm interested in partners with large, complex supply chains and a commitment to innovation.\n* **Advisors:** Individuals with deep expertise in supply chain management, AI ethics, and go-to-market strategy. I'm particularly interested in advisors who have experience scaling SaaS businesses.\n* **Industry Experts:** Individuals with a strong understanding of the challenges and opportunities in dynamic resource allocation and supply chain resilience.\n\nI'm open to advisory roles in companies that align with my interests and expertise. I'm *not* interested in roles that involve solely sales or marketing \u2013 I prefer to focus on the technical and strategic aspects of building and scaling businesses.",
+    "notes": "Hassan is actively engaging in conversations with several potential investors. He's particularly focused on finding partners who 'get' the nuance of generative AI beyond the hype. Initial feedback suggests he can be somewhat skeptical of overly optimistic projections. He prefers data-driven discussions and detailed technical explanations. He's a quick study and appreciates direct communication. Recent conversations suggest he's prioritizing partners who demonstrate a strong commitment to responsible AI practices. Data quality on his LinkedIn profile is excellent, but his Twitter activity (linked below) provides additional insights into his thinking.",
+    "locationAvailability": "Currently based in Boston, Massachusetts, but open to opportunities with a global reach. Willing to travel for key meetings and partnerships.",
+    "introPreferences": "* **Hard Requirements:** No introductions to individuals solely focused on sales or marketing roles. Avoid introductions to individuals promoting 'blockchain-based supply chain solutions' \u2013 he\u2019s skeptical of their value.\n* **Soft Preferences:** Prioritize introductions to individuals with a technical background and a deep understanding of AI/ML. Introductions to individuals at Fortune 500 companies in the manufacturing or logistics sectors are highly valued.\n* **Introduction Framing:** When making an introduction, please highlight the potential synergies between SynapseFlow and the recipient\u2019s organization. Focus on the specific challenges SynapseFlow can address and the potential ROI. Please emphasize Hassan's commitment to ethical AI development.",
+    "personalPreferences": "I prefer to connect initially via email. WhatsApp is acceptable for quick follow-ups. Please keep communication concise and focused on actionable items.",
+    "meetingAndSchedulingPreferences": "I generally prefer virtual meetings, but am open to in-person meetings when appropriate. I use Calendly for scheduling: [link to Calendly - placeholder]."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 20.066367149353027,
+      "input_tokens": 864,
+      "output_tokens": 1439,
+      "problems": [
+        "meetingAndSchedulingPreferences: possible truncation (ends with '...[fictional Calendly link]')"
+      ]
+    },
+    {
+      "attempt": 2,
+      "elapsed_s": 27.237019062042236,
+      "input_tokens": 864,
+      "output_tokens": 1416,
+      "problems": []
+    }
+  ],
+  "success": true
+}

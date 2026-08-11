@@ -1,0 +1,54 @@
+{
+  "id": 732,
+  "archetype": "Executive Search to Venture/Fundraising",
+  "given_name": "Takumi Dubois",
+  "style_version": 45,
+  "archetypes_version": 123,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Takumi Dubois is a former Head of Executive Search specializing in Series B/C stage SaaS companies. He spent 12 years at a boutique firm, becoming a partner and building a strong network of both executive talent and VCs. He recently left to launch a pre-seed fund focused on overlooked founders building developer tools. He's very network-focused, still actively leveraging his search connections for deal flow and due diligence. He's a bit of a 'connector' personality \u2013 genuinely enjoys facilitating relationships. His fundraising is ongoing, and he\u2019s looking for LPs who understand the specific nuances of the developer tool space and can bring more than just capital (network access, strategic guidance). He's very direct and efficient in communication, valuing clarity and concise information. He's early in his fund lifecycle and needs help getting the word out.",
+    "positioning": "Takumi Dubois is the Founding Partner at NovaDev Ventures, a pre-seed fund investing in the future of developer tooling. After a decade-plus career building relationships with leading technology executives through executive search, I\u2019m now leveraging that deep network and understanding of high-growth companies to identify and support exceptional founders. NovaDev Ventures focuses on companies building infrastructure, platforms, and tools that empower developers \u2013 a sector I believe is fundamentally undervalued. I\u2019m particularly passionate about backing founders who are deeply technical and solving truly challenging problems. Currently, we're actively deploying capital from our initial close and building out our LP base. Connecting with me now allows you to participate in the ground floor of a fund poised to capitalize on the explosive growth in the developer ecosystem and gain access to a curated pipeline of early-stage opportunities.",
+    "background": "- **Founding Partner, NovaDev Ventures** (2023 \u2013 Present)\n  -- Launched a pre-seed venture fund focused on developer tools, managing all aspects of fund operations, deal sourcing, due diligence, and portfolio support.\n  -- Secured initial commitments from angel investors and family offices, completing a $500k first close.\n  -- Developed a proprietary deal sourcing methodology leveraging my extensive network within the tech executive space.\n  -- Currently focused on fundraising for a $2M target fund size.\n\n- **Partner, Horizon Executive Search** (2011 \u2013 2023)\n  -- Led the SaaS practice, specializing in executive placements for Series B \u2013 Series C funded companies. \n  -- Consistently exceeded quarterly revenue targets, achieving a 30% year-over-year growth rate for the practice.\n  -- Managed a team of 5 recruiters, providing mentorship and guidance on candidate sourcing, client management, and deal negotiation.\n  -- Developed and maintained relationships with over 200 VCs and portfolio company CEOs.\n  -- Key placements included VP Engineering at DataDog (2016), CTO at Amplitude (2018), and CFO at Snyk (2020).\n\n- **Associate, Horizon Executive Search** (2009 \u2013 2011)\n  -- Responsible for full-cycle recruitment, including candidate sourcing, screening, interviewing, and offer negotiation.\n  -- Specialized in identifying and recruiting top talent for engineering, product, and marketing roles.\n  -- Developed a strong understanding of the technology landscape and the competitive hiring market.\n\n- **Education:**\n  -- MBA, Harvard Business School (2009)\n  -- BS, Computer Science, Stanford University (2007) \u2013 *Tau Beta Pi* (Engineering Honor Society)\n\n- **Certifications:**\n  -- Certified Executive Search Consultant (CESC)",
+    "lookingFor": "- Limited Partners (LPs) with experience in the developer tooling space \u2013 ideally those who have built or invested in similar companies.\n- Introductions to family offices actively exploring allocations to emerging venture funds.\n- Founders building pre-seed/seed stage developer tools \u2013 particularly those focused on observability, security, or AI-powered development.\n- Strategic advisors with deep expertise in fund operations, fundraising, and LP relations.\n- Connections to angel investors who are passionate about supporting early-stage tech companies.\n- Individuals who can validate my fund thesis and provide valuable market insights.\n- No requests for job opportunities \u2013 I am fully committed to NovaDev Ventures.\n- Not currently seeking co-investment opportunities \u2013 focused solely on deploying capital from the fund.",
+    "notes": "Takumi is incredibly direct and efficient in his communication. He values brevity and clarity. He\u2019s a strong networker and genuinely enjoys connecting people. He\u2019s still very plugged into the executive search world and frequently leverages those connections for deal flow and due diligence. He's actively fundraising and is very open about that, but not pushy. We discussed his frustration with the 'spray and pray' approach of many funds and his commitment to a more focused, thesis-driven strategy. He specifically mentioned he's looking for LPs who can offer more than just capital \u2013 strategic guidance and network access are highly valued. He's very quick to get to the point in conversations and appreciates the same in return.",
+    "locationAvailability": "Based in San Francisco, CA, with frequent travel to New York and Boston for investor meetings.",
+    "introPreferences": "- Warm email introductions are preferred, with a concise summary of the connection\u2019s relevant experience and why they might be a good fit for NovaDev Ventures.\n- Please highlight any prior experience with developer tools or venture capital.\n- Briefly mention my background in executive search and my focus on building a strong network.\n- *Do not* introduce me to individuals solely based on their title \u2013 focus on their relevant expertise and potential value.\n- Avoid lengthy introductions \u2013 keep it concise and impactful.",
+    "personalPreferences": "Prefers asynchronous communication initially, followed by a brief call if there\u2019s a strong mutual fit.",
+    "meetingAndSchedulingPreferences": "Open to 30-minute Zoom calls. Please share a brief agenda beforehand."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 25.640278100967407,
+      "input_tokens": 751,
+      "output_tokens": 1257,
+      "problems": []
+    }
+  ],
+  "success": true
+}

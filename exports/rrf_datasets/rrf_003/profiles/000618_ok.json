@@ -1,0 +1,54 @@
+{
+  "id": 618,
+  "archetype": "Hospitality Veteran, Data Innovator",
+  "given_name": "Jamal Jansen",
+  "style_version": 38,
+  "archetypes_version": 103,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Jamal Jansen is a seasoned hospitality professional who spent 20 years climbing the ranks in luxury hotel management. However, about 5 years ago, he made a deliberate pivot, recognizing the transformative power of data analytics in the industry. He completed a Master's in Data Science, focusing on applications within hospitality, and now works as a 'Hospitality Data Strategist' \u2013 a somewhat self-defined role where he consults with hotels and resorts on implementing data-driven solutions to enhance guest experience, optimize revenue, and improve operational efficiency. He\u2019s particularly interested in predictive analytics for personalized service and is actively seeking funding for a startup focused on a hyper-personalized hotel concierge app powered by AI. A distinctive detail: he still actively bakes sourdough bread as a stress reliever, a skill honed during the pandemic lockdowns and a testament to his hands-on approach extending beyond the digital realm.",
+    "positioning": "Jamal Jansen is a Hospitality Data Strategist dedicated to bridging the gap between luxury service and cutting-edge data analytics. With over two decades of experience in high-end hotel management, he now leverages data science to optimize guest experiences and drive revenue growth for hospitality businesses. Jamal specializes in implementing predictive analytics, personalized marketing strategies, and operational efficiency improvements through data-driven insights. He\u2019s passionate about transforming the hospitality industry through innovative technology and is currently developing a venture poised to revolutionize the concierge experience.",
+    "background": "* **Chief Data Strategist (Consultant)**, Independent (2020 \u2013 Present)\n    * Advise luxury hotels and resorts on data strategy, implementation of analytics tools, and staff training.\n    * Developed and implemented a predictive analytics model for a boutique hotel chain, resulting in a 15% increase in repeat bookings within six months.\n    * Created data visualization dashboards to monitor key performance indicators (KPIs) and identify areas for improvement.\n    * Led workshops on data literacy for hospitality professionals.\n* **General Manager**, The Grand Majestic Hotel (2010 \u2013 2020)\n    * Oversaw all aspects of hotel operations, including guest services, food and beverage, housekeeping, and maintenance.\n    * Consistently exceeded guest satisfaction targets and revenue goals.\n    * Implemented a new CRM system to improve guest relationship management.\n    * Managed a team of over 200 employees.\n* **Front Office Manager**, The Ritz-Carlton (2005 \u2013 2010)\n    * Managed the front office team and ensured exceptional guest service.\n    * Resolved guest complaints and ensured guest satisfaction.\n    * Implemented new check-in/check-out procedures to improve efficiency.\n* **Education:**\n    * **Master of Science in Data Science**, University of California, Berkeley (2018 \u2013 2020) \u2013 Focused on machine learning and predictive modeling.\n    * **Bachelor of Science in Hospitality Management**, Cornell University (2001 \u2013 2005)\n* **Skills:** SQL, Python (Pandas, Scikit-learn), Tableau, Power BI, CRM Systems (Salesforce, Opera), Hotel Operations Management, Revenue Management, Data Visualization, Predictive Analytics, Machine Learning, Guest Relationship Management, Team Leadership.",
+    "lookingFor": "* **Seed Funding:** Seeking $500k - $1M in seed funding for 'Aura Concierge', a hyper-personalized hotel concierge app using AI.\n* **Strategic Partnerships:** Interested in partnerships with hotel groups willing to pilot 'Aura Concierge'.\n* **AI/ML Experts:** Connections with data scientists specializing in recommendation engines and natural language processing.\n* **Hospitality Tech Investors:** Introductions to venture capitalists and angel investors focused on hospitality technology.\n* **Mentorship:** Seeking advice from experienced startup founders, particularly those in the travel tech space.\n* **Do not contact:** Recruiters offering traditional hotel management roles. I am fully committed to my data science focus.\n* **Do not contact:** Individuals selling generic CRM solutions \u2013 I\u2019m looking for specialized AI applications.",
+    "notes": "Jamal is actively networking and attending industry events related to both hospitality and data science. He\u2019s very articulate about his vision for 'Aura Concierge' and has a compelling pitch deck. He mentioned a recent conversation with a potential advisor from a prominent tech incubator. Data quality on his LinkedIn profile is excellent. He\u2019s responsive and engaged. He is currently prioritizing meetings related to funding and strategic partnerships.",
+    "locationAvailability": "San Francisco, California",
+    "introPreferences": "* **Ideal Introductions:** Investors with a proven track record in hospitality tech or AI-driven consumer applications.\n* **Introduction Style:** Warm introductions are preferred, highlighting my experience in both hospitality and data science. A brief overview of 'Aura Concierge' in the introduction email is helpful.\n* **Hard Requirement:** Investors/Partners should demonstrate an understanding of the hospitality industry and the importance of personalized guest experiences.\n* **Soft Preference:** Individuals with a network within major hotel chains (Marriott, Hilton, Hyatt) are highly valued.\n* **Do not introduce:** Individuals who are not decision-makers or influencers in investment/partnership decisions.",
+    "personalPreferences": "I prefer to communicate via email initially, then transition to a brief call. I'm a morning person and generally respond quickly.",
+    "meetingAndSchedulingPreferences": "I'm flexible with meeting times but prefer to schedule calls at least 24 hours in advance. I like to send a quick follow-up email summarizing key takeaways after each meeting."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 21.19879698753357,
+      "input_tokens": 820,
+      "output_tokens": 1167,
+      "problems": []
+    }
+  ],
+  "success": true
+}

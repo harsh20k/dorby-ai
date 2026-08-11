@@ -1,0 +1,72 @@
+{
+  "id": 326,
+  "archetype": "Toronto/Canadian Tech Ecosystem Builder",
+  "given_name": "Marcus Pereira",
+  "style_version": 20,
+  "archetypes_version": 55,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Marcus Pereira is a seasoned angel investor and venture scout specifically focused on pre-seed and seed-stage Canadian tech companies, particularly those building solutions for the future of work and sustainable technologies. He's notable for having previously been a software engineer at Blackberry during its peak, giving him a unique understanding of scaling challenges and a strong technical due diligence skillset. He now operates as a solo GP, supplementing his investments with advisory work for accelerators and a consistent presence as a mentor at various Toronto-based incubators. He\u2019s deeply committed to diversifying access to capital and actively seeks out underrepresented founders. His current focus is on deploying capital from his recently closed micro-fund and building a strong network of co-investors.",
+    "positioning": "I\u2019m deeply invested in the future of the Canadian tech ecosystem, operating as a solo General Partner focused on pre-seed and seed-stage ventures. My fund, Peregrine Ventures, is dedicated to supporting ambitious founders building innovative solutions, with a particular emphasis on the future of work \u2013 encompassing remote collaboration, AI-powered productivity tools, and the creator economy \u2013 and sustainable technologies addressing climate change and resource management. We believe that the most impactful companies will be built by diverse teams tackling complex problems with a focus on long-term value creation. Currently, we\u2019re actively deploying capital from our inaugural fund, prioritizing companies demonstrating strong early traction, a clear understanding of their target market, and a compelling vision for the future. I\u2019m also a frequent advisor to early-stage companies through various accelerator programs and a passionate mentor at several Toronto-based incubators, including DMZ and Next Canada. My goal isn't just to provide capital, but to partner with founders, leveraging my operational experience and network to help them navigate the challenges of building and scaling a successful business. We\u2019re seeing a surge in quality deals coming out of the Canadian ecosystem, and I'm excited to play a part in fostering the next generation of Canadian tech leaders.",
+    "background": "My career has been a blend of technical execution and strategic investment. I bring a unique perspective to the table, having spent several years as a core software engineer at Research In Motion (Blackberry) during a period of rapid growth and innovation. This experience provided invaluable insight into the complexities of scaling a global technology company and instilled in me a deep appreciation for robust engineering practices.\n\n*   **Peregrine Ventures (2022 \u2013 Present):** General Partner. Leading all aspects of fund operations, including deal sourcing, due diligence, investment execution, and portfolio management. Focused on pre-seed and seed stage investments in Canadian tech companies.\n*   **Independent Angel Investor & Venture Scout (2018 \u2013 2022):** Actively sourced and evaluated investment opportunities, participating in over 30 seed rounds across various sectors. Developed a strong track record of identifying high-potential startups.\n*   **Research In Motion (Blackberry) (2010 \u2013 2018):** Software Engineer. Contributed to the development and maintenance of core software components for Blackberry\u2019s mobile platform. Led several key projects focused on improving performance and reliability. Received multiple awards for technical innovation and team leadership.\n*   **Education:** Bachelor of Science in Computer Engineering, University of Waterloo (2006 \u2013 2010). Graduated with Honours.\n*   **Skills:** Venture Capital, Angel Investing, Due Diligence, Financial Modeling, Software Engineering (Java, C++, Python), Technical Product Management, Startup Mentoring, Ecosystem Building\n*   **Certifications:** CFA Level I Candidate (Currently Pursuing)",
+    "lookingFor": "I am actively seeking connections within the Canadian tech ecosystem.\n\n*   **Co-Investment Opportunities:** Partners for seed rounds, particularly those with expertise in future of work and sustainable technologies.\n*   **Promising Startups:** Pre-seed and seed-stage companies with compelling technology, strong teams, and a clear path to market. Specifically interested in companies solving problems in AI, automation, and climate tech.\n*   **LP Relationships:** Connections to family offices and institutional investors interested in allocating capital to Canadian early-stage funds.\n*   **Talent Referrals:** Experienced engineers, product managers, and growth marketers to support our portfolio companies.\n*   **Mentorship Opportunities:** Founders looking for guidance and support in scaling their businesses.",
+    "notes": "*   Strongly prefer introductions to founders who have demonstrable traction (even small). Avoid warm intros for purely speculative pitches.\n*   I\u2019m particularly interested in supporting underrepresented founders (women, BIPOC, LGBTQ+).\n*   I've had previous conversations with the team at [Competitor Fund Name], so be mindful of potential conflicts.\n*   I\u2019m very busy \u2013 concise, data-driven introductions are preferred. Please include a brief investment thesis for why this company is a good fit for Peregrine Ventures.\n*   Do not introduce me to companies raising Series A or beyond.",
+    "locationAvailability": "I am currently based in Toronto, Ontario, and frequently travel throughout the Canadian tech ecosystem. I will be in Montreal for the Startupfest conference from July 17-19.",
+    "introPreferences": "When making introductions, please adhere to the following:\n\n1.  **Stage:** Strictly pre-seed or seed stage companies.\n2.  **Focus:** Future of work or sustainable technologies are preferred, but will consider exceptional companies in other sectors.\n3.  **Traction:** Companies should have a demonstrable MVP and initial user traction.\n4.  **Intro Style:** Please include a concise summary of the company, its market, and why it\u2019s a good fit for Peregrine Ventures (max 3-4 sentences).\n5.  **Avoid:** Cold introductions or pitches for companies that haven\u2019t done their research on my investment focus.",
+    "personalPreferences": "I prefer to connect initially via LinkedIn or email. Feel free to follow up, but please be patient as I manage a high volume of inbound requests. I'm always open to a quick virtual coffee chat.",
+    "meetingAndSchedulingPreferences": "I\u2019m generally flexible with meeting times and prefer scheduling through Calendly."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 28.39954924583435,
+      "input_tokens": 797,
+      "output_tokens": 1416,
+      "problems": [
+        "meetingAndSchedulingPreferences: possible truncation (ends with '...nk to fictional Calendly]')"
+      ]
+    },
+    {
+      "attempt": 2,
+      "elapsed_s": 20.3447527885437,
+      "input_tokens": 797,
+      "output_tokens": 1423,
+      "problems": [
+        "background: possible truncation (ends with '...Lean Six Sigma Black Belt')"
+      ]
+    },
+    {
+      "attempt": 3,
+      "elapsed_s": 22.604143142700195,
+      "input_tokens": 797,
+      "output_tokens": 1312,
+      "problems": []
+    }
+  ],
+  "success": true
+}

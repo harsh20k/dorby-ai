@@ -1,0 +1,54 @@
+{
+  "id": 14,
+  "archetype": "Real Estate & Venture Hybrid",
+  "given_name": "Takumi Martins",
+  "style_version": 1,
+  "archetypes_version": 3,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Takumi Martins is a 38-year-old former real estate developer who successfully pivoted into a specialized finance role focusing on sale-leaseback transactions. He made a name for himself revitalizing underperforming commercial properties in secondary markets, specifically focusing on adaptive reuse. Now, he\u2019s actively exploring venture capital opportunities, specifically those targeting proptech and innovative real estate finance models. He's seeking to leverage his deep understanding of the *asset* side of real estate to identify and invest in companies disrupting the *capital* side. He\u2019s particularly interested in companies utilizing data analytics or AI to improve real estate investment decisions. He\u2019s not looking to *leave* real estate, but to expand his influence and impact through strategic investments. He\u2019s a bit of a networker, but values quality over quantity, prioritizing connections that offer genuine strategic value.",
+    "positioning": "Takumi Martins is a seasoned real estate finance professional with a proven track record of identifying and executing complex transactions, particularly in the sale-leaseback space. Having spent the last decade transforming underutilized commercial properties into thriving assets, I\u2019m now focused on leveraging that expertise to drive innovation within the real estate technology sector. My background provides a unique perspective on the challenges and opportunities facing both property owners and investors. Currently, I'm actively exploring venture opportunities, seeking to partner with visionary founders who are building the future of real estate. I\u2019m particularly keen to connect with individuals involved in proptech, data analytics, and alternative financing models. My value lies in bridging the gap between traditional real estate and the rapidly evolving world of venture capital, offering both a deep understanding of asset-level fundamentals and a forward-thinking approach to investment strategy. ",
+    "background": "- **Managing Director, Nova Capital Partners** (2021 \u2013 Present)\n  - Spearheaded the firm\u2019s expansion into sale-leaseback financing, originating and structuring over $350M in transactions.\n  - Developed a proprietary financial model for evaluating sale-leaseback opportunities, increasing portfolio yield by 12%.\n  - Led a team of analysts responsible for market research, due diligence, and financial modeling.\n\n- **Principal, Redpoint Development Group** (2016 \u2013 2021)\n  - Managed all aspects of commercial real estate development projects, from site selection and permitting to construction and leasing.\n  - Successfully repositioned three underperforming shopping centers in secondary markets, increasing occupancy rates by an average of 20%.\n  - Secured over $75M in financing for development projects, including conventional loans, tax-increment financing, and private equity.\n  - Notably, led the adaptive reuse of a former textile mill into a mixed-use development featuring retail, office, and residential spaces \u2013 awarded \u2018Project of the Year\u2019 by the local Chamber of Commerce.\n\n- **Associate, Blackwood Realty Investments** (2013 \u2013 2016)\n  - Conducted financial analysis and due diligence for potential real estate investments.\n  - Assisted in the management of a $50M portfolio of commercial properties.\n  - Prepared investment memoranda and presentations for senior management.\n\n- **Education:**\n  - **MBA, Finance**, Columbia Business School (2013)\n  - **BA, Economics**, University of California, Berkeley (2011) \u2013 *Phi Beta Kappa*\n\n- **Skills:** Real Estate Development, Financial Modeling, Investment Analysis, Sale-Leaseback Transactions, Due Diligence, Project Management, Negotiation, Adaptive Reuse, Market Research, Venture Capital (emerging)",
+    "lookingFor": "## Opportunities & Connections\n\n- **Venture Capital Partnerships:** Seeking introductions to early-stage venture funds focused on proptech, construction tech, and real estate fintech. Preference for funds with a demonstrated track record of successful investments in the space.\n- **Proptech Founders:** Actively scouting for innovative startups developing solutions for real estate investment, management, and finance. Specifically interested in companies utilizing AI, data analytics, and blockchain technology.\n- **Industry Experts:** Looking to connect with thought leaders and advisors in the real estate and venture capital industries. Seeking insights on emerging trends and best practices.\n- **LP Connections:** Interested in connecting with Limited Partners (LPs) who are actively investing in venture funds focused on real estate technology.",
+    "notes": "Takumi is incredibly well-connected within the commercial real estate world, particularly in the Southeast. He\u2019s very articulate and enthusiastic when discussing proptech, but can get bogged down in the details of asset-level finance. He mentioned being frustrated with the \u2018hype\u2019 around some proptech companies and emphasizes the importance of sound financial fundamentals. He recently attended the PropTech Summit in NYC and is following several companies closely. He\u2019s been casually mentioning an interest in angel investing, but seems more focused on finding the right fund opportunity. He's a quick study and very responsive, but prefers direct communication and avoids overly lengthy email chains. He\u2019s currently evaluating a potential advisory role with a small, seed-stage proptech firm.",
+    "locationAvailability": "Based in Atlanta, Georgia, but open to connecting with individuals globally.",
+    "introPreferences": "- **Hard Requirement:** Individuals involved in venture capital or actively building proptech companies.\n- **Soft Preference:** Founders with demonstrable traction and a clear understanding of the real estate market.\n- **Avoid:** Introductions to individuals solely focused on traditional real estate brokerage or property management.\n- **Introduction Note:** Please highlight any relevant experience the connection has with sale-leaseback transactions or data-driven real estate investment.\n- **Ideal Seniority:** Partner level at VC firms, or CEO/Founder of Seed-Series A startups.",
+    "personalPreferences": "Takumi prefers concise and direct communication. He\u2019s responsive on LinkedIn and email, but often prefers a quick phone call to discuss opportunities. He appreciates a thoughtful introduction that highlights the mutual value proposition. He's a big fan of data visualization and enjoys receiving concise reports or decks summarizing key information.",
+    "meetingAndSchedulingPreferences": "Prefers virtual meetings initially, followed by in-person meetings if a strong connection is established. He\u2019s generally flexible with scheduling but prefers to avoid early morning meetings."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 24.99617600440979,
+      "input_tokens": 771,
+      "output_tokens": 1317,
+      "problems": []
+    }
+  ],
+  "success": true
+}

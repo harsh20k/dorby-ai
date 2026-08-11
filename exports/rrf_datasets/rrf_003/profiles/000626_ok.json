@@ -1,0 +1,54 @@
+{
+  "id": 626,
+  "archetype": "Growth Operator, Scaling Commerce Tech",
+  "given_name": "Priya Zhang",
+  "style_version": 38,
+  "archetypes_version": 105,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Priya Zhang is a highly analytical and results-oriented Growth Operator currently focused on scaling early-stage, B2B SaaS companies in the commerce tech space. She spent the first 7 years of her career at a large, established marketplace (Etsy) where she honed her skills in data-driven growth, specifically focused on seller acquisition and activation. A distinctive detail is that she *actively* sought out and led a cross-functional project to build a dedicated 'Seller Success Engineering' team \u2013 essentially bridging the gap between customer success and product to proactively address pain points impacting seller growth. This demonstrated her ability to identify systemic issues and drive technical solutions. She\u2019s now looking for a role where she can leverage that experience to build and scale growth initiatives at a Series A/B startup with strong unit economics and a clear path to profitability. She's not interested in pre-seed companies or roles that are purely marketing-focused; she needs a strong operational component. She\u2019s very direct and values efficiency in communication and introductions.",
+    "positioning": "Priya Zhang is a seasoned growth leader specializing in scaling B2B SaaS platforms within the commerce technology ecosystem. With a proven track record of driving significant revenue growth through data-driven strategies, she excels at identifying and capitalizing on opportunities to improve user acquisition, activation, and retention. Priya\u2019s expertise lies in building and leading high-performing growth teams, integrating data analytics into operational workflows, and fostering strong cross-functional collaboration. Currently seeking a challenging operational role at a rapidly growing startup, she is passionate about building sustainable growth engines and delivering measurable results.",
+    "background": "- **Head of Growth, Nova Commerce (2022 - Present):** Led all growth initiatives for a Series A B2B SaaS platform enabling brands to launch and scale direct-to-consumer subscriptions. Key achievements include a 3x increase in monthly recurring revenue (MRR) within 18 months, driven by optimized onboarding flows and targeted expansion campaigns.\n- **Growth Manager, Etsy (2015 - 2022):** Progressively responsible roles within Etsy\u2019s Growth organization, initially focused on seller acquisition and later on activation and retention. Consistently exceeded performance targets, contributing to significant growth in the platform\u2019s seller base.\n    - *Led the initiative to establish a 'Seller Success Engineering' team*, proactively identifying and resolving technical roadblocks hindering seller growth, resulting in a 15% increase in seller retention.\n    - Developed and implemented A/B testing frameworks for key onboarding flows, resulting in a 10% improvement in seller activation rates.\n    - Managed a $500K+ annual budget for seller acquisition campaigns, optimizing spend to maximize ROI.\n- **Education:** MBA, Harvard Business School (2013-2015); B.S. in Computer Science, Stanford University (2009-2013)\n- **Skills:** SQL, Python (intermediate), Google Analytics, Mixpanel, A/B Testing (Optimizely, VWO), Data Visualization (Tableau), Growth Hacking, SaaS Metrics (CAC, LTV, Churn), Marketplace Dynamics, Project Management, Cross-Functional Leadership.",
+    "lookingFor": "## Opportunities\n- Series A/B B2B SaaS roles with a strong growth focus, specifically in commerce tech (e.g., marketplaces, payments, supply chain).\n- Operational leadership roles where I can build and scale growth initiatives.\n- Companies with demonstrated unit economics and a clear path to profitability.\n\n## Connections\n- Investors actively deploying capital in the commerce tech space (Series A/B).\n- Founders of rapidly growing B2B SaaS companies in the commerce tech space.\n- Heads of Growth at similar companies (benchmarking, best practices).\n\n**Do Not:** Introduce me to pre-seed startups or purely marketing-focused roles. I\u2019m not looking for advisory positions at this time.",
+    "notes": "Priya is a highly focused and direct communicator. She responds quickly to relevant inquiries but is not interested in lengthy, exploratory conversations. Her LinkedIn activity suggests a strong interest in data-driven growth methodologies and a preference for quantifiable results. She recently engaged with content related to cohort analysis and retention optimization. She\u2019s actively interviewing and has a strong preference for companies that prioritize data transparency and operational efficiency. Be prepared to discuss specific growth metrics and the company\u2019s approach to data analysis.",
+    "locationAvailability": "San Francisco, California",
+    "introPreferences": "- **Ideal Candidates:** Heads of Growth, VPs of Growth, or similar leadership roles at Series A/B B2B SaaS companies in commerce tech.\n- **Introduction Style:** Concise and direct. Highlight the potential synergy between my experience and the company\u2019s current growth challenges.\n- **Hard Requirement:** The company *must* have demonstrable traction and a clear understanding of its unit economics.\n- **Soft Preference:** Experience scaling a marketplace or platform business is a plus.\n- **Do Not:** Introduce me to individuals who are not directly involved in growth or who cannot articulate the company\u2019s key performance indicators (KPIs).",
+    "personalPreferences": "I prefer asynchronous communication whenever possible and appreciate concise, data-driven updates. I'm a morning person and find it easier to schedule calls before noon PST.",
+    "meetingAndSchedulingPreferences": "I typically prefer a brief introductory call (15-20 minutes) to assess fit before committing to a longer meeting. Please include a calendar link with your introduction to facilitate scheduling."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 20.413039922714233,
+      "input_tokens": 820,
+      "output_tokens": 1159,
+      "problems": []
+    }
+  ],
+  "success": true
+}

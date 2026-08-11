@@ -1,0 +1,54 @@
+{
+  "id": 876,
+  "archetype": "Founder-Turned-Advisor (Early Stage)",
+  "given_name": "Isabela Zhang",
+  "style_version": 54,
+  "archetypes_version": 148,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Isabela Zhang is a first-time founder who successfully exited her SaaS company, 'Synapse Solutions,' a sales intelligence platform, two years ago. The exit wasn't a massive windfall, but it provided financial freedom and a strong reputation within the sales tech space. She\u2019s now focused on advising early-stage (Seed to Series A) startups, specifically those tackling complex sales cycles or building innovative sales enablement tools. Her sweet spot is helping founders refine their go-to-market strategy, particularly around sales process optimization, lead qualification, and building high-performing sales teams. She\u2019s actively looking to take on a couple of formal advisory roles and is open to angel investing in the right opportunities. She's known for being direct, pragmatic, and focused on measurable results. She\u2019s also a passionate advocate for diversity in tech.",
+    "positioning": "Isabela Zhang is a seasoned go-to-market advisor specializing in helping early-stage SaaS companies scale revenue. Having successfully founded and exited Synapse Solutions, a sales intelligence platform, Isabela brings firsthand experience navigating the challenges of building and scaling a sales organization from the ground up. She's particularly adept at identifying and eliminating bottlenecks in the sales process, optimizing lead qualification strategies, and building high-performing sales teams. Currently, Isabela is focusing on supporting founders with innovative solutions in the sales and marketing technology space, offering guidance on product-market fit, pricing, and go-to-market execution. She\u2019s a pragmatic advisor who prioritizes data-driven decision-making and tangible results, aiming to accelerate growth and maximize impact for her portfolio companies.",
+    "background": "- **Founder & CEO, Synapse Solutions** (2018 \u2013 2022): Led all aspects of the company, from initial concept and fundraising to product development, sales, and marketing. Successfully secured $3M in seed funding and achieved 3x revenue growth year-over-year. Exited to InnovateTech Solutions in Q1 2022.\n- **Head of Sales, DataFlow Analytics** (2016 \u2013 2018): Built and scaled the sales team from 5 to 25 reps, exceeding revenue targets by 20% in both years. Implemented a new sales methodology (MEDDIC) that significantly improved win rates.\n- **Sales Development Representative, CloudMetrics** (2014 \u2013 2016): Consistently exceeded quota and was recognized as a top performer. Gained valuable experience in outbound prospecting and lead generation.\n- **Education:** MBA, Stanford Graduate School of Business (2012 \u2013 2014)\n- **Education:** BS, Computer Science, Massachusetts Institute of Technology (2008 \u2013 2012)\n- **Skills:** Go-to-Market Strategy, Sales Process Optimization, Sales Enablement, SaaS Sales, Lead Generation, MEDDIC, Sales Forecasting, CRM (Salesforce, HubSpot), Data Analytics, Team Building, Fundraising, Strategic Planning.\n- **Awards & Recognition:** Forbes 30 Under 30 (2021), TechCrunch Disrupt Startup Battlefield Finalist (2019).",
+    "lookingFor": "- **Formal Advisory Roles:** Seeking opportunities to join the advisory boards of Seed to Series A SaaS startups focused on sales and marketing technology.\n- **Angel Investment Opportunities:** Interested in angel investing in companies with strong founding teams and disruptive potential within the sales tech space.\n- **Networking with VCs:** Building relationships with venture capitalists who invest in early-stage SaaS companies.\n- **Connections to Founders:** Expanding network of ambitious founders tackling challenging problems in the B2B space.\n- **Expert Introductions:** Seeking introductions to experts in areas such as AI-powered sales tools, account-based marketing, and sales analytics.\n- **Partnerships:** Exploring potential partnerships between portfolio companies to create synergistic opportunities.",
+    "notes": "- Isabela is particularly interested in companies addressing the pain points of complex sales cycles \u2013 those selling to enterprise customers with long decision-making processes.\n- She recently spoke at a sales tech conference on the importance of data-driven sales strategies; a recording of the session is available on her LinkedIn.\n- She's currently reviewing several pitch decks and is prioritizing companies with a clear understanding of their target customer and a scalable go-to-market plan.\n- Isabela is a strong advocate for diversity and inclusion in the tech industry and actively seeks to support underrepresented founders.",
+    "locationAvailability": "Isabela Zhang is currently based in San Francisco, California, but is open to remote work and frequent travel. She anticipates spending time in New York and Boston over the next few months for industry events.",
+    "introPreferences": "- **Hard Requirements:** Introductions should be to founders or investors actively seeking advice or investment in the sales tech space.\n- **Hard Requirements:** Please provide a brief summary of the company/individual you're introducing, highlighting their relevant experience and current needs.\n- **Soft Preferences:** Prefer warm introductions with a personal connection or shared context.\n- **Soft Preferences:** Avoid introductions to individuals who are simply 'looking to network' without a specific ask or offer.\n- **Avoid:** Mass introductions or cold emails.\n- **Avoid:** Introductions to companies that haven't clearly defined their target market.",
+    "personalPreferences": "Isabela prefers direct and concise communication. She's most responsive to messages on LinkedIn and email. She values authenticity and transparency in her interactions.",
+    "meetingAndSchedulingPreferences": "- Isabela prefers to keep initial introductory calls concise (15-20 minutes).\n- Please include a brief agenda when requesting a meeting."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 21.292821884155273,
+      "input_tokens": 741,
+      "output_tokens": 1188,
+      "problems": []
+    }
+  ],
+  "success": true
+}

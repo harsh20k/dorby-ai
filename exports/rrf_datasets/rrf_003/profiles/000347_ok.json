@@ -1,0 +1,54 @@
+{
+  "id": 347,
+  "archetype": "Ex-Corporate Operator, Now Consultant/Founder",
+  "given_name": "Malia Suzuki",
+  "style_version": 21,
+  "archetypes_version": 58,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Malia Suzuki is a former Operations leader at Procter & Gamble, specifically within their beauty division, where she spearheaded a major supply chain digitization project. She left P&G two years ago to found 'Aether Operations,' a consulting firm specializing in optimizing supply chain resilience for direct-to-consumer (DTC) brands. Her core value proposition is bringing enterprise-level operational rigor to the often-chaotic world of rapidly growing DTC companies. She's currently seeking seed funding to build out Aether's proprietary diagnostic tool and expand her team. She\u2019s highly data-driven, a bit of a perfectionist, and prioritizes building long-term relationships. She's based in Cincinnati but is comfortable working remotely and traveling.",
+    "positioning": "I founded Aether Operations to bridge the gap between enterprise-level operational excellence and the dynamic needs of direct-to-consumer brands. Having spent 12 years at Procter & Gamble, leading complex supply chain transformations, I saw a consistent pattern: incredible product innovation hampered by fragile, inefficient operations. DTC brands often lack the resources and internal expertise to build the robust infrastructure needed to scale sustainably. \n\nAether Operations provides a tailored, data-driven approach to supply chain resilience. We don\u2019t offer cookie-cutter solutions; instead, we conduct a thorough diagnostic assessment, identifying critical vulnerabilities and implementing targeted improvements across sourcing, manufacturing, logistics, and inventory management. We\u2019ve already seen impressive results with clients like 'Bloomist' (floral delivery) and 'Everkind' (eco-friendly skincare), improving on-time delivery rates by an average of 25% and reducing inventory holding costs by 15%. \n\nCurrently, we're focused on developing \u2018Resilience Score,\u2019 a proprietary diagnostic tool that will automate much of our initial assessment process and provide clients with a clear, actionable roadmap for improvement. We are actively seeking $750K in seed funding to accelerate product development and expand our team of consultants. We aim to become *the* trusted operational partner for ambitious DTC brands.",
+    "background": "* **Aether Operations, Founder & CEO** (2022 \u2013 Present)\n    * Led all aspects of business development, client engagement, and consulting delivery.\n    * Developed and implemented supply chain optimization strategies for 8+ DTC brands across various industries (beauty, home goods, apparel).\n    * Achieved average client ROI of 20% through improved efficiency and reduced costs.\n    * Currently leading the development of \u2018Resilience Score\u2019 - a proprietary supply chain diagnostic tool.\n* **Procter & Gamble, Senior Operations Manager** (2010 \u2013 2022)\n    * Led a cross-functional team of 30+ engineers, analysts, and technicians in the implementation of a $50M supply chain digitization project, resulting in a 10% reduction in lead times and a 7% increase in forecast accuracy.\n    * Managed a $20M annual budget, consistently delivering projects on time and within budget.\n    * Developed and implemented new processes for inventory optimization, reducing waste by 12%.\n    * Mentored and developed junior operations professionals.\n* **Procter & Gamble, Supply Chain Analyst** (2008 \u2013 2010)\n    * Conducted data analysis to identify areas for improvement in the supply chain.\n    * Developed and maintained key performance indicators (KPIs) to track supply chain performance.\n    * Supported the development of new supply chain strategies.\n* **Education:**\n    * **MBA, Harvard Business School** (2008)\n    * **BS, Industrial Engineering, Georgia Institute of Technology** (2006)\n* **Skills:** Supply Chain Management, Operations Management, Data Analysis, Process Improvement, Lean Manufacturing, Six Sigma (Green Belt Certified), Project Management, Financial Modeling, Strategic Planning, Leadership, Team Management, DTC Industry Expertise, ERP Systems (SAP, Oracle).",
+    "lookingFor": "I\u2019m actively seeking connections that can help Aether Operations scale and amplify its impact. Specifically, I'm looking for:\n\n* **Seed Investors:** Individuals or firms with experience investing in B2B SaaS and/or supply chain technology. We're targeting a $750K seed round to accelerate product development and team expansion.  Ideal investment stage: pre-series A.\n* **Strategic Partners:**  Companies offering complementary services to DTC brands (e.g., fulfillment providers, marketing agencies) interested in exploring co-marketing or referral partnerships.\n* **DTC Founders/Operators:**  I'm always eager to connect with founders and operators who are facing supply chain challenges. Your insights are invaluable to refining our approach and identifying new opportunities.\n* **Talent:** Experienced supply chain consultants with a strong analytical background and a passion for working with fast-growing companies.  We are particularly interested in individuals with experience in data science and software development.\n\n**Hard Requirements:** Demonstrated experience/expertise in the areas listed above. Genuine interest in the DTC space.\n**Soft Preferences:**  A collaborative mindset, a willingness to share knowledge, and a long-term perspective.",
+    "notes": "Malia is exceptionally articulate and clearly passionate about her work. She is very data-driven and presents a compelling case for Aether's value proposition. During our call on 10/26, she emphasized the importance of building a scalable technology platform (Resilience Score) and her frustration with the lack of operational sophistication in many DTC brands. She's a bit of a perfectionist, so expect thorough follow-up and a detailed approach to any potential collaboration. Internal score: 8/10.  Good candidate for introductions to our supply chain tech investor network.  Mention our previous work with 'Bloomist' \u2013 she seemed very familiar with their success story.",
+    "locationAvailability": "I am based in Cincinnati, Ohio, but comfortable with remote work and frequent travel to client sites. I anticipate being on the West Coast (LA/SF) for client meetings in November.",
+    "introPreferences": "* **Hard Requirements:** The introduction *must* be to someone actively involved in investment decisions (for investors) or strategic partnerships (for potential partners).\n* **Soft Preferences:**\n    * Introducer should have a pre-existing relationship with the target.\n    *  Please frame Aether as a 'hidden gem' \u2013 a highly capable team solving a critical problem for a rapidly growing market.\n    *  Briefly mention our work with 'Bloomist' and 'Everkind' to establish credibility.\n    * Avoid overly enthusiastic or hyperbolic language. Malia prefers a professional and data-driven approach.\n    *  If introducing to a potential hire, emphasize our focus on impact and intellectual challenge.",
+    "personalPreferences": "I prefer to connect via LinkedIn or email initially. Quick responses aren't always possible due to client commitments, but I aim to respond within 24-48 hours. I'm most responsive to concise, well-structured communication.",
+    "meetingAndSchedulingPreferences": "I'm flexible with meeting times and happy to join video calls. I'm comfortable with either direct scheduling (via Calendly link available upon request) or having my assistant manage the process."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 28.803926944732666,
+      "input_tokens": 820,
+      "output_tokens": 1532,
+      "problems": []
+    }
+  ],
+  "success": true
+}

@@ -1,0 +1,54 @@
+{
+  "id": 19,
+  "archetype": "Boardy Network - Operator/Advisor",
+  "given_name": "Olivia Ishikawa",
+  "style_version": 2,
+  "archetypes_version": 4,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Olivia Ishikawa is a seasoned operator specializing in scaling early-stage AI/ML startups. She\u2019s spent the last decade building and leading engineering teams, but recently transitioned to a more advisory/interim executive role after successfully navigating a complex exit for her previous company (acquired by a larger player in the data analytics space). The distinctive career detail is her deep expertise in *responsible AI* \u2013 she\u2019s become a sought-after resource for companies wanting to build ethically aligned AI products, and a vocal advocate for regulatory clarity. She\u2019s currently looking for board seats or interim CTO roles at pre-Series B companies with strong technical foundations but needing help with scaling and responsible AI implementation. She's part of the Boardy network through Curtis, who she worked with during a due diligence process on a potential acquisition target.",
+    "positioning": "Olivia Ishikawa is a technology leader with a proven track record of building and scaling high-performing engineering teams within the artificial intelligence and machine learning space. Following a successful acquisition of her previous venture, she now focuses on advising early-stage founders and taking on interim executive roles where she can leverage her experience in infrastructure development, model deployment, and, crucially, responsible AI practices. Olivia\u2019s expertise lies in translating complex technical challenges into actionable strategies, fostering a data-driven culture, and ensuring ethical considerations are central to product development. She is passionate about bridging the gap between cutting-edge AI research and real-world applications, helping companies navigate the evolving landscape of AI regulations and build trustworthy, impactful products. She believes strongly in the power of AI to solve significant problems, but only when deployed responsibly and ethically.",
+    "background": "* **Interim CTO, Aether Analytics (2023 \u2013 Present):** Stepped in to lead engineering and product development following founder departure. Focused on stabilizing infrastructure, streamlining deployment pipelines, and establishing a responsible AI framework. Achieved 30% reduction in model training costs through optimization of cloud resources.\n* **VP of Engineering, Lumina AI (2018 \u2013 2023):** Led a team of 40+ engineers responsible for the development and deployment of Lumina\u2019s core AI-powered recommendation engine. Oversaw the successful launch of three major product iterations, resulting in a 2x increase in user engagement. Drove the implementation of robust monitoring and alerting systems, improving system uptime to 99.9%. Successfully navigated the company through a competitive acquisition process.\n* **Senior Machine Learning Engineer, Data Insights Corp (2015 \u2013 2018):** Developed and deployed machine learning models for fraud detection and risk assessment. Contributed to the development of a novel anomaly detection algorithm that reduced false positives by 15%.\n* **Education:** PhD, Computer Science (Specialization: Artificial Intelligence), Stanford University (2015). BS, Computer Science, Massachusetts Institute of Technology (2011).\n* **Skills:** Python, TensorFlow, PyTorch, Kubernetes, AWS, GCP, Azure, Data Engineering, Machine Learning, Deep Learning, Responsible AI, Model Deployment, Team Leadership, Agile Development, DevOps, Statistical Modeling, Data Visualization.",
+    "lookingFor": "I\u2019m actively seeking board seats or interim CTO opportunities at pre-Series B AI/ML startups demonstrating strong technical foundations and a commitment to responsible AI. I\u2019m particularly interested in companies tackling problems in healthcare, fintech, or climate tech. \n\nSpecifically, I'm looking to connect with:\n\n* **Founders:** Building companies with a strong ethical AI focus and a clear path to monetization.\n* **Investors:** Focused on early-stage AI/ML, particularly those with a thesis around responsible AI.\n* **Talent:** Experienced machine learning engineers and data scientists with a passion for building ethical and impactful AI solutions. \n\nI\u2019m open to introductions to individuals who can help me identify promising investment opportunities or connect me with companies in need of technical leadership. I'm also keen to collaborate with other advisors and experts in the responsible AI space.",
+    "notes": "* Olivia is a strong advocate for model explainability and fairness. She can be a bit critical of companies that prioritize growth over ethical considerations.\n* Recently presented at the AI Ethics Conference in San Francisco \u2013 happy to share her slides.\n* She\u2019s currently exploring opportunities to invest angel capital in companies aligned with her values.\n* Prefers to avoid companies with opaque data practices or a history of ethical lapses.\n* She\u2019s particularly interested in companies leveraging federated learning or differential privacy.",
+    "locationAvailability": "Olivia is based in the San Francisco Bay Area and is open to remote work or travel for board meetings and key engagements.",
+    "introPreferences": "* **Hard Requirements:** Companies *must* demonstrate a commitment to responsible AI principles. No companies actively involved in surveillance technology.\n* **Soft Preferences:** Founders with a technical background are a plus. Investors with a strong understanding of the AI landscape. Individuals with experience in scaling early-stage startups.\n* **Suggested Framing:** \"Olivia Ishikawa is a highly respected technical leader with a deep understanding of AI/ML and a passion for responsible AI. I thought you two should connect given [Company/Investor]'s focus on [relevant area].\"",
+    "personalPreferences": "I prefer to communicate via email initially.",
+    "meetingAndSchedulingPreferences": "Generally available for calls during Pacific Standard Time business hours."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 21.44877290725708,
+      "input_tokens": 803,
+      "output_tokens": 1129,
+      "problems": []
+    }
+  ],
+  "success": true
+}

@@ -1,0 +1,54 @@
+{
+  "id": 513,
+  "archetype": "Serial Founder - Rapid Iteration",
+  "given_name": "Fatima Rossi",
+  "style_version": 31,
+  "archetypes_version": 86,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Fatima Rossi is a serial founder currently focused on a B2B SaaS platform for predictive supply chain risk management, called 'ResilientFlow'. She's had two previous exits \u2013 a successful e-commerce marketplace for artisan goods and a mobile gaming studio. A distinctive detail is her unusual background; she started her career as a quantitative analyst in high-frequency trading *before* pivoting to entrepreneurship. This gives her a strong analytical foundation and a very data-driven approach to building businesses, but also a slight impatience with 'soft' strategy and a tendency to over-optimize early. She\u2019s currently seeking Series A funding after strong seed traction and is known for moving *very* quickly. She\u2019s a demanding but fair leader, and values direct communication. She's actively looking to expand her network with VCs specializing in enterprise software and supply chain tech, and is building out her engineering team.",
+    "positioning": "I\u2019m the founder and CEO of ResilientFlow, a SaaS platform leveraging AI to predict and mitigate supply chain disruptions *before* they impact businesses. We\u2019re building the \u2018early warning system\u2019 for global commerce. Having experienced firsthand the fragility of supply chains during the pandemic \u2013 both with my previous venture in artisan goods and observing the impact on friends in manufacturing \u2013 I realized the existing solutions were reactive and insufficient. ResilientFlow proactively identifies vulnerabilities by analyzing a massive dataset of geopolitical events, weather patterns, financial indicators, and supplier performance metrics.\n\nWe\u2019ve achieved 300% revenue growth in the last six months, onboarding key clients in the automotive and consumer packaged goods industries. Our proprietary algorithm has demonstrated an 85% accuracy rate in predicting significant supply chain events. We're now focused on scaling our engineering and sales teams to capitalize on this momentum. \n\nMy background is somewhat unconventional. I spent my early career in quantitative finance, developing high-frequency trading algorithms. This experience instilled in me a deep appreciation for data-driven decision-making and the importance of speed. I transitioned to entrepreneurship with a passion for building products that solve real-world problems, and a belief that technology can make global commerce more resilient and equitable. I\u2019m driven by building strong teams and fostering a culture of innovation and rapid iteration. I believe in failing fast, learning quickly, and relentlessly pursuing a better solution.",
+    "background": "- **ResilientFlow, CEO & Founder** (2022 \u2013 Present)\n    - Led seed funding round of $2.5M from [Fictional VC Firm: Nova Ventures] and [Fictional Angel Investor: Anya Sharma].\n    - Built and launched MVP, achieving 300% revenue growth in 6 months.\n    - Developed and patented core AI algorithm for predictive supply chain risk assessment.\n    - Assembled a team of 15 engineers, data scientists, and sales professionals.\n    - Secured key clients including Apex Automotive and Stellar Foods.\n\n- **ArtisanBloom, Founder & CEO** (2018 \u2013 2021) \u2013 *Acquired by Etsy*\n    - Built and scaled an e-commerce marketplace connecting consumers with independent artisans globally.\n    - Grew revenue to $10M annually with a 40% gross margin.\n    - Successfully negotiated acquisition by Etsy for $18M.\n    - Implemented a robust quality control and logistics system to ensure customer satisfaction.\n\n- **PixelPush Studios, Co-Founder & CTO** (2015 \u2013 2018)\n    - Led the development of several successful mobile games, including 'Cosmic Crusaders' (1M+ downloads).\n    - Managed a team of 8 game developers and designers.\n    - Oversaw all technical aspects of game development, including coding, testing, and deployment.\n    - Implemented A/B testing and data analytics to optimize game performance and user engagement.\n\n- **QuantX Capital, Quantitative Analyst** (2013 \u2013 2015)\n    - Developed and implemented high-frequency trading algorithms for equities and derivatives.\n    - Conducted statistical analysis and modeling to identify trading opportunities.\n    - Managed risk and optimized trading strategies.\n    - Proficient in Python, R, and SQL.\n\n- **Education:**\n    - **Massachusetts Institute of Technology (MIT)**, Cambridge, MA \u2013 Master of Science in Financial Engineering (2013)\n    - **Stanford University**, Stanford, CA \u2013 Bachelor of Science in Mathematics (2011), *Summa Cum Laude* \n\n- **Skills:** Supply Chain Management, SaaS, AI/ML, Predictive Analytics, Data Science, Python, R, SQL, Financial Modeling, Entrepreneurship, Leadership, Team Building, Fundraising, Go-to-Market Strategy, Agile Development.",
+    "lookingFor": "* **Fundraising (Series A):**\n    - Target Raise: $15M - $20M\n    - Valuation expectation: $60M - $80M pre-money\n    - Lead investors with experience in B2B SaaS and supply chain technology are preferred.\n\n* **Strategic Introductions:**\n    - VCs: Accel, Sequoia, Lightspeed, Andreessen Horowitz (specifically partners focused on enterprise software).\n    - Influencers: Supply chain thought leaders (e.g., Lora Cecere), industry analysts at Gartner and Forrester.\n    - Potential enterprise customers: Heads of Supply Chain at Fortune 500 companies in automotive, CPG, and pharmaceuticals.\n\n* **Hiring:**\n    - Senior Machine Learning Engineer (experience with time-series data and anomaly detection).\n    - VP of Sales (proven track record of scaling SaaS sales teams).\n    - Data Engineer (experience building and maintaining data pipelines).\n\n* **Partnerships:**\n    - Data providers with access to real-time geopolitical and weather data.\n    - Integration partners with leading ERP and supply chain management systems (SAP, Oracle).",
+    "notes": "Fatima is exceptionally driven and data-focused. She's demonstrated a strong ability to execute quickly, but can sometimes be overly critical of approaches that aren't immediately quantifiable. Boardy score: 8/10 (High Potential). Previous conversations indicate she prioritizes directness and dislikes 'fluff'. She's very responsive but expects concise communication. Be prepared to discuss metrics and ROI. Caution: She's previously expressed frustration with investors who lack deep understanding of the technology. Internal note: Flag for potential follow-up with Anya Sharma regarding her experience as an early investor.",
+    "locationAvailability": "Based in San Francisco, CA, but open to travel. Also comfortable with remote meetings and collaboration.",
+    "introPreferences": "To ensure a productive introduction, please adhere to the following:\n\n* **Hard Requirements:**\n    - Investor focus: Must have a demonstrable track record of investing in B2B SaaS companies, ideally within the supply chain or logistics space.\n    - Stage preference: Actively investing in Series A rounds.\n    - Investment size: Comfortable with investments in the $15M - $20M range.\n\n* **Soft Preferences:**\n    - Prior experience with AI/ML-driven solutions is a plus.\n    - A genuine interest in the problem of supply chain resilience.\n    - A collaborative and supportive investment philosophy.\n\nAvoid introductions to investors who are primarily focused on consumer-facing businesses or early-stage seed rounds. Please provide a brief overview of the investor's relevant experience and investment thesis before making the connection. I value introductions that are concise and focused on mutual strategic alignment.",
+    "personalPreferences": "I prefer initial contact via email. I'm responsive on LinkedIn but prefer more detailed discussions to be conducted via Zoom. I appreciate direct and honest communication.",
+    "meetingAndSchedulingPreferences": "I typically schedule meetings in 30-minute increments. Please send a brief agenda in advance. I am generally available during Pacific Standard Time business hours."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 30.102293014526367,
+      "input_tokens": 861,
+      "output_tokens": 1692,
+      "problems": []
+    }
+  ],
+  "success": true
+}

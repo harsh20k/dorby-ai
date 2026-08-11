@@ -1,0 +1,54 @@
+{
+  "id": 416,
+  "archetype": "Serial Founder, Deep Tech/Healthcare",
+  "given_name": "Fatima Oduya",
+  "style_version": 25,
+  "archetypes_version": 69,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Fatima Oduya is a serial founder, currently focused on AI-driven diagnostics for rare genetic diseases. Her previous two exits were in the consumer tech space (a personalized nutrition app and a fitness platform), but her mother's long struggle with an undiagnosed genetic condition spurred her to pivot to healthcare. She's a highly data-driven leader, fiercely protective of her company's IP, and deeply committed to making a tangible impact on patients' lives. She\u2019s currently raising a Series A and is looking for investors with experience in both healthcare *and* AI, not just one or the other. She\u2019s also quietly building a world-class scientific advisory board and is seeking introductions to key opinion leaders in genomics and pediatric neurology. She's known for being direct and efficient, valuing clear communication and demonstrable results. She\u2019s based in Boston, leveraging the city\u2019s biotech ecosystem.",
+    "positioning": "At GenetiSolve, we\u2019re revolutionizing the diagnosis of rare genetic diseases through the power of artificial intelligence. Millions suffer from conditions that take years \u2013 often decades \u2013 to correctly diagnose, leading to delayed treatment and diminished quality of life. We\u2019ve developed a proprietary AI platform that analyzes multi-omic data \u2013 genomics, proteomics, metabolomics \u2013 to identify patterns indicative of rare disorders with unprecedented speed and accuracy. We are currently focused on pediatric cases, where early diagnosis is particularly critical. GenetiSolve is post-seed, demonstrating strong clinical validation with our initial cohort, and is now poised for rapid expansion and commercialization. Our unique advantage lies in our ability to integrate diverse data types and our commitment to explainable AI, ensuring clinicians understand *why* our platform arrives at a given diagnosis.",
+    "background": " * **Founder & CEO, GenetiSolve** (Boston, MA) \u2013 2021 \u2013 Present\n    * Led seed funding round of $3M, securing investment from leading biotech VCs.\n    * Built and scaled a team of 15+ data scientists, engineers, and clinical specialists.\n    * Oversaw the development and validation of GenetiSolve\u2019s core AI diagnostic platform.\n    * Secured IRB approval for pilot studies at Boston Children\u2019s Hospital and Mass General.\n    * Established key partnerships with leading genomics labs for data access and validation.\n* **Founder & CEO, FitLife Technologies** (San Francisco, CA) \u2013 2016 \u2013 2020\n    * Developed and launched a personalized fitness app utilizing wearable sensor data and machine learning.\n    * Achieved 1M+ downloads and a 4.8-star rating in the App Store.\n    * Successfully acquired by HealthCorp for $45M.\n* **Founder & CEO, NutriGenix** (San Francisco, CA) \u2013 2013 \u2013 2016\n    * Pioneered a direct-to-consumer personalized nutrition platform based on DNA analysis.\n    * Secured $5M in venture capital funding.\n    * Exited through acquisition by Wellness Solutions for $28M.\n* **Consultant, McKinsey & Company** (New York, NY) \u2013 2011 \u2013 2013\n    * Advised Fortune 500 companies on strategy and operations.\n    * Led projects in the healthcare and technology sectors.\n* **Education:** PhD, Computer Science, Stanford University \u2013 2007 \u2013 2011\n* **Skills:** Artificial Intelligence, Machine Learning, Genomics, Proteomics, Metabolomics, Data Analysis, Software Development, Strategic Planning, Fundraising, Team Leadership.",
+    "lookingFor": "We are currently raising a $15M Series A round to scale our platform and expand our clinical trials. Specifically, we are seeking:\n* **Investors with a dual focus on healthcare *and* AI:** We need partners who understand both the regulatory complexities of the healthcare industry and the technical nuances of our AI platform.\n* **Strategic partners:** Companies with established distribution channels in the diagnostics or pharmaceutical space.\n* **Key opinion leaders:** Leading geneticists, neurologists, and pediatricians to join our scientific advisory board.\n* **Experienced regulatory affairs professionals:** Individuals with a proven track record of navigating FDA approval processes for AI-driven diagnostic tools.\n* **Senior Machine Learning Engineers:** Expertise in time-series data analysis and model deployment is highly valued.\n We are open to investors with check sizes ranging from $2M to $5M. Geographic preference is US-based investors, but will consider international opportunities.",
+    "notes": "Fatima had a very productive call with Dr. Anya Sharma (Mass General) last week. Dr. Sharma is enthusiastic about the potential of GenetiSolve and has agreed to serve as a clinical advisor. Follow up with Dr. Sharma to finalize the advisory agreement. \n\n* **Data Discrepancy:** There\u2019s a slight discrepancy in the reported accuracy rate of the platform between our internal testing and the initial data from Boston Children\u2019s Hospital. Need to investigate this further \u2013 potential issue with data normalization. \n* **Investor Update:** Sequoia is showing strong interest but wants to see more data on reimbursement pathways. Prepare a presentation outlining our strategy for securing insurance coverage. \n* **Upcoming Event:** Fatima will be presenting at the JP Morgan Healthcare Conference in January. Coordinate travel arrangements and prepare talking points.",
+    "locationAvailability": "Based in Boston, MA, with primary operations and research facilities located in the Seaport district.",
+    "introPreferences": "I\u2019m very focused on connecting with individuals who can directly contribute to GenetiSolve\u2019s growth. \n* **Hard Requirements:** Introductions should be to VCs specializing in healthcare AI, leading geneticists/neurologists with experience in rare diseases, and potential strategic partners with established diagnostics distribution networks.\n* **Soft Preferences:** I appreciate concise, targeted introductions that clearly articulate the value proposition of GenetiSolve and the individual's potential contribution. Please avoid introductions to generalist investors or individuals with limited experience in either healthcare or AI.\n* **Do Not Introduce:** Individuals from competing AI diagnostics companies (e.g., Freenome, PathAI). I\u2019m also not currently interested in connecting with recruiters.",
+    "personalPreferences": "I prefer email for initial contact and am most responsive in the mornings. I'm a big fan of efficient communication \u2013 please keep messages concise and focused.",
+    "meetingAndSchedulingPreferences": "I generally prefer 30-minute meetings and appreciate a brief agenda sent in advance. Please always include a Zoom link with the meeting invite. I respond to follow-up emails within 24-48 hours."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 19.233300924301147,
+      "input_tokens": 766,
+      "output_tokens": 1399,
+      "problems": []
+    }
+  ],
+  "success": true
+}

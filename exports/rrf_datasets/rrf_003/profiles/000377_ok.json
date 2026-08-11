@@ -1,0 +1,54 @@
+{
+  "id": 377,
+  "archetype": "Toronto Tech Hardware/Robotics Builder",
+  "given_name": "Chidi Dubois",
+  "style_version": 23,
+  "archetypes_version": 63,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Chidi Dubois is a hardware engineer and robotics specialist who spent several years at a large industrial automation firm, but became frustrated with the slow pace of innovation. He left to found 'KineticFlow Robotics', a company building modular, adaptable robotic arms targeted at small and medium-sized manufacturers. He's technically brilliant, but relatively inexperienced in fundraising and scaling a business. He's deeply embedded in the Toronto tech hardware scene and is currently seeking Series A funding to ramp up production and expand distribution. He's very focused on finding investors *who understand* hardware, not just software, and who are willing to be actively involved in the manufacturing process. He's a bit of a perfectionist and can be overly critical of marketing approaches that he deems 'fluffy'. He's committed to building a sustainable, ethically-sourced supply chain.",
+    "positioning": "As Founder and CEO of KineticFlow Robotics, I'm leading the charge in democratizing access to advanced robotic automation for small and medium-sized manufacturers. We\u2019re building highly adaptable, modular robotic arms designed to integrate seamlessly into existing workflows, increasing efficiency and reducing costs. Prior to founding KineticFlow, I spent seven years at Siemens, where I led a team developing advanced control systems for industrial robots, resulting in a 15% increase in production throughput for key clients. My expertise lies at the intersection of mechanical engineering, robotics, and control systems. Currently, I\u2019m focused on securing Series A funding to scale our manufacturing capabilities and expand our distribution network, bringing cutting-edge robotics to a wider market. I believe in building solutions that are both technically innovative and ethically responsible.",
+    "background": "\u2022 **KineticFlow Robotics, Toronto, ON** \u2013 *Founder & CEO* (2021 \u2013 Present)\n    \u25e6 Led all aspects of company formation, product development, and initial market launch.\n    \u25e6 Secured seed funding of $500k from angel investors.\n    \u25e6 Developed and patented a novel modular robotic arm design.\n    \u25e6 Built a team of 8 engineers and technicians.\n    \u25e6 Responsible for all technical aspects of product development, including mechanical design, control systems, and software integration.\n\u2022 **Siemens, Toronto, ON** \u2013 *Senior Robotics Engineer* (2014 \u2013 2021)\n    \u25e6 Led a team of engineers responsible for developing and implementing robotic automation solutions for manufacturing clients.\n    \u25e6 Designed and implemented control systems for industrial robots, utilizing Siemens PLCs and HMI systems.\n    \u25e6 Managed project budgets and timelines, ensuring on-time and within-budget delivery.\n    \u25e6 Contributed to a 15% increase in production throughput for key clients through the implementation of robotic automation.\n    \u25e6 Proficient in: ROS, Python, C++, SolidWorks, AutoCAD, Siemens TIA Portal.\n\u2022 **University of Toronto, Toronto, ON** \u2013 *Master of Applied Science, Mechanical Engineering* (2012 \u2013 2014)\n    \u25e6 Thesis: 'Adaptive Control Strategies for Robotic Manipulators in Uncertain Environments'.\n    \u25e6 GPA: 3.9/4.0\n\u2022 **Queen's University, Kingston, ON** \u2013 *Bachelor of Science, Engineering Physics* (2008 \u2013 2012)\n    \u25e6 Minor: Computer Science\n    \u25e6 Dean\u2019s List all years.",
+    "lookingFor": "\u2022 **Series A Investors:** Actively seeking $3-5M in Series A funding to scale manufacturing and distribution.\n\u2022 **Hardware-Focused VCs:** Specifically interested in investors with a deep understanding of hardware development and manufacturing challenges.\n\u2022 **Strategic Partnerships:** Open to partnerships with companies in related industries (e.g., automation components, industrial software).\n\u2022 **Manufacturing Expertise:** Connections to experienced manufacturing consultants or advisors.\n\u2022 **Supply Chain Specialists:** Individuals with expertise in building resilient and ethical supply chains for robotics components.",
+    "notes": "Chidi is highly technically competent and passionate about his product, but can be somewhat resistant to marketing or sales strategies he perceives as overselling. Caution: he\u2019s a detail-oriented engineer and will thoroughly vet any potential investor's technical understanding. He values transparency and direct communication. Important: he\u2019s deeply committed to ethical sourcing and sustainable manufacturing practices; investors should align with these values. He is a member of the Toronto Robotics Network and frequently attends industry events. He prefers investors who can offer more than just capital \u2013 active mentorship and operational support are highly valued.",
+    "locationAvailability": "I am based in Toronto, Ontario, and primarily focused on opportunities within the Greater Toronto Area. While I\u2019m open to exploring remote investment opportunities, I believe a strong local presence is crucial for supporting our manufacturing operations. I am willing to travel to meet with potential investors and partners, particularly within North America.",
+    "introPreferences": "\u2022 **Hard Requirements:** Introductions to partners at venture capital firms specializing in early-stage hardware companies (Series A and beyond).\n\u2022 **Soft Preferences:** Introductions to individuals with significant experience scaling hardware manufacturing operations.\n\u2022 **Avoid:** Introductions to marketing firms or consultants unless they have a demonstrable track record in the robotics or industrial automation space. Avoid introductions to individuals primarily focused on software or SaaS businesses.\n\u2022 **Introduction Framing:** Please emphasize KineticFlow\u2019s unique modular design, our focus on addressing the needs of SMEs, and our commitment to ethical manufacturing.",
+    "personalPreferences": "I generally respond best to direct emails \u2013 please avoid LinkedIn messages initially. Feel free to share relevant articles or resources ahead of any outreach. I check my email regularly throughout the day.",
+    "meetingAndSchedulingPreferences": "I am available for virtual meetings most weekdays. Please use Calendly to schedule a time that works for both of us: [fictional Calendly link]. I prefer to keep initial meetings focused and concise, around 30-45 minutes."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 21.719883918762207,
+      "input_tokens": 797,
+      "output_tokens": 1232,
+      "problems": []
+    }
+  ],
+  "success": true
+}

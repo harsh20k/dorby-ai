@@ -1,0 +1,211 @@
+<title>Which Lever Actually Worked?</title>
+<style>
+:root{--bg:#eef1ee;--surface:#fff;--surface-2:#e4e8e3;--ink:#1c211f;--ink-soft:#4b544f;
+--muted:#7c8781;--line:#d3d9d1;--copper:#b5622a;--teal:#1f7a72;--slate:#4a5578;--code-bg:#e6e9e2;
+--shadow:0 1px 2px rgba(20,25,20,.06),0 8px 24px rgba(20,25,20,.05);}
+@media (prefers-color-scheme:dark){:root{--bg:#12151a;--surface:#191d23;--surface-2:#20252c;
+--ink:#e7ebe6;--ink-soft:#aab4ac;--muted:#6d7871;--line:#2a3038;--copper:#e0925a;--teal:#5bc2b6;
+--slate:#9aa6d6;--code-bg:#1c2229;--shadow:0 1px 2px rgba(0,0,0,.3),0 12px 32px rgba(0,0,0,.35);}}
+:root[data-theme="dark"]{--bg:#12151a;--surface:#191d23;--surface-2:#20252c;--ink:#e7ebe6;
+--ink-soft:#aab4ac;--muted:#6d7871;--line:#2a3038;--copper:#e0925a;--teal:#5bc2b6;--slate:#9aa6d6;
+--code-bg:#1c2229;--shadow:0 1px 2px rgba(0,0,0,.3),0 12px 32px rgba(0,0,0,.35);}
+:root[data-theme="light"]{--bg:#eef1ee;--surface:#fff;--surface-2:#e4e8e3;--ink:#1c211f;
+--ink-soft:#4b544f;--muted:#7c8781;--line:#d3d9d1;--copper:#b5622a;--teal:#1f7a72;--slate:#4a5578;
+--code-bg:#e6e9e2;--shadow:0 1px 2px rgba(20,25,20,.06),0 8px 24px rgba(20,25,20,.05);}
+*{box-sizing:border-box}html,body{margin:0;padding:0}
+body{background:var(--bg);color:var(--ink);font-family:"IBM Plex Sans","Segoe UI",-apple-system,system-ui,sans-serif;
+font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}
+.wrap{max-width:900px;margin:0 auto;padding:0 24px 80px}
+h1,h2{font-family:Charter,"Iowan Old Style",Georgia,serif;font-weight:600;text-wrap:balance}
+code,.mono{font-family:"IBM Plex Mono","SF Mono",Menlo,monospace;font-variant-numeric:tabular-nums}
+header.hero{padding:60px 24px 34px;max-width:900px;margin:0 auto;border-bottom:1px solid var(--line)}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;font-family:"IBM Plex Mono",monospace;
+font-size:12px;letter-spacing:.09em;text-transform:uppercase;color:var(--muted);margin-bottom:14px}
+.eyebrow .dot{width:6px;height:6px;border-radius:50%;background:var(--teal)}
+h1.title{font-size:clamp(28px,4vw,40px);line-height:1.14;margin:0 0 12px}
+.lede{font-size:17px;color:var(--ink-soft);max-width:640px;margin:0}
+.links{display:flex;gap:18px;flex-wrap:wrap;margin-top:18px;font-size:13.5px}
+.links a{color:var(--teal);text-decoration:none;border-bottom:1px solid transparent}
+.links a:hover{border-color:var(--teal)}
+section{padding:42px 0;border-bottom:1px solid var(--line)}section:last-of-type{border-bottom:none}
+.section-head{display:flex;align-items:baseline;gap:14px;margin-bottom:8px}
+.section-num{font-family:"IBM Plex Mono",monospace;font-size:13px;color:var(--muted)}
+h2{font-size:22px;margin:0}
+p{margin:0 0 14px;max-width:68ch}p:last-child{margin-bottom:0}
+/* 2x2 grid */
+.grid2{display:grid;grid-template-columns:auto 1fr 1fr;gap:10px;margin:22px 0;align-items:stretch}
+.gh{font-family:"IBM Plex Mono",monospace;font-size:11.5px;letter-spacing:.05em;text-transform:uppercase;
+color:var(--muted);display:flex;align-items:center;justify-content:center;padding:6px}
+.gh.rot{writing-mode:vertical-rl;transform:rotate(180deg)}
+.cell{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:14px 16px;box-shadow:var(--shadow)}
+.cell.best{border:2px solid var(--teal)}
+.cell.worst{border:2px solid var(--copper)}
+.cell .nm{font-size:13px;font-weight:600;margin-bottom:8px}
+.cell .met{font-family:"IBM Plex Mono",monospace;font-size:12.5px;color:var(--ink-soft);display:flex;
+justify-content:space-between;gap:10px}
+.cell .tag{display:inline-block;font-size:10.5px;letter-spacing:.05em;text-transform:uppercase;
+padding:2px 7px;border-radius:20px;margin-top:8px;font-family:"IBM Plex Mono",monospace}
+.tag.best{background:color-mix(in srgb,var(--teal) 18%,transparent);color:var(--teal)}
+.tag.worst{background:color-mix(in srgb,var(--copper) 18%,transparent);color:var(--copper)}
+@media (max-width:700px){.grid2{grid-template-columns:1fr}.gh.rot{writing-mode:horizontal-tb;transform:none}}
+.table-wrap{overflow-x:auto;margin:18px 0;border:1px solid var(--line);border-radius:10px;
+background:var(--surface);box-shadow:var(--shadow)}
+table{border-collapse:collapse;width:100%;min-width:620px;font-size:14px}
+th,td{text-align:right;padding:10px 14px;border-bottom:1px solid var(--line)}
+th:first-child,td:first-child{text-align:left}
+thead th{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.04em;text-transform:uppercase;
+color:var(--muted);font-weight:500;background:var(--surface-2)}
+tbody tr:last-child td{border-bottom:none}td.mono{font-family:"IBM Plex Mono",monospace}
+tr.hi td{background:color-mix(in srgb,var(--teal) 8%,transparent);font-weight:600}
+.pos{color:var(--teal)}.neg{color:var(--copper)}
+.callout{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:16px 18px;
+margin:16px 0;box-shadow:var(--shadow)}
+.callout.teal{border-left:3px solid var(--teal)}
+.callout.copper{border-left:3px solid var(--copper)}
+.callout.slate{border-left:3px solid var(--slate)}
+.callout .label{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.06em;
+text-transform:uppercase;color:var(--muted);margin-bottom:6px}
+ol.steps{list-style:none;padding:0;margin:16px 0;counter-reset:s}
+ol.steps li{position:relative;padding:10px 0 10px 34px;border-bottom:1px solid var(--line);font-size:14.5px}
+ol.steps li:last-child{border-bottom:none}
+ol.steps li::before{counter-increment:s;content:counter(s);position:absolute;left:0;top:9px;width:22px;height:22px;
+border-radius:50%;background:var(--surface-2);border:1px solid var(--line);font-family:"IBM Plex Mono",monospace;
+font-size:11.5px;display:flex;align-items:center;justify-content:center;color:var(--ink-soft)}
+ol.steps b{display:block;margin-bottom:2px}ol.steps span{color:var(--ink-soft)}
+footer{padding:30px 0 0;color:var(--muted);font-size:13px}
+footer code{background:var(--code-bg);padding:.1em .4em;border-radius:4px}
+:focus-visible{outline:2px solid var(--teal);outline-offset:2px}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+
+<header class="hero">
+  <div class="eyebrow"><span class="dot"></span> Dorby AI · two-tower ablation · combined verdict</div>
+  <h1 class="title">Bigger batches helped. The extra negative hurt.</h1>
+  <p class="lede">The previous run moved two levers at once and couldn't say which one mattered. Running the missing corners of a 2×2 grid — repeated where possible, so there's a measured noise floor rather than an assumed one — gives a clear answer, and reverses one of the assumptions behind the original experiment.</p>
+  <div class="links">
+    <a href="https://claude.ai/code/artifact/9dcd8dc1-97ba-4183-b77b-717380d1966b">Arm A — batch only</a>
+    <a href="https://claude.ai/code/artifact/187a3df4-362b-4373-98fe-0b34f00bbb61">Arm B — negatives only</a>
+    <a href="https://claude.ai/code/artifact/d2407099-83f8-4e65-a5a3-f8125ae57381">Arm C — baseline</a>
+    <a href="https://claude.ai/code/artifact/6d2ea3d7-0f90-42b6-ac2e-ac807dcaedb1">← bigbatch run</a>
+    <a href="https://claude.ai/code/artifact/3511253c-fb74-429e-820c-d30dbd8c4816">← original fine-tune</a>
+  </div>
+</header>
+<div class="wrap" style="padding-bottom:0">
+  <div class="callout copper" style="margin-top:28px">
+    <div class="label">Correction — Arm A is one run, not an average</div>
+    <p>Arm A's two recorded runs are not repeats of each other: one shipped its final epoch because
+    a checkpoint-pruning bug deleted the earlier ones, the other correctly selected epoch 4. Arm A's
+    figures here are the correctly-selected run alone; an earlier version averaged the two, which
+    flattered it. Arms B and C were genuine repeats and are unchanged, so the noise floor still
+    stands — it just no longer includes Arm A.</p>
+    <p style="margin-top:10px">A later evaluation on all 200 real pairs also found that Arm A's
+    advantage over frozen nano is <b>zero</b> on pair AUC and recall@1 outside this 69-pair sample.
+    <a href="https://claude.ai/code/artifact/d807fdd2-afe5-40ad-bafa-04423b9ccf87">See the 200-pair evaluation</a>
+    and the <a href="https://claude.ai/code/artifact/f9283fec-b9dd-46f1-846f-9280523feb18">Qwen3-8B follow-up</a>.</p>
+  </div>
+</div>
+
+<div class="wrap">
+
+  <section>
+    <div class="section-head"><span class="section-num">01</span><h2>The grid</h2></div>
+    <p>Every cell: effective batch 12, 245 optimizer steps, same 643 training pairs, same dev split. Only two things vary — how many examples share a training step (micro-batch), and how many rejected candidates each row carries (k).</p>
+    <div class="grid2">
+      <div></div>
+      <div class="gh">k = 1 negative/row</div>
+      <div class="gh">k = 2 negatives/row</div>
+
+      <div class="gh rot">micro-batch 2</div>
+      <div class="cell">
+        <div class="nm">Arm C — baseline</div>
+        <div class="met"><span>pair AUC</span><span>0.5996</span></div>
+        <div class="met"><span>MRR</span><span>0.4902</span></div>
+        <div class="met"><span>recall@1</span><span>0.3276</span></div>
+      </div>
+      <div class="cell worst">
+        <div class="nm">Arm B — negatives only</div>
+        <div class="met"><span>pair AUC</span><span>0.5595</span></div>
+        <div class="met"><span>MRR</span><span>0.4813</span></div>
+        <div class="met"><span>recall@1</span><span>0.2931</span></div>
+        <span class="tag worst">worst cell</span>
+      </div>
+
+      <div class="gh rot">micro-batch 6</div>
+      <div class="cell best">
+        <div class="nm">Arm A — batch only</div>
+        <div class="met"><span>pair AUC</span><span>0.5983</span></div>
+        <div class="met"><span>MRR</span><span>0.5326</span></div>
+        <div class="met"><span>recall@1</span><span>0.3793</span></div>
+        <span class="tag best">best cell</span>
+      </div>
+      <div class="cell">
+        <div class="nm">bigbatch <span style="color:var(--muted);font-weight:400">(prior run)</span></div>
+        <div class="met"><span>pair AUC</span><span>0.5759</span></div>
+        <div class="met"><span>MRR</span><span>0.5138</span></div>
+        <div class="met"><span>recall@1</span><span>0.3448</span></div>
+      </div>
+    </div>
+    <p style="font-size:13.5px;color:var(--muted)">Reading down a column isolates micro-batch. Reading across a row isolates k. Arms B and C are the mean of two genuine repeat runs. Arm A is a single run — its two recorded runs shipped different epochs, so they are not repeats (see the correction at the top). The bigbatch cell is a single earlier run.</p>
+  </section>
+
+  <section>
+    <div class="section-head"><span class="section-num">02</span><h2>The two effects, isolated</h2></div>
+    <div class="table-wrap"><table>
+      <thead><tr><th>Change</th><th>Held fixed</th><th>Pair AUC</th><th>MRR</th><th>Recall@1</th></tr></thead>
+      <tbody>
+        <tr class="hi"><td>micro-batch 2 → 6</td><td>k=1</td><td class="mono pos">+0.005</td><td class="mono pos">+0.052</td><td class="mono pos">+0.069</td></tr>
+        <tr class="hi"><td>micro-batch 2 → 6</td><td>k=2</td><td class="mono pos">+0.016</td><td class="mono pos">+0.033</td><td class="mono pos">+0.052</td></tr>
+        <tr><td>k 1 → 2</td><td>micro-batch 2</td><td class="mono neg">−0.040</td><td class="mono neg">−0.009</td><td class="mono neg">−0.035</td></tr>
+        <tr><td>k 1 → 2</td><td>micro-batch 6</td><td class="mono neg">−0.029</td><td class="mono neg">−0.029</td><td class="mono neg">−0.052</td></tr>
+        <tr><td style="color:var(--muted)">noise floor (arms B &amp; C, same config rerun)</td><td style="color:var(--muted)">—</td><td class="mono" style="color:var(--muted)">±0.016</td><td class="mono" style="color:var(--muted)">±0.030</td><td class="mono" style="color:var(--muted)">±0.035</td></tr>
+      </tbody>
+    </table></div>
+    <div class="callout teal">
+      <div class="label">Effect 1 — micro-batch</div>
+      <p>Positive in every comparison, and the retrieval gains clear the noise floor. Raising micro-batch from 2 to 6 is worth roughly <b>+0.05 MRR</b> and <b>+0.06 recall@1</b>. This is the mechanism the earlier experiment guessed at: more candidates competing inside a single training step is closer rehearsal for ranking against a real candidate pool.</p>
+    </div>
+    <div class="callout copper">
+      <div class="label">Effect 2 — the second negative</div>
+      <p>Negative in all four comparisons, with pair-AUC drops that clear the noise floor. The cause looks like a data limitation rather than a flaw in the idea: only <b>189 of 385</b> seeker-queries actually have two <i>different</i> rejected candidates, so <b>27.5% of second-negative slots are duplicates of the first</b>. A repeated negative teaches nothing new but doubles that one example's pull on the loss.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="section-head"><span class="section-num">03</span><h2>Where the best arm actually stands</h2></div>
+    <div class="table-wrap"><table>
+      <thead><tr><th>Model</th><th>Pair AUC</th><th>Hard-neg</th><th>MRR</th><th>Recall@1</th><th>Recall@10</th></tr></thead>
+      <tbody>
+        <tr class="hi"><td>Arm A — micro 6, k=1</td><td class="mono">0.5983</td><td class="mono">0.6034</td><td class="mono">0.5326</td><td class="mono">0.3793</td><td class="mono">0.8621</td></tr>
+        <tr><td>Voyage-4-large <span style="color:var(--muted)">(frozen production)</span></td><td class="mono">0.6086</td><td class="mono">0.6020</td><td class="mono">0.5287</td><td class="mono">0.3448</td><td class="mono">0.8621</td></tr>
+        <tr><td>bigbatch run <span style="color:var(--muted)">(previous best guess)</span></td><td class="mono">0.5759</td><td class="mono">0.5879</td><td class="mono">0.5138</td><td class="mono">0.3448</td><td class="mono">0.7931</td></tr>
+        <tr><td>original triplet fine-tune</td><td class="mono">0.6034</td><td class="mono">0.6138</td><td class="mono">0.4633</td><td class="mono">0.2759</td><td class="mono">0.7586</td></tr>
+      </tbody>
+    </table></div>
+    <div class="callout slate">
+      <div class="label">A correction worth stating plainly</div>
+      <p>Arm A's <i>first</i> run scored recall@1 0.4138, which looked like a clean sweep over the production model. That run turned out to have shipped its final epoch through a checkpoint bug; the correctly selected model scores 0.3793. On that basis Arm A is <b>slightly behind Voyage-4-large on pair AUC</b> (0.5983 vs 0.6086), <b>ahead on MRR</b> (0.5326 vs 0.5287, inside noise) and <b>ahead on recall@1 by one query</b>. It is still the best configuration this project has trained on this holdout — but "beats production on everything" was an artefact of a buggy run, and a later evaluation on all 200 real pairs found its advantage over <i>frozen</i> nano is zero on pair AUC and recall@1.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="section-head"><span class="section-num">04</span><h2>A side finding: the dev set can't pick winners</h2></div>
+    <p>Arms A and C initially shipped their final epoch by accident — a checkpoint-retention setting had deleted the earlier epochs before best-epoch selection ran. Fixing it produced a surprise: the <b>correctly selected model scored worse</b> on the real holdout than the accidental one (Arm A: 0.5983 vs 0.6112 pair AUC).</p>
+    <p>The 60-row dev set only spans 0.50–0.58 across all five epochs — a narrower range than its own run-to-run wobble. It cannot reliably rank checkpoints, so "best epoch" is close to a coin flip right now. Both numbers are reported above, and the correctly-selected one is used — not the flattering one, and not an average of the two, since they are different models.</p>
+  </section>
+
+  <section>
+    <div class="section-head"><span class="section-num">05</span><h2>What to do next</h2></div>
+    <ol class="steps">
+      <li><b>Push micro-batch higher.</b><span> It's the lever that works and 6 wasn't the ceiling — the measured out-of-memory limit was 8 at k=2, and k=1 costs less memory, so 8–10 should fit. Cheapest remaining gain.</span></li>
+      <li><b>Re-test extra negatives without the duplicates.</b><span> Restrict to the 189 seeker-queries that genuinely have two distinct rejections. Smaller dataset, but it would answer whether real extra negatives help — which this ablation could not, because half of them were copies.</span></li>
+      <li><b>Fix the dev set before trusting checkpoint selection again.</b><span> Either enlarge it, or select on a retrieval-shaped metric instead of triplet accuracy, so selection optimizes for the thing that's actually improving.</span></li>
+      <li><b>Replicate the bigbatch corner.</b><span> It's the one cell in the grid with a single run and therefore no error estimate.</span></li>
+    </ol>
+  </section>
+
+  <footer>
+    Boardy AI contact-intro recommender · all numbers on the real 69-pair holdout (29 positive queries) ·
+    training labels are LLM-judge opinions on synthetic profiles, not real accept/decline outcomes ·
+    full writeup in <code>docs/twotower-rrf-triplet-ablation-experiment.md</code>
+  </footer>
+</div>

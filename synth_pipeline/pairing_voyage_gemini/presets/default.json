@@ -1,0 +1,35 @@
+{
+  "_readme": [
+    "Voyage-4-large + gemini-3.1-flash-lite (direct Google API) pairing run,",
+    "over the same 9,659-profile pool as rrf_qwen_full_001. Queries are reused",
+    "read-only from that batch's queries.json — no Bedrock spend here at all."
+  ],
+
+  "batch_id": "voyage_gemini_001",
+
+  "profile_run": "artifacts/bedrock_synth/run_20260804_023936",
+  "queries_source": "artifacts/pairing_rrf_qwen_judge/rrf_qwen_full_001/queries.json",
+
+  "pairing": {
+    "seeker_frac": 0.43,
+    "recall_k": 10,
+    "seed": 42
+  },
+
+  "embedding": {
+    "model": "voyage-4-large",
+    "output_dimension": 1024
+  },
+
+  "judge": {
+    "enabled": true,
+    "model": "gemini-3.1-flash-lite",
+    "concurrency": 8
+  },
+
+  "export": {
+    "enabled": true,
+    "dest": "exports/rrf_datasets_voyage_gemini",
+    "include_embeddings": false
+  }
+}

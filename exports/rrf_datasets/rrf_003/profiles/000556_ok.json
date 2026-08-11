@@ -1,0 +1,54 @@
+{
+  "id": 556,
+  "archetype": "Canadian Tech Founder, US Focus",
+  "given_name": "Soraya Castillo",
+  "style_version": 34,
+  "archetypes_version": 93,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Soraya Castillo is a first-time founder, originally from a strong engineering background. She built and sold a successful internal tool at a larger firm before deciding to launch her own company, 'Synapse Solutions', focused on AI-powered supply chain optimization for small to medium-sized businesses. She's based in Toronto, but *very* focused on expanding into the US market, specifically targeting the Midwest manufacturing sector. She\u2019s seeking seed funding and strategic partnerships to accelerate growth. A key detail is she\u2019s deliberately *avoiding* VC firms known for aggressive growth-at-all-costs strategies; she wants sustainable, value-driven investment. She's highly analytical and prioritizes data-driven decision-making, but also values strong personal connections built on trust.",
+    "positioning": "Soraya Castillo is the Founder & CEO of Synapse Solutions, an AI platform streamlining supply chain operations for SMBs. Leveraging a decade of experience in software engineering and process optimization, I\u2019m passionate about empowering businesses to build resilient and efficient supply chains. At Synapse, we're focused on delivering measurable ROI through predictive analytics and automated workflows. Currently, we are actively expanding our operations into the US market, with a strong emphasis on serving the manufacturing sector. I'm seeking strategic partners and investors who share our commitment to sustainable growth and long-term value creation.",
+    "background": "* 2023 \u2013 Present: Founder & CEO, Synapse Solutions (Toronto, ON) \u2013 Led all aspects of company formation, product development, and initial market traction.\n* 2020 \u2013 2023: Senior Software Engineer, Atlas Logistics (Toronto, ON) \u2013 Developed and deployed a proprietary internal tool for route optimization, resulting in a 15% reduction in transportation costs.\n* 2018 \u2013 2020: Software Engineer, NovaTech Systems (Toronto, ON) \u2013 Focused on full-stack development of cloud-based supply chain management solutions.\n* 2016 \u2013 2018: Research Assistant, University of Toronto \u2013 Conducted research in the field of machine learning and optimization algorithms.\n* 2016: Bachelor of Applied Science, Electrical & Computer Engineering, University of Toronto \u2013 Graduated with Honors.\n* Proficient in: Python, Java, SQL, AWS, Azure, Machine Learning (Regression, Classification, Time Series Analysis).\n* Experienced with Agile methodologies and DevOps practices.\n* Successfully led cross-functional teams in fast-paced environments.\n* Authored and presented research papers at industry conferences.\n* Mentored junior engineers in software development best practices.\n* Developed and maintained RESTful APIs and microservices.",
+    "lookingFor": "* **Seed Funding:** Seeking $1.5M - $2M to scale our US operations and expand our engineering team.\n* **Strategic Partnerships:** Collaborations with companies in the logistics, manufacturing, and supply chain industries (particularly in the US Midwest).\n* **Mentorship:** Guidance from experienced founders who have successfully scaled SaaS businesses in the US market.\n* **Investor Profile:** Value-aligned investors focused on sustainable growth and long-term value, *specifically* avoiding aggressive, hyper-growth strategies.\n* **US-Based Advisors:** Seeking advisors with deep knowledge of the US manufacturing landscape and regulatory environment.\n* **Connections to Midwest Manufacturing Associations:** Introductions to key decision-makers within relevant industry associations.\n* **Potential Pilot Customers:** SMBs in the US manufacturing sector open to piloting Synapse Solutions.",
+    "notes": "* Actively attending supply chain and AI conferences in the US. (Recent: MODEX 2024).\n* Very responsive on LinkedIn \u2013 prefers direct messages over connection requests.\n* Mentioned interest in learning more about the 'Manufacturing USA' initiative.\n* Flagged a recent conversation with a potential partner at a logistics firm in Ohio \u2013 follow up recommended.\n* Part of the 'Canadian Tech Founders' Slack community.",
+    "locationAvailability": "Based in Toronto, Canada, but frequently travels to the US and is open to relocation for the right opportunity.",
+    "introPreferences": "* **Ideal Introductions:** Founders of successful B2B SaaS companies with a focus on manufacturing or logistics, US-based VCs with a track record of supporting sustainable growth, and senior executives at manufacturing companies in the Midwest.\n* **Hard No's:** Introductions to predatory lenders, individuals offering 'get rich quick' schemes, or anyone focused solely on short-term profits.\n* **Good to Know:** I appreciate concise introductions that highlight the mutual value proposition.\n* **Preferred Introduction Style:** A brief email outlining the connection\u2019s relevant experience and how it aligns with Synapse Solutions\u2019 goals.\n* **Avoid:** Cold calls or unsolicited sales pitches.\n* **Bonus Points:** If the introduction includes a shared connection or common interest.\n* **Industry Focus:** Manufacturing, Logistics, Supply Chain, AI/ML.\n* **Company Stage:** Series A/B VCs, Established SMBs (50-500 employees).",
+    "personalPreferences": "I prefer to communicate via email initially, and I'm always open to a quick video call to discuss potential collaborations. I value direct and honest communication.",
+    "meetingAndSchedulingPreferences": "I'm flexible with meeting times and am comfortable with Zoom or Google Meet."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 15.20524525642395,
+      "input_tokens": 758,
+      "output_tokens": 1125,
+      "problems": []
+    }
+  ],
+  "success": true
+}

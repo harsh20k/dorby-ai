@@ -1,0 +1,54 @@
+{
+  "id": 190,
+  "archetype": "Early-Stage Tech Builder, Diverse Background",
+  "given_name": "Rosa Mueller",
+  "style_version": 12,
+  "archetypes_version": 32,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Rosa Mueller is a first-time founder, currently building 'SynapseFlow,' a no-code automation platform specifically targeting small to medium-sized logistics companies. Her background is unusual \u2013 a PhD in Biophysics followed by five years as a quantitative analyst at a hedge fund. This gives her a unique perspective on complex systems and data optimization which she\u2019s applying to the notoriously inefficient logistics sector. She\u2019s a fast learner, comfortable with ambiguity, and deeply motivated by solving practical problems. She\u2019s currently focused on securing seed funding and building out her core engineering team. She's actively seeking strategic advisors with experience scaling SaaS platforms and investors specializing in supply chain tech. A key detail is she self-funded the initial MVP development to 70% completion \u2013 demonstrating commitment and technical capability \u2013 but now needs capital to accelerate growth and marketing.",
+    "positioning": "SynapseFlow is revolutionizing logistics automation for small and medium-sized businesses. As Founder & CEO, I\u2019m leading the development of a no-code platform that empowers logistics companies to streamline operations, reduce costs, and improve visibility across their supply chains. We\u2019re addressing a significant market gap \u2013 existing solutions are either overly complex, prohibitively expensive, or require extensive coding expertise. SynapseFlow\u2019s intuitive interface and pre-built integrations allow businesses to automate key workflows, from shipment tracking and inventory management to route optimization and invoice processing, without writing a single line of code. We\u2019ve already achieved significant traction with early adopters, demonstrating a clear demand for our solution and validating our core value proposition. Currently, we are seeking seed funding to expand our engineering team, accelerate product development, and scale our marketing efforts. I\u2019m particularly interested in connecting with individuals who have experience scaling SaaS platforms and possess a deep understanding of the logistics technology landscape.  I believe SynapseFlow has the potential to become the leading automation platform for the next generation of logistics providers.",
+    "background": "- **Founder & CEO, SynapseFlow** (2023 \u2013 Present)\n  - Led all aspects of company formation, product development, and market validation.\n  - Self-funded MVP development to 70% completion, demonstrating technical leadership and commitment.\n  - Currently focused on fundraising and team building.\n- **Quantitative Analyst, Stellar Capital Management** (2018 \u2013 2023)\n  - Developed and implemented algorithmic trading strategies, resulting in a 15% increase in portfolio returns.\n  - Conducted rigorous data analysis and statistical modeling to identify market inefficiencies.\n  - Collaborated with cross-functional teams to optimize trading infrastructure.\n- **PhD, Biophysics, University of Heidelberg** (2014 \u2013 2018)\n  - Dissertation: \u2018Modeling Protein-Ligand Interactions Using Markov State Models.\u2019\n  - Published peer-reviewed research in leading scientific journals.\n  - Developed strong analytical and problem-solving skills.\n- **MSc, Physics, Technical University of Munich** (2012 \u2013 2014)\n- **BSc, Physics, Ludwig Maximilian University of Munich** (2009 \u2013 2012)\n\n**Skills:** Python, SQL, Data Analysis, Statistical Modeling, Machine Learning, Algorithmic Trading, SaaS, Product Management, Leadership, Fundraising, Biophysics, Logistics, No-Code Development.",
+    "lookingFor": "I'm actively seeking connections to accelerate SynapseFlow\u2019s growth. Specifically, I\u2019m looking for:\n\n*   **Seed Investors:** Angels and VCs specializing in SaaS, logistics tech, or automation with check sizes between $500k - $2M.\n*   **Strategic Advisors:** Individuals with a proven track record of scaling early-stage SaaS companies, particularly in the B2B space. Experience with go-to-market strategy and sales optimization is highly valued.\n*   **Early-Stage Engineers:** Full-stack developers with experience building scalable web applications. Proficiency in React, Node.js, and cloud technologies (AWS/Azure/GCP) is a plus.\n*   **Introductions to Logistics Companies:**  I'm eager to connect with potential customers for feedback and pilot programs.  Focus is on companies with 50-250 employees.\n*   I'm open to connecting with other founders building innovative solutions in the supply chain space \u2013 potential for synergistic partnerships.",
+    "notes": "Rosa is incredibly driven and articulate. She clearly understands the technical challenges and market opportunities within the logistics automation space. Her background is unconventional, but her ability to translate complex scientific principles into practical business solutions is impressive. She's demonstrated significant personal investment in SynapseFlow, which speaks to her commitment. She's currently refining her pitch deck and is actively networking with potential investors. A potential flag is her lack of direct sales/marketing experience \u2013 she's relying heavily on her technical expertise and early adopter feedback.  However, she is very aware of this gap and actively looking for advisors to fill it.  Recent conversations indicate a heightened focus on securing a lead investor within the next 6-8 weeks.",
+    "locationAvailability": "Currently based in Berlin, Germany. I am open to occasional travel to the US for fundraising and networking opportunities, but am not currently considering a full relocation.",
+    "introPreferences": "* **Hard Requirements:**  Anyone I'm introduced to should have a demonstrable understanding of either SaaS business models *or* the logistics industry.  Cold introductions from unrelated fields are not helpful.\n* **Soft Preferences:**  I particularly value introductions to individuals who are known for being direct, pragmatic, and willing to provide candid feedback.\n* **Intro Style:** Please briefly explain my background and SynapseFlow\u2019s value proposition in your introduction.  Highlighting my unique background (biophysics PhD -> quant finance -> founder) often sparks engaging conversations.  Mentioning the 70% MVP completion is also helpful \u2013 it demonstrates execution.",
+    "personalPreferences": "I prefer initial contact via LinkedIn or email. I respond most quickly to concise and well-structured messages.",
+    "meetingAndSchedulingPreferences": "I generally prefer 30-minute introductory calls via video conference.  Please share a brief agenda beforehand to ensure we make the most of our time. I'm available most weekday mornings (CET). I'm happy to jump on a call with minimal notice if it's relevant and time-sensitive."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 19.04309105873108,
+      "input_tokens": 807,
+      "output_tokens": 1345,
+      "problems": []
+    }
+  ],
+  "success": true
+}

@@ -1,0 +1,75 @@
+{
+  "id": 260,
+  "archetype": "Broadcast Journalist - AI Storyteller",
+  "given_name": "Olivia Martins",
+  "style_version": 16,
+  "archetypes_version": 43,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Olivia Martins is a former broadcast journalist who excelled at distilling complex information into engaging stories for television. She noticed the growing number of AI startups struggling to articulate their value proposition beyond technical jargon. Seeing a gap, she transitioned to becoming a narrative strategist specifically for AI founders, helping them craft compelling investor pitches and public-facing narratives. A key detail is that she *specifically* focuses on the 'why' of the AI, not just the 'how' \u2013 the human impact and market opportunity. She\u2019s building a small consultancy, aiming for sustainable ARR growth through retainer clients and pitch deck workshops. She's very direct and values efficiency, often pushing founders to refine their core message. She\u2019s based in Austin, but open to remote work. She\u2019s looking to connect with Seed/Series A VCs focused on AI, and other founders who are further along in their narrative development to potentially leverage them as case studies.",
+    "positioning": "I help AI founders unlock investment and build brand resonance by translating complex technology into compelling, human-centered stories. The problem is clear: brilliant AI solutions often get lost in technical detail, failing to connect with investors or the public. My consultancy bridges that gap. We don\u2019t just explain *what* the AI does; we articulate *why* it matters. \n\nWe work with Seed to Series A companies, focusing on narrative development, pitch deck refinement, and media training. Our core offering is a three-month retainer focused on building a foundational narrative that permeates all communications. We\u2019ve seen clients experience a 2x increase in investor meeting conversion rates after implementing our framework. Our ideal customer is a technically strong founder who recognizes the critical need for a clear, concise, and emotionally resonant story. Currently, we\u2019re focused on the generative AI, healthcare AI, and climate tech sectors. We\u2019re building towards $500k ARR by end of 2024, prioritizing high-LTV clients and scalable workshop offerings.",
+    "background": "<ul>\n  <li><b>Founder & Narrative Strategist, StoryForge AI (2023 \u2013 Present)</b>: Built and lead a narrative consultancy specializing in AI storytelling. Responsibilities include client acquisition, workshop development & delivery, pitch deck review, and media training. Key achievements: secured 5 retainer clients within the first 6 months, developed a proprietary narrative framework (\u201cThe Human Algorithm\u201d), and achieved a 90% client satisfaction rate.</li>\n  <li><b>Investigative Reporter, KXAN-TV (Austin, TX) (2018 \u2013 2023)</b>: Award-winning investigative reporter covering technology, healthcare, and social justice issues.  Led end-to-end production of long-form investigative stories, including research, interviewing, writing, and on-air presentation.  Consistently exceeded viewership targets for assigned segments.  Earned a regional Emmy Award for coverage of algorithmic bias in local policing. Managed a team of junior reporters during special projects.</li>\n  <li><b>Producer, NPR\u2019s *All Things Considered* (Summer Internship, 2017)</b>: Assisted producers in researching and editing audio segments. Developed skills in audio storytelling and journalistic ethics. Gained experience in a fast-paced news environment.</li>\n  <li><b>University of Texas at Austin (2014 \u2013 2018)</b>: Bachelor of Journalism, *Summa Cum Laude*.  Minor in Computer Science.  Awarded the University\u2019s prestigious Beall Scholarship. President of the Texas Student Television (TSTV) news program, overseeing a team of 50+ student journalists.</li>\n  <li><b>Certifications:</b> Certified StoryBrand Guide (2023), AI Fundamentals Certification (Coursera, 2024)</li>\n</ul>",
+    "lookingFor": "I\u2019m actively seeking connections with individuals who can amplify StoryForge AI\u2019s reach and impact. Specifically, I\u2019m looking to connect with:\n\n*   **Seed & Series A VCs:** Focused on AI, particularly generative AI, healthcare AI, and climate tech. I\u2019m interested in discussing narrative as a critical component of due diligence and portfolio company success.\n*   **AI Founders (Series B and beyond):** Who have successfully navigated the narrative challenge and are open to sharing their experiences as case studies or speaking at StoryForge AI workshops.\n*   **Growth Operators:** With experience scaling early-stage startups, particularly those with a strong emphasis on brand building and content marketing.\n*   **Angel Investors:** Interested in the intersection of storytelling and technology.\n\nI\u2019m also open to partnerships with accelerator programs and incubators looking to enhance their curriculum with narrative development training.  A great connection understands the importance of a compelling story in attracting investment and achieving market traction.",
+    "notes": "Olivia is extremely direct and values concise communication. She's very focused on the 'why' behind the technology, not just the 'how'.  She\u2019s currently exploring a subscription model for access to her narrative framework. \n\n*   Recent conversation (2/15/24) with Founder X \u2013 confirmed need for pitch deck overhaul. \n*   Data Quality Warning: LinkedIn profile is relatively new, so social proof is still building. \n*   Best intro: Focus on her ability to translate technical complexity into investor-ready narratives. Avoid overly technical explanations of her work.",
+    "locationAvailability": "I am currently based in Austin, Texas, but operate primarily remotely. I am open to travel for client engagements and speaking opportunities.",
+    "introPreferences": "Please adhere to the following when making introductions:\n\n*   **Hard Requirements:** VC partners at Seed/Series A funds focused on AI. Founders with Series B+ funding who have a strong narrative already.\n*   **Soft Preferences:** Operators with experience scaling early-stage tech companies. Individuals with a demonstrated interest in the intersection of storytelling and technology.\n*   **Intro Style:** Keep it concise and focused on the value I bring \u2013 translating complex AI into compelling narratives.  Specifically mention my background as a broadcast journalist. *Do not* position me as a 'marketing' consultant; I'm a narrative strategist.\n*   **Avoid:** Introductions to general marketing agencies or individuals offering purely technical services.",
+    "personalPreferences": "I prefer to connect via email initially, and I'm responsive on LinkedIn.  I generally respond to messages within 24-48 hours. I'm not a big fan of lengthy back-and-forth; I appreciate direct and to-the-point communication.",
+    "meetingAndSchedulingPreferences": "Please schedule a meeting via this link: [https://calendly.com/oliviamartins/narrative-consultation]"
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 28.3521409034729,
+      "input_tokens": 794,
+      "output_tokens": 1593,
+      "problems": [
+        "meetingAndSchedulingPreferences: possible truncation (ends with '...rtins/narrative-ai-intro]')"
+      ]
+    },
+    {
+      "attempt": 2,
+      "elapsed_s": 26.678303003311157,
+      "input_tokens": 794,
+      "output_tokens": 1548,
+      "problems": [
+        "meetingAndSchedulingPreferences: possible truncation (ends with '...ins/narrative-assessment]')"
+      ]
+    },
+    {
+      "attempt": 3,
+      "elapsed_s": 23.812071800231934,
+      "input_tokens": 794,
+      "output_tokens": 1428,
+      "problems": [
+        "background: possible truncation (ends with '...oursera, 2024)</li>\n</ul>')",
+        "meetingAndSchedulingPreferences: possible truncation (ends with '...s/narrative-consultation]')"
+      ]
+    }
+  ],
+  "success": false
+}

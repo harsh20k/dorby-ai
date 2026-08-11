@@ -1,0 +1,54 @@
+{
+  "id": 974,
+  "archetype": "Early Career, Diverse Skillset",
+  "given_name": "Diego Johansson",
+  "style_version": 60,
+  "archetypes_version": 163,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Diego Johansson is a 28-year-old with a fascinating background \u2013 a former competitive esports player transitioning into a career focused on the intersection of sports, data analytics, and fan engagement. He played professionally as a 'support' role in *League of Legends* for several years, developing strong teamwork, strategic thinking, and rapid decision-making skills. Recognizing the limited long-term career path in pro gaming, he proactively pursued a degree in Data Science and now works at 'FanPulse Analytics,' a startup building predictive analytics tools for sports teams to optimize fan experiences and revenue. He\u2019s driven, analytical, and still retains a strong network within the esports community, which he hopes to leverage. He's actively looking for seed funding and strategic partners who understand the evolving landscape of sports entertainment and the power of data. He\u2019s early in his career but demonstrates a clear path of proactive self-improvement and a unique skillset.",
+    "positioning": "I'm Diego Johansson, Head of Data Strategy at FanPulse Analytics. We're building the next generation of fan engagement platforms for professional sports teams. FanPulse leverages machine learning to predict fan behavior \u2013 everything from ticket purchasing patterns to in-arena spending \u2013 allowing teams to personalize experiences, optimize pricing, and ultimately, increase revenue.  My role focuses on developing and implementing our data science roadmap, ensuring we're leveraging the most cutting-edge techniques.  Recently, we secured a pilot program with a major NBA franchise, demonstrating a 15% increase in targeted merchandise sales during game days. We're currently focused on scaling our platform and expanding into new sports verticals.  I'm passionate about applying data-driven insights to enhance the fan experience and believe FanPulse is uniquely positioned to become a leader in this rapidly growing market.  Our core value proposition is delivering actionable intelligence that transforms fan data into tangible business results.",
+    "background": "* **FanPulse Analytics,** Data Scientist/Head of Data Strategy (2022 \u2013 Present)\n    * Led the development and implementation of machine learning models for predicting fan behavior, resulting in a 15% increase in targeted merchandise sales for pilot NBA client.\n    * Managed a team of two junior data scientists, providing mentorship and guidance on project execution.\n    * Collaborated with engineering and product teams to integrate data insights into the FanPulse platform.\n    * Responsible for data pipeline design, data quality control, and model deployment.\n    * Presented findings and recommendations to executive leadership and client stakeholders.\n* **University of California, Berkeley \u2013 Data Science Masters Program (2020 \u2013 2022)\n    * GPA: 3.8/4.0\n    * Relevant Coursework: Machine Learning, Statistical Modeling, Data Visualization, Database Management, Big Data Analytics\n    * Capstone Project: Developed a predictive model for player performance in *League of Legends* using advanced statistical techniques.\n* **Professional *League of Legends* Player \u2013 \u2018Phoenix Rising\u2019 (2018 \u2013 2020)\n    * Competed at a professional level in the North American *League of Legends* Championship Series (LCS).\n    * Specialized in the 'Support' role, requiring strategic thinking, teamwork, and rapid decision-making.\n    * Consistently ranked among the top performers in the LCS in key statistical categories (vision score, ward placement).\n    * Managed a personal brand and engaged with fans through social media and streaming platforms.\n* **California State University, Long Beach \u2013 B.A. in Mathematics (2014 \u2013 2018)\n    * Dean\u2019s List all semesters.\n    * President of the University Math Club.\n* **Certifications:**\n    * AWS Certified Machine Learning \u2013 Specialty (2021)\n    * Google Data Analytics Professional Certificate (2020)",
+    "lookingFor": "I'm actively seeking connections and resources to accelerate FanPulse Analytics\u2019 growth. Specifically:\n\n* **Seed Funding:**  We\u2019re currently raising a $1.5M seed round.  Ideal investors have a demonstrated track record of investing in early-stage sports tech or data analytics companies.  We're targeting funds with check sizes between $250k - $500k.\n* **Strategic Partnerships:** I'm looking to connect with sports teams, leagues, and technology providers interested in exploring collaborative opportunities.  We're particularly interested in integrating our platform with existing CRM or ticketing systems.\n* **Data Engineering Talent:**  We're looking to expand our data engineering team with experienced engineers proficient in cloud technologies (AWS, Azure, GCP) and data pipeline tools (Airflow, Kafka).  Ideally, candidates will have experience building scalable data infrastructure for real-time analytics.\n* **Mentorship:** I'm eager to connect with experienced entrepreneurs and data science leaders who can provide guidance and support as I navigate the challenges of building a startup.\n\nI'm open to informational interviews with individuals who have relevant expertise or connections. I'm also keen to explore potential advisory roles for individuals with a strong network in the sports industry.  I prioritize conversations with individuals who demonstrate a genuine understanding of the intersection between data, sports, and fan engagement.",
+    "notes": "* Diego is highly articulate and enthusiastic about FanPulse Analytics. \n* During our initial call (2024-01-15), he presented a clear and compelling vision for the company. \n* He is very comfortable discussing technical details but can also explain complex concepts in a non-technical manner. \n* He mentioned his esports background frequently, highlighting the transferable skills he gained (teamwork, strategic thinking). \n*  He\u2019s a quick learner and appears to be very proactive in seeking out new knowledge and opportunities. \n*  Previous introduction to a VC firm (Apex Ventures) resulted in a follow-up meeting. \n* Data quality check: LinkedIn profile matches information provided. \n* Potential red flag:  May overemphasize his esports experience \u2013 need to gently steer conversations towards his data science expertise during introductions.",
+    "locationAvailability": "Diego is currently based in San Francisco, CA, and is willing to travel domestically for meetings and conferences.",
+    "introPreferences": "When making introductions for me, please keep the following in mind:\n\n* **Hard Requirements:** The individual *must* have a demonstrable interest in sports, data analytics, or fan engagement.  Avoid introducing me to individuals solely focused on unrelated industries.\n* **Soft Preferences:** I prefer introductions to individuals who are decision-makers or influencers within their organizations.  I'm particularly interested in connecting with VPs of Marketing, Heads of Data Science, or C-level executives.\n* **Introduction Style:** Please provide a brief, personalized message highlighting my background and the value proposition of FanPulse Analytics.  Avoid generic introductions.  Specifically mention our recent pilot program with the NBA team.\n* **Do\u2019s:**  Emphasize my unique blend of data science expertise and experience within the gaming/esports world. \n* **Don\u2019ts:** Don\u2019t position me as simply an \u201cesports guy\u201d trying to break into the sports industry.  Focus on my data science skills and the business value of FanPulse Analytics.  Avoid introductions to junior-level employees without clear decision-making authority.",
+    "personalPreferences": "I prefer to communicate via email initially, then move to a quick phone call. I\u2019m typically available for calls after 2 PM PST. I respond to messages quickly.",
+    "meetingAndSchedulingPreferences": "I am flexible with meeting times and can accommodate most schedules with 24 hours' notice."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 26.722947120666504,
+      "input_tokens": 809,
+      "output_tokens": 1620,
+      "problems": []
+    }
+  ],
+  "success": true
+}

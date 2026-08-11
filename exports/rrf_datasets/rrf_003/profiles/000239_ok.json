@@ -1,0 +1,54 @@
+{
+  "id": 239,
+  "archetype": "Healthcare AI Security Specialist",
+  "given_name": "Amir Ibrahim",
+  "style_version": 15,
+  "archetypes_version": 39,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Amir Ibrahim is a highly specialized cybersecurity professional focused on the emerging field of AI security *within* healthcare. He isn't a generalist; his expertise lies in the unique vulnerabilities and regulatory landscape surrounding the deployment of AI/ML models in clinical settings \u2013 think diagnostic tools, personalized medicine algorithms, and robotic surgery systems. A distinctive career detail is that he previously worked as a clinical data analyst *before* transitioning to cybersecurity, giving him a rare understanding of both the technical *and* clinical sides of healthcare. He's currently leading a small security team at a mid-sized hospital system, but is looking to move into a more strategic, leadership role \u2013 ideally at a company developing or deploying AI-driven healthcare solutions, or a consultancy specializing in this niche. He\u2019s very aware of HIPAA, GDPR, and emerging AI-specific regulations, and wants a role where he can proactively shape security strategies, not just react to threats. He's a strong believer in 'security by design' and is frustrated by the reactive approach he often sees in healthcare. He's a bit of an introvert, preferring direct, targeted communication, and values efficiency in networking.",
+    "positioning": "A results-oriented cybersecurity leader specializing in the protection of Artificial Intelligence and Machine Learning applications within the healthcare ecosystem. I bring a unique blend of technical expertise, clinical understanding, and regulatory awareness to the challenges of securing sensitive patient data and ensuring the integrity of AI-driven clinical decision support systems. My experience spans vulnerability assessment, threat modeling, incident response, and the development of comprehensive security architectures tailored to the specific risks posed by AI/ML models. Currently, as Security Lead at St. Luke\u2019s Regional Health Network, I am responsible for overseeing the security posture of our expanding portfolio of AI-powered diagnostic tools and personalized treatment algorithms. This includes leading a team of security engineers in conducting penetration testing, implementing security controls, and ensuring compliance with HIPAA, GDPR, and emerging AI-specific regulations. Prior to this role, my background as a Clinical Data Analyst provided me with invaluable insight into the data flows and clinical workflows that underpin modern healthcare, allowing me to anticipate vulnerabilities and develop security solutions that are both effective and practical. I am passionate about proactive security \u2013 'security by design' \u2013 and am seeking a leadership opportunity where I can leverage my expertise to build and implement robust security strategies for organizations at the forefront of healthcare innovation. I believe that secure AI is not just a technical imperative, but a fundamental ethical responsibility in the delivery of quality patient care.",
+    "background": "- **Security Lead, St. Luke\u2019s Regional Health Network** (2021 \u2013 Present)\n   - Led a team of 4 security engineers in securing the hospital\u2019s AI/ML infrastructure, reducing potential data breach risk by 35% within the first year.\n   - Developed and implemented a comprehensive vulnerability management program specifically tailored to AI/ML applications, identifying and mitigating over 100 critical vulnerabilities.\n   - Spearheaded the integration of security automation tools into the CI/CD pipeline for AI/ML model deployment, improving security efficiency by 20%.\n   - Ensured compliance with HIPAA, GDPR, and emerging AI-specific regulations, including participation in regular audits and risk assessments.\n- **Clinical Data Analyst, St. Luke\u2019s Regional Health Network** (2018 \u2013 2021)\n   - Analyzed large datasets of patient data to identify trends and patterns, supporting the development of AI-powered diagnostic tools.\n   - Collaborated with clinicians and data scientists to define data requirements and ensure data quality for AI/ML model training.\n   - Developed and maintained data pipelines for the ingestion, transformation, and storage of clinical data.\n- **Security Analyst, SecureTech Solutions (Consulting)** (2016 \u2013 2018)\n   - Conducted penetration testing and vulnerability assessments for healthcare clients.\n   - Developed security policies and procedures for protecting sensitive patient data.\n   - Assisted clients with incident response and forensic investigations.",
+    "lookingFor": "- Leadership roles in AI security within healthcare (e.g., Director of AI Security, Head of Healthcare Security).\n- Opportunities at companies developing or deploying AI-driven healthcare solutions (e.g., diagnostic imaging, personalized medicine).\n- Consulting positions specializing in AI security for the healthcare industry.\n- Connections with leaders in healthcare AI and cybersecurity.\n- Companies with a strong commitment to 'security by design' and ethical AI practices.\n- Open to roles at companies of 50-500 employees, but willing to consider larger organizations for the right opportunity.\n- Interested in roles that offer the opportunity to influence security strategy and shape the future of secure AI in healthcare.",
+    "notes": "Amir is a highly technical individual who can also articulate complex security concepts to non-technical audiences. He\u2019s a bit reserved initially but very engaged once he\u2019s comfortable. He expressed frustration with the reactive security posture common in many healthcare organizations and is actively seeking a proactive role. He\u2019s particularly interested in companies that prioritize explainable AI and fairness in algorithms. He mentioned attending the Healthcare Information and Management Systems Society (HIMSS) conference in March and is looking to connect with people he met there. He\u2019s currently completing a certification in Responsible AI. Last conversation: 2024-02-29. He asked about my network's connections to companies like PathAI and Tempus Labs.",
+    "locationAvailability": "I am currently based in Boston, Massachusetts, and am open to remote work or relocation for the right opportunity, preferably remaining within the Northeastern United States.",
+    "introPreferences": "- **Hard Requirements:** Introductions to hiring managers or key decision-makers at companies focused on AI security in healthcare.\n- **Soft Preferences:** Introductions to individuals with expertise in federated learning, differential privacy, or adversarial robustness.\n- **Desired Introduction Style:** Direct and concise \u2013 please highlight my specific experience in healthcare AI security and my proactive approach to risk management.\n- **Avoid:** Introductions to general cybersecurity roles without a specific focus on AI or healthcare.\n- I am particularly interested in connecting with individuals at companies that are actively addressing the ethical and regulatory challenges of AI in healthcare.",
+    "personalPreferences": "I prefer to communicate via email initially, and am available for calls during business hours. I appreciate concise and well-structured communication. I am not active on social media for professional networking. Please respect my time and avoid lengthy introductory calls without a clear agenda.",
+    "meetingAndSchedulingPreferences": "I generally prefer virtual meetings, and am flexible with scheduling as long as I have at least 24 hours' notice."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 24.084402322769165,
+      "input_tokens": 806,
+      "output_tokens": 1388,
+      "problems": []
+    }
+  ],
+  "success": true
+}

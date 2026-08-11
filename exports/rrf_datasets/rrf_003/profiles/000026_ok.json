@@ -1,0 +1,54 @@
+{
+  "id": 26,
+  "archetype": "Serial Entrepreneur, Now HealthTech",
+  "given_name": "Valeria Volkov",
+  "style_version": 2,
+  "archetypes_version": 5,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Valeria Volkov is a 42-year-old serial entrepreneur with a strong technical background. She has successfully founded and exited two SaaS companies \u2013 one in the marketing automation space and another in supply chain management. Her current venture, \u2018Synapse Health,\u2019 is a B2B healthtech platform focused on predictive analytics for hospital readmission rates. A key detail is that her second exit was particularly lucrative, giving her significant personal capital and allowing her to be more selective about her next venture, prioritizing impact *and* financial return. She\u2019s not actively fundraising *right now*, but is always open to connecting with strategic investors who understand the long-term vision of preventative healthcare. She's highly data-driven and actively seeks out advisors with deep expertise in clinical workflows and regulatory compliance. She\u2019s comfortable being the \u2018adult in the room\u2019 mentoring younger founders, but fiercely independent and values direct communication.",
+    "positioning": "Valeria Volkov is a seasoned technology executive and serial entrepreneur currently leading Synapse Health, a platform leveraging predictive analytics to reduce hospital readmission rates and improve patient outcomes. Having successfully built and exited two prior SaaS businesses \u2013 Innovate Marketing Solutions (acquired by HubSpot, 2018) and Streamline Logistics (acquired by Blue Yonder, 2021) \u2013 Valeria brings a unique blend of technical expertise, business acumen, and a proven track record of scaling high-growth companies. At Synapse Health, she is focused on building strategic partnerships with leading hospital systems and integrating cutting-edge AI/ML technologies to deliver actionable insights. Valeria\u2019s expertise spans product development, go-to-market strategy, and team leadership. She is actively seeking connections with healthcare industry leaders, data scientists specializing in clinical analytics, and investors with a long-term commitment to innovation in preventative healthcare. She is passionate about leveraging technology to address critical challenges in the healthcare industry and is committed to building a sustainable, impactful business.",
+    "background": "* **Synapse Health, Founder & CEO** (January 2023 \u2013 Present)\n    * Spearheaded the development and launch of a predictive analytics platform designed to identify patients at high risk of hospital readmission, resulting in a 15% reduction in readmission rates during pilot programs.\n    * Secured initial seed funding of $3M from angel investors and is currently focused on scaling the platform and expanding partnerships.\n    * Built and leads a team of 25 engineers, data scientists, and healthcare professionals.\n    * Developed and implemented a comprehensive data security and compliance strategy, adhering to HIPAA and other relevant regulations.\n* **Streamline Logistics, Founder & CEO** (June 2015 \u2013 December 2021)\n    * Founded and scaled a SaaS platform for optimizing supply chain logistics, serving over 100 enterprise clients.\n    * Led the company through a successful acquisition by Blue Yonder for $85M.\n    * Increased revenue by 300% year-over-year for three consecutive years.\n    * Oversaw all aspects of the business, including product development, sales, marketing, and operations.\n* **Innovate Marketing Solutions, Founder & CEO** (January 2012 \u2013 May 2018)\n    * Developed and launched a marketing automation platform targeting small and medium-sized businesses.\n    * Grew the customer base to over 5,000 users within five years.\n    * Led the company through an acquisition by HubSpot.\n    * Implemented a data-driven marketing strategy that resulted in a 40% increase in lead generation.\n* **Software Engineer, Google** (June 2008 \u2013 December 2011)\n    * Developed and maintained key components of Google\u2019s advertising infrastructure.\n    * Contributed to the development of new algorithms for ad targeting and optimization.\n    * Collaborated with a team of engineers to deliver high-quality software solutions.",
+    "lookingFor": "I'm currently focused on scaling Synapse Health and building a strong network of strategic partners. While we are not actively fundraising, I'm always open to connecting with investors who have a long-term vision for preventative healthcare and a proven track record of supporting high-growth healthtech companies.\n\nSpecifically, I'm looking for:\n\n* **Advisors:** Individuals with deep expertise in clinical workflows, hospital administration, and healthcare regulatory compliance (HIPAA, etc.).\n* **Potential Partners:** Hospital systems interested in piloting and implementing our readmission prediction platform.\n* **Strategic Investors:** Funds or individuals who understand the B2B healthtech landscape and can provide valuable insights and connections.\n* **Mentorship Opportunities:** While I'm an experienced founder, I'm always open to learning from seasoned healthcare executives.\n\nI\u2019m also keen to connect with other founders in the healthtech space to share insights and best practices. I'm less interested in purely speculative conversations or pitches for unrelated services.",
+    "notes": "Valeria is extremely responsive and direct in her communication. She values efficiency and prefers concise, data-driven conversations. She is currently prioritizing partnerships that can accelerate Synapse Health's market penetration. Recent conversations indicate she\u2019s particularly interested in organizations with established relationships with large IDNs (Integrated Delivery Networks).  Be mindful that she\u2019s highly selective with her time and prefers introductions that are well-researched and clearly articulate the value proposition for Synapse Health.  She's less likely to respond to cold outreach.",
+    "locationAvailability": "Currently based in Boston, Massachusetts. We are targeting the Northeast US market initially, but are open to expanding nationally. Relocation is not a priority.",
+    "introPreferences": "* **Hard Requirements:** No pitches for marketing agencies or consulting services unrelated to healthcare. Avoid introductions to individuals solely focused on seed-stage funding \u2013 we\u2019re beyond that stage.\n* **Soft Preferences:** Prioritize introductions to individuals with a strong technical background and a deep understanding of the healthcare industry.  Ideally, the connection should have a demonstrated track record of successful partnerships with health systems.\n* **Introduction Framing:** Please emphasize Synapse Health\u2019s focus on *reducing* hospital readmissions and improving patient outcomes. Highlight the platform\u2019s data-driven approach and its potential to generate significant ROI for hospital systems. A brief mention of her previous successful exits can be helpful, but should not be the primary focus.",
+    "personalPreferences": "I prefer to connect initially via LinkedIn message and am generally responsive to email. I\u2019m not active on Twitter. Follow-up should be professional and concise.",
+    "meetingAndSchedulingPreferences": "I generally prefer virtual meetings initially, followed by in-person meetings if a strong connection is established. I use Calendly for scheduling."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 28.690701007843018,
+      "input_tokens": 870,
+      "output_tokens": 1418,
+      "problems": []
+    }
+  ],
+  "success": true
+}

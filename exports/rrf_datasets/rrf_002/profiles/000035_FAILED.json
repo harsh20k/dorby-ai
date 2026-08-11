@@ -1,0 +1,74 @@
+{
+  "id": 35,
+  "archetype": "Fintech/Payments Infrastructure Builder",
+  "given_name": "Malia Pereira",
+  "style_version": 3,
+  "archetypes_version": 8,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Malia Pereira is a seasoned payments infrastructure engineer currently focused on building robust, scalable, and compliant solutions for cross-border remittances. Her distinctive career detail is a three-year stint at a central bank in S\u00e3o Paulo, Brazil, where she directly contributed to the implementation of Pix, Brazil\u2019s real-time payment system. This experience gave her a unique understanding of the regulatory landscape and the importance of interoperability. Now, she's leading a team at 'NovaPay,' a Series B fintech aiming to disrupt the remittance market by leveraging blockchain technology for increased transparency and reduced costs. She's looking to connect with other infrastructure builders, legal experts specializing in international payments, and potential partners who can help NovaPay expand its reach into emerging markets. She's deeply technical, values rigorous testing and security, and is wary of 'hype-driven' solutions. She\u2019s a pragmatic innovator, focused on solving real-world problems with proven technology.",
+    "positioning": "As Head of Payments Infrastructure at NovaPay, I lead a team dedicated to building the next generation of cross-border remittance solutions. We\u2019re tackling the significant inefficiencies and high costs that plague the current system, particularly for individuals sending money home to loved ones. My focus is on architecting a secure, scalable, and fully compliant platform leveraging distributed ledger technology to deliver faster, more transparent, and significantly cheaper transactions. My previous experience at Banco Central do Brasil, where I was instrumental in the development and rollout of Pix \u2013 Brazil\u2019s instant payment system \u2013 provided me with invaluable insights into the complexities of payment rails and the critical importance of interoperability. I'm passionate about building systems that truly empower individuals and facilitate economic inclusion.  We're currently concentrating on expanding our network of liquidity providers and navigating the increasingly complex regulatory landscape surrounding stablecoins and cross-border transfers. I believe the future of remittances lies in a blend of innovative technology and a deep understanding of the financial needs of underserved communities. I\u2019m actively seeking collaborations that can accelerate this vision and drive positive change in the global payments ecosystem.",
+    "background": "## Work Experience\n* **NovaPay** (San Francisco, CA) \u2013 **Head of Payments Infrastructure** (2022 \u2013 Present)\n    * Oversee the design, development, and implementation of NovaPay\u2019s core payments infrastructure.\n    * Lead a team of 8 engineers specializing in blockchain, cryptography, and payments processing.\n    * Responsible for ensuring compliance with global regulatory requirements (KYC/AML, GDPR, etc.).\n    * Reduced transaction costs by 15% through optimized routing and ledger integration.\n* **Banco Central do Brasil** (S\u00e3o Paulo, Brazil) \u2013 **Software Engineer, Pix Project** (2019 \u2013 2022)\n    * Key contributor to the development and implementation of Pix, Brazil\u2019s real-time payment system.\n    * Developed and maintained critical components of the Pix API and settlement infrastructure.\n    * Collaborated with financial institutions and regulatory bodies to ensure seamless integration.\n* **PagSeguro** (S\u00e3o Paulo, Brazil) \u2013 **Junior Software Engineer** (2017 \u2013 2019)\n    * Assisted in the development and maintenance of PagSeguro\u2019s online payment gateway.\n    * Gained experience in Java, SQL, and agile development methodologies.\n\n## Education\n* **Universidade de S\u00e3o Paulo** (S\u00e3o Paulo, Brazil) \u2013 **Bachelor of Science in Computer Science** (2013 \u2013 2017)\n* **Coursera** - **Blockchain Specialization** (2021)\n\n## Skills:\n* Blockchain Development (Solidity, Rust)\n* Payments Infrastructure\n* Cryptography\n* API Design & Development\n* Regulatory Compliance (KYC/AML)\n* Agile Development\n* Java, Python, SQL",
+    "lookingFor": "## Connections I'm Seeking:\n* **Infrastructure Engineers:** Individuals with deep expertise in building and scaling high-throughput, low-latency payment systems. Specifically interested in those with experience in blockchain, distributed ledgers, and cryptography.\n* **Legal & Compliance Experts:** Attorneys specializing in international payments regulations, stablecoins, and digital asset compliance (US, EU, and emerging markets).\n* **Liquidity Providers:** Representatives from banks or financial institutions seeking to integrate with innovative remittance platforms.\n* **Partnerships - Emerging Markets Focus:** Individuals with strong networks and market knowledge in key remittance corridors (e.g., Latin America, Africa, Asia).\n\n## Ideal Introductions:\n* CTOs or Heads of Engineering at fintech companies focused on cross-border payments.\n* Partners at law firms specializing in financial technology and regulatory compliance.\n* Senior executives at banks interested in exploring partnerships with innovative fintechs.\n\n## I am *not* looking for:\n* Sales & Marketing professionals (unless specifically related to partnership development).\n* Individuals promoting purely speculative crypto projects without a clear use case in payments.\n* Recruiters (unless for highly specialized engineering roles).",
+    "notes": "Malia is incredibly articulate and technically astute. She's a strong advocate for her team and is passionate about NovaPay's mission.  She responds well to detailed technical discussions and appreciates a direct, no-nonsense approach. She's somewhat skeptical of 'buzzword' solutions and prefers to focus on pragmatic outcomes.  \n\n* **Key talking point:** Emphasize NovaPay's commitment to security and compliance. Her central bank experience makes her particularly sensitive to these issues.\n* **Recent conversation (Oct 26th):** Discussed challenges with correspondent banking and the potential of stablecoins to address these issues. She's keen to explore potential partnerships with companies offering stablecoin infrastructure.\n* **Avoid:** Overselling or making unsubstantiated claims. She values transparency and honesty.",
+    "locationAvailability": "I am currently based in San Francisco, California, but NovaPay is a remote-first company, and I am comfortable collaborating with teams and individuals globally. I am open to occasional travel for key meetings and conferences, particularly in Latin America and Europe. While I\u2019m not actively seeking relocation at this time, I am open to considering opportunities with a strong remote work component.",
+    "introPreferences": "* Introductions should be to individuals with a demonstrable track record in building and scaling payments infrastructure.\n* Please include a brief summary of the connection\u2019s relevant experience and how it aligns with NovaPay\u2019s goals.\n* Avoid introducing me to individuals solely focused on sales or marketing.\n* I prefer concise and informative introductions \u2013 no lengthy narratives, please.\n* Ensure the person understands NovaPay\u2019s focus on cross-border remittances and blockchain technology.",
+    "personalPreferences": "I generally prefer to connect on LinkedIn and communicate via email for more detailed discussions. I\u2019m responsive to direct messages, but I find email allows for more thoughtful and organized conversations.",
+    "meetingAndSchedulingPreferences": "I prefer meetings to be focused and agenda-driven. Please share any relevant materials beforehand. I\u2019m comfortable with video conferencing and generally prefer 30-minute meetings unless a more extended discussion is necessary."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 28.14578890800476,
+      "input_tokens": 793,
+      "output_tokens": 1617,
+      "problems": [
+        "background: possible truncation (ends with '...ance: KYC/AML, GDPR, PSD2')"
+      ]
+    },
+    {
+      "attempt": 2,
+      "elapsed_s": 30.481685876846313,
+      "input_tokens": 793,
+      "output_tokens": 1656,
+      "problems": [
+        "background: possible truncation (ends with '...icroservices Architecture')"
+      ]
+    },
+    {
+      "attempt": 3,
+      "elapsed_s": 28.559977054595947,
+      "input_tokens": 793,
+      "output_tokens": 1506,
+      "problems": [
+        "background: possible truncation (ends with '...pment\n* Java, Python, SQL')"
+      ]
+    }
+  ],
+  "success": false
+}

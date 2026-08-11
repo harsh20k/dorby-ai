@@ -1,0 +1,54 @@
+{
+  "id": 856,
+  "archetype": "AI-Focused Founder/Operator",
+  "given_name": "Jamal Mensah",
+  "style_version": 52,
+  "archetypes_version": 144,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Jamal Mensah is a first-time founder, 34 years old, building 'Synapse Solutions,' a company focused on applying generative AI to streamline content creation for marketing teams. He has a strong engineering background, specifically in natural language processing, honed during a five-year stint at a major ad tech firm. A distinctive detail is he *left* a guaranteed VP track at that firm to pursue his entrepreneurial vision, fueled by frustration with the slow pace of innovation within a large corporation. He's currently focused on securing seed funding and building out a small, high-performing engineering team. He's very focused on practical applications and ROI for his clients, and less interested in purely theoretical AI advancements. He\u2019s a direct communicator, values efficiency, and is looking for investors and advisors who understand the marketing tech landscape. He\u2019s also open to strategic partnerships that can accelerate his go-to-market strategy.",
+    "positioning": "I'm the founder and CEO of Synapse Solutions, a company revolutionizing content creation for marketing teams through the power of generative AI. We\u2019re building a platform that dramatically reduces content production costs and time-to-market, allowing marketers to focus on strategy and campaign optimization. My background is deeply rooted in natural language processing and machine learning, developed over five years at [AdTech Giant Name], where I led the development of several key features for their flagship ad platform. Frustrated by the inherent limitations of innovation within a large organization, I took the leap to build Synapse Solutions \u2013 a place where we can move fast, iterate quickly, and deliver tangible value to our customers. We\u2019re currently focused on securing seed funding to scale our engineering team and expand our platform\u2019s capabilities. I\u2019m passionate about bridging the gap between cutting-edge AI research and practical marketing applications, and I believe Synapse Solutions is uniquely positioned to lead this charge. We\u2019re not just building AI; we\u2019re building a solution that delivers measurable ROI.",
+    "background": "* **Synapse Solutions, Founder & CEO** (Jan 2023 \u2013 Present)\n    * Led all aspects of company formation, including business plan development, fundraising strategy, and product roadmap definition.\n    * Developed and launched the initial MVP of the Synapse Solutions content generation platform.\n    * Secured initial pilot customers and generated early revenue.\n    * Built and managed a small team of engineers and designers.\n* **[AdTech Giant Name], Senior Software Engineer / Tech Lead** (June 2018 \u2013 Dec 2022)\n    * Led a team of 4 engineers in the development and maintenance of core features for the company\u2019s primary advertising platform.\n    * Designed and implemented novel NLP algorithms for ad copy optimization, resulting in a 15% increase in click-through rates.\n    * Spearheaded the integration of machine learning models into the ad serving pipeline, improving ad relevance and user engagement.\n    * Mentored junior engineers and fostered a collaborative team environment.\n    * Technologies used: Python, TensorFlow, PyTorch, Kubernetes, AWS, SQL.\n* **[University Name], Master of Science in Computer Science** (Sept 2016 \u2013 May 2018)\n    * Specialization in Artificial Intelligence and Machine Learning.\n    * Thesis: \u201cGenerative Models for Personalized Content Creation.\u201d\n    * GPA: 3.9/4.0\n* **[University Name], Bachelor of Science in Computer Engineering** (Sept 2012 \u2013 May 2016)\n    * Relevant Coursework: Data Structures & Algorithms, Machine Learning, Database Systems, Software Engineering.\n* **Skills:** Python, TensorFlow, PyTorch, NLP, Generative AI, Machine Learning, AWS, Kubernetes, Docker, SQL, Agile Development, Product Management, Leadership, Team Management.",
+    "lookingFor": "I'm actively seeking introductions to seed-stage investors with a focus on marketing technology and AI. I'm particularly interested in firms that have a track record of supporting early-stage companies and understand the nuances of the B2B SaaS space. Ideal investor profile: check sizes between $500k - $2M, lead investors preferred, experience with AI/ML companies, and a strong understanding of the marketing tech landscape. \n\nI\u2019m also exploring strategic partnerships with marketing agencies and content creation platforms. We\u2019re open to integrations and co-marketing opportunities that can expand our reach and accelerate our go-to-market strategy. \n\nSpecifically, I'm looking for:\n\n* **Introductions to VCs:** Focusing on seed rounds, specifically those with a marketing tech or AI focus.\n* **Strategic Partnerships:** With marketing agencies specializing in content marketing.\n* **Early Adopter Clients:** Larger enterprises looking to pilot innovative AI-powered content solutions.\n* **Experienced Advisors:** Individuals with experience scaling B2B SaaS companies in the marketing tech space. I\u2019m particularly interested in advice on sales and marketing strategy.\n* **Talented Engineers:** Specifically, NLP engineers with experience in generative AI \u2013 looking for full-stack and backend developers.",
+    "notes": "Jamal is incredibly focused and articulate about his vision for Synapse Solutions. He's clearly passionate about the problem he's solving and has a strong grasp of the technical details. He's a direct communicator and doesn't waste time with fluff. Initial call felt very much like a pitch, which is understandable given his current fundraising efforts. He seemed receptive to feedback and genuinely interested in building a strong network. He mentioned a slight frustration with the lack of marketing expertise within his current team, which could be a key area to offer support. Follow-up should be focused on connecting him with potential investors and advisors with marketing experience. Also, flagged a potential opportunity to introduce him to [Contact Name] at [Agency Name] - they are actively looking for AI solutions for their clients. He responds quickly to messages and seems very proactive.",
+    "locationAvailability": "I'm based in San Francisco, California, and am generally available for meetings in the Bay Area. I\u2019m willing to travel for key investor meetings or strategic partnership discussions.",
+    "introPreferences": "When making introductions, please keep the following in mind:\n\n* **Hard Requirements:** Introductions to investors should be to partners or principals \u2013 I\u2019m not interested in speaking with associates at this stage.\n* **Soft Preferences:** I prefer concise, impactful introductions that highlight the key value proposition of Synapse Solutions and my background.\n* **Intro Style:** Focus on the ROI potential for investors and the potential for synergy for partners. Avoid overly technical jargon.\n* **Ideal Contact Characteristics:**  Individuals who are actively seeking innovative solutions in the marketing tech space, have a strong understanding of AI/ML, and are open to exploring new technologies.\n* **Please avoid:** Introductions to purely academic researchers or individuals who are not directly involved in investment decisions or strategic partnerships.\n* **Briefing Note:** Mentioning my background at [AdTech Giant Name] and my decision to leave a VP track to pursue this venture often resonates well.",
+    "personalPreferences": "I prefer email for initial contact (jamal.mensah@synapsesolutions.ai) and am also reachable on LinkedIn. I'm generally quick to respond to messages.",
+    "meetingAndSchedulingPreferences": "I prefer short, focused meetings (30-45 minutes) and am happy to meet virtually or in person. Please send a calendar invite with a clear agenda. I\u2019m generally available during standard business hours (PST)."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 32.75478005409241,
+      "input_tokens": 920,
+      "output_tokens": 1590,
+      "problems": []
+    }
+  ],
+  "success": true
+}

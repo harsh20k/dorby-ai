@@ -1,0 +1,54 @@
+{
+  "id": 559,
+  "archetype": "Content Creator & Tech Operator",
+  "given_name": "Sana Castillo",
+  "style_version": 34,
+  "archetypes_version": 94,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Sana Castillo is a 32-year-old content creator and tech operator focused on the intersection of AI and sustainable fashion. She spent the first part of her career as a software engineer, specializing in computer vision, before realizing the power of content to drive broader adoption of technology. A pivotal moment was building a real-time style recommendation engine for a fast fashion company, which exposed her to the industry\u2019s wastefulness and sparked her passion for sustainability. Now, she's building 'ThreadAI,' a platform using AI to personalize sustainable fashion choices, predict trends in eco-friendly materials, and connect conscious consumers with ethical brands. She\u2019s actively seeking investors and strategic partnerships to scale ThreadAI and wants to build a community around responsible fashion tech.",
+    "positioning": "Sana Castillo is a technologist and content creator dedicated to revolutionizing the fashion industry through artificial intelligence. With a background in computer vision and software engineering, she now focuses on building innovative solutions for sustainable fashion. She is the founder of ThreadAI, a platform designed to empower consumers to make conscious choices and connect with ethical brands. Sana\u2019s work blends technical expertise with compelling storytelling, fostering a community around responsible consumption and driving positive change within the industry. She\u2019s passionate about using technology to minimize fashion\u2019s environmental impact and create a more circular economy.",
+    "background": "- Founder, ThreadAI (2023 - Present) \u2013 Leading all aspects of company development, from product vision to fundraising.\n- Lead Software Engineer, StyleForward (2020 - 2023) \u2013 Developed and deployed a real-time style recommendation engine using computer vision and machine learning.\n- Software Engineer, VisionTech Solutions (2018 - 2020) \u2013 Focused on developing image recognition algorithms for industrial automation.\n- Research Assistant, MIT Media Lab (2017 - 2018) \u2013 Contributed to research on human-computer interaction and artificial intelligence.\n- B.S. Computer Science, Massachusetts Institute of Technology (2014 - 2018)\n- Developed and maintained RESTful APIs using Python and Flask.\n- Proficient in TensorFlow, PyTorch, and OpenCV.\n- Experience with cloud platforms (AWS, Google Cloud).\n- Led a team of three engineers at StyleForward, overseeing the delivery of multiple product features.\n- Presented research findings at the International Conference on Computer Vision (ICCV) in 2017.\n- Contributed to open-source projects related to computer vision and machine learning.\n- Experienced in Agile development methodologies.\n- Familiar with sustainable fashion practices and supply chain management.",
+    "lookingFor": "- **Seed Funding:** Seeking $500K - $1M to scale ThreadAI\u2019s platform and expand its team.\n- **Strategic Partnerships:** Collaborations with sustainable fashion brands, retailers, and material science companies.\n- **AI/ML Engineers:** Experienced engineers specializing in computer vision, recommendation systems, and natural language processing.\n- **Angel Investors:** Individuals with a strong interest in sustainability and technology.\n- **Mentorship:** Guidance from experienced entrepreneurs in the fashion tech space.\n- **Advisors:** Industry experts in sustainable fashion and AI ethics.\n- **Content Collaboration:** Partnerships with influencers and bloggers focused on sustainable living.\n- **Early Adopters:**  Individuals passionate about ethical fashion to participate in beta testing and provide feedback.",
+    "notes": "- Sana is a highly engaged member of the 'Sustainable Tech' community on this platform.\n- Recently commented on a post regarding AI-powered textile recycling \u2013 demonstrating her deep knowledge.\n- She\u2019s actively following investors focused on climate tech and fashion.\n- Prioritized connections with individuals at Patagonia and Eileen Fisher.\n-  She's very responsive and appreciates thoughtful introductions.\n-  Mention her work at StyleForward when introducing her \u2013 she\u2019s proud of that project, but eager to discuss her current focus.",
+    "locationAvailability": "Based in Boston, MA, and open to remote meetings. Willing to travel for key investor meetings and industry events.",
+    "introPreferences": "- **Ideal Connection:** VCs investing in seed-stage, sustainability-focused startups. (HARD)\n- **Acceptable Connection:** Founders of successful D2C sustainable fashion brands. (MEDIUM)\n- **Good to Know:**  Individuals with expertise in circular economy models. (SOFT)\n- **Avoid:**  Representatives from fast fashion companies. (HARD)\n- **Avoid:**  Salespeople pitching unrelated products or services. (HARD)\n- **Introduction Style:** Focus on ThreadAI\u2019s potential to disrupt the fashion industry and its positive environmental impact.\n- **Keep it concise:** Sana is busy and prefers quick, direct introductions.\n- **Highlight shared interests:** Mention any common connections or relevant industry experience.\n- **Don\u2019t:** Introduce her to anyone looking for a job at ThreadAI without prior discussion.",
+    "personalPreferences": "Sana prefers to communicate via email initially and is generally very responsive. She appreciates concise and well-structured communication.",
+    "meetingAndSchedulingPreferences": "Prefers Zoom meetings and is available during standard East Coast business hours. Please send a calendar invite with a brief agenda."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 19.693375825881958,
+      "input_tokens": 759,
+      "output_tokens": 1096,
+      "problems": []
+    }
+  ],
+  "success": true
+}

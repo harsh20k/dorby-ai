@@ -1,0 +1,54 @@
+{
+  "id": 294,
+  "archetype": "AI Orchestration, Solo Founder",
+  "given_name": "Grace Volkov",
+  "style_version": 18,
+  "archetypes_version": 49,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Grace Volkov is a highly technical solo founder building 'FlowState', an AI orchestration platform specifically for automating repetitive tasks for freelance copywriters. She previously spent 8 years as a backend engineer at a large language model company (similar to Cohere), where she became frustrated with the limited access smaller businesses had to cutting-edge AI. This frustration fueled her to create FlowState \u2013 a no-code/low-code platform leveraging open-source LLMs and task automation tools. She's currently pre-seed, bootstrapping and focused on building out a strong MVP and initial user base. She\u2019s heavily involved in the open-source community, contributing to several relevant projects and actively seeking strategic advisors with experience in both AI and the creator economy. She's a bit of a perfectionist and prefers direct, technically-focused communication. She prioritizes efficiency and dislikes overly 'fluffy' networking attempts.",
+    "positioning": "FlowState is revolutionizing productivity for freelance copywriters by seamlessly orchestrating AI tools to automate tedious tasks \u2013 from research and outlining to first drafts and SEO optimization. We\u2019re building a no-code/low-code platform that democratizes access to the power of large language models, allowing creators to focus on what they do best: crafting compelling narratives. Currently in pre-seed, we're focused on rapidly iterating on our MVP based on direct user feedback and establishing a core community of early adopters. Our differentiator lies in our commitment to open-source integration, providing users with flexibility and control over their AI workflows, and our laser focus on a specific, underserved niche. We're not just building a tool; we're building an ecosystem that empowers the next generation of creative entrepreneurs.",
+    "background": "Grace Volkov's career has been defined by a passion for building scalable, efficient systems and a dedication to making cutting-edge technology accessible.\n\n* **Founder & CEO, FlowState (2023 - Present):** Leading all aspects of product development, fundraising, and go-to-market strategy for an AI orchestration platform for freelance copywriters. Responsible for technical architecture, user acquisition, and community building.\n* **Senior Backend Engineer, LexiCorp (2015 - 2023):**  Developed and maintained core infrastructure for a large language model API, specializing in scaling and optimization. Led a team of 3 engineers in the development of a new API endpoint that increased throughput by 40%. Contributed to the open-source project 'LangChain' with key improvements to the memory module.\n* **Software Engineering Intern, DataWeave (Summer 2014):** Developed a data pipeline for analyzing social media sentiment, utilizing Python and Hadoop.\n\n**Education:**\n* **Massachusetts Institute of Technology (MIT) - Cambridge, MA (2011 - 2015):** Bachelor of Science in Computer Science, GPA: 3.9/4.0.  Minor in Linguistics.\n* **Relevant Skills:** Python, JavaScript, Go, Docker, Kubernetes, AWS, REST APIs, Large Language Models (LLMs), Machine Learning, Data Structures & Algorithms, Agile Development, Open-Source Contribution.\n* **Certifications:** AWS Certified Developer \u2013 Associate (2018)",
+    "lookingFor": "## Connections\n* **Strategic Advisors:** Experienced entrepreneurs with a background in AI, the creator economy, and/or SaaS business models.  Specifically seeking individuals who have successfully navigated pre-seed/seed fundraising.\n* **Early Adopters:** Freelance copywriters willing to provide detailed feedback on FlowState and help shape its development.\n* **Potential Integrators:**  Developers or companies working on complementary tools (e.g., project management software, SEO tools) for the creator space.\n\n## Assistance\n* **Pre-Seed Funding:**  Seeking angel investors or micro-VCs with a demonstrated interest in AI-powered tools for creators.  Target investment range: $250k - $500k.\n* **Technical Mentorship:** Guidance on scaling infrastructure and optimizing performance for LLM-based applications.\n* **Go-to-Market Strategy:** Advice on effective marketing and user acquisition strategies for a niche SaaS product.\n\n## Potential Hires (Future):**\n* **Frontend Engineer:**  Proficient in React and passionate about building user-friendly interfaces. (6-12 months out)",
+    "notes": "* Grace is highly responsive to technical inquiries but can be dismissive of vague or overly promotional pitches. \n* She is actively contributing to the LangChain project and frequently discusses it. \n* Recently completed a beta program with 5 copywriters \u2013 feedback was overwhelmingly positive regarding automation features but highlighted a need for improved documentation. \n* Prioritize direct communication and avoid overly 'fluffy' language. \n* She's currently exploring potential partnerships with SEO tool providers.",
+    "locationAvailability": "Based in Boston, MA, but fully remote and open to virtual meetings.",
+    "introPreferences": "## Hard Requirements\n* **Investors:** Must have a demonstrated track record of investing in early-stage AI or creator economy startups.\n* **Advisors:**  Must have experience scaling a SaaS business and a strong technical understanding of LLMs.\n* **Potential Integrators:** Must have a clearly defined API and a willingness to collaborate on joint marketing efforts.\n\n## Soft Preferences\n* **Investors:**  Prefer investors who are actively involved and willing to provide strategic guidance. \n* **Advisors:**  Prefer individuals who are comfortable with a fast-paced, iterative development process. \n* **Introductions:**  Keep introductions concise and focused on the value proposition for both parties.  Avoid lengthy email chains \u2013 a quick LinkedIn connection and a brief introductory message are preferred.",
+    "personalPreferences": "I prefer direct communication and appreciate brevity. Please avoid sending me unsolicited marketing materials.",
+    "meetingAndSchedulingPreferences": "Please send calendar invites with a clear agenda and estimated duration."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 24.750954151153564,
+      "input_tokens": 744,
+      "output_tokens": 1262,
+      "problems": []
+    }
+  ],
+  "success": true
+}

@@ -46,7 +46,15 @@ class TrainConfig:
     train_dev_user_fraction: float = 0.1
     train_dev_min_pairs: int = 20
     contrastive_margin: float = 0.5
-    include_synth: bool = True  # False = real-only control arm
+    # QUARANTINE DEFAULT (changed 2026-07-30, was True).
+    # True pulls in the 460 promoted `batch_500_001` synthetic pairs, which are
+    # known-harmful: a candidate-profile-only classifier hits 99.2% accuracy on
+    # them (label leaked into the generated text, `docs/possible-bugs.md` #4),
+    # and `run_001` trained on them scored 0.4845 hard-negative AUC — below
+    # chance — while `arm_a_real_only` beat it on 1/5th the data.
+    # See `data/archive/batch_500_001_quarantined/README.md`.
+    # `run_001` was produced with True; set it explicitly to reproduce that run.
+    include_synth: bool = False
 
     # Prompts (Voyage asymmetric convention)
     query_prompt: str = DEFAULT_QUERY_PROMPT

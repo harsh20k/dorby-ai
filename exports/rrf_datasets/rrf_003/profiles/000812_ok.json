@@ -1,0 +1,65 @@
+{
+  "id": 812,
+  "archetype": "Prediction Markets/Web3 Community Builder",
+  "given_name": "Sanjay Jansen",
+  "style_version": 50,
+  "archetypes_version": 137,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Sanjay Jansen is a serial entrepreneur currently focused on building a community-driven prediction market platform leveraging Layer 2 scaling solutions on Ethereum. He previously spent a decade in traditional finance, specifically algorithmic trading, which gave him a deep understanding of market mechanics and risk management. He left that world disillusioned with its opacity and centralized control, and is now passionate about creating more transparent and equitable systems through decentralized prediction markets. He\u2019s particularly interested in applications beyond simple event outcomes \u2013 things like forecasting project success rates in Web3, predicting token price movements, and even corporate performance. He\u2019s currently fundraising for his seed round, and actively seeking advisors with experience in community building and tokenomics. He\u2019s a bit of a data fanatic and gets lost in the weeds of model building, so needs help with outward-facing communication and marketing. He\u2019s known to be direct and intellectually curious, sometimes to the point of interrupting to ask clarifying questions.",
+    "positioning": "Sanjay Jansen is the founder of 'Foresight Foundry,' a next-generation prediction market protocol building on Arbitrum. We're democratizing access to accurate forecasting, enabling users to monetize their insights and drive better decision-making across Web3. Leveraging my background in algorithmic trading and a deep understanding of decentralized finance, I\u2019m focused on building a platform that\u2019s not just technically robust, but also deeply community-driven. Foresight Foundry aims to be the go-to platform for forecasting the future of the decentralized world, offering a more transparent and efficient alternative to traditional information silos. I\u2019m particularly focused on bringing institutional-grade risk modeling to the everyday user.",
+    "background": "- **Founder, Foresight Foundry** (2023 \u2013 Present)\n  * Leading all aspects of platform development, from smart contract architecture to community strategy.\n  * Secured initial angel investment of $250k based on a detailed whitepaper and prototype.\n  * Currently building out MVP on Arbitrum, focusing on scalability and low transaction costs.\n\n- **Quantitative Analyst, Apex Trading Group** (2013 \u2013 2023)\n  * Developed and deployed high-frequency trading algorithms for equities, options, and futures markets.\n  * Managed a portfolio of $50M+ in assets, consistently exceeding performance benchmarks.\n  * Led a team of three junior quants, mentoring them in statistical modeling and software development.\n  * Pioneered the use of machine learning techniques for market anomaly detection.\n\n- **Research Intern, Stanford Computational Finance Lab** (Summer 2012)\n  * Conducted research on agent-based modeling of financial markets.\n  * Published a paper on the impact of herding behavior on market volatility.\n\n- **B.S. in Mathematics & Computer Science, Stanford University** (2009 \u2013 2013)\n  * Graduated *summa cum laude* with honors in both disciplines.\n  * President of the Stanford Quantitative Trading Club.",
+    "lookingFor": "- Advisors with experience in Web3 community building and tokenomics.\n- Investors interested in early-stage prediction market protocols.\n- Developers proficient in Solidity and Rust.\n- Individuals passionate about decentralized finance and the future of forecasting.\n- Connections to potential strategic partners in the data analytics space.\n- Mentors who have successfully navigated the fundraising process for Layer 2 projects.\n- Individuals with experience building successful Discord/Telegram communities.",
+    "notes": "Sanjay is *extremely* fast-paced and intellectually driven. Don\u2019t be offended if he interrupts to ask clarifying questions \u2013 he\u2019s just trying to quickly assess fit. He's currently obsessed with optimizing the platform\u2019s liquidity mechanisms. He recently completed a deep dive into Gelato Network and is exploring potential integrations. \n\n*   He\u2019s a big fan of short, direct communication. Avoid fluff.\n*   Mentioning specific projects in the prediction market space he admires (e.g., Augur, Polymarket, Gnosis) will get his attention.\n*   He\u2019s currently reading 'The Signal and the Noise' \u2013 referencing it might be a good icebreaker.\n*   He\u2019s *not* interested in pitches for traditional finance products.",
+    "locationAvailability": "Based in San Francisco, CA, but frequently travels to industry events and is open to remote meetings.",
+    "introPreferences": "- Focus on shared interests in Web3, prediction markets, or decentralized finance.\n- Highlight any relevant experience in community building, tokenomics, or smart contract development.\n- Keep it concise \u2013 Sanjay prefers getting straight to the point.\n- *Do not* introduce him to people solely based on their investment capital; he values expertise and alignment first.\n- If you know someone working on Layer 2 scaling solutions, that's a huge plus.",
+    "personalPreferences": "Prefers direct messaging on Twitter or Telegram. Email is okay, but slower response.",
+    "meetingAndSchedulingPreferences": "- Prefers short, focused calls (30-45 minutes).\n- Generally available during weekday afternoons (PST).\n- Always open to virtual meetings."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 19.61778211593628,
+      "input_tokens": 760,
+      "output_tokens": 1126,
+      "problems": [
+        "background: possible truncation (ends with '...Web3 startups.</li>\n</ul>')",
+        "lookingFor: possible truncation (ends with '...entrepreneurs.</li>\n</ul>')",
+        "introPreferences: possible truncation (ends with '...person brings.</li>\n</ul>')"
+      ]
+    },
+    {
+      "attempt": 2,
+      "elapsed_s": 18.91409397125244,
+      "input_tokens": 760,
+      "output_tokens": 1081,
+      "problems": []
+    }
+  ],
+  "success": true
+}

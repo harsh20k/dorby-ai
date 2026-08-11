@@ -1,0 +1,54 @@
+{
+  "id": 209,
+  "archetype": "Healthcare AI/Software Executive - Growth Stage",
+  "given_name": "Fatima Eriksson",
+  "style_version": 13,
+  "archetypes_version": 35,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Fatima Eriksson is a seasoned healthcare AI executive currently focused on scaling 'Synapse Health,' a Series B company developing predictive analytics for hospital readmission rates. Her distinctive career detail is a prior successful exit as the VP of Engineering at a remote patient monitoring company acquired by a major telehealth provider. She\u2019s pragmatic, data-driven, and looking for strategic partnerships and talent to accelerate Synapse Health\u2019s growth. She's not interested in purely academic discussions; she wants to talk shop about implementation, ROI, and scaling challenges. She's a Swedish-American who values direct communication and efficiency. She's likely to be a mentor to younger women in tech, but doesn't advertise this overtly.",
+    "positioning": "As Chief Operating Officer at Synapse Health, I lead the strategic execution of our vision to revolutionize hospital readmission rates through the power of predictive AI. We\u2019ve developed a proprietary platform that leverages machine learning to identify patients at high risk, enabling proactive interventions and significantly reducing costly readmissions. Prior to Synapse Health, I served as VP of Engineering at VitalConnect, where I spearheaded the development and launch of their remote patient monitoring solution, culminating in a successful acquisition by Teladoc Health. My expertise lies in building and scaling high-performing engineering teams, navigating complex regulatory landscapes within healthcare, and translating cutting-edge technology into tangible business value. I am passionate about leveraging AI to improve patient outcomes and drive efficiency in healthcare delivery, and I\u2019m actively seeking partners and talent who share this commitment. I excel at identifying and resolving bottlenecks in the commercialization of innovative healthcare technologies, particularly those involving data integration and clinical workflow adoption.",
+    "background": "- **Synapse Health, San Francisco, CA**\n  *Chief Operating Officer* (January 2022 \u2013 Present)\n    * Led cross-functional teams in scaling the company from seed stage to Series B funding.\n    * Oversaw product development, engineering, and clinical implementation, resulting in a 30% reduction in hospital readmission rates for pilot partners.\n    * Established key partnerships with major hospital systems and payers.\n    * Responsible for P&L management and operational efficiency.\n\n- **VitalConnect, San Diego, CA**\n  *Vice President of Engineering* (June 2017 \u2013 December 2021)\n    * Built and led a team of 40+ engineers responsible for the development and maintenance of a remote patient monitoring platform.\n    * Successfully launched and scaled the platform, achieving 200% year-over-year revenue growth.\n    * Drove the engineering strategy and architecture for a product that was acquired by Teladoc Health in 2021.\n    * Implemented Agile development methodologies and CI/CD pipelines.\n\n- **Qualcomm, San Diego, CA**\n  *Senior Software Engineer* (August 2013 \u2013 May 2017)\n    * Developed and tested embedded software for mobile devices.\n    * Contributed to the development of key features for Qualcomm's Snapdragon processors.\n    * Collaborated with cross-functional teams to deliver high-quality software.\n\n- **Education:**\n  *Master of Science in Computer Science, Stanford University, 2013\n  *Bachelor of Science in Computer Engineering, KTH Royal Institute of Technology, Sweden, 2011\n\n- **Skills:** AI/ML, Predictive Analytics, Healthcare IT, Software Development, Agile Methodologies, Cloud Computing (AWS, Azure), Data Science, Strategic Partnerships, P&L Management, Team Leadership, Regulatory Compliance (HIPAA, GDPR), Go-to-Market Strategy.",
+    "lookingFor": "I\u2019m actively seeking connections with individuals who can help Synapse Health accelerate its growth and impact. Specifically, I\u2019m interested in:\n\n* **Strategic Partnerships:** Leaders at large hospital systems (CIOs, CMOs, Innovation Directors) interested in piloting or implementing our readmission prediction platform.\n* **Potential Investors:** VCs specializing in healthcare AI and growth-stage companies.\n* **AI/ML Talent:** Experienced data scientists and machine learning engineers with a passion for solving real-world healthcare problems. (Senior level preferred).\n* **Healthcare Sales Leaders:** Individuals with a proven track record of selling complex software solutions to hospitals and payers.\n\nI\u2019m open to informational conversations, but prioritize connections that have the potential to evolve into mutually beneficial partnerships. I\u2019m particularly interested in learning about innovative approaches to data integration and clinical workflow optimization. I\u2019m also keen to connect with other female leaders in healthcare tech for mentorship and knowledge sharing.",
+    "notes": "- Followed up with John Davies (CFO, Mercy Hospital) regarding a potential pilot program \u2013 awaiting response.\n- Fatima mentioned a strong preference for direct communication \u2013 avoid lengthy email chains.\n- She's currently focused on securing Series C funding; could be a good source for investor introductions.\n- Highlighted the importance of data security and HIPAA compliance during our conversation.\n- Potential mentor for rising female leaders in AI - explore this angle.",
+    "locationAvailability": "I am based in San Francisco, California, but frequently travel for business. I am comfortable with remote meetings and am available to travel to key locations as needed.",
+    "introPreferences": "When making introductions, please:\n\n* **Hard Requirement:** Ensure the contact has decision-making authority or significant influence within their organization.\n* **Soft Preference:** Prioritize individuals with a demonstrated interest in AI-driven healthcare solutions.\n* **Context is Key:** Briefly explain Synapse Health's value proposition and how it aligns with the contact's interests.\n* **Avoid:** Generic introductions \u2013 I value quality over quantity.\n* **Preferred Communication:** Email is best for initial contact; follow up with a brief LinkedIn message.",
+    "personalPreferences": "I prefer concise and direct communication. Outside of work, I enjoy hiking and spending time with my family. I'm a native Swedish speaker and appreciate efficiency in all things.",
+    "meetingAndSchedulingPreferences": "- Prefer 30-minute introductory calls.\n- Prompt responses are appreciated.\n- I generally make decisions quickly once I have the necessary information."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 22.073587894439697,
+      "input_tokens": 842,
+      "output_tokens": 1312,
+      "problems": []
+    }
+  ],
+  "success": true
+}

@@ -1,0 +1,54 @@
+{
+  "id": 434,
+  "archetype": "AI/ML Product Leader, Founder Transition",
+  "given_name": "Camille Castillo",
+  "style_version": 27,
+  "archetypes_version": 73,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Camille Castillo is a 38-year-old AI/ML Product Leader who recently left a senior role at a large fintech company to found 'Aether Insights,' a startup focused on applying generative AI to personalized financial planning. Her distinctive career detail is a PhD in computational linguistics *before* pivoting to machine learning \u2013 this gives her a unique understanding of the nuances of LLMs and human-computer interaction. She's highly technical, but understands the need for a strong business strategy. She\u2019s currently fundraising (seed round) and actively seeking a technical co-founder with strong engineering skills, specifically in scalable backend infrastructure. She\u2019s also looking to connect with early-stage investors specializing in fintech and AI. She's pragmatic, data-driven, and prioritizes building a strong, ethical AI product. She's comfortable with remote work but prefers occasional in-person collaboration.",
+    "positioning": "I\u2019m Camille Castillo, Founder & CEO of Aether Insights. We're building the future of financial wellness through personalized, AI-powered financial planning. We believe everyone deserves access to sophisticated financial advice, tailored to their unique circumstances and goals. Aether Insights leverages cutting-edge generative AI models \u2013 built with a strong emphasis on explainability and responsible AI practices \u2013 to provide users with proactive, actionable insights, moving beyond simple budgeting to truly strategic financial guidance.\n\nPrior to founding Aether Insights, I spent seven years at Nova Finance, most recently as Head of AI Product. There, I led the development and launch of several key AI-driven features, including a fraud detection system that reduced fraudulent transactions by 35% and a personalized investment recommendation engine that increased user engagement by 20%. I was instrumental in building and scaling their AI/ML infrastructure, and spearheaded the adoption of a new MLOps platform. \n\nCurrently, we're focused on completing our seed funding round and refining our MVP. We've already secured initial traction with a promising beta program, demonstrating strong user engagement and positive feedback. We're actively exploring partnerships with financial institutions to expand our reach and impact. We\u2019re deeply committed to building an AI solution that is not only powerful but also transparent and trustworthy, ensuring our users always understand *why* they\u2019re receiving specific recommendations.",
+    "background": "* **Aether Insights, Founder & CEO** (2023 \u2013 Present)\n    * Leading all aspects of startup development, from product vision and strategy to fundraising and team building.\n    * Defining and executing the go-to-market strategy for a generative AI-powered financial planning platform.\n    * Successfully secured initial beta users and are gathering key product feedback.\n* **Nova Finance, Head of AI Product** (2016 \u2013 2023)\n    * Led a team of data scientists and ML engineers in the development and deployment of AI-driven financial products.\n    * Oversaw the entire AI product lifecycle, from ideation and prototyping to launch and iteration.\n    * Key achievements: Developed a fraud detection system (35% reduction in fraudulent transactions), a personalized investment recommendation engine (20% increase in user engagement), and implemented a new MLOps platform.\n    * Managed a budget of $2M annually for AI/ML initiatives.\n* **Research Scientist, LexiTech Labs** (2014 \u2013 2016)\n    * Conducted research in computational linguistics, focusing on natural language understanding and machine translation.\n    * Published several peer-reviewed papers in leading NLP conferences.\n    * Developed and implemented novel algorithms for sentiment analysis and topic modeling.\n* **Education:**\n    * **PhD, Computational Linguistics**, Stanford University (2014)\n    * **MS, Computer Science**, Carnegie Mellon University (2010)\n    * **BS, Computer Science**, Massachusetts Institute of Technology (2008)\n* **Skills:** Python, TensorFlow, PyTorch, LLMs (GPT-3, LaMDA, etc.), MLOps, Data Science, Machine Learning, Natural Language Processing, Product Management, Agile Development, Financial Modeling, Statistical Analysis.",
+    "lookingFor": "I'm actively seeking connections with individuals who can contribute to the growth of Aether Insights. Specifically, I'm looking for:\n\n* **Technical Co-founder:** A highly skilled engineer with a strong background in scalable backend infrastructure (preferably Python/Django or Node.js). Experience with cloud platforms (AWS, Azure, GCP) and database management is essential.  Someone who is excited about building a robust and reliable platform to support our AI models.\n* **Seed-Stage Investors:** VCs and angel investors specializing in fintech and/or AI, with a demonstrated track record of supporting early-stage startups. We\u2019re looking for investors who understand the potential of generative AI and are aligned with our vision for ethical and responsible AI development.\n* **Advisors:** Experienced entrepreneurs and industry leaders who can provide guidance on product strategy, fundraising, and scaling a startup.  Specifically, advisors with experience in financial services and/or AI-driven consumer products would be incredibly valuable.\n\nI'm also open to connecting with other founders in the AI/ML space to share insights and learn from each other. I\u2019m particularly interested in discussing challenges related to responsible AI, data privacy, and building sustainable business models.  I'm *not* currently looking for sales or marketing support, but may be in the future.  Please focus introductions on the roles listed above.",
+    "notes": "Camille is very focused and direct. She's a strong communicator and clearly articulates her vision for Aether Insights. She's very technically astute and will quickly assess the expertise of anyone she connects with. \n\n* **Recent Interaction:** Had a brief call with her last week. She mentioned struggling to find a technical co-founder who also understands the regulatory landscape of the financial industry.\n* **Key Takeaway:** She\u2019s highly selective and values authenticity. Avoid overly-hyped pitches. Focus on tangible experience and demonstrated results.\n* **Caution:** She\u2019s sensitive to discussions about AI ethics and data privacy. Be mindful of these topics when introducing her to potential partners or investors.\n* **Follow-up:** She asked me to keep an eye out for strong backend engineers in my network. I promised to share any relevant profiles.",
+    "locationAvailability": "Based in San Francisco, CA. Open to remote collaboration and travel, primarily focused on opportunities on the West Coast and in New York City.",
+    "introPreferences": "* **Target Individuals:** Technical co-founders (backend engineers), Seed-stage investors (fintech/AI focus), Experienced startup advisors (fintech/AI). \n* **Introduction Style:** Warm, concise, and focused on the individual\u2019s relevant experience and expertise.  Avoid lengthy introductions or unnecessary fluff. \n* **Include in Introduction:** A brief summary of their relevant skills/experience AND why they might be a good fit for Aether Insights. Specifically mention my need for a technical co-founder with scalable backend experience or their investment focus on fintech/AI.\n* **Avoid in Introduction:**  Vague statements about 'synergy' or 'potential collaboration.'  Don't position them as a 'solution' to my problems; position them as a potentially valuable connection.\n* **Preferred Method:** Email introduction.  Brief LinkedIn connection request is acceptable *after* the email introduction.\n* **Do Not:** Cold-call or send unsolicited LinkedIn messages.",
+    "personalPreferences": "I prefer email communication initially. I'm generally responsive but can be heads-down during focused work periods.",
+    "meetingAndSchedulingPreferences": "* I'm generally available for virtual meetings during Pacific Standard Time (PST) business hours.\n* I prefer short, focused meetings (30-60 minutes).\n* Please send a calendar invite with a clear agenda.\n* I'm flexible, but please allow at least 24 hours' notice for scheduling."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 26.134077072143555,
+      "input_tokens": 770,
+      "output_tokens": 1682,
+      "problems": []
+    }
+  ],
+  "success": true
+}

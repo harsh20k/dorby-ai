@@ -1,0 +1,54 @@
+{
+  "id": 405,
+  "archetype": "Nigeria/Emerging Markets Tech Builder",
+  "given_name": "Daniel Ibrahim",
+  "style_version": 25,
+  "archetypes_version": 68,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Daniel Ibrahim is a 34-year-old Nigerian-British founder and CEO of 'PowerUp Analytics', a fintech company building a credit scoring system specifically for the unbanked and underbanked in West Africa. He previously worked as a data scientist at a London-based hedge fund, but left to return to Nigeria and address financial inclusion challenges he witnessed growing up. A distinctive detail is that he self-funded the initial stages of PowerUp Analytics by winning a regional tech innovation competition focused on sustainable development. He's currently seeking Series A funding to scale operations and expand into other West African markets. He's highly data-driven, pragmatic, and focused on demonstrable impact. He's also acutely aware of the challenges of operating in a complex regulatory environment and the need for strong local partnerships.",
+    "positioning": "PowerUp Analytics is revolutionizing access to credit in West Africa by leveraging alternative data sources to build robust and reliable credit scores for individuals excluded from traditional banking systems. We\u2019re tackling the $5.2 trillion funding gap for SMEs in Africa by providing lenders with the confidence to extend credit to a previously underserved market. Our proprietary algorithms combine mobile money transaction data, utility payment history, and social network analysis to create a nuanced understanding of creditworthiness. Currently, we operate in Nigeria and Ghana, serving over 50 microfinance institutions and impacting the lives of over 200,000 individuals. We\u2019re seeking strategic investors who share our vision of financial empowerment and are committed to long-term, sustainable growth in emerging markets. We differentiate ourselves through our hyperlocal data sourcing and a commitment to ethical AI practices.",
+    "background": "- **CEO & Founder, PowerUp Analytics** (Lagos, Nigeria; 2021 \u2013 Present)\n  * Led all aspects of company strategy, fundraising, product development, and operations.\n  * Secured seed funding of $300,000 through the \u2018Innovate for Africa\u2019 competition and angel investors.\n  * Built and deployed a proprietary credit scoring model achieving 88% accuracy in predicting loan repayment rates.\n  * Established partnerships with 50+ microfinance institutions in Nigeria and Ghana.\n  * Grew the user base to over 200,000 individuals with limited or no credit history.\n  * Oversaw a team of 15 data scientists, engineers, and business development professionals.\n\n- **Data Scientist, Quant Capital** (London, UK; 2018 \u2013 2021)\n  * Developed and implemented machine learning models for algorithmic trading strategies.\n  * Conducted extensive data analysis to identify market trends and optimize trading performance.\n  * Collaborated with traders and portfolio managers to refine trading algorithms and risk management protocols.\n  * Contributed to the development of a new risk assessment framework, reducing portfolio volatility by 15%.\n\n- **Research Assistant, University of Oxford** (Oxford, UK; 2016 \u2013 2018)\n  * Assisted Professor Anya Sharma with research on behavioral economics and financial inclusion.\n  * Conducted statistical analysis of large datasets related to microfinance and poverty alleviation.\n  * Published a co-authored paper on the impact of mobile banking on financial literacy in rural communities.\n\n- **Education:**\n  * **DPhil (PhD) in Machine Learning, University of Oxford** (2016 \u2013 2018)\n  * **MSc in Financial Engineering, Imperial College London** (2014 \u2013 2016)\n  * **BSc in Mathematics, University of Ibadan** (2010 \u2013 2014)\n\n- **Skills:** Python, R, Machine Learning, Deep Learning, Data Analysis, Financial Modeling, Statistical Analysis, Credit Risk Management, Fintech, Strategic Planning, Leadership, Business Development.",
+    "lookingFor": "We are currently raising a $2 million Series A round to fuel our expansion across West Africa and enhance our product offering. Specifically, we are seeking:\n\n* **Investors:** Venture capital firms with a demonstrated track record of investing in fintech companies in emerging markets. We are looking for investors who understand the nuances of the African market and are committed to long-term value creation.\n* **Strategic Partners:** Microfinance institutions and banks interested in integrating our credit scoring solution into their lending processes. We are open to exploring joint ventures and revenue-sharing agreements.\n* **Talent:** Experienced software engineers with expertise in backend development and cloud infrastructure (AWS, Azure, GCP). We also need a Head of Partnerships to lead our expansion efforts. Experience operating in West Africa is a significant plus. We're willing to offer competitive salaries and equity options.\n* **Advisors:** Individuals with experience in regulatory compliance and navigating the financial landscape in West Africa.",
+    "notes": "Had a productive call with Adebayo from EchoVC last week. He expressed strong interest but wants to see further traction in Ghana before committing. Follow up with Ghana team to expedite partnership onboarding. \n\n* Action Item: Schedule a meeting with the Ghana team to discuss onboarding progress \u2013 deadline: EOW.\n* Potential Issue: Regulatory uncertainty surrounding data privacy in Nigeria. Need to engage legal counsel to ensure compliance.\n\nAlso, received a lukewarm response from a contact at Accion. They seem hesitant to invest in a company focused solely on credit scoring.  Will prioritize investors with a broader fintech focus. Recent data indicates a 12% increase in loan applications through our partner MFIs, validating the demand for our solution.  Need to update pitch deck with this information.",
+    "locationAvailability": "Lagos, Nigeria & London, UK (travel frequently between both locations).",
+    "introPreferences": "I'm particularly interested in connecting with:\n\n* **Venture Capital Partners** specializing in African Fintech (Series A/B focus).\n* **Heads of Innovation** at major West African banks.\n* **Experienced Fintech Founders** who have successfully scaled businesses in emerging markets.\n\nWhen making introductions, please emphasize our focus on data-driven credit scoring and our commitment to financial inclusion.  \n\n* **Hard Requirement:** Please do *not* introduce me to individuals solely focused on impact investing without a clear understanding of financial returns.\n* **Soft Preference:**  I appreciate introductions to individuals with a strong technical background in machine learning and data science. Avoid introductions to individuals at firms that have previously passed on our seed round.",
+    "personalPreferences": "I prefer email communication for initial contact. I'm generally available for calls between 9 am - 5 pm WAT. I'm a big fan of Afrobeat music and enjoy running in my spare time.",
+    "meetingAndSchedulingPreferences": "I prefer concise, focused meetings with clear agendas. Please send a brief summary of key discussion points beforehand.  I will always follow up with a thank-you note and any agreed-upon action items."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 20.381298780441284,
+      "input_tokens": 760,
+      "output_tokens": 1468,
+      "problems": []
+    }
+  ],
+  "success": true
+}

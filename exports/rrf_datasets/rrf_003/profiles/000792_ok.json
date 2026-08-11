@@ -1,0 +1,63 @@
+{
+  "id": 792,
+  "archetype": "Bootstrapped Fintech Founder, Ex-Operator",
+  "given_name": "Theo Nakamura",
+  "style_version": 49,
+  "archetypes_version": 134,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Theo Nakamura is a first-time founder in the fintech space, specifically focusing on embedded finance solutions for small and medium-sized businesses (SMBs). He spent 8 years as a Marine Corps logistics officer, which instilled in him a deep appreciation for operational efficiency, risk management, and building scalable systems. He left the military at the rank of Captain and transitioned into a role at Stripe, initially in operations, then moving into a product role focused on onboarding complex merchants. He became frustrated with the \u2018one-size-fits-all\u2019 approach to fintech and saw an opportunity to build a platform that tailored financial services to the specific needs of SMBs, especially those operating in niche industries. He's currently bootstrapped, focused on achieving product-market fit, and is highly pragmatic \u2013 prioritizing demonstrable value over flashy features. He's actively seeking strategic advisors and early-stage investors who understand the SMB landscape and appreciate a lean, execution-focused approach. He's somewhat skeptical of VCs who prioritize growth at all costs.",
+    "positioning": "I\u2019m Theo Nakamura, founder of NovaFlow, a fintech platform empowering SMBs with customized financial tools and streamlined access to capital. My background isn\u2019t typical for a fintech founder \u2013 I spent eight years as a logistics officer in the US Marine Corps, leading teams and optimizing complex supply chains in challenging environments. This experience ingrained in me a relentless focus on efficiency, data-driven decision-making, and the importance of building scalable, resilient systems.  \n\nAfter transitioning from military service, I honed my understanding of the fintech landscape at Stripe, where I led initiatives to onboard and support complex merchant integrations.  I quickly realized that many existing solutions failed to adequately address the unique financial needs of smaller businesses, leading me to found NovaFlow.  \n\nWe're tackling the pain points of fragmented financial services by offering a modular platform that integrates seamlessly with existing business workflows.  NovaFlow isn't about disruption; it's about enabling SMBs to thrive by providing them with the financial tools they need to operate more effectively and unlock their growth potential.  Currently focused on the construction and light manufacturing sectors, we\u2019re demonstrating significant customer retention and revenue growth through a highly targeted approach.  I\u2019m passionate about building a sustainable, impactful company that truly understands and serves its customers.",
+    "background": "- **NovaFlow, Founder & CEO** (2023 \u2013 Present)\n  * Led all aspects of company formation, including product development, fundraising, and customer acquisition.\n  * Developed and launched NovaFlow's MVP, focusing on invoice factoring and expense management for construction subcontractors.\n  * Achieved 20% month-over-month revenue growth for the past six months.\n  * Built a fully remote team of 5 engineers and 2 customer success representatives.\n\n- **Stripe, Product Manager** (2021 \u2013 2023)\n  * Managed the onboarding process for large, complex merchants, reducing integration time by 15%.\n  * Collaborated with engineering and design teams to improve the Stripe dashboard user experience.\n  * Developed and implemented a new risk assessment framework for high-volume merchants.\n\n- **Stripe, Operations Specialist** (2020 \u2013 2021)\n  * Investigated and resolved merchant disputes, minimizing financial losses and maintaining customer satisfaction.\n  * Developed and maintained internal documentation for operational procedures.\n  * Provided training and support to new team members.\n\n- **United States Marine Corps, Logistics Officer** (2012 \u2013 2020)\n  * Commanded a logistics platoon of 50 Marines, responsible for the procurement, storage, and distribution of critical supplies.\n  * Deployed to Afghanistan, managing a $10 million budget and coordinating logistics support for combat operations.\n  * Awarded the Navy and Marine Corps Commendation Medal for outstanding performance.\n\n- **Education:**\n  * **Stanford University, MBA** (2018 \u2013 2020), Concentration in Finance\n  * **United States Naval Academy, BS** (2008 \u2013 2012), Major in Systems Engineering\n\n- **Skills:**\n  * **Technical:** SQL, Python (basic), Data Analysis, Product Management, Agile Methodologies, Fintech Regulations (KYC/AML).\n  * **Business:** Financial Modeling, Business Development, Strategic Planning, Risk Management, Team Leadership, Customer Relationship Management.\n  * **Soft Skills:** Communication, Problem-Solving, Critical Thinking, Adaptability, Leadership, Negotiation.",
+    "lookingFor": "I'm actively seeking connections with individuals who can provide strategic guidance and support as NovaFlow scales. Specifically:\n\n* **Experienced Fintech Founders:** I'd love to connect with founders who have successfully navigated the challenges of building and scaling a fintech company, particularly in the SMB space. I'm eager to learn from their experiences and gain insights into best practices.\n* **Early-Stage Investors (Seed/Pre-Seed):** We're currently bootstrapped but anticipate raising a seed round in the next 6-9 months. I'm looking for investors who understand our vision and are aligned with our long-term goals.\n* **Strategic Advisors with SMB Expertise:**  Individuals with deep knowledge of the construction, manufacturing, or other niche SMB sectors are highly valuable. I\u2019m looking for advisors who can help us refine our product roadmap and identify new market opportunities.\n* **Potential Partners:** Companies offering complementary services to SMBs (e.g., accounting software, CRM platforms) are of interest for potential integration partnerships.\n\n**Do not connect if:**\n* You are a recruiter offering unsolicited job opportunities.\n* You are solely focused on high-growth, venture-backed opportunities \u2013 we're building a sustainable business, not a unicorn.\n* You are selling marketing services or other non-strategic offerings.\n* You\u2019re offering vague \u201cmentorship\u201d without clear expertise or a willingness to actively contribute.",
+    "notes": "Theo is highly analytical and values direct communication. He's skeptical of hype and prefers data-driven discussions. During our initial conversation, he was very focused on unit economics and customer acquisition cost. He expressed a strong desire to avoid the common pitfalls of overspending on marketing before achieving product-market fit. He's a quick learner and is receptive to constructive feedback. He\u2019s currently reading 'The Lean Startup' for the third time, and it clearly informs his approach.  He's a no-nonsense individual who appreciates efficiency and transparency.  Introductions should highlight any shared connections within the fintech or military veteran communities.",
+    "locationAvailability": "Based in Austin, Texas, USA (Central Time Zone). Open to remote meetings and occasional travel to industry events.",
+    "introPreferences": "When making an introduction to Theo, please emphasize:\n\n* **Relevance:** Clearly articulate *why* the connection would be valuable to him, specifically relating to NovaFlow's focus on SMB fintech.\n* **Specific Expertise:** Highlight any relevant experience or knowledge the person has in the fintech space, particularly with SMBs or embedded finance.\n* **Conciseness:** Theo is busy; keep the intro brief and to the point.\n\n**Good talking points:**\n* \u201cI thought of you because of your work with [relevant company/technology] and how it could potentially integrate with NovaFlow\u2019s platform.\u201d\n* \u201cTheo is building a really interesting solution for [specific SMB pain point] and I know you\u2019ve had experience addressing similar challenges.\u201d\n\n**Avoid:**\n* Generic introductions like \u201cI thought you two should connect.\u201d\n* Overly promotional language.",
+    "personalPreferences": "I prefer initial contact via LinkedIn message.  I'm responsive to email, but tend to prioritize direct messages.  A quick follow-up a few days after our initial connection is appreciated.",
+    "meetingAndSchedulingPreferences": "I'm generally available for 30-minute Zoom calls.  Please send a calendar invite with a few suggested times."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 29.2840256690979,
+      "input_tokens": 772,
+      "output_tokens": 1706,
+      "problems": [
+        "background: possible truncation (ends with '...my Distinguished Graduate')"
+      ]
+    },
+    {
+      "attempt": 2,
+      "elapsed_s": 32.576964139938354,
+      "input_tokens": 772,
+      "output_tokens": 1716,
+      "problems": []
+    }
+  ],
+  "success": true
+}

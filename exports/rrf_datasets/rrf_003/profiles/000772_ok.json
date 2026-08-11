@@ -1,0 +1,54 @@
+{
+  "id": 772,
+  "archetype": "Solo Technical Founder, Bootstrapped",
+  "given_name": "Beatriz Ibrahim",
+  "style_version": 47,
+  "archetypes_version": 130,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Beatriz Ibrahim is a solo founder building 'SynapseFlow,' a low-code automation platform for biotech research. She\u2019s a former computational biologist with a PhD, and spent several years at a top-tier pharmaceutical company building internal pipelines. She left to build SynapseFlow because she saw a huge gap in the market for accessible automation tools for smaller labs and research groups. She's deeply technical and prefers to focus on product development, but recognizes she needs to build a network for fundraising and strategic partnerships. She\u2019s entirely bootstrapped so far and hesitant to give up equity, preferring revenue-based financing or grants. She values direct, technically-minded conversations and is wary of overly 'salesy' pitches. A distinctive career detail is her publication record \u2013 she's a named author on several high-impact papers in bioinformatics.",
+    "positioning": "Beatriz Ibrahim is the founder and CEO of SynapseFlow, a no-code automation platform empowering biotech researchers to accelerate discovery. Leveraging a deep background in computational biology and years of experience designing and implementing complex research pipelines, I\u2019m focused on democratizing access to automation technologies. SynapseFlow is currently in private beta with promising early traction, streamlining workflows for early-stage drug discovery and genomic analysis. My core strength lies in translating complex scientific needs into elegant, user-friendly software solutions. I\u2019m actively seeking connections with potential pilot customers, strategic advisors with experience scaling SaaS products, and investors interested in the future of biotech innovation. I\u2019m particularly keen to connect with leaders in synthetic biology and personalized medicine.",
+    "background": " * **PhD, Computational Biology, Stanford University (2016-2020):** Dissertation focused on developing novel machine learning algorithms for predicting protein-protein interactions. Published three first-author papers in *Nature Biotechnology* and *Bioinformatics*. Maintained a 3.9/4.0 GPA. \n* **Postdoctoral Fellow, Novartis Institutes for BioMedical Research (2020-2022):** Led the development of a high-throughput screening pipeline for identifying novel drug candidates, resulting in a 15% increase in screening efficiency. Managed a team of two research assistants. Instrumental in securing a $500,000 internal grant for pipeline expansion.\n* **Senior Computational Biologist, Genentech (2022-2023):** Designed and implemented automated workflows for analyzing large-scale genomic datasets, contributing to two Phase II clinical trials. Reduced data processing time by 20% through optimization of existing algorithms. Collaborated with cross-functional teams including wet-lab scientists, data engineers, and statisticians. \n* **Founder & CEO, SynapseFlow (2023-Present):** Conceptualized, designed, and built the core SynapseFlow platform. Currently managing all aspects of the business, including product development, marketing, and customer acquisition. Secured initial beta users through targeted outreach to academic labs. Achieved a 40% week-over-week growth in beta user engagement during the last month. Independently funded through personal savings.",
+    "lookingFor": "* Introductions to heads of research or automation specialists at biotech companies (Series A/B funded preferred).\n* Connections to grant writers specializing in SBIR/STTR applications for biotech startups.\n* Advisors with experience scaling early-stage SaaS businesses with a strong technical focus.\n* Investors interested in revenue-based financing or convertible notes (avoiding traditional equity rounds initially).\n* Beta users in the areas of synthetic biology, genomics, and drug discovery.\n* Individuals with expertise in marketing to highly technical audiences.\n* Mentorship regarding navigating legal aspects of data privacy in biotech (HIPAA, GDPR).\n* Do not introduce me to VCs focused solely on pre-seed equity investments.\n* Do not connect me with marketing agencies offering 'growth hacking' services \u2013 I prioritize sustainable, organic growth.\n* No recruiters, please.",
+    "notes": "Beatriz is *extremely* technically capable and prefers to discuss the underlying technology. She's wary of hype and prefers data-driven conversations. [03/15/2024: Had a good call with her, she was deeply knowledgeable about the competitive landscape.] She\u2019s bootstrapping and very protective of her company\u2019s equity. She responded well to introductions focused on *value exchange* \u2013 offering her expertise in return for advice. [03/22/2024: She mentioned struggling with content creation for the website, might be a good area for a helpful introduction.] She\u2019s a fast learner and very responsive, but can be somewhat introverted in larger networking events. Flag: she gets frustrated with overly simplistic explanations of complex problems.",
+    "locationAvailability": "Based in the San Francisco Bay Area. Willing to travel to conferences and meetings on the West Coast. Primarily focused on building a remote-first team and is open to remote collaboration globally.",
+    "introPreferences": "* **Hard Requirement:** Introductions must be to individuals with a technical background or a demonstrated understanding of biotech research.\n* **Soft Preference:** Introductions to people who have successfully scaled a similar SaaS product are ideal.\n* **Ideal Intro Style:** A concise email highlighting our shared technical interests and a brief overview of SynapseFlow\u2019s value proposition. \n* **Do Not:** Send generic LinkedIn connection requests or mass emails.\n* **Do Not:** Lead with a sales pitch or ask for a demo immediately.\n* **Preferred Format:** Warm email introduction with a clear ask \u2013 e.g., 'Beatriz would love to get your thoughts on X challenge in the field.'\n* **Example of Good Intro:** 'Hi [Recipient], I wanted to introduce you to Beatriz Ibrahim, the founder of SynapseFlow. She's building a fantastic low-code automation platform for biotech, and I thought you might find her approach to streamlining genomic workflows particularly interesting given your work at [Company].'",
+    "personalPreferences": "Prefers direct communication via email. Responds quickly to well-written, concise messages.",
+    "meetingAndSchedulingPreferences": "Generally available for video calls in the afternoons (PST). Google Calendar is preferred for scheduling."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 22.013468027114868,
+      "input_tokens": 799,
+      "output_tokens": 1294,
+      "problems": []
+    }
+  ],
+  "success": true
+}

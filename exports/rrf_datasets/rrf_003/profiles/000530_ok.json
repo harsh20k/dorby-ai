@@ -1,0 +1,54 @@
+{
+  "id": 530,
+  "archetype": "Early-Stage Climate Tech Founder",
+  "given_name": "Jing Zhang",
+  "style_version": 32,
+  "archetypes_version": 89,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Jing Zhang is a 28-year-old founder of 'TerraLens', a SaaS platform leveraging satellite imagery and AI to provide hyper-local carbon sequestration monitoring for reforestation projects. She's a former PhD student in remote sensing at MIT, where she developed the core algorithms TerraLens uses. She\u2019s deeply technical, sometimes struggles to articulate the business value *without* getting lost in the tech, and is very focused on data integrity and scientific rigor. She's currently fundraising a pre-seed round and needs introductions to climate-focused angel investors and potential early-adopter forestry companies. She\u2019s a bit wary of investors who don\u2019t understand the technical complexities of her solution and values authenticity and a long-term vision. She's relatively new to the fundraising game and can be a bit overwhelmed by networking events, preferring targeted introductions.",
+    "positioning": "TerraLens is revolutionizing carbon credit verification and reforestation project monitoring. We provide a Software-as-a-Service platform that utilizes advanced satellite imagery analysis and proprietary AI algorithms to deliver highly accurate, granular data on carbon sequestration rates. Unlike traditional, ground-based monitoring methods, TerraLens offers a scalable, cost-effective, and transparent solution. Our target market is reforestation project developers, carbon credit buyers, and ESG-focused investment firms. We differentiate ourselves through our algorithm's precision \u2013 achieving 95% correlation with ground truth data in pilot projects \u2013 and our focus on providing actionable insights, not just raw data. We\u2019ve recently completed a successful pilot program with \u2018GreenGrowth Forestry\u2019 demonstrating a 40% reduction in monitoring costs and a 20% increase in data accuracy compared to their existing methods. We are currently seeking $750k in pre-seed funding to expand our engineering team, scale our data processing infrastructure, and accelerate customer acquisition.",
+    "background": "* **Massachusetts Institute of Technology (MIT)**, Cambridge, MA \u2013 PhD, Remote Sensing (2018-2023) \n\t* Dissertation: 'High-Resolution Carbon Flux Estimation Using Multi-Spectral Satellite Imagery and Deep Learning'. Developed and validated novel algorithms for estimating carbon sequestration rates from satellite data. \n\t* Relevant Coursework: Machine Learning, Remote Sensing, GIS, Data Science, Environmental Modeling.\n* **NASA Goddard Space Flight Center**, Greenbelt, MD \u2013 Research Intern (Summer 2017)\n\t* Assisted in the development of algorithms for analyzing satellite data related to deforestation and land use change.\n\t* Gained experience with remote sensing data processing and analysis tools (e.g., ENVI, QGIS).\n* **Stanford University**, Stanford, CA \u2013 BS, Earth Systems (2014-2018)\n\t* Minor in Computer Science.\n\t* Relevant Projects: Developed a web-based application for visualizing and analyzing environmental data.\n* **Skills:** Python (expert), TensorFlow, PyTorch, Remote Sensing Software (ENVI, QGIS), GIS, Data Visualization (Tableau, Matplotlib), Statistical Modeling, Machine Learning, Cloud Computing (AWS, GCP). Proficient in scientific writing and presentation.",
+    "lookingFor": "## Investment \n* **Angel Investors:** Seeking climate-focused angels with a technical background or a strong understanding of the carbon market. Investment range: $50k - $150k.\n* **Seed Funds:** Targeting seed funds specializing in climate tech and SaaS. Target check size: $250k - $500k.\n\n## Strategic Partnerships\n* **Reforestation Companies:** Looking for pilot customers and long-term partners to validate our platform and integrate it into their monitoring workflows. Specifically, companies operating large-scale reforestation projects in South America and Southeast Asia.\n* **Carbon Credit Verification Bodies:** Interested in exploring partnerships to streamline the carbon credit verification process and improve data transparency.\n\n## Expertise\n* **SaaS Go-to-Market Strategy:** Need advice on developing a scalable and effective go-to-market strategy for a B2B SaaS product.\n* **Carbon Market Dynamics:** Seeking insights into the latest trends and regulations in the carbon market.",
+    "notes": "Jing is incredibly bright and passionate about her work. She\u2019s deeply committed to using technology to address climate change. However, she can sometimes get overly focused on the technical details and struggle to articulate the business value proposition in a concise and compelling way. When making introductions, emphasize the *impact* of TerraLens \u2013 the ability to unlock higher-quality carbon credits and accelerate reforestation efforts \u2013 rather than getting bogged down in the algorithms. She appreciates direct, honest feedback and is open to learning. She\u2019s relatively new to the fundraising process and could benefit from mentorship from experienced founders. Be mindful that she's very protective of her IP and will likely be hesitant to share detailed technical information without a strong NDA in place. She's particularly interested in investors who demonstrate a genuine commitment to sustainability, not just financial returns. \n\n*  She is *not* interested in investors who promote 'greenwashing' or lack a deep understanding of climate science.\n*  She responds best to data-driven arguments and avoids overly optimistic or vague claims.",
+    "locationAvailability": "Jing is currently based in Cambridge, Massachusetts. She is open to remote meetings and occasional travel to key events and potential customer sites.",
+    "introPreferences": "* **Hard Requirements:**\n\t* Individuals with a demonstrable interest in climate tech and/or carbon markets.\n\t* Investors with a track record of supporting early-stage, technically-focused startups.\n\t* Professionals with experience in the forestry or environmental monitoring industries.\n* **Soft Preferences:**\n\t* Connections with individuals who have a strong technical background (e.g., PhD in a relevant field).\n\t* Introductions should emphasize the unique value proposition of TerraLens \u2013 its accuracy, scalability, and transparency.\n\t* Avoid introductions to individuals solely focused on 'hype' or 'trends' without a genuine understanding of the underlying technology.",
+    "personalPreferences": "I prefer initial contact via email. Please keep follow-up concise and focused. I'm happy to share updates on our progress, but I'm generally quite busy. WhatsApp is fine for quick check-ins after an initial connection.",
+    "meetingAndSchedulingPreferences": "Please send a brief agenda in advance of any meetings. I prefer meetings to be focused and efficient, with clear objectives. I'm generally available for meetings during Eastern Time business hours. A quick debrief after the meeting to summarize key takeaways would be greatly appreciated."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 19.237792015075684,
+      "input_tokens": 791,
+      "output_tokens": 1390,
+      "problems": []
+    }
+  ],
+  "success": true
+}

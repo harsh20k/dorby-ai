@@ -1,0 +1,54 @@
+{
+  "id": 121,
+  "archetype": "Fintech Founder/Operator - Cross Border",
+  "given_name": "Layla Rossi",
+  "style_version": 8,
+  "archetypes_version": 20,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Layla Rossi is a 38-year-old founder and CEO of 'TerraFlow,' a fintech company focused on dramatically reducing the cost and complexity of cross-border payments for small and medium-sized businesses (SMBs). Her distinctive career detail is a 7-year stint embedded within the compliance department of a major international bank *before* moving into tech. This experience gave her a unique insider's view of the pain points in the current system \u2013 not just the technical limitations, but the regulatory hurdles and risk aversion that stifle innovation. TerraFlow uses a combination of blockchain technology and strategic partnerships with local financial institutions to offer significantly lower fees and faster settlement times. She's currently in a Series A raise and aggressively seeking strategic partners who can help her navigate regulatory landscapes in key emerging markets (specifically LatAm and Southeast Asia). She\u2019s highly data-driven, a bit impatient, and values direct communication. She's built a strong technical team but needs help scaling the business development and regulatory side.",
+    "positioning": "As CEO and Founder of TerraFlow, I\u2019m leading a revolution in cross-border payments for SMBs. For too long, businesses have been burdened by exorbitant fees, opaque processes, and frustratingly slow settlement times when transacting internationally. TerraFlow is changing that. We\u2019ve built a next-generation payments infrastructure leveraging distributed ledger technology and a network of carefully vetted local banking partners. This allows us to bypass traditional correspondent banking networks, dramatically reducing costs \u2013 typically 50-80% compared to incumbents \u2013 and accelerating settlement from days to minutes. \n\nOur core value proposition isn\u2019t just about cost savings; it\u2019s about unlocking global opportunities for SMBs. We empower them to compete on a level playing field, expand into new markets, and build stronger relationships with international suppliers and customers. We\u2019re initially focused on facilitating payments to and from Latin America and Southeast Asia, two regions with significant growth potential and underserved SMBs. \n\nI'm deeply passionate about building a more inclusive and efficient global financial system. My background in financial crime compliance at HSBC instilled in me a deep understanding of the regulatory complexities surrounding international payments, and I\u2019ve designed TerraFlow from the ground up to be fully compliant and secure. We\u2019re not just building a faster, cheaper payment solution; we\u2019re building a trusted platform that businesses can rely on to navigate the intricacies of cross-border commerce.",
+    "background": "- **CEO & Founder, TerraFlow** (2021 \u2013 Present)\n    * Led seed funding round of $2.5M, securing key investors focused on fintech and blockchain.\n    * Developed and launched TerraFlow\u2019s MVP, achieving 300% user growth in the first year.\n    * Established strategic partnerships with local financial institutions in Brazil and Indonesia.\n    * Built a high-performing team of engineers, product managers, and compliance experts.\n- **Senior Compliance Officer, HSBC** (2014 \u2013 2021)\n    * Managed a portfolio of high-risk clients, ensuring compliance with AML and KYC regulations.\n    * Led investigations into potential financial crimes, collaborating with law enforcement agencies.\n    * Developed and implemented new compliance procedures, reducing regulatory risk by 15%.\n    * Specialized in cross-border payment regulations and sanctions compliance.\n- **Education:**\n    * **MBA, Stanford Graduate School of Business** (2012 \u2013 2014)\n    * **BA, Economics, University of California, Berkeley** (2008 \u2013 2012)\n- **Skills:** Fintech, Blockchain, Cross-Border Payments, AML/KYC Compliance, Regulatory Affairs, Risk Management, Strategic Partnerships, Team Leadership, Business Development, Series A Funding.",
+    "lookingFor": "I'm actively seeking connections to accelerate TerraFlow\u2019s growth and expand our global reach. Specifically, I\u2019m looking for:\n\n* **Strategic Investors:**  Series A investors ($5M-$10M) with a proven track record in fintech, specifically cross-border payments or blockchain infrastructure.  We're looking for partners who can bring more than just capital \u2013 industry expertise, network access, and strategic guidance are crucial.\n* **Regulatory Experts:**  Legal counsel and advisors specializing in fintech regulations in Latin America and Southeast Asia.  Navigating the complex regulatory landscape is a key challenge, and we need experienced partners to help us ensure compliance.\n* **Potential Banking Partners:**  Banks and financial institutions in emerging markets interested in integrating with our platform to offer improved cross-border payment solutions to their customers.  We\u2019re open to exploring various partnership models, including API integrations and revenue-sharing agreements.\n* **Mentors & Advisors:** Experienced founders and operators who have successfully scaled fintech companies. I'm looking for guidance on navigating the challenges of rapid growth and building a sustainable business.",
+    "notes": "Layla is laser-focused on execution. She's very direct and appreciates concise communication. She's currently prioritizing LatAm and SEA expansion.  She's *extremely* knowledgeable about compliance, so don't try to sell her something she already knows. Recent update:  Just closed a pilot program with a large e-commerce platform in Brazil - huge validation!  She's open to quick calls but prefers to vet introductions via LinkedIn first.  Avoid warm introductions from VCs she's already speaking with.",
+    "locationAvailability": "I am based in San Francisco, California, but frequently travel to Latin America and Southeast Asia. I'm comfortable with remote meetings and can accommodate various time zones.",
+    "introPreferences": "Please read *carefully* before making an introduction.\n\n**Hard Requirements:**\n* **Relevance:** Introductions *must* be directly relevant to TerraFlow\u2019s needs (as outlined in the 'Looking For' section).  No general networking requests, please.\n* **Level:**  I prefer introductions to C-level executives, VPs, or Directors at target organizations.\n* **Pre-briefing:**  Please *brief* the person you're introducing me to on TerraFlow *before* making the connection.  A short summary of our value proposition is sufficient.\n\n**Soft Preferences:**\n* **Investor Focus:** If introducing an investor, they should have a portfolio focused on fintech and a demonstrated interest in cross-border payments.\n* **Regulatory Expertise:** If introducing a legal expert, they should have specific experience with fintech regulations in LatAm or SEA.\n* **Concise Emails:** Keep introduction emails short and to the point.  I receive a high volume of inquiries and appreciate efficiency.\n* **No Cold Outreach:** Please do not forward my contact information without my permission.",
+    "personalPreferences": "I'm a pretty direct communicator \u2013 I appreciate honesty and transparency.  I'm most responsive to email, but happy to jump on a quick call if necessary. Outside of work, I enjoy hiking, reading (mostly non-fiction related to economics and technology), and exploring new cuisines. I\u2019m a big coffee drinker, so feel free to suggest a virtual coffee chat!",
+    "meetingAndSchedulingPreferences": "I generally prefer to schedule meetings via Calendly.  Please send me a link to your availability, and I'll find a time that works."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 28.276087045669556,
+      "input_tokens": 808,
+      "output_tokens": 1551,
+      "problems": []
+    }
+  ],
+  "success": true
+}

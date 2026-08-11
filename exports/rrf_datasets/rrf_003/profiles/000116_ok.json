@@ -1,0 +1,63 @@
+{
+  "id": 116,
+  "archetype": "Community Builder & Ecosystem Connector",
+  "given_name": "Mikael Bianchi",
+  "style_version": 8,
+  "archetypes_version": 20,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Mikael Bianchi is a seasoned tech professional who transitioned from a successful career in cybersecurity consulting to focus on building the Toronto Web3 ecosystem. He's not a developer himself, but understands the business and security needs of the space intimately. He runs a small, invitation-only community called 'Decentralized Toronto' focused on connecting founders, investors, and legal/compliance professionals. He's currently raising a small seed fund focused on early-stage Web3 infrastructure projects, specifically those addressing security and scalability. A distinctive career detail is that he spent 5 years as a penetration tester *before* moving into consulting, giving him a very practical, hands-on understanding of vulnerabilities. He's highly networked, pragmatic, and focused on actionable connections, not just 'networking for networking's sake.' He leverages his deep security background to position himself as a trustworthy gatekeeper within the often-opaque Web3 world.",
+    "positioning": "I'm Mikael Bianchi, Founder of Decentralized Toronto and currently building a seed-stage venture fund focused on Web3 infrastructure. I\u2019ve spent the last 15+ years at the intersection of cybersecurity and business, most recently as a Principal Consultant at SecurePath Solutions, advising Fortune 500 companies on threat modeling, incident response, and regulatory compliance. I\u2019ve seen firsthand the escalating security challenges facing organizations adopting blockchain technologies, and I believe a robust and secure infrastructure layer is critical for mainstream adoption. \n\nDecentralized Toronto is a curated community bringing together the brightest minds in the Toronto Web3 space \u2013 from founders building innovative dApps to investors seeking promising opportunities and legal professionals navigating the evolving regulatory landscape. We focus on fostering collaboration, sharing knowledge, and accelerating growth. \n\nI\u2019m particularly interested in connecting with founders tackling scalability and security challenges in Web3, investors with a thesis around infrastructure, and legal/compliance experts specializing in digital assets. I\u2019m actively evaluating investment opportunities and always open to discussing the future of decentralized technologies. Feel free to reach out \u2013 I\u2019m timely to connect with if you\u2019re serious about building the future of Web3 in Toronto.",
+    "background": "* **SecurePath Solutions (2018 \u2013 2023):** Principal Consultant. Led complex cybersecurity engagements for clients in the financial services, healthcare, and energy sectors. Oversaw engagements from scoping and planning through execution and reporting. Developed and delivered cybersecurity training programs for executive leadership. Increased client retention rate by 15% through proactive risk assessments and tailored security recommendations.\n* **Blackwatch Security (2013 \u2013 2018):** Senior Security Consultant. Managed a team of security analysts performing vulnerability assessments, penetration testing, and incident response. Specialized in application security and cloud security. Successfully identified and mitigated critical vulnerabilities in high-profile client applications, preventing potential data breaches. Led the implementation of a new security information and event management (SIEM) system, improving threat detection capabilities by 20%.\n* **Digital Fortress (2008 \u2013 2013):** Penetration Tester. Conducted comprehensive penetration tests of web applications, networks, and systems. Identified and documented security vulnerabilities. Developed proof-of-concept exploits to demonstrate the impact of vulnerabilities. Contributed to the development of security best practices and guidelines. Consistently exceeded expectations in identifying critical vulnerabilities and providing actionable remediation recommendations.\n* **University of Waterloo (2004 \u2013 2008):** Bachelor of Computer Science, Minor in Mathematics. Dean\u2019s List all four years. Active member of the Cybersecurity Club, participating in Capture the Flag (CTF) competitions.",
+    "lookingFor": "I'm currently focused on expanding the Decentralized Toronto community and deploying capital from my new seed fund. I\u2019m actively seeking connections with individuals who can contribute to the growth of the Toronto Web3 ecosystem.\n\nSpecifically, I'm looking for:\n\n* **Founders:** Early-stage Web3 infrastructure projects (Layer 2 solutions, security protocols, scalability tools) seeking seed funding.\n* **Investors:** Angel investors and VCs with a genuine interest in Web3 infrastructure and a long-term investment horizon.\n* **Legal/Compliance Professionals:** Experts in digital asset regulations, smart contract auditing, and KYC/AML compliance.\n* **Experienced Operators:** Individuals with a strong track record in scaling early-stage tech companies, particularly in the Web3 space.\n\nI'm also open to informal mentorship opportunities and knowledge sharing. I'm particularly interested in learning about innovative approaches to decentralized security and governance.",
+    "notes": "* Mikael is very active on Twitter (@MikaelBianchi) and frequently shares insights on Web3 security and the Toronto ecosystem.\n* He occasionally speaks at local Web3 events. \n* His LinkedIn profile doesn't explicitly mention Decentralized Toronto \u2013 he prefers to vet people before adding them to the community.\n* He\u2019s notoriously difficult to get a hold of via email; Twitter DM is often the best way to reach him initially.",
+    "locationAvailability": "I\u2019m based in Toronto, Canada, and frequently attend events and meetings in the downtown core. I\u2019m also open to virtual meetings and occasional travel to other major tech hubs.",
+    "introPreferences": "* **Hard Requirements:**\n    * Introduction target is actively involved in the Web3 space (founder, investor, legal expert).\n    * Introducer has a pre-existing relationship with the target.\n    * Target is open to discussing opportunities in the Toronto ecosystem.\n* **Soft Preferences:**\n    * Please emphasize my background in cybersecurity and my focus on building a secure and scalable Web3 infrastructure.\n    * Avoid introducing me to individuals solely interested in NFT speculation or meme coins.\n    * Keep introductions concise and focused on mutual value.",
+    "personalPreferences": "I prefer to connect on Twitter initially. Quick, direct communication is appreciated. I'm always happy to share resources and insights, but I'm not a fan of lengthy email chains.",
+    "meetingAndSchedulingPreferences": "I generally prefer video calls over phone calls. I typically block off 30-minute slots for introductory meetings. Please send a calendar invite with a few proposed times."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 32.24401903152466,
+      "input_tokens": 824,
+      "output_tokens": 1533,
+      "problems": [
+        "background: possible truncation (ends with '...* Minor: Computer Science')"
+      ]
+    },
+    {
+      "attempt": 2,
+      "elapsed_s": 26.05253291130066,
+      "input_tokens": 824,
+      "output_tokens": 1303,
+      "problems": []
+    }
+  ],
+  "success": true
+}

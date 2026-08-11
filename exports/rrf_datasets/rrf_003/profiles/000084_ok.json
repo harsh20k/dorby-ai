@@ -1,0 +1,54 @@
+{
+  "id": 84,
+  "archetype": "Oxford MBA, Tech/Finance Background",
+  "given_name": "Diego Mahmoud",
+  "style_version": 6,
+  "archetypes_version": 14,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Diego Mahmoud is a 34-year-old graduate of the Oxford MBA program (class of 2018). He previously worked as a quantitative analyst at Goldman Sachs, specializing in algorithmic trading strategies for fixed income. While highly successful, he found the purely financial aspect unfulfilling. He used his MBA to pivot towards the intersection of finance and technology, specifically fintech. He\u2019s currently building \u2018NovaCredit Analytics,\u2019 a startup using alternative data and machine learning to provide credit risk assessment for the underbanked in emerging markets. He\u2019s seeking seed funding and strategic partnerships with established fintech companies and impact investors. He's very data-driven, articulate, and possesses a slight impatience with inefficiency. A key distinctive detail is that he spent a year volunteering with a microfinance NGO in Kenya *before* starting his finance career \u2013 this informs his current passion.",
+    "positioning": "A highly analytical and results-oriented leader with a proven track record in financial modeling, algorithmic trading, and now, building a disruptive fintech startup. My background at Goldman Sachs honed my quantitative skills and risk management expertise, while my MBA at Oxford broadened my strategic perspective and entrepreneurial drive. I\u2019m the founder and CEO of NovaCredit Analytics, where we\u2019re leveraging the power of alternative data and machine learning to unlock access to credit for millions of underserved individuals in emerging markets. We\u2019re building a more inclusive financial system, one data point at a time. I am passionate about leveraging technology for social impact and believe that data-driven solutions can be a powerful force for economic empowerment. I\u2019m actively seeking strategic partnerships, seed funding, and mentorship to scale NovaCredit Analytics and expand our reach. I specialize in building and leading high-performing teams, developing innovative financial products, and navigating the complex regulatory landscape of fintech. I\u2019m comfortable presenting to investors, articulating a clear vision, and driving execution. My pre-finance experience volunteering with a microfinance organization in Kenya instilled in me a deep understanding of the challenges faced by the unbanked and a commitment to finding sustainable solutions.",
+    "background": "- **Founder & CEO, NovaCredit Analytics** (London, UK) \u2013 2020 - Present\n  * Led all aspects of startup development, from initial concept and business plan creation to product launch and fundraising.\n  * Developed proprietary machine learning models for credit risk assessment, achieving 15% higher accuracy than traditional methods.\n  * Secured seed funding commitments totaling $500,000 from angel investors.\n  * Built a team of 8 data scientists, engineers, and financial analysts.\n  * Established partnerships with local microfinance institutions in Kenya and Nigeria for data acquisition and pilot programs.\n\n- **Associate, Goldman Sachs** (New York, NY) \u2013 2016 - 2018\n  * Quantitative Analyst in the Fixed Income, Currency & Commodities (FICC) division.\n  * Developed and implemented algorithmic trading strategies for US Treasury bonds, resulting in a 7% increase in trading profits.\n  * Conducted extensive data analysis and statistical modeling to identify market inefficiencies and optimize trading parameters.\n  * Collaborated with traders and technologists to improve trading infrastructure and risk management systems.\n\n- **Volunteer, Kiva Microfinance** (Nairobi, Kenya) \u2013 2014 - 2015\n  * Assisted local entrepreneurs with loan applications and financial literacy training.\n  * Conducted field visits to assess the impact of microloans on local communities.\n  * Developed a data collection system to track loan performance and identify key risk factors.\n\n- **Bachelor of Science in Mathematics, Massachusetts Institute of Technology (MIT)** (Cambridge, MA) \u2013 2010 - 2014\n  * Minor in Economics.\n  * Dean\u2019s List all semesters.\n  * Research assistant in the Department of Mathematics.",
+    "lookingFor": "I am actively seeking connections with:\n\n* **Seed-stage investors** focused on fintech and impact investing, particularly those with experience in emerging markets.\n* **Strategic partners** \u2013 established fintech companies interested in exploring collaborations related to alternative data, credit scoring, or expansion into new markets.\n* **Mentors** \u2013 experienced entrepreneurs and industry leaders who can provide guidance and support as I scale NovaCredit Analytics.\n* **Data science talent** \u2013 exceptional machine learning engineers with a passion for solving real-world problems.\n\nI\u2019m open to introductions to individuals who can help NovaCredit Analytics achieve its mission of financial inclusion. I'm particularly interested in expanding our network within the Kenyan and Nigerian fintech ecosystems. I\u2019m also keen to learn from others who have successfully navigated the challenges of building and scaling a fintech startup in emerging markets. I\u2019m available for virtual meetings and would welcome the opportunity to discuss potential collaborations.",
+    "notes": "Diego is incredibly bright and driven, but can be quite direct. He appreciates efficiency and dislikes unnecessary meetings. He's genuinely passionate about his mission and will happily talk for hours about alternative data and credit scoring. He\u2019s very data-focused, so be prepared to back up any claims with evidence. He's recently closed a small bridge round but is aggressively pursuing a larger seed raise. \n\n* **Do:** Highlight relevant experience in fintech, data science, or emerging markets.\n* **Don't:** Waste his time with vague pitches or unrealistic expectations.\n* **Recent Update:** He\u2019s presenting at the Fintech Africa Conference next month.",
+    "locationAvailability": "I am based in London, UK, but frequently travel to Kenya and Nigeria for business development and pilot program implementation. I will be in Nairobi from November 15-22.",
+    "introPreferences": "* **Hard Requirements:**\n  * Introductions should be to individuals at the VP level or above.\n  * The person should have a demonstrable track record of success in fintech or impact investing.\n  * A brief, personalized introduction email is *essential* \u2013 no mass emails, please.\n\n* **Soft Preferences:**\n  * Individuals with experience in the Kenyan or Nigerian fintech ecosystems are highly preferred.\n  * Those with a strong understanding of machine learning and alternative data are a plus.\n  * Introductions to potential mentors with a background in scaling startups are welcome.\n\n* **Absolutely Avoid:**\n  * Introducing me to junior-level employees or individuals without relevant experience.\n  * Sending unsolicited marketing materials or sales pitches.\n  * Making introductions without first checking with me to confirm my availability.",
+    "personalPreferences": "I enjoy reading about behavioral economics and data science. I'm a keen runner and try to get out for a run most mornings. I prefer concise communication and appreciate directness.",
+    "meetingAndSchedulingPreferences": "I am generally available for meetings via video conference. Please schedule meetings at least 24 hours in advance, and include a brief agenda in the meeting request. I prefer meetings to be focused and efficient."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 34.74767303466797,
+      "input_tokens": 783,
+      "output_tokens": 1478,
+      "problems": []
+    }
+  ],
+  "success": true
+}

@@ -1,0 +1,54 @@
+{
+  "id": 141,
+  "archetype": "Product Operator - SaaS/Martech",
+  "given_name": "Mateus Tanaka",
+  "style_version": 9,
+  "archetypes_version": 24,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Mateus Tanaka is a seasoned Product Operator specializing in MarTech SaaS. He spent the first decade of his career at Adobe, rising through the ranks in product management focused on the Marketing Cloud. He deliberately left Adobe five years ago to gain startup experience, first at a Series A funded marketing automation platform (where he was employee #8 and Head of Product) and now he\u2019s quietly building a very early-stage (pre-seed) company focused on AI-powered content personalization for B2B marketing. He\u2019s very focused on finding early adopters and strategic advisors. He's deliberately understated about his current venture \u2013 he wants to be approached as a knowledgeable operator, not just a founder seeking funding. He\u2019s a data-driven, analytical thinker who prioritizes user-centric design and scalable solutions. He\u2019s also a keen cyclist and amateur photographer, but keeps these interests separate from his professional profile.",
+    "positioning": "A highly analytical and results-oriented Product Operator with a decade of experience building and scaling SaaS products within the MarTech landscape. I specialize in translating complex market needs into intuitive and impactful product features, driving user engagement and revenue growth. My expertise encompasses the full product lifecycle, from ideation and market research to launch and iterative optimization. I\u2019m adept at leveraging data analytics, A/B testing, and user feedback to inform product decisions and maximize ROI. Currently, I\u2019m focused on applying cutting-edge AI technologies to revolutionize content personalization for B2B marketers, helping them deliver hyper-relevant experiences that convert. I thrive in fast-paced environments and excel at collaborating with cross-functional teams to achieve ambitious goals. I consistently deliver measurable results and am passionate about building products that solve real-world problems.",
+    "background": "Throughout my career, I\u2019ve been dedicated to building and optimizing MarTech solutions. \n\n* **Adobe (2013 \u2013 2018):** I joined Adobe as an Associate Product Manager and quickly progressed to Senior Product Manager, focusing on the Adobe Marketing Cloud. Key accomplishments include:\n    * Led the development and launch of a new segmentation engine within Adobe Target, resulting in a 15% increase in user engagement.\n    * Managed a cross-functional team to revamp the user interface for Adobe Campaign, improving user satisfaction scores by 20%.\n    * Spearheaded A/B testing initiatives across multiple products, identifying and implementing improvements that drove a 10% lift in conversion rates.\n    * Technologies utilized: Adobe Analytics, Adobe Target, Adobe Campaign, Java, SQL, Agile methodologies.\n\n* **NovaLead (2018 \u2013 2023):**  As Head of Product at NovaLead, a Series A funded marketing automation platform, I was employee #8 and responsible for the entire product roadmap. I successfully:\n    * Defined and executed the product strategy, leading to 3x user growth within two years.\n    * Oversaw the development and launch of key features, including lead scoring, email automation, and CRM integration.\n    * Implemented a robust data analytics framework to track key performance indicators and inform product decisions.\n    * Managed a team of product managers, designers, and engineers.\n    * Technologies utilized: Python, React, PostgreSQL, AWS, HubSpot integration, Marketo integration.\n\n* **Current Venture (2023 \u2013 Present):** Currently, I am building a pre-seed stage company focused on AI-powered content personalization for B2B marketers.  Details are available upon request, but my focus is on building a minimal viable product and securing early adopters.",
+    "lookingFor": "I am actively seeking connections with individuals who can offer valuable insights and support as I build my current venture. Specifically:\n\n* **Strategic Advisors:** Experienced entrepreneurs and investors with a track record of success in the MarTech space.\n    * \u2013 Preference for those with experience scaling early-stage SaaS companies.\n    * \u2013 Looking for individuals with expertise in AI/ML, content marketing, and B2B sales.\n* **Early Adopters:** B2B marketing leaders at companies with complex content marketing needs.\n    * \u2013 Target company size: 200+ employees.\n    * \u2013 Ideal industries: Technology, Financial Services, Healthcare.\n    * \u2013 Must be actively seeking solutions to improve content personalization and engagement.\n* **Potential Partners:** Companies offering complementary technologies or services in the MarTech ecosystem.\n    * \u2013 Focus on integrations with existing marketing automation platforms (e.g., HubSpot, Marketo, Pardot).\n* **Talent:**  Highly skilled engineers with experience in AI/ML and data science.\n\n**Do Not Surface:**\n* \u2013 Venture Capitalists actively seeking to lead a Series A round (too early).\n* \u2013 Recruiters offering generic sales or marketing roles.\n* \u2013 Individuals solely interested in networking without a specific value proposition.",
+    "notes": "* Mateus is intentionally vague about his current company. He\u2019s testing the waters and wants to assess individuals' genuine interest and expertise before revealing details.\n* He recently had a positive conversation with Sarah Chen (ID: SC789) regarding potential integration opportunities. Follow up with her next week.\n* He expressed a strong preference for data-driven discussions and dislikes overly promotional pitches.\n* Data quality regarding NovaLead tenure is high - he's verified this information.",
+    "locationAvailability": "I am currently based in San Francisco, California, but am open to remote collaboration and occasional travel. I am flexible and can adapt to different time zones.",
+    "introPreferences": "When making introductions to Mateus Tanaka, please keep the following in mind:\n\n* **Focus on Value:** Highlight the potential mutual benefit of the connection. Explain *why* this individual would be valuable to Mateus and vice versa.\n* **Be Concise:** Mateus is a busy professional, so keep introductions brief and to the point.\n* **Emphasize Expertise:** Frame the introduction around the individual\u2019s relevant expertise and experience, particularly in the MarTech or AI/ML space.\n* **Avoid Sales Pitches:** Do not pitch products or services directly. Focus on building a genuine connection and fostering a collaborative dialogue.\n* **Highlight Shared Interests:** If possible, mention any shared interests or connections that might facilitate a stronger rapport.\n* **Preferred Communication Style:** He responds best to direct, data-driven communication. Avoid fluff and get straight to the point.",
+    "personalPreferences": "I prefer to connect initially via LinkedIn. Email is acceptable for follow-up. I\u2019m responsive to thoughtful messages and appreciate constructive feedback. I\u2019m not a fan of overly formal communication.",
+    "meetingAndSchedulingPreferences": "I am generally available for meetings during standard business hours (PST). Please schedule meetings at least 24 hours in advance."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 26.210209131240845,
+      "input_tokens": 775,
+      "output_tokens": 1435,
+      "problems": []
+    }
+  ],
+  "success": true
+}

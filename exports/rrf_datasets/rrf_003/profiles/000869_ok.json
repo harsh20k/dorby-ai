@@ -1,0 +1,54 @@
+{
+  "id": 869,
+  "archetype": "Operations Leader, SaaS & Fintech",
+  "given_name": "Yusuf Eriksson",
+  "style_version": 53,
+  "archetypes_version": 147,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Yusuf Eriksson is a seasoned RevOps leader currently focused on scaling a Series B fintech startup, 'NovaPay'. He spent the first half of his career in traditional financial services operations, specifically risk management at a large Scandinavian bank. He made a deliberate pivot to SaaS around 8 years ago, recognizing the need for operational excellence in rapidly growing tech companies. He's a strong believer in data-driven decision-making and building scalable processes *before* they break. He's actively looking to connect with other RevOps leaders, potential strategic partners for NovaPay (particularly in the embedded finance space), and investors interested in the future of fintech. He's known for being direct, pragmatic, and valuing efficiency in all interactions.",
+    "positioning": "Yusuf Eriksson is a results-oriented RevOps leader with a proven track record of building and scaling high-performing revenue operations functions within fast-growing SaaS and fintech organizations. Currently, as Head of Revenue Operations at NovaPay, he\u2019s leading the charge in optimizing our go-to-market strategy and driving sustainable revenue growth. My expertise lies in streamlining complex processes, implementing robust data analytics frameworks, and fostering collaboration between sales, marketing, and customer success teams. I\u2019m passionate about leveraging technology to unlock operational efficiencies and create a superior customer experience, and I thrive in environments that demand innovation and agility. I'm particularly focused on the intersection of fintech and embedded finance, and am eager to connect with individuals shaping the future of this dynamic space.",
+    "background": "- **Head of Revenue Operations, NovaPay** (Jan 2022 \u2013 Present)\n   - Led the build-out and scaling of the RevOps function from initial stages to support a 3x revenue increase.\n   - Implemented Salesforce Revenue Cloud, including CPQ and Billing, resulting in a 20% reduction in sales cycle time.\n   - Developed and maintained key revenue metrics dashboards, providing real-time visibility into performance.\n   - Collaborated with sales and marketing leadership to optimize lead scoring and routing processes.\n\n- **Director of Operations, FinTech Solutions Inc.** (June 2018 \u2013 Dec 2021)\n   - Oversaw all operational aspects of a rapidly growing SaaS platform for small business lending.\n   - Implemented automation tools to streamline loan origination and servicing processes.\n   - Managed a team of 15 operations professionals.\n   - Led cross-functional projects to improve customer onboarding and retention.\n\n- **Risk Management Officer, Nordea Bank** (Aug 2010 \u2013 May 2018)\n   - Conducted risk assessments and developed mitigation strategies for various banking products.\n   - Ensured compliance with regulatory requirements.\n   - Managed a portfolio of high-value accounts.\n   - Developed and delivered risk management training programs.\n\n- **Education:**\n   - MBA, Stockholm School of Economics (2008)\n   - BSc, Finance, University of Gothenburg (2006)\n\n- **Skills:** Salesforce (Admin & Advanced), Salesforce Revenue Cloud (CPQ, Billing), SQL, Tableau, Excel (Advanced), Lean Six Sigma (Green Belt), Revenue Operations, Data Analysis, Process Improvement, Strategic Planning, Go-to-Market Strategy, Fintech, SaaS.",
+    "lookingFor": "- **Strategic Partnerships:** Seeking connections with companies offering complementary technologies or services in the embedded finance space. Specifically interested in platforms focusing on KYC/AML, fraud prevention, or payment processing.\n- **RevOps Leaders:** Connecting with other RevOps professionals to share best practices, discuss industry trends, and explore potential collaboration opportunities.\n- **Investors:** Open to connecting with venture capitalists and angel investors interested in the fintech space, particularly those with experience in Series B/C funding rounds.\n- **Talent Acquisition:** Networking with experienced RevOps professionals looking to join a fast-growing fintech startup. Senior analysts and managers preferred.\n- **Advisory:** Seeking advice from experienced entrepreneurs and advisors who have successfully scaled SaaS or fintech companies.\n- I\u2019m happy to offer my insights on building scalable RevOps functions.",
+    "notes": "- Yusuf is highly analytical and values data-driven conversations. Avoid vague pitches or overly promotional content.\n- He recently presented at a RevOps conference on the topic of 'Building a Data-Driven Revenue Engine'.\n- NovaPay is currently focused on expanding its embedded finance solutions for e-commerce platforms.\n- He's a strong advocate for automation and believes in 'failing fast' to iterate quickly.\n- He\u2019s actively reading books on organizational scaling and behavioral economics.",
+    "locationAvailability": "Yusuf Eriksson is based in Stockholm, Sweden, but frequently travels to the US for business. He is open to remote meetings and occasional travel for strategic discussions.",
+    "introPreferences": "- **Hard Requirements:** Introductions should be to individuals in leadership roles (Director level or above) at companies with a clear strategic alignment with NovaPay.\n- **Hard Requirements:** No unsolicited sales pitches \u2013 introductions should be focused on building relationships and exploring potential collaboration.\n- **Soft Preferences:** Prioritize introductions to individuals with experience in the embedded finance or fintech industries.\n- **Soft Preferences:** Value introductions that come with a warm handoff and a clear context for the connection.\n- Avoid introductions to junior-level employees or individuals who are not directly involved in decision-making.\n- Keep introductions concise and focused on the mutual value proposition.",
+    "personalPreferences": "I prefer direct and efficient communication. Email is my primary mode of communication, but I'm also available on LinkedIn. I appreciate thoughtful and well-prepared conversations.",
+    "meetingAndSchedulingPreferences": "- Please include a brief agenda with any meeting requests.\n- I prefer meetings to be focused and action-oriented.\n- Follow-up communication is appreciated."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 16.872979879379272,
+      "input_tokens": 733,
+      "output_tokens": 1230,
+      "problems": []
+    }
+  ],
+  "success": true
+}

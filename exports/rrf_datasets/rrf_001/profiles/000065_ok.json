@@ -1,0 +1,54 @@
+{
+  "id": 65,
+  "archetype": "CivicTech Founder, Social Impact Focus",
+  "given_name": "Zainab Reyes",
+  "style_version": 5,
+  "archetypes_version": 12,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Zainab Reyes is a 38-year-old founder and CEO of 'CivicFlow,' a platform designed to streamline communication and data sharing between local governments and community organizations. Her distinctive career detail is a prior 8-year stint as a data scientist *within* a large city government (Philadelphia), where she became acutely aware of the siloed systems and communication breakdowns hindering effective public service delivery. This experience fuels her passion for CivicFlow. She\u2019s currently focused on securing Series A funding and expanding CivicFlow\u2019s pilot program beyond its initial three cities (Baltimore, Detroit, and Richmond). She\u2019s a collaborative leader, deeply committed to open-source principles and equitable access to government information. She's slightly wary of venture capitalists who don't understand the nuances of the civic tech space and prioritize purely financial returns over social impact.",
+    "positioning": "I founded CivicFlow to address a fundamental challenge I witnessed firsthand during my eight years as a data scientist within the City of Philadelphia: the frustrating disconnect between local government and the community organizations striving to serve its residents. Too often, vital information remains trapped in departmental silos, hindering effective collaboration and preventing timely responses to critical community needs. CivicFlow is a secure, open-source platform designed to bridge this gap, facilitating seamless data sharing, streamlined communication, and increased transparency. \n\nOur core value proposition is simple: empower local governments to better serve their communities by fostering a more collaborative and data-driven ecosystem. We achieve this through a suite of tools including a centralized data repository, secure messaging channels, and customizable reporting dashboards. We\u2019re not simply building software; we\u2019re building trust and fostering a more responsive, equitable government. \n\nWe\u2019re currently focused on expanding our pilot program, which has already demonstrated significant positive impact in Baltimore, Detroit, and Richmond. In Detroit, for example, CivicFlow enabled a 30% reduction in response time to citizen requests regarding housing assistance. We\u2019re actively seeking Series A funding to scale our operations, enhance our platform\u2019s capabilities, and bring CivicFlow to cities across the country. We believe that accessible, transparent, and collaborative governance is not just a desirable goal, but a fundamental right, and CivicFlow is the tool to make it a reality. We aim to be the connective tissue for thriving, informed communities.",
+    "background": "* **CEO & Founder, CivicFlow (2021 \u2013 Present):** Leading all aspects of company strategy, product development, fundraising, and team building. Successfully launched pilot programs in three major US cities.\n* **Data Scientist, City of Philadelphia (2013 \u2013 2021):** Developed and implemented data-driven solutions to improve city services, including predictive policing algorithms (later modified to focus on resource allocation, acknowledging initial bias concerns), public health monitoring systems, and transportation planning models. Led a team of junior data scientists and collaborated with various city departments.\n* **Research Fellow, MIT Media Lab (2011 \u2013 2013):** Conducted research on the intersection of data science, urban planning, and civic engagement. Published several peer-reviewed papers on the topic of data-driven governance.\n* **B.S., Computer Science, Stanford University (2007 \u2013 2011):** Graduated with honors, specializing in Artificial Intelligence and Machine Learning. Relevant coursework included database management, statistical modeling, and data visualization.\n* **Skills:** Python, R, SQL, Data Visualization (Tableau, Power BI), Machine Learning, Statistical Modeling, Public Speaking, Grant Writing, Team Leadership, Project Management.",
+    "lookingFor": "* **Series A Investors:** Specifically seeking investors with a demonstrated commitment to civic tech and social impact. We're not looking for a quick exit; we need partners who share our long-term vision.\n* **Strategic Partnerships:** Collaboration with foundations focused on civic engagement and government innovation.\n* **City Government Contacts:** Introductions to CIOs, CTOs, and department heads in mid-sized US cities (population 200k-1M).\n* **Potential Pilot Cities:** Cities actively seeking to improve their data infrastructure and enhance community engagement.\n* **Advisors:** Experienced entrepreneurs in the SaaS space, particularly those with experience scaling open-source platforms.\n* **Mentors:** Individuals with a strong track record of navigating the complexities of government procurement and partnership.\n* **Open-source developers:** Skilled in Python and Javascript, interested in contributing to a meaningful project.",
+    "notes": "Zainab is incredibly passionate about her work and deeply committed to the mission of CivicFlow. She\u2019s a strong communicator and a natural leader, but can sometimes get caught up in the technical details. She's very protective of the open-source nature of CivicFlow and will be resistant to any proposals that compromise its core principles. She recently presented at the 'GovTech Summit' in Austin and received positive feedback on the platform's potential. She's currently exploring a potential partnership with a national non-profit focused on digital equity. Be aware she\u2019s wary of \u2018solutionism\u2019 \u2013 she\u2019s not interested in technology for technology's sake; it *must* address a genuine community need. She\u2019s actively involved in several local community boards and prioritizes transparency and inclusivity.",
+    "locationAvailability": "Zainab is currently based in Baltimore, Maryland, and is frequently traveling to our pilot cities. She is open to relocating for the right opportunity but prefers to remain on the East Coast.",
+    "introPreferences": "* **Hard Requirements:** Introductions *must* be to individuals with decision-making authority (e.g., CIOs, Directors, VPs). No cold introductions \u2013 a warm connection is essential.\n* **Preferred Industries:** Civic Tech, Government Technology, Social Impact Investing, Philanthropy.\n* **Ideal Contacts:** Individuals who are actively seeking solutions to improve government efficiency and community engagement.\n* **Avoid:** Introductions to individuals solely focused on financial returns without a demonstrated interest in social impact. Also, please do *not* introduce her to sales representatives for competing products \u2013 she\u2019s not interested in being pitched to.\n* **Please include:** A brief summary of why you think the connection would be valuable for Zainab and CivicFlow.",
+    "personalPreferences": "Zainab prefers to connect initially via LinkedIn or email. She's a quick responder and values concise, informative communication. She is generally available for brief introductory calls.",
+    "meetingAndSchedulingPreferences": "Zainab prefers virtual meetings initially to assess fit and save time. She is flexible with scheduling but requires at least 24 hours\u2019 notice. She is not available for meetings on Friday afternoons."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 24.031261920928955,
+      "input_tokens": 809,
+      "output_tokens": 1408,
+      "problems": []
+    }
+  ],
+  "success": true
+}

@@ -1,0 +1,74 @@
+{
+  "id": 69,
+  "archetype": "Experienced Operator, Now Angel/Advisor",
+  "given_name": "Astrid Fernandez",
+  "style_version": 5,
+  "archetypes_version": 13,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Astrid Fernandez is a former VP of Engineering at a rapidly scaling cybersecurity firm, CrowdDefend. She\u2019s a deeply technical leader who built and scaled engineering teams through multiple funding rounds and a successful Series C. She recently left CrowdDefend after a disagreement with the new CEO regarding technical debt prioritization \u2013 a point she\u2019ll subtly allude to. Now, she\u2019s angel investing in early-stage (Seed/Series A) cybersecurity and AI-powered SaaS companies, focusing on technical founders. She's looking for companies with strong IP and a clear path to profitability, and is *very* wary of 'growth-at-all-costs' mentalities. She positions herself as offering both capital and highly practical operational guidance, particularly around scaling engineering organizations. She's a direct communicator and values efficiency. She's based in the Bay Area but open to remote opportunities.",
+    "positioning": "A seasoned technology executive and now active angel investor, I bring a unique blend of hands-on engineering leadership and strategic business acumen to the table. For over 15 years, I've been building and scaling high-performing engineering teams, most recently as VP of Engineering at CrowdDefend, a leading cybersecurity innovator. My focus now is on identifying and supporting the next generation of exceptional founders tackling critical challenges in cybersecurity and AI-powered SaaS. \n\nI\u2019m particularly passionate about companies that prioritize technical excellence and sustainable growth. I believe a strong technical foundation is the bedrock of any successful startup, and I\u2019m committed to helping founders navigate the complexities of scaling engineering organizations while maintaining product integrity. I'm not just writing checks; I'm offering battle-tested advice and a network of industry contacts to accelerate growth.\n\nCurrently, I\u2019m actively evaluating opportunities in areas like threat intelligence, vulnerability management, and AI-driven security automation. I'm looking for founders who are deeply technical, have a clear vision, and are committed to building resilient and scalable solutions. I'm a firm believer in 'slow is smooth, and smooth is fast' \u2013 a philosophy I bring to every investment I make.",
+    "background": "* **CrowdDefend, VP of Engineering** (2018 \u2013 2023)\n    * Led a team of 80+ engineers across multiple disciplines (backend, frontend, DevOps, QA) responsible for the development and maintenance of CrowdDefend\u2019s core security platform.\n    * Scaled the engineering organization from 15 engineers to 80+ through multiple funding rounds (Series A, B, C), implementing robust hiring processes and fostering a culture of continuous learning.\n    * Successfully launched three major product features, resulting in a 30% increase in user engagement and a 20% increase in revenue.\n    * Implemented and championed agile development methodologies, improving team velocity and reducing time-to-market.\n    * Oversaw the migration of CrowdDefend\u2019s infrastructure to AWS, enhancing scalability and reliability.\n    * Managed a budget of $12M annually.\n* **SecureLogic, Director of Engineering** (2015 \u2013 2018)\n    * Managed a team of 30 engineers focused on the development of SecureLogic\u2019s flagship vulnerability management platform.\n    * Led the redesign of the platform\u2019s backend architecture, resulting in a 50% improvement in performance.\n    * Implemented automated testing frameworks, significantly reducing bug rates and improving product quality.\n* **CipherTech, Senior Software Engineer** (2010 \u2013 2015)\n    * Developed and maintained key components of CipherTech\u2019s encryption solutions.\n    * Contributed to the design and implementation of new security protocols.\n    * Mentored junior engineers and provided technical guidance.\n* **Certifications:** Certified Information Systems Security Professional (CISSP), AWS Certified Solutions Architect \u2013 Associate",
+    "lookingFor": "I\u2019m actively seeking investment opportunities in Seed and Series A-stage companies focused on cybersecurity and AI-powered SaaS. I\u2019m particularly interested in companies with a strong technical founder and a defensible IP position. \n\nI'm looking for founders who understand the importance of building a sustainable business, not just chasing hypergrowth. I want to see a clear path to profitability and a commitment to technical excellence. I'm open to leading or co-leading investment rounds, typically investing between $100k-$500k.\n\nSpecifically, I'm keen to connect with companies working on:\n* Threat Intelligence Platforms\n* Vulnerability Management Solutions\n* AI-Driven Security Automation\n* Cloud Security\n* Developer Security (DevSecOps)\n\nI\u2019m also happy to provide advisory services to companies I believe in, even if I don\u2019t invest directly. I\u2019m available to mentor founders, provide technical guidance, and help build high-performing engineering teams.",
+    "notes": "Astrid is sharp, direct, and highly knowledgeable. She's looking to leverage her operational experience to help early-stage companies avoid common pitfalls. She's still processing her departure from CrowdDefend \u2013 she\u2019ll subtly critique leadership decisions that prioritized growth over technical soundness. Don't mention 'blitzscaling' or overly aggressive growth strategies. She responds well to data-driven pitches and technical deep dives. She values transparency and honesty. \n\nShe's very protective of her time, so be concise and respectful. A warm introduction from a mutual connection is highly recommended. She\u2019s currently exploring opportunities to join a few advisory boards, so mentioning relevant connections could be beneficial. She's building a reputation as a 'founder-friendly' investor, so highlighting a dedication to long-term partnership will resonate.",
+    "locationAvailability": "Based in the San Francisco Bay Area, but open to considering remote opportunities across North America.",
+    "introPreferences": "* **Hard Requirements:** Technical founder (preferably with engineering background). Clear articulation of the problem being solved and the company\u2019s competitive advantage.\n* **Soft Preferences:** Companies that have already demonstrated some early traction (e.g., pilot customers, LOIs). Founders who are open to feedback and mentorship. \n* **Do Not Introduce:** Companies with unrealistic valuations or founders who are solely focused on fundraising. Companies that lack a clear technical roadmap. Companies that appear to be copycats of existing solutions. \n* **Ideal Intro:** A brief, concise email that highlights the company\u2019s core technology, the founder\u2019s technical expertise, and the current stage of development. Include a link to the company\u2019s pitch deck and a brief summary of the founder\u2019s background.",
+    "personalPreferences": "I prefer direct and efficient communication. Email is best for initial contact. I\u2019m generally responsive, but please allow 24-48 hours for a reply. I'm not a fan of long, rambling conversations \u2013 get straight to the point.",
+    "meetingAndSchedulingPreferences": "Please include a brief agenda when requesting a meeting. I prefer 30-minute meetings to start. Calendly link preferred for scheduling."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 21.497084140777588,
+      "input_tokens": 836,
+      "output_tokens": 1346,
+      "problems": [
+        "lookingFor: possible truncation (ends with '...ve core banking platforms')"
+      ]
+    },
+    {
+      "attempt": 2,
+      "elapsed_s": 20.062527894973755,
+      "input_tokens": 836,
+      "output_tokens": 1486,
+      "problems": [
+        "background: possible truncation (ends with '...CP), Six Sigma Black Belt')"
+      ]
+    },
+    {
+      "attempt": 3,
+      "elapsed_s": 19.961645126342773,
+      "input_tokens": 836,
+      "output_tokens": 1490,
+      "problems": [
+        "background: possible truncation (ends with '...ons Architect \u2013 Associate')"
+      ]
+    }
+  ],
+  "success": false
+}

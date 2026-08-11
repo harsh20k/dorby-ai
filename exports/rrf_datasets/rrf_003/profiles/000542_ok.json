@@ -1,0 +1,63 @@
+{
+  "id": 542,
+  "archetype": "Data/AI Infrastructure Builder",
+  "given_name": "Lucas Okafor",
+  "style_version": 33,
+  "archetypes_version": 91,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Lucas Okafor is a seasoned Data Infrastructure Engineer currently focused on building scalable and reliable data pipelines for the financial technology (FinTech) sector. He has a distinctive background \u2013 a brief stint as a quantitative analyst early in his career that gave him deep domain expertise in financial modeling *before* pivoting to engineering. This informs his approach; he doesn\u2019t just build pipelines, he understands the data\u2019s ultimate purpose and the business needs driving it. He\u2019s now leading a team at a Series B FinTech company, but is increasingly interested in the challenges of applying advanced AI/ML to even more complex datasets. He's looking for opportunities to leverage his experience building robust infrastructure to support cutting-edge AI applications, potentially moving into a more leadership/architectural role, or even exploring opportunities at companies tackling similar challenges in the healthcare or insurance industries. He\u2019s very proactive about networking and highly values thoughtful introductions. He\u2019s also a bit of a perfectionist and appreciates direct, efficient communication.",
+    "positioning": "I am a Data Infrastructure Engineer with over eight years of experience designing, building, and scaling data pipelines and platforms. My current focus is on architecting and implementing robust data solutions at NovaFin, a rapidly growing FinTech company revolutionizing micro-lending. I lead a team responsible for the ingestion, transformation, and delivery of critical data powering our risk assessment models, fraud detection systems, and customer analytics dashboards. My background is somewhat unique \u2013 I began my career as a quantitative analyst, building and validating financial models. This experience instilled in me a deep understanding of data quality, accuracy, and the business context driving data requirements. I\u2019ve since transitioned my passion for data into a full-time engineering role, combining my analytical skills with a strong technical skillset encompassing cloud technologies, data warehousing, and ETL processes. Recently, my team successfully migrated our data warehouse to Snowflake, resulting in a 30% reduction in query latency and significant cost savings. I am uniquely positioned to bridge the gap between data science and engineering, translating complex business needs into scalable and reliable data infrastructure solutions. I\u2019m particularly interested in leveraging my expertise to build platforms that support the deployment and monitoring of machine learning models at scale.",
+    "background": "- **NovaFin** (2021 \u2013 Present): Lead Data Infrastructure Engineer. Responsible for data pipeline architecture, team leadership, and infrastructure optimization. Spearheaded the migration to Snowflake, resulting in significant performance and cost improvements. \n- **Quantify Capital** (2019 \u2013 2021): Quantitative Analyst. Developed and validated financial models for risk management and trading strategies. Gained deep understanding of financial data and regulatory requirements. \n- **DataStream Solutions** (2017 \u2013 2019): Data Engineer. Built and maintained ETL pipelines for various clients across different industries. Proficient in Python, SQL, and cloud-based data warehousing solutions (AWS Redshift, Google BigQuery).\n- **Education:** Master of Science in Financial Engineering, Columbia University (2017). Bachelor of Science in Mathematics, Massachusetts Institute of Technology (2015).\n- **Skills:** Python, SQL, Snowflake, AWS (S3, EC2, Lambda, Redshift), Apache Airflow, Docker, Kubernetes, Data Modeling, ETL, Data Warehousing, Machine Learning Pipelines, CI/CD, Git.\n- **Certifications:** AWS Certified Data Analytics \u2013 Specialty (2020).\n- **Projects:** Contributed to open-source data pipeline tools on GitHub (focused on data quality validation).\n- **Awards:** NovaFin \u201cInnovation Award\u201d (2023) \u2013 for leading the Snowflake migration project.\n- **Publications:** Presented research on data quality in financial modeling at the International Conference on Financial Engineering (2016).",
+    "lookingFor": "I'm actively exploring opportunities to expand my impact within the data and AI infrastructure space. I'm particularly drawn to companies that are pushing the boundaries of what's possible with data-driven solutions. \n\n*   **Role:** Senior Data Infrastructure Engineer, Data Architect, or Engineering Manager roles with a focus on AI/ML infrastructure.\n*   **Industry:** FinTech, Healthcare, or Insurance \u2013 industries with complex data challenges and high regulatory scrutiny.\n*   **Company Stage:** Series B/C or established players with a strong commitment to innovation.\n*   **Location:** Primarily interested in opportunities in the New York City area, but open to remote positions or relocation for the right opportunity.\n*   **Connections:** I\u2019m looking to connect with individuals leading data infrastructure teams at innovative companies.\n*   **Introductions:** I would greatly appreciate introductions to hiring managers or technical leaders at companies building cutting-edge AI platforms.\n*   **Mentorship:** Open to mentoring opportunities for junior data engineers.\n*   **Collaboration:** Interested in discussing best practices and potential collaborations on open-source data infrastructure projects.",
+    "notes": "Spoke with Sarah Chen (CTO at HealthAI) last week \u2013 she mentioned they\u2019re struggling with scaling their ML pipeline. Sounds like a potential fit, but their infrastructure is a bit\u2026 chaotic. Need to follow up and offer to share our Snowflake migration learnings. Also, remember to ask about their data governance policies. Had a good conversation with David Lee (VP Engineering at InsureTech) \u2013 they\u2019re using a lot of Spark, which is interesting. He\u2019s a strong advocate for data mesh architecture. Should read up on that. Lucas mentioned he\u2019s been experimenting with dbt for data transformation, and is very enthusiastic about its potential. He's also keen to learn more about real-time data streaming solutions like Kafka. He's a quick learner and a strong communicator, but can sometimes get bogged down in details \u2013 needs someone to help him prioritize.",
+    "locationAvailability": "I am currently based in New York City and am open to remote work or relocation for the right opportunity. I am also comfortable with occasional travel.",
+    "introPreferences": "When making introductions, please keep the following in mind:\n\n*   **Industry Focus:** I'm most interested in connecting with individuals in FinTech, Healthcare, and Insurance.\n*   **Company Size:** I prefer companies with 50-500 employees \u2013 large enough to have complex data challenges, but small enough to be agile.\n*   **Role Type:** I'm looking to connect with Data Engineers, Data Architects, Engineering Managers, and CTOs.\n*   **Shared Interests:** Individuals with a strong background in data warehousing, cloud technologies, and machine learning pipelines are ideal.\n*   **Thought Leadership:** I appreciate connecting with individuals who are active in the data community and share their knowledge through blogging, speaking, or open-source contributions.\n*   **Avoid:** Please avoid introducing me to recruiters unless I specifically request it.",
+    "personalPreferences": "I prefer to communicate via email initially, and am happy to schedule a quick call to discuss further. I respond best to concise and direct communication.",
+    "meetingAndSchedulingPreferences": "I'm generally available for meetings during standard business hours (EST). Please send a calendar invite with a brief agenda."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 29.479076862335205,
+      "input_tokens": 818,
+      "output_tokens": 1547,
+      "problems": [
+        "background: possible truncation (ends with '...ality, Data Observability')"
+      ]
+    },
+    {
+      "attempt": 2,
+      "elapsed_s": 30.42064595222473,
+      "input_tokens": 818,
+      "output_tokens": 1510,
+      "problems": []
+    }
+  ],
+  "success": true
+}

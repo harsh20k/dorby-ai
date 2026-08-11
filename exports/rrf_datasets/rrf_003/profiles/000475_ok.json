@@ -1,0 +1,63 @@
+{
+  "id": 475,
+  "archetype": "Technical Co-founder/AI Implementer",
+  "given_name": "Rosa Santos",
+  "style_version": 29,
+  "archetypes_version": 80,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Rosa Santos is a highly experienced machine learning engineer who spent the first decade of her career at established tech companies, but recently transitioned to actively seeking co-founding opportunities. A key detail about her career is a stint leading a small, internal 'skunkworks' team at Google dedicated to rapidly prototyping AI-driven solutions for internal efficiency. This experience gave her a taste for the full lifecycle \u2013 ideation to deployment \u2013 and instilled a strong bias towards practical, impactful AI, not just theoretical research. She's now looking for non-technical founders with strong vision and market understanding, but who lack the deep technical expertise to build a scalable AI product. She's *not* interested in being a 'gun for hire,' she wants equity and a genuine co-founding role. She's particularly interested in applications of AI in logistics, supply chain, and sustainability. She's very direct and values efficient communication.",
+    "positioning": "I'm a machine learning engineer and technical leader passionate about building impactful AI-powered solutions. For the last several years, I've focused on translating complex AI concepts into tangible, scalable products. My background spans the full stack \u2013 from data engineering and model development to deployment and monitoring \u2013 allowing me to contribute meaningfully at every stage of the product lifecycle. I recently completed a particularly rewarding project at Google, leading a small, agile team focused on rapid prototyping of internal AI tools. This experience solidified my belief in the power of lean experimentation and the importance of close collaboration between technical and business teams. Now, I'm actively seeking a co-founding opportunity with a driven, non-technical founder who has a compelling vision and a strong understanding of their target market. I bring the technical horsepower to turn that vision into reality, and I'm eager to build something truly innovative. I\u2019m not just looking for a job; I\u2019m looking for a partner to build a company. My value proposition is simple: I de-risk the technical execution of your AI-first idea and accelerate your path to market. Let's connect if you're ready to build the future.",
+    "background": "- **Google, Staff Machine Learning Engineer** (2018 \u2013 2023)\n    - Led a 3-person 'skunkworks' team responsible for rapid prototyping of AI solutions to improve internal operational efficiency, resulting in a 15% reduction in logistics costs for one key department.\n    - Developed and deployed machine learning models for fraud detection, improving accuracy by 8%.\n    - Mentored junior engineers in best practices for machine learning development and deployment.\n    - Contributed to the development of Google's internal AI infrastructure.\n- **Amazon, Machine Learning Engineer** (2015 \u2013 2018)\n    - Built and maintained recommendation systems for Amazon\u2019s retail platform.\n    - Worked with large datasets to identify patterns and improve customer experience.\n    - Collaborated with cross-functional teams to deploy machine learning models into production.\n- **Education:**\n    - **Stanford University, MS in Computer Science (Machine Learning)** (2013 \u2013 2015)\n    - **Massachusetts Institute of Technology (MIT), BS in Electrical Engineering and Computer Science** (2009 \u2013 2013)\n- **Skills:** Python, TensorFlow, PyTorch, Kubernetes, Docker, AWS (S3, EC2, SageMaker), Data Engineering (Spark, Hadoop), SQL, Agile Development, Model Deployment, MLOps, Statistical Modeling, Deep Learning, Natural Language Processing (NLP).",
+    "lookingFor": "I'm seeking a co-founding opportunity with a non-technical founder who has a strong business acumen and a compelling idea for an AI-driven product. Specifically, I'm interested in:\n\n- **Founders with validated market need:** I want to build something people *actually* want.\n- **Focus areas:** Logistics, Supply Chain, Sustainability, and Fintech are particularly interesting to me.\n- **Early-stage startups (pre-seed to seed):** I want to be involved from the ground up.\n- **Equity-based partnerships:** I'm looking for a genuine co-founding role with significant equity.\n\n**I am *not* interested in:**\n- Contract work or freelance projects.\n- Projects without a clear path to monetization.\n- Founders who are unwilling to listen to technical advice.\n- Ideas that are purely 'AI for the sake of AI' \u2013 I want practical applications.",
+    "notes": "- Recently completed due diligence on two potential co-founding opportunities \u2013 both fell through due to founder misalignment.\n- Prioritizing opportunities with demonstrable traction (even if it's just a strong MVP and user feedback).\n- Extremely efficient communicator \u2013 prefers directness and clarity.\n- Avoid lengthy introductory emails; a concise pitch and a clear ask are appreciated.\n- I\u2019m actively researching opportunities in the carbon accounting space.",
+    "locationAvailability": "I am currently based in the San Francisco Bay Area, but am open to remote work and travel. I'm particularly interested in opportunities based in North America, but can consider projects with a strong remote-first culture located elsewhere. I prefer locations with good access to tech hubs and a vibrant startup ecosystem.",
+    "introPreferences": "When making introductions, please adhere to the following:\n\n**Hard Requirements:**\n- **The founder *must* be non-technical.** I need someone who recognizes their technical limitations and is actively seeking a strong technical co-founder.\n- **The idea must be focused on a real-world problem.** I'm not interested in speculative projects.\n- **The founder must be willing to share a detailed business plan and market analysis.**\n\n**Strongly Preferred:**\n- Briefly highlight my experience leading the 'skunkworks' team at Google \u2013 this demonstrates my ability to rapidly prototype and deliver value.\n- Emphasize my full-stack machine learning expertise.\n- Mention my specific interests in logistics, supply chain, sustainability, and fintech.\n\n**Avoid:**\n- Describing me as a 'developer' or 'coder' \u2013 I\u2019m a technical *leader*.\n- Sending me introductions to projects that are already well-funded or have a large technical team.\n- Overselling the idea \u2013 I prefer to form my own opinions based on the facts.\n- Using overly flowery or promotional language.",
+    "personalPreferences": "Please reach out via email initially. I check my email frequently. I\u2019m not currently active on other platforms.",
+    "meetingAndSchedulingPreferences": "I generally prefer to schedule meetings during weekdays. Please avoid sending meeting invites before 10 AM PST."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 23.564831972122192,
+      "input_tokens": 837,
+      "output_tokens": 1494,
+      "problems": [
+        "background: possible truncation (ends with '...low Developer Certificate')"
+      ]
+    },
+    {
+      "attempt": 2,
+      "elapsed_s": 30.111884117126465,
+      "input_tokens": 837,
+      "output_tokens": 1421,
+      "problems": []
+    }
+  ],
+  "success": true
+}

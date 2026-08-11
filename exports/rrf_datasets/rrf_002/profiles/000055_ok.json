@@ -1,0 +1,54 @@
+{
+  "id": 55,
+  "archetype": "Former Journalist, AI Storyteller",
+  "given_name": "Jing Weber",
+  "style_version": 4,
+  "archetypes_version": 10,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Jing Weber is a former investigative journalist who specialized in covering the ethical implications of emerging technologies. She spent 12 years at the *San Francisco Chronicle* before becoming increasingly frustrated with the shrinking newsroom and the pressure to prioritize clicks over substance. She pivoted to AI storytelling about 3 years ago, recognizing the need for nuanced narratives around AI, particularly as Large Language Models (LLMs) became more prevalent. She now runs 'Narrative Forge,' a boutique consultancy helping AI startups translate their technical work into compelling, accessible stories for investors, customers, and the public. A distinctive detail: she specifically focuses on AI applications in climate tech, driven by a personal commitment to sustainability. She's very careful about the projects she takes on, prioritizing those with a demonstrable positive impact. She's building a reputation as someone who can help 'good' AI companies stand out and avoid the hype cycle. She's actively looking for seed-stage climate tech AI companies and potential partnerships with venture capital firms specializing in the space. She is a bit wary of overly aggressive sales pitches and prefers a more collaborative, relationship-building approach.",
+    "positioning": "As Founder & Chief Narrative Strategist at Narrative Forge, I help ambitious AI companies \u2013 particularly those tackling climate change \u2013 articulate their vision and impact. We\u2019re living in an era of unprecedented technological advancement, and the potential of Artificial Intelligence to address some of humanity\u2019s most pressing challenges is immense. However, technical brilliance alone isn\u2019t enough. Investors, customers, and the public need to understand *why* this technology matters, what problems it solves, and how it aligns with their values. That\u2019s where Narrative Forge comes in. \n\nWe specialize in crafting compelling narratives that demystify complex AI concepts, translate technical jargon into accessible language, and build trust through authentic storytelling. Our core value proposition is not simply \u2018communication,\u2019 but \u2018impactful communication\u2019 \u2013 driving investment, fostering adoption, and shaping public perception. We work with seed to Series A startups, focusing on defining their core narrative, developing key messaging, and creating content that resonates with their target audiences. \n\nRecent successes include helping 'TerraForm AI' (a soil carbon sequestration platform) secure a $3M seed round by crafting a pitch deck narrative that highlighted the tangible environmental and economic benefits of their technology. We also partnered with 'Oceanus Analytics' (an AI-powered ocean plastic monitoring system) to launch a thought leadership campaign that generated significant media coverage and attracted several key partnerships with environmental NGOs.  My background as an investigative journalist informs every aspect of our work \u2013 we prioritize accuracy, transparency, and ethical considerations, ensuring that the stories we tell are both compelling and responsible.  We\u2019re not just building narratives; we\u2019re building a future powered by responsible AI.",
+    "background": "* **2021 \u2013 Present: Founder & Chief Narrative Strategist, Narrative Forge.** Leading a consultancy specializing in AI storytelling and narrative strategy for climate tech startups. Services include narrative development, messaging workshops, pitch deck refinement, content creation, and media relations.\n* **2009 \u2013 2021: Investigative Reporter, *San Francisco Chronicle*.** Covered a wide range of topics, with a focus on technology, ethics, and social impact. Awarded the Sigma Delta Chi Award for investigative reporting in 2017 for a series on algorithmic bias in facial recognition technology.\n* **2008 \u2013 2009: Freelance Journalist.** Contributed articles to *Wired*, *The Atlantic*, and *Fast Company* focusing on the intersection of technology and society.\n* **2004 \u2013 2008: University of California, Berkeley \u2013 B.A. Journalism.** Graduated *summa cum laude* with a focus on investigative reporting and data journalism.  Recipient of the prestigious Hearst Foundation Scholarship for journalism.\n* **Skills:** Narrative Development, Storytelling, Content Strategy, Public Speaking, Media Relations, Investigative Reporting, Data Analysis, AI Literacy (LLMs, Machine Learning), Climate Tech, Pitch Deck Development, Crisis Communication.",
+    "lookingFor": "* Seed-stage climate tech AI startups seeking narrative support and investment readiness.\n* Venture Capital firms specializing in climate tech and/or AI \u2013 looking for potential partnership opportunities to provide narrative strategy services to portfolio companies.\n* AI founders who are committed to ethical and responsible AI development.\n* Individuals with expertise in climate science and/or AI ethics to collaborate on thought leadership content.\n* Introductions to leading climate tech investors (e.g., Breakthrough Energy Ventures, Lowercarbon Capital).\n* Potential clients interested in workshops on AI storytelling for their teams.\n* Individuals knowledgeable about grant opportunities for climate tech AI startups.\n* Mentors with experience scaling a consultancy.",
+    "notes": "Jing is incredibly passionate about the intersection of AI and climate change. She's a thoughtful, articulate communicator with a strong ethical compass. She\u2019s highly selective about the projects she takes on, prioritizing those that align with her values. She's a strong advocate for responsible AI development and is wary of hype or misleading claims. She\u2019s currently exploring opportunities to develop a workshop series on AI storytelling for climate tech founders. \n\n* Recent activity: Attended the COP28 climate summit in Dubai, focusing on AI-driven climate solutions.\n* Potential Sensitivity: Can be critical of AI applications that lack transparency or have negative social/environmental consequences.\n* Best approach for introductions: Focus on shared values and potential for collaboration. Avoid overly aggressive sales pitches. Highlight the positive impact of the individual's work.\n* Recent Update: Narrative Forge is currently fully booked for the next two months but accepting inquiries for projects starting in March.",
+    "locationAvailability": "I am based in San Francisco, California, and primarily serve clients remotely. I am open to travel for key engagements, particularly to climate tech hubs like Boston, New York, and London.",
+    "introPreferences": "* **Hard Requirements:** Individuals working in climate tech AI, or investors *specifically* focused on that space.\n* **Soft Preferences:** Founders with a strong technical background and a clear vision for their company. Individuals who value ethical considerations and responsible AI development.\n* **Ideal Introductions:** VPs of Innovation at climate-focused corporations, Partner-level investors at relevant VC firms, prominent researchers in climate science and AI.\n* **Do NOT Introduce:** Salespeople offering generic marketing services, individuals pushing blockchain-based solutions (unless directly related to verifiable carbon credits), or anyone involved in AI applications with questionable ethical implications (e.g., autonomous weapons systems).",
+    "personalPreferences": "I generally respond best to email initially, allowing me time to thoughtfully consider requests. I appreciate concise and well-written communications. I\u2019m also active on LinkedIn and open to connecting there.",
+    "meetingAndSchedulingPreferences": "I prefer virtual meetings via Zoom or Google Meet. I am generally available during standard business hours (PST).  Please include a brief agenda when requesting a meeting to ensure we can make the most of our time."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 28.34146499633789,
+      "input_tokens": 806,
+      "output_tokens": 1470,
+      "problems": []
+    }
+  ],
+  "success": true
+}

@@ -1,0 +1,54 @@
+{
+  "id": 379,
+  "archetype": "Product Leader, AI/Growth Focus",
+  "given_name": "Yara Silva",
+  "style_version": 23,
+  "archetypes_version": 63,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Yara Silva is a seasoned Product Leader with a strong background in growth, particularly leveraging AI to optimize user acquisition and retention. She\u2019s spent the last 7 years in progressively responsible roles, culminating in leading growth for a mid-stage edtech company. A distinctive detail is her deep dive into behavioral economics during a sabbatical \u2013 she's passionate about applying these principles to product design, and specifically, using AI to personalize learning paths. She\u2019s now looking to join an early-stage (Seed to Series A) AI startup focused on a consumer application, ideally in the education, wellness, or future of work space. She\u2019s less interested in purely B2B or complex enterprise solutions. She's highly data-driven, a strong communicator, and values a collaborative, fast-paced environment. She\u2019s *very* specific about the types of connections she's looking for \u2013 she needs introductions to founders and early employees, not recruiters unless pre-vetted.",
+    "positioning": "A results-oriented Product Leader with a passion for building and scaling AI-powered consumer products. I specialize in leveraging data, behavioral science, and rapid experimentation to drive sustainable growth. Most recently, as Head of Growth at Learnify, I led a team responsible for increasing user acquisition by 45% and improving monthly active users by 30% through the implementation of personalized learning recommendations powered by a proprietary AI engine. I\u2019m adept at identifying and capitalizing on growth opportunities, from optimizing conversion funnels to launching new product features. Currently, I'm focused on identifying opportunities to apply my expertise in AI and growth to a high-impact startup, building products that are not only innovative but also deeply user-centric and ethically designed. I thrive in environments where I can translate complex data into actionable insights and drive measurable results.",
+    "background": "\u2022 **Head of Growth, Learnify** (2021 - Present) \n    * Led a team of 5 product managers, data scientists, and engineers focused on growth initiatives.\n    * Spearheaded the development and implementation of a personalized learning recommendation engine using machine learning, resulting in a 20% increase in course completion rates.\n    * Managed a $500K+ growth marketing budget, optimizing spend across various channels (paid social, SEM, content marketing).\n    * Implemented A/B testing frameworks and data-driven decision-making processes.\n\u2022 **Senior Product Manager, Growth, BloomTech** (2019 - 2021)\n    * Focused on user acquisition and activation for BloomTech\u2019s coding bootcamp programs.\n    * Launched a new referral program that contributed to 15% of new student enrollments.\n    * Conducted extensive user research to identify pain points and opportunities for improvement.\n\u2022 **Product Manager, User Engagement, Skillshare** (2018 - 2019)\n    * Managed the user onboarding experience, resulting in a 10% increase in user retention.\n    * Collaborated with engineering and design teams to develop and launch new features.\n\u2022 **Sabbatical \u2013 Behavioral Economics Research** (2018 - 6 months)\n    * Independent study focused on applying behavioral economics principles to product design and user behavior.\n    * Completed coursework in behavioral science and experimental design.\n\u2022 **Education:** \n    * **MBA, Stanford Graduate School of Business** (2016-2018)\n    * **BS, Computer Science, Massachusetts Institute of Technology (MIT)** (2012-2016)\n\u2022 **Skills:** Product Management, Growth Hacking, A/B Testing, Data Analysis (SQL, Python, Tableau), Machine Learning (basic understanding), User Research, Behavioral Economics, Agile Methodologies, Team Leadership, Communication, Stakeholder Management.",
+    "lookingFor": "\u2022 **Role:** Product Leader (Head of Product, Director of Product, or similar) at an early-stage (Seed - Series A) AI startup.\n\u2022 **Industry Focus:** Education, Wellness, Future of Work \u2013 consumer-facing applications preferred.\n\u2022 **Company Stage:** Seed to Series A \u2013 looking for a role where I can have a significant impact.\n\u2022 **Team Size:** Ideally, a team of 5-15 people.\n\u2022 **Connections:** Introductions to founders and early employees at relevant startups.\n\u2022 **Investment Criteria (if applicable):** Companies with a strong ethical framework and a commitment to user privacy.",
+    "notes": "Yara is a highly analytical and data-driven leader. She's a strong advocate for user-centric design and ethical AI practices. \n\n\u2022 **Caution:** She is *very* selective about the companies she considers. She needs to be genuinely excited about the mission and the team. \n\u2022 **Important:** She's not interested in roles that are primarily focused on operational product management or maintenance. She wants to *build* and *grow*.\n\u2022 **Community Affiliations:** Active member of the Product School community and a frequent attendee of AI/ML conferences.",
+    "locationAvailability": "I am currently based in San Francisco, California, and am open to remote work or hybrid arrangements. I am willing to relocate for the right opportunity, preferably within the West Coast. I am comfortable with occasional travel for team meetings or industry events. My preference is a role that allows for significant flexibility and doesn\u2019t require a daily commute.",
+    "introPreferences": "\u2022 **Hard Requirements:** Introductions *must* be to founders or early employees (VP level or below) at companies matching my industry and stage preferences.\n\u2022 **Soft Preferences:** Please provide context about the company\u2019s mission, the team, and the specific challenges they are facing.\n\u2022 **Avoid:** \n    * Recruiters (unless pre-vetted and specifically requested).\n    * Introductions to companies outside of my target industries.\n    * Generic introductions without specific context.",
+    "personalPreferences": "I\u2019m most responsive to messages on LinkedIn or via email. Feel free to share relevant articles or resources you think I might find interesting. I appreciate concise and thoughtful communication.",
+    "meetingAndSchedulingPreferences": "I generally prefer to start with a brief introductory call (15-20 minutes) to assess mutual fit before scheduling a longer meeting."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 21.317146062850952,
+      "input_tokens": 796,
+      "output_tokens": 1327,
+      "problems": []
+    }
+  ],
+  "success": true
+}

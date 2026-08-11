@@ -1,0 +1,72 @@
+{
+  "id": 664,
+  "archetype": "Serial Founder, Scaling B2B SaaS",
+  "given_name": "Priya Vargas",
+  "style_version": 41,
+  "archetypes_version": 112,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Priya Vargas is a serial founder currently focused on scaling 'FlowState,' a B2B SaaS platform that automates complex workflow approvals for engineering teams. Her distinctive career detail is a prior, highly successful exit from a cybersecurity company she founded after identifying a critical gap in vulnerability management. This experience instilled in her a laser focus on operational efficiency and a strong aversion to wasted time. She\u2019s now building FlowState to solve a pain point she personally experienced in her previous venture \u2013 the bottleneck of manual approvals slowing down development cycles. She's seeking strategic advisors, potential enterprise clients in the FinTech and Healthcare sectors, and connections to VCs specializing in Series B funding. She's direct, values data-driven insights, and dislikes unnecessary fluff in communication.",
+    "positioning": "Priya Vargas is the Founder & CEO of FlowState, a workflow automation platform built for engineering teams. Having previously founded and successfully exited CipherGuard, a leading cybersecurity firm, Priya brings a unique perspective to the challenges of scaling high-growth technology companies. She is passionate about eliminating operational friction and empowering engineering teams to ship faster, with fewer errors. FlowState directly addresses the costly delays inherent in manual approval processes, offering a streamlined, auditable, and secure solution. Priya is a recognized thought leader in operational efficiency and is frequently invited to speak on the topic of accelerating software delivery.",
+    "background": "- **FlowState (2022 \u2013 Present):** Founder & CEO. Led seed funding round ($3.5M). Currently focused on scaling sales and marketing, and expanding platform functionality. Achieved 3x revenue growth in the last 6 months.\n- **CipherGuard (2016 \u2013 2021):** Founder & CEO. Built and scaled a cybersecurity company specializing in vulnerability management. Successfully exited to SentinelOne in a $180M acquisition.\n    - Spearheaded product development, securing key patents in automated vulnerability detection.\n    - Grew the team from 2 to 85 employees.\n    - Managed P&L and secured Series A funding ($12M).\n- **Accenture (2014 \u2013 2016):** Management Consultant. Focused on process optimization and digital transformation for Fortune 500 clients.\n    - Led cross-functional teams to implement new technologies and improve operational efficiency.\n    - Developed and delivered presentations to senior management on project progress and recommendations.\n- **Education:**\n    - MBA, Stanford Graduate School of Business (2014)\n    - BS, Computer Science, Massachusetts Institute of Technology (2012) - *Magna Cum Laude*.\n- **Skills:** SaaS, B2B Sales, Workflow Automation, Cybersecurity, Go-to-Market Strategy, Team Building, Venture Capital, Product Management, Agile Development, Process Improvement, Data Analysis.",
+    "lookingFor": "I\u2019m actively looking to connect with individuals who can help FlowState scale rapidly and efficiently. Specifically, I\u2019m seeking introductions to:\n\n- **VP of Engineering/CTO at FinTech and Healthcare companies (Series C and above):** We\u2019re targeting these verticals initially and need champions who understand the pain points of complex approval workflows in highly regulated environments. Looking for individuals with a proven track record of implementing and adopting new technologies.\n- **Series B VCs specializing in B2B SaaS:** We\u2019re preparing for a Series B raise in Q1 2024 and are looking for investors with deep experience in scaling B2B software businesses.\n- **Strategic Advisors with experience in scaling SaaS sales teams:** We need guidance on optimizing our sales process and building a high-performing sales organization. Experience with land-and-expand strategies is particularly valuable.\n\nI\u2019m open to informational interviews with individuals interested in learning more about FlowState and our mission to revolutionize workflow automation. I\u2019m also interested in learning about emerging trends in engineering productivity and operational efficiency.",
+    "notes": "Priya is highly focused and values direct communication. She responds best to concise, data-driven messages. Avoid lengthy introductions or excessive background information. She's currently prioritizing partnerships that directly contribute to revenue growth and scalability. She's skeptical of 'shiny object syndrome' and prefers proven solutions. Recent conversation with a potential advisor indicated a need for more robust case studies demonstrating FlowState\u2019s ROI. She\u2019s been actively posting on LinkedIn regarding the challenges of engineering bottlenecks - a good jumping-off point for engagement. Her assistant, Sarah Chen, manages her calendar \u2013 expect a slightly delayed response time initially. Confirm Sarah\u2019s email address before attempting to schedule.",
+    "locationAvailability": "Priya is based in San Francisco, California, but is open to remote meetings and travel as needed. She prefers to limit travel during peak development cycles.",
+    "introPreferences": "When making introductions to Priya, please adhere to the following guidelines:\n\n* **Hard Requirements:**\n    - The connection *must* be relevant to FlowState\u2019s target market (FinTech, Healthcare) or funding stage (Series B).\n    - The connection *must* have a demonstrable track record of success in their field.\n* **Soft Preferences:**\n    - Prior experience with workflow automation tools is a plus, but not required.\n    - A shared interest in operational efficiency and engineering productivity is highly valued.\n* **Introduction Messaging:**\n    - Keep it concise and focused on the *value* the connection can bring to FlowState. (e.g., 'I\u2019m connecting you with Priya Vargas, the founder of FlowState, a workflow automation platform. Given your experience leading engineering at [Company], I thought you\u2019d appreciate learning about how FlowState is helping teams like yours ship faster\u2019).\n    - Highlight any specific areas of alignment between the connection\u2019s expertise and FlowState\u2019s needs.\n    - Do *not* lead with a lengthy explanation of FlowState \u2013 let Priya do that.",
+    "personalPreferences": "I prefer email for initial communication. Please keep messages concise and to the point. I\u2019m not a fan of long email threads \u2013 let\u2019s schedule a quick call if a more detailed discussion is needed.",
+    "meetingAndSchedulingPreferences": "I generally prefer 30-minute meetings. Please send a brief agenda ahead of time outlining the key topics you\u2019d like to discuss. I'm available for meetings between 10am-12pm PST and 2pm-4pm PST. I prefer Google Meet for video conferencing."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 20.738476991653442,
+      "input_tokens": 820,
+      "output_tokens": 1477,
+      "problems": [
+        "introPreferences: possible truncation (ends with '...ry might be of interest.\u2019')"
+      ]
+    },
+    {
+      "attempt": 2,
+      "elapsed_s": 34.8605170249939,
+      "input_tokens": 820,
+      "output_tokens": 1391,
+      "problems": [
+        "introPreferences: possible truncation (ends with '...cused on [relevant area]\u2019')"
+      ]
+    },
+    {
+      "attempt": 3,
+      "elapsed_s": 19.074448108673096,
+      "input_tokens": 820,
+      "output_tokens": 1366,
+      "problems": []
+    }
+  ],
+  "success": true
+}

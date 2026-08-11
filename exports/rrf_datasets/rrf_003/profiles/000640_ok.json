@@ -1,0 +1,54 @@
+{
+  "id": 640,
+  "archetype": "YC-Backed, Repeat Founder, FinTech Focus",
+  "given_name": "Aisha Weber",
+  "style_version": 39,
+  "archetypes_version": 107,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Aisha Weber is a repeat founder in the FinTech space, currently building 'NovaVest', a platform leveraging AI to provide personalized investment strategies for Gen Z and Millennials. Her distinctive career detail is a prior successful exit with a robo-advisor focused on socially responsible investing (SRI) \u2013 a company she scaled rapidly by partnering directly with influencers and building a strong community. NovaVest aims to repeat that success, but with a broader range of investment options and a more sophisticated AI engine. She\u2019s seeking strategic investors with experience in scaling consumer FinTech, and potential partnerships with platforms that reach her target demographic. She's very direct and values efficiency, preferring concise communication. She's based in San Francisco but frequently travels for fundraising and industry events.",
+    "positioning": "NovaVest is revolutionizing access to personalized investment strategies for the next generation of investors. We believe that financial wellbeing shouldn't be limited to the wealthy or those with extensive financial literacy. Our platform leverages cutting-edge AI and machine learning algorithms to analyze individual financial goals, risk tolerance, and lifestyle preferences, delivering tailored investment portfolios with transparent fees and a user-friendly experience. Unlike traditional robo-advisors that offer a one-size-fits-all approach, NovaVest continuously adapts to evolving market conditions and user needs, ensuring optimal portfolio performance. \n\nOur core value proposition centers around accessibility, personalization, and education. We\u2019re targeting Gen Z and Millennials \u2013 a demographic underserved by traditional financial institutions \u2013 by meeting them where they are: on mobile, through engaging content, and via trusted social channels.  NovaVest isn't just about investing; it's about building financial confidence and empowering a generation to take control of their financial futures.  We differentiate ourselves through our proprietary AI engine, 'Athena', which incorporates behavioral finance principles to mitigate emotional biases and improve investment outcomes.  Athena's ability to dynamically adjust portfolios based on real-time data and individual user behavior provides a significant competitive advantage. We are currently in seed funding and actively seeking partners for strategic growth.",
+    "background": "- **Founder & CEO, NovaVest** (2023 \u2013 Present)\n  - Leading all aspects of company strategy, product development, fundraising, and team building.\n  - Secured initial seed funding of $2.5M from leading angel investors.\n  - Developed and launched NovaVest's beta platform, achieving over 5,000 registered users in the first three months.\n\n- **Founder & CEO, Ethos Investments** (2017 \u2013 2022) \u2013 *Acquired by GreenPath Financial* \n  - Built and scaled a successful robo-advisor focused on socially responsible investing (SRI).\n  - Grew assets under management (AUM) to $300M in under four years.\n  - Pioneered a unique influencer marketing strategy, partnering with financial literacy advocates to reach a broader audience.\n  - Successfully negotiated acquisition by GreenPath Financial for an undisclosed sum.\n\n- **Senior Financial Analyst, Goldman Sachs** (2015 \u2013 2017)\n  - Conducted financial modeling and analysis for mergers and acquisitions (M&A) transactions.\n  - Supported senior bankers in deal execution and client management.\n  - Developed expertise in valuation, financial statement analysis, and due diligence.\n\n- **Education:**\n  - **MBA, Stanford Graduate School of Business** (2013 \u2013 2015)\n  - **BS, Economics, University of California, Berkeley** (2009 \u2013 2013) \u2013 *Summa Cum Laude*",
+    "lookingFor": "I'm actively seeking connections with investors who have a strong track record of scaling consumer FinTech companies, particularly those focused on mobile-first experiences and AI-driven personalization.  I'm especially interested in firms with expertise in the Gen Z and Millennial demographics.  \n\nSpecifically, I'm looking for:\n\n* **Series A Investors:**  Targeting firms with check sizes between $10M - $20M.\n* **Strategic Partners:**  Platforms with large, engaged Gen Z/Millennial user bases (e.g., TikTok, Instagram, Student loan refinancing companies).\n* **Mentors:** Experienced founders who have successfully navigated the challenges of scaling a FinTech startup.\n\nI'm open to introductions to individuals who can provide valuable insights into the competitive landscape, regulatory environment, or potential acquisition targets.  I'm also keen to connect with thought leaders in the behavioral finance and AI space.",
+    "notes": "Aisha is extremely focused on growth and fundraising right now. She\u2019s very direct and appreciates concise communication. She recently spoke at TechCrunch Disrupt and generated significant interest, but is still prioritizing investor meetings.  She's particularly interested in firms that understand the importance of community building. Do *not* waste her time with vague offers or lengthy pitches.",
+    "locationAvailability": "I am currently based in San Francisco, California, and frequently travel for fundraising and industry events. I will be in New York City the week of November 6th and plan to attend the Finovate conference in February. I am open to relocating if necessary for the right opportunity, but prefer to maintain a presence in the Bay Area.",
+    "introPreferences": "When making introductions, please emphasize NovaVest's strong traction, our unique AI-powered personalization engine ('Athena'), and my previous successful exit with Ethos Investments. \n\n**Hard Requirements:**\n* Investor must have a demonstrable track record in consumer FinTech.\n* Contact must have decision-making authority or significant influence over investment decisions.\n\n**Soft Preferences:**\n* Experience with mobile-first platforms.\n* Understanding of the Gen Z/Millennial demographic.\n* Interest in socially responsible investing (though not essential). \n\nPlease avoid overly long email chains or introductions that lack a clear value proposition.  I prefer concise, direct communication.",
+    "personalPreferences": "WhatsApp is the fastest way to reach me. I respond best to direct questions and actionable requests.",
+    "meetingAndSchedulingPreferences": "I generally prefer morning or early afternoon meetings (PST). I'm available for Zoom or in-person meetings in San Francisco. Please send a meeting request with a clear agenda and any relevant materials beforehand. I typically block off 30-minute slots for initial conversations."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 24.03854203224182,
+      "input_tokens": 811,
+      "output_tokens": 1354,
+      "problems": []
+    }
+  ],
+  "success": true
+}

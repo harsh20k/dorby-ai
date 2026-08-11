@@ -1,0 +1,54 @@
+{
+  "id": 709,
+  "archetype": "Deep Tech Medtech Founder",
+  "given_name": "Sana Mensah",
+  "style_version": 43,
+  "archetypes_version": 118,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Sana Mensah is a 38-year-old founder and CEO of \u2018NeuroSync\u2019, a deep tech medtech startup developing a non-invasive neurostimulation device to accelerate recovery from stroke and traumatic brain injury. Her background is unusual \u2013 a PhD in Biomedical Engineering *and* a Masters in Business Analytics. This gives her a unique ability to bridge the gap between cutting-edge research and commercial viability, a skill she frequently emphasizes. NeuroSync is currently seeking Series A funding, and Sana is focused on connecting with investors familiar with the healthcare space, particularly those with a track record of supporting early-stage hardware companies. She's also looking to connect with potential strategic partners \u2013 hospitals and rehabilitation centers \u2013 for clinical trial sites and future product distribution. A key detail is that she previously *failed* to secure funding for a similar, but less refined, technology at a previous startup, and is highly sensitive about demonstrating robust data and de-risking the investment opportunity. She\u2019s very data-driven and prefers direct, concise communication.",
+    "positioning": "A highly analytical and results-oriented founder and CEO, Sana Mensah is driving innovation in neurorehabilitation with NeuroSync. With a unique blend of biomedical engineering expertise and data-driven business acumen, I\u2019m leading the development of a novel, non-invasive neurostimulation device designed to significantly improve recovery outcomes for stroke and traumatic brain injury patients. Having spent over 10 years translating complex scientific research into tangible solutions, I\u2019ve built a strong track record of navigating the challenges of the medtech landscape. NeuroSync is currently poised for rapid growth, having demonstrated promising preliminary clinical data and secured seed funding. I am actively seeking strategic investors and partners who share our vision of transforming neurological rehabilitation and are committed to long-term impact. My focus is on building a scalable, data-centric company that delivers clinically proven solutions to improve the lives of millions.",
+    "background": "- **CEO & Founder, NeuroSync** (2021 \u2013 Present)\n  - Led all aspects of company formation, including fundraising ($2M seed round), product development, clinical trial planning, and team building.\n  - Spearheaded the development of NeuroSync\u2019s core technology, a non-invasive neurostimulation device utilizing personalized stimulation protocols based on real-time EEG analysis.\n  - Managed a team of 8 engineers, scientists, and regulatory specialists.\n  - Secured preliminary clinical data demonstrating a 30% improvement in motor function recovery in early-stage stroke patients.\n  - Skills: Leadership, Strategic Planning, Fundraising, Product Development, Clinical Trial Management, Neurostimulation, EEG Analysis, Data Analytics, Regulatory Affairs (FDA).\n\n- **Data Science Consultant, Healthcare Analytics Group** (2019 \u2013 2021)\n  - Provided data analytics and machine learning expertise to healthcare organizations, focusing on predictive modeling and patient outcome optimization.\n  - Developed and implemented algorithms to identify patients at high risk of readmission, resulting in a 15% reduction in readmission rates for a key client.\n  - Skills: Python, R, Machine Learning, Statistical Modeling, Data Visualization, Healthcare Data Analytics.\n\n- **Research Scientist, BioTech Innovations Inc.** (2016 \u2013 2019)\n  - Conducted research on novel biomaterials for neural tissue engineering.\n  - Published 5 peer-reviewed articles in leading scientific journals.\n  - Managed a research budget of $500,000.\n  - Skills: Biomedical Engineering, Neural Tissue Engineering, Biomaterials, Research & Development, Scientific Writing.\n\n- **Education:**\n  - PhD, Biomedical Engineering, Massachusetts Institute of Technology (MIT) \u2013 2016\n  - MS, Business Analytics, Carnegie Mellon University \u2013 2014\n  - BS, Electrical Engineering, Stanford University \u2013 2012\n\n- **Certifications:**\n  - Project Management Professional (PMP)",
+    "lookingFor": "I'm actively seeking connections with individuals who can contribute to the growth and success of NeuroSync.\n\n* **Series A Investors:** Specifically, VCs with a demonstrated track record of investing in early-stage medtech hardware companies. I'm looking for investors who understand the long development cycles and regulatory hurdles inherent in our space.\n* **Strategic Partners:** Hospitals and rehabilitation centers interested in participating in clinical trials and potentially becoming early adopters of our technology. I'm particularly interested in institutions with strong neurology and neurorehabilitation departments.\n* **Experienced Medtech Advisors:** Individuals with experience in scaling medtech companies, navigating regulatory pathways (FDA 510(k) process), and building high-performing teams.\n* **Key Opinion Leaders (KOLs):** Neurologists and rehabilitation specialists who are influential in the field and can provide valuable insights and guidance.\n\nI'm open to informational conversations to discuss potential collaborations and investment opportunities. I'm particularly interested in learning about best practices for navigating the Series A fundraising process and accelerating our path to commercialization. I am *not* currently seeking connections with recruiters.",
+    "notes": "Sana is highly focused on securing Series A funding. Her previous startup attempt failed due to insufficient data and a lack of investor confidence. She\u2019s acutely aware of this and is heavily emphasizing the scientific rigor and clinical validation of NeuroSync's technology. Avoid making overly optimistic statements or downplaying the challenges of the medtech space. Highlight the strength of her data and the potential for significant ROI. She's comfortable discussing the previous startup, but steer the conversation towards the lessons learned and how NeuroSync is different. Emphasize her unique dual background (engineering *and* analytics).",
+    "locationAvailability": "Based in Boston, MA, but open to remote meetings and travel as needed.",
+    "introPreferences": "* **Hard Requirements:** Do *not* introduce Sana as someone \u2018just starting out\u2019 or \u2018exploring options.\u2019 She is a seasoned founder actively raising capital.\n* **Soft Preferences:** Framing introductions as connecting her with individuals who can provide \u2018strategic guidance\u2019 or \u2018potential investment\u2019 is ideal.\n* **Preferred Intro Framing:** \u201cSana Mensah is the CEO of NeuroSync, a deep tech medtech company revolutionizing stroke rehabilitation with a novel neurostimulation device. She has a strong scientific background and a proven track record of translating research into tangible solutions. I thought you two might have a valuable conversation regarding [specific area of expertise of the recipient].\u201d\n* **Avoid:** Introducing her to general networking events or individuals with no direct relevance to her current goals.",
+    "personalPreferences": "Direct communication, data-driven discussions, concise emails, prefers Zoom over phone calls.",
+    "meetingAndSchedulingPreferences": "Sana prefers to initially screen all meeting requests and has a fairly packed schedule. Please allow 48 hours for a response."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 24.227436065673828,
+      "input_tokens": 872,
+      "output_tokens": 1444,
+      "problems": []
+    }
+  ],
+  "success": true
+}

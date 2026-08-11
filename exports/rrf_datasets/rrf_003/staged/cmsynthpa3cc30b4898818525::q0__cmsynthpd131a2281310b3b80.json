@@ -1,0 +1,77 @@
+{
+  "pair": {
+    "userContactId": "cmsynthpa3cc30b4898818525",
+    "matchContactId": "cmsynthpd131a2281310b3b80",
+    "userContactFileVersion": 1,
+    "matchContactFileVersion": 1,
+    "searchQuery": "NYC-area Data Architect/Engineering Manager at Series B/C FinTech, Healthcare, or Insurance companies building AI/ML platforms. Strong Snowflake/cloud data warehousing experience preferred.",
+    "userContactFile": {
+      "positioning": "I am a Data Infrastructure Engineer with over eight years of experience designing, building, and scaling data pipelines and platforms. My current focus is on architecting and implementing robust data solutions at NovaFin, a rapidly growing FinTech company revolutionizing micro-lending. I lead a team responsible for the ingestion, transformation, and delivery of critical data powering our risk assessment models, fraud detection systems, and customer analytics dashboards. My background is somewhat unique \u2013 I began my career as a quantitative analyst, building and validating financial models. This experience instilled in me a deep understanding of data quality, accuracy, and the business context driving data requirements. I\u2019ve since transitioned my passion for data into a full-time engineering role, combining my analytical skills with a strong technical skillset encompassing cloud technologies, data warehousing, and ETL processes. Recently, my team successfully migrated our data warehouse to Snowflake, resulting in a 30% reduction in query latency and significant cost savings. I am uniquely positioned to bridge the gap between data science and engineering, translating complex business needs into scalable and reliable data infrastructure solutions. I\u2019m particularly interested in leveraging my expertise to build platforms that support the deployment and monitoring of machine learning models at scale.",
+      "lookingFor": "I'm actively exploring opportunities to expand my impact within the data and AI infrastructure space. I'm particularly drawn to companies that are pushing the boundaries of what's possible with data-driven solutions. \n\n*   **Role:** Senior Data Infrastructure Engineer, Data Architect, or Engineering Manager roles with a focus on AI/ML infrastructure.\n*   **Industry:** FinTech, Healthcare, or Insurance \u2013 industries with complex data challenges and high regulatory scrutiny.\n*   **Company Stage:** Series B/C or established players with a strong commitment to innovation.\n*   **Location:** Primarily interested in opportunities in the New York City area, but open to remote positions or relocation for the right opportunity.\n*   **Connections:** I\u2019m looking to connect with individuals leading data infrastructure teams at innovative companies.\n*   **Introductions:** I would greatly appreciate introductions to hiring managers or technical leaders at companies building cutting-edge AI platforms.\n*   **Mentorship:** Open to mentoring opportunities for junior data engineers.\n*   **Collaboration:** Interested in discussing best practices and potential collaborations on open-source data infrastructure projects.",
+      "introPreferences": "When making introductions, please keep the following in mind:\n\n*   **Industry Focus:** I'm most interested in connecting with individuals in FinTech, Healthcare, and Insurance.\n*   **Company Size:** I prefer companies with 50-500 employees \u2013 large enough to have complex data challenges, but small enough to be agile.\n*   **Role Type:** I'm looking to connect with Data Engineers, Data Architects, Engineering Managers, and CTOs.\n*   **Shared Interests:** Individuals with a strong background in data warehousing, cloud technologies, and machine learning pipelines are ideal.\n*   **Thought Leadership:** I appreciate connecting with individuals who are active in the data community and share their knowledge through blogging, speaking, or open-source contributions.\n*   **Avoid:** Please avoid introducing me to recruiters unless I specifically request it.",
+      "personalPreferences": "I prefer to communicate via email initially, and am happy to schedule a quick call to discuss further. I respond best to concise and direct communication.",
+      "meetingAndSchedulingPreferences": "I'm generally available for meetings during standard business hours (EST). Please send a calendar invite with a brief agenda.",
+      "background": "- **NovaFin** (2021 \u2013 Present): Lead Data Infrastructure Engineer. Responsible for data pipeline architecture, team leadership, and infrastructure optimization. Spearheaded the migration to Snowflake, resulting in significant performance and cost improvements. \n- **Quantify Capital** (2019 \u2013 2021): Quantitative Analyst. Developed and validated financial models for risk management and trading strategies. Gained deep understanding of financial data and regulatory requirements. \n- **DataStream Solutions** (2017 \u2013 2019): Data Engineer. Built and maintained ETL pipelines for various clients across different industries. Proficient in Python, SQL, and cloud-based data warehousing solutions (AWS Redshift, Google BigQuery).\n- **Education:** Master of Science in Financial Engineering, Columbia University (2017). Bachelor of Science in Mathematics, Massachusetts Institute of Technology (2015).\n- **Skills:** Python, SQL, Snowflake, AWS (S3, EC2, Lambda, Redshift), Apache Airflow, Docker, Kubernetes, Data Modeling, ETL, Data Warehousing, Machine Learning Pipelines, CI/CD, Git.\n- **Certifications:** AWS Certified Data Analytics \u2013 Specialty (2020).\n- **Projects:** Contributed to open-source data pipeline tools on GitHub (focused on data quality validation).\n- **Awards:** NovaFin \u201cInnovation Award\u201d (2023) \u2013 for leading the Snowflake migration project.\n- **Publications:** Presented research on data quality in financial modeling at the International Conference on Financial Engineering (2016).",
+      "locationAvailability": "I am currently based in New York City and am open to remote work or relocation for the right opportunity. I am also comfortable with occasional travel.",
+      "notes": "Spoke with Sarah Chen (CTO at HealthAI) last week \u2013 she mentioned they\u2019re struggling with scaling their ML pipeline. Sounds like a potential fit, but their infrastructure is a bit\u2026 chaotic. Need to follow up and offer to share our Snowflake migration learnings. Also, remember to ask about their data governance policies. Had a good conversation with David Lee (VP Engineering at InsureTech) \u2013 they\u2019re using a lot of Spark, which is interesting. He\u2019s a strong advocate for data mesh architecture. Should read up on that. Lucas mentioned he\u2019s been experimenting with dbt for data transformation, and is very enthusiastic about its potential. He's also keen to learn more about real-time data streaming solutions like Kafka. He's a quick learner and a strong communicator, but can sometimes get bogged down in details \u2013 needs someone to help him prioritize."
+    },
+    "matchContactFile": {
+      "positioning": "As a Site Reliability Engineer at NovaBank, I lead the development and maintenance of our enterprise-scale LLM infrastructure. My focus is on ensuring the reliability, scalability, and security of our AI deployments, with a strong emphasis on data governance and compliance within a highly regulated environment. Leveraging my background in quantitative finance, I bridge the gap between model development and real-world business applications, translating complex requirements into robust and efficient infrastructure solutions. Currently, I\u2019m spearheading a project to migrate our LLM inference pipeline to a more cost-effective and auditable platform, utilizing Kubernetes and serverless technologies. I\u2019m passionate about building resilient systems and am always eager to connect with individuals facing similar challenges in the financial services industry or with expertise in AI infrastructure security.",
+      "lookingFor": "\u2022 **AI Security Vendors:** Seeking innovative solutions for securing LLM deployments, including adversarial attack detection and data privacy preservation.\n\u2022 **SREs in Financial Services:** Interested in connecting with peers tackling similar challenges in regulated industries to share best practices and collaborate on solutions.\n\u2022 **Open-Source Contributors:** Looking for collaborators on open-source tooling for LLM observability, particularly around cost tracking and performance monitoring.\n\u2022 **Cloud Infrastructure Experts:**  Seeking advice on optimizing cloud infrastructure for LLM workloads, focusing on cost efficiency and scalability.\n\u2022 **Potential Partners:** Exploring potential partnerships with companies specializing in data lineage and governance for AI systems.\n\u2022 **Advisors:** Connecting with experienced advisors in the AI infrastructure space to gain insights into emerging trends and best practices.",
+      "introPreferences": "\u2022 **Hard Requirements:** Introductions should be to individuals with direct experience in AI infrastructure security or SRE for financial institutions.\n\u2022 **Hard Requirements:**  Ensure the connection understands the importance of data sovereignty and compliance.\n\u2022 **Soft Preferences:** Prefer introductions from mutual connections with a strong technical background.\n\u2022 **Soft Preferences:** Keep introductions concise and focused on the specific area of mutual interest.\n\u2022 **Avoid:** Introductions to sales representatives without a technical background or a clear understanding of our infrastructure needs.\n\u2022 **Avoid:**  Introductions to individuals focused solely on 'bleeding edge' technologies without a proven track record.",
+      "personalPreferences": "I prefer asynchronous communication (email or Slack) for initial contact. I'm a direct communicator and appreciate clear, concise messaging.  I'm an early riser and generally respond quickly during UK business hours.",
+      "meetingAndSchedulingPreferences": "Please include a brief agenda when requesting a meeting. I am flexible with scheduling and happy to accommodate different time zones.",
+      "background": "\u2022 **NovaBank, London, UK** \u2013 *Site Reliability Engineer* (Jan 2021 \u2013 Present)\n    \u25e6 Responsible for the full lifecycle of LLM infrastructure, including design, deployment, monitoring, and incident response.\n    \u25e6 Led the migration of key LLM services to Kubernetes, resulting in a 30% reduction in infrastructure costs.\n    \u25e6 Implemented comprehensive monitoring and alerting systems using Prometheus and Grafana, improving system observability.\n    \u25e6 Developed and maintained infrastructure-as-code using Terraform, ensuring reproducibility and version control.\n    \u25e6 Collaborated with data science and security teams to ensure compliance with data privacy regulations (GDPR, CCPA).\n    \u25e6 Championed the adoption of Chaos Engineering principles to proactively identify and mitigate system vulnerabilities.\n\u2022 **QuantStrat Capital, New York, USA** \u2013 *Quantitative Analyst* (June 2016 \u2013 Dec 2020)\n    \u25e6 Developed and backtested algorithmic trading strategies using Python and statistical modeling techniques.\n    \u25e6 Conducted research on market microstructure and statistical arbitrage opportunities.\n    \u25e6 Collaborated with software engineers to implement trading algorithms and risk management systems.\n    \u25e6 Gained deep understanding of financial markets, data analysis, and risk management principles.\n\u2022 **Massachusetts Institute of Technology (MIT), Cambridge, MA, USA** \u2013 *Master of Science in Financial Engineering* (2014 \u2013 2016)\n    \u25e6 Focused coursework on machine learning, stochastic calculus, and computational finance.\n\u2022 **University of California, Berkeley, CA, USA** \u2013 *Bachelor of Science in Mathematics* (2010 \u2013 2014)\n    \u25e6 Minor in Computer Science.\n\u2022 **Skills:** Kubernetes, Terraform, Python, Prometheus, Grafana, Docker, AWS (EC2, S3, Lambda), GCP, LLM Observability (Weights & Biases, Arize AI), Data Governance, GDPR, CCPA, Git, CI/CD, Statistical Modeling, Risk Management.",
+      "locationAvailability": "Currently based in London, UK. Open to remote collaboration and occasional travel within Europe.  Planning to attend the AI Summit in Amsterdam in November.",
+      "notes": "\u2022 Thabo is particularly interested in solutions that address the unique challenges of deploying LLMs in highly regulated environments.\n\u2022 Recently completed a successful proof-of-concept for a new LLM inference pipeline using serverless technologies.\n\u2022 Currently evaluating several AI security vendors and is focused on solutions that integrate seamlessly with existing infrastructure.\n\u2022  Mentioned a strong preference for pragmatic, data-driven approaches to problem-solving.  Avoid overly theoretical discussions."
+    }
+  },
+  "label": "pos",
+  "failure_mode": null,
+  "seed_pair_id": null,
+  "seed_user_id": null,
+  "batch_id": "rrf_003",
+  "split_hash": "20bbe8f293127372",
+  "metadata": {
+    "source": "pairing_rrf",
+    "query_key": "cmsynthpa3cc30b4898818525::q0",
+    "section_index": 0,
+    "labeler": {
+      "kind": "llm_judge",
+      "model": "google/gemini-3.1-flash-lite",
+      "framing": "naive",
+      "prompt_ref": {
+        "role": "pair_judge",
+        "identifier": "-/pair-rrf-judge:v1",
+        "commit_hash": "9a319b13c2bf37a803c9b7b73ed18a325b31e62885af6f1200742d0dc2e4bdc2",
+        "owner": "-",
+        "repo": "pair-rrf-judge",
+        "tag_or_version": "v1"
+      },
+      "votes_per_pair": 1,
+      "deadband": false,
+      "holdout_pair_auc": 0.6358,
+      "holdout_hard_neg_auc": 0.6466,
+      "holdout_accuracy_at_decision_point": 0.5942
+    },
+    "fusion": {
+      "candidate_id": "cmsynthpd131a2281310b3b80",
+      "rrf_score": 0.032258,
+      "dense_rank": 2,
+      "dense_score": 0.725146,
+      "lexical_rank": null,
+      "lexical_score": null,
+      "found_by_both": false
+    },
+    "drop_reason": null
+  },
+  "qc": {
+    "judge_match": "yes",
+    "judge_confidence_unused": 85.0,
+    "judge_reasoning": "Both individuals share a background in quantitative finance and have transitioned into high-level infrastructure roles within regulated industries. They are both currently focused on the intersection of data/ML infrastructure and scalability, making them excellent peers for exchanging best practices regarding LLM deployment, data governance, and infrastructure optimization. Despite the geographic difference, their shared technical challenges and professional trajectories create a strong foundation for a mutually beneficial connection."
+  },
+  "human_review": {
+    "verdict": null,
+    "notes": null
+  }
+}

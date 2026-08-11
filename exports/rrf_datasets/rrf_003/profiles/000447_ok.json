@@ -1,0 +1,54 @@
+{
+  "id": 447,
+  "archetype": "Experienced Founder, Community Builder",
+  "given_name": "Sana Zhang",
+  "style_version": 27,
+  "archetypes_version": 75,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Sana Zhang is a serial entrepreneur currently focused on building a platform connecting Web3 creators with their communities. Her distinctive career detail is a previous successful exit in the sustainable fashion tech space, which provided the capital for her current venture. She\u2019s deeply invested in the creator economy and believes the future of content ownership lies with decentralized technologies. She\u2019s actively seeking seed funding and strategic partnerships to scale her platform. She's a strong believer in the power of community and actively mentors other female founders. She isn't necessarily looking for a traditional 'job' but is open to advisory roles with companies aligned with her values.",
+    "positioning": "I'm Sana Zhang, founder and CEO of \u2018NexusBloom,\u2019 a platform empowering Web3 creators to forge deeper, more rewarding connections with their audiences. We're building the infrastructure for a creator-owned future, enabling direct monetization, community governance, and authentic engagement. Previously, I led the development and successful acquisition of \u2018ThreadCycle,\u2019 a sustainable fashion tech startup focused on circular economy solutions. That experience fueled my passion for building impactful businesses and understanding the power of technology to drive positive change. At NexusBloom, we\u2019ve achieved significant early traction with a rapidly growing community of artists, writers, and developers. We\u2019re currently focused on expanding our platform\u2019s functionality and scaling our user base. I'm passionate about fostering a collaborative ecosystem where creators thrive and innovation flourishes. I'm actively seeking partners who share this vision and are committed to shaping the future of the internet.",
+    "background": "- **CEO & Founder, NexusBloom** (Jan 2022 \u2013 Present)\n\t* Spearheaded the development and launch of NexusBloom, a Web3 platform connecting creators with their communities through tokenized access, DAO governance, and direct monetization tools.\n\t* Secured initial seed funding of $500K and built a core team of 8 engineers, designers, and marketers.\n\t* Implemented a robust tokenomics model utilizing ERC-20 tokens for community rewards and platform governance.\n\t* Technologies used: Solidity, React, Node.js, IPFS, Web3.js, Discord integration.\n\t* Key Achievement: Achieved 10,000 registered creators and 50,000 active community members within the first 12 months.\n\n- **CEO & Founder, ThreadCycle** (June 2018 \u2013 Dec 2021)\n\t* Founded ThreadCycle, a technology platform facilitating the resale and recycling of clothing, reducing textile waste.\n\t* Developed a proprietary AI-powered system for clothing authentication and valuation.\n\t* Led the company through a successful acquisition by \u2018EcoStyle Solutions\u2019 for $2.3M.\n\t* Managed a team of 15 employees across engineering, operations, and marketing.\n\t* Technologies used: Python, Machine Learning (TensorFlow, scikit-learn), AWS, PostgreSQL.\n\t* Key Achievement: Diverted over 500,000 items of clothing from landfills and generated over $1M in revenue.\n\n- **Software Engineer, InnovateTech** (Aug 2016 \u2013 May 2018)\n\t* Developed and maintained web applications using Java, Spring, and MySQL.\n\t* Collaborated with cross-functional teams to design and implement new features.\n\t* Contributed to the improvement of software development processes and best practices.\n\t* Key Achievement: Led the development of a new user interface for a key product, resulting in a 20% increase in user engagement.",
+    "lookingFor": "I'm actively looking to expand my network and explore strategic partnerships that can accelerate NexusBloom\u2019s growth. Specifically, I\u2019m seeking:\n\n* **Seed-stage investors** with a focus on Web3, creator economy, and decentralized technologies. I\u2019m open to discussing our Series A round in the coming months.\n* **Strategic partners** \u2013 particularly those with expertise in blockchain infrastructure, NFT marketplaces, and community management tools.\n* **Experienced advisors** with a background in scaling early-stage startups and navigating the Web3 landscape.\n* **Connections to key influencers** within the creator economy who can help amplify our message and reach a wider audience.\n\nI'm also open to mentoring aspiring female founders in the Web3 space. Please connect me if you know anyone who might benefit from a conversation. I\u2019m particularly interested in founders building solutions around creator monetization, community building, and decentralized governance.",
+    "notes": "- Data quality note: Sana\u2019s professional history is slightly embellished, reflecting a common practice among founders to present a polished narrative. Her role at InnovateTech was more junior than presented.\n- Narrative framing: Sana consistently frames her work around impact and positive change; this is a core element of her personal brand.\n- Potential conflict: She\u2019s a vocal advocate for open-source technologies, which may occasionally conflict with proprietary solutions preferred by potential partners.\n- Community affiliation: Active member of the Female Founders in Tech (FFT) network and frequently speaks at Web3 conferences.\n- Verification needed: The $2.3M acquisition price of ThreadCycle needs further verification.",
+    "locationAvailability": "I'm currently based in San Francisco, California, but I'm comfortable with remote collaboration and willing to travel for key meetings and events.",
+    "introPreferences": "* **Do:** Introduce me to VCs actively investing in Web3 creator tools. Highlight my previous successful exit with ThreadCycle. Emphasize my commitment to building a creator-owned future.\n* **Don\u2019t:** Position me as seeking a \u2018job\u2019 \u2013 I'm a founder, not a job seeker. Oversell the technical complexity of NexusBloom \u2013 keep the explanation concise and focused on the value proposition for creators.\n* Ideal introduction: A warm email introducing me to the relevant contact, briefly outlining NexusBloom's mission and my background, and suggesting a short introductory call.",
+    "personalPreferences": "I prefer initial communication via email and am always open to quick video calls. Constructive feedback is highly valued, but please deliver it directly and respectfully.",
+    "meetingAndSchedulingPreferences": "Flexible with scheduling. Prefer 30-minute introductory calls. Happy to meet in-person in the Bay Area."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 22.01210308074951,
+      "input_tokens": 819,
+      "output_tokens": 1341,
+      "problems": []
+    }
+  ],
+  "success": true
+}

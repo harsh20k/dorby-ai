@@ -1,0 +1,72 @@
+{
+  "id": 887,
+  "archetype": "European Founder, US Expansion",
+  "given_name": "Amara Weber",
+  "style_version": 55,
+  "archetypes_version": 150,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Amara Weber is a Spanish founder (originally from Barcelona) who built a successful, bootstrapped SaaS company focused on AI-powered content localization for e-commerce. She\u2019s now seeking Series A funding to aggressively expand into the US market, specifically targeting partnerships with major e-commerce platforms and agencies. A distinctive career detail is that she initially started as a freelance translator, giving her deep empathy for the pain points of content localization. She\u2019s highly data-driven, pragmatic, and very focused on ROI. She's actively networking to find the *right* investors and partners \u2013 she\u2019s wary of purely hype-driven individuals and values demonstrable experience scaling similar businesses. She's also very keen to connect with US-based e-commerce leaders to understand the nuances of the American market.",
+    "positioning": "Amara Weber is the Founder and CEO of LinguaFlow, an AI-driven platform revolutionizing content localization for e-commerce businesses. After years witnessing the inefficiencies of traditional translation methods, Amara built LinguaFlow to deliver faster, more accurate, and cost-effective localization solutions. We\u2019ve achieved 300% revenue growth year-over-year, entirely bootstrapped, and are now poised for rapid US expansion. LinguaFlow empowers brands to seamlessly adapt their content for new markets, boosting conversion rates and global reach. I\u2019m actively seeking strategic investors and partners to fuel our next phase of growth and am eager to connect with those who share our vision for a truly globalized e-commerce landscape.",
+    "background": "- **Founder & CEO, LinguaFlow** (2020 \u2013 Present): Led all aspects of company strategy, product development, sales, and marketing, achieving significant revenue growth and market traction in the European e-commerce sector.\n- **Freelance Translator & Localization Consultant** (2016 \u2013 2020): Provided translation and localization services to a diverse portfolio of clients, gaining deep insight into the challenges faced by businesses expanding internationally.\n- **BA, Translation & Interpretation, Universitat Pompeu Fabra, Barcelona** (2012 \u2013 2016): Focused on technical translation and computational linguistics, graduating *cum laude*.\n- **Skills:** AI, Machine Translation, Natural Language Processing (NLP), E-commerce Localization, SaaS, Growth Hacking, Business Development, Strategic Partnerships, Spanish (Native), English (Fluent), Catalan (Fluent).\n- **Certifications:** Project Management Professional (PMP), Google Analytics Certified.\n- **Awards:** \u2018Rising Star\u2019 \u2013 Barcelona Tech Founders (2023).\n- **Previous Projects:** Developed a custom machine translation engine for a leading Spanish fashion retailer, resulting in a 20% reduction in translation costs.\n- **Languages:** Spanish (Native), English (Fluent), Catalan (Fluent), French (Conversational).\n- **Technical Proficiency:** Proficient in various CAT tools (Trados, memoQ), MT engines (DeepL, Google Translate), and data analytics platforms (Google Analytics, Mixpanel).",
+    "lookingFor": "## Investors\n- Seed/Series A investors with a proven track record of investing in B2B SaaS companies, particularly those focused on AI or e-commerce.\n- Investors who understand the nuances of the localization market and can provide strategic guidance for US expansion.\n\n## Strategic Partners\n- Partnerships with major e-commerce platforms (Shopify, Magento, BigCommerce) to integrate LinguaFlow\u2019s API.\n- Relationships with leading e-commerce marketing agencies in the US to offer LinguaFlow as a value-added service to their clients.\n\n## Mentors & Advisors\n- Experienced entrepreneurs who have successfully scaled SaaS businesses in the US market.\n- Individuals with deep expertise in US e-commerce regulations and market trends.",
+    "notes": "- Amara is extremely data-driven and responds best to concrete metrics and ROI projections.\n- She is very protective of her company culture and prioritizes finding partners who align with her values.\n- She\u2019s been burned by overly aggressive sales tactics in the past; a consultative approach is preferred.\n- She's very open to informational interviews but dislikes vague networking requests.\n- She's currently exploring options for a US headquarters, likely in the Northeast (Boston/NYC area).",
+    "locationAvailability": "Based in Barcelona, Spain, but actively traveling to the US and available for remote meetings. Open to establishing a strong presence on the East Coast.",
+    "introPreferences": "## Hard Requirements\n- Introductions to Partners at Series A/B Venture Capital firms focused on SaaS.\n- Introductions to Heads of Partnerships at Shopify, Big Commerce, or similar major e-commerce platforms.\n- Individuals who can provide *specific* insights into the US e-commerce localization landscape.\n\n## Soft Preferences\n- Introductions should be warm and include context about why a connection would be mutually beneficial.\n- I prefer introductions from people who have a pre-existing relationship with the target individual.\n- Please avoid introductions to individuals who primarily focus on early-stage seed funding.",
+    "personalPreferences": "I prefer direct and concise communication. Email is my primary method of contact, but I'm also available on LinkedIn. I appreciate thoughtful introductions with clear context.",
+    "meetingAndSchedulingPreferences": "I am generally flexible with scheduling but prefer to avoid meetings on Fridays. I am comfortable with video conferencing and am open to traveling for key meetings."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 21.823943853378296,
+      "input_tokens": 775,
+      "output_tokens": 1175,
+      "problems": [
+        "background: possible truncation (ends with '...hine Learning \u2013 Specialty')"
+      ]
+    },
+    {
+      "attempt": 2,
+      "elapsed_s": 16.58672785758972,
+      "input_tokens": 775,
+      "output_tokens": 1207,
+      "problems": [
+        "background: possible truncation (ends with '...hine Learning \u2013 Specialty')"
+      ]
+    },
+    {
+      "attempt": 3,
+      "elapsed_s": 15.359158039093018,
+      "input_tokens": 775,
+      "output_tokens": 1147,
+      "problems": []
+    }
+  ],
+  "success": true
+}

@@ -1,0 +1,54 @@
+{
+  "id": 57,
+  "archetype": "Experienced Retail/Consumer Transformation Leader",
+  "given_name": "Mikael Ibrahim",
+  "style_version": 4,
+  "archetypes_version": 10,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Mikael Ibrahim is a seasoned retail and consumer packaged goods (CPG) executive currently leading transformation efforts at 'NovaBloom,' a direct-to-consumer (DTC) floral delivery startup. He spent the first 15 years of his career in traditional brick-and-mortar retail, culminating in a regional VP role at Target. A pivotal experience leading a failed omnichannel initiative at Target (despite positive results in his region) sparked his passion for the agility and customer-centricity of DTC brands. He\u2019s now focused on scaling NovaBloom while actively looking for board advisory roles where he can apply his expertise to help other companies navigate the evolving retail landscape. He\u2019s a data-driven leader but also emphasizes the importance of brand storytelling and emotional connection with consumers. He\u2019s a relatively direct communicator and values efficiency in networking.",
+    "positioning": "As CEO of NovaBloom, I\u2019m focused on disrupting the floral industry with a data-driven, customer-first approach. We deliver farm-fresh bouquets directly to consumers, cutting out the traditional retail markup and offering unparalleled quality and convenience. Since launching our personalized subscription service six months ago, we\u2019ve seen a 35% month-over-month growth in subscriber acquisition, fueled by targeted digital marketing campaigns and a commitment to sustainable sourcing. My role involves leading all aspects of the business, from strategy and operations to marketing and fundraising, ensuring NovaBloom remains at the forefront of the evolving DTC landscape. We're currently seeking Series A funding to expand our fulfillment network and scale our marketing efforts.",
+    "background": "- **CEO, NovaBloom** (2022 - Present): Led the company through seed funding, built out core team, launched DTC subscription service, and drove 35% MoM subscriber growth.\n- **Regional Vice President, Target** (2017 \u2013 2022): Managed P&L for a $300M region, overseeing 15 stores and a team of 800+ employees. Consistently exceeded sales targets, achieving a 5% YoY sales increase in a mature market.\n- **Omnichannel Initiative Lead, Target** (2019-2021): Led the implementation of a regional omnichannel strategy, integrating online and in-store experiences. While the regional rollout was successful (18% online sales increase), the company-wide implementation faced challenges, fueling my interest in the agility of DTC models.\n- **Store Director, Target** (2013 \u2013 2017): Managed all aspects of store operations, including merchandising, staffing, and customer service. Consistently ranked among the top 10% of stores nationwide in customer satisfaction.\n- **Assistant Store Manager, Target** (2010 \u2013 2013): Developed leadership skills and gained experience in retail operations.\n- **Bachelor of Science in Business Administration, University of Minnesota** (2006-2010). Graduated *Cum Laude*.\n- **Certified Six Sigma Black Belt** (2018): Demonstrated proficiency in process improvement and data analysis.\n- Previously served as a mentor for the Target Scholars program, assisting underprivileged students with career development.",
+    "lookingFor": "- Introductions to Venture Capital firms specializing in Series A funding for DTC brands (specifically those with a focus on sustainability).\n- Connections to experienced CPG operators who have successfully scaled subscription-based businesses.\n- Board advisory opportunities with mid-stage retail or CPG companies seeking transformation guidance.\n- Warm introductions to potential strategic partners in the floral supply chain (specifically farms committed to sustainable practices).\n- Insights into best practices for international expansion (specifically into the European market).\n- Introductions to marketing agencies specializing in performance marketing for DTC brands.\n- Connections to leaders at companies known for exceptional supply chain logistics.\n- Seeking individuals interested in joining NovaBloom's advisory board.",
+    "notes": "- Mikael is very direct and values efficient communication. Avoid lengthy introductory emails; get straight to the point.\n- He's particularly interested in learning from others' mistakes, especially regarding scaling challenges.\n- He recently mentioned being frustrated with the lack of focus on sustainability within the traditional floral industry.\n- He\u2019s actively researching potential acquisitions for NovaBloom to expand product offerings.\n- He\u2019s a strong advocate for employee empowerment and a positive work culture.\n- He is open to informal coffee chats but prefers to keep them focused on specific topics.",
+    "locationAvailability": "Based in Minneapolis, Minnesota, but open to remote meetings and occasional travel. Willing to consider relocation for the right board opportunity.",
+    "introPreferences": "- **Must-Have:** Experience scaling a DTC subscription business to $50M+ in revenue.\n- **Strongly Preferred:** Background in the CPG or retail industry.\n- **Ideal:** Connection has a track record of successful exits or IPOs.\n- **Avoid:** Introductions to individuals solely focused on early-stage seed funding.\n- **Framing:** When making introductions, highlight my experience in both traditional retail and the DTC space.\n- **Dealbreaker:** Individuals with a history of unethical business practices.\n- **Preferred Connection Level:** VP, Director, or C-Level executives.",
+    "personalPreferences": "I prefer quick, concise communication via email or LinkedIn. I\u2019m not a big fan of long phone calls unless absolutely necessary.",
+    "meetingAndSchedulingPreferences": "I generally prefer 30-minute meetings and utilize Calendly for scheduling. I'm flexible with video conferencing platforms \u2013 Zoom, Google Meet, or Microsoft Teams all work well."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 15.72511100769043,
+      "input_tokens": 847,
+      "output_tokens": 1175,
+      "problems": []
+    }
+  ],
+  "success": true
+}

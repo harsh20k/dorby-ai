@@ -1,0 +1,63 @@
+{
+  "id": 413,
+  "archetype": "European Fintech/VC Cross-Border",
+  "given_name": "Anh Lopes",
+  "style_version": 25,
+  "archetypes_version": 69,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Anh Lopes is a Portuguese-Brazilian founder and CEO of 'NovaPay,' a fintech startup focused on simplifying cross-border payments for small and medium-sized businesses (SMBs) operating between the EU and Latin America. She previously spent 8 years at a major European bank focusing on regulatory compliance for international transactions, which gave her deep insight into the pain points of existing systems. A distinctive detail: she bootstrapped NovaPay for the first two years, leveraging her personal savings and a small angel investment from former colleagues, demonstrating significant resourcefulness. Now, she\u2019s seeking Series A funding to scale operations and expand market reach. She's very focused on impact investing and building a diverse team. She's based in Lisbon but frequently travels to London and S\u00e3o Paulo.",
+    "positioning": "NovaPay is revolutionizing cross-border payments for SMBs, eliminating friction and reducing costs for businesses trading between Europe and Latin America. We understand the complexities of international finance, having experienced them firsthand, and we\u2019ve built a platform designed specifically to address these challenges. Our proprietary technology streamlines compliance, automates FX conversions, and offers transparent, competitive pricing. Currently, we are experiencing 30% MoM growth, serving over 150 businesses, and are poised to become the leading solution for this underserved market. We're not just moving money; we're empowering businesses to thrive globally.",
+    "background": "\u2022 **CEO & Founder, NovaPay** (Lisbon, Portugal) \u2013 January 2021 \u2013 Present\n    * Led all aspects of company strategy, fundraising, product development, and operations, successfully bootstrapping the company through initial growth phases.\n    * Secured seed funding of \u20ac300k from angel investors, utilizing funds for platform development and team expansion.\n    * Achieved 30% month-over-month revenue growth for the past six months, demonstrating strong market demand.\n    * Built and launched a fully compliant cross-border payment platform integrated with key European and Latin American banking partners.\n    * Oversaw the development and implementation of a robust KYC/AML compliance program.\n\n\u2022 **Compliance Manager, Deutsche Bank** (London, UK) \u2013 June 2013 \u2013 December 2020\n    * Managed regulatory compliance for international payments, focusing on AML, KYC, and sanctions screening.\n    * Developed and implemented new compliance procedures, resulting in a 15% reduction in compliance-related errors.\n    * Led cross-functional teams to address complex compliance challenges related to cross-border transactions.\n    * Conducted risk assessments and developed mitigation strategies for international payment flows.\n    * Maintained strong relationships with regulatory bodies and external auditors.\n\n\u2022 **Education:**\n    * **MBA, London Business School** (London, UK) \u2013 2011 \u2013 2013\n    * **BA, Economics, Universidade Nova de Lisboa** (Lisbon, Portugal) \u2013 2008 \u2013 2011\n\n\u2022 **Skills:** Fintech, Cross-Border Payments, Regulatory Compliance (AML, KYC), Risk Management, Strategic Planning, Fundraising, Team Leadership, Portuguese, English, German (conversational).",
+    "lookingFor": "We are currently raising a Series A round of \u20ac2-3 million to accelerate our growth and expand our market presence. Specifically, we are seeking:\n\n* **Venture Capital Investors:**  Funds with a focus on Fintech, particularly those with experience in cross-border payments or Latin American markets. We are prioritizing investors who can offer strategic guidance and access to their network.\n* **Strategic Partners:**  Banks and financial institutions interested in integrating NovaPay\u2019s platform into their existing services. We are open to exploring partnership models ranging from API integrations to co-branded solutions.\n* **Key Hires:**\n    * **Head of Engineering:**  Experienced engineering leader with a proven track record of building and scaling high-performance payment platforms.  Strong experience with cloud infrastructure (AWS, Azure, GCP) is essential.\n    * **Head of Sales (Latin America):**  Experienced sales executive with a deep understanding of the Latin American market and a network of contacts within the SMB sector.  Fluency in Spanish is required.\n    * **Compliance Officer:**  Experienced compliance professional with a strong understanding of European and Latin American regulatory frameworks.",
+    "notes": "Anh had a very positive call with Alex at Anthemis last week. He expressed strong interest but wants to see more traction in the Brazilian market. Follow up with marketing team to prioritize Brazil-focused campaigns. Also, need to update the pitch deck with the latest growth metrics. \n\n* **Action Item:** Schedule follow-up call with Alex for next week.\n* **Potential Issue:**  Competition from Wise is increasing.  Need to refine our messaging to emphasize our focus on SMBs and our unique value proposition for the EU-LatAm corridor.\n* **Key Relationship:**  Maintaining a strong relationship with Ricardo Silva at Santander is crucial for securing future partnerships.",
+    "locationAvailability": "Based in Lisbon, Portugal, with frequent travel to London, UK and S\u00e3o Paulo, Brazil.",
+    "introPreferences": "I'm particularly interested in connecting with:\n\n* **Fintech VCs:** Specifically those actively investing in cross-border payments and/or Latin America.\n* **Founders of successful Fintech companies:** I value learning from peers who have navigated similar challenges.\n* **Regulatory experts specializing in Fintech:**  Gaining insights into evolving regulatory landscapes is critical for our business.\n\n**Framing for introductions:** Please position NovaPay as a rapidly growing fintech startup disrupting the cross-border payments space for SMBs.\n\n**Please avoid introductions to:** Generalist investors without specific Fintech experience.  Also, please avoid connecting me with competing payment platforms.",
+    "personalPreferences": "I prefer quick, direct communication. Email is best for detailed discussions, but feel free to reach out on LinkedIn for quick questions. I'm an early riser and generally available before 9 AM CET.",
+    "meetingAndSchedulingPreferences": "I generally prefer to have a quick introductory call before scheduling a longer meeting.  Please send a brief agenda in advance.  I always follow up with a thank-you note and key takeaways after each meeting."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 17.891897916793823,
+      "input_tokens": 761,
+      "output_tokens": 1341,
+      "problems": [
+        "background: possible truncation (ends with '..., Portugal) \u2013 2011 \u2013 2014')"
+      ]
+    },
+    {
+      "attempt": 2,
+      "elapsed_s": 17.714396953582764,
+      "input_tokens": 761,
+      "output_tokens": 1328,
+      "problems": []
+    }
+  ],
+  "success": true
+}

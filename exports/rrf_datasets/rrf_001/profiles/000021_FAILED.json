@@ -1,0 +1,74 @@
+{
+  "id": 21,
+  "archetype": "Full-Stack Engineer, Growth Mindset",
+  "given_name": "Leilani Chen",
+  "style_version": 2,
+  "archetypes_version": 5,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Leilani Chen is a seasoned Full-Stack Engineer currently leading the front-end development for 'NovaBloom,' a seed-stage agtech startup focused on AI-powered precision farming. She's a pragmatic problem-solver with a strong background in scaling early-stage products. A distinctive career detail is her prior experience at a small robotics firm, giving her a unique understanding of hardware/software integration, which she now leverages in NovaBloom. She\u2019s aiming to solidify NovaBloom\u2019s tech stack, build out a small but high-performing engineering team, and ultimately achieve Series A funding. She\u2019s actively seeking connections with experienced engineering leaders and investors familiar with the agtech space. She\u2019s less interested in purely theoretical discussions and more focused on practical solutions and demonstrable results.",
+    "positioning": "Leilani Chen is a full-stack engineer with a passion for building scalable and impactful technology. Currently, as a lead front-end engineer at NovaBloom, I'm focused on delivering a user-friendly and data-rich platform for precision agriculture. My expertise lies in translating complex data science into intuitive interfaces that empower farmers to optimize their yields and minimize environmental impact. Prior to NovaBloom, I honed my skills at a robotics firm, developing embedded systems and web applications for agricultural automation. This experience instilled in me a deep appreciation for the entire technology stack, from hardware integration to user experience. I thrive in fast-paced, early-stage environments where I can leverage my full skillset to drive product development and achieve tangible results. I'm passionate about leveraging technology to address real-world challenges and am always eager to connect with like-minded individuals.",
+    "background": "- **NovaBloom** (Seed Stage AgTech Startup) \u2013 *Lead Front-End Engineer* (Jan 2023 \u2013 Present)\n    * Led the development of the user interface for NovaBloom\u2019s core platform, resulting in a 30% increase in user engagement within the first quarter of launch.\n    * Implemented a responsive design system utilizing React, Redux, and TypeScript, improving cross-device compatibility and accessibility.\n    * Collaborated with data scientists and agricultural experts to translate complex algorithms into actionable insights for farmers.\n    * Mentored a junior engineer, guiding them through the full software development lifecycle.\n\n- **AgriRobotics Inc.** \u2013 *Software Engineer* (June 2020 \u2013 Dec 2022)\n    * Developed and maintained web applications for controlling and monitoring robotic harvesting systems using Python, Django, and JavaScript.\n    * Integrated software with embedded systems for real-time data acquisition and control.\n    * Contributed to the design and implementation of RESTful APIs for data exchange.\n    * Resolved critical production issues, ensuring system uptime and data integrity.\n\n- **Education:**\n    * **Massachusetts Institute of Technology (MIT)** \u2013 *Bachelor of Science in Computer Science* (2016 - 2020), Minor in Biology. GPA: 3.8/4.0\n    * Relevant coursework: Machine Learning, Data Structures & Algorithms, Robotics, Software Engineering\n\n- **Skills:**\n    * **Languages:** JavaScript (ES6+), TypeScript, Python, HTML, CSS\n    * **Frameworks/Libraries:** React, Redux, Node.js, Django, TensorFlow (basic)\n    * **Databases:** PostgreSQL, MongoDB\n    * **Tools:** Git, Docker, AWS (EC2, S3), Jira, Confluence\n    * **Methodologies:** Agile, Scrum",
+    "lookingFor": "I'm currently focused on building a strong engineering team at NovaBloom and scaling our platform for wider adoption. I'm actively seeking introductions to experienced engineering leaders (VP Engineering, CTO) who have successfully built and scaled engineering teams in early-stage startups, particularly within the agtech or IoT space. I'm also looking to connect with investors who are passionate about the future of agriculture and have a strong understanding of the challenges and opportunities in this sector.\n\nSpecifically, I'm interested in:\n\n* **Series A investors** focused on agtech, climate tech, or SaaS.\n* **Full-stack engineers** with 3+ years of experience and a strong proficiency in React and Node.js. Bonus points for experience with data visualization and geospatial technologies.\n* **Engineering managers** with a track record of building high-performing teams and fostering a culture of innovation.\n* **Advisors** with expertise in scaling cloud infrastructure and optimizing performance for data-intensive applications.\n\nI'm open to informational calls and would appreciate any referrals or connections that could help us achieve our goals.",
+    "notes": "* Leilani is highly pragmatic and values demonstrable results over theoretical discussions.\n* She's currently prioritizing engineering talent acquisition.\n* NovaBloom recently completed a successful seed round led by XYZ Ventures.\n* She prefers direct communication and avoids lengthy email chains.\n* She's particularly interested in individuals who have experience with hardware/software integration.",
+    "locationAvailability": "Leilani Chen is based in the San Francisco Bay Area and is open to remote collaboration. She is willing to travel for key meetings and conferences.",
+    "introPreferences": "* **Hard Requirements:** Individuals must have verifiable experience in building and scaling technology products.\n* **Soft Preferences:** Experience in agtech/IoT is a significant plus. Strong communication skills and a collaborative mindset are essential.\n* **Framing Suggestion:** 'Leilani is building a cutting-edge platform for precision agriculture at NovaBloom and is looking to connect with experienced leaders who can help her scale the technology and build a world-class engineering team.'\n* **Avoid:** Introducing Leilani to individuals who are primarily focused on academic research or consulting without a proven track record of implementation.\n* **Ideal Intro:** Someone who can immediately offer actionable advice or facilitate a connection to a relevant investor or potential hire.",
+    "personalPreferences": "I prefer to communicate via LinkedIn or email.",
+    "meetingAndSchedulingPreferences": "Generally available for meetings after 2 PM PST."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 24.60796284675598,
+      "input_tokens": 806,
+      "output_tokens": 1332,
+      "problems": [
+        "background: possible truncation (ends with '...odologies:** Agile, Scrum')"
+      ]
+    },
+    {
+      "attempt": 2,
+      "elapsed_s": 22.733840942382812,
+      "input_tokens": 806,
+      "output_tokens": 1287,
+      "problems": [
+        "background: possible truncation (ends with '...odologies:** Agile, Scrum')"
+      ]
+    },
+    {
+      "attempt": 3,
+      "elapsed_s": 22.4136700630188,
+      "input_tokens": 806,
+      "output_tokens": 1298,
+      "problems": [
+        "background: possible truncation (ends with '...odologies:** Agile, Scrum')"
+      ]
+    }
+  ],
+  "success": false
+}

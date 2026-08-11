@@ -1,0 +1,54 @@
+{
+  "id": 77,
+  "archetype": "Sales/GTM Strategist, Remote-First",
+  "given_name": "Olivia Sokolov",
+  "style_version": 5,
+  "archetypes_version": 14,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Olivia Sokolov is a seasoned GTM strategist specializing in helping early-stage SaaS companies achieve product-market fit and scale rapidly. Her distinctive career detail is a prior 7-year stint as a competitive chess player, which heavily influences her strategic thinking and ability to anticipate opponent (competitor) moves. She\u2019s now operating as an independent consultant, focusing on fractional CMO/VP of Sales roles for seed to Series A startups. She\u2019s actively seeking clients who are data-driven, ambitious, and open to challenging conventional sales wisdom. She prioritizes remote work and a flexible schedule, and is highly selective about the projects she takes on. She\u2019s a strong believer in the \u2018revenue-first\u2019 approach and isn\u2019t afraid to push back on founders who prioritize vanity metrics over tangible growth. She values direct communication and dislikes time-wasting activities.",
+    "positioning": "I\u2019m Olivia Sokolov, a growth strategist dedicated to accelerating revenue for early-stage SaaS companies. I specialize in architecting and executing go-to-market strategies that deliver measurable results, focusing on lean experimentation and rapid iteration. My approach is deeply rooted in data analysis and a relentless pursuit of product-market fit. Having spent years navigating the complexities of scaling high-growth businesses, I now offer fractional leadership \u2013 essentially, I step in as a part-time CMO or VP of Sales to provide strategic direction and hands-on execution. I'm particularly passionate about helping founders refine their messaging, optimize their sales processes, and build high-performing GTM teams. Recent successes include leading a seed-stage startup to 3x their ARR within six months and overhauling the sales strategy for a Series A company resulting in a 40% increase in qualified leads. Currently, I'm prioritizing engagements where I can have a significant impact on revenue generation and build a long-term advisory relationship.",
+    "background": "- **Independent GTM Consultant** (2021 \u2013 Present)\n    * Providing fractional CMO/VP of Sales leadership to seed to Series A SaaS startups.\n    * Developed and implemented GTM strategies resulting in an average of 2.5x ARR growth for clients within 6-12 months.\n    * Expertise in demand generation, sales process optimization, pricing strategy, and team building.\n    * Proficient in tools such as HubSpot, Salesforce, Mixpanel, Amplitude, and Google Analytics.\n    * Regularly conduct market research and competitive analysis to identify growth opportunities.\n\n- **Head of Growth, NovaTech Solutions** (2018 \u2013 2021)\n    * Led a team of 5 growth marketers responsible for driving user acquisition and revenue growth.\n    * Increased monthly recurring revenue (MRR) by 150% through a combination of paid advertising, content marketing, and SEO.\n    * Implemented A/B testing frameworks and data-driven decision-making processes.\n    * Managed a significant marketing budget, optimizing spend across various channels.\n\n- **Demand Generation Manager, CloudScale Inc.** (2016 \u2013 2018)\n    * Developed and executed lead generation campaigns targeting enterprise clients.\n    * Increased the number of qualified leads by 60% through targeted content and email marketing.\n    * Collaborated with sales teams to improve lead qualification and conversion rates.\n    * Managed and optimized marketing automation workflows.\n\n- **Sales Development Representative, DataWise Analytics** (2014 \u2013 2016)\n    * Consistently exceeded quota for qualified lead generation.\n    * Developed strong prospecting and communication skills.\n    * Gained a deep understanding of the sales cycle and customer needs.\n\n- **Competitive Chess Player** (2007 \u2013 2014) - *National Level*\n    * Ranked within the top 10% of players nationally.\n    * Developed strategic thinking, pattern recognition, and decision-making skills under pressure.",
+    "lookingFor": "I\u2019m actively seeking engagements with ambitious, data-driven SaaS founders who are looking to scale their businesses. I\u2019m particularly interested in companies operating in the B2B space, specifically those focused on developer tools, marketing technology, or sales enablement. I\u2019m open to both short-term consulting projects (3-6 months) and longer-term fractional leadership roles. \n\nI\u2019m also building my network of fellow GTM experts and investors. I'm looking for connections who can provide valuable insights into emerging market trends and potential partnership opportunities. Ideally, I\u2019d like to connect with angel investors and VCs who are actively investing in early-stage SaaS companies. \n\nI am *not* looking for projects that involve extensive travel or require on-site presence. I prioritize remote work and a flexible schedule. I\u2019m also not interested in working with companies that lack a clear understanding of their target market or are unwilling to embrace data-driven decision-making.",
+    "notes": "Olivia is exceptionally sharp and direct. She values efficiency and dislikes \u2018fluff.\u2019 She\u2019s a quick study and can rapidly assess a company\u2019s strengths and weaknesses. Her chess background is a genuine asset \u2013 she\u2019s a master strategist who anticipates challenges and develops contingency plans. She\u2019s highly selective about her clients and won\u2019t hesitate to turn down projects that don\u2019t align with her values or expertise. Recent conversations suggest she\u2019s focused on finding companies with strong technical founders who need help with the commercial side of the business. Approach her with data, be prepared to answer tough questions, and avoid wasting her time. Demonstrating a commitment to measurable results is crucial. She responds well to concise, well-articulated proposals.",
+    "locationAvailability": "I am fully remote and available to work with companies globally. I am based in Eastern Time (ET) but am flexible with meeting times to accommodate different time zones.",
+    "introPreferences": "- **Hard Requirements:** Any introduction *must* include a brief overview of the company\u2019s ARR, growth rate, and current funding stage. I need to understand the scale and trajectory of the business before even considering a conversation.\n- **Strongly Preferred:** Introductions should come from individuals who have a strong understanding of the company\u2019s business model and target market.\n- **Soft Preferences:** I appreciate introductions to founders who are actively seeking strategic advice and are open to challenging their existing assumptions.\n- **Do Not:** Introduce me to companies that are pre-revenue or have a poorly defined product. Avoid introductions that are purely speculative or lack a clear value proposition. Do *not* attempt to sell me on the opportunity \u2013 let the data speak for itself. I do not respond well to overly enthusiastic or generic introductions.",
+    "personalPreferences": "I prefer direct and concise communication. Email is my primary method of contact, but I\u2019m also available for brief calls. I appreciate clear agendas and pre-reading materials for meetings. I value honesty and transparency and am not afraid to provide constructive feedback.",
+    "meetingAndSchedulingPreferences": "Please include a Calendly link with your initial outreach. I prefer meetings to be focused and time-boxed (30-60 minutes max). Please send a brief summary of the key discussion points beforehand."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 20.20184874534607,
+      "input_tokens": 847,
+      "output_tokens": 1515,
+      "problems": []
+    }
+  ],
+  "success": true
+}

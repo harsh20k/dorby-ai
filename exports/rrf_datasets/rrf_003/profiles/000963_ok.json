@@ -1,0 +1,54 @@
+{
+  "id": 963,
+  "archetype": "Mobile-First African Tech Founder",
+  "given_name": "Diego Nakamura",
+  "style_version": 59,
+  "archetypes_version": 161,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Diego Nakamura is a 32-year-old Ghanaian-Brazilian founder currently building 'SikaPay', a mobile payment platform focused on enabling cross-border remittances *within* Africa, specifically targeting the informal economy. He previously spent 5 years in product management at a major fintech in Brazil, then took a deliberate step back to build a grassroots understanding of the African mobile money landscape. A key detail: he intentionally spent a year working *as* a mobile money agent in Accra to understand the pain points firsthand. He\u2019s highly articulate, passionate about financial inclusion, and currently fundraising a seed round. He\u2019s extremely focused on traction and demonstrable impact, and is wary of vanity metrics. He's looking for investors and advisors with deep experience in African fintech, particularly those comfortable with early-stage, high-risk/high-reward ventures. He prioritizes genuine connection and understanding over quick pitches.",
+    "positioning": "I'm Diego Nakamura, founder and CEO of SikaPay, a mobile payment platform designed to revolutionize cross-border remittances within Africa. We\u2019re tackling a significant problem: the exorbitant fees and friction associated with sending money between African countries, especially for those operating in the informal economy. I\u2019ve seen firsthand the impact these barriers have on families and small businesses. \n\nMy background blends experience in both developed and emerging markets. Before launching SikaPay, I spent five years at a leading Brazilian fintech, where I honed my skills in product management, user experience, and scaling technology solutions. However, I recognized that building for Africa requires a deeply contextualized approach. That\u2019s why I spent a year working *as* a mobile money agent in Accra, Ghana \u2013 a formative experience that informed our core product strategy.\n\nWe\u2019ve achieved significant early traction with SikaPay, demonstrating a clear market need and strong user engagement. We are now focused on expanding our network, enhancing our security protocols, and preparing for a full regional launch. I\u2019m actively seeking strategic partners and investors who share our vision of a financially inclusive Africa and are committed to supporting a sustainable, impactful scaleup.",
+    "background": "- **CEO & Founder, SikaPay** (Accra, Ghana) \u2013 January 2023 \u2013 Present\n    * Led all aspects of company formation, product development, and early-stage market entry.\n    * Secured initial angel investment of $150,000 based on MVP and market validation.\n    * Achieved 1,200+ active users and processed over $25,000 in transaction volume within the first six months.\n    * Developed and implemented a robust KYC/AML compliance framework tailored to the African context.\n\n- **Product Manager, PagSeguro** (S\u00e3o Paulo, Brazil) \u2013 June 2018 \u2013 December 2022\n    * Managed the roadmap and execution for a key mobile payments feature, resulting in a 20% increase in user adoption.\n    * Led cross-functional teams (engineering, design, marketing) to deliver high-quality product releases on time and within budget.\n    * Conducted extensive user research and data analysis to identify and prioritize product improvements.\n    * Mentored junior product managers and fostered a collaborative team environment.\n\n- **Mobile Money Agent, Various Locations, Accra, Ghana** \u2013 January 2022 \u2013 December 2022 (Independent Contractor)\n    * Gained firsthand experience of the challenges and opportunities within the African mobile money ecosystem.\n    * Built relationships with local communities and identified key pain points in remittance services.\n    * Provided valuable insights that directly informed the development of SikaPay\u2019s core features.\n\n- **B.S., Computer Science, Universidade de S\u00e3o Paulo** (S\u00e3o Paulo, Brazil) \u2013 2014 \u2013 2018\n    * Graduated *magna cum laude* with a focus on mobile application development.\n    * Completed a capstone project on secure mobile payment systems.",
+    "lookingFor": "I\u2019m actively seeking connections with individuals who can contribute to SikaPay\u2019s growth and impact. Specifically, I\u2019m focused on:\n\n**Fundraising:**\n* Seed-stage investors with a demonstrated track record of supporting African fintech startups.  We're targeting a $500k seed round.\n* Angel investors with experience in mobile payments or remittances.\n* Individuals with connections to relevant venture capital firms.\n\n**Advisory & Mentorship:**\n* Seasoned fintech executives with experience scaling businesses in emerging markets.\n* Experts in regulatory compliance and risk management within the African financial landscape.\n* Individuals with a strong network within the African mobile money ecosystem.\n\n**Partnerships:**\n* Potential partners for expanding our network of agents and merchants.\n* Technology providers offering complementary solutions (e.g., fraud detection, data analytics).\n\nI'm particularly interested in connecting with people who understand the nuances of operating in Africa and are passionate about financial inclusion.  I value authentic engagement and prefer conversations that go beyond superficial networking.  I'm *not* looking for general business advice; I need expertise specifically related to the African fintech market.",
+    "notes": "*Priority:* Seed funding. Diego is very focused on closing this round in Q1 2024.\n*Caveat:* He's skeptical of investors who haven't spent time on the ground in Africa.  He wants to see genuine understanding, not just financial backing.\n*Signal:*  He frequently mentions the year he spent working as a mobile money agent \u2013 this is a key part of his story and demonstrates his commitment.\n*Context:* He's extremely proud of SikaPay's early traction and is eager to share metrics, but dislikes 'vanity metrics' and focuses on demonstrable impact.\n*Recent Update:* He just completed a pitch deck refinement based on feedback from a potential investor in Nigeria.",
+    "locationAvailability": "Based in Accra, Ghana. Willing to travel within Africa and to key international fintech hubs (London, Silicon Valley) for fundraising.",
+    "introPreferences": "* Please only introduce Diego to investors actively deploying capital in African fintech, *specifically* mobile payments or remittances.\n* Minimum check size: $50,000.\n* Preferred introductions are warm introductions with a personal connection and a brief explanation of why the investor would be a good fit.\n* Please avoid cold emails or LinkedIn messages.  Diego prefers to be approached through trusted connections.\n* When making an introduction, please highlight Diego\u2019s experience working as a mobile money agent \u2013 he feels this is a critical differentiator.\n* Do *not* position SikaPay as simply a 'remittance app'; emphasize the focus on cross-border payments *within* Africa and serving the informal economy.",
+    "personalPreferences": "Prefers direct and concise communication. Appreciates thoughtful questions and genuine curiosity.",
+    "meetingAndSchedulingPreferences": "* Prefers initial meetings to be conducted via video conference (Zoom, Google Meet).\n* Is generally responsive to emails, but prefers short, focused messages.\n* Available for calls between 9:00 AM - 6:00 PM GMT."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 28.464833974838257,
+      "input_tokens": 911,
+      "output_tokens": 1520,
+      "problems": []
+    }
+  ],
+  "success": true
+}

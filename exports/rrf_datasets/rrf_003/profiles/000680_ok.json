@@ -1,0 +1,54 @@
+{
+  "id": 680,
+  "archetype": "Early-Stage Climate Tech Founder",
+  "given_name": "Lucas Fernandez",
+  "style_version": 42,
+  "archetypes_version": 114,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Lucas Fernandez is a first-time founder, 28 years old, with a background in data science and a passion for sustainable agriculture. He previously worked as a data scientist at a large agricultural tech company, where he became deeply frustrated with the amount of waste and inefficiency in the supply chain. He noticed a significant gap in real-time data visibility for small and medium-sized farms, leading to suboptimal yields and increased environmental impact. He\u2019s now building 'TerraLens', a SaaS platform providing predictive analytics and resource optimization for these farms, focusing initially on water usage and fertilizer application. He's currently raising a pre-seed round and is very focused on connecting with investors who understand the agricultural space *and* the power of data-driven solutions. He\u2019s energetic, slightly idealistic, and very data-focused \u2013 he\u2019ll lead with metrics. A distinctive career detail: he spent a year volunteering on an organic farm in Costa Rica after graduating, which solidified his commitment to sustainable practices.",
+    "positioning": "I'm Lucas Fernandez, founder of TerraLens, a platform transforming resource management for small and medium-sized farms. We\u2019re tackling the critical issue of agricultural inefficiency \u2013 a significant contributor to greenhouse gas emissions and water scarcity. TerraLens provides actionable insights powered by predictive analytics, helping farmers optimize water usage, fertilizer application, and ultimately, crop yields. Our target customer is the progressive farmer, typically managing between 50-500 acres, who is open to adopting technology to improve sustainability and profitability. We\u2019re seeing strong early traction with a pilot program in California\u2019s Central Valley, demonstrating a 15% reduction in water consumption and a 10% increase in yield for participating farms. We\u2019re currently raising a pre-seed round to expand our pilot, build out our engineering team, and scale our sales and marketing efforts. TerraLens isn't just about increasing farm profits; it's about building a more resilient and sustainable food system for the future. We believe data is the key to unlocking this potential, and we're dedicated to putting that power directly into the hands of farmers.",
+    "background": "* **TerraLens, Founder & CEO** (2023 \u2013 Present)\n    * Led all aspects of company formation, including market research, product development, fundraising, and team building.\n    * Developed and implemented the core data analytics algorithms powering TerraLens\u2019s predictive models.\n    * Secured initial pilot program with 5 farms in California\u2019s Central Valley.\n    * Responsible for investor relations and pitch deck development.\n* **AgriTech Solutions, Data Scientist** (2020 \u2013 2023)\n    * Developed machine learning models to predict crop yields based on weather patterns, soil conditions, and historical data.\n    * Conducted statistical analysis to identify trends and patterns in agricultural data.\n    * Collaborated with agronomists and farmers to implement data-driven solutions.\n    * Led the development of a data visualization dashboard for internal use.\n* **Volunteer \u2013 Finca La Esperanza, Costa Rica** (2019 \u2013 2020)\n    * Assisted with all aspects of organic farm operations, including planting, harvesting, and composting.\n    * Gained practical experience in sustainable agriculture practices.\n    * Developed a deep understanding of the challenges faced by small-scale farmers.\n* **Education:**\n    * **Master of Science, Data Science** \u2013 Stanford University (2018 \u2013 2020)\n        * GPA: 3.9/4.0\n        * Relevant Coursework: Machine Learning, Statistical Modeling, Data Visualization, Database Management.\n    * **Bachelor of Science, Environmental Science** \u2013 University of California, Berkeley (2014 \u2013 2018)\n        * Dean\u2019s List all semesters.\n* **Skills:** Python, R, SQL, Machine Learning (Regression, Classification, Clustering), Data Visualization (Tableau, Power BI), Statistical Modeling, Cloud Computing (AWS, Azure), GIS, Sustainable Agriculture, Data Analysis, Project Management, Communication, Leadership.",
+    "lookingFor": "I'm actively seeking connections with individuals who can help TerraLens scale and maximize its impact. Specifically, I'm looking for:\n\n* **Pre-Seed/Seed Stage Investors:**\n    * Focus: Climate Tech, AgTech, SaaS\n    * Ticket Size: $500k - $1M\n    * Ideal Profile: Investors with a strong understanding of the agricultural landscape and a commitment to sustainable solutions.  We\u2019re not just looking for capital; we want partners who can provide strategic guidance and industry connections.\n* **Strategic Partners:**\n    * Agricultural Cooperatives:  Partnerships to facilitate access to farm data and pilot program expansion.\n    * Farm Equipment Manufacturers: Integration opportunities to embed TerraLens's insights directly into existing farming machinery.\n    * Data Providers:  Access to additional data sources (e.g., soil sensors, weather data) to enhance our predictive models.\n* **Advisors:**\n    * Experienced AgTech Founders:  Guidance on navigating the challenges of building and scaling a startup in the agricultural space.\n    * Data Science Experts:  Mentorship on advanced analytics techniques and model optimization.\n    * Sales & Marketing Professionals:  Advice on go-to-market strategy and customer acquisition.\n\nI\u2019m also open to connecting with other founders in the climate tech space to share learnings and collaborate.  I\u2019m particularly interested in discussing challenges related to data access, farmer adoption, and scaling sustainable solutions.  I'm *not* currently looking for sales representatives or marketing agencies.",
+    "notes": "Profile created based on LinkedIn and publicly available information related to early-stage climate tech founders. Lucas Fernandez appears highly engaged on LinkedIn, frequently sharing articles related to sustainable agriculture and data-driven farming. Recent activity suggests he's actively networking with potential investors. Data source: LinkedIn, Crunchbase, company website. Caution: Information is synthetic and based on archetype research.  Avoid introductory requests solely focused on offering generic services. Focus introductions on investors with relevant sector experience.",
+    "locationAvailability": "Currently based in San Francisco, CA, but open to remote collaboration and travel. Willing to consider relocation for the right investment opportunity.",
+    "introPreferences": "When making introductions, please:\n\n* **Prioritize investors with a demonstrated interest in AgTech or Climate Tech.**\n* **Briefly highlight TerraLens\u2019s traction with the pilot program in California.** (15% water reduction, 10% yield increase).\n* **Keep introductions concise and focused on mutual benefit.** I appreciate directness and efficiency.\n* **Do *not* introduce me to individuals solely offering marketing or sales services.** I\u2019m currently focused on fundraising and strategic partnerships.\n* **Please include a brief note explaining *why* you think the connection would be valuable.** A personalized touch goes a long way.\n* **Preferred communication method is email initially.**",
+    "personalPreferences": "Prefers coffee meetings over formal lunches. Always checks email first thing in the morning.",
+    "meetingAndSchedulingPreferences": "I'm generally available for 30-minute introductory calls or video conferences. Please send a calendar invite with a few proposed times. I prefer to avoid meetings on Fridays if possible."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 26.088151216506958,
+      "input_tokens": 791,
+      "output_tokens": 1548,
+      "problems": []
+    }
+  ],
+  "success": true
+}

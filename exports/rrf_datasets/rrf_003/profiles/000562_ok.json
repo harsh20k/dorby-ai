@@ -1,0 +1,54 @@
+{
+  "id": 562,
+  "archetype": "Hospitality Tech Builder & Connector",
+  "given_name": "Mateus Reyes",
+  "style_version": 34,
+  "archetypes_version": 94,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Mateus Reyes is a former hotel General Manager who saw firsthand the inefficiencies and missed opportunities caused by outdated technology in the hospitality sector. He's now a Product Manager at 'StayForward,' a small but rapidly growing hospitality tech startup focused on AI-powered revenue management. His distinctive career detail is a six-month secondment to a luxury resort in Kyoto, Japan, where he deeply appreciated the blend of tradition and innovation. He's actively building a network of hotel operators and investors to accelerate StayForward's growth and evangelize a more tech-forward approach to hospitality. He's particularly interested in connecting with early-stage venture capitalists specializing in SaaS and with hotel groups looking to pilot new technologies. He values authenticity and a genuine interest in solving real-world hospitality problems.",
+    "positioning": "A seasoned hospitality professional transitioning into the tech space, Mateus Reyes is currently a Product Manager at StayForward, driving the development of AI-powered revenue management solutions for hotels. Leveraging over a decade of operational experience, he focuses on building products that address the core challenges faced by hoteliers, improving efficiency and maximizing profitability. His background as a General Manager provides a unique perspective on the practical application of technology, ensuring solutions are both innovative and user-friendly. Mateus is passionate about fostering collaboration between the hospitality and tech industries, believing that technology is key to unlocking the full potential of the modern hotel experience.",
+    "background": "* **StayForward, Product Manager** (2022 - Present) - Leading product roadmap, feature prioritization, and user research for AI-driven revenue management platform. Focus on integrations with PMS and Channel Managers.\n* **The Grand Majestic Hotel, General Manager** (2018 - 2022) - Full P&L responsibility for a 250-room luxury hotel; consistently exceeded revenue targets.\n* **Secondment - Kyoto Imperial Resort, Operational Manager** (2020 - 6 months) - Implemented service standardization protocols, focused on guest experience enhancement.\n* **The Grand Majestic Hotel, Front Office Manager** (2016 - 2018) - Managed front office operations, implemented guest recognition program increasing loyalty scores by 15%.\n* **The Coastal Breeze Inn, Assistant Manager** (2014 - 2016) - Assisted in daily operations, managed team of 10+ employees; streamlined check-in/check-out processes.\n* **Cornell University, School of Hotel Administration, B.S.** (2010 - 2014) - Dean's List, Hospitality Management Club President.\n* **Certified Revenue Management Professional (CRMP)** (2019)\n* **Proficient in:** Opera PMS, Duetto RMS, IDeaS RMS, Salesforce, Jira, Agile methodologies.",
+    "lookingFor": "* **Early-Stage Venture Capitalists:** Seeking seed/Series A funding for StayForward \u2013 specifically interested in firms with a portfolio focused on SaaS and hospitality tech.\n* **Hotel Groups (50+ rooms):** Actively seeking pilot partners to test and refine StayForward\u2019s revenue management platform. Open to both independent properties and branded hotels.\n* **Hospitality Tech Founders:** Interested in connecting with founders of complementary technologies (e.g., guest messaging, digital concierge) for potential integrations and partnerships.\n* **Revenue Management Consultants:** Looking to collaborate with consultants to expand StayForward\u2019s reach and provide expert insights to clients.\n* **Mentors:** Seeking guidance from experienced product leaders in the SaaS space.\n* **Thought Leadership Opportunities:** Open to speaking engagements and contributing articles to industry publications focused on hospitality tech.",
+    "notes": "* Mateus is a very active participant in the 'Hospitality Tech Innovators' Slack channel. \n* He recently attended the Hotel Technology Conference (HTNG) and is following up with several leads.\n* He\u2019s particularly interested in solutions that improve the guest experience *and* drive revenue.\n* He mentions his time in Kyoto frequently \u2013 it deeply influenced his approach to service and innovation. \n* Flag: He\u2019s a strong advocate for data-driven decision-making in hospitality.",
+    "locationAvailability": "Based in New York City, willing to travel domestically and internationally.",
+    "introPreferences": "* **Ideal Introductions:** VPs of Revenue Management at major hotel brands, Partners at relevant VC firms (seed/Series A), Founders of companies with complementary tech.\n* **Hard No:** Recruiters, Sales pitches for unrelated products (e.g., marketing automation, CRM). \n* **Soft Preference:** Introductions should highlight the potential for mutual benefit \u2013 specifically, how the connection can help StayForward grow or improve its product. \n* **Introduction Style:** A brief, personalized message explaining why the connection would be valuable.  Avoid generic templates.\n* **Don't introduce to:** Individuals solely focused on legacy systems or resistant to adopting new technologies.\n* **Bonus points if:** The connection has a demonstrated track record of innovation in the hospitality industry.\n* **Avoid:** Introductions to individuals who are not decision-makers.",
+    "personalPreferences": "I prefer to connect via LinkedIn or email initially. I'm a fairly direct communicator and appreciate concise, well-thought-out messages.",
+    "meetingAndSchedulingPreferences": "Generally available for virtual meetings. Please send a calendar invite with a brief agenda."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 18.69533896446228,
+      "input_tokens": 760,
+      "output_tokens": 1132,
+      "problems": []
+    }
+  ],
+  "success": true
+}

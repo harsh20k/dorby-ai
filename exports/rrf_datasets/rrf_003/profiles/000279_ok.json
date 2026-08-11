@@ -1,0 +1,54 @@
+{
+  "id": 279,
+  "archetype": "Early-Stage Investor/Advisor Network",
+  "given_name": "Malia Petrov",
+  "style_version": 17,
+  "archetypes_version": 46,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Malia Petrov is a seasoned angel investor and startup advisor specializing in B2B SaaS and AI-driven solutions. She had a successful career as a software engineer at a large tech company (Google) but left to found a small, ultimately unsuccessful, edtech startup. This experience deeply informs her investment strategy \u2013 she\u2019s particularly drawn to founders who demonstrate technical depth *and* a realistic understanding of market needs. She\u2019s now focused on making angel investments and providing mentorship, specifically looking for pre-seed and seed-stage companies. She\u2019s highly selective, preferring to work closely with a small number of promising teams. She values direct communication and wants to avoid time wasted on pitches from companies that aren't a good fit for her portfolio focus.",
+    "positioning": "Malia Petrov is an angel investor and advisor dedicated to empowering the next generation of B2B SaaS and AI founders. Leveraging a background in software engineering and firsthand experience building a startup, I bring a unique perspective to early-stage investment. I focus on identifying companies with strong technical foundations, defensible intellectual property, and a clear path to market. My investment philosophy centers on providing not just capital, but also strategic guidance and operational support to help founders navigate the challenges of building a successful business.\n\nCurrently, I\u2019m actively deploying capital from my personal fund and selectively taking on advisory roles with companies poised for rapid growth. I excel at identifying key technical risks and opportunities, helping founders refine their product roadmap, and building high-performing engineering teams. I believe in a collaborative approach, working closely with founders to ensure alignment and maximize impact.\n\nI am passionate about fostering innovation and believe that the most transformative companies are built by teams that are both technically brilliant and deeply customer-focused. My goal is to support founders who are tackling significant problems with elegant, scalable solutions. I\u2019m particularly interested in applications of AI that drive efficiency and create new value for businesses.\n\nUltimately, I see myself as a partner to founders, offering both financial resources and the benefit of my experience to help them realize their vision. I'm always seeking to connect with ambitious entrepreneurs who are building the future of B2B technology.",
+    "background": "- **Google, Software Engineer (2012 \u2013 2017)**\n  * Developed and maintained core infrastructure components for Google Ads, focusing on scalability and performance. \n  * Led a team of three engineers in the development of a new bidding algorithm, resulting in a 15% increase in click-through rates.\n  * Proficient in Java, Python, and C++, with a strong understanding of distributed systems and cloud computing.\n  * Received the 'Google Founders' Award' for outstanding contributions to the Ads platform.\n\n- **Founder & CEO, LearnLeap (2017 \u2013 2020)**\n  * Founded an edtech startup focused on personalized learning for K-12 students, leveraging AI-powered adaptive learning algorithms.\n  * Secured $500,000 in seed funding from angel investors.\n  * Oversaw all aspects of the business, including product development, marketing, sales, and fundraising.\n  * While the company ultimately did not achieve long-term sustainability, gained invaluable experience in startup operations, market validation, and customer acquisition.\n\n- **Independent Angel Investor & Advisor (2020 \u2013 Present)**\n  * Made 12 angel investments in pre-seed and seed-stage B2B SaaS and AI companies.\n  * Currently serve as an advisor to three portfolio companies, providing guidance on product strategy, engineering, and fundraising.\n  * Actively participate in industry events and networking activities to identify promising investment opportunities.\n  * Regularly contribute to online forums and publications on topics related to early-stage investing and startup growth.\n\n- **Mentor, Techstars (2022 \u2013 Present)**\n  * Selected as a mentor for the Techstars accelerator program, providing guidance to early-stage startups.\n  * Facilitated workshops on topics such as product-market fit, fundraising, and team building.\n  * Leveraged my experience to help startups refine their business models and prepare for investor pitches.\n\n- **Advisor, Stanford University \u2013 BASES Entrepreneurship Challenge (2023)**\n  * Served as a judge and mentor for the annual BASES Entrepreneurship Challenge, evaluating early-stage startup pitches.\n  * Provided feedback to student entrepreneurs on their business plans and presentations.\n  * Contributed to the selection of winning teams and provided mentorship to help them launch their ventures.",
+    "lookingFor": "I am currently focused on identifying and investing in pre-seed and seed-stage B2B SaaS and AI companies with strong technical foundations and a clear path to market. I am particularly interested in companies addressing pain points in areas like sales enablement, marketing automation, and data analytics.\n\nI\u2019m seeking opportunities to leverage my experience and network to help promising founders scale their businesses. I\u2019m most interested in companies that are revenue-generating or have a clear monetization strategy.\n\nSpecifically, I\u2019m looking to connect with:\n* Founders with deep technical expertise and a proven track record of execution.\n* Companies targeting large, addressable markets with significant growth potential.\n* Teams that are passionate about solving real-world problems.\n* Individuals building solutions related to generative AI for business applications.\n\nI am *not* interested in:\n* Consumer-facing applications.\n* Hardware startups.\n* Companies seeking large Series A rounds.\n* Founders who are unwilling to accept constructive criticism or mentorship.\n* Opportunities outside of North America.",
+    "notes": "Profile created based on LinkedIn data and publicly available information. Malia appears to be highly active in the angel investing community and frequently shares insights on Twitter. Recent interactions suggest a strong preference for direct communication and a pragmatic approach to investment. She's been actively reviewing profiles with AI/ML focus. Discrepancy: Initial data suggested a background in fintech, which was corrected based on further research. Key takeaway: High-quality leads should emphasize technical depth and demonstrable traction.",
+    "locationAvailability": "Based in San Francisco, California (PST). Willing to travel to meet with promising teams.",
+    "introPreferences": "When making introductions, please adhere to the following guidelines:\n* **Hard Requirements:**\n  * The founder *must* have a technical background (e.g., computer science degree or equivalent experience).\n  * The company *must* be focused on B2B SaaS or AI.\n  * The company *must* be at the pre-seed or seed stage.\n* **Soft Preferences:**\n  * An introduction is most effective if the founder has already reviewed my LinkedIn profile and understands my investment focus.\n  * Please provide a brief summary of the company's business model, target market, and key differentiators in the introduction email.\n  * Avoid introducing me to companies that are seeking funding beyond the seed stage.\n  * I prefer warm introductions through mutual connections rather than cold outreach.",
+    "personalPreferences": "I prefer to communicate via email initially. I'm generally responsive, but please allow up to 48 hours for a reply. When scheduling meetings, a brief agenda in advance is appreciated.",
+    "meetingAndSchedulingPreferences": "Please send a concise deck (max 10 slides) outlining the problem, solution, market, and team prior to any meeting. I prefer 30-minute introductory calls to assess potential fit. I typically debrief internally within 24 hours of any meeting."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 21.749327182769775,
+      "input_tokens": 791,
+      "output_tokens": 1600,
+      "problems": []
+    }
+  ],
+  "success": true
+}

@@ -1,0 +1,54 @@
+{
+  "id": 461,
+  "archetype": "Consulting Background, Mobility & AI",
+  "given_name": "Daniel Garcia",
+  "style_version": 28,
+  "archetypes_version": 77,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Daniel Garcia is a former strategy consultant at a top-tier firm (McKinsey) who pivoted into the burgeoning field of autonomous vehicle (AV) fleet management. He *specifically* focused on the operationalization of AI for predictive maintenance and route optimization during his consulting stint, and now leads a small, seed-funded startup called 'RouteWise' that offers a SaaS platform to manage AV fleets for logistics companies. He's deeply technical for a 'business' guy, and a bit frustrated by the hype around AI without practical implementation. He\u2019s currently fundraising a Series A and looking for strategic investors and potential pilot customers. He\u2019s driven, data-focused, and values direct communication. A key detail is he *really* dislikes overly optimistic or vague pitches; he wants concrete ROI discussions. He\u2019s 35, married, and based in Austin, TX.",
+    "positioning": "RouteWise is revolutionizing autonomous vehicle fleet management. We're tackling the critical challenge of maximizing uptime and minimizing operational costs for companies deploying AVs in logistics and delivery. While the promise of autonomous fleets is significant, the reality is hampered by unexpected maintenance needs, inefficient routing, and a lack of real-time performance insights. RouteWise provides a SaaS platform leveraging predictive AI \u2013 built on years of experience optimizing complex supply chains \u2013 to proactively identify maintenance requirements, dynamically optimize routes based on real-world conditions, and provide a comprehensive performance dashboard. We\u2019re seeing a 20-25% reduction in maintenance costs and a 15-18% improvement in delivery efficiency for our early pilot customers. We\u2019re currently focused on securing a Series A investment to scale our platform and expand our customer base. \n\nI\u2019m particularly interested in connecting with VCs specializing in mobility and AI, fleet operators actively exploring AV deployment, and individuals with deep expertise in AI/ML model maintenance and edge computing. Let\u2019s discuss how RouteWise can unlock the true potential of your autonomous fleet \u2013 let\u2019s talk data, ROI, and practical implementation, not just potential.",
+    "background": "* **RouteWise, Austin, TX** (2022 \u2013 Present)\n    * **CEO & Founder:** Led all aspects of company formation, product development, fundraising (seed round completed Nov 2023), and customer acquisition.\n    * **Key Achievement:** Secured seed funding of $2.5M from leading mobility-focused investors.\n    * **Responsibilities:** Define company vision and strategy, manage P&L, oversee engineering and sales teams, build and maintain investor relations.\n* **McKinsey & Company, Dallas, TX** (2016 \u2013 2022)\n    * **Strategy Consultant:** Focused on operations and supply chain management, specializing in the application of AI/ML to optimize logistics networks.\n    * **Key Achievement:** Led a project for a major automotive manufacturer that resulted in a $150M annual cost savings through optimized parts distribution.\n    * **Responsibilities:** Conducted data analysis, developed strategic recommendations, managed client relationships, led project teams.\n    * **Notable Projects:** Developed predictive maintenance models for railcar fleets, optimized route planning for last-mile delivery services, conducted market analysis for autonomous trucking.\n* **The University of Texas at Austin, Austin, TX** (2012 \u2013 2016)\n    * **B.S. in Industrial Engineering:** Graduated *Summa Cum Laude*.  Minor in Computer Science.\n    * **Relevant Coursework:** Operations Research, Machine Learning, Data Mining, Supply Chain Management, Statistical Modeling.\n    * **Research Assistant:**  Worked on a project developing algorithms for optimizing traffic flow in urban environments.",
+    "lookingFor": "I'm actively seeking connections to accelerate RouteWise's growth. Specifically, I\u2019m looking for:\n\n* **Series A Investors:** VCs with a demonstrable track record in the mobility, logistics, or AI sectors. We\u2019re targeting a $10-15M round to scale our engineering team, expand our sales and marketing efforts, and accelerate customer acquisition.\n* **Fleet Operators (Logistics/Delivery):** Companies currently piloting or planning to deploy autonomous vehicle fleets. We\u2019re eager to demonstrate the value of RouteWise through pilot programs and establish long-term partnerships.\n* **AI/ML Engineers (Edge Computing Focus):**  Talented engineers with experience in developing and deploying machine learning models on edge devices. We\u2019re building a best-in-class AI engine and need top-tier talent.\n* **Strategic Advisors:** Individuals with deep expertise in autonomous vehicle technology, fleet management, or the logistics industry.  Guidance on navigating regulatory hurdles and scaling operations would be invaluable.\n\nI\u2019m particularly interested in introductions to individuals at companies like Ryder, XPO Logistics, UPS, FedEx, and investment firms like Fontinalis Partners, Autotech Ventures, and Maniv Mobility.",
+    "notes": "Daniel is very direct and appreciates efficiency. He's not interested in 'small talk' and prefers to get straight to the point. He\u2019s had a few frustrating conversations recently with investors who are focused on the 'shiny object' aspect of AVs and haven't asked detailed questions about the underlying technology and business model. He's highly analytical and expects potential partners to be equally data-driven. \n\n* **Recent Conversation:** Spoke with Sarah Chen (Partner at XYZ Ventures) on 1/15. She expressed initial interest but needs more data on customer acquisition costs. Follow up with a detailed cost analysis.\n* **Priority:** Closing Series A funding by end of Q2 2024.\n* **Caution:** He can be dismissive of ideas that aren\u2019t backed by data. Avoid overly optimistic projections.",
+    "locationAvailability": "Based in Austin, Texas, with frequent travel to potential customer sites and investor meetings. Open to remote meetings and flexible working arrangements.",
+    "introPreferences": "* **Hard Requirements:** Introductions should be to individuals with decision-making authority (e.g., VP-level or higher) at relevant companies or investment firms.\n* **Soft Preferences:**  Ideal connections have a demonstrable interest in AI/ML applications in logistics or fleet management.\n* **Introduction Framing:** Please highlight RouteWise\u2019s focus on *practical* AI-driven solutions for optimizing AV fleet performance, emphasizing our track record of delivering measurable ROI.\n* **Avoid:** Introducing Daniel to individuals who are solely focused on the theoretical aspects of autonomous vehicles or lack a strong understanding of the operational challenges.\n* **Key Talking Point:** Mention our seed funding and the investors already backing us \u2013 it adds credibility.",
+    "personalPreferences": "I prefer email for initial contact and follow-up. I\u2019m very responsive, but I value concise and well-structured communication. I appreciate direct feedback and am always open to constructive criticism. Quick turnaround times are important to me.",
+    "meetingAndSchedulingPreferences": "* Prefer 30-minute introductory calls.\n* Happy to debrief briefly after introductions to gauge their potential.\n* I use Calendly for scheduling \u2013 link available upon request."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 19.964039087295532,
+      "input_tokens": 881,
+      "output_tokens": 1497,
+      "problems": []
+    }
+  ],
+  "success": true
+}

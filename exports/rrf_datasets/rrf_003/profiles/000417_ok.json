@@ -1,0 +1,63 @@
+{
+  "id": 417,
+  "archetype": "Global Operator, B2B SaaS Expansion",
+  "given_name": "Nikolai Kimura",
+  "style_version": 26,
+  "archetypes_version": 70,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Nikolai Kimura is a Japanese-American founder and CEO of 'LinguaFlow', a B2B SaaS platform providing AI-powered localization and transcreation for marketing content. He previously spent a decade at Salesforce, specifically within their international marketing teams, where he spearheaded a highly successful expansion into the Southeast Asian market, noticing firsthand the inefficiencies and high costs associated with traditional localization methods. LinguaFlow is currently in Series B funding, aiming to expand beyond its current North American and European presence into Latin America and Asia-Pacific. He\u2019s a data-driven marketer with a strong focus on ROI and a pragmatic approach to international expansion. A distinctive detail is that he is fluent in Japanese, English, and conversational Mandarin, and deeply understands the cultural nuances crucial for successful global campaigns. He\u2019s actively looking for strategic investors with experience in scaling SaaS businesses internationally and is also building out his executive team with a VP of Sales focused on APAC.",
+    "positioning": "LinguaFlow is revolutionizing how global brands connect with their audiences. We provide an AI-powered platform that doesn't just translate, but *transcreates* marketing content \u2013 adapting it to resonate culturally and linguistically with local markets. We\u2019re addressing a $50 billion market plagued by slow turnaround times, high costs, and inconsistent brand messaging. Currently, we\u2019re experiencing 300% year-over-year growth, fueled by our proprietary AI engine and a commitment to exceptional customer service. We\u2019re seeking strategic partners to accelerate our expansion into Latin America and Asia-Pacific, bringing the power of truly localized marketing to businesses worldwide. LinguaFlow isn\u2019t just about breaking language barriers; it\u2019s about building genuine connections with customers, wherever they are.",
+    "background": "* **LinguaFlow, CEO & Founder** (2021 \u2013 Present)\n    * Led all aspects of company creation, from initial concept and seed funding through Series A and currently preparing for Series B. \n    * Developed and launched LinguaFlow's core AI-powered localization platform.\n    * Built a team of 45+ employees across engineering, marketing, sales, and customer success.\n    * Secured $15M in venture funding from leading investors including Initial Capital and Peak Ventures.\n    * Achieved 300% YoY revenue growth in the last fiscal year.\n    * Oversaw successful expansion into key European markets (Germany, France, Spain).\n* **Salesforce, Senior Director, International Marketing** (2013 \u2013 2021)\n    * Led marketing strategy and execution for Southeast Asia, driving significant revenue growth.\n    * Increased market share in Singapore, Indonesia, and Thailand by 40% within three years.\n    * Managed a budget of $10M+ and a team of 20+ marketing professionals.\n    * Developed and implemented localized marketing campaigns across multiple channels (digital, social, events).\n    * Spearheaded the adoption of marketing automation tools, improving lead generation and conversion rates.\n    * Consistently exceeded quarterly and annual revenue targets.\n* **Accenture, Management Consultant** (2011 \u2013 2013)\n    * Provided strategic consulting services to Fortune 500 clients in the technology and financial services industries.\n    * Conducted market research, analyzed data, and developed recommendations for improving business performance.\n    * Managed project teams and delivered presentations to senior management.\n* **Stanford University, MBA** (2009 \u2013 2011)\n    * Focus: Marketing and Strategy\n    * Graduated with honors.\n* **University of California, Berkeley, BA, Economics** (2005 \u2013 2009)\n    * Minor: East Asian Studies\n    * Fluent in Japanese (JLPT N1) and English, conversational Mandarin.",
+    "lookingFor": "We are currently raising a $30M Series B round to fuel our expansion into Latin America and the Asia-Pacific region.  Specifically, we are seeking:\n\n* **Investors:**  Growth equity firms with a proven track record of scaling B2B SaaS companies internationally.  We're looking for partners who can provide strategic guidance, operational expertise, and access to a strong network.\n* **Strategic Partners:** Companies with established distribution channels or complementary technologies in the localization and marketing technology space.  We\u2019re particularly interested in potential integrations with leading Marketing Automation Platforms (MAPs) and Content Management Systems (CMSs).\n* **VP of Sales (APAC):** A dynamic and experienced sales leader to build and scale our sales team in the Asia-Pacific region.  Must have a proven track record of exceeding sales targets in a SaaS environment, a deep understanding of the APAC market, and strong leadership skills.  Experience selling into enterprise accounts is highly preferred.  We are open to remote candidates based in Singapore, Hong Kong, or Australia.\n* **Head of Localization Engineering:** Someone to help enhance our AI models and improve the speed and accuracy of our platform. Experience with NLP and machine translation is a must.",
+    "notes": "Spoke with Sarah Chen at Sequoia yesterday. She expressed initial interest but wants to see more traction in the LATAM market before committing. Follow up with the LATAM marketing lead to get a report on Q3 performance. \n\n* Action Item: Schedule a call with the LATAM team next week.\n* Potential Issue:  Competitor 'GlobalizeAI' just launched a similar product \u2013 need to monitor their progress closely and refine our messaging to emphasize our unique transcreation capabilities.\n* Update: Had a positive introductory call with David Lee at Andreessen Horowitz. He\u2019s interested in learning more about our AI technology and the potential for disruption in the localization market. Sending him a detailed technical deck.\n* Key Relationship: Maintaining a strong relationship with Kenji Tanaka at Initial Capital is crucial - he's a valuable advisor and potential advocate for our Series B round.",
+    "locationAvailability": "San Francisco, CA (HQ) and remote globally.",
+    "introPreferences": "I'm particularly interested in connecting with:\n\n* **VPs of Global Marketing at large enterprises:**  Specifically, those struggling with the challenges of scaling localized marketing campaigns.\n* **Founders of successful B2B SaaS companies that have expanded internationally:** I'm eager to learn from their experiences and best practices.\n* **Investors specializing in B2B SaaS and AI.**\n\n**Please frame introductions as:** 'Nikolai Kimura, the founder of LinguaFlow, a rapidly growing AI-powered localization platform. He's looking to connect with leaders in global marketing to discuss the future of transcreation.'\n\n**Please avoid introductions to:**  Recruiters (we have a dedicated recruiting team), or individuals solely focused on translation services (we're beyond simple translation).  Avoid connecting me with anyone from 'GlobalizeAI' at this time.",
+    "personalPreferences": "I respond best to concise, data-driven communication.  I prefer email for initial contact.  I\u2019m generally available for calls between 9am-12pm PST.",
+    "meetingAndSchedulingPreferences": "Please send a calendar invite with a clear agenda. I appreciate a quick pre-read document outlining key discussion points.  I will always follow up with a thank you note and any agreed-upon action items."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 18.31704807281494,
+      "input_tokens": 769,
+      "output_tokens": 1314,
+      "problems": [
+        "background: possible truncation (ends with '...ation, Strategic Planning')"
+      ]
+    },
+    {
+      "attempt": 2,
+      "elapsed_s": 24.47934579849243,
+      "input_tokens": 769,
+      "output_tokens": 1550,
+      "problems": []
+    }
+  ],
+  "success": true
+}

@@ -1,0 +1,54 @@
+{
+  "id": 742,
+  "archetype": "European Tech & Automation Specialist",
+  "given_name": "Layla Nguyen",
+  "style_version": 45,
+  "archetypes_version": 124,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Layla Nguyen is a German-Vietnamese automation engineer with a strong background in industrial cybersecurity. She spent the first half of her career deeply embedded in the automotive manufacturing sector, specifically focusing on PLC programming and SCADA system security. A pivotal moment was leading a team that successfully mitigated a significant ransomware attack on a major German automotive plant \u2013 a high-pressure situation that solidified her expertise and passion for securing critical infrastructure. Now, she\u2019s leading the North American expansion for \u2018Automata Solutions GmbH\u2019, a mid-sized German firm specializing in adaptive automation solutions for warehousing and logistics. She\u2019s looking to build partnerships with North American system integrators and distributors who can help scale their offerings, particularly those focused on clients with stringent security requirements (e.g., pharmaceutical, aerospace). She's very focused on demonstrating the *value* of proactive security, not just reactive patching. She\u2019s meticulous, direct, and values efficiency in communication. She doesn't want to waste time with 'tire kickers'.",
+    "positioning": "Layla Nguyen is a seasoned automation specialist and cybersecurity expert driving the North American market entry for Automata Solutions GmbH. I specialize in delivering robust, secure, and highly efficient automation solutions for warehousing and logistics, with a particular focus on adaptive systems that respond dynamically to changing operational needs. My core expertise lies in PLC programming, SCADA system security, and industrial network architecture. I\u2019ve successfully led teams in mitigating complex cybersecurity threats within mission-critical manufacturing environments, understanding the immense cost \u2013 both financial and reputational \u2013 of downtime. At Automata Solutions, I\u2019m focused on forging strategic partnerships with North American system integrators and distributors to expand our reach and deliver cutting-edge automation technology to clients seeking enhanced security and operational resilience. I help companies proactively safeguard their automation investments while simultaneously optimizing performance and reducing costs. I\u2019m particularly adept at translating complex technical concepts into clear, business-focused value propositions.",
+    "background": "- **Automata Solutions GmbH, Munich, Germany** (2021 \u2013 Present)\n  *Head of North American Expansion* \u2013 Responsible for developing and executing the company\u2019s North American market entry strategy, including partner identification, sales channel development, and technical pre-sales support. Increased lead generation by 45% in Q3 2023 through targeted outreach to key system integrators.\n  *Key Skills:* Strategic Planning, Business Development, Partner Management, Technical Sales, Cybersecurity, International Market Expansion.\n\n- **Bosch Rexroth AG, Lohr am Main, Germany** (2017 \u2013 2021)\n  *Senior Automation Engineer* \u2013 Led a team of engineers in the design, implementation, and maintenance of PLC-based automation systems for automotive manufacturing plants. Spearheaded the implementation of a new cybersecurity protocol that reduced vulnerability to industrial espionage by 30%.\n  *Key Skills:* PLC Programming (Siemens, Allen-Bradley), SCADA System Administration (WinCC, Ignition), Industrial Network Security (Firewalls, Intrusion Detection), Robotics, HMI Development.\n\n- **Continental AG, Hanover, Germany** (2015 \u2013 2017)\n  *Automation Engineer* \u2013 Developed and tested automation solutions for tire manufacturing processes. Contributed to a project that improved production efficiency by 15% through optimized PLC code.\n  *Key Skills:* PLC Programming, Process Automation, Data Analysis, Lean Manufacturing.\n\n- **University of Stuttgart, Stuttgart, Germany** (2011 \u2013 2015)\n  *Master of Science in Automation Technology* \u2013 Focused on industrial cybersecurity and adaptive control systems. Dissertation: 'Vulnerability Assessment and Mitigation Strategies for SCADA Systems in Automotive Manufacturing'.\n  *Key Skills:* Control Systems, Robotics, Cybersecurity, Data Analysis, Research & Development.\n\n- **University of Stuttgart, Stuttgart, Germany** (2008 \u2013 2011)\n  *Bachelor of Science in Electrical Engineering* \u2013 Specialization in Automation.\n\n*Languages:* German (Native), English (Fluent), Vietnamese (Conversational).",
+    "lookingFor": "I am actively seeking strategic partnerships with North American system integrators and distributors specializing in warehousing and logistics automation. Specifically, I\u2019m interested in connecting with companies that:\n\n*   **Serve clients in highly regulated industries:** Pharmaceutical, aerospace, defense, and food & beverage are particularly attractive.\n*   **Have a strong track record in cybersecurity:** I need partners who understand the importance of proactive security measures and can effectively integrate our solutions with existing security infrastructure.\n*   **Focus on delivering value-added services:** Beyond simply reselling hardware, I\u2019m looking for partners who can provide comprehensive integration, training, and support services.\n*   **Are actively pursuing Industry 4.0 initiatives:** Companies embracing data analytics, IoT, and cloud-based automation are ideal.\n\nI\u2019m open to discussing potential collaborations with companies of all sizes, but I\u2019m particularly interested in those with established market presence and a strong customer base. I\u2019m *not* interested in unsolicited sales pitches or individuals looking for employment. I\u2019m also not seeking partnerships with companies that prioritize price over quality and security. \n\nIdeally, I\u2019d like to connect with:\n\n*   **VP of Business Development** at System Integrators (50+ employees)\n*   **Director of Partnerships** at Distribution Companies\n*   **CTOs** of companies implementing advanced automation solutions\n*   **Heads of Automation** in large warehousing and logistics operations\n\nI'm available for virtual meetings to discuss potential synergies and explore how Automata Solutions can help your clients achieve their automation goals.",
+    "notes": "Layla is very focused on security \u2013 always bring that up. She's been burned by companies who treat security as an afterthought. \n\n*   She had a very positive initial call with 'Integrate Solutions' (contact: Mark Johnson) - follow up next week.\n*   She's hesitant about partnerships that require significant upfront investment from Automata Solutions \u2013 she needs to see commitment from the partner first.\n*   She\u2019s attending the \u2018Automate\u2019 conference in Chicago next month \u2013 potentially a good opportunity for introductions.\n*   Avoid discussing competitor products unless specifically asked. Focus on the unique benefits of Automata Solutions' adaptive automation technology.\n*   She prefers concise communication and dislikes lengthy email chains.",
+    "locationAvailability": "Based in Munich, Germany, but actively traveling to North America. Available for remote meetings at any time.",
+    "introPreferences": "When making introductions, please emphasize the following:\n\n*   **My expertise in industrial cybersecurity:** Highlight my experience in mitigating ransomware attacks and securing critical infrastructure.\n*   **Automata Solutions\u2019 focus on adaptive automation:** Explain how our solutions can help clients respond dynamically to changing operational needs.\n*   **Our commitment to quality and reliability:** Emphasize our German engineering heritage and our rigorous quality control standards.\n\n**Hard Requirements:**\n\n*   The recipient *must* be involved in decision-making regarding automation solutions.\n*   The recipient\u2019s company *must* have a clear need for automation technology.\n\n**Soft Preferences:**\n\n*   The recipient should be open to exploring new technologies.\n*   The recipient should be proactive and forward-thinking.\n\n**Introduction Message Guidance:** Keep it brief and to the point. Focus on the mutual benefits of a connection. Avoid overly promotional language. A simple \u2018Layla is expanding Automata Solutions into North America and is seeking partners with expertise in [relevant area]\u2019 is sufficient.",
+    "personalPreferences": "I prefer email for initial contact. Please keep messages concise and focused. I respond promptly to well-written, relevant inquiries. I do *not* use WhatsApp for professional communication.",
+    "meetingAndSchedulingPreferences": "Please send a calendar invite with a clear agenda. I prefer meetings to be no longer than 30 minutes. I\u2019m generally available during European business hours."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 23.238855123519897,
+      "input_tokens": 825,
+      "output_tokens": 1699,
+      "problems": []
+    }
+  ],
+  "success": true
+}

@@ -1,0 +1,54 @@
+{
+  "id": 821,
+  "archetype": "Brand Builder & Youth Culture Innovator",
+  "given_name": "Rosa Tanaka",
+  "style_version": 50,
+  "archetypes_version": 138,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Rosa Tanaka is a 32-year-old Brand Strategist specializing in Gen Z and Millennial-focused lifestyle brands. Her distinctive career detail is a successful pivot from traditional advertising to building direct-to-consumer (DTC) brands from the ground up. She's currently consulting with early-stage startups, helping them define their brand identity, messaging, and go-to-market strategy. She\u2019s actively looking to connect with founders who are building authentic brands with a strong community focus, and also with potential investors interested in the future of youth culture. She's known for being data-driven but also deeply empathetic to consumer needs, and is a strong advocate for inclusive marketing practices. She\u2019s particularly interested in brands that intersect with sustainability and wellness.",
+    "positioning": "Rosa Tanaka helps emerging brands resonate with Gen Z and Millennial audiences. As a Brand Strategist, she blends data-driven insights with a deep understanding of youth culture to craft compelling brand narratives and effective marketing strategies. She specializes in launching and scaling direct-to-consumer businesses, focusing on building authentic community engagement and sustainable growth. Rosa\u2019s approach centers on identifying unmet needs and translating them into innovative brand experiences that foster lasting customer loyalty. She\u2019s passionate about empowering founders to build brands that not only succeed commercially but also positively impact the world.",
+    "background": "\u2022 **Consultant, Self-Employed** (2022 \u2013 Present)\n\t\t- Providing brand strategy, marketing, and go-to-market consulting to early-stage startups in the wellness, sustainable fashion, and lifestyle spaces.\n\t\t- Developed and implemented brand frameworks for 5+ clients, resulting in an average 30% increase in website traffic and a 20% growth in social media engagement within the first quarter.\n\t\t- Conducted extensive market research and competitive analysis to identify key opportunities and inform brand positioning.\n\n\u2022 **Brand Manager, Aura Collective (DTC Wellness Brand)** (2019 \u2013 2022)\n\t\t- Led the development and execution of integrated marketing campaigns across social media, email, and influencer marketing.\n\t\t- Increased brand awareness by 45% and drove a 60% increase in online sales through targeted advertising and content marketing initiatives.\n\t\t- Managed a budget of $500K and oversaw a team of 3 marketing specialists.\n\n\u2022 **Account Executive, Zenith Advertising** (2017 \u2013 2019)\n\t\t- Managed advertising campaigns for a portfolio of clients in the fashion and beauty industries.\n\t\t- Developed and presented strategic recommendations to clients, resulting in increased campaign performance and client satisfaction.\n\t\t- Consistently exceeded sales targets and demonstrated a strong ability to build and maintain client relationships.\n\n\u2022 **B.A. Communications, University of California, Berkeley** (2013 \u2013 2017)\n\t\t- Minor in Digital Media. Graduated *Cum Laude* with a focus on marketing and advertising.",
+    "lookingFor": "\u2022 Founders of early-stage DTC brands (pre-Series A) seeking strategic guidance on brand building and growth.\n\u2022 Investors focused on consumer brands, particularly those targeting Gen Z and Millennial audiences.\n\u2022 Individuals with expertise in sustainable manufacturing and supply chain management.\n\u2022 Marketing professionals specializing in influencer marketing and social media strategy.\n\u2022 Opportunities to speak at industry events and share insights on youth culture and brand innovation.\n\u2022 Collaborations on research projects related to consumer behavior and brand perception.\n\u2022 Mentors with experience scaling direct-to-consumer businesses.",
+    "notes": "Rosa is exceptionally responsive and values quick, direct communication. She's a big believer in paying it forward and is always happy to offer advice or connect people within her network. She recently completed a certification in Sustainable Marketing from the University of Cambridge. She's also a passionate advocate for diversity and inclusion in the marketing industry. Be aware she's extremely busy, so keep introductory messages concise and focused. She\u2019s currently exploring opportunities to advise a non-profit focused on youth entrepreneurship.  She *loves* a good case study and is always eager to learn from others\u2019 successes (and failures!).",
+    "locationAvailability": "Based in Los Angeles, CA. Open to remote collaboration and occasional travel to industry events.",
+    "introPreferences": "\u2022 Please avoid generic introduction requests. A personalized message outlining *why* you think a connection would be mutually beneficial is highly appreciated.\n\u2022 Focus on shared interests or relevant experience. Highlight any specific areas where you believe we could collaborate or learn from each other.\n\u2022 If introducing someone, please provide context about their work and why you think they\u2019d be a good fit for Rosa\u2019s network.\n\u2022 Don't introduce people just to 'make an introduction' \u2013 ensure there's a clear value proposition for both parties.\n\u2022 Briefly explain how you know both individuals \u2013 a shared connection adds credibility.",
+    "personalPreferences": "Prefers direct messaging over email for initial contact.",
+    "meetingAndSchedulingPreferences": "Typically prefers 30-minute virtual meetings. Availability is limited during peak hours (10am-12pm PST & 3pm-5pm PST) due to client commitments."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 20.782467126846313,
+      "input_tokens": 761,
+      "output_tokens": 1139,
+      "problems": []
+    }
+  ],
+  "success": true
+}

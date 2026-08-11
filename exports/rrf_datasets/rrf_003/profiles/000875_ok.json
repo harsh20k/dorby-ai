@@ -1,0 +1,54 @@
+{
+  "id": 875,
+  "archetype": "Enterprise AI Infrastructure Builder",
+  "given_name": "Thabo Castillo",
+  "style_version": 53,
+  "archetypes_version": 148,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Thabo Castillo is a seasoned Site Reliability Engineer (SRE) specializing in the deployment and scaling of large language models (LLMs) for financial institutions. A distinctive detail is that Thabo previously spent 5 years as a quantitative analyst *before* transitioning to SRE, giving them a unique understanding of both the model *and* the business needs. They're currently focused on building out a secure, cost-effective, and fully auditable LLM infrastructure for a large European bank, prioritizing data sovereignty and compliance. They're actively seeking connections with vendors offering cutting-edge AI security solutions, other SREs tackling similar challenges in regulated industries, and potential collaborators on open-source tooling for LLM observability. Thabo is pragmatic and prioritizes solutions that demonstrably improve reliability and reduce operational overhead. They are *not* interested in purely 'shiny object' technologies without a clear business case.",
+    "positioning": "As a Site Reliability Engineer at NovaBank, I lead the development and maintenance of our enterprise-scale LLM infrastructure. My focus is on ensuring the reliability, scalability, and security of our AI deployments, with a strong emphasis on data governance and compliance within a highly regulated environment. Leveraging my background in quantitative finance, I bridge the gap between model development and real-world business applications, translating complex requirements into robust and efficient infrastructure solutions. Currently, I\u2019m spearheading a project to migrate our LLM inference pipeline to a more cost-effective and auditable platform, utilizing Kubernetes and serverless technologies. I\u2019m passionate about building resilient systems and am always eager to connect with individuals facing similar challenges in the financial services industry or with expertise in AI infrastructure security.",
+    "background": "\u2022 **NovaBank, London, UK** \u2013 *Site Reliability Engineer* (Jan 2021 \u2013 Present)\n    \u25e6 Responsible for the full lifecycle of LLM infrastructure, including design, deployment, monitoring, and incident response.\n    \u25e6 Led the migration of key LLM services to Kubernetes, resulting in a 30% reduction in infrastructure costs.\n    \u25e6 Implemented comprehensive monitoring and alerting systems using Prometheus and Grafana, improving system observability.\n    \u25e6 Developed and maintained infrastructure-as-code using Terraform, ensuring reproducibility and version control.\n    \u25e6 Collaborated with data science and security teams to ensure compliance with data privacy regulations (GDPR, CCPA).\n    \u25e6 Championed the adoption of Chaos Engineering principles to proactively identify and mitigate system vulnerabilities.\n\u2022 **QuantStrat Capital, New York, USA** \u2013 *Quantitative Analyst* (June 2016 \u2013 Dec 2020)\n    \u25e6 Developed and backtested algorithmic trading strategies using Python and statistical modeling techniques.\n    \u25e6 Conducted research on market microstructure and statistical arbitrage opportunities.\n    \u25e6 Collaborated with software engineers to implement trading algorithms and risk management systems.\n    \u25e6 Gained deep understanding of financial markets, data analysis, and risk management principles.\n\u2022 **Massachusetts Institute of Technology (MIT), Cambridge, MA, USA** \u2013 *Master of Science in Financial Engineering* (2014 \u2013 2016)\n    \u25e6 Focused coursework on machine learning, stochastic calculus, and computational finance.\n\u2022 **University of California, Berkeley, CA, USA** \u2013 *Bachelor of Science in Mathematics* (2010 \u2013 2014)\n    \u25e6 Minor in Computer Science.\n\u2022 **Skills:** Kubernetes, Terraform, Python, Prometheus, Grafana, Docker, AWS (EC2, S3, Lambda), GCP, LLM Observability (Weights & Biases, Arize AI), Data Governance, GDPR, CCPA, Git, CI/CD, Statistical Modeling, Risk Management.",
+    "lookingFor": "\u2022 **AI Security Vendors:** Seeking innovative solutions for securing LLM deployments, including adversarial attack detection and data privacy preservation.\n\u2022 **SREs in Financial Services:** Interested in connecting with peers tackling similar challenges in regulated industries to share best practices and collaborate on solutions.\n\u2022 **Open-Source Contributors:** Looking for collaborators on open-source tooling for LLM observability, particularly around cost tracking and performance monitoring.\n\u2022 **Cloud Infrastructure Experts:**  Seeking advice on optimizing cloud infrastructure for LLM workloads, focusing on cost efficiency and scalability.\n\u2022 **Potential Partners:** Exploring potential partnerships with companies specializing in data lineage and governance for AI systems.\n\u2022 **Advisors:** Connecting with experienced advisors in the AI infrastructure space to gain insights into emerging trends and best practices.",
+    "notes": "\u2022 Thabo is particularly interested in solutions that address the unique challenges of deploying LLMs in highly regulated environments.\n\u2022 Recently completed a successful proof-of-concept for a new LLM inference pipeline using serverless technologies.\n\u2022 Currently evaluating several AI security vendors and is focused on solutions that integrate seamlessly with existing infrastructure.\n\u2022  Mentioned a strong preference for pragmatic, data-driven approaches to problem-solving.  Avoid overly theoretical discussions.",
+    "locationAvailability": "Currently based in London, UK. Open to remote collaboration and occasional travel within Europe.  Planning to attend the AI Summit in Amsterdam in November.",
+    "introPreferences": "\u2022 **Hard Requirements:** Introductions should be to individuals with direct experience in AI infrastructure security or SRE for financial institutions.\n\u2022 **Hard Requirements:**  Ensure the connection understands the importance of data sovereignty and compliance.\n\u2022 **Soft Preferences:** Prefer introductions from mutual connections with a strong technical background.\n\u2022 **Soft Preferences:** Keep introductions concise and focused on the specific area of mutual interest.\n\u2022 **Avoid:** Introductions to sales representatives without a technical background or a clear understanding of our infrastructure needs.\n\u2022 **Avoid:**  Introductions to individuals focused solely on 'bleeding edge' technologies without a proven track record.",
+    "personalPreferences": "I prefer asynchronous communication (email or Slack) for initial contact. I'm a direct communicator and appreciate clear, concise messaging.  I'm an early riser and generally respond quickly during UK business hours.",
+    "meetingAndSchedulingPreferences": "Please include a brief agenda when requesting a meeting. I am flexible with scheduling and happy to accommodate different time zones."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 20.9858181476593,
+      "input_tokens": 732,
+      "output_tokens": 1278,
+      "problems": []
+    }
+  ],
+  "success": true
+}

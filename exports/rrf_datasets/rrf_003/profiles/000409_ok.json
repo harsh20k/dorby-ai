@@ -1,0 +1,54 @@
+{
+  "id": 409,
+  "archetype": "AI/ML Focused Technical Founder",
+  "given_name": "Naledi Dubois",
+  "style_version": 25,
+  "archetypes_version": 68,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Naledi Dubois is a 34-year-old, first-time founder with a PhD in Computational Linguistics. Her company, 'Sonaris', is building a conversational AI platform specifically for complex customer service interactions in the financial services sector. A distinctive career detail is that before founding Sonaris, she spent two years as a post-doc researcher at MIT Media Lab, focusing on the ethical implications of large language models \u2013 this deeply informs her approach to AI development. She\u2019s currently leading a small seed round and is *highly* focused on finding a strong CTO/co-founder with deep experience in scalable infrastructure and real-time voice processing. She\u2019s very technically capable herself but recognizes she needs someone to complement her strengths and accelerate development. She\u2019s based in Boston and is open to remote co-founders, but prefers someone who can eventually spend significant time in person. She's pragmatic, data-driven, and very aware of the challenges of building a defensible AI business.",
+    "positioning": "Sonaris is revolutionizing customer service for financial institutions with an AI-powered conversational platform designed to handle complex inquiries with accuracy and empathy. We\u2019re tackling the pain point of long wait times and inconsistent support experiences, offering a solution that dramatically improves customer satisfaction and reduces operational costs. Our core differentiator lies in our proprietary natural language understanding (NLU) engine, built on a foundation of ethical AI principles and trained on a massive dataset of financial conversations. We are currently closing a $1.5M seed round and focused on expanding our engineering team and piloting our platform with key strategic partners. Sonaris isn't just automating responses; we\u2019re building intelligent interactions that foster trust and drive business value.",
+    "background": "- **Founder & CEO, Sonaris** (Boston, MA) \u2013 2023 \u2013 Present\n  * Led all aspects of company formation, including business plan development, fundraising, team building, and product strategy.\n  * Secured initial seed funding commitments totaling $1.2M.\n  * Developed and validated the core technology underpinning the Sonaris platform.\n  * Currently managing a team of 3 engineers and 1 customer success manager.\n\n- **Postdoctoral Researcher, MIT Media Lab** (Cambridge, MA) \u2013 2021 \u2013 2023\n  * Conducted research on the ethical implications of large language models (LLMs) in conversational AI, specifically focusing on bias detection and mitigation.\n  * Published 3 peer-reviewed papers in leading AI conferences (ACL, EMNLP, NeurIPS).\n  * Collaborated with industry partners to develop guidelines for responsible AI development.\n\n- **Research Scientist, IBM Watson** (Cambridge, MA) \u2013 2019 \u2013 2021\n  * Developed and implemented NLU models for various Watson applications, including customer service chatbots and virtual assistants.\n  * Contributed to the development of a novel algorithm for intent recognition, resulting in a 15% improvement in accuracy.\n  * Mentored junior researchers and interns.\n\n- **PhD, Computational Linguistics, Carnegie Mellon University** (Pittsburgh, PA) \u2013 2015 \u2013 2019\n  * Dissertation: \u201cContextualizing Sentiment Analysis: A Novel Approach to Understanding Emotional Nuance in Dialogue.\u201d\n  * Relevant coursework: Machine Learning, Natural Language Processing, Statistical Modeling, Data Mining.\n  * Awarded the CMU Graduate Student Research Fellowship.\n\n- **Skills:** Python, TensorFlow, PyTorch, NLTK, SpaCy, AWS, Azure, Data Analysis, Machine Learning, Deep Learning, Natural Language Understanding, Conversational AI, Statistical Modeling.",
+    "lookingFor": "We are actively seeking a highly skilled and experienced CTO/co-founder to join Sonaris and lead our engineering efforts. This is a critical role with significant equity potential. Ideal candidates will possess:\n\n* **Deep technical expertise** in building and scaling real-time voice processing systems and cloud infrastructure (AWS/Azure).\n* **Proven experience** leading and mentoring engineering teams.\n* **Strong understanding** of machine learning principles and best practices.\n* **Experience** with conversational AI platforms and technologies is *highly* preferred.\n* **A passion for ethical AI development** and a commitment to building responsible technology.\n\nWe are also open to connecting with angel investors specializing in AI/ML and fintech, with investment amounts ranging from $250k - $500k. We're particularly interested in investors who can provide strategic guidance and access to relevant industry networks.",
+    "notes": "Naledi had a very positive call with David Chen at Amplify Partners last week. He expressed interest but wants to see more traction data before committing. Follow up with David in two weeks with updated user engagement metrics. She also mentioned a potential connection to a strong backend engineer through her MIT network \u2013 will circle back on that next week. There was a slight discrepancy in the reported customer acquisition cost during the last investor pitch; need to clarify the data source and ensure consistency. She\u2019s very focused on finding the right co-founder and is willing to be patient. Her ethical AI stance is a core value and a key differentiator we need to emphasize.",
+    "locationAvailability": "Boston, Massachusetts",
+    "introPreferences": "I\u2019m looking to connect with:\n\n* **Experienced CTOs/VPs of Engineering** with a proven track record of building and scaling AI-powered products.\n* **Angel investors** focused on AI/ML and fintech, particularly those with experience in the customer service space.\n* **Potential strategic partners** \u2013 financial institutions interested in piloting our platform.\n\n**Please frame introductions as:** 'Naledi Dubois, founder of Sonaris, is building a cutting-edge AI platform to transform customer service in the financial industry.'\n\n**Please avoid introducing me to:** Generalist VCs or individuals focused on industries outside of AI/ML and fintech.\n\n**Strongly prefer:** Introductions are warm and pre-vetted; a quick heads-up before making an introduction is always appreciated.",
+    "personalPreferences": "I prefer email for initial communication. I'm generally available for calls between 10am-4pm EST. I'm a big fan of concise communication.",
+    "meetingAndSchedulingPreferences": "I prefer short, focused meetings with clear agendas. Please send a brief follow-up summary after each meeting outlining key takeaways and action items."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 18.731878757476807,
+      "input_tokens": 773,
+      "output_tokens": 1368,
+      "problems": []
+    }
+  ],
+  "success": true
+}

@@ -1,0 +1,54 @@
+{
+  "id": 15,
+  "archetype": "Toronto-Based Tech Builder/Scout",
+  "given_name": "Soraya Pereira",
+  "style_version": 1,
+  "archetypes_version": 3,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Soraya Pereira is a seasoned product leader currently leading growth at a pre-seed AI-powered marketing analytics startup called 'InsightFlow'. Before this, she had a unique stint as an early engineer at a robotics firm, giving her a strong technical foundation that informs her product sense. She's actively looking to connect with potential seed investors and advisors who understand the nuances of AI-driven SaaS, and is also quietly scouting for strong engineering talent to bolster InsightFlow\u2019s team. She\u2019s a very data-driven operator who values direct communication and isn\u2019t afraid to challenge assumptions. She's relatively new to the Toronto tech scene, having moved from Vancouver six months ago and is keen to build her network.",
+    "positioning": "Soraya Pereira is a growth-focused product leader driving the expansion of InsightFlow, a next-generation marketing analytics platform leveraging artificial intelligence. With a background rooted in both engineering and product management, I bring a unique perspective to building and scaling innovative technology solutions. At InsightFlow, I'm leading efforts to accelerate user acquisition, optimize conversion rates, and establish a strong market presence. My core strength lies in translating complex technical capabilities into tangible value for customers, and in building data-driven strategies that deliver measurable results. Right now, I'm particularly focused on securing seed funding to fuel our expansion and building out a world-class engineering team. I'm eager to connect with investors, advisors, and fellow builders who share a passion for AI and are shaping the future of marketing technology.",
+    "background": " **InsightFlow, Toronto, ON** \n *Head of Growth* (September 2023 \u2013 Present)\n    - Spearheaded the development and execution of the company\u2019s growth strategy, resulting in a 40% increase in qualified leads within the first quarter.\n    - Led A/B testing initiatives across key marketing channels, improving conversion rates by 15%.\n    - Managed a budget of $50,000 for paid advertising campaigns, consistently achieving a ROAS of 3x.\n    - Collaborated with the product team to prioritize features based on user data and market analysis.\n\n **RoboDynamics Inc., Vancouver, BC**\n *Software Engineer* (June 2020 \u2013 August 2023)\n    - Developed and maintained core software components for robotic automation systems, utilizing Python, C++, and ROS.\n    - Contributed to the design and implementation of real-time control algorithms, improving system accuracy by 20%.\n    - Participated in the full software development lifecycle, from requirements gathering to testing and deployment.\n    - Mentored junior engineers and provided technical guidance on best practices.\n\n **University of British Columbia, Vancouver, BC**\n *Bachelor of Science in Computer Science* (September 2016 \u2013 May 2020)\n    - Graduated with honors, achieving a GPA of 3.8/4.0.\n    - Completed a senior capstone project focused on machine learning applications in healthcare.\n    - Relevant Coursework: Artificial Intelligence, Machine Learning, Data Structures and Algorithms, Software Engineering.\n\n **Skills:** Python, C++, ROS, Machine Learning, Data Analysis, A/B Testing, Google Analytics, SQL, Product Management, Growth Marketing.",
+    "lookingFor": "## Investment & Advisory\n* **Seed Investors:** Seeking investors with a proven track record in AI-driven SaaS, preferably with experience in the marketing technology space. Target investment range: $500k - $1M.\n* **AI/ML Advisors:** Mentorship from experienced AI/ML practitioners to refine our algorithms and data science strategy.\n* **Marketing Tech Experts:** Connections with individuals who have successfully scaled marketing technology companies.\n\n## Talent Acquisition\n* **Senior Backend Engineer (Python):**  Looking for a highly skilled engineer with 3+ years of experience building scalable backend systems. Experience with cloud platforms (AWS, Azure, GCP) is a strong plus.\n* **Data Scientist (Machine Learning):** Seeking a data scientist with expertise in time series analysis and predictive modeling. PhD preferred.\n* **Growth Marketing Specialist:**  Experienced marketer to help expand our reach and optimize our marketing campaigns.",
+    "notes": "Soraya is very focused on InsightFlow\u2019s success and is currently operating in \u2018hustle mode\u2019. She recently mentioned feeling the pressure of needing to close the seed round within the next quarter. She\u2019s still relatively new to the Toronto tech ecosystem and is actively trying to build out her network. She was initially hesitant to share details about her engineering background, but warmed up to the topic once she realized the value of highlighting her technical expertise. She's been receptive to introductions to potential investors, but has been particularly critical of those who don\u2019t demonstrate a deep understanding of AI. She\u2019s also mentioned she\u2019s attending the AI Toronto conference next month \u2013 a good opportunity for a meet-up. She\u2019s expressed interest in connecting with other female founders in the AI space.",
+    "locationAvailability": "Based in Toronto, ON, but open to connecting with individuals across North America.",
+    "introPreferences": "* **Hard Requirement:** Individuals with a demonstrable understanding of AI and/or SaaS business models.\n* **Soft Preference:**  Investors with a portfolio focused on early-stage startups.\n* **Soft Preference:**  Engineers with experience building scalable backend systems using Python.\n* **Please Note:**  When making an introduction, briefly highlight the connection\u2019s experience with AI and/or SaaS. Avoid generic introductions.",
+    "personalPreferences": "Soraya prefers direct and concise communication. She\u2019s a big fan of Slack for quick check-ins and prefers email for more detailed discussions. She likes to get straight to the point and appreciates transparency. She's usually very responsive, but can be slow to reply if she\u2019s deeply focused on a task. She\u2019s open to grabbing a coffee or virtual meeting, but prefers to have a clear agenda beforehand.",
+    "meetingAndSchedulingPreferences": "Prefers 30-minute virtual meetings to initially assess potential collaborations."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 21.296075105667114,
+      "input_tokens": 776,
+      "output_tokens": 1289,
+      "problems": []
+    }
+  ],
+  "success": true
+}

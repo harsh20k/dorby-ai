@@ -1,0 +1,54 @@
+{
+  "id": 641,
+  "archetype": "Toronto-Based, Early-Career Software Engineer",
+  "given_name": "Ravi Reyes",
+  "style_version": 39,
+  "archetypes_version": 107,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Ravi Reyes is a recent graduate (2021) from the University of Waterloo, specializing in AI and Machine Learning. He\u2019s currently a Software Engineer II at \u2018Synapse Solutions\u2019, a small, rapidly growing Toronto-based startup developing AI-powered tools for the logistics industry. What sets him apart is a strong side-project \u2013 a sophisticated, open-source library for explainable AI (XAI) called \u2018ClarityAI\u2019, which has gained modest traction on GitHub and has become a talking point in interviews. He\u2019s ambitious, eager to learn, and looking to connect with experienced engineers and potential investors who can help him scale ClarityAI beyond a side-project and potentially spin it out as its own venture. He's actively seeking mentorship and exploring opportunities to present ClarityAI at industry conferences. He\u2019s focused on building his network within the Toronto tech ecosystem.",
+    "positioning": "I am a Software Engineer at Synapse Solutions, where I contribute to the development of cutting-edge AI solutions for optimizing supply chain logistics. We leverage machine learning algorithms to predict demand, streamline transportation routes, and minimize operational costs for our clients. My primary focus is on building and deploying scalable, robust, and interpretable AI models. I'm passionate about bridging the gap between complex AI systems and human understanding, and that\u2019s why I\u2019ve also developed ClarityAI, an open-source Python library designed to provide clear, concise explanations for machine learning predictions. ClarityAI is built on SHAP values and LIME, offering a user-friendly interface for visualizing model behavior and identifying key drivers of predictions. We aim to empower data scientists and business users to trust and effectively utilize AI in critical decision-making processes. I believe explainability is not just a \u2018nice-to-have\u2019 feature, but a fundamental requirement for responsible AI deployment, especially in regulated industries. Synapse Solutions is positioned to become a leader in the logistics AI space, and I\u2019m excited to be a part of that journey.",
+    "background": "- **Software Engineer II, Synapse Solutions (2022 \u2013 Present)**\n  * Developed and deployed machine learning models for demand forecasting, resulting in a 15% reduction in inventory holding costs for a major client.\n  * Led the integration of XAI techniques into existing models, improving model transparency and user trust.\n  * Contributed to the design and implementation of a scalable data pipeline using Apache Kafka and Spark.\n  * Mentored junior engineers in best practices for machine learning development and deployment.\n- **Software Engineering Intern, Maple Leaf Analytics (Summer 2021)**\n  * Assisted in the development of a fraud detection system using anomaly detection algorithms.\n  * Gained experience with data preprocessing, feature engineering, and model evaluation.\n- **Research Assistant, University of Waterloo (2019 \u2013 2021)**\n  * Conducted research on novel machine learning techniques for natural language processing.\n  * Published a research paper on sentiment analysis at a regional conference.\n- **Education: University of Waterloo (2017 \u2013 2021)**\n  * Bachelor of Science in Computer Science, specializing in Artificial Intelligence.\n  * Dean\u2019s List, multiple semesters.\n  * Relevant Coursework: Machine Learning, Deep Learning, Data Mining, Statistical Modeling, Software Design.",
+    "lookingFor": "I\u2019m actively seeking to expand my network within the Toronto AI and tech community. I'm particularly interested in connecting with:\n\n* **Experienced AI Engineers & Architects:** I\u2019m eager to learn from individuals with proven track records in building and deploying large-scale AI systems.\n* **Venture Capitalists & Angel Investors:** I\u2019m exploring opportunities to potentially spin out ClarityAI as an independent venture and would welcome conversations with investors interested in the XAI space.\n* **Industry Leaders in Logistics & Supply Chain:** I'd like to connect with professionals who can provide insights into the challenges and opportunities of applying AI to logistics.\n* **Speakers & Organizers of AI Conferences:** I\u2019m keen to present ClarityAI at relevant industry events and would appreciate introductions to conference organizers.\n\nI\u2019m always open to discussing new technologies, innovative approaches to AI, and potential collaborations. I'm especially interested in companies leveraging AI for social good.",
+    "notes": "Ravi is enthusiastic and genuinely passionate about XAI. He's a quick learner and very proactive. He recently mentioned wanting to get involved in local AI meetups. He\u2019s a bit shy initially, but warms up quickly when discussing technical details.  He's currently refining a presentation on ClarityAI.",
+    "locationAvailability": "I am currently based in Toronto, Ontario. I am willing to travel within the Greater Toronto Area for meetings and events. I am open to considering relocation opportunities in the future, but my preference is to remain in the Toronto area for the time being. I have no upcoming travel plans at this moment.",
+    "introPreferences": "When making introductions, please emphasize my work on ClarityAI and my passion for explainable AI. It\u2019s a great conversation starter and demonstrates my initiative. \n\n* **Hard Requirements:**  Contacts should have a demonstrable interest or involvement in AI/ML.\n* **Soft Preferences:** Individuals with experience in open-source projects or a background in logistics are highly desirable.\n* **Please avoid:** Introductions to recruiters focusing solely on generic software engineering roles \u2013 I\u2019m specifically interested in AI-focused positions or connections related to ClarityAI.\n* **Angle to emphasize:** My proactive approach to learning and building impactful solutions.",
+    "personalPreferences": "I prefer to connect via LinkedIn initially, but I'm also open to quick chats on WhatsApp if that's more convenient.",
+    "meetingAndSchedulingPreferences": "I generally prefer virtual meetings, especially for initial introductions. I'm available for meetings most weekdays after 10 AM EST. I respond promptly to messages and am flexible with scheduling. Please send a meeting invite with a brief agenda beforehand."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 23.15908193588257,
+      "input_tokens": 809,
+      "output_tokens": 1266,
+      "problems": []
+    }
+  ],
+  "success": true
+}

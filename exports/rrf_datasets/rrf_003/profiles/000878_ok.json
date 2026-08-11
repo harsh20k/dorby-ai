@@ -1,0 +1,54 @@
+{
+  "id": 878,
+  "archetype": "Early-Career Operator, Diverse Background",
+  "given_name": "Elena Yamamoto",
+  "style_version": 54,
+  "archetypes_version": 148,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Elena Yamamoto is a 27-year-old with a surprisingly diverse background, having started in classical music performance before pivoting to data science. She initially pursued a violin performance degree, realizing the career path wasn\u2019t sustainable, and then self-taught data science through online courses and bootcamps, leveraging her analytical skills developed through music. She\u2019s now a Data Analyst at a mid-sized marketing tech company but is actively looking to transition into a more innovative, fast-paced startup environment. She's particularly interested in companies applying data science to sustainability or social impact. She\u2019s eager to connect with founders, data science leaders, and investors in those spaces, and is comfortable taking on a role that requires a lot of independent problem-solving. She's very detail-oriented and values thoughtful, informative networking interactions.",
+    "positioning": "A data-driven analyst with a unique background in the arts, Elena Yamamoto leverages a rigorous analytical mindset and a passion for problem-solving to deliver actionable insights. Currently a Data Analyst at MarketBloom, she specializes in customer segmentation and campaign performance analysis, recently leading a project that increased conversion rates by 15%. Elena\u2019s transition from a professional musician to data science demonstrates her adaptability and commitment to continuous learning. She\u2019s seeking to apply her skills to a dynamic startup focused on impactful solutions, particularly within the sustainability or social impact sectors. She\u2019s a firm believer in the power of data to drive positive change and is eager to connect with individuals who share that vision.",
+    "background": "* **Data Analyst, MarketBloom** (2021 \u2013 Present)\n    * Developed and maintained data pipelines using SQL, Python (Pandas, NumPy), and cloud-based data warehouses (Snowflake).\n    * Conducted A/B testing and statistical analysis to optimize marketing campaigns.\n    * Created interactive dashboards using Tableau and Power BI to visualize key performance indicators.\n    * Led a project to improve customer segmentation, resulting in a 15% increase in conversion rates.\n    * Collaborated with marketing and sales teams to translate data insights into actionable strategies.\n* **Freelance Data Science Consultant** (2020 \u2013 2021)\n    * Provided data analysis and visualization services to small businesses.\n    * Developed predictive models using machine learning techniques (regression, classification).\n    * Utilized data cleaning and preparation techniques to ensure data quality.\n* **Violin Performance, The Conservatory of Music** (2016 \u2013 2020) - Bachelor of Music\n    * Extensive training in musical theory, performance practice, and ensemble collaboration.\n    * Developed strong analytical skills through score analysis and interpretation.\n    * Performed in numerous recitals and orchestral concerts.\n* **Skills:** Python (Pandas, NumPy, Scikit-learn), SQL, Tableau, Power BI, A/B Testing, Statistical Analysis, Data Visualization, Data Cleaning, Data Mining, Machine Learning (Regression, Classification), Snowflake, Git, Agile Methodologies.",
+    "lookingFor": "* **Startup Founders:** Particularly interested in connecting with founders in the sustainability and social impact space.\n* **Data Science Leaders:** Seeking mentorship and guidance from experienced data science leaders in fast-growing companies.\n* **Investors:** Networking with venture capitalists and angel investors focused on early-stage startups.\n* **Data Science Roles:** Exploring opportunities for Data Analyst or Data Scientist positions in innovative startups.\n* **Sustainability/Impact Focused Companies:** Specifically targeting companies leveraging data for environmental or social good.\n* **Mentors:** Looking for individuals willing to share their experience navigating career transitions and the startup ecosystem.\n* **Industry Insights:** Seeking information about emerging trends and best practices in data science and sustainable business.",
+    "notes": "* Elena is highly motivated and a quick learner. She\u2019s comfortable taking initiative and working independently.\n* She recently completed a course on advanced machine learning techniques and is eager to apply those skills to a real-world project.\n* She\u2019s actively building her portfolio on GitHub with personal data science projects.\n* Elena mentioned she's particularly interested in the intersection of data science and circular economy principles.",
+    "locationAvailability": "Elena Yamamoto is currently based in San Francisco, California and is open to relocation for the right opportunity. She has upcoming travel planned for a data science conference in New York City in November.",
+    "introPreferences": "* **Hard Requirements:** Introductions should be to individuals in leadership positions at startups focusing on sustainability or social impact.\n* **Hard Requirements:** Introductions should be warm \u2013 a personal connection or shared interest is highly valued.\n* **Soft Preferences:** Introductions to individuals with a strong technical background in data science are preferred.\n* **Soft Preferences:** Avoid introductions to recruiters unless specifically requested.\n* **Introduction Style:** A concise, personalized message highlighting Elena\u2019s unique background and relevant skills is ideal.\n* **Avoid:** Generic introductions or mass emails.",
+    "personalPreferences": "* Prefers initial contact via LinkedIn message or email.\n* Is responsive and values clear communication.\n* Enjoys discussing data science trends and innovative solutions.",
+    "meetingAndSchedulingPreferences": "* Please share a brief agenda prior to any scheduled meetings.\n* Elena is available for virtual meetings during standard business hours (PST)."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 17.608518838882446,
+      "input_tokens": 738,
+      "output_tokens": 1104,
+      "problems": []
+    }
+  ],
+  "success": true
+}

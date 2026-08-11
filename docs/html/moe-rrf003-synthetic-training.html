@@ -1,0 +1,583 @@
+<title>Training the MoE on 2,619 synthetic pairs</title>
+<style>
+  :root {
+    color-scheme: light;
+    --plane:          #f9f9f7;
+    --surface-1:      #fcfcfb;
+    --text-primary:   #0b0b0b;
+    --text-secondary: #52514e;
+    --muted:          #898781;
+    --grid:           #e1e0d9;
+    --baseline:       #c3c2b7;
+    --border:         rgba(11,11,11,0.10);
+    --series-1:       #2a78d6;
+    --series-2:       #eb6834;
+    --good:           #0ca30c;
+    --good-text:      #006300;
+    --warning:        #fab219;
+    --critical:       #d03b3b;
+    --wash:           rgba(42,120,214,0.07);
+    --wash-crit:      rgba(208,59,59,0.08);
+    --wash-good:      rgba(12,163,12,0.08);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:where(:not([data-theme="light"])) {
+      color-scheme: dark;
+      --plane:          #0d0d0d;
+      --surface-1:      #1a1a19;
+      --text-primary:   #ffffff;
+      --text-secondary: #c3c2b7;
+      --muted:          #898781;
+      --grid:           #2c2c2a;
+      --baseline:       #383835;
+      --border:         rgba(255,255,255,0.10);
+      --series-1:       #3987e5;
+      --series-2:       #d95926;
+      --good:           #0ca30c;
+      --good-text:      #0ca30c;
+      --critical:       #d03b3b;
+      --wash:           rgba(57,135,229,0.12);
+      --wash-crit:      rgba(208,59,59,0.14);
+      --wash-good:      rgba(12,163,12,0.12);
+    }
+  }
+  :root[data-theme="dark"] {
+    color-scheme: dark;
+    --plane:          #0d0d0d;
+    --surface-1:      #1a1a19;
+    --text-primary:   #ffffff;
+    --text-secondary: #c3c2b7;
+    --muted:          #898781;
+    --grid:           #2c2c2a;
+    --baseline:       #383835;
+    --border:         rgba(255,255,255,0.10);
+    --series-1:       #3987e5;
+    --series-2:       #d95926;
+    --good:           #0ca30c;
+    --good-text:      #0ca30c;
+    --critical:       #d03b3b;
+    --wash:           rgba(57,135,229,0.12);
+    --wash-crit:      rgba(208,59,59,0.14);
+    --wash-good:      rgba(12,163,12,0.12);
+  }
+
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--plane);
+    color: var(--text-primary);
+    font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+    line-height: 1.6;
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 940px; margin: 0 auto; padding: 40px 20px 80px; }
+
+  header.page { margin-bottom: 36px; }
+  .kicker {
+    font-size: 12px; letter-spacing: .09em; text-transform: uppercase;
+    color: var(--muted); font-weight: 600; margin-bottom: 10px;
+  }
+  h1 { font-size: clamp(28px, 4.4vw, 40px); line-height: 1.15; margin: 0 0 14px; letter-spacing: -0.02em; }
+  .standfirst { font-size: 18px; color: var(--text-secondary); margin: 0; max-width: 68ch; }
+
+  h2 {
+    font-size: 22px; margin: 48px 0 6px; letter-spacing: -0.01em;
+    padding-bottom: 10px; border-bottom: 1px solid var(--grid);
+  }
+  h2 .n {
+    display: block; font-size: 11px; font-weight: 700; color: var(--series-1);
+    letter-spacing: .11em; text-transform: uppercase; margin-bottom: 5px;
+  }
+  h3 { font-size: 16px; margin: 26px 0 8px; }
+  p { margin: 12px 0; color: var(--text-secondary); max-width: 72ch; }
+  p strong, li strong { color: var(--text-primary); }
+  a { color: var(--series-1); }
+  code {
+    font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+    font-size: .88em; background: var(--wash); color: var(--text-primary);
+    padding: 1px 5px; border-radius: 4px;
+  }
+
+  /* ---------- verdict ---------- */
+  .verdict {
+    background: var(--surface-1); border: 1px solid var(--border);
+    border-radius: 14px; padding: 24px 26px; margin: 28px 0 8px;
+  }
+  .verdict-row { display: flex; gap: 14px; align-items: flex-start; margin-bottom: 16px; }
+  .verdict-row:last-child { margin-bottom: 0; }
+  .vchip {
+    flex-shrink: 0; font-size: 10.5px; font-weight: 700; letter-spacing: .07em;
+    text-transform: uppercase; padding: 3px 9px; border-radius: 4px; margin-top: 2px;
+    min-width: 74px; text-align: center; font-variant-numeric: tabular-nums;
+  }
+  .vchip.no    { background: var(--wash-crit); color: var(--critical); }
+  .vchip.yes   { background: var(--wash-good); color: var(--good-text); }
+  .vchip.note  { background: var(--wash);      color: var(--series-1); }
+  .vtext { margin: 0; color: var(--text-secondary); }
+  .vtext b { color: var(--text-primary); }
+
+  /* ---------- cards ---------- */
+  .cards { display: grid; gap: 14px; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); margin: 20px 0; }
+  .card {
+    background: var(--surface-1); border: 1px solid var(--border);
+    border-radius: 12px; padding: 18px 18px 16px;
+  }
+  .card.ok    { border-left: 3px solid var(--good); }
+  .card.bad   { border-left: 3px solid var(--critical); }
+  .card h4 { margin: 0 0 8px; font-size: 15px; }
+  .card p { margin: 0; font-size: 14.5px; }
+
+  /* ---------- stat tiles ---------- */
+  .tiles { display: grid; gap: 14px; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); margin: 22px 0; }
+  .tile {
+    background: var(--surface-1); border: 1px solid var(--border);
+    border-radius: 12px; padding: 18px;
+  }
+  .tile .val { font-size: 34px; font-variant-numeric: tabular-nums; font-weight: 650; letter-spacing: -0.02em; line-height: 1.05; }
+  .tile .val.crit { color: var(--critical); }
+  .tile .lab { font-size: 13.5px; color: var(--text-secondary); margin-top: 6px; }
+  .tile .sub { font-size: 12.5px; color: var(--muted); margin-top: 4px; }
+
+  /* ---------- figures / charts ---------- */
+  figure {
+    margin: 26px 0; background: var(--surface-1); border: 1px solid var(--border);
+    border-radius: 14px; padding: 22px 24px 18px;
+  }
+  figcaption { font-size: 13.5px; color: var(--muted); margin-top: 16px; padding-top: 14px; border-top: 1px solid var(--grid); }
+  .fig-title { font-size: 16px; font-weight: 600; margin: 0 0 4px; }
+  .fig-sub { font-size: 13.5px; color: var(--text-secondary); margin: 0 0 20px; }
+
+  .bars { display: flex; flex-direction: column; gap: 2px; }
+  .bar-row {
+    display: grid; grid-template-columns: minmax(120px, 205px) 1fr auto;
+    gap: 12px; align-items: center; padding: 3px 0; cursor: default;
+  }
+  .bar-row:hover .track { background: var(--wash); }
+  .bar-lab { font-size: 13.5px; color: var(--text-secondary); text-align: right; }
+  .bar-row.hl .bar-lab { color: var(--text-primary); font-weight: 600; }
+  .track { position: relative; height: 22px; border-radius: 4px; transition: background .12s; }
+  .fill {
+    height: 12px; margin-top: 5px; border-radius: 0 4px 4px 0;
+    background: var(--series-1); min-width: 2px;
+  }
+  .fill.crit { background: var(--critical); }
+  .fill.good { background: var(--good); }
+  .fill.mut  { background: var(--baseline); }
+  .bar-val { font-size: 13.5px; font-variant-numeric: tabular-nums; font-variant-numeric: tabular-nums; color: var(--text-primary); min-width: 46px; }
+  .bar-row .tag {
+    font-size: 11px; font-weight: 650; letter-spacing: .04em; text-transform: uppercase;
+    color: var(--critical); margin-left: 8px; white-space: nowrap;
+  }
+  .chance-note { font-size: 12.5px; color: var(--muted); margin-top: 14px; }
+
+  /* grouped bars */
+  .grp { display: flex; flex-direction: column; gap: 18px; }
+  .grp-block .grp-lab { font-size: 13.5px; color: var(--text-secondary); margin-bottom: 6px; }
+  .grp-pair { display: flex; flex-direction: column; gap: 2px; }
+  .grp-bar { display: grid; grid-template-columns: 1fr auto; gap: 10px; align-items: center; }
+  .grp-track { height: 16px; position: relative; }
+  .grp-fill { height: 14px; border-radius: 0 4px 4px 0; }
+  .s1 { background: var(--series-1); }
+  .s2 { background: var(--series-2); }
+  .grp-val { font-size: 13px; font-variant-numeric: tabular-nums; min-width: 92px; color: var(--text-secondary); }
+  .grp-val b { color: var(--text-primary); }
+
+  .legend { display: flex; gap: 18px; flex-wrap: wrap; margin-bottom: 18px; font-size: 13.5px; color: var(--text-secondary); }
+  .legend span { display: flex; align-items: center; gap: 7px; }
+  .swatch { width: 12px; height: 12px; border-radius: 3px; flex-shrink: 0; }
+
+  /* histogram */
+  .hist { display: flex; align-items: flex-end; gap: 2px; height: 150px; margin-bottom: 8px; }
+  .hbar { flex: 1; display: flex; flex-direction: column; justify-content: flex-end; align-items: center; height: 100%; }
+  .hbar .hf { width: 100%; background: var(--series-1); border-radius: 4px 4px 0 0; min-height: 2px; }
+  .hbar.tail .hf { background: var(--critical); }
+  .hbar .hn { font-size: 12px; color: var(--text-secondary); font-variant-numeric: tabular-nums; margin-bottom: 4px; }
+  .hax { display: flex; gap: 2px; border-top: 1px solid var(--baseline); padding-top: 6px; }
+  .hax div { flex: 1; text-align: center; font-size: 11.5px; color: var(--muted); }
+
+  /* ---------- problems ---------- */
+  .prob {
+    background: var(--surface-1); border: 1px solid var(--border);
+    border-left: 3px solid var(--critical); border-radius: 12px;
+    padding: 20px 22px; margin: 16px 0;
+  }
+  .prob.warn { border-left-color: var(--warning); }
+  .prob-head { display: flex; align-items: baseline; gap: 12px; flex-wrap: wrap; margin-bottom: 2px; }
+  .prob-num {
+    font-size: 11.5px; font-weight: 700; letter-spacing: .07em; color: var(--muted);
+    text-transform: uppercase; white-space: nowrap;
+  }
+  .prob h4 { margin: 0; font-size: 17px; letter-spacing: -0.01em; }
+  .sev {
+    font-size: 11px; font-weight: 700; letter-spacing: .05em; text-transform: uppercase;
+    padding: 2px 8px; border-radius: 20px; white-space: nowrap;
+  }
+  .sev.fatal { background: var(--wash-crit); color: var(--critical); }
+  .sev.high  { background: var(--wash-crit); color: var(--critical); }
+  .sev.med   { background: var(--wash); color: var(--series-1); }
+  .evidence {
+    margin-top: 14px; padding: 12px 14px; background: var(--plane);
+    border-radius: 8px; border: 1px solid var(--grid);
+    font-size: 13.5px; color: var(--text-secondary);
+  }
+  .evidence b { color: var(--text-primary); }
+  .evidence .elab { font-size: 11px; font-weight: 700; letter-spacing: .07em; text-transform: uppercase; color: var(--muted); display: block; margin-bottom: 4px; }
+  .fix { margin-top: 12px; font-size: 14px; color: var(--text-secondary); }
+  .fix b { color: var(--good-text); }
+
+  /* ---------- steps ---------- */
+  .steps { display: flex; flex-direction: column; gap: 12px; margin: 22px 0; counter-reset: s -1; }
+  .step {
+    background: var(--surface-1); border: 1px solid var(--border); border-radius: 12px;
+    padding: 18px 20px; display: grid; grid-template-columns: auto 1fr; gap: 16px; align-items: start;
+  }
+  .step .badge {
+    width: 34px; height: 34px; border-radius: 9px; background: var(--wash);
+    color: var(--series-1); font-weight: 700; font-size: 15px;
+    display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+  }
+  .step h4 { margin: 0 0 4px; font-size: 15.5px; }
+  .step p { margin: 0; font-size: 14.5px; }
+  .cost {
+    display: inline-block; font-size: 12px; font-weight: 650; color: var(--good-text);
+    background: var(--wash-good); padding: 1px 8px; border-radius: 20px; margin-left: 8px;
+    vertical-align: 2px; letter-spacing: .02em;
+  }
+  .cost.stop { color: var(--critical); background: var(--wash-crit); }
+
+  /* ---------- diagram fix ---------- */
+  .diagram-fix { display: grid; gap: 14px; grid-template-columns: 1fr 1fr; margin: 22px 0; }
+  @media (max-width: 640px) { .diagram-fix { grid-template-columns: 1fr; } }
+  .dcol { background: var(--surface-1); border: 1px solid var(--border); border-radius: 12px; padding: 18px; }
+  .dcol.before { border-top: 3px solid var(--critical); }
+  .dcol.after  { border-top: 3px solid var(--good); }
+  .dcol .dh { font-size: 12px; font-weight: 700; letter-spacing: .07em; text-transform: uppercase; margin-bottom: 12px; }
+  .dcol.before .dh { color: var(--critical); }
+  .dcol.after  .dh { color: var(--good-text); }
+  .dcol ul { margin: 0; padding-left: 18px; }
+  .dcol li { font-size: 14px; color: var(--text-secondary); margin-bottom: 9px; }
+  .dcol li b { color: var(--text-primary); }
+
+  /* ---------- update banner ---------- */
+  .update {
+    background: var(--surface-1); border: 1px solid var(--border);
+    border-left: 3px solid var(--series-1); border-radius: 12px;
+    padding: 20px 22px; margin: 24px 0 0;
+  }
+  .update-head {
+    font-size: 12px; font-weight: 700; letter-spacing: .07em; text-transform: uppercase;
+    color: var(--series-1); margin-bottom: 12px;
+  }
+  .update ul { margin: 0; padding-left: 20px; }
+  .update li { font-size: 14.5px; color: var(--text-secondary); margin-bottom: 9px; }
+  .update li:last-child { margin-bottom: 0; }
+
+  .sev.resolved { background: var(--wash-good); color: var(--good-text); }
+  .prob.resolved { border-left-color: var(--good); }
+  .prob.resolved h4 { text-decoration: none; }
+  .withdrawn {
+    font-size: 13.5px; color: var(--good-text); font-weight: 600;
+    margin: 0 0 10px;
+  }
+  .struck { opacity: .62; }
+
+  ul.plain { margin: 12px 0; padding-left: 20px; }
+  ul.plain li { color: var(--text-secondary); margin-bottom: 9px; max-width: 72ch; }
+
+  details.tbl { margin-top: 14px; font-size: 13.5px; }
+  details.tbl summary { cursor: pointer; color: var(--series-1); font-size: 13.5px; }
+  .scroll { overflow-x: auto; margin-top: 12px; }
+  table { border-collapse: collapse; width: 100%; font-size: 13.5px; min-width: 380px; }
+  th, td { text-align: left; padding: 7px 12px 7px 0; border-bottom: 1px solid var(--grid); }
+  th { color: var(--muted); font-weight: 600; font-size: 12px; text-transform: uppercase; letter-spacing: .05em; }
+  td { color: var(--text-secondary); font-variant-numeric: tabular-nums; }
+  td:first-child { color: var(--text-primary); }
+
+  footer.page { margin-top: 56px; padding-top: 20px; border-top: 1px solid var(--grid); font-size: 13px; color: var(--muted); }
+</style>
+<div class="wrap">
+
+<header class="page">
+  <div class="kicker">Experiment · dorby-ai · 2026-07-29</div>
+  <h1>We trained the MoE on 2,619 synthetic pairs. It got worse.</h1>
+  <p class="standfirst">24× more training data made every model <b>lose to using no model at
+  all</b>. The useful part is <i>where</i> it broke: the synthetic vocabulary transfers almost
+  perfectly, and the labels don't transfer at all.</p>
+</header>
+
+<div class="verdict">
+  <div class="verdict-row">
+    <div class="vchip no">Answer</div>
+    <p class="vtext"><b>No.</b> Every arm trained on synthetic pairs scored below the
+    no-model TF-IDF floor of 0.5660. Two scored <b>below chance</b>.</p>
+  </div>
+  <div class="verdict-row">
+    <div class="vchip yes">Held up</div>
+    <p class="vtext"><b>One prediction held.</b> Training <i>within a seeker</i> instead of on
+    raw pairs was worth <b>+0.131</b> — the largest single effect measured, and the one thing the
+    synthetic batch genuinely unlocked.</p>
+  </div>
+  <div class="verdict-row">
+    <div class="vchip note">Corrects</div>
+    <p class="vtext"><b>The earlier conclusion was wrong and is now corrected.</b> The bottleneck
+    is not data <i>volume</i> — it is <b>label validity</b>. A teacher scoring 0.5797 against real
+    human outcomes cannot teach a student to beat plain keyword cosine.</p>
+  </div>
+</div>
+
+<h2><span class="n">Results</span>Every arm, scored on real pairs</h2>
+
+<figure>
+  <p class="fig-title">Nothing trained on synthetic data reaches the do-nothing floor</p>
+  <p class="fig-sub">AUC on 131 real pairs (71 pos / 60 neg). Bars anchored at 0.35; the coin-flip
+  line is marked. Red = below chance.</p>
+  <div class="bars" role="img" aria-label="AUC on real pairs: MoE real only 0.3934, MoE synthetic pairwise 0.4066, logistic synthetic 0.4270, synth pretrain then real fine-tune 0.4730, coin flip 0.5000, MoE synthetic within-seeker 0.5380, TF-IDF with synthetic vocabulary 0.5631, TF-IDF alone 0.5660, the judge teacher 0.5797, logistic regression on real pairs 0.6398.">
+    <div class="bar-row">
+      <div class="bar-lab">MoE, real pairs only</div>
+      <div class="track"><div class="fill crit" style="width:14.0%"></div></div>
+      <div class="bar-val">0.3934<span style="color:var(--muted);font-size:12px;"> ±0.177</span></div>
+    </div>
+    <div class="bar-row">
+      <div class="bar-lab">MoE, synthetic — pairwise</div>
+      <div class="track"><div class="fill crit" style="width:18.3%"></div></div>
+      <div class="bar-val">0.4066</div>
+    </div>
+    <div class="bar-row">
+      <div class="bar-lab">Logistic, synthetic</div>
+      <div class="track"><div class="fill crit" style="width:24.8%"></div></div>
+      <div class="bar-val">0.4270</div>
+    </div>
+    <div class="bar-row">
+      <div class="bar-lab">Synth pretrain → real fine-tune</div>
+      <div class="track"><div class="fill crit" style="width:39.7%"></div></div>
+      <div class="bar-val">0.4730<span style="color:var(--muted);font-size:12px;"> ±0.145</span></div>
+    </div>
+    <div class="bar-row">
+      <div class="bar-lab">Coin flip</div>
+      <div class="track"><div class="fill mut" style="width:48.4%"></div></div>
+      <div class="bar-val">0.5000</div>
+    </div>
+    <div class="bar-row hl">
+      <div class="bar-lab">MoE, synthetic — within-seeker</div>
+      <div class="track"><div class="fill" style="width:60.6%"></div></div>
+      <div class="bar-val">0.5380</div>
+    </div>
+    <div class="bar-row">
+      <div class="bar-lab">TF-IDF, synthetic vocabulary</div>
+      <div class="track"><div class="fill" style="width:68.7%"></div></div>
+      <div class="bar-val">0.5631</div>
+    </div>
+    <div class="bar-row hl">
+      <div class="bar-lab">TF-IDF alone, no model</div>
+      <div class="track"><div class="fill good" style="width:69.7%"></div></div>
+      <div class="bar-val">0.5660</div>
+    </div>
+    <div class="bar-row">
+      <div class="bar-lab">The judge teacher itself</div>
+      <div class="track"><div class="fill" style="width:74.1%"></div></div>
+      <div class="bar-val">0.5797</div>
+    </div>
+    <div class="bar-row hl">
+      <div class="bar-lab">Logistic, real pairs</div>
+      <div class="track"><div class="fill good" style="width:93.5%"></div></div>
+      <div class="bar-val">0.6398<span style="color:var(--muted);font-size:12px;"> ±0.177</span></div>
+    </div>
+  </div>
+  <p class="chance-note">Single-shot arms (no ±) are measured on all 131 pairs, SE <b>±0.0505</b>.
+  Arms with ± are seeker-disjoint 5-fold CV; the figure shown is the fold-to-fold standard
+  deviation, which is large.</p>
+  <figcaption>The three highlighted rows are the ones that matter: the best model overall is
+  <b>plain logistic regression on ~105 real pairs</b>, the floor is <b>TF-IDF with no training at
+  all</b>, and the best synthetic arm sits between chance and that floor.</figcaption>
+</figure>
+
+<h2><span class="n">Diagnosis</span>Where exactly it broke</h2>
+
+<p>A synthetic-to-real failure can happen in two places: the <b>text</b> could look different, or
+the <b>labels</b> could mean something different. These separate cleanly here.</p>
+
+<div class="cards">
+  <div class="card ok">
+    <h4>The vocabulary transfers</h4>
+    <p>A TF-IDF vocabulary learned <i>entirely</i> from synthetic profiles scores real pairs at
+    <b>0.5631</b> — within <b>0.003</b> of one learned from real profiles (0.5660). The synthetic
+    profiles are lexically fine.</p>
+  </div>
+  <div class="card bad">
+    <h4>The labels do not</h4>
+    <p>Models learn the synthetic labels well (<b>0.61–0.66</b> synthetic-internal AUC) and then
+    score <b>0.41–0.54</b> on real pairs. Fitting works; the meaning of "good match" does not
+    survive the move.</p>
+  </div>
+  <div class="card bad">
+    <h4>Below chance is a real signal</h4>
+    <p>Two arms land at <b>0.4066</b> and <b>0.4270</b>. That is not "no signal" — the
+    feature→label relationship learned from synthetic pairs is <b>anti-correlated</b> with real
+    outcomes. Training on it inverts the decision.</p>
+  </div>
+</div>
+
+<h2><span class="n">Implication</span>The distillation ceiling</h2>
+
+<p>This is the number that reframes the whole plan. Distillation only works if the teacher is
+worth imitating, so: <b>how good is the judge itself on real pairs?</b></p>
+
+<div class="tiles">
+  <div class="tile"><div class="val">0.6637</div><div class="lab">student, on synthetic labels</div><div class="sub">it learned the lesson</div></div>
+  <div class="tile"><div class="val crit">0.5797</div><div class="lab">teacher, on real pairs</div><div class="sub">the hard ceiling</div></div>
+  <div class="tile"><div class="val crit">0.5380</div><div class="lab">student, on real pairs</div><div class="sub">below its own teacher</div></div>
+  <div class="tile"><div class="val">0.6398</div><div class="lab">plain logistic on 105 real pairs</div><div class="sub">above the ceiling entirely</div></div>
+</div>
+
+<p><strong>Signal is lost at every hop.</strong> The student learns the judge's labels well. The
+judge is only weakly right about humans. And the student ends up <i>below even that</i> — because
+it learns the judge's decision function <b>as expressed on synthetic profiles</b>, which is not
+the function the judge applies to real ones. Distilling on synthetic data does not even reproduce
+the judge's own real-pair behaviour.</p>
+
+<p><strong>The consequence:</strong> a perfect imitator of this judge would still score below what
+plain logistic regression already achieves on 105 real pairs. More labels at this teacher quality
+is not the lever. The judge has to get better first — and <code>structured_cot</code> already
+failed at that.</p>
+
+<h2><span class="n">Positive result</span>What did work</h2>
+
+<figure>
+  <p class="fig-title">Within-seeker training: +0.131, the largest effect in the experiment</p>
+  <p class="fig-sub">Identical data, identical architecture — only the training objective changes.</p>
+  <div class="bars" role="img" aria-label="Pairwise training on synthetic data scores 0.4066 on real pairs; within-seeker triplet training on the same data scores 0.5380.">
+    <div class="bar-row">
+      <div class="bar-lab">Pairwise (each pair alone)</div>
+      <div class="track"><div class="fill crit" style="width:18.3%"></div></div>
+      <div class="bar-val">0.4066</div>
+    </div>
+    <div class="bar-row hl">
+      <div class="bar-lab">Within-seeker triplets</div>
+      <div class="track"><div class="fill good" style="width:60.6%"></div></div>
+      <div class="bar-val">0.5380</div>
+    </div>
+  </div>
+  <figcaption>Ranking candidates <i>against each other inside one seeker</i> cancels the
+  per-seeker base rate by construction — the shortcut that scored 0.687 with no text at all on an
+  earlier batch. rrf_003's <b>2,773</b> within-seeker triplets made this possible; the real pairs
+  offer only <b>19</b>. Validated, and worth keeping in any future architecture — but it only
+  rescues the model to roughly chance, not above the floor.</figcaption>
+</figure>
+
+<h2><span class="n">Corrections</span>Two bugs caught mid-run</h2>
+
+<p>Both would have produced confidently wrong conclusions, and both were caught by a number
+looking implausible rather than by a test failing.</p>
+
+<div class="prob warn">
+  <div class="prob-head"><span class="prob-num">Bug 1</span><span class="sev med">Fixed</span></div>
+  <h4>A hand-rolled TF-IDF that was simply wrong</h4>
+  <p>The feature module first built its own vectorizer with unigrams and sublinear scaling,
+  against the repo encoder's bigrams and no sublinear scaling. On the same 131 real pairs that
+  scored <b>0.4366 versus the repo's 0.5660</b>, correlation only <b>0.52</b>.</p>
+  <div class="evidence"><span class="elab">Why it mattered</span>
+  TF-IDF is the strongest single channel in the entire feature set. Getting it wrong would have
+  made every downstream number untrustworthy — and it would have looked like a finding about
+  synthetic data.</div>
+  <div class="fix"><b>Fixed</b> by using the repo's <code>TfidfEncoder</code> unchanged, verified
+  by reproducing the documented holdout figure (0.5905 vs 0.5922 published). Reuse beat
+  re-derivation.</div>
+</div>
+
+<div class="prob warn">
+  <div class="prob-head"><span class="prob-num">Bug 2</span><span class="sev med">Fixed</span></div>
+  <h4>A stale cache silently merged two arms into one</h4>
+  <p><code>TfidfEncoder.encode()</code> keys its disk cache on the texts, <b>not on the fitted
+  vocabulary</b>. This experiment deliberately encodes the same real rows under two different
+  fits — real vocabulary and synthetic vocabulary — so they collided, and the second call returned
+  the first call's vectors.</p>
+  <div class="evidence"><span class="elab">The tell</span>
+  The two arms reported <b>byte-identical AUCs of 0.5660</b>. A coincidence too exact to be real.
+  Had it gone unnoticed, the headline "vocabulary transfers perfectly" would have been an artifact
+  instead of a finding.</div>
+  <div class="fix"><b>Fixed</b> by calling <code>vectorizer.transform</code> directly, bypassing
+  the cache. Worth knowing for any future experiment that re-encodes identical text under a new
+  fit — the project notes flag this hazard for explicit cache names, but it applies to the
+  content-hashed default too.</div>
+</div>
+
+<h2><span class="n">Limits</span>Caveats, stated plainly</h2>
+
+<ul class="plain">
+  <li><b>The CV arms are very noisy.</b> Fold-to-fold standard deviations of 0.145–0.177 over 5
+  folds. <code>logistic_real</code> and <code>moe_real</code> differ by more than that spread, but
+  neither is a precise estimate.</li>
+  <li><b>"Does not beat the floor" is safe; "is worse than the floor" is not.</b> The single-shot
+  arms carry SE ±0.0505, so 0.5380 and 0.5660 are not cleanly separable.</li>
+  <li><b>The feature set is weaker than the previous experiment's.</b> The embedding channel had
+  to be dropped — rrf_003's cached vectors are Qwen3, the real-pair features are voyage-nano, and
+  mixing spaces would make a feature mean different things per row. Absolute levels are therefore
+  lower across the board; the comparison is unaffected since every arm shares it.</li>
+  <li><b>The real 69-pair holdout was not spent.</b> Nothing came close to earning the one-shot
+  check.</li>
+  <li><b>These labels were never claimed to be ground truth.</b> The value here is quantifying
+  <i>by how much</i> they fail and locating <i>where</i> — which turned out to be the labeling
+  function, not the profile text.</li>
+</ul>
+
+<h2><span class="n">Decision</span>What to carry forward</h2>
+
+<div class="diagram-fix">
+  <div class="dcol after">
+    <div class="dh">Keep</div>
+    <ul>
+      <li><b>Within-seeker training.</b> +0.131, validated, cheap.</li>
+      <li><b>The 200 real pairs as the only trustworthy signal.</b> Simple models on them remain
+      the strongest thing measured in this project.</li>
+      <li><b>The frozen-copy discipline.</b> Source hash verified unchanged; the synthetic batch
+      is reusable without being disturbed.</li>
+    </ul>
+  </div>
+  <div class="dcol before">
+    <div class="dh">Drop or rethink</div>
+    <ul>
+      <li><b>Scaling judge-labeled data.</b> More pairs at 0.5797 teacher quality is not the
+      lever.</li>
+      <li><b>Synthetic pretraining.</b> It is a liability the fine-tune cannot undo (0.4730 vs
+      0.6398).</li>
+      <li><b>"The bottleneck is data."</b> It is label validity. 24× more pairs made things
+      worse.</li>
+    </ul>
+  </div>
+</div>
+
+<details class="tbl">
+  <summary>Table view — every figure on this page</summary>
+  <div class="scroll">
+  <table>
+    <thead><tr><th>Arm / quantity</th><th>Real AUC</th><th>Fold std</th><th>n_train</th></tr></thead>
+    <tbody>
+      <tr><td>tfidf_realfit (floor)</td><td>0.5660</td><td>—</td><td>0</td></tr>
+      <tr><td>tfidf_synthfit</td><td>0.5631</td><td>—</td><td>0</td></tr>
+      <tr><td>logistic_real (best)</td><td>0.6398</td><td>0.177</td><td>105</td></tr>
+      <tr><td>moe_real</td><td>0.3934</td><td>0.158</td><td>105</td></tr>
+      <tr><td>logistic_synth</td><td>0.4270</td><td>—</td><td>2,619</td></tr>
+      <tr><td>moe_synth (pairwise)</td><td>0.4066</td><td>—</td><td>2,619</td></tr>
+      <tr><td>moe_synth_ws (within-seeker)</td><td>0.5380</td><td>—</td><td>2,773</td></tr>
+      <tr><td>moe_transfer</td><td>0.4730</td><td>0.145</td><td>105</td></tr>
+      <tr><td>Judge teacher on the same 131 pairs</td><td>0.5797</td><td>—</td><td>—</td></tr>
+      <tr><td>Judge–human agreement (accuracy)</td><td>0.5878</td><td>—</td><td>—</td></tr>
+      <tr><td>Synthetic-internal AUC (range)</td><td>0.6086–0.6637</td><td>—</td><td>—</td></tr>
+      <tr><td>Real eval pool</td><td>131 pairs</td><td>SE ±0.0505</td><td>71 pos / 60 neg</td></tr>
+      <tr><td>Synthetic batch</td><td>2,619 pairs</td><td>—</td><td>44.9% pos</td></tr>
+      <tr><td>Within-seeker triplets: synth vs real</td><td>2,773 vs 19</td><td>—</td><td>146×</td></tr>
+      <tr><td>Contact-id overlap between populations</td><td>0</td><td>—</td><td>923 vs 1,217 ids</td></tr>
+    </tbody>
+  </table>
+  </div>
+</details>
+
+<footer class="page">
+  Isolated experiment package <code>moe_rrf/</code>; nothing in <code>moe_reranker/</code> or
+  <code>baselines/</code> was modified. Full writeup:
+  <code>docs/moe-rrf003-synthetic-training-findings.md</code>. Reproduce with
+  <code>PYTHONPATH=. .venv/bin/python -m moe_rrf.experiment --run-id rrf003_001</code>.
+</footer>
+
+</div>

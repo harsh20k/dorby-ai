@@ -1,0 +1,54 @@
+{
+  "id": 71,
+  "archetype": "Consultancy Founder, Scaling Services",
+  "given_name": "Jing Sokolov",
+  "style_version": 5,
+  "archetypes_version": 13,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Jing Sokolov is a 38-year-old founder of 'SynergyFlow', a boutique consultancy specializing in DevOps and Cloud migration for Series A/B startups. Her distinctive career detail is a prior 7-year stint as a Site Reliability Engineer (SRE) at a notoriously demanding fintech unicorn, 'NovaPay'. This experience heavily informs her consultancy\u2019s approach \u2013 she's deeply pragmatic, focused on *reliable* scaling, not just rapid growth. She\u2019s currently focused on expanding SynergyFlow\u2019s service offerings to include security audits and cost optimization, and is actively seeking partnerships with complementary firms (e.g., penetration testing specialists, data science consultancies). She emphasizes a 'hands-on' approach, often rolling up her sleeves alongside her team on key client engagements, and has a reputation for being a direct, no-nonsense communicator. Her priority isn\u2019t just delivering solutions, but building internal client capability. She\u2019s ambitious but grounded, and values long-term relationships over quick wins. She's looking to establish SynergyFlow as *the* go-to consultancy for startups needing robust, scalable infrastructure.",
+    "positioning": "I founded SynergyFlow to bridge the gap between ambitious startup visions and the realities of scalable, reliable infrastructure. Having spent years in the trenches as a Site Reliability Engineer at NovaPay, I witnessed firsthand the pain points of rapid growth \u2013 the fragility, the technical debt, the firefighting. SynergyFlow isn\u2019t about simply *deploying* technology; it\u2019s about architecting solutions that can withstand pressure and evolve with your business. We specialize in DevOps implementation, cloud migration (AWS, GCP, Azure), and infrastructure-as-code. Currently, we're expanding our services to incorporate comprehensive security audits and cost optimization strategies, recognizing that security and efficiency are paramount for sustainable growth. I\u2019m passionate about empowering our clients to not only *have* a scalable infrastructure, but to *understand* and *maintain* it.  My focus is on building long-term partnerships, acting as an extension of our clients\u2019 teams, and delivering measurable results.",
+    "background": "- **Founder & CEO, SynergyFlow** (2021 \u2013 Present)\n  * Led the establishment and growth of a boutique consultancy specializing in DevOps and Cloud solutions for startups.\n  * Secured key clients including 'BloomTech' (Series A, EdTech) and 'Aether Dynamics' (Series B, Robotics).\n  * Developed and implemented a proprietary \u2018Reliability Blueprint\u2019 methodology for assessing and improving infrastructure resilience.\n  * Achieved 300% revenue growth in the last 18 months.\n  * Built and manage a team of 8 highly skilled DevOps engineers and cloud architects.\n\n- **Site Reliability Engineer (SRE), NovaPay** (2014 \u2013 2021)\n  * Responsible for the reliability, scalability, and performance of NovaPay\u2019s core payment processing infrastructure.\n  * Led the migration of critical services to AWS, resulting in a 20% reduction in infrastructure costs.\n  * Developed and automated incident response procedures, reducing mean time to resolution (MTTR) by 35%.\n  * Implemented monitoring and alerting systems using Prometheus, Grafana, and PagerDuty.\n  * Mentored junior SRE engineers and contributed to the development of internal best practices.\n\n- **Systems Administrator, Stellar Solutions Inc.** (2012 \u2013 2014)\n  * Managed and maintained a Linux-based server infrastructure for a small IT services provider.\n  * Gained experience in scripting (Bash, Python) and automation tools (Ansible).\n\n**Certifications:**\n* AWS Certified Solutions Architect \u2013 Professional\n* Google Cloud Certified Professional Cloud Architect\n* Certified Kubernetes Administrator (CKA)",
+    "lookingFor": "I'm actively seeking strategic partnerships with complementary consultancies. Specifically, I\u2019m looking for firms specializing in:\n\n* **Penetration Testing & Vulnerability Assessments:**  We need a reliable partner to offer comprehensive security audits alongside our infrastructure work.  Ideal firms have a strong track record with startups and a deep understanding of cloud security best practices.\n* **Data Science & Machine Learning:**  We're seeing increasing demand for data engineering and ML infrastructure support. A partnership would allow us to expand our offerings without building that expertise in-house immediately.\n\nI\u2019m also open to connecting with potential investors interested in supporting SynergyFlow\u2019s growth. We\u2019re currently bootstrapped and exploring options for Series A funding to accelerate our expansion.  I\u2019m particularly interested in investors with experience in the B2B SaaS and consulting space.  \n\nFinally, I\u2019m always looking to connect with talented DevOps engineers and cloud architects.  We\u2019re a growing team, and I\u2019m committed to attracting top talent.  I'm especially interested in individuals with experience in infrastructure-as-code (Terraform, CloudFormation) and containerization (Docker, Kubernetes).",
+    "notes": "Jing is incredibly focused and direct. She values efficiency and dislikes \u2018fluff\u2019. She's very pragmatic, and her experience at NovaPay has made her skeptical of overly hyped technologies. She responds well to data-driven arguments and demonstrable results. She\u2019s currently prioritizing building out SynergyFlow\u2019s service catalog and securing a few key strategic partnerships. She mentioned being frustrated with the lack of consultants who truly understand the operational realities of scaling a startup. She values honesty and transparency, and will quickly dismiss anyone she perceives as being disingenuous.  She recently expressed interest in learning more about serverless architectures and is actively researching potential use cases for her clients. Approaching her with concrete solutions, rather than vague promises, will be key.",
+    "locationAvailability": "I'm primarily focused on serving clients in North America (Eastern and Pacific Time Zones), but I'm open to remote engagements with companies globally. I am based in Toronto, Canada and available for limited travel.",
+    "introPreferences": "* **Hard Requirements:** Anyone I\u2019m introduced to MUST be a decision-maker or a key influencer within their organization.  I do *not* want to be connected to junior-level employees or sales representatives without a clear understanding of their client's needs.\n* **Soft Preferences:**\n    * Individuals with a strong technical background \u2013 I want to be able to have a meaningful conversation about infrastructure challenges.\n    * People who are genuinely interested in building long-term partnerships, not just making a quick sale.\n    * Founders or leaders of companies operating in the Series A/B funding stage.\n* **Do NOT introduce me to:** Anyone selling generic \u2018digital transformation\u2019 services. I\u2019m looking for specialized expertise, not buzzwords.\n* **Please include in the introduction:** A brief overview of the individual\u2019s company, their role, and their specific infrastructure challenges.",
+    "personalPreferences": "I prefer concise and direct communication. Email is my primary method of contact. I'm generally responsive, but I prioritize focused work time, so please allow up to 24 hours for a response. I appreciate clear agendas and well-prepared meeting materials.",
+    "meetingAndSchedulingPreferences": "Please use Calendly (link available upon request) to schedule meetings.  I prefer 30-60 minute meetings with a clear agenda.  Please send any relevant materials (e.g., architecture diagrams, technical specifications) at least 24 hours in advance."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 25.33118486404419,
+      "input_tokens": 840,
+      "output_tokens": 1574,
+      "problems": []
+    }
+  ],
+  "success": true
+}

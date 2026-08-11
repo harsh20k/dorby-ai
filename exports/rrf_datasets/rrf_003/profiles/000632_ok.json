@@ -1,0 +1,65 @@
+{
+  "id": 632,
+  "archetype": "European Venture Builder, Now US-Focused",
+  "given_name": "Nikolai Castillo",
+  "style_version": 39,
+  "archetypes_version": 106,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Nikolai Castillo is a seasoned venture builder originally from Barcelona, Spain, with a strong background in operational roles at European VC funds. He spent 8 years at Nauta Capital, initially as an analyst and rising to a Principal role, specializing in scaling portfolio companies post-seed. He\u2019s recently relocated to San Francisco to launch 'NovaScale', a firm focused on bridging the gap between European AI startups and US market access \u2013 providing not just capital, but intensive operational and go-to-market support. A defining career moment was successfully turning around a struggling German SaaS company within Nauta\u2019s portfolio, which he attributes to a deep understanding of cultural nuances and operational efficiency. He's currently raising a $50M fund and is aggressively networking for LPs, strategic partners (particularly US-based enterprise software companies), and AI founders seeking US expansion. He is *very* focused on GenAI applications and is wary of hype cycles.",
+    "positioning": "Nikolai Castillo is the Founder and Managing Partner of NovaScale, a venture building firm specializing in accelerating the US market entry for high-potential European AI startups. With a proven track record of operational excellence within leading European venture capital firms, Nikolai focuses on providing more than just capital \u2013 he delivers hands-on support in areas like go-to-market strategy, sales, and team building. His expertise lies in identifying and nurturing companies with strong technology foundations and a clear path to scalable growth. He\u2019s passionate about fostering cross-Atlantic innovation and bridging the gap between European ingenuity and US market demand. NovaScale aims to be the premier partner for European founders seeking to disrupt the US landscape.",
+    "background": "- **NovaScale, Founder & Managing Partner** (Jan 2024 \u2013 Present) \u2013 Leading all aspects of fund formation, investment strategy, and portfolio company operations. Focus on GenAI, SaaS, and B2B platforms.\n- **Nauta Capital, Principal** (Sept 2019 \u2013 Dec 2023) \u2013 Originated, executed, and managed investments in early-stage tech companies across Europe. Led post-investment operational support for portfolio companies, specializing in scaling revenue and building high-performing teams.\n    * Successfully led the turnaround of 'DataForge' (German SaaS company) \u2013 increased ARR by 300% within 18 months.\n    * Mentored 10+ portfolio company CEOs on scaling strategies.\n- **Nauta Capital, Analyst** (July 2015 \u2013 Aug 2019) \u2013 Supported investment due diligence, market research, and financial modeling. Contributed to the successful closure of 15+ investment deals.\n- **IE Business School, Madrid, Spain** \u2013 MBA, Finance (2013 \u2013 2015). Graduated with honors.\n- **Universitat Pompeu Fabra, Barcelona, Spain** \u2013 Bachelor of Arts, Economics (2009 \u2013 2013). Awarded 'Outstanding Student' recognition.\n- **Skills:** Venture Capital, Startup Operations, Go-to-Market Strategy, SaaS, AI/ML, Financial Modeling, Due Diligence, Cross-Border Expansion, Team Building, Investor Relations, German (fluent), Spanish (native), English (fluent).",
+    "lookingFor": "### Investment Opportunities\n- Pre-Seed to Series A European AI startups actively seeking US expansion.\n- Companies with demonstrable traction and a clear value proposition for the US market.\n- Specifically interested in GenAI applications within enterprise software.\n\n### Strategic Partnerships\n- US-based enterprise software companies seeking to integrate innovative European AI technologies.\n- Corporate venture arms interested in exploring cross-border investment opportunities.\n\n### Limited Partners (LPs)\n- Institutional investors with a long-term investment horizon and an interest in European technology.\n- Family offices seeking exposure to high-growth AI startups.\n\n**Do not** contact me with pitches for blockchain/crypto projects, or consumer-facing applications without a clear B2B component. I'm not interested in pre-revenue ideas.",
+    "notes": "Nikolai is highly focused on operational value-add. He\u2019s less interested in simply writing checks and more interested in actively helping companies scale. He's been very vocal internally about needing to build a strong network of US-based legal counsel specializing in cross-border transactions. Recent conversations suggest he\u2019s prioritizing companies that can demonstrate a strong understanding of the US regulatory landscape. Data quality is good, but his LinkedIn activity indicates a recent increase in focus on GenAI \u2013 this should be reflected in future interactions. He\u2019s currently attending several AI-focused conferences in the Bay Area.",
+    "locationAvailability": "San Francisco, California",
+    "introPreferences": "- Ideal introductions are to US-based VPs of Strategy or Innovation at established enterprise software companies (e.g., Salesforce, Microsoft, Adobe).\n- Preferred introduction style: concise email with a clear articulation of the startup's value proposition and why it\u2019s relevant to the recipient.\n- **Hard requirement:** The recipient *must* have decision-making authority regarding potential partnerships or investments.\n- **Soft preference:** Introductions to individuals with experience in the European market are a plus.\n- **Do not** introduce me to junior-level employees or individuals without a clear understanding of AI/ML.\n- Warm introductions are strongly preferred; cold outreach is unlikely to be successful.",
+    "personalPreferences": "Prefers asynchronous communication - email is best.  He's a big fan of prioritizing deep work and avoids unnecessary meetings.",
+    "meetingAndSchedulingPreferences": "Generally prefers 30-minute introductory calls.  Please provide a brief agenda beforehand.  Follow-up is appreciated, but please allow 24-48 hours for a response."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 23.144688844680786,
+      "input_tokens": 824,
+      "output_tokens": 1233,
+      "problems": [
+        "background: possible truncation (ends with '...onversational)</li>\n</ul>')",
+        "lookingFor: possible truncation (ends with '...l feasibility.</li>\n</ul>')",
+        "introPreferences: possible truncation (ends with '...al foundation.</li>\n</ul>')"
+      ]
+    },
+    {
+      "attempt": 2,
+      "elapsed_s": 22.961736917495728,
+      "input_tokens": 824,
+      "output_tokens": 1226,
+      "problems": []
+    }
+  ],
+  "success": true
+}

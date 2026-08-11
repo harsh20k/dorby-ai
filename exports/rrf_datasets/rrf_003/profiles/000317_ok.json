@@ -1,0 +1,54 @@
+{
+  "id": 317,
+  "archetype": "Former Journalist, AI Storyteller",
+  "given_name": "Tariq Mendes",
+  "style_version": 20,
+  "archetypes_version": 52,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Tariq Mendes is a former broadcast journalist who discovered a knack for translating complex technical concepts into compelling narratives. He spent 15 years covering national and international news, but increasingly found himself drawn to stories about emerging technologies. A particularly impactful assignment covering the early days of AI research sparked a career pivot. He now works as an AI Storyteller, helping early-stage AI startups craft their messaging, pitch decks, and overall brand narratives. He's currently focused on companies building generative AI tools for creative industries, and is actively seeking seed funding for his new venture: 'Narrative Forge', a consultancy specializing in AI-powered storytelling solutions. He's a highly articulate and persuasive communicator, with a strong network in both media and tech, but needs to expand his connections within the venture capital community. A key detail is that he *specifically* focuses on the *creative* applications of AI, differentiating him from general AI consultants.",
+    "positioning": "I\u2019m Tariq Mendes, and I help AI founders tell their stories. For fifteen years, I was a broadcast journalist \u2013 reporting from the field, interviewing experts, and distilling complex information into digestible narratives for a national audience. That experience taught me the power of a compelling story, and the critical importance of clarity when communicating groundbreaking ideas. Now, I apply those skills to the world of artificial intelligence. I\u2019ve spent the last three years working with early-stage AI startups, specifically those focused on generative AI for creative applications \u2013 music, art, writing, and video. I've helped them refine their messaging, build investor-ready pitch decks, and establish a strong brand identity. \n\nCurrently, I\u2019m building Narrative Forge, a consultancy that leverages AI itself to enhance storytelling. We\u2019re developing proprietary tools to analyze audience engagement, optimize narrative structures, and even generate initial drafts of marketing copy. We believe AI isn\u2019t just *what* is being created, but can fundamentally *change* *how* we create and communicate. We\u2019re seeing incredible traction with early clients, demonstrating a clear need for specialized narrative expertise in the rapidly evolving AI landscape. \n\nMy expertise lies at the intersection of technology, journalism, and marketing. I excel at identifying the core value proposition of a complex technology and translating it into a compelling and relatable narrative. I\u2019m passionate about empowering founders to share their vision with the world and am currently seeking strategic partners and seed funding to scale Narrative Forge and expand our suite of AI-powered storytelling solutions.",
+    "background": "- **Founder & CEO, Narrative Forge** (Jan 2023 \u2013 Present)\n    - Developed and launched a consultancy focused on AI-powered storytelling solutions for early-stage AI startups.\n    - Led client engagements, providing narrative strategy, pitch deck development, and brand messaging.\n    - Currently developing proprietary AI tools for audience analysis and content optimization (using Python, NLP libraries like NLTK and spaCy, and cloud platforms like AWS).\n    - Secured initial seed funding via angel investors.\n\n- **AI Narrative Consultant, Freelance** (June 2020 \u2013 Dec 2022)\n    - Provided narrative consulting services to over 15 AI startups, specializing in generative AI applications.\n    - Developed and delivered workshops on effective communication for technical founders.\n    - Key projects included crafting the launch narrative for 'Synesthesia AI' (music generation) and 'Pixel Bloom' (AI-assisted art).\n\n- **National Correspondent, Global News Network (GNN)** (Sept 2008 \u2013 May 2020)\n    - Reported on national and international news events, covering a wide range of topics including politics, economics, and technology.\n    - Conducted interviews with leading experts and policymakers.\n    - Produced and presented live news broadcasts and pre-recorded reports.\n    - Received multiple awards for investigative journalism.\n\n- **Education:**\n    - **Master of Journalism, Columbia University** (2006 \u2013 2008)\n    - **Bachelor of Arts, Political Science, Yale University** (2002 \u2013 2006)\n\n- **Skills:**\n    - Storytelling, Narrative Development, Public Speaking, Media Relations, Content Creation, Pitch Deck Design, Brand Messaging, AI Communication, Generative AI, Natural Language Processing (NLP), Python, AWS, Data Analysis, Investor Relations, Journalism, Interviewing, Investigative Reporting.",
+    "lookingFor": "I\u2019m actively seeking connections with venture capitalists specializing in early-stage AI investments, particularly those interested in the creative applications of the technology. I'm looking for investors who understand the power of narrative and recognize the importance of effective communication in building a successful AI startup. I\u2019m also seeking introductions to founders of promising AI companies in the generative art, music, writing, and video spaces. \n\nSpecifically, I\u2019m interested in:\n\n*   Seed funding for Narrative Forge \u2013 seeking $500k to $1M to scale our AI-powered storytelling tools and expand our team.\n*   Introductions to partners at leading VC firms (Sequoia, Andreessen Horowitz, First Round Capital).\n*   Connections with AI founders who are struggling to articulate their value proposition and reach their target audience.\n*   Advisors with experience in both AI and media/marketing.\n\nI'm open to strategic partnerships with companies offering complementary technologies or services. I'm also keen to explore opportunities to collaborate on research projects related to AI and storytelling. I\u2019m available for advisory roles and speaking engagements.",
+    "notes": "Tariq is incredibly articulate and passionate about his work \u2013 a real storyteller. He's very focused on the creative AI space, which is a good differentiator. Needs a strong push into the VC world; his network is currently heavily weighted towards journalism. He mentioned a potential collaboration with a professor at Stanford researching AI-generated content \u2013 follow up on that. He\u2019s a bit sensitive about being pigeonholed as *just* a communications consultant; he wants to be seen as a strategic partner who understands the underlying technology. He prefers direct outreach via LinkedIn and is responsive to well-crafted messages. - Reminder: Research potential VC contacts at Andreessen Horowitz.",
+    "locationAvailability": "Based in New York, NY, USA. Open to remote collaboration.",
+    "introPreferences": "When making introductions, please prioritize VCs with a demonstrated interest in generative AI and creative technologies. A warm introduction with a brief overview of Narrative Forge\u2019s unique value proposition (AI-powered storytelling) is ideal. \n\n*   **Hard Requirements:** The contact *must* be involved in venture capital or have direct influence over investment decisions. They *must* have a portfolio that includes AI-focused companies.\n*   **Soft Preferences:**  Contacts with experience in media, marketing, or the creative arts are highly valued. A personal connection to the introducer is always beneficial. \n\nPlease avoid introductions to general business consultants or individuals who are not directly involved in the investment process.  Do not mention my journalism background unless specifically asked \u2013 I want to position myself as a tech leader first and foremost. A concise, impactful introduction (no more than three sentences) is preferred.",
+    "personalPreferences": "Prefers asynchronous communication. Enjoys a good debate. Values authenticity.",
+    "meetingAndSchedulingPreferences": "- Prefers initial meetings to be 30-45 minutes.\n- Flexible with scheduling, but generally unavailable on Friday afternoons."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 21.22247886657715,
+      "input_tokens": 851,
+      "output_tokens": 1575,
+      "problems": []
+    }
+  ],
+  "success": true
+}

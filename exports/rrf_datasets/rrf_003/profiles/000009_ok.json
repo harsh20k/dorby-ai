@@ -1,0 +1,54 @@
+{
+  "id": 9,
+  "archetype": "Healthcare AI Commercialization Expert",
+  "given_name": "Anh Kaur",
+  "style_version": 1,
+  "archetypes_version": 2,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Anh Kaur is a seasoned commercialization leader in healthcare AI. She\u2019s spent the last 15 years moving AI solutions *through* the regulatory gauntlet and into revenue-generating products. A distinctive detail: she spent 5 years at a small, highly specialized FDA consulting firm *before* moving to larger companies, giving her an unusually deep understanding of the regulatory process. Currently, she\u2019s focused on scaling a Series B AI diagnostics company, but is increasingly frustrated by the lack of experienced sales and marketing leaders who truly understand the nuances of selling AI to hospitals and health systems. She's looking for connections who can help her build out that team, and also for potential strategic partnerships to expand market access. She's fairly direct and values efficiency in communication.",
+    "positioning": "I lead commercial strategy and execution for [Company Name], a rapidly growing AI-powered diagnostics company. We\u2019re focused on transforming early disease detection through cutting-edge machine learning, and I\u2019m responsible for driving market adoption and revenue growth. Previously, I\u2019ve successfully launched multiple AI-driven healthcare solutions, navigating complex regulatory pathways and building high-performing commercial teams. My unique strength lies in bridging the gap between technical innovation and real-world clinical needs, ensuring both clinical efficacy and commercial viability. Currently, I'm actively seeking strategic partnerships and exceptional talent to accelerate our growth and expand our impact on patient care. Connecting with me now offers the opportunity to collaborate on the forefront of healthcare AI commercialization and build solutions that truly matter.",
+    "background": "\u2022 **Chief Commercial Officer**, [Company Name], San Francisco, CA (2021 \u2013 Present)\n    \u2013 Spearheaded the development and execution of the commercialization strategy, resulting in a 3x increase in year-over-year revenue.\n    \u2013 Built and led a 30+ person sales, marketing, and customer success team focused on enterprise hospital sales.\n    \u2013 Secured key partnerships with leading health systems and diagnostic labs, expanding market reach by 25%.\n    \u2013 Oversaw all aspects of product marketing, including positioning, messaging, and launch execution.\n\n\u2022 **VP, Commercial Operations**, HealthTech Innovations, Boston, MA (2018 \u2013 2021)\n    \u2013 Led the commercial launch of a novel AI-powered remote patient monitoring platform.\n    \u2013 Developed and implemented a comprehensive sales training program, improving sales team performance by 40%.\n    \u2013 Managed a $10M+ marketing budget, driving significant lead generation and brand awareness.\n\n\u2022 **Senior Consultant**, Regulatory AI Solutions, Washington, D.C. (2013 \u2013 2018)\n    \u2013 Provided expert regulatory guidance to healthcare AI companies, assisting with FDA submissions and compliance.\n    \u2013 Advised clients on navigating the evolving landscape of AI regulation, including data privacy and algorithmic bias.\n    \u2013 Successfully guided 15+ clients through the FDA approval process for AI-powered medical devices.\n\n\u2022 **Education:** MBA, Harvard Business School (2013); BS, Biomedical Engineering, Johns Hopkins University (2009)\n\n\u2022 **Skills:** Healthcare AI, Commercialization, Regulatory Affairs (FDA), Sales & Marketing, Strategic Partnerships, Product Management, Team Leadership, Market Analysis, Data Analytics.",
+    "lookingFor": "### Strategic Partnerships\n\u2022 Companies with established distribution networks within major hospital systems.\n\u2022 Organizations offering complementary technologies in the diagnostics or precision medicine space.\n\u2022 Potential collaborators for joint research and development initiatives.\n\n### Talent Acquisition\n\u2022 **VP of Sales:** Proven track record of selling complex enterprise software solutions to healthcare providers. Experience with AI/ML is *required*.\n\u2022 **Director of Marketing:** Deep understanding of healthcare marketing and digital marketing strategies. Experience launching new products is a must.\n\u2022 **Head of Healthcare Strategy:** Experience navigating the complex healthcare landscape and building relationships with key stakeholders.",
+    "notes": "Anh is very focused on building out her team right now. She\u2019s had a few disappointing interviews recently and is becoming increasingly selective. She mentioned being frustrated with candidates who talk a big game about AI but lack a real understanding of the clinical workflow. She's particularly interested in people with experience selling into the IDN (Integrated Delivery Network) market. She briefly mentioned exploring potential advisory roles in the past, but that's no longer a priority. She's very responsive to direct, concise communication. Her previous experience at Regulatory AI Solutions is a key differentiator and should be highlighted when making introductions. She's attending the HLTH conference in October and is actively seeking meetings there.",
+    "locationAvailability": "Based in San Francisco, CA, but open to connecting with individuals across the US and internationally.",
+    "introPreferences": "\u2022 **Hard Requirement:** Introductions must be to individuals at the VP level or above.\n\u2022 **Strong Preference:** Individuals with direct experience in healthcare AI commercialization, particularly in diagnostics.\n\u2022 **Soft Preference:** Contacts at leading hospital systems (e.g., Mayo Clinic, Cleveland Clinic, Mass General).\n\u2022 **Avoid:** Introductions to venture capitalists or angel investors \u2013 she\u2019s currently fully funded. Please include a brief summary of the connection\u2019s relevant experience in the introduction email.",
+    "personalPreferences": "Anh prefers to connect initially via LinkedIn and then move to a quick phone call if the connection seems promising. She appreciates directness and efficiency in communication and dislikes overly lengthy email chains. She\u2019s generally available for brief calls during business hours, Pacific Time. She\u2019s not a big fan of overly formal networking events.",
+    "meetingAndSchedulingPreferences": "Prefers 30-minute introductory calls to assess potential synergies."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 16.477921724319458,
+      "input_tokens": 770,
+      "output_tokens": 1195,
+      "problems": []
+    }
+  ],
+  "success": true
+}

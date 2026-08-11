@@ -1,0 +1,54 @@
+{
+  "id": 905,
+  "archetype": "European Tech Operator, US Expansion",
+  "given_name": "Mei Sokolov",
+  "style_version": 55,
+  "archetypes_version": 152,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Mei Sokolov is a 34-year-old founder originally from Latvia, now based in Berlin, with a strong technical background in machine learning and a demonstrated ability to build and scale SaaS products. Her distinctive career detail is a successful, but ultimately sold, B2B marketing automation platform focused on the Baltic states. She learned valuable lessons about rapid scaling *before* product-market fit, and is now hyper-focused on disciplined growth with her current venture, 'Synapse Insights'. Synapse Insights is a data analytics platform for early-stage VC funds, helping them identify promising startups faster and with greater conviction. She\u2019s currently raising a Seed extension round and actively building a network in the US, specifically targeting West Coast VCs and potential strategic partners in the data analytics space. She's pragmatic, data-driven, and values direct communication. She\u2019s somewhat wary of \u2018hype\u2019 and prioritizes genuine expertise over superficial networking.",
+    "positioning": "I'm the founder and CEO of Synapse Insights, a data analytics platform designed to revolutionize how early-stage venture capital firms source and evaluate startups. We address the critical pain point of information overload and inefficient deal flow, allowing VCs to identify high-potential companies earlier and with greater confidence.  Our platform aggregates and analyzes data from a wide range of sources \u2013 including alternative data sets, social media sentiment, and technical code repositories \u2013 to provide a holistic view of a startup's viability. \n\nWe recently completed a successful MVP launch with several prominent European seed funds, demonstrating strong traction and positive user feedback.  We\u2019re seeing a significant reduction in time-to-decision for our clients, and a noticeable increase in their success rate in identifying winning startups.  We\u2019re now focused on expanding our data coverage, refining our predictive algorithms, and preparing for US market entry.  \n\nMy background is deeply rooted in building scalable SaaS solutions.  I'm passionate about leveraging data to empower better decision-making, and I believe Synapse Insights is uniquely positioned to become the industry standard for early-stage VC due diligence. We\u2019re not just building a product; we\u2019re building a competitive advantage for the next generation of venture capitalists.",
+    "background": "- **Founder & CEO, Synapse Insights** (Berlin, Germany) \u2013 2022 \u2013 Present\n    * Led all aspects of product development, fundraising, and go-to-market strategy for a Seed-stage SaaS platform. \n    * Successfully launched MVP with key European VC partners, achieving demonstrable user traction and positive ROI for clients.\n    * Currently leading a Seed extension round to fuel US market expansion and product development.\n\n- **Founder & CEO, MarketSpark** (Riga, Latvia) \u2013 2018 \u2013 2022 (Acquired)\n    * Founded and scaled a B2B marketing automation platform targeting small and medium-sized businesses in the Baltic region.\n    * Grew user base to over 500 paying customers within three years, demonstrating strong market demand.\n    * Oversaw all aspects of the company\u2019s operations, including product development, sales, marketing, and customer support.\n    * Successfully exited via acquisition by a larger marketing technology company.\n\n- **Machine Learning Engineer, SonarLabs** (Berlin, Germany) \u2013 2016 \u2013 2018\n    * Developed and deployed machine learning models for fraud detection and risk assessment in the financial services industry.\n    * Collaborated with a team of data scientists and engineers to build and maintain a scalable machine learning infrastructure.\n    * Gained expertise in various machine learning algorithms, including supervised learning, unsupervised learning, and deep learning.\n\n- **Research Assistant, University of Latvia** (Riga, Latvia) \u2013 2014 \u2013 2016\n    * Conducted research in the field of artificial intelligence, focusing on natural language processing and computer vision.\n    * Published research papers in peer-reviewed academic journals.\n    * Assisted in the development of a novel machine learning algorithm for image recognition.\n\n- **Education:** MSc in Computer Science, University of Latvia (2016). BSc in Computer Science, University of Latvia (2014).\n- **Certifications:** AWS Certified Machine Learning \u2013 Specialty (2019).",
+    "lookingFor": "I\u2019m currently focused on expanding Synapse Insights into the US market, and I\u2019m actively seeking connections with individuals who can help facilitate that process. Specifically, I'm raising a Seed extension round and am looking to connect with US-based VCs who specialize in B2B SaaS and have a strong track record of investing in data analytics companies.\n\nI\u2019m particularly interested in funds that have a thesis around the future of work, the digitization of venture capital, or the application of AI/ML to investment decision-making. I\u2019m also open to exploring strategic partnerships with companies that provide complementary data sets or technologies.\n\nHere\u2019s a breakdown of what I\u2019m looking for:\n* **VC Introductions:** Pre-Seed to Series A funds focused on B2B SaaS, Data Analytics, or Fintech.\n* **Strategic Partnerships:** Companies providing alternative data, market intelligence, or financial data.\n* **Advisory Support:** Experienced operators who have successfully scaled SaaS businesses in the US market.\n* **Early Adopter Customers:** US-based seed and micro-VC funds willing to pilot our platform and provide feedback.",
+    "notes": "Mei is incredibly sharp and data-driven. She's very aware of the pitfalls of scaling too quickly, having experienced that firsthand with MarketSpark. She\u2019s a pragmatic founder, focused on delivering demonstrable value to her customers. \n\n* **Recent Interaction:** Had a 30-minute call on Oct 26th. She was very receptive to feedback on our US market research. \n* **Personality Assessment:** High in analytical thinking and low in social risk-taking. Prefers direct communication and avoids small talk.\n* **Key Takeaway:** She\u2019s genuinely interested in building a long-term relationship and isn\u2019t just looking for a quick investment. \n* **Follow-up:** Send her the US market report next week. Prioritize connecting her with [Name of VC contact at XYZ Ventures].",
+    "locationAvailability": "I\u2019m currently based in Berlin, Germany, but I travel frequently to the US, particularly to the San Francisco Bay Area. I\u2019m open to relocating to the US in the future if it makes strategic sense for Synapse Insights.",
+    "introPreferences": "When making introductions, please prioritize quality over quantity. I\u2019m not interested in being connected to individuals who simply have large networks; I\u2019m looking for people who have relevant expertise and a genuine interest in helping Synapse Insights succeed. \n\n* **Do not** connect me with individuals who are primarily focused on self-promotion.\n* **Do** provide a brief context for the introduction, highlighting why you think the connection would be mutually beneficial. A short, personalized note is significantly more effective than a generic LinkedIn request.\n* **Hard Requirement:** Any VC introduction *must* be someone who actively invests in Seed-stage B2B SaaS companies. \n* I strongly prefer warm introductions over cold outreach. A mutual connection significantly increases the likelihood of a productive conversation.",
+    "personalPreferences": "I prefer to communicate via email initially. Once a rapport is established, I\u2019m happy to hop on a call or connect on WhatsApp for more immediate communication.",
+    "meetingAndSchedulingPreferences": "I generally prefer to schedule meetings at least 24 hours in advance. I am available for video calls most weekdays between 9:00 AM and 6:00 PM CET. I am a big believer in having a clear agenda for every meeting, and I appreciate it when people come prepared to discuss specific topics. I also find that shorter, more focused meetings are generally more productive than longer, more rambling ones."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 30.207695960998535,
+      "input_tokens": 800,
+      "output_tokens": 1691,
+      "problems": []
+    }
+  ],
+  "success": true
+}

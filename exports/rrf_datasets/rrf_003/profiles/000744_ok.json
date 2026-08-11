@@ -1,0 +1,54 @@
+{
+  "id": 744,
+  "archetype": "Early-Stage Technical Founder, North America",
+  "given_name": "Hana Ishikawa",
+  "style_version": 45,
+  "archetypes_version": 125,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Hana Ishikawa is a first-time founder, 32, building 'Synapse Solutions,' a pre-seed AI-powered platform for optimizing supply chain logistics for small to medium-sized manufacturers. Her background is in robotics and machine learning, specifically applied to industrial automation. A distinctive detail is that she spent two years *embedded* with a small, family-owned metal fabrication shop after her PhD, working directly on the factory floor. This experience deeply informed her understanding of the real-world pain points in manufacturing \u2013 beyond the theoretical optimizations \u2013 and fuels her current venture. She\u2019s currently focused on securing seed funding and landing her first 3-5 pilot customers. She\u2019s highly technical but understands she needs to build a strong network for fundraising and business development. She\u2019s very direct and values efficiency in communication.",
+    "positioning": "Hana Ishikawa is the Founder & CEO of Synapse Solutions, an AI platform revolutionizing supply chain efficiency for manufacturers. We empower SMBs to overcome the challenges of fragmented data and unpredictable disruptions with predictive analytics and automated optimization. My background in robotics and machine learning, coupled with direct experience on the factory floor, allows me to deeply understand the operational realities of modern manufacturing. Synapse Solutions isn't about abstract algorithms; it's about delivering tangible ROI through reduced waste, improved on-time delivery, and increased profitability. We\u2019re currently focused on securing seed funding to scale our platform and expand our reach. I\u2019m passionate about bridging the gap between cutting-edge AI and the practical needs of the manufacturing sector, enabling smaller businesses to compete effectively in a rapidly evolving landscape. I'm seeking strategic advisors and investors who share this vision and can contribute to our growth.",
+    "background": "- **Founder & CEO, Synapse Solutions** (Jan 2023 \u2013 Present)\n  - Led all aspects of company formation, including product development, market research, fundraising strategy, and team building.\n  - Developed and validated core AI algorithms for supply chain optimization, resulting in a demonstrable 15% reduction in inventory costs in initial simulations.\n  - Secured pre-seed funding of $100k from angel investors.\n  - Skills: AI/ML, Supply Chain Management, Entrepreneurship, Product Management, Fundraising, Python, Data Analysis.\n\n- **Robotics Engineer, Applied Automation Inc.** (June 2020 \u2013 Dec 2022)\n  - Designed, developed, and deployed robotic automation solutions for manufacturing clients.\n  - Led a project to integrate a collaborative robot (cobot) into a welding process, increasing production throughput by 20%.\n  - Developed and maintained ROS-based software for robot control and data acquisition.\n  - Skills: Robotics, ROS, Python, C++, Computer Vision, Industrial Automation, Project Management.\n\n- **Research Intern, MIT CSAIL** (Summer 2019)\n  - Conducted research on reinforcement learning algorithms for robotic manipulation.\n  - Published a research paper in a peer-reviewed conference.\n  - Skills: Reinforcement Learning, Machine Learning, Python, Robotics, Research.\n\n- **PhD, Robotics, Carnegie Mellon University** (Sept 2016 \u2013 May 2020)\n  - Dissertation: \u201cAdaptive Control of Robotic Systems in Uncertain Environments.\u201d\n  - GPA: 3.9/4.0\n  - Relevant Coursework: Machine Learning, Control Theory, Computer Vision, Artificial Intelligence.\n\n- **BS, Mechanical Engineering, University of California, Berkeley** (Sept 2012 \u2013 May 2016)\n  - Dean's List all semesters.\n  - Relevant Coursework: Dynamics, Control Systems, Thermodynamics, Fluid Mechanics.\n\n- **Languages:** English (Native), Japanese (Conversational)",
+    "lookingFor": "I'm actively seeking connections with individuals who can contribute to the growth of Synapse Solutions. Specifically, I\u2019m looking for:\n\n* **Seed-stage investors:** Funds with a focus on industrial tech, AI/ML, and supply chain innovation. Investment size: $500k - $1M. I\u2019m particularly interested in investors with operational experience in manufacturing.\n* **Manufacturing leaders (VP Operations, Supply Chain Directors):** Individuals at SMB manufacturers (50-500 employees) facing challenges with supply chain visibility, inventory management, or production bottlenecks. I\u2019m looking to understand their pain points and explore potential pilot partnerships.\n* **Experienced advisors:** Individuals with a proven track record in scaling early-stage tech companies, particularly in the B2B space. Expertise in sales, marketing, and fundraising is highly valued.\n* **Mentors:** Seasoned entrepreneurs who have successfully navigated the challenges of building a tech startup.\n\n**Ideal profiles:**\n* **Title:** VP of Operations, Director of Supply Chain, CEO (small manufacturing company)\n* **Company Size:** 50-500 employees\n* **Industry:** Metal Fabrication, Automotive Parts, Electronics Manufacturing, Food & Beverage Processing\n* **Current Challenge:** Struggling with supply chain disruptions, high inventory costs, lack of real-time visibility.\n\n**Do not contact:** Recruiters, marketing agencies offering unsolicited services, individuals offering generic 'growth hacking' advice without specific industry expertise.",
+    "notes": " * **Priority:** Closing seed round by end of Q3. Focus on investor meetings this week.\n * **Recent Conversation:** Had a positive initial call with [Investor Name] at [Fund Name]. Follow up with a deck and detailed financial projections.\n * **Pilot Customer Update:** Scheduling demo with [Company Name] next Tuesday. Key decision-maker is [Name], VP of Operations.\n * **Potential Risk:** Competitor [Competitor Name] just announced a similar product. Need to refine our messaging to emphasize our unique value proposition (focus on SMBs, deep manufacturing experience).\n * **Commitment:** Promised to send a case study to [Contact Name] at [Partner Company] by Friday.\n * **Quick note:** I respond fastest to direct messages here, and prefer concise communication.",
+    "locationAvailability": "Based in Boston, MA, but open to remote collaboration and travel within North America.",
+    "introPreferences": "* **Best Introductions:** To investors actively deploying capital in the industrial tech space. A warm introduction with context on Synapse Solutions\u2019 focus on SMB manufacturers and my background is crucial.\n* **Hard Requirements:** Introductions *must* be to individuals with decision-making authority (e.g., Partner at a VC firm, VP of Operations at a target company).\n* **Soft Preferences:** Introductions to people who have a demonstrated interest in AI/ML applications in manufacturing.\n* **Introduction Message Guidelines:** Please highlight my experience working *on the factory floor* \u2013 it\u2019s a key differentiator. Focus on the problem Synapse Solutions solves: helping SMBs optimize their supply chains and improve profitability. Avoid overly technical jargon.\n* **Avoid:** Introductions to sales/marketing professionals unless they have a direct connection to a potential investor or customer.",
+    "personalPreferences": "I prefer direct communication via email (hana.ishikawa@synapsesolutions.ai) or direct message here. I check both regularly. Please keep messages concise and to the point \u2013 I\u2019m often juggling multiple priorities.",
+    "meetingAndSchedulingPreferences": "I generally prefer meetings to be scheduled with a clear agenda sent in advance. I am available for meetings between 9am-5pm EST. Please allow 24 hours notice for scheduling."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 27.84991693496704,
+      "input_tokens": 828,
+      "output_tokens": 1598,
+      "problems": []
+    }
+  ],
+  "success": true
+}

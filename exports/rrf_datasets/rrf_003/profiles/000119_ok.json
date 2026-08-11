@@ -1,0 +1,54 @@
+{
+  "id": 119,
+  "archetype": "Serial Entrepreneur, Diverse Background",
+  "given_name": "Viktor Suzuki",
+  "style_version": 8,
+  "archetypes_version": 20,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Viktor Suzuki is a serial entrepreneur currently focused on building 'Synapse Dynamics', a company leveraging neuromorphic computing to create ultra-low-latency financial trading algorithms. He has a unique background \u2013 originally trained as a classical pianist, he transitioned to computational physics, then finance, and finally, entrepreneurship. This unusual path informs his approach to problem-solving, emphasizing pattern recognition and system optimization. He\u2019s a seasoned fundraiser, having secured seed and Series A rounds for previous ventures, and is now looking for strategic partners and investors for Synapse Dynamics\u2019 Series B. He's particularly interested in investors with a strong understanding of both AI *and* financial markets \u2013 he's tired of explaining the basics to venture capitalists. He\u2019s a direct communicator, values efficiency, and has little patience for 'fluff'. He's based in London but frequently travels to the US for fundraising.",
+    "positioning": "As CEO and Founder of Synapse Dynamics, I\u2019m spearheading the next generation of financial technology. We're not simply building another trading algorithm; we're architecting a fundamentally new approach to market interaction, utilizing neuromorphic computing to achieve unprecedented speed and predictive accuracy. The core problem we solve is latency \u2013 the milliseconds that separate profit from loss in high-frequency trading. Traditional computing architectures are reaching their limits, creating a bottleneck that we bypass with our bio-inspired hardware and software. Synapse Dynamics' algorithms are designed to identify and capitalize on arbitrage opportunities *before* they are visible to conventional systems. This isn't about incremental improvements; it's a paradigm shift. We\u2019ve demonstrated a consistent alpha generation exceeding 15% in backtesting and are currently deploying a limited pilot program with select institutional clients. Our technology is applicable beyond finance \u2013 to areas like real-time risk management, high-speed data analysis, and even robotics \u2013 but our initial focus is on establishing dominance in the financial sector. We are building a team of world-class engineers and quantitative analysts to scale our infrastructure and expand our algorithmic offerings. We are currently preparing for a Series B funding round to accelerate deployment and broaden our market reach. We\u2019re not looking for passengers; we\u2019re looking for partners who understand the transformative potential of neuromorphic computing and the imperative of speed in modern finance.",
+    "background": "- **CEO & Founder, Synapse Dynamics** (2021 - Present): Led all aspects of company formation, fundraising (Seed & Series A), product development, and strategic partnerships. Currently focused on Series B fundraising and scaling operations.\n- **CTO & Co-founder, QuantumLeap Analytics** (2018 - 2021): Developed and deployed machine learning models for predictive analytics in the insurance industry. Successfully exited to a larger competitor.\n- **Quantitative Analyst, Citadel LLC** (2015 - 2018): Conducted research and developed trading strategies for a global hedge fund. Specialized in statistical arbitrage and high-frequency trading.\n- **Research Fellow, University of Cambridge** (2012 - 2015): PhD in Computational Physics, focusing on complex systems and emergent behavior. Published several peer-reviewed articles in leading scientific journals.\n- **Education:** PhD, Computational Physics, University of Cambridge; MA, Physics, University of Oxford; BA (Hons) Music Performance (Piano), Royal Academy of Music.\n- **Skills:** Neuromorphic Computing, Machine Learning, Quantitative Finance, Statistical Modeling, Algorithmic Trading, Python, C++, Data Analysis, Leadership, Fundraising, Strategic Planning.",
+    "lookingFor": "I'm actively seeking connections to support Synapse Dynamics' Series B funding round and strategic expansion. Specifically, I'm interested in:\n\n* **Investment Firms:** Venture capital firms with a demonstrated track record of investing in both AI/ML and FinTech companies. Fund size $100M+ preferred. \n* **Strategic Partners:** Institutional investors (hedge funds, asset managers) interested in piloting our technology and co-developing bespoke trading solutions.\n* **Industry Experts:** Individuals with deep expertise in neuromorphic computing, high-frequency trading, and financial market microstructure.\n* **Key Introductions:** Warm introductions to relevant decision-makers within the target investor and partner profiles. I\u2019m particularly interested in firms with a European or US presence.\n* **Board Advisors:** Experienced board members with a strong understanding of scaling tech companies in the financial sector.",
+    "notes": "Viktor is very direct. No lengthy pitches, please. He\u2019s focused on execution and wants to talk specifics. Recent progress: pilot program with two Tier 1 banks is showing promising results \u2013 alpha generation consistently above projections. He\u2019s skeptical of \u2018AI washing\u2019 and wants to see genuine understanding of the underlying technology. He's travelling to NYC/SF the week of November 13th for investor meetings. Avoid discussing the 'art' of his piano background unless *he* brings it up. He appreciates efficiency and dislikes unnecessary meetings. Currently prioritizing investors who can lead the Series B.",
+    "locationAvailability": "I am based in London, UK, but travel frequently to the United States, primarily New York and the San Francisco Bay Area. I\u2019m comfortable with remote meetings, but prefer in-person discussions when possible.",
+    "introPreferences": "* **Hard Requirements:**\n    * Introductions must be to decision-makers (Partner level or above at investment firms, Head of Trading or equivalent at financial institutions).\n    * The person being introduced to *must* have a demonstrable understanding of both AI/ML *and* financial markets.\n    * Introductions should be accompanied by a brief, concise email outlining the key value proposition of Synapse Dynamics.\n* **Soft Preferences:**\n    * Avoid introductions to individuals who are solely focused on \u2018general purpose AI\u2019 \u2013 we are solving a specific problem in a specific domain.\n    * Please do not forward my LinkedIn profile without prior consent.\n    * Keep the introduction email brief and to the point \u2013 no more than 3-4 sentences.\n    * Focus on the potential for alpha generation and the unique advantages of our neuromorphic computing approach.\n    * Do *not* ask me to explain neuromorphic computing in the introduction \u2013 assume a base level of technical understanding.",
+    "personalPreferences": "I value direct communication and efficient use of time. I respond best to concise emails and appreciate a straightforward approach. Outside of work, I enjoy classical music (though rarely perform anymore) and staying up-to-date on the latest advancements in computational science. I'm a morning person and generally respond to emails quickest before noon GMT.",
+    "meetingAndSchedulingPreferences": "I prefer meetings to be scheduled with a clear agenda. Back-to-back meetings are fine, but please allow for a 5-minute buffer between calls. I use Calendly for scheduling: [link to Calendly would go here]."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 29.078996896743774,
+      "input_tokens": 801,
+      "output_tokens": 1450,
+      "problems": []
+    }
+  ],
+  "success": true
+}

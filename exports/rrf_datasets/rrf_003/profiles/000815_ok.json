@@ -1,0 +1,54 @@
+{
+  "id": 815,
+  "archetype": "AI-Focused Founder with Prior Exit",
+  "given_name": "Aisha Johansson",
+  "style_version": 50,
+  "archetypes_version": 137,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Aisha Johansson is a serial founder currently building 'Synapse Solutions,' an AI-powered platform for optimizing supply chain logistics. Her distinct career detail is a successful exit from 'Nova Analytics' \u2013 a data visualization company she founded in her late 20s \u2013 which was acquired by a larger firm five years ago. This exit provides her with both capital and credibility. She's now focused on scaling Synapse Solutions, seeking strategic partnerships, and connecting with investors who understand the complexities of AI implementation in enterprise settings. She's a pragmatic, data-driven leader who values efficiency and measurable results. She's also mindful of building a strong company culture after experiencing both successes and challenges in her previous venture.",
+    "positioning": "Aisha Johansson is the Founder & CEO of Synapse Solutions, a company revolutionizing supply chain efficiency through the power of predictive AI. We help businesses proactively identify and mitigate disruptions, optimize inventory levels, and reduce operational costs. Having previously built and successfully exited Nova Analytics, I bring a unique blend of technical expertise, business acumen, and a deep understanding of the challenges facing rapidly scaling technology companies. I\u2019m passionate about building high-performing teams and leveraging data to drive tangible business outcomes.",
+    "background": "\u2022 **Founder & CEO, Synapse Solutions** (2021 \u2013 Present)\n\t\t- Led the development and launch of an AI-powered supply chain optimization platform, securing seed funding within six months of inception.\n\t\t- Built a team of 15+ engineers, data scientists, and supply chain experts.\n\t\t- Currently focused on securing Series A funding and expanding the platform\u2019s capabilities.\n\n\u2022 **Founder & CEO, Nova Analytics** (2016 \u2013 2019)\n\t\t- Conceptualized, developed, and launched a data visualization platform used by Fortune 500 companies.\n\t\t- Grew revenue from $0 to $2M ARR in under three years.\n\t\t- Successfully negotiated acquisition by \u2018Data Insights Corp\u2019 for an undisclosed sum.\n\n\u2022 **Data Scientist, GlobalTech Solutions** (2014 \u2013 2016)\n\t\t- Developed and implemented machine learning models for fraud detection, resulting in a 15% reduction in fraudulent transactions.\n\t\t- Collaborated with cross-functional teams to integrate data science solutions into existing business processes.\n\n\u2022 **M.S., Data Science, Stanford University** (2012 \u2013 2014)\n\t\t- Focused research on time series analysis and predictive modeling.\n\t\t- Published research paper on \u2018Advanced Algorithms for Anomaly Detection.\u2019\n\n\u2022 **B.S., Computer Science, Massachusetts Institute of Technology (MIT)** (2008 \u2013 2012)\n\t\t- Graduated *Cum Laude* with a concentration in Artificial Intelligence.",
+    "lookingFor": "\u2022 Strategic partners with expertise in logistics and supply chain management.\n\u2022 Investors specializing in AI and enterprise software (Series A and beyond).\n\u2022 Mentors with experience scaling SaaS companies to $10M+ ARR.\n\u2022 Connections to potential enterprise clients in the manufacturing and retail sectors.\n\u2022 Individuals interested in joining our advisory board \u2013 specifically those with a background in supply chain risk management.\n\u2022 Open to discussing potential collaborations and cross-promotional opportunities.",
+    "notes": "Aisha is incredibly focused right now on fundraising. She\u2019s very data-driven and responds best to concrete proposals. She\u2019s been burned in the past by overly optimistic promises, so under-promise and over-deliver. She\u2019s a fast-paced thinker and appreciates direct communication. \n\n*   She recently spoke at the \u2018AI in Supply Chain\u2019 conference in Chicago \u2013 happy to share slides if requested.\n*   She\u2019s a big advocate for diversity in tech and actively mentors young women pursuing careers in STEM.\n*   Avoid pitching her anything related to blockchain \u2013 she\u2019s skeptical of its practical applications.",
+    "locationAvailability": "Based in San Francisco, CA, with frequent travel to meet with investors and partners. Open to remote meetings.",
+    "introPreferences": "\u2022 Please only introduce me to individuals who have a demonstrable track record of success in the AI or supply chain space.\n\u2022 When making an introduction, briefly highlight the potential synergy between my work at Synapse Solutions and the recipient\u2019s expertise.\n\u2022 Avoid introducing me to individuals who are primarily focused on early-stage ideation \u2013 I\u2019m looking for established players.\n\u2022 Please include a brief context about *why* you think this connection would be valuable \u2013 a simple 'you should talk' isn't helpful.\n\u2022 I am *not* currently looking for sales pitches or unsolicited advice.",
+    "personalPreferences": "Prefers quick, concise communication via email or LinkedIn message. Rarely checks Twitter.",
+    "meetingAndSchedulingPreferences": "I generally prefer 30-minute introductory calls to assess potential synergies. Please include a brief agenda when requesting a meeting."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 17.199613332748413,
+      "input_tokens": 756,
+      "output_tokens": 1089,
+      "problems": []
+    }
+  ],
+  "success": true
+}

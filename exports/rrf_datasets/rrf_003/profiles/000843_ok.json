@@ -1,0 +1,54 @@
+{
+  "id": 843,
+  "archetype": "AI/ML Technical Co-founder & Builder",
+  "given_name": "Mei Oduya",
+  "style_version": 52,
+  "archetypes_version": 142,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Mei Oduya is a highly specialized AI/ML engineer who transitioned from a research scientist role at a national lab to building and scaling early-stage startups. Her distinctive career detail is a successful, but ultimately exited, company focused on applying reinforcement learning to supply chain optimization. While profitable, Mei felt constrained by the existing business model and is now seeking to co-found or act as a highly-compensated, equity-holding CTO for ventures pushing the boundaries of agentic workflows and autonomous systems. She\u2019s not interested in 'idea stage' projects; she wants to *build* and needs a team with significant funding already secured or a clear path to it. She\u2019s pragmatic, data-driven, and prioritizes projects with demonstrable ROI. She values intellectual honesty and a bias towards action over endless planning. She\u2019s intentionally positioning herself as a 'builder' \u2013 someone who rolls up her sleeves and delivers tangible results, not just a thought leader.",
+    "positioning": "I'm Mei Oduya, a technical leader specializing in the design, development, and deployment of advanced AI and machine learning systems, with a particular focus on agentic workflows. My career has been defined by bridging the gap between cutting-edge research and real-world application, consistently delivering impactful solutions that drive demonstrable business value. Most recently, I led the engineering team at LogiFlow, a startup leveraging reinforcement learning to optimize complex supply chain logistics \u2013 a company we successfully exited after achieving a 30% reduction in operational costs for our clients. \n\nCurrently, I\u2019m leveraging my expertise to consult with and potentially co-found organizations at the forefront of the next wave of AI innovation. I'm deeply interested in projects that move beyond traditional supervised learning and embrace the potential of autonomous agents capable of adapting, learning, and problem-solving in dynamic environments. I\u2019m particularly excited about applications in robotics, automation, and personalized digital experiences. \n\nI\u2019m actively seeking opportunities where I can contribute not just my technical skills, but also my experience in building and scaling successful AI-driven products. I\u2019m not an \u2018idea person\u2019; I\u2019m a \u2018builder,\u2019 and I thrive in environments where I can translate vision into reality. I'm prioritizing engagements with significant equity potential and a clear path to profitability. I\u2019m open to discussing CTO-level roles or co-founding positions with established teams and secured funding.",
+    "background": "- **CTO/Co-founder (Consulting), Self-Employed** (2023 \u2013 Present)\n    * Providing technical due diligence and architecture guidance to early-stage AI/ML startups.\n    * Evaluating potential co-founding opportunities with a focus on agentic systems and autonomy.\n    * Developing proof-of-concept implementations of novel AI algorithms.\n\n- **Chief Technology Officer, LogiFlow** (2020 \u2013 2023)\n    * Led a team of 8 engineers in the development and deployment of a reinforcement learning-based supply chain optimization platform.\n    * Architected the platform's core infrastructure, leveraging cloud-native technologies (AWS, Kubernetes, Docker).\n    * Oversaw the implementation of machine learning pipelines for data ingestion, feature engineering, and model training.\n    * Achieved a 30% reduction in average client operational costs through optimized logistics and inventory management.\n    * Secured $2M in Series A funding.\n\n- **Research Scientist, National Renewable Energy Laboratory (NREL)** (2017 \u2013 2020)\n    * Conducted research in the field of machine learning for energy systems optimization.\n    * Developed and implemented algorithms for predicting renewable energy generation and demand.\n    * Published 5 peer-reviewed papers in leading academic journals.\n    * Collaborated with industry partners to translate research findings into practical applications.\n\n- **Software Engineer Intern, Google** (Summer 2016)\n    * Developed and tested software components for Google\u2019s cloud infrastructure.\n    * Contributed to the development of automated testing frameworks.\n\n- **Education:**\n    * **Ph.D., Computer Science (Machine Learning), Stanford University** (2017)\n        * Dissertation: \u201cScalable Reinforcement Learning for Dynamic Systems.\u201d\n    * **B.S., Computer Science, Massachusetts Institute of Technology (MIT)** (2013)\n\n- **Skills:** Python, TensorFlow, PyTorch, Kubernetes, Docker, AWS (S3, EC2, Lambda, SageMaker), Reinforcement Learning, Deep Learning, Natural Language Processing (NLP), Agentic Workflows, Data Engineering, Cloud Computing, Statistical Modeling, Agile Development, Software Architecture.",
+    "lookingFor": "I am actively seeking opportunities to leverage my expertise in AI/ML to build and scale impactful solutions. My priority is to either co-found a company or take on a significant, equity-holding CTO role. I\u2019m not interested in advisory positions or short-term consulting engagements unless they have a clear pathway to a more substantial commitment.\n\nSpecifically, I\u2019m looking for:\n\n* **Co-founding opportunities:** Ideally, a team with a strong business vision and secured seed funding ($500k+) focused on agentic workflows, autonomous systems, or robotics.\n* **CTO roles:** Companies with a proven product-market fit and Series A funding (or equivalent) seeking a technical leader to scale their AI/ML capabilities.\n* **Introductions:** I\u2019m open to introductions to VCs and angel investors focused on AI/ML startups.\n* **Partnerships:** Potential collaborations with research institutions or companies working on cutting-edge AI technologies.\n\nI\u2019m *not* currently interested in:\n\n* Early-stage ideas without a clear path to funding.\n* Roles that primarily focus on data science without a strong engineering component.\n* Companies with a lack of technical depth or a reluctance to embrace innovation.",
+    "notes": "Mei is exceptionally focused and pragmatic. She\u2019s very clear about what she wants \u2013 a challenging technical problem, a strong team, and significant equity. She\u2019s not interested in \u2018fluff\u2019 or overly optimistic pitches. She\u2019ll quickly assess the technical feasibility and business viability of any opportunity. Be prepared to discuss technical details in depth. \n\nShe\u2019s slightly hesitant to discuss the specifics of the LogiFlow exit, but it was a profitable acquisition that left her wanting more control and creative freedom. She\u2019s determined to build something truly impactful and is willing to take calculated risks to achieve that goal.\n\nShe responds best to direct and concise communication. Avoid overly promotional language or vague promises. She values transparency and intellectual honesty above all else. She is a strong negotiator and will advocate for her value.",
+    "locationAvailability": "I am currently based in San Francisco, California, but am open to remote work or relocation for the right opportunity. I\u2019m flexible regarding location as long as it allows for occasional travel to key industry events and team meetings.",
+    "introPreferences": "* **Hard Requirement:** Introductions must be to individuals with decision-making authority (e.g., CEOs, Founders, VCs).\n* **Soft Preference:** Prioritize introductions to companies working on agentic workflows or autonomous systems.\n* **Intro Style:** Keep introductions concise and focused on my technical expertise and experience.\n* **Avoid:** Introductions to individuals solely looking for data science consulting.\n* **Do:** Highlight any existing funding or traction the target company has achieved.\n* **Do:** Clearly articulate the company\u2019s technical challenges and how my skills could address them.\n* **Avoid:** Generalized networking requests \u2013 be specific about the potential synergy.",
+    "personalPreferences": "I prefer asynchronous communication whenever possible. I find it allows for more thoughtful responses. I'm a morning person and generally respond quickest to messages before noon PST.",
+    "meetingAndSchedulingPreferences": "I'm generally flexible with meeting times, but prefer to schedule calls with a clear agenda beforehand. I'm comfortable with video conferencing (Zoom, Google Meet) and am happy to share my calendar via Calendly."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 32.43373417854309,
+      "input_tokens": 813,
+      "output_tokens": 1726,
+      "problems": []
+    }
+  ],
+  "success": true
+}

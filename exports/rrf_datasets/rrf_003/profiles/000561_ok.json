@@ -1,0 +1,54 @@
+{
+  "id": 561,
+  "archetype": "Serial Tech Founder, Now Scaling",
+  "given_name": "Jamal Kowalski",
+  "style_version": 34,
+  "archetypes_version": 94,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Jamal Kowalski is a Polish-American serial entrepreneur currently focused on scaling 'Synapse Solutions,' a B2B SaaS platform leveraging AI to optimize supply chain logistics for mid-sized manufacturers. He\u2019s had two successful exits previously \u2013 one in ad-tech, one in fintech \u2013 but his distinctive detail is a deep, almost academic understanding of materials science, stemming from a brief (and abandoned) PhD program. He uses this knowledge to understand the *physical* constraints of supply chains, giving Synapse Solutions a unique edge. He\u2019s aggressively fundraising a Series B, looking for investors who understand complex systems and aren\u2019t afraid of deep technical due diligence. He's actively networking for experienced sales leaders and strategic advisors with supply chain expertise. He's direct, values efficiency, and dislikes 'fluff' in communication. He's based in Chicago but frequently travels to manufacturing hubs.",
+    "positioning": "Jamal Kowalski is a seasoned technology entrepreneur building Synapse Solutions, an AI-powered platform revolutionizing supply chain management for manufacturers. With a background bridging materials science and software development, I bring a unique perspective to complex logistical challenges. Having successfully exited two prior ventures \u2013 a programmatic advertising platform and a blockchain-based lending solution \u2013 I'm currently focused on scaling Synapse Solutions to become the industry standard for predictive supply chain optimization.  I\u2019m passionate about building high-performing teams and leveraging technology to unlock significant operational efficiencies for our clients.  My focus is now on securing a Series B investment to accelerate growth and expand market reach.",
+    "background": "- **Founder & CEO, Synapse Solutions** (2021 \u2013 Present): Leading all aspects of product development, fundraising, and go-to-market strategy. Secured $8M Series A funding in Q4 2023.\n- **Founder & CEO, NovaPay** (2017 \u2013 2020): Developed a blockchain-based lending platform for small businesses. Acquired by LendingClub in 2020.\n- **Founder & CTO, AdApt Technologies** (2014 \u2013 2017): Pioneered a programmatic advertising platform utilizing machine learning. Sold to Google in 2017.\n- **Lead Software Engineer, Motorola Solutions** (2012 \u2013 2014):  Developed embedded software for ruggedized mobile devices.\n- **Research Assistant, Northwestern University, Materials Science Department** (2010 \u2013 2012): Conducted research on advanced materials for energy storage applications. (PhD candidacy abandoned).\n- **BS, Computer Science, University of Illinois at Urbana-Champaign** (2006 \u2013 2010)\n- Extensive experience with: Python, Java, AWS, Kubernetes, Machine Learning (TensorFlow, PyTorch), Supply Chain Management (SAP, Oracle).\n- Proficient in data modeling, algorithm design, and full-stack development.\n- Key achievement at NovaPay: Reduced loan default rates by 15% through AI-driven risk assessment.\n- Key achievement at AdApt: Increased ad click-through rates by 20% using personalized ad targeting.",
+    "lookingFor": "- **Series B Investors:** Seeking $20-30M to scale Synapse Solutions\u2019 sales and marketing efforts and expand product development.  Specifically targeting funds with experience in B2B SaaS and supply chain technology.\n- **Strategic Advisors (Supply Chain):**  Individuals with deep experience in manufacturing, logistics, and supply chain optimization to provide guidance on market strategy and product roadmap.\n- **VP of Sales:**  Proven track record of building and leading high-performing sales teams in the B2B SaaS space, preferably with experience selling to the manufacturing sector.\n- **Head of Engineering:** Experienced leader in scaling engineering teams and managing complex software projects.\n- Open to connecting with other founders scaling similar businesses for peer learning and potential collaboration.\n- Interested in exploring partnerships with large manufacturing companies for pilot programs and strategic integrations.",
+    "notes": "- Jamal is very focused on concrete results and dislikes lengthy pitches. Keep it concise and data-driven.\n- He's a member of the Chicago Tech Council and frequently attends industry events.\n- Recently engaged in a conversation with [User ID: 4782] regarding potential integration opportunities.\n- He prioritizes introductions to individuals with *specific* expertise, not just general connections.\n- Flag: He's skeptical of 'hype' and prefers a pragmatic approach to technology.",
+    "locationAvailability": "Based in Chicago, IL. Willing to travel nationally and internationally for key meetings and investor presentations.",
+    "introPreferences": "- **Ideal Introductions:** Series B investors with a portfolio focused on B2B SaaS, supply chain tech, or AI/ML. VPs of Sales with a proven track record in the manufacturing sector.\n- **Hard No:** Marketing agencies, consultants offering general business advice, individuals seeking funding for unrelated ventures.\n- **Soft Preference:** Individuals with a technical background (engineering, data science) are highly valued.\n- **Introduction Style:** Direct and concise.  Focus on the value proposition of Synapse Solutions and the individual's relevant expertise. Avoid lengthy introductions.\n- **Do Not:** Introduce him to junior-level employees or individuals without a clear connection to his current needs.\n- **Preferred Contact:**  A brief email introduction followed by a LinkedIn connection request.\n- He values introductions that highlight the *specific* problem the connection can solve for Synapse Solutions.\n- Avoid introductions that are purely social or networking-focused.",
+    "personalPreferences": "I prefer direct communication and value efficiency. Email is generally my preferred method of contact. I\u2019m not a big fan of lengthy back-and-forth.",
+    "meetingAndSchedulingPreferences": "I generally prefer video calls (Zoom or Google Meet) for initial meetings. My calendar is quite full, so please provide a few specific time slots when requesting a meeting."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 23.95888113975525,
+      "input_tokens": 765,
+      "output_tokens": 1252,
+      "problems": []
+    }
+  ],
+  "success": true
+}

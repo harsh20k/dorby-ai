@@ -1,0 +1,54 @@
+{
+  "id": 234,
+  "archetype": "Deep-Tech AI/ML Founder (Global)",
+  "given_name": "Tariq Mendes",
+  "style_version": 14,
+  "archetypes_version": 38,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Tariq Mendes is a 38-year-old founder and CEO of 'Synapse Dynamics', a pre-seed AI company focused on developing predictive maintenance solutions for industrial robotics using federated learning. He has a PhD in Robotics from Carnegie Mellon and spent 5 years as a research scientist at Siemens, where he pioneered the application of reinforcement learning to optimize robotic arm movements. He's currently fundraising a seed round, looking for strategic investors and advisors with expertise in industrial automation and AI commercialization. He\u2019s globally focused, with a particular eye on expansion into the DACH region and Southeast Asia. He is very technically minded and prefers direct, data-driven conversations. He's somewhat averse to 'fluff' and prioritizes connections who can offer tangible value \u2013 technical insights, introductions to potential clients, or investment opportunities. He\u2019s based in London but frequently travels.",
+    "positioning": "Tariq Mendes is the Founder and CEO of Synapse Dynamics, an AI company revolutionizing predictive maintenance for industrial robotics through federated learning. Leveraging a strong research background in robotics and machine learning, Tariq leads a team focused on building robust, scalable AI solutions for complex industrial environments. Synapse Dynamics is currently focused on securing seed funding to accelerate product development and market entry. Tariq is actively seeking connections with investors, advisors, and potential partners experienced in industrial automation, AI commercialization, and scaling early-stage ventures. He's particularly interested in exploring opportunities in the DACH region and Southeast Asia.",
+    "background": "<ul>\n<li><b>Synapse Dynamics, London, UK</b> (2023 \u2013 Present) \u2013 Founder & CEO</li>\n<ul>\n<li>Led the development of a federated learning platform for predictive maintenance of industrial robots.</li>\n<li>Secured initial pre-seed funding from angel investors.</li>\n<li>Developed the company\u2019s core technology and go-to-market strategy.</li>\n</ul>\n<li><b>Siemens, Munich, Germany</b> (2018 \u2013 2023) \u2013 Research Scientist, Robotics & AI</li>\n<ul>\n<li>Led research projects applying reinforcement learning to optimize robotic arm movements, resulting in a 15% increase in efficiency.</li>\n<li>Published 5 peer-reviewed papers in leading robotics conferences (ICRA, IROS).</li>\n<li>Mentored junior researchers and collaborated with engineering teams on product integration.</li>\n</ul>\n<li><b>Carnegie Mellon University, Pittsburgh, USA</b> (2014 \u2013 2018) \u2013 PhD, Robotics</li>\n<ul>\n<li>Dissertation: \u2018Federated Reinforcement Learning for Decentralized Robotic Control\u2019.</li>\n<li>Recipient of the Robotics Institute Fellowship.</li>\n</ul>\n<li><b>Massachusetts Institute of Technology (MIT), Cambridge, USA</b> (2010 \u2013 2014) \u2013 BS, Mechanical Engineering</li>\n</ul>\n<b>Skills:</b> Python, TensorFlow, PyTorch, Federated Learning, Reinforcement Learning, Robotics, Machine Learning, Data Analysis, Statistical Modeling, C++, Cloud Computing (AWS, Azure), German (Conversational)",
+    "lookingFor": "Tariq is actively seeking connections in the following areas:\n\n*   **Seed-Stage Investors:** Specifically, venture capital firms with a focus on industrial AI, robotics, or deep tech.  He's looking for investors who can provide not just capital, but also strategic guidance and access to relevant networks.\n*   **Industrial Automation Experts:** Individuals with deep experience in the industrial robotics space, particularly those familiar with predictive maintenance and automation challenges.\n*   **Potential Clients/Pilot Partners:** Companies operating in manufacturing, logistics, or other industries reliant on industrial robots.  He's interested in exploring pilot projects to demonstrate the value of Synapse Dynamics\u2019 technology.\n*   **Advisors:** Seasoned entrepreneurs or industry veterans who can provide mentorship and guidance on scaling an AI startup.\n*   **Connections in DACH & Southeast Asia:** Individuals with established networks in these regions who can assist with market entry and business development.\n\nHe\u2019s *not* currently interested in purely marketing or sales-focused connections. He values technical depth and strategic alignment above all else.",
+    "notes": "Spoke with Tariq on 10/26. Very sharp, technically driven.  He's laser-focused on the technical aspects of the business and less concerned with 'hype'.  Mentioned a preference for investors who understand the nuances of federated learning.  He\u2019s currently evaluating several potential pilot projects in Germany.  Follow up with introductions to the Siemens AI team \u2013 he respects their work.",
+    "locationAvailability": "Tariq is based in London, UK, but frequently travels to Germany and the US for business.",
+    "introPreferences": "<b>Hard Requirements:</b>\n*   Introductions *must* be to individuals with a technical background in AI, robotics, or industrial automation.\n*   Prioritize introductions to decision-makers or influencers within target investment firms.\n*   Do *not* introduce to generalist investors or individuals solely focused on marketing/sales.\n\n<b>Soft Preferences:</b>\n*   Briefly highlight the connection's relevant expertise and experience in the introduction email.\n*   Focus on Synapse Dynamics\u2019 technical innovation and potential impact on the industrial sector.\n*   Keep introductions concise and data-driven \u2013 Tariq appreciates brevity and clarity.\n*   Best fit: Individuals with a demonstrable understanding of federated learning or experience with deploying AI solutions in industrial settings.",
+    "personalPreferences": "Prefers initial contact via email.  Avoid LinkedIn InMail unless absolutely necessary.  Is responsive on WhatsApp for quick follow-ups after an initial connection.",
+    "meetingAndSchedulingPreferences": "Generally available for virtual meetings during UK business hours. Prefers short, focused meetings with a clear agenda.  He's comfortable with video conferencing (Zoom, Google Meet) and is willing to travel for in-person meetings with potential investors or partners."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 21.312822103500366,
+      "input_tokens": 757,
+      "output_tokens": 1275,
+      "problems": []
+    }
+  ],
+  "success": true
+}

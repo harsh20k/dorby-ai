@@ -1,0 +1,64 @@
+{
+  "id": 840,
+  "archetype": "Healthcare Operator Turned AI Founder",
+  "given_name": "Liang Volkov",
+  "style_version": 51,
+  "archetypes_version": 142,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Liang Volkov is a former hospital administrator with an MBA who spent 12 years scaling operations for a large healthcare system. He became deeply frustrated with the inefficiencies and data silos hindering patient care, leading him to believe AI could be a transformative force. He self-funded a small AI startup, 'Synapse Health,' focused on predictive analytics for hospital resource allocation \u2013 specifically, optimizing bed availability and reducing patient wait times. He's a very data-driven operator, still very much hands-on, and actively seeking seed funding and strategic partnerships to accelerate Synapse Health\u2019s growth. He's a strong believer in pragmatic AI application, shunning 'AI for AI's sake' approaches. He\u2019s comfortable pitching to VCs but also values connections with hospital systems willing to pilot his technology. He\u2019s a first-time founder and slightly insecure about his tech credentials, preferring to focus on the clinical impact and ROI of his solution.",
+    "positioning": "Liang Volkov is a healthcare executive turned entrepreneur, building Synapse Health \u2013 an AI-powered platform designed to revolutionize hospital operations. With over a decade of experience scaling complex healthcare systems, I've witnessed firsthand the crippling effects of inefficiencies and fragmented data. Synapse Health directly addresses these challenges by leveraging predictive analytics to optimize resource allocation, dramatically reducing patient wait times and improving overall care quality. We\u2019ve already demonstrated a 15% improvement in bed utilization during our pilot program at St. Jude\u2019s Regional, translating to a significant cost savings and enhanced patient satisfaction.\n\nMy background isn\u2019t solely in technology, but in *solving* problems within healthcare. This operational lens informs our AI development, ensuring we build solutions that are not just innovative, but genuinely impactful and easily integrated into existing workflows. We are currently focused on securing seed funding to expand our engineering team and scale our pilot program to additional hospital systems. \n\nI\u2019m actively seeking strategic partnerships with hospital networks and healthcare technology investors who share our vision for a more efficient and patient-centric healthcare future. I believe the key to unlocking AI\u2019s potential in healthcare lies in pragmatic application and a relentless focus on measurable results \u2013 and that\u2019s exactly what Synapse Health delivers. I'm a builder at heart, and passionate about transforming healthcare through intelligent technology.",
+    "background": "- **Synapse Health, Founder & CEO** (2022 \u2013 Present)\n    * Spearheaded the development and launch of an AI-powered platform for predictive hospital resource allocation, focusing on bed management and patient flow.\n    * Led fundraising efforts, securing initial seed funding from angel investors.\n    * Oversaw all aspects of company operations, including product development, marketing, and sales.\n    * Achieved a 15% improvement in bed utilization during a pilot program at St. Jude\u2019s Regional Hospital, resulting in an estimated $300,000 in annual cost savings.\n    * Built and manage a small team of data scientists and software engineers.\n\n- **Citywide Health System, Director of Operations** (2010 \u2013 2022)\n    * Managed the operational performance of a 500-bed hospital, overseeing departments including admissions, discharge planning, and patient transport.\n    * Led a system-wide initiative to streamline patient flow, resulting in a 10% reduction in average emergency department wait times.\n    * Implemented a new electronic health record (EHR) system, ensuring seamless data migration and user adoption.\n    * Developed and managed an annual operating budget of $80 million.\n    * Consistently exceeded key performance indicators (KPIs) related to patient satisfaction, cost efficiency, and clinical outcomes.\n\n- **Education**\n    * **MBA, Stanford Graduate School of Business** (2008 \u2013 2010) \u2013 Focus: Healthcare Management\n    * **BS, Biology, University of California, Berkeley** (2004 \u2013 2008)\n\n- **Skills**\n    * Healthcare Operations Management\n    * Predictive Analytics\n    * Machine Learning (Basic understanding, actively learning)\n    * Data Visualization (Tableau, Power BI)\n    * Project Management (PMP Certified)\n    * Budget Management\n    * Strategic Planning\n    * EHR Systems (Epic, Cerner)\n    * Leadership & Team Building\n    * Process Improvement (Lean Six Sigma)\n    * Python (Basic proficiency)",
+    "lookingFor": "I\u2019m currently focused on securing seed funding to scale Synapse Health and expand our market reach. I\u2019m seeking introductions to venture capital firms specializing in healthcare AI and digital health. Specifically, firms with a track record of supporting early-stage companies in the healthcare space are of high interest.\n\nBeyond funding, I\u2019m actively looking for strategic partnerships with hospital systems willing to pilot our technology. We\u2019re targeting hospitals with over 300 beds and a demonstrated commitment to innovation. I\u2019m particularly interested in connecting with Chief Innovation Officers, Chief Medical Information Officers, and Heads of Operations.\n\nHere's a breakdown of my priorities:\n* **High Priority:** Seed-stage VCs ($2-5M round)\n* **Medium Priority:** Hospital systems for pilot programs (focus on large networks)\n* **Low Priority:** Angel investors with healthcare experience\n\nI\u2019m open to discussing potential advisory roles and mentorship opportunities as well. I'm eager to learn from experienced entrepreneurs and industry leaders. I am also open to exploring potential acquisitions down the line, but that's not my primary focus currently.",
+    "notes": "Liang is a highly motivated and intelligent individual, but visibly a first-time founder. He\u2019s extremely data-driven and can articulate the ROI of his solution very effectively. He tends to downplay his technical skills, which is understandable given his background, but he\u2019s clearly a fast learner. He\u2019s very focused on demonstrating tangible results and is somewhat averse to \u2018blue sky\u2019 thinking. Be mindful of his sensitivity regarding his tech background \u2013 frame discussions around the clinical impact and business value of Synapse Health. He may be receptive to introductions to technical advisors who can supplement his team. He's very responsive and eager to build relationships. ",
+    "locationAvailability": "Liang Volkov is currently based in San Francisco, California, and is open to remote meetings. He is willing to travel for key meetings and investor pitches, but prefers to minimize travel in the initial stages of fundraising.",
+    "introPreferences": "- **Hard Requirement:** Introductions to VCs *must* have a demonstrated interest in healthcare or AI.\n- **Soft Preference:** Introductions to hospital executives should be at the VP level or above.\n- **Intro Style:** Keep introductions concise and focused on the quantifiable benefits of Synapse Health (e.g., cost savings, improved patient outcomes).\n- **Avoid:** Introducing Liang to individuals solely focused on theoretical AI research \u2013 he prefers pragmatic applications.\n- **Do:** Highlight his operational experience and his understanding of the challenges faced by hospital systems.\n- **Do:** Mention the 15% improvement in bed utilization achieved during the St. Jude\u2019s pilot program.",
+    "personalPreferences": "Liang is a big coffee drinker and enjoys hiking in his free time. He prefers direct and to-the-point communication.",
+    "meetingAndSchedulingPreferences": "Liang is generally flexible with meeting times and is comfortable with video conferencing. He appreciates a quick follow-up email after initial conversations."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 32.04455614089966,
+      "input_tokens": 804,
+      "output_tokens": 1683,
+      "problems": [
+        "background: possible truncation (ends with '...eam Management</li>\n</ul>')",
+        "introPreferences: possible truncation (ends with '...ifferentiator.</li>\n</ul>')"
+      ]
+    },
+    {
+      "attempt": 2,
+      "elapsed_s": 22.526975870132446,
+      "input_tokens": 804,
+      "output_tokens": 1584,
+      "problems": []
+    }
+  ],
+  "success": true
+}

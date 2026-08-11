@@ -1,0 +1,54 @@
+{
+  "id": 512,
+  "archetype": "AI/ML Researcher - Academic Focus",
+  "given_name": "Priya Chen",
+  "style_version": 32,
+  "archetypes_version": 87,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Priya Chen is a rising star in the field of Explainable AI (XAI), currently a Research Scientist at Stanford University\u2019s AI Lab. Her distinctive career detail is a prior, brief stint as a quantitative analyst at a high-frequency trading firm *before* pivoting fully to academic research. This experience fuels her interest in the practical implications and real-world risks of black-box AI models, specifically in high-stakes environments. She's currently leading a project focused on developing novel XAI techniques for improving the trustworthiness of AI systems used in medical diagnosis, and is seeking seed funding to spin out a company based on her research. She's highly collaborative but very focused on rigorous methodology and demonstrable results. She's internationally educated, having completed her undergraduate degree in the UK, and maintains connections there.",
+    "positioning": "I lead research at the Stanford AI Lab, focusing on the critical intersection of Artificial Intelligence and human trust. Our team is tackling the challenge of \u2018black box\u2019 AI \u2013 complex models that deliver accurate predictions but offer little insight into *why* they reach those conclusions. This opacity is particularly concerning in high-stakes domains like healthcare, finance, and autonomous systems. My current project, \u2018ClarityMD,\u2019 develops novel Explainable AI (XAI) techniques specifically tailored for medical diagnosis. We're building algorithms that not only predict disease but also provide clinicians with clear, understandable rationales for those predictions, increasing confidence and facilitating better patient care.\n\nMy background is somewhat unconventional. I began my career in the fast-paced world of quantitative finance, working as a quantitative analyst at a high-frequency trading firm in London. While intellectually stimulating, I quickly realized my passion lay in building AI systems that were not only powerful but also *responsible*. This led me to pursue a PhD, shifting my focus to the theoretical foundations of AI and, ultimately, to the practical challenges of XAI.\n\nWe\u2019ve recently achieved promising results with ClarityMD, demonstrating a significant improvement in clinician trust and diagnostic accuracy in preliminary trials. We are now actively exploring opportunities to translate this research into a commercially viable product and are seeking seed funding to build a dedicated team and accelerate development. Our vision is to empower healthcare professionals with AI tools they can confidently rely on, ultimately improving patient outcomes and building a more equitable and transparent healthcare system.",
+    "background": "* **Stanford University, AI Lab \u2013 Research Scientist** (2021 \u2013 Present)\n    * Lead researcher on the \u2018ClarityMD\u2019 project, developing novel XAI algorithms for medical diagnosis. \n    * Secured a $50,000 research grant from the National Science Foundation for XAI development.\n    * Published three peer-reviewed papers in top-tier AI conferences (NeurIPS, ICML, ICLR) focusing on counterfactual explanations and model interpretability.\n    * Mentored two undergraduate research assistants, contributing to their successful applications for graduate programs.\n* **Quantopian \u2013 Quantitative Analyst** (6 months, 2020)\n    * Developed and backtested algorithmic trading strategies using Python and data science tools.\n    * Gained practical experience in high-frequency trading environments and risk management.\n    * Quickly recognized limitations of 'black box' models in a high-stakes financial setting, motivating career shift.\n* **University of Oxford, UK \u2013 PhD in Computer Science (Artificial Intelligence)** (2017 \u2013 2021)\n    * Dissertation: \u201cTowards Robust and Interpretable AI: A Framework for Counterfactual Reasoning.\u201d\n    * Received full scholarship and maintained a consistently high academic record.\n    * Collaborated with researchers at DeepMind on a project exploring adversarial robustness.\n* **University of Cambridge, UK \u2013 BA (Hons) in Mathematics** (2014 \u2013 2017)\n    * Graduated *summa cum laude* with a specialization in statistical modeling.\n    * Awarded the Rayleigh Prize for outstanding performance in mathematics.\n* **Skills:** Python (expert), TensorFlow, PyTorch, Scikit-learn, Statistical Modeling, Machine Learning, Deep Learning, Explainable AI (XAI), Counterfactual Explanations, Model Interpretability, Data Visualization, High-Frequency Trading (basic), Quantitative Finance (basic).",
+    "lookingFor": "* **Seed Funding:**\n    * Seeking $750,000 - $1,000,000 in seed funding.\n    * Pre-money valuation target: $3.5 - $4.5 million.\n    * Funds will be used for team expansion (ML engineers, software developers), clinical trial validation, and initial product development.\n* **Introductions to Investors:**\n    * **Focus:** Venture capitalists specializing in AI, healthcare technology, and deep tech.\n    * **Specific Firms:** Andreessen Horowitz (Bio + Crypto), Sequoia Capital, Khosla Ventures, Lightspeed Venture Partners.\n    * **Investor Preference:** Investors with a demonstrated understanding of XAI and a commitment to responsible AI development.\n* **Strategic Partnerships:**\n    * **Hospital Networks:** Seeking introductions to Chief Innovation Officers or heads of AI initiatives at leading hospital systems (e.g., Stanford Health Care, UCSF Medical Center).\n    * **Medical Device Companies:** Interested in exploring potential integration of ClarityMD with existing diagnostic tools.\n* **Advisory Board Members:**\n    * Seeking experienced entrepreneurs and AI experts to join our advisory board.\n    * **Desired Expertise:** Commercialization of AI technologies, regulatory affairs in healthcare, clinical trial design.",
+    "notes": "Priya is exceptionally bright and driven, with a clear vision for her company. Her prior experience in finance adds a pragmatic perspective often missing in academic researchers. However, she can be quite demanding and expects a high level of technical rigor from her team. Internal Boardy score: 8/10 (High Potential). Caution: She is very protective of her IP and may be hesitant to share detailed technical information without a strong NDA. Flagged for potential 'founder-market fit' risk \u2013 needs careful assessment of her willingness to transition from researcher to CEO. Previous conversations indicate a preference for investors who are actively involved in portfolio companies.",
+    "locationAvailability": "Based in Palo Alto, California, but willing to travel for investor meetings and conferences. Remote work is acceptable for certain team members.",
+    "introPreferences": "To ensure a productive introduction, please adhere to the following:\n\n* **Hard Requirements:**\n    * Investor must have a demonstrable track record of investing in AI or healthcare technology.\n    * Investor must understand the importance of Explainable AI and responsible AI development.\n    * Introduction should come from a trusted source with a strong professional relationship with both parties.\n* **Soft Preferences:**\n    * Investors with experience in the medical device industry are highly preferred.\n    * Introductions to individuals who have successfully spun out companies from academic research are particularly valuable.\n    * Avoid introductions to investors who are primarily focused on short-term financial returns. I'm looking for long-term partners who share our vision for building a trustworthy and impactful AI solution.",
+    "personalPreferences": "Prefers initial contact via email. Responsive on LinkedIn, but prefers longer-form communication through email. Values concise and data-driven communication.",
+    "meetingAndSchedulingPreferences": "Please provide at least 48 hours notice for meeting requests. I generally prefer morning meetings (PST). A brief agenda and any relevant materials should be shared in advance."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 81.86676788330078,
+      "input_tokens": 863,
+      "output_tokens": 1568,
+      "problems": []
+    }
+  ],
+  "success": true
+}

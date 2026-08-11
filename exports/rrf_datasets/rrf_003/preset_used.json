@@ -1,0 +1,39 @@
+{
+  "batch_id": "rrf_003",
+  "generate_profiles": {
+    "enabled": true,
+    "count": 1000,
+    "model_id": "google.gemma-3-27b-it",
+    "concurrency": 4,
+    "region": "us-east-1"
+  },
+  "profile_run": null,
+  "pairing": {
+    "enabled": true,
+    "seeker_frac": 0.43,
+    "recall_k": 10,
+    "top_k": 5,
+    "dense_weight": 2.0,
+    "lexical_weight": 1.0,
+    "rrf_k": 60,
+    "max_pairs_per_seeker": null,
+    "min_dense_similarity": null,
+    "seed": 42
+  },
+  "embedding": {
+    "model": "Qwen/Qwen3-Embedding-8B",
+    "backend": "modal",
+    "batch_size": 2,
+    "max_length": 4096,
+    "use_chroma": true
+  },
+  "judge": {
+    "enabled": true,
+    "concurrency": 4
+  },
+  "export": {
+    "enabled": true,
+    "dest": "exports/rrf_datasets",
+    "include_embeddings": false
+  }
+}

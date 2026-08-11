@@ -1,0 +1,54 @@
+{
+  "id": 96,
+  "archetype": "European Cybersecurity Technical Operator",
+  "given_name": "Kavya Novak",
+  "style_version": 7,
+  "archetypes_version": 17,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Kavya Novak is a recent MSc graduate in Cybersecurity from a UK university, but with a strong practical bent. She didn't just study theory; she actively participated in Capture the Flag (CTF) competitions, contributing significantly to her university team\u2019s success \u2013 specifically, she became known for her reverse engineering skills. This gives her a unique edge over purely academic graduates. She\u2019s now actively seeking a role as a SOC analyst or, ideally, a detection engineer in Germany, leveraging her fluency in German (learned from her mother) and her technical skills. She's ambitious and eager to prove herself in a real-world environment, but also realistic about being a junior member of a team. She's particularly interested in companies focused on industrial control systems (ICS) security, as she finds that area fascinating. She's actively networking to bypass the need for extensive initial experience requirements.",
+    "positioning": "I am a highly motivated and technically proficient cybersecurity professional with a recent Master of Science degree in Cybersecurity and a demonstrated passion for proactive threat detection and incident response. My academic foundation is complemented by significant practical experience gained through participation in competitive cybersecurity challenges, notably Capture the Flag (CTF) events where I specialized in reverse engineering and vulnerability analysis. I\u2019m driven by a desire to contribute to a robust security posture, proactively identifying and mitigating threats before they impact critical infrastructure. \n\nI offer a unique blend of theoretical knowledge and hands-on skills, enabling me to quickly adapt to new technologies and challenges. My MSc coursework provided a strong understanding of network security, cryptography, malware analysis, and security architecture. However, my engagement in CTFs honed my ability to think critically under pressure, collaborate effectively within a team, and rapidly develop solutions to complex security problems. I excel at dissecting malicious code, identifying vulnerabilities in software, and developing effective mitigation strategies.\n\nI am particularly interested in opportunities within the realm of Industrial Control Systems (ICS) security, recognizing the growing importance of protecting critical infrastructure from cyberattacks. I believe my analytical skills and proactive approach would be a valuable asset to an organization dedicated to safeguarding these vital systems. I am eager to learn from experienced professionals and contribute to a team focused on innovation and excellence in cybersecurity. Ultimately, I aim to become a leading expert in threat detection and prevention, helping organizations stay ahead of the evolving threat landscape. I am fluent in both English and German, facilitating seamless communication and collaboration within international teams.",
+    "background": "- **MSc Cybersecurity**, University of Strathclyde, Glasgow, UK (September 2022 \u2013 September 2023) \u2013 Dissertation: \u201cAnalysis of Advanced Persistent Threat (APT) Tactics Targeting ICS Environments.\u201d GPA: 3.8/4.0\n- **BSc Computer Science**, University of York, York, UK (September 2019 \u2013 June 2022) \u2013 Focused on network security and software engineering. GPA: 3.6/4.0\n- **Cybersecurity Intern**, SecureTech Solutions, London, UK (Summer 2021) \u2013 Assisted with vulnerability assessments, penetration testing, and security awareness training. Contributed to the development of a new phishing simulation campaign.\n- **CTF Team Member & Reverse Engineering Specialist**, University of Strathclyde Cybersecurity Society (2022-2023) \u2013 Consistently ranked among the top performers in regional and national CTF competitions. Specialized in reverse engineering challenges, identifying vulnerabilities in compiled code.\n- **Skills:** Python, C++, Assembly Language, Wireshark, Metasploit, Burp Suite, Kali Linux, SIEM tools (Splunk \u2013 basic proficiency), Network Security Protocols (TCP/IP, DNS, HTTP), Reverse Engineering (IDA Pro, Ghidra), Vulnerability Assessment, Malware Analysis, German (Fluent), English (Native).\n- **Certifications:** CompTIA Security+ (Expected November 2023)",
+    "lookingFor": "I am actively seeking a full-time position in cybersecurity within Germany or broader Europe, ideally as a SOC Analyst or Detection Engineer. My priority is to join a team where I can apply my technical skills and contribute to a proactive security posture. \n\n**Ideal Connections:**\n*   **Hiring Managers:** Specifically, those responsible for recruiting SOC analysts, Detection Engineers, or Security Operations Center (SOC) team leads in Germany and surrounding European countries (Netherlands, Switzerland, Austria).\n*   **Security Engineers/Architects:** Individuals working in ICS security or with experience in threat detection and incident response.\n*   **Recruiters:** Specializing in cybersecurity roles within Germany and Europe. \n\n**Target Companies:**\n*   Companies focused on Industrial Control System (ICS) security.\n*   Managed Security Service Providers (MSSPs) operating in Europe.\n*   Large corporations with established SOCs.\n\n**Not a Good Fit:**\n*   Purely sales or marketing roles.\n*   Positions requiring extensive travel (I\u2019m looking to establish myself in a specific location).\n*   Roles focused solely on compliance or risk management (I\u2019m passionate about the technical aspects of security). \n\n**Evolving Search Focus:** I am increasingly interested in roles that involve threat hunting and proactive security research. I am also open to exploring opportunities to develop my skills in cloud security.",
+    "notes": "Kavya is a very promising candidate. She\u2019s proactive and eager to learn. I spoke with her on October 26th, and she\u2019s very focused on landing a role in Germany. She mentioned she\u2019s actively applying to several positions but is finding the experience requirements challenging to overcome. \n\n*   She\u2019s particularly interested in companies that are willing to invest in training and mentorship.\n*   She highlighted her strong reverse engineering skills as a differentiator.\n*   She\u2019s attending the Cybersecurity Summit in Munich in November and would welcome introductions to attendees from target companies.\n*   Previous outreach to Siemens yielded no response. Follow up with contacts at Bosch and ABB.",
+    "locationAvailability": "I am currently based in Glasgow, UK, but am actively seeking opportunities in Germany and throughout Europe. I am available to relocate immediately and am open to travel for interviews. I am particularly interested in opportunities in the Munich, Berlin, and Frankfurt areas.",
+    "introPreferences": "Please adhere to the following when making introductions:\n\n*   **Hard Requirements:**\n    *   The recipient *must* be involved in hiring for a technical cybersecurity role (SOC, Detection Engineering, Threat Hunting).\n    *   The recipient *must* work for a company operating in Germany or another European country.\n\n*   **Soft Preferences:**\n    *   Prioritize introducing me to individuals who have experience mentoring junior cybersecurity professionals.\n    *   Focus on companies known for their strong security culture and commitment to innovation.\n\n*   **Introduction Style:**\n    *   Clearly highlight my technical skills, particularly my reverse engineering experience and participation in CTF competitions.\n    *   Emphasize my fluency in German and my eagerness to relocate.\n    *   Keep the introduction concise and focused on my relevant qualifications.\n\n*   **Avoid:**\n    *   Introducing me to individuals in purely sales or management roles.\n    *   Making introductions without verifying the recipient\u2019s involvement in technical hiring.",
+    "personalPreferences": "I prefer to be contacted via LinkedIn messaging or email. I check both regularly. Please use a clear and concise subject line when emailing. I am generally available for brief calls during UK business hours (GMT).",
+    "meetingAndSchedulingPreferences": "I am flexible with meeting times and can adapt to different time zones. Please provide at least 24 hours\u2019 notice for any scheduled meetings."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 28.230685234069824,
+      "input_tokens": 853,
+      "output_tokens": 1633,
+      "problems": []
+    }
+  ],
+  "success": true
+}

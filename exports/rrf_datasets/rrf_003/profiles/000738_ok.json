@@ -1,0 +1,54 @@
+{
+  "id": 738,
+  "archetype": "Tech Executive, Now Founder",
+  "given_name": "Nikolai Suzuki",
+  "style_version": 45,
+  "archetypes_version": 124,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Nikolai Suzuki is a 42-year-old former VP of Engineering at a mid-sized cybersecurity firm, 'BastionTech'. He\u2019s a deeply pragmatic engineer at heart, specializing in scalable systems architecture and threat modeling. He left BastionTech six months ago to found 'Aegis Insights', a startup focusing on proactive threat intelligence for small and medium-sized businesses (SMBs) \u2013 a market he felt underserved during his time at BastionTech. He\u2019s a first-time founder, so while technically brilliant, he\u2019s actively seeking mentorship and connections in the startup ecosystem, especially around fundraising, scaling, and go-to-market strategy. He\u2019s based in Seattle and willing to travel, but prioritizes remote work. He's a bit introverted and prefers direct, concise communication. He\u2019s particularly interested in connecting with angel investors specializing in early-stage cybersecurity, and experienced SaaS founders who've successfully navigated the SMB market.",
+    "positioning": "Nikolai Suzuki is the Founder and CEO of Aegis Insights, a next-generation threat intelligence platform designed to empower small and medium-sized businesses with proactive cybersecurity. Having spent over 15 years building highly scalable and resilient systems at BastionTech, I recognized a critical gap in the market: robust, affordable threat intelligence often remains inaccessible to businesses lacking dedicated security teams. Aegis Insights bridges this gap. We deliver actionable, context-aware threat data directly to SMBs, enabling them to anticipate and mitigate risks before they materialize. My core expertise lies in architecting secure, scalable cloud infrastructure, coupled with a deep understanding of the evolving threat landscape. I\u2019m passionate about democratizing cybersecurity and empowering businesses to thrive in a digitally connected world. Currently focused on securing seed funding and building a high-performing engineering team to accelerate product development and market penetration. I am actively seeking strategic advisors and early adopters to help refine our offering and validate our go-to-market strategy.",
+    "background": "- **Founder & CEO, Aegis Insights** (Seattle, WA) \u2013 Present\n  -- Spearheading all aspects of startup development, including product vision, fundraising, team building, and go-to-market strategy.\n  -- Developed and launched a Minimum Viable Product (MVP) demonstrating core threat intelligence capabilities.\n  -- Secured initial angel investment commitments totaling $250,000.\n  -- Key Skills: Startup Leadership, Product Management, Threat Intelligence, Cybersecurity, Cloud Architecture, Fundraising.\n\n- **VP of Engineering, BastionTech** (Seattle, WA) \u2013 2016 \u2013 2023\n  -- Led a team of 40+ engineers responsible for the design, development, and maintenance of BastionTech\u2019s flagship cybersecurity platform.\n  -- Oversaw the successful migration of the platform to a microservices architecture, resulting in a 30% improvement in scalability and resilience.\n  -- Implemented a robust CI/CD pipeline, reducing deployment time by 50%.\n  -- Championed the adoption of DevSecOps best practices, enhancing the security posture of the platform.\n  -- Key Skills: Engineering Management, Cloud Computing (AWS, Azure), Microservices, DevOps, Cybersecurity, Agile Methodologies, Threat Modeling.\n\n- **Senior Software Engineer, SecureLogic** (San Francisco, CA) \u2013 2012 \u2013 2016\n  -- Developed and maintained critical components of SecureLogic\u2019s identity and access management (IAM) solution.\n  -- Contributed to the design and implementation of a new multi-factor authentication (MFA) module.\n  -- Key Skills: Java, Python, IAM, MFA, Software Development, Agile.\n\n- **Software Engineer, Innovate Systems** (Boston, MA) \u2013 2010 \u2013 2012\n  -- Developed and tested software applications for the financial services industry.\n  -- Key Skills: C++, Software Testing, Requirements Analysis.\n\n- **Education:**\n  -- Master of Science in Computer Science, Massachusetts Institute of Technology (MIT), Cambridge, MA \u2013 2010\n  -- Bachelor of Science in Computer Science, Stanford University, Stanford, CA \u2013 2008\n\n- **Languages:** English (Native), Japanese (Conversational)",
+    "lookingFor": "I\u2019m actively seeking connections within the startup ecosystem to support the growth of Aegis Insights. Specifically, I\u2019m looking to connect with:\n\n* **Angel Investors:** Individuals or firms specializing in early-stage cybersecurity investments (Seed/Series A). I\u2019m particularly interested in investors with experience in the SMB market.\n* **SaaS Founders:** Experienced founders who have successfully scaled SaaS businesses targeting SMBs. I\u2019m eager to learn from their experiences and gain insights into best practices for growth and customer acquisition.\n* **Cybersecurity Experts:** Individuals with deep expertise in threat intelligence, vulnerability management, and incident response. I\u2019m open to exploring advisory roles and potential partnerships.\n* **Potential Strategic Partners:** Companies offering complementary solutions to SMBs (e.g., managed service providers, IT consulting firms).\n\nI'm *not* currently interested in:\n\n* **Sales/Marketing roles:** We are not actively hiring for these positions at this time.\n* **Large Enterprise Cybersecurity solutions providers:** Our focus is specifically on the SMB market.\n* **Recruiters offering roles outside of advisory/investment capacity.**\n\nI'm keen to engage in conversations about the future of cybersecurity for SMBs, the challenges of building a successful startup, and the opportunities for collaboration. I\u2019m open to quick virtual coffee chats or longer strategic discussions. I\u2019m particularly interested in learning about innovative approaches to threat detection, proactive security measures, and effective customer engagement strategies. I\u2019m also happy to share my experiences and insights from my time at BastionTech.",
+    "notes": "\u2022 Nikolai is highly responsive via email but prefers concise communication. Avoid lengthy introductory emails. \n\u2022 He\u2019s currently prioritizing fundraising and building out the engineering team. \n\u2022 He mentioned a potential partnership with a managed service provider in the Pacific Northwest \u2013 follow up on this lead. \n\u2022 He\u2019s attending the RSA Conference in May \u2013 potential opportunity for an in-person meeting. \n\u2022 He's a bit hesitant about networking events and prefers targeted introductions.\n\u2022 Last conversation (3/15) \u2013 He expressed frustration with the complexity of seed funding rounds.",
+    "locationAvailability": "Based in Seattle, WA. Primarily working remotely, but willing to travel for key meetings and events.",
+    "introPreferences": "When making introductions to Nikolai Suzuki, please adhere to the following:\n\n* **Hard Requirements:** The introduction *must* be to someone relevant to Aegis Insights\u2019 current needs (see \u2018Looking For\u2019 section). Do *not* introduce him to recruiters or individuals offering irrelevant services.\n* **Soft Preferences:** Ideally, the introduction should be to someone with a proven track record of success in the cybersecurity industry or the startup world. A warm introduction is *always* preferred over a cold email.\n* **Introduction Message Guidelines:** Keep the introduction message concise and focused. Briefly explain the connection and highlight the potential value for both parties. Avoid overly promotional language. Focus on shared interests and potential synergies.\n* **Framing:** Position the introduction as a mutually beneficial opportunity for learning and collaboration. Highlight Nikolai\u2019s expertise in scalable systems architecture and threat intelligence.\n* **Do not mention his introversion or suggest he \u2018come out of his shell\u2019. He appreciates directness and respects boundaries.",
+    "personalPreferences": "I prefer email communication (nikolai.suzuki@aegisinsights.com). Please keep updates brief and to the point. I'm not active on social media for professional networking.",
+    "meetingAndSchedulingPreferences": "I generally prefer 30-minute meetings. Please send a calendar invite with a clear agenda beforehand. I'm typically available during Pacific Standard Time business hours."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 28.767881155014038,
+      "input_tokens": 824,
+      "output_tokens": 1689,
+      "problems": []
+    }
+  ],
+  "success": true
+}

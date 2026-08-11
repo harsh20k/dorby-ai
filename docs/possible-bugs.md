@@ -353,3 +353,114 @@ deliberate pause per user decision, not a technical blocker. Re-run
 `scripts/check_synth_cheatability.py` against the full-scale regenerated
 batch once available to confirm the drop holds at scale before promoting
 it.
+
+## 5. `twotower.eval.evaluate_pairs` always includes the search query, even for a model trained without it
+
+**Where:** `twotower/data.py::LabeledPair.seeker_text` (hardcoded to
+`seeker_to_text(profile, searchQuery)`), consumed unconditionally by
+`twotower/eval.py::evaluate_pairs`, and therefore by every caller of that
+function — `eval_real_full/eval.py::run_eval`,
+`twotower_top1_optimised/train.py`'s in-training holdout eval, etc.
+
+**Found in:** `twotower_no_query/` — the first all-200 eval of
+`no_query_001` (an adapter trained on `profile_to_text` seeker text, no
+query anywhere in training) went through `eval_real_full.eval.run_eval` like
+every other adapter in this project, which built seeker text via
+`LabeledPair.seeker_text` — profile *plus* query, unconditionally. User
+caught this by inspection ("i think that is also using search query") before
+the result was written up as final.
+
+**What's wrong:** for every other adapter in this project (`run_001`,
+`arm_a_real_only`, the RRF triplet series, `top1_ctrl`), `seeker_text`
+correctly matches training — they all trained on profile+query concatenated,
+so evaluating on the same text is right. `no_query_001` is the first adapter
+whose training text diverges from `seeker_text`, and nothing in
+`evaluate_pairs` or its callers parameterizes seeker-text construction, so it
+silently fed the model out-of-distribution input (query tokens never seen in
+training) rather than raising or requiring an explicit override.
+
+**Impact measured:** re-scored `no_query_001` on seeker text that matches
+its training (`profile_to_text`, via `twotower_query_weighted.eval`'s
+already-published `profile_only` path, read-only reuse) instead of
+`evaluate_pairs`'s query-included text. All-200 real pairs:
+
+| Eval text | Pair AUC | Hard-neg AUC | MRR | Recall@1 | Recall@10 |
+|---|---|---|---|---|---|
+| Mismatched (`evaluate_pairs`, profile+query — the bug) | 0.5718 | 0.5550 | 0.3371 | 0.18 | 0.67 |
+| Matched (profile only, correct) | 0.5574 | 0.5374 | 0.2827 | 0.13 | 0.62 |
+
+The mismatched number is *higher* on every metric than the matched one — the
+model does slightly better on text it never trained on than on its own
+training distribution, most likely because the extra (unfamiliar) query
+tokens still add some lexical signal even unattended-to. Either way, the
+original write-up's headline number (R@1 0.18, "matches the untrained
+baseline") was not measuring what it claimed to measure. See
+`docs/twotower-no-query-experiment.md` for the corrected comparison and full
+discussion.
+
+**Suggested next step:** `twotower.eval.evaluate_pairs`/`LabeledPair` have no
+way to express "score this pair's seeker side without the query" — any future
+adapter trained on non-standard seeker text needs its own eval path (as
+`twotower_no_query/modal_eval_matched.py` now does by reusing
+`twotower_query_weighted.eval`) rather than the shared `evaluate_pairs`,
+until/unless a `seeker_text_variant` parameter is added there. Not fixing the
+shared function itself — every other published number in this project depends
+on its current unconditional query-inclusion being correct.
+
+**Status:** confirmed and worked around 2026-08-03 via a matched-distribution
+eval in `twotower_no_query/`; the shared `evaluate_pairs` function is
+unchanged (fixing it would need to become opt-in, not default, to avoid
+retroactively changing every prior published number).
+
+## 6. Custom training loops that bypass `.encode()` train on the untruncated embedding, not the 1024-dim one everything else uses
+
+**Where:** `twotower_split/train.py`'s `_encode` (and the same pattern
+originally in `twotower_field_gate/train.py`, fixed before publishing).
+
+**Found in:** building `twotower_field_gate/`, while adding a second custom
+training loop (needed because `SentenceTransformerTrainer` can't route
+non-standard forward passes) and checking why a `FieldGate` linear layer
+sized for 1024-dim inputs raised a shape-mismatch error on real data.
+
+**What's wrong:** `voyage-4-nano`'s native pooled embedding is
+**2048-dimensional**, not 1024 — `truncate_dim=1024` (used everywhere else
+in this project) is a real truncation, applied only inside
+`SentenceTransformer.encode()`'s own post-processing
+(`sentence_transformers.util.truncate_embeddings`, a plain
+`embeddings[..., :truncate_dim]` slice of the already-normalized pooled
+output, then renormalized if `normalize_embeddings=True`). A raw
+`model(features)["sentence_embedding"]` forward pass — the pattern both
+`twotower_split/train.py` and the first draft of `twotower_field_gate/
+train.py` used, needed because `.encode()` disables gradients — **skips this
+entirely** and returns the full 2048-dim vector. Verified numerically:
+manually slicing to `[:1024]` and renormalizing exactly reproduces
+`.encode(..., truncate_dim=1024, normalize_embeddings=True)` (max abs diff
+0.0), confirming the mechanism and the fix.
+
+**Why it matters:** every other embedding in this project — every baseline,
+every prior fine-tune, every eval script — is computed at 1024 dims. A
+custom loop that trains on the untruncated 2048-dim space is optimizing a
+LoRA adapter for a representation that gets thrown away and re-sliced before
+comparison at eval time; the adapter has no reason to put the most useful
+signal specifically in the first 1024 of its 2048 output dimensions.
+
+**Impact:** `twotower_field_gate/train.py` was fixed before any GPU spend
+(caught by a shape-mismatch crash, not silently). `twotower_split/train.py`
+was **not** retroactively fixed or rerun — its published result
+(`docs/twotower-split-experiment.md`) trained on the native 2048-dim space
+and was only truncated to 1024 at eval time. This doesn't necessarily
+invalidate that result (the negative finding — split towers underperform —
+might well hold regardless), but it is a real methodological gap between how
+that adapter trained and how it was scored, on record as a caveat rather
+than silently left unstated.
+
+**Suggested next step:** any future custom training loop that bypasses
+`.encode()` should truncate-then-renormalize explicitly, as
+`twotower_field_gate/train.py`'s fixed `_encode` now does. Re-running
+`twotower_split` with the fix applied, to see whether it changes the
+already-negative result, is a candidate follow-up but not yet scheduled.
+
+**Status:** confirmed and fixed in `twotower_field_gate/` 2026-08-04;
+`twotower_split/`'s already-published number is left as-is with this caveat
+recorded, not retroactively edited (per the isolation rule — its code is
+frozen, matching what actually produced the published result).

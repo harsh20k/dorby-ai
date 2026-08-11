@@ -1,0 +1,54 @@
+{
+  "id": 522,
+  "archetype": "Cybersecurity Professional, Germany-Based",
+  "given_name": "Layla Oduya",
+  "style_version": 32,
+  "archetypes_version": 88,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Layla Oduya is a recent Master's graduate in Cybersecurity from a top German university (RWTH Aachen). She\u2019s highly technically proficient, specializing in Security Operations (SecOps), threat intelligence, and incident response. A distinctive detail is her prior experience as a competitive Capture The Flag (CTF) player \u2013 she was a key member of a nationally-ranked team, \u2018NullPointerException\u2019, which honed her rapid problem-solving and collaborative skills under pressure. While academically strong, she lacks extensive professional experience *beyond* internships, making her eager to prove herself in a full-time role. She's focused on Germany, but open to opportunities across Europe, and is actively networking to land a SecOps Engineer or similar position. She\u2019s ambitious, a quick learner, and presents as confident but approachable. She's particularly interested in companies dealing with industrial control systems (ICS) security.",
+    "positioning": "I am a highly motivated and technically skilled Cybersecurity professional seeking a challenging role in Security Operations. My recent Master\u2019s degree from RWTH Aachen University, coupled with a strong foundation in threat intelligence, incident response, and vulnerability management, positions me to immediately contribute to a dynamic security team. I\u2019m particularly passionate about the protection of critical infrastructure and industrial control systems (ICS), and am eager to apply my skills in a real-world environment. During my studies, I focused extensively on practical application of security principles, including reverse engineering, malware analysis, and penetration testing. I\u2019m adept at utilizing industry-standard tools such as SIEM solutions (Splunk, QRadar), intrusion detection/prevention systems (IDS/IPS), and endpoint detection and response (EDR) platforms. I\u2019m eager to join an organization that values continuous learning and innovation in the rapidly evolving cybersecurity landscape. My goal is to become a leading expert in securing complex systems and mitigating emerging threats.",
+    "background": "- **RWTH Aachen University, Aachen, Germany** (2022 \u2013 2024)\n  Master of Science in Cybersecurity\n  * Relevant Coursework: Network Security, Cryptography, Malware Analysis, Digital Forensics, ICS Security, Threat Intelligence.\n  * Master Thesis: 'Automated Threat Hunting with Machine Learning in Industrial Control Systems'\n  * GPA: 1.3 (German grading scale \u2013 equivalent to A)\n\n- **Fraunhofer Institute for Applied and Integrated Security (IAIS), Sankt Augustin, Germany** (Summer 2023) \u2013 *Intern, Threat Intelligence*\n  * Conducted open-source intelligence (OSINT) gathering and analysis to identify emerging threats and vulnerabilities.\n  * Contributed to the development of threat reports and intelligence briefings for internal stakeholders.\n  * Gained experience with threat modeling and risk assessment methodologies.\n\n- **Siemens Energy, Munich, Germany** (Summer 2022) \u2013 *Intern, IT Security*\n  * Assisted in the implementation and maintenance of security controls for critical infrastructure systems.\n  * Participated in vulnerability assessments and penetration testing exercises.\n  * Learned about the challenges of securing OT environments.\n\n- **NullPointerException CTF Team** (2018 \u2013 2022)\n  * Key member of a nationally-ranked Capture The Flag (CTF) team.\n  * Specialization in reverse engineering and exploit development.\n  * Demonstrated ability to collaborate effectively under pressure and solve complex security challenges.\n\n- **University of Freiburg, Freiburg, Germany** (2018 \u2013 2022)\n  Bachelor of Science in Computer Science\n  * Minor in Mathematics\n  * Relevant Projects: Developed a secure messaging application using cryptography and secure coding practices.",
+    "lookingFor": "## Opportunities\n* **Full-time SecOps Engineer roles:** Primarily in Germany, but open to opportunities across Europe. I'm especially interested in roles involving incident response, threat hunting, and vulnerability management.\n* **Companies focusing on ICS/OT Security:** My Master\u2019s thesis and internship experience have cultivated a strong interest in securing critical infrastructure.\n\n## Introductions\n* **Recruiters specializing in cybersecurity:** Targeting roles within mid-to-large size organizations.\n* **Security professionals at companies like Siemens Energy, SAP, or Bosch:** Keen to learn about their SecOps teams and potential opportunities.\n* **Individuals involved in the German cybersecurity community:** Networking and mentorship opportunities are highly valued.\n* **Leaders in the field of Threat Intelligence:** Seeking advice and guidance on career development.",
+    "notes": "Layla is a highly promising candidate with a strong academic background and demonstrable technical skills. Her CTF experience is a significant asset, indicating a proactive and problem-solving mindset. She\u2019s eager to learn and contribute, but lacks extensive professional experience, so mentorship and a supportive team environment will be crucial for her success. She\u2019s very focused on Germany initially, but willing to consider wider European opportunities. When making introductions, emphasize her SecOps skills, her thesis work on ICS security, and her competitive CTF background. Be mindful that she is relatively new to the professional world and may benefit from guidance on navigating company culture and expectations. She is actively applying to many positions, so a timely and personalized introduction is key. She responds quickly to messages and is very appreciative of any assistance.",
+    "locationAvailability": "I am currently based in Aachen, Germany, and am readily available for opportunities within the country. I am also open to relocating within Europe and am comfortable with remote work arrangements, though I prefer roles with some in-person collaboration.",
+    "introPreferences": "* **Hard Requirements:**\n  * Introductions should be to individuals in hiring positions or with direct influence over hiring decisions.\n  * The connection should be within a cybersecurity-focused role (SecOps, Threat Intel, Incident Response, Vulnerability Management).\n* **Soft Preferences:**\n  * Introductions to individuals who have a background in mentoring junior security professionals are highly valued.\n  * Emphasize my technical skills (reverse engineering, malware analysis, SIEM tools) and my Master\u2019s thesis work related to ICS security.\n  * Avoid introductions to roles that are primarily focused on compliance or risk management \u2013 I am seeking a technical, hands-on position.",
+    "personalPreferences": "I prefer initial contact via LinkedIn message or email. Please feel free to share any relevant job postings or articles that you think I might find interesting. I\u2019m happy to provide updates on my job search progress if requested.",
+    "meetingAndSchedulingPreferences": "I am generally available for virtual meetings and can adapt to different time zones. Please send a calendar invite with a clear agenda beforehand to allow me to prepare. I appreciate concise and focused meetings with actionable outcomes. I'm happy to follow up with a thank-you note and any requested materials after our discussion."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 26.57082486152649,
+      "input_tokens": 789,
+      "output_tokens": 1437,
+      "problems": []
+    }
+  ],
+  "success": true
+}

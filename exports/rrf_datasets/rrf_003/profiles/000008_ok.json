@@ -1,0 +1,54 @@
+{
+  "id": 8,
+  "archetype": "Global Finance Operator/Founder",
+  "given_name": "Alejandro Santos",
+  "style_version": 1,
+  "archetypes_version": 2,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Alejandro Santos is a seasoned finance professional who spent the first 15 years of his career in corporate treasury at large multinational corporations, specializing in emerging markets risk management. He recently (within the last 2 years) founded 'TerraFlow Capital,' a fintech startup focused on providing streamlined cross-border payment solutions for small and medium-sized enterprises (SMEs) operating in Latin America. He's currently focused on securing Series A funding and expanding TerraFlow's reach beyond its initial pilot markets. He's a systems thinker, comfortable with complexity, and highly values efficient, reliable financial infrastructure. A key distinctive detail is his deep understanding of the regulatory landscape in several Latin American countries, gained through years of on-the-ground experience managing treasury operations there. He\u2019s actively seeking strategic investors and advisors with experience scaling fintech businesses globally.",
+    "positioning": "Alejandro Santos is the Founder and CEO of TerraFlow Capital, a fintech company revolutionizing cross-border payments for SMEs in Latin America. Leveraging 15+ years of experience in global corporate treasury, Alejandro identified a critical gap in the market \u2013 the high cost and complexity of international transactions for growing businesses. TerraFlow\u2019s platform dramatically simplifies this process, offering transparent pricing and faster settlement times. We\u2019ve achieved significant traction in our pilot markets, demonstrating a clear demand for our solution. Currently, Alejandro is focused on securing Series A funding to accelerate expansion and enhance our technology. He\u2019s a strategic leader with a passion for building robust financial systems and a proven track record of navigating complex international markets. Connect with Alejandro to discuss opportunities for partnership, investment, or to explore how TerraFlow Capital can streamline your global payment operations.",
+    "background": "- **Founder & CEO, TerraFlow Capital** (2022 \u2013 Present)\n  - Led all aspects of company formation, including fundraising, product development, and market entry.\n  - Secured seed funding of $1.5M, achieving 300% revenue growth within the first year.\n  - Built and manages a team of 15+ engineers, developers, and financial professionals.\n  - Oversaw regulatory compliance and established key partnerships with financial institutions in Mexico, Colombia, and Peru.\n\n- **Head of Treasury, LatAm, GlobalTech Solutions** (2018 \u2013 2022)\n  - Managed a $500M+ treasury portfolio across multiple Latin American subsidiaries.\n  - Developed and implemented hedging strategies to mitigate currency risk, reducing exposure by 20%.\n  - Led the implementation of a new treasury management system (TMS), improving efficiency by 15%.\n  - Negotiated banking agreements and optimized cash flow management processes.\n\n- **Senior Treasury Manager, OmniCorp Industries** (2013 \u2013 2018)\n  - Supported the company\u2019s global treasury operations, with a focus on emerging markets.\n  - Managed daily cash positions, foreign exchange transactions, and intercompany loans.\n  - Assisted in the development and implementation of treasury policies and procedures.\n\n- **Education:**\n  - MBA, Finance, Stanford University (2013)\n  - Bachelor of Science, Economics, Universidad de Buenos Aires (2011)\n\n- **Skills:** Fintech, Treasury Management, Cross-Border Payments, Risk Management, Financial Modeling, Corporate Finance, International Finance, Regulatory Compliance (LatAm), Strategic Planning, Leadership, Team Management.",
+    "lookingFor": "## Strategic Partnerships & Investment\n\n- **Series A Investors:** Seeking investors with a proven track record of scaling fintech companies, particularly those with experience in the Latin American market. Target investment size: $10M - $15M.\n- **Strategic Advisors:** Experienced advisors with expertise in cross-border payments, regulatory compliance, and international expansion.\n- **Potential Acquisition Targets:** Small to medium-sized fintech companies offering complementary technologies or services (e.g., KYC/AML solutions, payment gateways).\n\n## Key Hires\n\n- **Head of Engineering:** Experienced engineering leader to scale our technology platform. Strong background in microservices architecture and cloud infrastructure.\n- **Head of Sales (LatAm):** Proven sales leader with a deep understanding of the Latin American market and a network of contacts within the SME sector.\n\n## Introductions\n\n- Introductions to VCs specializing in fintech and Latin American investments.\n- Introductions to potential strategic partners in the payment processing industry.",
+    "notes": "Alejandro is incredibly passionate about TerraFlow and genuinely believes it can have a significant impact on SMEs in Latin America. He's a very direct communicator and values efficiency. He was initially hesitant to seek external funding, preferring a bootstrapped approach, but has come to recognize the need for capital to accelerate growth. Recent conversations suggest he\u2019s particularly interested in investors who can bring more than just capital \u2013 strategic guidance and industry connections are highly valued. He briefly explored a B2C model early on but quickly pivoted to focus on the SME market. He\u2019s fluent in Spanish and Portuguese, in addition to English. Be mindful of his time \u2013 he\u2019s extremely busy and prioritizes interactions that have a clear potential for tangible outcomes.",
+    "locationAvailability": "Based in Miami, Florida, but frequently travels throughout Latin America and is open to connecting with individuals globally.",
+    "introPreferences": "- **Hard Requirement:** Introductions to investors *must* have experience investing in fintech companies.\n- **Hard Requirement:** Introductions to potential advisors *must* have a demonstrable track record of scaling similar businesses.\n- **Soft Preference:** Prioritize introductions to individuals with existing networks within the Latin American fintech ecosystem.\n- **Soft Preference:** Introductions to individuals who have previously founded and exited companies.\n- **Introduction Format:** Please include a brief summary of the individual\u2019s relevant experience and how they might be a good fit for TerraFlow.",
+    "personalPreferences": "Alejandro prefers direct and concise communication. He\u2019s most responsive on LinkedIn and WhatsApp. He likes to get straight to the point and appreciates individuals who are well-prepared for meetings. While he's open to informal networking, he generally prefers to focus conversations on specific opportunities or challenges. He's not a big fan of lengthy email chains.",
+    "meetingAndSchedulingPreferences": "Prefers virtual meetings initially, followed by in-person meetings if a strong connection is established. A brief agenda sent in advance is appreciated."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 21.745450973510742,
+      "input_tokens": 773,
+      "output_tokens": 1361,
+      "problems": []
+    }
+  ],
+  "success": true
+}

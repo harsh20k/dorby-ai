@@ -26,6 +26,7 @@ that's the decision gate from
 | Practice set (train-dev, mostly fake) | 0.986 | 0.743 | — | Looks great; misleading |
 | Real held-out pairs, `run_001` (real + unfixed fake) | 0.578 | 0.283 | 0.4845 (below chance) | Doesn't beat baselines |
 | **Real held-out pairs, Arm A (real-only, no fake)** | **0.579** | **0.388** | **0.500 (chance)** | **Beats `run_001` on almost everything, with 1/5th the data** |
+| Real held-out pairs, judge-distilled (Arm A recipe, soft labels) | **0.604** | 0.359 | 0.552 | Best twotower pair AUC yet — see "Distillation experiment" below |
 | Frozen Voyage-4-nano (matched holdout) | 0.579 | 0.461 | 0.571 | Roughly Arm A's neighborhood |
 | Frozen Voyage-4-large (prod, matched holdout) | 0.609 | 0.529 | 0.602 | Bar to beat |
 
@@ -98,6 +99,54 @@ signal looked like small-sample topic clustering (36 examples across ~15
 seed queries) rather than the old structural tell — inspected the
 classifier's top words and found ordinary topic vocabulary ("health,"
 "climate," "campus"), not narrative giveaways.
+
+## Distillation experiment: LLM-judge soft labels instead of hard 0/1 (2026-07-26)
+
+Small, one-variable side experiment run alongside the Arm A/B/C plan, not a
+replacement for it. Same recipe as Arm A exactly (LoRA on voyage-4-nano,
+5 epochs, 111 real-only train pairs, `ContrastiveLoss`, identical holdout) —
+the only change is the training label. Instead of the hard 0/1 accept/decline
+outcome, each pair's label is the naive LLM judge's (`google/gemini-3.1-flash-lite`,
+see [`llm-judge-experiment.md`](llm-judge-experiment.md)) confidence-signed
+score in `[0, 1]` (`baselines/llm_judge/judge.py::verdict_to_score`), used
+directly as a soft `ContrastiveLoss` target. `ContrastiveLoss` linearly
+interpolates between its "pull together" and "push apart" terms by the label,
+so a continuous label is a valid target with no loss-function change needed.
+
+The judge was re-run with `--split train` to score the 131 real train pairs
+it hadn't seen before (its verdict cache already had the 69 holdout pairs
+from earlier baseline runs) — 131 new API calls, a few cents, no other new
+cost. `scripts/build_judge_soft_labels.py` turns the cache into a
+`pair_id -> score` file; `twotower/train_distill.py` monkeypatches
+`twotower.train.pairs_to_hf_dict` for the one call site that builds the
+training dataset, so nothing else in the training/eval pipeline changed.
+
+**Finding: distillation beat every twotower run to date on pair AUC**
+(0.604 vs. Arm A's 0.579, `run_001`'s 0.578), and is now ahead of TF-IDF's
+0.592 — the first twotower run to clear that bar. Hard-negative AUC also
+moved off exactly-chance (0.552 vs. Arm A's 0.500). It traded away some
+retrieval quality to get there — MRR dropped to 0.359 from Arm A's 0.388 —
+so this is a real but partial win, not a clean sweep.
+
+**Caveat: the checkpoint-selection safety net didn't have a real candidate
+this run.** The best train-dev score was found at an early checkpoint that
+`save_total_limit=3` had already pruned by the time selection ran, so
+`select_best_checkpoint` fell back to the final epoch (same fallback
+behavior as `possible-bugs.md` #2, not a new bug). Train-dev here is also
+only 20 pairs — too small to trust as a selection signal regardless. Treat
+this result as a promising lead worth carrying into Arm C, not a confirmed
+win; a repeat with a higher `save_total_limit` (or holdout re-eval across
+more checkpoints) would firm it up.
+
+Rerun with:
+
+```bash
+python -m baselines.llm_judge.eval --data-dir data --variant naive --split train
+python scripts/build_judge_soft_labels.py
+modal run twotower/modal_train_distill.py --run-id distill_judge_001 --epochs 5
+modal volume get dorby-twotower-checkpoints distill_judge_001/metrics_holdout.json \
+    artifacts/twotower/distill_judge_001/metrics_holdout.json --force
+```
 
 ## What's left
 

@@ -1,0 +1,63 @@
+{
+  "id": 198,
+  "archetype": "European-Based Tech Builder",
+  "given_name": "Malia Pereira",
+  "style_version": 13,
+  "archetypes_version": 33,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Malia Pereira is a 38-year-old Portuguese-British dual citizen currently the CTO of 'NovaBloom', a Lisbon-based agritech startup focused on AI-powered precision farming solutions for vertical farms. She's a seasoned full-stack engineer who *deliberately* spent 5 years as a solo developer building and scaling a successful (though small) SaaS product for independent musicians *before* moving into leadership. This experience gives her a unique empathy for engineers and a pragmatic, hands-on approach to technical strategy, even at a CTO level. NovaBloom is currently seeking Series A funding from US-based VCs with a demonstrated interest in sustainability and AI. Malia is actively networking to connect with potential investors, advisors with experience in scaling similar companies, and top engineering talent to expand NovaBloom's team. She\u2019s deeply committed to building a diverse and inclusive engineering culture.",
+    "positioning": "As CTO of NovaBloom, I lead the engineering and data science teams in building a cutting-edge platform that optimizes resource utilization and maximizes yields in vertical farming environments. We leverage machine learning, computer vision, and IoT sensor data to create a closed-loop system that reduces waste, minimizes environmental impact, and delivers consistently high-quality produce. Prior to NovaBloom, I spent five years as an independent developer, building and scaling 'MelodyForge,' a SaaS platform for music creators \u2013 a challenging but incredibly rewarding experience that honed my full-stack skills and instilled a deep understanding of the entire product lifecycle. This experience allows me to balance strategic vision with pragmatic execution. I\u2019m passionate about applying technology to solve critical global challenges, specifically within the food-tech space, and am focused on driving NovaBloom\u2019s growth and impact through innovation and a strong engineering culture.",
+    "background": "- **NovaBloom, Lisbon, Portugal** (Oct 2021 \u2013 Present)\n  * **CTO:** Responsible for all aspects of technology strategy, development, and operations. Led the team through initial MVP development, successful beta launch, and current scaling phase.\n  * Key Achievements: Successfully integrated AI-powered predictive analytics into the platform, resulting in a 15% increase in yield optimization. Built and mentored a high-performing engineering team of 12.\n  * Secured seed funding of \u20ac1.2M based on technology roadmap and demonstration of product viability.\n\n- **MelodyForge (Independent Developer), Remote** (Jan 2016 \u2013 Sept 2021)\n  * **Founder & Lead Developer:** Solely responsible for the design, development, deployment, and maintenance of a SaaS platform for independent musicians focused on royalty tracking and music licensing.\n  * Key Achievements: Achieved over 500 paying subscribers within three years. Managed all aspects of the business, including customer support, marketing, and finances. Developed a deep understanding of cloud infrastructure (AWS) and full-stack development (React, Node.js, PostgreSQL).\n\n- **WebDev Solutions, London, UK** (June 2013 \u2013 Dec 2015)\n  * **Senior Front-End Developer:** Developed and maintained responsive web applications for a diverse range of clients.\n  * Key Skills: Proficient in HTML, CSS, JavaScript, and various front-end frameworks (AngularJS).\n\n- **Education:**\n  * **Imperial College London, UK** (2010 \u2013 2013) \u2013 BSc in Computing\n  * **Certifications:** AWS Certified Developer \u2013 Associate\n\n- **Skills:** Python, JavaScript, React, Node.js, PostgreSQL, AWS (EC2, S3, Lambda), Machine Learning (TensorFlow, PyTorch), Computer Vision, Agile Methodologies, DevOps, Team Leadership, Full-Stack Development, SaaS Architecture.",
+    "lookingFor": "I'm actively seeking connections with US-based Venture Capital firms specializing in Seed and Series A funding for AgTech and AI companies. I'm particularly interested in firms with a strong commitment to sustainability and a track record of supporting European startups. \n\nSpecifically, I\u2019m looking for:\n\n* **VC Partners:** Individuals with experience in scaling similar companies and a deep understanding of the AgTech landscape.\n* **Advisors:** Seasoned entrepreneurs and technology leaders who have successfully navigated the challenges of building and scaling global technology businesses.\n* **Engineering Talent:** Exceptional full-stack engineers with experience in AI/ML and cloud infrastructure. We are currently expanding our team and looking for passionate individuals to join our mission.\n\nI'm open to informational interviews and introductions. Please prioritize connections with individuals who can provide strategic guidance and potential investment opportunities. I'm also happy to share insights into the European AgTech market.",
+    "notes": "- Met with Anya Sharma (VC at GreenTech Ventures) - positive initial conversation, follow up next week.\n- Actively recruiting for a Senior Machine Learning Engineer \u2013 prioritize candidates with experience in computer vision.\n- Preparing pitch deck for Series A round \u2013 focusing on scalability and market opportunity.\n- Needs introduction to someone at Bessemer Venture Partners. Anya Sharma suggested contacting David Lee.\n- Follow up with LinkedIn posts highlighting NovaBloom\u2019s recent achievements.",
+    "locationAvailability": "I am based in Lisbon, Portugal, but frequently travel to other European capitals and am open to virtual meetings with US-based partners. I am available for limited travel to the US for key investor meetings.",
+    "introPreferences": "When making introductions, please highlight NovaBloom's unique approach to AI-powered precision farming and our commitment to sustainability. \n\n* **Hard Requirements:** Introductions should be to individuals with direct influence over investment decisions or relevant expertise.\n* **Soft Preferences:** I prefer introductions that are concise and clearly articulate the value proposition of NovaBloom.\n* Please include a brief context explaining why a connection would be mutually beneficial. \n* I respond best to LinkedIn messages or email \u2013 avoid cold calls.",
+    "personalPreferences": "I\u2019m a keen runner and enjoy spending time outdoors. I also play the guitar \u2013 a hobby that reminds me of my days building MelodyForge! I prefer clear and direct communication and appreciate a collaborative working style.",
+    "meetingAndSchedulingPreferences": "- Prefer video calls over phone calls.\n- Quick follow-up after initial meetings is appreciated.\n- I am decisive and prefer efficient decision-making processes."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 19.140408992767334,
+      "input_tokens": 840,
+      "output_tokens": 1392,
+      "problems": [
+        "background: possible truncation (ends with '...hine Learning \u2013 Specialty')"
+      ]
+    },
+    {
+      "attempt": 2,
+      "elapsed_s": 18.521039247512817,
+      "input_tokens": 840,
+      "output_tokens": 1347,
+      "problems": []
+    }
+  ],
+  "success": true
+}

@@ -1,0 +1,54 @@
+{
+  "id": 448,
+  "archetype": "Toronto AI/Community Builder",
+  "given_name": "Priya Abara",
+  "style_version": 27,
+  "archetypes_version": 75,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Priya Abara is a 32-year-old ecosystem builder in Toronto, focused on applied AI. She's not a *developer* herself, but excels at connecting technical AI/ML talent with businesses and communities that can benefit from their work. Her distinctive career detail is a previous stint as a policy advisor for the City of Toronto focused on smart city initiatives, giving her a strong understanding of regulatory hurdles and public sector needs. She recently founded 'Synergy AI', a consultancy and community hub aiming to accelerate AI adoption across various sectors in Toronto. She's currently seeking seed funding and strategic partnerships to scale Synergy AI and expand its impact. She's very active in the Toronto tech scene, often hosting workshops and networking events. She's approachable, enthusiastic, and presents herself as a collaborative problem-solver.",
+    "positioning": "I'm Priya Abara, founder of Synergy AI, a Toronto-based consultancy and community dedicated to bridging the gap between cutting-edge AI/ML research and real-world application. We work with businesses \u2013 from startups to established enterprises \u2013 to identify opportunities to leverage AI for growth and innovation. My background in public policy, coupled with a deep passion for the transformative power of AI, allows me to navigate the complex landscape of AI adoption, addressing both technical and regulatory challenges. We\u2019ve recently achieved significant traction with pilot projects in the healthcare and logistics sectors, demonstrating measurable ROI for our clients.  Synergy AI isn\u2019t just about implementation; it's about building a thriving AI ecosystem in Toronto. We host regular workshops, networking events, and mentorship programs to foster collaboration and knowledge sharing. I'm currently focused on securing seed funding to expand our team and scale our impact, and am actively seeking strategic partnerships to accelerate our growth and broaden our reach within the Canadian market.",
+    "background": "* **Founder & CEO, Synergy AI** (Toronto, ON) \u2013 January 2023 \u2013 Present\n    * Spearheaded the launch of Synergy AI, a consultancy and community hub focused on applied AI solutions for Canadian businesses.\n    * Developed and implemented a go-to-market strategy resulting in securing pilot projects with three clients within the first six months.\n    * Built and manage a network of over 150 AI/ML professionals, connecting them with relevant business opportunities.\n    * Oversee all aspects of business operations, including client acquisition, project management, and financial planning.\n    * Skills: AI Strategy, Business Development, Project Management, Community Building, Public Speaking, Python (basic understanding for project scoping).\n* **Policy Advisor, City of Toronto** (Toronto, ON) \u2013 June 2018 \u2013 December 2022\n    * Advised the City Council on policy related to smart city initiatives, with a focus on data privacy, ethical AI, and citizen engagement.\n    * Led the development of a framework for responsible AI adoption within municipal services, ensuring alignment with ethical guidelines and legal requirements.\n    * Managed stakeholder consultations with community groups, industry experts, and government agencies.\n    * Researched and analyzed emerging trends in AI and their potential impact on urban environments.\n    * Skills: Policy Analysis, Stakeholder Management, Regulatory Compliance, Data Governance, Public Speaking, Report Writing.\n* **Research Assistant, Vector Institute** (Toronto, ON) \u2013 September 2016 \u2013 May 2018\n    * Supported research projects in the field of deep learning, focusing on applications in computer vision and natural language processing.\n    * Assisted in data collection, cleaning, and analysis using Python and TensorFlow.\n    * Contributed to the publication of research papers in peer-reviewed journals.\n    * Skills: Python, TensorFlow, Data Analysis, Machine Learning (foundational knowledge), Research Methodology.",
+    "lookingFor": "I'm actively seeking connections to help scale Synergy AI and expand our impact on the Toronto AI ecosystem. Specifically, I'm looking for:\n\n* **Seed Investors:** Angel investors or seed funds with a focus on early-stage AI/ML companies in Canada. We are raising $500k to expand our team and marketing efforts.\n* **Strategic Partners:** Businesses in the healthcare, logistics, and financial services sectors interested in exploring AI solutions.  We\u2019re particularly interested in pilot project opportunities.\n* **AI/ML Talent:** Experienced machine learning engineers and data scientists seeking consulting opportunities or full-time roles within our growing team.  We value practical experience and a passion for solving real-world problems.\n* **Mentors:** Experienced entrepreneurs and business leaders who can provide guidance and support as we navigate the challenges of scaling a startup.\n\nI'm also open to discussing potential collaborations with other AI/ML community organizations in Toronto.  I\u2019m always happy to connect with individuals passionate about fostering innovation and driving positive change through AI.",
+    "notes": "\u2013 Priya is a highly articulate and engaging communicator. She\u2019s very effective at presenting complex technical concepts in a clear and accessible manner. \u2013 Her background in public policy is a key differentiator, providing her with a unique perspective on the ethical and regulatory challenges of AI adoption. \u2013 Synergy AI is relatively new; traction is promising, but still early. \u2013 She\u2019s a frequent attendee at Toronto AI events; verifying attendance records is recommended. \u2013 Potential conflict: briefly consulted with a competing firm (Data Insights Corp) in Q4 2022, but no formal engagement occurred. \u2013 She's very active on LinkedIn and Twitter (@PriyaAbaraAI).",
+    "locationAvailability": "I am based in Toronto, Ontario, and available for meetings both in-person and remotely. I am willing to travel within the Greater Toronto Area and occasionally to other Canadian cities for key opportunities.",
+    "introPreferences": "* Please emphasize my background in both policy *and* my passion for applied AI. The combination is key to understanding Synergy AI\u2019s value proposition.\n* When introducing me to potential investors, highlight our early traction and the potential for significant ROI.\n* When connecting me with potential clients, focus on the specific challenges they are facing and how AI can help them achieve their business goals.\n* I prefer introductions that are concise and personalized, with a clear explanation of why the connection is mutually beneficial.\n* Please avoid overly technical introductions; focus on the business value of AI rather than the technical details.",
+    "personalPreferences": "I prefer to communicate via email or LinkedIn initially. I appreciate direct and constructive feedback, and am always open to new ideas. Quick responses are appreciated!",
+    "meetingAndSchedulingPreferences": "Generally flexible; prefer Zoom or in-person meetings. Mornings are best."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 23.512163877487183,
+      "input_tokens": 818,
+      "output_tokens": 1390,
+      "problems": []
+    }
+  ],
+  "success": true
+}

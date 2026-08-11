@@ -1,0 +1,155 @@
+<title>Bigger Batch, More Negatives — Does It Fix Retrieval?</title>
+<style>
+  :root{
+    --bg: #eef1ee; --surface: #ffffff; --surface-2: #e4e8e3; --ink: #1c211f;
+    --ink-soft: #4b544f; --muted: #7c8781; --line: #d3d9d1;
+    --copper: #b5622a; --copper-soft: #dd8a4f; --teal: #1f7a72; --teal-soft: #4fa89e;
+    --slate: #4a5578; --slate-soft: #7986ad; --code-bg: #e6e9e2;
+    --shadow: 0 1px 2px rgba(20,25,20,0.06), 0 8px 24px rgba(20,25,20,0.05);
+  }
+  @media (prefers-color-scheme: dark){
+    :root{
+      --bg: #12151a; --surface: #191d23; --surface-2: #20252c; --ink: #e7ebe6;
+      --ink-soft: #aab4ac; --muted: #6d7871; --line: #2a3038;
+      --copper: #e0925a; --copper-soft: #c97a41; --teal: #5bc2b6; --teal-soft: #3d9c92;
+      --slate: #9aa6d6; --slate-soft: #7986ad; --code-bg: #1c2229;
+      --shadow: 0 1px 2px rgba(0,0,0,0.3), 0 12px 32px rgba(0,0,0,0.35);
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg: #12151a; --surface: #191d23; --surface-2: #20252c; --ink: #e7ebe6;
+    --ink-soft: #aab4ac; --muted: #6d7871; --line: #2a3038; --copper: #e0925a;
+    --copper-soft: #c97a41; --teal: #5bc2b6; --teal-soft: #3d9c92; --slate: #9aa6d6;
+    --slate-soft: #7986ad; --code-bg: #1c2229;
+    --shadow: 0 1px 2px rgba(0,0,0,0.3), 0 12px 32px rgba(0,0,0,0.35);
+  }
+  :root[data-theme="light"]{
+    --bg: #eef1ee; --surface: #ffffff; --surface-2: #e4e8e3; --ink: #1c211f;
+    --ink-soft: #4b544f; --muted: #7c8781; --line: #d3d9d1; --copper: #b5622a;
+    --copper-soft: #dd8a4f; --teal: #1f7a72; --teal-soft: #4fa89e; --slate: #4a5578;
+    --slate-soft: #7986ad; --code-bg: #e6e9e2;
+    --shadow: 0 1px 2px rgba(20,25,20,0.06), 0 8px 24px rgba(20,25,20,0.05);
+  }
+  *{box-sizing:border-box;}
+  html,body{margin:0;padding:0;}
+  body{
+    background:var(--bg); color:var(--ink);
+    font-family:"IBM Plex Sans","Segoe UI",-apple-system,BlinkMacSystemFont,system-ui,sans-serif;
+    font-size:16px; line-height:1.6; -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:880px;margin:0 auto;padding:0 24px 80px;}
+  h1,h2,h3{font-family:Charter,"Iowan Old Style","Source Serif 4",Georgia,serif;font-weight:600;text-wrap:balance;color:var(--ink);}
+  code,.mono{font-family:"IBM Plex Mono","SF Mono",Menlo,Consolas,monospace;font-variant-numeric:tabular-nums;}
+
+  header.hero{padding:64px 24px 36px;max-width:880px;margin:0 auto;border-bottom:1px solid var(--line);}
+  .eyebrow{display:inline-flex;align-items:center;gap:8px;font-family:"IBM Plex Mono",monospace;font-size:12.5px;letter-spacing:0.09em;text-transform:uppercase;color:var(--muted);margin-bottom:16px;}
+  .eyebrow .dot{width:6px;height:6px;border-radius:50%;background:var(--copper);}
+  h1.title{font-size:clamp(28px,4vw,40px);line-height:1.14;margin:0 0 12px;letter-spacing:-0.01em;}
+  .lede{font-size:17px;color:var(--ink-soft);max-width:640px;margin:0;}
+  .prev-link{display:inline-flex;align-items:center;gap:6px;margin-top:18px;font-size:13.5px;color:var(--teal);text-decoration:none;border-bottom:1px solid transparent;}
+  .prev-link:hover{border-color:var(--teal);}
+
+  section{padding:44px 0;border-bottom:1px solid var(--line);}
+  section:last-of-type{border-bottom:none;}
+  .section-head{display:flex;align-items:baseline;gap:14px;margin-bottom:6px;}
+  .section-num{font-family:"IBM Plex Mono",monospace;font-size:13px;color:var(--muted);}
+  h2.section-title{font-size:23px;margin:0;}
+  p{margin:0 0 14px;max-width:68ch;}
+  p:last-child{margin-bottom:0;}
+
+  .table-wrap{overflow-x:auto;margin:18px 0;border:1px solid var(--line);border-radius:10px;background:var(--surface);box-shadow:var(--shadow);}
+  table{border-collapse:collapse;width:100%;min-width:640px;font-size:14px;}
+  th,td{text-align:right;padding:10px 14px;border-bottom:1px solid var(--line);}
+  th:first-child,td:first-child{text-align:left;}
+  thead th{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:0.04em;text-transform:uppercase;color:var(--muted);font-weight:500;background:var(--surface-2);}
+  tbody tr:last-child td{border-bottom:none;}
+  td.mono{font-family:"IBM Plex Mono",monospace;}
+  td.best{color:var(--teal);font-weight:600;}
+  tr.this-run td{background:color-mix(in srgb, var(--copper) 8%, transparent);}
+
+  .split{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin:18px 0;}
+  @media (max-width:680px){.split{grid-template-columns:1fr;}}
+  .card{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:18px 20px;box-shadow:var(--shadow);}
+  .card h4{margin:0 0 8px;font-size:15px;display:flex;align-items:center;gap:8px;}
+  .card h4 i{width:9px;height:9px;border-radius:50%;display:inline-block;}
+  .card p{font-size:14px;}
+
+  .callout{background:var(--surface);border:1px solid var(--line);border-left:3px solid var(--copper);border-radius:10px;padding:16px 18px;margin:18px 0;box-shadow:var(--shadow);}
+  .callout .label{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:0.06em;text-transform:uppercase;color:var(--muted);margin-bottom:6px;}
+
+  ol.steps{list-style:none;padding:0;margin:16px 0;counter-reset:step;}
+  ol.steps li{position:relative;padding:10px 0 10px 34px;border-bottom:1px solid var(--line);font-size:14.5px;}
+  ol.steps li:last-child{border-bottom:none;}
+  ol.steps li::before{counter-increment:step;content:counter(step);position:absolute;left:0;top:9px;width:22px;height:22px;border-radius:50%;background:var(--surface-2);border:1px solid var(--line);font-family:"IBM Plex Mono",monospace;font-size:11.5px;display:flex;align-items:center;justify-content:center;color:var(--ink-soft);}
+  ol.steps b{display:block;margin-bottom:2px;}
+  ol.steps span{color:var(--ink-soft);}
+
+  footer{padding:32px 0 0;color:var(--muted);font-size:13px;}
+  footer code{background:var(--code-bg);padding:0.1em 0.4em;border-radius:4px;}
+  :focus-visible{outline:2px solid var(--teal);outline-offset:2px;}
+  @media (prefers-reduced-motion:reduce){*{animation:none !important;transition:none !important;}}
+</style>
+
+<header class="hero">
+  <div class="eyebrow"><span class="dot"></span> Dorby AI · two-tower fine-tune · follow-up experiment</div>
+  <h1 class="title">A bigger batch closed the retrieval gap — by trading away classification accuracy</h1>
+  <p class="lede">Follow-up to the first triplet fine-tune. This run only changed how many rivals the model saw per training step (bigger batch, 2 negatives instead of 1). Recall@1 caught up to Boardy's production model. Pair accuracy fell below it. Here's the three-way comparison and what to try next.</p>
+  <a class="prev-link" href="https://claude.ai/code/artifact/3511253c-fb74-429e-820c-d30dbd8c4816" target="_blank" rel="noopener">← Previous report: the original triplet fine-tune (voyage-nano + Qwen3-8B)</a>
+</header>
+
+<div class="wrap">
+
+  <section>
+    <div class="section-head"><span class="section-num">01</span><h2 class="section-title">All four models, real 69-pair holdout</h2></div>
+    <p>Same evaluation every time — the only population that reflects actual human accept/decline behavior. Bold = best in column.</p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Model</th><th>Pair AUC</th><th>Hard-neg AUC</th><th>MRR</th><th>Recall@1</th><th>Recall@10</th></tr></thead>
+        <tbody>
+          <tr class="this-run"><td>voyage-nano, bigger batch + 2 negatives <span class="mono" style="color:var(--muted);font-size:11.5px">(this run)</span></td><td class="mono">0.576</td><td class="mono">0.588</td><td class="mono best">0.514</td><td class="mono best">0.345</td><td class="mono">0.793</td></tr>
+          <tr><td>Qwen3-Embedding-8B, original triplet run</td><td class="mono best">0.667</td><td class="mono best">0.617</td><td class="mono">0.439</td><td class="mono">0.276</td><td class="mono best">0.862</td></tr>
+          <tr><td>voyage-nano, original triplet run</td><td class="mono">0.610</td><td class="mono">0.614</td><td class="mono">0.463</td><td class="mono">0.276</td><td class="mono">0.759</td></tr>
+          <tr><td>Voyage-4-large <span class="mono" style="color:var(--muted);font-size:11.5px">(frozen, production)</span></td><td class="mono">0.609</td><td class="mono">0.602</td><td class="mono best">0.529</td><td class="mono best">0.345</td><td class="mono best">0.862</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="callout">
+      <div class="label">What changed, in one line</div>
+      <p>Only the training crowd size changed — real batch size 2→6, negatives per training row 1→2. Same synthetic training data, same loss function, same holdout. That one change moved recall@1 from 0.276 to 0.345 (tied with production) — and moved pair AUC down from 0.610 to 0.576.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="section-head"><span class="section-num">02</span><h2 class="section-title">Why one metric went up while the other went down</h2></div>
+    <div class="split">
+      <div class="card">
+        <h4><i style="background:var(--teal)"></i>Recall@1 — closed the gap</h4>
+        <p>Recall@1 asks: out of the whole candidate pool, does the true match come out ranked #1? Practicing against more rivals per step (bigger batch, 2 negatives) is a closer rehearsal for that exact test — so it improved, right up to production's own level.</p>
+      </div>
+      <div class="card">
+        <h4><i style="background:var(--copper)"></i>Pair AUC — got worse</h4>
+        <p>Pair AUC asks a narrower question: given just one candidate, is it good or bad? Spreading attention across more rivals each step means less repetition on any single head-to-head comparison — the narrow judgment call got noisier, not sharper.</p>
+      </div>
+    </div>
+    <p>Same trade-off already seen in the first report, now confirmed by pushing the same lever further in one direction: retrieval and pairwise classification are pulling on different things. Whichever matters more depends on the product — one best pick shown to a user favors pair AUC; a ranked shortlist favors recall@1/MRR.</p>
+  </section>
+
+  <section>
+    <div class="section-head"><span class="section-num">03</span><h2 class="section-title">A real ceiling, not a design choice</h2></div>
+    <p>The batch size wasn't picked freely — it was found by testing on the GPU directly. Batch size 8 used 64 of 79 GB; batch size 10 ran out of memory immediately. Training used batch size 6 (a safety margin below that wall), a real 3x increase over the original run's batch size of 2, but well short of the 32-64 originally hoped for. The bottleneck is long profile text (up to ~1,700 tokens) with no memory-saving trick available for this specific model.</p>
+  </section>
+
+  <section>
+    <div class="section-head"><span class="section-num">04</span><h2 class="section-title">Next steps</h2></div>
+    <ol class="steps">
+      <li><b>Separate the two changes.</b><span> This run moved batch size and negatives-per-row together. Run each alone to find out which one is actually doing the work.</span></li>
+      <li><b>Try a blended target.</b><span> Instead of optimizing purely for "beat every rival" or purely for "beat one rival," score checkpoints on a mix of both — aiming to land between this run and the original, not at either extreme.</span></li>
+      <li><b>Get denser negative coverage.</b><span> Only half of the training seekers had two genuinely different rejected candidates to compare against; the rest had to reuse the same one twice. A larger labeled batch with more rejections per seeker would let this experiment use 3+ negatives instead of 2.</span></li>
+      <li><b>Rerun clean.</b><span> A checkpoint-selection bug was found and fixed after this run finished — it happened to pick the right epoch anyway, but a fresh run now benefits from the fix by default.</span></li>
+    </ol>
+  </section>
+
+  <footer>
+    Boardy AI contact-intro recommender · RecSys course project · full writeup in <code>docs/twotower-rrf-triplet-bigbatch-experiment.md</code> · code isolated under <code>twotower_rrf_triplet_bigbatch/</code>
+  </footer>
+</div>

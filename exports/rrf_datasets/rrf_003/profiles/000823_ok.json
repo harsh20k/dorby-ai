@@ -1,0 +1,54 @@
+{
+  "id": 823,
+  "archetype": "Former McKinsey Partner, Venture Builder",
+  "given_name": "Zainab Kowalski",
+  "style_version": 50,
+  "archetypes_version": 138,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Zainab Kowalski is a former McKinsey partner who specialized in financial services, specifically payments. She left to become a venture builder, focusing on early-stage fintech startups. Her distinctive detail is a failed (but valuable learning experience) startup in the BNPL (Buy Now, Pay Later) space two years ago. This experience has made her more risk-averse but also deeply knowledgeable about the pitfalls of scaling in that sector. Now, she\u2019s building a portfolio of very early-stage (pre-seed/seed) fintech companies, acting as a hands-on advisor and sometimes interim executive. She's looking for founders tackling *real* problems with defensible technology, not just chasing hype. She's particularly interested in companies focused on financial inclusion and embedded finance. She\u2019s pragmatic, data-driven, and doesn\u2019t suffer fools gladly, but is ultimately passionate about helping talented founders succeed.",
+    "positioning": "Zainab Kowalski is a venture builder and advisor specializing in early-stage fintech companies. Leveraging over 15 years of experience at McKinsey & Company, she helps founders navigate the complexities of building scalable and sustainable businesses. Zainab focuses on identifying and supporting companies with strong fundamentals in areas like embedded finance, financial inclusion, and next-generation payments. She brings a unique blend of strategic insight, operational expertise, and a pragmatic approach to risk management, honed through both successful consulting engagements and firsthand experience launching her own venture. Zainab\u2019s goal is to accelerate the growth of innovative fintech solutions that deliver tangible value to consumers and businesses.",
+    "background": "\u2022 **Founder & Managing Partner, Kestrel Ventures** (2022 \u2013 Present)\n\t \u2013 Building a portfolio of pre-seed and seed-stage fintech startups, providing strategic guidance, operational support, and access to a network of investors and advisors.\n\t \u2013 Currently advising three portfolio companies focused on cross-border payments, SME lending, and fractional investing.\n\t \u2013 Developed and implemented a proprietary due diligence framework for evaluating early-stage fintech opportunities.\n\u2022 **Partner, McKinsey & Company** (2007 \u2013 2022)\n\t \u2013 Led engagements for leading financial institutions, focusing on payments, digital banking, and risk management.\n\t \u2013 Served as a subject matter expert on emerging payment technologies, including blockchain and digital currencies.\n\t \u2013 Managed teams of consultants and delivered impactful recommendations to clients, resulting in significant cost savings and revenue growth.\n\t \u2013 Led the Payments Practice for the Midwest region, growing revenue by 30% over three years.\n\u2022 **Co-founder & CEO, NovaPay** (2020 \u2013 2022) \u2013 *Failed BNPL Startup*\n\t \u2013 Conceptualized, launched, and scaled a Buy Now, Pay Later platform targeting the underserved millennial market.\n\t \u2013 Secured $5M in seed funding from prominent venture capital firms.\n\t \u2013 Gained invaluable experience in product development, marketing, and regulatory compliance \u2013 and the challenges of rapid scaling in a competitive landscape.\n\u2022 **Education, Harvard Business School** (2005 \u2013 2007) \u2013 MBA, Dean\u2019s List\n\u2022 **Education, Stanford University** (2001 \u2013 2005) \u2013 BS, Computer Science, *Summa Cum Laude*",
+    "lookingFor": "\u2022 Founders of pre-seed/seed fintech companies \u2013 ideally with a working MVP and early traction.\n\u2022 Individuals with deep expertise in specific fintech verticals (e.g., RegTech, InsurTech, embedded finance).\n\u2022 Investors (angel, seed, Series A) focused on fintech \u2013 open to exploring co-investment opportunities.\n\u2022 Mentors and advisors with experience scaling early-stage startups \u2013 particularly those who\u2019ve navigated regulatory hurdles.\n\u2022 Connections to potential strategic partners for portfolio companies (e.g., banks, payment processors).\n\u2022 Interested in learning about novel approaches to financial inclusion and serving underserved markets.",
+    "notes": "Zainab is incredibly direct and values efficiency. She\u2019s not a fan of lengthy pitches or fluff. Get straight to the point and demonstrate a clear understanding of your business. She's very open to quick calls but prefers a concise introductory email outlining the key value proposition. \n\n*  She\u2019s still processing the NovaPay experience, so avoid pitching her BNPL ideas \u2013 she\u2019s thoroughly vetted that space. \n*  She actively participates in several fintech-focused Slack groups. \n*  She\u2019s a surprisingly avid amateur astronomer and enjoys discussing space exploration.",
+    "locationAvailability": "Based in Chicago, Illinois. Available for travel within the US and occasional international trips. Primarily works remotely.",
+    "introPreferences": "\u2022 Please avoid introductions to people who are solely looking for funding \u2013 Zainab is more interested in building relationships with potential partners and advisors.\n\u2022 Prioritize introductions to founders who are actively building and scaling their businesses, not just ideating.\n\u2022 When making an introduction, briefly highlight the specific area of expertise or experience that makes the connection relevant.\n\u2022 Do *not* send unsolicited decks or lengthy business plans. A brief summary and a link to a website or LinkedIn profile are sufficient.\n\u2022 A warm introduction with context is always preferred over a cold outreach.",
+    "personalPreferences": "Prefers email for initial contact. Will respond quickly to concise, well-written messages.",
+    "meetingAndSchedulingPreferences": "Prefers 30-minute virtual meetings. Is generally available during business hours (Central Time) but can be flexible for important conversations."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 15.844128131866455,
+      "input_tokens": 763,
+      "output_tokens": 1181,
+      "problems": []
+    }
+  ],
+  "success": true
+}

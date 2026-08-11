@@ -92,15 +92,28 @@ def build_split_bundle(
     train_dev_user_fraction: float = 0.1,
     train_dev_min_pairs: int = 20,
     seed: int = 42,
-    include_synth: bool = True,
+    include_synth: bool = False,
 ) -> SplitBundle:
     """Build leakage-safe train / train-dev / holdout from frozen seed_split + synth.
 
     Holdout = frozen eval_pair_ids only (never used for model selection).
     Train pool = frozen train_pair_ids + promoted synth pairs that touch no eval user.
     Train-dev = user-disjoint carve from the train pool.
-    ``include_synth=False`` drops promoted synth pairs from the train pool
-    entirely (real-only control arm — see docs/twotower-run-001-findings.md).
+
+    ``include_synth`` **defaults to False as of 2026-07-30** (it was True). The 460
+    promoted `batch_500_001` pairs still sitting in ``data/dataset_*.json`` are
+    known-harmful, not merely unhelpful: a classifier shown only the candidate's
+    profile text predicts their label with 99.2% accuracy (the generator leaked the
+    label into the text — ``docs/possible-bugs.md`` #4), and ``run_001`` trained on
+    them scored 0.4845 hard-negative AUC, below chance, while ``arm_a_real_only``
+    beat it on a fifth of the data. Quarantine is enforced here rather than by
+    deleting rows, because deleting them would make ``run_001`` unreproducible.
+    See ``data/archive/batch_500_001_quarantined/README.md``.
+
+    Every caller written after ``run_001`` already passed ``include_synth=False``
+    explicitly, so this flip changes behaviour for exactly one path: ``twotower``
+    training launched without a flag. Pass ``include_synth=True`` to reproduce
+    ``run_001``.
     """
     positives, negatives = load_canonical_pairs(data_dir)
     split = load_split(split_path)

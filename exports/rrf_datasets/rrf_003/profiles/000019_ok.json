@@ -1,0 +1,54 @@
+{
+  "id": 19,
+  "archetype": "AI-Powered SaaS Solo Founder",
+  "given_name": "Mateus Tanaka",
+  "style_version": 2,
+  "archetypes_version": 4,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Mateus Tanaka is a 34-year-old, first-time founder bootstrapping an AI-powered platform for optimizing marketing spend for small e-commerce businesses. He's a former data scientist at a large ad agency (WPP) where he discovered the massive inefficiencies in how smaller clients were managing their ad budgets \u2013 they lacked the tools and expertise to truly leverage data. He\u2019s self-taught in full-stack development and built the MVP of 'AdApt' over the past 18 months, achieving $10k MRR with minimal marketing. He\u2019s now focused on raising a small pre-seed round ($500k) to build out the core engineering team and accelerate user acquisition. He\u2019s *extremely* focused on capital efficiency and wants investors who understand his lean approach. He\u2019s technically brilliant but can be a bit awkward in networking, preferring direct, data-driven conversations. He\u2019s particularly interested in connecting with other bootstrapped SaaS founders, potential angel investors with a marketing tech focus, and experienced engineers who are excited about AI.",
+    "positioning": "I'm Mateus Tanaka, founder of AdApt, an AI-powered platform helping e-commerce businesses maximize their marketing ROI. After years witnessing wasted ad spend at a major agency, I built AdApt to democratize access to data-driven marketing optimization. We're currently experiencing strong traction with over 50 paying customers and $10k MRR, proving the market need for a simpler, more effective solution. \n\nI'm currently focused on raising a pre-seed round to scale our engineering efforts and expand our market reach. I'm looking for partners who share my commitment to building a sustainable, capital-efficient business.  \n\nMy background combines deep analytical skills with a practical understanding of the challenges faced by small businesses. I\u2019m uniquely positioned to deliver a platform that not only analyzes data but also provides actionable insights that drive real results.  I'm eager to connect with individuals who can offer strategic guidance, potential investment, or technical expertise as we build the future of marketing optimization.",
+    "background": "\u2022 **Founder & CEO, AdApt** (Jan 2022 \u2013 Present)\n    \u2013 Developed and launched AdApt, an AI-powered SaaS platform for e-commerce marketing optimization.\n    \u2013 Achieved $10,000 MRR within 18 months of launch, with 50+ active paying customers.\n    \u2013 Led all aspects of the business, including product development, marketing, sales, and customer support.\n    \u2013 Implemented a lean startup methodology, prioritizing rapid iteration and customer feedback.\n    \u2013 Currently preparing for a pre-seed funding round.\n\n\u2022 **Data Scientist, WPP** (June 2018 \u2013 Dec 2021)\n    \u2013 Developed and implemented machine learning models to optimize digital advertising campaigns for Fortune 500 clients.\n    \u2013 Analyzed large datasets to identify key trends and insights, improving campaign performance by an average of 15%.\n    \u2013 Collaborated with cross-functional teams to develop and execute data-driven marketing strategies.\n    \u2013 Presented findings and recommendations to senior management and clients.\n\n\u2022 **Research Assistant, Stanford University \u2013 AI Lab** (Sept 2016 \u2013 May 2018)\n    \u2013 Assisted in research on deep learning algorithms for natural language processing.\n    \u2013 Published research findings in peer-reviewed conferences.\n\n\u2022 **Education:**\n    \u2013 **Master of Science, Data Science**, Stanford University (2018)\n    \u2013 **Bachelor of Science, Computer Science**, University of California, Berkeley (2016)\n\n\u2022 **Skills:** Python, Machine Learning, Deep Learning, SQL, AWS, JavaScript, React, Node.js, Data Visualization (Tableau, Power BI), Digital Marketing, SaaS, Full-Stack Development.",
+    "lookingFor": "### Investment Opportunities\n\u2022 Angel investors with a focus on marketing technology and a history of supporting bootstrapped SaaS companies.\n\u2022 Seed-stage VCs interested in capital-efficient growth and strong unit economics.\n\n### Mentorship & Advice\n\u2022 Experienced SaaS founders who have successfully raised pre-seed/seed funding.\n\u2022 Marketing experts with a deep understanding of e-commerce and paid advertising.\n\n### Technical Talent\n\u2022 Full-stack engineers with experience in React and Node.js (remote positions).\n\u2022 Machine learning engineers with a passion for building scalable AI solutions.",
+    "notes": "Mateus is highly intelligent and driven, but can be somewhat introverted and struggles with 'small talk'. He responds best to direct, data-driven questions. He's *very* protective of his equity and is wary of investors who push for aggressive valuations. Recent conversation (10/26) indicated he's been getting a lot of inbound from recruiters for data science roles, which he's politely declining but finds distracting. He\u2019s a bit sensitive about the fact that AdApt is still a one-person engineering team \u2013 he knows it\u2019s a vulnerability. He mentioned a past interest in blockchain but has explicitly stated it's no longer a priority. He\u2019s currently reading 'The Mom Test' and is actively trying to improve his customer interview skills.",
+    "locationAvailability": "Based in San Francisco, CA, but open to connecting with individuals globally.",
+    "introPreferences": "\u2022 **Hard Requirements:** Individuals with direct experience in pre-seed/seed funding for SaaS companies.\n\u2022 **Soft Preferences:** Angel investors with a marketing tech focus; Experienced SaaS founders; Full-stack engineers with React/Node.js expertise.\n\u2022 **Avoid:** Recruiters (unless specifically for engineering roles); Individuals offering services unrelated to SaaS growth or funding.\n\u2022 **Introduction Note:** Please mention my focus on capital efficiency and the $10k MRR traction.",
+    "personalPreferences": "I prefer concise and direct communication. Email is fine for initial contact, but I'm happy to jump on a quick video call if you have a specific opportunity to discuss. I\u2019m not a big fan of lengthy back-and-forth; I appreciate people who get straight to the point. I check Slack regularly, but WhatsApp is preferred for quick updates if we\u2019ve already connected.",
+    "meetingAndSchedulingPreferences": "I\u2019m generally available for 30-minute virtual meetings after 2 PM PST. Please send over a brief agenda beforehand so I can prepare."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 24.164366245269775,
+      "input_tokens": 772,
+      "output_tokens": 1379,
+      "problems": []
+    }
+  ],
+  "success": true
+}

@@ -1,0 +1,74 @@
+{
+  "id": 85,
+  "archetype": "Legal/Finance to Tech Founder",
+  "given_name": "Mei Kaur",
+  "style_version": 6,
+  "archetypes_version": 15,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Mei Kaur is a former securities litigator who founded 'ClauseAI,' a legal tech startup using AI to automate contract review and compliance for early-stage companies. Her background gives her a deep understanding of the legal risks startups face, and she's building ClauseAI to be the 'first line of defense' for founders who can't afford large legal teams. She's currently focused on Series A funding and strategic partnerships with venture capital firms and angel investors who specialize in pre-seed and seed-stage tech companies. She's *very* particular about who she connects with \u2013 she needs people who understand the pain points of scaling a legal tech business and can provide tangible value beyond just networking. She\u2019s actively seeking advisors with experience in SaaS sales and scaling AI models.",
+    "positioning": "I am a founder building the future of legal risk management for startups. For over a decade, I practiced as a securities litigation attorney at major firms, defending companies against complex claims of fraud, breach of contract, and regulatory violations. This experience provided me with an intimate understanding of the incredibly high costs \u2013 both financial and strategic \u2013 associated with legal missteps, particularly for companies in their formative stages. I saw firsthand how founders, often brilliant technologists, were burdened by navigating a labyrinthine legal landscape, diverting valuable resources from innovation. \n\nClauseAI is my response to that problem. We leverage cutting-edge AI to automate contract review, identify potential compliance issues, and provide actionable insights for early-stage companies. We're not aiming to *replace* lawyers, but to empower founders to proactively mitigate risk, negotiate effectively, and focus on building their businesses. Our platform integrates seamlessly with existing workflows, offering a cost-effective and scalable solution that grows with our clients.\n\nMy approach is rooted in a deep understanding of both the legal and technological domains. I don\u2019t speak \u2018legalese\u2019 *at* founders \u2013 I translate complex legal concepts into clear, actionable steps. I\u2019m passionate about building a company that not only delivers exceptional technology but also fosters trust and transparency in the often-opaque world of legal compliance. I believe that responsible growth requires a proactive legal strategy, and ClauseAI is designed to make that strategy accessible to everyone.",
+    "background": "- **Founder & CEO, ClauseAI** (2022 \u2013 Present)\n  - Led all aspects of company formation, product development, fundraising, and team building.\n  - Secured seed funding of $1.5M from angel investors and early-stage funds.\n  - Developed and launched ClauseAI's core contract review platform, achieving 100+ paying customers within the first year.\n  - Built and manage a team of 8 engineers, legal experts, and sales professionals.\n  - Spearheading current Series A fundraising round.\n- **Associate Attorney, Kirkland & Ellis LLP** (2015 \u2013 2022)\n  - Represented publicly traded companies in high-stakes securities litigation, including class action lawsuits and regulatory investigations.\n  - Conducted extensive legal research, drafted pleadings and motions, and managed all phases of discovery.\n  - Contributed to successful defense verdicts and settlements in numerous complex cases.\n- **Education:** Juris Doctor (J.D.), Harvard Law School (2015); Bachelor of Arts (B.A.), Economics, Stanford University (2012)\n- **Skills:** Legal Technology, Contract Law, Securities Litigation, AI/ML (fundamentals), SaaS, Fundraising, Team Leadership, Risk Management, Negotiation, Public Speaking",
+    "lookingFor": "I'm currently focused on building strategic relationships to accelerate ClauseAI's growth. I'm actively seeking connections in the following areas:\n\n**Priority 1: Series A Investors**\n  - Venture Capital firms specializing in SaaS, LegalTech, or AI/ML with an investment range of $5M - $15M.\n  - Partners or Principals with a demonstrated track record of investing in and supporting early-stage companies.\n  - *Not interested* in firms that primarily focus on late-stage growth equity.\n\n**Priority 2: Strategic Advisors**\n  - Experienced SaaS sales leaders with a proven ability to scale revenue in a B2B environment. (Ideally, experience with developer tools or legal software)\n  - AI/ML engineers with expertise in scaling and deploying large language models.\n  - Former General Counsel at high-growth startups.\n\n**Priority 3: Potential Partnerships**\n  - Venture Capital firms looking to offer value-add services to their portfolio companies (e.g., discounted access to ClauseAI).\n  - Angel investor networks active in the legal tech space.\n  - Companies offering complementary services to startups (e.g., accounting software, HR platforms).\n\nI\u2019m particularly interested in individuals who: understand the unique challenges faced by early-stage startups; have a strong network within the venture capital community; and are genuinely passionate about innovation in the legal industry. I\u2019m *not* looking for purely transactional connections or individuals who are simply looking to 'pick my brain'.",
+    "notes": "Just completed a series of meetings with potential Series A investors in the Bay Area. General sentiment is positive, but investors are keen to see continued traction with customer acquisition. Specifically, they want to see a lower customer acquisition cost (CAC). We're currently working on optimizing our marketing funnel to address this. \n\n- Had a great conversation with David Chen (Partner at Apex Ventures) \u2013 he's intrigued by ClauseAI's potential and is circulating our deck internally. I'll follow up next week.\n- Spoke with Sarah Lee (Angel Investor) \u2013 she's interested in exploring a potential investment but wants to see more data on our customer retention rates.\n- Received a few introductions to potential advisors, but none have been a strong fit so far. Looking for someone with *deep* SaaS sales experience, not just general marketing expertise. \n\nI\u2019m currently prioritizing meetings with investors over networking events. Please prioritize introductions to relevant VCs and advisors.",
+    "locationAvailability": "I am based in New York City but frequently travel to the San Francisco Bay Area for fundraising and investor meetings. I\u2019m also open to virtual meetings with individuals located anywhere in the United States and Europe.",
+    "introPreferences": "Please adhere to the following when making introductions to Mei Kaur:\n\n**Hard Requirements:**\n - The individual *must* have a clear understanding of the challenges faced by early-stage startups.\n - The individual *must* be able to articulate how their expertise or resources can directly benefit ClauseAI.\n - *Do not* introduce me to individuals who are primarily seeking funding or mentorship. I am the one offering the product/service.\n\n**Soft Preferences:**\n - Prioritize introductions to individuals with a proven track record of success in SaaS, LegalTech, or AI/ML.\n - Briefly highlight the connection's relevant experience and expertise in the introduction email.\n - Keep the introduction concise and focused on the potential synergy between Mei and the connection.\n\n**Effective Introduction Style:**\n 'Hi [Connection Name], Mei Kaur is the founder of ClauseAI, a legal tech startup automating contract review for early-stage companies. Given your experience at [Company], I thought you two might have a valuable conversation about [specific topic]. Mei, [Connection Name] has a strong background in [relevant area].'\n\n**Avoid:** Generic introductions or introductions to individuals who are clearly outside of my target profile.",
+    "personalPreferences": "I prefer to communicate via email initially. Once a connection is established, I\u2019m happy to schedule a quick call via Zoom. Please avoid LinkedIn InMail \u2013 it often gets lost in the noise. I respond to emails within 24-48 hours.",
+    "meetingAndSchedulingPreferences": "I'm generally available for meetings during Eastern Time business hours. Please use Calendly (link available upon request) to schedule a meeting."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 27.640260934829712,
+      "input_tokens": 848,
+      "output_tokens": 1654,
+      "problems": [
+        "background: possible truncation (ends with '...essional (CIPP/US) - 2022')"
+      ]
+    },
+    {
+      "attempt": 2,
+      "elapsed_s": 26.315524101257324,
+      "input_tokens": 848,
+      "output_tokens": 1601,
+      "problems": [
+        "background: possible truncation (ends with '...otiation, Public Speaking')"
+      ]
+    },
+    {
+      "attempt": 3,
+      "elapsed_s": 30.070470809936523,
+      "input_tokens": 848,
+      "output_tokens": 1687,
+      "problems": [
+        "background: possible truncation (ends with '...otiation, Public Speaking')"
+      ]
+    }
+  ],
+  "success": false
+}

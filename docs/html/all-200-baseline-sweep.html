@@ -1,0 +1,332 @@
+<title>Where the 69-pair holdout stops working</title>
+<style>
+  :root {
+    --ground: #f7f6f3;
+    --panel: #ffffff;
+    --ink: #1c1e22;
+    --ink-soft: #5a6069;
+    --ink-faint: #8b929c;
+    --rule: #e0ddd6;
+    --accent: #b5541f;      /* signal */
+    --accent-soft: #f3e4d9;
+    --good: #2f6b4f;
+    --bad: #a32c26;
+    --band: #f0eee8;
+    --mono: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+    --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    --serif: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --ground: #14161a;
+      --panel: #1c1f25;
+      --ink: #e8e6e1;
+      --ink-soft: #a8afb9;
+      --ink-faint: #737b86;
+      --rule: #2e333b;
+      --accent: #e08b52;
+      --accent-soft: #33241a;
+      --good: #6fbd92;
+      --bad: #e2716a;
+      --band: #22262d;
+    }
+  }
+  :root[data-theme="dark"] {
+    --ground: #14161a; --panel: #1c1f25; --ink: #e8e6e1; --ink-soft: #a8afb9;
+    --ink-faint: #737b86; --rule: #2e333b; --accent: #e08b52;
+    --accent-soft: #33241a; --good: #6fbd92; --bad: #e2716a; --band: #22262d;
+  }
+  :root[data-theme="light"] {
+    --ground: #f7f6f3; --panel: #ffffff; --ink: #1c1e22; --ink-soft: #5a6069;
+    --ink-faint: #8b929c; --rule: #e0ddd6; --accent: #b5541f;
+    --accent-soft: #f3e4d9; --good: #2f6b4f; --bad: #a32c26; --band: #f0eee8;
+  }
+
+  body {
+    background: var(--ground); color: var(--ink);
+    font-family: var(--sans); line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 60rem; margin: 0 auto; padding: 3.5rem 1.5rem 5rem; }
+  .stack { display: flex; flex-direction: column; gap: 2.5rem; }
+
+  .eyebrow {
+    font-family: var(--mono); font-size: .7rem; letter-spacing: .14em;
+    text-transform: uppercase; color: var(--accent); margin-bottom: .9rem;
+  }
+  h1 {
+    font-family: var(--serif); font-weight: 600; font-size: clamp(2rem, 5vw, 3rem);
+    line-height: 1.12; text-wrap: balance; letter-spacing: -.015em; margin-bottom: 1rem;
+  }
+  .lede { font-size: 1.1rem; color: var(--ink-soft); max-width: 44ch; }
+  h2 {
+    font-family: var(--serif); font-size: 1.5rem; font-weight: 600;
+    letter-spacing: -.01em; text-wrap: balance;
+    padding-bottom: .5rem; border-bottom: 1px solid var(--rule); margin-bottom: 1.2rem;
+  }
+  h3 { font-size: 1rem; font-weight: 650; margin-bottom: .4rem; }
+  p { max-width: 68ch; }
+  p + p { margin-top: .85rem; }
+  code { font-family: var(--mono); font-size: .88em; background: var(--band);
+         padding: .1em .35em; border-radius: 3px; }
+  strong { font-weight: 650; }
+
+  /* the three-number hero */
+  .corr { display: grid; grid-template-columns: repeat(auto-fit, minmax(11rem, 1fr));
+          gap: 1px; background: var(--rule); border: 1px solid var(--rule);
+          border-radius: 6px; overflow: hidden; }
+  .corr > div { background: var(--panel); padding: 1.4rem 1.2rem; }
+  .corr .grp { font-family: var(--mono); font-size: .72rem; letter-spacing: .08em;
+               text-transform: uppercase; color: var(--ink-faint); margin-bottom: .5rem; }
+  .corr .val { font-family: var(--mono); font-size: 2.1rem; font-weight: 600;
+               font-variant-numeric: tabular-nums; line-height: 1; }
+  .corr .note { font-size: .82rem; color: var(--ink-soft); margin-top: .5rem; }
+  .corr .fail { background: var(--accent-soft); }
+  .corr .fail .val { color: var(--accent); }
+  .ok .val { color: var(--good); }
+
+  .tablewrap { overflow-x: auto; border: 1px solid var(--rule);
+               border-radius: 6px; background: var(--panel); }
+  table { border-collapse: collapse; width: 100%; font-size: .88rem; }
+  th, td { padding: .55rem .8rem; text-align: right; white-space: nowrap;
+           border-bottom: 1px solid var(--rule); }
+  th:first-child, td:first-child { text-align: left; }
+  thead th { font-family: var(--mono); font-size: .68rem; letter-spacing: .07em;
+             text-transform: uppercase; color: var(--ink-faint);
+             background: var(--band); position: sticky; top: 0; }
+  tbody tr:last-child td { border-bottom: none; }
+  td.num { font-family: var(--mono); font-variant-numeric: tabular-nums; }
+  .best { color: var(--accent); font-weight: 650; }
+  .fam { font-family: var(--mono); font-size: .72rem; color: var(--ink-faint); }
+  tr.rule-top td { border-top: 2px solid var(--accent); }
+  .exact { color: var(--good); font-family: var(--mono); font-size: .8rem; }
+  .drift { color: var(--ink-faint); font-family: var(--mono); font-size: .8rem; }
+
+  .callout { border-left: 3px solid var(--accent); background: var(--panel);
+             padding: 1rem 1.2rem; border-radius: 0 6px 6px 0; }
+  .callout h3 { color: var(--accent); }
+
+  .findings { display: flex; flex-direction: column; gap: 1.3rem; }
+  .finding { display: grid; grid-template-columns: 2.2rem 1fr; gap: .9rem; }
+  .finding .n { font-family: var(--mono); font-size: 1.4rem; color: var(--ink-faint);
+                font-variant-numeric: tabular-nums; line-height: 1.2; }
+
+  footer { margin-top: 1rem; padding-top: 1.5rem; border-top: 1px solid var(--rule);
+           font-size: .84rem; color: var(--ink-faint); }
+  ul { padding-left: 1.1rem; max-width: 68ch; }
+  li + li { margin-top: .4rem; }
+</style>
+
+<div class="wrap stack">
+
+  <header>
+    <div class="eyebrow">Boardy AI · RecSys · evaluation methodology</div>
+    <h1>The holdout ranks bad models fine, and good models not at all</h1>
+    <p class="lede">Fourteen models re-scored on all 200 real pairs instead of 69.
+    The leaderboard changed — but the reason it changed is the actual finding.</p>
+  </header>
+
+  <section>
+    <p>Every baseline number in this project has been computed on a frozen 69-pair
+    holdout: <strong>29 positive queries</strong> ranked against 65 candidates.
+    That population had already reversed a conclusion three times. So all fourteen
+    models were re-scored on the full <strong>200 real pairs</strong> — 100 positive
+    queries, a 178-candidate corpus, 2.9× the sample.</p>
+
+    <p>Rank the models by MRR on each population and correlate the two orderings.
+    Taken as a whole, the holdout looks excellent:</p>
+
+    <div class="corr">
+      <div class="ok">
+        <div class="grp">All 14 models</div>
+        <div class="val">+0.886</div>
+        <div class="note">Spearman, p &lt; 0.001. Looks like a trustworthy proxy.</div>
+      </div>
+      <div class="ok">
+        <div class="grp">Bottom 8</div>
+        <div class="val">+0.976</div>
+        <div class="note">Near-perfect. Weak models are ordered correctly.</div>
+      </div>
+      <div class="fail">
+        <div class="grp">Top 6</div>
+        <div class="val">−0.029</div>
+        <div class="note">p = 0.957. Indistinguishable from random ordering.</div>
+      </div>
+    </div>
+
+    <p style="margin-top:1.4rem">The headline <code>+0.886</code> is carried almost
+    entirely by the bottom of the table. Among the six best models the holdout
+    carries <strong>no ranking information whatsoever</strong> — and those six span
+    just 0.052 MRR.</p>
+
+    <div class="callout">
+      <h3>Why this is the worst possible place to fail</h3>
+      <p>Nobody in this project has ever needed to know whether zembed-1 beats
+      frozen BERT. Every decision actually made — which baseline is the bar, whether
+      a fine-tune helped, whether an open-weight model can replace production — was
+      a decision <em>among the top six</em>. That is exactly the region where the
+      holdout is blind.</p>
+      <p style="margin-top:.7rem"><strong>The rule:</strong> the holdout is a fine
+      screen for “is this model broken”. It cannot rank models that work.</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>All 200 real pairs · 100 positive queries · 178 candidates</h2>
+    <div class="tablewrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Model</th><th>Family</th><th>Pair AUC</th><th>Hard-neg</th>
+            <th>MRR</th><th>R@1</th><th>R@10</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>twotower <code>top1_ctrl</code></td><td class="fam">fine-tuned</td><td class="num">0.5683</td><td class="num">0.5484</td><td class="num best">0.3550</td><td class="num best">0.1900</td><td class="num">0.6900</td></tr>
+          <tr><td>twotower Arm A (v2)</td><td class="fam">fine-tuned</td><td class="num">0.5594</td><td class="num">0.5558</td><td class="num">0.3341</td><td class="num">0.1800</td><td class="num">0.6400</td></tr>
+          <tr><td>BGE-en-ICL</td><td class="fam">open-weight</td><td class="num">0.5389</td><td class="num">0.5226</td><td class="num">0.3190</td><td class="num">0.1700</td><td class="num">0.6200</td></tr>
+          <tr><td>Voyage-4-nano (frozen)</td><td class="fam">baseline</td><td class="num">0.5593</td><td class="num">0.5046</td><td class="num">0.3171</td><td class="num">0.1800</td><td class="num">0.5900</td></tr>
+          <tr><td>Voyage-4-large (production)</td><td class="fam">baseline</td><td class="num">0.5726</td><td class="num">0.5422</td><td class="num">0.3102</td><td class="num">0.1300</td><td class="num best">0.7000</td></tr>
+          <tr><td>twotower Qwen micro-6</td><td class="fam">fine-tuned</td><td class="num best">0.5947</td><td class="num best">0.5608</td><td class="num">0.3031</td><td class="num">0.1400</td><td class="num">0.6600</td></tr>
+          <tr class="rule-top"><td>twotower <code>top1_sharp</code></td><td class="fam">fine-tuned</td><td class="num">0.5429</td><td class="num">0.4578</td><td class="num">0.3010</td><td class="num">0.1400</td><td class="num">0.6400</td></tr>
+          <tr><td>twotower Qwen micro-1</td><td class="fam">fine-tuned</td><td class="num">0.5604</td><td class="num">0.4828</td><td class="num">0.2734</td><td class="num">0.1400</td><td class="num">0.5600</td></tr>
+          <tr><td>Qwen3-Embedding-8B</td><td class="fam">open-weight</td><td class="num">0.5529</td><td class="num">0.4680</td><td class="num">0.2045</td><td class="num">0.0500</td><td class="num">0.5500</td></tr>
+          <tr><td>TF-IDF (lexical)</td><td class="fam">baseline</td><td class="num">0.5649</td><td class="num">0.5164</td><td class="num">0.1313</td><td class="num">0.0500</td><td class="num">0.2600</td></tr>
+          <tr><td>E5-Mistral-7B-instruct</td><td class="fam">open-weight</td><td class="num">0.4597</td><td class="num">0.3772</td><td class="num">0.1159</td><td class="num">0.0300</td><td class="num">0.3000</td></tr>
+          <tr><td>Frozen BERT</td><td class="fam">baseline</td><td class="num">0.4697</td><td class="num">0.4108</td><td class="num">0.0941</td><td class="num">0.0200</td><td class="num">0.1800</td></tr>
+          <tr><td>NV-Embed-v2</td><td class="fam">open-weight</td><td class="num">0.4841</td><td class="num">0.3836</td><td class="num">0.0857</td><td class="num">0.0400</td><td class="num">0.1600</td></tr>
+          <tr><td>zembed-1-embedding</td><td class="fam">open-weight</td><td class="num">0.4707</td><td class="num">0.4864</td><td class="num">0.0377</td><td class="num">0.0100</td><td class="num">0.0800</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p style="margin-top:.8rem; font-size:.85rem; color:var(--ink-faint)">
+      The rule marks the boundary of the “top 6” — the group the holdout cannot order.
+      Retrieval metrics are comparable between models within one population only.</p>
+  </section>
+
+  <section>
+    <h2>What changes</h2>
+    <div class="findings">
+
+      <div class="finding">
+        <div class="n">01</div>
+        <div>
+          <h3>“Qwen3-Embedding-8B beats Voyage-4-large” is retracted</h3>
+          <p>The claim in <code>CLAUDE.md</code> — the first model of any kind to beat
+          Boardy's production model, 0.6595 vs 0.6086 — does not survive. On 200 pairs
+          Qwen scores <strong>0.5529 against Voyage-4-large's 0.5726</strong>, and loses
+          on every retrieval metric (MRR 0.2045 vs 0.3102, R@1 0.0500 vs 0.1300). Its
+          hard-negative AUC of 0.4680 is below chance — and hard negatives are the only
+          population that exists in production.</p>
+          <p>Verified through the same <code>baselines/hf_embedding</code> code path,
+          same 8192 context, no truncation. This run's own holdout subset lands at
+          0.6543 against the published 0.6595.</p>
+        </div>
+      </div>
+
+      <div class="finding">
+        <div class="n">02</div>
+        <div>
+          <h3>No open-weight model beats production overall</h3>
+          <p>BGE-en-ICL is the closest and genuinely good at retrieval — MRR 0.3190 and
+          R@1 0.1700 both <em>beat</em> Voyage-4-large — but it trails on pair AUC
+          (0.5389 vs 0.5726) and recall@10. A real result worth carrying forward, but
+          not the claim that was on the board.</p>
+        </div>
+      </div>
+
+      <div class="finding">
+        <div class="n">03</div>
+        <div>
+          <h3>TF-IDF's strength was a small-pool artifact</h3>
+          <p>Pair AUC holds up (0.5649 vs 0.5922) but retrieval collapses as the pool
+          grows: MRR 0.2475 → 0.1313, R@1 0.1379 → 0.0500. TF-IDF beating the
+          fine-tunes was always a pair-classification result; it does not survive as a
+          retrieval result.</p>
+        </div>
+      </div>
+
+      <div class="finding">
+        <div class="n">04</div>
+        <div>
+          <h3>The fine-tuned nano arms hold the top two spots</h3>
+          <p><code>top1_ctrl</code> (0.3550) and Arm A v2 (0.3341) lead all fourteen
+          models, ahead of production. The 69-pair view had ranked Qwen micro-6 first;
+          on 200 pairs it falls to sixth — the largest rank movement in the table.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section>
+    <h2>Why these numbers can be trusted</h2>
+    <p>Each run scored the holdout subset alongside all 200, so every model's holdout
+    row is checkable against its own previously published number — same code, same
+    encoders, same metric functions.</p>
+    <div class="tablewrap">
+      <table>
+        <thead><tr><th>Model</th><th>Published holdout AUC</th><th>This sweep</th><th>Delta</th></tr></thead>
+        <tbody>
+          <tr><td>TF-IDF</td><td class="num">0.5922</td><td class="num">0.5922</td><td class="exact">exact</td></tr>
+          <tr><td>Frozen BERT</td><td class="num">0.4595</td><td class="num">0.4595</td><td class="exact">exact</td></tr>
+          <tr><td>E5-Mistral-7B</td><td class="num">0.5664</td><td class="num">0.5664</td><td class="exact">exact</td></tr>
+          <tr><td>BGE-en-ICL</td><td class="num">0.5750</td><td class="num">0.5750</td><td class="exact">exact</td></tr>
+          <tr><td>NV-Embed-v2</td><td class="num">0.5034</td><td class="num">0.5034</td><td class="exact">exact</td></tr>
+          <tr><td>zembed-1</td><td class="num">0.5052</td><td class="num">0.5086</td><td class="drift">+0.0034</td></tr>
+          <tr><td>Qwen3-8B</td><td class="num">0.6595</td><td class="num">0.6543</td><td class="drift">−0.0052</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p style="margin-top:.9rem">Five of seven reproduce exactly. The two that don't are
+    precisely the models running bf16, where a text's embedding shifts slightly with
+    which texts share its batch. fp32 models reproduce to the digit; bf16 lands within
+    ±0.006. No protocol difference is involved anywhere.</p>
+  </section>
+
+  <section>
+    <h2>Two defects found on the way</h2>
+    <div class="callout">
+      <h3>TF-IDF is not reproducible across environments</h3>
+      <p><code>baselines/tfidf</code> fits with <code>max_features=20000</code>, and on
+      this data the vocabulary lands at <em>exactly</em> 20000 — the truncation binds.
+      sklearn then drops features by document frequency, and that tie-break is not
+      stable across environments. Identical code, data, scikit-learn 1.9.0 and numpy
+      2.4.6 give holdout 0.5922 / MRR 0.2475 in this repo's venv but 0.5914 / 0.2653 in
+      a container. There are no ties in the score matrix — it is a genuinely different
+      fitted vectorizer. TF-IDF's numbers here therefore come from a local run, the only
+      environment reproducing the published row.</p>
+    </div>
+    <div class="callout" style="margin-top:1rem">
+      <h3><code>max_length</code> must match the published run</h3>
+      <p>An initial pass ran E5-Mistral and NV-Embed-v2 at 4096 where their published
+      runs used 8192. E5's holdout drifted to 0.5819 from 0.5664; corrected to 8192 it
+      reproduces exactly. NV-Embed additionally OOMs at 8192 on A100-40GB for the
+      200-pair text set and needs A100-80GB.</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>Caveats</h2>
+    <ul>
+      <li>100 positive queries still quantizes recall@1 at 0.01. One- or two-query
+      differences remain noise; the top-6 spread of 0.052 MRR is roughly five queries.</li>
+      <li>Retrieval metrics compare models <em>within</em> one population only — a
+      178-candidate pool is strictly harder than a 65-candidate one.</li>
+      <li>NV-Embed-v2 remains a documented approximation: it ships no
+      sentence-transformers prompts dict and is run symmetrically, which understates it.</li>
+      <li>The hybrid TF-IDF+nano fusion and the LLM judge are <em>not</em> in this table.
+      The fusion needs a fitted scorer rather than an encoder; the judge has no shared
+      vector space, so no retrieval metrics.</li>
+      <li>This changes how models are ranked, not what the task is. Absolute numbers stay
+      low because the task is residual “will these two connect”, not topical relevance.</li>
+    </ul>
+  </section>
+
+  <footer>
+    Package <code>eval_real_full/</code> · writeup <code>docs/all-200-baseline-sweep.md</code>
+    · full tables <code>docs/baseline-results-real200.md</code><br>
+    14 models · 200 real pairs · total Modal cost $1.38 · 2026-07-31
+  </footer>
+
+</div>

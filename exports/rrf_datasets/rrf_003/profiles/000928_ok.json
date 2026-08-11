@@ -1,0 +1,54 @@
+{
+  "id": 928,
+  "archetype": "European Cybersecurity Technical Operator",
+  "given_name": "Fatima Novak",
+  "style_version": 57,
+  "archetypes_version": 156,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Fatima Novak is a 28-year-old Polish-German dual citizen with a strong technical background in threat intelligence and malware analysis. She recently (6 months ago) co-founded 'Sentinel Insights,' a boutique cybersecurity firm specializing in proactive threat hunting and incident response for mid-sized European manufacturing companies \u2013 a sector often overlooked but increasingly targeted. Her distinctive career detail is a year spent as a 'red team' operator *within* a major German automotive supplier, giving her unique insight into the vulnerabilities of industrial control systems (ICS). She\u2019s highly focused on building Sentinel Insights\u2019 reputation for technical expertise and securing seed funding. She\u2019s actively seeking connections to potential clients, investors specializing in industrial cybersecurity, and senior threat intelligence analysts to expand her team. She\u2019s a very direct communicator, appreciates concise information, and is skeptical of overly hyped security solutions.",
+    "positioning": "I'm Fatima Novak, co-founder of Sentinel Insights. We\u2019re a new cybersecurity firm focused on proactively defending European manufacturing companies against increasingly sophisticated cyber threats. Manufacturing consistently lags behind other sectors in cybersecurity investment, making it a prime target. We differentiate ourselves by offering a deeply technical, threat-hunting-led approach. \n\nOur core service is continuous threat monitoring and incident response, tailored specifically to the unique challenges of ICS and operational technology (OT) environments. We leverage a combination of open-source intelligence (OSINT), proprietary malware analysis, and endpoint detection and response (EDR) solutions. \n\nKey Milestones in the last six months:\n* Secured initial contracts with three manufacturing clients in Germany and Poland.\n* Developed a custom YARA rule set targeting known ICS malware variants.\n* Established a partnership with a leading EDR vendor for joint threat research.\n\nCurrently, we're focused on scaling our operations and securing seed funding to expand our team and enhance our threat intelligence capabilities. We\u2019re looking for partners who understand the complexities of the industrial cybersecurity landscape and share our commitment to proactive defense.",
+    "background": "* **Co-founder & CTO, Sentinel Insights** (Berlin, Germany \u2013 Oct 2023 \u2013 Present)\n    * Spearheaded the development of Sentinel Insights\u2019 core threat detection and response platform.\n    * Led the onboarding of initial clients, including technical scoping, deployment, and incident response.\n    * Managed a small team of junior analysts, providing mentorship and technical guidance.\n    * Responsible for the company's technical roadmap and security research initiatives.\n* **Red Team Operator, AutoTech GmbH** (Stuttgart, Germany \u2013 Sept 2022 \u2013 Sept 2023)\n    * Conducted internal penetration testing and vulnerability assessments of AutoTech's critical infrastructure, including ICS and OT networks.\n    * Identified and exploited vulnerabilities in PLC systems, SCADA applications, and industrial control devices.\n    * Developed detailed reports outlining security weaknesses and recommended remediation strategies. *This role provided invaluable insight into the real-world vulnerabilities of industrial environments.*\n* **Security Analyst, CyberDefend Solutions** (Warsaw, Poland \u2013 June 2020 \u2013 Sept 2022)\n    * Monitored security information and event management (SIEM) systems for malicious activity.\n    * Conducted malware analysis and reverse engineering to identify and understand emerging threats.\n    * Participated in incident response activities, including containment, eradication, and recovery.\n    * Contributed to the development of security policies and procedures.\n* **M.Sc. in Cybersecurity, Technical University of Munich** (Munich, Germany \u2013 2018 \u2013 2020)\n    * Focused on malware analysis, network security, and cryptography.\n    * Thesis: 'Detecting Anomalous Behavior in Industrial Control Systems Using Machine Learning'.\n* **B.Sc. in Computer Science, University of Warsaw** (Warsaw, Poland \u2013 2015 \u2013 2018)\n    * Minor in Mathematics.\n* **Skills:** Python, YARA, Wireshark, SIEM (Splunk, ELK Stack), EDR (CrowdStrike, SentinelOne), Malware Analysis (IDA Pro, Ghidra), Vulnerability Assessment (Nmap, Nessus), ICS/OT Security, Threat Intelligence, Incident Response, German (Fluent), Polish (Native).",
+    "lookingFor": "I\u2019m actively expanding my network to support Sentinel Insights\u2019 growth. Specifically, I\u2019m looking for:\n\n* **Seed-stage investors** specializing in industrial cybersecurity. We are seeking \u20ac500k - \u20ac1M to scale our team and expand our threat intelligence capabilities. We\u2019re targeting funds with a strong understanding of the European market and a demonstrable interest in proactive security solutions.\n* **Senior Threat Intelligence Analysts** with experience in ICS/OT security. We need individuals who can contribute to our threat research efforts and develop custom detection rules. Experience with malware analysis and reverse engineering is highly desirable.\n* **Potential clients** \u2013 mid-sized manufacturing companies in Germany, Poland, and the broader DACH region. We offer a unique blend of technical expertise and industry-specific knowledge.\n* **Introductions to CISOs and security leaders** within manufacturing organizations. I'm keen to understand their biggest security challenges and demonstrate how Sentinel Insights can help.\n\nI'm also open to connecting with other cybersecurity professionals working in the industrial sector to exchange knowledge and best practices. I am particularly interested in learning about new threat trends and emerging technologies.\n\nI\u2019m *not* currently seeking partnerships with MSSPs that offer broad, generalized security services. We focus on a niche area and require partners who share that specialization.",
+    "notes": "Fatima is very direct and technically sharp. She\u2019s skeptical of marketing fluff and values substance over style. She recently attended the 'Industry 4.0 Security Summit' in Munich and is keen to follow up with contacts made there. She's currently prioritizing lead generation and fundraising. \n\n*  Avoid introductions to general cybersecurity vendors. \n*  Highlight any experience with ICS/OT security when making introductions. \n*  She\u2019s particularly interested in connections who can offer insights into the latest ransomware threats targeting industrial organizations.\n*  She prefers concise communication and dislikes lengthy email chains.",
+    "locationAvailability": "I am primarily based in Berlin, Germany, but I frequently travel to Poland for client engagements. I am comfortable with remote meetings and can accommodate different time zones.",
+    "introPreferences": "When making introductions, please:\n\n* **Hard Requirements:** The connection *must* have a demonstrable understanding of cybersecurity, preferably within the industrial sector.  Vague connections are a waste of both our time.\n* **Soft Preferences:**  Connections with experience in threat intelligence, incident response, or malware analysis are highly valued.  C-level executives and decision-makers are preferred over junior-level staff.\n* **Intro Style:**  Keep the introduction concise and focused on the potential mutual benefit. Briefly explain how the connection can help Sentinel Insights or vice versa.  Avoid overly effusive praise or lengthy descriptions of my background \u2013 I can handle that myself.\n* **Do not:** Introduce me to sales representatives from companies offering generic cybersecurity solutions. I am specifically looking for strategic partnerships and investment opportunities.",
+    "personalPreferences": "I prefer to communicate via email initially. LinkedIn is fine for initial connection, but email is best for detailed discussions. I respond quickly to well-written, concise messages.",
+    "meetingAndSchedulingPreferences": "I typically prefer 30-minute video calls for initial meetings. Please include a brief agenda when scheduling a meeting to ensure we make the most of our time. I'm generally available during standard European business hours (CET). Please propose a few specific times rather than asking 'when are you free?'"
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 22.93538212776184,
+      "input_tokens": 868,
+      "output_tokens": 1639,
+      "problems": []
+    }
+  ],
+  "success": true
+}

@@ -1,0 +1,54 @@
+{
+  "id": 65,
+  "archetype": "Ex-BigCo SaaS Go-To-Market Leader",
+  "given_name": "Maria Singh",
+  "style_version": 4,
+  "archetypes_version": 11,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Maria Singh is a seasoned Go-To-Market leader who spent 12 years at Salesforce, culminating in leading strategic partnerships for their SMB sales cloud. She left to co-found 'SynergyFlow,' a SaaS platform focused on automating partner onboarding and enablement for B2B SaaS companies. Her distinctive career detail is a deep understanding of *how* large SaaS companies successfully leverage partner ecosystems, and she's building SynergyFlow to democratize that access for smaller, faster-growing businesses. She's currently focused on seed funding and early customer acquisition, leveraging her extensive network. She's pragmatic, data-driven, and enjoys building strong relationships. She's looking for investors who understand the partner ecosystem and potential customers who are actively scaling through partnerships.",
+    "positioning": "I'm the co-founder of SynergyFlow, a SaaS platform revolutionizing partner onboarding and enablement for B2B companies. We\u2019re tackling the significant challenges of partner program scalability \u2013 specifically, the time and resources wasted on manual processes and inconsistent partner experiences. SynergyFlow automates everything from initial training and content delivery to performance tracking and co-marketing asset creation, empowering SaaS businesses to unlock the full potential of their partner networks.  We recently completed a successful beta program with three key clients, demonstrating a 30% reduction in partner onboarding time and a 15% increase in partner-sourced revenue. We\u2019re passionate about helping companies build thriving, mutually beneficial partner ecosystems.",
+    "background": "- **Salesforce (2012 - 2024):**\n  * **Senior Director, Strategic Partnerships (2018 - 2024):** Led a team responsible for managing and scaling partnerships within the Salesforce SMB Sales Cloud, driving a 40% year-over-year increase in partner-sourced revenue. Managed a portfolio of over 100 strategic partners.\n  * **Director, Customer Success (2015 - 2018):**  Developed and implemented customer success strategies for key accounts, resulting in a 20% improvement in customer retention rates.\n  * **Account Executive (2012 - 2015):** Consistently exceeded sales quotas, achieving President\u2019s Club recognition in 2014 and 2015.\n- **Accenture (2010 - 2012):** Management Consultant, focused on CRM implementation for Fortune 500 clients.\n- **Education:** MBA, Harvard Business School (2010); BS, Computer Science, Stanford University (2008).\n- **Certifications:** Salesforce Certified Administrator, Salesforce Certified Sales Cloud Consultant.\n- Prior to Salesforce, I honed my analytical and problem-solving skills at Accenture, working on large-scale CRM implementations. This experience provided a foundational understanding of the technology landscape and the importance of customer-centric solutions.\n-  Throughout my time at Salesforce, I consistently sought opportunities to improve processes and drive efficiency, leading to several internal initiatives focused on partner program optimization.",
+    "lookingFor": "- Introductions to Seed Stage VCs focused on SaaS and/or Partner Ecosystems.\n-  Warm introductions to Heads of Partnerships at B2B SaaS companies (Series A - C).\n-  Connections to thought leaders in the Partner Relationship Management (PRM) space.\n-  Advice from experienced founders who have successfully raised seed funding.\n-  Potential early access customers interested in streamlining their partner onboarding process.\n-  Looking to connect with individuals experienced in building and scaling partner programs from zero to significant revenue.\n-  Seeking introductions to angel investors with a strong SaaS background.\n-  Open to conversations with potential advisors who have a deep understanding of the channel sales landscape.",
+    "notes": "- Maria is highly responsive and appreciates direct communication. She's a strong networker and always willing to reciprocate introductions.\n- She\u2019s currently laser-focused on fundraising and is actively pitching investors.\n-  Mentioned she's particularly interested in VCs who've invested in companies like Crossbeam and PartnerStack.\n- She\u2019s a firm believer in data-driven decision-making and expects to see quantifiable results from any partnership or investment.\n- She previously expressed frustration with overly complex PRM solutions, which is a key driver behind SynergyFlow's simplicity.",
+    "locationAvailability": "Based in San Francisco, CA, but comfortable with remote meetings and occasional travel.",
+    "introPreferences": "- **Must-Haves:** Introductions to VCs actively investing in Seed stage SaaS companies.\n- **Ideal Connection:** Heads of Partnerships at companies with 50-200 employees, actively scaling their partner programs.\n- **Dealbreakers:**  Introductions to individuals who are not decision-makers or influencers.\n- **Framing:** Please emphasize Maria\u2019s deep experience at Salesforce and her understanding of the challenges of scaling partner ecosystems.\n- **Preferred Introduction Length:** Concise and to the point \u2013 no more than 5 sentences.\n- **Connection Stage:** Seeking introductions to individuals who are open to exploring new solutions and are actively facing challenges with partner management.\n- **Avoid:**  Introductions to individuals solely focused on direct sales; Maria is targeting partnership leaders.",
+    "personalPreferences": "I prefer to connect on LinkedIn initially and am generally quick to respond to messages. I'm a big believer in keeping communication concise and focused.",
+    "meetingAndSchedulingPreferences": "I'm available for 30-minute introductory calls and prefer to schedule meetings using Calendly. I generally respond to scheduling requests within 24 hours."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 15.870733976364136,
+      "input_tokens": 850,
+      "output_tokens": 1175,
+      "problems": []
+    }
+  ],
+  "success": true
+}

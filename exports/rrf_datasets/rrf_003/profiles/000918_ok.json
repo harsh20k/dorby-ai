@@ -1,0 +1,54 @@
+{
+  "id": 918,
+  "archetype": "Former Big Tech, Now Entrepreneur",
+  "given_name": "Rosa Pereira",
+  "style_version": 56,
+  "archetypes_version": 155,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Rosa Pereira is a 38-year-old former Senior Data Scientist at Amazon, specializing in personalization algorithms for Amazon Prime Video. She left Amazon after 8 years, frustrated by the slow pace of innovation within a large organization and a desire to build something impactful herself. She\u2019s now the founder and CEO of 'StorySpark,' a startup developing AI-powered tools for independent filmmakers to improve script analysis and audience targeting. A distinctive career detail is that she initially trained as a classical violinist, giving her a unique perspective on narrative structure and emotional resonance that she now applies to her work in AI. She\u2019s actively seeking seed funding and strategic partnerships to scale StorySpark, and is particularly interested in connecting with investors who understand the creative industries. She\u2019s very focused on building a strong, diverse team and is open to mentorship opportunities.",
+    "positioning": "As Founder & CEO of StorySpark, I'm passionate about empowering independent filmmakers with the power of AI. We're building a suite of tools that leverage machine learning to provide data-driven insights into script quality, target audience identification, and potential market performance. My background as a Senior Data Scientist at Amazon, where I led personalization efforts for Prime Video, has equipped me with a deep understanding of recommendation systems, predictive modeling, and large-scale data analysis. I'm focused on bridging the gap between artistic vision and data-driven decision-making, believing that technology can enhance\u2014not replace\u2014the creative process. StorySpark is currently in beta, and we're actively seeking partners and investors to accelerate our growth and democratize access to data-driven filmmaking.",
+    "background": "- **Founder & CEO, StorySpark** (2023 \u2013 Present)\n    * Spearheaded the development and launch of StorySpark's beta platform, securing initial user base of 50+ independent filmmakers.\n    * Led fundraising efforts, currently in the process of securing seed funding.\n    * Developed and implemented the company\u2019s core AI algorithms, focusing on sentiment analysis, narrative arc detection, and audience prediction.\n    * Built and managed a remote team of 3 engineers and 1 creative consultant.\n\n- **Senior Data Scientist, Amazon Prime Video** (2015 \u2013 2023)\n    * Led a team of 5 data scientists in developing and deploying personalization algorithms for video recommendations, resulting in a 15% increase in user engagement.\n    * Designed and implemented A/B testing frameworks to evaluate the performance of new algorithms and features.\n    * Developed and maintained machine learning models using Python, TensorFlow, and AWS SageMaker.\n    * Presented research findings to senior leadership and stakeholders.\n\n- **Data Science Intern, Netflix** (Summer 2014)\n    * Assisted in the analysis of user viewing data to identify trends and patterns.\n    * Developed prototypes of recommendation algorithms using Python and R.\n\n- **Education:**\n    * **Master of Science in Data Science, Stanford University** (2013 \u2013 2015)\n    * **Bachelor of Music in Violin Performance, The Juilliard School** (2009 \u2013 2013)\n\n- **Skills:** Python, TensorFlow, PyTorch, AWS (SageMaker, EC2, S3), SQL, Data Visualization (Tableau, matplotlib), Machine Learning (Recommendation Systems, Natural Language Processing, Predictive Modeling), A/B Testing, Statistical Analysis, Script Analysis, Music Theory.",
+    "lookingFor": "I'm actively seeking connections within the venture capital community, particularly investors with a demonstrated interest in the creative industries and AI-driven startups. I'm looking for seed-stage funding to scale our engineering team, expand our marketing efforts, and refine our AI models. \n\nSpecifically, I\u2019m interested in:\n\n* **Seed-stage VCs:** Firms with investment sizes between $500k - $2M.\n* **Angel Investors:** Individuals with experience in film, media, or AI.\n* **Strategic Partners:** Companies in the film production, distribution, or technology space.\n* **Mentors:** Experienced entrepreneurs and industry leaders who can provide guidance and support.\n\nI\u2019m also keen to connect with independent filmmakers who would be willing to provide feedback on our beta platform. I'm open to exploring collaborations with universities and research institutions focused on AI and storytelling. I'm particularly interested in individuals who understand the challenges faced by independent creators and are passionate about leveraging technology to empower them.",
+    "notes": "* Rosa is very passionate about her startup and quickly gets excited when discussing StorySpark. \n* She's a strong advocate for diversity and inclusion in tech and is actively building a diverse team. \n* She\u2019s a bit of a perfectionist and can be very detail-oriented.\n* Mention her background in music \u2013 it\u2019s a unique angle and helps her stand out. \n* Avoid overly technical explanations; she prefers to focus on the business value of her work.",
+    "locationAvailability": "Based in Los Angeles, California, and available for remote meetings. Willing to travel for key investor meetings and industry events.",
+    "introPreferences": "* **Hard Requirements:** Introductions should be to VCs or angel investors actively investing in seed-stage startups, particularly in the AI or media/entertainment sectors. \n* **Soft Preferences:** Introductions to individuals with a strong understanding of the film industry or a demonstrated track record of supporting creative entrepreneurs are highly valued.\n* **Introduction Style:** Please briefly mention StorySpark\u2019s mission to empower independent filmmakers and Rosa\u2019s background at Amazon. Highlight her unique perspective as someone with both technical expertise and artistic sensibility.\n* **Avoid:** Introductions to individuals who are not actively involved in investment or partnerships.",
+    "personalPreferences": "Prefers email for initial contact, followed by a brief phone call. Responsive on LinkedIn. Please avoid unsolicited marketing materials.",
+    "meetingAndSchedulingPreferences": "Generally available for meetings between 9am and 5pm PST. I prefer 30-minute introductory calls to assess mutual fit. Happy to schedule video conferences via Zoom or Google Meet. Please send a calendar invite with a clear agenda beforehand. I'm proactive about following up after initial conversations."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 26.18651270866394,
+      "input_tokens": 840,
+      "output_tokens": 1314,
+      "problems": []
+    }
+  ],
+  "success": true
+}

@@ -1,0 +1,54 @@
+{
+  "id": 827,
+  "archetype": "Operator-Turned-Founder, Reverse Logistics",
+  "given_name": "Maria Santos",
+  "style_version": 51,
+  "archetypes_version": 139,
+  "prompt_refs": {
+    "style_refresh": {
+      "role": "style_refresh",
+      "identifier": "-/profile-gen-style-refresh:v1",
+      "commit_hash": "a9814d0f20b78dc39b316dbd51bdc66159d1c3773b0d4a4489f0b6ef4a0f591b",
+      "owner": "-",
+      "repo": "profile-gen-style-refresh",
+      "tag_or_version": "v1"
+    },
+    "archetype_refresh": {
+      "role": "archetype_refresh",
+      "identifier": "-/profile-gen-archetype-refresh:v1",
+      "commit_hash": "5adb9d6009f8146c066dd032d2726c98030c689ec7d5fc690aa3b20c02612366",
+      "owner": "-",
+      "repo": "profile-gen-archetype-refresh",
+      "tag_or_version": "v1"
+    },
+    "generate_profile": {
+      "role": "generate_profile",
+      "identifier": "-/profile-gen-generate:v3",
+      "commit_hash": "c09241a35bafaf40dce780408894a3aa7bed01d221fe97d7c2d5b6b3212af3ab",
+      "owner": "-",
+      "repo": "profile-gen-generate",
+      "tag_or_version": "v3"
+    }
+  },
+  "profile": {
+    "reasoning": "Maria Santos spent 8 years deeply embedded in the returns processing side of a major electronics retailer, witnessing firsthand the massive inefficiencies and environmental impact of reverse logistics. She saw mountains of perfectly functional returned items being needlessly scrapped due to lack of efficient repair/refurbishment processes. This frustration led her to found 'ReCircle Solutions,' a company specializing in AI-powered diagnostics and repair routing for returned electronics. She's now focused on scaling ReCircle, securing partnerships with larger retailers and manufacturers, and advocating for more sustainable practices in the industry. She\u2019s very data-driven and passionate about reducing e-waste, but can sometimes get overly technical when explaining her solution.",
+    "positioning": "Maria Santos is the Founder and CEO of ReCircle Solutions, a technology company revolutionizing reverse logistics for the electronics industry. We leverage AI to intelligently diagnose returned devices, optimizing repair and refurbishment pathways, and minimizing waste. I help retailers and manufacturers unlock value from their returns, reduce operational costs, and build more sustainable business models. My experience on the front lines of returns processing gives me a unique understanding of the challenges and opportunities in this often-overlooked sector. I\u2019m passionate about building a circular economy and am actively seeking partners to drive meaningful change.",
+    "background": "\u2022 **Founder & CEO, ReCircle Solutions** (2021 \u2013 Present)\n\t\t - Led all aspects of company formation, fundraising (Seed round of $2M secured in 2022), product development, and go-to-market strategy.\n\t\t - Developed and patented AI-powered diagnostic platform that increases refurbishment rates by 25% on average.\n\t\t - Built a team of 15 engineers, data scientists, and operations specialists.\n\t\t - Secured pilot programs with two national electronics retailers.\n\u2022 **Returns Operations Manager, ElectroMart** (2013 \u2013 2021)\n\t\t - Managed a team of 30 responsible for processing over 50,000 returned items per month.\n\t\t - Implemented a new returns triage process that reduced processing time by 15%.\n\t\t - Identified and reported key pain points in the reverse logistics chain, leading to initial internal investigations into refurbishment options.\n\t\t - Consistently exceeded performance metrics for returns processing efficiency and cost reduction.\n\u2022 **Supply Chain Analyst, ElectroMart** (2011 \u2013 2013)\n\t\t - Analyzed supply chain data to identify areas for improvement in inventory management and logistics.\n\t\t - Developed and maintained dashboards to track key performance indicators (KPIs).\n\u2022 **Bachelor of Science in Industrial Engineering, University of California, Berkeley** (2007 \u2013 2011)\n\t\t - Graduated *Cum Laude* with a focus on logistics and operations research.\n\t\t - Completed a senior project focused on optimizing warehouse layout for e-commerce fulfillment.",
+    "lookingFor": "\u2022 Strategic partnerships with large electronics manufacturers.\n\u2022 Connections to venture capitalists specializing in sustainability and circular economy investments (Series A funding).\n\u2022 Mentors with experience scaling SaaS businesses in the B2B space.\n\u2022 Individuals involved in industry consortia focused on e-waste reduction and responsible recycling.\n\u2022 Potential advisors with expertise in supply chain finance.\n\u2022 Retail executives open to piloting innovative reverse logistics solutions.\n\u2022 Thought leaders in the circular economy space to collaborate on content and speaking opportunities.",
+    "notes": "Maria is incredibly passionate about her mission and can sometimes dive deep into the technical details of her AI algorithms \u2013 be prepared for a detailed explanation! She\u2019s always open to discussing the challenges of reverse logistics and is a strong advocate for sustainability. She recently presented at the Sustainable Electronics Summit in October 2023. She's currently exploring integration with blockchain technology for supply chain transparency. Don't hesitate to ask about the environmental impact of e-waste \u2013 it\u2019s a topic she\u2019s very knowledgeable about.",
+    "locationAvailability": "Based in San Francisco, CA, with frequent travel to industry events and potential client sites. Open to remote meetings.",
+    "introPreferences": "\u2022 Please highlight any shared interest in sustainability or the circular economy when making an introduction.\n\u2022 Focus on the potential for cost savings and increased efficiency when introducing her to retail or manufacturing contacts.\n\u2022 Avoid overly generic introductions \u2013 personalize the message to demonstrate you understand ReCircle's value proposition.\n\u2022 She appreciates introductions to people who are *decision-makers* or *influencers* within their organizations.\n\u2022 If introducing her to a VC, please emphasize the strong ROI and scalability of her business model.",
+    "personalPreferences": "Prefers email for initial contact; happy to jump on a quick call after.",
+    "meetingAndSchedulingPreferences": "Generally available for meetings during standard business hours (PST). Prefers 30-minute introductory calls."
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 19.247983932495117,
+      "input_tokens": 761,
+      "output_tokens": 1056,
+      "problems": []
+    }
+  ],
+  "success": true
+}
