@@ -1,5 +1,5 @@
 <!doctype html>
-<title>Ask Tower, Offer Tower</title>
+<title>Two Towers, One Verdict</title>
 <style>
 @font-face {
   font-family: 'Plex Serif';
@@ -40,7 +40,6 @@
 :root {
   --paper: #f4f5f0;
   --surface: #eaece4;
-  --surface-2: #e2e4da;
   --ink: #14181a;
   --ink-2: #565d59;
   --ink-3: #83887f;
@@ -49,7 +48,6 @@
   --fwd: #2a78d6;
   --recip: #eb6834;
   --fwd-soft: #dde9f8;
-  --recip-soft: #f5e3d5;
   --shadow: 0 1px 2px rgba(20, 24, 26, 0.06);
 }
 
@@ -57,7 +55,6 @@
   :root:not([data-theme="light"]) {
     --paper: #0f1210;
     --surface: #171b17;
-    --surface-2: #1e231e;
     --ink: #e9ebe4;
     --ink-2: #a3a99c;
     --ink-3: #767c70;
@@ -66,15 +63,12 @@
     --fwd: #5b9bdb;
     --recip: #d95926;
     --fwd-soft: #1c2733;
-    --recip-soft: #2c2119;
     --shadow: 0 1px 2px rgba(0, 0, 0, 0.35);
   }
 }
-
 :root[data-theme="dark"] {
   --paper: #0f1210;
   --surface: #171b17;
-  --surface-2: #1e231e;
   --ink: #e9ebe4;
   --ink-2: #a3a99c;
   --ink-3: #767c70;
@@ -83,14 +77,11 @@
   --fwd: #5b9bdb;
   --recip: #d95926;
   --fwd-soft: #1c2733;
-  --recip-soft: #2c2119;
   --shadow: 0 1px 2px rgba(0, 0, 0, 0.35);
 }
-
 :root[data-theme="light"] {
   --paper: #f4f5f0;
   --surface: #eaece4;
-  --surface-2: #e2e4da;
   --ink: #14181a;
   --ink-2: #565d59;
   --ink-3: #83887f;
@@ -99,12 +90,10 @@
   --fwd: #2a78d6;
   --recip: #eb6834;
   --fwd-soft: #dde9f8;
-  --recip-soft: #f5e3d5;
   --shadow: 0 1px 2px rgba(20, 24, 26, 0.06);
 }
 
 * { box-sizing: border-box; }
-
 body {
   margin: 0;
   background: var(--paper);
@@ -114,498 +103,139 @@ body {
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
 }
-
-.page {
-  max-width: 760px;
-  margin: 0 auto;
-  padding: 56px 24px 88px;
-}
+.page { max-width: 700px; margin: 0 auto; padding: 52px 24px 72px; }
 
 .kicker {
   font-family: 'Plex Mono', ui-monospace, monospace;
-  font-size: 11px;
-  font-weight: 500;
-  letter-spacing: 0.09em;
-  text-transform: uppercase;
-  color: var(--ink-2);
+  font-size: 11px; font-weight: 500; letter-spacing: 0.09em;
+  text-transform: uppercase; color: var(--ink-2);
 }
-
-.masthead {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 16px;
-  flex-wrap: wrap;
-  margin-bottom: 18px;
-}
-
+.masthead { display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; margin-bottom: 16px; }
 .status-badge {
   font-family: 'Plex Mono', ui-monospace, monospace;
-  font-size: 10.5px;
-  font-weight: 500;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  color: var(--ink-2);
-  border: 1px solid var(--line-strong);
-  border-radius: 3px;
-  padding: 3px 8px;
-  white-space: nowrap;
+  font-size: 10.5px; font-weight: 500; letter-spacing: 0.06em; text-transform: uppercase;
+  color: var(--ink-2); border: 1px solid var(--line-strong); border-radius: 3px;
+  padding: 3px 8px; white-space: nowrap;
 }
-
 h1 {
   font-family: 'Plex Serif', ui-serif, Georgia, serif;
-  font-weight: 600;
-  font-size: 38px;
-  line-height: 1.12;
-  letter-spacing: -0.01em;
-  margin: 0 0 14px;
-  text-wrap: balance;
+  font-weight: 600; font-size: 34px; line-height: 1.14; letter-spacing: -0.01em;
+  margin: 0 0 12px; text-wrap: balance;
 }
+.dek { font-size: 16.5px; line-height: 1.55; color: var(--ink-2); max-width: 58ch; margin: 0; }
 
-.dek {
-  font-size: 17px;
-  line-height: 1.55;
-  color: var(--ink-2);
-  max-width: 58ch;
-  margin: 0 0 8px;
+.verdict-card {
+  margin-top: 26px;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: var(--surface);
+  padding: 18px 20px;
+  box-shadow: var(--shadow);
+  font-size: 14.5px;
+  line-height: 1.6;
 }
+.verdict-card b { color: var(--ink); }
 
-.masthead-meta {
-  display: flex;
-  gap: 18px;
-  flex-wrap: wrap;
-  margin-top: 22px;
-  padding-top: 18px;
-  border-top: 1px solid var(--line);
-  font-family: 'Plex Mono', ui-monospace, monospace;
-  font-size: 12px;
-  color: var(--ink-3);
-}
-.masthead-meta span { white-space: nowrap; }
-.masthead-meta b { color: var(--ink-2); font-weight: 500; }
-
-section {
-  margin-top: 52px;
-  padding-top: 28px;
-  border-top: 1px solid var(--line);
-}
-
+section { margin-top: 38px; padding-top: 22px; border-top: 1px solid var(--line); }
 section .kicker { margin-bottom: 10px; }
-
 h2 {
   font-family: 'Plex Serif', ui-serif, Georgia, serif;
-  font-weight: 600;
-  font-size: 21px;
-  line-height: 1.3;
-  margin: 0 0 14px;
-  text-wrap: balance;
+  font-weight: 600; font-size: 19px; line-height: 1.3; margin: 0 0 12px;
 }
 
-ul.bullets {
-  margin: 0 0 18px;
-  padding: 0;
-  list-style: none;
-}
-ul.bullets li {
-  position: relative;
-  padding-left: 18px;
-  margin-bottom: 9px;
-  font-size: 15px;
-  line-height: 1.55;
-}
-ul.bullets li::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 9px;
-  width: 5px;
-  height: 5px;
-  border-radius: 50%;
-  background: var(--ink-3);
-}
-ul.bullets li:last-child { margin-bottom: 0; }
-ul.bullets b { font-weight: 600; color: var(--ink); }
-ul.bullets .fwd-dot::before { background: var(--fwd); }
-ul.bullets .recip-dot::before { background: var(--recip); }
-
-code.inline {
-  font-family: 'Plex Mono', ui-monospace, monospace;
-  font-size: 0.9em;
-  background: var(--surface);
-  border: 1px solid var(--line);
-  border-radius: 3px;
-  padding: 0.05em 0.35em;
-}
-
-.formula-card {
-  background: var(--surface);
-  border: 1px solid var(--line);
-  border-radius: 6px;
-  padding: 18px 20px;
-  margin: 4px 0 20px;
-  overflow-x: auto;
-  box-shadow: var(--shadow);
-}
-.formula-line {
-  font-family: 'Plex Mono', ui-monospace, monospace;
-  font-size: 14px;
-  font-variant-numeric: tabular-nums;
-  white-space: pre;
-  line-height: 1.9;
-  color: var(--ink);
-}
-.formula-line .name { font-weight: 500; }
-.formula-line .fwd { color: var(--fwd); font-weight: 500; }
-.formula-line .recip { color: var(--recip); font-weight: 500; }
-.formula-line .comment { color: var(--ink-3); }
-
-figure {
-  margin: 8px 0 22px;
-  padding: 0;
-}
-.figure-frame {
-  border: 1px solid var(--line);
-  border-radius: 6px;
-  background: var(--surface);
-  padding: 18px 14px 12px;
-  overflow-x: auto;
-  box-shadow: var(--shadow);
-}
-figure svg {
-  display: block;
-  width: 100%;
-  height: auto;
-  max-width: 100%;
-  color: var(--ink-2);
-}
-figure text { fill: currentColor; }
-figcaption {
-  font-size: 12.5px;
-  color: var(--ink-2);
-  margin-top: 10px;
-  line-height: 1.5;
-  max-width: 60ch;
-}
-
-.table-wrap { overflow-x: auto; margin: 4px 0 8px; }
+.table-wrap { overflow-x: auto; margin: 4px 0 4px; }
 table.spec {
-  width: 100%;
-  border-collapse: collapse;
-  font-size: 13.5px;
-  min-width: 520px;
+  width: 100%; border-collapse: collapse; font-size: 13.5px; min-width: 480px;
 }
-table.spec th, table.spec td {
-  text-align: left;
-  padding: 9px 12px;
-  border-bottom: 1px solid var(--line);
-  vertical-align: top;
-}
+table.spec th, table.spec td { text-align: left; padding: 8px 12px; border-bottom: 1px solid var(--line); vertical-align: top; }
 table.spec th {
-  font-family: 'Plex Mono', ui-monospace, monospace;
-  font-size: 11px;
-  font-weight: 500;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
-  color: var(--ink-2);
+  font-family: 'Plex Mono', ui-monospace, monospace; font-size: 10.5px; font-weight: 500;
+  letter-spacing: 0.05em; text-transform: uppercase; color: var(--ink-2);
 }
 table.spec td.mono { font-family: 'Plex Mono', ui-monospace, monospace; font-variant-numeric: tabular-nums; }
 table.spec tr:last-child td { border-bottom: none; }
-table.spec td.today { color: var(--ink-2); }
-table.spec td.proposed { color: var(--ink); }
+table.spec td.fwd-num { color: var(--fwd); font-weight: 500; }
+table.spec td.recip-num { color: var(--recip); font-weight: 500; }
+table.spec td.delta-pos { color: var(--recip); font-weight: 500; }
+table.spec td.delta-flat { color: var(--ink-3); }
 
-.callout {
-  border-left: 2px solid var(--line-strong);
-  padding: 2px 0 2px 16px;
-  margin: 4px 0 20px;
-  font-size: 14.5px;
-  color: var(--ink-2);
-  line-height: 1.6;
+ul.bullets { margin: 4px 0 0; padding: 0; list-style: none; }
+ul.bullets li { position: relative; padding-left: 18px; margin-bottom: 10px; font-size: 15px; line-height: 1.55; }
+ul.bullets li::before {
+  content: ""; position: absolute; left: 0; top: 9px; width: 5px; height: 5px;
+  border-radius: 50%; background: var(--ink-3);
 }
-.callout b { color: var(--ink); font-weight: 600; }
+ul.bullets li:last-child { margin-bottom: 0; }
+ul.bullets b { font-weight: 600; color: var(--ink); }
+
+code.inline {
+  font-family: 'Plex Mono', ui-monospace, monospace; font-size: 0.9em;
+  background: var(--surface); border: 1px solid var(--line); border-radius: 3px; padding: 0.05em 0.35em;
+}
+
+.repro {
+  background: var(--surface); border: 1px solid var(--line); border-radius: 6px;
+  padding: 14px 18px; margin-top: 4px; overflow-x: auto; box-shadow: var(--shadow);
+  font-family: 'Plex Mono', ui-monospace, monospace; font-size: 13px; line-height: 1.8; color: var(--ink-2);
+  white-space: pre;
+}
 
 footer {
-  margin-top: 56px;
-  padding-top: 22px;
-  border-top: 1px solid var(--line);
-  font-size: 12.5px;
-  color: var(--ink-3);
-  line-height: 1.7;
+  margin-top: 44px; padding-top: 20px; border-top: 1px solid var(--line);
+  font-size: 12.5px; color: var(--ink-3); line-height: 1.7;
 }
 footer a { color: var(--ink-2); }
-footer .foot-title {
-  font-family: 'Plex Mono', ui-monospace, monospace;
-  font-size: 10.5px;
-  letter-spacing: 0.07em;
-  text-transform: uppercase;
-  color: var(--ink-3);
-  margin-bottom: 6px;
-}
 
-@media (max-width: 520px) {
-  h1 { font-size: 30px; }
-  .page { padding: 40px 18px 64px; }
-}
+@media (max-width: 480px) { h1 { font-size: 27px; } .page { padding: 36px 18px 56px; } }
 </style>
 
 <div class="page">
-
   <div class="masthead">
-    <span class="kicker">Training design</span>
-    <span class="status-badge">Built &middot; results in</span>
+    <span class="kicker">Training result</span>
+    <span class="status-badge">Built &middot; mixed result</span>
   </div>
-  <h1>Ask Tower, Offer Tower</h1>
-  <p class="dek">A plan for training two separate towers to score both directions of a match at once &mdash; replacing today&rsquo;s one-tower, one-direction recipe.</p>
-  <div class="masthead-meta">
-    <span><b>Builds on</b> reciprocal_static (zero-training version, already run)</span>
-    <span><b>Source</b> Ga Wu, FWP paper, 2026-06-07</span>
-    <span><b>Result</b> <a href="https://claude.ai/code/artifact/c20614ee-600a-4882-aaab-035faca4ccfd" style="color:var(--ink);">Two Towers, One Verdict &rarr;</a></span>
+  <h1>Two Towers, One Verdict</h1>
+  <p class="dek">Two separately-trained LoRA towers, optimized jointly on the reciprocal score &mdash; run end to end. It didn&rsquo;t beat the reigning model, and the reason why is the real finding.</p>
+
+  <div class="verdict-card">
+    <b>Headline:</b> on the all-200 population, the reciprocal term adds real signal (pair AUC 0.513&rarr;<b>0.571</b>). On the 69-pair holdout it does nothing (0.614&rarr;0.612). Neither beats <code class="inline">voyage_gemini_ctrl</code>&rsquo;s combined score (0.659 all-200 / 0.735 holdout) &mdash; one shared tower, full-profile text, reciprocal term applied for free with zero extra training.
   </div>
 
   <section>
-    <div class="kicker">Architecture</div>
-    <h2>One tower today, two towers proposed</h2>
-    <ul class="bullets">
-      <li>Today: <b>one shared tower</b> reads a full profile and is trained to predict one direction only &mdash; does the candidate suit the seeker.</li>
-      <li>Proposed: <b>two separate towers</b>, each specialized on one narrow slice of text.</li>
-      <li><b>Ask tower</b> only ever reads demand language. <b>Offer tower</b> only ever reads self-description.</li>
-      <li>Same base model to start from (<code class="inline">voyage-4-nano</code>), two independent LoRA adapters on top.</li>
-    </ul>
-    <figure>
-      <div class="figure-frame">
-        <svg viewBox="0 0 680 216" role="img" aria-label="Today, one shared tower reads full seeker and candidate profiles and outputs one forward score. Proposed, two separate towers, Ask and Offer, each read one narrow field, and their outputs combine into S.">
-          <defs>
-            <marker id="arrowA" markerWidth="7" markerHeight="7" refX="5.5" refY="3" orient="auto">
-              <polygon points="0,0 6,3 0,6" fill="currentColor" />
-            </marker>
-          </defs>
-          <text x="30" y="22" font-family="Plex Mono, monospace" font-size="10.5" letter-spacing="1" fill="currentColor" opacity="0.75">TODAY</text>
-          <rect x="70" y="70" width="180" height="50" rx="5" fill="none" stroke="currentColor" stroke-width="1.2"/>
-          <text x="160" y="90" text-anchor="middle" font-family="Plex Sans, sans-serif" font-size="12.5" fill="currentColor">shared tower</text>
-          <text x="160" y="106" text-anchor="middle" font-family="Plex Mono, monospace" font-size="10" fill="currentColor" opacity="0.65">1 set of weights</text>
-          <line x1="100" y1="46" x2="130" y2="68" stroke="currentColor" stroke-width="1.1" marker-end="url(#arrowA)"/>
-          <text x="66" y="40" font-family="Plex Sans, sans-serif" font-size="10.5" fill="currentColor" opacity="0.8">seeker profile</text>
-          <line x1="220" y1="46" x2="190" y2="68" stroke="currentColor" stroke-width="1.1" marker-end="url(#arrowA)"/>
-          <text x="176" y="40" font-family="Plex Sans, sans-serif" font-size="10.5" fill="currentColor" opacity="0.8">candidate profile</text>
-          <line x1="160" y1="120" x2="160" y2="150" stroke="currentColor" stroke-width="1.1" marker-end="url(#arrowA)"/>
-          <text x="160" y="168" text-anchor="middle" font-family="Plex Mono, monospace" font-size="11.5" fill="currentColor">s_fwd only</text>
-
-          <line x1="340" y1="10" x2="340" y2="206" stroke="currentColor" stroke-width="1" opacity="0.25"/>
-
-          <text x="380" y="22" font-family="Plex Mono, monospace" font-size="10.5" letter-spacing="1" fill="currentColor" opacity="0.75">PROPOSED</text>
-          <rect x="380" y="46" width="120" height="42" rx="5" fill="none" stroke="currentColor" stroke-width="1.2"/>
-          <text x="440" y="71" text-anchor="middle" font-family="Plex Sans, sans-serif" font-size="12.5" fill="currentColor">Ask tower</text>
-          <rect x="380" y="104" width="120" height="42" rx="5" fill="none" stroke="currentColor" stroke-width="1.2"/>
-          <text x="440" y="129" text-anchor="middle" font-family="Plex Sans, sans-serif" font-size="12.5" fill="currentColor">Offer tower</text>
-          <line x1="352" y1="60" x2="378" y2="65" stroke="currentColor" stroke-width="1.1" marker-end="url(#arrowA)"/>
-          <text x="345" y="52" font-family="Plex Sans, sans-serif" font-size="10" fill="currentColor" opacity="0.8">look-for text</text>
-          <line x1="352" y1="140" x2="378" y2="128" stroke="currentColor" stroke-width="1.1" marker-end="url(#arrowA)"/>
-          <text x="343" y="158" font-family="Plex Sans, sans-serif" font-size="10" fill="currentColor" opacity="0.8">background text</text>
-          <line x1="500" y1="67" x2="560" y2="90" stroke="currentColor" stroke-width="1.1"/>
-          <line x1="500" y1="125" x2="560" y2="102" stroke="currentColor" stroke-width="1.1"/>
-          <circle cx="565" cy="96" r="9" fill="none" stroke="currentColor" stroke-width="1.2"/>
-          <text x="565" y="99.5" text-anchor="middle" font-family="Plex Mono, monospace" font-size="11" fill="currentColor">+</text>
-          <line x1="574" y1="96" x2="600" y2="96" stroke="currentColor" stroke-width="1.1" marker-end="url(#arrowA)"/>
-          <text x="440" y="184" text-anchor="middle" font-family="Plex Mono, monospace" font-size="12.5" fill="currentColor">S = s_fwd + &lambda;&middot;s_rev</text>
-          <text x="440" y="200" text-anchor="middle" font-family="Plex Sans, sans-serif" font-size="10" fill="currentColor" opacity="0.7">sees both directions</text>
-        </svg>
-      </div>
-      <figcaption>Today, one tower produces one score. Proposed, two specialized towers feed a combined score &mdash; detail in the next figure.</figcaption>
-    </figure>
-  </section>
-
-  <section>
-    <div class="kicker">The score</div>
-    <h2>Every pair scored in both directions</h2>
-    <ul class="bullets">
-      <li class="fwd-dot"><b>Forward</b> &mdash; does the candidate look like what the seeker wants.</li>
-      <li class="recip-dot"><b>Reverse</b> &mdash; does the seeker look like what the candidate wants.</li>
-      <li>Both get combined into one number, <code class="inline">S</code>, before training sees it.</li>
-    </ul>
-    <div class="formula-card">
-      <div class="formula-line"><span class="name">s_fwd</span> = Ask(seeker) &middot; Offer(candidate)   <span class="comment">// what seeker wants vs. what candidate offers</span></div>
-      <div class="formula-line"><span class="name">s_rev</span> = Ask(candidate) &middot; Offer(seeker)   <span class="comment">// what candidate wants vs. what seeker offers</span></div>
-      <div class="formula-line"><span class="name">S</span>     = <span class="fwd">s_fwd</span> + &lambda;&middot;<span class="recip">s_rev</span>          <span class="comment">// trained on this, not s_fwd alone</span></div>
-    </div>
-    <figure>
-      <div class="figure-frame">
-        <svg viewBox="0 0 620 300" role="img" aria-label="Forward lane: seeker through Ask tower produces k_u, candidate through Offer tower produces v_i, their dot product is s_fwd. Reverse lane: candidate through the same Ask tower produces k_i, seeker through the same Offer tower produces v_u, their dot product is s_rev. Both combine into S.">
-          <defs>
-            <marker id="arrowB" markerWidth="7" markerHeight="7" refX="5.5" refY="3" orient="auto">
-              <polygon points="0,0 6,3 0,6" fill="currentColor" />
-            </marker>
-          </defs>
-
-          <text x="10" y="18" font-family="Plex Mono, monospace" font-size="10.5" letter-spacing="1" fill="currentColor" opacity="0.75">FORWARD</text>
-          <rect x="10" y="32" width="110" height="34" rx="4" fill="none" stroke="currentColor" stroke-width="1.1"/>
-          <text x="65" y="53" text-anchor="middle" font-family="Plex Sans, sans-serif" font-size="11.5">seeker text</text>
-          <line x1="120" y1="49" x2="168" y2="49" stroke="currentColor" stroke-width="1.1" marker-end="url(#arrowB)"/>
-          <rect x="170" y="32" width="90" height="34" rx="4" fill="none" stroke="currentColor" stroke-width="1.1"/>
-          <text x="215" y="53" text-anchor="middle" font-family="Plex Sans, sans-serif" font-size="11.5">Ask</text>
-          <line x1="260" y1="49" x2="300" y2="49" stroke="currentColor" stroke-width="1.1" marker-end="url(#arrowB)"/>
-          <text x="308" y="53" font-family="Plex Mono, monospace" font-size="12" fill="currentColor">k_u</text>
-
-          <rect x="340" y="32" width="110" height="34" rx="4" fill="none" stroke="currentColor" stroke-width="1.1"/>
-          <text x="395" y="53" text-anchor="middle" font-family="Plex Sans, sans-serif" font-size="11.5">candidate text</text>
-          <line x1="450" y1="49" x2="478" y2="49" stroke="currentColor" stroke-width="1.1" marker-end="url(#arrowB)"/>
-          <rect x="480" y="32" width="90" height="34" rx="4" fill="none" stroke="currentColor" stroke-width="1.1"/>
-          <text x="525" y="53" text-anchor="middle" font-family="Plex Sans, sans-serif" font-size="11.5">Offer</text>
-
-          <line x1="215" y1="66" x2="272" y2="116" stroke="currentColor" stroke-width="1.1" marker-end="url(#arrowB)"/>
-          <line x1="525" y1="66" x2="326" y2="116" stroke="currentColor" stroke-width="1.1" marker-end="url(#arrowB)"/>
-          <circle cx="298" cy="122" r="10" fill="none" stroke="var(--fwd)" stroke-width="1.3"/>
-          <text x="298" y="126" text-anchor="middle" font-family="Plex Mono, monospace" font-size="12" style="fill:var(--fwd)">&middot;</text>
-          <text x="318" y="126" font-family="Plex Mono, monospace" font-size="13" style="fill:var(--fwd)" font-weight="500">s_fwd</text>
-
-          <line x1="10" y1="150" x2="610" y2="150" stroke="currentColor" stroke-width="1" opacity="0.2"/>
-
-          <text x="10" y="176" font-family="Plex Mono, monospace" font-size="10.5" letter-spacing="1" fill="currentColor" opacity="0.75">REVERSE</text>
-          <rect x="10" y="190" width="110" height="34" rx="4" fill="none" stroke="currentColor" stroke-width="1.1"/>
-          <text x="65" y="211" text-anchor="middle" font-family="Plex Sans, sans-serif" font-size="11.5">candidate text</text>
-          <line x1="120" y1="207" x2="168" y2="207" stroke="currentColor" stroke-width="1.1" marker-end="url(#arrowB)"/>
-          <rect x="170" y="190" width="90" height="34" rx="4" fill="none" stroke="currentColor" stroke-width="1.1"/>
-          <text x="215" y="211" text-anchor="middle" font-family="Plex Sans, sans-serif" font-size="11.5">Ask</text>
-          <text x="230" y="184" font-family="Plex Mono, monospace" font-size="9" fill="currentColor" opacity="0.6">(same tower)</text>
-          <line x1="260" y1="207" x2="300" y2="207" stroke="currentColor" stroke-width="1.1" marker-end="url(#arrowB)"/>
-          <text x="308" y="211" font-family="Plex Mono, monospace" font-size="12" fill="currentColor">k_i</text>
-
-          <rect x="340" y="190" width="110" height="34" rx="4" fill="none" stroke="currentColor" stroke-width="1.1"/>
-          <text x="395" y="211" text-anchor="middle" font-family="Plex Sans, sans-serif" font-size="11.5">seeker text</text>
-          <line x1="450" y1="207" x2="478" y2="207" stroke="currentColor" stroke-width="1.1" marker-end="url(#arrowB)"/>
-          <rect x="480" y="190" width="90" height="34" rx="4" fill="none" stroke="currentColor" stroke-width="1.1"/>
-          <text x="525" y="211" text-anchor="middle" font-family="Plex Sans, sans-serif" font-size="11.5">Offer</text>
-          <text x="480" y="184" font-family="Plex Mono, monospace" font-size="9" fill="currentColor" opacity="0.6">(same tower)</text>
-
-          <line x1="215" y1="224" x2="270" y2="248" stroke="currentColor" stroke-width="1.1" marker-end="url(#arrowB)"/>
-          <line x1="525" y1="224" x2="330" y2="248" stroke="currentColor" stroke-width="1.1" marker-end="url(#arrowB)"/>
-          <circle cx="298" cy="252" r="10" fill="none" stroke="var(--recip)" stroke-width="1.3"/>
-          <text x="298" y="256" text-anchor="middle" font-family="Plex Mono, monospace" font-size="12" style="fill:var(--recip)">&middot;</text>
-          <text x="330" y="260" font-family="Plex Mono, monospace" font-size="13" style="fill:var(--recip)" font-weight="500">s_rev</text>
-
-          <text x="310" y="292" text-anchor="middle" font-family="Plex Mono, monospace" font-size="13.5" font-weight="500" fill="currentColor">S = s_fwd + &lambda;&middot;s_rev</text>
-        </svg>
-      </div>
-      <figcaption><b style="color:var(--fwd)">Forward</b> and <b style="color:var(--recip)">reverse</b> use the exact same two towers, just applied to the two people in opposite roles, then combined into one training target.</figcaption>
-    </figure>
-  </section>
-
-  <section>
-    <div class="kicker">Tower inputs</div>
-    <h2>What each tower is allowed to read</h2>
-    <ul class="bullets">
-      <li><b>Ask tower</b> &mdash; <code class="inline">lookingFor</code> only. Seeker side also gets <code class="inline">searchQuery</code>.</li>
-      <li><b>Offer tower</b> &mdash; <code class="inline">positioning</code> + <code class="inline">background</code> only.</li>
-      <li>Everything else &mdash; notes, scheduling, preferences &mdash; stays unused, same narrowing already used in the field-pair fine-tunes.</li>
-    </ul>
-  </section>
-
-  <section>
-    <div class="kicker">Batches &amp; negatives</div>
-    <h2>One row, many negatives for free</h2>
-    <ul class="bullets">
-      <li>One training row = (seeker, candidate, 1 explicit hard negative).</li>
-      <li>Today&rsquo;s recipe (<code class="inline">voyage_gemini_ctrl</code>): batch of 6 rows &rarr; <b>11 negatives per good pair</b>, all in-batch, no extra sampling.</li>
-      <li>Proposed keeps the exact same batching &mdash; only what gets scored per cell changes, from <code class="inline">s_fwd</code> to <code class="inline">S</code>.</li>
-    </ul>
-    <figure>
-      <div class="figure-frame">
-        <svg viewBox="0 0 460 330" role="img" aria-label="A four by four grid of seekers against candidates. The diagonal cells are the true pairs, scored S. Every off-diagonal cell is a free negative.">
-          <text x="0" y="16" font-family="Plex Mono, monospace" font-size="10" fill="currentColor" opacity="0.7">candidates &rarr;</text>
-          <text x="0" y="60" font-family="Plex Mono, monospace" font-size="10" fill="currentColor" opacity="0.7" transform="rotate(-90 10 60)">seekers &darr;</text>
-
-          <g font-family="Plex Mono, monospace" font-size="10.5" fill="currentColor" opacity="0.75">
-            <text x="94" y="40" text-anchor="middle">c1</text>
-            <text x="157" y="40" text-anchor="middle">c2</text>
-            <text x="220" y="40" text-anchor="middle">c3</text>
-            <text x="283" y="40" text-anchor="middle">c4</text>
-            <text x="55" y="79" text-anchor="end">s1</text>
-            <text x="55" y="142" text-anchor="end">s2</text>
-            <text x="55" y="205" text-anchor="end">s3</text>
-            <text x="55" y="268" text-anchor="end">s4</text>
-          </g>
-
-          <g stroke="currentColor" stroke-width="1" fill="none" opacity="0.55">
-            <rect x="65" y="50" width="58" height="58"/>
-            <rect x="128" y="50" width="58" height="58"/>
-            <rect x="191" y="50" width="58" height="58"/>
-            <rect x="254" y="50" width="58" height="58"/>
-            <rect x="65" y="113" width="58" height="58"/>
-            <rect x="128" y="113" width="58" height="58"/>
-            <rect x="191" y="113" width="58" height="58"/>
-            <rect x="254" y="113" width="58" height="58"/>
-            <rect x="65" y="176" width="58" height="58"/>
-            <rect x="128" y="176" width="58" height="58"/>
-            <rect x="191" y="176" width="58" height="58"/>
-            <rect x="254" y="176" width="58" height="58"/>
-            <rect x="65" y="239" width="58" height="58"/>
-            <rect x="128" y="239" width="58" height="58"/>
-            <rect x="191" y="239" width="58" height="58"/>
-            <rect x="254" y="239" width="58" height="58"/>
-          </g>
-
-          <g stroke="var(--ink)" stroke-width="1.6" fill="var(--fwd-soft)">
-            <rect x="65" y="50" width="58" height="58"/>
-            <rect x="128" y="113" width="58" height="58"/>
-            <rect x="191" y="176" width="58" height="58"/>
-            <rect x="254" y="239" width="58" height="58"/>
-          </g>
-          <g font-family="Plex Mono, monospace" font-size="12" font-weight="500" fill="currentColor" text-anchor="middle">
-            <text x="94" y="83">S</text>
-            <text x="157" y="146">S</text>
-            <text x="220" y="209">S</text>
-            <text x="283" y="272">S</text>
-          </g>
-
-          <text x="230" y="312" text-anchor="middle" font-family="Plex Sans, sans-serif" font-size="11" fill="currentColor" opacity="0.75">diagonal = true pair &middot; every other cell = free negative</text>
-        </svg>
-      </div>
-      <figcaption>Shown: a batch of 4 for clarity. The actual recipe uses 6 rows per step, giving 11 negatives per true pair.</figcaption>
-    </figure>
-  </section>
-
-  <section>
-    <div class="kicker">The loss</div>
-    <h2>Trained on S, not on s_fwd alone</h2>
-    <ul class="bullets">
-      <li>Same loss shape as today: push the true pair&rsquo;s score up, every other cell in the batch down.</li>
-      <li>The difference: the score being pushed is <code class="inline">S</code>, so gradients reach <b>both</b> towers, from <b>both</b> directions.</li>
-      <li>Today&rsquo;s fine-tunes never see the reciprocal term during training at all &mdash; this would be the first one that does.</li>
-    </ul>
-  </section>
-
-  <section>
-    <div class="kicker">&lambda;</div>
-    <h2>Fixed, not learned</h2>
-    <ul class="bullets">
-      <li>&lambda; is chosen by sweep + train-dev score &mdash; not trained jointly with the two towers.</li>
-      <li>An unconstrained &lambda; can drift to zero: smaller loss, reciprocal term quietly switched off, looks trained but isn&rsquo;t using it.</li>
-      <li>Already seen this collapse once &mdash; <code class="inline">bilinear_mf</code>&rsquo;s residual regularized itself to zero until the search grid was forced wider.</li>
-      <li>Starting point: <b>&lambda; = 1.75</b>, already fit on real data with zero training.</li>
-    </ul>
-  </section>
-
-  <section>
-    <div class="kicker">Side by side</div>
-    <h2>Today&rsquo;s recipe vs. proposed</h2>
+    <div class="kicker">Results</div>
+    <h2>Forward-only vs. combined score</h2>
     <div class="table-wrap">
       <table class="spec">
         <thead>
-          <tr><th></th><th>Today (voyage_gemini_ctrl)</th><th>Proposed</th></tr>
+          <tr><th>Population</th><th>Forward-only AUC</th><th>Combined AUC</th><th>&Delta;</th></tr>
         </thead>
         <tbody>
-          <tr><td>Towers</td><td class="today">1 shared</td><td class="proposed">2 separate (Ask, Offer)</td></tr>
-          <tr><td>Input text</td><td class="today">full profile</td><td class="proposed">narrow field slices</td></tr>
-          <tr><td>Score trained on</td><td class="today mono">s_fwd</td><td class="proposed mono">S = s_fwd + &lambda;&middot;s_rev</td></tr>
-          <tr><td>Loss</td><td class="today">MultipleNegativesRankingLoss</td><td class="proposed">same loss, applied to S</td></tr>
-          <tr><td>Negatives / anchor</td><td class="today mono">11 (in-batch, batch=6)</td><td class="proposed">same mechanism</td></tr>
-          <tr><td>&lambda;</td><td class="today">n/a</td><td class="proposed">fixed hyperparameter, swept</td></tr>
+          <tr><td>Holdout (69 pairs)</td><td class="mono fwd-num">0.6138</td><td class="mono recip-num">0.6121</td><td class="mono delta-flat">&minus;0.0017</td></tr>
+          <tr><td>All-200</td><td class="mono fwd-num">0.5126</td><td class="mono recip-num">0.5714</td><td class="mono delta-pos">+0.0588</td></tr>
         </tbody>
       </table>
     </div>
   </section>
 
-  <footer>
-    <div class="foot-title">Status</div>
-    <p>Design only &mdash; nothing trained or run yet. Builds on <code class="inline" style="font-size:11.5px;">reciprocal_static</code> (<code class="inline" style="font-size:11.5px;">docs/reciprocal-static-experiment.md</code>), the zero-training version of this score, already run on the real 200-pair dataset. Source idea: Ga Wu, &ldquo;Dynamic Reciprocal User Matching with Fast Weight Programmers,&rdquo; 2026-06-07.</p>
-  </footer>
+  <section>
+    <div class="kicker">What it means</div>
+    <h2>Three things worth carrying forward</h2>
+    <ul class="bullets">
+      <li><b>The reciprocal term itself works</b> &mdash; on the population this project trusts more (all-200, not the noisy 69-pair holdout), combining forward + reverse score adds real accuracy, same direction as the zero-training version of this idea.</li>
+      <li><b>The trained forward tower is the weak link.</b> 0.513 all-200 AUC is barely above chance, and below frozen Voyage-4-nano&rsquo;s own forward score (0.564) with zero training. Narrowing each tower to one field (lookingFor / positioning+background) likely cost more than untying the weights gained.</li>
+      <li><b>Two variables changed at once</b> &mdash; untying the towers and narrowing the text both happened in this run. This result can&rsquo;t tell them apart; a follow-up that changes only one would.</li>
+    </ul>
+  </section>
 
+  <section>
+    <div class="kicker">Repro</div>
+    <h2>Reproducing this run</h2>
+    <div class="repro">modal run --detach twotower_ask_offer/modal_train.py --run-id ask_offer_001
+modal run twotower_ask_offer/modal_eval.py --run-id ask_offer_001
+pytest tests/test_twotower_ask_offer.py -q</div>
+  </section>
+
+  <footer>
+    Full writeup: <code class="inline" style="font-size:11.5px;">docs/twotower-ask-offer-experiment.md</code>. Training plan this run followed: <a href="https://claude.ai/code/artifact/373941ab-0755-4948-af61-9eba1fd34bc8">Ask Tower, Offer Tower</a>.
+  </footer>
 </div>
