@@ -1,0 +1,875 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>top1_ctrl field/query sweep — Dorby AI</title>
+<style>
+  :root {
+    color-scheme: light;
+    --surface-1: #fcfcfb;
+    --page: #f9f9f7;
+    --ink: #0b0b0b;
+    --ink-2: #52514e;
+    --muted: #898781;
+    --grid: #e1e0d9;
+    --border: rgba(11,11,11,0.10);
+    --panel: #ffffff;
+    --good: #0ca30c;
+    --good-bg: #e3f6e3;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:where(:not([data-theme="light"])) {
+      color-scheme: dark;
+      --surface-1: #1a1a19;
+      --page: #0d0d0d;
+      --ink: #ffffff;
+      --ink-2: #c3c2b7;
+      --muted: #898781;
+      --grid: #2c2c2a;
+      --border: rgba(255,255,255,0.10);
+      --panel: #161615;
+      --good: #0ca30c;
+      --good-bg: #103010;
+    }
+  }
+  :root[data-theme="dark"] {
+    color-scheme: dark;
+    --surface-1: #1a1a19;
+    --page: #0d0d0d;
+    --ink: #ffffff;
+    --ink-2: #c3c2b7;
+    --muted: #898781;
+    --grid: #2c2c2a;
+    --border: rgba(255,255,255,0.10);
+    --panel: #161615;
+    --good: #0ca30c;
+    --good-bg: #103010;
+  }
+
+  * { box-sizing: border-box; }
+  html, body { margin: 0; min-height: 100%; }
+  body {
+    font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+    color: var(--ink);
+    background: var(--page);
+    line-height: 1.45;
+  }
+  :where(a, button, input, [tabindex]):focus-visible {
+    outline: 2px solid var(--good);
+    outline-offset: 2px;
+    border-radius: 4px;
+  }
+  @media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
+
+  .wrap { width: min(1180px, calc(100% - 2rem)); margin: 0 auto; padding: 2rem 0 4rem; }
+
+  header.hero { display: grid; gap: 0.6rem; margin-bottom: 1.6rem; }
+  .brand { font-size: clamp(1.6rem, 3.6vw, 2.2rem); letter-spacing: -0.02em; margin: 0; font-weight: 700; display: flex; align-items: baseline; gap: 0.6rem; flex-wrap: wrap; }
+  .n-badge {
+    font-size: 0.65rem; font-weight: 700; letter-spacing: 0.02em; text-transform: uppercase;
+    color: var(--good); background: var(--good-bg); border-radius: 999px; padding: 0.25rem 0.6rem;
+    vertical-align: middle;
+  }
+  .lede { margin: 0; max-width: 62rem; color: var(--ink-2); font-size: 0.95rem; }
+  .lede code { background: var(--surface-1); border: 1px solid var(--border); border-radius: 4px; padding: 0.05rem 0.35rem; font-size: 0.85em; }
+  .meta { margin: 0; font-size: 0.8rem; color: var(--muted); }
+
+  .tabs { display: flex; gap: 0.5rem; margin-top: 1rem; }
+  .tab-btn {
+    font-size: 0.82rem; font-weight: 600; padding: 0.45rem 0.9rem; border-radius: 8px;
+    border: 1px solid var(--border); background: var(--panel); color: var(--ink-2); cursor: pointer;
+  }
+  .tab-btn.active { color: var(--ink); border-color: var(--ink); background: var(--surface-1); }
+  .tab-btn:hover { background: var(--surface-1); }
+
+  .explore-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 1rem; }
+  @media (max-width: 900px) { .explore-grid { grid-template-columns: 1fr; } }
+
+  .field-group { display: flex; flex-direction: column; gap: 0.5rem; }
+  .field-group-label { font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.02em; color: var(--muted); }
+  .checkbox-row { display: flex; gap: 0.9rem; flex-wrap: wrap; }
+  .checkbox-pill {
+    display: inline-flex; align-items: center; gap: 0.4rem; font-size: 0.85rem;
+    padding: 0.35rem 0.7rem; border-radius: 8px; border: 1px solid var(--border);
+    background: var(--surface-1); cursor: pointer; user-select: none;
+  }
+  .checkbox-pill input { accent-color: var(--good); width: 0.95rem; height: 0.95rem; }
+  .checkbox-pill.checked { border-color: var(--good); background: var(--good-bg); }
+
+  .query-toggle-row { display: flex; align-items: center; gap: 0.6rem; margin-top: 0.2rem; }
+  .switch { position: relative; display: inline-block; width: 2.4rem; height: 1.35rem; flex: none; }
+  .switch input { opacity: 0; width: 0; height: 0; }
+  .switch-track {
+    position: absolute; inset: 0; background: var(--grid); border-radius: 999px; transition: background 0.15s ease;
+  }
+  .switch-track::before {
+    content: ""; position: absolute; width: 1.05rem; height: 1.05rem; left: 0.15rem; top: 0.15rem;
+    background: var(--panel); border-radius: 50%; transition: transform 0.15s ease; box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+  }
+  .switch input:checked + .switch-track { background: var(--good); }
+  .switch input:checked + .switch-track::before { transform: translateX(1.05rem); }
+
+  .result-card { margin-top: 0.9rem; padding: 1rem; border-radius: 10px; background: var(--surface-1); border: 1px solid var(--border); }
+  .result-card.is-empty { color: var(--muted); font-size: 0.85rem; text-align: center; padding: 1.6rem 1rem; }
+  .result-headline { font-size: 0.9rem; font-weight: 700; margin: 0 0 0.7rem; }
+  .stat-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.6rem; }
+  .stat-tile { background: var(--panel); border: 1px solid var(--border); border-radius: 8px; padding: 0.55rem 0.7rem; }
+  .stat-tile .k { font-size: 0.66rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.02em; color: var(--muted); margin: 0 0 0.15rem; }
+  .stat-tile .v {
+    font-size: 1rem; font-weight: 700; font-family: ui-monospace, "SF Mono", "Cascadia Code", Menlo, Consolas, monospace;
+    font-variant-numeric: tabular-nums;
+  }
+
+  .metric-select-row { display: flex; align-items: center; gap: 0.6rem; margin-bottom: 0.8rem; }
+  .metric-select {
+    font-size: 0.85rem; font-weight: 600; padding: 0.4rem 0.7rem; border-radius: 8px;
+    border: 1px solid var(--border); background: var(--surface-1); color: var(--ink); cursor: pointer;
+  }
+  .top3-list { display: flex; flex-direction: column; gap: 0.55rem; }
+  .top3-row {
+    display: flex; align-items: center; gap: 0.7rem; padding: 0.6rem 0.75rem; border-radius: 8px;
+    background: var(--surface-1); border: 1px solid var(--border);
+  }
+  .top3-rank {
+    flex: none; width: 1.6rem; height: 1.6rem; border-radius: 50%; background: var(--good-bg); color: var(--good);
+    font-weight: 700; font-size: 0.82rem; display: flex; align-items: center; justify-content: center;
+  }
+  .top3-body { flex: 1; }
+  .top3-combo { font-size: 0.84rem; font-weight: 600; color: var(--ink); }
+  .top3-summary { font-size: 0.78rem; color: var(--muted); margin-top: 0.1rem; }
+  .top3-value {
+    font-family: ui-monospace, "SF Mono", "Cascadia Code", Menlo, Consolas, monospace;
+    font-variant-numeric: tabular-nums; font-weight: 700; font-size: 0.92rem; flex: none;
+  }
+
+  .chart-card {
+    background: var(--panel); border: 1px solid var(--border); border-radius: 12px;
+    padding: 1.4rem 1.4rem 1.2rem; margin-top: 1rem;
+  }
+  .chart-title { font-size: 0.95rem; font-weight: 700; margin: 0 0 0.15rem; }
+  .chart-sub { font-size: 0.78rem; color: var(--muted); margin: 0 0 1rem; }
+
+  .heatmap-pair-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.4rem; margin-top: 0.6rem; }
+  @media (max-width: 900px) { .heatmap-pair-grid { grid-template-columns: 1fr; } }
+  .heatmap-pane-title { font-size: 0.8rem; font-weight: 700; margin: 0 0 0.5rem; color: var(--ink-2); }
+  .heatmap-scroll { overflow-x: auto; }
+  .heatmap-layout { display: grid; grid-template-columns: auto 1fr; gap: 0.5rem; align-items: start; min-width: 640px; }
+  .axis-label-y {
+    display: flex; flex-direction: column; justify-content: center; align-items: flex-end;
+    font-size: 0.72rem; font-weight: 700; color: var(--muted); writing-mode: vertical-rl;
+    transform: rotate(180deg); text-align: center; padding-right: 0.3rem;
+  }
+  .heatmap-col-labels { display: grid; grid-auto-flow: column; margin-bottom: 0.3rem; }
+  .heatmap-row { display: grid; grid-auto-flow: column; align-items: center; }
+  .row-label {
+    font-size: 0.74rem; font-weight: 700; color: var(--ink-2); text-align: right;
+    padding-right: 0.5rem; white-space: nowrap;
+  }
+  .col-label {
+    font-size: 0.74rem; font-weight: 700; color: var(--ink-2); text-align: center;
+    padding-bottom: 0.3rem; white-space: nowrap;
+  }
+  .heatmap-grid { display: grid; gap: 3px; }
+  .cell {
+    aspect-ratio: 1.15 / 1; min-width: 5.4rem; border-radius: 6px; display: flex;
+    align-items: center; justify-content: center; font-size: 0.78rem; font-weight: 700;
+    font-family: ui-monospace, "SF Mono", "Cascadia Code", Menlo, Consolas, monospace;
+    cursor: default; border: 2px solid transparent;
+  }
+  .cell:hover, .cell:focus-visible { border-color: var(--ink); outline: none; }
+  .heatmap-body { display: grid; grid-template-columns: repeat(7, 1fr); gap: 3px; }
+
+  .legend-bar { display: flex; align-items: center; gap: 0.6rem; margin-top: 0.9rem; font-size: 0.74rem; color: var(--muted); }
+
+  .heatmap-grid-all { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.1rem; margin-top: 0.6rem; }
+  @media (max-width: 980px) { .heatmap-grid-all { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 620px) { .heatmap-grid-all { grid-template-columns: 1fr; } }
+  .mini-card { border: 1px solid var(--border); border-radius: 10px; padding: 0.8rem 0.8rem 0.7rem; background: var(--panel); }
+  .mini-title { font-size: 0.76rem; font-weight: 700; margin: 0 0 0.55rem; color: var(--ink); }
+  .mini-layout { display: grid; grid-template-columns: 3.2rem 1fr; gap: 0.25rem; align-items: stretch; }
+  .mini-col-labels { display: grid; gap: 2px; margin-left: 3.2rem; margin-bottom: 2px; }
+  .mini-col-label {
+    font-size: 0.52rem; font-weight: 700; color: var(--muted); text-align: center;
+    white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+  }
+  .mini-row-labels { display: grid; gap: 2px; }
+  .mini-row-label {
+    font-size: 0.54rem; font-weight: 700; color: var(--muted); display: flex;
+    align-items: center; justify-content: flex-end; padding-right: 0.2rem; white-space: nowrap;
+  }
+  .mini-body { display: grid; gap: 2px; }
+  .mini-cell { aspect-ratio: 1 / 1; min-width: 1.5rem; border-radius: 3px; cursor: default; }
+  .mini-cell:hover, .mini-cell:focus-visible { outline: 2px solid var(--ink); outline-offset: -1px; }
+  .mini-legend { display: flex; align-items: center; gap: 0.4rem; margin-top: 0.5rem; font-size: 0.62rem; color: var(--muted); }
+  .mini-legend-ramp { flex: 1; height: 0.4rem; border-radius: 3px; }
+  .legend-ramp { flex: 1; max-width: 22rem; height: 0.7rem; border-radius: 4px; }
+
+  .fields-tooltip {
+    position: fixed; z-index: 50; pointer-events: none; opacity: 0; visibility: hidden;
+    transform: translateY(4px); transition: opacity 0.1s ease, transform 0.1s ease;
+    background: var(--panel); border: 1px solid var(--border); border-radius: 8px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.18); padding: 0.65rem 0.8rem; max-width: min(24rem, 90vw);
+  }
+  .fields-tooltip.is-visible { opacity: 1; visibility: visible; transform: translateY(0); }
+  .fields-tooltip .tt-name { font-size: 0.8rem; font-weight: 700; margin: 0 0 0.4rem; color: var(--ink); }
+  .fields-tooltip table { border-collapse: collapse; width: 100%; }
+  .fields-tooltip th {
+    text-align: left; font-size: 0.64rem; font-weight: 700; text-transform: uppercase;
+    letter-spacing: 0.02em; color: var(--muted); padding: 0 0.6rem 0.25rem 0; white-space: nowrap;
+  }
+  .fields-tooltip td {
+    text-align: left; font-size: 0.76rem; color: var(--ink); padding: 0 0.6rem 0.15rem 0;
+    font-family: ui-monospace, "SF Mono", "Cascadia Code", Menlo, Consolas, monospace;
+    font-variant-numeric: tabular-nums; white-space: nowrap;
+  }
+
+  .section-title { margin: 1.7rem 0 0.2rem; font-size: 0.95rem; font-weight: 700; }
+  .section-sub { margin: 0 0 0.4rem; font-size: 0.78rem; color: var(--muted); }
+
+  .findings { display: grid; gap: 0.7rem; margin-top: 0.6rem; }
+  .finding {
+    background: var(--panel); border: 1px solid var(--border); border-radius: 10px;
+    padding: 0.9rem 1.1rem; font-size: 0.87rem; color: var(--ink-2);
+  }
+  .finding b { color: var(--ink); }
+  .finding code { background: var(--surface-1); border: 1px solid var(--border); border-radius: 4px; padding: 0.02rem 0.3rem; font-size: 0.85em; }
+
+  .table-scroll {
+    margin-top: 0.8rem; overflow-x: auto; border: 1px solid var(--border);
+    border-radius: 10px; background: var(--panel); max-height: 32rem; overflow-y: auto;
+  }
+  table.data-table { border-collapse: collapse; width: 100%; font-size: 0.84rem; }
+  table.data-table thead th {
+    position: sticky; top: 0; background: var(--surface-1); text-align: right;
+    padding: 0.6rem 0.8rem; font-weight: 700; white-space: nowrap;
+    border-bottom: 1px solid var(--grid);
+  }
+  table.data-table thead th:first-child, table.data-table thead th:nth-child(2), table.data-table thead th:nth-child(3) { text-align: left; }
+  table.data-table tbody td, table.data-table tbody th {
+    padding: 0.45rem 0.8rem; border-bottom: 1px solid var(--grid); white-space: nowrap;
+  }
+  table.data-table tbody th { text-align: left; font-weight: 600; color: var(--ink-2); }
+  table.data-table tbody td {
+    text-align: right; color: var(--ink);
+    font-family: ui-monospace, "SF Mono", "Cascadia Code", Menlo, Consolas, monospace;
+    font-variant-numeric: tabular-nums; font-size: 0.82rem;
+  }
+  table.data-table tbody tr:hover td, table.data-table tbody tr:hover th { background: color-mix(in srgb, var(--ink) 4%, transparent); }
+  table.data-table tbody tr:nth-child(-n+1) td, table.data-table tbody tr:nth-child(-n+1) th { background: var(--good-bg); }
+
+  @media (max-width: 640px) {
+    .wrap { width: min(100%, calc(100% - 1.25rem)); padding-top: 1.25rem; }
+  }
+</style>
+</head>
+<body>
+  <div class="fields-tooltip" id="fields-tooltip" role="tooltip"></div>
+  <div class="wrap">
+    <header class="hero">
+      <h1 class="brand">top1_ctrl field/query sweep <span class="n-badge" id="combo-count-badge">— combos · n = 200 (all)</span></h1>
+      <p class="lede">
+        Which combination of seeker fields, candidate fields, and searchQuery
+        inclusion works best for <strong>top1_ctrl</strong> — this project's
+        best fine-tuned model (a LoRA adapter on Voyage-4-nano)? The exact
+        same 105-combo grid as the frozen-model sweep, re-run against the
+        fine-tuned checkpoint instead: every non-empty subset of
+        <code>positioning</code> / <code>background</code> / <code>lookingFor</code>
+        (7 per side) x with/without the search query, plus a "query-only"
+        seeker (no profile fields at all) x the same 7 candidate subsets,
+        each scored with the project's full metric suite on all 200 real
+        pairs. See <code>docs/twotower-top1-ctrl-field-sweep-experiment.md</code>
+        (and <code>docs/voyage-nano-field-sweep-experiment.md</code> for the
+        frozen-model comparison).
+      </p>
+      <p class="meta" id="meta-line"></p>
+    </header>
+
+    <main>
+      <div class="chart-card">
+        <p class="chart-title">Explore a combination</p>
+        <p class="chart-sub">Pick seeker fields, candidate fields, and whether the search query is included — see that exact combo's results below.</p>
+        <div class="explore-grid">
+          <div>
+            <div class="field-group">
+              <span class="field-group-label">Seeker fields</span>
+              <div class="checkbox-row" id="seeker-checkboxes"></div>
+            </div>
+            <div class="field-group" style="margin-top: 0.9rem;">
+              <span class="field-group-label">Candidate fields</span>
+              <div class="checkbox-row" id="candidate-checkboxes"></div>
+            </div>
+            <div class="query-toggle-row">
+              <label class="switch">
+                <input type="checkbox" id="query-toggle-input" checked />
+                <span class="switch-track"></span>
+              </label>
+              <span class="field-group-label" style="text-transform:none; font-weight:600; font-size:0.85rem; color:var(--ink-2);">Include search query</span>
+            </div>
+          </div>
+          <div id="result-card-wrap"></div>
+        </div>
+      </div>
+
+      <div class="chart-card">
+        <p class="chart-title">Top 3 combos by metric</p>
+        <p class="chart-sub" id="top3-sub">Rank all combos by any single metric and see the top three, independent of the selection above.</p>
+        <div class="metric-select-row">
+          <span class="field-group-label" style="text-transform:none; font-weight:600; font-size:0.85rem; color:var(--ink-2);">Rank by</span>
+          <select class="metric-select" id="metric-select"></select>
+        </div>
+        <div class="top3-list" id="top3-list"></div>
+      </div>
+
+      <div class="chart-card">
+        <p class="chart-title" id="heatmap-title">Pair ROC-AUC heatmaps — seeker fields (rows) x candidate fields (columns)</p>
+        <p class="chart-sub" id="heatmap-sub">Darker = higher pair AUC. Hover any cell for the full metric breakdown (hard/easy-neg AUC, best-F1, MRR, Recall@1/5/10, NDCG@1/5/10). Query included and excluded shown side by side.</p>
+        <div class="metric-select-row">
+          <span class="field-group-label" style="text-transform:none; font-weight:600; font-size:0.85rem; color:var(--ink-2);">Color / value by</span>
+          <select class="metric-select" id="heatmap-metric-select"></select>
+        </div>
+        <div class="heatmap-pair-grid">
+          <div class="heatmap-pane">
+            <p class="heatmap-pane-title">Query included</p>
+            <div class="heatmap-scroll">
+              <div class="heatmap-layout">
+                <div class="axis-label-y">Seeker fields</div>
+                <div>
+                  <div class="heatmap-col-labels" id="col-labels-yes" style="display:grid; grid-template-columns: repeat(7, 1fr); margin-left: 6.5rem;"></div>
+                  <div style="display:grid; grid-template-columns: 6.5rem 1fr; gap: 0.3rem; align-items: stretch;" id="heatmap-rows-wrap-yes">
+                    <div></div>
+                    <div class="heatmap-body" id="heatmap-body-yes"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="heatmap-pane">
+            <p class="heatmap-pane-title">Query excluded</p>
+            <div class="heatmap-scroll">
+              <div class="heatmap-layout">
+                <div class="axis-label-y">Seeker fields</div>
+                <div>
+                  <div class="heatmap-col-labels" id="col-labels-no" style="display:grid; grid-template-columns: repeat(7, 1fr); margin-left: 6.5rem;"></div>
+                  <div style="display:grid; grid-template-columns: 6.5rem 1fr; gap: 0.3rem; align-items: stretch;" id="heatmap-rows-wrap-no">
+                    <div></div>
+                    <div class="heatmap-body" id="heatmap-body-no"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="legend-bar">
+          <span id="legend-min">—</span>
+          <div class="legend-ramp" id="legend-ramp"></div>
+          <span id="legend-max">—</span>
+          <span id="legend-metric-label" style="margin-left:0.4rem;">pair AUC</span>
+        </div>
+      </div>
+
+      <div class="chart-card">
+        <p class="chart-title">All metrics at a glance</p>
+        <p class="chart-sub">Every tracked metric as its own heatmap, same seeker (rows) x candidate (columns) layout as above, each with its own color scale. Hover any cell for the full breakdown.</p>
+        <div class="tabs" id="query-tabs">
+          <button class="tab-btn active" data-query="yes">Query included</button>
+          <button class="tab-btn" data-query="no">Query excluded</button>
+        </div>
+        <div class="heatmap-grid-all" id="heatmap-grid-all"></div>
+      </div>
+
+      <p class="section-title">Findings</p>
+      <div class="findings" id="findings"></div>
+
+      <p class="section-title">All combos <span class="n-badge" id="table-count-badge">ranked by pair AUC</span></p>
+      <p class="section-sub">Top row highlighted. Scroll for the full grid.</p>
+      <div class="table-scroll">
+        <table class="data-table" id="full-table"></table>
+      </div>
+    </main>
+  </div>
+
+  <script id="data" type="application/json">{"seeker_axis_labels": ["None", "Pos", "Back", "Look", "Pos+Back", "Pos+Look", "Back+Look", "Pos+Back+Look"], "candidate_axis_labels": ["Pos", "Back", "Look", "Pos+Back", "Pos+Look", "Back+Look", "Pos+Back+Look"], "fields": ["positioning", "background", "lookingFor"], "field_short": {"positioning": "Pos", "background": "Back", "lookingFor": "Look"}, "grids": {"yes": [[{"seeker": "None", "candidate": "Pos", "use_query": true, "pair_auc": 0.5720999999999999, "best_f1": 0.6688963210702341, "accuracy_at_half": 0.54, "hard_auc": 0.5164, "easy_auc": 0.7084, "mrr": 0.45259347879030665, "mean_rank": 10.27, "median_rank": 3.0, "recall_1": 0.26, "recall_5": 0.72, "recall_10": 0.84, "ndcg_1": 0.26, "ndcg_5": 0.5017426425445615, "ndcg_10": 0.5421215429991207}, {"seeker": "None", "candidate": "Back", "use_query": true, "pair_auc": 0.5805999999999999, "best_f1": 0.6711409395973155, "accuracy_at_half": 0.55, "hard_auc": 0.4978, "easy_auc": 0.7008, "mrr": 0.4276241383796926, "mean_rank": 7.08, "median_rank": 3.0, "recall_1": 0.23, "recall_5": 0.65, "recall_10": 0.85, "ndcg_1": 0.23, "ndcg_5": 0.4572456595771992, "ndcg_10": 0.5224753193384587}, {"seeker": "None", "candidate": "Look", "use_query": true, "pair_auc": 0.6220000000000001, "best_f1": 0.6711864406779661, "accuracy_at_half": 0.565, "hard_auc": 0.5512, "easy_auc": 0.7779999999999999, "mrr": 0.3883863590739892, "mean_rank": 11.36, "median_rank": 4.0, "recall_1": 0.22, "recall_5": 0.59, "recall_10": 0.69, "ndcg_1": 0.22, "ndcg_5": 0.417701703853607, "ndcg_10": 0.4502751318456874}, {"seeker": "None", "candidate": "Pos+Back", "use_query": true, "pair_auc": 0.5741999999999999, "best_f1": 0.6688963210702341, "accuracy_at_half": 0.56, "hard_auc": 0.5282, "easy_auc": 0.6684, "mrr": 0.4735902505864747, "mean_rank": 5.74, "median_rank": 3.0, "recall_1": 0.27, "recall_5": 0.76, "recall_10": 0.87, "ndcg_1": 0.27, "ndcg_5": 0.5278204261718232, "ndcg_10": 0.5637182085974928}, {"seeker": "None", "candidate": "Pos+Look", "use_query": true, "pair_auc": 0.6005, "best_f1": 0.6666666666666666, "accuracy_at_half": 0.56, "hard_auc": 0.5314, "easy_auc": 0.7692000000000001, "mrr": 0.43236211546326425, "mean_rank": 7.66, "median_rank": 3.0, "recall_1": 0.24, "recall_5": 0.71, "recall_10": 0.83, "ndcg_1": 0.24, "ndcg_5": 0.4828436479292935, "ndcg_10": 0.5218902660172252}, {"seeker": "None", "candidate": "Back+Look", "use_query": true, "pair_auc": 0.6016, "best_f1": 0.6666666666666666, "accuracy_at_half": 0.6, "hard_auc": 0.522, "easy_auc": 0.728, "mrr": 0.47357398785413246, "mean_rank": 6.04, "median_rank": 3.0, "recall_1": 0.28, "recall_5": 0.75, "recall_10": 0.86, "ndcg_1": 0.28, "ndcg_5": 0.5259776518119287, "ndcg_10": 0.5610343049639651}, {"seeker": "None", "candidate": "Pos+Back+Look", "use_query": true, "pair_auc": 0.5896000000000001, "best_f1": 0.6666666666666666, "accuracy_at_half": 0.565, "hard_auc": 0.5218, "easy_auc": 0.7088, "mrr": 0.45772140529116695, "mean_rank": 6.04, "median_rank": 3.0, "recall_1": 0.25, "recall_5": 0.76, "recall_10": 0.86, "ndcg_1": 0.25, "ndcg_5": 0.5157172399116002, "ndcg_10": 0.5496229502703084}], [{"seeker": "Pos", "candidate": "Pos", "use_query": true, "pair_auc": 0.5897000000000001, "best_f1": 0.6688963210702341, "accuracy_at_half": 0.565, "hard_auc": 0.5288, "easy_auc": 0.6724, "mrr": 0.3831583940737618, "mean_rank": 12.68, "median_rank": 4.0, "recall_1": 0.2, "recall_5": 0.59, "recall_10": 0.79, "ndcg_1": 0.2, "ndcg_5": 0.40936665260544153, "ndcg_10": 0.473772487260511}, {"seeker": "Pos", "candidate": "Back", "use_query": true, "pair_auc": 0.6022000000000001, "best_f1": 0.6782006920415224, "accuracy_at_half": 0.555, "hard_auc": 0.5336, "easy_auc": 0.7415999999999999, "mrr": 0.41100248814652846, "mean_rank": 8.25, "median_rank": 3.0, "recall_1": 0.23, "recall_5": 0.65, "recall_10": 0.77, "ndcg_1": 0.23, "ndcg_5": 0.4481704011535377, "ndcg_10": 0.48684815904866935}, {"seeker": "Pos", "candidate": "Look", "use_query": true, "pair_auc": 0.6318, "best_f1": 0.6734006734006733, "accuracy_at_half": 0.585, "hard_auc": 0.5838, "easy_auc": 0.7012, "mrr": 0.36780850142071975, "mean_rank": 12.83, "median_rank": 5.0, "recall_1": 0.22, "recall_5": 0.53, "recall_10": 0.65, "ndcg_1": 0.22, "ndcg_5": 0.3823819274184801, "ndcg_10": 0.4223172165902122}, {"seeker": "Pos", "candidate": "Pos+Back", "use_query": true, "pair_auc": 0.5974999999999999, "best_f1": 0.6718146718146718, "accuracy_at_half": 0.57, "hard_auc": 0.5098, "easy_auc": 0.6944, "mrr": 0.44411476651264986, "mean_rank": 7.28, "median_rank": 3.0, "recall_1": 0.25, "recall_5": 0.72, "recall_10": 0.85, "ndcg_1": 0.25, "ndcg_5": 0.4950240054923342, "ndcg_10": 0.5362193243016804}, {"seeker": "Pos", "candidate": "Pos+Look", "use_query": true, "pair_auc": 0.6168, "best_f1": 0.6688963210702341, "accuracy_at_half": 0.595, "hard_auc": 0.5488, "easy_auc": 0.7057692307692308, "mrr": 0.38132163001823643, "mean_rank": 9.32, "median_rank": 4.0, "recall_1": 0.19, "recall_5": 0.6, "recall_10": 0.8, "ndcg_1": 0.19, "ndcg_5": 0.40918882699738157, "ndcg_10": 0.473962595632578}, {"seeker": "Pos", "candidate": "Back+Look", "use_query": true, "pair_auc": 0.6250000000000001, "best_f1": 0.6694560669456067, "accuracy_at_half": 0.59, "hard_auc": 0.5635999999999999, "easy_auc": 0.7128, "mrr": 0.42875699462555494, "mean_rank": 6.98, "median_rank": 3.0, "recall_1": 0.23, "recall_5": 0.71, "recall_10": 0.83, "ndcg_1": 0.23, "ndcg_5": 0.4800240054923342, "ndcg_10": 0.5181156557187667}, {"seeker": "Pos", "candidate": "Pos+Back+Look", "use_query": true, "pair_auc": 0.6087000000000001, "best_f1": 0.6666666666666666, "accuracy_at_half": 0.59, "hard_auc": 0.5212, "easy_auc": 0.7152, "mrr": 0.44927501436882145, "mean_rank": 7.2, "median_rank": 3.0, "recall_1": 0.25, "recall_5": 0.73, "recall_10": 0.83, "ndcg_1": 0.25, "ndcg_5": 0.5028204261718233, "ndcg_10": 0.5348068202825318}], [{"seeker": "Back", "candidate": "Pos", "use_query": true, "pair_auc": 0.5992, "best_f1": 0.6737588652482269, "accuracy_at_half": 0.575, "hard_auc": 0.5884, "easy_auc": 0.6532, "mrr": 0.3652907513411306, "mean_rank": 12.95, "median_rank": 3.5, "recall_1": 0.17, "recall_5": 0.61, "recall_10": 0.76, "ndcg_1": 0.17, "ndcg_5": 0.403750589488993, "ndcg_10": 0.45334422774778527}, {"seeker": "Back", "candidate": "Back", "use_query": true, "pair_auc": 0.5955999999999999, "best_f1": 0.6788321167883212, "accuracy_at_half": 0.56, "hard_auc": 0.5378000000000001, "easy_auc": 0.7412, "mrr": 0.38939726023282817, "mean_rank": 8.9, "median_rank": 3.0, "recall_1": 0.2, "recall_5": 0.59, "recall_10": 0.75, "ndcg_1": 0.2, "ndcg_5": 0.414580359745875, "ndcg_10": 0.46637750444193243}, {"seeker": "Back", "candidate": "Look", "use_query": true, "pair_auc": 0.6395000000000001, "best_f1": 0.6711409395973155, "accuracy_at_half": 0.61, "hard_auc": 0.6055999999999999, "easy_auc": 0.6971999999999999, "mrr": 0.3492105261377084, "mean_rank": 13.89, "median_rank": 6.0, "recall_1": 0.21, "recall_5": 0.48, "recall_10": 0.65, "ndcg_1": 0.21, "ndcg_5": 0.3522041018104201, "ndcg_10": 0.40715748122376555}, {"seeker": "Back", "candidate": "Pos+Back", "use_query": true, "pair_auc": 0.5874, "best_f1": 0.6714801444043322, "accuracy_at_half": 0.56, "hard_auc": 0.5506, "easy_auc": 0.7028, "mrr": 0.3984222565348604, "mean_rank": 7.34, "median_rank": 4.0, "recall_1": 0.2, "recall_5": 0.63, "recall_10": 0.78, "ndcg_1": 0.2, "ndcg_5": 0.4310370163467271, "ndcg_10": 0.4800631644730667}, {"seeker": "Back", "candidate": "Pos+Look", "use_query": true, "pair_auc": 0.6191000000000001, "best_f1": 0.6764705882352942, "accuracy_at_half": 0.58, "hard_auc": 0.5740000000000001, "easy_auc": 0.6704, "mrr": 0.3661166887863693, "mean_rank": 10.06, "median_rank": 4.0, "recall_1": 0.19, "recall_5": 0.56, "recall_10": 0.76, "ndcg_1": 0.19, "ndcg_5": 0.38474552557903174, "ndcg_10": 0.4504194563598764}, {"seeker": "Back", "candidate": "Back+Look", "use_query": true, "pair_auc": 0.6165, "best_f1": 0.6747967479674797, "accuracy_at_half": 0.575, "hard_auc": 0.5944, "easy_auc": 0.6576, "mrr": 0.41817468720613277, "mean_rank": 7.69, "median_rank": 4.0, "recall_1": 0.25, "recall_5": 0.64, "recall_10": 0.78, "ndcg_1": 0.25, "ndcg_5": 0.45048546475819284, "ndcg_10": 0.49510999768924985}, {"seeker": "Back", "candidate": "Pos+Back+Look", "use_query": true, "pair_auc": 0.6005000000000001, "best_f1": 0.6666666666666667, "accuracy_at_half": 0.58, "hard_auc": 0.5743999999999999, "easy_auc": 0.6376, "mrr": 0.41153943137369553, "mean_rank": 7.78, "median_rank": 4.0, "recall_1": 0.24, "recall_5": 0.64, "recall_10": 0.79, "ndcg_1": 0.24, "ndcg_5": 0.4450526422392553, "ndcg_10": 0.49328930101366325}], [{"seeker": "Look", "candidate": "Pos", "use_query": true, "pair_auc": 0.5823999999999999, "best_f1": 0.673611111111111, "accuracy_at_half": 0.535, "hard_auc": 0.5326, "easy_auc": 0.7188, "mrr": 0.3940860912527134, "mean_rank": 10.64, "median_rank": 3.0, "recall_1": 0.2, "recall_5": 0.61, "recall_10": 0.75, "ndcg_1": 0.2, "ndcg_5": 0.42537966345983447, "ndcg_10": 0.47147990135606355}, {"seeker": "Look", "candidate": "Back", "use_query": true, "pair_auc": 0.5968, "best_f1": 0.6808510638297873, "accuracy_at_half": 0.545, "hard_auc": 0.5276, "easy_auc": 0.7768, "mrr": 0.34971657162734865, "mean_rank": 8.04, "median_rank": 4.0, "recall_1": 0.16, "recall_5": 0.6, "recall_10": 0.75, "ndcg_1": 0.16, "ndcg_5": 0.3864282810988855, "ndcg_10": 0.4344362013355466}, {"seeker": "Look", "candidate": "Look", "use_query": true, "pair_auc": 0.6168, "best_f1": 0.6734006734006733, "accuracy_at_half": 0.575, "hard_auc": 0.5648, "easy_auc": 0.7244, "mrr": 0.3102282450001448, "mean_rank": 13.6, "median_rank": 6.0, "recall_1": 0.14, "recall_5": 0.48, "recall_10": 0.63, "ndcg_1": 0.14, "ndcg_5": 0.32408275770268813, "ndcg_10": 0.3726662207588731}, {"seeker": "Look", "candidate": "Pos+Back", "use_query": true, "pair_auc": 0.589, "best_f1": 0.678082191780822, "accuracy_at_half": 0.56, "hard_auc": 0.5662, "easy_auc": 0.7236, "mrr": 0.394048175898176, "mean_rank": 6.32, "median_rank": 4.0, "recall_1": 0.2, "recall_5": 0.68, "recall_10": 0.83, "ndcg_1": 0.2, "ndcg_5": 0.44165822645629155, "ndcg_10": 0.4902022003893808}, {"seeker": "Look", "candidate": "Pos+Look", "use_query": true, "pair_auc": 0.6166999999999999, "best_f1": 0.6688963210702341, "accuracy_at_half": 0.585, "hard_auc": 0.5422, "easy_auc": 0.7183999999999999, "mrr": 0.3376755214526444, "mean_rank": 8.72, "median_rank": 4.0, "recall_1": 0.14, "recall_5": 0.58, "recall_10": 0.77, "ndcg_1": 0.14, "ndcg_5": 0.3690522911597657, "ndcg_10": 0.43167009516786403}, {"seeker": "Look", "candidate": "Back+Look", "use_query": true, "pair_auc": 0.6223999999999998, "best_f1": 0.6746031746031746, "accuracy_at_half": 0.62, "hard_auc": 0.5948000000000001, "easy_auc": 0.7375999999999999, "mrr": 0.4030822049176245, "mean_rank": 6.57, "median_rank": 3.5, "recall_1": 0.21, "recall_5": 0.64, "recall_10": 0.79, "ndcg_1": 0.21, "ndcg_5": 0.43578899622496686, "ndcg_10": 0.4861974806902048}, {"seeker": "Look", "candidate": "Pos+Back+Look", "use_query": true, "pair_auc": 0.6091000000000001, "best_f1": 0.6666666666666666, "accuracy_at_half": 0.615, "hard_auc": 0.588, "easy_auc": 0.7228, "mrr": 0.3975400463643111, "mean_rank": 6.16, "median_rank": 4.0, "recall_1": 0.2, "recall_5": 0.64, "recall_10": 0.84, "ndcg_1": 0.2, "ndcg_5": 0.42933077107306816, "ndcg_10": 0.49575087655184147}], [{"seeker": "Pos+Back", "candidate": "Pos", "use_query": true, "pair_auc": 0.5857, "best_f1": 0.6689655172413793, "accuracy_at_half": 0.575, "hard_auc": 0.5835999999999999, "easy_auc": 0.6356, "mrr": 0.3538955395664757, "mean_rank": 14.43, "median_rank": 4.0, "recall_1": 0.18, "recall_5": 0.58, "recall_10": 0.74, "ndcg_1": 0.18, "ndcg_5": 0.3866115216963965, "ndcg_10": 0.43808721896519115}, {"seeker": "Pos+Back", "candidate": "Back", "use_query": true, "pair_auc": 0.5883, "best_f1": 0.6763636363636364, "accuracy_at_half": 0.54, "hard_auc": 0.5446, "easy_auc": 0.7495999999999999, "mrr": 0.39599512679079907, "mean_rank": 10.14, "median_rank": 4.0, "recall_1": 0.24, "recall_5": 0.57, "recall_10": 0.72, "ndcg_1": 0.24, "ndcg_5": 0.41359057064895227, "ndcg_10": 0.4622831205494233}, {"seeker": "Pos+Back", "candidate": "Look", "use_query": true, "pair_auc": 0.6183000000000001, "best_f1": 0.6734006734006733, "accuracy_at_half": 0.61, "hard_auc": 0.6012, "easy_auc": 0.6683999999999999, "mrr": 0.3416977039731347, "mean_rank": 14.64, "median_rank": 6.5, "recall_1": 0.2, "recall_5": 0.49, "recall_10": 0.64, "ndcg_1": 0.2, "ndcg_5": 0.35238734240793107, "ndcg_10": 0.3999368593564255}, {"seeker": "Pos+Back", "candidate": "Pos+Back", "use_query": true, "pair_auc": 0.5835, "best_f1": 0.6688963210702341, "accuracy_at_half": 0.575, "hard_auc": 0.5604, "easy_auc": 0.6788000000000001, "mrr": 0.3824028223980701, "mean_rank": 8.95, "median_rank": 4.0, "recall_1": 0.19, "recall_5": 0.62, "recall_10": 0.77, "ndcg_1": 0.19, "ndcg_5": 0.4174701899451543, "ndcg_10": 0.4664373051994787}, {"seeker": "Pos+Back", "candidate": "Pos+Look", "use_query": true, "pair_auc": 0.6054999999999999, "best_f1": 0.6688963210702341, "accuracy_at_half": 0.6, "hard_auc": 0.6058, "easy_auc": 0.6216, "mrr": 0.3560917375007699, "mean_rank": 11.28, "median_rank": 5.0, "recall_1": 0.19, "recall_5": 0.54, "recall_10": 0.76, "ndcg_1": 0.19, "ndcg_5": 0.3712504554908255, "ndcg_10": 0.4432074007401976}, {"seeker": "Pos+Back", "candidate": "Back+Look", "use_query": true, "pair_auc": 0.6007, "best_f1": 0.6688963210702341, "accuracy_at_half": 0.58, "hard_auc": 0.5952, "easy_auc": 0.6876, "mrr": 0.401863090137565, "mean_rank": 8.57, "median_rank": 3.0, "recall_1": 0.22, "recall_5": 0.62, "recall_10": 0.8, "ndcg_1": 0.22, "ndcg_5": 0.43200846943434096, "ndcg_10": 0.4899467919498119}, {"seeker": "Pos+Back", "candidate": "Pos+Back+Look", "use_query": true, "pair_auc": 0.5921, "best_f1": 0.6666666666666666, "accuracy_at_half": 0.57, "hard_auc": 0.5721999999999999, "easy_auc": 0.694, "mrr": 0.4026926179101705, "mean_rank": 9.16, "median_rank": 4.0, "recall_1": 0.24, "recall_5": 0.61, "recall_10": 0.79, "ndcg_1": 0.24, "ndcg_5": 0.4286372754088474, "ndcg_10": 0.48745040321545224}], [{"seeker": "Pos+Look", "candidate": "Pos", "use_query": true, "pair_auc": 0.5755000000000001, "best_f1": 0.6711864406779661, "accuracy_at_half": 0.56, "hard_auc": 0.5302, "easy_auc": 0.6164000000000001, "mrr": 0.33570897133083044, "mean_rank": 12.48, "median_rank": 4.0, "recall_1": 0.15, "recall_5": 0.6, "recall_10": 0.72, "ndcg_1": 0.15, "ndcg_5": 0.38055722107155954, "ndcg_10": 0.41839543564248877}, {"seeker": "Pos+Look", "candidate": "Back", "use_query": true, "pair_auc": 0.5935, "best_f1": 0.6851211072664359, "accuracy_at_half": 0.575, "hard_auc": 0.501, "easy_auc": 0.7951999999999999, "mrr": 0.3617295909653644, "mean_rank": 9.02, "median_rank": 5.0, "recall_1": 0.2, "recall_5": 0.57, "recall_10": 0.73, "ndcg_1": 0.2, "ndcg_5": 0.38480462211749505, "ndcg_10": 0.43797987599628674}, {"seeker": "Pos+Look", "candidate": "Look", "use_query": true, "pair_auc": 0.6036999999999999, "best_f1": 0.6734006734006733, "accuracy_at_half": 0.545, "hard_auc": 0.5803999999999999, "easy_auc": 0.7128, "mrr": 0.2898327376282161, "mean_rank": 14.33, "median_rank": 6.0, "recall_1": 0.12, "recall_5": 0.49, "recall_10": 0.61, "ndcg_1": 0.12, "ndcg_5": 0.3136140536513771, "ndcg_10": 0.35191872419754444}, {"seeker": "Pos+Look", "candidate": "Pos+Back", "use_query": true, "pair_auc": 0.5867, "best_f1": 0.6712802768166091, "accuracy_at_half": 0.575, "hard_auc": 0.5286, "easy_auc": 0.7247999999999999, "mrr": 0.3676989021514912, "mean_rank": 7.64, "median_rank": 4.0, "recall_1": 0.18, "recall_5": 0.64, "recall_10": 0.82, "ndcg_1": 0.18, "ndcg_5": 0.4100885170202485, "ndcg_10": 0.4675004244757933}, {"seeker": "Pos+Look", "candidate": "Pos+Look", "use_query": true, "pair_auc": 0.6013, "best_f1": 0.6688963210702341, "accuracy_at_half": 0.575, "hard_auc": 0.5428, "easy_auc": 0.6971999999999999, "mrr": 0.32560898132799954, "mean_rank": 10.04, "median_rank": 5.0, "recall_1": 0.15, "recall_5": 0.55, "recall_10": 0.73, "ndcg_1": 0.15, "ndcg_5": 0.35399292662496734, "ndcg_10": 0.4111911540240199}, {"seeker": "Pos+Look", "candidate": "Back+Look", "use_query": true, "pair_auc": 0.6123000000000001, "best_f1": 0.6688963210702341, "accuracy_at_half": 0.62, "hard_auc": 0.5772, "easy_auc": 0.6888, "mrr": 0.3819210226645896, "mean_rank": 7.38, "median_rank": 4.0, "recall_1": 0.2, "recall_5": 0.58, "recall_10": 0.8, "ndcg_1": 0.2, "ndcg_5": 0.40175347252346344, "ndcg_10": 0.47212087421979726}, {"seeker": "Pos+Look", "candidate": "Pos+Back+Look", "use_query": true, "pair_auc": 0.6013, "best_f1": 0.6689419795221844, "accuracy_at_half": 0.58, "hard_auc": 0.5416000000000001, "easy_auc": 0.6655999999999999, "mrr": 0.3963839847145135, "mean_rank": 7.42, "median_rank": 4.0, "recall_1": 0.23, "recall_5": 0.6, "recall_10": 0.76, "ndcg_1": 0.23, "ndcg_5": 0.4193250948386625, "ndcg_10": 0.4721330744740848}], [{"seeker": "Back+Look", "candidate": "Pos", "use_query": true, "pair_auc": 0.5794, "best_f1": 0.6712328767123288, "accuracy_at_half": 0.56, "hard_auc": 0.5392, "easy_auc": 0.6295999999999999, "mrr": 0.35354121161972174, "mean_rank": 13.08, "median_rank": 4.0, "recall_1": 0.18, "recall_5": 0.57, "recall_10": 0.69, "ndcg_1": 0.18, "ndcg_5": 0.3839516368545233, "ndcg_10": 0.42414102141851645}, {"seeker": "Back+Look", "candidate": "Back", "use_query": true, "pair_auc": 0.5778, "best_f1": 0.6836363636363636, "accuracy_at_half": 0.55, "hard_auc": 0.5105999999999999, "easy_auc": 0.7799999999999999, "mrr": 0.35423515123643157, "mean_rank": 9.62, "median_rank": 5.0, "recall_1": 0.18, "recall_5": 0.52, "recall_10": 0.69, "ndcg_1": 0.18, "ndcg_5": 0.36678393906638584, "ndcg_10": 0.4211249277438451}, {"seeker": "Back+Look", "candidate": "Look", "use_query": true, "pair_auc": 0.5991, "best_f1": 0.6756756756756758, "accuracy_at_half": 0.575, "hard_auc": 0.5442, "easy_auc": 0.7068, "mrr": 0.2734674263246262, "mean_rank": 15.34, "median_rank": 6.0, "recall_1": 0.12, "recall_5": 0.47, "recall_10": 0.61, "ndcg_1": 0.12, "ndcg_5": 0.2935724958845981, "ndcg_10": 0.3396383980265686}, {"seeker": "Back+Look", "candidate": "Pos+Back", "use_query": true, "pair_auc": 0.5719000000000001, "best_f1": 0.6736842105263159, "accuracy_at_half": 0.55, "hard_auc": 0.5202, "easy_auc": 0.6779999999999999, "mrr": 0.363871668421591, "mean_rank": 7.94, "median_rank": 4.0, "recall_1": 0.17, "recall_5": 0.63, "recall_10": 0.75, "ndcg_1": 0.17, "ndcg_5": 0.4071449985205765, "ndcg_10": 0.44503234085110366}, {"seeker": "Back+Look", "candidate": "Pos+Look", "use_query": true, "pair_auc": 0.5921, "best_f1": 0.6711409395973155, "accuracy_at_half": 0.59, "hard_auc": 0.5514, "easy_auc": 0.6612, "mrr": 0.30699188370852953, "mean_rank": 10.85, "median_rank": 5.0, "recall_1": 0.13, "recall_5": 0.51, "recall_10": 0.72, "ndcg_1": 0.13, "ndcg_5": 0.32591828727713046, "ndcg_10": 0.39407544321793103}, {"seeker": "Back+Look", "candidate": "Back+Look", "use_query": true, "pair_auc": 0.5909, "best_f1": 0.6711409395973155, "accuracy_at_half": 0.56, "hard_auc": 0.5673999999999999, "easy_auc": 0.614, "mrr": 0.3705047807787083, "mean_rank": 8.04, "median_rank": 4.0, "recall_1": 0.2, "recall_5": 0.54, "recall_10": 0.77, "ndcg_1": 0.2, "ndcg_5": 0.3816528182182209, "ndcg_10": 0.4544271080350527}, {"seeker": "Back+Look", "candidate": "Pos+Back+Look", "use_query": true, "pair_auc": 0.5836, "best_f1": 0.6711409395973155, "accuracy_at_half": 0.55, "hard_auc": 0.5464, "easy_auc": 0.6431999999999999, "mrr": 0.365203426004918, "mean_rank": 7.83, "median_rank": 4.0, "recall_1": 0.19, "recall_5": 0.6, "recall_10": 0.74, "ndcg_1": 0.19, "ndcg_5": 0.3985546891165788, "ndcg_10": 0.4422585899403952}], [{"seeker": "Pos+Back+Look", "candidate": "Pos", "use_query": true, "pair_auc": 0.5743, "best_f1": 0.6689189189189189, "accuracy_at_half": 0.575, "hard_auc": 0.5666, "easy_auc": 0.5851999999999999, "mrr": 0.3408827844228133, "mean_rank": 14.46, "median_rank": 4.0, "recall_1": 0.16, "recall_5": 0.57, "recall_10": 0.7, "ndcg_1": 0.16, "ndcg_5": 0.37484617988427416, "ndcg_10": 0.41778279011290176}, {"seeker": "Pos+Back+Look", "candidate": "Back", "use_query": true, "pair_auc": 0.5743, "best_f1": 0.6763636363636364, "accuracy_at_half": 0.565, "hard_auc": 0.4918, "easy_auc": 0.7788000000000002, "mrr": 0.3694959304523882, "mean_rank": 10.9, "median_rank": 5.0, "recall_1": 0.22, "recall_5": 0.52, "recall_10": 0.7, "ndcg_1": 0.22, "ndcg_5": 0.3790288081573408, "ndcg_10": 0.4359127146035289}, {"seeker": "Pos+Back+Look", "candidate": "Look", "use_query": true, "pair_auc": 0.5912, "best_f1": 0.6734006734006733, "accuracy_at_half": 0.58, "hard_auc": 0.5398000000000001, "easy_auc": 0.6788000000000001, "mrr": 0.2660389885078087, "mean_rank": 16.09, "median_rank": 7.0, "recall_1": 0.11, "recall_5": 0.45, "recall_10": 0.58, "ndcg_1": 0.11, "ndcg_5": 0.2835546891165789, "ndcg_10": 0.3261281171086592}, {"seeker": "Pos+Back+Look", "candidate": "Pos+Back", "use_query": true, "pair_auc": 0.5726, "best_f1": 0.6689895470383276, "accuracy_at_half": 0.545, "hard_auc": 0.5172000000000001, "easy_auc": 0.696, "mrr": 0.3518646459125947, "mean_rank": 9.65, "median_rank": 4.0, "recall_1": 0.17, "recall_5": 0.59, "recall_10": 0.74, "ndcg_1": 0.17, "ndcg_5": 0.3871269305076026, "ndcg_10": 0.434247894654524}, {"seeker": "Pos+Back+Look", "candidate": "Pos+Look", "use_query": true, "pair_auc": 0.5852999999999999, "best_f1": 0.6711409395973155, "accuracy_at_half": 0.61, "hard_auc": 0.5486, "easy_auc": 0.6295999999999999, "mrr": 0.30131526627748095, "mean_rank": 12.04, "median_rank": 5.0, "recall_1": 0.13, "recall_5": 0.52, "recall_10": 0.69, "ndcg_1": 0.13, "ndcg_5": 0.3273460458861067, "ndcg_10": 0.3824174910434824}, {"seeker": "Pos+Back+Look", "candidate": "Back+Look", "use_query": true, "pair_auc": 0.5846, "best_f1": 0.6688963210702341, "accuracy_at_half": 0.57, "hard_auc": 0.5378, "easy_auc": 0.592, "mrr": 0.3669088616420716, "mean_rank": 8.94, "median_rank": 4.0, "recall_1": 0.19, "recall_5": 0.54, "recall_10": 0.73, "ndcg_1": 0.19, "ndcg_5": 0.38127394524463076, "ndcg_10": 0.4422963925940959}, {"seeker": "Pos+Back+Look", "candidate": "Pos+Back+Look", "use_query": true, "pair_auc": 0.5787, "best_f1": 0.6688963210702341, "accuracy_at_half": 0.575, "hard_auc": 0.516, "easy_auc": 0.6432, "mrr": 0.3681069502644653, "mean_rank": 9.27, "median_rank": 4.0, "recall_1": 0.2, "recall_5": 0.57, "recall_10": 0.7, "ndcg_1": 0.2, "ndcg_5": 0.3935905706489523, "ndcg_10": 0.4353286824729946}]], "no": [[{"pair_auc": null, "hard_auc": null, "easy_auc": null, "best_f1": null, "accuracy_at_half": null, "mrr": null, "recall_1": null, "recall_5": null, "recall_10": null, "ndcg_1": null, "ndcg_5": null, "ndcg_10": null, "seeker": "None", "candidate": "Pos", "use_query": false, "mean_rank": null, "median_rank": null, "na": true}, {"pair_auc": null, "hard_auc": null, "easy_auc": null, "best_f1": null, "accuracy_at_half": null, "mrr": null, "recall_1": null, "recall_5": null, "recall_10": null, "ndcg_1": null, "ndcg_5": null, "ndcg_10": null, "seeker": "None", "candidate": "Back", "use_query": false, "mean_rank": null, "median_rank": null, "na": true}, {"pair_auc": null, "hard_auc": null, "easy_auc": null, "best_f1": null, "accuracy_at_half": null, "mrr": null, "recall_1": null, "recall_5": null, "recall_10": null, "ndcg_1": null, "ndcg_5": null, "ndcg_10": null, "seeker": "None", "candidate": "Look", "use_query": false, "mean_rank": null, "median_rank": null, "na": true}, {"pair_auc": null, "hard_auc": null, "easy_auc": null, "best_f1": null, "accuracy_at_half": null, "mrr": null, "recall_1": null, "recall_5": null, "recall_10": null, "ndcg_1": null, "ndcg_5": null, "ndcg_10": null, "seeker": "None", "candidate": "Pos+Back", "use_query": false, "mean_rank": null, "median_rank": null, "na": true}, {"pair_auc": null, "hard_auc": null, "easy_auc": null, "best_f1": null, "accuracy_at_half": null, "mrr": null, "recall_1": null, "recall_5": null, "recall_10": null, "ndcg_1": null, "ndcg_5": null, "ndcg_10": null, "seeker": "None", "candidate": "Pos+Look", "use_query": false, "mean_rank": null, "median_rank": null, "na": true}, {"pair_auc": null, "hard_auc": null, "easy_auc": null, "best_f1": null, "accuracy_at_half": null, "mrr": null, "recall_1": null, "recall_5": null, "recall_10": null, "ndcg_1": null, "ndcg_5": null, "ndcg_10": null, "seeker": "None", "candidate": "Back+Look", "use_query": false, "mean_rank": null, "median_rank": null, "na": true}, {"pair_auc": null, "hard_auc": null, "easy_auc": null, "best_f1": null, "accuracy_at_half": null, "mrr": null, "recall_1": null, "recall_5": null, "recall_10": null, "ndcg_1": null, "ndcg_5": null, "ndcg_10": null, "seeker": "None", "candidate": "Pos+Back+Look", "use_query": false, "mean_rank": null, "median_rank": null, "na": true}], [{"seeker": "Pos", "candidate": "Pos", "use_query": false, "pair_auc": 0.5613999999999999, "best_f1": 0.6688963210702341, "accuracy_at_half": 0.54, "hard_auc": 0.5147999999999999, "easy_auc": 0.6192307692307693, "mrr": 0.19786007235661363, "mean_rank": 32.54, "median_rank": 13.5, "recall_1": 0.06, "recall_5": 0.31, "recall_10": 0.46, "ndcg_1": 0.06, "ndcg_5": 0.1983714552704482, "ndcg_10": 0.2470550262711749}, {"seeker": "Pos", "candidate": "Back", "use_query": false, "pair_auc": 0.5419999999999999, "best_f1": 0.6666666666666666, "accuracy_at_half": 0.53, "hard_auc": 0.46420000000000006, "easy_auc": 0.6584000000000001, "mrr": 0.19117840386959536, "mean_rank": 28.19, "median_rank": 12.0, "recall_1": 0.07, "recall_5": 0.32, "recall_10": 0.45, "ndcg_1": 0.07, "ndcg_5": 0.19252361024921208, "ndcg_10": 0.23561354818880137}, {"seeker": "Pos", "candidate": "Look", "use_query": false, "pair_auc": 0.5474, "best_f1": 0.6666666666666667, "accuracy_at_half": 0.54, "hard_auc": 0.4534, "easy_auc": 0.66, "mrr": 0.20305485698610456, "mean_rank": 30.69, "median_rank": 16.5, "recall_1": 0.1, "recall_5": 0.29, "recall_10": 0.41, "ndcg_1": 0.1, "ndcg_5": 0.19949026742319956, "ndcg_10": 0.23574699112816203}, {"seeker": "Pos", "candidate": "Pos+Back", "use_query": false, "pair_auc": 0.5537000000000001, "best_f1": 0.6666666666666666, "accuracy_at_half": 0.525, "hard_auc": 0.4928, "easy_auc": 0.6652, "mrr": 0.20195547641001013, "mean_rank": 28.38, "median_rank": 9.5, "recall_1": 0.05, "recall_5": 0.35, "recall_10": 0.52, "ndcg_1": 0.05, "ndcg_5": 0.2099052831741178, "ndcg_10": 0.2654095082892307}, {"seeker": "Pos", "candidate": "Pos+Look", "use_query": false, "pair_auc": 0.5526, "best_f1": 0.6666666666666666, "accuracy_at_half": 0.52, "hard_auc": 0.5080000000000001, "easy_auc": 0.6888, "mrr": 0.22309084866533485, "mean_rank": 28.38, "median_rank": 14.0, "recall_1": 0.12, "recall_5": 0.31, "recall_10": 0.45, "ndcg_1": 0.12, "ndcg_5": 0.2159897823455424, "ndcg_10": 0.2614448797010574}, {"seeker": "Pos", "candidate": "Back+Look", "use_query": false, "pair_auc": 0.5446, "best_f1": 0.6666666666666666, "accuracy_at_half": 0.515, "hard_auc": 0.478, "easy_auc": 0.6664, "mrr": 0.2124354543384116, "mean_rank": 25.95, "median_rank": 10.5, "recall_1": 0.07, "recall_5": 0.35, "recall_10": 0.5, "ndcg_1": 0.07, "ndcg_5": 0.21946704566572933, "ndcg_10": 0.26659857466182574}, {"seeker": "Pos", "candidate": "Pos+Back+Look", "use_query": false, "pair_auc": 0.5479999999999999, "best_f1": 0.6666666666666666, "accuracy_at_half": 0.53, "hard_auc": 0.4662, "easy_auc": 0.6599999999999999, "mrr": 0.23294925094233676, "mean_rank": 27.62, "median_rank": 9.5, "recall_1": 0.1, "recall_5": 0.39, "recall_10": 0.51, "ndcg_1": 0.1, "ndcg_5": 0.24758297478401037, "ndcg_10": 0.28705180798050434}], [{"seeker": "Back", "candidate": "Pos", "use_query": false, "pair_auc": 0.5605, "best_f1": 0.6666666666666667, "accuracy_at_half": 0.545, "hard_auc": 0.5458000000000001, "easy_auc": 0.6426923076923077, "mrr": 0.1856467439344577, "mean_rank": 36.88, "median_rank": 18.5, "recall_1": 0.09, "recall_5": 0.27, "recall_10": 0.35, "ndcg_1": 0.09, "ndcg_5": 0.18150519115674846, "ndcg_10": 0.2082367038010253}, {"seeker": "Back", "candidate": "Back", "use_query": false, "pair_auc": 0.5475000000000001, "best_f1": 0.6688963210702341, "accuracy_at_half": 0.545, "hard_auc": 0.4978, "easy_auc": 0.6960000000000001, "mrr": 0.1744479541133935, "mean_rank": 31.86, "median_rank": 20.0, "recall_1": 0.08, "recall_5": 0.25, "recall_10": 0.37, "ndcg_1": 0.08, "ndcg_5": 0.1651241373076673, "ndcg_10": 0.2043985677206729}, {"seeker": "Back", "candidate": "Look", "use_query": false, "pair_auc": 0.5596, "best_f1": 0.6666666666666666, "accuracy_at_half": 0.53, "hard_auc": 0.5312, "easy_auc": 0.6040000000000001, "mrr": 0.15069350642915416, "mean_rank": 36.87, "median_rank": 22.0, "recall_1": 0.06, "recall_5": 0.17, "recall_10": 0.33, "ndcg_1": 0.06, "ndcg_5": 0.12190213889469285, "ndcg_10": 0.17530613131123143}, {"seeker": "Back", "candidate": "Pos+Back", "use_query": false, "pair_auc": 0.5431, "best_f1": 0.6666666666666666, "accuracy_at_half": 0.54, "hard_auc": 0.4842, "easy_auc": 0.632, "mrr": 0.1917576348831894, "mean_rank": 31.94, "median_rank": 16.5, "recall_1": 0.09, "recall_5": 0.26, "recall_10": 0.41, "ndcg_1": 0.09, "ndcg_5": 0.1795674387260171, "ndcg_10": 0.2283401511968532}, {"seeker": "Back", "candidate": "Pos+Look", "use_query": false, "pair_auc": 0.5549999999999999, "best_f1": 0.6688963210702341, "accuracy_at_half": 0.545, "hard_auc": 0.49119999999999997, "easy_auc": 0.652, "mrr": 0.1884788258311587, "mean_rank": 33.8, "median_rank": 18.0, "recall_1": 0.1, "recall_5": 0.25, "recall_10": 0.38, "ndcg_1": 0.1, "ndcg_5": 0.1749463116996073, "ndcg_10": 0.21751076079194345}, {"seeker": "Back", "candidate": "Back+Look", "use_query": false, "pair_auc": 0.5507, "best_f1": 0.6711409395973155, "accuracy_at_half": 0.575, "hard_auc": 0.5018, "easy_auc": 0.668, "mrr": 0.17468770916769027, "mean_rank": 31.02, "median_rank": 17.5, "recall_1": 0.08, "recall_5": 0.22, "recall_10": 0.4, "ndcg_1": 0.08, "ndcg_5": 0.15307490059279158, "ndcg_10": 0.21047108983032417}, {"seeker": "Back", "candidate": "Pos+Back+Look", "use_query": false, "pair_auc": 0.5416000000000001, "best_f1": 0.6688963210702341, "accuracy_at_half": 0.59, "hard_auc": 0.4964, "easy_auc": 0.662, "mrr": 0.1846123990290115, "mean_rank": 32.66, "median_rank": 18.0, "recall_1": 0.08, "recall_5": 0.25, "recall_10": 0.44, "ndcg_1": 0.08, "ndcg_5": 0.17069349566422073, "ndcg_10": 0.23111504333964764}], [{"seeker": "Look", "candidate": "Pos", "use_query": false, "pair_auc": 0.5576999999999999, "best_f1": 0.6666666666666666, "accuracy_at_half": 0.525, "hard_auc": 0.5117647058823529, "easy_auc": 0.6844000000000001, "mrr": 0.2652607327775555, "mean_rank": 17.53, "median_rank": 6.5, "recall_1": 0.11, "recall_5": 0.45, "recall_10": 0.59, "ndcg_1": 0.11, "ndcg_5": 0.2827553854026194, "ndcg_10": 0.3292049397427293}, {"seeker": "Look", "candidate": "Back", "use_query": false, "pair_auc": 0.5646, "best_f1": 0.6666666666666667, "accuracy_at_half": 0.52, "hard_auc": 0.505, "easy_auc": 0.7264, "mrr": 0.2584258476164916, "mean_rank": 15.22, "median_rank": 7.0, "recall_1": 0.12, "recall_5": 0.41, "recall_10": 0.64, "ndcg_1": 0.12, "ndcg_5": 0.2600056694830253, "ndcg_10": 0.33504766577906453}, {"seeker": "Look", "candidate": "Look", "use_query": false, "pair_auc": 0.5704, "best_f1": 0.6666666666666667, "accuracy_at_half": 0.495, "hard_auc": 0.5084000000000001, "easy_auc": 0.6812000000000001, "mrr": 0.20336851998969788, "mean_rank": 22.1, "median_rank": 13.0, "recall_1": 0.08, "recall_5": 0.32, "recall_10": 0.4, "ndcg_1": 0.08, "ndcg_5": 0.20353662110360496, "ndcg_10": 0.22896120823576838}, {"seeker": "Look", "candidate": "Pos+Back", "use_query": false, "pair_auc": 0.5486, "best_f1": 0.6666666666666667, "accuracy_at_half": 0.525, "hard_auc": 0.5182, "easy_auc": 0.6307999999999999, "mrr": 0.2660768058575346, "mean_rank": 13.29, "median_rank": 6.0, "recall_1": 0.1, "recall_5": 0.47, "recall_10": 0.67, "ndcg_1": 0.1, "ndcg_5": 0.28351880758420545, "ndcg_10": 0.34866566356836615}, {"seeker": "Look", "candidate": "Pos+Look", "use_query": false, "pair_auc": 0.5648000000000001, "best_f1": 0.6666666666666667, "accuracy_at_half": 0.54, "hard_auc": 0.501, "easy_auc": 0.6224000000000001, "mrr": 0.22750758375088695, "mean_rank": 16.33, "median_rank": 9.0, "recall_1": 0.09, "recall_5": 0.36, "recall_10": 0.53, "ndcg_1": 0.09, "ndcg_5": 0.22521937662345878, "ndcg_10": 0.28067447397897377}, {"seeker": "Look", "candidate": "Back+Look", "use_query": false, "pair_auc": 0.5746, "best_f1": 0.6666666666666667, "accuracy_at_half": 0.55, "hard_auc": 0.5464, "easy_auc": 0.6692, "mrr": 0.26044914345385295, "mean_rank": 13.85, "median_rank": 7.0, "recall_1": 0.11, "recall_5": 0.45, "recall_10": 0.55, "ndcg_1": 0.11, "ndcg_5": 0.2782222596579291, "ndcg_10": 0.3109638073663106}, {"seeker": "Look", "candidate": "Pos+Back+Look", "use_query": false, "pair_auc": 0.5624, "best_f1": 0.6666666666666666, "accuracy_at_half": 0.53, "hard_auc": 0.5434, "easy_auc": 0.6436, "mrr": 0.2766579440383054, "mean_rank": 13.21, "median_rank": 7.5, "recall_1": 0.13, "recall_5": 0.43, "recall_10": 0.59, "ndcg_1": 0.13, "ndcg_5": 0.2814569178458067, "ndcg_10": 0.3336040387225027}], [{"seeker": "Pos+Back", "candidate": "Pos", "use_query": false, "pair_auc": 0.5681, "best_f1": 0.6688963210702341, "accuracy_at_half": 0.555, "hard_auc": 0.5394, "easy_auc": 0.6372, "mrr": 0.22057684944140196, "mean_rank": 32.16, "median_rank": 16.5, "recall_1": 0.11, "recall_5": 0.32, "recall_10": 0.41, "ndcg_1": 0.11, "ndcg_5": 0.2204330837638922, "ndcg_10": 0.24980180901584448}, {"seeker": "Pos+Back", "candidate": "Back", "use_query": false, "pair_auc": 0.5541, "best_f1": 0.6666666666666666, "accuracy_at_half": 0.56, "hard_auc": 0.5016, "easy_auc": 0.7116, "mrr": 0.20614093506862644, "mean_rank": 27.26, "median_rank": 15.0, "recall_1": 0.09, "recall_5": 0.33, "recall_10": 0.45, "ndcg_1": 0.09, "ndcg_5": 0.2100415510153988, "ndcg_10": 0.24928164567414585}, {"seeker": "Pos+Back", "candidate": "Look", "use_query": false, "pair_auc": 0.5552, "best_f1": 0.6666666666666667, "accuracy_at_half": 0.54, "hard_auc": 0.5226, "easy_auc": 0.6180000000000001, "mrr": 0.2067871592505054, "mean_rank": 29.84, "median_rank": 16.0, "recall_1": 0.11, "recall_5": 0.26, "recall_10": 0.39, "ndcg_1": 0.11, "ndcg_5": 0.19113173317260923, "ndcg_10": 0.2319802477001783}, {"seeker": "Pos+Back", "candidate": "Pos+Back", "use_query": false, "pair_auc": 0.5541, "best_f1": 0.6666666666666666, "accuracy_at_half": 0.555, "hard_auc": 0.4978, "easy_auc": 0.6632, "mrr": 0.23356994314458343, "mean_rank": 27.25, "median_rank": 11.5, "recall_1": 0.11, "recall_5": 0.36, "recall_10": 0.48, "ndcg_1": 0.11, "ndcg_5": 0.23878620302503153, "ndcg_10": 0.27758361261362413}, {"seeker": "Pos+Back", "candidate": "Pos+Look", "use_query": false, "pair_auc": 0.5641, "best_f1": 0.6688963210702341, "accuracy_at_half": 0.555, "hard_auc": 0.53, "easy_auc": 0.652, "mrr": 0.23101376996987735, "mean_rank": 28.31, "median_rank": 15.5, "recall_1": 0.13, "recall_5": 0.31, "recall_10": 0.39, "ndcg_1": 0.13, "ndcg_5": 0.22405202991481105, "ndcg_10": 0.2502571274991618}, {"seeker": "Pos+Back", "candidate": "Back+Look", "use_query": false, "pair_auc": 0.5594, "best_f1": 0.6666666666666666, "accuracy_at_half": 0.575, "hard_auc": 0.5398, "easy_auc": 0.6108, "mrr": 0.21326374178423543, "mean_rank": 25.15, "median_rank": 10.0, "recall_1": 0.09, "recall_5": 0.34, "recall_10": 0.52, "ndcg_1": 0.09, "ndcg_5": 0.21408790469580416, "ndcg_10": 0.2723983883475665}, {"seeker": "Pos+Back", "candidate": "Pos+Back+Look", "use_query": false, "pair_auc": 0.5537000000000001, "best_f1": 0.6666666666666666, "accuracy_at_half": 0.57, "hard_auc": 0.5016, "easy_auc": 0.6424, "mrr": 0.2306697311125205, "mean_rank": 27.0, "median_rank": 11.0, "recall_1": 0.11, "recall_5": 0.37, "recall_10": 0.49, "ndcg_1": 0.11, "ndcg_5": 0.24004155101539873, "ndcg_10": 0.27923159170187495}], [{"seeker": "Pos+Look", "candidate": "Pos", "use_query": false, "pair_auc": 0.5597000000000001, "best_f1": 0.6688963210702341, "accuracy_at_half": 0.56, "hard_auc": 0.529, "easy_auc": 0.6136, "mrr": 0.2722161561818827, "mean_rank": 17.48, "median_rank": 6.0, "recall_1": 0.13, "recall_5": 0.42, "recall_10": 0.63, "ndcg_1": 0.13, "ndcg_5": 0.27539720223151876, "ndcg_10": 0.3448857143262741}, {"seeker": "Pos+Look", "candidate": "Back", "use_query": false, "pair_auc": 0.5686, "best_f1": 0.6739130434782609, "accuracy_at_half": 0.54, "hard_auc": 0.48300000000000004, "easy_auc": 0.7944, "mrr": 0.2683233212130052, "mean_rank": 15.08, "median_rank": 6.5, "recall_1": 0.12, "recall_5": 0.44, "recall_10": 0.6, "ndcg_1": 0.12, "ndcg_5": 0.27970938280170365, "ndcg_10": 0.33329205978371823}, {"seeker": "Pos+Look", "candidate": "Look", "use_query": false, "pair_auc": 0.5628, "best_f1": 0.6711864406779661, "accuracy_at_half": 0.535, "hard_auc": 0.5237999999999999, "easy_auc": 0.6892, "mrr": 0.21736161883359728, "mean_rank": 20.35, "median_rank": 12.0, "recall_1": 0.09, "recall_5": 0.34, "recall_10": 0.45, "ndcg_1": 0.09, "ndcg_5": 0.2180983835952164, "ndcg_10": 0.25427812432505287}, {"seeker": "Pos+Look", "candidate": "Pos+Back", "use_query": false, "pair_auc": 0.564, "best_f1": 0.6711409395973155, "accuracy_at_half": 0.525, "hard_auc": 0.47100000000000003, "easy_auc": 0.7195999999999999, "mrr": 0.2951810029693055, "mean_rank": 12.95, "median_rank": 5.0, "recall_1": 0.12, "recall_5": 0.51, "recall_10": 0.67, "ndcg_1": 0.12, "ndcg_5": 0.3206343923743771, "ndcg_10": 0.3718903300051691}, {"seeker": "Pos+Look", "candidate": "Pos+Look", "use_query": false, "pair_auc": 0.5613, "best_f1": 0.6711409395973155, "accuracy_at_half": 0.55, "hard_auc": 0.5056, "easy_auc": 0.6476, "mrr": 0.23919140338878556, "mean_rank": 15.57, "median_rank": 8.5, "recall_1": 0.09, "recall_5": 0.39, "recall_10": 0.56, "ndcg_1": 0.09, "ndcg_5": 0.2436318604193964, "ndcg_10": 0.29954350863773227}, {"seeker": "Pos+Look", "candidate": "Back+Look", "use_query": false, "pair_auc": 0.57, "best_f1": 0.6711409395973155, "accuracy_at_half": 0.55, "hard_auc": 0.5162, "easy_auc": 0.6624, "mrr": 0.28806260420187707, "mean_rank": 12.27, "median_rank": 6.0, "recall_1": 0.13, "recall_5": 0.49, "recall_10": 0.59, "ndcg_1": 0.13, "ndcg_5": 0.3106810971342721, "ndcg_10": 0.3439506458520104}, {"seeker": "Pos+Look", "candidate": "Pos+Back+Look", "use_query": false, "pair_auc": 0.5631999999999999, "best_f1": 0.6711409395973155, "accuracy_at_half": 0.55, "hard_auc": 0.49760000000000004, "easy_auc": 0.6264, "mrr": 0.3008423726761143, "mean_rank": 12.43, "median_rank": 5.5, "recall_1": 0.14, "recall_5": 0.5, "recall_10": 0.61, "ndcg_1": 0.14, "ndcg_5": 0.3236372754088474, "ndcg_10": 0.36001141892217214}], [{"seeker": "Back+Look", "candidate": "Pos", "use_query": false, "pair_auc": 0.5652000000000001, "best_f1": 0.6711864406779661, "accuracy_at_half": 0.56, "hard_auc": 0.5302, "easy_auc": 0.6451999999999999, "mrr": 0.27348255028478646, "mean_rank": 18.87, "median_rank": 6.5, "recall_1": 0.13, "recall_5": 0.45, "recall_10": 0.57, "ndcg_1": 0.13, "ndcg_5": 0.2906521991423963, "ndcg_10": 0.3300514346177002}, {"seeker": "Back+Look", "candidate": "Back", "use_query": false, "pair_auc": 0.5591, "best_f1": 0.673611111111111, "accuracy_at_half": 0.57, "hard_auc": 0.4814, "easy_auc": 0.7263999999999999, "mrr": 0.2706534903345055, "mean_rank": 15.56, "median_rank": 8.0, "recall_1": 0.12, "recall_5": 0.43, "recall_10": 0.58, "ndcg_1": 0.12, "ndcg_5": 0.2823819274184801, "ndcg_10": 0.32945534975523444}, {"seeker": "Back+Look", "candidate": "Look", "use_query": false, "pair_auc": 0.5618, "best_f1": 0.6712802768166091, "accuracy_at_half": 0.505, "hard_auc": 0.4914, "easy_auc": 0.686, "mrr": 0.21452302148787583, "mean_rank": 21.04, "median_rank": 11.0, "recall_1": 0.08, "recall_5": 0.33, "recall_10": 0.49, "ndcg_1": 0.08, "ndcg_5": 0.21184845059430019, "ndcg_10": 0.262687060009452}, {"seeker": "Back+Look", "candidate": "Pos+Back", "use_query": false, "pair_auc": 0.5513000000000001, "best_f1": 0.6688963210702341, "accuracy_at_half": 0.535, "hard_auc": 0.48200000000000004, "easy_auc": 0.6752, "mrr": 0.29342539384261124, "mean_rank": 13.62, "median_rank": 6.0, "recall_1": 0.13, "recall_5": 0.47, "recall_10": 0.64, "ndcg_1": 0.13, "ndcg_5": 0.3085133993461347, "ndcg_10": 0.3633708979711029}, {"seeker": "Back+Look", "candidate": "Pos+Look", "use_query": false, "pair_auc": 0.5639000000000001, "best_f1": 0.6711409395973155, "accuracy_at_half": 0.565, "hard_auc": 0.5248, "easy_auc": 0.6612, "mrr": 0.24446105073267446, "mean_rank": 16.64, "median_rank": 9.0, "recall_1": 0.09, "recall_5": 0.4, "recall_10": 0.54, "ndcg_1": 0.09, "ndcg_5": 0.25333557373807475, "ndcg_10": 0.2988840397198635}, {"seeker": "Back+Look", "candidate": "Back+Look", "use_query": false, "pair_auc": 0.5569000000000001, "best_f1": 0.6666666666666667, "accuracy_at_half": 0.56, "hard_auc": 0.5166000000000001, "easy_auc": 0.5992, "mrr": 0.28533532764588015, "mean_rank": 13.17, "median_rank": 7.0, "recall_1": 0.15, "recall_5": 0.44, "recall_10": 0.61, "ndcg_1": 0.15, "ndcg_5": 0.29365508217686664, "ndcg_10": 0.34793611176963773}, {"seeker": "Back+Look", "candidate": "Pos+Back+Look", "use_query": false, "pair_auc": 0.5561, "best_f1": 0.6689189189189189, "accuracy_at_half": 0.55, "hard_auc": 0.49740000000000006, "easy_auc": 0.6292, "mrr": 0.29551066664632925, "mean_rank": 13.63, "median_rank": 6.5, "recall_1": 0.17, "recall_5": 0.46, "recall_10": 0.61, "ndcg_1": 0.17, "ndcg_5": 0.3076474863119247, "ndcg_10": 0.3562572324352969}], [{"seeker": "Pos+Back+Look", "candidate": "Pos", "use_query": false, "pair_auc": 0.5674000000000001, "best_f1": 0.6689189189189189, "accuracy_at_half": 0.58, "hard_auc": 0.5714, "easy_auc": 0.6392, "mrr": 0.26516593462682475, "mean_rank": 19.48, "median_rank": 7.5, "recall_1": 0.12, "recall_5": 0.46, "recall_10": 0.6, "ndcg_1": 0.12, "ndcg_5": 0.2887503214926581, "ndcg_10": 0.3326338330946236}, {"seeker": "Pos+Back+Look", "candidate": "Back", "use_query": false, "pair_auc": 0.5545, "best_f1": 0.6666666666666667, "accuracy_at_half": 0.57, "hard_auc": 0.4576, "easy_auc": 0.7792, "mrr": 0.28757545832072173, "mean_rank": 16.66, "median_rank": 7.5, "recall_1": 0.16, "recall_5": 0.43, "recall_10": 0.58, "ndcg_1": 0.16, "ndcg_5": 0.29409331968525515, "ndcg_10": 0.34203005625129534}, {"seeker": "Pos+Back+Look", "candidate": "Look", "use_query": false, "pair_auc": 0.5570999999999999, "best_f1": 0.6734006734006733, "accuracy_at_half": 0.54, "hard_auc": 0.49520000000000003, "easy_auc": 0.6731999999999999, "mrr": 0.21373968463524498, "mean_rank": 21.16, "median_rank": 11.0, "recall_1": 0.09, "recall_5": 0.32, "recall_10": 0.49, "ndcg_1": 0.09, "ndcg_5": 0.20799772928997398, "ndcg_10": 0.26178694605299285}, {"seeker": "Pos+Back+Look", "candidate": "Pos+Back", "use_query": false, "pair_auc": 0.5534000000000001, "best_f1": 0.6688963210702341, "accuracy_at_half": 0.54, "hard_auc": 0.4804, "easy_auc": 0.6916, "mrr": 0.2947741104336979, "mean_rank": 14.77, "median_rank": 6.0, "recall_1": 0.14, "recall_5": 0.49, "recall_10": 0.6, "ndcg_1": 0.14, "ndcg_5": 0.31819903790045884, "ndcg_10": 0.35413115608038687}, {"seeker": "Pos+Back+Look", "candidate": "Pos+Look", "use_query": false, "pair_auc": 0.5607, "best_f1": 0.6734006734006733, "accuracy_at_half": 0.56, "hard_auc": 0.5218, "easy_auc": 0.6427999999999999, "mrr": 0.24406452782193278, "mean_rank": 16.97, "median_rank": 9.0, "recall_1": 0.1, "recall_5": 0.39, "recall_10": 0.56, "ndcg_1": 0.1, "ndcg_5": 0.24896944362254253, "ndcg_10": 0.30371851513998244}, {"seeker": "Pos+Back+Look", "candidate": "Back+Look", "use_query": false, "pair_auc": 0.5585, "best_f1": 0.6688963210702341, "accuracy_at_half": 0.555, "hard_auc": 0.5284, "easy_auc": 0.6088, "mrr": 0.2912375032735145, "mean_rank": 13.61, "median_rank": 6.5, "recall_1": 0.12, "recall_5": 0.46, "recall_10": 0.59, "ndcg_1": 0.12, "ndcg_5": 0.3058357077362422, "ndcg_10": 0.3488412559493021}, {"seeker": "Pos+Back+Look", "candidate": "Pos+Back+Look", "use_query": false, "pair_auc": 0.5562, "best_f1": 0.6689189189189189, "accuracy_at_half": 0.56, "hard_auc": 0.4808, "easy_auc": 0.6664, "mrr": 0.2955792860174198, "mean_rank": 14.34, "median_rank": 6.0, "recall_1": 0.15, "recall_5": 0.48, "recall_10": 0.61, "ndcg_1": 0.15, "ndcg_5": 0.31627909223774675, "ndcg_10": 0.3581114989007357}]]}, "combo_lookup": {"None|Pos|yes": {"seeker": "None", "candidate": "Pos", "use_query": true, "pair_auc": 0.5720999999999999, "best_f1": 0.6688963210702341, "accuracy_at_half": 0.54, "hard_auc": 0.5164, "easy_auc": 0.7084, "mrr": 0.45259347879030665, "mean_rank": 10.27, "median_rank": 3.0, "recall_1": 0.26, "recall_5": 0.72, "recall_10": 0.84, "ndcg_1": 0.26, "ndcg_5": 0.5017426425445615, "ndcg_10": 0.5421215429991207}, "None|Back|yes": {"seeker": "None", "candidate": "Back", "use_query": true, "pair_auc": 0.5805999999999999, "best_f1": 0.6711409395973155, "accuracy_at_half": 0.55, "hard_auc": 0.4978, "easy_auc": 0.7008, "mrr": 0.4276241383796926, "mean_rank": 7.08, "median_rank": 3.0, "recall_1": 0.23, "recall_5": 0.65, "recall_10": 0.85, "ndcg_1": 0.23, "ndcg_5": 0.4572456595771992, "ndcg_10": 0.5224753193384587}, "None|Look|yes": {"seeker": "None", "candidate": "Look", "use_query": true, "pair_auc": 0.6220000000000001, "best_f1": 0.6711864406779661, "accuracy_at_half": 0.565, "hard_auc": 0.5512, "easy_auc": 0.7779999999999999, "mrr": 0.3883863590739892, "mean_rank": 11.36, "median_rank": 4.0, "recall_1": 0.22, "recall_5": 0.59, "recall_10": 0.69, "ndcg_1": 0.22, "ndcg_5": 0.417701703853607, "ndcg_10": 0.4502751318456874}, "None|Pos+Back|yes": {"seeker": "None", "candidate": "Pos+Back", "use_query": true, "pair_auc": 0.5741999999999999, "best_f1": 0.6688963210702341, "accuracy_at_half": 0.56, "hard_auc": 0.5282, "easy_auc": 0.6684, "mrr": 0.4735902505864747, "mean_rank": 5.74, "median_rank": 3.0, "recall_1": 0.27, "recall_5": 0.76, "recall_10": 0.87, "ndcg_1": 0.27, "ndcg_5": 0.5278204261718232, "ndcg_10": 0.5637182085974928}, "None|Pos+Look|yes": {"seeker": "None", "candidate": "Pos+Look", "use_query": true, "pair_auc": 0.6005, "best_f1": 0.6666666666666666, "accuracy_at_half": 0.56, "hard_auc": 0.5314, "easy_auc": 0.7692000000000001, "mrr": 0.43236211546326425, "mean_rank": 7.66, "median_rank": 3.0, "recall_1": 0.24, "recall_5": 0.71, "recall_10": 0.83, "ndcg_1": 0.24, "ndcg_5": 0.4828436479292935, "ndcg_10": 0.5218902660172252}, "None|Back+Look|yes": {"seeker": "None", "candidate": "Back+Look", "use_query": true, "pair_auc": 0.6016, "best_f1": 0.6666666666666666, "accuracy_at_half": 0.6, "hard_auc": 0.522, "easy_auc": 0.728, "mrr": 0.47357398785413246, "mean_rank": 6.04, "median_rank": 3.0, "recall_1": 0.28, "recall_5": 0.75, "recall_10": 0.86, "ndcg_1": 0.28, "ndcg_5": 0.5259776518119287, "ndcg_10": 0.5610343049639651}, "None|Pos+Back+Look|yes": {"seeker": "None", "candidate": "Pos+Back+Look", "use_query": true, "pair_auc": 0.5896000000000001, "best_f1": 0.6666666666666666, "accuracy_at_half": 0.565, "hard_auc": 0.5218, "easy_auc": 0.7088, "mrr": 0.45772140529116695, "mean_rank": 6.04, "median_rank": 3.0, "recall_1": 0.25, "recall_5": 0.76, "recall_10": 0.86, "ndcg_1": 0.25, "ndcg_5": 0.5157172399116002, "ndcg_10": 0.5496229502703084}, "Pos|Pos|yes": {"seeker": "Pos", "candidate": "Pos", "use_query": true, "pair_auc": 0.5897000000000001, "best_f1": 0.6688963210702341, "accuracy_at_half": 0.565, "hard_auc": 0.5288, "easy_auc": 0.6724, "mrr": 0.3831583940737618, "mean_rank": 12.68, "median_rank": 4.0, "recall_1": 0.2, "recall_5": 0.59, "recall_10": 0.79, "ndcg_1": 0.2, "ndcg_5": 0.40936665260544153, "ndcg_10": 0.473772487260511}, "Pos|Pos|no": {"seeker": "Pos", "candidate": "Pos", "use_query": false, "pair_auc": 0.5613999999999999, "best_f1": 0.6688963210702341, "accuracy_at_half": 0.54, "hard_auc": 0.5147999999999999, "easy_auc": 0.6192307692307693, "mrr": 0.19786007235661363, "mean_rank": 32.54, "median_rank": 13.5, "recall_1": 0.06, "recall_5": 0.31, "recall_10": 0.46, "ndcg_1": 0.06, "ndcg_5": 0.1983714552704482, "ndcg_10": 0.2470550262711749}, "Pos|Back|yes": {"seeker": "Pos", "candidate": "Back", "use_query": true, "pair_auc": 0.6022000000000001, "best_f1": 0.6782006920415224, "accuracy_at_half": 0.555, "hard_auc": 0.5336, "easy_auc": 0.7415999999999999, "mrr": 0.41100248814652846, "mean_rank": 8.25, "median_rank": 3.0, "recall_1": 0.23, "recall_5": 0.65, "recall_10": 0.77, "ndcg_1": 0.23, "ndcg_5": 0.4481704011535377, "ndcg_10": 0.48684815904866935}, "Pos|Back|no": {"seeker": "Pos", "candidate": "Back", "use_query": false, "pair_auc": 0.5419999999999999, "best_f1": 0.6666666666666666, "accuracy_at_half": 0.53, "hard_auc": 0.46420000000000006, "easy_auc": 0.6584000000000001, "mrr": 0.19117840386959536, "mean_rank": 28.19, "median_rank": 12.0, "recall_1": 0.07, "recall_5": 0.32, "recall_10": 0.45, "ndcg_1": 0.07, "ndcg_5": 0.19252361024921208, "ndcg_10": 0.23561354818880137}, "Pos|Look|yes": {"seeker": "Pos", "candidate": "Look", "use_query": true, "pair_auc": 0.6318, "best_f1": 0.6734006734006733, "accuracy_at_half": 0.585, "hard_auc": 0.5838, "easy_auc": 0.7012, "mrr": 0.36780850142071975, "mean_rank": 12.83, "median_rank": 5.0, "recall_1": 0.22, "recall_5": 0.53, "recall_10": 0.65, "ndcg_1": 0.22, "ndcg_5": 0.3823819274184801, "ndcg_10": 0.4223172165902122}, "Pos|Look|no": {"seeker": "Pos", "candidate": "Look", "use_query": false, "pair_auc": 0.5474, "best_f1": 0.6666666666666667, "accuracy_at_half": 0.54, "hard_auc": 0.4534, "easy_auc": 0.66, "mrr": 0.20305485698610456, "mean_rank": 30.69, "median_rank": 16.5, "recall_1": 0.1, "recall_5": 0.29, "recall_10": 0.41, "ndcg_1": 0.1, "ndcg_5": 0.19949026742319956, "ndcg_10": 0.23574699112816203}, "Pos|Pos+Back|yes": {"seeker": "Pos", "candidate": "Pos+Back", "use_query": true, "pair_auc": 0.5974999999999999, "best_f1": 0.6718146718146718, "accuracy_at_half": 0.57, "hard_auc": 0.5098, "easy_auc": 0.6944, "mrr": 0.44411476651264986, "mean_rank": 7.28, "median_rank": 3.0, "recall_1": 0.25, "recall_5": 0.72, "recall_10": 0.85, "ndcg_1": 0.25, "ndcg_5": 0.4950240054923342, "ndcg_10": 0.5362193243016804}, "Pos|Pos+Back|no": {"seeker": "Pos", "candidate": "Pos+Back", "use_query": false, "pair_auc": 0.5537000000000001, "best_f1": 0.6666666666666666, "accuracy_at_half": 0.525, "hard_auc": 0.4928, "easy_auc": 0.6652, "mrr": 0.20195547641001013, "mean_rank": 28.38, "median_rank": 9.5, "recall_1": 0.05, "recall_5": 0.35, "recall_10": 0.52, "ndcg_1": 0.05, "ndcg_5": 0.2099052831741178, "ndcg_10": 0.2654095082892307}, "Pos|Pos+Look|yes": {"seeker": "Pos", "candidate": "Pos+Look", "use_query": true, "pair_auc": 0.6168, "best_f1": 0.6688963210702341, "accuracy_at_half": 0.595, "hard_auc": 0.5488, "easy_auc": 0.7057692307692308, "mrr": 0.38132163001823643, "mean_rank": 9.32, "median_rank": 4.0, "recall_1": 0.19, "recall_5": 0.6, "recall_10": 0.8, "ndcg_1": 0.19, "ndcg_5": 0.40918882699738157, "ndcg_10": 0.473962595632578}, "Pos|Pos+Look|no": {"seeker": "Pos", "candidate": "Pos+Look", "use_query": false, "pair_auc": 0.5526, "best_f1": 0.6666666666666666, "accuracy_at_half": 0.52, "hard_auc": 0.5080000000000001, "easy_auc": 0.6888, "mrr": 0.22309084866533485, "mean_rank": 28.38, "median_rank": 14.0, "recall_1": 0.12, "recall_5": 0.31, "recall_10": 0.45, "ndcg_1": 0.12, "ndcg_5": 0.2159897823455424, "ndcg_10": 0.2614448797010574}, "Pos|Back+Look|yes": {"seeker": "Pos", "candidate": "Back+Look", "use_query": true, "pair_auc": 0.6250000000000001, "best_f1": 0.6694560669456067, "accuracy_at_half": 0.59, "hard_auc": 0.5635999999999999, "easy_auc": 0.7128, "mrr": 0.42875699462555494, "mean_rank": 6.98, "median_rank": 3.0, "recall_1": 0.23, "recall_5": 0.71, "recall_10": 0.83, "ndcg_1": 0.23, "ndcg_5": 0.4800240054923342, "ndcg_10": 0.5181156557187667}, "Pos|Back+Look|no": {"seeker": "Pos", "candidate": "Back+Look", "use_query": false, "pair_auc": 0.5446, "best_f1": 0.6666666666666666, "accuracy_at_half": 0.515, "hard_auc": 0.478, "easy_auc": 0.6664, "mrr": 0.2124354543384116, "mean_rank": 25.95, "median_rank": 10.5, "recall_1": 0.07, "recall_5": 0.35, "recall_10": 0.5, "ndcg_1": 0.07, "ndcg_5": 0.21946704566572933, "ndcg_10": 0.26659857466182574}, "Pos|Pos+Back+Look|yes": {"seeker": "Pos", "candidate": "Pos+Back+Look", "use_query": true, "pair_auc": 0.6087000000000001, "best_f1": 0.6666666666666666, "accuracy_at_half": 0.59, "hard_auc": 0.5212, "easy_auc": 0.7152, "mrr": 0.44927501436882145, "mean_rank": 7.2, "median_rank": 3.0, "recall_1": 0.25, "recall_5": 0.73, "recall_10": 0.83, "ndcg_1": 0.25, "ndcg_5": 0.5028204261718233, "ndcg_10": 0.5348068202825318}, "Pos|Pos+Back+Look|no": {"seeker": "Pos", "candidate": "Pos+Back+Look", "use_query": false, "pair_auc": 0.5479999999999999, "best_f1": 0.6666666666666666, "accuracy_at_half": 0.53, "hard_auc": 0.4662, "easy_auc": 0.6599999999999999, "mrr": 0.23294925094233676, "mean_rank": 27.62, "median_rank": 9.5, "recall_1": 0.1, "recall_5": 0.39, "recall_10": 0.51, "ndcg_1": 0.1, "ndcg_5": 0.24758297478401037, "ndcg_10": 0.28705180798050434}, "Back|Pos|yes": {"seeker": "Back", "candidate": "Pos", "use_query": true, "pair_auc": 0.5992, "best_f1": 0.6737588652482269, "accuracy_at_half": 0.575, "hard_auc": 0.5884, "easy_auc": 0.6532, "mrr": 0.3652907513411306, "mean_rank": 12.95, "median_rank": 3.5, "recall_1": 0.17, "recall_5": 0.61, "recall_10": 0.76, "ndcg_1": 0.17, "ndcg_5": 0.403750589488993, "ndcg_10": 0.45334422774778527}, "Back|Pos|no": {"seeker": "Back", "candidate": "Pos", "use_query": false, "pair_auc": 0.5605, "best_f1": 0.6666666666666667, "accuracy_at_half": 0.545, "hard_auc": 0.5458000000000001, "easy_auc": 0.6426923076923077, "mrr": 0.1856467439344577, "mean_rank": 36.88, "median_rank": 18.5, "recall_1": 0.09, "recall_5": 0.27, "recall_10": 0.35, "ndcg_1": 0.09, "ndcg_5": 0.18150519115674846, "ndcg_10": 0.2082367038010253}, "Back|Back|yes": {"seeker": "Back", "candidate": "Back", "use_query": true, "pair_auc": 0.5955999999999999, "best_f1": 0.6788321167883212, "accuracy_at_half": 0.56, "hard_auc": 0.5378000000000001, "easy_auc": 0.7412, "mrr": 0.38939726023282817, "mean_rank": 8.9, "median_rank": 3.0, "recall_1": 0.2, "recall_5": 0.59, "recall_10": 0.75, "ndcg_1": 0.2, "ndcg_5": 0.414580359745875, "ndcg_10": 0.46637750444193243}, "Back|Back|no": {"seeker": "Back", "candidate": "Back", "use_query": false, "pair_auc": 0.5475000000000001, "best_f1": 0.6688963210702341, "accuracy_at_half": 0.545, "hard_auc": 0.4978, "easy_auc": 0.6960000000000001, "mrr": 0.1744479541133935, "mean_rank": 31.86, "median_rank": 20.0, "recall_1": 0.08, "recall_5": 0.25, "recall_10": 0.37, "ndcg_1": 0.08, "ndcg_5": 0.1651241373076673, "ndcg_10": 0.2043985677206729}, "Back|Look|yes": {"seeker": "Back", "candidate": "Look", "use_query": true, "pair_auc": 0.6395000000000001, "best_f1": 0.6711409395973155, "accuracy_at_half": 0.61, "hard_auc": 0.6055999999999999, "easy_auc": 0.6971999999999999, "mrr": 0.3492105261377084, "mean_rank": 13.89, "median_rank": 6.0, "recall_1": 0.21, "recall_5": 0.48, "recall_10": 0.65, "ndcg_1": 0.21, "ndcg_5": 0.3522041018104201, "ndcg_10": 0.40715748122376555}, "Back|Look|no": {"seeker": "Back", "candidate": "Look", "use_query": false, "pair_auc": 0.5596, "best_f1": 0.6666666666666666, "accuracy_at_half": 0.53, "hard_auc": 0.5312, "easy_auc": 0.6040000000000001, "mrr": 0.15069350642915416, "mean_rank": 36.87, "median_rank": 22.0, "recall_1": 0.06, "recall_5": 0.17, "recall_10": 0.33, "ndcg_1": 0.06, "ndcg_5": 0.12190213889469285, "ndcg_10": 0.17530613131123143}, "Back|Pos+Back|yes": {"seeker": "Back", "candidate": "Pos+Back", "use_query": true, "pair_auc": 0.5874, "best_f1": 0.6714801444043322, "accuracy_at_half": 0.56, "hard_auc": 0.5506, "easy_auc": 0.7028, "mrr": 0.3984222565348604, "mean_rank": 7.34, "median_rank": 4.0, "recall_1": 0.2, "recall_5": 0.63, "recall_10": 0.78, "ndcg_1": 0.2, "ndcg_5": 0.4310370163467271, "ndcg_10": 0.4800631644730667}, "Back|Pos+Back|no": {"seeker": "Back", "candidate": "Pos+Back", "use_query": false, "pair_auc": 0.5431, "best_f1": 0.6666666666666666, "accuracy_at_half": 0.54, "hard_auc": 0.4842, "easy_auc": 0.632, "mrr": 0.1917576348831894, "mean_rank": 31.94, "median_rank": 16.5, "recall_1": 0.09, "recall_5": 0.26, "recall_10": 0.41, "ndcg_1": 0.09, "ndcg_5": 0.1795674387260171, "ndcg_10": 0.2283401511968532}, "Back|Pos+Look|yes": {"seeker": "Back", "candidate": "Pos+Look", "use_query": true, "pair_auc": 0.6191000000000001, "best_f1": 0.6764705882352942, "accuracy_at_half": 0.58, "hard_auc": 0.5740000000000001, "easy_auc": 0.6704, "mrr": 0.3661166887863693, "mean_rank": 10.06, "median_rank": 4.0, "recall_1": 0.19, "recall_5": 0.56, "recall_10": 0.76, "ndcg_1": 0.19, "ndcg_5": 0.38474552557903174, "ndcg_10": 0.4504194563598764}, "Back|Pos+Look|no": {"seeker": "Back", "candidate": "Pos+Look", "use_query": false, "pair_auc": 0.5549999999999999, "best_f1": 0.6688963210702341, "accuracy_at_half": 0.545, "hard_auc": 0.49119999999999997, "easy_auc": 0.652, "mrr": 0.1884788258311587, "mean_rank": 33.8, "median_rank": 18.0, "recall_1": 0.1, "recall_5": 0.25, "recall_10": 0.38, "ndcg_1": 0.1, "ndcg_5": 0.1749463116996073, "ndcg_10": 0.21751076079194345}, "Back|Back+Look|yes": {"seeker": "Back", "candidate": "Back+Look", "use_query": true, "pair_auc": 0.6165, "best_f1": 0.6747967479674797, "accuracy_at_half": 0.575, "hard_auc": 0.5944, "easy_auc": 0.6576, "mrr": 0.41817468720613277, "mean_rank": 7.69, "median_rank": 4.0, "recall_1": 0.25, "recall_5": 0.64, "recall_10": 0.78, "ndcg_1": 0.25, "ndcg_5": 0.45048546475819284, "ndcg_10": 0.49510999768924985}, "Back|Back+Look|no": {"seeker": "Back", "candidate": "Back+Look", "use_query": false, "pair_auc": 0.5507, "best_f1": 0.6711409395973155, "accuracy_at_half": 0.575, "hard_auc": 0.5018, "easy_auc": 0.668, "mrr": 0.17468770916769027, "mean_rank": 31.02, "median_rank": 17.5, "recall_1": 0.08, "recall_5": 0.22, "recall_10": 0.4, "ndcg_1": 0.08, "ndcg_5": 0.15307490059279158, "ndcg_10": 0.21047108983032417}, "Back|Pos+Back+Look|yes": {"seeker": "Back", "candidate": "Pos+Back+Look", "use_query": true, "pair_auc": 0.6005000000000001, "best_f1": 0.6666666666666667, "accuracy_at_half": 0.58, "hard_auc": 0.5743999999999999, "easy_auc": 0.6376, "mrr": 0.41153943137369553, "mean_rank": 7.78, "median_rank": 4.0, "recall_1": 0.24, "recall_5": 0.64, "recall_10": 0.79, "ndcg_1": 0.24, "ndcg_5": 0.4450526422392553, "ndcg_10": 0.49328930101366325}, "Back|Pos+Back+Look|no": {"seeker": "Back", "candidate": "Pos+Back+Look", "use_query": false, "pair_auc": 0.5416000000000001, "best_f1": 0.6688963210702341, "accuracy_at_half": 0.59, "hard_auc": 0.4964, "easy_auc": 0.662, "mrr": 0.1846123990290115, "mean_rank": 32.66, "median_rank": 18.0, "recall_1": 0.08, "recall_5": 0.25, "recall_10": 0.44, "ndcg_1": 0.08, "ndcg_5": 0.17069349566422073, "ndcg_10": 0.23111504333964764}, "Look|Pos|yes": {"seeker": "Look", "candidate": "Pos", "use_query": true, "pair_auc": 0.5823999999999999, "best_f1": 0.673611111111111, "accuracy_at_half": 0.535, "hard_auc": 0.5326, "easy_auc": 0.7188, "mrr": 0.3940860912527134, "mean_rank": 10.64, "median_rank": 3.0, "recall_1": 0.2, "recall_5": 0.61, "recall_10": 0.75, "ndcg_1": 0.2, "ndcg_5": 0.42537966345983447, "ndcg_10": 0.47147990135606355}, "Look|Pos|no": {"seeker": "Look", "candidate": "Pos", "use_query": false, "pair_auc": 0.5576999999999999, "best_f1": 0.6666666666666666, "accuracy_at_half": 0.525, "hard_auc": 0.5117647058823529, "easy_auc": 0.6844000000000001, "mrr": 0.2652607327775555, "mean_rank": 17.53, "median_rank": 6.5, "recall_1": 0.11, "recall_5": 0.45, "recall_10": 0.59, "ndcg_1": 0.11, "ndcg_5": 0.2827553854026194, "ndcg_10": 0.3292049397427293}, "Look|Back|yes": {"seeker": "Look", "candidate": "Back", "use_query": true, "pair_auc": 0.5968, "best_f1": 0.6808510638297873, "accuracy_at_half": 0.545, "hard_auc": 0.5276, "easy_auc": 0.7768, "mrr": 0.34971657162734865, "mean_rank": 8.04, "median_rank": 4.0, "recall_1": 0.16, "recall_5": 0.6, "recall_10": 0.75, "ndcg_1": 0.16, "ndcg_5": 0.3864282810988855, "ndcg_10": 0.4344362013355466}, "Look|Back|no": {"seeker": "Look", "candidate": "Back", "use_query": false, "pair_auc": 0.5646, "best_f1": 0.6666666666666667, "accuracy_at_half": 0.52, "hard_auc": 0.505, "easy_auc": 0.7264, "mrr": 0.2584258476164916, "mean_rank": 15.22, "median_rank": 7.0, "recall_1": 0.12, "recall_5": 0.41, "recall_10": 0.64, "ndcg_1": 0.12, "ndcg_5": 0.2600056694830253, "ndcg_10": 0.33504766577906453}, "Look|Look|yes": {"seeker": "Look", "candidate": "Look", "use_query": true, "pair_auc": 0.6168, "best_f1": 0.6734006734006733, "accuracy_at_half": 0.575, "hard_auc": 0.5648, "easy_auc": 0.7244, "mrr": 0.3102282450001448, "mean_rank": 13.6, "median_rank": 6.0, "recall_1": 0.14, "recall_5": 0.48, "recall_10": 0.63, "ndcg_1": 0.14, "ndcg_5": 0.32408275770268813, "ndcg_10": 0.3726662207588731}, "Look|Look|no": {"seeker": "Look", "candidate": "Look", "use_query": false, "pair_auc": 0.5704, "best_f1": 0.6666666666666667, "accuracy_at_half": 0.495, "hard_auc": 0.5084000000000001, "easy_auc": 0.6812000000000001, "mrr": 0.20336851998969788, "mean_rank": 22.1, "median_rank": 13.0, "recall_1": 0.08, "recall_5": 0.32, "recall_10": 0.4, "ndcg_1": 0.08, "ndcg_5": 0.20353662110360496, "ndcg_10": 0.22896120823576838}, "Look|Pos+Back|yes": {"seeker": "Look", "candidate": "Pos+Back", "use_query": true, "pair_auc": 0.589, "best_f1": 0.678082191780822, "accuracy_at_half": 0.56, "hard_auc": 0.5662, "easy_auc": 0.7236, "mrr": 0.394048175898176, "mean_rank": 6.32, "median_rank": 4.0, "recall_1": 0.2, "recall_5": 0.68, "recall_10": 0.83, "ndcg_1": 0.2, "ndcg_5": 0.44165822645629155, "ndcg_10": 0.4902022003893808}, "Look|Pos+Back|no": {"seeker": "Look", "candidate": "Pos+Back", "use_query": false, "pair_auc": 0.5486, "best_f1": 0.6666666666666667, "accuracy_at_half": 0.525, "hard_auc": 0.5182, "easy_auc": 0.6307999999999999, "mrr": 0.2660768058575346, "mean_rank": 13.29, "median_rank": 6.0, "recall_1": 0.1, "recall_5": 0.47, "recall_10": 0.67, "ndcg_1": 0.1, "ndcg_5": 0.28351880758420545, "ndcg_10": 0.34866566356836615}, "Look|Pos+Look|yes": {"seeker": "Look", "candidate": "Pos+Look", "use_query": true, "pair_auc": 0.6166999999999999, "best_f1": 0.6688963210702341, "accuracy_at_half": 0.585, "hard_auc": 0.5422, "easy_auc": 0.7183999999999999, "mrr": 0.3376755214526444, "mean_rank": 8.72, "median_rank": 4.0, "recall_1": 0.14, "recall_5": 0.58, "recall_10": 0.77, "ndcg_1": 0.14, "ndcg_5": 0.3690522911597657, "ndcg_10": 0.43167009516786403}, "Look|Pos+Look|no": {"seeker": "Look", "candidate": "Pos+Look", "use_query": false, "pair_auc": 0.5648000000000001, "best_f1": 0.6666666666666667, "accuracy_at_half": 0.54, "hard_auc": 0.501, "easy_auc": 0.6224000000000001, "mrr": 0.22750758375088695, "mean_rank": 16.33, "median_rank": 9.0, "recall_1": 0.09, "recall_5": 0.36, "recall_10": 0.53, "ndcg_1": 0.09, "ndcg_5": 0.22521937662345878, "ndcg_10": 0.28067447397897377}, "Look|Back+Look|yes": {"seeker": "Look", "candidate": "Back+Look", "use_query": true, "pair_auc": 0.6223999999999998, "best_f1": 0.6746031746031746, "accuracy_at_half": 0.62, "hard_auc": 0.5948000000000001, "easy_auc": 0.7375999999999999, "mrr": 0.4030822049176245, "mean_rank": 6.57, "median_rank": 3.5, "recall_1": 0.21, "recall_5": 0.64, "recall_10": 0.79, "ndcg_1": 0.21, "ndcg_5": 0.43578899622496686, "ndcg_10": 0.4861974806902048}, "Look|Back+Look|no": {"seeker": "Look", "candidate": "Back+Look", "use_query": false, "pair_auc": 0.5746, "best_f1": 0.6666666666666667, "accuracy_at_half": 0.55, "hard_auc": 0.5464, "easy_auc": 0.6692, "mrr": 0.26044914345385295, "mean_rank": 13.85, "median_rank": 7.0, "recall_1": 0.11, "recall_5": 0.45, "recall_10": 0.55, "ndcg_1": 0.11, "ndcg_5": 0.2782222596579291, "ndcg_10": 0.3109638073663106}, "Look|Pos+Back+Look|yes": {"seeker": "Look", "candidate": "Pos+Back+Look", "use_query": true, "pair_auc": 0.6091000000000001, "best_f1": 0.6666666666666666, "accuracy_at_half": 0.615, "hard_auc": 0.588, "easy_auc": 0.7228, "mrr": 0.3975400463643111, "mean_rank": 6.16, "median_rank": 4.0, "recall_1": 0.2, "recall_5": 0.64, "recall_10": 0.84, "ndcg_1": 0.2, "ndcg_5": 0.42933077107306816, "ndcg_10": 0.49575087655184147}, "Look|Pos+Back+Look|no": {"seeker": "Look", "candidate": "Pos+Back+Look", "use_query": false, "pair_auc": 0.5624, "best_f1": 0.6666666666666666, "accuracy_at_half": 0.53, "hard_auc": 0.5434, "easy_auc": 0.6436, "mrr": 0.2766579440383054, "mean_rank": 13.21, "median_rank": 7.5, "recall_1": 0.13, "recall_5": 0.43, "recall_10": 0.59, "ndcg_1": 0.13, "ndcg_5": 0.2814569178458067, "ndcg_10": 0.3336040387225027}, "Pos+Back|Pos|yes": {"seeker": "Pos+Back", "candidate": "Pos", "use_query": true, "pair_auc": 0.5857, "best_f1": 0.6689655172413793, "accuracy_at_half": 0.575, "hard_auc": 0.5835999999999999, "easy_auc": 0.6356, "mrr": 0.3538955395664757, "mean_rank": 14.43, "median_rank": 4.0, "recall_1": 0.18, "recall_5": 0.58, "recall_10": 0.74, "ndcg_1": 0.18, "ndcg_5": 0.3866115216963965, "ndcg_10": 0.43808721896519115}, "Pos+Back|Pos|no": {"seeker": "Pos+Back", "candidate": "Pos", "use_query": false, "pair_auc": 0.5681, "best_f1": 0.6688963210702341, "accuracy_at_half": 0.555, "hard_auc": 0.5394, "easy_auc": 0.6372, "mrr": 0.22057684944140196, "mean_rank": 32.16, "median_rank": 16.5, "recall_1": 0.11, "recall_5": 0.32, "recall_10": 0.41, "ndcg_1": 0.11, "ndcg_5": 0.2204330837638922, "ndcg_10": 0.24980180901584448}, "Pos+Back|Back|yes": {"seeker": "Pos+Back", "candidate": "Back", "use_query": true, "pair_auc": 0.5883, "best_f1": 0.6763636363636364, "accuracy_at_half": 0.54, "hard_auc": 0.5446, "easy_auc": 0.7495999999999999, "mrr": 0.39599512679079907, "mean_rank": 10.14, "median_rank": 4.0, "recall_1": 0.24, "recall_5": 0.57, "recall_10": 0.72, "ndcg_1": 0.24, "ndcg_5": 0.41359057064895227, "ndcg_10": 0.4622831205494233}, "Pos+Back|Back|no": {"seeker": "Pos+Back", "candidate": "Back", "use_query": false, "pair_auc": 0.5541, "best_f1": 0.6666666666666666, "accuracy_at_half": 0.56, "hard_auc": 0.5016, "easy_auc": 0.7116, "mrr": 0.20614093506862644, "mean_rank": 27.26, "median_rank": 15.0, "recall_1": 0.09, "recall_5": 0.33, "recall_10": 0.45, "ndcg_1": 0.09, "ndcg_5": 0.2100415510153988, "ndcg_10": 0.24928164567414585}, "Pos+Back|Look|yes": {"seeker": "Pos+Back", "candidate": "Look", "use_query": true, "pair_auc": 0.6183000000000001, "best_f1": 0.6734006734006733, "accuracy_at_half": 0.61, "hard_auc": 0.6012, "easy_auc": 0.6683999999999999, "mrr": 0.3416977039731347, "mean_rank": 14.64, "median_rank": 6.5, "recall_1": 0.2, "recall_5": 0.49, "recall_10": 0.64, "ndcg_1": 0.2, "ndcg_5": 0.35238734240793107, "ndcg_10": 0.3999368593564255}, "Pos+Back|Look|no": {"seeker": "Pos+Back", "candidate": "Look", "use_query": false, "pair_auc": 0.5552, "best_f1": 0.6666666666666667, "accuracy_at_half": 0.54, "hard_auc": 0.5226, "easy_auc": 0.6180000000000001, "mrr": 0.2067871592505054, "mean_rank": 29.84, "median_rank": 16.0, "recall_1": 0.11, "recall_5": 0.26, "recall_10": 0.39, "ndcg_1": 0.11, "ndcg_5": 0.19113173317260923, "ndcg_10": 0.2319802477001783}, "Pos+Back|Pos+Back|yes": {"seeker": "Pos+Back", "candidate": "Pos+Back", "use_query": true, "pair_auc": 0.5835, "best_f1": 0.6688963210702341, "accuracy_at_half": 0.575, "hard_auc": 0.5604, "easy_auc": 0.6788000000000001, "mrr": 0.3824028223980701, "mean_rank": 8.95, "median_rank": 4.0, "recall_1": 0.19, "recall_5": 0.62, "recall_10": 0.77, "ndcg_1": 0.19, "ndcg_5": 0.4174701899451543, "ndcg_10": 0.4664373051994787}, "Pos+Back|Pos+Back|no": {"seeker": "Pos+Back", "candidate": "Pos+Back", "use_query": false, "pair_auc": 0.5541, "best_f1": 0.6666666666666666, "accuracy_at_half": 0.555, "hard_auc": 0.4978, "easy_auc": 0.6632, "mrr": 0.23356994314458343, "mean_rank": 27.25, "median_rank": 11.5, "recall_1": 0.11, "recall_5": 0.36, "recall_10": 0.48, "ndcg_1": 0.11, "ndcg_5": 0.23878620302503153, "ndcg_10": 0.27758361261362413}, "Pos+Back|Pos+Look|yes": {"seeker": "Pos+Back", "candidate": "Pos+Look", "use_query": true, "pair_auc": 0.6054999999999999, "best_f1": 0.6688963210702341, "accuracy_at_half": 0.6, "hard_auc": 0.6058, "easy_auc": 0.6216, "mrr": 0.3560917375007699, "mean_rank": 11.28, "median_rank": 5.0, "recall_1": 0.19, "recall_5": 0.54, "recall_10": 0.76, "ndcg_1": 0.19, "ndcg_5": 0.3712504554908255, "ndcg_10": 0.4432074007401976}, "Pos+Back|Pos+Look|no": {"seeker": "Pos+Back", "candidate": "Pos+Look", "use_query": false, "pair_auc": 0.5641, "best_f1": 0.6688963210702341, "accuracy_at_half": 0.555, "hard_auc": 0.53, "easy_auc": 0.652, "mrr": 0.23101376996987735, "mean_rank": 28.31, "median_rank": 15.5, "recall_1": 0.13, "recall_5": 0.31, "recall_10": 0.39, "ndcg_1": 0.13, "ndcg_5": 0.22405202991481105, "ndcg_10": 0.2502571274991618}, "Pos+Back|Back+Look|yes": {"seeker": "Pos+Back", "candidate": "Back+Look", "use_query": true, "pair_auc": 0.6007, "best_f1": 0.6688963210702341, "accuracy_at_half": 0.58, "hard_auc": 0.5952, "easy_auc": 0.6876, "mrr": 0.401863090137565, "mean_rank": 8.57, "median_rank": 3.0, "recall_1": 0.22, "recall_5": 0.62, "recall_10": 0.8, "ndcg_1": 0.22, "ndcg_5": 0.43200846943434096, "ndcg_10": 0.4899467919498119}, "Pos+Back|Back+Look|no": {"seeker": "Pos+Back", "candidate": "Back+Look", "use_query": false, "pair_auc": 0.5594, "best_f1": 0.6666666666666666, "accuracy_at_half": 0.575, "hard_auc": 0.5398, "easy_auc": 0.6108, "mrr": 0.21326374178423543, "mean_rank": 25.15, "median_rank": 10.0, "recall_1": 0.09, "recall_5": 0.34, "recall_10": 0.52, "ndcg_1": 0.09, "ndcg_5": 0.21408790469580416, "ndcg_10": 0.2723983883475665}, "Pos+Back|Pos+Back+Look|yes": {"seeker": "Pos+Back", "candidate": "Pos+Back+Look", "use_query": true, "pair_auc": 0.5921, "best_f1": 0.6666666666666666, "accuracy_at_half": 0.57, "hard_auc": 0.5721999999999999, "easy_auc": 0.694, "mrr": 0.4026926179101705, "mean_rank": 9.16, "median_rank": 4.0, "recall_1": 0.24, "recall_5": 0.61, "recall_10": 0.79, "ndcg_1": 0.24, "ndcg_5": 0.4286372754088474, "ndcg_10": 0.48745040321545224}, "Pos+Back|Pos+Back+Look|no": {"seeker": "Pos+Back", "candidate": "Pos+Back+Look", "use_query": false, "pair_auc": 0.5537000000000001, "best_f1": 0.6666666666666666, "accuracy_at_half": 0.57, "hard_auc": 0.5016, "easy_auc": 0.6424, "mrr": 0.2306697311125205, "mean_rank": 27.0, "median_rank": 11.0, "recall_1": 0.11, "recall_5": 0.37, "recall_10": 0.49, "ndcg_1": 0.11, "ndcg_5": 0.24004155101539873, "ndcg_10": 0.27923159170187495}, "Pos+Look|Pos|yes": {"seeker": "Pos+Look", "candidate": "Pos", "use_query": true, "pair_auc": 0.5755000000000001, "best_f1": 0.6711864406779661, "accuracy_at_half": 0.56, "hard_auc": 0.5302, "easy_auc": 0.6164000000000001, "mrr": 0.33570897133083044, "mean_rank": 12.48, "median_rank": 4.0, "recall_1": 0.15, "recall_5": 0.6, "recall_10": 0.72, "ndcg_1": 0.15, "ndcg_5": 0.38055722107155954, "ndcg_10": 0.41839543564248877}, "Pos+Look|Pos|no": {"seeker": "Pos+Look", "candidate": "Pos", "use_query": false, "pair_auc": 0.5597000000000001, "best_f1": 0.6688963210702341, "accuracy_at_half": 0.56, "hard_auc": 0.529, "easy_auc": 0.6136, "mrr": 0.2722161561818827, "mean_rank": 17.48, "median_rank": 6.0, "recall_1": 0.13, "recall_5": 0.42, "recall_10": 0.63, "ndcg_1": 0.13, "ndcg_5": 0.27539720223151876, "ndcg_10": 0.3448857143262741}, "Pos+Look|Back|yes": {"seeker": "Pos+Look", "candidate": "Back", "use_query": true, "pair_auc": 0.5935, "best_f1": 0.6851211072664359, "accuracy_at_half": 0.575, "hard_auc": 0.501, "easy_auc": 0.7951999999999999, "mrr": 0.3617295909653644, "mean_rank": 9.02, "median_rank": 5.0, "recall_1": 0.2, "recall_5": 0.57, "recall_10": 0.73, "ndcg_1": 0.2, "ndcg_5": 0.38480462211749505, "ndcg_10": 0.43797987599628674}, "Pos+Look|Back|no": {"seeker": "Pos+Look", "candidate": "Back", "use_query": false, "pair_auc": 0.5686, "best_f1": 0.6739130434782609, "accuracy_at_half": 0.54, "hard_auc": 0.48300000000000004, "easy_auc": 0.7944, "mrr": 0.2683233212130052, "mean_rank": 15.08, "median_rank": 6.5, "recall_1": 0.12, "recall_5": 0.44, "recall_10": 0.6, "ndcg_1": 0.12, "ndcg_5": 0.27970938280170365, "ndcg_10": 0.33329205978371823}, "Pos+Look|Look|yes": {"seeker": "Pos+Look", "candidate": "Look", "use_query": true, "pair_auc": 0.6036999999999999, "best_f1": 0.6734006734006733, "accuracy_at_half": 0.545, "hard_auc": 0.5803999999999999, "easy_auc": 0.7128, "mrr": 0.2898327376282161, "mean_rank": 14.33, "median_rank": 6.0, "recall_1": 0.12, "recall_5": 0.49, "recall_10": 0.61, "ndcg_1": 0.12, "ndcg_5": 0.3136140536513771, "ndcg_10": 0.35191872419754444}, "Pos+Look|Look|no": {"seeker": "Pos+Look", "candidate": "Look", "use_query": false, "pair_auc": 0.5628, "best_f1": 0.6711864406779661, "accuracy_at_half": 0.535, "hard_auc": 0.5237999999999999, "easy_auc": 0.6892, "mrr": 0.21736161883359728, "mean_rank": 20.35, "median_rank": 12.0, "recall_1": 0.09, "recall_5": 0.34, "recall_10": 0.45, "ndcg_1": 0.09, "ndcg_5": 0.2180983835952164, "ndcg_10": 0.25427812432505287}, "Pos+Look|Pos+Back|yes": {"seeker": "Pos+Look", "candidate": "Pos+Back", "use_query": true, "pair_auc": 0.5867, "best_f1": 0.6712802768166091, "accuracy_at_half": 0.575, "hard_auc": 0.5286, "easy_auc": 0.7247999999999999, "mrr": 0.3676989021514912, "mean_rank": 7.64, "median_rank": 4.0, "recall_1": 0.18, "recall_5": 0.64, "recall_10": 0.82, "ndcg_1": 0.18, "ndcg_5": 0.4100885170202485, "ndcg_10": 0.4675004244757933}, "Pos+Look|Pos+Back|no": {"seeker": "Pos+Look", "candidate": "Pos+Back", "use_query": false, "pair_auc": 0.564, "best_f1": 0.6711409395973155, "accuracy_at_half": 0.525, "hard_auc": 0.47100000000000003, "easy_auc": 0.7195999999999999, "mrr": 0.2951810029693055, "mean_rank": 12.95, "median_rank": 5.0, "recall_1": 0.12, "recall_5": 0.51, "recall_10": 0.67, "ndcg_1": 0.12, "ndcg_5": 0.3206343923743771, "ndcg_10": 0.3718903300051691}, "Pos+Look|Pos+Look|yes": {"seeker": "Pos+Look", "candidate": "Pos+Look", "use_query": true, "pair_auc": 0.6013, "best_f1": 0.6688963210702341, "accuracy_at_half": 0.575, "hard_auc": 0.5428, "easy_auc": 0.6971999999999999, "mrr": 0.32560898132799954, "mean_rank": 10.04, "median_rank": 5.0, "recall_1": 0.15, "recall_5": 0.55, "recall_10": 0.73, "ndcg_1": 0.15, "ndcg_5": 0.35399292662496734, "ndcg_10": 0.4111911540240199}, "Pos+Look|Pos+Look|no": {"seeker": "Pos+Look", "candidate": "Pos+Look", "use_query": false, "pair_auc": 0.5613, "best_f1": 0.6711409395973155, "accuracy_at_half": 0.55, "hard_auc": 0.5056, "easy_auc": 0.6476, "mrr": 0.23919140338878556, "mean_rank": 15.57, "median_rank": 8.5, "recall_1": 0.09, "recall_5": 0.39, "recall_10": 0.56, "ndcg_1": 0.09, "ndcg_5": 0.2436318604193964, "ndcg_10": 0.29954350863773227}, "Pos+Look|Back+Look|yes": {"seeker": "Pos+Look", "candidate": "Back+Look", "use_query": true, "pair_auc": 0.6123000000000001, "best_f1": 0.6688963210702341, "accuracy_at_half": 0.62, "hard_auc": 0.5772, "easy_auc": 0.6888, "mrr": 0.3819210226645896, "mean_rank": 7.38, "median_rank": 4.0, "recall_1": 0.2, "recall_5": 0.58, "recall_10": 0.8, "ndcg_1": 0.2, "ndcg_5": 0.40175347252346344, "ndcg_10": 0.47212087421979726}, "Pos+Look|Back+Look|no": {"seeker": "Pos+Look", "candidate": "Back+Look", "use_query": false, "pair_auc": 0.57, "best_f1": 0.6711409395973155, "accuracy_at_half": 0.55, "hard_auc": 0.5162, "easy_auc": 0.6624, "mrr": 0.28806260420187707, "mean_rank": 12.27, "median_rank": 6.0, "recall_1": 0.13, "recall_5": 0.49, "recall_10": 0.59, "ndcg_1": 0.13, "ndcg_5": 0.3106810971342721, "ndcg_10": 0.3439506458520104}, "Pos+Look|Pos+Back+Look|yes": {"seeker": "Pos+Look", "candidate": "Pos+Back+Look", "use_query": true, "pair_auc": 0.6013, "best_f1": 0.6689419795221844, "accuracy_at_half": 0.58, "hard_auc": 0.5416000000000001, "easy_auc": 0.6655999999999999, "mrr": 0.3963839847145135, "mean_rank": 7.42, "median_rank": 4.0, "recall_1": 0.23, "recall_5": 0.6, "recall_10": 0.76, "ndcg_1": 0.23, "ndcg_5": 0.4193250948386625, "ndcg_10": 0.4721330744740848}, "Pos+Look|Pos+Back+Look|no": {"seeker": "Pos+Look", "candidate": "Pos+Back+Look", "use_query": false, "pair_auc": 0.5631999999999999, "best_f1": 0.6711409395973155, "accuracy_at_half": 0.55, "hard_auc": 0.49760000000000004, "easy_auc": 0.6264, "mrr": 0.3008423726761143, "mean_rank": 12.43, "median_rank": 5.5, "recall_1": 0.14, "recall_5": 0.5, "recall_10": 0.61, "ndcg_1": 0.14, "ndcg_5": 0.3236372754088474, "ndcg_10": 0.36001141892217214}, "Back+Look|Pos|yes": {"seeker": "Back+Look", "candidate": "Pos", "use_query": true, "pair_auc": 0.5794, "best_f1": 0.6712328767123288, "accuracy_at_half": 0.56, "hard_auc": 0.5392, "easy_auc": 0.6295999999999999, "mrr": 0.35354121161972174, "mean_rank": 13.08, "median_rank": 4.0, "recall_1": 0.18, "recall_5": 0.57, "recall_10": 0.69, "ndcg_1": 0.18, "ndcg_5": 0.3839516368545233, "ndcg_10": 0.42414102141851645}, "Back+Look|Pos|no": {"seeker": "Back+Look", "candidate": "Pos", "use_query": false, "pair_auc": 0.5652000000000001, "best_f1": 0.6711864406779661, "accuracy_at_half": 0.56, "hard_auc": 0.5302, "easy_auc": 0.6451999999999999, "mrr": 0.27348255028478646, "mean_rank": 18.87, "median_rank": 6.5, "recall_1": 0.13, "recall_5": 0.45, "recall_10": 0.57, "ndcg_1": 0.13, "ndcg_5": 0.2906521991423963, "ndcg_10": 0.3300514346177002}, "Back+Look|Back|yes": {"seeker": "Back+Look", "candidate": "Back", "use_query": true, "pair_auc": 0.5778, "best_f1": 0.6836363636363636, "accuracy_at_half": 0.55, "hard_auc": 0.5105999999999999, "easy_auc": 0.7799999999999999, "mrr": 0.35423515123643157, "mean_rank": 9.62, "median_rank": 5.0, "recall_1": 0.18, "recall_5": 0.52, "recall_10": 0.69, "ndcg_1": 0.18, "ndcg_5": 0.36678393906638584, "ndcg_10": 0.4211249277438451}, "Back+Look|Back|no": {"seeker": "Back+Look", "candidate": "Back", "use_query": false, "pair_auc": 0.5591, "best_f1": 0.673611111111111, "accuracy_at_half": 0.57, "hard_auc": 0.4814, "easy_auc": 0.7263999999999999, "mrr": 0.2706534903345055, "mean_rank": 15.56, "median_rank": 8.0, "recall_1": 0.12, "recall_5": 0.43, "recall_10": 0.58, "ndcg_1": 0.12, "ndcg_5": 0.2823819274184801, "ndcg_10": 0.32945534975523444}, "Back+Look|Look|yes": {"seeker": "Back+Look", "candidate": "Look", "use_query": true, "pair_auc": 0.5991, "best_f1": 0.6756756756756758, "accuracy_at_half": 0.575, "hard_auc": 0.5442, "easy_auc": 0.7068, "mrr": 0.2734674263246262, "mean_rank": 15.34, "median_rank": 6.0, "recall_1": 0.12, "recall_5": 0.47, "recall_10": 0.61, "ndcg_1": 0.12, "ndcg_5": 0.2935724958845981, "ndcg_10": 0.3396383980265686}, "Back+Look|Look|no": {"seeker": "Back+Look", "candidate": "Look", "use_query": false, "pair_auc": 0.5618, "best_f1": 0.6712802768166091, "accuracy_at_half": 0.505, "hard_auc": 0.4914, "easy_auc": 0.686, "mrr": 0.21452302148787583, "mean_rank": 21.04, "median_rank": 11.0, "recall_1": 0.08, "recall_5": 0.33, "recall_10": 0.49, "ndcg_1": 0.08, "ndcg_5": 0.21184845059430019, "ndcg_10": 0.262687060009452}, "Back+Look|Pos+Back|yes": {"seeker": "Back+Look", "candidate": "Pos+Back", "use_query": true, "pair_auc": 0.5719000000000001, "best_f1": 0.6736842105263159, "accuracy_at_half": 0.55, "hard_auc": 0.5202, "easy_auc": 0.6779999999999999, "mrr": 0.363871668421591, "mean_rank": 7.94, "median_rank": 4.0, "recall_1": 0.17, "recall_5": 0.63, "recall_10": 0.75, "ndcg_1": 0.17, "ndcg_5": 0.4071449985205765, "ndcg_10": 0.44503234085110366}, "Back+Look|Pos+Back|no": {"seeker": "Back+Look", "candidate": "Pos+Back", "use_query": false, "pair_auc": 0.5513000000000001, "best_f1": 0.6688963210702341, "accuracy_at_half": 0.535, "hard_auc": 0.48200000000000004, "easy_auc": 0.6752, "mrr": 0.29342539384261124, "mean_rank": 13.62, "median_rank": 6.0, "recall_1": 0.13, "recall_5": 0.47, "recall_10": 0.64, "ndcg_1": 0.13, "ndcg_5": 0.3085133993461347, "ndcg_10": 0.3633708979711029}, "Back+Look|Pos+Look|yes": {"seeker": "Back+Look", "candidate": "Pos+Look", "use_query": true, "pair_auc": 0.5921, "best_f1": 0.6711409395973155, "accuracy_at_half": 0.59, "hard_auc": 0.5514, "easy_auc": 0.6612, "mrr": 0.30699188370852953, "mean_rank": 10.85, "median_rank": 5.0, "recall_1": 0.13, "recall_5": 0.51, "recall_10": 0.72, "ndcg_1": 0.13, "ndcg_5": 0.32591828727713046, "ndcg_10": 0.39407544321793103}, "Back+Look|Pos+Look|no": {"seeker": "Back+Look", "candidate": "Pos+Look", "use_query": false, "pair_auc": 0.5639000000000001, "best_f1": 0.6711409395973155, "accuracy_at_half": 0.565, "hard_auc": 0.5248, "easy_auc": 0.6612, "mrr": 0.24446105073267446, "mean_rank": 16.64, "median_rank": 9.0, "recall_1": 0.09, "recall_5": 0.4, "recall_10": 0.54, "ndcg_1": 0.09, "ndcg_5": 0.25333557373807475, "ndcg_10": 0.2988840397198635}, "Back+Look|Back+Look|yes": {"seeker": "Back+Look", "candidate": "Back+Look", "use_query": true, "pair_auc": 0.5909, "best_f1": 0.6711409395973155, "accuracy_at_half": 0.56, "hard_auc": 0.5673999999999999, "easy_auc": 0.614, "mrr": 0.3705047807787083, "mean_rank": 8.04, "median_rank": 4.0, "recall_1": 0.2, "recall_5": 0.54, "recall_10": 0.77, "ndcg_1": 0.2, "ndcg_5": 0.3816528182182209, "ndcg_10": 0.4544271080350527}, "Back+Look|Back+Look|no": {"seeker": "Back+Look", "candidate": "Back+Look", "use_query": false, "pair_auc": 0.5569000000000001, "best_f1": 0.6666666666666667, "accuracy_at_half": 0.56, "hard_auc": 0.5166000000000001, "easy_auc": 0.5992, "mrr": 0.28533532764588015, "mean_rank": 13.17, "median_rank": 7.0, "recall_1": 0.15, "recall_5": 0.44, "recall_10": 0.61, "ndcg_1": 0.15, "ndcg_5": 0.29365508217686664, "ndcg_10": 0.34793611176963773}, "Back+Look|Pos+Back+Look|yes": {"seeker": "Back+Look", "candidate": "Pos+Back+Look", "use_query": true, "pair_auc": 0.5836, "best_f1": 0.6711409395973155, "accuracy_at_half": 0.55, "hard_auc": 0.5464, "easy_auc": 0.6431999999999999, "mrr": 0.365203426004918, "mean_rank": 7.83, "median_rank": 4.0, "recall_1": 0.19, "recall_5": 0.6, "recall_10": 0.74, "ndcg_1": 0.19, "ndcg_5": 0.3985546891165788, "ndcg_10": 0.4422585899403952}, "Back+Look|Pos+Back+Look|no": {"seeker": "Back+Look", "candidate": "Pos+Back+Look", "use_query": false, "pair_auc": 0.5561, "best_f1": 0.6689189189189189, "accuracy_at_half": 0.55, "hard_auc": 0.49740000000000006, "easy_auc": 0.6292, "mrr": 0.29551066664632925, "mean_rank": 13.63, "median_rank": 6.5, "recall_1": 0.17, "recall_5": 0.46, "recall_10": 0.61, "ndcg_1": 0.17, "ndcg_5": 0.3076474863119247, "ndcg_10": 0.3562572324352969}, "Pos+Back+Look|Pos|yes": {"seeker": "Pos+Back+Look", "candidate": "Pos", "use_query": true, "pair_auc": 0.5743, "best_f1": 0.6689189189189189, "accuracy_at_half": 0.575, "hard_auc": 0.5666, "easy_auc": 0.5851999999999999, "mrr": 0.3408827844228133, "mean_rank": 14.46, "median_rank": 4.0, "recall_1": 0.16, "recall_5": 0.57, "recall_10": 0.7, "ndcg_1": 0.16, "ndcg_5": 0.37484617988427416, "ndcg_10": 0.41778279011290176}, "Pos+Back+Look|Pos|no": {"seeker": "Pos+Back+Look", "candidate": "Pos", "use_query": false, "pair_auc": 0.5674000000000001, "best_f1": 0.6689189189189189, "accuracy_at_half": 0.58, "hard_auc": 0.5714, "easy_auc": 0.6392, "mrr": 0.26516593462682475, "mean_rank": 19.48, "median_rank": 7.5, "recall_1": 0.12, "recall_5": 0.46, "recall_10": 0.6, "ndcg_1": 0.12, "ndcg_5": 0.2887503214926581, "ndcg_10": 0.3326338330946236}, "Pos+Back+Look|Back|yes": {"seeker": "Pos+Back+Look", "candidate": "Back", "use_query": true, "pair_auc": 0.5743, "best_f1": 0.6763636363636364, "accuracy_at_half": 0.565, "hard_auc": 0.4918, "easy_auc": 0.7788000000000002, "mrr": 0.3694959304523882, "mean_rank": 10.9, "median_rank": 5.0, "recall_1": 0.22, "recall_5": 0.52, "recall_10": 0.7, "ndcg_1": 0.22, "ndcg_5": 0.3790288081573408, "ndcg_10": 0.4359127146035289}, "Pos+Back+Look|Back|no": {"seeker": "Pos+Back+Look", "candidate": "Back", "use_query": false, "pair_auc": 0.5545, "best_f1": 0.6666666666666667, "accuracy_at_half": 0.57, "hard_auc": 0.4576, "easy_auc": 0.7792, "mrr": 0.28757545832072173, "mean_rank": 16.66, "median_rank": 7.5, "recall_1": 0.16, "recall_5": 0.43, "recall_10": 0.58, "ndcg_1": 0.16, "ndcg_5": 0.29409331968525515, "ndcg_10": 0.34203005625129534}, "Pos+Back+Look|Look|yes": {"seeker": "Pos+Back+Look", "candidate": "Look", "use_query": true, "pair_auc": 0.5912, "best_f1": 0.6734006734006733, "accuracy_at_half": 0.58, "hard_auc": 0.5398000000000001, "easy_auc": 0.6788000000000001, "mrr": 0.2660389885078087, "mean_rank": 16.09, "median_rank": 7.0, "recall_1": 0.11, "recall_5": 0.45, "recall_10": 0.58, "ndcg_1": 0.11, "ndcg_5": 0.2835546891165789, "ndcg_10": 0.3261281171086592}, "Pos+Back+Look|Look|no": {"seeker": "Pos+Back+Look", "candidate": "Look", "use_query": false, "pair_auc": 0.5570999999999999, "best_f1": 0.6734006734006733, "accuracy_at_half": 0.54, "hard_auc": 0.49520000000000003, "easy_auc": 0.6731999999999999, "mrr": 0.21373968463524498, "mean_rank": 21.16, "median_rank": 11.0, "recall_1": 0.09, "recall_5": 0.32, "recall_10": 0.49, "ndcg_1": 0.09, "ndcg_5": 0.20799772928997398, "ndcg_10": 0.26178694605299285}, "Pos+Back+Look|Pos+Back|yes": {"seeker": "Pos+Back+Look", "candidate": "Pos+Back", "use_query": true, "pair_auc": 0.5726, "best_f1": 0.6689895470383276, "accuracy_at_half": 0.545, "hard_auc": 0.5172000000000001, "easy_auc": 0.696, "mrr": 0.3518646459125947, "mean_rank": 9.65, "median_rank": 4.0, "recall_1": 0.17, "recall_5": 0.59, "recall_10": 0.74, "ndcg_1": 0.17, "ndcg_5": 0.3871269305076026, "ndcg_10": 0.434247894654524}, "Pos+Back+Look|Pos+Back|no": {"seeker": "Pos+Back+Look", "candidate": "Pos+Back", "use_query": false, "pair_auc": 0.5534000000000001, "best_f1": 0.6688963210702341, "accuracy_at_half": 0.54, "hard_auc": 0.4804, "easy_auc": 0.6916, "mrr": 0.2947741104336979, "mean_rank": 14.77, "median_rank": 6.0, "recall_1": 0.14, "recall_5": 0.49, "recall_10": 0.6, "ndcg_1": 0.14, "ndcg_5": 0.31819903790045884, "ndcg_10": 0.35413115608038687}, "Pos+Back+Look|Pos+Look|yes": {"seeker": "Pos+Back+Look", "candidate": "Pos+Look", "use_query": true, "pair_auc": 0.5852999999999999, "best_f1": 0.6711409395973155, "accuracy_at_half": 0.61, "hard_auc": 0.5486, "easy_auc": 0.6295999999999999, "mrr": 0.30131526627748095, "mean_rank": 12.04, "median_rank": 5.0, "recall_1": 0.13, "recall_5": 0.52, "recall_10": 0.69, "ndcg_1": 0.13, "ndcg_5": 0.3273460458861067, "ndcg_10": 0.3824174910434824}, "Pos+Back+Look|Pos+Look|no": {"seeker": "Pos+Back+Look", "candidate": "Pos+Look", "use_query": false, "pair_auc": 0.5607, "best_f1": 0.6734006734006733, "accuracy_at_half": 0.56, "hard_auc": 0.5218, "easy_auc": 0.6427999999999999, "mrr": 0.24406452782193278, "mean_rank": 16.97, "median_rank": 9.0, "recall_1": 0.1, "recall_5": 0.39, "recall_10": 0.56, "ndcg_1": 0.1, "ndcg_5": 0.24896944362254253, "ndcg_10": 0.30371851513998244}, "Pos+Back+Look|Back+Look|yes": {"seeker": "Pos+Back+Look", "candidate": "Back+Look", "use_query": true, "pair_auc": 0.5846, "best_f1": 0.6688963210702341, "accuracy_at_half": 0.57, "hard_auc": 0.5378, "easy_auc": 0.592, "mrr": 0.3669088616420716, "mean_rank": 8.94, "median_rank": 4.0, "recall_1": 0.19, "recall_5": 0.54, "recall_10": 0.73, "ndcg_1": 0.19, "ndcg_5": 0.38127394524463076, "ndcg_10": 0.4422963925940959}, "Pos+Back+Look|Back+Look|no": {"seeker": "Pos+Back+Look", "candidate": "Back+Look", "use_query": false, "pair_auc": 0.5585, "best_f1": 0.6688963210702341, "accuracy_at_half": 0.555, "hard_auc": 0.5284, "easy_auc": 0.6088, "mrr": 0.2912375032735145, "mean_rank": 13.61, "median_rank": 6.5, "recall_1": 0.12, "recall_5": 0.46, "recall_10": 0.59, "ndcg_1": 0.12, "ndcg_5": 0.3058357077362422, "ndcg_10": 0.3488412559493021}, "Pos+Back+Look|Pos+Back+Look|yes": {"seeker": "Pos+Back+Look", "candidate": "Pos+Back+Look", "use_query": true, "pair_auc": 0.5787, "best_f1": 0.6688963210702341, "accuracy_at_half": 0.575, "hard_auc": 0.516, "easy_auc": 0.6432, "mrr": 0.3681069502644653, "mean_rank": 9.27, "median_rank": 4.0, "recall_1": 0.2, "recall_5": 0.57, "recall_10": 0.7, "ndcg_1": 0.2, "ndcg_5": 0.3935905706489523, "ndcg_10": 0.4353286824729946}, "Pos+Back+Look|Pos+Back+Look|no": {"seeker": "Pos+Back+Look", "candidate": "Pos+Back+Look", "use_query": false, "pair_auc": 0.5562, "best_f1": 0.6689189189189189, "accuracy_at_half": 0.56, "hard_auc": 0.4808, "easy_auc": 0.6664, "mrr": 0.2955792860174198, "mean_rank": 14.34, "median_rank": 6.0, "recall_1": 0.15, "recall_5": 0.48, "recall_10": 0.61, "ndcg_1": 0.15, "ndcg_5": 0.31627909223774675, "ndcg_10": 0.3581114989007357}}, "metric_ranges": {"pair_auc": {"min": 0.5416000000000001, "max": 0.6395000000000001}, "hard_auc": {"min": 0.4534, "max": 0.6058}, "easy_auc": {"min": 0.5851999999999999, "max": 0.7951999999999999}, "best_f1": {"min": 0.6666666666666666, "max": 0.6851211072664359}, "accuracy_at_half": {"min": 0.495, "max": 0.62}, "mrr": {"min": 0.15069350642915416, "max": 0.4735902505864747}, "recall_1": {"min": 0.05, "max": 0.28}, "recall_5": {"min": 0.17, "max": 0.76}, "recall_10": {"min": 0.33, "max": 0.87}, "ndcg_1": {"min": 0.05, "max": 0.28}, "ndcg_5": {"min": 0.12190213889469285, "max": 0.5278204261718232}, "ndcg_10": {"min": 0.17530613131123143, "max": 0.5637182085974928}}, "metric_options": [["pair_auc", "Pair AUC", "auc"], ["hard_auc", "Hard-negative AUC", "auc"], ["easy_auc", "Easy-negative AUC", "auc"], ["best_f1", "Best F1", "auc"], ["accuracy_at_half", "Accuracy @ 0.5", "auc"], ["mrr", "MRR", "auc"], ["recall_1", "Recall@1", "pct"], ["recall_5", "Recall@5", "pct"], ["recall_10", "Recall@10", "pct"], ["ndcg_1", "NDCG@1", "auc"], ["ndcg_5", "NDCG@5", "auc"], ["ndcg_10", "NDCG@10", "auc"]], "min_auc": 0.5416000000000001, "max_auc": 0.6395000000000001, "full_rows": [{"seeker": "Back", "candidate": "Look", "use_query": true, "pair_auc": 0.6395000000000001, "best_f1": 0.6711409395973155, "accuracy_at_half": 0.61, "hard_auc": 0.6055999999999999, "easy_auc": 0.6971999999999999, "mrr": 0.3492105261377084, "mean_rank": 13.89, "median_rank": 6.0, "recall_1": 0.21, "recall_5": 0.48, "recall_10": 0.65, "ndcg_1": 0.21, "ndcg_5": 0.3522041018104201, "ndcg_10": 0.40715748122376555}, {"seeker": "Pos", "candidate": "Look", "use_query": true, "pair_auc": 0.6318, "best_f1": 0.6734006734006733, "accuracy_at_half": 0.585, "hard_auc": 0.5838, "easy_auc": 0.7012, "mrr": 0.36780850142071975, "mean_rank": 12.83, "median_rank": 5.0, "recall_1": 0.22, "recall_5": 0.53, "recall_10": 0.65, "ndcg_1": 0.22, "ndcg_5": 0.3823819274184801, "ndcg_10": 0.4223172165902122}, {"seeker": "Pos", "candidate": "Back+Look", "use_query": true, "pair_auc": 0.6250000000000001, "best_f1": 0.6694560669456067, "accuracy_at_half": 0.59, "hard_auc": 0.5635999999999999, "easy_auc": 0.7128, "mrr": 0.42875699462555494, "mean_rank": 6.98, "median_rank": 3.0, "recall_1": 0.23, "recall_5": 0.71, "recall_10": 0.83, "ndcg_1": 0.23, "ndcg_5": 0.4800240054923342, "ndcg_10": 0.5181156557187667}, {"seeker": "Look", "candidate": "Back+Look", "use_query": true, "pair_auc": 0.6223999999999998, "best_f1": 0.6746031746031746, "accuracy_at_half": 0.62, "hard_auc": 0.5948000000000001, "easy_auc": 0.7375999999999999, "mrr": 0.4030822049176245, "mean_rank": 6.57, "median_rank": 3.5, "recall_1": 0.21, "recall_5": 0.64, "recall_10": 0.79, "ndcg_1": 0.21, "ndcg_5": 0.43578899622496686, "ndcg_10": 0.4861974806902048}, {"seeker": "None", "candidate": "Look", "use_query": true, "pair_auc": 0.6220000000000001, "best_f1": 0.6711864406779661, "accuracy_at_half": 0.565, "hard_auc": 0.5512, "easy_auc": 0.7779999999999999, "mrr": 0.3883863590739892, "mean_rank": 11.36, "median_rank": 4.0, "recall_1": 0.22, "recall_5": 0.59, "recall_10": 0.69, "ndcg_1": 0.22, "ndcg_5": 0.417701703853607, "ndcg_10": 0.4502751318456874}, {"seeker": "Back", "candidate": "Pos+Look", "use_query": true, "pair_auc": 0.6191000000000001, "best_f1": 0.6764705882352942, "accuracy_at_half": 0.58, "hard_auc": 0.5740000000000001, "easy_auc": 0.6704, "mrr": 0.3661166887863693, "mean_rank": 10.06, "median_rank": 4.0, "recall_1": 0.19, "recall_5": 0.56, "recall_10": 0.76, "ndcg_1": 0.19, "ndcg_5": 0.38474552557903174, "ndcg_10": 0.4504194563598764}, {"seeker": "Pos+Back", "candidate": "Look", "use_query": true, "pair_auc": 0.6183000000000001, "best_f1": 0.6734006734006733, "accuracy_at_half": 0.61, "hard_auc": 0.6012, "easy_auc": 0.6683999999999999, "mrr": 0.3416977039731347, "mean_rank": 14.64, "median_rank": 6.5, "recall_1": 0.2, "recall_5": 0.49, "recall_10": 0.64, "ndcg_1": 0.2, "ndcg_5": 0.35238734240793107, "ndcg_10": 0.3999368593564255}, {"seeker": "Pos", "candidate": "Pos+Look", "use_query": true, "pair_auc": 0.6168, "best_f1": 0.6688963210702341, "accuracy_at_half": 0.595, "hard_auc": 0.5488, "easy_auc": 0.7057692307692308, "mrr": 0.38132163001823643, "mean_rank": 9.32, "median_rank": 4.0, "recall_1": 0.19, "recall_5": 0.6, "recall_10": 0.8, "ndcg_1": 0.19, "ndcg_5": 0.40918882699738157, "ndcg_10": 0.473962595632578}, {"seeker": "Look", "candidate": "Look", "use_query": true, "pair_auc": 0.6168, "best_f1": 0.6734006734006733, "accuracy_at_half": 0.575, "hard_auc": 0.5648, "easy_auc": 0.7244, "mrr": 0.3102282450001448, "mean_rank": 13.6, "median_rank": 6.0, "recall_1": 0.14, "recall_5": 0.48, "recall_10": 0.63, "ndcg_1": 0.14, "ndcg_5": 0.32408275770268813, "ndcg_10": 0.3726662207588731}, {"seeker": "Look", "candidate": "Pos+Look", "use_query": true, "pair_auc": 0.6166999999999999, "best_f1": 0.6688963210702341, "accuracy_at_half": 0.585, "hard_auc": 0.5422, "easy_auc": 0.7183999999999999, "mrr": 0.3376755214526444, "mean_rank": 8.72, "median_rank": 4.0, "recall_1": 0.14, "recall_5": 0.58, "recall_10": 0.77, "ndcg_1": 0.14, "ndcg_5": 0.3690522911597657, "ndcg_10": 0.43167009516786403}, {"seeker": "Back", "candidate": "Back+Look", "use_query": true, "pair_auc": 0.6165, "best_f1": 0.6747967479674797, "accuracy_at_half": 0.575, "hard_auc": 0.5944, "easy_auc": 0.6576, "mrr": 0.41817468720613277, "mean_rank": 7.69, "median_rank": 4.0, "recall_1": 0.25, "recall_5": 0.64, "recall_10": 0.78, "ndcg_1": 0.25, "ndcg_5": 0.45048546475819284, "ndcg_10": 0.49510999768924985}, {"seeker": "Pos+Look", "candidate": "Back+Look", "use_query": true, "pair_auc": 0.6123000000000001, "best_f1": 0.6688963210702341, "accuracy_at_half": 0.62, "hard_auc": 0.5772, "easy_auc": 0.6888, "mrr": 0.3819210226645896, "mean_rank": 7.38, "median_rank": 4.0, "recall_1": 0.2, "recall_5": 0.58, "recall_10": 0.8, "ndcg_1": 0.2, "ndcg_5": 0.40175347252346344, "ndcg_10": 0.47212087421979726}, {"seeker": "Look", "candidate": "Pos+Back+Look", "use_query": true, "pair_auc": 0.6091000000000001, "best_f1": 0.6666666666666666, "accuracy_at_half": 0.615, "hard_auc": 0.588, "easy_auc": 0.7228, "mrr": 0.3975400463643111, "mean_rank": 6.16, "median_rank": 4.0, "recall_1": 0.2, "recall_5": 0.64, "recall_10": 0.84, "ndcg_1": 0.2, "ndcg_5": 0.42933077107306816, "ndcg_10": 0.49575087655184147}, {"seeker": "Pos", "candidate": "Pos+Back+Look", "use_query": true, "pair_auc": 0.6087000000000001, "best_f1": 0.6666666666666666, "accuracy_at_half": 0.59, "hard_auc": 0.5212, "easy_auc": 0.7152, "mrr": 0.44927501436882145, "mean_rank": 7.2, "median_rank": 3.0, "recall_1": 0.25, "recall_5": 0.73, "recall_10": 0.83, "ndcg_1": 0.25, "ndcg_5": 0.5028204261718233, "ndcg_10": 0.5348068202825318}, {"seeker": "Pos+Back", "candidate": "Pos+Look", "use_query": true, "pair_auc": 0.6054999999999999, "best_f1": 0.6688963210702341, "accuracy_at_half": 0.6, "hard_auc": 0.6058, "easy_auc": 0.6216, "mrr": 0.3560917375007699, "mean_rank": 11.28, "median_rank": 5.0, "recall_1": 0.19, "recall_5": 0.54, "recall_10": 0.76, "ndcg_1": 0.19, "ndcg_5": 0.3712504554908255, "ndcg_10": 0.4432074007401976}, {"seeker": "Pos+Look", "candidate": "Look", "use_query": true, "pair_auc": 0.6036999999999999, "best_f1": 0.6734006734006733, "accuracy_at_half": 0.545, "hard_auc": 0.5803999999999999, "easy_auc": 0.7128, "mrr": 0.2898327376282161, "mean_rank": 14.33, "median_rank": 6.0, "recall_1": 0.12, "recall_5": 0.49, "recall_10": 0.61, "ndcg_1": 0.12, "ndcg_5": 0.3136140536513771, "ndcg_10": 0.35191872419754444}, {"seeker": "Pos", "candidate": "Back", "use_query": true, "pair_auc": 0.6022000000000001, "best_f1": 0.6782006920415224, "accuracy_at_half": 0.555, "hard_auc": 0.5336, "easy_auc": 0.7415999999999999, "mrr": 0.41100248814652846, "mean_rank": 8.25, "median_rank": 3.0, "recall_1": 0.23, "recall_5": 0.65, "recall_10": 0.77, "ndcg_1": 0.23, "ndcg_5": 0.4481704011535377, "ndcg_10": 0.48684815904866935}, {"seeker": "None", "candidate": "Back+Look", "use_query": true, "pair_auc": 0.6016, "best_f1": 0.6666666666666666, "accuracy_at_half": 0.6, "hard_auc": 0.522, "easy_auc": 0.728, "mrr": 0.47357398785413246, "mean_rank": 6.04, "median_rank": 3.0, "recall_1": 0.28, "recall_5": 0.75, "recall_10": 0.86, "ndcg_1": 0.28, "ndcg_5": 0.5259776518119287, "ndcg_10": 0.5610343049639651}, {"seeker": "Pos+Look", "candidate": "Pos+Look", "use_query": true, "pair_auc": 0.6013, "best_f1": 0.6688963210702341, "accuracy_at_half": 0.575, "hard_auc": 0.5428, "easy_auc": 0.6971999999999999, "mrr": 0.32560898132799954, "mean_rank": 10.04, "median_rank": 5.0, "recall_1": 0.15, "recall_5": 0.55, "recall_10": 0.73, "ndcg_1": 0.15, "ndcg_5": 0.35399292662496734, "ndcg_10": 0.4111911540240199}, {"seeker": "Pos+Look", "candidate": "Pos+Back+Look", "use_query": true, "pair_auc": 0.6013, "best_f1": 0.6689419795221844, "accuracy_at_half": 0.58, "hard_auc": 0.5416000000000001, "easy_auc": 0.6655999999999999, "mrr": 0.3963839847145135, "mean_rank": 7.42, "median_rank": 4.0, "recall_1": 0.23, "recall_5": 0.6, "recall_10": 0.76, "ndcg_1": 0.23, "ndcg_5": 0.4193250948386625, "ndcg_10": 0.4721330744740848}, {"seeker": "Pos+Back", "candidate": "Back+Look", "use_query": true, "pair_auc": 0.6007, "best_f1": 0.6688963210702341, "accuracy_at_half": 0.58, "hard_auc": 0.5952, "easy_auc": 0.6876, "mrr": 0.401863090137565, "mean_rank": 8.57, "median_rank": 3.0, "recall_1": 0.22, "recall_5": 0.62, "recall_10": 0.8, "ndcg_1": 0.22, "ndcg_5": 0.43200846943434096, "ndcg_10": 0.4899467919498119}, {"seeker": "Back", "candidate": "Pos+Back+Look", "use_query": true, "pair_auc": 0.6005000000000001, "best_f1": 0.6666666666666667, "accuracy_at_half": 0.58, "hard_auc": 0.5743999999999999, "easy_auc": 0.6376, "mrr": 0.41153943137369553, "mean_rank": 7.78, "median_rank": 4.0, "recall_1": 0.24, "recall_5": 0.64, "recall_10": 0.79, "ndcg_1": 0.24, "ndcg_5": 0.4450526422392553, "ndcg_10": 0.49328930101366325}, {"seeker": "None", "candidate": "Pos+Look", "use_query": true, "pair_auc": 0.6005, "best_f1": 0.6666666666666666, "accuracy_at_half": 0.56, "hard_auc": 0.5314, "easy_auc": 0.7692000000000001, "mrr": 0.43236211546326425, "mean_rank": 7.66, "median_rank": 3.0, "recall_1": 0.24, "recall_5": 0.71, "recall_10": 0.83, "ndcg_1": 0.24, "ndcg_5": 0.4828436479292935, "ndcg_10": 0.5218902660172252}, {"seeker": "Back", "candidate": "Pos", "use_query": true, "pair_auc": 0.5992, "best_f1": 0.6737588652482269, "accuracy_at_half": 0.575, "hard_auc": 0.5884, "easy_auc": 0.6532, "mrr": 0.3652907513411306, "mean_rank": 12.95, "median_rank": 3.5, "recall_1": 0.17, "recall_5": 0.61, "recall_10": 0.76, "ndcg_1": 0.17, "ndcg_5": 0.403750589488993, "ndcg_10": 0.45334422774778527}, {"seeker": "Back+Look", "candidate": "Look", "use_query": true, "pair_auc": 0.5991, "best_f1": 0.6756756756756758, "accuracy_at_half": 0.575, "hard_auc": 0.5442, "easy_auc": 0.7068, "mrr": 0.2734674263246262, "mean_rank": 15.34, "median_rank": 6.0, "recall_1": 0.12, "recall_5": 0.47, "recall_10": 0.61, "ndcg_1": 0.12, "ndcg_5": 0.2935724958845981, "ndcg_10": 0.3396383980265686}, {"seeker": "Pos", "candidate": "Pos+Back", "use_query": true, "pair_auc": 0.5974999999999999, "best_f1": 0.6718146718146718, "accuracy_at_half": 0.57, "hard_auc": 0.5098, "easy_auc": 0.6944, "mrr": 0.44411476651264986, "mean_rank": 7.28, "median_rank": 3.0, "recall_1": 0.25, "recall_5": 0.72, "recall_10": 0.85, "ndcg_1": 0.25, "ndcg_5": 0.4950240054923342, "ndcg_10": 0.5362193243016804}, {"seeker": "Look", "candidate": "Back", "use_query": true, "pair_auc": 0.5968, "best_f1": 0.6808510638297873, "accuracy_at_half": 0.545, "hard_auc": 0.5276, "easy_auc": 0.7768, "mrr": 0.34971657162734865, "mean_rank": 8.04, "median_rank": 4.0, "recall_1": 0.16, "recall_5": 0.6, "recall_10": 0.75, "ndcg_1": 0.16, "ndcg_5": 0.3864282810988855, "ndcg_10": 0.4344362013355466}, {"seeker": "Back", "candidate": "Back", "use_query": true, "pair_auc": 0.5955999999999999, "best_f1": 0.6788321167883212, "accuracy_at_half": 0.56, "hard_auc": 0.5378000000000001, "easy_auc": 0.7412, "mrr": 0.38939726023282817, "mean_rank": 8.9, "median_rank": 3.0, "recall_1": 0.2, "recall_5": 0.59, "recall_10": 0.75, "ndcg_1": 0.2, "ndcg_5": 0.414580359745875, "ndcg_10": 0.46637750444193243}, {"seeker": "Pos+Look", "candidate": "Back", "use_query": true, "pair_auc": 0.5935, "best_f1": 0.6851211072664359, "accuracy_at_half": 0.575, "hard_auc": 0.501, "easy_auc": 0.7951999999999999, "mrr": 0.3617295909653644, "mean_rank": 9.02, "median_rank": 5.0, "recall_1": 0.2, "recall_5": 0.57, "recall_10": 0.73, "ndcg_1": 0.2, "ndcg_5": 0.38480462211749505, "ndcg_10": 0.43797987599628674}, {"seeker": "Pos+Back", "candidate": "Pos+Back+Look", "use_query": true, "pair_auc": 0.5921, "best_f1": 0.6666666666666666, "accuracy_at_half": 0.57, "hard_auc": 0.5721999999999999, "easy_auc": 0.694, "mrr": 0.4026926179101705, "mean_rank": 9.16, "median_rank": 4.0, "recall_1": 0.24, "recall_5": 0.61, "recall_10": 0.79, "ndcg_1": 0.24, "ndcg_5": 0.4286372754088474, "ndcg_10": 0.48745040321545224}, {"seeker": "Back+Look", "candidate": "Pos+Look", "use_query": true, "pair_auc": 0.5921, "best_f1": 0.6711409395973155, "accuracy_at_half": 0.59, "hard_auc": 0.5514, "easy_auc": 0.6612, "mrr": 0.30699188370852953, "mean_rank": 10.85, "median_rank": 5.0, "recall_1": 0.13, "recall_5": 0.51, "recall_10": 0.72, "ndcg_1": 0.13, "ndcg_5": 0.32591828727713046, "ndcg_10": 0.39407544321793103}, {"seeker": "Pos+Back+Look", "candidate": "Look", "use_query": true, "pair_auc": 0.5912, "best_f1": 0.6734006734006733, "accuracy_at_half": 0.58, "hard_auc": 0.5398000000000001, "easy_auc": 0.6788000000000001, "mrr": 0.2660389885078087, "mean_rank": 16.09, "median_rank": 7.0, "recall_1": 0.11, "recall_5": 0.45, "recall_10": 0.58, "ndcg_1": 0.11, "ndcg_5": 0.2835546891165789, "ndcg_10": 0.3261281171086592}, {"seeker": "Back+Look", "candidate": "Back+Look", "use_query": true, "pair_auc": 0.5909, "best_f1": 0.6711409395973155, "accuracy_at_half": 0.56, "hard_auc": 0.5673999999999999, "easy_auc": 0.614, "mrr": 0.3705047807787083, "mean_rank": 8.04, "median_rank": 4.0, "recall_1": 0.2, "recall_5": 0.54, "recall_10": 0.77, "ndcg_1": 0.2, "ndcg_5": 0.3816528182182209, "ndcg_10": 0.4544271080350527}, {"seeker": "Pos", "candidate": "Pos", "use_query": true, "pair_auc": 0.5897000000000001, "best_f1": 0.6688963210702341, "accuracy_at_half": 0.565, "hard_auc": 0.5288, "easy_auc": 0.6724, "mrr": 0.3831583940737618, "mean_rank": 12.68, "median_rank": 4.0, "recall_1": 0.2, "recall_5": 0.59, "recall_10": 0.79, "ndcg_1": 0.2, "ndcg_5": 0.40936665260544153, "ndcg_10": 0.473772487260511}, {"seeker": "None", "candidate": "Pos+Back+Look", "use_query": true, "pair_auc": 0.5896000000000001, "best_f1": 0.6666666666666666, "accuracy_at_half": 0.565, "hard_auc": 0.5218, "easy_auc": 0.7088, "mrr": 0.45772140529116695, "mean_rank": 6.04, "median_rank": 3.0, "recall_1": 0.25, "recall_5": 0.76, "recall_10": 0.86, "ndcg_1": 0.25, "ndcg_5": 0.5157172399116002, "ndcg_10": 0.5496229502703084}, {"seeker": "Look", "candidate": "Pos+Back", "use_query": true, "pair_auc": 0.589, "best_f1": 0.678082191780822, "accuracy_at_half": 0.56, "hard_auc": 0.5662, "easy_auc": 0.7236, "mrr": 0.394048175898176, "mean_rank": 6.32, "median_rank": 4.0, "recall_1": 0.2, "recall_5": 0.68, "recall_10": 0.83, "ndcg_1": 0.2, "ndcg_5": 0.44165822645629155, "ndcg_10": 0.4902022003893808}, {"seeker": "Pos+Back", "candidate": "Back", "use_query": true, "pair_auc": 0.5883, "best_f1": 0.6763636363636364, "accuracy_at_half": 0.54, "hard_auc": 0.5446, "easy_auc": 0.7495999999999999, "mrr": 0.39599512679079907, "mean_rank": 10.14, "median_rank": 4.0, "recall_1": 0.24, "recall_5": 0.57, "recall_10": 0.72, "ndcg_1": 0.24, "ndcg_5": 0.41359057064895227, "ndcg_10": 0.4622831205494233}, {"seeker": "Back", "candidate": "Pos+Back", "use_query": true, "pair_auc": 0.5874, "best_f1": 0.6714801444043322, "accuracy_at_half": 0.56, "hard_auc": 0.5506, "easy_auc": 0.7028, "mrr": 0.3984222565348604, "mean_rank": 7.34, "median_rank": 4.0, "recall_1": 0.2, "recall_5": 0.63, "recall_10": 0.78, "ndcg_1": 0.2, "ndcg_5": 0.4310370163467271, "ndcg_10": 0.4800631644730667}, {"seeker": "Pos+Look", "candidate": "Pos+Back", "use_query": true, "pair_auc": 0.5867, "best_f1": 0.6712802768166091, "accuracy_at_half": 0.575, "hard_auc": 0.5286, "easy_auc": 0.7247999999999999, "mrr": 0.3676989021514912, "mean_rank": 7.64, "median_rank": 4.0, "recall_1": 0.18, "recall_5": 0.64, "recall_10": 0.82, "ndcg_1": 0.18, "ndcg_5": 0.4100885170202485, "ndcg_10": 0.4675004244757933}, {"seeker": "Pos+Back", "candidate": "Pos", "use_query": true, "pair_auc": 0.5857, "best_f1": 0.6689655172413793, "accuracy_at_half": 0.575, "hard_auc": 0.5835999999999999, "easy_auc": 0.6356, "mrr": 0.3538955395664757, "mean_rank": 14.43, "median_rank": 4.0, "recall_1": 0.18, "recall_5": 0.58, "recall_10": 0.74, "ndcg_1": 0.18, "ndcg_5": 0.3866115216963965, "ndcg_10": 0.43808721896519115}, {"seeker": "Pos+Back+Look", "candidate": "Pos+Look", "use_query": true, "pair_auc": 0.5852999999999999, "best_f1": 0.6711409395973155, "accuracy_at_half": 0.61, "hard_auc": 0.5486, "easy_auc": 0.6295999999999999, "mrr": 0.30131526627748095, "mean_rank": 12.04, "median_rank": 5.0, "recall_1": 0.13, "recall_5": 0.52, "recall_10": 0.69, "ndcg_1": 0.13, "ndcg_5": 0.3273460458861067, "ndcg_10": 0.3824174910434824}, {"seeker": "Pos+Back+Look", "candidate": "Back+Look", "use_query": true, "pair_auc": 0.5846, "best_f1": 0.6688963210702341, "accuracy_at_half": 0.57, "hard_auc": 0.5378, "easy_auc": 0.592, "mrr": 0.3669088616420716, "mean_rank": 8.94, "median_rank": 4.0, "recall_1": 0.19, "recall_5": 0.54, "recall_10": 0.73, "ndcg_1": 0.19, "ndcg_5": 0.38127394524463076, "ndcg_10": 0.4422963925940959}, {"seeker": "Back+Look", "candidate": "Pos+Back+Look", "use_query": true, "pair_auc": 0.5836, "best_f1": 0.6711409395973155, "accuracy_at_half": 0.55, "hard_auc": 0.5464, "easy_auc": 0.6431999999999999, "mrr": 0.365203426004918, "mean_rank": 7.83, "median_rank": 4.0, "recall_1": 0.19, "recall_5": 0.6, "recall_10": 0.74, "ndcg_1": 0.19, "ndcg_5": 0.3985546891165788, "ndcg_10": 0.4422585899403952}, {"seeker": "Pos+Back", "candidate": "Pos+Back", "use_query": true, "pair_auc": 0.5835, "best_f1": 0.6688963210702341, "accuracy_at_half": 0.575, "hard_auc": 0.5604, "easy_auc": 0.6788000000000001, "mrr": 0.3824028223980701, "mean_rank": 8.95, "median_rank": 4.0, "recall_1": 0.19, "recall_5": 0.62, "recall_10": 0.77, "ndcg_1": 0.19, "ndcg_5": 0.4174701899451543, "ndcg_10": 0.4664373051994787}, {"seeker": "Look", "candidate": "Pos", "use_query": true, "pair_auc": 0.5823999999999999, "best_f1": 0.673611111111111, "accuracy_at_half": 0.535, "hard_auc": 0.5326, "easy_auc": 0.7188, "mrr": 0.3940860912527134, "mean_rank": 10.64, "median_rank": 3.0, "recall_1": 0.2, "recall_5": 0.61, "recall_10": 0.75, "ndcg_1": 0.2, "ndcg_5": 0.42537966345983447, "ndcg_10": 0.47147990135606355}, {"seeker": "None", "candidate": "Back", "use_query": true, "pair_auc": 0.5805999999999999, "best_f1": 0.6711409395973155, "accuracy_at_half": 0.55, "hard_auc": 0.4978, "easy_auc": 0.7008, "mrr": 0.4276241383796926, "mean_rank": 7.08, "median_rank": 3.0, "recall_1": 0.23, "recall_5": 0.65, "recall_10": 0.85, "ndcg_1": 0.23, "ndcg_5": 0.4572456595771992, "ndcg_10": 0.5224753193384587}, {"seeker": "Back+Look", "candidate": "Pos", "use_query": true, "pair_auc": 0.5794, "best_f1": 0.6712328767123288, "accuracy_at_half": 0.56, "hard_auc": 0.5392, "easy_auc": 0.6295999999999999, "mrr": 0.35354121161972174, "mean_rank": 13.08, "median_rank": 4.0, "recall_1": 0.18, "recall_5": 0.57, "recall_10": 0.69, "ndcg_1": 0.18, "ndcg_5": 0.3839516368545233, "ndcg_10": 0.42414102141851645}, {"seeker": "Pos+Back+Look", "candidate": "Pos+Back+Look", "use_query": true, "pair_auc": 0.5787, "best_f1": 0.6688963210702341, "accuracy_at_half": 0.575, "hard_auc": 0.516, "easy_auc": 0.6432, "mrr": 0.3681069502644653, "mean_rank": 9.27, "median_rank": 4.0, "recall_1": 0.2, "recall_5": 0.57, "recall_10": 0.7, "ndcg_1": 0.2, "ndcg_5": 0.3935905706489523, "ndcg_10": 0.4353286824729946}, {"seeker": "Back+Look", "candidate": "Back", "use_query": true, "pair_auc": 0.5778, "best_f1": 0.6836363636363636, "accuracy_at_half": 0.55, "hard_auc": 0.5105999999999999, "easy_auc": 0.7799999999999999, "mrr": 0.35423515123643157, "mean_rank": 9.62, "median_rank": 5.0, "recall_1": 0.18, "recall_5": 0.52, "recall_10": 0.69, "ndcg_1": 0.18, "ndcg_5": 0.36678393906638584, "ndcg_10": 0.4211249277438451}, {"seeker": "Pos+Look", "candidate": "Pos", "use_query": true, "pair_auc": 0.5755000000000001, "best_f1": 0.6711864406779661, "accuracy_at_half": 0.56, "hard_auc": 0.5302, "easy_auc": 0.6164000000000001, "mrr": 0.33570897133083044, "mean_rank": 12.48, "median_rank": 4.0, "recall_1": 0.15, "recall_5": 0.6, "recall_10": 0.72, "ndcg_1": 0.15, "ndcg_5": 0.38055722107155954, "ndcg_10": 0.41839543564248877}, {"seeker": "Look", "candidate": "Back+Look", "use_query": false, "pair_auc": 0.5746, "best_f1": 0.6666666666666667, "accuracy_at_half": 0.55, "hard_auc": 0.5464, "easy_auc": 0.6692, "mrr": 0.26044914345385295, "mean_rank": 13.85, "median_rank": 7.0, "recall_1": 0.11, "recall_5": 0.45, "recall_10": 0.55, "ndcg_1": 0.11, "ndcg_5": 0.2782222596579291, "ndcg_10": 0.3109638073663106}, {"seeker": "Pos+Back+Look", "candidate": "Pos", "use_query": true, "pair_auc": 0.5743, "best_f1": 0.6689189189189189, "accuracy_at_half": 0.575, "hard_auc": 0.5666, "easy_auc": 0.5851999999999999, "mrr": 0.3408827844228133, "mean_rank": 14.46, "median_rank": 4.0, "recall_1": 0.16, "recall_5": 0.57, "recall_10": 0.7, "ndcg_1": 0.16, "ndcg_5": 0.37484617988427416, "ndcg_10": 0.41778279011290176}, {"seeker": "Pos+Back+Look", "candidate": "Back", "use_query": true, "pair_auc": 0.5743, "best_f1": 0.6763636363636364, "accuracy_at_half": 0.565, "hard_auc": 0.4918, "easy_auc": 0.7788000000000002, "mrr": 0.3694959304523882, "mean_rank": 10.9, "median_rank": 5.0, "recall_1": 0.22, "recall_5": 0.52, "recall_10": 0.7, "ndcg_1": 0.22, "ndcg_5": 0.3790288081573408, "ndcg_10": 0.4359127146035289}, {"seeker": "None", "candidate": "Pos+Back", "use_query": true, "pair_auc": 0.5741999999999999, "best_f1": 0.6688963210702341, "accuracy_at_half": 0.56, "hard_auc": 0.5282, "easy_auc": 0.6684, "mrr": 0.4735902505864747, "mean_rank": 5.74, "median_rank": 3.0, "recall_1": 0.27, "recall_5": 0.76, "recall_10": 0.87, "ndcg_1": 0.27, "ndcg_5": 0.5278204261718232, "ndcg_10": 0.5637182085974928}, {"seeker": "Pos+Back+Look", "candidate": "Pos+Back", "use_query": true, "pair_auc": 0.5726, "best_f1": 0.6689895470383276, "accuracy_at_half": 0.545, "hard_auc": 0.5172000000000001, "easy_auc": 0.696, "mrr": 0.3518646459125947, "mean_rank": 9.65, "median_rank": 4.0, "recall_1": 0.17, "recall_5": 0.59, "recall_10": 0.74, "ndcg_1": 0.17, "ndcg_5": 0.3871269305076026, "ndcg_10": 0.434247894654524}, {"seeker": "None", "candidate": "Pos", "use_query": true, "pair_auc": 0.5720999999999999, "best_f1": 0.6688963210702341, "accuracy_at_half": 0.54, "hard_auc": 0.5164, "easy_auc": 0.7084, "mrr": 0.45259347879030665, "mean_rank": 10.27, "median_rank": 3.0, "recall_1": 0.26, "recall_5": 0.72, "recall_10": 0.84, "ndcg_1": 0.26, "ndcg_5": 0.5017426425445615, "ndcg_10": 0.5421215429991207}, {"seeker": "Back+Look", "candidate": "Pos+Back", "use_query": true, "pair_auc": 0.5719000000000001, "best_f1": 0.6736842105263159, "accuracy_at_half": 0.55, "hard_auc": 0.5202, "easy_auc": 0.6779999999999999, "mrr": 0.363871668421591, "mean_rank": 7.94, "median_rank": 4.0, "recall_1": 0.17, "recall_5": 0.63, "recall_10": 0.75, "ndcg_1": 0.17, "ndcg_5": 0.4071449985205765, "ndcg_10": 0.44503234085110366}, {"seeker": "Look", "candidate": "Look", "use_query": false, "pair_auc": 0.5704, "best_f1": 0.6666666666666667, "accuracy_at_half": 0.495, "hard_auc": 0.5084000000000001, "easy_auc": 0.6812000000000001, "mrr": 0.20336851998969788, "mean_rank": 22.1, "median_rank": 13.0, "recall_1": 0.08, "recall_5": 0.32, "recall_10": 0.4, "ndcg_1": 0.08, "ndcg_5": 0.20353662110360496, "ndcg_10": 0.22896120823576838}, {"seeker": "Pos+Look", "candidate": "Back+Look", "use_query": false, "pair_auc": 0.57, "best_f1": 0.6711409395973155, "accuracy_at_half": 0.55, "hard_auc": 0.5162, "easy_auc": 0.6624, "mrr": 0.28806260420187707, "mean_rank": 12.27, "median_rank": 6.0, "recall_1": 0.13, "recall_5": 0.49, "recall_10": 0.59, "ndcg_1": 0.13, "ndcg_5": 0.3106810971342721, "ndcg_10": 0.3439506458520104}, {"seeker": "Pos+Look", "candidate": "Back", "use_query": false, "pair_auc": 0.5686, "best_f1": 0.6739130434782609, "accuracy_at_half": 0.54, "hard_auc": 0.48300000000000004, "easy_auc": 0.7944, "mrr": 0.2683233212130052, "mean_rank": 15.08, "median_rank": 6.5, "recall_1": 0.12, "recall_5": 0.44, "recall_10": 0.6, "ndcg_1": 0.12, "ndcg_5": 0.27970938280170365, "ndcg_10": 0.33329205978371823}, {"seeker": "Pos+Back", "candidate": "Pos", "use_query": false, "pair_auc": 0.5681, "best_f1": 0.6688963210702341, "accuracy_at_half": 0.555, "hard_auc": 0.5394, "easy_auc": 0.6372, "mrr": 0.22057684944140196, "mean_rank": 32.16, "median_rank": 16.5, "recall_1": 0.11, "recall_5": 0.32, "recall_10": 0.41, "ndcg_1": 0.11, "ndcg_5": 0.2204330837638922, "ndcg_10": 0.24980180901584448}, {"seeker": "Pos+Back+Look", "candidate": "Pos", "use_query": false, "pair_auc": 0.5674000000000001, "best_f1": 0.6689189189189189, "accuracy_at_half": 0.58, "hard_auc": 0.5714, "easy_auc": 0.6392, "mrr": 0.26516593462682475, "mean_rank": 19.48, "median_rank": 7.5, "recall_1": 0.12, "recall_5": 0.46, "recall_10": 0.6, "ndcg_1": 0.12, "ndcg_5": 0.2887503214926581, "ndcg_10": 0.3326338330946236}, {"seeker": "Back+Look", "candidate": "Pos", "use_query": false, "pair_auc": 0.5652000000000001, "best_f1": 0.6711864406779661, "accuracy_at_half": 0.56, "hard_auc": 0.5302, "easy_auc": 0.6451999999999999, "mrr": 0.27348255028478646, "mean_rank": 18.87, "median_rank": 6.5, "recall_1": 0.13, "recall_5": 0.45, "recall_10": 0.57, "ndcg_1": 0.13, "ndcg_5": 0.2906521991423963, "ndcg_10": 0.3300514346177002}, {"seeker": "Look", "candidate": "Pos+Look", "use_query": false, "pair_auc": 0.5648000000000001, "best_f1": 0.6666666666666667, "accuracy_at_half": 0.54, "hard_auc": 0.501, "easy_auc": 0.6224000000000001, "mrr": 0.22750758375088695, "mean_rank": 16.33, "median_rank": 9.0, "recall_1": 0.09, "recall_5": 0.36, "recall_10": 0.53, "ndcg_1": 0.09, "ndcg_5": 0.22521937662345878, "ndcg_10": 0.28067447397897377}, {"seeker": "Look", "candidate": "Back", "use_query": false, "pair_auc": 0.5646, "best_f1": 0.6666666666666667, "accuracy_at_half": 0.52, "hard_auc": 0.505, "easy_auc": 0.7264, "mrr": 0.2584258476164916, "mean_rank": 15.22, "median_rank": 7.0, "recall_1": 0.12, "recall_5": 0.41, "recall_10": 0.64, "ndcg_1": 0.12, "ndcg_5": 0.2600056694830253, "ndcg_10": 0.33504766577906453}, {"seeker": "Pos+Back", "candidate": "Pos+Look", "use_query": false, "pair_auc": 0.5641, "best_f1": 0.6688963210702341, "accuracy_at_half": 0.555, "hard_auc": 0.53, "easy_auc": 0.652, "mrr": 0.23101376996987735, "mean_rank": 28.31, "median_rank": 15.5, "recall_1": 0.13, "recall_5": 0.31, "recall_10": 0.39, "ndcg_1": 0.13, "ndcg_5": 0.22405202991481105, "ndcg_10": 0.2502571274991618}, {"seeker": "Pos+Look", "candidate": "Pos+Back", "use_query": false, "pair_auc": 0.564, "best_f1": 0.6711409395973155, "accuracy_at_half": 0.525, "hard_auc": 0.47100000000000003, "easy_auc": 0.7195999999999999, "mrr": 0.2951810029693055, "mean_rank": 12.95, "median_rank": 5.0, "recall_1": 0.12, "recall_5": 0.51, "recall_10": 0.67, "ndcg_1": 0.12, "ndcg_5": 0.3206343923743771, "ndcg_10": 0.3718903300051691}, {"seeker": "Back+Look", "candidate": "Pos+Look", "use_query": false, "pair_auc": 0.5639000000000001, "best_f1": 0.6711409395973155, "accuracy_at_half": 0.565, "hard_auc": 0.5248, "easy_auc": 0.6612, "mrr": 0.24446105073267446, "mean_rank": 16.64, "median_rank": 9.0, "recall_1": 0.09, "recall_5": 0.4, "recall_10": 0.54, "ndcg_1": 0.09, "ndcg_5": 0.25333557373807475, "ndcg_10": 0.2988840397198635}, {"seeker": "Pos+Look", "candidate": "Pos+Back+Look", "use_query": false, "pair_auc": 0.5631999999999999, "best_f1": 0.6711409395973155, "accuracy_at_half": 0.55, "hard_auc": 0.49760000000000004, "easy_auc": 0.6264, "mrr": 0.3008423726761143, "mean_rank": 12.43, "median_rank": 5.5, "recall_1": 0.14, "recall_5": 0.5, "recall_10": 0.61, "ndcg_1": 0.14, "ndcg_5": 0.3236372754088474, "ndcg_10": 0.36001141892217214}, {"seeker": "Pos+Look", "candidate": "Look", "use_query": false, "pair_auc": 0.5628, "best_f1": 0.6711864406779661, "accuracy_at_half": 0.535, "hard_auc": 0.5237999999999999, "easy_auc": 0.6892, "mrr": 0.21736161883359728, "mean_rank": 20.35, "median_rank": 12.0, "recall_1": 0.09, "recall_5": 0.34, "recall_10": 0.45, "ndcg_1": 0.09, "ndcg_5": 0.2180983835952164, "ndcg_10": 0.25427812432505287}, {"seeker": "Look", "candidate": "Pos+Back+Look", "use_query": false, "pair_auc": 0.5624, "best_f1": 0.6666666666666666, "accuracy_at_half": 0.53, "hard_auc": 0.5434, "easy_auc": 0.6436, "mrr": 0.2766579440383054, "mean_rank": 13.21, "median_rank": 7.5, "recall_1": 0.13, "recall_5": 0.43, "recall_10": 0.59, "ndcg_1": 0.13, "ndcg_5": 0.2814569178458067, "ndcg_10": 0.3336040387225027}, {"seeker": "Back+Look", "candidate": "Look", "use_query": false, "pair_auc": 0.5618, "best_f1": 0.6712802768166091, "accuracy_at_half": 0.505, "hard_auc": 0.4914, "easy_auc": 0.686, "mrr": 0.21452302148787583, "mean_rank": 21.04, "median_rank": 11.0, "recall_1": 0.08, "recall_5": 0.33, "recall_10": 0.49, "ndcg_1": 0.08, "ndcg_5": 0.21184845059430019, "ndcg_10": 0.262687060009452}, {"seeker": "Pos", "candidate": "Pos", "use_query": false, "pair_auc": 0.5613999999999999, "best_f1": 0.6688963210702341, "accuracy_at_half": 0.54, "hard_auc": 0.5147999999999999, "easy_auc": 0.6192307692307693, "mrr": 0.19786007235661363, "mean_rank": 32.54, "median_rank": 13.5, "recall_1": 0.06, "recall_5": 0.31, "recall_10": 0.46, "ndcg_1": 0.06, "ndcg_5": 0.1983714552704482, "ndcg_10": 0.2470550262711749}, {"seeker": "Pos+Look", "candidate": "Pos+Look", "use_query": false, "pair_auc": 0.5613, "best_f1": 0.6711409395973155, "accuracy_at_half": 0.55, "hard_auc": 0.5056, "easy_auc": 0.6476, "mrr": 0.23919140338878556, "mean_rank": 15.57, "median_rank": 8.5, "recall_1": 0.09, "recall_5": 0.39, "recall_10": 0.56, "ndcg_1": 0.09, "ndcg_5": 0.2436318604193964, "ndcg_10": 0.29954350863773227}, {"seeker": "Pos+Back+Look", "candidate": "Pos+Look", "use_query": false, "pair_auc": 0.5607, "best_f1": 0.6734006734006733, "accuracy_at_half": 0.56, "hard_auc": 0.5218, "easy_auc": 0.6427999999999999, "mrr": 0.24406452782193278, "mean_rank": 16.97, "median_rank": 9.0, "recall_1": 0.1, "recall_5": 0.39, "recall_10": 0.56, "ndcg_1": 0.1, "ndcg_5": 0.24896944362254253, "ndcg_10": 0.30371851513998244}, {"seeker": "Back", "candidate": "Pos", "use_query": false, "pair_auc": 0.5605, "best_f1": 0.6666666666666667, "accuracy_at_half": 0.545, "hard_auc": 0.5458000000000001, "easy_auc": 0.6426923076923077, "mrr": 0.1856467439344577, "mean_rank": 36.88, "median_rank": 18.5, "recall_1": 0.09, "recall_5": 0.27, "recall_10": 0.35, "ndcg_1": 0.09, "ndcg_5": 0.18150519115674846, "ndcg_10": 0.2082367038010253}, {"seeker": "Pos+Look", "candidate": "Pos", "use_query": false, "pair_auc": 0.5597000000000001, "best_f1": 0.6688963210702341, "accuracy_at_half": 0.56, "hard_auc": 0.529, "easy_auc": 0.6136, "mrr": 0.2722161561818827, "mean_rank": 17.48, "median_rank": 6.0, "recall_1": 0.13, "recall_5": 0.42, "recall_10": 0.63, "ndcg_1": 0.13, "ndcg_5": 0.27539720223151876, "ndcg_10": 0.3448857143262741}, {"seeker": "Back", "candidate": "Look", "use_query": false, "pair_auc": 0.5596, "best_f1": 0.6666666666666666, "accuracy_at_half": 0.53, "hard_auc": 0.5312, "easy_auc": 0.6040000000000001, "mrr": 0.15069350642915416, "mean_rank": 36.87, "median_rank": 22.0, "recall_1": 0.06, "recall_5": 0.17, "recall_10": 0.33, "ndcg_1": 0.06, "ndcg_5": 0.12190213889469285, "ndcg_10": 0.17530613131123143}, {"seeker": "Pos+Back", "candidate": "Back+Look", "use_query": false, "pair_auc": 0.5594, "best_f1": 0.6666666666666666, "accuracy_at_half": 0.575, "hard_auc": 0.5398, "easy_auc": 0.6108, "mrr": 0.21326374178423543, "mean_rank": 25.15, "median_rank": 10.0, "recall_1": 0.09, "recall_5": 0.34, "recall_10": 0.52, "ndcg_1": 0.09, "ndcg_5": 0.21408790469580416, "ndcg_10": 0.2723983883475665}, {"seeker": "Back+Look", "candidate": "Back", "use_query": false, "pair_auc": 0.5591, "best_f1": 0.673611111111111, "accuracy_at_half": 0.57, "hard_auc": 0.4814, "easy_auc": 0.7263999999999999, "mrr": 0.2706534903345055, "mean_rank": 15.56, "median_rank": 8.0, "recall_1": 0.12, "recall_5": 0.43, "recall_10": 0.58, "ndcg_1": 0.12, "ndcg_5": 0.2823819274184801, "ndcg_10": 0.32945534975523444}, {"seeker": "Pos+Back+Look", "candidate": "Back+Look", "use_query": false, "pair_auc": 0.5585, "best_f1": 0.6688963210702341, "accuracy_at_half": 0.555, "hard_auc": 0.5284, "easy_auc": 0.6088, "mrr": 0.2912375032735145, "mean_rank": 13.61, "median_rank": 6.5, "recall_1": 0.12, "recall_5": 0.46, "recall_10": 0.59, "ndcg_1": 0.12, "ndcg_5": 0.3058357077362422, "ndcg_10": 0.3488412559493021}, {"seeker": "Look", "candidate": "Pos", "use_query": false, "pair_auc": 0.5576999999999999, "best_f1": 0.6666666666666666, "accuracy_at_half": 0.525, "hard_auc": 0.5117647058823529, "easy_auc": 0.6844000000000001, "mrr": 0.2652607327775555, "mean_rank": 17.53, "median_rank": 6.5, "recall_1": 0.11, "recall_5": 0.45, "recall_10": 0.59, "ndcg_1": 0.11, "ndcg_5": 0.2827553854026194, "ndcg_10": 0.3292049397427293}, {"seeker": "Pos+Back+Look", "candidate": "Look", "use_query": false, "pair_auc": 0.5570999999999999, "best_f1": 0.6734006734006733, "accuracy_at_half": 0.54, "hard_auc": 0.49520000000000003, "easy_auc": 0.6731999999999999, "mrr": 0.21373968463524498, "mean_rank": 21.16, "median_rank": 11.0, "recall_1": 0.09, "recall_5": 0.32, "recall_10": 0.49, "ndcg_1": 0.09, "ndcg_5": 0.20799772928997398, "ndcg_10": 0.26178694605299285}, {"seeker": "Back+Look", "candidate": "Back+Look", "use_query": false, "pair_auc": 0.5569000000000001, "best_f1": 0.6666666666666667, "accuracy_at_half": 0.56, "hard_auc": 0.5166000000000001, "easy_auc": 0.5992, "mrr": 0.28533532764588015, "mean_rank": 13.17, "median_rank": 7.0, "recall_1": 0.15, "recall_5": 0.44, "recall_10": 0.61, "ndcg_1": 0.15, "ndcg_5": 0.29365508217686664, "ndcg_10": 0.34793611176963773}, {"seeker": "Pos+Back+Look", "candidate": "Pos+Back+Look", "use_query": false, "pair_auc": 0.5562, "best_f1": 0.6689189189189189, "accuracy_at_half": 0.56, "hard_auc": 0.4808, "easy_auc": 0.6664, "mrr": 0.2955792860174198, "mean_rank": 14.34, "median_rank": 6.0, "recall_1": 0.15, "recall_5": 0.48, "recall_10": 0.61, "ndcg_1": 0.15, "ndcg_5": 0.31627909223774675, "ndcg_10": 0.3581114989007357}, {"seeker": "Back+Look", "candidate": "Pos+Back+Look", "use_query": false, "pair_auc": 0.5561, "best_f1": 0.6689189189189189, "accuracy_at_half": 0.55, "hard_auc": 0.49740000000000006, "easy_auc": 0.6292, "mrr": 0.29551066664632925, "mean_rank": 13.63, "median_rank": 6.5, "recall_1": 0.17, "recall_5": 0.46, "recall_10": 0.61, "ndcg_1": 0.17, "ndcg_5": 0.3076474863119247, "ndcg_10": 0.3562572324352969}, {"seeker": "Pos+Back", "candidate": "Look", "use_query": false, "pair_auc": 0.5552, "best_f1": 0.6666666666666667, "accuracy_at_half": 0.54, "hard_auc": 0.5226, "easy_auc": 0.6180000000000001, "mrr": 0.2067871592505054, "mean_rank": 29.84, "median_rank": 16.0, "recall_1": 0.11, "recall_5": 0.26, "recall_10": 0.39, "ndcg_1": 0.11, "ndcg_5": 0.19113173317260923, "ndcg_10": 0.2319802477001783}, {"seeker": "Back", "candidate": "Pos+Look", "use_query": false, "pair_auc": 0.5549999999999999, "best_f1": 0.6688963210702341, "accuracy_at_half": 0.545, "hard_auc": 0.49119999999999997, "easy_auc": 0.652, "mrr": 0.1884788258311587, "mean_rank": 33.8, "median_rank": 18.0, "recall_1": 0.1, "recall_5": 0.25, "recall_10": 0.38, "ndcg_1": 0.1, "ndcg_5": 0.1749463116996073, "ndcg_10": 0.21751076079194345}, {"seeker": "Pos+Back+Look", "candidate": "Back", "use_query": false, "pair_auc": 0.5545, "best_f1": 0.6666666666666667, "accuracy_at_half": 0.57, "hard_auc": 0.4576, "easy_auc": 0.7792, "mrr": 0.28757545832072173, "mean_rank": 16.66, "median_rank": 7.5, "recall_1": 0.16, "recall_5": 0.43, "recall_10": 0.58, "ndcg_1": 0.16, "ndcg_5": 0.29409331968525515, "ndcg_10": 0.34203005625129534}, {"seeker": "Pos+Back", "candidate": "Back", "use_query": false, "pair_auc": 0.5541, "best_f1": 0.6666666666666666, "accuracy_at_half": 0.56, "hard_auc": 0.5016, "easy_auc": 0.7116, "mrr": 0.20614093506862644, "mean_rank": 27.26, "median_rank": 15.0, "recall_1": 0.09, "recall_5": 0.33, "recall_10": 0.45, "ndcg_1": 0.09, "ndcg_5": 0.2100415510153988, "ndcg_10": 0.24928164567414585}, {"seeker": "Pos+Back", "candidate": "Pos+Back", "use_query": false, "pair_auc": 0.5541, "best_f1": 0.6666666666666666, "accuracy_at_half": 0.555, "hard_auc": 0.4978, "easy_auc": 0.6632, "mrr": 0.23356994314458343, "mean_rank": 27.25, "median_rank": 11.5, "recall_1": 0.11, "recall_5": 0.36, "recall_10": 0.48, "ndcg_1": 0.11, "ndcg_5": 0.23878620302503153, "ndcg_10": 0.27758361261362413}, {"seeker": "Pos", "candidate": "Pos+Back", "use_query": false, "pair_auc": 0.5537000000000001, "best_f1": 0.6666666666666666, "accuracy_at_half": 0.525, "hard_auc": 0.4928, "easy_auc": 0.6652, "mrr": 0.20195547641001013, "mean_rank": 28.38, "median_rank": 9.5, "recall_1": 0.05, "recall_5": 0.35, "recall_10": 0.52, "ndcg_1": 0.05, "ndcg_5": 0.2099052831741178, "ndcg_10": 0.2654095082892307}, {"seeker": "Pos+Back", "candidate": "Pos+Back+Look", "use_query": false, "pair_auc": 0.5537000000000001, "best_f1": 0.6666666666666666, "accuracy_at_half": 0.57, "hard_auc": 0.5016, "easy_auc": 0.6424, "mrr": 0.2306697311125205, "mean_rank": 27.0, "median_rank": 11.0, "recall_1": 0.11, "recall_5": 0.37, "recall_10": 0.49, "ndcg_1": 0.11, "ndcg_5": 0.24004155101539873, "ndcg_10": 0.27923159170187495}, {"seeker": "Pos+Back+Look", "candidate": "Pos+Back", "use_query": false, "pair_auc": 0.5534000000000001, "best_f1": 0.6688963210702341, "accuracy_at_half": 0.54, "hard_auc": 0.4804, "easy_auc": 0.6916, "mrr": 0.2947741104336979, "mean_rank": 14.77, "median_rank": 6.0, "recall_1": 0.14, "recall_5": 0.49, "recall_10": 0.6, "ndcg_1": 0.14, "ndcg_5": 0.31819903790045884, "ndcg_10": 0.35413115608038687}, {"seeker": "Pos", "candidate": "Pos+Look", "use_query": false, "pair_auc": 0.5526, "best_f1": 0.6666666666666666, "accuracy_at_half": 0.52, "hard_auc": 0.5080000000000001, "easy_auc": 0.6888, "mrr": 0.22309084866533485, "mean_rank": 28.38, "median_rank": 14.0, "recall_1": 0.12, "recall_5": 0.31, "recall_10": 0.45, "ndcg_1": 0.12, "ndcg_5": 0.2159897823455424, "ndcg_10": 0.2614448797010574}, {"seeker": "Back+Look", "candidate": "Pos+Back", "use_query": false, "pair_auc": 0.5513000000000001, "best_f1": 0.6688963210702341, "accuracy_at_half": 0.535, "hard_auc": 0.48200000000000004, "easy_auc": 0.6752, "mrr": 0.29342539384261124, "mean_rank": 13.62, "median_rank": 6.0, "recall_1": 0.13, "recall_5": 0.47, "recall_10": 0.64, "ndcg_1": 0.13, "ndcg_5": 0.3085133993461347, "ndcg_10": 0.3633708979711029}, {"seeker": "Back", "candidate": "Back+Look", "use_query": false, "pair_auc": 0.5507, "best_f1": 0.6711409395973155, "accuracy_at_half": 0.575, "hard_auc": 0.5018, "easy_auc": 0.668, "mrr": 0.17468770916769027, "mean_rank": 31.02, "median_rank": 17.5, "recall_1": 0.08, "recall_5": 0.22, "recall_10": 0.4, "ndcg_1": 0.08, "ndcg_5": 0.15307490059279158, "ndcg_10": 0.21047108983032417}, {"seeker": "Look", "candidate": "Pos+Back", "use_query": false, "pair_auc": 0.5486, "best_f1": 0.6666666666666667, "accuracy_at_half": 0.525, "hard_auc": 0.5182, "easy_auc": 0.6307999999999999, "mrr": 0.2660768058575346, "mean_rank": 13.29, "median_rank": 6.0, "recall_1": 0.1, "recall_5": 0.47, "recall_10": 0.67, "ndcg_1": 0.1, "ndcg_5": 0.28351880758420545, "ndcg_10": 0.34866566356836615}, {"seeker": "Pos", "candidate": "Pos+Back+Look", "use_query": false, "pair_auc": 0.5479999999999999, "best_f1": 0.6666666666666666, "accuracy_at_half": 0.53, "hard_auc": 0.4662, "easy_auc": 0.6599999999999999, "mrr": 0.23294925094233676, "mean_rank": 27.62, "median_rank": 9.5, "recall_1": 0.1, "recall_5": 0.39, "recall_10": 0.51, "ndcg_1": 0.1, "ndcg_5": 0.24758297478401037, "ndcg_10": 0.28705180798050434}, {"seeker": "Back", "candidate": "Back", "use_query": false, "pair_auc": 0.5475000000000001, "best_f1": 0.6688963210702341, "accuracy_at_half": 0.545, "hard_auc": 0.4978, "easy_auc": 0.6960000000000001, "mrr": 0.1744479541133935, "mean_rank": 31.86, "median_rank": 20.0, "recall_1": 0.08, "recall_5": 0.25, "recall_10": 0.37, "ndcg_1": 0.08, "ndcg_5": 0.1651241373076673, "ndcg_10": 0.2043985677206729}, {"seeker": "Pos", "candidate": "Look", "use_query": false, "pair_auc": 0.5474, "best_f1": 0.6666666666666667, "accuracy_at_half": 0.54, "hard_auc": 0.4534, "easy_auc": 0.66, "mrr": 0.20305485698610456, "mean_rank": 30.69, "median_rank": 16.5, "recall_1": 0.1, "recall_5": 0.29, "recall_10": 0.41, "ndcg_1": 0.1, "ndcg_5": 0.19949026742319956, "ndcg_10": 0.23574699112816203}, {"seeker": "Pos", "candidate": "Back+Look", "use_query": false, "pair_auc": 0.5446, "best_f1": 0.6666666666666666, "accuracy_at_half": 0.515, "hard_auc": 0.478, "easy_auc": 0.6664, "mrr": 0.2124354543384116, "mean_rank": 25.95, "median_rank": 10.5, "recall_1": 0.07, "recall_5": 0.35, "recall_10": 0.5, "ndcg_1": 0.07, "ndcg_5": 0.21946704566572933, "ndcg_10": 0.26659857466182574}, {"seeker": "Back", "candidate": "Pos+Back", "use_query": false, "pair_auc": 0.5431, "best_f1": 0.6666666666666666, "accuracy_at_half": 0.54, "hard_auc": 0.4842, "easy_auc": 0.632, "mrr": 0.1917576348831894, "mean_rank": 31.94, "median_rank": 16.5, "recall_1": 0.09, "recall_5": 0.26, "recall_10": 0.41, "ndcg_1": 0.09, "ndcg_5": 0.1795674387260171, "ndcg_10": 0.2283401511968532}, {"seeker": "Pos", "candidate": "Back", "use_query": false, "pair_auc": 0.5419999999999999, "best_f1": 0.6666666666666666, "accuracy_at_half": 0.53, "hard_auc": 0.46420000000000006, "easy_auc": 0.6584000000000001, "mrr": 0.19117840386959536, "mean_rank": 28.19, "median_rank": 12.0, "recall_1": 0.07, "recall_5": 0.32, "recall_10": 0.45, "ndcg_1": 0.07, "ndcg_5": 0.19252361024921208, "ndcg_10": 0.23561354818880137}, {"seeker": "Back", "candidate": "Pos+Back+Look", "use_query": false, "pair_auc": 0.5416000000000001, "best_f1": 0.6688963210702341, "accuracy_at_half": 0.59, "hard_auc": 0.4964, "easy_auc": 0.662, "mrr": 0.1846123990290115, "mean_rank": 32.66, "median_rank": 18.0, "recall_1": 0.08, "recall_5": 0.25, "recall_10": 0.44, "ndcg_1": 0.08, "ndcg_5": 0.17069349566422073, "ndcg_10": 0.23111504333964764}], "num_combos": 105}</script>
+  <script>
+    const DATA = JSON.parse(document.getElementById("data").textContent);
+    const RAMP_LIGHT = ["#cde2fb", "#b7d3f6", "#9ec5f4", "#86b6ef", "#6da7ec", "#5598e7", "#3987e5", "#2a78d6", "#256abf", "#1c5cab", "#184f95", "#104281", "#0d366b"];
+    const RAMP_DARK = ["#123a63", "#154577", "#18508a", "#1c5cab", "#256abf", "#2a78d6", "#3987e5", "#5598e7", "#6da7ec", "#86b6ef", "#9ec5f4", "#b7d3f6", "#cde2fb"];
+
+    document.getElementById("meta-line").textContent =
+      `${DATA.num_combos} combinations x full metric suite (pair AUC, best-F1, accuracy@0.5, hard/easy-neg AUC, MRR, mean/median rank, Recall@1/5/10, NDCG@1/5/10) — top1_ctrl (fine-tuned), all 200 real pairs.`;
+
+    function fmt(x, digits = 4) {
+      return x === null || x === undefined || Number.isNaN(x) ? "—" : x.toFixed(digits);
+    }
+    function pct(x, digits = 1) {
+      return x === null || x === undefined ? "—" : (x * 100).toFixed(digits) + "%";
+    }
+
+    function isDark() {
+      const stamp = document.documentElement.getAttribute("data-theme");
+      if (stamp === "dark") return true;
+      if (stamp === "light") return false;
+      return window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
+    }
+
+    function hexToRgb(hex) {
+      const n = parseInt(hex.slice(1), 16);
+      return [(n >> 16) & 255, (n >> 8) & 255, n & 255];
+    }
+    function rgbToHex([r, g, b]) {
+      return "#" + [r, g, b].map((v) => Math.round(v).toString(16).padStart(2, "0")).join("");
+    }
+    function lerpRamp(ramp, t) {
+      t = Math.max(0, Math.min(1, t));
+      const scaled = t * (ramp.length - 1);
+      const i0 = Math.floor(scaled);
+      const i1 = Math.min(ramp.length - 1, i0 + 1);
+      const f = scaled - i0;
+      const a = hexToRgb(ramp[i0]);
+      const b = hexToRgb(ramp[i1]);
+      return rgbToHex(a.map((v, idx) => v + (b[idx] - v) * f));
+    }
+    function textColorFor(t) {
+      // t close to 1 (dark cell) -> light text; t close to 0 (light cell) -> dark text
+      return t > 0.55 ? "#ffffff" : "#0b0b0b";
+    }
+
+    const METRIC_OPTIONS = DATA.metric_options; // [key, label, kind][]
+    function metricInfo(key) {
+      return METRIC_OPTIONS.find(([k]) => k === key) || METRIC_OPTIONS[0];
+    }
+    function fmtByKind(v, kind) {
+      if (v === null || v === undefined) return "—";
+      if (kind === "pct") return pct(v);
+      return fmt(v);
+    }
+
+    let currentMetric = "pair_auc";
+
+    function buildLegend() {
+      const ramp = isDark() ? RAMP_DARK : RAMP_LIGHT;
+      const el = document.getElementById("legend-ramp");
+      el.style.background = `linear-gradient(to right, ${ramp.join(",")})`;
+      const range = DATA.metric_ranges[currentMetric];
+      const [, label] = metricInfo(currentMetric);
+      document.getElementById("legend-min").textContent = fmt(range.min);
+      document.getElementById("legend-max").textContent = fmt(range.max);
+      document.getElementById("legend-metric-label").textContent = label;
+    }
+
+    // ---- shared hover tooltip ----
+    const tooltipEl = document.getElementById("fields-tooltip");
+    function showTooltip(cellData, evt) {
+      if (cellData.na) {
+        tooltipEl.innerHTML = `
+          <p class="tt-name">Seeker: ${cellData.seeker} &middot; Candidate: ${cellData.candidate}</p>
+          <p style="font-size:0.78rem; color:var(--muted); margin:0;">Not applicable — a query-only seeker with the query excluded has no seeker text at all.</p>
+        `;
+      } else {
+        tooltipEl.innerHTML = `
+          <p class="tt-name">Seeker: ${cellData.seeker} &middot; Candidate: ${cellData.candidate}</p>
+          <table>
+            <thead><tr><th>Pair AUC</th><th>Hard-neg</th><th>Easy-neg</th><th>Best-F1</th><th>Acc@0.5</th></tr></thead>
+            <tbody><tr>
+              <td>${fmt(cellData.pair_auc)}</td>
+              <td>${fmt(cellData.hard_auc)}</td>
+              <td>${fmt(cellData.easy_auc)}</td>
+              <td>${fmt(cellData.best_f1)}</td>
+              <td>${fmt(cellData.accuracy_at_half)}</td>
+            </tr></tbody>
+          </table>
+          <table style="margin-top:0.4rem;">
+            <thead><tr><th>MRR</th><th>Mean rank</th><th>R@1</th><th>R@5</th><th>R@10</th></tr></thead>
+            <tbody><tr>
+              <td>${fmt(cellData.mrr)}</td>
+              <td>${fmt(cellData.mean_rank, 2)}</td>
+              <td>${pct(cellData.recall_1)}</td>
+              <td>${pct(cellData.recall_5)}</td>
+              <td>${pct(cellData.recall_10)}</td>
+            </tr></tbody>
+          </table>
+        `;
+      }
+      tooltipEl.classList.add("is-visible");
+      positionTooltip(evt);
+    }
+    function positionTooltip(evt) {
+      const pad = 14;
+      const rect = tooltipEl.getBoundingClientRect();
+      let x = evt.clientX + pad;
+      let y = evt.clientY + pad;
+      if (x + rect.width > window.innerWidth - pad) x = evt.clientX - rect.width - pad;
+      if (y + rect.height > window.innerHeight - pad) y = evt.clientY - rect.height - pad;
+      tooltipEl.style.left = `${Math.max(pad, x)}px`;
+      tooltipEl.style.top = `${Math.max(pad, y)}px`;
+    }
+    function hideTooltip() { tooltipEl.classList.remove("is-visible"); }
+
+    // ---- heatmap (query included / excluded panes, side by side) ----
+    function renderHeatmapPane(queryKey, metricKey) {
+      const suffix = queryKey === "yes" ? "yes" : "no";
+      const grid = DATA.grids[queryKey];
+      const ramp = isDark() ? RAMP_DARK : RAMP_LIGHT;
+      const range = DATA.metric_ranges[metricKey];
+      const min = range.min, max = range.max;
+      const [, , metricKind] = metricInfo(metricKey);
+
+      const colLabels = document.getElementById(`col-labels-${suffix}`);
+      colLabels.style.gridTemplateColumns = `repeat(${DATA.candidate_axis_labels.length}, 1fr)`;
+      colLabels.innerHTML = DATA.candidate_axis_labels.map((l) => `<div class="col-label">${l}</div>`).join("");
+
+      const rowsWrap = document.getElementById(`heatmap-rows-wrap-${suffix}`);
+      rowsWrap.innerHTML = "";
+      const rowLabelsCol = document.createElement("div");
+      rowLabelsCol.style.display = "grid";
+      rowLabelsCol.style.gridTemplateRows = `repeat(${DATA.seeker_axis_labels.length}, 1fr)`;
+      rowLabelsCol.style.gap = "3px";
+      DATA.seeker_axis_labels.forEach((l) => {
+        const d = document.createElement("div");
+        d.className = "row-label";
+        d.textContent = l;
+        d.style.display = "flex";
+        d.style.alignItems = "center";
+        d.style.justifyContent = "flex-end";
+        rowLabelsCol.appendChild(d);
+      });
+
+      const body = document.createElement("div");
+      body.className = "heatmap-body";
+      body.style.gridTemplateColumns = `repeat(${DATA.candidate_axis_labels.length}, 1fr)`;
+      grid.forEach((row) => {
+        row.forEach((cellData) => {
+          const cell = document.createElement("div");
+          cell.className = "cell";
+          cell.tabIndex = 0;
+          const v = cellData[metricKey];
+          if (cellData.na || v === null || v === undefined) {
+            cell.style.background = "var(--grid)";
+            cell.style.color = "var(--muted)";
+            cell.textContent = "—";
+          } else {
+            const t = (v - min) / (max - min || 1);
+            cell.style.background = lerpRamp(ramp, t);
+            cell.style.color = textColorFor(t);
+            cell.textContent = metricKind === "pct" ? pct(v, 1) : v.toFixed(3);
+          }
+          cell.addEventListener("mouseenter", (evt) => showTooltip(cellData, evt));
+          cell.addEventListener("mousemove", positionTooltip);
+          cell.addEventListener("mouseleave", hideTooltip);
+          cell.addEventListener("focus", (evt) => showTooltip(cellData, evt));
+          cell.addEventListener("blur", hideTooltip);
+          body.appendChild(cell);
+        });
+      });
+
+      rowsWrap.appendChild(rowLabelsCol);
+      rowsWrap.appendChild(body);
+    }
+
+    function renderBothHeatmaps(metricKey) {
+      currentMetric = metricKey;
+      const [, metricLabel] = metricInfo(metricKey);
+      document.getElementById("heatmap-title").textContent =
+        `${metricLabel} heatmaps — seeker fields (rows) x candidate fields (columns)`;
+      document.getElementById("heatmap-sub").textContent =
+        `Darker = higher ${metricLabel.toLowerCase()}. Hover any cell for the full metric breakdown. Gray cells are not applicable (query-only seeker with the query excluded). Query included and excluded shown side by side.`;
+      renderHeatmapPane("yes", metricKey);
+      renderHeatmapPane("no", metricKey);
+      buildLegend();
+    }
+
+    // ---- all-metrics mini-heatmap grid (3 per row) ----
+    function renderMiniHeatmap(card, queryKey, metricKey) {
+      const grid = DATA.grids[queryKey];
+      const ramp = isDark() ? RAMP_DARK : RAMP_LIGHT;
+      const range = DATA.metric_ranges[metricKey];
+      const min = range.min, max = range.max;
+      const [, metricLabel, metricKind] = metricInfo(metricKey);
+
+      card.innerHTML = `
+        <p class="mini-title">${metricLabel}</p>
+        <div class="mini-layout">
+          <div></div>
+          <div class="mini-col-labels" id="mini-col-labels"></div>
+          <div class="mini-row-labels" id="mini-row-labels"></div>
+          <div class="mini-body" id="mini-body"></div>
+        </div>
+        <div class="mini-legend">
+          <span>${fmt(min)}</span>
+          <div class="mini-legend-ramp" id="mini-legend-ramp"></div>
+          <span>${fmt(max)}</span>
+        </div>
+      `;
+
+      const colLabels = card.querySelector("#mini-col-labels");
+      colLabels.style.gridTemplateColumns = `repeat(${DATA.candidate_axis_labels.length}, 1fr)`;
+      colLabels.innerHTML = DATA.candidate_axis_labels
+        .map((l) => `<div class="mini-col-label" title="${l}">${l}</div>`)
+        .join("");
+
+      const rowLabels = card.querySelector("#mini-row-labels");
+      rowLabels.style.gridTemplateRows = `repeat(${DATA.seeker_axis_labels.length}, 1fr)`;
+      rowLabels.innerHTML = DATA.seeker_axis_labels
+        .map((l) => `<div class="mini-row-label" title="${l}">${l}</div>`)
+        .join("");
+
+      const body = card.querySelector("#mini-body");
+      body.style.gridTemplateColumns = `repeat(${DATA.candidate_axis_labels.length}, 1fr)`;
+      body.innerHTML = "";
+      grid.forEach((row) => {
+        row.forEach((cellData) => {
+          const cell = document.createElement("div");
+          cell.className = "mini-cell";
+          cell.tabIndex = 0;
+          const v = cellData[metricKey];
+          if (cellData.na || v === null || v === undefined) {
+            cell.style.background = "var(--grid)";
+          } else {
+            const t = (v - min) / (max - min || 1);
+            cell.style.background = lerpRamp(ramp, t);
+          }
+          cell.addEventListener("mouseenter", (evt) => showTooltip(cellData, evt));
+          cell.addEventListener("mousemove", positionTooltip);
+          cell.addEventListener("mouseleave", hideTooltip);
+          cell.addEventListener("focus", (evt) => showTooltip(cellData, evt));
+          cell.addEventListener("blur", hideTooltip);
+          body.appendChild(cell);
+        });
+      });
+
+      card.querySelector("#mini-legend-ramp").style.background =
+        `linear-gradient(to right, ${ramp.join(",")})`;
+    }
+
+    function renderAllMiniHeatmaps(queryKey) {
+      const container = document.getElementById("heatmap-grid-all");
+      container.innerHTML = "";
+      for (const [metricKey] of METRIC_OPTIONS) {
+        const card = document.createElement("div");
+        card.className = "mini-card";
+        container.appendChild(card);
+        renderMiniHeatmap(card, queryKey, metricKey);
+      }
+    }
+
+    // ---- explore-a-combination panel ----
+    const FIELD_LABELS = { positioning: "Positioning", background: "Background", lookingFor: "LookingFor" };
+
+    function renderCheckboxGroup(containerId, groupName, defaultChecked) {
+      const el = document.getElementById(containerId);
+      el.innerHTML = DATA.fields
+        .map(
+          (f) => `
+        <label class="checkbox-pill ${defaultChecked.includes(f) ? "checked" : ""}">
+          <input type="checkbox" data-group="${groupName}" data-field="${f}" ${defaultChecked.includes(f) ? "checked" : ""} />
+          ${FIELD_LABELS[f]}
+        </label>`
+        )
+        .join("");
+    }
+
+    function selectedFields(groupName) {
+      return DATA.fields.filter((f) => {
+        const cb = document.querySelector(`input[data-group="${groupName}"][data-field="${f}"]`);
+        return cb && cb.checked;
+      });
+    }
+
+    function fieldsToLabel(fields) {
+      return fields.map((f) => DATA.field_short[f]).join("+") || "None";
+    }
+
+    const RESULT_STATS = [
+      ["Pair AUC", "pair_auc", "auc"],
+      ["Hard-neg AUC", "hard_auc", "auc"],
+      ["Easy-neg AUC", "easy_auc", "auc"],
+      ["Best F1", "best_f1", "auc"],
+      ["Accuracy@0.5", "accuracy_at_half", "auc"],
+      ["MRR", "mrr", "auc"],
+      ["Mean rank", "mean_rank", "rank"],
+      ["Median rank", "median_rank", "rank"],
+      ["Recall@1", "recall_1", "pct"],
+      ["Recall@5", "recall_5", "pct"],
+      ["Recall@10", "recall_10", "pct"],
+      ["NDCG@10", "ndcg_10", "auc"],
+    ];
+
+    function fmtStat(v, kind) {
+      if (v === null || v === undefined) return "—";
+      if (kind === "pct") return pct(v);
+      if (kind === "rank") return v.toFixed(2);
+      return fmt(v);
+    }
+
+    function renderResultCard() {
+      const seekerFields = selectedFields("seeker");
+      const candidateFields = selectedFields("candidate");
+      const useQuery = document.getElementById("query-toggle-input").checked;
+      const wrap = document.getElementById("result-card-wrap");
+
+      if (candidateFields.length === 0) {
+        wrap.innerHTML = `<div class="result-card is-empty">Select at least one candidate field. (Zero seeker fields is allowed — that's the "query-only" seeker.)</div>`;
+        return;
+      }
+
+      const key = `${fieldsToLabel(seekerFields)}|${fieldsToLabel(candidateFields)}|${useQuery ? "yes" : "no"}`;
+      const row = DATA.combo_lookup[key];
+      if (!row) {
+        const reason =
+          seekerFields.length === 0 && !useQuery
+            ? "A query-only seeker (no fields) with the query excluded has no text at all — not a valid combination."
+            : "No data for this combination.";
+        wrap.innerHTML = `<div class="result-card is-empty">${reason}</div>`;
+        return;
+      }
+
+      wrap.innerHTML = `
+        <div class="result-card">
+          <p class="result-headline">Seeker: ${fieldsToLabel(seekerFields)} &middot; Candidate: ${fieldsToLabel(candidateFields)} &middot; Query: ${useQuery ? "yes" : "no"}</p>
+          <div class="stat-grid">
+            ${RESULT_STATS.map(
+              ([label, k, kind]) => `
+              <div class="stat-tile">
+                <p class="k">${label}</p>
+                <p class="v">${fmtStat(row[k], kind)}</p>
+              </div>`
+            ).join("")}
+          </div>
+        </div>
+      `;
+    }
+
+    renderCheckboxGroup("seeker-checkboxes", "seeker", ["positioning"]);
+    renderCheckboxGroup("candidate-checkboxes", "candidate", ["lookingFor"]);
+    renderResultCard();
+
+    document.getElementById("seeker-checkboxes").addEventListener("change", (e) => {
+      e.target.closest(".checkbox-pill")?.classList.toggle("checked", e.target.checked);
+      renderResultCard();
+    });
+    document.getElementById("candidate-checkboxes").addEventListener("change", (e) => {
+      e.target.closest(".checkbox-pill")?.classList.toggle("checked", e.target.checked);
+      renderResultCard();
+    });
+    document.getElementById("query-toggle-input").addEventListener("change", renderResultCard);
+
+    // ---- static count badges ----
+    document.getElementById("combo-count-badge").textContent = `${DATA.num_combos} combos · n = 200 (all)`;
+    document.getElementById("table-count-badge").textContent = `ranked by pair AUC · all ${DATA.num_combos} combos`;
+    document.getElementById("top3-sub").textContent =
+      `Rank all ${DATA.num_combos} combos by any single metric and see the top three, independent of the selection above.`;
+
+    // ---- top-3-by-metric panel ----
+    function renderTop3(metricKey) {
+      const [, metricLabel, kind] = metricInfo(metricKey);
+      const ranked = DATA.full_rows
+        .filter((r) => r[metricKey] !== null && r[metricKey] !== undefined)
+        .slice()
+        .sort((a, b) => b[metricKey] - a[metricKey])
+        .slice(0, 3);
+
+      const listEl = document.getElementById("top3-list");
+      listEl.innerHTML = ranked
+        .map(
+          (r, i) => `
+        <div class="top3-row">
+          <div class="top3-rank">${i + 1}</div>
+          <div class="top3-body">
+            <div class="top3-combo">Seeker: ${r.seeker} &middot; Candidate: ${r.candidate} &middot; Query: ${r.use_query ? "yes" : "no"}</div>
+            <div class="top3-summary">Best ${metricLabel.toLowerCase()} among the ${DATA.num_combos} combos tested, pair AUC ${fmt(r.pair_auc)}, hard-neg AUC ${fmt(r.hard_auc)}.</div>
+          </div>
+          <div class="top3-value">${fmtStat(r[metricKey], kind)}</div>
+        </div>
+      `
+        )
+        .join("");
+    }
+
+    const metricSelectEl = document.getElementById("metric-select");
+    metricSelectEl.innerHTML = METRIC_OPTIONS.map(([k, label]) => `<option value="${k}">${label}</option>`).join("");
+    metricSelectEl.value = "pair_auc";
+    renderTop3("pair_auc");
+    metricSelectEl.addEventListener("change", (e) => renderTop3(e.target.value));
+
+    // ---- heatmap controls: query tabs + metric select ----
+    const heatmapMetricSelectEl = document.getElementById("heatmap-metric-select");
+    heatmapMetricSelectEl.innerHTML = METRIC_OPTIONS.map(([k, label]) => `<option value="${k}">${label}</option>`).join("");
+    heatmapMetricSelectEl.value = "pair_auc";
+
+    function currentQueryTab() {
+      return document.querySelector("#query-tabs .tab-btn.active")?.dataset.query || "yes";
+    }
+
+    renderBothHeatmaps(heatmapMetricSelectEl.value);
+    renderAllMiniHeatmaps(currentQueryTab());
+
+    document.getElementById("query-tabs").addEventListener("click", (e) => {
+      const btn = e.target.closest(".tab-btn");
+      if (!btn) return;
+      document.querySelectorAll("#query-tabs .tab-btn").forEach((b) => b.classList.remove("active"));
+      btn.classList.add("active");
+      renderAllMiniHeatmaps(btn.dataset.query);
+    });
+    heatmapMetricSelectEl.addEventListener("change", (e) => {
+      renderBothHeatmaps(e.target.value);
+    });
+
+    // ---- findings ----
+    const findingsEl = document.getElementById("findings");
+    const findings = [
+      `<b>The best combo overall — seeker=<code>background</code>, candidate=<code>lookingFor</code>, query included — reaches 0.6395 pair AUC</b>,
+       beating the full-profile top1_ctrl baseline (0.5683, +0.0712) and every other embedding-family model measured in this project on the
+       all-200 population, including the frozen-Voyage-4-nano sweep's own best combo (0.6110, see
+       <a href="https://claude.ai/code/artifact/1e698f4e-15a6-44b4-bd76-2381befb2f40" target="_blank" rel="noopener">that sweep</a>). Field
+       selection helps the fine-tuned model even more than it helped the frozen one — fine-tuning did not make the model field-selection-proof.`,
+      `<b>This is within 0.006 of the LLM judge's own best</b> (0.6451 pair AUC, <code>docs/llm-judge-focused-prompt-experiment.md</code>) — by
+       far the closest any embedding-based model has come to LLM-judge performance in this project, at zero extra serving cost over frozen nano
+       (a merged LoRA adapter, per the project's &lt;100ms latency framing).`,
+      `<b>Search query matters everywhere in the grid</b> — mean pair AUC with the query included (0.5966, n=56) beats without it (0.5578, n=49).`,
+      `<b>More seeker fields is worse, monotonically, all the way down to zero.</b> Mean pair AUC by seeker field count: 0 fields (query-only)
+       0.5915 &rarr; 1 field 0.5813 &rarr; 2 fields 0.5766 &rarr; 3 fields (full) 0.5692 — a query-only seeker beats every seeker field-count
+       average except the single best combos. Candidate side is flatter (1-field 0.5785, 2-field 0.5791, 3-field 0.5763), with
+       <code>lookingFor</code> the only candidate field with a positive marginal effect (+0.0117).`,
+      `<b>A query-only seeker still beats the full-profile baseline</b> — best of the 7 query-only combos (candidate=<code>lookingFor</code>)
+       reaches 0.6220 pair AUC, using zero seeker profile fields — and even beats the frozen sweep's overall best combo (0.6110).`,
+      `<b>Caveat: 105-way search on one 200-pair population, no held-out check.</b> The gap between the best (0.6395) and 10th-best (0.6167) combo
+       is comparable to run-to-run noise seen elsewhere in this project — read this as "field selection helps the fine-tuned model too," not as a
+       validated production config without a holdout check.`,
+    ];
+    for (const f of findings) {
+      const div = document.createElement("div");
+      div.className = "finding";
+      div.innerHTML = f;
+      findingsEl.appendChild(div);
+    }
+
+    // ---- full table ----
+    const cols = [
+      ["Seeker", (r) => r.seeker, "left"],
+      ["Candidate", (r) => r.candidate, "left"],
+      ["Query", (r) => (r.use_query ? "yes" : "no"), "left"],
+      ["Pair AUC", (r) => fmt(r.pair_auc)],
+      ["Hard-neg", (r) => fmt(r.hard_auc)],
+      ["Easy-neg", (r) => fmt(r.easy_auc)],
+      ["Best F1", (r) => fmt(r.best_f1)],
+      ["Acc@0.5", (r) => fmt(r.accuracy_at_half)],
+      ["MRR", (r) => fmt(r.mrr)],
+      ["Mean rank", (r) => fmt(r.mean_rank, 2)],
+      ["R@1", (r) => pct(r.recall_1)],
+      ["R@5", (r) => pct(r.recall_5)],
+      ["R@10", (r) => pct(r.recall_10)],
+    ];
+    const tableEl = document.getElementById("full-table");
+    tableEl.innerHTML = `
+      <thead><tr>${cols.map(([label], i) => `<th style="${i < 3 ? 'text-align:left' : ''}">${label}</th>`).join("")}</tr></thead>
+      <tbody>
+        ${DATA.full_rows.map((r) => `
+          <tr>
+            ${cols.map(([label, fn], i) => i < 3 ? `<th>${fn(r)}</th>` : `<td>${fn(r)}</td>`).join("")}
+          </tr>
+        `).join("")}
+      </tbody>
+    `;
+  </script>
+</body>
+</html>

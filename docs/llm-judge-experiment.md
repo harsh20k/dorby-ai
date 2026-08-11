@@ -47,6 +47,16 @@ this project. Two cheaper open-weight judges tested since (Gemma 3 27B,
 Qwen3-32B, both via Bedrock) land lower on AUC but match or beat it on
 hard-negative AUC — see "Which judge model?" below.**
 
+**Related, isolated experiment:** a focused-prompt variant that *does* give
+the model the searchQuery plus a trimmed subset of profile fields (instead
+of withholding the query and showing everything) is in
+`baselines/llm_judge_with_pos_look_pos_back_look/` /
+`docs/llm-judge-focused-prompt-experiment.md` — via the direct Google API it
+reaches pair AUC 0.6530 and hard-neg AUC 0.6784, both better than this
+experiment's headline naive-judge numbers, though that comparison also
+surfaced a real OpenRouter-vs-direct-API gap worth reading before trusting
+any single-backend number as a ceiling.
+
 Matched frozen 69-pair holdout, so every row is the same population
 (`docs/baseline-results-holdout.md` is the source for the non-LLM rows):
 
