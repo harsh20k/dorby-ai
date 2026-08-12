@@ -1,0 +1,256 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>B-data unique contacts — findings</title>
+<style>
+  :root {
+    color-scheme: light;
+    --page: #f9f9f7;
+    --ink: #0b0b0b;
+    --ink-2: #52514e;
+    --muted: #898781;
+    --grid: #e1e0d9;
+    --border: rgba(11,11,11,0.10);
+    --card: #ffffff;
+    --accent: #2a78d6;
+    --accent2: #eb6834;
+    --seeker: #2f6f68;
+    --both: #a85a2e;
+    --cand: #64748b;
+    --warn-bg: #fdf3df;
+    --warn-border: #e9c37a;
+    --warn-ink: #6b4d10;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:where(:not([data-theme="light"])) {
+      color-scheme: dark;
+      --page: #0d0d0d;
+      --ink: #ffffff;
+      --ink-2: #c3c2b7;
+      --muted: #898781;
+      --grid: #2c2c2a;
+      --border: rgba(255,255,255,0.10);
+      --card: #17181a;
+      --warn-bg: #2a2415;
+      --warn-border: #6b551f;
+      --warn-ink: #e7c477;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--page);
+    color: var(--ink);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    line-height: 1.55;
+  }
+  .page { max-width: 780px; margin: 0 auto; padding: 56px 24px 96px; }
+  h1, h2, h3 {
+    font-family: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+    font-weight: 600;
+    text-wrap: balance;
+    margin: 0 0 0.4em;
+  }
+  h1 { font-size: 2rem; letter-spacing: -0.01em; }
+  h2 { font-size: 1.3rem; margin-top: 2.6em; }
+  p { margin: 0 0 1em; max-width: 66ch; }
+  .lede { font-size: 1.1rem; color: var(--ink-2); max-width: 62ch; }
+  .eyebrow {
+    font-size: 0.72rem;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+    color: var(--muted);
+    font-weight: 600;
+    margin-bottom: 0.6em;
+  }
+  code, .mono {
+    font-family: ui-monospace, "SF Mono", "Cascadia Code", monospace;
+    font-size: 0.92em;
+  }
+  .status-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.76rem;
+    font-weight: 600;
+    padding: 4px 10px 4px 8px;
+    border-radius: 999px;
+    background: var(--warn-bg);
+    border: 1px solid var(--warn-border);
+    color: var(--warn-ink);
+    margin-bottom: 1.4em;
+  }
+  .status-chip::before {
+    content: "";
+    width: 6px; height: 6px;
+    border-radius: 50%;
+    background: var(--warn-ink);
+  }
+  .kpi-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin: 1.2em 0 1.6em;
+  }
+  @media (max-width: 640px) { .kpi-grid { grid-template-columns: 1fr 1fr; } }
+  .kpi {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 12px 14px;
+  }
+  .kpi .label { font-size: 0.68rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--muted); font-weight: 700; }
+  .kpi .value { font-family: "Iowan Old Style", Palatino, Georgia, serif; font-size: 1.45rem; margin-top: 2px; }
+  .kpi .sub { font-size: 0.78rem; color: var(--muted); margin-top: 2px; }
+  .chart-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 18px;
+    margin: 1em 0 1.6em;
+  }
+  .bars { display: grid; gap: 8px; }
+  .bar-row {
+    display: grid;
+    grid-template-columns: 9.5rem 1fr 4.5rem;
+    gap: 10px;
+    align-items: center;
+    font-size: 0.84rem;
+  }
+  .bar-row .name { color: var(--ink-2); }
+  .track { height: 12px; background: var(--grid); border-radius: 999px; overflow: hidden; }
+  .fill { height: 100%; border-radius: 999px; background: var(--accent); }
+  .fill.seeker { background: var(--seeker); }
+  .fill.both { background: var(--both); }
+  .fill.cand { background: var(--cand); }
+  .fill.orange { background: var(--accent2); }
+  .count { text-align: right; font-variant-numeric: tabular-nums; color: var(--muted); font-size: 0.8rem; }
+  .table-wrap { overflow-x: auto; margin: 1.2em 0 1.6em; }
+  table { border-collapse: collapse; width: 100%; font-size: 0.86rem; min-width: 480px; }
+  th, td {
+    text-align: right;
+    padding: 8px 10px;
+    border-bottom: 1px solid var(--grid);
+    font-variant-numeric: tabular-nums;
+  }
+  th:first-child, td:first-child { text-align: left; }
+  th { color: var(--muted); font-weight: 600; font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.04em; }
+  tr.highlight td { background: color-mix(in srgb, var(--accent2) 12%, transparent); font-weight: 600; }
+  .callout {
+    border: 1px solid var(--border);
+    background: var(--card);
+    border-radius: 10px;
+    padding: 18px 20px;
+    margin: 1.4em 0;
+  }
+  .callout.warn { background: var(--warn-bg); border-color: var(--warn-border); }
+  .callout.warn p { color: var(--warn-ink); margin: 0; }
+  ul.plain { margin: 0 0 1.2em; padding-left: 1.2em; max-width: 66ch; }
+  ul.plain li { margin-bottom: 0.45em; }
+  .footer {
+    margin-top: 3em;
+    padding-top: 1.2em;
+    border-top: 1px solid var(--grid);
+    font-size: 0.82rem;
+    color: var(--muted);
+  }
+</style>
+</head>
+<body>
+<div class="page">
+  <div class="eyebrow">Boardy AI · dorby-ai · unique contacts from B-data</div>
+  <h1>About 30k unique people in the production dump, keyed on positioning</h1>
+  <p class="lede">
+    Seekers and candidates collapsed into one catalog. Identity is a hash of
+    <span class="mono">positioning</span> when present, otherwise the first
+    nonempty other profile field. Locked <span class="mono">B-data.json</span>
+    is not modified.
+  </p>
+  <div class="status-chip">29,923 unique contacts</div>
+
+  <div class="kpi-grid">
+    <div class="kpi"><div class="label">Unique contacts</div><div class="value">29,923</div><div class="sub">9 all-empty dropped</div></div>
+    <div class="kpi"><div class="label">Keyed on positioning</div><div class="value">29,904</div><div class="sub">99.94% of catalog</div></div>
+    <div class="kpi"><div class="label">Fallback keys</div><div class="value">19</div><div class="sub">11 background + 8 lookingFor</div></div>
+    <div class="kpi"><div class="label">Seen as both</div><div class="value">10,333</div><div class="sub">seeker and candidate</div></div>
+    <div class="kpi"><div class="label">Seeker only</div><div class="value">8,755</div><div class="sub">have a contactId</div></div>
+    <div class="kpi"><div class="label">Candidate only</div><div class="value">10,835</div><div class="sub">no contactId</div></div>
+  </div>
+
+  <h2>How uniqueness was defined</h2>
+  <p>
+    Candidates in B-data have no ids. Full-profile hashes overcount people
+    whose text drifts slightly. Positioning is almost never empty, so it is
+    the primary key.
+  </p>
+  <ul class="plain">
+    <li>If <span class="mono">positioning</span> is nonempty → hash that text.</li>
+    <li>Else hash the first nonempty of background, lookingFor, location, intro/personal/meeting prefs.</li>
+    <li>All-empty profiles (9 slots) are dropped.</li>
+    <li>Duplicates keep the richest profile text, union of seeker ids and queries.</li>
+  </ul>
+  <div class="callout warn">
+    <p>
+      This is inferred identity, not Boardy’s contactId. Same person with two
+      different positioning strings counts twice; two people with identical
+      positioning collapse to one.
+    </p>
+  </div>
+
+  <h2>Roles</h2>
+  <div class="chart-card">
+    <div class="bars">
+      <div class="bar-row"><div class="name">candidate only</div><div class="track"><div class="fill cand" style="width:100%"></div></div><div class="count">10,835</div></div>
+      <div class="bar-row"><div class="name">both</div><div class="track"><div class="fill both" style="width:95.4%"></div></div><div class="count">10,333</div></div>
+      <div class="bar-row"><div class="name">seeker only</div><div class="track"><div class="fill seeker" style="width:80.8%"></div></div><div class="count">8,755</div></div>
+    </div>
+  </div>
+  <p>
+    About a third of the catalog never appears as a seeker in this dump.
+  </p>
+
+  <h2>Field coverage on the unique catalog</h2>
+  <div class="chart-card">
+    <div class="bars">
+      <div class="bar-row"><div class="name">positioning</div><div class="track"><div class="fill" style="width:99.94%"></div></div><div class="count">99.9%</div></div>
+      <div class="bar-row"><div class="name">background</div><div class="track"><div class="fill" style="width:99.87%"></div></div><div class="count">99.9%</div></div>
+      <div class="bar-row"><div class="name">lookingFor</div><div class="track"><div class="fill" style="width:99.73%"></div></div><div class="count">99.7%</div></div>
+      <div class="bar-row"><div class="name">location</div><div class="track"><div class="fill" style="width:99.53%"></div></div><div class="count">99.5%</div></div>
+      <div class="bar-row"><div class="name">intro prefs</div><div class="track"><div class="fill orange" style="width:78.59%"></div></div><div class="count">78.6%</div></div>
+      <div class="bar-row"><div class="name">personal prefs</div><div class="track"><div class="fill orange" style="width:51.42%"></div></div><div class="count">51.4%</div></div>
+      <div class="bar-row"><div class="name">meeting prefs</div><div class="track"><div class="fill orange" style="width:21.74%"></div></div><div class="count">21.7%</div></div>
+    </div>
+  </div>
+
+  <h2>Vs earlier counts</h2>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Count</th><th>n</th><th>What it is</th></tr></thead>
+      <tbody>
+        <tr><td>Seeker contactIds</td><td>15,986</td><td>Authoritative ids, seekers only</td></tr>
+        <tr><td>Full-profile hashes ∪ seekers</td><td>~31,913</td><td>Overcounts text drift</td></tr>
+        <tr class="highlight"><td>Positioning + fallback</td><td>29,923</td><td>This catalog</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2>Reproduce</h2>
+  <div class="callout">
+    <p class="mono" style="margin:0; white-space:pre-wrap">python scripts/build_unique_contacts_B_data.py
+python -m pytest tests/test_unique_contacts_B_data.py -q</p>
+  </div>
+  <p>
+    Catalog (gitignored under <span class="mono">data/</span>):
+    <span class="mono">data/unique_contacts_B_data.json</span> (167MB) ·
+    stats: <span class="mono">artifacts/bdata_unique_contacts/stats.json</span>
+  </p>
+
+  <div class="footer">
+    Published 2026-08-12 · source <span class="mono">B-data.json</span> locked read-only ·
+    builder <span class="mono">scripts/build_unique_contacts_B_data.py</span>
+  </div>
+</div>
+</body>
+</html>
