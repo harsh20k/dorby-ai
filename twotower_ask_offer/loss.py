@@ -25,7 +25,7 @@ from baselines.reciprocal_static.text import bg_text, look_text, seeker_look_tex
 @dataclass(frozen=True)
 class BatchTexts:
     seeker_ask: list[str]  # k_u source text (lookingFor + query)
-    seeker_offer: list[str]  # v_u source text (positioning + background)
+    seeker_offer: list[str]  # v_u source text (all fields except lookingFor)
     pool_ask: list[str]  # k_i source text, positives then negatives
     pool_offer: list[str]  # v_i source text, positives then negatives
     n: int  # batch size (number of anchors)

@@ -4,8 +4,8 @@ Deliberate duplicate of baselines/reciprocal_lambda_grid_top1ctrl/eval.py's
 sweep mechanics (experiment isolation rule), with one substitution: s_fwd and
 s_recip come from **two independent LoRA towers** (`twotower_ask_offer`'s
 `ask_offer_001` run — Ask tower on `lookingFor`(+`searchQuery`), Offer tower
-on `positioning`+`background`) instead of one shared frozen or fine-tuned
-encoder. `twotower_ask_offer.eval.py::run_eval` already scores this pair at a
+on every profile field except `lookingFor`) instead of one shared frozen or
+fine-tuned encoder. `twotower_ask_offer.eval.py::run_eval` already scores this pair at a
 single fixed lambda (1.75, the value it was trained with); this module reuses
 its exact encode/text plumbing read-only and adds the missing piece: sweeping
 lambda over a grid post-hoc, the same no-fitting diagnostic every other
@@ -123,7 +123,7 @@ def run_eval(
         "device": str(device),
         "batch_size": batch_size,
         "ask_fields": ["lookingFor", "searchQuery (seeker only)"],
-        "offer_fields": ["positioning", "background"],
+        "offer_fields": ["all profile fields except lookingFor (baselines.reciprocal_static.text.BG_FIELDS)"],
         "note": (
             "No fitting step: every lambda in the grid is evaluated directly "
             "against these same labels. ask_offer_001 itself was trained with "

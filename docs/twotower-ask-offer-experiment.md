@@ -63,9 +63,16 @@ on an A100-80GB that this didn't block the run.
 Same split as `reciprocal_static` and the design doc, reused read-only
 (`baselines.reciprocal_static.text`):
 - **Ask tower**: `lookingFor` only. Seeker side also gets `searchQuery`.
-- **Offer tower**: `positioning` + `background` only.
-- Every other field (notes, preferences, scheduling) — unused, same
-  narrowing this repo's field-pair experiments already used.
+- **Offer tower**: every profile field *except* `lookingFor` — i.e.
+  `positioning`, `background`, `notes`, `locationAvailability`,
+  `introPreferences`, `personalPreferences`,
+  `meetingAndSchedulingPreferences` (`baselines.reciprocal_static.text
+  .BG_FIELDS`). This is the *original*, wider `reciprocal_static` field
+  split, not the narrower positioning+background-only convention used by
+  the `reciprocal_lambda_grid*` sweep packages — an earlier version of this
+  doc stated the narrower split; that was wrong, corrected 2026-08-12 after
+  a direct check of `twotower_ask_offer/loss.py::build_batch_texts` (the
+  code that actually built the training batches).
 
 ## Training
 
