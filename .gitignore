@@ -10,6 +10,8 @@ notes/
 
 # Editor / Cursor
 .cursor/
+!.cursor/agents/
+!.cursor/agents/**
 .claude/worktrees/
 
 # Python
