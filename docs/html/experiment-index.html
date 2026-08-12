@@ -346,7 +346,7 @@
     </div>
     <div class="header-stats">
       <span><b id="stat-total">—</b> items</span>
-      <span><b>2026-07-20</b> → <b>2026-08-10</b></span>
+      <span><b>2026-07-20</b> → <b>2026-08-11</b></span>
     </div>
   </div>
 </header>
@@ -377,7 +377,7 @@
 
 <footer>
   Built from <code>docs/experiment-graphs-index.md</code> and the live
-  <code>Artifact</code> listing (37 published pages, checked 2026-08-10).
+  <code>Artifact</code> listing (40 published pages, checked 2026-08-11).
   Local <code>file://</code> links are pinned to this checkout's path and
   won't resolve on another machine — use <code>open docs/html/&lt;file&gt;.html</code> there instead.
 </footer>
@@ -387,6 +387,10 @@ const REPO = "/Users/harsh/Artifacts/dorby-ai/docs/html/";
 
 // { date: "YYYY-MM-DD", title, desc, type: 'published'|'local'|'both'|'note', pub: url|null, loc: filename|null, locFull: absolute file:// url|null }
 const DATA = [
+  { date:"2026-08-11", title:"voyage_gemini_ctrl checkpoint-1130 field/query sweep", desc:"Same training run, the discarded final-epoch checkpoint (step 1130/1130) instead of the recall@1-selected one (step 452). Loses on all 105/105 combos vs. the selected checkpoint — the cleanest confirmation yet of this project's early-peak-then-decay pattern.", type:"both", pub:"https://claude.ai/code/artifact/bf1d8ed3-5c1b-4e8b-bb74-997ef3a73ba2", loc:"twotower-voyage-gemini-ctrl-ckpt1130-field-sweep-heatmap.html" },
+  { date:"2026-08-11", title:"voyage_gemini_ctrl field/query sweep", desc:"The same 105-combo grid re-scored against the newest fine-tune, voyage_gemini_ctrl_001; grid best reaches 0.6855 pair AUC — a new project-wide record and the first embedding-based model to beat the LLM judge's own best (0.6451).", type:"both", pub:"https://claude.ai/code/artifact/ed83c211-f865-4d8b-9e6a-56d20a027804", loc:"twotower-voyage-gemini-ctrl-field-sweep-heatmap.html" },
+  { date:"2026-08-11", title:"top1_ctrl's recipe on a bigger, leakier batch", desc:"Same LoRA recipe as top1_ctrl retrained on a newer, much larger synthetic batch — beats top1_ctrl on every all-200 metric but not the project's current record, and the batch measured leakier than prior sources before training.", type:"both", pub:"https://claude.ai/code/artifact/11d21292-33d6-42b6-8d5d-f42b41b620e6", loc:"twotower-voyage-gemini-ctrl-experiment.html" },
+
   { date:"2026-08-10", title:"Same sweep, fine-tuned model: top1_ctrl", desc:"Re-running the no-fit λ sweep on the fine-tuned top1_ctrl LoRA checkpoint instead of frozen voyage-4-nano; forward-only alone is already far stronger, and the holdout curve's peak flips to negative λ — the first case where the \"expected\" positive direction hurts. Caveat: the fine-tune was trained on full-profile text, never this narrower look/bg split.", type:"both", pub:"https://claude.ai/code/artifact/c522e5a2-a1fb-4a77-8f96-ed8e9c403431", loc:"reciprocal-lambda-grid.html" },
   { date:"2026-08-10", title:"Lambda sweep, no fitting: does the reciprocal term hold up?", desc:"Sweeping λ from -2 to +2 directly (no fit) shows two smooth, positive-peaked curves — holdout AUC 0.5966→0.6181 at λ=0.25, all-200 0.5578→0.5663 at λ=0.55 — showing the rrf003 run's null result was a bad fit, not proof the term is worthless.", type:"both", pub:"https://claude.ai/code/artifact/c522e5a2-a1fb-4a77-8f96-ed8e9c403431", loc:"reciprocal-lambda-grid.html" },
   { date:"2026-08-10", title:"Reciprocal λ calibrated on synthetic judge labels — a null result", desc:"Fitting λ on 2,619 rrf003 judge-labeled pairs instead of real train lands near zero (0.05 vs. 1.75) and gives a small AUC loss on the real 200, not the original run's gain — but the fitting population and field set changed at once, confounding the result.", type:"local", locFull:"file:///Users/harsh/Artifacts/dorby-ai/docs/reciprocal-static-rrf003-experiment.md" },
