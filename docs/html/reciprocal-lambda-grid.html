@@ -577,9 +577,42 @@ footer {
     <div class="note"><strong>Forward-only is the real headline.</strong> 0.7164 holdout / 0.6108 all-200 already beat every other number in this project on their own &mdash; the reciprocal sweep adds a real but comparatively small lift on top of a fine-tune that's already the strongest thing tested.</div>
   </section>
 
+  <section>
+    <h2>Same sweep, but two separate towers (ask_offer_001)</h2>
+    <p class="dek" style="margin-bottom:24px">Every model above uses <strong>one</strong> shared encoder for both s_fwd and s_recip. <span class="mono">ask_offer_001</span> is the first fine-tune with <strong>two independent LoRA towers</strong> &mdash; an Ask tower (trained only on <span class="mono">lookingFor</span> + <span class="mono">searchQuery</span>) and an Offer tower (trained only on <span class="mono">positioning</span> + <span class="mono">background</span>) &mdash; jointly optimized against the combined score S&nbsp;=&nbsp;s_fwd&nbsp;+&nbsp;&lambda;&middot;s_recip at a fixed &lambda;=1.75. This sweep asks the same no-fitting question on top of that trained pair: how sensitive is the score to &lambda; post-hoc.</p>
+
+    <div class="stats" style="margin-bottom:24px">
+      <div class="tile holdout">
+        <div class="tile-label">Holdout &middot; 69 pairs</div>
+        <div class="tile-value">0.6138 &rarr; 0.6293</div>
+        <div class="tile-sub">peak at &lambda;&nbsp;=&nbsp;0.15 &nbsp;(small, genuine bump)</div>
+      </div>
+      <div class="tile all200">
+        <div class="tile-label">All 200 pairs</div>
+        <div class="tile-value">0.5126 &rarr; 0.5723</div>
+        <div class="tile-sub">rises to the grid boundary at &lambda;=1.90 &mdash; no true peak</div>
+      </div>
+    </div>
+
+    <div class="chart-card">
+      <div class="legend">
+        <span class="legend-item"><span class="legend-swatch holdout"></span>Holdout (69)</span>
+        <span class="legend-item"><span class="legend-swatch all200"></span>All 200</span>
+      </div>
+      <div class="chart-wrap" id="chartWrap4">
+        <svg class="chart" id="chart4" viewBox="0 0 800 380" preserveAspectRatio="xMidYMid meet"></svg>
+        <div class="tooltip" id="tooltip4"></div>
+      </div>
+    </div>
+
+    <div class="note" style="margin-top:20px"><strong>The forward-only tower itself is weak.</strong> 0.5126 all-200 AUC is close to chance and below frozen voyage-4-nano's own forward score (0.5638, <span class="mono">reciprocal_static</span>) &mdash; two dedicated towers on narrower, single-field text did not out-encode the frozen zero-training split. The combined score's +0.059 all-200 lift is rescuing a weak base, not polishing a strong one.</div>
+    <div class="note"><strong>Holdout says the reciprocal term did nothing (&minus;0.0017 at &lambda;=1.75, the trained value); this sweep shows a small genuine peak nearby at &lambda;=0.15.</strong> Per this project's own finding that the 69-pair holdout carries no reliable signal among strong models, the all-200 result (+0.059, real but riding a weak forward tower) is the one to trust more.</div>
+    <div class="note"><strong>Against the reigning champion:</strong> <span class="mono">voyage_gemini_ctrl</span> (one shared tower, full-profile text) reaches 0.6587 all-200 / 0.7345 holdout combined &mdash; both with zero extra training on the reciprocal term. Two dedicated, jointly-trained towers do not currently beat one tower plus a free post-hoc sweep. Full write-up: <span class="mono">docs/twotower-ask-offer-experiment.md</span>.</div>
+  </section>
+
   <footer>
-    <span>baselines/reciprocal_lambda_grid + _top1ctrl + _voyage_gemini_ctrl &middot; voyage-4-nano (frozen, top1_ctrl_001, voyage_gemini_ctrl_001) &middot; Modal A10G/A100 &middot; run real200_001</span>
-    <span>docs/reciprocal-lambda-grid-experiment.md + -top1ctrl- + -voyage-gemini-ctrl-experiment.md</span>
+    <span>baselines/reciprocal_lambda_grid + _top1ctrl + _voyage_gemini_ctrl &middot; reciprocal_lambda_grid_ask_offer &middot; voyage-4-nano (frozen, top1_ctrl_001, voyage_gemini_ctrl_001, ask_offer_001) &middot; Modal A10G/A100 &middot; run real200_001</span>
+    <span>docs/reciprocal-lambda-grid-experiment.md + -top1ctrl- + -voyage-gemini-ctrl- + -ask-offer-experiment.md</span>
   </footer>
 </div>
 
@@ -744,6 +777,13 @@ footer {
     yMin: 0.40, yMax: 0.74, yTicks: [0.40, 0.48, 0.56, 0.64, 0.72],
     holdout: [[-2.0, 0.4155], [-1.95, 0.4155], [-1.9, 0.4198], [-1.85, 0.4259], [-1.8, 0.431], [-1.75, 0.4319], [-1.7, 0.4345], [-1.65, 0.4388], [-1.6, 0.444], [-1.55, 0.4457], [-1.5, 0.45], [-1.45, 0.4534], [-1.4, 0.4586], [-1.35, 0.4664], [-1.3, 0.4741], [-1.25, 0.4793], [-1.2, 0.4845], [-1.15, 0.4905], [-1.1, 0.4957], [-1.05, 0.5121], [-1.0, 0.5224], [-0.95, 0.5302], [-0.9, 0.5414], [-0.85, 0.5483], [-0.8, 0.5578], [-0.75, 0.5681], [-0.7, 0.5776], [-0.65, 0.5905], [-0.6, 0.6026], [-0.55, 0.6147], [-0.5, 0.6284], [-0.45, 0.6457], [-0.4, 0.6603], [-0.35, 0.6793], [-0.3, 0.6784], [-0.25, 0.6819], [-0.2, 0.6888], [-0.15, 0.6966], [-0.1, 0.7026], [-0.05, 0.7095], [0.0, 0.7164], [0.05, 0.7121], [0.1, 0.7138], [0.15, 0.7198], [0.2, 0.7216], [0.25, 0.7259], [0.3, 0.7284], [0.35, 0.7345], [0.4, 0.731], [0.45, 0.7302], [0.5, 0.7302], [0.55, 0.7276], [0.6, 0.7276], [0.65, 0.7233], [0.7, 0.7216], [0.75, 0.719], [0.8, 0.7198], [0.85, 0.719], [0.9, 0.7181], [0.95, 0.7172], [1.0, 0.7164], [1.05, 0.7147], [1.1, 0.7138], [1.15, 0.7155], [1.2, 0.7129], [1.25, 0.7112], [1.3, 0.7086], [1.35, 0.7069], [1.4, 0.7078], [1.45, 0.7052], [1.5, 0.706], [1.55, 0.7078], [1.6, 0.7069], [1.65, 0.706], [1.7, 0.706], [1.75, 0.7078], [1.8, 0.706], [1.85, 0.706], [1.9, 0.7052], [1.95, 0.7052], [2.0, 0.7043]],
     all200: [[-2.0, 0.4082], [-1.95, 0.4096], [-1.9, 0.4115], [-1.85, 0.4131], [-1.8, 0.4154], [-1.75, 0.4181], [-1.7, 0.4212], [-1.65, 0.4223], [-1.6, 0.4258], [-1.55, 0.4277], [-1.5, 0.4309], [-1.45, 0.4331], [-1.4, 0.4363], [-1.35, 0.4393], [-1.3, 0.4431], [-1.25, 0.446], [-1.2, 0.4491], [-1.15, 0.4528], [-1.1, 0.456], [-1.05, 0.4623], [-1.0, 0.4666], [-0.95, 0.4724], [-0.9, 0.4765], [-0.85, 0.4822], [-0.8, 0.4892], [-0.75, 0.4946], [-0.7, 0.5009], [-0.65, 0.5092], [-0.6, 0.5185], [-0.55, 0.5271], [-0.5, 0.5362], [-0.45, 0.5463], [-0.4, 0.5552], [-0.35, 0.565], [-0.3, 0.5722], [-0.25, 0.5803], [-0.2, 0.5879], [-0.15, 0.5941], [-0.1, 0.6012], [-0.05, 0.6071], [0.0, 0.6108], [0.05, 0.6156], [0.1, 0.6197], [0.15, 0.6252], [0.2, 0.6307], [0.25, 0.6347], [0.3, 0.6373], [0.35, 0.6412], [0.4, 0.644], [0.45, 0.6451], [0.5, 0.6478], [0.55, 0.648], [0.6, 0.6497], [0.65, 0.6512], [0.7, 0.6518], [0.75, 0.6526], [0.8, 0.6537], [0.85, 0.6548], [0.9, 0.6551], [0.95, 0.6556], [1.0, 0.6556], [1.05, 0.6563], [1.1, 0.6571], [1.15, 0.6571], [1.2, 0.6577], [1.25, 0.6574], [1.3, 0.657], [1.35, 0.6571], [1.4, 0.6573], [1.45, 0.6563], [1.5, 0.6569], [1.55, 0.6573], [1.6, 0.6575], [1.65, 0.6574], [1.7, 0.6576], [1.75, 0.6583], [1.8, 0.6583], [1.85, 0.6584], [1.9, 0.6587], [1.95, 0.6585], [2.0, 0.6576]]
+  });
+
+  buildChart({
+    svgId: 'chart4', tooltipId: 'tooltip4', wrapId: 'chartWrap4',
+    yMin: 0.40, yMax: 0.66, yTicks: [0.40, 0.46, 0.52, 0.58, 0.64],
+    holdout: [[-2.0, 0.4586], [-1.95, 0.4569], [-1.9, 0.4595], [-1.85, 0.4612], [-1.8, 0.4647], [-1.75, 0.4664], [-1.7, 0.4647], [-1.65, 0.4664], [-1.6, 0.4672], [-1.55, 0.469], [-1.5, 0.4716], [-1.45, 0.4681], [-1.4, 0.4733], [-1.35, 0.4698], [-1.3, 0.4716], [-1.25, 0.4793], [-1.2, 0.4828], [-1.15, 0.4897], [-1.1, 0.4914], [-1.05, 0.494], [-1.0, 0.5017], [-0.95, 0.5017], [-0.9, 0.5112], [-0.85, 0.5207], [-0.8, 0.5284], [-0.75, 0.5353], [-0.7, 0.544], [-0.65, 0.5569], [-0.6, 0.5698], [-0.55, 0.5724], [-0.5, 0.5707], [-0.45, 0.5819], [-0.4, 0.5862], [-0.35, 0.5905], [-0.3, 0.5931], [-0.25, 0.5974], [-0.2, 0.6], [-0.15, 0.6017], [-0.1, 0.6052], [-0.05, 0.6103], [0.0, 0.6138], [0.05, 0.6207], [0.1, 0.625], [0.15, 0.6293], [0.2, 0.6241], [0.25, 0.6259], [0.3, 0.6259], [0.35, 0.6267], [0.4, 0.6267], [0.45, 0.6259], [0.5, 0.6276], [0.55, 0.625], [0.6, 0.6259], [0.65, 0.6241], [0.7, 0.6224], [0.75, 0.6207], [0.8, 0.6207], [0.85, 0.6216], [0.9, 0.6224], [0.95, 0.6172], [1.0, 0.6181], [1.05, 0.6181], [1.1, 0.6164], [1.15, 0.6155], [1.2, 0.6164], [1.25, 0.6138], [1.3, 0.6121], [1.35, 0.6129], [1.4, 0.6138], [1.45, 0.6112], [1.5, 0.6112], [1.55, 0.6112], [1.6, 0.6112], [1.65, 0.6121], [1.7, 0.6112], [1.75, 0.6121], [1.8, 0.6121], [1.85, 0.6121], [1.9, 0.6129], [1.95, 0.6103], [2.0, 0.6086]],
+    all200: [[-2.0, 0.4091], [-1.95, 0.4097], [-1.9, 0.4102], [-1.85, 0.411], [-1.8, 0.4117], [-1.75, 0.4132], [-1.7, 0.414], [-1.65, 0.4151], [-1.6, 0.416], [-1.55, 0.4171], [-1.5, 0.4175], [-1.45, 0.417], [-1.4, 0.4177], [-1.35, 0.4179], [-1.3, 0.4183], [-1.25, 0.4211], [-1.2, 0.4242], [-1.15, 0.426], [-1.1, 0.427], [-1.05, 0.4289], [-1.0, 0.4324], [-0.95, 0.4353], [-0.9, 0.4381], [-0.85, 0.442], [-0.8, 0.4457], [-0.75, 0.45], [-0.7, 0.4541], [-0.65, 0.4594], [-0.6, 0.4655], [-0.55, 0.4698], [-0.5, 0.4723], [-0.45, 0.4772], [-0.4, 0.4815], [-0.35, 0.4857], [-0.3, 0.4879], [-0.25, 0.4929], [-0.2, 0.496], [-0.15, 0.4996], [-0.1, 0.5047], [-0.05, 0.5086], [0.0, 0.5126], [0.05, 0.5167], [0.1, 0.5192], [0.15, 0.5236], [0.2, 0.5272], [0.25, 0.5294], [0.3, 0.5332], [0.35, 0.5375], [0.4, 0.5408], [0.45, 0.544], [0.5, 0.5471], [0.55, 0.5487], [0.6, 0.5495], [0.65, 0.5525], [0.7, 0.5537], [0.75, 0.5553], [0.8, 0.5563], [0.85, 0.5566], [0.9, 0.558], [0.95, 0.5575], [1.0, 0.557], [1.05, 0.5586], [1.1, 0.5591], [1.15, 0.5593], [1.2, 0.5604], [1.25, 0.5623], [1.3, 0.5639], [1.35, 0.5661], [1.4, 0.5681], [1.45, 0.5688], [1.5, 0.569], [1.55, 0.57], [1.6, 0.571], [1.65, 0.5706], [1.7, 0.5709], [1.75, 0.5714], [1.8, 0.572], [1.85, 0.5719], [1.9, 0.5723], [1.95, 0.5716], [2.0, 0.5713]]
   });
 })();
 </script>
