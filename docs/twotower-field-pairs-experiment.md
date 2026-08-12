@@ -160,4 +160,4 @@ training) remains the strongest, cheapest lever found in this project —
 reinforced again by this result, since none of these three genuinely new
 fine-tunes caught up to it either.
 
-Published artifact: https://claude.ai/code/artifact/e6fe7e21-ee5b-4538-86a6-51e80e07ec5f
+Published artifact: https://dorby-project-story-411960113601.s3.amazonaws.com/docs/twotower-field-pairs-experiment.html

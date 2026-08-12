@@ -133,4 +133,4 @@ reads, not what it trained on — and that lever still wins. The next natural
 step, not yet run: point the field/query sweep methodology at this new batch
 before spending more GPU budget training on its default full-profile text.
 
-Published artifact: https://claude.ai/code/artifact/11d21292-33d6-42b6-8d5d-f42b41b620e6
+Published artifact: https://dorby-project-story-411960113601.s3.amazonaws.com/docs/twotower-voyage-gemini-ctrl-experiment.html

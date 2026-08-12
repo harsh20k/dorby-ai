@@ -77,7 +77,7 @@ Published alongside: a 3D PCA embedding graph of the 200 real pairs
 `docs/html/query-weighted-topology.html`), toggling between the frozen and
 fine-tuned encoder and between direct seeker→candidate edges and the 2-hop
 seeker→query→candidate path, colored by accept/decline outcome. Artifact:
-https://claude.ai/code/artifact/a7787d14-b5c0-415a-bce6-8f629d63e865
+https://dorby-project-story-411960113601.s3.amazonaws.com/docs/query-weighted-topology.html
 
 Caveat: PCA to 3D keeps only ~13–16% of the embedding variance for both
 models (`explained_variance` in `graph_data.json`) — positions show coarse

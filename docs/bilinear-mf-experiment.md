@@ -5,7 +5,7 @@ or `twotower/` was modified)
 **Artifacts:** `artifacts/bilinear_mf/{mf_tfidf_001_lsa, mf_voyage_001_lsa, mf_tfidf_002, mf_voyage_002}/results.json`
 **Tests:** `tests/test_bilinear_mf.py` (9 passing)
 **Results page:** `docs/html/bilinear-mf-results.html`
-([published](https://claude.ai/code/artifact/d0b86eb9-4eda-4d03-9c76-9c79201f4ebb),
+([published](https://dorby-project-story-411960113601.s3.amazonaws.com/docs/bilinear-mf-results.html),
 built by `scripts/build_bilinear_mf_browser.py`)
 **Date:** 2026-08-06
 

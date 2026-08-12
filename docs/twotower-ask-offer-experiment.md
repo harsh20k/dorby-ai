@@ -16,14 +16,14 @@ result, not a bug to explain away — see "Reading the result" below for what
 it does and doesn't tell us.
 
 Design doc (written before this ran, kept as the audit trail):
-[`docs/html/reciprocal-two-tower-training-plan.html`](https://claude.ai/code/artifact/373941ab-0755-4948-af61-9eba1fd34bc8).
+[`docs/html/reciprocal-two-tower-training-plan.html`](https://dorby-project-story-411960113601.s3.amazonaws.com/docs/reciprocal-two-tower-training-plan.html).
 Builds on `baselines/reciprocal_static/` (zero-training version of this
 score, `docs/reciprocal-static-experiment.md`).
 
 A post-hoc, no-fitting λ sweep on top of these same two towers
 (`reciprocal_lambda_grid_ask_offer/`, same mechanics as the other three
 `reciprocal_lambda_grid*` sweeps) is plotted alongside them in
-[`docs/html/reciprocal-lambda-grid.html`](https://claude.ai/code/artifact/c522e5a2-a1fb-4a77-8f96-ed8e9c403431):
+[`docs/html/reciprocal-lambda-grid.html`](https://dorby-project-story-411960113601.s3.amazonaws.com/docs/reciprocal-lambda-grid.html):
 holdout curve peaks at λ=0.15 (0.6138→0.6293, a small genuine bump near the
 trained λ=1.75's flat result); all-200 curve rises to the grid boundary
 (λ=1.90, 0.5126→0.5723) without a real interior peak, same "not a peak, a

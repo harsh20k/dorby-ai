@@ -9,7 +9,7 @@ it into one dense vector. Not a training run or a new baseline; a
 diagnostic to see whether a structured representation surfaces failure
 modes that cosine similarity hides.
 
-Published: https://claude.ai/code/artifact/af0a622e-ba61-488f-b999-cf555f61d2ac
+Published: https://dorby-project-story-411960113601.s3.amazonaws.com/docs/knowledge-graph-experiment.html
 Local (rebuildable): `docs/html/knowledge-graph-experiment.html`
 Script: `scripts/build_kg_experiment.py`
 

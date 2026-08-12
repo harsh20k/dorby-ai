@@ -184,4 +184,4 @@ or `field_gate_001`'s actual training loop — the architectures that showed
 the collapse this mechanism was built to fix — rather than to `top1_ctrl`,
 which didn't have that problem.
 
-Published artifact: https://claude.ai/code/artifact/62bb2021-7d76-41c3-b05e-3d257df0a236
+Published artifact: https://dorby-project-story-411960113601.s3.amazonaws.com/docs/twotower-kl-reg-experiment.html

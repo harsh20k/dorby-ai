@@ -2,7 +2,7 @@
 
 **Status: run complete (`voyage-4-nano`, Modal A10G, run `real200_001`).**
 Chart: [`docs/html/reciprocal-lambda-grid.html`](html/reciprocal-lambda-grid.html)
-([published](https://claude.ai/code/artifact/c522e5a2-a1fb-4a77-8f96-ed8e9c403431)).
+([published](https://dorby-project-story-411960113601.s3.amazonaws.com/docs/reciprocal-lambda-grid.html)).
 No
 fitting step this time — `lambda` is swept from -2 to +2 (step 0.05) and pair
 ROC-AUC of `s_fwd + lambda*s_recip` is reported directly against the real 200

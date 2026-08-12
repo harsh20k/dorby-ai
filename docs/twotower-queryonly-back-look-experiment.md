@@ -159,4 +159,4 @@ negative population is production's own false positives — plus proof that
 a frozen-model field/query search is now a validated way to *find* a text
 representation worth spending GPU budget on.
 
-Published artifact: https://claude.ai/code/artifact/47754226-aeaf-4306-902f-35a9ed6ee586
+Published artifact: https://dorby-project-story-411960113601.s3.amazonaws.com/docs/twotower-queryonly-back-look-experiment.html

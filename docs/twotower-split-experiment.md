@@ -116,4 +116,4 @@ project stands: the query-weighting trick on a normally-trained shared model
 extension) remains the best lever found, cheaper and stronger than every
 training-architecture variant tried against it.
 
-Published artifact: https://claude.ai/code/artifact/18e56189-7715-4303-b42b-1cc98abdbdc2
+Published artifact: https://dorby-project-story-411960113601.s3.amazonaws.com/docs/twotower-split-experiment.html

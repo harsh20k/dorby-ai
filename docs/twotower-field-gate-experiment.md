@@ -122,4 +122,4 @@ voyage-4-large's query-only arm (recall@1 0.42,
 `docs/query-weighted-encoding-experiment.md`) — remains the strongest,
 cheapest lever found in this project.
 
-Published artifact: https://claude.ai/code/artifact/b4183e40-2971-4fa6-b4e9-e415ed2143d7
+Published artifact: https://dorby-project-story-411960113601.s3.amazonaws.com/docs/twotower-field-gate-experiment.html

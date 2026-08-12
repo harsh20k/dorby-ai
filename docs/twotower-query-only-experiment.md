@@ -94,4 +94,4 @@ size of that lever on its own (voyage-4-large query-only: recall@1 0.42, the
 best number anywhere in this project).
 
 Published alongside the `twotower_no_query/` findings in the same artifact:
-https://claude.ai/code/artifact/8d467198-ce99-4dc1-9008-a0f4910ecf8c
+https://dorby-project-story-411960113601.s3.amazonaws.com/docs/twotower-no-query-comparison.html
