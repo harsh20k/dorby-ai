@@ -1,0 +1,251 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>B-data Voyage-4-nano posbg — findings</title>
+<style>
+  :root {
+    color-scheme: light;
+    --surface: #fcfcfb;
+    --page: #f9f9f7;
+    --ink: #0b0b0b;
+    --ink-2: #52514e;
+    --muted: #898781;
+    --grid: #e1e0d9;
+    --border: rgba(11,11,11,0.10);
+    --card: #ffffff;
+    --accept: #15803d;
+    --reject: #b91c1c;
+    --pending: #64748b;
+    --accent: #2a78d6;
+    --accent2: #eb6834;
+    --warn-bg: #fdf3df;
+    --warn-border: #e9c37a;
+    --warn-ink: #6b4d10;
+    --bad-bg: #fdeceb;
+    --bad-border: #e8a09a;
+    --bad-ink: #8a1f1a;
+}
+  @media (prefers-color-scheme: dark) {
+    :root:where(:not([data-theme="light"])) {
+      color-scheme: dark;
+      --surface: #1a1a19;
+      --page: #0d0d0d;
+      --ink: #ffffff;
+      --ink-2: #c3c2b7;
+      --muted: #898781;
+      --grid: #2c2c2a;
+      --border: rgba(255,255,255,0.10);
+      --card: #17181a;
+      --warn-bg: #2a2415;
+      --warn-border: #6b551f;
+      --warn-ink: #e7c477;
+      --bad-bg: #2a1515;
+      --bad-border: #6b2a2a;
+      --bad-ink: #f0a0a0;
+}
+}
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--page);
+    color: var(--ink);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    line-height: 1.55;
+}
+  .page { max-width: 780px; margin: 0 auto; padding: 56px 24px 96px; }
+  h1, h2, h3 {
+    font-family: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+    font-weight: 600;
+    text-wrap: balance;
+    margin: 0 0 0.4em;
+}
+  h1 { font-size: 2rem; letter-spacing: -0.01em; }
+  h2 { font-size: 1.3rem; margin-top: 2.6em; }
+  h3 { font-size: 1.02rem; margin-top: 1.6em; }
+  p { margin: 0 0 1em; max-width: 66ch; }
+  .lede { font-size: 1.1rem; color: var(--ink-2); max-width: 62ch; }
+  .eyebrow {
+    font-size: 0.72rem;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+    color: var(--muted);
+    font-weight: 600;
+    margin-bottom: 0.6em;
+}
+  code, .mono {
+    font-family: ui-monospace, "SF Mono", "Cascadia Code", monospace;
+    font-size: 0.92em;
+}
+  .status-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.76rem;
+    font-weight: 600;
+    padding: 4px 10px 4px 8px;
+    border-radius: 999px;
+    background: var(--warn-bg);
+    border: 1px solid var(--warn-border);
+    color: var(--warn-ink);
+    margin-bottom: 1.4em;
+}
+  .status-chip::before {
+    content: "";
+    width: 6px; height: 6px;
+    border-radius: 50%;
+    background: var(--warn-ink);
+}
+  .kpi-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin: 1.2em 0 1.6em;
+}
+  @media (max-width: 640px) { .kpi-grid { grid-template-columns: 1fr 1fr; } }
+  .kpi {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 12px 14px;
+}
+  .kpi .label { font-size: 0.68rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--muted); font-weight: 700; }
+  .kpi .value { font-family: "Iowan Old Style", Palatino, Georgia, serif; font-size: 1.45rem; margin-top: 2px; }
+  .kpi .sub { font-size: 0.78rem; color: var(--muted); margin-top: 2px; }
+  .table-wrap { overflow-x: auto; margin: 1.2em 0 1.6em; }
+  table { border-collapse: collapse; width: 100%; font-size: 0.86rem; min-width: 480px; }
+  th, td {
+    text-align: right;
+    padding: 8px 10px;
+    border-bottom: 1px solid var(--grid);
+    font-variant-numeric: tabular-nums;
+}
+  th:first-child, td:first-child { text-align: left; }
+  th {
+    color: var(--muted);
+    font-weight: 600;
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+  tr.highlight td { background: color-mix(in srgb, var(--accent2) 12%, transparent); font-weight: 600; }
+  .callout {
+    border: 1px solid var(--border);
+    background: var(--card);
+    border-radius: 10px;
+    padding: 18px 20px;
+    margin: 1.4em 0;
+}
+  .callout.warn { background: var(--warn-bg); border-color: var(--warn-border); }
+  .callout.warn p { color: var(--warn-ink); margin: 0; }
+  ul.plain { margin: 0 0 1.2em; padding-left: 1.2em; max-width: 66ch; }
+  ul.plain li { margin-bottom: 0.45em; }
+  .footer {
+    margin-top: 3em;
+    padding-top: 1.2em;
+    border-top: 1px solid var(--grid);
+    font-size: 0.82rem;
+    color: var(--muted);
+}
+  a { color: inherit; }
+</style>
+</head>
+<body>
+<div class="page">
+  <div class="eyebrow">Boardy AI · dorby-ai · bdata_voyage_nano_posbg</div>
+  <h1>Narrower packing is barely above chance; retrieval fails</h1>
+  <p class="lede">
+    Frozen <span class="mono">voyage-4-nano</span> cosine on locked
+    <span class="mono">data/B-data.json</span>, narrower packing
+    (seeker = lookingFor + query, candidate = positioning + background),
+    every resolved pair, plus retrieval against the unique-candidate pool.
+  </p>
+  <div class="status-chip">Pair AUC 0.5185 — near chance; MRR 0.032</div>
+
+  <h2>What was tested</h2>
+  <ul class="plain">
+    <li>Isolated package <span class="mono">bdata_voyage_nano_posbg/</span> — does not edit <span class="mono">bdata_voyage_nano/</span>, <span class="mono">bdata_tfidf/</span>, or <span class="mono">baselines/voyage_nano/</span>.</li>
+    <li>No train/holdout split. PENDING dropped; ACCEPT vs REJECT on all 18,304 resolved pairs (15,821 / 2,483) from 6,962 seekers.</li>
+    <li>Candidate ids: real Boardy ids where present, else <span class="mono">cmb</span> + first 25 hex of <span class="mono">identityKey</span>. 3,104 Boardy-id collisions across positioning hashes were minted. Map written only under this experiment’s artifacts.</li>
+    <li>Retrieval: each ACCEPT query ranked against 21,168 unique match-role people (2 ACCEPT pairs skipped, candidate not in corpus).</li>
+    <li>Modal A10G <span class="mono">ap-UqnhokCeY5vqmIz9QEEYEC</span> stopped 18:40 ADT, ~29 min, clean completion.</li>
+  </ul>
+
+  <div class="kpi-grid">
+    <div class="kpi"><div class="label">Pair AUC</div><div class="value">0.5185</div><div class="sub">all 18,304 pairs</div></div>
+    <div class="kpi"><div class="label">Hard-neg AUC</div><div class="value">0.4319</div><div class="sub">n_neg=1,242</div></div>
+    <div class="kpi"><div class="label">Cosine gap</div><div class="value">+0.0034</div><div class="sub">ACCEPT slightly higher</div></div>
+    <div class="kpi"><div class="label">Within-seeker</div><div class="value">0.5388</div><div class="sub">median 0.50 · n=804</div></div>
+    <div class="kpi"><div class="label">Retrieval MRR</div><div class="value">0.0320</div><div class="sub">vs 21,168 pool</div></div>
+    <div class="kpi"><div class="label">R@1</div><div class="value">0.0048</div><div class="sub">median rank 184</div></div>
+  </div>
+
+  <h2>Results</h2>
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr><th>Metric</th><th>Value</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>n</td><td>18,304 (15,821 ACCEPT / 2,483 REJECT)</td></tr>
+        <tr class="highlight"><td>Pair ROC-AUC</td><td>0.5185</td></tr>
+        <tr><td>Average precision</td><td>0.8704 (yes-skew artifact)</td></tr>
+        <tr><td>Accuracy @ 0.5</td><td>0.8080 (yes-skew; 86.4% ACCEPT)</td></tr>
+        <tr><td>Mean cosine ACCEPT / REJECT / gap</td><td>0.5802 / 0.5768 / 0.0034</td></tr>
+        <tr><td>Easy-neg pair AUC</td><td>0.6401 (n_neg=621)</td></tr>
+        <tr class="highlight"><td>Hard-neg pair AUC</td><td>0.4319 (n_neg=1,242)</td></tr>
+        <tr><td>Within-seeker mean / median AUC</td><td>0.5388 / 0.5000 (n=804)</td></tr>
+        <tr class="highlight"><td>Retrieval MRR</td><td>0.0320</td></tr>
+        <tr><td>Mean / median rank</td><td>709.8 / 184.0</td></tr>
+        <tr><td>R@1 / R@5 / R@10 / R@100</td><td>0.0048 / 0.0394 / 0.0766 / 0.3755</td></tr>
+        <tr><td>NDCG@10</td><td>0.0335</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2>Vs the full-profile B-data nano run</h2>
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr><th>Run</th><th>Population</th><th>Packing</th><th>Pair AUC</th><th>Hard-neg AUC</th></tr>
+      </thead>
+      <tbody>
+        <tr class="highlight"><td>Voyage-4-nano posbg (this)</td><td>all resolved pairs</td><td>look+query / pos+bg</td><td>0.5185</td><td>0.4319</td></tr>
+        <tr><td>Voyage-4-nano</td><td>B-data holdout</td><td>full profile</td><td>0.4691</td><td>0.3626</td></tr>
+        <tr><td>TF-IDF</td><td>B-data holdout</td><td>full profile</td><td>0.5121</td><td>0.4026</td></tr>
+        <tr><td>Voyage-4-nano</td><td>200 seed pairs</td><td>full profile</td><td>0.5614</td><td>0.5064</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="callout warn">
+    <p>
+      Near chance on pair classification (AUC 0.5185; cosine gap 0.0034).
+      Hard-neg AUC 0.4319 is inverted. Retrieval against the 21k pool is very
+      weak (MRR 0.032, median rank 184, R@1 0.5%). Not comparable 1:1 to
+      <span class="mono">bdata_tfidf</span> 0.5121 or
+      <span class="mono">bdata_voyage_nano</span> 0.4691 — those were
+      holdout-only and full-profile packing.
+    </p>
+  </div>
+
+  <h2>Reproduce</h2>
+  <div class="callout">
+    <p class="mono" style="margin:0; white-space:pre-wrap">python -m pytest tests/test_bdata_voyage_nano_posbg.py -q
+modal run bdata_voyage_nano_posbg/modal_eval.py --batch-size 8 --gpu A10G
+modal volume get dorby-bdata-voyage-nano-posbg-eval allpairs/metrics.json \
+  ./artifacts/bdata_voyage_nano_posbg/metrics.json --force</p>
+  </div>
+  <p>
+    Writeup: <span class="mono">docs/bdata-voyage-nano-posbg-experiment.md</span>
+  </p>
+
+  <div class="footer">
+    Published 2026-08-12 · Modal A10G stopped 18:40 ADT (~29 min, clean) ·
+    source <span class="mono">B-data.json</span> locked read-only ·
+    package <span class="mono">bdata_voyage_nano_posbg/</span> isolated
+  </div>
+</div>
+</body>
+</html>
