@@ -1,0 +1,894 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>B-data summary — Dorby AI</title>
+<style>
+  :root {
+    --ink: #1a2421;
+    --muted: #5d6b66;
+    --line: #cfd8d3;
+    --paper: #f4f7f5;
+    --panel: #ffffff;
+    --accent: #1f6b55;
+    --accent2: #b45309;
+    --accent3: #1d4ed8;
+    --pending: #64748b;
+    --accept: #15803d;
+    --reject: #b91c1c;
+    --serif: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+    --sans: "Avenir Next", Avenir, "Century Gothic", "Gill Sans", sans-serif;
+    --mono: "SF Mono", Menlo, Consolas, monospace;
+    --shadow: 0 10px 28px rgba(26, 36, 33, 0.07);
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; min-height: 100%; }
+  body {
+    font-family: var(--sans);
+    color: var(--ink);
+    background:
+      radial-gradient(1000px 480px at 0% -10%, #dff0e8 0%, transparent 55%),
+      radial-gradient(900px 420px at 100% 0%, #e8eee9 0%, transparent 50%),
+      var(--paper);
+    line-height: 1.45;
+  }
+  .wrap {
+    width: min(1100px, calc(100% - 1.5rem));
+    margin: 0 auto;
+    padding: 1.75rem 0 3.5rem;
+  }
+  h1 {
+    font-family: var(--serif);
+    font-size: clamp(1.8rem, 3.5vw, 2.5rem);
+    letter-spacing: -0.02em;
+    margin: 0 0 0.35rem;
+  }
+  .lede {
+    margin: 0 0 1.25rem;
+    color: var(--muted);
+    max-width: 42rem;
+  }
+  .meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem 1rem;
+    color: var(--muted);
+    font-size: 0.85rem;
+    margin-bottom: 1.5rem;
+  }
+  .meta code {
+    font-family: var(--mono);
+    font-size: 0.8rem;
+    background: #e8efeb;
+    padding: 0.1rem 0.35rem;
+    border-radius: 4px;
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 0.75rem;
+    margin-bottom: 1.25rem;
+  }
+  .kpi {
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    padding: 0.9rem 1rem;
+    box-shadow: var(--shadow);
+  }
+  .kpi .label {
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--muted);
+    font-weight: 700;
+  }
+  .kpi .value {
+    font-family: var(--serif);
+    font-size: 1.65rem;
+    margin-top: 0.15rem;
+  }
+  .kpi .sub {
+    font-size: 0.8rem;
+    color: var(--muted);
+    margin-top: 0.15rem;
+  }
+  section {
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    padding: 1.1rem 1.2rem 1.25rem;
+    box-shadow: var(--shadow);
+    margin-bottom: 1rem;
+  }
+  section h2 {
+    font-family: var(--serif);
+    font-size: 1.25rem;
+    margin: 0 0 0.35rem;
+  }
+  section p.note {
+    margin: 0 0 0.9rem;
+    color: var(--muted);
+    font-size: 0.9rem;
+  }
+  .chart-row {
+    display: grid;
+    grid-template-columns: 1.1fr 1fr;
+    gap: 1.25rem;
+    align-items: start;
+  }
+  @media (max-width: 800px) {
+    .chart-row { grid-template-columns: 1fr; }
+  }
+  .bars { display: grid; gap: 0.55rem; }
+  .bar-row {
+    display: grid;
+    grid-template-columns: 9.5rem 1fr 4.2rem;
+    gap: 0.55rem;
+    align-items: center;
+    font-size: 0.88rem;
+  }
+  .bar-row .name {
+    font-family: var(--mono);
+    font-size: 0.78rem;
+    color: var(--ink);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  .track {
+    height: 12px;
+    background: #e8eeea;
+    border-radius: 999px;
+    overflow: hidden;
+  }
+  .fill {
+    height: 100%;
+    border-radius: 999px;
+    background: var(--accent);
+  }
+  .fill.accept { background: var(--accept); }
+  .fill.reject { background: var(--reject); }
+  .fill.pending { background: var(--pending); }
+  .fill.type0 { background: var(--accent); }
+  .fill.type1 { background: var(--accent3); }
+  .fill.type2 { background: var(--accent2); }
+  .fill.type3 { background: #7c3aed; }
+  .count {
+    text-align: right;
+    font-variant-numeric: tabular-nums;
+    color: var(--muted);
+    font-size: 0.82rem;
+  }
+  .donut-wrap {
+    display: grid;
+    place-items: center;
+    gap: 0.75rem;
+  }
+  .donut {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    position: relative;
+  }
+  .donut::after {
+    content: "";
+    position: absolute;
+    inset: 42px;
+    background: var(--panel);
+    border-radius: 50%;
+  }
+  .legend {
+    display: grid;
+    gap: 0.35rem;
+    font-size: 0.85rem;
+  }
+  .legend span {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 2px;
+    margin-right: 0.4rem;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.88rem;
+  }
+  th, td {
+    text-align: left;
+    padding: 0.45rem 0.5rem;
+    border-bottom: 1px solid var(--line);
+    font-variant-numeric: tabular-nums;
+  }
+  th {
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--muted);
+  }
+  td.mono { font-family: var(--mono); font-size: 0.8rem; }
+  .two-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+  @media (max-width: 800px) {
+    .two-col { grid-template-columns: 1fr; }
+  }
+  details {
+    margin-top: 0.75rem;
+    border-top: 1px solid var(--line);
+    padding-top: 0.75rem;
+  }
+  summary {
+    cursor: pointer;
+    color: var(--accent);
+    font-weight: 600;
+  }
+  pre {
+    background: #0f1714;
+    color: #d7e7df;
+    padding: 0.85rem;
+    border-radius: 10px;
+    overflow: auto;
+    font-size: 0.72rem;
+    max-height: 320px;
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>B-data summary</h1>
+  <p class="lede">
+    Quantitative overview of the locked Boardy B-dataset: seekers, queries,
+    candidate matches, and ACCEPT / REJECT / PENDING outcomes.
+  </p>
+  <div class="meta">
+    <span>Source <code id="src"></code></span>
+    <span>Generated <span id="gen"></span></span>
+    <span>Read-only (B-data.json locked)</span>
+  </div>
+
+  <div class="grid" id="kpis"></div>
+
+  <section>
+    <h2>Match status</h2>
+    <p class="note">Label lives on <code>matches[].status</code>, not as separate pos/neg files.</p>
+    <div class="chart-row">
+      <div class="bars" id="status-bars"></div>
+      <div class="donut-wrap">
+        <div class="donut" id="status-donut"></div>
+        <div class="legend" id="status-legend"></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Match type</h2>
+    <p class="note">Channel / source of the intro (<code>matches[].matchType</code>).</p>
+    <div class="bars" id="type-bars"></div>
+  </section>
+
+  <section>
+    <h2>Status × match type</h2>
+    <p class="note">How outcomes break down within each channel.</p>
+    <div id="status-by-type"></div>
+  </section>
+
+  <section>
+    <h2>Matches per seeker row</h2>
+    <p class="note">Each row is one (seeker, query) with 1–4 attached matches.</p>
+    <div class="bars" id="mpr-bars"></div>
+  </section>
+
+  <section>
+    <h2>Seeker multiplicity</h2>
+    <p class="note">Same <code>contactId</code> can appear in multiple rows (different queries).</p>
+    <div class="chart-row">
+      <div class="bars" id="multi-bars"></div>
+      <div>
+        <table>
+          <thead><tr><th>Metric</th><th>Value</th></tr></thead>
+          <tbody id="multi-table"></tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Candidate identity (no contactIds)</h2>
+    <p class="note" id="identity-note"></p>
+    <div class="grid" id="identity-kpis"></div>
+    <div class="chart-row" style="margin-top:1rem">
+      <div>
+        <h3 style="font-size:1rem;margin:0 0 0.6rem;font-family:var(--serif)">Match-profile reuse</h3>
+        <p class="note" style="margin-top:0">How often the same exact <code>contactFile</code> appears across match slots.</p>
+        <div class="bars" id="reuse-bars"></div>
+      </div>
+      <div>
+        <h3 style="font-size:1rem;margin:0 0 0.6rem;font-family:var(--serif)">Seeker ↔ candidate overlap</h3>
+        <table>
+          <thead><tr><th>Metric</th><th>Value</th></tr></thead>
+          <tbody id="identity-table"></tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Profile field coverage</h2>
+    <p class="note">Share of profiles with a non-empty string for each field. <code>notes</code> is absent in B-data.</p>
+    <div class="two-col">
+      <div>
+        <h3 style="font-size:1rem;margin:0 0 0.6rem;font-family:var(--serif)">Seeker contactFile</h3>
+        <div class="bars" id="seeker-cov"></div>
+      </div>
+      <div>
+        <h3 style="font-size:1rem;margin:0 0 0.6rem;font-family:var(--serif)">Match contactFile</h3>
+        <div class="bars" id="match-cov"></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Text length stats</h2>
+    <p class="note">Character lengths for queries and profile fields (non-empty only).</p>
+    <div class="two-col">
+      <table>
+        <thead>
+          <tr><th>Field</th><th>n</th><th>p50</th><th>p90</th><th>max</th><th>mean</th></tr>
+        </thead>
+        <tbody id="len-seeker"></tbody>
+      </table>
+      <table>
+        <thead>
+          <tr><th>Field</th><th>n</th><th>p50</th><th>p90</th><th>max</th><th>mean</th></tr>
+        </thead>
+        <tbody id="len-match"></tbody>
+      </table>
+    </div>
+  </section>
+
+  <section>
+    <h2>Vs original seed pairs</h2>
+    <table>
+      <thead><tr><th>Aspect</th><th>Original (pos/neg)</th><th>B-data</th></tr></thead>
+      <tbody>
+        <tr>
+          <td>Unit</td>
+          <td>Labeled pair</td>
+          <td>Seeker + query + matches[]</td>
+        </tr>
+        <tr>
+          <td>Label</td>
+          <td>File membership</td>
+          <td><code>matches[].status</code></td>
+        </tr>
+        <tr>
+          <td>Candidate id</td>
+          <td><code>matchContactId</code></td>
+          <td>Absent</td>
+        </tr>
+        <tr>
+          <td><code>notes</code> field</td>
+          <td>Present</td>
+          <td>Absent</td>
+        </tr>
+        <tr>
+          <td>Unresolved</td>
+          <td>None (all labeled)</td>
+          <td>Mostly <code>PENDING</code></td>
+        </tr>
+        <tr>
+          <td>Candidate uniqueness</td>
+          <td>Exact via <code>matchContactId</code></td>
+          <td>Inferred only via profile-text hash</td>
+        </tr>
+        <tr>
+          <td>Seeker as candidate</td>
+          <td>Checkable via ids</td>
+          <td>Only via profile-hash overlap</td>
+        </tr>
+      </tbody>
+    </table>
+    <details>
+      <summary>Raw stats JSON</summary>
+      <pre id="raw"></pre>
+    </details>
+  </section>
+</div>
+<script>
+const STATS = {
+  "generated_at": "2026-08-12 14:25 UTC",
+  "source": "data/B-data.json",
+  "n_rows": 46609,
+  "unique_seekers": 15986,
+  "total_matches": 58293,
+  "avg_matches_per_row": 1.251,
+  "matches_per_row_dist": {
+    "1": 34949,
+    "2": 11637,
+    "3": 22,
+    "4": 1
+  },
+  "status_counts": {
+    "PENDING": 39989,
+    "ACCEPT": 15821,
+    "REJECT": 2483
+  },
+  "type_counts": {
+    "SMS": 12045,
+    "ON_CALL": 1414,
+    "BACKGROUND_MATCH": 44796,
+    "AUTOMATCH": 38
+  },
+  "status_by_type": {
+    "AUTOMATCH": {
+      "PENDING": 31,
+      "ACCEPT": 6,
+      "REJECT": 1
+    },
+    "BACKGROUND_MATCH": {
+      "PENDING": 35095,
+      "ACCEPT": 8014,
+      "REJECT": 1687
+    },
+    "ON_CALL": {
+      "PENDING": 1179,
+      "ACCEPT": 219,
+      "REJECT": 16
+    },
+    "SMS": {
+      "PENDING": 3684,
+      "ACCEPT": 7582,
+      "REJECT": 779
+    }
+  },
+  "resolved_matches": 18304,
+  "accept_rate_among_resolved": 86.43,
+  "reject_rate_among_resolved": 13.57,
+  "pending_rate_all": 68.6,
+  "rows_with_accept": 13694,
+  "rows_with_reject": 2268,
+  "rows_resolved": 15747,
+  "rows_pending_only": 30862,
+  "seekers_with_accept": 6221,
+  "seekers_with_reject": 1545,
+  "multi_query_seekers": 10978,
+  "single_query_seekers": 5008,
+  "rows_per_seeker": {
+    "n": 15986,
+    "min": 1,
+    "p50": 2,
+    "p90": 6,
+    "max": 146,
+    "mean": 2.9
+  },
+  "query_len": {
+    "n": 46609,
+    "min": 16,
+    "p50": 148,
+    "p90": 238,
+    "max": 916,
+    "mean": 159.8
+  },
+  "seeker_field_coverage": {
+    "positioning": {
+      "n": 46587,
+      "pct": 99.95,
+      "len": {
+        "n": 46587,
+        "min": 45,
+        "p50": 639,
+        "p90": 827,
+        "max": 7884,
+        "mean": 660.0
+      }
+    },
+    "background": {
+      "n": 46549,
+      "pct": 99.87,
+      "len": {
+        "n": 46549,
+        "min": 63,
+        "p50": 2677,
+        "p90": 4274,
+        "max": 35212,
+        "mean": 2860.2
+      }
+    },
+    "lookingFor": {
+      "n": 46502,
+      "pct": 99.77,
+      "len": {
+        "n": 46502,
+        "min": 63,
+        "p50": 765,
+        "p90": 1885,
+        "max": 32847,
+        "mean": 1033.8
+      }
+    },
+    "notes": {
+      "n": 0,
+      "pct": 0.0,
+      "len": {
+        "n": 0,
+        "min": 0,
+        "p50": 0,
+        "p90": 0,
+        "max": 0,
+        "mean": 0.0
+      }
+    },
+    "locationAvailability": {
+      "n": 46368,
+      "pct": 99.48,
+      "len": {
+        "n": 46368,
+        "min": 5,
+        "p50": 98,
+        "p90": 231,
+        "max": 1313,
+        "mean": 113.4
+      }
+    },
+    "introPreferences": {
+      "n": 37791,
+      "pct": 81.08,
+      "len": {
+        "n": 37791,
+        "min": 7,
+        "p50": 651,
+        "p90": 1366,
+        "max": 18091,
+        "mean": 785.3
+      }
+    },
+    "personalPreferences": {
+      "n": 25545,
+      "pct": 54.81,
+      "len": {
+        "n": 25545,
+        "min": 4,
+        "p50": 115,
+        "p90": 299,
+        "max": 9674,
+        "mean": 164.9
+      }
+    },
+    "meetingAndSchedulingPreferences": {
+      "n": 11493,
+      "pct": 24.66,
+      "len": {
+        "n": 11493,
+        "min": 20,
+        "p50": 181,
+        "p90": 526,
+        "max": 3873,
+        "mean": 264.7
+      }
+    }
+  },
+  "match_field_coverage": {
+    "positioning": {
+      "n": 58276,
+      "pct": 99.97,
+      "len": {
+        "n": 58276,
+        "min": 41,
+        "p50": 644,
+        "p90": 841,
+        "max": 7884,
+        "mean": 663.9
+      }
+    },
+    "background": {
+      "n": 58274,
+      "pct": 99.97,
+      "len": {
+        "n": 58274,
+        "min": 27,
+        "p50": 2768,
+        "p90": 4424,
+        "max": 35212,
+        "mean": 2936.6
+      }
+    },
+    "lookingFor": {
+      "n": 58157,
+      "pct": 99.77,
+      "len": {
+        "n": 58157,
+        "min": 34,
+        "p50": 759,
+        "p90": 1776,
+        "max": 27357,
+        "mean": 972.4
+      }
+    },
+    "notes": {
+      "n": 0,
+      "pct": 0.0,
+      "len": {
+        "n": 0,
+        "min": 0,
+        "p50": 0,
+        "p90": 0,
+        "max": 0,
+        "mean": 0.0
+      }
+    },
+    "locationAvailability": {
+      "n": 58187,
+      "pct": 99.82,
+      "len": {
+        "n": 58187,
+        "min": 5,
+        "p50": 97,
+        "p90": 238,
+        "max": 1128,
+        "mean": 115.0
+      }
+    },
+    "introPreferences": {
+      "n": 47614,
+      "pct": 81.68,
+      "len": {
+        "n": 47614,
+        "min": 7,
+        "p50": 690,
+        "p90": 1398,
+        "max": 14598,
+        "mean": 803.7
+      }
+    },
+    "personalPreferences": {
+      "n": 32740,
+      "pct": 56.16,
+      "len": {
+        "n": 32740,
+        "min": 18,
+        "p50": 120,
+        "p90": 299,
+        "max": 9674,
+        "mean": 159.7
+      }
+    },
+    "meetingAndSchedulingPreferences": {
+      "n": 17567,
+      "pct": 30.14,
+      "len": {
+        "n": 17567,
+        "min": 7,
+        "p50": 181,
+        "p90": 510,
+        "max": 3873,
+        "mean": 261.8
+      }
+    }
+  },
+  "vs_original": {
+    "original_label": "file membership (dataset_positive vs dataset_negative)",
+    "b_data_label": "matches[].status (ACCEPT / REJECT / PENDING)",
+    "notes_field": "absent in B-data (present in original)",
+    "match_contact_id": "absent on B-data matches"
+  },
+  "identity": {
+    "match_contact_ids_present": false,
+    "method": "exact sha256 of matches[].contactFile JSON",
+    "caveat": "Inferred only \u2014 identical profile text suggests same person, but without contactIds this is not authoritative.",
+    "match_slots": 58293,
+    "unique_match_profiles": 26672,
+    "singleton_match_profiles": 15034,
+    "repeated_match_profiles": 11638,
+    "match_slots_from_repeated_profiles": 43259,
+    "pct_slots_from_repeats": 74.21,
+    "seeker_profiles_also_seen_as_match": 10745,
+    "unique_seekers_appearing_as_match": 8121,
+    "match_slots_equal_to_some_seeker_profile": 30339,
+    "pct_match_slots_equal_seeker": 52.05,
+    "same_row_seeker_equals_match": 0,
+    "reuse_bucket_profile_counts": {
+      "2\u00d7": 4974,
+      "6\u201310\u00d7": 1468,
+      "1\u00d7": 15034,
+      "3\u20135\u00d7": 4866,
+      "11\u00d7+": 330
+    }
+  }
+};
+
+function fmt(n) {
+  return Number(n).toLocaleString("en-US");
+}
+
+function barList(el, items, max, classFor) {
+  el.innerHTML = items.map(([name, count]) => {
+    const pct = max ? (100 * count / max) : 0;
+    const cls = classFor ? classFor(name) : "fill";
+    return `<div class="bar-row">
+      <div class="name" title="${name}">${name}</div>
+      <div class="track"><div class="fill ${cls}" style="width:${pct.toFixed(2)}%"></div></div>
+      <div class="count">${fmt(count)}</div>
+    </div>`;
+  }).join("");
+}
+
+function statusClass(name) {
+  const n = String(name).toUpperCase();
+  if (n === "ACCEPT") return "accept";
+  if (n === "REJECT") return "reject";
+  if (n === "PENDING") return "pending";
+  return "";
+}
+
+const typeClassMap = {};
+Object.keys(STATS.type_counts || {}).sort((a,b) => STATS.type_counts[b]-STATS.type_counts[a])
+  .forEach((k, i) => { typeClassMap[k] = `type${i % 4}`; });
+
+document.getElementById("src").textContent = STATS.source;
+document.getElementById("gen").textContent = STATS.generated_at;
+document.getElementById("raw").textContent = JSON.stringify(STATS, null, 2);
+
+const kpis = [
+  ["Rows", STATS.n_rows, "seeker × query"],
+  ["Unique seekers", STATS.unique_seekers, `${STATS.multi_query_seekers.toLocaleString()} with >1 row`],
+  ["Matches", STATS.total_matches, `avg ${STATS.avg_matches_per_row} / row`],
+  ["ACCEPT", STATS.status_counts.ACCEPT || 0, `${STATS.accept_rate_among_resolved}% of resolved`],
+  ["REJECT", STATS.status_counts.REJECT || 0, `${STATS.reject_rate_among_resolved}% of resolved`],
+  ["PENDING", STATS.status_counts.PENDING || 0, `${STATS.pending_rate_all}% of all matches`],
+];
+document.getElementById("kpis").innerHTML = kpis.map(([label, value, sub]) => `
+  <div class="kpi">
+    <div class="label">${label}</div>
+    <div class="value">${fmt(value)}</div>
+    <div class="sub">${sub}</div>
+  </div>`).join("");
+
+const statusItems = Object.entries(STATS.status_counts).sort((a,b) => b[1]-a[1]);
+const statusMax = Math.max(...statusItems.map(x => x[1]), 1);
+barList(document.getElementById("status-bars"), statusItems, statusMax, statusClass);
+
+const totalStatus = statusItems.reduce((s, [,c]) => s + c, 0) || 1;
+const colors = { ACCEPT: "#15803d", REJECT: "#b91c1c", PENDING: "#64748b", UNKNOWN: "#94a3b8" };
+let acc = 0;
+const stops = statusItems.map(([name, count]) => {
+  const start = acc;
+  const pct = 100 * count / totalStatus;
+  acc += pct;
+  return `${colors[name] || "#94a3b8"} ${start.toFixed(2)}% ${acc.toFixed(2)}%`;
+});
+document.getElementById("status-donut").style.background = `conic-gradient(${stops.join(", ")})`;
+document.getElementById("status-legend").innerHTML = statusItems.map(([name, count]) => `
+  <div><span style="background:${colors[name] || "#94a3b8"}"></span>
+  ${name} — ${fmt(count)} (${(100*count/totalStatus).toFixed(1)}%)</div>`).join("");
+
+const typeItems = Object.entries(STATS.type_counts).sort((a,b) => b[1]-a[1]);
+barList(document.getElementById("type-bars"), typeItems, Math.max(...typeItems.map(x => x[1]), 1),
+  (name) => typeClassMap[name] || "type0");
+
+const sbt = STATS.status_by_type;
+const sbtHtml = Object.entries(sbt).sort((a,b) => {
+  const sa = Object.values(a[1]).reduce((x,y)=>x+y,0);
+  const sb = Object.values(b[1]).reduce((x,y)=>x+y,0);
+  return sb - sa;
+}).map(([mt, st]) => {
+  const total = Object.values(st).reduce((x,y)=>x+y,0) || 1;
+  const parts = ["ACCEPT","REJECT","PENDING"].map(k => {
+    const c = st[k] || 0;
+    return `<div class="bar-row">
+      <div class="name">${k}</div>
+      <div class="track"><div class="fill ${statusClass(k)}" style="width:${(100*c/total).toFixed(2)}%"></div></div>
+      <div class="count">${fmt(c)}</div>
+    </div>`;
+  }).join("");
+  return `<div style="margin-bottom:1rem">
+    <div style="font-family:var(--mono);font-size:0.8rem;margin-bottom:0.35rem">${mt}
+      <span style="color:var(--muted)"> · ${fmt(total)}</span></div>
+    ${parts}
+  </div>`;
+}).join("");
+document.getElementById("status-by-type").innerHTML = sbtHtml;
+
+const mprItems = Object.entries(STATS.matches_per_row_dist).map(([k,v]) => [`${k} match${k==="1"?"":"es"}`, v]);
+barList(document.getElementById("mpr-bars"), mprItems, Math.max(...mprItems.map(x => x[1]), 1));
+
+barList(document.getElementById("multi-bars"), [
+  ["Single-query seekers", STATS.single_query_seekers],
+  ["Multi-query seekers", STATS.multi_query_seekers],
+], Math.max(STATS.single_query_seekers, STATS.multi_query_seekers, 1));
+
+const rps = STATS.rows_per_seeker;
+document.getElementById("multi-table").innerHTML = `
+  <tr><td>Rows with ≥1 ACCEPT</td><td>${fmt(STATS.rows_with_accept)}</td></tr>
+  <tr><td>Rows with ≥1 REJECT</td><td>${fmt(STATS.rows_with_reject)}</td></tr>
+  <tr><td>Rows with any resolved</td><td>${fmt(STATS.rows_resolved)}</td></tr>
+  <tr><td>Rows pending-only</td><td>${fmt(STATS.rows_pending_only)}</td></tr>
+  <tr><td>Seekers with ACCEPT</td><td>${fmt(STATS.seekers_with_accept)}</td></tr>
+  <tr><td>Seekers with REJECT</td><td>${fmt(STATS.seekers_with_reject)}</td></tr>
+  <tr><td>Rows/seeker p50 / p90 / max</td><td>${rps.p50} / ${rps.p90} / ${rps.max}</td></tr>
+  <tr><td>Query length p50 / p90 / max</td><td>${STATS.query_len.p50} / ${STATS.query_len.p90} / ${STATS.query_len.max}</td></tr>
+`;
+
+const ID = STATS.identity || {};
+document.getElementById("identity-note").textContent =
+  (ID.match_contact_ids_present === false
+    ? "Matches have no contactId. "
+    : "") + (ID.caveat || "") +
+  (ID.method ? ` Method: ${ID.method}.` : "");
+
+document.getElementById("identity-kpis").innerHTML = [
+  ["Unique match profiles", ID.unique_match_profiles || 0, `of ${fmt(ID.match_slots || 0)} match slots`],
+  ["Repeated profiles", ID.repeated_match_profiles || 0, `${ID.pct_slots_from_repeats || 0}% of slots`],
+  ["Seekers seen as matches", ID.unique_seekers_appearing_as_match || 0, "by exact profile hash"],
+  ["Self-match on same row", ID.same_row_seeker_equals_match || 0, "seeker profile = own match"],
+].map(([label, value, sub]) => `
+  <div class="kpi">
+    <div class="label">${label}</div>
+    <div class="value">${fmt(value)}</div>
+    <div class="sub">${sub}</div>
+  </div>`).join("");
+
+const reuseOrder = ["1×", "2×", "3–5×", "6–10×", "11×+"];
+const reuseItems = reuseOrder
+  .filter(k => (ID.reuse_bucket_profile_counts || {})[k])
+  .map(k => [k, ID.reuse_bucket_profile_counts[k]]);
+barList(
+  document.getElementById("reuse-bars"),
+  reuseItems,
+  Math.max(...reuseItems.map(x => x[1]), 1),
+  () => "type2"
+);
+
+document.getElementById("identity-table").innerHTML = `
+  <tr><td>Match contactIds present</td><td>${ID.match_contact_ids_present ? "yes" : "no"}</td></tr>
+  <tr><td>Match slots</td><td>${fmt(ID.match_slots || 0)}</td></tr>
+  <tr><td>Unique match profiles (exact hash)</td><td>${fmt(ID.unique_match_profiles || 0)}</td></tr>
+  <tr><td>Singleton profiles (appear once)</td><td>${fmt(ID.singleton_match_profiles || 0)}</td></tr>
+  <tr><td>Repeated profiles (appear ≥2×)</td><td>${fmt(ID.repeated_match_profiles || 0)}</td></tr>
+  <tr><td>Slots from repeated profiles</td><td>${fmt(ID.match_slots_from_repeated_profiles || 0)} (${ID.pct_slots_from_repeats || 0}%)</td></tr>
+  <tr><td>Seeker profiles also seen as a match</td><td>${fmt(ID.seeker_profiles_also_seen_as_match || 0)}</td></tr>
+  <tr><td>Unique seekers appearing as a match</td><td>${fmt(ID.unique_seekers_appearing_as_match || 0)}</td></tr>
+  <tr><td>Match slots equal to some seeker profile</td><td>${fmt(ID.match_slots_equal_to_some_seeker_profile || 0)} (${ID.pct_match_slots_equal_seeker || 0}%)</td></tr>
+  <tr><td>Same-row seeker == match profile</td><td>${fmt(ID.same_row_seeker_equals_match || 0)}</td></tr>
+`;
+
+function covBars(el, cov, colorClass) {
+  const items = Object.entries(cov).map(([k,v]) => [k, v.pct]);
+  const max = 100;
+  el.innerHTML = items.map(([name, pct]) => `
+    <div class="bar-row">
+      <div class="name" title="${name}">${name}</div>
+      <div class="track"><div class="fill ${colorClass}" style="width:${pct}%"></div></div>
+      <div class="count">${pct.toFixed(1)}%</div>
+    </div>`).join("");
+}
+covBars(document.getElementById("seeker-cov"), STATS.seeker_field_coverage, "type0");
+covBars(document.getElementById("match-cov"), STATS.match_field_coverage, "type1");
+
+function lenRows(el, cov, extraFirst) {
+  const rows = [];
+  if (extraFirst) rows.push(extraFirst);
+  for (const [name, v] of Object.entries(cov)) {
+    const L = v.len;
+    rows.push(`<tr>
+      <td class="mono">${name}</td>
+      <td>${fmt(L.n)}</td>
+      <td>${fmt(L.p50)}</td>
+      <td>${fmt(L.p90)}</td>
+      <td>${fmt(L.max)}</td>
+      <td>${fmt(L.mean)}</td>
+    </tr>`);
+  }
+  el.innerHTML = rows.join("");
+}
+const q = STATS.query_len;
+lenRows(document.getElementById("len-seeker"), STATS.seeker_field_coverage,
+  `<tr><td class="mono">query</td><td>${fmt(q.n)}</td><td>${fmt(q.p50)}</td><td>${fmt(q.p90)}</td><td>${fmt(q.max)}</td><td>${fmt(q.mean)}</td></tr>`);
+lenRows(document.getElementById("len-match"), STATS.match_field_coverage, null);
+</script>
+</body>
+</html>

@@ -62,7 +62,8 @@ Artifact: `artifacts/bdata_tfidf/metrics.json`.
 Published findings page:
 [https://dorby-project-story-411960113601.s3.amazonaws.com/docs/bdata-tfidf-experiment.html](https://dorby-project-story-411960113601.s3.amazonaws.com/docs/bdata-tfidf-experiment.html)
 (local: `docs/html/bdata-tfidf-experiment.html`). Dataset browser summary:
-`data/summary_B_data.html` (gitignored under `data/`).
+[https://dorby-project-story-411960113601.s3.amazonaws.com/docs/bdata-summary.html](https://dorby-project-story-411960113601.s3.amazonaws.com/docs/bdata-summary.html)
+(local: `docs/html/bdata-summary.html`; rebuild via `python scripts/build_summary_B_data.py`).
 
 ## Reading
 

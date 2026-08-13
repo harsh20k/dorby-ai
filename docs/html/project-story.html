@@ -76,7 +76,7 @@
     width: var(--nav-w);
     padding: 72px 40px 48px 0;
     display: flex; flex-direction: column; align-items: flex-end;
-    justify-content: center;
+    justify-content: safe center;
     background: transparent;
     border: 0;
     overflow-y: auto; z-index: 40;
@@ -295,7 +295,7 @@
       <div class="eyebrow anim">Recommender Systems · Boardy AI</div>
       <h1 class="anim">Can we tell which introductions people will&nbsp;actually accept?</h1>
       <p class="lede anim">The findings that mattered, in the order they changed what we believed.</p>
-      <div class="dateline anim">July 16 — August 4, 2026</div>
+      <div class="dateline anim">July 16 — August 13, 2026</div>
     </div>
   </section>
 
@@ -479,7 +479,7 @@
     <div class="inner">
       <div class="eyebrow anim"><span class="num">13</span> &nbsp;·&nbsp; Synth transfer</div>
       <h2 class="anim">Safer generation fixed the handwriting leak. It did not fix the transfer gap.</h2>
-      <p class="lede anim">Models trained on judge-labeled synthetic pairs still struggle to move real numbers. Synthetic vocabulary can transfer; synthetic labels often teach the teacher. Scoring each lookingFor ask separately helped — the clever mixer less so.</p>
+      <p class="lede anim">Models trained on judge-labeled synthetic pairs still struggle to move real numbers. Synthetic vocabulary can transfer; synthetic labels often teach the teacher. A 25k-pair Qwen-judged batch showed the same seeker-identity leak, louder at scale. Scoring each lookingFor ask separately helped — the clever mixer less so.</p>
       <div class="decision anim">
         <span class="decision-label">Still open</span>
         <p class="decision-text">Useable synth labels, distillation of the judge, and a real latency benchmark.</p>
@@ -594,10 +594,10 @@
   <section class="slide" data-nav="Smarter prompts lose" data-date="Aug 3">
     <div class="inner">
       <div class="eyebrow anim"><span class="num">20</span> &nbsp;·&nbsp; Prompt evolution</div>
-      <h2 class="anim">Nine automatic attempts at a smarter judge prompt. Naive still wins.</h2>
-      <p class="lede anim">Hand-designed calibrated and structured CoT already lost. Auto-optimization grew rules, shrunk them, repaired contracts, swapped optimizers. Best clean run (evo_006) hit 0.6105 — still under naive’s 0.6177. A stronger seed does not survive the loop into a better final.</p>
+      <h2 class="anim">Ten automatic attempts at a smarter judge prompt. Naive still wins.</h2>
+      <p class="lede anim">Hand-designed calibrated and structured CoT already lost. Auto-optimization grew rules, shrunk them, repaired contracts, swapped optimizers. Best clean run (evo_006) hit 0.6105 — still under naive’s 0.6177. The tenth run, seeded from the stronger focused prompt, lost the widest gap yet: it kept the yes/no and killed what “confidence” meant.</p>
       <div class="decision anim">
-        <span class="decision-label">Three ways, same answer</span>
+        <span class="decision-label">Ten ways, same answer</span>
         <p class="decision-text">Manual, structured, and automatic — none beat four plain paragraphs.</p>
       </div>
       <div class="dig anim">
@@ -606,33 +606,116 @@
     </div>
   </section>
 
+  <section class="slide" data-nav="Query-only trained" data-date="Aug 6">
+    <div class="inner">
+      <div class="eyebrow anim"><span class="num">21</span> &nbsp;·&nbsp; Field selection</div>
+      <h2 class="anim">Train on the ask, not the biography — and it beats the full-profile fine-tune.</h2>
+      <p class="lede anim">A 105-way field sweep found the best frozen combo: seeker = search query only, candidate = background + lookingFor. Training that combo beat top1_ctrl on every metric. Hard-neg AUC 0.6564 — first embedding model to invert hard/easy like the LLM judge. Two-field identity trains all lost on ranking, and won only on hard-neg resistance.</p>
+      <div class="decision anim">
+        <span class="decision-label">The win is narrow</span>
+        <p class="decision-text">Keep the seeker’s ask. Trim the candidate to what they offer. Don’t strip both sides to identity fields.</p>
+      </div>
+      <div class="dig anim">
+        <a href="https://dorby-project-story-411960113601.s3.amazonaws.com/docs/twotower-queryonly-back-look-experiment.html" target="_blank" rel="noopener">Query-only + bg/look</a>
+        <a href="https://dorby-project-story-411960113601.s3.amazonaws.com/docs/twotower-field-pairs-experiment.html" target="_blank" rel="noopener">Field-pair trains</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="slide" data-nav="Reciprocal score" data-date="Aug 6">
+    <div class="inner">
+      <div class="eyebrow anim"><span class="num">22</span> &nbsp;·&nbsp; Reciprocal matching</div>
+      <h2 class="anim">Score what they want from you, too.</h2>
+      <p class="lede anim">Adding the candidate’s lookingFor against the seeker’s background lifts frozen-nano AUC on every population — directionally, not proven (bootstrap CIs cross zero). Fitting λ on synthetic labels collapsed to ~0. Sweeping λ without fitting shows a real positive-sided curve. Two dedicated Ask/Offer towers added reciprocal signal on all-200 (+0.059) but the forward tower itself was weaker than one shared encoder.</p>
+      <div class="decision anim">
+        <span class="decision-label">Cheap rerank, not a new tower</span>
+        <p class="decision-text">A shared model plus a free λ sweep still beats two jointly-trained towers.</p>
+      </div>
+      <div class="dig anim">
+        <a href="https://dorby-project-story-411960113601.s3.amazonaws.com/docs/reciprocal-static-findings.html" target="_blank" rel="noopener">Static reciprocal</a>
+        <a href="https://dorby-project-story-411960113601.s3.amazonaws.com/docs/reciprocal-lambda-grid.html" target="_blank" rel="noopener">λ sweep</a>
+        <a href="https://dorby-project-story-411960113601.s3.amazonaws.com/docs/twotower-ask-offer-findings.html" target="_blank" rel="noopener">Ask / Offer train</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="slide" data-nav="Factor the text" data-date="Aug 6">
+    <div class="inner">
+      <div class="eyebrow anim"><span class="num">23</span> &nbsp;·&nbsp; Matrix factorization</div>
+      <h2 class="anim">Compress the words. Do not factor the people.</h2>
+      <p class="lede anim">Classic LSA on the documents×terms matrix lifts hard-neg AUC on both TF-IDF and Voyage — a plateau, not a lucky rank. A learned bilinear correction on frozen embeddings fails at 131 training pairs: inner CV invented 0.74, honest out-of-fold was 0.62. Retrieval collapsed. Third experiment to hit this wall after the MoE reranker and the triplet ablation.</p>
+      <div class="decision anim">
+        <span class="decision-label">At this data size</span>
+        <p class="decision-text">Hyperparameter search is itself enough overfitting to invent a result.</p>
+      </div>
+      <div class="dig anim">
+        <a href="https://dorby-project-story-411960113601.s3.amazonaws.com/docs/bilinear-mf-results.html" target="_blank" rel="noopener">LSA vs bilinear</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="slide" data-nav="Bigger batch" data-date="Aug 11">
+    <div class="inner">
+      <div class="eyebrow anim"><span class="num">24</span> &nbsp;·&nbsp; Scale</div>
+      <h2 class="anim">More synthetic data moved the needle. Qwen set the records. Treat the leakage.</h2>
+      <p class="lede anim">Retraining top1_ctrl on a 5× larger, leakier batch beat it on every all-200 metric. A KL leash to the frozen base lost again, by a wider margin. Qwen3-8B on the same rows hit pair AUC 0.6446 and hard-neg 0.6862 — tying the LLM judge on classification, without a field-selection trick. Nano still wins retrieval. Candidate-only AUC on that batch was 0.758 before any training.</p>
+      <div class="decision anim">
+        <span class="decision-label">Asterisk</span>
+        <p class="decision-text">Headline numbers wait on a cleaner batch before they count as settled.</p>
+      </div>
+      <div class="dig anim">
+        <a href="https://dorby-project-story-411960113601.s3.amazonaws.com/docs/twotower-voyage-gemini-ctrl-experiment.html" target="_blank" rel="noopener">Nano on the new batch</a>
+        <a href="https://dorby-project-story-411960113601.s3.amazonaws.com/docs/twotower-qwen-voyage-gemini-experiment.html" target="_blank" rel="noopener">Qwen records</a>
+        <a href="https://dorby-project-story-411960113601.s3.amazonaws.com/docs/twotower-voyage-gemini-kl-experiment.html" target="_blank" rel="noopener">KL still loses</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="slide" data-nav="The real dump" data-date="Aug 12">
+    <div class="inner">
+      <div class="eyebrow anim"><span class="num">25</span> &nbsp;·&nbsp; B-data</div>
+      <h2 class="anim">On Boardy’s actual production dump, nothing we already knew still works.</h2>
+      <p class="lede anim">18k resolved ACCEPT/REJECT pairs, ~30k unique people. TF-IDF pair AUC 0.512 — chance. Frozen voyage-4-nano 0.469 — below chance; REJECT slightly more similar than ACCEPT. Narrowing to lookingFor+query vs positioning+background barely clears chance (0.518) and ranks the accepted person at median 184 of 21k.</p>
+      <div class="decision anim">
+        <span class="decision-label">The exam changed</span>
+        <p class="decision-text">The 200-pair seed set was a different, easier population. B-data is now the real test.</p>
+      </div>
+      <div class="dig anim">
+        <a href="https://dorby-project-story-411960113601.s3.amazonaws.com/docs/bdata-summary.html" target="_blank" rel="noopener">B-data summary</a>
+        <a href="https://dorby-project-story-411960113601.s3.amazonaws.com/docs/bdata-tfidf-experiment.html" target="_blank" rel="noopener">TF-IDF on B-data</a>
+        <a href="https://dorby-project-story-411960113601.s3.amazonaws.com/docs/bdata-voyage-nano-experiment.html" target="_blank" rel="noopener">Nano on B-data</a>
+        <a href="https://dorby-project-story-411960113601.s3.amazonaws.com/docs/bdata-voyage-nano-posbg-experiment.html" target="_blank" rel="noopener">Ask / offer packing</a>
+        <a href="https://dorby-project-story-411960113601.s3.amazonaws.com/docs/bdata-unique-contacts.html" target="_blank" rel="noopener">~30k people</a>
+      </div>
+    </div>
+  </section>
+
   <section class="slide slide--title" data-nav="Where it stands" data-date="Today">
     <div class="inner">
-      <div class="eyebrow anim">Where it stands · August 4</div>
+      <div class="eyebrow anim">Where it stands · August 13</div>
       <h2 class="anim">What we can say out loud.</h2>
       <div class="finals anim">
         <div class="final-item">
-          <div class="final-head">The task is residual accept/decline among production’s own recommendations.</div>
-          <div class="final-sub">Hard negatives are the whole population. All-200 is the only leaderboard that ranks strong models.</div>
+          <div class="final-head">The 200-pair seed taught us the levers. B-data is the exam.</div>
+          <div class="final-sub">Hard negatives are the whole population. All-200 ranks strong models on the seed. Frozen nano and TF-IDF are at or below chance on the production dump.</div>
         </div>
         <div class="final-item">
-          <div class="final-head">The strongest cheap lever is what text you encode — not a fancier tower.</div>
-          <div class="final-sub">Voyage-large query-only leads all-200 retrieval (R@1 0.42). Split towers and field gates lost. Fine-tune specialization lost to eval-time text choice.</div>
+          <div class="final-head">What you encode still beats a fancier tower.</div>
+          <div class="final-sub">Query-only + offer fields is the best trained recipe on the seed. Reciprocal is a cheap rerank. Ask/Offer towers and bilinear heads did not pay rent. LSA compression did.</div>
         </div>
         <div class="final-item">
-          <div class="final-head">Two-tower under &lt;100&nbsp;ms still fits. Per-candidate LLMs do not.</div>
-          <div class="final-sub">The judge remains the hard-neg reference and labeler. Its naive prompt still beats every evolved one.</div>
+          <div class="final-head">Qwen on the leakier batch ties the judge — with an asterisk.</div>
+          <div class="final-sub">Pair AUC 0.6446, hard-neg 0.6862. Candidate-only leakage was 0.758 before training. Naive judge prompts still beat every evolved one.</div>
         </div>
         <div class="final-item dim">
-          <div class="final-head">Useable synthetic labels remain the open thread.</div>
-          <div class="final-sub">Leakage is fixed by construction. Teaching real outcomes from judge labels is not. Latency still unbenchmarked.</div>
+          <div class="final-head">Useable synthetic labels, a B-data model, and a latency number remain open.</div>
+          <div class="final-sub">Handwriting leak is fixed by construction. Teaching real outcomes from judge labels is not. Nothing has been timed under 100&nbsp;ms.</div>
         </div>
       </div>
       <div class="dig anim">
-        <a href="https://claude.ai/code/artifact/8d467198-ce99-4dc1-9008-a0f4910ecf8c" target="_blank" rel="noopener">Best all-200 result</a>
-        <a href="https://claude.ai/code/artifact/6e59f7a8-ef20-4c6e-839a-9922db7f6be7" target="_blank" rel="noopener">Canonical sweep</a>
-        <a href="https://claude.ai/code/artifact/b4183e40-2971-4fa6-b4e9-e415ed2143d7" target="_blank" rel="noopener">Architecture verdict</a>
-        <a href="./experiment-index.html" target="_blank" rel="noopener">Full experiment index</a>
+        <a href="https://dorby-project-story-411960113601.s3.amazonaws.com/docs/twotower-qwen-voyage-gemini-experiment.html" target="_blank" rel="noopener">Current seed records</a>
+        <a href="https://dorby-project-story-411960113601.s3.amazonaws.com/docs/bdata-voyage-nano-experiment.html" target="_blank" rel="noopener">B-data reality check</a>
+        <a href="https://dorby-project-story-411960113601.s3.amazonaws.com/docs/experiment-index.html" target="_blank" rel="noopener">Full experiment index</a>
       </div>
     </div>
   </section>

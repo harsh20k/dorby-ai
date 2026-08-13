@@ -2,11 +2,11 @@
 
 **Live URL:** http://dorby-project-story-411960113601.s3-website-us-east-1.amazonaws.com/
 
-Plain-language, chronological walkthrough of the project (July 16–August 4, 2026), built as a
+Plain-language, chronological walkthrough of the project (July 16–August 13, 2026), built as a
 keynote-style slideshow with light/dark mode (respects `prefers-color-scheme`, persists in
-`localStorage`). Content refreshed 2026-08-04 (query-weighted lever, train-vs-eval text,
-split/field-gate losses, nomad-drift calibration, judge prompt evolution, experiment deep
-links). Source file: [`docs/html/project-story.html`](html/project-story.html).
+`localStorage`). Content refreshed 2026-08-13 (query-only training, reciprocal matching,
+LSA vs bilinear, Qwen seed-set records, B-data production dump). Source file:
+[`docs/html/project-story.html`](html/project-story.html).
 
 ## Hosting details
 
