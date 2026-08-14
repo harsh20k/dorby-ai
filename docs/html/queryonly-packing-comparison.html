@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Query-only packing — four-way comparison</title>
+<meta name="description" content="Frozen voyage-4-nano vs top1_ctrl eval-time query-only swap vs queryonly_back_look_001, both candidate packings, all 200 real pairs.">
+<style>
+  :root {
+    color-scheme: light;
+    --surface-1: #fcfcfb;
+    --surface-page: #f9f9f7;
+    --text-primary: #0b0b0b;
+    --text-secondary: #52514e;
+    --text-muted: #898781;
+    --gridline: #e1e0d9;
+    --border: rgba(11,11,11,0.10);
+    --good: #006300;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      color-scheme: dark;
+      --surface-1: #1a1a19;
+      --surface-page: #0d0d0d;
+      --text-primary: #ffffff;
+      --text-secondary: #c3c2b7;
+      --text-muted: #898781;
+      --gridline: #2c2c2a;
+      --border: rgba(255,255,255,0.10);
+      --good: #0ca30c;
+    }
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body {
+    background: var(--surface-page);
+    font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+    color: var(--text-primary);
+  }
+  .page { max-width: 1080px; margin: 0 auto; padding: 40px 24px 80px; }
+  h1 { font-size: 22px; font-weight: 700; letter-spacing: -0.01em; margin: 0 0 10px; text-wrap: balance; }
+  .lede { font-size: 14.5px; line-height: 1.6; color: var(--text-secondary); max-width: 720px; margin: 0; }
+  .lede b { color: var(--text-primary); }
+  .card {
+    background: var(--surface-1); border: 1px solid var(--border);
+    border-radius: 12px; padding: 24px; margin: 28px 0;
+  }
+  .card h2 { font-size: 13px; text-transform: uppercase; letter-spacing: 0.05em; color: var(--text-muted); margin: 0 0 12px; font-weight: 700; }
+  .wrap { overflow-x: auto; }
+  table { width: 100%; border-collapse: collapse; font-size: 13px; min-width: 920px; }
+  th, td {
+    text-align: right; padding: 9px 10px; font-variant-numeric: tabular-nums;
+    border-bottom: 1px solid var(--gridline); vertical-align: top;
+  }
+  th:first-child, td:first-child, th:nth-child(2), td:nth-child(2), th:nth-child(3), td:nth-child(3) {
+    text-align: left; font-variant-numeric: normal;
+  }
+  th { color: var(--text-muted); font-weight: 600; font-size: 11px; text-transform: uppercase; letter-spacing: 0.04em; }
+  td.best { color: var(--good); font-weight: 700; }
+  tr.group td { background: color-mix(in srgb, var(--text-muted) 8%, var(--surface-1)); font-weight: 700; text-align: left; }
+  .sub { display: block; font-size: 11.5px; color: var(--text-muted); font-weight: 400; margin-top: 3px; }
+  .note { font-size: 13px; line-height: 1.6; color: var(--text-secondary); }
+  .note b { color: var(--text-primary); }
+  .dig { margin-top: 18px; display: flex; flex-wrap: wrap; gap: 8px; }
+  .dig a {
+    display: inline-flex; align-items: center; gap: 6px;
+    padding: 7px 12px; border-radius: 980px; border: 1px solid var(--border);
+    color: inherit; text-decoration: none; font-size: 13px; font-weight: 600;
+  }
+  footer { font-size: 12px; color: var(--text-muted); margin-top: 8px; }
+  footer code { color: var(--text-secondary); }
+</style>
+</head>
+<body>
+<div class="page">
+  <h1>Query-only packing: four-way comparison</h1>
+  <p class="lede">
+    All 200 real pairs, 178-candidate corpus. Same two seeker/candidate packings,
+    scored on <b>frozen voyage-4-nano</b> and on the matching fine-tune.
+    Retrieval (MRR / R@K) is mostly the text choice. Hard-neg AUC is where
+    training on the trimmed candidate actually pays.
+  </p>
+
+  <div class="card">
+    <h2>All 200 real pairs</h2>
+    <div class="wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Model</th>
+            <th>Train</th>
+            <th>Eval</th>
+            <th>pair AUC</th>
+            <th>hard-neg</th>
+            <th>easy-neg</th>
+            <th>MRR</th>
+            <th>R@1</th>
+            <th>R@5</th>
+            <th>R@10</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="group"><td colspan="10">1. Query only → full candidate profile</td></tr>
+          <tr>
+            <td>Frozen voyage-4-nano<span class="sub">no training</span></td>
+            <td>—</td>
+            <td>query → full profile</td>
+            <td>0.553</td>
+            <td>0.591</td>
+            <td>0.579</td>
+            <td>0.502</td>
+            <td>0.30</td>
+            <td>0.78</td>
+            <td class="best">0.91</td>
+          </tr>
+          <tr>
+            <td>top1_ctrl + query-only swap<span class="sub">trained full-profile; eval swap</span></td>
+            <td>full profile both sides</td>
+            <td>query → full profile</td>
+            <td>0.595</td>
+            <td>0.646</td>
+            <td>0.616</td>
+            <td class="best">0.508</td>
+            <td class="best">0.32</td>
+            <td class="best">0.80</td>
+            <td>0.90</td>
+          </tr>
+          <tr class="group"><td colspan="10">2. Query only → background + lookingFor</td></tr>
+          <tr>
+            <td>Frozen voyage-4-nano<span class="sub">no training</span></td>
+            <td>—</td>
+            <td>query → bg+lookingFor</td>
+            <td>0.563</td>
+            <td>0.437</td>
+            <td class="best">0.742</td>
+            <td>0.476</td>
+            <td>0.28</td>
+            <td>0.76</td>
+            <td>0.85</td>
+          </tr>
+          <tr>
+            <td>queryonly_back_look_001<span class="sub">trained and evaluated on this packing</span></td>
+            <td>query → bg+lookingFor</td>
+            <td>query → bg+lookingFor</td>
+            <td class="best">0.598</td>
+            <td class="best">0.656</td>
+            <td>0.570</td>
+            <td>0.479</td>
+            <td>0.30</td>
+            <td>0.74</td>
+            <td>0.86</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>Reading</h2>
+    <p class="note">
+      Frozen nano already has the retrieval on packing 1 (R@1 0.30 / R@10 0.91).
+      Fine-tuning barely moves R@K. The free <code>top1_ctrl</code> query-only swap
+      is still the best retrieval row (R@1 <b>0.32</b>, MRR <b>0.508</b>, R@5 <b>0.80</b>).
+      <br><br>
+      <b>Hard-neg AUC is the training lever.</b> Packing 2 on frozen nano is below
+      chance (0.437). Training on that trim jumps it to <b>0.656</b> — best of the
+      four, and the reason <code>queryonly_back_look_001</code> exists.
+      Trimming the candidate at eval without training that way hurts hard-negs.
+    </p>
+    <div class="dig">
+      <a href="https://dorby-project-story-411960113601.s3.amazonaws.com/docs/query-weighted-encoding.html">Frozen query-weighted</a>
+      <a href="https://dorby-project-story-411960113601.s3.amazonaws.com/docs/query-weighted-topology.html">top1_ctrl query-weighted</a>
+      <a href="https://dorby-project-story-411960113601.s3.amazonaws.com/docs/twotower-queryonly-back-look-experiment.html">queryonly_back_look_001</a>
+    </div>
+  </div>
+
+  <footer>
+    Sources: <code>docs/query-weighted-encoding-experiment.md</code>,
+    <code>artifacts/twotower_query_weighted/qw_top1_ctrl_001/top1_ctrl/metrics.json</code>,
+    <code>docs/twotower-queryonly-back-look-experiment.md</code>.
+    Hardness split pinned to concat-baseline seeker text on packing 1;
+    packing 2 uses the same project-wide hardness rule as <code>queryonly_back_look</code>.
+  </footer>
+</div>
+</body>
+</html>

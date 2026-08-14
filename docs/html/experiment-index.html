@@ -255,6 +255,14 @@
     font-weight: 620;
     letter-spacing: -0.005em;
   }
+  .item.bold .item-title,
+  .item.bold .item-title b {
+    font-weight: 800;
+  }
+  .item.bold .item-desc {
+    font-weight: 700;
+    color: var(--ink);
+  }
   .item-desc {
     font-size: 0.87rem;
     color: var(--ink-soft);
@@ -387,6 +395,7 @@ const REPO = "/Users/harsh/Artifacts/dorby-ai/docs/html/";
 
 // { date: "YYYY-MM-DD", title, desc, type: 'published'|'local'|'both'|'note', pub: url|null, loc: filename|null, locFull: absolute file:// url|null }
 const DATA = [
+  { date:"2026-08-13", title:"Query-only packing: frozen nano vs top1_ctrl swap vs queryonly_back_look", desc:"Four-way all-200 table. Packing 1 (query → full candidate): frozen nano R@1 0.30 / R@10 0.91; top1_ctrl eval-time query-only swap is the best retrieval row (R@1 0.32, MRR 0.508, R@5 0.80). Packing 2 (query → background+lookingFor): frozen nano hard-neg 0.437 (below chance); queryonly_back_look_001 trained on that trim hits pair AUC 0.598 and hard-neg 0.656. Retrieval is the text choice; hard-neg is where training on the trim pays.", type:"both", pub:"https://dorby-project-story-411960113601.s3.amazonaws.com/docs/queryonly-packing-comparison.html", loc:"queryonly-packing-comparison.html", bold:true },
   { date:"2026-08-12", title:"B-data summary: 46k rows, mostly PENDING", desc:"Quantitative overview of locked B-data.json: 46,609 seeker×query rows, 15,986 seekers, 58,293 matches. 68.6% PENDING; among resolved, 15,821 ACCEPT vs 2,483 REJECT (~6.4:1). Channels: BACKGROUND_MATCH 44,796, SMS 12,045, ON_CALL 1,414, AUTOMATCH 38.", type:"both", pub:"https://dorby-project-story-411960113601.s3.amazonaws.com/docs/bdata-summary.html", loc:"bdata-summary.html" },
   { date:"2026-08-12", title:"Voyage-4-nano posbg on all resolved B-data pairs", desc:"Frozen voyage-4-nano, seeker=lookingFor+query and candidate=positioning+background, scored on every resolved B-data pair (no split) plus retrieval against 21k unique candidates. Pair AUC 0.5185 (barely above chance); hard-neg AUC 0.4319 (inverted); MRR 0.032, median rank 184. Isolated package bdata_voyage_nano_posbg/.", type:"both", pub:"https://dorby-project-story-411960113601.s3.amazonaws.com/docs/bdata-voyage-nano-posbg-experiment.html", loc:"bdata-voyage-nano-posbg-experiment.html" },
   { date:"2026-08-12", title:"Fifth λ-sweep chart: pos+bg ask/offer is a wash", desc:"Same no-fit λ grid on ask_offer_posbg_001 (offer = positioning+background only, trained and scored). All-200 at trained λ=1.75 is 0.5754 vs wide-offer chart 4's 0.5714 — a wash. Forward-only still near chance (0.5159). All-200 rises to the grid boundary (λ=2.00 → 0.5782), a shelf not a peak. Holdout is not the headline.", type:"both", pub:"https://dorby-project-story-411960113601.s3.amazonaws.com/docs/reciprocal-lambda-grid.html", loc:"reciprocal-lambda-grid.html" },
@@ -520,14 +529,15 @@ for(const g of grouped){
 
   for(const it of g.items){
     const row = document.createElement("div");
-    row.className = "item";
+    row.className = it.bold ? "item bold" : "item";
     row.dataset.type = it.type;
 
     const main2 = document.createElement("div");
     main2.className = "item-main";
+    const titleHtml = it.bold ? `<b>${it.title}</b>` : it.title;
     main2.innerHTML = `
       <div class="item-title-row">
-        <span class="item-title">${it.title}</span>
+        <span class="item-title">${titleHtml}</span>
         <span class="badge ${it.type}">${badgeLabel(it.type)}</span>
       </div>
       <div class="item-desc">${it.desc}${it.note ? ` <span class="mono" style="color:var(--ink-faint)">— ${it.note}</span>` : ""}</div>
