@@ -1,5 +1,15 @@
 # Predicting Introduction Acceptance in a Professional Networking System
 
+![[image-31-1.jpeg]]
+
+**CSCI 6517: Recommender Systems**
+
+**Project Report**
+
+**Banner ID:** B01051076
+**Name:** Harsh Pandey
+**Date:** 26-Oct-2025
+**Gitlab Repo:** N/A
 **Boardy AI × RecSys Course Project**
 Ga Wu (Instructor) · Industry Partner: Boardy AI · 2026
 
@@ -412,3 +422,4 @@ Every experiment run in this project, grouped by track. One row per experiment. 
 | B-data TF-IDF | Word-overlap cosine | 0.5121 | Near chance | [`bdata-tfidf-experiment.md`](bdata-tfidf-experiment.md) |
 | B-data Voyage-4-nano | Full profile | 0.4691 | **Below chance** | [`bdata-voyage-nano-experiment.md`](bdata-voyage-nano-experiment.md) |
 | B-data Voyage-4-nano (posbg) | Narrow field set | 0.5185 | Near chance; MRR 0.032 at 21k candidates | [`bdata-voyage-nano-posbg-experiment.md`](bdata-voyage-nano-posbg-experiment.md) |
+| Fine-tuned models on B-data | — | — | **Pending** | — |
