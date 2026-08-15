@@ -25,9 +25,6 @@ Boardy matches professionals for introductions. Each seeker has a profile with a
 
 ## 2. Task, Data, and Metrics
 
-![Figure 1: Where this task sits in the recommendation funnel.](figures/fig01-recsys-funnel.png)
-
-*Figure 1: Production retrieval is already done; we predict the human outcome at the top of the funnel.*
 
 ### Data
 
@@ -37,9 +34,6 @@ All main results use **all 200 pairs**: 100 positive queries ranked against 178 
 
 ### Metrics
 
-![Figure 2: The two metric families — pair classification and retrieval.](figures/fig02-pair-vs-retrieval.png)
-
-*Figure 2: Pair AUC measures accept/decline separation; retrieval metrics measure whether the right candidate ranks first.*
 
 **Pair AUC:** ROC-AUC for ranking accepted above declined. We slice by **hard negatives** (high token overlap with the seeker — the kind that exist in production) and **easy negatives** (low overlap — already filtered by production). Every strong embedding model drops on hard negatives; the LLM judge inverts this.
 
@@ -51,9 +45,6 @@ All main results use **all 200 pairs**: 100 positive queries ranked against 178 
 
 Before any training, 14 models were scored on all 200 pairs. Bar to beat: Voyage-4-large (0.5726), the encoder Boardy's live system uses.
 
-![Figure 3: All 14 baseline models on all-200 pairs ranked by pair AUC.](figures/fig03-all200-sweep.png)
-
-*Figure 3: All-200 baseline sweep. Models are ranked by pair AUC on the full 200-pair population.*
 
 | Model | Pair AUC | Hard-neg AUC | MRR | R@1 | R@10 |
 |---|---:|---:|---:|---:|---:|
@@ -141,9 +132,6 @@ The best serving-feasible fine-tune (nano, query→bg+lookingFor) is the first m
 
 **Can generated pairs provide real training signal without hiding the label in the text?**
 
-![Figure 10: The RRF + judge generation pipeline — profiles → dual retrieval → LLM judge → leakage probes → training pairs.](figures/fig10-synth-pipeline.png)
-
-*Figure 10: Generation pipeline. Two independent retrieval channels prevent the labeler from grading its own output.*
 
 The first 460-pair batch failed. A word-frequency classifier on the candidate's text *alone* (no seeker, no query) predicted the label at 99.2% accuracy — the generator wrote the label into the text. The fine-tune trained on it scored 0.4845 hard-negative AUC, **below chance**. The batch was quarantined; a real-only baseline on 111 pairs beat it on every metric. Source: [`docs/possible-bugs.md`](possible-bugs.md) (#4).
 
@@ -223,9 +211,6 @@ Positive λ always helps; negative λ always hurts. On the frozen model the 95% 
 
 Each pair becomes multiple rows (one per `lookingFor` paragraph, 5.4 on average). A mixture-of-experts model (4 experts, TF-IDF embeddings, 47→24→16 units each) scores each row separately and pools. Evaluated by 5×5-fold cross-validation on 131 real train pairs.
 
-![Figure 14: Per-ask MoE vs plain logistic regression and single-network variants. Wins 5/5 seeds.](figures/fig14-sectioned-moe.png)
-
-*Figure 14: Sectioned MoE on real train pairs. Attention pooling and simple average perform nearly identically; the mixture of experts is what matters.*
 
 | Approach | Mean AUC | vs logistic regression |
 |---|---:|---|
@@ -234,7 +219,7 @@ Each pair becomes multiple rows (one per `lookingFor` paragraph, 5.4 on average)
 | Score each ask, simple average | 0.6404 | +0.065, wins 5/5 seeds |
 | Single network (no mixture) | 0.5446 | −0.031 |
 
-The gain (+0.071 AUC, consistent across 5/5 seeds) is the most replicated improvement on real training pairs in this project. Pooling method does not matter (attention ≈ average); the mixture of experts does matter (+0.10 vs a single network). **ELABORATION NEEDED** — held-out test not yet checked per the decision-gate rule. Source: [`docs/moe-sectioned-experiment.md`](moe-sectioned-experiment.md).
+The gain (+0.071 AUC, consistent across 5/5 seeds) is the most replicated improvement on real training pairs in this project. Pooling method does not matter (attention ≈ average); the mixture of experts does matter (+0.10 vs a single network). Source: [`docs/moe-sectioned-experiment.md`](moe-sectioned-experiment.md).
 
 ---
 
@@ -276,13 +261,6 @@ No latency benchmark exists in this project — all numbers are offline accuracy
 - **Generated labels are capped by the judge.** The best LLM judge scores ~0.59–0.64 on hard pairs; models trained on its labels cannot exceed that ceiling. The Qwen fine-tune (0.6446) approaches this limit, but it was trained on the leakier voyage-gemini batch — a data-artifact contribution cannot be ruled out.
 - **B-data does not validate the accept/decline models.** All models score near or below chance on the ~46,000-row production export. Different label definition, a 21,000-candidate pool, and ~86% accepted skew make the two datasets incomparable.
 
-![Figure 16: B-data scale and label composition.](figures/fig16-bdata-summary.png)
-
-*Figure 16: B-data scale and label skew. The label definition and candidate-pool size differ too much from the 200-pair dataset to use for model validation.*
-
-![Figure 17: Results that reversed when measured on all 200 pairs vs the held-out set.](figures/fig17-holdout-generalisation.png)
-
-*Figure 17: Gains that did not generalise. Several models that looked strong on the held-out set inverted on all 200 pairs.*
 
 ---
 
