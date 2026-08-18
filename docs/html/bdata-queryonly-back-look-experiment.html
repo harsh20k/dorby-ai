@@ -203,7 +203,9 @@
       </thead>
       <tbody>
         <tr class="highlight"><td>queryonly_back_look_001 (this)</td><td>B-data all 18,304</td><td>query → bg+lookingFor (LoRA)</td><td>0.5075</td><td>0.4937</td><td>0.0514</td><td>0.0120</td></tr>
+        <tr><td>frozen nano (matched packing)</td><td>B-data all 18,304</td><td>query → bg+lookingFor</td><td>0.4869</td><td>0.4585</td><td>0.0523</td><td>0.0139</td></tr>
         <tr><td>same adapter</td><td>200 seed pairs</td><td>same</td><td>0.5983</td><td>0.6564</td><td>0.4791</td><td>0.30</td></tr>
+        <tr><td>frozen nano (same packing)</td><td>200 seed pairs</td><td>same</td><td>0.5626</td><td>0.4374</td><td>0.4763</td><td>0.28</td></tr>
         <tr><td>frozen nano posbg</td><td>B-data all 18,304</td><td>look+query → pos+bg</td><td>0.5185</td><td>0.4319</td><td>0.0320</td><td>0.0048</td></tr>
         <tr><td>frozen nano</td><td>B-data holdout</td><td>full profile</td><td>0.4691</td><td>0.3626</td><td>—</td><td>—</td></tr>
         <tr><td>TF-IDF</td><td>B-data holdout</td><td>full profile</td><td>0.5121</td><td>0.4026</td><td>—</td><td>—</td></tr>
@@ -214,12 +216,96 @@
 
   <div class="callout warn">
     <p>
-      The 200-pair win does not transfer. Pair AUC 0.5075 (cosine gap 0.002);
-      within-seeker 0.482 is below chance. Retrieval is a bit better than frozen
-      posbg nano (median rank 96 vs 184) and still far from the 200-pair MRR of
-      0.48 — that number was against a 178-person corpus, this is 21k.
-      Holdout TF-IDF / frozen-nano rows are a different population and packing.
+      Pair AUC 0.5075 is the transfer failure (pool-size invariant, was 0.598).
+      The frozen control on the same 18,304 pairs and packing is 0.4869 — LoRA
+      is a small bump, both chance. R@1 0.012 vs 0.30 is mostly the list getting
+      119× longer (178 → 21,168 people), not 15k queries. Same-quality dilution
+      predicts R@1 ≈ 0.0025; we beat that (~5×). Frozen 200-pair R@1 0.28
+      dilutes to ≈ 0.0024; observed 0.0139 is ~6×.
     </p>
+  </div>
+
+  <h2>Expected R@1 if the model were unchanged</h2>
+  <p>
+    The ~15k count is <strong>queries</strong> (15,819 ACCEPT), not the ranking
+    pool. Recall@1 depends on how many people you rank against. 200-pair eval:
+    100 queries into <span class="mono">178</span> candidates. This run: 15,819
+    queries into <span class="mono">21,168</span>. Pool ratio
+    21,168 / 178 ≈ <strong>119×</strong>.
+  </p>
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr><th></th><th>200-pair (178 pool)</th><th>Naive same-quality on 21k</th><th>Observed</th></tr>
+      </thead>
+      <tbody>
+        <tr class="highlight"><td>R@1</td><td>0.30</td><td>0.30 × 178 / 21,168 ≈ 0.0025</td><td>0.0120 (~5× naive)</td></tr>
+        <tr><td>frozen R@1</td><td>0.28</td><td>0.28 × 178 / 21,168 ≈ 0.0024</td><td>0.0139 (~6× naive)</td></tr>
+        <tr><td>MRR</td><td>0.479</td><td>0.479 × 178 / 21,168 ≈ 0.0040</td><td>0.0514 (~13× naive)</td></tr>
+        <tr><td>Random R@1</td><td>1/178 ≈ 0.56%</td><td>1/21,168 ≈ 0.005%</td><td>—</td></tr>
+        <tr><td>Lift vs chance</td><td>~53×</td><td>—</td><td>~250×</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>
+    Absolute R@1 of 0.30 was never a fair B-data target. Observed 0.012 is
+    better than i.i.d. dilution, likely because the 178-person seed corpus is
+    production’s already-hard shortlist and the 21k pool is mixed. Pair AUC
+    has no such excuse.
+  </p>
+
+  <h2>Frozen control (same packing, no LoRA)</h2>
+  <p>
+    Isolated package <span class="mono">bdata_queryonly_back_look_frozen/</span>.
+    Frozen <span class="mono">voyage-4-nano</span>, same query → background+lookingFor
+    packing, all 18,304 resolved pairs. Modal A10G
+    <span class="mono">ap-ZSKQPoXPwnX6QMQJ1PYUbe</span> (~34 min).
+  </p>
+  <div class="kpi-grid">
+    <div class="kpi"><div class="label">Frozen pair AUC</div><div class="value">0.4869</div><div class="sub">LoRA 0.5075</div></div>
+    <div class="kpi"><div class="label">Frozen hard-neg</div><div class="value">0.4585</div><div class="sub">LoRA 0.4937</div></div>
+    <div class="kpi"><div class="label">Frozen MRR</div><div class="value">0.0523</div><div class="sub">LoRA 0.0514 · tie</div></div>
+    <div class="kpi"><div class="label">Frozen R@1</div><div class="value">0.0139</div><div class="sub">LoRA 0.0120 · median 96</div></div>
+    <div class="kpi"><div class="label">Frozen cosine gap</div><div class="value">−0.0040</div><div class="sub">REJECT slightly higher</div></div>
+    <div class="kpi"><div class="label">Frozen within-seeker</div><div class="value">0.4873</div><div class="sub">LoRA 0.4821 · n=804</div></div>
+  </div>
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr><th></th><th>Frozen B-data</th><th>LoRA B-data</th><th>Frozen 200-pair</th></tr>
+      </thead>
+      <tbody>
+        <tr class="highlight"><td>Pair AUC</td><td>0.4869</td><td>0.5075</td><td>0.5626</td></tr>
+        <tr><td>Hard-neg</td><td>0.4585</td><td>0.4937</td><td>0.4374</td></tr>
+        <tr class="highlight"><td>MRR</td><td>0.0523</td><td>0.0514</td><td>0.4763</td></tr>
+        <tr><td>R@1</td><td>0.0139</td><td>0.0120</td><td>0.28</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>
+    Retrieval is a tie (median rank 96 both). Frozen 200-pair R@1 0.28 dilutes
+    to ≈ 0.0024 on 21k; observed 0.0139 is ~6× that. Cosine gap inverted
+    (−0.004). The adapter did not uniquely destroy a working frozen encoder:
+    frozen was already chance at this packing and scale. LoRA’s 200-pair
+    hard-neg win (0.656 vs frozen 0.437) does not transfer.
+  </p>
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr><th>Metric</th><th>Frozen nano</th><th>LoRA (this page)</th></tr>
+      </thead>
+      <tbody>
+        <tr class="highlight"><td>Pair ROC-AUC</td><td>0.4869</td><td>0.5075</td></tr>
+        <tr><td>Hard-neg AUC</td><td>0.4585</td><td>0.4937</td></tr>
+        <tr><td>Easy-neg AUC</td><td>0.5342</td><td>0.5295</td></tr>
+        <tr><td>Within-seeker mean AUC</td><td>0.4873</td><td>0.4821</td></tr>
+        <tr><td>Cosine gap</td><td>−0.0040</td><td>+0.0020</td></tr>
+        <tr class="highlight"><td>MRR</td><td>0.0523</td><td>0.0514</td></tr>
+        <tr><td>Median rank</td><td>96</td><td>96</td></tr>
+        <tr><td>R@1 / R@10 / R@100</td><td>0.0139 / 0.1194 / 0.5095</td><td>0.0120 / 0.1227 / 0.5104</td></tr>
+        <tr><td>NDCG@10</td><td>0.0566</td><td>0.0567</td></tr>
+      </tbody>
+    </table>
   </div>
 
   <h2>Reproduce</h2>
@@ -228,16 +314,26 @@
 modal run bdata_queryonly_back_look/modal_eval.py --batch-size 8 --gpu A10G
 modal volume get dorby-bdata-queryonly-back-look-eval allpairs \
   ./artifacts/bdata_queryonly_back_look --force
-python -m bdata_queryonly_back_look.store</p>
+python -m bdata_queryonly_back_look.store
+
+# frozen control (same packing, no LoRA)
+python -m pytest tests/test_bdata_queryonly_back_look_frozen.py -q
+modal run --detach bdata_queryonly_back_look_frozen/modal_eval.py --batch-size 8 --gpu A10G
+modal volume get dorby-bdata-queryonly-back-look-frozen allpairs \
+  ./artifacts/bdata_queryonly_back_look_frozen --force</p>
   </div>
   <p>
     Writeup: <span class="mono">docs/bdata-queryonly-back-look-experiment.md</span>
+    · frozen control: <span class="mono">docs/bdata-queryonly-back-look-frozen-experiment.md</span>
   </p>
 
   <div class="footer">
-    Published 2026-08-18 · Modal A10G stopped 14:44 ADT (~35 min, clean) ·
+    Published 2026-08-18 (frozen control added same day) ·
+    LoRA Modal A10G stopped 14:44 ADT (~35 min) ·
+    frozen Modal A10G <span class="mono">ap-ZSKQPoXPwnX6QMQJ1PYUbe</span> (~34 min) ·
     source <span class="mono">B-data.json</span> locked read-only ·
-    package <span class="mono">bdata_queryonly_back_look/</span> isolated
+    packages <span class="mono">bdata_queryonly_back_look/</span> and
+    <span class="mono">bdata_queryonly_back_look_frozen/</span> isolated
   </div>
 </div>
 </body>

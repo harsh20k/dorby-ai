@@ -75,34 +75,106 @@ Chroma: `artifacts/bdata_queryonly_back_look/chroma/` (21,168 candidates, 15,819
 
 ## Reading
 
-The 200-pair win does not transfer. Same adapter and packing sit at chance on
-B-data pair classification (AUC 0.5075, cosine gap 0.002). Within-seeker AUC
-0.482 is below chance. Hard-neg AUC 0.4937 is near chance — better than frozen
-posbg nano's inverted 0.4319, still not a signal.
-
-Retrieval against the 21k pool is a bit better than frozen posbg (MRR 0.051 vs
-0.032, median rank 96 vs 184, R@1 1.2% vs 0.5%) and still far from the 200-pair
-MRR of 0.48. The 200-pair retrieval numbers were measured against a 178-person
-corpus; this is a different ranking problem.
+Pair classification is where quality actually dropped: AUC 0.5075 (cosine
+gap 0.002), within-seeker 0.482 below chance, hard-neg 0.4937 near chance.
+That is the transfer failure. Retrieval R@1 0.012 vs 0.30 is mostly pool
+size — see below — not a 25× model collapse.
 
 Published findings page:
 [https://dorby-project-story-411960113601.s3.amazonaws.com/docs/bdata-queryonly-back-look-experiment.html](https://dorby-project-story-411960113601.s3.amazonaws.com/docs/bdata-queryonly-back-look-experiment.html)
 (local: `docs/html/bdata-queryonly-back-look-experiment.html`).
+
+## Expected R@1 if the model were unchanged
+
+The ~15k figure is **queries** (15,819 ACCEPT), not the ranking pool.
+Recall@1 is about how many people you rank against.
+
+| Eval | Positive queries | Retrieval corpus |
+|---|---:|---:|
+| 200-pair | 100 | **178** |
+| this run | 15,819 | **21,168** |
+
+If scoring quality stayed the same and extra people were more of the same,
+ranks stretch by **21,168 / 178 ≈ 119×**:
+
+| | 200-pair | Naive same-quality on 21k | Observed |
+|---|---:|---:|---:|
+| R@1 | 0.30 | **0.30 × 178 / 21,168 ≈ 0.0025** | **0.0120** (~5× naive) |
+| MRR | 0.479 | **0.479 × 178 / 21,168 ≈ 0.0040** | **0.0514** (~13× naive) |
+
+Random R@1 is 1/178 ≈ 0.56% vs 1/21,168 ≈ 0.005%. The model is ~53× chance
+on 200 pairs and ~250× chance here. Absolute R@1 must fall on a 119× longer
+list even if nothing about the encoder changed; 0.30 was never a fair
+target. Observed 0.012 is *better* than that dilution, likely because the
+178-person seed corpus is production’s already-hard shortlist while the 21k
+pool is mixed.
+
+Pair AUC does not get this excuse — it is pool-size invariant, and it went
+0.598 → 0.508.
 
 ## Comparison (quoted; not all matched-population)
 
 | Run | Population | Packing | Pair AUC | Hard-neg | MRR | R@1 |
 |---|---|---|---:|---:|---:|---:|
 | **This run** | all resolved B-data | query → bg+lookingFor (LoRA) | **0.5075** | **0.4937** | **0.0514** | **0.0120** |
+| **frozen nano (matched packing)** | all resolved B-data | query → bg+lookingFor | **0.4869** | **0.4585** | **0.0523** | **0.0139** |
 | same adapter | 200 seed pairs | same | 0.5983 | 0.6564 | 0.4791 | 0.30 |
+| frozen nano (same packing) | 200 seed pairs | same | 0.5626 | 0.4374 | 0.4763 | 0.28 |
 | `bdata_voyage_nano_posbg` | all resolved B-data | look+query → pos+bg (frozen) | 0.5185 | 0.4319 | 0.0320 | 0.0048 |
 | `bdata_voyage_nano` | B-data holdout | full profile (frozen) | 0.4691 | 0.3626 | — | — |
 | `bdata_tfidf` | B-data holdout | full profile TF-IDF | 0.5121 | 0.4026 | — | — |
 | `voyage_nano` full | 200 seed pairs | full profile (frozen) | 0.5614 | 0.5064 | — | — |
 
 Holdout TF-IDF / frozen-nano rows are a different population **and** packing.
-The matched B-data comparison is this run vs `bdata_voyage_nano_posbg` (same
-18,304 pairs, different packing, LoRA vs frozen).
+The matched B-data comparison is this run vs frozen nano on the **same
+packing** (`bdata_queryonly_back_look_frozen/`, pair AUC **0.4869**, hard-neg
+**0.4585**, MRR **0.0523**, R@1 **0.0139**) — retrieval is a tie; LoRA is a
+small pair-AUC bump, both chance. `bdata_voyage_nano_posbg` is the same 18,304
+pairs but different packing. The 200-pair R@1 / MRR row is against a
+178-person corpus, not 21k — do not read 0.30 → 0.012 as a 25× quality drop;
+same-quality dilution is 0.0025. Frozen 200-pair R@1 0.28 dilutes to ≈ 0.0024;
+observed frozen B-data R@1 0.0139 is ~6× that.
+
+## Frozen control (same packing, no LoRA)
+
+Isolated package `bdata_queryonly_back_look_frozen/`. Modal A10G
+`ap-ZSKQPoXPwnX6QMQJ1PYUbe` (~34 min). Artifact:
+`artifacts/bdata_queryonly_back_look_frozen/metrics.json`.
+Writeup: `docs/bdata-queryonly-back-look-frozen-experiment.md`.
+
+| | Frozen B-data | LoRA B-data | Frozen 200-pair |
+|---|---:|---:|---:|
+| Pair AUC | **0.4869** | 0.5075 | 0.5626 |
+| Hard-neg | **0.4585** | 0.4937 | 0.4374 |
+| MRR | **0.0523** | 0.0514 | 0.4763 |
+| R@1 | **0.0139** | 0.0120 | 0.28 |
+
+Retrieval is a tie (median rank 96 both). Frozen 200-pair R@1 0.28 dilutes to
+≈ 0.0024 on 21k; observed 0.0139 is ~6× that. Cosine gap inverted (−0.004).
+
+| Metric | Frozen nano | LoRA (this page) |
+|---|---:|---:|
+| Pair ROC-AUC | **0.4869** | 0.5075 |
+| Hard-neg AUC | **0.4585** | 0.4937 |
+| Easy-neg AUC | 0.5342 | 0.5295 |
+| Within-seeker mean AUC | 0.4873 | 0.4821 |
+| Cosine gap | −0.0040 (inverted) | +0.0020 |
+| MRR | **0.0523** | 0.0514 |
+| Median rank | 96 | 96 |
+| R@1 / R@10 / R@100 | 0.0139 / 0.1194 / 0.5095 | 0.0120 / 0.1227 / 0.5104 |
+| NDCG@10 | 0.0566 | 0.0567 |
+
+The adapter did not uniquely destroy a working frozen encoder. Frozen was
+already chance-or-worse on this packing at B-data scale (pair AUC 0.487,
+hard-neg 0.459 inverted, cosine gap negative). LoRA's 200-pair hard-neg win
+(0.656 vs frozen 0.437) does not transfer. Retrieval is indistinguishable.
+
+```bash
+python -m pytest tests/test_bdata_queryonly_back_look_frozen.py -q
+modal run --detach bdata_queryonly_back_look_frozen/modal_eval.py --batch-size 8 --gpu A10G
+modal volume get dorby-bdata-queryonly-back-look-frozen allpairs \
+  ./artifacts/bdata_queryonly_back_look_frozen --force
+```
 
 ## Isolation notes
 
