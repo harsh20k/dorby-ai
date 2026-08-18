@@ -1,0 +1,869 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Boardy AI — Research Report</title>
+<style>
+  :root, [data-theme="light"] {
+    --bg: #f5f5f7;
+    --surface: #ffffff;
+    --ink: #1d1d1f;
+    --muted: #6e6e73;
+    --line: #d2d2d7;
+    --accent: #0071e3;
+    --accent-soft: rgba(0, 113, 227, 0.12);
+    --rail: #d2d2d7;
+    --link-bg: rgba(0, 113, 227, 0.08);
+    --link-border: rgba(0, 113, 227, 0.18);
+    --toggle-bg: rgba(0, 0, 0, 0.06);
+    --toggle-hover: rgba(0, 0, 0, 0.1);
+    --nav-w: 240px;
+    color-scheme: light;
+  }
+  [data-theme="dark"] {
+    --bg: #000000;
+    --surface: #0d0d0f;
+    --ink: #f5f5f7;
+    --muted: #86868b;
+    --line: #2a2a2e;
+    --accent: #2997ff;
+    --accent-soft: rgba(41, 151, 255, 0.16);
+    --rail: #3a3a3e;
+    --link-bg: rgba(41, 151, 255, 0.12);
+    --link-border: rgba(41, 151, 255, 0.28);
+    --toggle-bg: rgba(255, 255, 255, 0.08);
+    --toggle-hover: rgba(255, 255, 255, 0.14);
+    color-scheme: dark;
+  }
+
+  * { box-sizing: border-box; }
+  html, body { height: 100%; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Segoe UI", Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    overflow: hidden;
+    transition: background .25s ease, color .25s ease;
+  }
+
+  #progress {
+    position: fixed; top: 0; left: 0; height: 2px; width: 0%;
+    background: var(--accent); z-index: 50; transition: width .25s ease-out;
+  }
+
+  .theme-toggle {
+    position: fixed; top: 22px; left: 28px; z-index: 60;
+    width: 36px; height: 36px; border: 0; border-radius: 50%;
+    background: var(--toggle-bg); color: var(--ink);
+    display: inline-flex; align-items: center; justify-content: center;
+    cursor: pointer; transition: background .2s ease, transform .15s ease;
+    backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
+  }
+  .theme-toggle:hover { background: var(--toggle-hover); }
+  .theme-toggle:active { transform: scale(0.94); }
+  .theme-toggle svg { width: 18px; height: 18px; display: block; }
+  .theme-toggle .icon-sun { display: none; }
+  .theme-toggle .icon-moon { display: block; }
+  [data-theme="dark"] .theme-toggle .icon-sun { display: block; }
+  [data-theme="dark"] .theme-toggle .icon-moon { display: none; }
+
+  aside {
+    position: fixed; top: 0; right: 0; bottom: 0;
+    width: var(--nav-w);
+    padding: 72px 40px 48px 0;
+    display: flex; flex-direction: column; align-items: flex-end;
+    justify-content: safe center;
+    background: transparent;
+    border: 0;
+    overflow-y: auto; z-index: 40;
+    scrollbar-width: none;
+    pointer-events: none;
+  }
+  aside::-webkit-scrollbar { display: none; }
+  .brand, .brand-sub { display: none; }
+  nav {
+    display: flex; flex-direction: column; align-items: flex-end;
+    gap: 2px;
+    pointer-events: auto;
+  }
+  .nav-item {
+    display: inline-block; position: relative;
+    background: none; border: 0; padding: 5px 0 4px;
+    margin: 0; cursor: pointer;
+    font-family: inherit; font-size: 12px; font-weight: 400;
+    line-height: 1.25; letter-spacing: -.01em;
+    color: var(--muted); text-align: right;
+    transition: color .22s cubic-bezier(.25, .1, .25, 1),
+                opacity .22s cubic-bezier(.25, .1, .25, 1),
+                transform .22s cubic-bezier(.25, .1, .25, 1);
+  }
+  .nav-item::after {
+    content: "";
+    position: absolute; left: 0; right: 0; bottom: 3px;
+    height: 1px;
+    background: currentColor;
+    transform: scaleX(0);
+    transform-origin: right center;
+    transition: transform .28s cubic-bezier(.25, .1, .25, 1),
+                opacity .22s ease;
+    opacity: 0;
+  }
+  .nav-item:hover { color: var(--ink); transform: translateX(-2px); }
+  .nav-item:hover::after { transform: scaleX(1); opacity: .45; }
+  .nav-item:active { transform: translateX(-1px) scale(0.98); }
+  .nav-item.active { color: var(--ink); font-weight: 500; }
+  .nav-item.active::after { transform: scaleX(1); opacity: 1; }
+  .nav-date { display: none; }
+
+  .deck {
+    height: 100vh; overflow-y: scroll;
+    scroll-snap-type: y mandatory; scroll-behavior: smooth;
+    scrollbar-width: none;
+  }
+  .deck::-webkit-scrollbar { display: none; }
+
+  .slide {
+    min-height: 100vh; scroll-snap-align: start; scroll-snap-stop: always;
+    display: flex; flex-direction: column; justify-content: center;
+    padding: 96px clamp(40px, 7vw, 120px);
+    padding-right: calc(var(--nav-w) + 24px);
+  }
+  .inner { max-width: 900px; }
+
+  .eyebrow {
+    font-size: 13px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase;
+    color: var(--muted); margin-bottom: 24px;
+  }
+  .eyebrow .num { color: var(--accent); }
+
+  h1 {
+    font-size: clamp(40px, 6.4vw, 92px); font-weight: 700;
+    letter-spacing: -.035em; line-height: 1.02; margin: 0;
+    text-wrap: balance;
+  }
+  h2 {
+    font-size: clamp(34px, 4.6vw, 64px); font-weight: 700;
+    letter-spacing: -.032em; line-height: 1.05; margin: 0;
+    text-wrap: balance;
+  }
+  .lede {
+    font-size: clamp(19px, 1.9vw, 27px); font-weight: 400; line-height: 1.45;
+    color: var(--muted); margin: 28px 0 0; max-width: 34ch;
+    letter-spacing: -.01em;
+  }
+  .decision {
+    margin-top: 44px; padding-top: 22px; border-top: 1px solid var(--line);
+    max-width: 36ch;
+  }
+  .decision-label {
+    font-size: 11px; font-weight: 600; letter-spacing: .1em; text-transform: uppercase;
+    color: var(--accent); display: block; margin-bottom: 8px;
+  }
+  .decision-text {
+    font-size: clamp(19px, 1.85vw, 26px); font-weight: 600;
+    letter-spacing: -.02em; line-height: 1.3; margin: 0;
+  }
+
+  .dig {
+    margin-top: 28px; display: flex; flex-wrap: wrap; gap: 10px;
+  }
+  .dig a {
+    display: inline-flex; align-items: center; gap: 6px;
+    padding: 8px 14px; border-radius: 980px;
+    background: var(--link-bg); border: 1px solid var(--link-border);
+    color: var(--accent); text-decoration: none;
+    font-size: 13px; font-weight: 500; letter-spacing: -.01em;
+    transition: background .2s ease, transform .15s ease;
+  }
+  .dig a:hover { background: var(--accent-soft); }
+  .dig a:active { transform: scale(0.98); }
+  .dig a::after { content: "↗"; font-size: 11px; opacity: .7; }
+
+  .slide-figure {
+    margin-top: 28px; max-width: min(520px, 100%);
+    border-radius: 18px; overflow: hidden;
+    border: 1px solid var(--line);
+    background: var(--surface);
+  }
+  .slide-figure img {
+    display: block; width: 100%; height: auto;
+    vertical-align: middle;
+  }
+  .slide--title h1 { font-size: clamp(46px, 7.4vw, 110px); }
+  .slide--title .lede { max-width: 28ch; margin-top: 32px; }
+  .dateline {
+    margin-top: 56px; font-size: 14px; color: var(--muted); letter-spacing: .01em;
+  }
+  .finals { margin-top: 40px; display: grid; gap: 26px; max-width: 42ch; }
+  .final-item { padding-left: 20px; border-left: 2px solid var(--accent); }
+  .final-item.dim { border-left-color: var(--rail); }
+  .final-head {
+    font-size: clamp(20px, 2vw, 28px); font-weight: 600; letter-spacing: -.02em; line-height: 1.25;
+  }
+  .final-sub { font-size: 16px; color: var(--muted); margin-top: 6px; line-height: 1.45; }
+
+  /* Tables */
+  .tbl-wrap {
+    margin-top: 24px; overflow-x: auto;
+    border-radius: 14px; border: 1px solid var(--line);
+    background: var(--surface);
+    max-height: 38vh; overflow-y: auto;
+  }
+  table { border-collapse: collapse; width: 100%; font-size: 13.5px; }
+  th {
+    background: var(--accent-soft); color: var(--ink);
+    font-weight: 600; text-align: left;
+    padding: 10px 14px; border-bottom: 2px solid var(--line);
+    white-space: nowrap; position: sticky; top: 0;
+  }
+  th.r, td.r { text-align: right; font-variant-numeric: tabular-nums; }
+  td { padding: 9px 14px; border-bottom: 1px solid var(--line); color: var(--ink); }
+  td:first-child { max-width: 200px; }
+  tr:last-child td { border-bottom: 0; }
+  .tag {
+    display: inline-block; padding: 2px 8px; border-radius: 6px;
+    font-size: 11px; font-weight: 600; letter-spacing: .04em;
+    background: var(--accent-soft); color: var(--accent);
+  }
+  .tag.warn { background: rgba(255,160,0,.12); color: #b07000; }
+  [data-theme="dark"] .tag.warn { color: #ffb340; }
+  .tag.bad { background: rgba(220,50,50,.1); color: #c0392b; }
+  [data-theme="dark"] .tag.bad { color: #ff6b6b; }
+
+  /* Two-column layout for slides with figure + text */
+  .cols { display: flex; gap: 40px; align-items: flex-start; margin-top: 28px; }
+  .col-text { flex: 1; }
+  .col-fig { flex: 0 0 auto; max-width: 340px; }
+  .col-fig img {
+    display: block; width: 100%; height: auto; border-radius: 14px;
+    border: 1px solid var(--line); background: var(--surface);
+  }
+
+  .anim { opacity: 0; transform: translateY(18px); transition: opacity .7s ease, transform .7s cubic-bezier(.2,.7,.3,1); }
+  .slide.in .anim { opacity: 1; transform: none; }
+  .slide.in .anim:nth-child(2) { transition-delay: .06s; }
+  .slide.in .anim:nth-child(3) { transition-delay: .12s; }
+  .slide.in .anim:nth-child(4) { transition-delay: .18s; }
+  .slide.in .anim:nth-child(5) { transition-delay: .24s; }
+  .slide.in .anim:nth-child(6) { transition-delay: .30s; }
+
+  .hint {
+    position: fixed; bottom: 30px; left: 40px; z-index: 45;
+    font-size: 12px; color: var(--muted); letter-spacing: .02em;
+    display: flex; align-items: center; gap: 8px;
+    transition: opacity .4s ease;
+  }
+  .hint.hidden { opacity: 0; pointer-events: none; }
+  .key {
+    display: inline-flex; align-items: center; justify-content: center;
+    width: 20px; height: 20px; border: 1px solid var(--line); border-radius: 5px;
+    font-size: 11px;
+  }
+
+  @media (max-width: 880px) {
+    :root, [data-theme="light"], [data-theme="dark"] { --nav-w: 0px; }
+    aside { display: none; }
+    .slide { padding: 84px 28px; }
+    .hint { display: none; }
+    .theme-toggle { top: 14px; left: 14px; }
+    .cols { flex-direction: column; }
+    .col-fig { max-width: 100%; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .anim { opacity: 1; transform: none; transition: none; }
+    * { scroll-behavior: auto !important; }
+  }
+
+  @media print {
+    html, body { height: auto; overflow: visible; background: #fff; }
+    #progress, .theme-toggle, aside, .hint { display: none !important; }
+    .deck {
+      height: auto; overflow: visible;
+      scroll-snap-type: none;
+    }
+    .slide {
+      min-height: 0;
+      height: 100vh;
+      page-break-after: always;
+      break-after: page;
+      padding: 48px 64px;
+      padding-right: 64px;
+      justify-content: center;
+    }
+    .slide:last-child { page-break-after: auto; break-after: auto; }
+    .anim { opacity: 1 !important; transform: none !important; }
+    .tbl-wrap { max-height: none; overflow: visible; }
+    .col-fig { max-width: 280px; }
+    h1 { font-size: 52px; }
+    h2 { font-size: 36px; }
+    .lede { font-size: 18px; }
+  }
+</style>
+<script>
+  (function () {
+    var key = 'dorby-story-theme';
+    var saved = null;
+    try { saved = localStorage.getItem(key); } catch (e) {}
+    var theme = (saved === 'light' || saved === 'dark')
+      ? saved
+      : (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+    document.documentElement.setAttribute('data-theme', theme);
+  })();
+</script>
+</head>
+<body>
+
+<div id="progress"></div>
+
+<button class="theme-toggle" id="themeToggle" type="button" aria-label="Toggle light and dark mode" title="Toggle appearance">
+  <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+    <path d="M21 14.5A8.5 8.5 0 0 1 9.5 3a7 7 0 1 0 11.5 11.5z"/>
+  </svg>
+  <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+    <circle cx="12" cy="12" r="4.2"/>
+    <path d="M12 2.5v2.2M12 19.3v2.2M2.5 12h2.2M19.3 12h2.2M5.1 5.1l1.6 1.6M17.3 17.3l1.6 1.6M18.9 5.1l-1.6 1.6M6.7 17.3l-1.6 1.6"/>
+  </svg>
+</button>
+
+<aside>
+  <nav id="nav"></nav>
+</aside>
+
+<main class="deck" id="deck">
+
+  <!-- 00: TITLE -->
+  <section class="slide slide--title" data-nav="Start">
+    <div class="inner">
+      <div class="eyebrow anim">Recommender Systems · Boardy AI × RecSys Course · 2026</div>
+      <h1 class="anim">Predicting Introduction Acceptance</h1>
+      <p class="lede anim">40+ experiments on what actually moves the needle when two people have already been matched.</p>
+      <div class="dateline anim">Ga Wu · Industry Partner: Boardy AI · August 2026</div>
+      <div class="dig anim">
+        <a href="https://github.com/harsh20k/dorby-ai/blob/main/docs/research-report.md" target="_blank" rel="noopener">Full report (GitHub)</a>
+        <a href="http://dorby-project-story-411960113601.s3-website-us-east-1.amazonaws.com/" target="_blank" rel="noopener">Project story</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 01: THE TASK -->
+  <section class="slide" data-nav="The task">
+    <div class="inner">
+      <div class="eyebrow anim"><span class="num">01</span> &nbsp;·&nbsp; The Task</div>
+      <h2 class="anim">Every pair was already recommended. The label is what humans did next.</h2>
+      <p class="lede anim">200 real introductions — 100 accepted, 100 declined. Every pair passed production's own relevance filter. We're not modeling topic match. We're modeling residual fit: will these two people actually connect?</p>
+      <div class="decision anim">
+        <span class="decision-label">The constraint</span>
+        <p class="decision-text">&lt;100 ms latency. Bi-encoders only — candidates pre-embedded, one live query encode + nearest-neighbor lookup.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 02: DATA -->
+  <section class="slide" data-nav="Data &amp; split">
+    <div class="inner">
+      <div class="eyebrow anim"><span class="num">02</span> &nbsp;·&nbsp; Data</div>
+      <h2 class="anim">200 real pairs. Split user-disjointly. All-200 is the canonical leaderboard.</h2>
+      <p class="lede anim">131 train / 69 held-out, frozen. All main results use all 200 pairs: 100 positive queries ranked against 178 unique candidates. The small held-out set ranks weak models reliably but is uncorrelated with the all-200 ranking among the top models.</p>
+      <div class="decision anim">
+        <span class="decision-label">Evaluation rule</span>
+        <p class="decision-text">Never make a decision from the small held-out set alone. Re-measure on all 200 before calling anything a win.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 03: METRICS -->
+  <section class="slide" data-nav="Metrics">
+    <div class="inner">
+      <div class="eyebrow anim"><span class="num">02</span> &nbsp;·&nbsp; Metrics</div>
+      <h2 class="anim">Two questions. Two metric families. They don't always agree.</h2>
+      <div class="cols anim">
+        <div class="col-text">
+          <p style="margin:0 0 18px;font-size:17px;color:var(--muted);line-height:1.5"><strong style="color:var(--ink)">Pair AUC</strong> — can the model rank accepted above declined? Sliced by hard negatives (high word overlap, the production-relevant population) and easy negatives (low overlap, already filtered by production).</p>
+          <p style="margin:0;font-size:17px;color:var(--muted);line-height:1.5"><strong style="color:var(--ink)">Retrieval</strong> — does the accepted candidate appear near the top of 178 candidates? MRR, R@1, R@10.</p>
+        </div>
+      </div>
+      <div class="decision anim">
+        <span class="decision-label">The diagnostic</span>
+        <p class="decision-text">Every strong embedding model drops on hard negatives. The LLM judge is the only exception.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 04: STARTING POINT -->
+  <section class="slide" data-nav="Baselines">
+    <div class="inner">
+      <div class="eyebrow anim"><span class="num">03</span> &nbsp;·&nbsp; The Starting Point</div>
+      <h2 class="anim">Voyage-4-large (0.5726) is the bar. No open-weight model consistently beats it.</h2>
+      <div class="tbl-wrap anim">
+        <table>
+          <thead>
+            <tr><th>Model</th><th class="r">Pair AUC</th><th class="r">Hard-neg AUC</th><th class="r">MRR</th><th class="r">R@1</th><th class="r">R@10</th></tr>
+          </thead>
+          <tbody>
+            <tr><td><strong>Voyage-4-large (production)</strong></td><td class="r"><strong>0.5726</strong></td><td class="r">0.5422</td><td class="r">0.310</td><td class="r">0.13</td><td class="r"><strong>0.70</strong></td></tr>
+            <tr><td>Voyage-4-nano (frozen)</td><td class="r">0.5593</td><td class="r">0.5046</td><td class="r">0.317</td><td class="r">0.18</td><td class="r">0.59</td></tr>
+            <tr><td>TF-IDF</td><td class="r">0.5649</td><td class="r">0.5164</td><td class="r">0.131</td><td class="r">0.05</td><td class="r">0.26</td></tr>
+            <tr><td>BGE-en-ICL</td><td class="r">0.5389</td><td class="r">0.5226</td><td class="r"><strong>0.319</strong></td><td class="r"><strong>0.17</strong></td><td class="r">0.62</td></tr>
+            <tr><td>Qwen3-Embedding-8B</td><td class="r">0.5529</td><td class="r">0.4680</td><td class="r">0.205</td><td class="r">0.05</td><td class="r">0.55</td></tr>
+            <tr><td>Frozen BERT</td><td class="r">0.4697</td><td class="r">0.4108</td><td class="r">0.094</td><td class="r">0.02</td><td class="r">0.18</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="decision anim">
+        <span class="decision-label">Observation</span>
+        <p class="decision-text">TF-IDF looks strong (0.5649) — but hard-neg AUC is 0.5164, near chance. It is solving yesterday's problem.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 05: RESULT 1 — QUERY ENCODING -->
+  <section class="slide" data-nav="Query encoding">
+    <div class="inner">
+      <div class="eyebrow anim"><span class="num">04</span> &nbsp;·&nbsp; Result 1 — What Text to Encode</div>
+      <h2 class="anim">The search query is 2% of the text. Separate it and recall nearly doubles.</h2>
+      <div class="cols anim">
+        <div class="col-text">
+          <div class="tbl-wrap" style="margin-top:0">
+            <table>
+              <thead><tr><th>Approach</th><th class="r">Pair AUC</th><th class="r">Hard-neg AUC</th><th class="r">R@1</th><th class="r">R@10</th></tr></thead>
+              <tbody>
+                <tr><td>Concatenate (baseline)</td><td class="r">0.5593</td><td class="r">0.5046</td><td class="r">0.18</td><td class="r">0.59</td></tr>
+                <tr><td>Query only (α=1)</td><td class="r">0.5530</td><td class="r"><strong>0.5914</strong></td><td class="r"><strong>0.30</strong></td><td class="r"><strong>0.91</strong></td></tr>
+                <tr><td>Blend α=0.6</td><td class="r"><strong>0.5872</strong></td><td class="r">0.5818</td><td class="r">0.25</td><td class="r">0.89</td></tr>
+                <tr><td>Profile only (no query)</td><td class="r">0.5424</td><td class="r">0.4862</td><td class="r">0.09</td><td class="r">0.50</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="col-fig">
+          <img src="figures/fig04-alpha-curve.png" alt="α sweep showing pair AUC and R@1 vs alpha value">
+        </div>
+      </div>
+      <div class="decision anim">
+        <span class="decision-label">Zero training</span>
+        <p class="decision-text">R@1 0.18→0.30, R@10 0.59→0.91. α=0.6 gives best pair AUC. Pattern replicates on every fine-tuned adapter.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 06: FIELD ISOLATION -->
+  <section class="slide" data-nav="Field isolation">
+    <div class="inner">
+      <div class="eyebrow anim"><span class="num">04</span> &nbsp;·&nbsp; Which Fields Matter</div>
+      <h2 class="anim">Three fields carry identity. Three fields are scheduling boilerplate.</h2>
+      <div class="cols anim">
+        <div class="col-text">
+          <div class="tbl-wrap" style="margin-top:0">
+            <table>
+              <thead><tr><th>Field</th><th class="r">Own-profile sim</th><th class="r">Same field, others</th></tr></thead>
+              <tbody>
+                <tr><td>positioning</td><td class="r">0.890</td><td class="r">0.549</td></tr>
+                <tr><td>background</td><td class="r">0.850</td><td class="r">0.580</td></tr>
+                <tr><td>lookingFor</td><td class="r">0.852</td><td class="r">0.595</td></tr>
+                <tr><td>notes</td><td class="r">0.700</td><td class="r">0.563</td></tr>
+                <tr><td>introPreferences</td><td class="r">0.731</td><td class="r">0.680</td></tr>
+                <tr><td style="color:var(--muted)">locationAvailability</td><td class="r" style="color:var(--muted)">0.450</td><td class="r" style="color:var(--accent)">0.676</td></tr>
+                <tr><td style="color:var(--muted)">meetingPreferences</td><td class="r" style="color:var(--muted)">0.391</td><td class="r" style="color:var(--accent)">0.751</td></tr>
+                <tr><td style="color:var(--muted)">personalPreferences</td><td class="r" style="color:var(--muted)">0.366</td><td class="r" style="color:var(--accent)">0.756</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="col-fig">
+          <img src="figures/fig06-field-isolation.png" alt="3D embedding space field isolation">
+        </div>
+      </div>
+      <div class="decision anim">
+        <span class="decision-label">Drop these</span>
+        <p class="decision-text">Bottom three fields are more similar to other people's same field than to the person's own profile. Noise, not signal.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 07: PACKING -->
+  <section class="slide" data-nav="Best packing">
+    <div class="inner">
+      <div class="eyebrow anim"><span class="num">04</span> &nbsp;·&nbsp; Best Text Combination</div>
+      <h2 class="anim">Seeker = search query only. Candidate = background + lookingFor.</h2>
+      <div class="cols anim">
+        <div class="col-text">
+          <p style="margin:0 0 18px;font-size:17px;color:var(--muted);line-height:1.5">A 105-field-combination sweep confirmed this pairing beat every other combination on the frozen model. It became the basis for the best serving-feasible fine-tune.</p>
+          <p style="margin:0;font-size:17px;color:var(--muted);line-height:1.5">It also reduces live encoding work: ~2,500 tokens → ~55 tokens for the seeker.</p>
+        </div>
+        <div class="col-fig">
+          <img src="figures/fig05-packing-comparison.png" alt="Four-way packing comparison">
+        </div>
+      </div>
+      <div class="decision anim">
+        <span class="decision-label">The lesson</span>
+        <p class="decision-text">What you feed the encoder at inference consistently outweighed training choices throughout this project.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 08: FINE-TUNING SETUP -->
+  <section class="slide" data-nav="Fine-tuning">
+    <div class="inner">
+      <div class="eyebrow anim"><span class="num">05</span> &nbsp;·&nbsp; Result 2 — Fine-Tuning</div>
+      <h2 class="anim">LoRA adapter on a frozen encoder. Batch size is the key training lever.</h2>
+      <div class="cols anim">
+        <div class="col-text">
+          <p style="margin:0 0 18px;font-size:17px;color:var(--muted);line-height:1.5">&lt;1% of parameters trained. Adapter merges into base weights at serving time — no extra overhead. Two base models: <strong style="color:var(--ink)">Voyage-4-nano</strong> (serving-feasible) and <strong style="color:var(--ink)">Qwen3-8B</strong> (higher accuracy).</p>
+          <p style="margin:0;font-size:17px;color:var(--muted);line-height:1.5">Micro-batch 6 beats micro-batch 2 by 5 R@1 points. The gain comes from more candidates per forward pass — gradient accumulation does not replicate it.</p>
+        </div>
+        <div class="col-fig">
+          <img src="figures/fig07-ablation-verdict.png" alt="2x2 ablation grid: batch size vs extra negatives">
+        </div>
+      </div>
+      <div class="decision anim">
+        <span class="decision-label">Training insight</span>
+        <p class="decision-text">More candidates per forward pass beats gradient accumulation. Every structural addition failed.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 09: FINE-TUNING RESULTS -->
+  <section class="slide" data-nav="Fine-tune results">
+    <div class="inner">
+      <div class="eyebrow anim"><span class="num">05</span> &nbsp;·&nbsp; Fine-Tune Results</div>
+      <h2 class="anim">Qwen3-8B sets the record. Nano on query→bg+lookingFor is the serving-feasible winner.</h2>
+      <div class="tbl-wrap anim">
+        <table>
+          <thead><tr><th>Model</th><th class="r">Pair AUC</th><th class="r">Hard-neg AUC</th><th class="r">MRR</th><th class="r">R@1</th><th class="r">R@10</th></tr></thead>
+          <tbody>
+            <tr><td>Qwen fine-tune (voyage-gemini) <span class="tag warn">caveat</span></td><td class="r"><strong>0.6446</strong></td><td class="r"><strong>0.6862</strong></td><td class="r">0.415</td><td class="r">0.24</td><td class="r">—</td></tr>
+            <tr><td>Nano: query→bg+lookingFor</td><td class="r">0.5983</td><td class="r">0.6564</td><td class="r">0.479</td><td class="r">0.30</td><td class="r">0.86</td></tr>
+            <tr><td>Voyage-4-nano (frozen, query-only)</td><td class="r">0.5530</td><td class="r">0.5914</td><td class="r"><strong>0.502</strong></td><td class="r"><strong>0.30</strong></td><td class="r"><strong>0.91</strong></td></tr>
+            <tr><td>Voyage-4-large (production)</td><td class="r">0.5726</td><td class="r">0.5422</td><td class="r">0.310</td><td class="r">0.13</td><td class="r">0.70</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="cols anim" style="margin-top:20px;gap:20px">
+        <div class="col-fig" style="max-width:260px"><img src="figures/fig08-qwen-record.png" alt="Qwen record fine-tune"></div>
+        <div class="col-fig" style="max-width:260px"><img src="figures/fig09-queryonly-back-look.png" alt="Best nano fine-tune"></div>
+      </div>
+      <div class="decision anim">
+        <span class="decision-label">Key finding</span>
+        <p class="decision-text">Nano query→bg+lookingFor: first model where hard-neg AUC (0.6564) exceeds easy-neg AUC — previously only the LLM judge.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 10: GENERATED DATA — FAILURE -->
+  <section class="slide" data-nav="Data generation">
+    <div class="inner">
+      <div class="eyebrow anim"><span class="num">06</span> &nbsp;·&nbsp; Result 3 — Generated Training Data</div>
+      <h2 class="anim">The first batch was actively harmful. 99.2% of the label was in the text.</h2>
+      <p class="lede anim">A classifier on the candidate's text alone — no seeker, no query — predicted accept/decline at 99.2% accuracy. The fine-tune trained on this batch scored 0.4845 hard-neg AUC, below chance. The real-only baseline (111 pairs) beat it on every metric with a fifth of the data.</p>
+      <div class="decision anim">
+        <span class="decision-label">The fix</span>
+        <p class="decision-text">Quarantine the batch. Invent the people first, decide the match later — and verify with three probes before training.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 11: THREE PROBES -->
+  <section class="slide" data-nav="Leakage probes">
+    <div class="inner">
+      <div class="eyebrow anim"><span class="num">06</span> &nbsp;·&nbsp; Three Leakage Probes</div>
+      <h2 class="anim">Three cheap checks gate every batch before training.</h2>
+      <p style="margin:16px 0 0;font-size:16px;color:var(--muted)" class="anim"><strong style="color:var(--ink)">1. Candidate-only AUC</strong> — word-frequency on candidate text predicts label? Real floor ~0.49. Above 0.55 = leakage.<br><strong style="color:var(--ink)">2. Lexical circularity</strong> — query↔candidate word-overlap predicts label? If yes, model learns overlap, not fit.<br><strong style="color:var(--ink)">3. Seeker-identity AUC</strong> — knowing only which seeker predicts label? If yes, per-seeker base rates dominate.</p>
+      <div class="tbl-wrap anim">
+        <table>
+          <thead><tr><th>Batch</th><th class="r">Candidate-only AUC</th><th class="r">Lexical circ.</th><th class="r">Seeker-identity</th></tr></thead>
+          <tbody>
+            <tr><td>First batch <span class="tag bad">quarantined</span></td><td class="r"><strong>0.992</strong></td><td class="r">—</td><td class="r">—</td></tr>
+            <tr><td>rrf_002</td><td class="r">0.634</td><td class="r">0.701</td><td class="r">0.687</td></tr>
+            <tr><td>rrf_003 (main training batch)</td><td class="r">—</td><td class="r">—</td><td class="r">~0.687</td></tr>
+            <tr><td>voyage-gemini batch <span class="tag warn">leakier</span></td><td class="r">0.758</td><td class="r">0.481</td><td class="r">0.780</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="decision anim">
+        <span class="decision-label">Clean pipeline</span>
+        <p class="decision-text">Dense (Qwen3-8B) + BM25 → weighted RRF → Gemini judge. Retrieval and labeling are independent.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 12: WHAT TRANSFERS -->
+  <section class="slide" data-nav="Transfer gap">
+    <div class="inner">
+      <div class="eyebrow anim"><span class="num">06</span> &nbsp;·&nbsp; What Transfers</div>
+      <h2 class="anim">Vocabulary transfers. Labels do not.</h2>
+      <div class="cols anim">
+        <div class="col-text">
+          <p style="margin:0 0 18px;font-size:17px;color:var(--muted);line-height:1.5">A model trained to predict generated labels scores <strong style="color:var(--ink)">0.427 AUC</strong> on real outcomes — below chance.</p>
+          <p style="margin:0;font-size:17px;color:var(--muted);line-height:1.5">The LLM judge scoring ~0.59 on hard pairs is the ceiling for anything trained on its labels. The best fine-tune (0.6446) is approaching that ceiling.</p>
+        </div>
+        <div class="col-fig">
+          <img src="figures/fig11-synth-transfer.png" alt="Vocabulary transfers, labels do not">
+        </div>
+      </div>
+      <div class="decision anim">
+        <span class="decision-label">Ceiling</span>
+        <p class="decision-text">More real accept/decline outcomes would unblock progress more directly than new model architectures.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 13: LLM JUDGE -->
+  <section class="slide" data-nav="LLM judge">
+    <div class="inner">
+      <div class="eyebrow anim"><span class="num">07</span> &nbsp;·&nbsp; Result 4 — LLM Judge</div>
+      <h2 class="anim">Best overall: 0.6451 AUC. Only approach that does better on hard negatives.</h2>
+      <div class="cols anim">
+        <div class="col-text">
+          <div class="tbl-wrap" style="margin-top:0">
+            <table>
+              <thead><tr><th>Prompt variant</th><th class="r">Pair AUC</th><th class="r">Hard-neg</th><th class="r">Easy-neg</th></tr></thead>
+              <tbody>
+                <tr><td>Focused (trimmed fields + query)</td><td class="r"><strong>0.6451</strong></td><td class="r"><strong>0.6590</strong></td><td class="r">0.6570</td></tr>
+                <tr><td>Naive (complete profiles)</td><td class="r">0.6177</td><td class="r">—</td><td class="r">—</td></tr>
+                <tr><td>Forced step-by-step CoT</td><td class="r">0.6100</td><td class="r">0.6225</td><td class="r">0.6394</td></tr>
+                <tr><td>Calibrated (told base rate)</td><td class="r">0.5901</td><td class="r">0.5879</td><td class="r">0.5310</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p style="margin:14px 0 0;font-size:15px;color:var(--muted)">Adding information hurt. Forced reasoning hurt. All 10 automated prompt rewrites scored below the original.</p>
+        </div>
+        <div class="col-fig">
+          <img src="figures/fig12-judge-comparison.png" alt="LLM judge vs embeddings, hard/easy split">
+        </div>
+      </div>
+      <div class="decision anim">
+        <span class="decision-label">Not deployable</span>
+        <p class="decision-text">Per-candidate LLM calls take seconds. Value: accuracy ceiling and training-data labeler.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 14: RECIPROCAL SCORING -->
+  <section class="slide" data-nav="Reciprocal scoring">
+    <div class="inner">
+      <div class="eyebrow anim"><span class="num">08</span> &nbsp;·&nbsp; Result 5 — Reciprocal Scoring</div>
+      <h2 class="anim">Score fit in both directions. Positive λ always helps.</h2>
+      <div class="cols anim">
+        <div class="col-text">
+          <p style="margin:0 0 14px;font-size:16px;color:var(--muted);font-family:monospace;background:var(--accent-soft);padding:12px 16px;border-radius:10px">forward + λ × sim(candidate lookingFor, seeker background)</p>
+          <div class="tbl-wrap" style="margin-top:0">
+            <table>
+              <thead><tr><th>Encoder</th><th class="r">Forward AUC</th><th class="r">Combined (best λ)</th><th class="r">Held-out</th></tr></thead>
+              <tbody>
+                <tr><td>Frozen Voyage-4-nano</td><td class="r">0.5638</td><td class="r">0.5964 (λ=1.75)</td><td class="r">0.6241</td></tr>
+                <tr><td>top1_ctrl fine-tune</td><td class="r">0.5890</td><td class="r">0.5961 (λ=0.50)</td><td class="r">0.6853</td></tr>
+                <tr><td>voyage_gemini_ctrl <span class="tag warn">caveat</span></td><td class="r">0.6081</td><td class="r"><strong>0.6587</strong> (λ=1.90)</td><td class="r"><strong>0.7345</strong></td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="col-fig">
+          <img src="figures/fig13-lambda-grid.png" alt="Lambda sweep curves across encoders">
+        </div>
+      </div>
+      <div class="decision anim">
+        <span class="decision-label">Consistent direction</span>
+        <p class="decision-text">Negative λ always hurts (drops to ~0.49 at λ=−2). The reciprocal term carries real directional signal.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 15: PER-ASK SCORING -->
+  <section class="slide" data-nav="Per-ask scoring">
+    <div class="inner">
+      <div class="eyebrow anim"><span class="num">09</span> &nbsp;·&nbsp; Result 6 — Per-Ask Scoring</div>
+      <h2 class="anim">Score each lookingFor paragraph separately. +0.071 AUC over logistic regression.</h2>
+      <p class="lede anim">Each pair becomes multiple rows (5.4 paragraphs per seeker on average). A mixture-of-experts model (4 experts, TF-IDF embeddings) scores each row separately and pools. 5×5-fold CV on 131 real train pairs.</p>
+      <div class="tbl-wrap anim">
+        <table>
+          <thead><tr><th>Approach</th><th class="r">Mean AUC</th><th>vs logistic regression</th></tr></thead>
+          <tbody>
+            <tr><td>Plain logistic regression</td><td class="r">0.5758</td><td>—</td></tr>
+            <tr><td>Per-ask, attention pooling</td><td class="r"><strong>0.6467</strong></td><td>+0.071, wins 5/5 seeds</td></tr>
+            <tr><td>Per-ask, simple average</td><td class="r">0.6404</td><td>+0.065, wins 5/5 seeds</td></tr>
+            <tr><td>Single network (no MoE)</td><td class="r">0.5446</td><td>−0.031</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="decision anim">
+        <span class="decision-label">Most replicated gain</span>
+        <p class="decision-text">Pooling method doesn't matter (attention ≈ average). The mixture of experts matters (+0.10 vs single network). Held-out not yet checked.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 16: WHAT DID NOT WORK -->
+  <section class="slide" data-nav="What didn't work">
+    <div class="inner">
+      <div class="eyebrow anim"><span class="num">10</span> &nbsp;·&nbsp; What Did Not Work</div>
+      <h2 class="anim">Eight additions. All lost to choosing better text.</h2>
+      <div class="tbl-wrap anim">
+        <table>
+          <thead><tr><th>Addition</th><th>Result</th><th>What won instead</th></tr></thead>
+          <tbody>
+            <tr><td>Two separate encoders</td><td>Hard-neg AUC 0.483, below chance</td><td>One shared encoder</td></tr>
+            <tr><td>Learned field selector</td><td>Worst retrieval (R@1 0.23)</td><td>Fixed blend α=0.6</td></tr>
+            <tr><td>KL drift penalty</td><td>Slightly worse in two separate tests</td><td>Plain training</td></tr>
+            <tr><td>Sharper training objective</td><td>R@1 0.18→0.14, below frozen</td><td>Default settings</td></tr>
+            <tr><td>Bilinear score correction</td><td>CV 0.74, honest 0.62</td><td>Cosine + LSA compression</td></tr>
+            <tr><td>Forced step-by-step LLM reasoning</td><td>AUC 0.6409→0.6336, yes-rate 55%→75%</td><td>Naive direct prompt</td></tr>
+            <tr><td>Automatic prompt rewrites (10 runs)</td><td>All 10 below the original</td><td>Original prompt</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="decision anim">
+        <span class="decision-label">Pattern</span>
+        <p class="decision-text">At 200 pairs, complexity is a liability. What you encode beats model architecture every time.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 17: SERVING -->
+  <section class="slide" data-nav="Serving">
+    <div class="inner">
+      <div class="eyebrow anim"><span class="num">11</span> &nbsp;·&nbsp; Serving</div>
+      <h2 class="anim">Bi-encoders only. No latency benchmark exists yet.</h2>
+      <p class="lede anim">The &lt;100 ms constraint rules out LLM judges, cross-encoders, and remote API calls per candidate. Offline candidate embeddings + one query encode + ANN lookup is the only viable shape. A merged LoRA adapter adds no serving overhead.</p>
+      <div class="decision anim">
+        <span class="decision-label">Open</span>
+        <p class="decision-text">Whether the best serving-feasible config actually completes in under 100 ms on Boardy's hardware has not been measured. That measurement comes first.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 18: LIMITATIONS -->
+  <section class="slide" data-nav="Limitations">
+    <div class="inner">
+      <div class="eyebrow anim"><span class="num">12</span> &nbsp;·&nbsp; Limitations</div>
+      <h2 class="anim">Five threats to every number in this project.</h2>
+      <div class="finals anim">
+        <div class="final-item">
+          <div class="final-head">Small held-out set unreliable for strong models</div>
+          <div class="final-sub">Top-6 ranking on held-out vs all-200: Spearman −0.029. Qwen3-8B reversed from 0.6595 to 0.5529. Use all-200.</div>
+        </div>
+        <div class="final-item">
+          <div class="final-head">131 pairs manufactures results under selection</div>
+          <div class="final-sub">Bilinear MF: CV 0.74, honest 0.62. A 0.12 gap from 64 configurations. Always multi-seed CV.</div>
+        </div>
+        <div class="final-item">
+          <div class="final-head">Retrieval metrics are partly self-graded</div>
+          <div class="final-sub">Production selected candidates with the same searchQuery used for evaluation. Pair AUC does not have this circularity.</div>
+        </div>
+        <div class="final-item dim">
+          <div class="final-head">Generated labels capped by the judge · B-data incomparable</div>
+          <div class="final-sub">Judge ~0.59 on hard pairs is the ceiling. B-data (46k rows) uses different labels, 21k candidates, ~86% accepted — incomparable to 200-pair dataset.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 19: CONCLUSION -->
+  <section class="slide slide--title" data-nav="Conclusion">
+    <div class="inner">
+      <div class="eyebrow anim">Conclusion · August 2026</div>
+      <h2 class="anim">What you encode matters more than which model you use.</h2>
+      <div class="finals anim">
+        <div class="final-item">
+          <div class="final-head">Query-weighted retrieval: R@1 0.30, R@10 0.91 — frozen model, no training</div>
+          <div class="final-sub">The biggest single improvement in the project. Replicates on every fine-tuned adapter.</div>
+        </div>
+        <div class="final-item">
+          <div class="final-head">Fine-tune on clean data: 0.6446 AUC, 0.6862 hard-neg AUC</div>
+          <div class="final-sub">Three leakage probes separate helpful batches from harmful ones. The first batch was actively harmful.</div>
+        </div>
+        <div class="final-item">
+          <div class="final-head">Recommended design: query retrieval → reciprocal re-ranker</div>
+          <div class="final-sub">Retrieval and accept/decline are different problems. The bottleneck is label quality, not model architecture.</div>
+        </div>
+        <div class="final-item dim">
+          <div class="final-head">Open: latency · cleaner batch · sectioned MoE holdout check</div>
+          <div class="final-sub">Nothing has been timed under 100 ms. Arm C (clean full-scale batch) is not yet scheduled.</div>
+        </div>
+      </div>
+      <div class="dig anim">
+        <a href="https://github.com/harsh20k/dorby-ai/blob/main/docs/research-report.md" target="_blank" rel="noopener">Full report + appendices</a>
+        <a href="http://dorby-project-story-411960113601.s3-website-us-east-1.amazonaws.com/" target="_blank" rel="noopener">Project story</a>
+        <a href="https://dorby-project-story-411960113601.s3.amazonaws.com/docs/experiment-index.html" target="_blank" rel="noopener">Experiment index</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<div class="hint" id="hint"><span class="key">↑</span><span class="key">↓</span> to move</div>
+
+<script>
+  var deck = document.getElementById('deck');
+  var slides = Array.prototype.slice.call(deck.querySelectorAll('.slide'));
+  var nav = document.getElementById('nav');
+  var progress = document.getElementById('progress');
+  var hint = document.getElementById('hint');
+  var themeToggle = document.getElementById('themeToggle');
+  var themeKey = 'dorby-story-theme';
+
+  slides.forEach(function (slide, i) {
+    var btn = document.createElement('button');
+    btn.className = 'nav-item';
+    btn.textContent = slide.dataset.nav;
+    btn.addEventListener('click', function () { goTo(i); });
+    nav.appendChild(btn);
+  });
+  var navItems = Array.prototype.slice.call(nav.children);
+
+  var current = 0;
+  function goTo(i) {
+    current = Math.max(0, Math.min(slides.length - 1, i));
+    slides[current].scrollIntoView({ behavior: 'smooth' });
+  }
+
+  var observer = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (!entry.isIntersecting) return;
+      entry.target.classList.add('in');
+      var i = slides.indexOf(entry.target);
+      current = i;
+      navItems.forEach(function (n, j) { n.classList.toggle('active', j === i); });
+      navItems[i].scrollIntoView({ block: 'nearest' });
+      progress.style.width = ((i / (slides.length - 1)) * 100) + '%';
+      hint.classList.toggle('hidden', i > 0);
+    });
+  }, { threshold: 0.45 });
+  slides.forEach(function (s) { observer.observe(s); });
+
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'ArrowDown' || e.key === 'ArrowRight' || e.key === 'PageDown' || e.key === ' ') {
+      e.preventDefault(); goTo(current + 1);
+    } else if (e.key === 'ArrowUp' || e.key === 'ArrowLeft' || e.key === 'PageUp') {
+      e.preventDefault(); goTo(current - 1);
+    } else if (e.key === 'Home') { e.preventDefault(); goTo(0); }
+    else if (e.key === 'End') { e.preventDefault(); goTo(slides.length - 1); }
+  });
+
+  function setTheme(theme) {
+    document.documentElement.setAttribute('data-theme', theme);
+    try { localStorage.setItem(themeKey, theme); } catch (e) {}
+    themeToggle.setAttribute('aria-label', theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode');
+  }
+
+  themeToggle.addEventListener('click', function (e) {
+    e.stopPropagation();
+    var next = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+    setTheme(next);
+  });
+
+  try {
+    if (!localStorage.getItem(themeKey)) {
+      window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function (e) {
+        if (!localStorage.getItem(themeKey)) setTheme(e.matches ? 'dark' : 'light');
+      });
+    }
+  } catch (e) {}
+
+  setTheme(document.documentElement.getAttribute('data-theme') || 'light');
+</script>
+</body>
+</html>

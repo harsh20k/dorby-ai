@@ -1,3 +1,7 @@
+---
+share_link: https://share.note.sx/iixuvuv9#9MYJPFnsxnfh8BN094wPoK1vly3X64OcQp4q0uVnGlg
+share_updated: 2026-08-14T23:00:56-03:00
+---
 # Predicting Introduction Acceptance in a Professional Networking System
 
 ![[image-31-1.jpeg]]
@@ -8,10 +12,30 @@
 
 **Banner ID:** B01051076
 **Name:** Harsh Pandey
-**Date:** 26-Oct-2025
-**Gitlab Repo:** N/A
+**Date:** 14-Aug-2026
+**Github Repo:** [Link](https://github.com/harsh20k/dorby-ai)
+
 **Boardy AI × RecSys Course Project**
-Ga Wu (Instructor) · Industry Partner: Boardy AI · 2026
+Ga Wu (Professor)
+
+
+<div class="page-break" style="page-break-before: always;"></div>
+
+Table of contents
+
+```table-of-contents
+title: 
+style: nestedList # TOC style (nestedList|nestedOrderedList|inlineFirstLevel)
+minLevel: 0 # Include headings from the specified level
+maxLevel: 4 # Include headings up to the specified level
+include: 
+exclude: 
+includeLinks: true # Make headings clickable
+hideWhenEmpty: false # Hide TOC if no headings are found
+debugInConsole: false # Print debug info in Obsidian console
+```
+
+<div class="page-break" style="page-break-before: always;"></div>
 
 ---
 
